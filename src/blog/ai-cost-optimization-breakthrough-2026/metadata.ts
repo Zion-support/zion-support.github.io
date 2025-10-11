@@ -9,17 +9,11 @@ export const metadata = {
     description: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains for Fortune 500 companies.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-cost-optimization-breakthrough-2026',
-    images: [
-      {
-        url: 'https://ziontechgroup.com/images/ai-cost-optimization-2026.jpg',
-        width: 1200,
-        height: 630,
-        alt:       ,
-$4}
+    images: [{
+        url: 'https://ziontechgroup.com/images/ai-cost-optimization-2026.jpg', width: 1200, height: 630, alt:, $4}
         alt: 'AI Cost Optimization Breakthrough 2026'
 
-      }
-    ]
+      }]
   },
 
   twitte,
@@ -34,8 +28,7 @@ $4}
     descriptio,
   n: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains.',
     image,
-  s: ['http,
-  s://ziontechgroup.com/images/ai-cost-optimization-2026.jpg']
+  s: ['http, s: //ziontechgroup.com/images/ai-cost-optimization-2026.jpg']
   },
   robot,
   s: {/* TODO: Fix JSX expression */}

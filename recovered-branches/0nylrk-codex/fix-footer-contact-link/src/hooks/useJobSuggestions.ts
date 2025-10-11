@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react"
-import { supabase } from "@/integrations/supabase/client"
-import { toast } from "@/hooks/use-toast"
-import { JobMatch } from "@/types/jobs"
+import { useState, useEffect  } from 'react'
+import { supabase  } from '@/integrations/supabase/client'
+import { toast  } from '@/hooks/use-toast'
+import { JobMatch  } from '@/types/jobs'
 export function useJobSuggestions(talentId?: string) {
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([])
   const [isLoading, setIsLoading] = useState(true)
@@ -15,14 +15,14 @@ export function useJobSuggestions(talentId?: string) {
           .from("job_talent_matches")
           .select(`
             *,
-            job:job_id (*)
+            job: job_id (*)
           `)
           .eq("talent_id", talentId)
           .order("created_at", { ascending: false })
         if (error) throw error
         setJobMatches(data || [])
       } catch (error) {
-        console.error("Error fetching job matches:", error)
+        console.error("Error fetching job matches: ", error)
         toast({
           title: "Error",
           description: "Failed to load job suggestions",
@@ -67,7 +67,7 @@ export function useJobSuggestions(talentId?: string) {
         })
       }
     } catch (error) {
-      console.error("Error updating job match status:", error)
+      console.error("Error updating job match status: ", error)
       toast({
         title: "Error",
         description: "Failed to update job status",

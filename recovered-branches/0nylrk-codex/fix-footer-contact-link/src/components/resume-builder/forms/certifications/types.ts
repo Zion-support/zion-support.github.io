@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import { z  } from 'zod'
 // Define schema for form validation
 export const certificationSchema = z.object({
   name: z.string().min(1, 'Certification name is required'),

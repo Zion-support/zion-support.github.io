@@ -1,14 +1,10 @@
 #!/usr/bin/env node
 /**
  * Merge Newest Cursor Branches - Process the newest cursor branches
- */ import { execSync } from 'child_process'
+ */ import { execSync  } from 'child_process'
 import fs from 'fs'
 // //Newest cursor branches to merge
-const newestCursorBranches = [
-  'cursor/fix-errors-and-merge-to-main-2639',
-  'cursor/fix-errors-and-merge-to-main-7 e2 b',
-  'cursor/fix-errors-and-merge-to-main-9758',
-  'cursor/fix-errors-and-merge-to-main-dfd4']
+const newestCursorBranches = ['cursor/fix-errors-and-merge-to-main-2639', 'cursor/fix-errors-and-merge-to-main-7 e2 b', 'cursor/fix-errors-and-merge-to-main-9758', 'cursor/fix-errors-and-merge-to-main-dfd4']
 // //Function to safely execute git commands
 function safeGitCommand(command, description) {
   try {
@@ -103,7 +99,7 @@ if (mergedCount > 0) {
   'TypeScript type checking')
 )
 const buildCheck = safeGitCommand('pnpm run,
-  build:no-check',
+  build: no-check',
   'Production build')
 )
 //Push changes if any were merged

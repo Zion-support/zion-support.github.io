@@ -1,26 +1,13 @@
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'
+import { EnhancedRealMicroSaasService  } from './enhanced-real-micro-saas-services'
 const contact = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
 }
-export const newRealServices2025: EnhancedRealMicroSaasService[] = [
-	{
-		id: 'agent-ops-monitor',
-		name: 'AgentOps Reliability Monitor',
-		tagline: 'Track crashes, hallucinations, and stuck loops in agent workflows',
-		price: '$99',
-		period: '/month',
-		description:
-			'Production monitoring for AI agents. Detect tool-call failures, long-running chains, and hallucination spikes. Alert to Slack, auto-open Jira with traces.',
-		features: [
-			'Latency, error and hallucination tracking',
-			'Workflow heatmaps and slow-step detection',
-			'PII guardrail violations dashboard',
-			'Slack/PagerDuty alerts with deep links',
-			'Jira/Linear ticket auto-creation'
-		],
+export const newRealServices2025: EnhancedRealMicroSaasService[] = [{
+		id: 'agent-ops-monitor', name: 'AgentOps Reliability Monitor', tagline: 'Track crashes, hallucinations, and stuck loops in agent workflows', price: '$99', period: '/month', description: 'Production monitoring for AI agents. Detect tool-call failures, long-running chains, and hallucination spikes. Alert to Slack, auto-open Jira with traces.', features: [
+			'Latency, error and hallucination tracking', 'Workflow heatmaps and slow-step detection', 'PII guardrail violations dashboard', 'Slack/PagerDuty alerts with deep links', 'Jira/Linear ticket auto-creation'],
 		popular: true,
 		icon: '🧭',
 		color: 'from-cyan-600 to-blue-700',
@@ -54,15 +41,8 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		tagline: 'Find PII across S3, GCS and Snowflake with remediation workflows',
 		price: '$149',
 		period: '/month',
-		description:
-			'Scan object stores and warehouses for PII/PHI with classifiers and regex+ML. Map owners, file tickets, and track remediation SLAs.',
-		features: [
-			'Prebuilt PII detectors (SSN, CCN, PHI)',
-			'Custom rules and dictionaries',
-			'Owners and data lineage lookups',
-			'Remediation tickets and SLA tracking',
-			'Compliance export packs'
-		],
+		description: 'Scan object stores and warehouses for PII/PHI with classifiers and regex+ML. Map owners, file tickets, and track remediation SLAs.',
+		features: ['Prebuilt PII detectors (SSN, CCN, PHI)', 'Custom rules and dictionaries', 'Owners and data lineage lookups', 'Remediation tickets and SLA tracking', 'Compliance export packs'],
 		popular: false,
 		icon: '🕵️‍♀️',
 		color: 'from-rose-600 to-orange-700',
@@ -96,15 +76,8 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		tagline: 'Latency, recall and cost benchmarking across vector databases',
 		price: '$79',
 		period: '/month',
-		description:
-			'Benchmark Pinecone, Weaviate, Qdrant or pgvector using your corpus. Get query plans, ANN configs and recall/latency trade-offs with recommendations.',
-		features: [
-			'Corpus sampling and ground-truth evals',
-			'Latency/recall trade-off explorer',
-			'ANN/hnsw/ivf config generator',
-			'Cost projection by provider',
-			'One-click config export'
-		],
+		description: 'Benchmark Pinecone, Weaviate, Qdrant or pgvector using your corpus. Get query plans, ANN configs and recall/latency trade-offs with recommendations.',
+		features: ['Corpus sampling and ground-truth evals', 'Latency/recall trade-off explorer', 'ANN/hnsw/ivf config generator', 'Cost projection by provider', 'One-click config export'],
 		popular: true,
 		icon: '🧪',
 		color: 'from-emerald-600 to-teal-700',
@@ -138,15 +111,8 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		tagline: 'Find prompt injection risks and jailbreak vectors before prod',
 		price: '$59',
 		period: '/month',
-		description:
-			'Scan prompts, tools and context windows for injection vectors. Generate red-team prompts and propose mitigations with policy diffs.',
-		features: [
-			'Prompt injection pattern library',
-			'Content policy diffing',
-			'Automatic test corpus generation',
-			'CI/CD gate with pass/fail',
-			'Report exports for security review'
-		],
+		description: 'Scan prompts, tools and context windows for injection vectors. Generate red-team prompts and propose mitigations with policy diffs.',
+		features: ['Prompt injection pattern library', 'Content policy diffing', 'Automatic test corpus generation', 'CI/CD gate with pass/fail', 'Report exports for security review'],
 		popular: false,
 		icon: '🛡️',
 		color: 'from-purple-600 to-pink-700',
@@ -180,15 +146,8 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		tagline: 'Draft security and product responses with citations in minutes',
 		price: '$129',
 		period: '/month',
-		description:
-			'Upload RFP PDFs, map to knowledge base, and generate answers with citations and policy references. Export clean DOCX/Google Docs.',
-		features: [
-			'Document parsing and mapping',
-			'Policy/KB grounding with citations',
-			'Gaps highlighting and follow-ups',
-			'Export to DOCX/Google Docs',
-			'Collaborative review modes'
-		],
+		description: 'Upload RFP PDFs, map to knowledge base, and generate answers with citations and policy references. Export clean DOCX/Google Docs.',
+		features: ['Document parsing and mapping', 'Policy/KB grounding with citations', 'Gaps highlighting and follow-ups', 'Export to DOCX/Google Docs', 'Collaborative review modes'],
 		popular: true,
 		icon: '📄',
 		color: 'from-blue-600 to-indigo-700',
@@ -222,15 +181,8 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		tagline: 'Automated adversarial prompts against your models and tools',
 		price: '$199',
 		period: '/month',
-		description:
-			'Continuously attack your AI stack with curated jailbreak prompts and tool abuse scenarios. Track regressions, export reports for auditors.',
-		features: [
-			'Curated jailbreak corpora',
-			'Tool-abuse and exfiltration scenarios',
-			'Scoring and trend reports',
-			'CI/CD gating and webhooks',
-			'Auditor-friendly exports'
-		],
+		description: 'Continuously attack your AI stack with curated jailbreak prompts and tool abuse scenarios. Track regressions, export reports for auditors.',
+		features: ['Curated jailbreak corpora', 'Tool-abuse and exfiltration scenarios', 'Scoring and trend reports', 'CI/CD gating and webhooks', 'Auditor-friendly exports'],
 		popular: false,
 		icon: '🧨',
 		color: 'from-amber-600 to-red-700',
@@ -264,15 +216,8 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		tagline: 'Transcripts, topic mining and QA scoring for calls and chats',
 		price: '$179',
 		period: '/month',
-		description:
-			'Ingest call recordings or live streams, transcribe, detect topics and sentiment, and score QA with dashboards. Coach agents with snippets.',
-		features: [
-			'Accurate transcription with diarization',
-			'Sentiment and topic mining',
-			'QA auto-scoring and calibration',
-			'Coaching snippets and playbooks',
-			'PII redaction and access controls'
-		],
+		description: 'Ingest call recordings or live streams, transcribe, detect topics and sentiment, and score QA with dashboards. Coach agents with snippets.',
+		features: ['Accurate transcription with diarization', 'Sentiment and topic mining', 'QA auto-scoring and calibration', 'Coaching snippets and playbooks', 'PII redaction and access controls'],
 		popular: true,
 		icon: '🎧',
 		color: 'from-indigo-600 to-violet-700',
@@ -306,15 +251,8 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		tagline: 'Generate balanced, private datasets for ML and analytics',
 		price: '$199',
 		period: '/month',
-		description:
-			'Create class-balanced datasets with differentially private generators. Export to parquet/CSV and seed sandboxes for testing.',
-		features: [
-			'DP and k-anonymity options',
-			'Imbalance correction and sampling',
-			'Drift detection on synthetic sets',
-			'Row/column level lineage',
-			'Governed export with approvals'
-		],
+		description: 'Create class-balanced datasets with differentially private generators. Export to parquet/CSV and seed sandboxes for testing.',
+		features: ['DP and k-anonymity options', 'Imbalance correction and sampling', 'Drift detection on synthetic sets', 'Row/column level lineage', 'Governed export with approvals'],
 		popular: false,
 		icon: '🧬',
 		color: 'from-teal-600 to-emerald-700',
@@ -348,15 +286,8 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		tagline: 'Low-lift offline+online features with governance',
 		price: '$99',
 		period: '/month',
-		description:
-			'Bootstrap an offline+online feature store with transformations, point-in-time joins and approvals. Ship faster with templates.',
-		features: [
-			'Point-in-time correctness',
-			'Transformation registry',
-			'Approval workflows',
-			'Lineage and ownership',
-			'Rollbacks and versioning'
-		],
+		description: 'Bootstrap an offline+online feature store with transformations, point-in-time joins and approvals. Ship faster with templates.',
+		features: ['Point-in-time correctness', 'Transformation registry', 'Approval workflows', 'Lineage and ownership', 'Rollbacks and versioning'],
 		popular: false,
 		icon: '🧱',
 		color: 'from-amber-600 to-yellow-700',
@@ -390,15 +321,8 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		tagline: 'Version, stage and approve models with audit trails',
 		price: '$79',
 		period: '/month',
-		description:
-			'Lightweight model registry with artifacts, metrics and stage transitions. Webhooks to CI for canary rollouts.',
-		features: [
-			'Artifacts and signatures',
-			'Metrics and evals',
-			'Stage transitions and approvals',
-			'RBAC and audit logs',
-			'Webhooks and rollback'
-		],
+		description: 'Lightweight model registry with artifacts, metrics and stage transitions. Webhooks to CI for canary rollouts.',
+		features: ['Artifacts and signatures', 'Metrics and evals', 'Stage transitions and approvals', 'RBAC and audit logs', 'Webhooks and rollback'],
 		popular: false,
 		icon: '📦',
 		color: 'from-sky-600 to-cyan-700',
@@ -432,15 +356,8 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		tagline: 'Detect schema drift, null spikes and metric anomalies',
 		price: '$129',
 		period: '/month',
-		description:
-			'Monitor tables, streams and ML features for freshness, volume and validity. Alert owners and auto-create issues with owners preset.',
-		features: [
-			'Freshness and volume checks',
-			'Anomaly detection on metrics',
-			'Schema drift notifications',
-			'Ownership and runbooks',
-			'Incident export and trends'
-		],
+		description: 'Monitor tables, streams and ML features for freshness, volume and validity. Alert owners and auto-create issues with owners preset.',
+		features: ['Freshness and volume checks', 'Anomaly detection on metrics', 'Schema drift notifications', 'Ownership and runbooks', 'Incident export and trends'],
 		popular: true,
 		icon: '🩺',
 		color: 'from-lime-600 to-green-700',
@@ -474,15 +391,8 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		tagline: 'DSAR/CPRA workflows with connectors and approvals',
 		price: '$89',
 		period: '/month',
-		description:
-			'Automate data subject access requests across SaaS and data stores. Identity verification, redact/export, and audit-ready logs.',
-		features: [
-			'Identity verification and portals',
-			'Connector library for SaaS and data',
-			'Redaction and export pipelines',
-			'Approvals and audit logs',
-			'SLA tracking and escalations'
-		],
+		description: 'Automate data subject access requests across SaaS and data stores. Identity verification, redact/export, and audit-ready logs.',
+		features: ['Identity verification and portals', 'Connector library for SaaS and data', 'Redaction and export pipelines', 'Approvals and audit logs', 'SLA tracking and escalations'],
 		popular: false,
 		icon: '🧾',
 		color: 'from-fuchsia-600 to-pink-700',
@@ -516,15 +426,8 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		tagline: 'Unify profiles and events with identity resolution',
 		price: '$149',
 		period: '/month',
-		description:
-			'Ingest web/app events, stitch identities, and build segments for activation with basic RT engagement dashboards.',
-		features: [
-			'Event schema and SDKs',
-			'Identity stitching and dedupe',
-			'Segments and audiences',
-			'Warehouse sync and reverse ETL',
-			'Consent and governance basics'
-		],
+		description: 'Ingest web/app events, stitch identities, and build segments for activation with basic RT engagement dashboards.',
+		features: ['Event schema and SDKs', 'Identity stitching and dedupe', 'Segments and audiences', 'Warehouse sync and reverse ETL', 'Consent and governance basics'],
 		popular: true,
 		icon: '👥',
 		color: 'from-cyan-600 to-sky-700',
@@ -558,15 +461,8 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		tagline: 'Feature flags, experiments and stats with guardrails',
 		price: '$89',
 		period: '/month',
-		description:
-			'Run experiments with CUPED/Sequential testing, guardrail metrics and sample ratio checks. SDKs for web and backend.',
-		features: [
-			'Bucketing and targeting',
-			'CUPED/Sequential methods',
-			'Guardrails and SRM detection',
-			'Feature flags and killswitches',
-			'Dashboards and exports'
-		],
+		description: 'Run experiments with CUPED/Sequential testing, guardrail metrics and sample ratio checks. SDKs for web and backend.',
+		features: ['Bucketing and targeting', 'CUPED/Sequential methods', 'Guardrails and SRM detection', 'Feature flags and killswitches', 'Dashboards and exports'],
 		popular: false,
 		icon: '🧫',
 		color: 'from-pink-600 to-rose-700',

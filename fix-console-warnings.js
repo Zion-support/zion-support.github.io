@@ -3,17 +3,7 @@
 import fs from 'fs'
 import path from 'path'
 // Files with console warnings
-const filesToFix = [
-  './add-missing-routes.js',
-  './advanced-app-improvements.js',
-  './api/error-report.js',
-  './api/newsletter/subscribe.js',
-  './api/onsite-request.js',
-  './api/quotes.js',
-  './api/shipping-rates.js',
-  './api/subscribe.js',
-  './api/wallet.js'
-]
+const filesToFix = ['./add-missing-routes.js', './advanced-app-improvements.js', './api/error-report.js', './api/newsletter/subscribe.js', './api/onsite-request.js', './api/quotes.js', './api/shipping-rates.js', './api/subscribe.js', './api/wallet.js']
 function fixConsoleWarnings(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8')

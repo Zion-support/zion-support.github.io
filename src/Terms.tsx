@@ -1,14 +1,12 @@
-import { SEO } from "@/components/SEO"
-import { GradientHeading } from "@/components/GradientHeading"
+import { SEO  } from '@/components/SEO'
+import { GradientHeading  } from '@/components/GradientHeading'
 const Terms: React.FC = () => {
   return (
     
-      <SEO
-        title="Terms of Service"
+      <SEO title="Terms of Service"
         description="The terms and conditions for using the Zion platform."
         canonical="https://ziontechgroup.com/terms"
-      />
-      
+      /></SEO>
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg shadow-lg p-8">
@@ -31,8 +29,7 @@ const Terms: React.FC = () => {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Description of Service</h2>
                 <p className="text-gray-700 mb-4">
-                  Zion Tech Group provides technology solutions and services including but not limited to:
-                </p>
+                  Zion Tech Group provides technology solutions and services including but not limited to: </p>
                 <ul className="list-disc pl-6 text-gray-700 mb-4">
                   <li>AI and machine learning solutions</li>
                   <li>Cybersecurity services</li>
@@ -48,8 +45,7 @@ const Terms: React.FC = () => {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">3. User Accounts and Registration</h2>
                 <p className="text-gray-700 mb-4">
-                  To access certain features of our Service, you may be required to create an account. You agree to:
-                </p>
+                  To access certain features of our Service, you may be required to create an account. You agree to: </p>
                 <ul className="list-disc pl-6 text-gray-700 mb-4">
                   <li>Provide accurate, current, and complete information</li>
                   <li>Maintain and update your account information</li>
@@ -65,8 +61,7 @@ const Terms: React.FC = () => {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. Acceptable Use Policy</h2>
                 <p className="text-gray-700 mb-4">
-                  You agree not to use the Service to:
-                </p>
+                  You agree not to use the Service to: </p>
                 <ul className="list-disc pl-6 text-gray-700 mb-4">
                   <li>Violate any applicable laws or regulations</li>
                   <li>Infringe upon the rights of others</li>
@@ -101,8 +96,7 @@ const Terms: React.FC = () => {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Payment Terms</h2>
                 <p className="text-gray-700 mb-4">
-                  For paid services, the following terms apply:
-                </p>
+                  For paid services, the following terms apply: </p>
                 <ul className="list-disc pl-6 text-gray-700 mb-4">
                   <li>All fees are due upon receipt unless otherwise specified</li>
                   <li>Prices are subject to change with 30 days notice</li>
@@ -138,8 +132,7 @@ const Terms: React.FC = () => {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Disclaimer of Warranties</h2>
                 <p className="text-gray-700 mb-4">
-                  The Service is provided on an "AS IS" and "AS AVAILABLE" basis. Zion Tech Group makes no warranties, expressed or implied, and hereby disclaims all warranties, including without limitation:
-                </p>
+                  The Service is provided on an "AS IS" and "AS AVAILABLE" basis. Zion Tech Group makes no warranties, expressed or implied, and hereby disclaims all warranties, including without limitation: </p>
                 <ul className="list-disc pl-6 text-gray-700 mb-4">
                   <li>Warranties of merchantability or fitness for a particular purpose</li>
                   <li>Warranties that the Service will be uninterrupted or error-free</li>
@@ -151,8 +144,7 @@ const Terms: React.FC = () => {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">11. Indemnification</h2>
                 <p className="text-gray-700 mb-4">
-                  You agree to defend, indemnify, and hold harmless Zion Tech Group and its officers, directors, employees, and agents from and against any claims, damages, obligations, losses, liabilities, costs, or debt arising from:
-                </p>
+                  You agree to defend, indemnify, and hold harmless Zion Tech Group and its officers, directors, employees, and agents from and against any claims, damages, obligations, losses, liabilities, costs, or debt arising from: </p>
                 <ul className="list-disc pl-6 text-gray-700 mb-4">
                   <li>Your use of the Service</li>
                   <li>Your violation of these Terms</li>
@@ -194,8 +186,7 @@ const Terms: React.FC = () => {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">15. Contact Information</h2>
                 <p className="text-gray-700 mb-4">
-                  If you have any questions about these Terms of Service, please contact us:
-                </p>
+                  If you have any questions about these Terms of Service, please contact us: </p>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <p className="text-gray-700 mb-2">
                     <strong>Zion Tech Group</strong>

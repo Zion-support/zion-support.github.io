@@ -1,84 +1,39 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react'
+import { Helmet  } from 'react-helmet-async'
+import { ArrowLeft, TrendingUp, CheckCircle  } from 'lucide-react'
 const CaseStudiesPage: React.FC = () => {
-  const caseStudies = [
-    {
-      id: 1,
-      title: 'E-commerce Platform Transformation',
-      company: 'TechRetail Inc.',
-      industry: 'E-commerce',
-      challenge: 'Low conversion rates and high customer acquisition costs',
-      solution: 'AI-powered personalization and dynamic pricing optimization',
-      results: {
-        roi: '340%',
-        conversion: '+85%',
-        costReduction: '-65%',
-        revenue: '+$2.3M'
-      },
-      image: '🛒',
-      description: 'Transformed a struggling e-commerce platform using AI-driven personalization and dynamic pricing strategies.'
-    },
-    {
-      id: 2,
-      title: 'Financial Services Automation',
-      company: 'FinTech Solutions',
-      industry: 'Financial Services',
-      challenge: 'Manual processes causing delays and errors in loan processing',
-      solution: 'AI-powered document processing and risk assessment automation',
-      results: {
-        roi: '280%',
-        processingTime: '-80%',
-        accuracy: '+95%',
-        costSavings: '$1.8M'
-      },
-      image: '🏦',
-      description: 'Automated complex financial processes using advanced AI algorithms for document processing and risk assessment.'
-    },
-    {
-      id: 3,
-      title: 'Healthcare Data Analytics',
-      company: 'MedTech Innovations',
-      industry: 'Healthcare',
-      challenge: 'Fragmented patient data and inefficient treatment planning',
-      solution: 'AI-powered data integration and predictive analytics for treatment optimization',
-      results: {
-        roi: '420%',
-        patientOutcomes: '+70%',
-        efficiency: '+90%',
-        costSavings: '$3.2M'
-      },
-      image: '🏥',
-      description: 'Revolutionized healthcare data management with AI-driven analytics and predictive treatment models.'
-    },
-    {
-      id: 4,
-      title: 'Manufacturing Optimization',
-      company: 'AutoParts Manufacturing',
-      industry: 'Manufacturing',
-      challenge: 'Production inefficiencies and quality control issues',
-      solution: 'AI-powered predictive maintenance and quality control automation',
-      results: {
-        roi: '310%',
-        efficiency: '+75%',
-        defects: '-90%',
-        downtime: '-85%'
-      },
-      image: '🏭',
-      description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.'
-    }
-  ]
   return (
-    <React.Fragment>
-      <Helmet>
+
+  const caseStudies = [{
+      id: 1, title: 'E-commerce Platform Transformation', company: 'TechRetail Inc.', industry: 'E-commerce', challenge: 'Low conversion rates and high customer acquisition costs', solution: 'AI-powered personalization and dynamic pricing optimization', results: {
+        roi: '340%', conversion: '+85%', costReduction: '-65%', revenue: '+$2.3M'
+      
+  );
+}, image: '🛒', description: 'Transformed a struggling e-commerce platform using AI-driven personalization and dynamic pricing strategies.'
+    }, {
+      id: 2, title: 'Financial Services Automation', company: 'FinTech Solutions', industry: 'Financial Services', challenge: 'Manual processes causing delays and errors in loan processing', solution: 'AI-powered document processing and risk assessment automation', results: {
+        roi: '280%', processingTime: '-80%', accuracy: '+95%', costSavings: '$1.8M'
+      }, image: '🏦', description: 'Automated complex financial processes using advanced AI algorithms for document processing and risk assessment.'
+    }, {
+      id: 3, title: 'Healthcare Data Analytics', company: 'MedTech Innovations', industry: 'Healthcare', challenge: 'Fragmented patient data and inefficient treatment planning', solution: 'AI-powered data integration and predictive analytics for treatment optimization', results: {
+        roi: '420%', patientOutcomes: '+70%', efficiency: '+90%', costSavings: '$3.2M'
+      }, image: '🏥', description: 'Revolutionized healthcare data management with AI-driven analytics and predictive treatment models.'
+    }, {
+      id: 4, title: 'Manufacturing Optimization', company: 'AutoParts Manufacturing', industry: 'Manufacturing', challenge: 'Production inefficiencies and quality control issues', solution: 'AI-powered predictive maintenance and quality control automation', results: {
+        roi: '310%', efficiency: '+75%', defects: '-90%', downtime: '-85%'
+      }, image: '🏭', description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.'
+    }]
+  return (
+    <React .Fragment></React>
+      <Helmet ></Helmet>
         <title>Case Studies - Zion Tech Group
         <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Header */}
         <header className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-4">
-            <Link to="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
-              <ArrowLeft className="w-4 h-4 mr-2" />
+            <Link to="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200"></Link>
+              <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
               Back to Home,
   
           </div>
@@ -98,10 +53,10 @@ const CaseStudiesPage: React.FC = () => {
                 and achieved remarkable ROI with our cutting-edge AI technology.
         {/* Case Studies Grid */}
         <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {caseStudies.map((study) => (
-                <div key={study.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200">
+                <div key={study.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover: shadow-xl transition-shadow duration-200">
                   <div className="p-8">
                     <div className="flex items-center mb-4">
                       <div className="text-4xl mr-4">{study.image}
@@ -111,14 +66,11 @@ const CaseStudiesPage: React.FC = () => {
                         <p className="text-gray-500 text-sm">{study.industry}
                     <p className="text-gray-600 mb-6">{study.description}
                     <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-2">Challenge:
-                      <p className="text-gray-600 text-sm">{study.challenge}
+                      <h4 className="font-semibold text-gray-900 mb-2">Challenge: <p className="text-gray-600 text-sm">{study.challenge}
                     <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-2">Solution:
-                      <p className="text-gray-600 text-sm">{study.solution}
+                      <h4 className="font-semibold text-gray-900 mb-2">Solution: <p className="text-gray-600 text-sm">{study.solution}
                     <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-4">Results:
-                      <div className="grid grid-cols-2 gap-4">
+                      <h4 className="font-semibold text-gray-900 mb-4">Results: <div className="grid grid-cols-2 gap-4">
                         <div className="text-center p-3 bg-green-50 rounded-lg">
                           <div className="text-2xl font-bold text-green-600">{study.results.roi}
                           <div className="text-sm text-gray-600">ROI
@@ -134,7 +86,7 @@ const CaseStudiesPage: React.FC = () => {
                         Learn More,
   
                       <div className="flex items-center text-green-600">
-                        <CheckCircle className="w-4 h-4 mr-1" />
+                        <CheckCircle className="w-4 h-4 mr-1" /></CheckCircle>
                         <span className="text-sm font-semibold">Verified Results
               ))}
         {/* Stats Section */}
@@ -147,7 +99,7 @@ const CaseStudiesPage: React.FC = () => {
               <p className="text-xl text-gray-600">
                 Our AI solutions deliver consistent, measurable results
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-4xl font-bold text-blue-600 mb-2">300%+
                 <div className="text-gray-600">Average ROI
@@ -174,7 +126,7 @@ const CaseStudiesPage: React.FC = () => {
                 to="/contact"
                 className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center">
                 Start Your Project
-                <TrendingUp className="w-4 h-4 ml-2" />
+                <TrendingUp className="w-4 h-4 ml-2" /></TrendingUp>
               <$2 />
                 to="/services"
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200">

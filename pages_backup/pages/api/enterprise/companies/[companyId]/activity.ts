@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { store } from '[^']*'
+import { store  } from '[^']*'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from "next"
-import { store } from "../../../../../utils/data/enterpriseStore"
+import { store  } from '../../../../../utils/data/enterpriseStore'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { companyId } = req.query
   if (!companyId |typeof companyId !== "string") {
@@ -16,17 +16,17 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ activity: [] })
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { store } from '../../../../../utils/data/enterpriseStore'
+import { store  } from '../../../../../utils/data/enterpriseStore'
 export default function handler(req, res) {
   try {
   const { companyId } = req.query
   if (!companyId || typeof companyId !== 'string') {
     return res.status(400).json({ error: 'companyId required' })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -35,17 +35,17 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ activity: [] })
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { store } from '../../../../../utils/data/enterpriseStore'
+import { store  } from '../../../../../utils/data/enterpriseStore'
 export default function handler(req, res) {
   try {
   const { companyId } = req.query
   if (!companyId || typeof companyId !== 'string') {
     return res.status(400).json({ error: 'companyId required' })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
   const company = store.getCompanyById (company_id)
@@ -55,7 +55,7 @@ export default function handler(req, res) {
   return res.status (200).json (company.activity)
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -65,15 +65,15 @@ export default function handler(req, res) {
 }
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }

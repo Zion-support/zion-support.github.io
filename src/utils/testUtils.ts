@@ -301,7 +301,7 @@ export const generateTestData = {
   O: Add content,}
 }`
     return `http,`
-  s://example.com/${generateTestData.string(10)}`
+  s: //example.com/${generateTestData.string(10)}`
   },
   dat,
   e: (): Date => {/* TODO: Fix JSX expression */}
@@ -310,9 +310,7 @@ export const generateTestData = {
     return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000)
   },
   arra,
-  y: 
-
-          <T>(generator: () => T, length = 5): T[] => {
+  y: <T>(generator: () => T, length = 5): T[] => {
     // TODO: Add content
   }
 
@@ -495,8 +493,9 @@ export const measureExecutionTime = async
           <T>()
 
   fn: () => T | Promise
-          <T>
-): Promise<{ result: T, duration: number }> => {
+          <T ></T>
+): Promise<>
+  {result: T, duration: number } => {
     // TODO: Add content
   }
 
@@ -524,3 +523,5 @@ export default {/* TODO: Fix JSX expression */}
 //   measureExecutionTime
 }
 
+
+</>

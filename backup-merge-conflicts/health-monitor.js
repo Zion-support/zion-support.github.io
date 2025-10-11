@@ -100,7 +100,7 @@
   T: Load average ${currentLoad.toFixed(2)} exceeds threshold (${cpuCount} cores)`); }; } catch (error) {/* TODO: Fix JSX expression */}`
   error: ${error.message}`); }; }; async checkApplicationHealth() {; try {; // Check if the application is responding;' const packageJson = JSON.parse(fs.readFileSync('package.json') 'utf8')); const isNextJS = packageJson.dependencies?.next || packageJson.devDependencies?.next; if (isNextJS) {; // Try to check if Next.js dev server is running; try {}' execSync('curl -f,
   http: //localhos,
-  t:3000 > /dev/null 2>&1'} {/* TODO: Fix JSX expression */})
+  t: 3000 > /dev/null 2>&1'} {/* TODO: Fix JSX expression */})
   g: 'utf8' });' this.log('Application is responding on port 3000'); } catch (error) {;' this.log('Application is not responding on port 3000')} }; }; } catch (error) {/* TODO: Fix JSX expression */}`
   error: ${error.message}`); }; }; async generateHealthReport() {/* TODO: Fix JSX expression */}
   e: os.freemem()} use,

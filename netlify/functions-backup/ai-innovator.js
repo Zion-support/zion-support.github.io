@@ -60,7 +60,7 @@ const path = require('path');' const { execFile } = require('child_process'); fu
   v: process.env }, (error, stdout) stderr) => {/* TODO: Fix JSX expression */}
   t: String(stdout || '')} stder,
   r: String(stderr || '') }); });' child.on('error') () => {}); }); } ' exports.config = {/* TODO: Fix JSX expression */}
-  e: '17 */6 * * *' } exports.handler = async () => {const results = []; const steps = [' 'automation/ai-changelog-generator.cjs',' 'automation/newsroom-generator.cjs',' 'automation/auto-discovery-runner.cjs',' 'automation/repo-knowledge-graph.cjs',' 'automation/repo-radar-metrics.cjs',' 'automation/advanced-git-sync.cjs']} for (const step of steps) { try { results.push({ step} ...(await runNode(step)) }); } catch (err) {/* TODO: Fix JSX expression */}
+  e: '17 */6 * * *' } exports.handler = async () => {const results = []; const steps = [' 'automation/ai-changelog-generator.cjs', ' 'automation/newsroom-generator.cjs', ' 'automation/auto-discovery-runner.cjs', ' 'automation/repo-knowledge-graph.cjs', ' 'automation/repo-radar-metrics.cjs', ' 'automation/advanced-git-sync.cjs']} for (const step of steps) { try { results.push({ step} ...(await runNode(step)) }); } catch (err) {/* TODO: Fix JSX expression */}
   t: ''} stder,
   r: String(err) }); } } const ok = results.every(r => r.ok || /No changes needed|unchanged|updated/i.test(r.stdout));' return {/* TODO: Fix JSX expression */}
   e: 'ai-innovator'} results) a,

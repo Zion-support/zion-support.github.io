@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface EmergingTechnologyService {
   id: string
   name: string
@@ -39,27 +39,10 @@ export interface EmergingTechnologyService {
   rating: number
   reviews: number
 }
-export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[] = [
-  // Quantum Computing as a Service
+export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[] = [// Quantum Computing as a Service
   {
-    id: 'quantum-computing-as-a-service',
-    name: 'Quantum Computing as a Service',
-    tagline: 'Access to quantum computing power through the cloud',
-    price: '$999',
-    period: '/month',
-    description: 'Advanced quantum computing platform that provides access to quantum processors, quantum algorithms, and quantum software development tools.',
-    features: [
-      'Access to quantum processors (IBM, Google, Rigetti)',
-      'Quantum algorithm library',
-      'Quantum software development kit',
-      'Real-time quantum circuit execution',
-      'Quantum error correction',
-      'Hybrid quantum-classical computing',
-      'Quantum machine learning algorithms',
-      'Quantum cryptography tools',
-      'Performance monitoring and analytics',
-      'Expert quantum consulting'
-    ],
+    id: 'quantum-computing-as-a-service', name: 'Quantum Computing as a Service', tagline: 'Access to quantum computing power through the cloud', price: '$999', period: '/month', description: 'Advanced quantum computing platform that provides access to quantum processors, quantum algorithms, and quantum software development tools.', features: [
+      'Access to quantum processors (IBM, Google, Rigetti)', 'Quantum algorithm library', 'Quantum software development kit', 'Real-time quantum circuit execution', 'Quantum error correction', 'Hybrid quantum-classical computing', 'Quantum machine learning algorithms', 'Quantum cryptography tools', 'Performance monitoring and analytics', 'Expert quantum consulting'],
     popular: true,
     icon: '⚛️',
     color: 'from-indigo-600 to-purple-600',
@@ -100,18 +83,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     price: '$399',
     period: '/month',
     description: 'Advanced blockchain platform that provides infrastructure, development tools, and deployment services for enterprise blockchain applications.',
-    features: [
-      'Multi-blockchain support (Ethereum, Polygon, Solana)',
-      'Smart contract development tools',
-      'Blockchain deployment automation',
-      'Performance monitoring and analytics',
-      'Security auditing and testing',
-      'Cross-chain interoperability',
-      'Scalability solutions',
-      'Developer SDK and APIs',
-      'Compliance and governance tools',
-      '24/7 blockchain monitoring'
-    ],
+    features: ['Multi-blockchain support (Ethereum, Polygon, Solana)', 'Smart contract development tools', 'Blockchain deployment automation', 'Performance monitoring and analytics', 'Security auditing and testing', 'Cross-chain interoperability', 'Scalability solutions', 'Developer SDK and APIs', 'Compliance and governance tools', '24/7 blockchain monitoring'],
     popular: true,
     icon: '🔗',
     color: 'from-green-600 to-emerald-600',
@@ -152,18 +124,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     price: '$299',
     period: '/month',
     description: 'Advanced edge computing platform that orchestrates distributed computing resources, optimizes performance, and provides real-time data processing capabilities.',
-    features: [
-      'Distributed edge node management',
-      'Real-time data processing',
-      'Load balancing and optimization',
-      'Edge AI model deployment',
-      'Performance monitoring and analytics',
-      'Security and compliance tools',
-      'Multi-cloud edge integration',
-      'Custom edge applications',
-      'Edge-to-cloud synchronization',
-      'Advanced orchestration dashboard'
-    ],
+    features: ['Distributed edge node management', 'Real-time data processing', 'Load balancing and optimization', 'Edge AI model deployment', 'Performance monitoring and analytics', 'Security and compliance tools', 'Multi-cloud edge integration', 'Custom edge applications', 'Edge-to-cloud synchronization', 'Advanced orchestration dashboard'],
     popular: true,
     icon: '🌐',
     color: 'from-blue-600 to-cyan-600',
@@ -204,18 +165,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     price: '$599',
     period: '/month',
     description: 'Advanced metaverse platform that provides tools for creating, deploying, and managing immersive virtual worlds and experiences.',
-    features: [
-      '3D world building tools',
-      'Avatar creation and customization',
-      'Real-time collaboration tools',
-      'VR/AR integration',
-      'Blockchain integration',
-      'Social features and networking',
-      'Content monetization tools',
-      'Performance optimization',
-      'Multi-platform deployment',
-      'Advanced analytics dashboard'
-    ],
+    features: ['3D world building tools', 'Avatar creation and customization', 'Real-time collaboration tools', 'VR/AR integration', 'Blockchain integration', 'Social features and networking', 'Content monetization tools', 'Performance optimization', 'Multi-platform deployment', 'Advanced analytics dashboard'],
     popular: true,
     icon: '🌍',
     color: 'from-purple-600 to-pink-600',
@@ -256,18 +206,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     price: '$799',
     period: '/month',
     description: 'Advanced space technology platform that provides satellite management, space data analytics, and space infrastructure solutions.',
-    features: [
-      'Satellite constellation management',
-      'Space data analytics and processing',
-      'Ground station automation',
-      'Orbital mechanics optimization',
-      'Space weather monitoring',
-      'Satellite communication tools',
-      'Space debris tracking',
-      'Launch vehicle integration',
-      'Regulatory compliance tools',
-      'Advanced space analytics dashboard'
-    ],
+    features: ['Satellite constellation management', 'Space data analytics and processing', 'Ground station automation', 'Orbital mechanics optimization', 'Space weather monitoring', 'Satellite communication tools', 'Space debris tracking', 'Launch vehicle integration', 'Regulatory compliance tools', 'Advanced space analytics dashboard'],
     popular: true,
     icon: '🚀',
     color: 'from-gray-600 to-slate-600',

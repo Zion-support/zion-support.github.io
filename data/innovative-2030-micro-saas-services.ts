@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface Innovative2030MicroSaasService {
   id: string
   name: string
@@ -39,27 +39,10 @@ export interface Innovative2030MicroSaasService {
   rating: number
   reviews: number
 }
-export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] = [
-  // AI-Powered Business Intelligence
+export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] = [// AI-Powered Business Intelligence
   {
-    id: 'ai-business-intelligence-suite',
-    name: 'AI Business Intelligence Suite',
-    tagline: 'Transform data into actionable insights with AI-powered analytics',
-    price: '$299',
-    period: '/month',
-    description: 'Advanced AI-powered business intelligence platform that automatically analyzes your data, identifies trends, and provides actionable insights to drive business growth.',
-    features: [
-      'AI-powered predictive analytics',
-      'Real-time data visualization',
-      'Automated report generation',
-      'Natural language query interface',
-      'Custom dashboard builder',
-      'Data source integration (100+ connectors)',
-      'Advanced machine learning models',
-      'Collaborative analytics workspace',
-      'Mobile-responsive design',
-      'API access for custom integrations'
-    ],
+    id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite', tagline: 'Transform data into actionable insights with AI-powered analytics', price: '$299', period: '/month', description: 'Advanced AI-powered business intelligence platform that automatically analyzes your data, identifies trends, and provides actionable insights to drive business growth.', features: [
+      'AI-powered predictive analytics', 'Real-time data visualization', 'Automated report generation', 'Natural language query interface', 'Custom dashboard builder', 'Data source integration (100+ connectors)', 'Advanced machine learning models', 'Collaborative analytics workspace', 'Mobile-responsive design', 'API access for custom integrations'],
     popular: true,
     icon: '📊',
     color: 'from-blue-500 to-cyan-600',
@@ -100,18 +83,7 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     price: '$599',
     period: '/month',
     description: 'Next-generation cybersecurity platform that implements quantum-resistant cryptographic algorithms to protect your data against both current and future quantum computing threats.',
-    features: [
-      'Quantum-resistant encryption algorithms',
-      'Post-quantum cryptography implementation',
-      'Real-time threat detection',
-      'Zero-trust security architecture',
-      'Advanced endpoint protection',
-      'Cloud security monitoring',
-      'Compliance automation (SOC2, ISO27001)',
-      'Security incident response automation',
-      'Multi-factor authentication',
-      'Security awareness training platform'
-    ],
+    features: ['Quantum-resistant encryption algorithms', 'Post-quantum cryptography implementation', 'Real-time threat detection', 'Zero-trust security architecture', 'Advanced endpoint protection', 'Cloud security monitoring', 'Compliance automation (SOC2, ISO27001)', 'Security incident response automation', 'Multi-factor authentication', 'Security awareness training platform'],
     popular: true,
     icon: '🔒',
     color: 'from-purple-500 to-pink-600',
@@ -152,18 +124,7 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     price: '$199',
     period: '/month',
     description: 'Comprehensive customer experience platform that uses AI to personalize interactions, predict customer needs, and optimize every touchpoint across the customer journey.',
-    features: [
-      'AI-powered personalization engine',
-      'Customer journey mapping',
-      'Predictive customer analytics',
-      'Omnichannel experience management',
-      'Real-time customer insights',
-      'Automated customer segmentation',
-      'A/B testing optimization',
-      'Customer feedback analysis',
-      'Loyalty program management',
-      'Customer success automation'
-    ],
+    features: ['AI-powered personalization engine', 'Customer journey mapping', 'Predictive customer analytics', 'Omnichannel experience management', 'Real-time customer insights', 'Automated customer segmentation', 'A/B testing optimization', 'Customer feedback analysis', 'Loyalty program management', 'Customer success automation'],
     popular: true,
     icon: '🎯',
     color: 'from-green-500 to-emerald-600',
@@ -204,18 +165,7 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     price: '$399',
     period: '/month',
     description: 'Blockchain-powered supply chain platform that provides complete transparency, traceability, and compliance across your entire supply chain network.',
-    features: [
-      'Blockchain-based traceability',
-      'Real-time supply chain monitoring',
-      'Smart contract automation',
-      'Compliance documentation',
-      'Supplier performance tracking',
-      'Quality control automation',
-      'Sustainability metrics',
-      'Risk assessment tools',
-      'Multi-party collaboration',
-      'Mobile app for field workers'
-    ],
+    features: ['Blockchain-based traceability', 'Real-time supply chain monitoring', 'Smart contract automation', 'Compliance documentation', 'Supplier performance tracking', 'Quality control automation', 'Sustainability metrics', 'Risk assessment tools', 'Multi-party collaboration', 'Mobile app for field workers'],
     popular: false,
     icon: '⛓️',
     color: 'from-orange-500 to-red-600',
@@ -256,18 +206,7 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     price: '$149',
     period: '/month',
     description: 'Comprehensive HR automation platform that uses AI to streamline recruitment, employee management, performance tracking, and compliance processes.',
-    features: [
-      'AI-powered candidate screening',
-      'Automated interview scheduling',
-      'Performance analytics',
-      'Employee engagement monitoring',
-      'Compliance automation',
-      'Payroll integration',
-      'Benefits management',
-      'Training program automation',
-      'Diversity & inclusion analytics',
-      'Mobile HR app'
-    ],
+    features: ['AI-powered candidate screening', 'Automated interview scheduling', 'Performance analytics', 'Employee engagement monitoring', 'Compliance automation', 'Payroll integration', 'Benefits management', 'Training program automation', 'Diversity & inclusion analytics', 'Mobile HR app'],
     popular: false,
     icon: '👥',
     color: 'from-indigo-500 to-blue-600',
@@ -308,18 +247,7 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     price: '$899',
     period: '/month',
     description: 'Cutting-edge platform that combines quantum computing with machine learning to solve complex problems that are intractable for classical computers.',
-    features: [
-      'Quantum algorithm optimization',
-      'Hybrid quantum-classical ML',
-      'Quantum neural networks',
-      'Optimization problem solving',
-      'Financial modeling',
-      'Drug discovery simulation',
-      'Climate modeling',
-      'Quantum error correction',
-      'Real-time quantum simulation',
-      'API for custom applications'
-    ],
+    features: ['Quantum algorithm optimization', 'Hybrid quantum-classical ML', 'Quantum neural networks', 'Optimization problem solving', 'Financial modeling', 'Drug discovery simulation', 'Climate modeling', 'Quantum error correction', 'Real-time quantum simulation', 'API for custom applications'],
     popular: true,
     icon: '⚛️',
     color: 'from-cyan-500 to-blue-600',
@@ -360,18 +288,7 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     price: '$249',
     period: '/month',
     description: 'Comprehensive edge computing platform that enables you to deploy, manage, and scale applications across distributed edge locations with intelligent orchestration.',
-    features: [
-      'Multi-edge location management',
-      'Intelligent workload distribution',
-      'Real-time performance monitoring',
-      'Automated scaling',
-      'Edge security management',
-      'Data synchronization',
-      'API gateway',
-      'Edge analytics',
-      'Mobile app management',
-      'IoT device integration'
-    ],
+    features: ['Multi-edge location management', 'Intelligent workload distribution', 'Real-time performance monitoring', 'Automated scaling', 'Edge security management', 'Data synchronization', 'API gateway', 'Edge analytics', 'Mobile app management', 'IoT device integration'],
     popular: false,
     icon: '🌐',
     color: 'from-teal-500 to-green-600',

@@ -2,7 +2,7 @@
 /**
  * Targeted Latest Merge - Focuses on specific new branches
  * This script targets only the specific new branches we identified
- */ import { execSync } from 'child_process'
+ */ import { execSync  } from 'child_process'
 import fs from 'fs'
 //Step 1: Ensure we're on main,
 try {,
@@ -12,30 +12,13 @@ try {,
   }
 
 //Step 2: Target specific new branches we identified,
-const targetBranches = [,
-//Step,
-  1: Ensure we're on main,
-try {/* TODO: Fix JSX expression */}
+const targetBranches = [//Step, 1: Ensure we're on main, try {/* TODO: Fix JSX expression */}
   o: 'inherit' })
 } catch (error) {/* TODO: Fix JSX expression */}
 }
 
-//Step,
-  2: Target specific new branches we identified,
-const targetBranches = [
-  'cursor/fix-errors-and-merge-to-main-016f',
-  'cursor/fix-errors-and-merge-to-main-073a',
-  'cursor/fix-errors-and-merge-to-main-0ebe',
-  'cursor/fix-errors-and-merge-to-main-0fc7',
-  'cursor/fix-errors-and-merge-to-main-19db',
-  'cursor/fix-errors-and-merge-to-main-5597',
-  'cursor/fix-errors-and-merge-to-main-77 cd',
-  'cursor/fix-errors-and-merge-to-main-8510',
-  'cursor/fix-errors-and-merge-to-main-9658',
-  'cursor/fix-errors-and-merge-to-main-afb8',
-  'cursor/fix-errors-and-merge-to-main-b319',
-  'cursor/fix-errors-and-merge-to-main-cf0 f',
-  'cursor/fix-errors-and-merge-to-main-e15 f']
+//Step, 2: Target specific new branches we identified, const targetBranches = [
+  'cursor/fix-errors-and-merge-to-main-016f', 'cursor/fix-errors-and-merge-to-main-073a', 'cursor/fix-errors-and-merge-to-main-0ebe', 'cursor/fix-errors-and-merge-to-main-0fc7', 'cursor/fix-errors-and-merge-to-main-19db', 'cursor/fix-errors-and-merge-to-main-5597', 'cursor/fix-errors-and-merge-to-main-77 cd', 'cursor/fix-errors-and-merge-to-main-8510', 'cursor/fix-errors-and-merge-to-main-9658', 'cursor/fix-errors-and-merge-to-main-afb8', 'cursor/fix-errors-and-merge-to-main-b319', 'cursor/fix-errors-and-merge-to-main-cf0 f', 'cursor/fix-errors-and-merge-to-main-e15 f']
 //Step 3: Enhanced conflict resolution function,
 function resolveConflictsAndMerge(branchName) {
 ,

@@ -206,7 +206,7 @@ export const cachingMiddleware = (ttl: number): Middleware => {// TODO: Add cont
   }
 }
   const cache = new Map
-          <string, { data: unknown, timestamp: number }>()
+          <string, >{data: unknown, timestamp: number }()
 if (context.request.method !== 'GET') {
     const cached = cache.get(key)
   }
@@ -225,8 +225,7 @@ if (context.request.method !== 'GET') {
 /**
  * Caching middleware
  */
-export const cachingMiddleware = (ttl: number): Middleware => {
-  const cache = new Map<string, { data: unknown, timestamp: number }>()
+export const cachingMiddleware = (ttl: number): Middleware => >{const cache = new Map<string, { data: unknown, timestamp: number }()
   return async (context, next) => {
     if (context.request.method !== 'GET') {
       return await next()
@@ -277,7 +276,7 @@ export const timeoutMiddleware = (timeoutMs: number): Middleware => {return awai
  * Request transformation middleware
 export const transformRequestMiddleware = ()
   transformer: (context: MiddlewareContext) => MiddlewareContext | Promise,
-          <MiddlewareContext>
+          <MiddlewareContext ></MiddlewareContext>
 ): Middleware => {
     return await transformer(result)
   }
@@ -291,7 +290,7 @@ export function createDefaultMiddlewareChain(): MiddlewareExecutor {
  * Request transformation middleware
  */
 export const transformRequestMiddleware = (
-  transformer: (context: MiddlewareContext) => MiddlewareContext | Promise<MiddlewareContext>
+  transformer: (context: MiddlewareContext) => MiddlewareContext | Promise<MiddlewareContext ></MiddlewareContext>
 ): Middleware => {
     return async (context, next) => {
     const transformedContext = await transformer(context)

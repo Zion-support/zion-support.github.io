@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface RevolutionaryAIService2026 {
   id: string
   name: string
@@ -39,27 +39,10 @@ export interface RevolutionaryAIService2026 {
   rating: number
   reviews: number
 }
-export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
-  // AI Multimodal Fusion Platform
+export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [// AI Multimodal Fusion Platform
   {
-    id: 'ai-multimodal-fusion-platform',
-    name: 'AI Multimodal Fusion Platform',
-    tagline: 'Unify text, image, audio, and video with AI intelligence',
-    price: '$2,499',
-    period: '/month',
-    description: 'Revolutionary AI platform that seamlessly integrates and processes multiple data types (text, image, audio, video) to create unified, intelligent insights and applications.',
-    features: [
-      'Multi-modal data processing',
-      'Real-time fusion algorithms',
-      'Advanced pattern recognition',
-      'Cross-modal learning',
-      'Custom fusion models',
-      'API integration capabilities',
-      'Real-time analytics',
-      'Advanced visualization',
-      'Custom training tools',
-      '24/7 technical support'
-    ],
+    id: 'ai-multimodal-fusion-platform', name: 'AI Multimodal Fusion Platform', tagline: 'Unify text, image, audio, and video with AI intelligence', price: '$2, 499', period: '/month', description: 'Revolutionary AI platform that seamlessly integrates and processes multiple data types (text, image, audio, video) to create unified, intelligent insights and applications.', features: [
+      'Multi-modal data processing', 'Real-time fusion algorithms', 'Advanced pattern recognition', 'Cross-modal learning', 'Custom fusion models', 'API integration capabilities', 'Real-time analytics', 'Advanced visualization', 'Custom training tools', '24/7 technical support'],
     popular: true,
     icon: '🔄',
     color: 'from-blue-500 to-indigo-600',
@@ -100,18 +83,7 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
     price: '$4,999',
     period: '/month',
     description: 'Complete AI-powered business automation platform that manages operations, decision-making, customer interactions, and strategic planning with minimal human intervention.',
-    features: [
-      'Complete business automation',
-      'AI decision-making engine',
-      'Customer interaction management',
-      'Strategic planning automation',
-      'Financial management AI',
-      'Supply chain optimization',
-      'Marketing automation',
-      'HR process automation',
-      'Real-time monitoring',
-      'Custom AI models'
-    ],
+    features: ['Complete business automation', 'AI decision-making engine', 'Customer interaction management', 'Strategic planning automation', 'Financial management AI', 'Supply chain optimization', 'Marketing automation', 'HR process automation', 'Real-time monitoring', 'Custom AI models'],
     popular: true,
     icon: '🏢',
     color: 'from-emerald-500 to-teal-600',
@@ -152,18 +124,7 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
     price: '$1,999',
     period: '/month',
     description: 'Revolutionary AI platform that generates unlimited creative content including art, music, literature, videos, and interactive experiences with human-level creativity.',
-    features: [
-      'Unlimited content generation',
-      'Multi-format creativity',
-      'Style customization',
-      'Collaborative creation tools',
-      'Real-time generation',
-      'Custom AI models',
-      'API access',
-      'Advanced analytics',
-      'Content management',
-      '24/7 support'
-    ],
+    features: ['Unlimited content generation', 'Multi-format creativity', 'Style customization', 'Collaborative creation tools', 'Real-time generation', 'Custom AI models', 'API access', 'Advanced analytics', 'Content management', '24/7 support'],
     popular: true,
     icon: '🎨',
     color: 'from-purple-500 to-pink-600',
@@ -204,18 +165,7 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
     price: '$3,499',
     period: '/month',
     description: 'Advanced AI healthcare platform that provides personalized medical support, monitoring, diagnosis assistance, and health recommendations with 24/7 availability.',
-    features: [
-      '24/7 healthcare support',
-      'Personalized health monitoring',
-      'AI diagnosis assistance',
-      'Health recommendations',
-      'Emergency response system',
-      'Integration with medical devices',
-      'Compliance certifications',
-      'Advanced analytics',
-      'Custom health models',
-      'Medical professional support'
-    ],
+    features: ['24/7 healthcare support', 'Personalized health monitoring', 'AI diagnosis assistance', 'Health recommendations', 'Emergency response system', 'Integration with medical devices', 'Compliance certifications', 'Advanced analytics', 'Custom health models', 'Medical professional support'],
     popular: true,
     icon: '🏥',
     color: 'from-green-500 to-emerald-600',
@@ -256,18 +206,7 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
     price: '$3,999',
     period: '/month',
     description: 'Revolutionary logistics platform using quantum computing to optimize supply chains, route planning, inventory management, and delivery scheduling with unprecedented accuracy.',
-    features: [
-      'Quantum route optimization',
-      'Supply chain optimization',
-      'Inventory management',
-      'Delivery scheduling',
-      'Real-time tracking',
-      'Predictive analytics',
-      'Custom optimization models',
-      'API integration',
-      'Advanced reporting',
-      '24/7 monitoring'
-    ],
+    features: ['Quantum route optimization', 'Supply chain optimization', 'Inventory management', 'Delivery scheduling', 'Real-time tracking', 'Predictive analytics', 'Custom optimization models', 'API integration', 'Advanced reporting', '24/7 monitoring'],
     popular: true,
     icon: '🚚',
     color: 'from-orange-500 to-red-600',

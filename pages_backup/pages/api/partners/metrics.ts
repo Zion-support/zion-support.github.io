@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next"
-import { getServerSupabase } from "../../../utils/supabase/server"
+import { getServerSupabase  } from '../../../utils/supabase/server'
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
@@ -22,7 +22,7 @@ export default async function handler(
         currency: "USD"
       })
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { getServerSupabase } from '../../../utils/supabase/server'
+import { getServerSupabase  } from '../../../utils/supabase/server'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const code = (req.query.code as string)?.toLowerCase()
   if (!code) return res.status($1).json({$2})
@@ -85,22 +85,22 @@ export default async function handler(req, res) {
     } else {
       res.status(405).end('Method Not Allowed')
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
     res.status(500).json({ error: 'Internal server error' })
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { getServerSupabase } from '../../../utils/supabase/server'
+import { getServerSupabase  } from '../../../utils/supabase/server'
 export default async function handler(req, res) {
   try {
   const code = (req.query.code as string)?.toLowerCase()
@@ -112,15 +112,15 @@ export default async function handler(req, res) {
         payout_amount: 210,
         currency: 'USD'})
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -174,11 +174,10 @@ export default async function handler(req, res) {
 }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
     return res.status (500).json ({ error: e?.message })
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

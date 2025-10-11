@@ -1,35 +1,22 @@
 import fs from 'fs'
-import { glob } from 'glob'
+import { glob  } from 'glob'
 // Very specific and safe JSX fixes
-const fixes = [
-  // Fix corrupted closing tags
+const fixes = [// Fix corrupted closing tags
   {
-    pattern: /<\/di><\/div>/g,
-    replacement: '</div>'
-  },
-  {
-    pattern: /<\/Ap><\/App>/g,
-    replacement: '</App>'
-  },
-  {
-    pattern: /<\/HomePag><\/HomePage>/g,
-    replacement: '</HomePage>'
-  },
-  {
-    pattern: /<\/LoadingSpinne><\/LoadingSpinner>/g,
-    replacement: '</LoadingSpinner>'
-  },
-  {
-    pattern: /<\/Reac><\/React>/g,
-    replacement: '</React>'
-  },
-  // Fix other corrupted patterns
-  {
-    pattern: /<\/\w+><\/\w+>/g,
-    replacement: (match) => {
+    pattern: /<\/di><\/div>/g, replacement: '</div>'
+  }, {
+    pattern: /<\/Ap><\/App>/g, replacement: '</App>'
+  }, {
+    pattern: /<\/HomePag><\/HomePage>/g, replacement: '</HomePage>'
+  }, {
+    pattern: /<\/LoadingSpinne><\/LoadingSpinner>/g, replacement: '</LoadingSpinner>'
+  }, {
+    pattern: /<\/Reac><\/React>/g, replacement: '</React>'
+  }, // Fix other corrupted patterns
+  >{pattern: /<\/\w+><\/\w+>/g, replacement: (match) => {
       // Extract the first closing tag
       const firstTag = match.match(/<\/(\w+)>/)[1]
-      return `</${firstTag}>`
+      return `</${firstTag}`
     }
   }
 ]
@@ -62,11 +49,7 @@ function fixFile(filePath) {
 // Main function
 async function main() {
   // Focus on the most problematic files first
-  const priorityFiles = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'App.tsx'
-  ]
+  const priorityFiles = ['app/**/*.tsx', 'app/**/*.ts', 'App.tsx']
   let allFiles = []
   for (const pattern of priorityFiles) {
     const files = await glob(pattern, {

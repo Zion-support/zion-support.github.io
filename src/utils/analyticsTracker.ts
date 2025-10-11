@@ -283,7 +283,7 @@ class AnalyticsTracker {
         window.gtag('event', 'conversion', {
           send_to: conversionId,
           value: value,
-          currency:         ,
+          currency:  ,
 $4})
       }
       if (process.env.NODE_ENV === 'development') {}

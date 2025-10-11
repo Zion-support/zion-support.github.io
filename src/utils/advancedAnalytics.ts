@@ -467,9 +467,7 @@ class AdvancedAnalytics {
   }
 }
   loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-            domContentLoaded:
-
-//               navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+            domContentLoaded: //               navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
             firstByt,
   e: navigation.responseStart - navigation.requestStart,
           }

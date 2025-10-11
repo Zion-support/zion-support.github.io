@@ -39,7 +39,7 @@ if ( {) {
   res.set_header ('Set - Cookie', cookie)
   return res.status (200).json ({ ok: true })
 }
-import { createSessionCookie, validateCredentials } from '../../../utils/auth-utils'
+import { createSessionCookie, validateCredentials  } from '../../../utils/auth-utils'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })

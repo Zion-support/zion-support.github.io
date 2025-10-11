@@ -59,7 +59,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
                 Enterprise AI Solutions
             </div>"
             < className="text-5xl,"$2 />
-  md:text-7xl font-extrabold text-white mb-8">
+  md: text-7xl font-extrabold text-white mb-8">
               Enterprise Solutions</$1>"
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Trusted by 500+ Fortune 500 Companies Worldwide</$1>"
@@ -69,20 +69,20 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               uptime with enterprise-grade security and compliance.
             </p>"
             < className="flex flex-col,"$2 />
-  sm:flex-row gap-4 justify-center">
+  sm: flex-row gap-4 justify-center">
               <Link></Link>"
                 href="/contact""
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold,
-  hover:from-cyan-600,
-  hover:to-blue-700 transition-all duration-300 transform,"
-  hover:scale-105"
+  hover: from-cyan-600,
+  hover: to-blue-700 transition-all duration-300 transform,"
+  hover: scale-105"
               >
                 Get Enterprise Demo
               <Link></Link>"
                 href="/services""
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold,
-  hover:bg-cyan-400,"
-  hover:text-slate-900 transition-all duration-300"
+  hover: bg-cyan-400,"
+  hover: text-slate-900 transition-all duration-300"
               >
                 View All Services
         </div>,
@@ -98,7 +98,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
       <section className="py-20 bg-black/20"></section>"
         <div className="container mx-auto px-4"></div>"
           < className="grid grid-cols-2,"$2 />
-  md:grid-cols-4 gap-8"></div>"
+  md: grid-cols-4 gap-8"></div>"
             <div className="text-center"></div>"
               <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>"
               <div className="text-gray-300">Fortune 500 Clients
@@ -143,10 +143,10 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               <p className="text-gray-300 mb-6">
 "
           < className="grid,$2 />
-  md:grid-cols-2,"
-  lg:grid-cols-3 gap-8"></div>"
+  md: grid-cols-2,"
+  lg: grid-cols-3 gap-8"></div>"
             < className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20,"$2 />
-  hover:bg-white/20 transition-all duration-300"></div>"
+  hover: bg-white/20 transition-all duration-300"></div>"
               <div className="text-4xl mb-4">🤖</div>"
               <h3 className="text-2xl font-bold text-white mb-4">
                 Autonomous Operations</$1>"
@@ -165,7 +165,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               <p className="text-gray-300 mb-6">
 "
             < className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20,"$2 />
-  hover:bg-white/20 transition-all duration-300"></div>"
+  hover: bg-white/20 transition-all duration-300"></div>"
               <div className="text-4xl mb-4">🧠</div>"
               <h3 className="text-2xl font-bold text-white mb-4">
                 Quantum Intelligence</$1>"
@@ -184,7 +184,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               <p className="text-gray-300 mb-6">
 "
             < className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20,"$2 />
-  hover:bg-white/20 transition-all duration-300"></div>"
+  hover: bg-white/20 transition-all duration-300"></div>"
               <div className="text-4xl mb-4">🔒</div>"
               <h3 className="text-2xl font-bold text-white mb-4">
                 Enterprise Security</$1>"
@@ -229,20 +229,20 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               to achieve unprecedented growth and efficiency.
             </p>"
             < className="flex flex-col,"$2 />
-  sm:flex-row gap-4 justify-center">
+  sm: flex-row gap-4 justify-center">
               <Link></Link>"
                 href="/contact""
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold,
-  hover:from-cyan-600,
-  hover:to-blue-700 transition-all duration-300 transform,"
-  hover:scale-105"
+  hover: from-cyan-600,
+  hover: to-blue-700 transition-all duration-300 transform,"
+  hover: scale-105"
               >
                 Schedule Enterprise Demo
               <Link></Link>"
                 href="/services""
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold,
-  hover:bg-cyan-400,"
-  hover:text-slate-900 transition-all duration-300"
+  hover: bg-cyan-400,"
+  hover: text-slate-900 transition-all duration-300"
               >
                 Explore Solutions
       </section>,

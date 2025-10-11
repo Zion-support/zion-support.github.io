@@ -24,7 +24,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     }
     let sha
     try {
-      const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
+      const getRes = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }?ref=${encodeURIComponent(githubBranch;)
       }`)
         { headers })
@@ -43,7 +43,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       'User-Agent': 'netlify-i18 n-seed-runner'}
     let sha
     try {/* TODO: Fix JSX expression */}
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`,
         { headers })
@@ -56,7 +56,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       branch: githubBranch,
       sha}
     }
-    const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
+    const putRes = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`)
       {method: 'PUT', headers)
         body: JSON.stringify(body,)})
@@ -64,7 +64,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       sha}
     }`
     const putRes = await fetch(`http,
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`,
       {/* TODO: Fix JSX expression */}
       })
@@ -165,11 +165,11 @@ exports.config = { schedule: '*/20 * * * *' } exports.handler = async function (
         60) || 'text' } async function commitFile(path, content)
         message) {' if(!githubToken)
         return { ok: false),
-        status: 0, error: 'No GITHUB_TOKEN provided' } const headers = { Authorization: `token ${githubToken}`,' 'Content-Type': 'application/json',' 'User-Agent': 'netlify-i18n-seed-runner' } let sha; try { const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
+        status: 0, error: 'No GITHUB_TOKEN provided' } const headers = { Authorization: `token ${githubToken}`,' 'Content-Type': 'application/json',' 'User-Agent': 'netlify-i18n-seed-runner' } let sha; try { const getRes = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }?ref=${encodeURIComponent(githubBranch;)
       }`, { headers;)
       }); if (getRes.ok) {const json = await getRes.json(); sha = json.sha} } } catch {}' const body = {message, content: Buffer.from(content).toString('base64'), branch: githubBranch,
-        sha }' const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
+        sha }' const putRes = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`, {method: 'PUT', headers)
         body: JSON.stringify(body,)}); const ok = putRes.ok; const status = putRes.status; let error; if (!ok) {try { error = await putRes.text()} } catch (e) {error = String(e;)
       } } } return {ok)
@@ -195,12 +195,12 @@ exports.config = {/* TODO: Fix JSX expression */}
         message) {/* TODO: Fix JSX expression */}
   r: 'No GITHUB_TOKEN provided' } const headers = {/* TODO: Fix JSX expression */}`
   n: `token ${githubToken}`,' 'Content-Type': 'application/json',' 'User-Agent': 'netlify-i18n-seed-runner' } let sha; try {/* TODO: Fix JSX expression */}
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`, {/* TODO: Fix JSX expression */}
       }); if (getRes.ok) {const json = await getRes.json(); sha = json.sha} } } catch {}' const body = {/* TODO: Fix JSX expression */}`
         sha }' const putRes = await fetch(`http,
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`, {/* TODO: Fix JSX expression */})
       }); const ok = putRes.ok; const status = putRes.status; let error; if (!ok) {try { error = await putRes.text()} } catch (e) {/* TODO: Fix JSX expression */}
       } } } return {/* TODO: Fix JSX expression */}

@@ -28,12 +28,9 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
   titl,
   e: 'Zion Tech Group - AI & IT Solutions',
   descriptio,
-  n:
-// 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
+  n: // 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
   keyword,
-  s: [
-  // TOD,
-  O: Add items]
+  s: [// TOD, O: Add items]
 //     'AI',
 //     'artificial intelligence',
 //     'enterprise solutions',
@@ -42,10 +39,10 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
 //   ],
   imag,
   e: 'http,
-  s://ziontechgroup.com/og-image.jpg',
+  s: //ziontechgroup.com/og-image.jpg',
   ur,
   l: 'http,
-  s://ziontechgroup.com',
+  s: //ziontechgroup.com',
   typ,
   e: 'website' as const,
   local,
@@ -106,7 +103,7 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       '@context': 'http,
-  s://schema.org',
+  s: //schema.org',
       '@type': type === 'article' ? 'Article' : 'WebPage',
       headlin,
   e: seo.title,

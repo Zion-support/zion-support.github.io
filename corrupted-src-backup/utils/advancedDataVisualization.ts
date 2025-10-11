@@ -2,7 +2,7 @@
  * Advanced data visualization utilities
  */
 
-import { DataPoint, ChartData, StoredChart, VisualizationConfig, ChartType, ColorScheme } from '../types/visualization'
+import { DataPoint, ChartData, StoredChart, VisualizationConfig, ChartType, ColorScheme  } from '../types/visualization'
 export class AdvancedDataVisualization {
   private config: VisualizationConfig,
   private charts: Map<string, StoredChart> = new Map()</string>constructor</string>(config: Partial<VisualizationConfig> = {}) {</VisualizationConfig>this</VisualizationConfig>.config = {

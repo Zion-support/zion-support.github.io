@@ -1,16 +1,11 @@
 export interface Insight {/* TODO: Fix JSX expression */}
 }
 
-export const newInsights: Insight[] = [
-  {
+export const newInsights: Insight[] = [{
     id: 'ai-platform-optimization-insights'
     title: 'AI Platform Optimization: Maximizing ROI with Intelligent Scorecards'
-    summary: 'Revolutionary AI platform optimization delivering unprecedented ROI through intelligent scorecards and performance monitoring.',
-    category: 'AI Strategy',
-    date: '2025-10-03',
-    readMinutes: 7
-    featured: true,
-    tags: ['Platform', 'ROI', 'Scorecards'],
+    summary: 'Revolutionary AI platform optimization delivering unprecedented ROI through intelligent scorecards and performance monitoring.', category: 'AI Strategy', date: '2025-10-03', readMinutes: 7
+    featured: true, tags: ['Platform', 'ROI', 'Scorecards'],
     content: `
 # AI Platform Optimization Insights
 Transform your AI platform with intelligent scorecards and performance monitoring that deliver measurable ROI.
@@ -41,8 +36,6 @@ Protect your AI systems with next-generation quantum security frameworks.
 - Real-time monitoring provides instant threat response,
     `,
 export const,
-  newInsights: Insight[] = [
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
+  newInsights: Insight[] = [{/* TODO: Fix JSX expression */}
+  }, {/* TODO: Fix JSX expression */}
   }]

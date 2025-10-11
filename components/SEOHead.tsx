@@ -24,11 +24,11 @@ export default function SEOHead({
   const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
   const defaultStructuredData = {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
+    "url": "https: //ziontechgroup.com",
+    "logo": "https: //ziontechgroup.com/logo.png",
     "description": description,
     "foundingDate": "2020",
     "address": {
@@ -45,36 +45,22 @@ export default function SEOHead({
       "contactType": "customer service",
       "email": "kleber@ziontechgroup.com"
     },
-    "sameAs": [
-      "https://linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup",
-      "https://github.com/zion-tech-group"
-    ],
+    "sameAs": ["https: //linkedin.com/company/zion-tech-group", "https: //twitter.com/ziontechgroup", "https: //github.com/zion-tech-group"],
     "offers": {
       "@type": "AggregateOffer",
       "offerCount": "100+",
-      "offers": [
-        {
-          "@type": "Offer",
-          "name": "AI Solutions",
-          "description": "Revolutionary AI solutions from quantum computing to metaverse intelligence"
-        },
-        {
-          "@type": "Offer",
-          "name": "IT Services",
-          "description": "Enterprise-grade infrastructure from 5G networks to space technology"
-        },
-        {
-          "@type": "Offer",
-          "name": "Micro SaaS",
-          "description": "Innovative SaaS solutions from AI code generation to metaverse builders"
-        }
-      ]
+      "offers": [{
+          "@type": "Offer", "name": "AI Solutions", "description": "Revolutionary AI solutions from quantum computing to metaverse intelligence"
+        }, {
+          "@type": "Offer", "name": "IT Services", "description": "Enterprise-grade infrastructure from 5G networks to space technology"
+        }, {
+          "@type": "Offer", "name": "Micro SaaS", "description": "Innovative SaaS solutions from AI code generation to metaverse builders"
+        }]
     }
   }
   const finalStructuredData = structuredData || defaultStructuredData
   return (
-    <Head>
+    <Head ></Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
@@ -87,20 +73,20 @@ export default function SEOHead({
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og: title" content={fullTitle} />
+      <meta property="og: description" content={description} />
+      <meta property="og: type" content={ogType} />
+      <meta property="og: url" content={canonicalUrl} />
+      <meta property="og: image" content={ogImage} />
+      <meta property="og: site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter: card" content={twitterCard} />
+      <meta name="twitter: title" content={fullTitle} />
+      <meta name="twitter: description" content={description} />
+      <meta name="twitter: image" content={ogImage} />
+      <meta name="twitter: site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       
       {/* Additional SEO Meta Tags */}
@@ -118,7 +104,7 @@ export default function SEOHead({
       <link rel="manifest" href="/site.webmanifest" />
       
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https: //fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
       

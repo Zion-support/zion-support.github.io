@@ -15,7 +15,7 @@ export const fsDb = {
   exists: (path: string) => false,
   delete: (path: string) => null
 }
-import { promises as fs } from 'fs'
+import { promises as fs  } from 'fs'
 import path from 'path'
 const DATA_DIR = path.join(process.cwd(), 'data')
   try {
@@ -33,7 +33,7 @@ export async function writeJsonAsync<T>(filePath: string, data: T): Promise<void
     await fs.mkdir(dir, { recursive: true })
     await fs.writeFile(fullPath, JSON.stringify(data, null, 2))
   } catch (error) {
-    console.error('Error writing JSON file:', error)
+    console.error('Error writing JSON file: ', error)
   }
 }
 }

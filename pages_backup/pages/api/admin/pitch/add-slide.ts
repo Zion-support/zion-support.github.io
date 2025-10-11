@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
-import { ensureAdminFromApi } from '../../../../utils/auth',
+import { ensureAdminFromApi  } from '../../../../utils/auth',
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { allowed } = await ensureAdminFromApi(req),
   if (!allowed) return res.status(403).json({ error: 'Forbidden' }),
@@ -8,6 +8,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.'})
 }
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { ensureAdminFromApi } from '../../../../utils/auth'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import { ensureAdminFromApi  } from '../../../../utils/auth'

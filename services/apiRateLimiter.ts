@@ -160,8 +160,7 @@ if ( {) {
       return await response.json ()
     } catch (error) {
       // Mock rules for demo
-      return [
-        {
+      return [{
           id: 'rule_1'
           name: 'API Endpoints'
           pattern: '/api/**'
@@ -170,12 +169,10 @@ if ( {) {
             requestsPerMinute: 100
             requestsPerHour: 1000
             requestsPerDay: 10000
-            burst_limit: 50,
-            window_size: 60
+            burst_limit: 50, window_size: 60
           }
           enabled: true
-          created_at: new Date (),
-          updated_at: new Date ()
+          created_at: new Date (), updated_at: new Date ()
         }
         {
           id: 'rule_2'
@@ -186,14 +183,12 @@ if ( {) {
             requestsPerMinute: 10
             requestsPerHour: 100
             requestsPerDay: 1000
-            burst_limit: 5,
-            window_size: 60
+            burst_limit: 5, window_size: 60
           }
           enabled: true
           createdAt: new Date()
           updatedAt: new Date()
-        }
-      ]
+        }]
     }
   }
   async updateRateLimitRule(id: string, updates: Partial<RateLimitRule>): Promise<RateLimitRule> {
@@ -255,40 +250,15 @@ export class APIRateLimiterService {
       return await response.json()
     } catch (error) {
       // Mock rules for demo
-      return [
-        {
-          id: 'rule_1',
-          name: 'API Endpoints',
-          pattern: '/api/**',
-          method: 'ALL',
-          config: {
-            requestsPerMinute: 100,
-            requestsPerHour: 1000,
-            requestsPerDay: 10000,
-            burstLimit: 50,
-            windowSize: 60
-          },
-          enabled: true,
-          createdAt: new Date(),
-          updatedAt: new Date()
-        },
-        {
-          id: 'rule_2',
-          name: 'Authentication',
-          pattern: '/auth/**',
-          method: 'POST',
-          config: {
-            requestsPerMinute: 10,
-            requestsPerHour: 100,
-            requestsPerDay: 1000,
-            burstLimit: 5,
-            windowSize: 60
-          },
-          enabled: true,
-          createdAt: new Date(),
-          updatedAt: new Date()
-        }
-      ]
+      return [{
+          id: 'rule_1', name: 'API Endpoints', pattern: '/api/**', method: 'ALL', config: {
+            requestsPerMinute: 100, requestsPerHour: 1000, requestsPerDay: 10000, burstLimit: 50, windowSize: 60
+          }, enabled: true, createdAt: new Date(), updatedAt: new Date()
+        }, {
+          id: 'rule_2', name: 'Authentication', pattern: '/auth/**', method: 'POST', config: {
+            requestsPerMinute: 10, requestsPerHour: 100, requestsPerDay: 1000, burstLimit: 5, windowSize: 60
+          }, enabled: true, createdAt: new Date(), updatedAt: new Date()
+        }]
     }
   }
   async updateRateLimitRule(id: string, updates: Partial<RateLimitRule>): Promise<RateLimitRule> {
@@ -328,7 +298,7 @@ export class APIRateLimiterService {
         throw new Error(`Failed to delete rate limit rule: ${response.statusText}`)
       }
     } catch (error) {
-      console.error('Failed to delete rate limit rule:', error)
+      console.error('Failed to delete rate limit rule: ', error)
       throw error
     }
   }
@@ -353,7 +323,7 @@ export class APIRateLimiterService {
         throw new Error(`Failed to delete rate limit rule: ${response.statusText}`)
       }
     } catch (error) {
-      console.error('Failed to delete rate limit rule:', error)
+      console.error('Failed to delete rate limit rule: ', error)
       throw error
     }
   }
@@ -376,8 +346,7 @@ export class APIRateLimiterService {
       return await response.json()
     } catch (error) {
       // Mock stats for demo
-      return [
-        {
+      return [{
           endpoint: '/api/users'
           method: 'GET'
           totalRequests: 15420
@@ -402,43 +371,21 @@ export class APIRateLimiterService {
             hour: 95
             day: 650
 export interface RateLimitConfig {
-  requestsPerMinute: number,
-  requestsPerHour: number,
-  requestsPerDay: number,
-  burstLimit: number,
-  windowSize: number
+  requestsPerMinute: number, requestsPerHour: number, requestsPerDay: number, burstLimit: number, windowSize: number
 }
 
 export interface RateLimitRule {
-  id: string,
-  name: string,
-  pattern: string,
-  method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'ALL',
-  config: RateLimitConfig,
-  enabled: boolean,
-  createdAt: Date,
-  updatedAt: Date
+  id: string, name: string, pattern: string, method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'ALL', config: RateLimitConfig, enabled: boolean, createdAt: Date, updatedAt: Date
 }
 
 export interface RateLimitStats {
-  endpoint: string,
-  method: string,
-  totalRequests: number,
-  blockedRequests: number,
-  averageResponseTime: number,
-  lastRequest: Date,
-  currentUsage: {
-    minute: number,
-    hour: number,
-    day: number
+  endpoint: string, method: string, totalRequests: number, blockedRequests: number, averageResponseTime: number, lastRequest: Date, currentUsage: {
+    minute: number, hour: number, day: number
   }
 }
 
 export interface APIKey {
-  id: string,
-  name: string,
-  key: string,
-  permissions: string[],
+  id: string, name: string, key: string, permissions: string[],
   rateLimit: RateLimitConfig,
   createdAt: Date,
   lastUsed: Date,
@@ -500,40 +447,15 @@ export class APIRateLimiterService {
       return await response.json()
     } catch (error) {
       // Mock rules for demo
-      return [
-        {
-          id: 'rule_1',
-          name: 'API Endpoints',
-          pattern: '/api/**',
-          method: 'ALL',
-          config: {
-            requestsPerMinute: 100,
-            requestsPerHour: 1000,
-            requestsPerDay: 10000,
-            burstLimit: 50,
-            windowSize: 60
-          },
-          enabled: true,
-          createdAt: new Date(),
-          updatedAt: new Date()
-        },
-        {
-          id: 'rule_2',
-          name: 'Authentication',
-          pattern: '/auth/**',
-          method: 'POST',
-          config: {
-            requestsPerMinute: 10,
-            requestsPerHour: 100,
-            requestsPerDay: 1000,
-            burstLimit: 5,
-            windowSize: 60
-          },
-          enabled: true,
-          createdAt: new Date(),
-          updatedAt: new Date()
-        }
-      ]
+      return [{
+          id: 'rule_1', name: 'API Endpoints', pattern: '/api/**', method: 'ALL', config: {
+            requestsPerMinute: 100, requestsPerHour: 1000, requestsPerDay: 10000, burstLimit: 50, windowSize: 60
+          }, enabled: true, createdAt: new Date(), updatedAt: new Date()
+        }, {
+          id: 'rule_2', name: 'Authentication', pattern: '/auth/**', method: 'POST', config: {
+            requestsPerMinute: 10, requestsPerHour: 100, requestsPerDay: 1000, burstLimit: 5, windowSize: 60
+          }, enabled: true, createdAt: new Date(), updatedAt: new Date()
+        }]
     }
   }
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules/${id}`, {
@@ -568,7 +490,7 @@ export class APIRateLimiterService {
       }
       return await response.json ()
     } catch (error) {
-      console && console.error('Failed to delete rate limit rule:', error)
+      console && console.error('Failed to delete rate limit rule: ', error)
       throw error
     }
   }
@@ -584,8 +506,7 @@ export class APIRateLimiterService {
       return await response.json()
     } catch (error) {
       // Mock stats for demo
-      return [
-        {
+      return [{
           endpoint: '/api / users'
           method: 'GET'
           total_requests: 15420
@@ -617,7 +538,7 @@ if ( {) {
         throw new Error (`Failed to delete rate limit rule: ${response.status_text}`)
       }
     } catch (error) {
-      console.error ('Failed to delete rate limit rule:', error)
+      console.error ('Failed to delete rate limit rule: ', error)
       throw error
     }
   }
@@ -636,8 +557,7 @@ if ( {) {
       return await response.json ()
     } catch (error) {
       // Mock stats for demo
-      return [
-        {
+      return [{
           endpoint: '/api / users'
           method: 'GET'
           total_requests: 15420
@@ -646,8 +566,7 @@ if ( {) {
           last_request: new Date ()
           current_usage: {
             minute: 15
-            hour: 180,
-            day: 1200
+            hour: 180, day: 1200
           }
         }
         {
@@ -659,35 +578,16 @@ if ( {) {
           last_request: new Date ()
           current_usage: {
             minute: 8
-            hour: 95,
-            day: 650
+            hour: 95, day: 650
           }
-          endpoint: '/api/users',
-          method: 'GET',
-          totalRequests: 15420,
-          blockedRequests: 234,
-          averageResponseTime: 45,
-          lastRequest: new Date(),
-          currentUsage: {
-            minute: 15,
-            hour: 180,
-            day: 1200
+          endpoint: '/api/users', method: 'GET', totalRequests: 15420, blockedRequests: 234, averageResponseTime: 45, lastRequest: new Date(), currentUsage: {
+            minute: 15, hour: 180, day: 1200
           }
-        },
-        {
-          endpoint: '/api/auth/login',
-          method: 'POST',
-          totalRequests: 8920,
-          blockedRequests: 156,
-          averageResponseTime: 120,
-          lastRequest: new Date(),
-          currentUsage: {
-            minute: 8,
-            hour: 95,
-            day: 650
+        }, {
+          endpoint: '/api/auth/login', method: 'POST', totalRequests: 8920, blockedRequests: 156, averageResponseTime: 120, lastRequest: new Date(), currentUsage: {
+            minute: 8, hour: 95, day: 650
           }
-        }
-      ]
+        }]
     }
   }
           }
@@ -740,8 +640,7 @@ if ( {) {
       return await response.json ()
     } catch (error) {
       // Mock API keys for demo
-      return [
-        {
+      return [{
           id: 'key_1'
           name: 'Web Application'
           key: 'zion_web123'
@@ -813,12 +712,8 @@ if ( {) {
       return await response.json()
     } catch (error) {
       // Mock API keys for demo
-      return [
-        {
-          id: 'key_1',
-          name: 'Web Application',
-          key: 'zion_web123',
-          permissions: ['readwrite'],
+      return [{
+          id: 'key_1', name: 'Web Application', key: 'zion_web123', permissions: ['readwrite'],
           rateLimit: {
             requestsPerMinute: 100,
             requestsPerHour: 1000,
@@ -886,12 +781,8 @@ if ( {) {
       return await response.json()
     } catch (error) {
       // Mock API keys for demo
-      return [
-        {
-          id: 'key_1',
-          name: 'Web Application',
-          key: 'zion_web123',
-          permissions: ['read', 'write'],
+      return [{
+          id: 'key_1', name: 'Web Application', key: 'zion_web123', permissions: ['read', 'write'],
           rateLimit: {
             requestsPerMinute: 100,
             requestsPerHour: 1000,
@@ -949,14 +840,11 @@ if ( {) {
       return await response.json ()
     } catch (error) {
       // Mock violations for demo
-      return [
-        {
+      return [{
           id: 'violation_1'
-          method: 'GET',
-          timestamp: new Date(Date && Date.now() - 1000 * 60 * 30), // 30 minutes ago
+          method: 'GET', timestamp: new Date(Date && Date.now() - 1000 * 60 * 30), // 30 minutes ago
           reason: 'rate_limit_exceeded'
-          ipAddress: '192 && 192.168.1 && 1.100',
-          userAgent: 'Mozilla/5 && 5.0 (Windows NT 10 && 10.0, Win64, x64) AppleWebKit/537 && 537.36'
+          ipAddress: '192 && 192.168.1 && 1.100', userAgent: 'Mozilla/5 && 5.0 (Windows NT 10 && 10.0, Win64, x64) AppleWebKit/537 && 537.36'
         }
         {
           id: 'violation_2'
@@ -980,36 +868,20 @@ if ( {) {
       return await response.json()
     } catch (error) {
       // Mock violations for demo
-      return [
-        {
-          id: 'violation_1',
-          apiKey: 'zion_web123',
-          endpoint: '/api/users',
-          method: 'GET',
-          timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
-          reason: 'rate_limit_exceeded',
-          ipAddress: '192.168.1.100',
-          userAgent: 'Mozilla/5.0 (Windows NT 10.0, Win64, x64) AppleWebKit/537.36'
-        },
-        {
-          id: 'violation_2',
-          apiKey: 'zion_mobile456',
-          endpoint: '/api/auth/login',
-          method: 'POST',
-          timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago
-          reason: 'burst_limit_exceeded',
-          ipAddress: '10.0.0.50',
-          userAgent: 'ZionMobileApp/1.0'
+      return [{
+          id: 'violation_1', apiKey: 'zion_web123', endpoint: '/api/users', method: 'GET', timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
+          reason: 'rate_limit_exceeded', ipAddress: '192.168.1.100', userAgent: 'Mozilla/5.0 (Windows NT 10.0, Win64, x64) AppleWebKit/537.36'
+        }, {
+          id: 'violation_2', apiKey: 'zion_mobile456', endpoint: '/api/auth/login', method: 'POST', timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago
+          reason: 'burst_limit_exceeded', ipAddress: '10.0.0.50', userAgent: 'ZionMobileApp/1.0'
         }
         {
           id: 'violation_2'
           api_key: 'zion_mobile456'
           endpoint: '/api / auth / login'
-          method: 'POST',
-          timestamp: new Date (Date.now () - 1000 * 60 * 15), // 15 minutes ago
+          method: 'POST', timestamp: new Date (Date.now () - 1000 * 60 * 15), // 15 minutes ago
           reason: 'burst_limit_exceeded'
-          ip_address: '10.0.0.50',
-          user_agent: 'ZionMobileApp / 1.0'
+          ip_address: '10.0.0.50', user_agent: 'ZionMobileApp / 1.0'
   async getViolations(limit: number = 100): Promise<RateLimitViolation[]> {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/violations?limit=${limit}`, {
@@ -1023,28 +895,13 @@ if ( {) {
       return await response.json()
     } catch (error) {
       // Mock violations for demo
-      return [
-        {
-          id: 'violation_1',
-          apiKey: 'zion_web123',
-          endpoint: '/api/users',
-          method: 'GET',
-          timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
-          reason: 'rate_limit_exceeded',
-          ipAddress: '192.168.1.100',
-          userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-        },
-        {
-          id: 'violation_2',
-          apiKey: 'zion_mobile456',
-          endpoint: '/api/auth/login',
-          method: 'POST',
-          timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago
-          reason: 'burst_limit_exceeded',
-          ipAddress: '10.0.0.50',
-          userAgent: 'ZionMobileApp/1.0'
-        }
-      ]
+      return [{
+          id: 'violation_1', apiKey: 'zion_web123', endpoint: '/api/users', method: 'GET', timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
+          reason: 'rate_limit_exceeded', ipAddress: '192.168.1.100', userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        }, {
+          id: 'violation_2', apiKey: 'zion_mobile456', endpoint: '/api/auth/login', method: 'POST', timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago
+          reason: 'burst_limit_exceeded', ipAddress: '10.0.0.50', userAgent: 'ZionMobileApp/1.0'
+        }]
     }
   }
   async generateReport(): Promise<{
@@ -1146,8 +1003,6 @@ if ( {) {
         total: violations.length,
         byReason: violationsByReason,
         recent: violations.slice(0, 10)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     }
   }
@@ -1158,27 +1013,20 @@ export const API_RATE_LIMITER_PRICING = {
     name: 'Starter'
     price: 25
     period: '/month',
-    features: [
-      'Up to 10 rate limit rules_basic rate limitingAPI key management_email notifications7 - day data retention_basic analytics'
-    ]
+    features: ['Up to 10 rate limit rules_basic rate limitingAPI key management_email notifications7 - day data retention_basic analytics']
   }
   professional: {
     name: 'Professional'
     price: 79
     period: '/month'
-    features: [
-      'Up to 50 rate limit rules_advanced rate limiting_unlimited API keys_real - time monitoring_slack and webhook notifications30 - day data retention_advanced analytics_custom dashboards',
-      'API access'
-    ]
+    features: ['Up to 50 rate limit rules_advanced rate limiting_unlimited API keys_real - time monitoring_slack and webhook notifications30 - day data retention_advanced analytics_custom dashboards', 'API access']
   }
   enterprise: {
     name: 'Enterprise'
     price: 199
     period: '/month'
-    features: [
-      'Unlimited rate limit rulesEnterprise-grade rate limitingAdvanced security featuresMultiple notification channels1-year data retentionCustom integrationsWhite-label optionsPriority support'
-      'SLA guarantee'
-    ]
+    features: ['Unlimited rate limit rulesEnterprise-grade rate limitingAdvanced security featuresMultiple notification channels1-year data retentionCustom integrationsWhite-label optionsPriority support'
+      'SLA guarantee']
   }
 }
 
@@ -1188,12 +1036,7 @@ export const API_RATE_LIMITER_PRICING = {
     name: 'Starter',
     price: 25,
     period: '/month',
-    features: [
-      'Unlimited rate limit rules_enterprise - grade rate limiting_advanced security features_multiple notification channels1 - year data retention_custom integrations_white - label options_priority support',
-      'SLA guarantee'
-    ]
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    features: ['Unlimited rate limit rules_enterprise - grade rate limiting_advanced security features_multiple notification channels1 - year data retention_custom integrations_white - label options_priority support', 'SLA guarantee']
   }
 }
       activeRules: number
@@ -1251,45 +1094,18 @@ export const API_RATE_LIMITER_PRICING = {
     name: 'Starter',
     price: 25,
     period: '/month',
-    features: [
-      'Up to 10 rate limit rules',
-      'Basic rate limiting',
-      'API key management',
-      'Email notifications',
-      '7-day data retention',
-      'Basic analytics'
-    ]
+    features: ['Up to 10 rate limit rules', 'Basic rate limiting', 'API key management', 'Email notifications', '7-day data retention', 'Basic analytics']
   },
   professional: {
     name: 'Professional',
     price: 79,
     period: '/month',
-    features: [
-      'Up to 50 rate limit rules',
-      'Advanced rate limiting',
-      'Unlimited API keys',
-      'Real-time monitoring',
-      'Slack and webhook notifications',
-      '30-day data retention',
-      'Advanced analytics',
-      'Custom dashboards',
-      'API access'
-    ]
+    features: ['Up to 50 rate limit rules', 'Advanced rate limiting', 'Unlimited API keys', 'Real-time monitoring', 'Slack and webhook notifications', '30-day data retention', 'Advanced analytics', 'Custom dashboards', 'API access']
   },
   enterprise: {
     name: 'Enterprise',
     price: 199,
     period: '/month',
-    features: [
-      'Unlimited rate limit rules',
-      'Enterprise-grade rate limiting',
-      'Advanced security features',
-      'Multiple notification channels',
-      '1-year data retention',
-      'Custom integrations',
-      'White-label options',
-      'Priority support',
-      'SLA guarantee'
-    ]
+    features: ['Unlimited rate limit rules', 'Enterprise-grade rate limiting', 'Advanced security features', 'Multiple notification channels', '1-year data retention', 'Custom integrations', 'White-label options', 'Priority support', 'SLA guarantee']
   }
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 interface SEOHeadProps {title?: string;}
@@ -21,19 +20,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
 
   twitterCard = 'summary_large_image',
 
-<<<<<<< HEAD
   structuredData;}}) => {}const fullTitle = title.includes('Zion Tech Group') ? title : `${title}| Zion Tech Group`
-=======
-  structuredData
-  }
-}) => {}
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
->>>>>>> origin/main
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
 const defaultStructuredData = {"@context": "https: //schema.org",
-=======
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import { Helmet  } from 'react-helmet-async'
 interface SEOHeadProps {
     title?: string
   description?: string
@@ -51,7 +42,6 @@ const SEOHead: React.FC<SEOHeadProps> = ()
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
 const defaultStructuredData = {
     "@context": "https: //schema.org",
->>>>>>> origin/main
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https: //ziontechgroup.com",
@@ -67,42 +57,19 @@ const defaultStructuredData = {
     "contactPoint": {"@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-<<<<<<< HEAD
       "email": "kleber@ziontechgroup.com"},
     "sameAs": [;
-=======
-      "email": "kleber@ziontechgroup.com"
-  },
-    "sameAs": [
->>>>>>> origin/main
-      "https: //www.linkedin.com/company/zion-tech-group",
-      "https: //twitter.com/ziontechgroup",
-    ],
+      "https: //www.linkedin.com/company/zion-tech-group", "https: //twitter.com/ziontechgroup"],
   }
-<<<<<<< HEAD
 return(<Helmet />)
       {/* Basic Meta Tags */} <title>{fullTitle}</title>
-=======
-return (
-    </SEOHeadProps><Helmet>
-      {/* Basic Meta Tags */}
-      </Helmet><title>{fullTitle}</title>
->>>>>>> origin/main
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-<<<<<<< HEAD
       <meta />
       {/* Canonical URL */}{canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
 {/* Open Graph Meta Tags */} <meta name="description" content="AI-powered solution" />
-=======
-      <meta>
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-{/* Open Graph Meta Tags */}
-      <meta name="description" content="AI-powered solution" />
->>>>>>> origin/main
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -126,13 +93,10 @@ return (
 export default SEOHead
       "email": "kleber@ziontechgroup.com"
     },
-    "sameAs": [
-      "https://www.linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup"
-    ]
+    "sameAs": ["https: //www.linkedin.com/company/zion-tech-group", "https: //twitter.com/ziontechgroup"]
   }
   return (
-    <Helmet>
+    <Helmet ></Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}
       <meta name="description" content={description} />
@@ -143,18 +107,18 @@ export default SEOHead
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og: title" content={fullTitle} />
+      <meta property="og: description" content={description} />
+      <meta property="og: type" content={ogType} />
+      <meta property="og: url" content={canonicalUrl} />
+      <meta property="og: image" content={ogImage} />
+      <meta property="og: site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter: card" content={twitterCard} />
+      <meta name="twitter: title" content={fullTitle} />
+      <meta name="twitter: description" content={description} />
+      <meta name="twitter: image" content={ogImage} />
       {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#0f172a" />
       <meta name="msapplication-TileColor" content="#0f172a" />
@@ -162,7 +126,6 @@ export default SEOHead
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       {/* Structured Data */}
       <script type="application/ld+json">
-<<<<<<< HEAD
         {JSON.stringify(structuredData || defaultStructuredData</div>
       </script>
     </Helmet>
@@ -170,11 +133,3 @@ export default SEOHead
 };
 
 export default SEOHead;
-=======
-        {JSON.stringify(structuredData || defaultStructuredData)}
-  )
-}
-export default SEOHead
-</li>
-</li>
->>>>>>> origin/main

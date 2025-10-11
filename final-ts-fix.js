@@ -2,7 +2,7 @@
 
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Get all TypeScript files in the app directory
@@ -43,7 +43,7 @@ function fixTsxFile(filePath) {
     content = content.replace(malformedJsxPattern, (match, tagName, attributes, text) => {
       if (text.trim()) {
         modified = true
-        return `<${tagName}${attributes}>${text}</${tagName}>`
+        return `<${tagName}$>{attributes}${text}</$>{tagName}`
       }
       return match
     })
@@ -52,7 +52,7 @@ function fixTsxFile(filePath) {
     content = content.replace(selfClosingWithContentPattern, (match, tagName, attributes, text) => {
       if (text.trim() && !text.includes('<')) {
         modified = true
-        return `<${tagName}${attributes}>${text}</${tagName}>`
+        return `<${tagName}$>{attributes}${text}</$>{tagName}`
       }
       return match
     })
@@ -60,7 +60,7 @@ function fixTsxFile(filePath) {
     const malformedClassPattern = /className="([^"]*)"([^>]*)><\/undefined>/g,
     content = content.replace(malformedClassPattern, (match, className, rest) => {
       modified = true
-      return `className="${className}"${rest}>`
+      return `className="${className}"$>{rest}`
     })
     // Fix 6: Fix malformed closing tags
     const malformedClosingPattern = /<\/undefined><\/undefined>/g,
@@ -81,7 +81,7 @@ function fixTsxFile(filePath) {
     content = content.replace(emptyJsxPattern, (match, tagName, attributes, content) => {
       if (content.trim()) {
         modified = true
-        return `<${tagName}${attributes}>${content}</${tagName}>`
+        return `<${tagName}$>{attributes}${content}</$>{tagName}`
       }
       return match
     })

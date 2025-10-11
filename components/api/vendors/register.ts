@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { getVendorBySlug, registerVendor } from '../../../utils/vendor-store'
+import { getVendorBySlug, registerVendor  } from '../../../utils/vendor-store'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST')
   if (req.method !== 'POST')
@@ -28,7 +28,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [],
       teamSize: Number(teamSize || 0),
       about,  try {
-import { getVendorBySlug, registerVendor } from '../../../utils/vendor-store'
+import { getVendorBySlug, registerVendor  } from '../../../utils/vendor-store'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {}

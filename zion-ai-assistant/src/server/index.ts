@@ -1,9 +1,9 @@
 import "dotenv/config"
 import express from "express"
 import cors from "cors"
-import { z } from "zod"
-import { MilestoneSuggestionInput, MilestoneSuggestionResponse } from "../shared/types.js"
-import { generateMilestones } from "./milestoneGenerator.js"
+import { z  } from 'zod'
+import { MilestoneSuggestionInput, MilestoneSuggestionResponse  } from '../shared/types.js'
+import { generateMilestones  } from './milestoneGenerator.js'
 const app = express()
 app.use(cors())
 app.use(express.json({ limit: "1mb" }))
@@ -40,13 +40,13 @@ app.post("/api/ai/milestones", async (req, res) => {
   }
 })
 const port = process.env.PORT ? Number(process.env.PORT) : 4321
-app.listen(port, () => {// // // console.log(`zion-ai-assistant listening on http://localhost:${port}`)
+app.listen(port, () => {// // // console.log(`zion-ai-assistant listening on http: //localhost:${port}`)
 import "dotenv/config",
 import express from "express",
 import cors from "cors",
-import { z } from "zod",
-import { MilestoneSuggestionInput, MilestoneSuggestionResponse } from "../shared/types.js",
-import { generateMilestones } from "./milestoneGenerator.js",
+import { z  } from 'zod',
+import { MilestoneSuggestionInput, MilestoneSuggestionResponse  } from '../shared/types.js',
+import { generateMilestones  } from './milestoneGenerator.js',
 const app = express(),
 app.use(cors()),
 app.use(express.json({ limit: "1mb" })),
@@ -71,8 +71,8 @@ app.post("/api/ai/milestones", async (req, res) => {
 }),
 const port = process.env.PORT ? Number(process.env.PORT) : 4321,
 app.listen(port, () => {
-  // // // console.log(`zion-ai-assistant listening on http://localhost:${port}`)
+  // // // console.log(`zion-ai-assistant listening on http: //localhost:${port}`)
 const port = process.env.PORT ? Number(process.env.PORT) : 4321
 app.listen(port, () => {
-  console.log(`zion-ai-assistant listening on http://localhost:${port}`)
+  console.log(`zion-ai-assistant listening on http: //localhost:${port}`)
 })

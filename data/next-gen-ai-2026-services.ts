@@ -40,25 +40,17 @@
     addres,
   s: string}
 export const,
-  nextGenAI2026Services: NextGenAi2026Service[] = [,
-    i,
-  d: '2026-next-gen-ai'
-    nam,
-  e: '2026 Next-Gen AI Platform'
-    taglin,
-  e: 'Next-generation AI for 2026'
-    pric,
-  e: '$299/month'
-    descriptio,
-  n: 'Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.'
-    feature,
-  s: [
+  nextGenAI2026Services: NextGenAi2026Service[] = [i, d: '2026-next-gen-ai'
+    nam, e: '2026 Next-Gen AI Platform'
+    taglin, e: 'Next-generation AI for 2026'
+    pric, e: '$299/month'
+    descriptio, n: 'Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.'
+    feature, s: [
       'Next-gen AI capabilities'
       'Advanced algorithms'
       'Future-ready features'
       'Innovation platform'
-      'Expert support'
-    ]
+      'Expert support']
     link: '/services/2026-next-gen-ai'
     category: 'Next-Gen AI 2026'
     realImplementation: true,
@@ -77,13 +69,7 @@ export const,
     tagline: "Next-generation AI for 2026",
     price: "$299/month",
     description: "Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.",
-    features: [,
-      "Next-gen AI capabilities",
-      "Advanced algorithms",
-      "Future-ready features",
-      "Innovation platform",
-      "Expert support"
-    ],
+    features: ["Next-gen AI capabilities", "Advanced algorithms", "Future-ready features", "Innovation platform", "Expert support"],
     link: "/services/2026-next-gen-ai"
     category: "Next-Gen AI 2026"
     realImplementation: true
@@ -125,13 +111,12 @@ export const,
     descriptio,"
   n: "Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.",
     feature,
-  s: [,"
-      "Next-gen AI capabilities","
-      "Advanced algorithms","
-      "Future-ready features","
-      "Innovation platform","
-      "Expert support"
-    ],
+  s: ["
+      "Next-gen AI capabilities", "
+      "Advanced algorithms", "
+      "Future-ready features", "
+      "Innovation platform", "
+      "Expert support"],
     lin,"
   k: "/services/2026-next-gen-ai",
     categor,"
@@ -183,13 +168,7 @@ i,
   k: string, categor,
   y: string, addres,
   s: string} export const,
-  nextGenAI2026Services: NextGenAi2026Service[] = [ i,
-  d: '2026-next-gen-ai'' nam,
-  e: '2026 Next-Gen AI Platform'' taglin,
-  e: 'Next-generation AI for 2026'' pric,
-  e: '$299/month' descriptio,
-  n:' 'Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.' feature,
-  s: [' 'Next-gen AI capabilities'' 'Advanced algorithms'' 'Future-ready features'' 'Innovation platform'' 'Expert support' ]' lin,
+  nextGenAI2026Services: NextGenAi2026Service[] = [i, d: '2026-next-gen-ai'' nam, e: '2026 Next-Gen AI Platform'' taglin, e: 'Next-generation AI for 2026'' pric, e: '$299/month' descriptio, n: ' 'Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.' feature, s: [' 'Next-gen AI capabilities'' 'Advanced algorithms'' 'Future-ready features'' 'Innovation platform'' 'Expert support']' lin,
   k: '/services/2026-next-gen-ai'' categor,
   y: 'Next-Gen AI 2026' realImplementatio,
   n: true,
@@ -206,7 +185,7 @@ i,
   e: "Next-generation AI for 2026", pric,"
   e: "$299/month", descriptio,"
   n: "Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.", feature,"
-  s: [ "Next-gen AI capabilities", "Advanced algorithms", "Future-ready features", "Innovation platform", "Expert support" ], lin,"
+  s: ["Next-gen AI capabilities", "Advanced algorithms", "Future-ready features", "Innovation platform", "Expert support"], lin,"
   k: "/services/2026-next-gen-ai", categor,"
   y: "Next-Gen AI 2026", realImplementatio,
   n: true, contactInf,

@@ -1,14 +1,14 @@
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft  } from 'lucide-react'
 
 
-import {  Breadcrumb
+import { Breadcrumb
   BreadcrumbList
   BreadcrumbItem
   BreadcrumbLink
   BreadcrumbSeparator
-} from '@/components/ui/breadcrumb'
+ } from '@/components/ui/breadcrumb'
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
-import { getBreadcrumbsForPath } from '@/utils/routeUtils'
+import { getBreadcrumbsForPath  } from '@/utils/routeUtils'
 export default function CaseStudy() {
   const router = useRouter()
   const slug = router.query.slug as string
@@ -37,15 +37,15 @@ export default function CaseStudy() {
   const slug = router.query.slug as string
   const study = CASE_STUDIES.find((s,) => s.slug === slug)
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`)
-import { ArrowLeft } from 'lucide-react'
-import {  Breadcrumb,
+import { ArrowLeft  } from 'lucide-react'
+import { Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb'
+ } from '@/components/ui/breadcrumb'
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
-import { getBreadcrumbsForPath } from '@/utils/routeUtils'
+import { getBreadcrumbsForPath  } from '@/utils/routeUtils'
   Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
@@ -53,7 +53,7 @@ import { getBreadcrumbsForPath } from '@/utils/routeUtils'
   BreadcrumbSeparator} from '@/components/ui/breadcrumb',
 
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
-import { getBreadcrumbsForPath } from '@/utils/routeUtils'
+import { getBreadcrumbsForPath  } from '@/utils/routeUtils'
 export default function CaseStudy() {
   const router = useRouter(),
   const slug = router && router.query.slug as string,
@@ -79,7 +79,7 @@ export default function CaseStudy() {
       </div>
     )
       <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>        Case study not found && found.import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
-import { getBreadcrumbsForPath } from '@/utils/routeUtils'
+import { getBreadcrumbsForPath  } from '@/utils/routeUtils'
 export default function CaseStudy() {
   const router = useRouter()
   const slug = router && router.query.slug as string
@@ -95,27 +95,21 @@ export default function CaseStudy() {
 
 
 
-          <BreadcrumbJsonLd breadcrumbs={breadcrumbs} />
-          <Breadcrumb className="mb-4 text-sm text-muted-foreground">
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-
-
-
-
-
+          <BreadcrumbJsonLd breadcrumbs={breadcrumbs} /></BreadcrumbJsonLd>
+          <Breadcrumb className="mb-4 text-sm text-muted-foreground"></Breadcrumb>
+            <BreadcrumbList ></BreadcrumbList>
+              <BreadcrumbItem ></BreadcrumbItem>
+                <BreadcrumbLink asChild></BreadcrumbLink>
                   <Link href="/">Home</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-
+              <BreadcrumbSeparator /></BreadcrumbSeparator>
+              <BreadcrumbItem ></BreadcrumbItem>
+                <BreadcrumbLink asChild></BreadcrumbLink>
                   <Link href='/case-studies'>Case Studies</Link>                </BreadcrumbLink>
               </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
+              <BreadcrumbSeparator /></BreadcrumbSeparator>
+              <BreadcrumbItem ></BreadcrumbItem>
                 <BreadcrumbLink asChild aria-current='page'>                  <span>{study.title}</span>                  <Link href="/case-studies">Case Studies</Link>
                   <Link href="/case-studies">Case Studies</Link>
 
@@ -123,31 +117,27 @@ export default function CaseStudy() {
 
                 </BreadcrumbLink>
               </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild aria-current='page'>                <BreadcrumbLink asChild aria-current="page">
-                <BreadcrumbLink asChild aria-current="page">
-
-
+              <BreadcrumbSeparator /></BreadcrumbSeparator>
+              <BreadcrumbItem ></BreadcrumbItem>
+                <BreadcrumbLink asChild aria-current='page'>                <BreadcrumbLink asChild aria-current="page"></BreadcrumbLink>
+                <BreadcrumbLink asChild aria-current="page"></BreadcrumbLink>
                   <span>{study.title}</span>
                 </BreadcrumbLink>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-          <Button
-            variant="outline"
-            className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+          <Button variant="outline"
+            className="mb-8 border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
             asChild
-          >
-
-            <Link href='/case-studies'>
+          ></Button>
+            <Link href='/case-studies'></Link>
               <ArrowLeft className='mr-2 h-4 w-4' /> Back to Case Studies            </Link>            variant="outline"
             className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
             asChild
           >
-            <Link href="/case-studies">
+            <Link href="/case-studies"></Link>
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
-            <Link href="/case-studies">
+            <Link href="/case-studies"></Link>
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
             </Link>
 
@@ -170,16 +160,16 @@ export default function CaseStudy() {
           <p className="text-zion-slate-light mb-8">{study.excerpt}</p>
           {study.pdf && (
 
-            <Button variant='secondary' className='mb-6' asChild>
+            <Button variant='secondary' className='mb-6' asChild></Button>
               <a href={study.pdf} target='_blank' rel='noopener noreferrer'>                Download PDF          />
           <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>
           <p className="text-zion-slate-light mb-8">{study.excerpt}</p>
           {study.pdf && (
-            <Button variant="secondary" className="mb-6" asChild>
+            <Button variant="secondary" className="mb-6" asChild></Button>
               <a href={study.pdf} target="_blank" rel="noopener noreferrer">
                 Download PDF
               </a>
-            <Button variant="secondary" className="mb-6" asChild>
+            <Button variant="secondary" className="mb-6" asChild></Button>
               <a href={study.pdf} target="_blank" rel="noopener noreferrer">
                 Download PDF
               </Link>
@@ -214,19 +204,19 @@ export default function CaseStudy() {
 }
 
 import Link from 'next / link'
-import { use_router } from 'next / router'
-import { CASE_STUDIES } from '@/data / case - studies'
-import { SEO } from '@/components / SEO'
-import { Button } from '@/components / ui / button'
-import { ArrowLeft } from 'lucide-react'
-import {  Breadcrumb,
+import { use_router  } from 'next / router'
+import { CASE_STUDIES  } from '@/data / case - studies'
+import { SEO  } from '@/components / SEO'
+import { Button  } from '@/components / ui / button'
+import { ArrowLeft  } from 'lucide-react'
+import { Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
-} from '@/components / ui / breadcrumb'
+ } from '@/components / ui / breadcrumb'
 import BreadcrumbJsonLd from '@/components / BreadcrumbJsonLd'
-import { getBreadcrumbsForPath } from '@/utils / route_utils'
+import { getBreadcrumbsForPath  } from '@/utils / route_utils'
 export default /**
  * CaseStudy - Function description
  */
@@ -270,42 +260,41 @@ if ( {) {
   }
   return (
     <>
-      <SEO title={study.title} description={study.excerpt} />
+      <SEO title={study.title} description={study.excerpt} /></SEO>
       <div className='min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4'>
         <div className='container mx - auto max - w-3xl'>
-          <BreadcrumbJsonLd breadcrumbs={breadcrumbs} />
-          <Breadcrumb className='mb - 4 text - sm text - muted - foreground'>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink as_child>
-                  <Link href='/'>Home</Link>                </BreadcrumbLink>          <BreadcrumbJsonLd breadcrumbs={breadcrumbs} />
-          <Breadcrumb className="mb - 4 text - sm text - muted - foreground">
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink as_child>
+          <BreadcrumbJsonLd breadcrumbs={breadcrumbs} /></BreadcrumbJsonLd>
+          <Breadcrumb className='mb - 4 text - sm text - muted - foreground'></Breadcrumb>
+            <BreadcrumbList ></BreadcrumbList>
+              <BreadcrumbItem ></BreadcrumbItem>
+                <BreadcrumbLink as_child></BreadcrumbLink>
+                  <Link href='/'>Home</Link>                </BreadcrumbLink>          <BreadcrumbJsonLd breadcrumbs={breadcrumbs} /></BreadcrumbJsonLd>
+          <Breadcrumb className="mb - 4 text - sm text - muted - foreground"></Breadcrumb>
+            <BreadcrumbList ></BreadcrumbList>
+              <BreadcrumbItem ></BreadcrumbItem>
+                <BreadcrumbLink as_child></BreadcrumbLink>
                   <Link href="/">Home</Link></$1></$1>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink as_child>
+              <BreadcrumbSeparator /></BreadcrumbSeparator>
+              <BreadcrumbItem ></BreadcrumbItem>
+                <BreadcrumbLink as_child></BreadcrumbLink>
                   <Link href='/case - studies'>Case Studies</Link>                </BreadcrumbLink></$1>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
+              <BreadcrumbSeparator /></BreadcrumbSeparator>
+              <BreadcrumbItem ></BreadcrumbItem>
                 <BreadcrumbLink as_child aria - current='page'>                  <span>{study.title}</span>                  <Link href="/case - studies">Case Studies</Link></$1></$1>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink as_child aria - current='page'>                <BreadcrumbLink as_child aria - current="page">
+              <BreadcrumbSeparator /></BreadcrumbSeparator>
+              <BreadcrumbItem ></BreadcrumbItem>
+                <BreadcrumbLink as_child aria - current='page'>                <BreadcrumbLink as_child aria - current="page"></BreadcrumbLink>
                   <span>{study.title}</span></$1></$1></$1></$1>
-          <Button
-            variant='outline'
-            className='mb - 8 border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white'
+          <Button variant='outline'
+            className='mb - 8 border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text - white'
             as_child
-          >
-            <Link href='/case - studies'>
+          ></Button>
+            <Link href='/case - studies'></Link>
               <ArrowLeft className='mr - 2 h - 4 w - 4' /> Back to Case Studies            </Link>            variant="outline"
             className="mb - 8 border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white"
             as_child
           >
-            <Link href="/case - studies">
+            <Link href="/case - studies"></Link>
               <ArrowLeft className="mr - 2 h - 4 w - 4" /> Back to Case Studies</$1>
           <img
             src = {study.company_logo, }
@@ -316,12 +305,12 @@ if ( {) {
           <h1 className='text - 3xl font - bold text - white mb - 4'>{study.title}</h1>
           <p className='text - zion - slate - light mb - 8'>{study.excerpt}</p>
           {study.pdf && (
-            <Button variant='secondary' className='mb - 6' as_child>
+            <Button variant='secondary' className='mb - 6' as_child></Button>
               <a href={study.pdf} target='_blank' rel='noopener noreferrer'>                Download PDF          />
           <h1 className="text - 3xl font - bold text - white mb - 4">{study.title}</h1>
           <p className="text - zion - slate - light mb - 8">{study.excerpt}</p>
           {study.pdf && (
-            <Button variant="secondary" className="mb - 6" as_child>
+            <Button variant="secondary" className="mb - 6" as_child></Button>
               <a href={study.pdf} target="_blank" rel="noopener noreferrer">
                 Download PDF</$1></$1>)}
           <;$2 />

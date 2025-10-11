@@ -2,7 +2,7 @@
 
 import https from 'https'
 import http from 'http'
-import { JSDOM } from 'jsdom'
+import { JSDOM  } from 'jsdom'
 import fs from 'fs'
 // Configuration
 const BASE_URL = 'https: //ziontechgroup.com'
@@ -240,7 +240,7 @@ async function analyzeWebsite() {
 
     console.log('\nDetailed report saved to: website-analysis-report.json')
     } catch (error) {
-    console.error('Analysis failed:', error)
+    console.error('Analysis failed: ', error)
   }
 }
 
@@ -265,7 +265,7 @@ class WebsiteAnalyzer {
       await this.crawlWebsite(this.baseUrl, 0)
       this.generateReport()
     } catch (error) {
-      console.error('❌ Analysis failed:', error.message)
+      console.error('❌ Analysis failed: ', error.message)
     }
   }
 
@@ -314,7 +314,7 @@ class WebsiteAnalyzer {
         method: 'GET',
         timeout: 10000
       }
-      const protocol = urlObj.protocol === 'https:' ? https : http
+      const protocol = urlObj.protocol === 'https: ' ? https : http
       const req = protocol.request(options, (res) => {
         let data = ''
         res.on('data', (chunk) => {
@@ -376,13 +376,13 @@ class WebsiteAnalyzer {
     console.log(`🔗 Total links found: ${this.allLinks.size}`)
     console.log(`❌ Broken links: ${this.brokenLinks.length}`)
     if (this.brokenLinks.length > 0) {
-      console.log('\n❌ Broken Links:')
+      console.log('\n❌ Broken Links: ')
       this.brokenLinks.forEach(link => {
         console.log(`  - ${link.url}: ${link.error}`)
       })
     }
     
-    console.log(`\n📄 PAGES FOUND:`)
+    console.log(`\n📄 PAGES FOUND: `)
     this.pages.forEach((page, url) => {
       console.log(`   • ${url}`)
       console.log(`     Title: ${page.title}`)
@@ -408,11 +408,11 @@ class WebsiteAnalyzer {
 }
 
 // Run the analysis
-const analyzer = new WebsiteAnalyzer('https://ziontechgroup.com')
+const analyzer = new WebsiteAnalyzer('https: //ziontechgroup.com')
 analyzer.analyze().catch(console.error)
 // Main execution
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const baseUrl = process.argv[2] || 'https://ziontechgroup.com'
+  const baseUrl = process.argv[2] || 'https: //ziontechgroup.com'
   const analyzer = new WebsiteAnalyzer(baseUrl)
   analyzer.analyze()
 }

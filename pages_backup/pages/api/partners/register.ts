@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { getServerSupabase } from '[^']*'
+import { getServerSupabase  } from '[^']*'
 import type { NextApiRequest, NextApiResponse } from "next"
-import { getServerSupabase } from "../../../utils/supabase/server"
+import { getServerSupabase  } from '../../../utils/supabase/server'
 function sanitizeCode(input: string): string {
   return input
     .toLowerCase()
@@ -47,7 +47,7 @@ export default async function handler(req, res) {
   } else {
     res.status(405).end('Method Not Allowed')
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { getServerSupabase } from '../../../utils/supabase/server'
+import { getServerSupabase  } from '../../../utils/supabase/server'
 function sanitizeCode(input: string): string {
   return input.toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')
 }

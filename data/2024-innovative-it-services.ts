@@ -37,25 +37,7 @@ export interface InnovativeITService2024 {id: string
   launchDate: string
   reviews: number,
 }
-export const innovativeITServices2024: InnovativeITService2024[] = [
-    id: "autonomous-devops-platform",
-    name: "Autonomous DevOps Platform",
-    tagline: "Self-healing infrastructure with zero downtime",
-    price: "$799",
-    period: "/month",
-    description: "AI-powered DevOps platform that automatically monitors, optimizes, and heals your infrastructure, ensuring maximum uptime and performance while reducing operational overhead.",
-    features: [,
-      "AI-powered infrastructure monitoring and alerting",
-      "Automatic performance optimization and scaling",
-      "Self-healing deployment pipelines",
-      "Intelligent resource allocation",
-      "Real-time security threat detection",
-      "Automated backup and disaster recovery",
-      "Multi-cloud orchestration",
-      "Advanced logging and analytics",
-      "Integration with popular DevOps tools",
-      "White-label solution for MSPs"
-    ],
+export const innovativeITServices2024: InnovativeITService2024[] = [id: "autonomous-devops-platform", name: "Autonomous DevOps Platform", tagline: "Self-healing infrastructure with zero downtime", price: "$799", period: "/month", description: "AI-powered DevOps platform that automatically monitors, optimizes, and heals your infrastructure, ensuring maximum uptime and performance while reducing operational overhead.", features: [, "AI-powered infrastructure monitoring and alerting", "Automatic performance optimization and scaling", "Self-healing deployment pipelines", "Intelligent resource allocation", "Real-time security threat detection", "Automated backup and disaster recovery", "Multi-cloud orchestration", "Advanced logging and analytics", "Integration with popular DevOps tools", "White-label solution for MSPs"],
     popular: true,
     icon: ""
     color: "from-blue-500 to-cyan-600",
@@ -100,32 +82,22 @@ export interface InnovativeITService2024 {/* TODO: Fix JSX expression */}
   review,
   s: number}
 export const,
-  innovativeITServices2024: InnovativeITService2024[] = [,
-    i,
-  d: "autonomous-devops-platform",
-    nam,"
-  e: "Autonomous DevOps Platform",
-    taglin,"
-  e: "Self-healing infrastructure with zero downtime",
-    pric,"
-  e: "$799",
-    perio,"
-  d: "/month",
-    descriptio,"
-  n: "AI-powered DevOps platform that automatically monitors, optimizes, and heals your infrastructure, ensuring maximum uptime and performance while reducing operational overhead.",
-    feature,
-  s: [,"
-      "AI-powered infrastructure monitoring and alerting","
-      "Automatic performance optimization and scaling","
-      "Self-healing deployment pipelines","
-      "Intelligent resource allocation","
-      "Real-time security threat detection","
-      "Automated backup and disaster recovery","
-      "Multi-cloud orchestration","
-      "Advanced logging and analytics","
-      "Integration with popular DevOps tools","
-      "White-label solution for MSPs"
-    ],
+  innovativeITServices2024: InnovativeITService2024[] = [i, d: "autonomous-devops-platform", nam, "
+  e: "Autonomous DevOps Platform", taglin, "
+  e: "Self-healing infrastructure with zero downtime", pric, "
+  e: "$799", perio, "
+  d: "/month", descriptio, "
+  n: "AI-powered DevOps platform that automatically monitors, optimizes, and heals your infrastructure, ensuring maximum uptime and performance while reducing operational overhead.", feature, s: [, "
+      "AI-powered infrastructure monitoring and alerting", "
+      "Automatic performance optimization and scaling", "
+      "Self-healing deployment pipelines", "
+      "Intelligent resource allocation", "
+      "Real-time security threat detection", "
+      "Automated backup and disaster recovery", "
+      "Multi-cloud orchestration", "
+      "Advanced logging and analytics", "
+      "Integration with popular DevOps tools", "
+      "White-label solution for MSPs"],
     popula,
   r: true,
     ico,"
@@ -136,7 +108,7 @@ export const,
   r: "text-blue-400",
     lin,"
   k: "http,"
-  s://ziontechgroup.com/autonomous-devops",
+  s: //ziontechgroup.com/autonomous-devops",
     marketPositio,"
   n: "Competitive with GitLab ($99/user/month), Jenkins (free), and CircleCI ($15/month). Our,"
   advantage: AI-powered automation, self-healing capabilities, and comprehensive infrastructure management.",
@@ -176,7 +148,7 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709",
       websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
     },
     realImplementatio,
   n: true,
@@ -229,20 +201,20 @@ export interface InnovativeITService2024,
   s: string, launchDat,
   e: string, review,
   s: number} export const,
-  innovativeITServices2024: InnovativeITService2024[] = [ i,"
-  d: "autonomous-devops-platform", nam,"
-  e: "Autonomous DevOps Platform", taglin,"
-  e: "Self-healing infrastructure with zero downtime", pric,"
-  e: "$799", perio,"
-  d: "/month", descriptio,"
-  n: "AI-powered DevOps platform that automatically monitors, optimizes, and heals your infrastructure, ensuring maximum uptime and performance while reducing operational overhead.", feature,"
-  s: [ "AI-powered infrastructure monitoring and alerting", "Automatic performance optimization and scaling", "Self-healing deployment pipelines", "Intelligent resource allocation", "Real-time security threat detection", "Automated backup and disaster recovery", "Multi-cloud orchestration", "Advanced logging and analytics", "Integration with popular DevOps tools", "White-label solution for MSPs" ], popula,
+  innovativeITServices2024: InnovativeITService2024[] = [i, "
+  d: "autonomous-devops-platform", nam, "
+  e: "Autonomous DevOps Platform", taglin, "
+  e: "Self-healing infrastructure with zero downtime", pric, "
+  e: "$799", perio, "
+  d: "/month", descriptio, "
+  n: "AI-powered DevOps platform that automatically monitors, optimizes, and heals your infrastructure, ensuring maximum uptime and performance while reducing operational overhead.", feature, "
+  s: [ "AI-powered infrastructure monitoring and alerting", "Automatic performance optimization and scaling", "Self-healing deployment pipelines", "Intelligent resource allocation", "Real-time security threat detection", "Automated backup and disaster recovery", "Multi-cloud orchestration", "Advanced logging and analytics", "Integration with popular DevOps tools", "White-label solution for MSPs"], popula,
   r: true, ico,"
   n: "⚡", colo,"
   r: "from-blue-500 to-cyan-600", textColo,"
   r: "text-blue-400", lin,"
   k: "http,"
-  s://ziontechgroup.com/autonomous-devops", marketPositio,"
+  s: //ziontechgroup.com/autonomous-devops", marketPositio,"
   n: "Competitive with GitLab ($99/user/month), Jenkins (free), and CircleCI ($15/month). Our,"
   advantage: AI-powered automation, self-healing capabilities, and comprehensive infrastructure management.", targetAudienc,"
   e: "DevOps teams, Software companies, IT departments, Cloud service providers, Managed service providerstups", trialDay,
@@ -263,7 +235,7 @@ export interface InnovativeITService2024,
   l: "kleber@ziontechgroup.com", addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709", websit,"
   e: "http,"
-  s://ziontechgroup.com" }, realImplementatio,
+  s: //ziontechgroup.com" }, realImplementatio,
   n: true, implementationDetail,"
   s: "Production-ready DevOps platform with AI-powered automation, real-time monitoring, and comprehensive infrastructure management capabilities.", launchDat,"
   e: "2024-01-15", customer,

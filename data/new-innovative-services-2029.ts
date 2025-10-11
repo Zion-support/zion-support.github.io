@@ -1,27 +1,13 @@
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'
+import { EnhancedRealMicroSaasService  } from './enhanced-real-micro-saas-services'
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 }
-export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
-  {
-    id: 'ai-customer-success-platform',
-    name: 'AI Customer Success Platform',
-    tagline: 'Predict churn, increase NRR, automate success workflows',
-    price: '$299',
-    period: '/month',
-    description: 'Customer health scoring, churn prediction, playbooks, and automated lifecycle campaigns with CRM and CS integrations.',
-    features: [
-      'Health scores with leading/lagging indicators',
-      'Churn prediction and expansion likelihood',
-      'Playbooks and success workflows',
-      '360° customer view with product analytics',
-      'CRM and ticketing integrations',
-      'Slack and email signals with alerts',
-      'Cohort analysis and NPS tracking'
-    ],
+export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [{
+    id: 'ai-customer-success-platform', name: 'AI Customer Success Platform', tagline: 'Predict churn, increase NRR, automate success workflows', price: '$299', period: '/month', description: 'Customer health scoring, churn prediction, playbooks, and automated lifecycle campaigns with CRM and CS integrations.', features: [
+      'Health scores with leading/lagging indicators', 'Churn prediction and expansion likelihood', 'Playbooks and success workflows', '360° customer view with product analytics', 'CRM and ticketing integrations', 'Slack and email signals with alerts', 'Cohort analysis and NPS tracking'],
     popular: true,
     icon: '📈',
     color: 'from-emerald-500 to-teal-600',
@@ -56,13 +42,7 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     price: '$149',
     period: '/month',
     description: 'Prospect enrichment, lead scoring, AI-written outreach with A/B testing, and pipeline analytics.',
-    features: [
-      'Company/person enrichment and signals',
-      'ICP and buying committee detection',
-      'AI sequences with tone and persona',
-      'Intent and risk scoring',
-      'Multichannel orchestration (email/LinkedIn)'
-    ],
+    features: ['Company/person enrichment and signals', 'ICP and buying committee detection', 'AI sequences with tone and persona', 'Intent and risk scoring', 'Multichannel orchestration (email/LinkedIn)'],
     popular: true,
     icon: '🧭',
     color: 'from-cyan-500 to-blue-600',
@@ -97,13 +77,7 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     price: '$199',
     period: '/month',
     description: 'FP&A with live ERP connectors, assumptions library, and what-if simulations.',
-    features: [
-      'Driver-based models',
-      'Scenario planning and stress tests',
-      'Rolling forecast and variances',
-      'Excel/Sheets bi-directional sync',
-      'ERP/CRM connectors'
-    ],
+    features: ['Driver-based models', 'Scenario planning and stress tests', 'Rolling forecast and variances', 'Excel/Sheets bi-directional sync', 'ERP/CRM connectors'],
     popular: true,
     icon: '💹',
     color: 'from-violet-500 to-purple-600',
@@ -138,12 +112,7 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     price: '$99',
     period: '/month',
     description: 'HR analytics with attrition risk, skill gap analysis, and recruiting pipeline metrics.',
-    features: [
-      'Attrition risk scoring',
-      'Workforce planning and skills mapping',
-      'DEI dashboards',
-      'ATS and HRIS connectors'
-    ],
+    features: ['Attrition risk scoring', 'Workforce planning and skills mapping', 'DEI dashboards', 'ATS and HRIS connectors'],
     popular: false,
     icon: '👥',
     color: 'from-pink-500 to-rose-600',

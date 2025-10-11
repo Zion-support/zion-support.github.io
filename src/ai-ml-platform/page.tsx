@@ -1,21 +1,21 @@
 import React from 'react'
-import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-react'
-import { Helmet } from 'react-helmet-async'
-import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react'
-import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star  } from 'lucide-react'
+import { Helmet  } from 'react-helmet-async'
+import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone } from 'lucide-react'
+import { Brain, TrendingUp, Shield, Users, Clock, Star  } from 'lucide-react'
+import { Link  } from 'react-router-dom'
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const AIMLPlatformPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'Complete ML Platform',
-      description: 'End-to-end machine learning platform with model development, training, and deployment',
-      benefits: ['Rapid model development', 'Automated training', 'Seamless deployment']
-    },
+  return (
+
+  const features = [{
+      icon: Brain, title: 'Complete ML Platform', description: 'End-to-end machine learning platform with model development, training, and deployment', benefits: ['Rapid model development', 'Automated training', 'Seamless deployment']
+    
+  );
+},
       icon: TrendingUp,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics and monitoring for machine learning models',
@@ -30,18 +30,8 @@ const AIMLPlatformPage: React.FC = () => {
       benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing']
     }
   ]
-  const pricingPlans = [
-      name: 'Developer',
-      price: '$999',
-      period: '/month',
-      description: 'Perfect for individual developers',
-      features: [
-        'Up to 5 models',
-        'Basic ML tools',
-        'Email support',
-        'Standard compute',
-        'Basic analytics'
-      ],
+  const pricingPlans = [name: 'Developer', price: '$999', period: '/month', description: 'Perfect for individual developers', features: [
+        'Up to 5 models', 'Basic ML tools', 'Email support', 'Standard compute', 'Basic analytics'],
       popular: false,
     name: 'Team',
       price: '$2,499',
@@ -79,54 +69,21 @@ const AIMLPlatformPage: React.FC = () => {
   s: ['Shared workspaces', 'Version control', 'Knowledge sharing']
     }
   ]
-  const pricingPlans = [
-      nam,
-  e: 'Team',
-      pric,
-  e: '$2,499',
-      descriptio,
-  n: 'Ideal for development teams',
-        'Up to 25 models',
-        'Advanced ML tools',
-        'Priority support',
-        'High-performance compute',
-        'Advanced analytics',
-        'Team collaboration'
-      popular: true,
-    name: 'Enterprise',
-      price: '$4,999',
-      description: 'For large organizations',
-        'Unlimited models',
-      popula,
-  r: true,
-      nam,
-  e: 'Enterprise',
-      pric,
-  e: '$4,999',
-      descriptio,
-  n: 'For large organizations',
-'Unlimited models',
-        'Premium ML features',
-        '24/7 support',
-        'Custom compute',
-        'Custom analytics',
-        'White-label options',
-        'API access'
+  const pricingPlans = [nam, e: 'Team', pric, e: '$2, 499', descriptio, n: 'Ideal for development teams', 'Up to 25 models', 'Advanced ML tools', 'Priority support', 'High-performance compute', 'Advanced analytics', 'Team collaboration'
+      popular: true, name: 'Enterprise', price: '$4, 999', description: 'For large organizations', 'Unlimited models', popula, r: true, nam, e: 'Enterprise', pric, e: '$4, 999', descriptio, n: 'For large organizations', 'Unlimited models', 'Premium ML features', '24/7 support', 'Custom compute', 'Custom analytics', 'White-label options', 'API access'
   const stats = [
   const stats = [
-  // TOD,
-  O: Add items
-],
+  // TOD, O: Add items],
     { icon: Users, value: '500+', label: 'Data Scientists' },
     { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
     { icon: Clock, value: '70%', label: 'Faster Development' },
     { icon: Star, value: '4.9/5', label: 'User Rating' }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <Helmet ></Helmet>
         <title>AI ML Platform | Zion Tech Group
         <meta name="description" content="Advanced AI ML platform solutions by Zion Tech Group." />
-      <Navigation />
+      <Navigation /></Navigation>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-5xl font-bold text-white mb-6">AI ML Platform
@@ -138,7 +95,7 @@ const AIMLPlatformPage: React.FC = () => {
               Contact Us
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
               Learn More
-      <Footer />
+      <Footer /></Footer>
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -152,11 +109,11 @@ const AIMLPlatformPage: React.FC = () => {
 // Contact Us,
           </button>"
             < className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg,$2 />
-  hover:bg-cyan-400,"
+  hover: bg-cyan-400,"
   hover: text-slate-900 transition-colors"></button>
 Learn More
           </div>
-      <Footer />
+      <Footer /></Footer>
     </div>
   ),
 }

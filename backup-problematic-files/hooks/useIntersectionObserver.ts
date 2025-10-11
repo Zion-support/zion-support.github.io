@@ -8,7 +8,7 @@ interface UseIntersectionObserverProps {
     if (prevNode.current) {
   return [setNode, entry] as const
 }
-import { useEffect, useRef, useState } from 'react',
+import { useEffect, useRef, useState  } from 'react',
 interface UseIntersectionObserverProps {
   threshold?: number,
   root?: Element | null,

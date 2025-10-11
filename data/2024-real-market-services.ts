@@ -36,27 +36,10 @@
   rating: number
   reviews: number,
 }
-export const realMarketServices: RealMarketService[] = [
-  // AI-Powered Business Intelligence
+export const realMarketServices: RealMarketService[] = [// AI-Powered Business Intelligence
   {
-    id: 'ai-business-intelligence-pro',
-    name: 'AI Business Intelligence Pro',
-    tagline: 'Transform data into actionable insights with AI',
-    price: '$299',
-    period: '/month',
-    description: 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable recommendations for growth and optimization.',
-    features: [
-      'Real-time data analytics dashboard',
-      'AI-powered trend prediction',
-      'Custom KPI tracking and alerts',
-      'Automated report generation',
-      'Multi-source data integration',
-      'Predictive analytics modeling',
-      'Executive summary automation',
-      'Mobile-responsive interface',
-      'White-label reporting',
-      'API access for custom integrations'
-    ],
+    id: 'ai-business-intelligence-pro', name: 'AI Business Intelligence Pro', tagline: 'Transform data into actionable insights with AI', price: '$299', period: '/month', description: 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable recommendations for growth and optimization.', features: [
+      'Real-time data analytics dashboard', 'AI-powered trend prediction', 'Custom KPI tracking and alerts', 'Automated report generation', 'Multi-source data integration', 'Predictive analytics modeling', 'Executive summary automation', 'Mobile-responsive interface', 'White-label reporting', 'API access for custom integrations'],
     popular: true,
     icon: '📊',
     color: 'from-blue-500 to-indigo-600',
@@ -96,18 +79,7 @@ export const realMarketServices: RealMarketService[] = [
     price: '$199',
     period: '/month',
     description: 'Comprehensive customer success automation platform that helps businesses reduce churn, increase customer lifetime value, and automate customer engagement workflows.',
-    features: [
-      'Automated onboarding sequences',
-      'Health score monitoring',
-      'Churn prediction alerts',
-      'Customer journey mapping',
-      'Automated check-in emails',
-      'Success milestone tracking',
-      'Integration with CRM systems',
-      'Customer feedback collection',
-      'Success playbook automation',
-      'Performance analytics dashboard'
-    ],
+    features: ['Automated onboarding sequences', 'Health score monitoring', 'Churn prediction alerts', 'Customer journey mapping', 'Automated check-in emails', 'Success milestone tracking', 'Integration with CRM systems', 'Customer feedback collection', 'Success playbook automation', 'Performance analytics dashboard'],
     popular: true,
     icon: '🎯',
     color: 'from-green-500 to-emerald-600',
@@ -148,18 +120,7 @@ export const realMarketServices: RealMarketService[] = [
     price: '$399',
     period: '/month',
     description: 'Comprehensive API security and monitoring solution that protects your APIs from attacks, monitors performance, and ensures compliance with security standards.',
-    features: [
-      'Real-time threat detection',
-      'API rate limiting and throttling',
-      'OAuth 2.0 and JWT management',
-      'API performance monitoring',
-      'Security compliance reporting',
-      'Automated security testing',
-      'API documentation generation',
-      'Developer portal management',
-      'Usage analytics and insights',
-      'Multi-cloud deployment support'
-    ],
+    features: ['Real-time threat detection', 'API rate limiting and throttling', 'OAuth 2.0 and JWT management', 'API performance monitoring', 'Security compliance reporting', 'Automated security testing', 'API documentation generation', 'Developer portal management', 'Usage analytics and insights', 'Multi-cloud deployment support'],
     popular: true,
     icon: '🔒',
     color: 'from-red-500 to-pink-600',
@@ -200,18 +161,7 @@ export const realMarketServices: RealMarketService[] = [
     price: '$249',
     period: '/month',
     description: 'All-in-one e-commerce automation platform that streamlines inventory management, order processing, customer service, and marketing automation for online stores.',
-    features: [
-      'Automated inventory management',
-      'Order processing automation',
-      'Customer service chatbot',
-      'Marketing automation workflows',
-      'Abandoned cart recovery',
-      'Personalized recommendations',
-      'Multi-channel integration',
-      'Analytics and reporting',
-      'Mobile app management',
-      'White-label solutions'
-    ],
+    features: ['Automated inventory management', 'Order processing automation', 'Customer service chatbot', 'Marketing automation workflows', 'Abandoned cart recovery', 'Personalized recommendations', 'Multi-channel integration', 'Analytics and reporting', 'Mobile app management', 'White-label solutions'],
     popular: true,
     icon: '🛒',
     color: 'from-purple-500 to-violet-600',
@@ -252,18 +202,7 @@ export const realMarketServices: RealMarketService[] = [
     price: '$179',
     period: '/month',
     description: 'Comprehensive HR automation platform that handles recruitment, onboarding, performance management, and employee engagement through AI-powered workflows.',
-    features: [
-      'AI-powered recruitment automation',
-      'Automated onboarding workflows',
-      'Performance management system',
-      'Employee engagement tracking',
-      'Time and attendance management',
-      'Benefits administration',
-      'Compliance reporting',
-      'Employee self-service portal',
-      'Mobile app for employees',
-      'Integration with payroll systems'
-    ],
+    features: ['AI-powered recruitment automation', 'Automated onboarding workflows', 'Performance management system', 'Employee engagement tracking', 'Time and attendance management', 'Benefits administration', 'Compliance reporting', 'Employee self-service portal', 'Mobile app for employees', 'Integration with payroll systems'],
     popular: true,
     icon: '👥',
     color: 'from-orange-500 to-red-600',
@@ -304,18 +243,7 @@ export const realMarketServices: RealMarketService[] = [
     price: '$349',
     period: '/month',
     description: 'Advanced financial analytics platform that provides real-time insights, automated reporting, and AI-powered forecasting for businesses of all sizes.',
-    features: [
-      'Real-time financial dashboards',
-      'AI-powered cash flow forecasting',
-      'Automated financial reporting',
-      'Budget tracking and alerts',
-      'Expense categorization',
-      'Financial KPI monitoring',
-      'Multi-currency support',
-      'Tax preparation assistance',
-      'Investment portfolio tracking',
-      'Regulatory compliance reporting'
-    ],
+    features: ['Real-time financial dashboards', 'AI-powered cash flow forecasting', 'Automated financial reporting', 'Budget tracking and alerts', 'Expense categorization', 'Financial KPI monitoring', 'Multi-currency support', 'Tax preparation assistance', 'Investment portfolio tracking', 'Regulatory compliance reporting'],
     popular: true,
     icon: '💰',
     color: 'from-yellow-500 to-amber-600',
@@ -356,18 +284,7 @@ export const realMarketServices: RealMarketService[] = [
     price: '$199',
     period: '/month',
     description: 'Intelligent project management platform that uses AI to optimize workflows, predict project risks, and enhance team collaboration for better project outcomes.',
-    features: [
-      'AI-powered project planning',
-      'Risk prediction and mitigation',
-      'Resource optimization',
-      'Team collaboration tools',
-      'Time tracking automation',
-      'Progress monitoring',
-      'Stakeholder reporting',
-      'Mobile app access',
-      'Integration with popular tools',
-      'White-label solutions'
-    ],
+    features: ['AI-powered project planning', 'Risk prediction and mitigation', 'Resource optimization', 'Team collaboration tools', 'Time tracking automation', 'Progress monitoring', 'Stakeholder reporting', 'Mobile app access', 'Integration with popular tools', 'White-label solutions'],
     popular: true,
     icon: '📋',
     color: 'from-teal-500 to-cyan-600',
@@ -408,18 +325,7 @@ export const realMarketServices: RealMarketService[] = [
     price: '$279',
     period: '/month',
     description: 'Comprehensive marketing automation platform that streamlines email marketing, social media management, lead generation, and campaign analytics through intelligent automation.',
-    features: [
-      'Email marketing automation',
-      'Social media management',
-      'Lead generation and scoring',
-      'Campaign analytics dashboard',
-      'A/B testing automation',
-      'Personalization engine',
-      'CRM integration',
-      'Marketing attribution',
-      'Mobile app management',
-      'White-label solutions'
-    ],
+    features: ['Email marketing automation', 'Social media management', 'Lead generation and scoring', 'Campaign analytics dashboard', 'A/B testing automation', 'Personalization engine', 'CRM integration', 'Marketing attribution', 'Mobile app management', 'White-label solutions'],
     popular: true,
     icon: '📢',
     color: 'from-pink-500 to-rose-600',
@@ -460,18 +366,7 @@ export const realMarketServices: RealMarketService[] = [
     price: '$399',
     period: '/month',
     description: 'AI-powered legal document automation platform that streamlines contract creation, document review, and legal workflow management for law firms and businesses.',
-    features: [
-      'AI-powered contract generation',
-      'Document review automation',
-      'Legal workflow management',
-      'Compliance checking',
-      'E-signature integration',
-      'Document version control',
-      'Client portal access',
-      'Billing integration',
-      'Mobile app access',
-      'White-label solutions'
-    ],
+    features: ['AI-powered contract generation', 'Document review automation', 'Legal workflow management', 'Compliance checking', 'E-signature integration', 'Document version control', 'Client portal access', 'Billing integration', 'Mobile app access', 'White-label solutions'],
     popular: true,
     icon: '⚖️',
     color: 'from-indigo-500 to-blue-600',
@@ -505,4 +400,4 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 480
   }
 ]
-import { ServiceVariant } from "../types/service-variants" export interface RealMarketService id: string; name: string; tagline: string; price: string, period: string, description: string; features: string[]; popular: boolean; icon: string; color: string; textColor: string; link: string; marketPosition: string; targetAudience: string; trialDays: number; setupTime: string; category: string; realService: boolean; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; variant: ServiceVariant; contactInfo: mobile: string; email: string; address: string, website: string }; realImplementation: boolean; implementationDetails: string; launchDate: string; customers: number; rating: number; reviews: number, } export const realMarketServices: RealMarketService[] = [ id: "ai-business-intelligence-pro" name: "AI Business Intelligence Pro" tagline: "Transform data into actionable insights with AI" price: "$299" period: "/month" description: "Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable recommendations for growth and optimization." features: [ "Real-time data analytics dashboard" "AI-powered trend prediction" "Custom KPI tracking and alerts" "Automated report generation" "Multi-source data integration" "Predictive analytics modeling" "Executive summary automation" "Mobile-responsive interface" "White-label reporting" "API access for custom integrations" ] popular: true icon: "📊" color: "from-blue-500 to-indigo-600" textColor: "text-blue-400" link: "https://ziontechgroup.com/ai-business-intelligence" marketPosition: "Competitive with Tableau ($70/user/month), Power BI ($9.99/user/month), and Looker ($30/user/month). Our advantage: AI automation, predictive analytics, and lower cost per user." targetAudience: "Business analysts, Data scientists, Executives, Marketing teams, Sales teams, Operations managers" trialDays: 14 setupTime: "2 hours" category: "AI & Analytics" realService: true technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"] integrations: ["Salesforce", "HubSpot", "Google Analytics", "Shopify", "QuickBooks", "Zapier"] useCases: ["Sales performance analysis", "Marketing ROI tracking", "Customer behavior insights", "Operational efficiency", "Financial forecasting", "Competitive analysis"] roi: "Average customer sees 400% ROI within 6 months through improved decision-making and operational efficiency." competitors: ["Tableau", "Power BI", "Looker", "Qlik", "Sisense"] marketSize: "$29.48B market" growthRate: "15.7% annual growth" variant: "ai-futuristic" contactInfo: mobile: "+1 302 464 0950" email: "kleber@ziontechgroup.com" address: "364 E Main St STE 1008 Middletown DE 19709" website: "https://ziontechgroup.com" } realImplementation: true implementationDetails: "Production-ready SaaS platform with real-time data processing, machine learning models, and comprehensive analytics dashboard. Includes data connectors for major business tools." launchDate: "2024-03-01" customers: 1800 rating: 4.7 reviews: 950 } ]
+import { ServiceVariant  } from '../types/service-variants' export interface RealMarketService id: string; name: string; tagline: string; price: string, period: string, description: string; features: string[]; popular: boolean; icon: string; color: string; textColor: string; link: string; marketPosition: string; targetAudience: string; trialDays: number; setupTime: string; category: string; realService: boolean; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; variant: ServiceVariant; contactInfo: mobile: string; email: string; address: string, website: string }; realImplementation: boolean; implementationDetails: string; launchDate: string; customers: number; rating: number; reviews: number, } export const realMarketServices: RealMarketService[] = [id: "ai-business-intelligence-pro" name: "AI Business Intelligence Pro" tagline: "Transform data into actionable insights with AI" price: "$299" period: "/month" description: "Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable recommendations for growth and optimization." features: [ "Real-time data analytics dashboard" "AI-powered trend prediction" "Custom KPI tracking and alerts" "Automated report generation" "Multi-source data integration" "Predictive analytics modeling" "Executive summary automation" "Mobile-responsive interface" "White-label reporting" "API access for custom integrations"] popular: true icon: "📊" color: "from-blue-500 to-indigo-600" textColor: "text-blue-400" link: "https://ziontechgroup.com/ai-business-intelligence" marketPosition: "Competitive with Tableau ($70/user/month), Power BI ($9.99/user/month), and Looker ($30/user/month). Our advantage: AI automation, predictive analytics, and lower cost per user." targetAudience: "Business analysts, Data scientists, Executives, Marketing teams, Sales teams, Operations managers" trialDays: 14 setupTime: "2 hours" category: "AI & Analytics" realService: true technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"] integrations: ["Salesforce", "HubSpot", "Google Analytics", "Shopify", "QuickBooks", "Zapier"] useCases: ["Sales performance analysis", "Marketing ROI tracking", "Customer behavior insights", "Operational efficiency", "Financial forecasting", "Competitive analysis"] roi: "Average customer sees 400% ROI within 6 months through improved decision-making and operational efficiency." competitors: ["Tableau", "Power BI", "Looker", "Qlik", "Sisense"] marketSize: "$29.48B market" growthRate: "15.7% annual growth" variant: "ai-futuristic" contactInfo: mobile: "+1 302 464 0950" email: "kleber@ziontechgroup.com" address: "364 E Main St STE 1008 Middletown DE 19709" website: "https://ziontechgroup.com" } realImplementation: true implementationDetails: "Production-ready SaaS platform with real-time data processing, machine learning models, and comprehensive analytics dashboard. Includes data connectors for major business tools." launchDate: "2024-03-01" customers: 1800 rating: 4.7 reviews: 950 } ]

@@ -48,26 +48,9 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 }
-export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
-  {
-    id: 'healthcare-ai-diagnostic-platform',
-    name: 'Healthcare AI Diagnostic Platform',
-    tagline: 'Advanced AI-powered diagnostic tools for healthcare professionals',
-    price: '$18,999',
-    period: '/month',
-    description: 'Comprehensive AI-powered diagnostic platform that assists healthcare professionals in accurate diagnosis, treatment planning, and patient care optimization.',
-    features: [
-      'AI-powered image analysis (X-rays, MRIs, CT scans)',
-      'Symptom analysis and diagnosis support',
-      'Treatment recommendation engine',
-      'Patient data management',
-      'Clinical decision support',
-      'Drug interaction checking',
-      'Medical literature integration',
-      'Compliance with HIPAA standards',
-      'Real-time collaboration tools',
-      'Analytics and reporting dashboard'
-    ],
+export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [{
+    id: 'healthcare-ai-diagnostic-platform', name: 'Healthcare AI Diagnostic Platform', tagline: 'Advanced AI-powered diagnostic tools for healthcare professionals', price: '$18, 999', period: '/month', description: 'Comprehensive AI-powered diagnostic platform that assists healthcare professionals in accurate diagnosis, treatment planning, and patient care optimization.', features: [
+      'AI-powered image analysis (X-rays, MRIs, CT scans)', 'Symptom analysis and diagnosis support', 'Treatment recommendation engine', 'Patient data management', 'Clinical decision support', 'Drug interaction checking', 'Medical literature integration', 'Compliance with HIPAA standards', 'Real-time collaboration tools', 'Analytics and reporting dashboard'],
     popular: true,
     icon: '🏥',
     color: 'from-green-600 to-emerald-600',
@@ -101,18 +84,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     price: '$22,999',
     period: '/month',
     description: 'Advanced blockchain platform designed specifically for financial services, providing secure, transparent, and efficient transaction processing, smart contracts, and digital asset management.',
-    features: [
-      'Smart contract development and deployment',
-      'Digital asset management',
-      'Cross-border payment processing',
-      'Regulatory compliance tools',
-      'Real-time transaction monitoring',
-      'Multi-currency support',
-      'Advanced security protocols',
-      'API for banking integration',
-      'Compliance reporting',
-      '24/7 platform monitoring'
-    ],
+    features: ['Smart contract development and deployment', 'Digital asset management', 'Cross-border payment processing', 'Regulatory compliance tools', 'Real-time transaction monitoring', 'Multi-currency support', 'Advanced security protocols', 'API for banking integration', 'Compliance reporting', '24/7 platform monitoring'],
     popular: true,
     icon: '💳',
     color: 'from-yellow-600 to-orange-600',
@@ -146,18 +118,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     price: '$16,999',
     period: '/month',
     description: 'Advanced IoT platform that enables smart manufacturing through real-time monitoring, predictive maintenance, quality control, and operational optimization.',
-    features: [
-      'Real-time equipment monitoring',
-      'Predictive maintenance alerts',
-      'Quality control automation',
-      'Energy consumption optimization',
-      'Supply chain tracking',
-      'Production line optimization',
-      'Safety monitoring systems',
-      'Data analytics dashboard',
-      'Mobile app for operators',
-      'Integration with ERP systems'
-    ],
+    features: ['Real-time equipment monitoring', 'Predictive maintenance alerts', 'Quality control automation', 'Energy consumption optimization', 'Supply chain tracking', 'Production line optimization', 'Safety monitoring systems', 'Data analytics dashboard', 'Mobile app for operators', 'Integration with ERP systems'],
     popular: true,
     icon: '🏭',
     color: 'from-blue-600 to-indigo-600',
@@ -191,18 +152,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     price: '$12,999',
     period: '/month',
     description: 'Comprehensive AI platform that optimizes retail operations through customer behavior analysis, inventory management, pricing optimization, and personalized marketing.',
-    features: [
-      'Customer behavior analysis',
-      'Inventory optimization',
-      'Dynamic pricing strategies',
-      'Personalized marketing campaigns',
-      'Demand forecasting',
-      'Customer segmentation',
-      'Sales performance analytics',
-      'Multi-channel integration',
-      'Real-time reporting dashboard',
-      'Mobile app for managers'
-    ],
+    features: ['Customer behavior analysis', 'Inventory optimization', 'Dynamic pricing strategies', 'Personalized marketing campaigns', 'Demand forecasting', 'Customer segmentation', 'Sales performance analytics', 'Multi-channel integration', 'Real-time reporting dashboard', 'Mobile app for managers'],
     popular: true,
     icon: '🛍️',
     color: 'from-pink-600 to-purple-600',
@@ -236,38 +186,11 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     price: '$19,999',
     period: '/month',
     description: 'Advanced AI platform that optimizes logistics operations, supply chain management, route planning, and delivery optimization for maximum efficiency and cost reduction.',
-    features: [
-      'Route optimization algorithms',
-      'Supply chain visibility',
-      'Demand forecasting',
-      'Inventory optimization',
-      'Real-time tracking systems',
-      'Cost optimization analytics',
-      'Risk assessment tools',
-      'Performance monitoring',
-      'Multi-carrier integration',
-      'Mobile app for drivers'
-export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[] = [
-  // Financial Technology Services
+    features: ['Route optimization algorithms', 'Supply chain visibility', 'Demand forecasting', 'Inventory optimization', 'Real-time tracking systems', 'Cost optimization analytics', 'Risk assessment tools', 'Performance monitoring', 'Multi-carrier integration', 'Mobile app for drivers'
+export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[] = [// Financial Technology Services
   {
-    id: 'ai-financial-risk-management',
-    name: 'AI Financial Risk Management Platform',
-    tagline: 'Intelligent Risk Assessment and Portfolio Optimization for Financial Institutions',
-    price: '$1,599',
-    period: '/month',
-    description: 'Advanced AI-powered financial risk management platform that provides real-time risk assessment, portfolio optimization, and predictive analytics for banks, investment firms, and financial institutions.',
-    features: [
-      'Real-time risk assessment and monitoring',
-      'AI-powered portfolio optimization',
-      'Predictive market analysis and forecasting',
-      'Credit risk modeling and assessment',
-      'Regulatory compliance automation',
-      'Stress testing and scenario analysis',
-      'Fraud detection and prevention',
-      'Multi-asset portfolio management',
-      'Real-time market data integration',
-      'Advanced reporting and analytics'
-    ],
+    id: 'ai-financial-risk-management', name: 'AI Financial Risk Management Platform', tagline: 'Intelligent Risk Assessment and Portfolio Optimization for Financial Institutions', price: '$1, 599', period: '/month', description: 'Advanced AI-powered financial risk management platform that provides real-time risk assessment, portfolio optimization, and predictive analytics for banks, investment firms, and financial institutions.', features: [
+      'Real-time risk assessment and monitoring', 'AI-powered portfolio optimization', 'Predictive market analysis and forecasting', 'Credit risk modeling and assessment', 'Regulatory compliance automation', 'Stress testing and scenario analysis', 'Fraud detection and prevention', 'Multi-asset portfolio management', 'Real-time market data integration', 'Advanced reporting and analytics'],
     popular: true,
     icon: '💰',
     color: 'from-green-600 to-emerald-600',
@@ -293,31 +216,11 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     customers: 67,
     rating: 4.9,
     reviews: 45,
-    benefits: [
-      'Real-time risk monitoring',
-      'Improved portfolio performance',
-      'Enhanced regulatory compliance',
-      'Reduced operational costs',
-      'Advanced fraud detection'
-    ],
-    capabilities: [
-      'Risk assessment',
-      'Portfolio optimization',
-      'Market analysis',
-      'Compliance automation',
-      'Fraud detection',
-      'Regulatory reporting'
-    ],
+    benefits: ['Real-time risk monitoring', 'Improved portfolio performance', 'Enhanced regulatory compliance', 'Reduced operational costs', 'Advanced fraud detection'],
+    capabilities: ['Risk assessment', 'Portfolio optimization', 'Market analysis', 'Compliance automation', 'Fraud detection', 'Regulatory reporting'],
     marketAdvantage: 'Superior AI capabilities for financial risk management at competitive pricing compared to traditional financial terminals.',
     averageMarketPrice: '$15000-30000/year',
-    featuresCapabilities: [
-      'Real-time risk monitoring',
-      'AI portfolio optimization',
-      'Predictive market analysis',
-      'Credit risk modeling',
-      'Regulatory compliance',
-      'Fraud detection'
-    ]
+    featuresCapabilities: ['Real-time risk monitoring', 'AI portfolio optimization', 'Predictive market analysis', 'Credit risk modeling', 'Regulatory compliance', 'Fraud detection']
   },
   // Energy & Sustainability Services
   {
@@ -327,18 +230,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     price: '$799',
     period: '/month',
     description: 'Intelligent energy optimization platform that uses AI to optimize energy consumption, reduce costs, and improve sustainability for commercial buildings, manufacturing facilities, and utility companies.',
-    features: [
-      'AI-powered energy consumption optimization',
-      'Real-time energy monitoring and analytics',
-      'Predictive maintenance for energy systems',
-      'Renewable energy integration and optimization',
-      'Carbon footprint tracking and reduction',
-      'Demand response optimization',
-      'Energy cost forecasting and budgeting',
-      'Sustainability reporting and compliance',
-      'Smart grid integration',
-      'Energy efficiency recommendations'
-    ],
+    features: ['AI-powered energy consumption optimization', 'Real-time energy monitoring and analytics', 'Predictive maintenance for energy systems', 'Renewable energy integration and optimization', 'Carbon footprint tracking and reduction', 'Demand response optimization', 'Energy cost forecasting and budgeting', 'Sustainability reporting and compliance', 'Smart grid integration', 'Energy efficiency recommendations'],
     popular: true,
     icon: '⚡',
     color: 'from-yellow-500 to-orange-500',
@@ -364,31 +256,11 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     customers: 89,
     rating: 4.8,
     reviews: 67,
-    benefits: [
-      'Reduce energy costs by 25-40%',
-      'Improve sustainability metrics',
-      'Enhanced operational efficiency',
-      'Predictive maintenance',
-      'Regulatory compliance'
-    ],
-    capabilities: [
-      'Energy optimization',
-      'Real-time monitoring',
-      'Predictive maintenance',
-      'Renewable integration',
-      'Carbon tracking',
-      'Sustainability reporting'
-    ],
+    benefits: ['Reduce energy costs by 25-40%', 'Improve sustainability metrics', 'Enhanced operational efficiency', 'Predictive maintenance', 'Regulatory compliance'],
+    capabilities: ['Energy optimization', 'Real-time monitoring', 'Predictive maintenance', 'Renewable integration', 'Carbon tracking', 'Sustainability reporting'],
     marketAdvantage: 'Superior AI capabilities for energy optimization with comprehensive sustainability features compared to traditional energy management systems.',
     averageMarketPrice: '$500-1200/month',
-    featuresCapabilities: [
-      'AI energy optimization',
-      'Real-time monitoring',
-      'Predictive maintenance',
-      'Renewable integration',
-      'Carbon tracking',
-      'Sustainability reporting'
-    ]
+    featuresCapabilities: ['AI energy optimization', 'Real-time monitoring', 'Predictive maintenance', 'Renewable integration', 'Carbon tracking', 'Sustainability reporting']
   },
   // Transportation & Logistics Services
   {
@@ -398,18 +270,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     price: '$1,199',
     period: '/month',
     description: 'Revolutionary autonomous logistics platform that optimizes supply chains, manages autonomous vehicles, and provides intelligent routing and scheduling for maximum efficiency and cost reduction.',
-    features: [
-      'AI-powered supply chain optimization',
-      'Autonomous vehicle fleet management',
-      'Intelligent routing and scheduling',
-      'Real-time logistics tracking and monitoring',
-      'Predictive demand forecasting',
-      'Warehouse automation and optimization',
-      'Last-mile delivery optimization',
-      'Multi-modal transportation coordination',
-      'Cost optimization and analytics',
-      'Sustainability and carbon footprint tracking'
-    ],
+    features: ['AI-powered supply chain optimization', 'Autonomous vehicle fleet management', 'Intelligent routing and scheduling', 'Real-time logistics tracking and monitoring', 'Predictive demand forecasting', 'Warehouse automation and optimization', 'Last-mile delivery optimization', 'Multi-modal transportation coordination', 'Cost optimization and analytics', 'Sustainability and carbon footprint tracking'],
     popular: true,
     icon: '🚚',
     color: 'from-blue-600 to-cyan-600',
@@ -435,31 +296,11 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     customers: 45,
     rating: 4.8,
     reviews: 34,
-    benefits: [
-      'Optimize supply chain operations',
-      'Reduce logistics costs by 30-50%',
-      'Improve delivery efficiency',
-      'Enhanced customer satisfaction',
-      'Sustainability improvements'
-    ],
-    capabilities: [
-      'Supply chain optimization',
-      'Autonomous fleet management',
-      'Route optimization',
-      'Warehouse automation',
-      'Demand forecasting',
-      'Sustainability tracking'
-    ],
+    benefits: ['Optimize supply chain operations', 'Reduce logistics costs by 30-50%', 'Improve delivery efficiency', 'Enhanced customer satisfaction', 'Sustainability improvements'],
+    capabilities: ['Supply chain optimization', 'Autonomous fleet management', 'Route optimization', 'Warehouse automation', 'Demand forecasting', 'Sustainability tracking'],
     marketAdvantage: 'Superior AI capabilities for logistics optimization with autonomous vehicle integration compared to traditional logistics platforms.',
     averageMarketPrice: '$3000-8000/month',
-    featuresCapabilities: [
-      'AI supply chain optimization',
-      'Autonomous fleet management',
-      'Intelligent routing',
-      'Warehouse automation',
-      'Demand forecasting',
-      'Sustainability tracking'
-    ]
+    featuresCapabilities: ['AI supply chain optimization', 'Autonomous fleet management', 'Intelligent routing', 'Warehouse automation', 'Demand forecasting', 'Sustainability tracking']
   },
   // Education Technology Services
   {
@@ -469,18 +310,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     price: '$399',
     period: '/month',
     description: 'Advanced AI-powered personalized learning platform that adapts to individual student needs, provides real-time feedback, and predicts student success to improve educational outcomes.',
-    features: [
-      'AI-powered adaptive learning algorithms',
-      'Personalized learning paths and content',
-      'Real-time student progress monitoring',
-      'Predictive analytics for student success',
-      'Intelligent assessment and feedback',
-      'Multi-modal content delivery',
-      'Learning analytics and insights',
-      'Parent and teacher communication tools',
-      'Accessibility and inclusivity features',
-      'Integration with existing LMS platforms'
-    ],
+    features: ['AI-powered adaptive learning algorithms', 'Personalized learning paths and content', 'Real-time student progress monitoring', 'Predictive analytics for student success', 'Intelligent assessment and feedback', 'Multi-modal content delivery', 'Learning analytics and insights', 'Parent and teacher communication tools', 'Accessibility and inclusivity features', 'Integration with existing LMS platforms'],
     popular: true,
     icon: '🎓',
     color: 'from-purple-600 to-indigo-600',
@@ -506,31 +336,11 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     customers: 156,
     rating: 4.9,
     reviews: 123,
-    benefits: [
-      'Improve student outcomes by 40%',
-      'Reduce administrative workload',
-      'Personalized learning experiences',
-      'Real-time progress tracking',
-      'Enhanced teacher effectiveness'
-    ],
-    capabilities: [
-      'Adaptive learning',
-      'Personalized content',
-      'Progress monitoring',
-      'Success prediction',
-      'Intelligent assessment',
-      'Learning analytics'
-    ],
+    benefits: ['Improve student outcomes by 40%', 'Reduce administrative workload', 'Personalized learning experiences', 'Real-time progress tracking', 'Enhanced teacher effectiveness'],
+    capabilities: ['Adaptive learning', 'Personalized content', 'Progress monitoring', 'Success prediction', 'Intelligent assessment', 'Learning analytics'],
     marketAdvantage: 'Superior AI capabilities for personalized learning with comprehensive analytics compared to traditional educational technology platforms.',
     averageMarketPrice: '$15-30/student/month',
-    featuresCapabilities: [
-      'AI adaptive learning',
-      'Personalized content',
-      'Real-time monitoring',
-      'Success prediction',
-      'Intelligent assessment',
-      'Learning analytics'
-    ]
+    featuresCapabilities: ['AI adaptive learning', 'Personalized content', 'Real-time monitoring', 'Success prediction', 'Intelligent assessment', 'Learning analytics']
   },
   // Real Estate Technology Services
   {
@@ -540,18 +350,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     price: '$599',
     period: '/month',
     description: 'Advanced AI-powered real estate analytics platform that provides market intelligence, property valuation, investment analysis, and predictive insights for real estate professionals and investors.',
-    features: [
-      'AI-powered property valuation and analysis',
-      'Market intelligence and trend analysis',
-      'Investment opportunity identification',
-      'Predictive market forecasting',
-      'Comparative market analysis (CMA)',
-      'Risk assessment and scoring',
-      'Portfolio optimization and management',
-      'Real-time market data integration',
-      'Advanced reporting and visualization',
-      'API access for custom applications'
-    ],
+    features: ['AI-powered property valuation and analysis', 'Market intelligence and trend analysis', 'Investment opportunity identification', 'Predictive market forecasting', 'Comparative market analysis (CMA)', 'Risk assessment and scoring', 'Portfolio optimization and management', 'Real-time market data integration', 'Advanced reporting and visualization', 'API access for custom applications'],
     popular: true,
     icon: '🏠',
     color: 'from-amber-600 to-orange-600',
@@ -577,31 +376,11 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     customers: 234,
     rating: 4.8,
     reviews: 189,
-    benefits: [
-      'Accurate property valuations',
-      'Market intelligence insights',
-      'Investment opportunity identification',
-      'Risk reduction',
-      'Improved decision-making'
-    ],
-    capabilities: [
-      'Property valuation',
-      'Market analysis',
-      'Investment analysis',
-      'Portfolio management',
-      'Risk assessment',
-      'Market forecasting'
-    ],
+    benefits: ['Accurate property valuations', 'Market intelligence insights', 'Investment opportunity identification', 'Risk reduction', 'Improved decision-making'],
+    capabilities: ['Property valuation', 'Market analysis', 'Investment analysis', 'Portfolio management', 'Risk assessment', 'Market forecasting'],
     marketAdvantage: 'Superior AI capabilities for real estate analytics with comprehensive market intelligence compared to traditional real estate data platforms.',
     averageMarketPrice: '$500-1500/month',
-    featuresCapabilities: [
-      'AI property valuation',
-      'Market intelligence',
-      'Investment analysis',
-      'Portfolio optimization',
-      'Risk assessment',
-      'Market forecasting'
-    ]
+    featuresCapabilities: ['AI property valuation', 'Market intelligence', 'Investment analysis', 'Portfolio optimization', 'Risk assessment', 'Market forecasting']
   },
   // Legal Technology Services
   {
@@ -611,18 +390,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     price: '$899',
     period: '/month',
     description: 'Advanced AI-powered legal research platform that provides intelligent case law analysis, document review, contract analysis, and legal research automation for law firms and legal professionals.',
-    features: [
-      'AI-powered legal research and case law analysis',
-      'Intelligent document review and analysis',
-      'Contract analysis and risk assessment',
-      'Legal precedent identification and tracking',
-      'Automated legal document generation',
-      'Compliance monitoring and alerts',
-      'Legal analytics and insights',
-      'Multi-jurisdiction research support',
-      'Collaborative research tools',
-      'Integration with legal practice management systems'
-    ],
+    features: ['AI-powered legal research and case law analysis', 'Intelligent document review and analysis', 'Contract analysis and risk assessment', 'Legal precedent identification and tracking', 'Automated legal document generation', 'Compliance monitoring and alerts', 'Legal analytics and insights', 'Multi-jurisdiction research support', 'Collaborative research tools', 'Integration with legal practice management systems'],
     popular: true,
     icon: '⚖️',
     color: 'from-slate-600 to-gray-600',
@@ -648,31 +416,11 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     customers: 89,
     rating: 4.9,
     reviews: 67,
-    benefits: [
-      'Reduce research time by 60%',
-      'Improve case outcomes',
-      'Enhanced document analysis',
-      'Automated compliance monitoring',
-      'Cost savings on research'
-    ],
-    capabilities: [
-      'Legal research',
-      'Document analysis',
-      'Contract review',
-      'Case law analysis',
-      'Compliance monitoring',
-      'Document generation'
-    ],
+    benefits: ['Reduce research time by 60%', 'Improve case outcomes', 'Enhanced document analysis', 'Automated compliance monitoring', 'Cost savings on research'],
+    capabilities: ['Legal research', 'Document analysis', 'Contract review', 'Case law analysis', 'Compliance monitoring', 'Document generation'],
     marketAdvantage: 'Superior AI capabilities for legal research with comprehensive analysis tools compared to traditional legal research platforms.',
     averageMarketPrice: '$150-300/month',
-    featuresCapabilities: [
-      'AI legal research',
-      'Document analysis',
-      'Contract review',
-      'Case law analysis',
-      'Compliance monitoring',
-      'Document generation'
-    ]
+    featuresCapabilities: ['AI legal research', 'Document analysis', 'Contract review', 'Case law analysis', 'Compliance monitoring', 'Document generation']
   },
   // Manufacturing Technology Services
   {
@@ -682,18 +430,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     price: '$1,499',
     period: '/month',
     description: 'Advanced AI-powered smart manufacturing platform that optimizes production processes, provides predictive maintenance, ensures quality control, and maximizes operational efficiency for manufacturing companies.',
-    features: [
-      'AI-powered production optimization',
-      'Predictive maintenance and equipment monitoring',
-      'Real-time quality control and inspection',
-      'Supply chain optimization and management',
-      'Energy consumption optimization',
-      'Workforce productivity analytics',
-      'Inventory management and optimization',
-      'Performance analytics and reporting',
-      'IoT device integration and management',
-      'Custom manufacturing workflows'
-    ],
+    features: ['AI-powered production optimization', 'Predictive maintenance and equipment monitoring', 'Real-time quality control and inspection', 'Supply chain optimization and management', 'Energy consumption optimization', 'Workforce productivity analytics', 'Inventory management and optimization', 'Performance analytics and reporting', 'IoT device integration and management', 'Custom manufacturing workflows'],
     popular: true,
     icon: '🏭',
     color: 'from-red-600 to-pink-600',
@@ -719,31 +456,11 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     customers: 67,
     rating: 4.8,
     reviews: 45,
-    benefits: [
-      'Improve production efficiency by 40%',
-      'Reduce downtime by 60%',
-      'Enhance quality control',
-      'Optimize energy consumption',
-      'Reduce operational costs'
-    ],
-    capabilities: [
-      'Production optimization',
-      'Predictive maintenance',
-      'Quality control',
-      'Supply chain optimization',
-      'Energy management',
-      'Performance analytics'
-    ],
+    benefits: ['Improve production efficiency by 40%', 'Reduce downtime by 60%', 'Enhance quality control', 'Optimize energy consumption', 'Reduce operational costs'],
+    capabilities: ['Production optimization', 'Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Energy management', 'Performance analytics'],
     marketAdvantage: 'Superior AI capabilities for manufacturing optimization with comprehensive IoT integration compared to traditional manufacturing platforms.',
     averageMarketPrice: '$500-2000/month',
-    featuresCapabilities: [
-      'AI production optimization',
-      'Predictive maintenance',
-      'Quality control',
-      'Supply chain optimization',
-      'Energy management',
-      'Performance analytics'
-    ]
+    featuresCapabilities: ['AI production optimization', 'Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Energy management', 'Performance analytics']
   },
   {
     id: 'ai-powered-healthcare-diagnostics',
@@ -752,18 +469,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     price: '$2,999',
     period: '/month',
     description: 'Advanced AI-powered healthcare diagnostics platform that provides accurate medical diagnosis, treatment recommendations, and patient monitoring. Features medical imaging analysis, predictive diagnostics, and personalized medicine.',
-    features: [
-      'Medical imaging analysis',
-      'Predictive diagnostics',
-      'Personalized medicine',
-      'Patient monitoring',
-      'Treatment recommendations',
-      'Drug interaction analysis',
-      'Clinical decision support',
-      'Telemedicine integration',
-      'HIPAA compliance',
-      'Expert consultation'
-    ],
+    features: ['Medical imaging analysis', 'Predictive diagnostics', 'Personalized medicine', 'Patient monitoring', 'Treatment recommendations', 'Drug interaction analysis', 'Clinical decision support', 'Telemedicine integration', 'HIPAA compliance', 'Expert consultation'],
     popular: true,
     icon: '🏥',
     color: 'from-green-600 to-emerald-700',
@@ -802,18 +508,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     price: '$1,899',
     period: '/month',
     description: 'Comprehensive smart manufacturing platform that uses AI, IoT, and automation to optimize production processes, quality control, and supply chain management. Features predictive maintenance and real-time optimization.',
-    features: [
-      'AI-powered production optimization',
-      'IoT sensor integration',
-      'Predictive maintenance',
-      'Quality control automation',
-      'Supply chain optimization',
-      'Real-time monitoring',
-      'Energy efficiency',
-      'Workforce management',
-      'Analytics dashboard',
-      'Mobile app access'
-    ],
+    features: ['AI-powered production optimization', 'IoT sensor integration', 'Predictive maintenance', 'Quality control automation', 'Supply chain optimization', 'Real-time monitoring', 'Energy efficiency', 'Workforce management', 'Analytics dashboard', 'Mobile app access'],
     popular: true,
     icon: '🏭',
     color: 'from-blue-600 to-cyan-700',
@@ -852,18 +547,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     price: '$3,999',
     period: '/month',
     description: 'Revolutionary AI-powered financial trading platform that provides intelligent market analysis, automated trading strategies, and risk management. Features predictive analytics and real-time market monitoring.',
-    features: [
-      'AI-powered market analysis',
-      'Automated trading strategies',
-      'Risk management',
-      'Predictive analytics',
-      'Real-time monitoring',
-      'Portfolio optimization',
-      'Algorithmic trading',
-      'Market sentiment analysis',
-      'Compliance monitoring',
-      'Expert consultation'
-    ],
+    features: ['AI-powered market analysis', 'Automated trading strategies', 'Risk management', 'Predictive analytics', 'Real-time monitoring', 'Portfolio optimization', 'Algorithmic trading', 'Market sentiment analysis', 'Compliance monitoring', 'Expert consultation'],
     popular: false,
     icon: '💰',
     color: 'from-green-600 to-emerald-700',
@@ -902,18 +586,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     price: '$1,299',
     period: '/month',
     description: 'Advanced AI-powered retail optimization platform that provides intelligent inventory management, customer behavior analysis, and personalized marketing. Features demand forecasting and dynamic pricing.',
-    features: [
-      'AI-powered inventory management',
-      'Customer behavior analysis',
-      'Personalized marketing',
-      'Demand forecasting',
-      'Dynamic pricing',
-      'Supply chain optimization',
-      'Customer segmentation',
-      'Marketing automation',
-      'Analytics dashboard',
-      'Mobile app access'
-    ],
+    features: ['AI-powered inventory management', 'Customer behavior analysis', 'Personalized marketing', 'Demand forecasting', 'Dynamic pricing', 'Supply chain optimization', 'Customer segmentation', 'Marketing automation', 'Analytics dashboard', 'Mobile app access'],
     popular: true,
     icon: '🛍️',
     color: 'from-purple-600 to-pink-700',
@@ -952,18 +625,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     price: '$1,599',
     period: '/month',
     description: 'Advanced AI-powered logistics platform that optimizes transportation, warehousing, and supply chain operations. Features route optimization, demand forecasting, and real-time tracking.',
-    features: [
-      'AI-powered route optimization',
-      'Demand forecasting',
-      'Real-time tracking',
-      'Warehouse optimization',
-      'Supply chain analytics',
-      'Fleet management',
-      'Last-mile delivery',
-      'Cost optimization',
-      'Analytics dashboard',
-      'Mobile app access'
-    ],
+    features: ['AI-powered route optimization', 'Demand forecasting', 'Real-time tracking', 'Warehouse optimization', 'Supply chain analytics', 'Fleet management', 'Last-mile delivery', 'Cost optimization', 'Analytics dashboard', 'Mobile app access'],
     popular: false,
     icon: '🚚',
     color: 'from-orange-600 to-red-600',
@@ -991,11 +653,5 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     reviews: 58
   }
 ]
-export const INDUSTRY_SOLUTION_CATEGORIES = [
-  'Healthcare Technology',
-  'FinTech Solutions',
-  'Manufacturing Technology',
-  'Retail Technology',
-  'Logistics Technology'
-  }
-]
+export const INDUSTRY_SOLUTION_CATEGORIES = ['Healthcare Technology', 'FinTech Solutions', 'Manufacturing Technology', 'Retail Technology', 'Logistics Technology'
+  }]

@@ -44,16 +44,15 @@ export async function trackEvent(payload: TrackEventPayload) {
   } catch (error) {
     // swallow
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export async function trackEvent(payload: TrackEventPayload) {
   try {

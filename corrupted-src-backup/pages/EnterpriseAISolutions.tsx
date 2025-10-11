@@ -1,14 +1,7 @@
 import React from 'react'
 export default function EnterpriseAISolutions(): React.JSX.Element {
-  const solutions = [
-    {
-      icon: <Building className="w-8 h-8" />,</Building>title</Building>: 'Enterprise AI Platform',
-      description: 'Comprehensive AI platform designed for large-scale enterprise deployments.',
-      features: [,
-        'Scalable Infrastructure',
-        'Advanced Analytics',
-        'Custom AI Models',
-        '24/7 Support'],
+  const solutions = [{
+      icon: <Building className="w-8 h-8" />, </Building>title</Building>: 'Enterprise AI Platform', description: 'Comprehensive AI platform designed for large-scale enterprise deployments.', features: [, 'Scalable Infrastructure', 'Advanced Analytics', 'Custom AI Models', '24/7 Support'],
 export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
@@ -16,15 +9,11 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
     {
       icon: <Zap className="w-8 h-8" />,</Zap>title</Zap>: 'AI Automation Suite',
       description: 'Complete automation solutions to streamline enterprise operations.',
-      features: [,
-        'Process Automation',
-        'Workflow Optimization',
-        'Intelligent Routing',
-        'Performance Monitoring']}]
+      features: ['Process Automation', 'Workflow Optimization', 'Intelligent Routing', 'Performance Monitoring']}]
   return(<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
+      <Helmet ></Helmet>
         <title>Enterprise AI Solutions - Zion Website
         <meta
           name="description"
@@ -48,17 +37,17 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
               <div className="flex items-center mb-4">,
             Comprehensive AI solutions designed for enterprise-scale deployments and large
             organizations.
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (
             <$2 />
               key={index}
-              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+              className="bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow">
               <div className="flex items-center mb-4">
                 <div className="text-blue-600 mr-3">{solution.icon}
     {/* TODO: Fix JSX expression */}
     }]
   return (<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
+      <Helmet ></Helmet>
         <title>Enterprise AI Solutions - Zion Website
         <meta></meta>"
           name="description""
@@ -73,12 +62,12 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
             organizations.
 "
         < className="grid,$2 />
-  md:grid-cols-2,"
-  lg:grid-cols-3 gap-8">
+  md: grid-cols-2,"
+  lg: grid-cols-3 gap-8">
           {/* TODO: Fix JSX expression */}
               key={index}"
               className="bg-white rounded-lg shadow-lg p-6,"
-  hover:shadow-xl transition-shadow"
+  hover: shadow-xl transition-shadow"
             >"
               <div className="flex items-center mb-4"></div>"
                 <div className="text-blue-600 mr-3">{solution.icon}</div>"
@@ -89,7 +78,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
               <ul className="space-y-2">
                 {/* TODO: Fix JSX expression */}"
                   <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
-                    <Target className="w-4 h-4 text-green-500 mr-2" />
+                    <Target className="w-4 h-4 text-green-500 mr-2" /></Target>
                     {feature}
                   </li>)
                 ))}

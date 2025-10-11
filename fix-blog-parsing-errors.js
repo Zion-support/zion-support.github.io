@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 // Get all blog files
 const blogDir = path.join(__dirname, 'src', 'blog')
 const blogFiles = []

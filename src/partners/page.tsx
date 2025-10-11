@@ -1,25 +1,17 @@
-import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail} from 'lucide-react'
+import { Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail } from 'lucide-react'
 'use client'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link  } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const PartnersPage: React.FC = () => {
-  const partnerTypes = [
-    {
-      title: 'Technology Partners',
-      description: 'Leading technology companies that provide the foundation for our solutions',
-      icon: Building,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
-      partners: [
-        { name: 'Microsoft', description: 'Azure Cloud Services & AI Platform', logo: '🏢' },
-        { name: 'Amazon Web Services', description: 'Cloud Infrastructure & AI Services', logo: '☁️' },
-        { name: 'Google Cloud', description: 'AI/ML Platform & Analytics', logo: '🔍' },
-        { name: 'IBM', description: 'Watson AI & Enterprise Solutions', logo: '🤖' },
-        { name: 'NVIDIA', description: 'GPU Computing & AI Hardware', logo: '🎮' },
-        { name: 'Intel', description: 'AI Processors & Edge Computing', logo: '💻' }
-      ]
+  return (
+
+  const partnerTypes = [{
+      title: 'Technology Partners', description: 'Leading technology companies that provide the foundation for our solutions', icon: Building, color: 'text-blue-400', bgColor: 'bg-blue-500/10', partners: [
+        { name: 'Microsoft', description: 'Azure Cloud Services & AI Platform', logo: '🏢' 
+  );
+}, { name: 'Amazon Web Services', description: 'Cloud Infrastructure & AI Services', logo: '☁️' }, { name: 'Google Cloud', description: 'AI/ML Platform & Analytics', logo: '🔍' }, { name: 'IBM', description: 'Watson AI & Enterprise Solutions', logo: '🤖' }, { name: 'NVIDIA', description: 'GPU Computing & AI Hardware', logo: '🎮' }, { name: 'Intel', description: 'AI Processors & Edge Computing', logo: '💻' }]
     },
       title: 'Solution Partners',
       description: 'Specialized solution providers that complement our offerings',
@@ -45,32 +37,12 @@ const PartnersPage: React.FC = () => {
         { name: 'SAP', description: 'Enterprise Resource Planning', logo: '📋' }
     }
   ]
-  const benefits = [
-      icon: Globe,
-      title: 'Global Reach',
-      description:       ,
-icon$5: Users,
-      title: 'Expertise Sharing',
-      description:       ,
-icon$5: Star,
-      title: 'Innovation',
-      description:       ,
-icon$5: CheckCircle,
-      title: 'Quality Assurance',
-      description: 'Rigorous partner certification and quality standards'
+  const benefits = [icon: Globe, title: 'Global Reach', description:, icon$5: Users, title: 'Expertise Sharing', description:, icon$5: Star, title: 'Innovation', description:, icon$5: CheckCircle, title: 'Quality Assurance', description: 'Rigorous partner certification and quality standards'
   const partnershipTiers = [
-      name: 'Strategic Partners',
-      level: 'Platinum',
-      description: 'Long-term strategic relationships with joint go-to-market initiatives',
-      benefits: [
-        'Joint marketing and sales initiatives',
-        'Co-development of solutions',
-        'Priority support and resources',
-        'Executive relationship management',
-        'Custom pricing and terms'
-      ],
+      name: 'Strategic Partners', level: 'Platinum', description: 'Long-term strategic relationships with joint go-to-market initiatives', benefits: [
+        'Joint marketing and sales initiatives', 'Co-development of solutions', 'Priority support and resources', 'Executive relationship management', 'Custom pricing and terms'],
       color: 'text-yellow-400',
-      bgColor:       ,
+      bgColor:  ,
 namename: 'Solution Partners',
       level: 'Gold',
       description: 'Technology integration and solution delivery partnerships',
@@ -80,7 +52,7 @@ namename: 'Solution Partners',
         'Training and certification',
         'Preferred pricing'
       color: 'text-gray-400',
-      bgColor:       ,
+      bgColor:  ,
 namename: 'Channel Partners',
       level: 'Silver',
       description: 'Reseller and referral partnerships for market expansion',
@@ -108,9 +80,7 @@ namename: 'Channel Partners',
       bgColo,
   r: 'bg-blue-500/10',
       partner,
-  s: [
-  // TOD,
-  O: Add items],
+  s: [// TOD, O: Add items],
         {/* TODO: Fix JSX expression */}
   o: '' },
         {/* TODO: Fix JSX expression */}
@@ -177,8 +147,8 @@ icon: Globe,
       description: 'Access to worldwide markets and customers through our partner network',
 const PagePage: React.FC = () => {
   return (
-    <React.Fragment>
-      <Navigation />
+    <React .Fragment></React>
+      <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
@@ -199,9 +169,9 @@ const PagePage: React.FC = () => {
                   <div>
                     <h2 className="text-2xl font-bold text-white neon-text">{type.title}
                     <p className="text-gray-300">{type.description}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
                   {type.partners.map((partner, partnerIndex) => (
-                    <div key={partnerIndex} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
+                    <div key={partnerIndex} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover: border-cyan-400/50 transition-all duration-300">
                       <div className="text-3xl mb-3">{partner.logo}
                       <h3 className="text-lg font-semibold text-white mb-2">{partner.name}
                       <p className="text-gray-300 text-sm">{partner.description}
@@ -209,7 +179,7 @@ const PagePage: React.FC = () => {
           {/* Partnership Benefits */}
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Why Partner With Us?
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -218,7 +188,7 @@ const PagePage: React.FC = () => {
                   <p className="text-gray-300 text-sm">{benefit.description}
           {/* Partnership Tiers */}
               Partnership Tiers
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
               {partnershipTiers.map((tier, index) => (
                 <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50`}>
                   <div className="text-center mb-6">
@@ -228,7 +198,7 @@ const PagePage: React.FC = () => {
                   <ul className="space-y-3">
                     {tier.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-start">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" /></CheckCircle>
                         <span className="text-gray-300 text-sm">{benefit}
           {/* Become a Partner CTA */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
@@ -241,18 +211,18 @@ const PagePage: React.FC = () => {
               <$2 />
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-                <Handshake className="w-5 h-5 mr-2" />
+                <Handshake className="w-5 h-5 mr-2" /></Handshake>
                 Become a Partner,
   
-                href="tel:+13024640950"
+                href="tel: +13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Phone className="w-4 h-4 mr-2" />
+                <Phone className="w-4 h-4 mr-2" /></Phone>
                 (302) 464-0950
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Mail className="w-4 h-4 mr-2" />
+                <Mail className="w-4 h-4 mr-2" /></Mail>
                 Email Us
-      <Footer />
+      <Footer /></Footer>
           {/* Header */}
           <div className="text-center mb-16"></div>"
             < className="text-4xl,"$2 />
@@ -273,11 +243,11 @@ const PagePage: React.FC = () => {
                     <h2 className="text-2xl font-bold text-white neon-text">{type.title}</h2>"
                     <p className="text-gray-300">{type.description}</p>"
                 < className="grid grid-cols-1,$2 />
-  md:grid-cols-2,"
-  lg:grid-cols-3 gap-6">
+  md: grid-cols-2,"
+  lg: grid-cols-3 gap-6">
                   {type.partners.map((partner, partnerIndex) => ()}"
           < key={partnerIndex} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"$2 />
-  hover:border-cyan-400/50 transition-all duration-300"></div>"
+  hover: border-cyan-400/50 transition-all duration-300"></div>"
                       <div className="text-3xl mb-3">{partner.logo}</div>"
                       <h3 className="text-lg font-semibold text-white mb-2">{partner.name}</h3>"
                       <p className="text-gray-300 text-sm">{partner.description}
@@ -287,8 +257,8 @@ const PagePage: React.FC = () => {
 // Why Partner With Us?
           </h2>"
             < className="grid grid-cols-1,$2 />
-  md:grid-cols-2,"
-  lg:grid-cols-4 gap-6">
+  md: grid-cols-2,"
+  lg: grid-cols-4 gap-6">
               {benefits.map((benefit, index) => ()}"
           <div key={index} className="text-center"></div>"
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
@@ -298,7 +268,7 @@ const PagePage: React.FC = () => {
 {/* Partnership Tiers */}
               Partnership Tiers;"
             < className="grid grid-cols-1,"$2 />
-  md:grid-cols-3 gap-8">
+  md: grid-cols-3 gap-8">
               {partnershipTiers.map((tier, index) => ()}`
           <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50`}></div>"
                   <div className="text-center mb-6"></div>`
@@ -322,15 +292,15 @@ const PagePage: React.FC = () => {
                 href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 // >
           "
-          <Handshake className="w-5 h-5 mr-2" />
+          <Handshake className="w-5 h-5 mr-2" /></Handshake>
 // Become a Partner
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-<Phone className="w-4 h-4 mr-2" />
+<Phone className="w-4 h-4 mr-2" /></Phone>
                 (302) 464-0950
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Mail className="w-4 h-4 mr-2" />
+                <Mail className="w-4 h-4 mr-2" /></Mail>
                 Email Us
-      <Footer />
+      <Footer /></Footer>
     </div>
   ),
 }

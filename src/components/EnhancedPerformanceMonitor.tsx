@@ -333,7 +333,7 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
     // Callback for custom handling
     onMetricsUpdate?.(metrics)
 // console.log('Performance)
-  Report:', report)
+  Report: ', report)
   }, [metrics, enableReporting, calculatePerformanceScore, analyzeResourceTiming, getMemoryUsage, getNetworkInfo, onMetricsUpdate])
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -379,45 +379,39 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
         <button>
           onClick={() => setIsVisible(false)}"
           className="text-gray-400,"
-  hover:text-white"
+  hover: text-white"
 // >
 /
       </div>"
       <div className="space-y-1"></div>"
         <div className="flex justify-between">
           <span>Performance,
-  Score:
-          <span className={performanceScore > 80 ? 'text-green-400' : performanceScore > 60 ? 'text-yellow-400' : 'text-red-400'}>
+  Score: <span className=>{performanceScore > 80 ? 'text-green-400' : performanceScore > 60 ? 'text-yellow-400' : 'text-red-400'}
             {performanceScore}/100
         {metrics.fcp !== null && ()}"
           <div className="flex justify-between">
             <span>FC,
-  P:
-            <span>{metrics.fcp.toFixed(0)}ms
+  P: <span>{metrics.fcp.toFixed(0)}ms
         )}
         {metrics.lcp !== null && ()}"
           <div className="flex justify-between">
             <span>LC,
-  P:
-            <span>{metrics.lcp.toFixed(0)}ms
+  P: <span>{metrics.lcp.toFixed(0)}ms
         )}
         {metrics.fid !== null && ()}"
           <div className="flex justify-between">
             <span>FI,
-  D:
-            <span>{metrics.fid.toFixed(0)}ms
+  D: <span>{metrics.fid.toFixed(0)}ms
         )}
         {metrics.cls !== null && ()}"
           <div className="flex justify-between">
             <span>CL,
-  S:
-            <span>{metrics.cls.toFixed(3)}
+  S: <span>{metrics.cls.toFixed(3)}
         )}
         {metrics.ttfb !== null && ()}"
           <div className="flex justify-between">
             <span>TTF,
-  B:
-            <span>{metrics.ttfb.toFixed(0)}ms
+  B: <span>{metrics.ttfb.toFixed(0)}ms
         )}
       </div>"
       <div className="mt-2 text-gray-400 text-xs"></div>

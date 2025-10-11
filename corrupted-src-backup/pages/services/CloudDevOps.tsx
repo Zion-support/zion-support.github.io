@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";"
+import { Helmet  } from 'react-helmet-async';"
 impo, r, t { Monit, o, r } fr, o, m "luci, d, e-rea, c, t";"
 import, Header, from "../../componen, t, s/Head, e, r";"
 import, Footer, from "../../componen, t, s/Foot, e, r"
@@ -9,73 +9,68 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";'
 const, CloudDevOp, s: Rea, c, t.FC = () => {
-  const, feature, s = [
-    {
+  const, feature, s = [{
       i, c, o
   n: Clo, u, d
-      tit, l, e: "Mul, t, i-Cloud, Strateg, y","
-      descripti, o, n: "Seamlessly, deploy, across A, W, S, Azu, r, e, GCP, with, intelligent workload, optimization, and cost, managemen, t.","
-      tit, l, e: "Mul, t, i-Cloud, Strateg, y","
-      descripti, o, n: "Seamlessly, deploy, across A, W, S, Azu, r, e, GCP, with, intelligent workload, optimization, and cost, managemen, t.","
+      tit, l, e: "Mul, t, i-Cloud, Strateg, y", "
+      descripti, o, n: "Seamlessly, deploy, across A, W, S, Azu, r, e, GCP, with, intelligent workload, optimization, and cost, managemen, t.", "
+      tit, l, e: "Mul, t, i-Cloud, Strateg, y", "
+      descripti, o, n: "Seamlessly, deploy, across A, W, S, Azu, r, e, GCP, with, intelligent workload, optimization, and cost, managemen, t.", "
       benef, i, t: "40% cost, reduction, average"
     }
     {
       ic, o, n: GitBran, c, h
-      tit, l, e: "CI/CD, Automatio, n","
-      descripti, o, n: "E, n, d-to-end, automation, from code, commit, to production, deployment, with advanced, testing, and rollback, capabilitie, s.","
-      tit, l, e: "CI/CD, Automatio, n","
-      descripti, o, n: "E, n, d-to-end, automation, from code, commit, to production, deployment, with advanced, testing, and rollback, capabilitie, s.","
+      tit, l, e: "CI/CD, Automatio, n", "
+      descripti, o, n: "E, n, d-to-end, automation, from code, commit, to production, deployment, with advanced, testing, and rollback, capabilitie, s.", "
+      tit, l, e: "CI/CD, Automatio, n", "
+      descripti, o, n: "E, n, d-to-end, automation, from code, commit, to production, deployment, with advanced, testing, and rollback, capabilitie, s.", "
       benef, i, t: "90% faster, deployment, s"
     }
     {
       ic, o, n: Shie, l, d
-      tit, l, e: "DevSecOps, Integratio, n","
-      descripti, o, n: "Securi, t, y-first, approach, with automated, vulnerability, scanning, compliance, check, s, and, threat, detection.","
-      tit, l, e: "DevSecOps, Integratio, n","
-      descripti, o, n: "Securi, t, y-first, approach, with automated, vulnerability, scanning, compliance, check, s, and, threat, detection.","
+      tit, l, e: "DevSecOps, Integratio, n", "
+      descripti, o, n: "Securi, t, y-first, approach, with automated, vulnerability, scanning, compliance, check, s, and, threat, detection.", "
+      tit, l, e: "DevSecOps, Integratio, n", "
+      descripti, o, n: "Securi, t, y-first, approach, with automated, vulnerability, scanning, compliance, check, s, and, threat, detection.", "
       benef, i, t: "99.9% security, complianc, e"
     }
     {
       ic, o, n: Monit, o, r
-      tit, l, e: "Infrastructure, as, Code","
-      descripti, o, n: "Manage, entire, infrastructure through, code, with Terrafo, r, m, Ansib, l, e, and, custom, automation too, l, s.","
-      tit, l, e: "Infrastructure, as, Code","
-      descripti, o, n: "Manage, entire, infrastructure through, code, with Terrafo, r, m, Ansib, l, e, and, custom, automation too, l, s.","
+      tit, l, e: "Infrastructure, as, Code", "
+      descripti, o, n: "Manage, entire, infrastructure through, code, with Terrafo, r, m, Ansib, l, e, and, custom, automation too, l, s.", "
+      tit, l, e: "Infrastructure, as, Code", "
+      descripti, o, n: "Manage, entire, infrastructure through, code, with Terrafo, r, m, Ansib, l, e, and, custom, automation too, l, s.", "
       benef, i, t: "Ze, r, o-downtime, deployment, s"
     }
     {
       ic, o, n: BarChar, t, 3
-      tit, l, e: "Advanced, Monitorin, g","
-      descripti, o, n: "Re, a, l-time, monitorin, g, alerti, n, g, and, performance, optimization with, A, I-powered, insight, s.","
-      tit, l, e: "Advanced, Monitorin, g","
-      descripti, o, n: "Re, a, l-time, monitorin, g, alerti, n, g, and, performance, optimization with, A, I-powered, insight, s.","
+      tit, l, e: "Advanced, Monitorin, g", "
+      descripti, o, n: "Re, a, l-time, monitorin, g, alerti, n, g, and, performance, optimization with, A, I-powered, insight, s.", "
+      tit, l, e: "Advanced, Monitorin, g", "
+      descripti, o, n: "Re, a, l-time, monitorin, g, alerti, n, g, and, performance, optimization with, A, I-powered, insight, s.", "
       benef, i, t: "99.99% uptime, SL, A"
     }
     {
       ic, o, n: Z, a, p
-      tit, l, e: "Au, t, o-Scali, n, g","
-      descripti, o, n: "Intelligent, aut, o-scaling, based, on demand, patterns, with predictive, capacity, planning.","
-      tit, l, e: "Au, t, o-Scali, n, g","
-      descripti, o, n: "Intelligent, aut, o-scaling, based, on demand, patterns, with predictive, capacity, planning.","
+      tit, l, e: "Au, t, o-Scali, n, g", "
+      descripti, o, n: "Intelligent, aut, o-scaling, based, on demand, patterns, with predictive, capacity, planning.", "
+      tit, l, e: "Au, t, o-Scali, n, g", "
+      descripti, o, n: "Intelligent, aut, o-scaling, based, on demand, patterns, with predictive, capacity, planning.", "
       benef, i, t: "60% infrastructure, saving, s"
-    }
-  ]
-  const, pricin, g = [
-    {
+    }]
+  const, pricin, g = [{
     na, m, e: "Start, u, p"
-      pri, c, e: "$3,5, 0, 0"
+      pri, c, e: "$3, 5, 0, 0"
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Perfect, for, startups and, small, teams getting, started, with cloud, infrastructur, e"
-      featur, e, s: [,
-        "Single, cloud, provider set, u, p"
+      featur, e, s: [, "Single, cloud, provider set, u, p"
         "Basic, C, I/CD, pipelin, e"
         "Standard, monitorin, g"
         "Email, suppor, t"
         "Monthly, infrastructure, review"
         "Basic, security, scanning"
         "Up, to, 5 environmen, t, s"
-        "Standard, backup, strategy"
-      ]
+        "Standard, backup, strategy"]
       popul, a, r: fal, s, e
   }
     {
@@ -83,8 +78,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       pri, c, e: "$8,5, 0, 0"
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Ideal, for, growing companies, with, complex deployment, need, s"
-      featur, e, s: [,
-        "Mul, t, i-cloud, setu, p"
+      featur, e, s: ["Mul, t, i-cloud, setu, p"
         "Advanced, C, I/CD, with, testing"
         "Comprehensive, monitorin, g & alerti, n, g"
         "Priority, suppor, t"
@@ -93,8 +87,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
         "Up, to, 15 environmen, t, s"
         "Automated, backu, p & recove, r, y"
         "Performance, optimizatio, n"
-        "Disaster, recovery, planning"
-      ]
+        "Disaster, recovery, planning"]
       popul, a, r: tr, u, e
   }
     {
@@ -102,8 +95,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       pri, c, e: "$25,0, 0, 0"
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s"
-      featur, e, s: [,
-        "Hybr, i, d & mul, t, i-cloud, architectur, e"
+      featur, e, s: ["Hybr, i, d & mul, t, i-cloud, architectur, e"
         "Enterpri, s, e-grade, C, I/CD"
         "Advanced, monitoring, with AI, insight, s"
         "Dedicated, DevOps, engineer"
@@ -114,24 +106,21 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
         "24/7, monitorin, g & suppo, r, t"
         "Custom, automation, development"
         "SLA, guarante, e"
-        "On-premise, integratio, n"
-      ]
+        "On-premise, integratio, n"]
       popul, a, r: fal, s, e
       n, a, m
   e: "Start, u, p","
       pri, c, e: "$3,5, 0, 0","
       peri, o, d: "/mon, t, h","
       descripti, o, n: "Perfect, for, startups and, small, teams getting, started, with cloud, infrastructur, e","
-      featur, e, s: [,
-        "Single, cloud, provider set, u, p","
-        "Basic, C, I/CD, pipelin, e","
-        "Standard, monitorin, g","
-        "Email, suppor, t","
-        "Monthly, infrastructure, review","
-        "Basic, security, scanning","
-        "Up, to, 5 environmen, t, s","
-        "Standard, backup, strategy"
-      ]
+      featur, e, s: ["Single, cloud, provider set, u, p", "
+        "Basic, C, I/CD, pipelin, e", "
+        "Standard, monitorin, g", "
+        "Email, suppor, t", "
+        "Monthly, infrastructure, review", "
+        "Basic, security, scanning", "
+        "Up, to, 5 environmen, t, s", "
+        "Standard, backup, strategy"]
       popul, a, r: fal, s, e
   }
     {
@@ -139,18 +128,16 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       pri, c, e: "$8,5, 0, 0","
       peri, o, d: "/mon, t, h","
       descripti, o, n: "Ideal, for, growing companies, with, complex deployment, need, s","
-      featur, e, s: [,
-        "Mul, t, i-cloud, setu, p","
-        "Advanced, C, I/CD, with, testing","
-        "Comprehensive, monitorin, g & alerti, n, g","
-        "Priority, suppor, t","
-        "Weekly, infrastructure, reviews","
-        "Advanced, securit, y & complian, c, e","
-        "Up, to, 15 environmen, t, s","
-        "Automated, backu, p & recove, r, y","
-        "Performance, optimizatio, n","
-        "Disaster, recovery, planning"
-      ]
+      featur, e, s: ["Mul, t, i-cloud, setu, p", "
+        "Advanced, C, I/CD, with, testing", "
+        "Comprehensive, monitorin, g & alerti, n, g", "
+        "Priority, suppor, t", "
+        "Weekly, infrastructure, reviews", "
+        "Advanced, securit, y & complian, c, e", "
+        "Up, to, 15 environmen, t, s", "
+        "Automated, backu, p & recove, r, y", "
+        "Performance, optimizatio, n", "
+        "Disaster, recovery, planning"]
       popul, a, r: tr, u, e
   }
     {
@@ -158,60 +145,52 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       pri, c, e: "$25,0, 0, 0","
       peri, o, d: "/mon, t, h","
       descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s","
-      featur, e, s: [,
-        "Hybr, i, d & mul, t, i-cloud, architectur, e","
-        "Enterpri, s, e-grade, C, I/CD","
-        "Advanced, monitoring, with AI, insight, s","
-        "Dedicated, DevOps, engineer","
-        "Daily, infrastructure, management","
-        "Full, securit, y & compliance, suit, e","
-        "Unlimited, environment, s","
-        "Enterprise, backu, p & disaster, recover, y","
-        "24/7, monitorin, g & suppo, r, t","
-        "Custom, automation, development","
-        "SLA, guarante, e","
-        "On-premise, integratio, n"
-      ]
+      featur, e, s: ["Hybr, i, d & mul, t, i-cloud, architectur, e", "
+        "Enterpri, s, e-grade, C, I/CD", "
+        "Advanced, monitoring, with AI, insight, s", "
+        "Dedicated, DevOps, engineer", "
+        "Daily, infrastructure, management", "
+        "Full, securit, y & compliance, suit, e", "
+        "Unlimited, environment, s", "
+        "Enterprise, backu, p & disaster, recover, y", "
+        "24/7, monitorin, g & suppo, r, t", "
+        "Custom, automation, development", "
+        "SLA, guarante, e", "
+        "On-premise, integratio, n"]
       popul, a, r: fal, s, e
   }
   ]
-  const, testimonial, s = [
-    {
-      na, m, e: "Alex, Thompso, n","
-      ro, l, e: "C, T, O, FinTech, Startu, p","
-      conte, n, t: "Zi, o, n's, DevOps, team transformed, our, deployment process, from, weekly releases, to, multiple daily, deployment, s. Our, development, velocity increased, by, 300%.","
-      na, m, e: "Alex, Thompso, n","
-      ro, l, e: "C, T, O, FinTech, Startu, p","
-      conte, n, t: "Zi, o, n's, DevOps, team transformed, our, deployment process, from, weekly releases, to, multiple daily, deployment, s. Our, development, velocity increased, by, 300%.","
-      rati, n, g: 5,
-      compa, n, y: "FinTech, Startu, p"
+  const, testimonial, s = [{
+      na, m, e: "Alex, Thompso, n", "
+      ro, l, e: "C, T, O, FinTech, Startu, p", "
+      conte, n, t: "Zi, o, n's, DevOps, team transformed, our, deployment process, from, weekly releases, to, multiple daily, deployment, s. Our, development, velocity increased, by, 300%.", "
+      na, m, e: "Alex, Thompso, n", "
+      ro, l, e: "C, T, O, FinTech, Startu, p", "
+      conte, n, t: "Zi, o, n's, DevOps, team transformed, our, deployment process, from, weekly releases, to, multiple daily, deployment, s. Our, development, velocity increased, by, 300%.", "
+      rati, n, g: 5, compa, n, y: "FinTech, Startu, p"
     }
     {
-      na, m, e: "Maria, Rodrigue, z","
-      ro, l, e: "VP, Engineerin, g, E-Commerce, Platfor, m","
-      conte, n, t: "The, mult, i-cloud, strategy, reduced our, infrastructure, costs by, 4, 5% while, improving, performance. The, monitoring, and alerting, prevented, 3 major, outage, s.","
-      na, m, e: "Maria, Rodrigue, z","
-      ro, l, e: "VP, Engineerin, g, E-Commerce, Platfor, m","
-      conte, n, t: "The, mult, i-cloud, strategy, reduced our, infrastructure, costs by, 4, 5% while, improving, performance. The, monitoring, and alerting, prevented, 3 major, outage, s.","
-      rati, n, g: 5,
-      compa, n, y: "E-Commerce, Platfor, m"
+      na, m, e: "Maria, Rodrigue, z", "
+      ro, l, e: "VP, Engineerin, g, E-Commerce, Platfor, m", "
+      conte, n, t: "The, mult, i-cloud, strategy, reduced our, infrastructure, costs by, 4, 5% while, improving, performance. The, monitoring, and alerting, prevented, 3 major, outage, s.", "
+      na, m, e: "Maria, Rodrigue, z", "
+      ro, l, e: "VP, Engineerin, g, E-Commerce, Platfor, m", "
+      conte, n, t: "The, mult, i-cloud, strategy, reduced our, infrastructure, costs by, 4, 5% while, improving, performance. The, monitoring, and alerting, prevented, 3 major, outage, s.", "
+      rati, n, g: 5, compa, n, y: "E-Commerce, Platfor, m"
     }
     {
-      na, m, e: "Dr. James, Che, n","
-      ro, l, e: "Head, of, IT, Healthcare, Networ, k","
-      conte, n, t: "DevSecOps, integration, ensured we, maintained, HIPAA compliance, while, accelerating our, deployment, cycles. Security, incidents, dropped to, zer, o.","
-      na, m, e: "Dr. James, Che, n","
-      ro, l, e: "Head, of, IT, Healthcare, Networ, k","
-      conte, n, t: "DevSecOps, integration, ensured we, maintained, HIPAA compliance, while, accelerating our, deployment, cycles. Security, incidents, dropped to, zer, o.","
-      rati, n, g: 5,
-      compa, n, y: "Healthcare, Networ, k"
-    }
-  ]
-  const, service, s = [
-    {
-      tit, l, e: "Cloud, Migratio, n","
+      na, m, e: "Dr. James, Che, n", "
+      ro, l, e: "Head, of, IT, Healthcare, Networ, k", "
+      conte, n, t: "DevSecOps, integration, ensured we, maintained, HIPAA compliance, while, accelerating our, deployment, cycles. Security, incidents, dropped to, zer, o.", "
+      na, m, e: "Dr. James, Che, n", "
+      ro, l, e: "Head, of, IT, Healthcare, Networ, k", "
+      conte, n, t: "DevSecOps, integration, ensured we, maintained, HIPAA compliance, while, accelerating our, deployment, cycles. Security, incidents, dropped to, zer, o.", "
+      rati, n, g: 5, compa, n, y: "Healthcare, Networ, k"
+    }]
+  const, service, s = [{
+      tit, l, e: "Cloud, Migratio, n", "
       ic, o, n: Clo, u, d
-      descripti, o, n: "Seamless, migration, to cloud, platforms, with zero, downtime, and minimal, disruptio, n.","
+      descripti, o, n: "Seamless, migration, to cloud, platforms, with zero, downtime, and minimal, disruptio, n.", "
       benefi, t, s: ["99.9% uptime, during, migration", "Automated, data, validation", "Rollback, capabilitie, s"]"
     }
     {
@@ -255,12 +234,12 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       benefi, t, s: ["Automated, security, scanning", "Compliance, reportin, g", "Threat, detectio, n"]"
   }
   ]
-  return(<React.Fragment>
-      <Helmet>
+  return(<React .Fragment></React>
+      <Helmet ></Helmet>
         <title>Clo, u, d & DevOps, Service, s - Zion, Tech, Group | Enterprise, Cloud, Solutions
         <me, t, a
   na, m, e="descripti, o, n"
-          content="Expert, Clou, d & DevOps, services, including mul, t, i-cloud, strateg, y, CI/CD, automatio, n, infrastructure, as, code, and, advanced, monitoring. 99.99% uptime, SL, A." /><meta name="keywor, d, s" content="cloud, service, s, devops, consultin, g, CI/CD, automatio, n, infrastructure, as, code, cloud, migratio, n, kubernet, e, s, dock, e, r" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/clo, u, d-devo, p, s/>"
+          content="Expert, Clou, d & DevOps, services, including mul, t, i-cloud, strateg, y, CI/CD, automatio, n, infrastructure, as, code, and, advanced, monitoring. 99.99% uptime, SL, A." /><meta name="keywor, d, s" content="cloud, service, s, devops, consultin, g, CI/CD, automatio, n, infrastructure, as, code, cloud, migratio, n, kubernet, e, s, dock, e, r" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/clo, u, d-devo, p, s/>"
 const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -274,8 +253,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
   ]
-  const, pricin, g = [
-    {/* TODO: Fix JSX expression */}
+  const, pricin, g = [{/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
@@ -284,18 +262,14 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
-    }
-  ]
-  const, testimonial, s = [
-    {/* TODO: Fix JSX expression */}
+    }]
+  const, testimonial, s = [{/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
-    }
-  ]
-  const, service, s = [
-    {/* TODO: Fix JSX expression */}
+    }]
+  const, service, s = [{/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
@@ -308,14 +282,13 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
-    }
-  ]
-  return (<React.Fragment>
-      <Helmet>
+    }]
+  return (<React .Fragment></React>
+      <Helmet ></Helmet>
         <title>Clo, u, d & DevOps, Service, s - Zion, Tech, Group | Enterprise, Cloud, Solutions
         <me, t, a;"
   na, m, e="descripti, o, n""
-          content="Expert, Clou, d & DevOps, services, including mul, t, i-cloud, strateg, y, CI/CD, automatio, n, infrastructure, as, code, and, advanced, monitoring. 99.99% uptime, SL, A." /><meta name="keywor, d, s" content="cloud, service, s, devops, consultin, g, CI/CD, automatio, n, infrastructure, as, code, cloud, migratio, n, kubernet, e, s, dock, e, r" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/clo, u, d-devo, p, s/>""
+          content="Expert, Clou, d & DevOps, services, including mul, t, i-cloud, strateg, y, CI/CD, automatio, n, infrastructure, as, code, and, advanced, monitoring. 99.99% uptime, SL, A." /><meta name="keywor, d, s" content="cloud, service, s, devops, consultin, g, CI/CD, automatio, n, infrastructure, as, code, cloud, migratio, n, kubernet, e, s, dock, e, r" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/clo, u, d-devo, p, s/>""
           content="Expert, Clou, d & DevOps, services, including mul, t, i-cloud, strateg, y, CI/CD, automatio, n, infrastructure, as, code, and, advanced, monitoring. 99.99% uptime, SL, A."
          />"
         <meta name="keywor, d, s" content="cloud, service, s, devops, consultin, g, CI/CD, automatio, n, infrastructure, as, code, cloud, migratio, n, kubernet, e, s, dock, e, r" />";"
@@ -325,14 +298,14 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         {/* Hero, Sectio, n */}
         <section, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-900, vi, a-gre, e, n-800, t, o-bl, u, e-900, tex, t-white, p, y-20">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
-  g:px-8">",
+  g: px-8">",
             <div, className="te, x, t-cent, e, r">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8">"
             <div, className="te, x, t-cent, e, r">
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
                 Clo, u, d &</h1> <span, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">DevO, p, s
-              <p, className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-gre, e, n-100, ma, x-w-4xl, m, x-auto, m, b-8">
+              <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-gre, e, n-100, ma, x-w-4xl, m, x-auto, m, b-8">
                 Expert, cloud, infrastructure and, DevOps, services that, deliver, 99.99% upti, m, e
   90% faster, deployment, s, and, 4, 0% cost, reduction, through intelligent, automatio, n.
               </p>
@@ -357,12 +330,12 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         {/* Hero, Sectio, n */}"
         <section, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-900, vi, a-gre, e, n-800, t, o-bl, u, e-900, tex, t-white, p, y-20"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
-  g:px-8">""
+  g: px-8">""
             <div, className="te, x, t-cent, e, r"></div>"
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">""
                 Clo, u, d & <span, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">DevO, p, s
               </h1>"
-              <p, className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-gre, e, n-100, ma, x-w-4xl, m, x-auto, m, b-8">
+              <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-gre, e, n-100, ma, x-w-4xl, m, x-auto, m, b-8">
                 Expert, cloud, infrastructure and, DevOps, services that, deliver, 99.99% upti, m, e
   90% faster, deployment, s, and, 4, 0% cost, reduction, through intelligent, automatio, n.
               </p>"
@@ -392,7 +365,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 <a></a>"
   hr, e, f="#prici, n, g""
                   classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e,"
-  r:te, x, t-gre, e, n-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
+  r: te, x, t-gre, e, n-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
                 >
                   View, Pricin, g;"
                   <Link, className="w-5 h-5, m, l-2  /></Link>"
@@ -400,7 +373,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         {/* Key, Benefit, s */}
         <section, className="py-16, b, g-gr, a, y-50">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
-  g:px-8">",
+  g: px-8">",
             <div, className="text-center mb-12">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-16, b, g-gr, a, y-50">"
@@ -416,7 +389,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         {/* Key, Benefit, s */}"
         <section, className="py-16, b, g-gr, a, y-50"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
-  g:px-8">""
+  g: px-8">""
             <div, className="text-center mb-12"></div>"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
         <section, className="py-16, b, g-gr, a, y-50">";"
@@ -435,7 +408,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   d: gr, i, d-co, l, s-4, ga, p-8">"
               <div, className="te, x, t-cent, e, r">
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">
-                  <TrendingUp, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />
+                  <TrendingUp , className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  /></TrendingUp>
             <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">"
               <div, className="te, x, t-cent, e, r">"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">"
@@ -453,7 +426,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Average, infrastructure, cost savin, g, s</p>"
               <div, className="te, x, t-cent, e, r">
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">
-                  <Zap, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0  />
+                  <Zap , className="w-8 h-8, tex, t-bl, u, e-6, 0, 0  /></Zap>
               <div, className="te, x, t-cent, e, r">"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">"
               </d, i, v>"
@@ -467,7 +440,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Automated, C, I/CD, pipeline, s</p>"
               <div, className="te, x, t-cent, e, r">
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4">
-                  <Shield, className="w-8 h-8, tex, t-purp, l, e-6, 0, 0  />
+                  <Shield , className="w-8 h-8, tex, t-purp, l, e-6, 0, 0  /></Shield>
               <div, className="te, x, t-cent, e, r">"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4">"
               </d, i, v>"
@@ -481,7 +454,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Enterpri, s, e-grade, reliabilit, y</p>"
               <div, className="te, x, t-cent, e, r">
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-4">
-                  <Globe, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0  />
+                  <Globe , className="w-8 h-8, tex, t-oran, g, e-6, 0, 0  /></Globe>
               <div, className="te, x, t-cent, e, r">"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-4">"
               </d, i, v>"
@@ -496,7 +469,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         {/* Servic, e, s */}
         <section, className="py-20">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
-  g:px-8">",
+  g: px-8">",
             <div, className="te, x, t-center, m, b-16">)
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">)
         <section, className="py-20">";)
@@ -512,7 +485,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         {/* Servic, e, s */}"
         <section, className="py-20"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
-  g:px-8">""
+  g: px-8">""
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
         <section, className="py-20">";"
@@ -523,14 +496,14 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">"
                 E, n, d-to-end, solutions, for modern, cloud, infrastructure and, deployment, automation.
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />
-  g:gr, i, d-co, l, s-4, ga, p-8">"
+  g: gr, i, d-co, l, s-4, ga, p-8">"
               {servic, e, s.m, a, p((servi, c, e, ind, e, x) => {
                 const, Ico, n = servi, c, e.ic, o, n
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-6">
                       <Icon, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />)
             <, className="grid, m, d: gr, i, d-co, l, s-2 l;)$2 />
-  g:gr, i, d-co, l, s-4, ga, p-8">";)
+  g: gr, i, d-co, l, s-4, ga, p-8">";)
               {servic, e, s.m, a, p((servi, c, e, ind, e, x) => {
                 const, Ico, n = servi, c, e.ic, o, n
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
@@ -538,9 +511,9 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 return (
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-6">
-                      <Icon, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />
+                      <Icon , className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  /></Icon>
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />
-  g:gr, i, d-co, l, s-4, ga, p-8"></div>"
+  g: gr, i, d-co, l, s-4, ga, p-8"></div>"
               {servic, e, s.m, a, p((servi, c, e, ind, e, x) => {
                 const, Ico, n = servi, c, e.ic, o, n
                 return (
@@ -552,18 +525,18 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     <ul, className="spa, c, e-y-2">";)
                       {servi, c, e.benefi, t, s.m, a, p((benef, i, t, benefitInd, e, x) => (
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
-                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  />
+                          <CheckCircle , className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  /></CheckCircle>
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">"
                           <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0" />"</$1>"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />
-  g:gr, i, d-co, l, s-4, ga, p-8">"
+  g: gr, i, d-co, l, s-4, ga, p-8">"
               {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">""
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-6"></div>"
                       <Icon, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  /></Icon>"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />
-  g:gr, i, d-co, l, s-4, ga, p-8">"
+  g: gr, i, d-co, l, s-4, ga, p-8">"
               {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-6">";"
@@ -584,7 +557,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         {/* Featur, e, s */}
         <section, className="py-20, b, g-gr, a, y-50">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
-  g:px-8">",
+  g: px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20, b, g-gr, a, y-50">"
@@ -600,7 +573,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         {/* Featur, e, s */}"
         <section, className="py-20, b, g-gr, a, y-50"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
-  g:px-8">""
+  g: px-8">""
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
         <section, className="py-20, b, g-gr, a, y-50">";"
@@ -611,7 +584,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">"
                 Powerful, features, that make, your, infrastructure truly, scalable, and resilie, n, t.
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />
-  g:gr, i, d-co, l, s-3, ga, p-8">"
+  g: gr, i, d-co, l, s-3, ga, p-8">"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
@@ -619,21 +592,21 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 return (
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-gre, e, n-100, rounde, d-lg, m, b-4">
-                      <Icon, className="w-6 h-6, tex, t-gre, e, n-6, 0, 0  />
+                      <Icon , className="w-6 h-6, tex, t-gre, e, n-6, 0, 0  /></Icon>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
                       <CheckCircle, className="w-4 h-4, m, r-1  />)
             <, className="grid, m, d: gr, i, d-co, l, s-2 l;)$2 />
-  g:gr, i, d-co, l, s-3, ga, p-8">";)
+  g: gr, i, d-co, l, s-3, ga, p-8">";)
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-gre, e, n-100, rounde, d-lg, m, b-4">"
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
-                      <CheckCircle, className="w-4 h-4, m, r-1  />
+                      <CheckCircle , className="w-4 h-4, m, r-1  /></CheckCircle>
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />
-  g:gr, i, d-co, l, s-3, ga, p-8"></div>"
+  g: gr, i, d-co, l, s-3, ga, p-8"></div>"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n
                 return (
@@ -645,18 +618,18 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">"
             </d, i, v>"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />
-  g:gr, i, d-co, l, s-3, ga, p-8">"
+  g: gr, i, d-co, l, s-3, ga, p-8">"
               {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">""
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-gre, e, n-100, rounde, d-lg, m, b-4"></div>"
-                      <Icon, className="w-6 h-6, tex, t-gre, e, n-6, 0, 0  />
+                      <Icon , className="w-6 h-6, tex, t-gre, e, n-6, 0, 0  /></Icon>
                     </d, i, v>"
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>"
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>"
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>"
                       <CheckCircle, className="w-4 h-4, m, r-1  /></CheckCircle>"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />
-  g:gr, i, d-co, l, s-3, ga, p-8">"
+  g: gr, i, d-co, l, s-3, ga, p-8">"
               {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-gre, e, n-100, rounde, d-lg, m, b-4">";"
@@ -673,7 +646,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         {/* Prici, n, g */}
         <section, i, d="prici, n, g" classNa, m, e="py-20">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
-  g:px-8">",
+  g: px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, i, d="prici, n, g" classNa, m, e="py-20">"
@@ -689,7 +662,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         {/* Prici, n, g */}"
         <section, i, d="prici, n, g" classNa, m, e="py-20"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
-  g:px-8">""
+  g: px-8">""
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
         <section, i, d="prici, n, g" classNa, m, e="py-20">";"
@@ -746,7 +719,7 @@ pl, a, n.popul, a, r
 ? 'bg-gre, e, n-600, tex, t-white, hov, e
   r: bg-gre, e, n-7, 0, 0','
   }
-: 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
+: 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r: bg-gr, a, y-2, 0, 0'}
                   <a></a>"
   hr, e, f="/conta, c, t"
                     classNa, m, e={/* TODO: Fix JSX expression */}`
@@ -771,7 +744,7 @@ pl, a, n.popul, a, r
         {/* Testimonia, l, s */}
         <section, className="py-20, b, g-gr, a, y-50">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
-  g:px-8">",
+  g: px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20, b, g-gr, a, y-50">"
@@ -787,7 +760,7 @@ pl, a, n.popul, a, r
         {/* Testimonia, l, s */}"
         <section, className="py-20, b, g-gr, a, y-50"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
-  g:px-8">""
+  g: px-8">""
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
         <section, className="py-20, b, g-gr, a, y-50">";"
@@ -806,7 +779,7 @@ pl, a, n.popul, a, r
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">"
                   <div, className="flex, item, s-center, m, b-4">"
                     {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (
-                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
+                      <Star , ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  /></Star>
             </d, i, v>"
             <, className="gri, d, m,"$2 />
   d: gr, i, d-co, l, s-3, ga, p-8">""
@@ -829,20 +802,20 @@ pl, a, n.popul, a, r
         {/* CTA, Sectio, n */}
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-gre, e, n-900, vi, a-gre, e, n-800, t, o-bl, u, e-900, tex, t-whi, t, e">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
-  g:px-8, tex, t-cent, e, r">"
+  g: px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-gre, e, n-900, vi, a-gre, e, n-800, t, o-bl, u, e-900, tex, t-whi, t, e">"
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8, tex, t-cent, e, r">"
         {/* CTA, Sectio, n */}"
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-gre, e, n-900, vi, a-gre, e, n-800, t, o-bl, u, e-900, tex, t-whi, t, e"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
-  g:px-8, tex, t-cent, e, r">""
+  g: px-8, tex, t-cent, e, r">""
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6"></h2>"
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-gre, e, n-900, vi, a-gre, e, n-800, t, o-bl, u, e-900, tex, t-whi, t, e">";"
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">";"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8, tex, t-cent, e, r">";"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">"
               Ready, to, Transform Your, Infrastructur, e?
             </h2>"
@@ -875,7 +848,7 @@ pl, a, n.popul, a, r
               <a></a>"
   hr, e, f="/ca, s, e-studi, e, s""
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e,"
-  r:te, x, t-gre, e, n-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
+  r: te, x, t-gre, e, n-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >
                 View, Case, Studies;"
                 <Link, className="w-5 h-5, m, l-2  /></Link>"

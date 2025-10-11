@@ -78,16 +78,12 @@ export interface EnterpriseIt2026Service {/* TODO: Fix JSX expression */}
     address: string,
   }
 }
-export const enterpriseIT2026 Services: EnterpriseIt2026 Service[] = [,
-    id: "2026-enterprise-it", name: "2026 Enterprise IT Solutions",
-    tagline: "Future-ready enterprise IT", price: "$399/month"
+export const enterpriseIT2026 Services: EnterpriseIt2026 Service[] = [id: "2026-enterprise-it", name: "2026 Enterprise IT Solutions", tagline: "Future-ready enterprise IT", price: "$399/month"
     description: "Comprehensive enterprise IT solutions designed for 2026 and beyond."
-    features: [,
-      "Enterprise architecture"
+    features: [, "Enterprise architecture"
       "Future-ready solutions"
       "Scalable infrastructure"
-      "Advanced security",
-      "24/7 support"],
+      "Advanced security", "24/7 support"],
     link: "/services/2026-enterprise-it", category: "Enterprise IT 2026",
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
@@ -127,23 +123,17 @@ export const enterpriseIT2026 Services: EnterpriseIt2026 Service[] = [,
   s: string}
 }
 export const,
-  enterpriseIT2026Services: EnterpriseIt2026Service[] = [,
-    i,"
-  d: "2026-enterprise-it", nam,"
-  e: "2026 Enterprise IT Solutions",
-    taglin,"
-  e: "Future-ready enterprise IT", pric,"
-  e: "$399/month",
-    descriptio,"
-  n: "Comprehensive enterprise IT solutions designed for 2026 and beyond.",
-    feature,
-  s: [,"
+  enterpriseIT2026Services: EnterpriseIt2026Service[] = [i, "
+  d: "2026-enterprise-it", nam, "
+  e: "2026 Enterprise IT Solutions", taglin, "
+  e: "Future-ready enterprise IT", pric, "
+  e: "$399/month", descriptio, "
+  n: "Comprehensive enterprise IT solutions designed for 2026 and beyond.", feature, s: [, "
       "Enterprise architecture""
       "Future-ready solutions""
       "Scalable infrastructure""
       "Advanced security""
-      "24/7 support"
-    ],
+      "24/7 support"],
     lin,"
   k: "/services/2026-enterprise-it", categor,"
   y: "Enterprise IT 2026",
@@ -178,13 +168,7 @@ id: "2026-enterprise-it"
     tagline: "Future-ready enterprise IT",
     price: "$399/month",
     description: "Comprehensive enterprise IT solutions designed for 2026 and beyond.",
-    features: [,
-      "Enterprise architecture",
-      "Future-ready solutions",
-      "Scalable infrastructure",
-      "Advanced security",
-      "24/7 support"
-    ],
+    features: ["Enterprise architecture", "Future-ready solutions", "Scalable infrastructure", "Advanced security", "24/7 support"],
     link: "/services/2026-enterprise-it"
     category: "Enterprise IT 2026"
     realImplementation: true
@@ -210,13 +194,12 @@ id: "2026-enterprise-it"
     descriptio,"
   n: "Comprehensive enterprise IT solutions designed for 2026 and beyond.",
     feature,
-  s: [,"
-      "Enterprise architecture","
-      "Future-ready solutions","
-      "Scalable infrastructure","
-      "Advanced security","
-      "24/7 support"
-    ],
+  s: ["
+      "Enterprise architecture", "
+      "Future-ready solutions", "
+      "Scalable infrastructure", "
+      "Advanced security", "
+      "24/7 support"],
     lin,"
   k: "/services/2026-enterprise-it",
     categor,"
@@ -288,13 +271,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  enterpriseIT2026Services: EnterpriseIt2026Service[] = [ i,"
-  d: "2026-enterprise-it", nam,"
-  e: "2026 Enterprise IT Solutions", taglin,"
-  e: "Future-ready enterprise IT", pric,"
-  e: "$399/month", descriptio,"
-  n: "Comprehensive enterprise IT solutions designed for 2026 and beyond.", feature,"
-  s: [ "Enterprise architecture" "Future-ready solutions" "Scalable infrastructure" "Advanced security" "24/7 support" ], lin,"
+  enterpriseIT2026Services: EnterpriseIt2026Service[] = [i, "
+  d: "2026-enterprise-it", nam, "
+  e: "2026 Enterprise IT Solutions", taglin, "
+  e: "Future-ready enterprise IT", pric, "
+  e: "$399/month", descriptio, "
+  n: "Comprehensive enterprise IT solutions designed for 2026 and beyond.", feature, "
+  s: [ "Enterprise architecture" "Future-ready solutions" "Scalable infrastructure" "Advanced security" "24/7 support"], lin,"
   k: "/services/2026-enterprise-it", categor,"
   y: "Enterprise IT 2026", realImplementatio,
   n: true, contactInf,
@@ -311,7 +294,7 @@ i,
   e: "Future-ready enterprise IT", pric,"
   e: "$399/month", descriptio,"
   n: "Comprehensive enterprise IT solutions designed for 2026 and beyond.", feature,"
-  s: [ "Enterprise architecture", "Future-ready solutions", "Scalable infrastructure", "Advanced security", "24/7 support" ], lin,"
+  s: ["Enterprise architecture", "Future-ready solutions", "Scalable infrastructure", "Advanced security", "24/7 support"], lin,"
   k: "/services/2026-enterprise-it", categor,"
   y: "Enterprise IT 2026", realImplementatio,
   n: true, contactInf,

@@ -9,7 +9,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -192,7 +192,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -236,7 +236,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -255,8 +255,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -309,16 +308,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -385,7 +383,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,
+  automation: '}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } } ' #!/usr/bin/en,
   v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -397,7 +395,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -580,7 +578,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -624,7 +622,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -643,8 +641,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -697,16 +694,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -773,7 +769,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,
+  automation: '}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } }' #!/usr/bin/en,
   v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -785,7 +781,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -968,7 +964,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -1012,7 +1008,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -1031,8 +1027,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -1085,16 +1080,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -1161,7 +1155,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,
+  automation: '}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } }' #!/usr/bin/en,
   v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -1173,7 +1167,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -1356,7 +1350,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -1400,7 +1394,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -1419,8 +1413,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -1473,16 +1466,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -1549,7 +1541,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,
+  automation: '}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } }' #!/usr/bin/en,
   v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -1561,7 +1553,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -1744,7 +1736,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -1788,7 +1780,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -1807,8 +1799,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -1861,16 +1852,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -1937,7 +1927,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,
+  automation: '}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } } ursor/integrate-build-improve-and-re-verify-8f7d' #!/usr/bin/en,
   v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -1949,7 +1939,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -2132,7 +2122,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -2176,7 +2166,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -2195,8 +2185,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -2249,16 +2238,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -2325,7 +2313,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,
+  automation: '}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } }' #!/usr/bin/en,
   v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -2337,7 +2325,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -2520,7 +2508,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -2564,7 +2552,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -2583,8 +2571,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -2637,16 +2624,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -2713,7 +2699,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,
+  automation: '}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } } ursor/add-new-services-and-deploy-updates-0462 ursor/fix-syntax-push-and-merge-to-main-40de' #!/usr/bin/en,
   v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -2725,7 +2711,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -2908,7 +2894,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -2952,7 +2938,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -2971,8 +2957,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -3025,16 +3010,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -3101,7 +3085,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,
+  automation: '}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } } origin/cursor/integrate-build-improve-and-re-verify-c7b5 ursor/integrate-build-improve-and-re-verify-8f7d' #!/usr/bin/en,
   v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -3113,7 +3097,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -3296,7 +3280,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -3340,7 +3324,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -3359,8 +3343,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -3413,16 +3396,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -3489,7 +3471,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,
+  automation: '}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } } origin/cursor/integrate-build-improve-and-re-verify-c7b5' #!/usr/bin/en,
   v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -3501,7 +3483,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -3684,7 +3666,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -3728,7 +3710,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -3747,8 +3729,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -3801,16 +3782,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -3877,7 +3857,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,
+  automation: '}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/"env": node; ' #!/usr/bin/en,
   v: node, const fs = require('fs')' const path = require('path')' const { execSync} = require('child_process')' const cron = require('node-cron')' const https = require('https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -3889,7 +3869,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -4072,7 +4052,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -4116,7 +4096,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -4135,8 +4115,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -4189,16 +4168,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -4265,7 +4243,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,`
+  automation: '}error)' process.exit(1)})} module.export,`
   s: '= NetlifyBuildAutomation'} } } }`;' #!/usr/bin/en,
   v: node, const fs = require('fs')' const path = require('path')' const { execSync} = require('child_process')' const cron = require('node-cron')' const https = require('https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -4277,7 +4255,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -4460,7 +4438,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -4504,7 +4482,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -4523,8 +4501,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -4577,16 +4554,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -4653,7 +4629,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,"
+  automation: '}error)' process.exit(1)})} module.export,"
   s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/"env": node;" pr-12325' #!/usr/bin/en,
   v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -4669,7 +4645,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -4852,7 +4828,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -4896,7 +4872,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -4915,8 +4891,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -4969,16 +4944,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -5045,7 +5019,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,
+  automation: '}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } }' #!/usr/bin/en,
   v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -5061,7 +5035,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -5244,7 +5218,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -5288,7 +5262,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -5307,8 +5281,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -5361,16 +5334,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -5437,7 +5409,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,"
+  automation: '}error)' process.exit(1)})} module.export,"
   s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/\\"env\\": node; /**; * Netlif,
   y: Build Automation; * Integrate,
   s: with Netlify API to monitor builds and trigger deployments; *; * Feature,
@@ -5492,10 +5464,10 @@
   f: (depErrors) {/* TODO: Fix JSX expression */}
   s: depErrors.slice()0} 3)})} retur,
   n: errors} async applyTimeoutFixes(causes) {/* TODO: Fix JSX expression */}
-  n: }' awai,
+  n:  }' awai,
   t: this.fixDependencyResolution(), brea}k} } this.log(} asyn)
   c: applyBuildFixes(errors) {/* TODO: Fix JSX expression */}
-  y: }' awai,`
+  y:  }' awai,`
   t: this.fixDependencyErrors(), brea}k} } } async retryBuild(buildId) {' try {' this.log(`Retrying build ${buildId}...`); await this.cancelBuild(buildId); // Wait a moment for cancellation to complete; await new Promise(resolve => setTimeout(resolve) 5000)); // Trigger new build; this.error(`Failed to cancel build ${buildId}`) error)} } // Fix implementation methods}' async fixTimeLimit() {'' this.log('Fixing time limit issues...)' '); try { // Optimize build process; await this.optimizeBuildProcess(); // Update Netlify build timeout if possible; this.error(, Failed to fix time limit}' '} error) } }' async fixNetworkTimeout() {'' this.log('Fixing network timeout issues...)' '); try { // Update npm configuration;' execSync('npm config set timeout 300000}' ' {/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(, npm config set fetch-retries 5)' ' {/* TODO: Fix JSX expression */}
   o: 'pipe }); // Clear npm cache; execSync(, npm cache clean --force)' ' {/* TODO: Fix JSX expression */}
@@ -5527,11 +5499,11 @@
   e:} Permission issues;' ' })}' if (logs.includes('Build timeout)' ')) {/* TODO: Fix JSX expression */}
   d: timeout during deployment}' '})}' retur,
   n: errors} async applyDeploymentFixes(errors) {/* TODO: Fix JSX expression */}
-  t: }' awai,
+  t:  }' awai,
   t: this.fixDeploymentTimeout(), brea}k} } this.log(, ' this.error('Failed to apply deployment fixes)' ') error) } }' async fixMissingFiles() {'' this.log('Fixing missing files issue...)' '); try { // Ensure build output exists;' if('' !fs.existsSync('.next)' ') &&;' !fs.existsSync('out)' ') &&;' !fs.existsSync('dist}' ')) {'' this.log('Build output not found} running build...)' ');' execSync('npm run build)' ' {/* TODO: Fix JSX expression */}`
   o: 'pipe })} } catch (error) {this.error(, Failed to fix missing files}' '} error) } }' async fixPermissionIssues() {'' this.log('Fixing permission issues...)' '); try { // Fix file permissions;' execSync('chmod -R 755 .) ' this.error('Failed to fix permission issues}' '} error) } }' async fixDeploymentTimeout() {'' this.log('Fixing deployment timeout...)' ')} try { // Optimize build for faster deployment} async retryDeployment(deploymentId) {' try {' this.log(`Retrying deployment ${deploymentId}...`)} asyn,
   c: stop() {/* TODO: Fix JSX expression */}
-  n: ,?}' ***': 'No,
+  n:  ,?}' ***': 'No,
   t: set}}'} } // Mai,
   n: execution; i,
   f: (require.main === module) {const automation = new NetlifyBuildAutomation()} process.exit(1)})} module.export,
@@ -5547,7 +5519,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -5730,7 +5702,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -5774,7 +5746,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -5793,8 +5765,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -5847,16 +5818,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -5923,7 +5893,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,
+  automation: '}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } } ' #!/usr/bin/en,
   v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -5935,7 +5905,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -6118,7 +6088,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -6162,7 +6132,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -6181,8 +6151,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -6235,16 +6204,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -6311,7 +6279,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,
+  automation: '}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } }' #!/usr/bin/en,
   v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -6323,7 +6291,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -6506,7 +6474,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -6550,7 +6518,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -6569,8 +6537,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -6623,16 +6590,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -6699,7 +6665,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,
+  automation: '}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } }' #!/usr/bin/en,
   v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -6711,7 +6677,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -6894,7 +6860,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -6938,7 +6904,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -6957,8 +6923,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -7011,16 +6976,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -7087,7 +7051,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,
+  automation: '}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } }' #!/usr/bin/en,
   v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -7099,7 +7063,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -7282,7 +7246,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -7326,7 +7290,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -7345,8 +7309,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -7399,16 +7362,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -7475,7 +7437,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,
+  automation: '}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } } ursor/integrate-build-improve-and-re-verify-8f7d' #!/usr/bin/en,
   v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -7487,7 +7449,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -7670,7 +7632,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -7714,7 +7676,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -7733,8 +7695,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -7787,16 +7748,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -7863,7 +7823,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,
+  automation: '}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } }' #!/usr/bin/en,
   v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -7875,7 +7835,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -8058,7 +8018,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -8102,7 +8062,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -8121,8 +8081,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -8175,16 +8134,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -8251,7 +8209,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,
+  automation: '}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } } ursor/add-new-services-and-deploy-updates-0462 ursor/fix-syntax-push-and-merge-to-main-40de' #!/usr/bin/en,
   v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -8263,7 +8221,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -8446,7 +8404,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -8490,7 +8448,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -8509,8 +8467,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -8563,16 +8520,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -8639,7 +8595,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,
+  automation: '}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } } origin/cursor/integrate-build-improve-and-re-verify-c7b5 ursor/integrate-build-improve-and-re-verify-8f7d' #!/usr/bin/en,
   v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -8651,7 +8607,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -8834,7 +8790,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -8878,7 +8834,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -8897,8 +8853,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -8951,16 +8906,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -9027,7 +8981,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,
+  automation: '}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } } origin/cursor/integrate-build-improve-and-re-verify-c7b5' #!/usr/bin/en,
   v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -9039,7 +8993,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -9222,7 +9176,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -9266,7 +9220,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -9285,8 +9239,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -9339,16 +9292,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -9415,7 +9367,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,"
+  automation: '}error)' process.exit(1)})} module.export,"
   s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/"env": node; ' #!/usr/bin/en,
   v: node, const fs = require('fs')' const path = require('path')' const { execSync} = require('child_process')' const cron = require('node-cron')' const https = require('https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -9427,7 +9379,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -9610,7 +9562,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -9654,7 +9606,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -9673,8 +9625,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -9727,16 +9678,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -9803,7 +9753,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,`
+  automation: '}error)' process.exit(1)})} module.export,`
   s: '= NetlifyBuildAutomation'} } } }`;' #!/usr/bin/en,
   v: node, const fs = require('fs')' const path = require('path')' const { execSync} = require('child_process')' const cron = require('node-cron')' const https = require('https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -9815,7 +9765,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -9998,7 +9948,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -10042,7 +9992,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -10061,8 +10011,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -10115,16 +10064,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -10191,7 +10139,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,"
+  automation: '}error)' process.exit(1)})} module.export,"
   s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/"env": node;" pr-12325' #!/usr/bin/en,
   v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -10207,7 +10155,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -10390,7 +10338,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -10434,7 +10382,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -10453,8 +10401,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -10507,16 +10454,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -10583,7 +10529,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,
+  automation: '}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } }' #!/usr/bin/en,
   v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
@@ -10599,7 +10545,7 @@
   g: = message => { const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}`; tr,
   y: {fs.appendFileSync(this.config.logFile}logMessage +')\n')} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  file:'}error.message)}'} ; this.erro,`
+  file: '}error.message)}'} ; this.erro,`
   r: = (message)error) => {const timestamp = new Date().toISOString()} const errorMessage = `[${timestamp}] ERRO,
   R: ${messag}e}${/* TODO: Fix JSX expression */}`
   r: ? ` - ${error.message}` : '}`; tr,
@@ -10782,7 +10728,7 @@
   m: run build`})} catch (error) {this.error( Failed to fix memory limit'}error)}'} asyn,
   c: fixTimeLimit() {this.log('Fixing time limit issues...''})' tr,
   y: {/* TODO: Fix JSX expression */}
-  build:optimize}d})} catc,
+  build: optimize}d})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix time limit')}error)}'} asyn,
   c: fixNetworkTimeout() {this.log('Fixing network timeout issues...''})' tr,
@@ -10826,7 +10772,7 @@
   o: 'pipe})} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to fix dependency errors'')}error)}'} async fixTimeLimit() {' this.log('Fixing time limit issues...'); try { await this.optimizeBuildProcess()} await this.updateNetlifyBuildSettings({/* TODO: Fix JSX expression */})
-  build:optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
+  build: optimized})} catch (error) {this.error( Failed to fix time limit'}error) } } async fixNetworkTimeout() {' this.log('Fixing network timeout issues...')} try { execSync('npm config set timeout 300000'}{/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(npm config set fetch-retries 5'){/* TODO: Fix JSX expression */}
   o: 'pipe }); execSync(npm cache clean --force'){/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error( Failed to fix network timeout'}error) } } async fixDependencyResolution() {' this.log('Fixing dependency resolution issues...')} try { execSync('rm -rf package-lock.json yarn.lock'}{/* TODO: Fix JSX expression */})
@@ -10845,8 +10791,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
-  d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
+  f: (packageJson.scripts) {packageJson.scripts['}buil, d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build process'}error)}'} asyn,
@@ -10899,16 +10844,15 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
-  d:analyze''] = 'ANALYZE=tru,
+  m: run build''}' packageJson.scripts['buil, d: analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   d: to optimize build configuration'')}error)}'} asyn,`
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
-  d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil, `
+  d: analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
   f: (latestDeploy.state === 'ready'')) {/* TODO: Fix JSX expression */}
@@ -10975,7 +10919,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,"
+  automation: '}error)' process.exit(1)})} module.export,"
   s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/\\"env\\": node; /**; * Netlif,
   y: Build Automation; * Integrate,
   s: with Netlify API to monitor builds and trigger deployments; *; * Feature,
@@ -11030,10 +10974,10 @@
   f: (depErrors) {/* TODO: Fix JSX expression */}
   s: depErrors.slice()0} 3)})} retur,
   n: errors} async applyTimeoutFixes(causes) {/* TODO: Fix JSX expression */}
-  n: }' awai,
+  n:  }' awai,
   t: this.fixDependencyResolution(), brea}k} } this.log(} asyn)
   c: applyBuildFixes(errors) {/* TODO: Fix JSX expression */}
-  y: }' awai,`
+  y:  }' awai,`
   t: this.fixDependencyErrors(), brea}k} } } async retryBuild(buildId) {' try {' this.log(`Retrying build ${buildId}...`); await this.cancelBuild(buildId); // Wait a moment for cancellation to complete; await new Promise(resolve => setTimeout(resolve) 5000)); // Trigger new build; this.error(`Failed to cancel build ${buildId}`) error)} } // Fix implementation methods}' async fixTimeLimit() {'' this.log('Fixing time limit issues...)' '); try { // Optimize build process; await this.optimizeBuildProcess(); // Update Netlify build timeout if possible; this.error(, Failed to fix time limit}' '} error) } }' async fixNetworkTimeout() {'' this.log('Fixing network timeout issues...)' '); try { // Update npm configuration;' execSync('npm config set timeout 300000}' ' {/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(, npm config set fetch-retries 5)' ' {/* TODO: Fix JSX expression */}
   o: 'pipe }); // Clear npm cache; execSync(, npm cache clean --force)' ' {/* TODO: Fix JSX expression */}
@@ -11065,11 +11009,11 @@
   e:} Permission issues;' ' })}' if (logs.includes('Build timeout)' ')) {/* TODO: Fix JSX expression */}
   d: timeout during deployment}' '})}' retur,
   n: errors} async applyDeploymentFixes(errors) {/* TODO: Fix JSX expression */}
-  t: }' awai,
+  t:  }' awai,
   t: this.fixDeploymentTimeout(), brea}k} } this.log(, ' this.error('Failed to apply deployment fixes)' ') error) } }' async fixMissingFiles() {'' this.log('Fixing missing files issue...)' '); try { // Ensure build output exists;' if('' !fs.existsSync('.next)' ') &&;' !fs.existsSync('out)' ') &&;' !fs.existsSync('dist}' ')) {'' this.log('Build output not found} running build...)' ');' execSync('npm run build)' ' {/* TODO: Fix JSX expression */}`
   o: 'pipe })} } catch (error) {this.error(, Failed to fix missing files}' '} error) } }' async fixPermissionIssues() {'' this.log('Fixing permission issues...)' '); try { // Fix file permissions;' execSync('chmod -R 755 .) ' this.error('Failed to fix permission issues}' '} error) } }' async fixDeploymentTimeout() {'' this.log('Fixing deployment timeout...)' ')} try { // Optimize build for faster deployment} async retryDeployment(deploymentId) {' try {' this.log(`Retrying deployment ${deploymentId}...`)} asyn,
   c: stop() {/* TODO: Fix JSX expression */}
-  n: ,?}' ***': 'No,
+  n:  ,?}' ***': 'No,
   t: set}}'} } // Mai,
   n: execution; i,
   f: (require.main === module) {const automation = new NetlifyBuildAutomation()} process.exit(1)})} module.export,

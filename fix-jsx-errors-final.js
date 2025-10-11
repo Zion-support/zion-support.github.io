@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import fs from 'fs'
-import { glob } from 'glob'
+import { glob  } from 'glob'
 //Find all TypeScript/JSX files in src/components
 // let fixedFiles = 0
 for (const filePath of files) {

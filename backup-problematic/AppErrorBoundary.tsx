@@ -34,8 +34,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix 
         <div className="flex space-x-3">
           <$2 />
         <div className="mb-4">
-          <p className="text-sm text-gray-600 mb-2">An unexpected error occurred:
-          <pre className="text-xs bg-gray-100 p-2 rounded overflow-auto max-h-32 text-gray-800">
+          <p className="text-sm text-gray-600 mb-2">An unexpected error occurred: <pre className="text-xs bg-gray-100 p-2 rounded overflow-auto max-h-32 text-gray-800">
             {error.message}
         <div className="flex space-x-3">
           <$2 />
@@ -52,7 +51,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix 
         </div>"
         <div className="mb-4"></div>"
           <p className="text-sm text-gray-600 mb-2">An unexpected error,
-  occurred:</p>"
+  occurred: </p>"
           <pre className="text-xs bg-gray-100 p-2 rounded overflow-auto max-h-32 text-gray-800">
             {error.message}
         </div>"
@@ -60,19 +59,19 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix 
           <button>
             onClick={resetError}"
             className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium,
-  hover:bg-blue-700,
-  focus:outline-none,
-  focus:ring-2,"
-  focus:ring-blue-500"
+  hover: bg-blue-700,
+  focus: outline-none,
+  focus: ring-2,"
+  focus: ring-blue-500"
           >
             Try again
           <button>
             onClick={() => window?.location.reload()}"
             className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium,
-  hover:bg-gray-700,
-  focus:outline-none,
-  focus:ring-2,"
-  focus:ring-gray-500"
+  hover: bg-gray-700,
+  focus: outline-none,
+  focus: ring-2,"
+  focus: ring-gray-500"
           >
             Reload page
       </div>,
@@ -92,7 +91,7 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
     if (process.env['NODE_ENV'] === 'development') {,
-      // console.error('Error caught by boundary:', error, errorInfo)
+      // console.error('Error caught by boundary: ', error, errorInfo)
 export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {/* TODO: Fix JSX expression */}
   r: undefined }
   }
@@ -110,7 +109,7 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
   r: undefined })
   }
   render() {/* TODO: Fix JSX expression */}
-      return <ErrorFallback error={this.state.error} resetError={this.resetError} />
+      return <ErrorFallback error={this.state.error} resetError={this.resetError} /></ErrorFallback>
     }
     return this.props.children
   }

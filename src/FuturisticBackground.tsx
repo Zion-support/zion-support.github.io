@@ -30,25 +30,23 @@ export function FuturisticBackground({
     resizeCanvas()
     window.addEventListener('resize', resizeCanvas)
     // Particle system
-    const particles: Array<{
-      x: number
+    const particles: Array<>
+  {x: number
       y: number
       vx: number
       vy: number
       size: number
       opacity: number
       color: string
-    }> = []
-    const colors = [
-      '#8c15e9', // zion-purple
+    } = []
+    const colors = ['#8c15e9', // zion-purple
       '#22ddd2', // zion-cyan
       '#2e73ea', // zion-blue
       '#b971f2', // zion-purple-light
-      '#7aeae4', // zion-cyan-light
-    ]
+      '#7aeae4', // zion-cyan-light]
     // Initialize particles
-    const initParticles = () => {
-      const particleCount = intensity === 'high' ? 150 : intensity === 'medium' ? 100 : 50
+    const initParticles = () => >{const particleCount = intensity === 'high' ? 150 : intensity === 'medium' ? 100 : 50
+</>
       for (let i = 0; i < particleCount; i++) {
         particles.push({
           x: Math.random() * canvas.width,
@@ -58,7 +56,7 @@ export function FuturisticBackground({
           size: Math.random() * 2 + 1,
       life: number
       maxLife: number
-    }> = []
+    } = []
     const getColorScheme = () => {
       switch (colorScheme) {
         case 'cyberpunk':
@@ -89,8 +87,7 @@ export function FuturisticBackground({
             accent: '#009900',
             background: 'rgba(0, 0, 0, 0.95)'
           }
-        default:
-          return {
+        default: return {
             primary: '#8c15e9',
             secondary: '#22ddd2',
             accent: '#ff0080',
@@ -251,8 +248,7 @@ export function FuturisticBackground({
         case 'matrix':
           drawMatrix()
           break
-        default:
-          break
+        default: break
       }
       
       // Update and draw particles
@@ -459,7 +455,7 @@ export function SimpleFuturisticBackground({
       </div>
 
       {/* Grid overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(140,21,233,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(140,21,233,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(140, 21, 233, 0.1)_1px, transparent_1px), linear-gradient(90deg, rgba(140, 21, 233, 0.1)_1px, transparent_1px)] bg-[size: 50px_50px]"></div>
 
       {/* Content */}
       <div className="relative z-10">

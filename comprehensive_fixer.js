@@ -1,8 +1,7 @@
 import fs from 'fs'
-import { glob } from 'glob'
+import { glob  } from 'glob'
 //Comprehensive TypeScript/JSX fixes
-const fixes = [
-  //Fix object literal syntax issues
+const fixes = [//Fix object literal syntax issues
   {
     pattern: /(\w+)\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacement: '$1 = { $2 }, $3'},
@@ -123,7 +122,7 @@ const fixes = [
     replacement: '.reduce(($1) => $2, $3) $4'},
   //Fix useState hooks
   {
-    pattern: /const\s*\[\s*(\w+),\s*(\w+)\s*\]\s*=\s*useState\s*\(\s*([^)]+)\s*\)\s*(\w+)/g,
+    pattern: /const\s*\[\s*(\w+), \s*(\w+)\s*\]\s*=\s*useState\s*\(\s*([^)]+)\s*\)\s*(\w+)/g,
     replacement: 'const [$1, $2] = useState($3); $4'},
   //Fix useEffect hooks
   {
@@ -131,8 +130,7 @@ const fixes = [
     replacement: 'useEffect(() => { $1 }, [$2]); $3'},
   //Fix useCallback hooks
   {
-    pattern:
-  {/* TODO: Fix JSX expression */}
+    pattern: {/* TODO: Fix JSX expression */}
   n: /(\w+)\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacemen,
   t: '$1 = { $2 }, $3'},
@@ -270,8 +268,7 @@ const fixes = [
   t: 'const $1 = useCallback(() => { $2 }, [$3]); $4'},
   //Fix useMemo hooks
   {
-    pattern:
-  {/* TODO: Fix JSX expression */}
+    pattern: {/* TODO: Fix JSX expression */}
       /const\s+(\w+)\s*=\s*useMemo\s*\(\s*\(\s*\)\s*=>\s*{\s*([^}]+)}\s*,\s*\[([^\]]+)\]\s*\)\s*(\w+)/g,
     replacemen,
   t: 'const $1 = useMemo(() => { $2 }, [$3]); $4'}]

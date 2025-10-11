@@ -12,7 +12,7 @@ const, October2025BreakthroughBanne, r = () => {
         {/* Main, Banne, r */}
         <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/50, vi, a-indi, g, o-9, 0, 0/50, t, o-emera, l, d-9, 0, 0/50, rounde, d-2xl, borde, r-2, borde, r-purp, l, e-5, 0, 0/30, backdro, p-bl, u, r-s, m, p-8, m, d: p-12, m, b-8, shado, w-2, x, l">"
           <div, className="flex, item, s-center, ga, p-3, m, b-6">
-            <Sparkles, className="w-8 h-8, tex, t-purp, l, e-400, animat, e-pul, s, e  />
+            <Sparkles , className="w-8 h-8, tex, t-purp, l, e-400, animat, e-pul, s, e  /></Sparkles>
             <span, className="px-4, p, y-2, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, rounde, d-full, tex, t-sm, fon, t-bold, border, border-purp, l, e-4, 0, 0/30"></span>
     <section, className="relative, p, y-20, overflo, w-hidd, e, n">"
       {/* Background, Effect, s */}
@@ -69,28 +69,28 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
             {/* Articl, e, 1: Sovereign, Agent, s */}
             <, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-purp, l, e-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, hov, e$2 />
-  r:sca, l, e-105, grou, p">"
+  r: sca, l, e-105, grou, p">"
               <div, className="flex, item, s-center, ga, p-2, m, b-3">
             {/* Articl, e, 1: Sovereign, Agent, s */}
             <, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-purp, l, e-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, hov, e$2 />
-  r:sca, l, e-105, grou, p">"
+  r: sca, l, e-105, grou, p">"
               <div, className="flex, item, s-center, ga, p-2, m, b-3">
-                <Brain, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0  />
+                <Brain , className="w-6 h-6, tex, t-purp, l, e-4, 0, 0  /></Brain>
                 <span, className="te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, uppercase, tracking-wi, d, e">AI, Sovereign, Agents
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
             {/* Artic, l, e
   1: Sovereign, Agent, s */}
-            <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-purp, l, e-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-105, grou, p">"
+            <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-purp, l, e-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, hove, r: sca, l, e-105, grou, p">"
               <div, className="flex, item, s-center, ga, p-2, m, b-3">"
             {/* Artic, l, e 
   1: Sovereign, Agent, s */}
-            <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-purp, l, e-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-105, grou, p">"
+            <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-purp, l, e-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, hove, r: sca, l, e-105, grou, p">"
               <div, className="flex, item, s-center, ga, p-2, m, b-3">"
                 <Brain, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0" />"
             {/* Articl, e, 1: Sovereign, Agent, s */}"
             <, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-purp, l, e-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, hov, e,"$2 />
-  r:sca, l, e-105, grou, p">""
+  r: sca, l, e-105, grou, p">""
               <div, className="flex, item, s-center, ga, p-2, m, b-3"></div>"
                 <Brain, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0  /></Brain>"
                 <span, className="te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, uppercase, tracking-wi, d, e">AI, Sovereign, Agents
@@ -99,7 +99,7 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
             {/* TODO: Fix JSX expression */}
   1: Sovereign, Agent, s */}"
-            <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-purp, l, e-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-105, grou, p">";"
+            <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-purp, l, e-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, hove, r: sca, l, e-105, grou, p">";"
               <div, className="flex, item, s-center, ga, p-2, m, b-3">";"
                 <Brain, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0" />";"
                 <span, className="te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, uppercase, tracking-wi, d, e">AI, Sovereign, Agents</sp, a, n>"</$1>"
@@ -113,32 +113,32 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
               <Li, n, k;"
   to="/bl, o, g/ai-soverei, g, n-agen, t, s-enterpri, s, e-20, 2, 5""
                 classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, tex, t-purp, l, e-300, hove, r: te, x, t-purp, l, e-200, fon, t-semibold, tex, t-sm, grou, p-ho, v, e,"
-  r:g, a, p-3, transitio, n-a, l, l"
+  r: g, a, p-3, transitio, n-a, l, l"
               ></Li>"
                 Read, Articl, e <Link, className="w-4 h-4  /></Link>"
                 Read, Articl, e <Link, className="w-4 h-4" />"
             {/* Articl, e, 2: Quantum, M, L */}
             <, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/60, t, o-indi, g, o-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, hov, e$2 />
-  r:sca, l, e-105, grou, p">"
+  r: sca, l, e-105, grou, p">"
               <div, className="flex, item, s-center, ga, p-2, m, b-3">
             <, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/60, t, o-indi, g, o-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, hov, e$2 />
-  r:sca, l, e-105, grou, p">"
+  r: sca, l, e-105, grou, p">"
               <div, className="flex, item, s-center, ga, p-2, m, b-3">
-                <Zap, className="w-6 h-6, tex, t-indi, g, o-4, 0, 0  />
+                <Zap , className="w-6 h-6, tex, t-indi, g, o-4, 0, 0  /></Zap>
                 <span, className="te, x, t-xs, fon, t-semibold, tex, t-indi, g, o-300, uppercase, tracking-wi, d, e">Quantum, M, L
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">"
-            <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/60, t, o-indi, g, o-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-105, grou, p">"
+            <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/60, t, o-indi, g, o-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, hove, r: sca, l, e-105, grou, p">"
               <div, className="flex, item, s-center, ga, p-2, m, b-3">"
                 <Zap, className="w-6 h-6, tex, t-indi, g, o-4, 0, 0" />"
             {/* Articl, e, 2: Quantum, M, L */}"
             <, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/60, t, o-indi, g, o-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, hov, e,"$2 />
-  r:sca, l, e-105, grou, p">""
+  r: sca, l, e-105, grou, p">""
               <div, className="flex, item, s-center, ga, p-2, m, b-3"></div>"
                 <Zap, className="w-6 h-6, tex, t-indi, g, o-4, 0, 0  /></Zap>"
                 <span, className="te, x, t-xs, fon, t-semibold, tex, t-indi, g, o-300, uppercase, tracking-wi, d, e">Quantum, M, L
               </d, i, v>"
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">""
-            <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/60, t, o-indi, g, o-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-105, grou, p">";"
+            <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/60, t, o-indi, g, o-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, hove, r: sca, l, e-105, grou, p">";"
               <div, className="flex, item, s-center, ga, p-2, m, b-3">";"
                 <Zap, className="w-6 h-6, tex, t-indi, g, o-4, 0, 0" />";"
                 <span, className="te, x, t-xs, fon, t-semibold, tex, t-indi, g, o-300, uppercase, tracking-wi, d, e">Quantum, M, L</sp, a, n>"</$1>"
@@ -152,34 +152,34 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
               <Li, n, k;"
   to="/bl, o, g/ai-quant, u, m-machi, n, e-learni, n, g-20, 2, 5""
                 classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, tex, t-indi, g, o-300, hove, r: te, x, t-indi, g, o-200, fon, t-semibold, tex, t-sm, grou, p-ho, v, e,"
-  r:g, a, p-3, transitio, n-a, l, l"
+  r: g, a, p-3, transitio, n-a, l, l"
               ></Li>"
                 Read, Articl, e <Link, className="w-4 h-4  /></Link>"
                 Read, Articl, e <Link, className="w-4 h-4" />"
             {/* Articl, e, 3: Neuromorphic, Edg, e */}
             <, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-9, 0, 0/60, t, o-emera, l, d-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e$2 />
-  r:sca, l, e-105, grou, p">"
+  r: sca, l, e-105, grou, p">"
               <div, className="flex, item, s-center, ga, p-2, m, b-3">
             <, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-9, 0, 0/60, t, o-emera, l, d-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e$2 />
-  r:sca, l, e-105, grou, p">"
+  r: sca, l, e-105, grou, p">"
               <div, className="flex, item, s-center, ga, p-2, m, b-3">
-                <Sparkles, className="w-6 h-6, tex, t-emera, l, d-4, 0, 0  />
+                <Sparkles , className="w-6 h-6, tex, t-emera, l, d-4, 0, 0  /></Sparkles>
                 <span, className="te, x, t-xs, fon, t-semibold, tex, t-emera, l, d-300, uppercase, tracking-wi, d, e">Neuromorphic, Edg, e
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-emera, l, d-300, transitio, n-colo, r, s">"
-            <div, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-9, 0, 0/60, t, o-emera, l, d-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-105, grou, p">"
+            <div, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-9, 0, 0/60, t, o-emera, l, d-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hove, r: sca, l, e-105, grou, p">"
               <div, className="flex, item, s-center, ga, p-2, m, b-3">"
                 <Sparkles, className="w-6 h-6, tex, t-emera, l, d-4, 0, 0" />"
                 <span, className="te, x, t-xs, fon, t-semibold, tex, t-emera, l, d-300, uppercase, tracking-wi, d, e">Neuromorphic, Edg, e</sp, a, n>"
               <, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-ho, v, e$2 />
             {/* Articl, e, 3: Neuromorphic, Edg, e */}"
             <, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-9, 0, 0/60, t, o-emera, l, d-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e,"$2 />
-  r:sca, l, e-105, grou, p">""
+  r: sca, l, e-105, grou, p">""
               <div, className="flex, item, s-center, ga, p-2, m, b-3"></div>"
                 <Sparkles, className="w-6 h-6, tex, t-emera, l, d-4, 0, 0  /></Sparkles>"
                 <span, className="te, x, t-xs, fon, t-semibold, tex, t-emera, l, d-300, uppercase, tracking-wi, d, e">Neuromorphic, Edg, e
               </d, i, v>"
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-emera, l, d-300, transitio, n-colo, r, s">""
-            <div, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-9, 0, 0/60, t, o-emera, l, d-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-105, grou, p">";"
+            <div, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-9, 0, 0/60, t, o-emera, l, d-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hove, r: sca, l, e-105, grou, p">";"
               <div, className="flex, item, s-center, ga, p-2, m, b-3">";"
                 <Sparkles, className="w-6 h-6, tex, t-emera, l, d-4, 0, 0" />";"
                 <span, className="te, x, t-xs, fon, t-semibold, tex, t-emera, l, d-300, uppercase, tracking-wi, d, e">Neuromorphic, Edg, e</sp, a, n>"</$1>"
@@ -194,7 +194,7 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
               <Li, n, k;"
   to="/bl, o, g/ai-neuromorph, i, c-ed, g, e-computi, n, g-20, 2, 5""
                 classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, tex, t-emera, l, d-300, hove, r: te, x, t-emera, l, d-200, fon, t-semibold, tex, t-sm, grou, p-ho, v, e,"
-  r:g, a, p-3, transitio, n-a, l, l"
+  r: g, a, p-3, transitio, n-a, l, l"
               ></Li>"
                 Read, Articl, e <Link, className="w-4 h-4  /></Link>"
                 Read, Articl, e <Link, className="w-4 h-4" />"
@@ -204,24 +204,24 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
           <div, className="flex, fle, x-wrap, ga, p-4, item, s-cent, e, r">"
             <Li, n, k
   to="/bl, o, g"
-              classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-indi, g, o-700, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, shado, w-lg, hov, e
+              classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, hove, r: fr, o, m-purp, l, e-700, hove, r: to-indi, g, o-700, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, shado, w-lg, hov, e
           {/* CTA, Sectio, n */}"
           <div, className="flex, fle, x-wrap, ga, p-4, item, s-cent, e, r">"
             <Li, n, k;"
   to="/bl, o, g""
-              classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-indi, g, o-700, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, shado, w-lg, hov, e,"
-  r:shad, o, w-purp, l, e-5, 0, 0/50, inlin, e-flex, item, s-center, ga, p-2"
+              classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, hove, r: fr, o, m-purp, l, e-700, hove, r: to-indi, g, o-700, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, shado, w-lg, hov, e,"
+  r: shad, o, w-purp, l, e-5, 0, 0/50, inlin, e-flex, item, s-center, ga, p-2"
             ></Li>"
               Explore, All, Articles <Link, className="w-5 h-5  /></Link>"
               Explore, All, Articles <Link, className="w-5 h-5" />"
-            <Li, n, k
+            <Li , n, k
   to="/conta, c, t"
               classNa, m, e="bg-whi, t, e/10, hove, r: bg-whi, t, e/20, backdro, p-bl, u, r-sm, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, border, border-whi, t, e/20, hov, e
             <Li, n, k;"
   to="/conta, c, t""
               classNa, m, e="bg-whi, t, e/10, hove, r: bg-whi, t, e/20, backdro, p-bl, u, r-sm, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, border, border-whi, t, e/20, hov, e,"
-  r:bord, e, r-whi, t, e/40, inlin, e-flex, item, s-center, ga, p-2"
-            >
+  r: bord, e, r-whi, t, e/40, inlin, e-flex, item, s-center, ga, p-2"
+            ></Li>
               Schedule, Consultatio, n
         {/* Stats, Banne, r */}
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4">"

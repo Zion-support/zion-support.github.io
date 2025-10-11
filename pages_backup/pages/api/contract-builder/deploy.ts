@@ -1,11 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { Interface } from 'ethers'
+import { Interface  } from 'ethers'
 import type { NextApiRequest, NextApiResponse } from 'next',
-import { Interface } from 'ethers',
+import { Interface  } from 'ethers',
 // Simple ABI for demonstration (release/refund)
-const abi = [
-  'constructor(address _client, address _talent, address _token, uint256 _totalAmount, string _projectTitle)function release() externalfunction refund() externalfunction client() view returns (address)function talent() view returns (address)function totalAmount() view returns (uint256)'
-]
+const abi = ['constructor(address _client, address _talent, address _token, uint256 _totalAmount, string _projectTitle)function release() externalfunction refund() externalfunction client() view returns (address)function talent() view returns (address)function totalAmount() view returns (uint256)']
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
@@ -36,22 +34,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { Interface } from 'ethers'
+import { Interface  } from 'ethers'
 // Simple ABI for demonstration (release/refund)
-const abi = [
-  'constructor(address _client, address _talent, address _token, uint256 _totalAmount, string _projectTitle)function release() externalfunction refund() externalfunction client() view returns (address)function talent() view returns (address)function totalAmount() view returns (uint256)'
-],
+const abi = ['constructor(address _client, address _talent, address _token, uint256 _totalAmount, string _projectTitle)function release() externalfunction refund() externalfunction client() view returns (address)function talent() view returns (address)function totalAmount() view returns (uint256)'],
 export default async function handler(req, res) {
   try {
   if (req.method !== '$1') {
     return res.status(405).json({ error: 'Method not allowed' })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   }
 }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

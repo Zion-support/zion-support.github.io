@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback  } from 'react'
 interface PerformanceMetrics {
     loadTime: number
   renderTime: number
@@ -141,8 +141,7 @@ export const _usePerformance = () => {
         loadTim,
   e: navigation.loadEventEnd - navigation.fetchStart,
         domContentLoade,
-  d:
-//           navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+  d: //           navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
 //         firstContentfulPaint,
 //         largestContentfulPaint,
 //         cumulativeLayoutShift,

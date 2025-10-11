@@ -1,4 +1,4 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts"
+import { serve  } from 'https: //deno.land/std@0.190.0/http/server.ts'
 import "https://deno.land/x/xhr@0.1.0/mod.ts"
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -22,7 +22,7 @@ serve(async (req) => {
     // Define the appropriate model to use
     // Default to base model if no specific model provided
     const model = modelId || "gpt-3.5-turbo"
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    const response = await fetch("https: //api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${openAIApiKey}`,
@@ -32,8 +32,7 @@ serve(async (req) => {
       body: JSON.stringify({
         model: model,
         messages: [{ 
-          role: "user", 
-          content: prompt 
+          role: "user", content: prompt 
         }],
         max_tokens: maxTokens,
         temperature: temperature})})
@@ -58,7 +57,7 @@ serve(async (req) => {
       }
     )
   } catch (error) {
-    console.error("Error in zion-gpt function:", error)
+    console.error("Error in zion-gpt function: ", error)
     return new Response(
       JSON.stringify({ error: error.message }),
       {

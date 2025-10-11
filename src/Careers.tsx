@@ -1,191 +1,56 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
-import { SEO } from "@/components/SEO"
-import { GradientHeading } from "@/components/GradientHeading"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { motion  } from 'framer-motion'
+import { Link  } from 'react-router-dom'
+import { SEO  } from '@/components/SEO'
+import { GradientHeading  } from '@/components/GradientHeading'
+import { Button  } from '@/components/ui/button'
+import { Card, CardContent  } from '@/components/ui/card'
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs'
 export default function Careers() {
   const [activeDepartment, setActiveDepartment] = useState('all')
-  const departments = [
-    {
-      id: 'all',
-      name: 'All Departments',
-      icon: Users,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      id: 'ai-research',
-      name: 'AI & Research',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      id: 'engineering',
-      name: 'Engineering',
-      icon: Code,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      id: 'cybersecurity',
-      name: 'Cybersecurity',
-      icon: Shield,
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      id: 'quantum',
-      name: 'Quantum Technology',
-      icon: Cpu,
-      color: 'from-indigo-500 to-purple-500'
-    },
-    {
-      id: 'cloud',
-      name: 'Cloud & Infrastructure',
-      icon: Cloud,
-      color: 'from-green-500 to-emerald-500'
+  const departments = [{
+      id: 'all', name: 'All Departments', icon: Users, color: 'from-purple-500 to-pink-500'
+    }, {
+      id: 'ai-research', name: 'AI & Research', icon: Brain, color: 'from-purple-500 to-pink-500'
+    }, {
+      id: 'engineering', name: 'Engineering', icon: Code, color: 'from-blue-500 to-cyan-500'
+    }, {
+      id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-pink-500'
+    }, {
+      id: 'quantum', name: 'Quantum Technology', icon: Cpu, color: 'from-indigo-500 to-purple-500'
+    }, {
+      id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, color: 'from-green-500 to-emerald-500'
     }
-import { Link } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+import { Link  } from 'react-router-dom'
+import { Link  } from 'react-router-dom'
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import { 
-  Briefcase, 
-  Users, 
-  Heart, 
-  Zap, 
-  Globe, 
-import { 
-  Search, 
-  MapPin, 
-  Briefcase, 
-  Clock, 
-  Users, 
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Database,
-  Network,
-  ArrowRight,
-  ChevronDown,
-  ChevronRight,
-  Star,
-  Heart,
-  Globe,
-  Building2,
-  GraduationCap,
-  Award,
-  Coffee,
-  Wifi,
-  Monitor,
-  Smartphone,
-  Palette,
-  Dumbbell,
-  BookOpen,
-  Users2,
-  Rocket,
-  Target,
-  Lightbulb,
-  CheckCircle,
-  Code,
-  Settings,
-  Eye
-} from 'lucide-react'
+import { motion  } from 'framer-motion'
+import { Briefcase, Users, Heart, Zap, Globe, import { 
+  Search, MapPin, Briefcase, Clock, Users, Zap, Brain, Shield, Cloud, Database, Network, ArrowRight, ChevronDown, ChevronRight, Star, Heart, Globe, Building2, GraduationCap, Award, Coffee, Wifi, Monitor, Smartphone, Palette, Dumbbell, BookOpen, Users2, Rocket, Target, Lightbulb, CheckCircle, Code, Settings, Eye
+ } from 'lucide-react'
 export default function Careers() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedDepartment, setSelectedDepartment] = useState('all')
   const [selectedLocation, setSelectedLocation] = useState('all')
   const [selectedType, setSelectedType] = useState('all')
-  const departments = [
-    { id: 'all', name: 'All Departments', count: 24, icon: Building2 },
-    { id: 'engineering', name: 'Engineering', count: 12, icon: Code },
-    { id: 'ai-ml', name: 'AI & Machine Learning', count: 6, icon: Brain },
-    { id: 'cybersecurity', name: 'Cybersecurity', count: 4, icon: Shield },
-    { id: 'quantum', name: 'Quantum Technology', count: 3, icon: Zap },
-    { id: 'sales', name: 'Sales & Business Development', count: 5, icon: Target },
-    { id: 'marketing', name: 'Marketing', count: 3, icon: Lightbulb },
-    { id: 'operations', name: 'Operations', count: 2, icon: Settings }
-  ]
-  const locations = [
-    { id: 'all', name: 'All Locations', count: 24 },
-    { id: 'remote', name: 'Remote', count: 18 },
-    { id: 'middletown-de', name: 'Middletown, DE', count: 4 },
-    { id: 'new-york', name: 'New York, NY', count: 2 }
-  ]
-  const jobTypes = [
-    { id: 'all', name: 'All Types', count: 24 },
-    { id: 'full-time', name: 'Full-time', count: 20 },
-    { id: 'part-time', name: 'Part-time', count: 2 },
-    { id: 'contract', name: 'Contract', count: 2 }
-import { motion } from 'framer-motion'
-import { 
-  Briefcase, 
-  Users, 
-  Award, 
-  MapPin, 
-  Clock,
-  ArrowRight,
-  Search,
-  Filter,
-  Building,
-  Brain,
-  Shield,
-  Cpu,
-  Network,
-  Rocket,
-  Star,
-  CheckCircle,
-  Globe,
-  Heart,
-  Zap
-} from 'lucide-react'
+  const departments = [{ id: 'all', name: 'All Departments', count: 24, icon: Building2 }, { id: 'engineering', name: 'Engineering', count: 12, icon: Code }, { id: 'ai-ml', name: 'AI & Machine Learning', count: 6, icon: Brain }, { id: 'cybersecurity', name: 'Cybersecurity', count: 4, icon: Shield }, { id: 'quantum', name: 'Quantum Technology', count: 3, icon: Zap }, { id: 'sales', name: 'Sales & Business Development', count: 5, icon: Target }, { id: 'marketing', name: 'Marketing', count: 3, icon: Lightbulb }, { id: 'operations', name: 'Operations', count: 2, icon: Settings }]
+  const locations = [{ id: 'all', name: 'All Locations', count: 24 }, { id: 'remote', name: 'Remote', count: 18 }, { id: 'middletown-de', name: 'Middletown, DE', count: 4 }, { id: 'new-york', name: 'New York, NY', count: 2 }]
+  const jobTypes = [{ id: 'all', name: 'All Types', count: 24 }, { id: 'full-time', name: 'Full-time', count: 20 }, { id: 'part-time', name: 'Part-time', count: 2 }, { id: 'contract', name: 'Contract', count: 2 }
+import { motion  } from 'framer-motion'
+import { Briefcase, Users, Award, MapPin, Clock, ArrowRight, Search, Filter, Building, Brain, Shield, Cpu, Network, Rocket, Star, CheckCircle, Globe, Heart, Zap
+ } from 'lucide-react'
 export default function Careers() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedDepartment, setSelectedDepartment] = useState('all')
   const [selectedLocation, setSelectedLocation] = useState('all')
   const [selectedType, setSelectedType] = useState('all')
-  const departments = [
-    { id: 'all', name: 'All Departments', count: 23 },
-    { id: 'engineering', name: 'Engineering', count: 12 },
-    { id: 'ai-research', name: 'AI Research', count: 6 },
-    { id: 'sales', name: 'Sales & Business', count: 3 },
-    { id: 'marketing', name: 'Marketing', count: 2 }
-  ]
-  const locations = [
-    { id: 'all', name: 'All Locations', count: 23 },
-    { id: 'middletown', name: 'Middletown, DE', count: 15 },
-    { id: 'remote', name: 'Remote', count: 6 },
-    { id: 'amsterdam', name: 'Amsterdam, NL', count: 2 }
-  ]
-  const jobTypes = [
-    { id: 'all', name: 'All Types', count: 23 },
-    { id: 'full-time', name: 'Full Time', count: 18 },
-    { id: 'part-time', name: 'Part Time', count: 3 },
-    { id: 'contract', name: 'Contract', count: 2 }
-  ]
-  const openPositions = [
-    {
-      id: 1,
-      title: "Senior AI Engineer",
-      department: "ai",
-      location: "Remote / Middletown, DE",
-      type: "Full-time",
-      experience: "5+ years",
-      salary: "$120k - $180k",
-      description: "Join our AI team to develop cutting-edge machine learning models and autonomous systems...",
-      requirements: [
-        "Advanced degree in Computer Science, AI, or related field",
-        "Experience with PyTorch, TensorFlow, and modern ML frameworks",
-        "Strong background in deep learning and neural networks",
-        "Experience with cloud platforms (AWS, Azure, GCP)"
-      ],
-      benefits: [
-        "Competitive salary and equity",
-        "Flexible remote work options",
-        "Health, dental, and vision insurance",
-        "Professional development budget"
-      ],
+  const departments = [{ id: 'all', name: 'All Departments', count: 23 }, { id: 'engineering', name: 'Engineering', count: 12 }, { id: 'ai-research', name: 'AI Research', count: 6 }, { id: 'sales', name: 'Sales & Business', count: 3 }, { id: 'marketing', name: 'Marketing', count: 2 }]
+  const locations = [{ id: 'all', name: 'All Locations', count: 23 }, { id: 'middletown', name: 'Middletown, DE', count: 15 }, { id: 'remote', name: 'Remote', count: 6 }, { id: 'amsterdam', name: 'Amsterdam, NL', count: 2 }]
+  const jobTypes = [{ id: 'all', name: 'All Types', count: 23 }, { id: 'full-time', name: 'Full Time', count: 18 }, { id: 'part-time', name: 'Part Time', count: 3 }, { id: 'contract', name: 'Contract', count: 2 }]
+  const openPositions = [{
+      id: 1, title: "Senior AI Engineer", department: "ai", location: "Remote / Middletown, DE", type: "Full-time", experience: "5+ years", salary: "$120k - $180k", description: "Join our AI team to develop cutting-edge machine learning models and autonomous systems...", requirements: [
+        "Advanced degree in Computer Science, AI, or related field", "Experience with PyTorch, TensorFlow, and modern ML frameworks", "Strong background in deep learning and neural networks", "Experience with cloud platforms (AWS, Azure, GCP)"],
+      benefits: ["Competitive salary and equity", "Flexible remote work options", "Health, dental, and vision insurance", "Professional development budget"],
       urgent: true
     },
     {
@@ -197,18 +62,8 @@ export default function Careers() {
       experience: "3+ years",
       salary: "$90k - $130k",
       description: "Help protect our clients' digital assets with advanced security solutions...",
-      requirements: [
-        "Bachelor's degree in Cybersecurity or related field",
-        "Experience with security tools and frameworks",
-        "Knowledge of compliance standards (SOC2, ISO 27001)",
-        "Strong analytical and problem-solving skills"
-      ],
-      benefits: [
-        "Competitive salary",
-        "Health and wellness benefits",
-        "Training and certification support",
-        "Career growth opportunities"
-      ],
+      requirements: ["Bachelor's degree in Cybersecurity or related field", "Experience with security tools and frameworks", "Knowledge of compliance standards (SOC2, ISO 27001)", "Strong analytical and problem-solving skills"],
+      benefits: ["Competitive salary", "Health and wellness benefits", "Training and certification support", "Career growth opportunities"],
       urgent: false
     },
     {
@@ -223,93 +78,35 @@ export default function Careers() {
   Star,
   TrendingUp
 } from 'lucide-react'
-import { Badge } from '../components/ui/badge'
-import { Card } from '../components/ui/card'
-import { Button } from '../components/ui/button'
-import { Input } from '../components/ui/input'
-import { Textarea } from '../components/ui/textarea'
+import { Badge  } from '../components/ui/badge'
+import { Card  } from '../components/ui/card'
+import { Button  } from '../components/ui/button'
+import { Input  } from '../components/ui/input'
+import { Textarea  } from '../components/ui/textarea'
 import FuturisticNeonButton from '../components/ui/FuturisticNeonButton'
 import FuturisticAnimatedBackground from '../components/ui/FuturisticAnimatedBackground'
-import { SEO } from '../components/SEO'
+import { SEO  } from '../components/SEO'
 const Careers: React.FC = () => {
+  return (
+
   const [selectedDepartment, setSelectedDepartment] = useState<string>('all')
   const [isApplying, setIsApplying] = useState<string | null>(null)
-  const departments = [
-    { id: 'all', name: 'All Departments', color: 'from-zion-cyan to-zion-blue' },
-    { id: 'engineering', name: 'Engineering', color: 'from-purple-500 to-pink-500' },
-    { id: 'ai', name: 'AI & ML', color: 'from-blue-500 to-cyan-500' },
-    { id: 'design', name: 'Design', color: 'from-green-500 to-emerald-500' },
-    { id: 'sales', name: 'Sales & Marketing', color: 'from-yellow-500 to-orange-500' },
-    { id: 'operations', name: 'Operations', color: 'from-red-500 to-pink-500' }
-import { 
-  MapPin, 
-  Clock, 
-  Users, 
-  Building, 
-  Rocket, 
-  Brain, 
-  Shield, 
-  Cpu,
-  Globe,
-  Award,
-  ArrowRight,
-  Mail,
-  Linkedin,
-  ExternalLink,
-  Filter,
-  Search
-} from 'lucide-react'
+  const departments = [{ id: 'all', name: 'All Departments', color: 'from-zion-cyan to-zion-blue' 
+  );
+}, { id: 'engineering', name: 'Engineering', color: 'from-purple-500 to-pink-500' }, { id: 'ai', name: 'AI & ML', color: 'from-blue-500 to-cyan-500' }, { id: 'design', name: 'Design', color: 'from-green-500 to-emerald-500' }, { id: 'sales', name: 'Sales & Marketing', color: 'from-yellow-500 to-orange-500' }, { id: 'operations', name: 'Operations', color: 'from-red-500 to-pink-500' }
+import { MapPin, Clock, Users, Building, Rocket, Brain, Shield, Cpu, Globe, Award, ArrowRight, Mail, Linkedin, ExternalLink, Filter, Search
+ } from 'lucide-react'
 export default function Careers() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedDepartment, setSelectedDepartment] = useState('All')
   const [selectedLocation, setSelectedLocation] = useState('All')
-  const departments = [
-    'All',
-    'Engineering',
-    'AI & Research',
-    'Sales & Business Development',
-    'Marketing',
-    'Operations',
-    'Customer Success',
-    'Finance & Legal'
-  ]
-  const locations = [
-    'All',
-    'Remote',
-    'Middletown, DE',
-    'Silicon Valley, CA',
-    'New York, NY',
-    'Austin, TX',
-    'Seattle, WA'
-  ]
-  const jobOpenings = [
-    {
-      id: 1,
-      title: "Senior AI Research Scientist",
-      department: "AI & Machine Learning",
-      location: "Remote",
-      type: "Full-time",
-      experience: "5+ years",
-      salary: "$120,000 - $180,000",
-      description: "Lead cutting-edge research in autonomous AI systems and quantum neural networks.",
-      requirements: [
-        "PhD in Computer Science, AI, or related field",
-        "Strong background in machine learning and neural networks",
-        "Experience with quantum computing concepts",
-        "Published research in top-tier conferences"
-      ],
-      responsibilities: [
-        "Develop novel AI algorithms and architectures",
-        "Lead research projects and mentor junior researchers",
-        "Collaborate with cross-functional teams",
-        "Publish research findings and patents"
-      ],
-      benefits: [
-        "Competitive salary and equity",
-        "Flexible remote work options",
-        "Professional development budget",
-        "Health, dental, and vision insurance"
-      ],
+  const departments = ['All', 'Engineering', 'AI & Research', 'Sales & Business Development', 'Marketing', 'Operations', 'Customer Success', 'Finance & Legal']
+  const locations = ['All', 'Remote', 'Middletown, DE', 'Silicon Valley, CA', 'New York, NY', 'Austin, TX', 'Seattle, WA']
+  const jobOpenings = [{
+      id: 1, title: "Senior AI Research Scientist", department: "AI & Machine Learning", location: "Remote", type: "Full-time", experience: "5+ years", salary: "$120, 000 - $180, 000", description: "Lead cutting-edge research in autonomous AI systems and quantum neural networks.", requirements: [
+        "PhD in Computer Science, AI, or related field", "Strong background in machine learning and neural networks", "Experience with quantum computing concepts", "Published research in top-tier conferences"],
+      responsibilities: ["Develop novel AI algorithms and architectures", "Lead research projects and mentor junior researchers", "Collaborate with cross-functional teams", "Publish research findings and patents"],
+      benefits: ["Competitive salary and equity", "Flexible remote work options", "Professional development budget", "Health, dental, and vision insurance"],
       icon: Brain,
       urgent: true,
       postedDate: "2024-12-15"
@@ -323,24 +120,9 @@ export default function Careers() {
       experience: "3+ years",
       salary: "$100,000 - $150,000",
       description: "Build and optimize quantum computing systems and quantum neural network platforms.",
-      requirements: [
-        "MS/PhD in Physics, Computer Science, or Engineering",
-        "Experience with quantum computing frameworks",
-        "Knowledge of quantum algorithms and error correction",
-        "Programming experience in Python, C++, or Q#"
-      ],
-      responsibilities: [
-        "Design and implement quantum algorithms",
-        "Optimize quantum circuit performance",
-        "Develop quantum software tools",
-        "Collaborate with research teams"
-      ],
-      benefits: [
-        "Competitive salary and equity",
-        "Remote work flexibility",
-        "Conference attendance support",
-        "Comprehensive benefits package"
-      ],
+      requirements: ["MS/PhD in Physics, Computer Science, or Engineering", "Experience with quantum computing frameworks", "Knowledge of quantum algorithms and error correction", "Programming experience in Python, C++, or Q#"],
+      responsibilities: ["Design and implement quantum algorithms", "Optimize quantum circuit performance", "Develop quantum software tools", "Collaborate with research teams"],
+      benefits: ["Competitive salary and equity", "Remote work flexibility", "Conference attendance support", "Comprehensive benefits package"],
       icon: Atom,
       urgent: false,
       postedDate: "2024-12-12"
@@ -354,24 +136,9 @@ export default function Careers() {
       experience: "7+ years",
       salary: "$130,000 - $200,000",
       description: "Design and implement enterprise security solutions and SOC2 compliance automation.",
-      requirements: [
-        "Bachelor's degree in Cybersecurity or related field",
-        "CISSP, CISM, or similar certifications",
-        "Experience with enterprise security architecture",
-        "Knowledge of compliance frameworks (SOC2, ISO 27001)"
-      ],
-      responsibilities: [
-        "Design security architecture for enterprise systems",
-        "Implement security controls and monitoring",
-        "Lead security assessments and audits",
-        "Develop security policies and procedures"
-      ],
-      benefits: [
-        "Competitive salary and benefits",
-        "Hybrid work model",
-        "Professional certification support",
-        "Health and wellness programs"
-      ],
+      requirements: ["Bachelor's degree in Cybersecurity or related field", "CISSP, CISM, or similar certifications", "Experience with enterprise security architecture", "Knowledge of compliance frameworks (SOC2, ISO 27001)"],
+      responsibilities: ["Design security architecture for enterprise systems", "Implement security controls and monitoring", "Lead security assessments and audits", "Develop security policies and procedures"],
+      benefits: ["Competitive salary and benefits", "Hybrid work model", "Professional certification support", "Health and wellness programs"],
       icon: Shield,
       urgent: true,
       postedDate: "2024-12-10"
@@ -385,24 +152,9 @@ export default function Careers() {
       experience: "4+ years",
       salary: "$90,000 - $140,000",
       description: "Build and maintain cloud infrastructure and CI/CD pipelines for autonomous systems.",
-      requirements: [
-        "Bachelor's degree in Computer Science or related field",
-        "Experience with AWS, Azure, or GCP",
-        "Knowledge of Docker, Kubernetes, and Terraform",
-        "Experience with CI/CD tools and automation"
-      ],
-      responsibilities: [
-        "Design and implement cloud infrastructure",
-        "Automate deployment and scaling processes",
-        "Monitor system performance and reliability",
-        "Collaborate with development teams"
-      ],
-      benefits: [
-        "Competitive salary and equity",
-        "Remote work options",
-        "Cloud certification support",
-        "Flexible work hours"
-      ],
+      requirements: ["Bachelor's degree in Computer Science or related field", "Experience with AWS, Azure, or GCP", "Knowledge of Docker, Kubernetes, and Terraform", "Experience with CI/CD tools and automation"],
+      responsibilities: ["Design and implement cloud infrastructure", "Automate deployment and scaling processes", "Monitor system performance and reliability", "Collaborate with development teams"],
+      benefits: ["Competitive salary and equity", "Remote work options", "Cloud certification support", "Flexible work hours"],
       icon: Cloud,
       urgent: false,
       postedDate: "2024-12-08"
@@ -416,24 +168,9 @@ export default function Careers() {
       experience: "3+ years",
       salary: "$95,000 - $150,000",
       description: "Develop innovative web applications and AI-powered business solutions.",
-      requirements: [
-        "Bachelor's degree in Computer Science or related field",
-        "Experience with React, Node.js, and Python",
-        "Knowledge of cloud services and databases",
-        "Experience with AI/ML integration"
-      ],
-      responsibilities: [
-        "Develop full-stack web applications",
-        "Integrate AI services and APIs",
-        "Optimize application performance",
-        "Collaborate with product and design teams"
-      ],
-      benefits: [
-        "Competitive salary and benefits",
-        "Office in NYC with hybrid options",
-        "Professional development opportunities",
-        "Team events and activities"
-      ],
+      requirements: ["Bachelor's degree in Computer Science or related field", "Experience with React, Node.js, and Python", "Knowledge of cloud services and databases", "Experience with AI/ML integration"],
+      responsibilities: ["Develop full-stack web applications", "Integrate AI services and APIs", "Optimize application performance", "Collaborate with product and design teams"],
+      benefits: ["Competitive salary and benefits", "Office in NYC with hybrid options", "Professional development opportunities", "Team events and activities"],
       icon: Code,
       urgent: false,
       postedDate: "2024-12-05"
@@ -447,24 +184,9 @@ export default function Careers() {
       experience: "5+ years",
       salary: "$110,000 - $170,000",
       description: "Lead product strategy and development for AI-powered business solutions.",
-      requirements: [
-        "Bachelor's degree in Business, Engineering, or related field",
-        "Experience in product management or AI product development",
-        "Understanding of AI/ML technologies and market trends",
-        "Strong analytical and communication skills"
-      ],
-      responsibilities: [
-        "Define product vision and strategy",
-        "Gather and prioritize product requirements",
-        "Work with engineering teams on product development",
-        "Analyze market trends and competitive landscape"
-      ],
-      benefits: [
-        "Competitive salary and equity",
-        "Remote work flexibility",
-        "Product management training",
-        "Comprehensive benefits package"
-      ],
+      requirements: ["Bachelor's degree in Business, Engineering, or related field", "Experience in product management or AI product development", "Understanding of AI/ML technologies and market trends", "Strong analytical and communication skills"],
+      responsibilities: ["Define product vision and strategy", "Gather and prioritize product requirements", "Work with engineering teams on product development", "Analyze market trends and competitive landscape"],
+      benefits: ["Competitive salary and equity", "Remote work flexibility", "Product management training", "Comprehensive benefits package"],
       icon: Target,
       urgent: false,
       postedDate: "2024-12-03"
@@ -476,18 +198,8 @@ export default function Careers() {
       experience: "4+ years",
       salary: "$100k - $150k",
       description: "Design and implement scalable cloud solutions for enterprise clients...",
-      requirements: [
-        "Experience with AWS, Azure, or Google Cloud",
-        "Knowledge of Kubernetes and containerization",
-        "Infrastructure as Code experience (Terraform, CloudFormation)",
-        "Strong understanding of networking and security"
-      ],
-      benefits: [
-        "Remote work flexibility",
-        "Competitive compensation",
-        "Health benefits",
-        "Professional development"
-      ],
+      requirements: ["Experience with AWS, Azure, or Google Cloud", "Knowledge of Kubernetes and containerization", "Infrastructure as Code experience (Terraform, CloudFormation)", "Strong understanding of networking and security"],
+      benefits: ["Remote work flexibility", "Competitive compensation", "Health benefits", "Professional development"],
       urgent: false
     },
     {
@@ -499,43 +211,20 @@ export default function Careers() {
       experience: "3+ years",
       salary: "$80k - $120k",
       description: "Build modern web applications and contribute to our product development...",
-      requirements: [
-        "Proficiency in React, Node.js, and modern JavaScript",
-        "Experience with TypeScript and modern frameworks",
-        "Knowledge of databases and API design",
-        "Understanding of DevOps practices"
-      ],
-      benefits: [
-        "Competitive salary",
-        "Hybrid work model",
-        "Health benefits",
-        "Learning and development"
-      ],
+      requirements: ["Proficiency in React, Node.js, and modern JavaScript", "Experience with TypeScript and modern frameworks", "Knowledge of databases and API design", "Understanding of DevOps practices"],
+      benefits: ["Competitive salary", "Hybrid work model", "Health benefits", "Learning and development"],
       urgent: false
     }
   ]
-  const companyValues = [
-    {
-      title: "Innovation First",
-      description: "We push boundaries and embrace cutting-edge technologies",
-      icon: Zap
-    },
-    {
-      title: "People Matter",
-      description: "Our team is our greatest asset and we invest in their growth",
-      icon: Heart
-    },
-    {
-      title: "Global Impact",
-      description: "We solve problems that affect businesses worldwide",
-      icon: Globe
-    },
-    {
-      title: "Continuous Learning",
-      description: "We foster a culture of curiosity and skill development",
-      icon: BookOpen
-    }
-  ]
+  const companyValues = [{
+      title: "Innovation First", description: "We push boundaries and embrace cutting-edge technologies", icon: Zap
+    }, {
+      title: "People Matter", description: "Our team is our greatest asset and we invest in their growth", icon: Heart
+    }, {
+      title: "Global Impact", description: "We solve problems that affect businesses worldwide", icon: Globe
+    }, {
+      title: "Continuous Learning", description: "We foster a culture of curiosity and skill development", icon: BookOpen
+    }]
       id: 1,
       title: "Senior AI Research Engineer",
       department: "ai-ml",
@@ -543,27 +232,9 @@ export default function Careers() {
       type: "full-time",
       experience: "5+ years",
       description: "Lead cutting-edge AI research projects, develop autonomous systems, and push the boundaries of machine learning technology.",
-      requirements: [
-        "PhD in Computer Science, AI, or related field",
-        "5+ years experience in AI/ML research",
-        "Expertise in deep learning, neural networks",
-        "Experience with autonomous systems",
-        "Strong publication record in top AI conferences"
-      ],
-      responsibilities: [
-        "Lead AI research initiatives and projects",
-        "Develop novel machine learning algorithms",
-        "Collaborate with cross-functional teams",
-        "Mentor junior researchers",
-        "Publish research findings"
-      ],
-      benefits: [
-        "Competitive salary + equity",
-        "Flexible remote work",
-        "Professional development budget",
-        "Health, dental, vision insurance",
-        "Unlimited PTO"
-      ],
+      requirements: ["PhD in Computer Science, AI, or related field", "5+ years experience in AI/ML research", "Expertise in deep learning, neural networks", "Experience with autonomous systems", "Strong publication record in top AI conferences"],
+      responsibilities: ["Lead AI research initiatives and projects", "Develop novel machine learning algorithms", "Collaborate with cross-functional teams", "Mentor junior researchers", "Publish research findings"],
+      benefits: ["Competitive salary + equity", "Flexible remote work", "Professional development budget", "Health, dental, vision insurance", "Unlimited PTO"],
       salary: "$150,000 - $200,000",
       urgent: true,
       postedDate: "2025-01-15"
@@ -576,27 +247,9 @@ export default function Careers() {
       type: "full-time",
       experience: "3+ years",
       description: "Build quantum computing applications and develop quantum algorithms for solving complex optimization problems.",
-      requirements: [
-        "MS/PhD in Physics, Computer Science, or related field",
-        "3+ years experience in quantum computing",
-        "Proficiency in Python, Qiskit, or similar",
-        "Understanding of quantum algorithms",
-        "Experience with quantum error correction"
-      ],
-      responsibilities: [
-        "Develop quantum computing applications",
-        "Implement quantum algorithms",
-        "Optimize quantum circuits",
-        "Collaborate with research team",
-        "Document quantum software solutions"
-      ],
-      benefits: [
-        "Competitive salary + equity",
-        "Remote work flexibility",
-        "Quantum computing lab access",
-        "Conference attendance",
-        "Comprehensive benefits package"
-      ],
+      requirements: ["MS/PhD in Physics, Computer Science, or related field", "3+ years experience in quantum computing", "Proficiency in Python, Qiskit, or similar", "Understanding of quantum algorithms", "Experience with quantum error correction"],
+      responsibilities: ["Develop quantum computing applications", "Implement quantum algorithms", "Optimize quantum circuits", "Collaborate with research team", "Document quantum software solutions"],
+      benefits: ["Competitive salary + equity", "Remote work flexibility", "Quantum computing lab access", "Conference attendance", "Comprehensive benefits package"],
       salary: "$120,000 - $160,000",
       urgent: false,
       postedDate: "2025-01-12"
@@ -609,27 +262,9 @@ export default function Careers() {
       type: "full-time",
       experience: "7+ years",
       description: "Design and implement enterprise-grade security solutions, ensuring compliance with SOC2 and other security standards.",
-      requirements: [
-        "Bachelor's degree in Cybersecurity, IT, or related field",
-        "7+ years in cybersecurity architecture",
-        "Expertise in SOC2 compliance",
-        "Experience with zero-trust security",
-        "Knowledge of quantum-safe cryptography"
-      ],
-      responsibilities: [
-        "Design security architectures",
-        "Implement security controls",
-        "Ensure compliance standards",
-        "Lead security assessments",
-        "Mentor security team members"
-      ],
-      benefits: [
-        "Competitive salary + equity",
-        "Remote work options",
-        "Security certifications",
-        "Professional development",
-        "Health and wellness benefits"
-      ],
+      requirements: ["Bachelor's degree in Cybersecurity, IT, or related field", "7+ years in cybersecurity architecture", "Expertise in SOC2 compliance", "Experience with zero-trust security", "Knowledge of quantum-safe cryptography"],
+      responsibilities: ["Design security architectures", "Implement security controls", "Ensure compliance standards", "Lead security assessments", "Mentor security team members"],
+      benefits: ["Competitive salary + equity", "Remote work options", "Security certifications", "Professional development", "Health and wellness benefits"],
       salary: "$140,000 - $180,000",
       urgent: true,
       postedDate: "2025-01-10"
@@ -642,27 +277,9 @@ export default function Careers() {
       type: "full-time",
       experience: "3+ years",
       description: "Build scalable web applications and contribute to our platform development using modern technologies.",
-      requirements: [
-        "Bachelor's degree in Computer Science or related field",
-        "3+ years full-stack development experience",
-        "Proficiency in React, Node.js, TypeScript",
-        "Experience with cloud platforms (AWS/Azure)",
-        "Knowledge of microservices architecture"
-      ],
-      responsibilities: [
-        "Develop web applications",
-        "Write clean, maintainable code",
-        "Collaborate with design and product teams",
-        "Participate in code reviews",
-        "Contribute to technical decisions"
-      ],
-      benefits: [
-        "Competitive salary + equity",
-        "Remote work flexibility",
-        "Latest development tools",
-        "Learning and development budget",
-        "Flexible work hours"
-      ],
+      requirements: ["Bachelor's degree in Computer Science or related field", "3+ years full-stack development experience", "Proficiency in React, Node.js, TypeScript", "Experience with cloud platforms (AWS/Azure)", "Knowledge of microservices architecture"],
+      responsibilities: ["Develop web applications", "Write clean, maintainable code", "Collaborate with design and product teams", "Participate in code reviews", "Contribute to technical decisions"],
+      benefits: ["Competitive salary + equity", "Remote work flexibility", "Latest development tools", "Learning and development budget", "Flexible work hours"],
       salary: "$90,000 - $130,000",
       urgent: false,
       postedDate: "2025-01-08"
@@ -675,27 +292,9 @@ export default function Careers() {
       type: "full-time",
       experience: "4+ years",
       description: "Build and maintain our cloud infrastructure, implement CI/CD pipelines, and ensure system reliability.",
-      requirements: [
-        "Bachelor's degree in Computer Science or related field",
-        "4+ years DevOps experience",
-        "Expertise in AWS, Docker, Kubernetes",
-        "Experience with CI/CD tools",
-        "Knowledge of infrastructure as code"
-      ],
-      responsibilities: [
-        "Manage cloud infrastructure",
-        "Implement CI/CD pipelines",
-        "Monitor system performance",
-        "Automate deployment processes",
-        "Ensure system security"
-      ],
-      benefits: [
-        "Competitive salary + equity",
-        "Remote work options",
-        "Cloud certification budget",
-        "Professional development",
-        "Comprehensive benefits"
-      ],
+      requirements: ["Bachelor's degree in Computer Science or related field", "4+ years DevOps experience", "Expertise in AWS, Docker, Kubernetes", "Experience with CI/CD tools", "Knowledge of infrastructure as code"],
+      responsibilities: ["Manage cloud infrastructure", "Implement CI/CD pipelines", "Monitor system performance", "Automate deployment processes", "Ensure system security"],
+      benefits: ["Competitive salary + equity", "Remote work options", "Cloud certification budget", "Professional development", "Comprehensive benefits"],
       salary: "$100,000 - $140,000",
       urgent: false,
       postedDate: "2025-01-05"
@@ -708,68 +307,28 @@ export default function Careers() {
       type: "full-time",
       experience: "5+ years",
       description: "Drive business growth by identifying new opportunities, building partnerships, and expanding our market presence.",
-      requirements: [
-        "Bachelor's degree in Business or related field",
-        "5+ years in B2B sales or business development",
-        "Experience in technology sales",
-        "Strong networking skills",
-        "Track record of meeting/exceeding targets"
-      ],
-      responsibilities: [
-        "Identify new business opportunities",
-        "Build strategic partnerships",
-        "Develop sales strategies",
-        "Manage client relationships",
-        "Achieve revenue targets"
-      ],
-      benefits: [
-        "Competitive base + commission",
-        "Remote work flexibility",
-        "Travel opportunities",
-        "Professional development",
-        "Performance bonuses"
-      ],
+      requirements: ["Bachelor's degree in Business or related field", "5+ years in B2B sales or business development", "Experience in technology sales", "Strong networking skills", "Track record of meeting/exceeding targets"],
+      responsibilities: ["Identify new business opportunities", "Build strategic partnerships", "Develop sales strategies", "Manage client relationships", "Achieve revenue targets"],
+      benefits: ["Competitive base + commission", "Remote work flexibility", "Travel opportunities", "Professional development", "Performance bonuses"],
       salary: "$80,000 - $120,000 + commission",
       urgent: false,
       postedDate: "2025-01-03"
     }
   ]
-  const companyValues = [
-    {
-      title: "Innovation First",
-      description: "We push boundaries and embrace cutting-edge technologies",
-      icon: Rocket,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Excellence",
-      description: "We strive for the highest quality in everything we do",
-      icon: Star,
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      title: "Collaboration",
-      description: "We believe in the power of diverse teams working together",
-      icon: Users2,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Continuous Learning",
-      description: "We invest in growth and development at every level",
-      icon: BookOpen,
-      color: "from-purple-500 to-pink-500"
+  const companyValues = [{
+      title: "Innovation First", description: "We push boundaries and embrace cutting-edge technologies", icon: Rocket, color: "from-blue-500 to-cyan-500"
+    }, {
+      title: "Excellence", description: "We strive for the highest quality in everything we do", icon: Star, color: "from-yellow-500 to-orange-500"
+    }, {
+      title: "Collaboration", description: "We believe in the power of diverse teams working together", icon: Users2, color: "from-green-500 to-emerald-500"
+    }, {
+      title: "Continuous Learning", description: "We invest in growth and development at every level", icon: BookOpen, color: "from-purple-500 to-pink-500"
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link  } from 'react-router-dom'
 export default function Careers() {
   const openPositions = [
     {
-      title: 'Senior AI Engineer',
-      department: 'AI & Machine Learning',
-      location: 'Remote / Middletown, DE',
-      type: 'Full-time',
-      experience: '5+ years',
-      description: 'Lead the development of cutting-edge AI solutions and autonomous systems.',
-      skills: ['Python', 'TensorFlow', 'PyTorch', 'MLOps', 'Cloud Platforms']
+      title: 'Senior AI Engineer', department: 'AI & Machine Learning', location: 'Remote / Middletown, DE', type: 'Full-time', experience: '5+ years', description: 'Lead the development of cutting-edge AI solutions and autonomous systems.', skills: ['Python', 'TensorFlow', 'PyTorch', 'MLOps', 'Cloud Platforms']
     },
     {
       title: 'Cybersecurity Specialist',
@@ -817,24 +376,10 @@ export default function Careers() {
       skills: ['Solution Architecture', 'AI/ML', 'Enterprise Integration', 'Consulting']
     }
   ]
-  const benefits = [
-    {
-      salary: '$90,000 - $140,000',
-      description: 'Build scalable web applications and contribute to our technology platform.',
-      requirements: [
-        'Strong proficiency in React, Node.js, and TypeScript',
-        'Experience with modern web technologies and APIs',
-        'Knowledge of database design and optimization',
-        'Understanding of DevOps and CI/CD practices',
-        'Experience with cloud services and microservices'
-      ],
-      benefits: [
-        'Competitive salary with growth opportunities',
-        'Remote-first work environment',
-        'Latest tools and technology',
-        'Collaborative team culture',
-        'Career advancement paths'
-      ]
+  const benefits = [{
+      salary: '$90, 000 - $140, 000', description: 'Build scalable web applications and contribute to our technology platform.', requirements: [
+        'Strong proficiency in React, Node.js, and TypeScript', 'Experience with modern web technologies and APIs', 'Knowledge of database design and optimization', 'Understanding of DevOps and CI/CD practices', 'Experience with cloud services and microservices'],
+      benefits: ['Competitive salary with growth opportunities', 'Remote-first work environment', 'Latest tools and technology', 'Collaborative team culture', 'Career advancement paths']
     },
     {
       id: 'ui-ux-designer',
@@ -845,20 +390,8 @@ export default function Careers() {
       experience: '4+ years',
       salary: '$85,000 - $130,000',
       description: 'Create exceptional user experiences and beautiful interfaces for our products.',
-      requirements: [
-        'Strong portfolio showcasing web and mobile design',
-        'Expertise in Figma, Sketch, or similar tools',
-        'Understanding of user research and testing',
-        'Experience with design systems and component libraries',
-        'Knowledge of accessibility and responsive design'
-      ],
-      benefits: [
-        'Creative freedom and ownership',
-        'Latest design tools and resources',
-        'Collaboration with cross-functional teams',
-        'Professional development opportunities',
-        'Competitive compensation package'
-      ]
+      requirements: ['Strong portfolio showcasing web and mobile design', 'Expertise in Figma, Sketch, or similar tools', 'Understanding of user research and testing', 'Experience with design systems and component libraries', 'Knowledge of accessibility and responsive design'],
+      benefits: ['Creative freedom and ownership', 'Latest design tools and resources', 'Collaboration with cross-functional teams', 'Professional development opportunities', 'Competitive compensation package']
     },
     {
       id: 'sales-director',
@@ -869,20 +402,8 @@ export default function Careers() {
       experience: '7+ years',
       salary: '$100,000 - $150,000 + Commission',
       description: 'Lead our sales strategy and drive revenue growth for enterprise clients.',
-      requirements: [
-        'Proven track record in B2B technology sales',
-        'Experience with enterprise software solutions',
-        'Strong leadership and team management skills',
-        'Understanding of complex sales cycles',
-        'Excellent communication and presentation skills'
-      ],
-      benefits: [
-        'Uncapped commission structure',
-        'Leadership development opportunities',
-        'High-growth company environment',
-        'Competitive base salary',
-        'Performance-based bonuses'
-      ]
+      requirements: ['Proven track record in B2B technology sales', 'Experience with enterprise software solutions', 'Strong leadership and team management skills', 'Understanding of complex sales cycles', 'Excellent communication and presentation skills'],
+      benefits: ['Uncapped commission structure', 'Leadership development opportunities', 'High-growth company environment', 'Competitive base salary', 'Performance-based bonuses']
     }
   ]
   const filteredPositions = openPositions.filter(position => {
@@ -907,7 +428,7 @@ export default function Careers() {
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/20 to-zion-purple/20"></div>
         <div className="relative container mx-auto px-4 py-24">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
               Join Our Mission to
               <span className="text-gradient block">Transform the Future</span>
             </h1>
@@ -917,28 +438,28 @@ export default function Careers() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center space-x-2 text-zion-cyan">
-                <Users className="h-5 w-5" />
+                <Users className="h-5 w-5" /></Users>
                 <span className="text-white">24 Open Positions</span>
               </div>
               <div className="flex items-center space-x-2 text-zion-cyan">
-                <Globe className="h-5 w-5" />
+                <Globe className="h-5 w-5" /></Globe>
                 <span className="text-white">Remote & Hybrid Options</span>
               </div>
               <div className="flex items-center space-x-2 text-zion-cyan">
-                <Star className="h-5 w-5" />
+                <Star className="h-5 w-5" /></Star>
                 <span className="text-white">Competitive Benefits</span>
               </div>
             </div>
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 pb-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative container mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Join Our Mission to
@@ -953,13 +474,13 @@ export default function Careers() {
             
             {/* Search Bar */}
             <div className="relative max-w-2xl mx-auto mb-8">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" /></Search>
               <input
                 type="text"
                 placeholder="Search for jobs, departments, or skills..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
             </div>
 
@@ -969,7 +490,7 @@ export default function Careers() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Apply Now
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5" /></ArrowRight>
               </Link>
               <$2 />
                 to="/about"
@@ -984,10 +505,10 @@ export default function Careers() {
             transition={{ duration: 0.6 }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium mb-6">
-              <Briefcase className="w-4 h-4 mr-2" />
+              <Briefcase className="w-4 h-4 mr-2" /></Briefcase>
               Join Our Team
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
+            <h1 className="text-4xl md: text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
               Build the Future with Us
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
@@ -997,13 +518,13 @@ export default function Careers() {
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto">
               <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Search>
                 <input
                   type="text"
                   placeholder="Search for positions, skills, or keywords..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20"
+                  className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20"
                 />
               </div>
             </div>
@@ -1012,7 +533,7 @@ export default function Careers() {
       </section>
 
       {/* Filters Section */}
-      <section className="pb-12 px-4 sm:px-6 lg:px-8">
+      <section className="pb-12 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">
             {/* Departments */}
@@ -1024,7 +545,7 @@ export default function Careers() {
                   className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-300 ${
                     selectedDepartment === dept.id
                       ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400'
-                      : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/30'
+                      : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover: border-cyan-500/30'
                   }`}
                 >
                   {dept.name}
@@ -1044,7 +565,7 @@ export default function Careers() {
                   className={`px-3 py-1 rounded-full text-sm border transition-all duration-300 ${
                     selectedLocation === location.id
                       ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400'
-                      : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/30'
+                      : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover: border-cyan-500/30'
                   }`}
                 >
                   {location.name}
@@ -1058,7 +579,7 @@ export default function Careers() {
                   className={`px-3 py-1 rounded-full text-sm border transition-all duration-300 ${
                     selectedType === type.id
                       ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400'
-                      : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/30'
+                      : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover: border-cyan-500/30'
                   }`}
                 >
                   {type.name}
@@ -1066,9 +587,8 @@ export default function Careers() {
                 </button>
               ))}
             </div>
-import { Link } from 'react-router-dom'
-import { 
-  Users, 
+import { Link  } from 'react-router-dom'
+import { Users, 
   Zap, 
   Globe, 
   Heart, 
@@ -1081,44 +601,15 @@ import {
   Send,
   CheckCircle,
   AlertCircle
-} from 'lucide-react'
+ } from 'lucide-react'
 const Careers = () => {
   const [selectedDepartment, setSelectedDepartment] = useState<string>('all')
   const [searchTerm, setSearchTerm] = useState<string>('')
-  const departments = [
-    'all',
-    'Engineering',
-    'Design',
-    'Product',
-    'Sales',
-    'Marketing',
-    'Operations',
-    'AI & ML'
-  ]
-  const jobListings = [
-    {
-      id: 1,
-      title: 'Senior Full Stack Developer',
-      department: 'Engineering',
-      location: 'Remote / Middletown, DE',
-      type: 'Full-time',
-      experience: '5+ years',
-      salary: '$120k - $180k',
-      description: 'We\'re looking for a Senior Full Stack Developer to join our growing engineering team. You\'ll work on cutting-edge projects using modern technologies like React, Node.js, and cloud platforms.',
-      requirements: [
-        'Strong experience with React, Node.js, and TypeScript',
-        'Experience with cloud platforms (AWS, Azure, or GCP)',
-        'Knowledge of microservices architecture',
-        'Experience with CI/CD pipelines and DevOps practices',
-        'Strong problem-solving and communication skills'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Flexible remote work options',
-        'Health, dental, and vision insurance',
-        'Professional development budget',
-        'Unlimited PTO'
-      ]
+  const departments = ['all', 'Engineering', 'Design', 'Product', 'Sales', 'Marketing', 'Operations', 'AI & ML']
+  const jobListings = [{
+      id: 1, title: 'Senior Full Stack Developer', department: 'Engineering', location: 'Remote / Middletown, DE', type: 'Full-time', experience: '5+ years', salary: '$120k - $180k', description: 'We\'re looking for a Senior Full Stack Developer to join our growing engineering team. You\'ll work on cutting-edge projects using modern technologies like React, Node.js, and cloud platforms.', requirements: [
+        'Strong experience with React, Node.js, and TypeScript', 'Experience with cloud platforms (AWS, Azure, or GCP)', 'Knowledge of microservices architecture', 'Experience with CI/CD pipelines and DevOps practices', 'Strong problem-solving and communication skills'],
+      benefits: ['Competitive salary and equity', 'Flexible remote work options', 'Health, dental, and vision insurance', 'Professional development budget', 'Unlimited PTO']
     },
     {
       id: 2,
@@ -1129,20 +620,8 @@ const Careers = () => {
       experience: '3+ years',
       salary: '$130k - $200k',
       description: 'Join our AI team to develop cutting-edge machine learning models and AI solutions that transform businesses. Work on projects involving computer vision, NLP, and predictive analytics.',
-      requirements: [
-        'MS/PhD in Computer Science, ML, or related field',
-        'Experience with PyTorch, TensorFlow, or similar frameworks',
-        'Strong Python programming skills',
-        'Experience with MLOps and model deployment',
-        'Knowledge of cloud ML platforms'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Access to latest AI/ML tools and infrastructure',
-        'Conference attendance and research opportunities',
-        'Health, dental, and vision insurance',
-        'Flexible work arrangements'
-      ]
+      requirements: ['MS/PhD in Computer Science, ML, or related field', 'Experience with PyTorch, TensorFlow, or similar frameworks', 'Strong Python programming skills', 'Experience with MLOps and model deployment', 'Knowledge of cloud ML platforms'],
+      benefits: ['Competitive salary and equity', 'Access to latest AI/ML tools and infrastructure', 'Conference attendance and research opportunities', 'Health, dental, and vision insurance', 'Flexible work arrangements']
     },
     {
       id: 3,
@@ -1153,20 +632,8 @@ const Careers = () => {
       experience: '3+ years',
       salary: '$90k - $140k',
       description: 'Create beautiful and intuitive user experiences for our products. Work closely with product managers and engineers to design solutions that users love.',
-      requirements: [
-        'Strong portfolio showcasing web and mobile design work',
-        'Experience with Figma, Sketch, or similar tools',
-        'Understanding of user research and usability principles',
-        'Experience with design systems and component libraries',
-        'Collaboration with cross-functional teams'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Latest design tools and software',
-        'Creative freedom and ownership',
-        'Health, dental, and vision insurance',
-        'Professional development opportunities'
-      ]
+      requirements: ['Strong portfolio showcasing web and mobile design work', 'Experience with Figma, Sketch, or similar tools', 'Understanding of user research and usability principles', 'Experience with design systems and component libraries', 'Collaboration with cross-functional teams'],
+      benefits: ['Competitive salary and equity', 'Latest design tools and software', 'Creative freedom and ownership', 'Health, dental, and vision insurance', 'Professional development opportunities']
     },
     {
       id: 4,
@@ -1177,20 +644,8 @@ const Careers = () => {
       experience: '4+ years',
       salary: '$110k - $160k',
       description: 'Build and maintain our cloud infrastructure, CI/CD pipelines, and deployment processes. Help us scale our systems and ensure high availability.',
-      requirements: [
-        'Experience with AWS, Azure, or GCP',
-        'Knowledge of Kubernetes and containerization',
-        'Experience with Terraform or CloudFormation',
-        'Strong scripting skills (Python, Bash)',
-        'Experience with monitoring and logging tools'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Latest cloud tools and certifications',
-        'Flexible remote work options',
-        'Health, dental, and vision insurance',
-        'Professional development budget'
-      ]
+      requirements: ['Experience with AWS, Azure, or GCP', 'Knowledge of Kubernetes and containerization', 'Experience with Terraform or CloudFormation', 'Strong scripting skills (Python, Bash)', 'Experience with monitoring and logging tools'],
+      benefits: ['Competitive salary and equity', 'Latest cloud tools and certifications', 'Flexible remote work options', 'Health, dental, and vision insurance', 'Professional development budget']
     },
     {
       id: 5,
@@ -1201,20 +656,8 @@ const Careers = () => {
       experience: '4+ years',
       salary: '$100k - $150k',
       description: 'Drive product strategy and execution for our AI-powered solutions. Work with customers, stakeholders, and engineering teams to deliver exceptional products.',
-      requirements: [
-        'Experience in B2B SaaS product management',
-        'Strong analytical and strategic thinking',
-        'Experience with agile development methodologies',
-        'Excellent communication and stakeholder management',
-        'Technical background or strong technical aptitude'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Product ownership and strategic impact',
-        'Customer interaction and market research',
-        'Health, dental, and vision insurance',
-        'Professional development opportunities'
-      ]
+      requirements: ['Experience in B2B SaaS product management', 'Strong analytical and strategic thinking', 'Experience with agile development methodologies', 'Excellent communication and stakeholder management', 'Technical background or strong technical aptitude'],
+      benefits: ['Competitive salary and equity', 'Product ownership and strategic impact', 'Customer interaction and market research', 'Health, dental, and vision insurance', 'Professional development opportunities']
     }
   ]
   const filteredJobs = jobListings.filter(job => {
@@ -1224,65 +667,25 @@ const Careers = () => {
                          job.department.toLowerCase().includes(searchTerm.toLowerCase())
     return matchesDepartment && matchesSearch
   })
-  const companyValues = [
-    {
-      icon: Zap,
-      title: 'Innovation First',
-      description: 'We constantly push boundaries and explore new technologies to solve complex problems.'
-    },
-    {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'Great ideas come from diverse teams working together towards common goals.'
-    },
-    {
-      icon: Heart,
-      title: 'Customer Focus',
-      description: 'Everything we do is driven by our commitment to customer success.'
+  const companyValues = [{
+      icon: Zap, title: 'Innovation First', description: 'We constantly push boundaries and explore new technologies to solve complex problems.'
+    }, {
+      icon: Users, title: 'Collaboration', description: 'Great ideas come from diverse teams working together towards common goals.'
+    }, {
+      icon: Heart, title: 'Customer Focus', description: 'Everything we do is driven by our commitment to customer success.'
   const filteredJobs = selectedDepartment === 'all' 
     ? jobOpenings 
     : jobOpenings.filter(job => job.department === selectedDepartment)
   const companyValues = [
     {
-      icon: Heart,
-      title: 'People First',
-      description: 'We believe our team is our greatest asset and invest in their growth and well-being.',
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      icon: Zap,
-      title: 'Innovation Driven',
-      description: 'We constantly push boundaries and embrace new technologies to solve complex problems.',
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      icon: Globe,
-      title: 'Global Impact',
-      id: 1,
-      title: "Senior AI Engineer",
-      department: "AI & Research",
-      location: "Remote",
-      type: "Full-time",
-      experience: "5+ years",
-      description: "Join our AI team to develop cutting-edge autonomous systems and machine learning solutions.",
-      requirements: [
-        "Advanced degree in Computer Science, AI, or related field",
-        "Experience with PyTorch, TensorFlow, and modern ML frameworks",
-        "Knowledge of autonomous systems and reinforcement learning",
-        "Strong software engineering principles and practices"
-      ],
-      responsibilities: [
-        "Design and implement AI algorithms for autonomous systems",
-        "Collaborate with research team on innovative ML approaches",
-        "Optimize model performance and scalability",
-        "Mentor junior engineers and contribute to technical decisions"
-      ],
-      benefits: [
-        "Competitive salary and equity package",
-        "Flexible remote work options",
-        "Professional development and conference attendance",
-        "Health, dental, and vision insurance"
-      ],
+      icon: Heart, title: 'People First', description: 'We believe our team is our greatest asset and invest in their growth and well-being.', color: 'from-red-500 to-pink-500'
+    }, {
+      icon: Zap, title: 'Innovation Driven', description: 'We constantly push boundaries and embrace new technologies to solve complex problems.', color: 'from-yellow-500 to-orange-500'
+    }, {
+      icon: Globe, title: 'Global Impact', id: 1, title: "Senior AI Engineer", department: "AI & Research", location: "Remote", type: "Full-time", experience: "5+ years", description: "Join our AI team to develop cutting-edge autonomous systems and machine learning solutions.", requirements: [
+        "Advanced degree in Computer Science, AI, or related field", "Experience with PyTorch, TensorFlow, and modern ML frameworks", "Knowledge of autonomous systems and reinforcement learning", "Strong software engineering principles and practices"],
+      responsibilities: ["Design and implement AI algorithms for autonomous systems", "Collaborate with research team on innovative ML approaches", "Optimize model performance and scalability", "Mentor junior engineers and contribute to technical decisions"],
+      benefits: ["Competitive salary and equity package", "Flexible remote work options", "Professional development and conference attendance", "Health, dental, and vision insurance"],
       featured: true,
       postedDate: "2025-01-20"
     },
@@ -1294,24 +697,9 @@ const Careers = () => {
       type: "Full-time",
       experience: "3+ years",
       description: "Research and develop quantum computing algorithms and applications for enterprise solutions.",
-      requirements: [
-        "PhD in Physics, Computer Science, or related field",
-        "Experience with quantum computing platforms (IBM Q, Rigetti)",
-        "Knowledge of quantum algorithms and quantum machine learning",
-        "Strong mathematical and analytical skills"
-      ],
-      responsibilities: [
-        "Research quantum computing applications for business problems",
-        "Develop quantum algorithms and optimization techniques",
-        "Collaborate with academic and industry partners",
-        "Publish research findings and present at conferences"
-      ],
-      benefits: [
-        "Competitive salary and equity package",
-        "Access to state-of-the-art quantum computing resources",
-        "Academic collaboration opportunities",
-        "Comprehensive benefits package"
-      ],
+      requirements: ["PhD in Physics, Computer Science, or related field", "Experience with quantum computing platforms (IBM Q, Rigetti)", "Knowledge of quantum algorithms and quantum machine learning", "Strong mathematical and analytical skills"],
+      responsibilities: ["Research quantum computing applications for business problems", "Develop quantum algorithms and optimization techniques", "Collaborate with academic and industry partners", "Publish research findings and present at conferences"],
+      benefits: ["Competitive salary and equity package", "Access to state-of-the-art quantum computing resources", "Academic collaboration opportunities", "Comprehensive benefits package"],
       featured: true,
       postedDate: "2025-01-18"
     },
@@ -1323,24 +711,9 @@ const Careers = () => {
       type: "Full-time",
       experience: "4+ years",
       description: "Build scalable web applications and microservices for our AI-powered platform.",
-      requirements: [
-        "Strong experience with React, Node.js, and TypeScript",
-        "Experience with cloud platforms (AWS, Azure, GCP)",
-        "Knowledge of microservices architecture and DevOps practices",
-        "Experience with database design and optimization"
-      ],
-      responsibilities: [
-        "Develop and maintain web applications and APIs",
-        "Implement responsive and accessible user interfaces",
-        "Collaborate with design and product teams",
-        "Participate in code reviews and technical planning"
-      ],
-      benefits: [
-        "Competitive salary and equity package",
-        "Remote work flexibility",
-        "Professional development opportunities",
-        "Health and wellness benefits"
-      ],
+      requirements: ["Strong experience with React, Node.js, and TypeScript", "Experience with cloud platforms (AWS, Azure, GCP)", "Knowledge of microservices architecture and DevOps practices", "Experience with database design and optimization"],
+      responsibilities: ["Develop and maintain web applications and APIs", "Implement responsive and accessible user interfaces", "Collaborate with design and product teams", "Participate in code reviews and technical planning"],
+      benefits: ["Competitive salary and equity package", "Remote work flexibility", "Professional development opportunities", "Health and wellness benefits"],
       featured: false,
       postedDate: "2025-01-15"
     },
@@ -1352,24 +725,9 @@ const Careers = () => {
       type: "Full-time",
       experience: "3+ years",
       description: "Ensure the security and compliance of our AI platforms and client solutions.",
-      requirements: [
-        "Experience with security frameworks and compliance standards",
-        "Knowledge of threat detection and incident response",
-        "Experience with security tools and penetration testing",
-        "Understanding of AI security challenges and solutions"
-      ],
-      responsibilities: [
-        "Implement security controls and monitoring systems",
-        "Conduct security assessments and penetration testing",
-        "Develop security policies and procedures",
-        "Respond to security incidents and threats"
-      ],
-      benefits: [
-        "Competitive salary and equity package",
-        "On-site and hybrid work options",
-        "Security training and certifications",
-        "Comprehensive benefits package"
-      ],
+      requirements: ["Experience with security frameworks and compliance standards", "Knowledge of threat detection and incident response", "Experience with security tools and penetration testing", "Understanding of AI security challenges and solutions"],
+      responsibilities: ["Implement security controls and monitoring systems", "Conduct security assessments and penetration testing", "Develop security policies and procedures", "Respond to security incidents and threats"],
+      benefits: ["Competitive salary and equity package", "On-site and hybrid work options", "Security training and certifications", "Comprehensive benefits package"],
       featured: false,
       postedDate: "2025-01-12"
     },
@@ -1381,24 +739,9 @@ const Careers = () => {
       type: "Full-time",
       experience: "5+ years",
       description: "Drive business growth by identifying and developing strategic partnerships and opportunities.",
-      requirements: [
-        "Experience in B2B sales and business development",
-        "Knowledge of AI, cybersecurity, or enterprise technology",
-        "Strong relationship-building and negotiation skills",
-        "Experience with enterprise sales cycles"
-      ],
-      responsibilities: [
-        "Identify and pursue new business opportunities",
-        "Build and maintain client relationships",
-        "Develop strategic partnerships and alliances",
-        "Achieve sales targets and business objectives"
-      ],
-      benefits: [
-        "Competitive salary and commission structure",
-        "Travel and entertainment budget",
-        "Professional development opportunities",
-        "Health and wellness benefits"
-      ],
+      requirements: ["Experience in B2B sales and business development", "Knowledge of AI, cybersecurity, or enterprise technology", "Strong relationship-building and negotiation skills", "Experience with enterprise sales cycles"],
+      responsibilities: ["Identify and pursue new business opportunities", "Build and maintain client relationships", "Develop strategic partnerships and alliances", "Achieve sales targets and business objectives"],
+      benefits: ["Competitive salary and commission structure", "Travel and entertainment budget", "Professional development opportunities", "Health and wellness benefits"],
       featured: false,
       postedDate: "2025-01-10"
     },
@@ -1410,24 +753,9 @@ const Careers = () => {
       type: "Full-time",
       experience: "4+ years",
       description: "Develop and execute marketing strategies for our AI and technology solutions.",
-      requirements: [
-        "Experience in B2B technology marketing",
-        "Knowledge of AI, cybersecurity, or enterprise technology",
-        "Strong analytical and creative skills",
-        "Experience with digital marketing and content creation"
-      ],
-      responsibilities: [
-        "Develop product positioning and messaging",
-        "Create marketing campaigns and content",
-        "Analyze market trends and competitive landscape",
-        "Collaborate with sales and product teams"
-      ],
-      benefits: [
-        "Competitive salary and equity package",
-        "Remote work flexibility",
-        "Marketing tools and resources",
-        "Professional development opportunities"
-      ],
+      requirements: ["Experience in B2B technology marketing", "Knowledge of AI, cybersecurity, or enterprise technology", "Strong analytical and creative skills", "Experience with digital marketing and content creation"],
+      responsibilities: ["Develop product positioning and messaging", "Create marketing campaigns and content", "Analyze market trends and competitive landscape", "Collaborate with sales and product teams"],
+      benefits: ["Competitive salary and equity package", "Remote work flexibility", "Marketing tools and resources", "Professional development opportunities"],
       featured: false,
       postedDate: "2025-01-08"
     },
@@ -1439,24 +767,9 @@ const Careers = () => {
       type: "Full-time",
       experience: "3+ years",
       description: "Ensure customer satisfaction and success with our AI-powered solutions.",
-      requirements: [
-        "Experience in customer success or account management",
-        "Knowledge of AI, cybersecurity, or enterprise technology",
-        "Strong communication and problem-solving skills",
-        "Experience with customer success platforms and tools"
-      ],
-      responsibilities: [
-        "Manage customer relationships and success metrics",
-        "Onboard new customers and provide training",
-        "Identify upsell and expansion opportunities",
-        "Gather customer feedback and drive product improvements"
-      ],
-      benefits: [
-        "Competitive salary and equity package",
-        "Hybrid work options",
-        "Customer success tools and resources",
-        "Professional development opportunities"
-      ],
+      requirements: ["Experience in customer success or account management", "Knowledge of AI, cybersecurity, or enterprise technology", "Strong communication and problem-solving skills", "Experience with customer success platforms and tools"],
+      responsibilities: ["Manage customer relationships and success metrics", "Onboard new customers and provide training", "Identify upsell and expansion opportunities", "Gather customer feedback and drive product improvements"],
+      benefits: ["Competitive salary and equity package", "Hybrid work options", "Customer success tools and resources", "Professional development opportunities"],
       featured: false,
       postedDate: "2025-01-05"
     },
@@ -1468,24 +781,9 @@ const Careers = () => {
       type: "Full-time",
       experience: "3+ years",
       description: "Build and maintain our cloud infrastructure and deployment pipelines.",
-      requirements: [
-        "Experience with cloud platforms (AWS, Azure, GCP)",
-        "Knowledge of containerization and orchestration (Docker, Kubernetes)",
-        "Experience with CI/CD pipelines and automation",
-        "Understanding of infrastructure as code principles"
-      ],
-      responsibilities: [
-        "Design and implement cloud infrastructure",
-        "Automate deployment and scaling processes",
-        "Monitor system performance and reliability",
-        "Collaborate with development and operations teams"
-      ],
-      benefits: [
-        "Competitive salary and equity package",
-        "On-site and hybrid work options",
-        "Cloud training and certifications",
-        "Comprehensive benefits package"
-      ],
+      requirements: ["Experience with cloud platforms (AWS, Azure, GCP)", "Knowledge of containerization and orchestration (Docker, Kubernetes)", "Experience with CI/CD pipelines and automation", "Understanding of infrastructure as code principles"],
+      responsibilities: ["Design and implement cloud infrastructure", "Automate deployment and scaling processes", "Monitor system performance and reliability", "Collaborate with development and operations teams"],
+      benefits: ["Competitive salary and equity package", "On-site and hybrid work options", "Cloud training and certifications", "Comprehensive benefits package"],
       featured: false,
       postedDate: "2025-01-03"
     }
@@ -1508,86 +806,35 @@ const Careers = () => {
       day: 'numeric' 
     })
   }
-  const companyValues = [
-    {
-      title: "Innovation First",
-      description: "We push the boundaries of what's possible with cutting-edge technology",
-      icon: Rocket
-    },
-    {
-      title: "Excellence",
-      description: "We deliver the highest quality solutions and exceptional service",
-      icon: Award
-    },
-    {
-      title: "Collaboration",
-      description: "We work together to achieve extraordinary results for our clients",
-      icon: Users
-    },
-    {
-      title: "Integrity",
-      description: "We maintain the highest ethical standards in all our interactions",
-      icon: Shield
-    }
-  ]
-  const benefits = [
-    {
-      icon: '🚀',
-      title: 'Innovation First',
-      description: 'Work on cutting-edge AI and quantum technologies'
-    },
-    {
-      icon: '🌍',
-      title: 'Remote First',
-      description: 'Work from anywhere with flexible schedules'
-    },
-    {
-      icon: '📚',
-      title: 'Continuous Learning',
-      description: 'Access to courses, conferences, and training programs'
-    },
-    {
-      icon: '💼',
-      title: 'Career Growth',
-      description: 'Clear career paths and advancement opportunities'
-    },
-    {
-      icon: '🏥',
-      title: 'Health & Wellness',
-      description: 'Comprehensive health insurance and wellness programs'
-    },
-    {
-      icon: '💰',
-      title: 'Competitive Pay',
-      description: 'Above-market salaries with equity options'
+  const companyValues = [{
+      title: "Innovation First", description: "We push the boundaries of what's possible with cutting-edge technology", icon: Rocket
+    }, {
+      title: "Excellence", description: "We deliver the highest quality solutions and exceptional service", icon: Award
+    }, {
+      title: "Collaboration", description: "We work together to achieve extraordinary results for our clients", icon: Users
+    }, {
+      title: "Integrity", description: "We maintain the highest ethical standards in all our interactions", icon: Shield
+    }]
+  const benefits = [{
+      icon: '🚀', title: 'Innovation First', description: 'Work on cutting-edge AI and quantum technologies'
+    }, {
+      icon: '🌍', title: 'Remote First', description: 'Work from anywhere with flexible schedules'
+    }, {
+      icon: '📚', title: 'Continuous Learning', description: 'Access to courses, conferences, and training programs'
+    }, {
+      icon: '💼', title: 'Career Growth', description: 'Clear career paths and advancement opportunities'
+    }, {
+      icon: '🏥', title: 'Health & Wellness', description: 'Comprehensive health insurance and wellness programs'
+    }, {
+      icon: '💰', title: 'Competitive Pay', description: 'Above-market salaries with equity options'
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { 
-  Users, 
-  Briefcase, 
-  MapPin, 
-  Clock, 
-  Star, 
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Globe,
-  Heart,
-  Target,
-  TrendingUp,
-  Award,
-  Lightbulb
-} from 'lucide-react'
+import { Link  } from 'react-router-dom'
+import { Users, Briefcase, MapPin, Clock, Star, Zap, CheckCircle, ArrowRight, Globe, Heart, Target, TrendingUp, Award, Lightbulb
+ } from 'lucide-react'
 const Careers = () => {
   const openPositions = [
     {
-      title: "Senior AI Engineer",
-      department: "Artificial Intelligence",
-      location: "Remote / Wilmington, DE",
-      type: "Full-time",
-      experience: "5+ years",
-      description: "Lead development of cutting-edge AI solutions and machine learning models for enterprise clients.",
-      skills: ["Python", "TensorFlow", "PyTorch", "MLOps", "Cloud Platforms"]
+      title: "Senior AI Engineer", department: "Artificial Intelligence", location: "Remote / Wilmington, DE", type: "Full-time", experience: "5+ years", description: "Lead development of cutting-edge AI solutions and machine learning models for enterprise clients.", skills: ["Python", "TensorFlow", "PyTorch", "MLOps", "Cloud Platforms"]
     },
     {
       title: "Cloud Solutions Architect",
@@ -1635,85 +882,44 @@ const Careers = () => {
       skills: ["Docker", "Kubernetes", "Jenkins", "Ansible", "Monitoring"]
     }
   ]
-  const benefits = [
-    {
-      icon: "🏠",
-      title: "Remote First",
-      description: "Work from anywhere with flexible remote work options"
-    },
-    {
-      icon: "💰",
-      title: "Competitive Salary",
-      description: "Attractive compensation packages with equity options"
-    },
-    {
-      icon: "🏥",
-      title: "Health Benefits",
-      description: "Comprehensive health, dental, and vision coverage"
-    },
-    {
-      icon: "📚",
-      title: "Learning & Development",
-      description: "Continuous learning opportunities and skill development"
-    },
-    {
-      icon: "🎯",
-      title: "Career Growth",
-      description: "Clear career progression paths and mentorship"
-    },
-    {
-      icon: "🎉",
-      title: "Team Events",
-      description: "Regular team building and social activities"
-    }
-  ]
-  const values = [
-    {
-      icon: "🚀",
-      title: "Innovation",
-      description: "We push boundaries and embrace new technologies"
-    },
-    {
-      icon: "🤝",
-      title: "Collaboration",
-      description: "Teamwork and knowledge sharing drive our success"
-    },
-    {
-      icon: "💡",
-      title: "Excellence",
-      description: "We strive for quality in everything we do"
-      title: "Competitive Compensation",
-      description: "Attractive salary packages with equity options",
-      icon: Award
-    },
-    {
-      title: "Flexible Work",
-      description: "Remote and hybrid work options for work-life balance",
-      icon: Globe
-    },
-    {
-      title: "Professional Growth",
-      description: "Continuous learning and career development opportunities",
-      icon: Brain
-    },
-    {
-      title: "Health & Wellness",
-      description: "Comprehensive health, dental, and vision coverage",
-      icon: Shield
-    }
-  ]
+  const benefits = [{
+      icon: "🏠", title: "Remote First", description: "Work from anywhere with flexible remote work options"
+    }, {
+      icon: "💰", title: "Competitive Salary", description: "Attractive compensation packages with equity options"
+    }, {
+      icon: "🏥", title: "Health Benefits", description: "Comprehensive health, dental, and vision coverage"
+    }, {
+      icon: "📚", title: "Learning & Development", description: "Continuous learning opportunities and skill development"
+    }, {
+      icon: "🎯", title: "Career Growth", description: "Clear career progression paths and mentorship"
+    }, {
+      icon: "🎉", title: "Team Events", description: "Regular team building and social activities"
+    }]
+  const values = [{
+      icon: "🚀", title: "Innovation", description: "We push boundaries and embrace new technologies"
+    }, {
+      icon: "🤝", title: "Collaboration", description: "Teamwork and knowledge sharing drive our success"
+    }, {
+      icon: "💡", title: "Excellence", description: "We strive for quality in everything we do"
+      title: "Competitive Compensation", description: "Attractive salary packages with equity options", icon: Award
+    }, {
+      title: "Flexible Work", description: "Remote and hybrid work options for work-life balance", icon: Globe
+    }, {
+      title: "Professional Growth", description: "Continuous learning and career development opportunities", icon: Brain
+    }, {
+      title: "Health & Wellness", description: "Comprehensive health, dental, and vision coverage", icon: Shield
+    }]
   return (
     <>
-      <SEO
-        title="Careers at Zion - Join Our Team"
+      <SEO title="Careers at Zion - Join Our Team"
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
     
       <SEO 
         title="Careers at Zion - Join Our Team" 
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform." 
         keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs"
-        canonical="https://ziontechgroup.com/careers"
-      />
+        canonical="https: //ziontechgroup.com/careers"
+      /></SEO>
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -1727,7 +933,7 @@ const Careers = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <$2 />
                 href="#open-positions"
-                className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
+                className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover: bg-zion-cyan-light transition-colors"
               >
                 View Open Positions
               </a>
@@ -1743,7 +949,7 @@ const Careers = () => {
       </section>
 
       {/* Company Values */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -1756,7 +962,7 @@ const Careers = () => {
           
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}
-      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+      <div className="pt-32 pb-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
             Join Our Team
@@ -1764,7 +970,7 @@ const Careers = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Help us build the future of AI and technology. Join a team of innovators, problem-solvers, and visionaries.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
               View Open Positions
             </button>
@@ -1776,7 +982,7 @@ const Careers = () => {
       </div>
 
       {/* Values Section */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
+      <div className="px-4 sm: px-6 lg:px-8 pb-16">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1789,7 +995,7 @@ const Careers = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="text-center p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300">
+              <div key={index} className="text-center p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover: border-cyan-400/50 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-cyan-400 mb-3">{value.title}</h3>
                 <p className="text-gray-300">{value.description}</p>
               </div>
@@ -1807,7 +1013,7 @@ const Careers = () => {
       </section>
 
       {/* Job Openings */}
-      <section id="openings" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
+      <section id="openings" className="py-20 px-4 sm: px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -1827,7 +1033,7 @@ const Careers = () => {
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-200 ${
                   selectedDepartment === dept.id
                     ? 'border-purple-500 bg-purple-500/20 text-purple-400'
-                    : 'border-gray-700 text-gray-300 hover:border-purple-500/50 hover:text-purple-400'
+                    : 'border-gray-700 text-gray-300 hover: border-purple-500/50 hover:text-purple-400'
                 }`}
               >
                 <dept.icon className="w-4 h-4" />
@@ -1837,7 +1043,7 @@ const Careers = () => {
                 </span>
               </button>
             ))}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-16 items-center mb-24">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>
               <p className="text-zion-slate-light text-lg mb-6">
@@ -1856,7 +1062,7 @@ const Careers = () => {
             </div>
             <div className="rounded-lg overflow-hidden">
               <img loading="lazy" 
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=600" 
+                src="https: //images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=600" 
                 alt="Team collaboration" 
                 className="object-cover w-full h-full"
               />
@@ -1865,7 +1071,7 @@ const Careers = () => {
           
           <div className="space-y-6">
             {filteredJobs.map((job) => (
-              <div key={job.id} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:border-purple-500/50 transition-all duration-300">
+              <div key={job.id} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover: border-purple-500/50 transition-all duration-300">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                   <div className="mb-4 lg:mb-0">
                     <div className="flex items-center space-x-3 mb-2">
@@ -1878,51 +1084,51 @@ const Careers = () => {
                     </div>
                     <div className="flex flex-wrap items-center gap-4 text-gray-400 text-sm">
                       <div className="flex items-center space-x-1">
-                        <Building className="w-4 h-4" />
+                        <Building className="w-4 h-4" /></Building>
                         <span>{departments.find(d => d.id === job.department)?.name}</span>
                       </div>
                       <div className="flex items-center space-x-1">
-                        <MapPin className="w-4 h-4" />
+                        <MapPin className="w-4 h-4" /></MapPin>
                         <span>{job.location}</span>
                       </div>
                       <div className="flex items-center space-x-1">
-                        <Clock className="w-4 h-4" />
+                        <Clock className="w-4 h-4" /></Clock>
                         <span>{job.type}</span>
                       </div>
                       <div className="flex items-center space-x-1">
-                        <Briefcase className="w-4 h-4" />
+                        <Briefcase className="w-4 h-4" /></Briefcase>
                         <span>{job.experience}</span>
                       </div>
                       <div className="flex items-center space-x-1">
-                        <DollarSign className="w-4 h-4" />
+                        <DollarSign className="w-4 h-4" /></DollarSign>
                         <span>{job.salary}</span>
                       </div>
                     </div>
                   </div>
                   <$2 />
                     to={`/careers/${job.id}`}
-                    className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 flex items-center justify-center space-x-2"
+                    className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover: from-purple-600 hover:to-pink-700 transition-all duration-200 flex items-center justify-center space-x-2"
                   >
                     <span>Apply Now</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4" /></ArrowRight>
                   </Link>
                 </div>
                 
                 <p className="text-gray-300 mb-4">{job.description}</p>
                 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">
                   <div>
                     <h4 className="font-semibold mb-3 text-purple-400">Requirements</h4>
                     <ul className="space-y-2">
                       {job.requirements.map((req, idx) => (
                         <li key={idx} className="flex items-center space-x-2">
-                          <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" /></CheckCircle>
                           <span className="text-gray-300 text-sm">{req}</span>
                         </li>
                       ))}
                     </ul>
       <section className="py-20 bg-black/20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Our Values
@@ -1936,7 +1142,7 @@ const Careers = () => {
             {companyValues.map((value, index) => (
               <$2 />
                 key={index}
-                className="text-center p-6 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70"
+                className="text-center p-6 bg-gray-800/50 rounded-xl border border-gray-700 hover: border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${value.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
                   <value.icon className="w-8 h-8 text-white" />
@@ -1951,7 +1157,7 @@ const Careers = () => {
 
       {/* Benefits Section */}
       <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Work With Us?
@@ -1971,14 +1177,14 @@ const Careers = () => {
                 <div className="space-y-3">
                   {category.items.map((item, itemIndex) => (
                     <div key={itemIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" /></CheckCircle>
                       <span className="text-gray-300">{item.name}</span>
                     </div>
                   ))}
                 </div>
       {/* Company Culture */}
       <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
               Why Work at Zion Tech Group?
@@ -1988,7 +1194,7 @@ const Careers = () => {
               of innovation, collaboration, and continuous growth.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {companyValues.map((value, index) => (
               <div key={index} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full mx-auto mb-6 flex items-center justify-center">
@@ -2008,7 +1214,7 @@ const Careers = () => {
 
       {/* Featured Positions */}
       {featuredPositions.length > 0 && (
-        <section className="pb-20 px-4 sm:px-6 lg:px-8">
+        <section className="pb-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">Featured Positions</h2>
@@ -2022,10 +1228,10 @@ const Careers = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                  className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 overflow-hidden hover: border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
                 >
                   <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
-                    <Briefcase className="w-16 h-16 text-cyan-400" />
+                    <Briefcase className="w-16 h-16 text-cyan-400" /></Briefcase>
                   </div>
                   
                   <div className="p-6">
@@ -2036,7 +1242,7 @@ const Careers = () => {
                       <span className="text-gray-400 text-sm capitalize">{position.department}</span>
                     </div>
                     
-                    <h3 className="text-2xl font-bold text-white mb-3 hover:text-cyan-400 transition-colors duration-200">
+                    <h3 className="text-2xl font-bold text-white mb-3 hover: text-cyan-400 transition-colors duration-200">
                       {position.title}
                     </h3>
                     
@@ -2047,29 +1253,29 @@ const Careers = () => {
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-4 text-sm text-gray-400">
                         <div className="flex items-center gap-2">
-                          <MapPin className="w-4 h-4" />
+                          <MapPin className="w-4 h-4" /></MapPin>
                           {locations.find(l => l.id === position.location)?.name}
                         </div>
                         <div className="flex items-center gap-2">
-                          <Clock className="w-4 h-4" />
+                          <Clock className="w-4 h-4" /></Clock>
                           {position.experience}
                         </div>
                         <div className="flex items-center gap-2">
-                          <Users className="w-4 h-4" />
+                          <Users className="w-4 h-4" /></Users>
                           {position.applications} applications
                         </div>
                       </div>
                     </div>
                     
                     <div className="mb-4">
-                      <h4 className="font-semibold text-gray-300 mb-2">Key Requirements:</h4>
+                      <h4 className="font-semibold text-gray-300 mb-2">Key Requirements: </h4>
                       <ul className="space-y-1">
                         {position.requirements.slice(0, 3).map((req, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-400">
-                            <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                            <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
       {/* Benefits */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
               Benefits & Perks
@@ -2081,7 +1287,7 @@ const Careers = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-zinc-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+              <div key={index} className="bg-zinc-50 rounded-xl p-6 text-center hover: shadow-lg transition-shadow">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full mx-auto mb-4 flex items-center justify-center">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -2094,7 +1300,7 @@ const Careers = () => {
       </div>
 
       {/* Benefits Section */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
+      <div className="px-4 sm: px-6 lg:px-8 pb-16">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -2107,7 +1313,7 @@ const Careers = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300">
+              <div key={index} className="p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover: border-cyan-400/50 transition-all duration-300">
                 <div className="text-4xl mb-4">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300">{benefit.description}</p>
@@ -2116,7 +1322,7 @@ const Careers = () => {
           </div>
         </div>
                     <div>
-                      <h4 className="font-semibold text-zion-blue-dark mb-2">Benefits:</h4>
+                      <h4 className="font-semibold text-zion-blue-dark mb-2">Benefits: </h4>
                       <ul className="space-y-1">
                         {job.benefits.map((benefit, index) => (
                           <li key={index} className="flex items-start text-sm text-zion-slate">
@@ -2131,16 +1337,14 @@ const Careers = () => {
               ))
             )}
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Careers - Join Zion Tech Group" 
+      <SEO title="Careers - Join Zion Tech Group" 
         description="Join our team and help build the future of technology. Explore career opportunities at Zion Tech Group."
         keywords="careers, jobs, Zion Tech Group, employment, tech jobs, AI jobs"
-        canonical="https://ziontechgroup.com/careers"
-      />
-
+        canonical="https: //ziontechgroup.com/careers"
+      /></SEO>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Join Our <span className="text-zion-cyan">Team</span>
           </h1>
@@ -2148,7 +1352,7 @@ const Careers = () => {
             Help us build the future of technology. We're looking for passionate, 
             innovative minds to join our mission.
           </p>
-          <Button asChild size="lg" className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue-dark">
+          <Button asChild size="lg" className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue-dark"></Button>
             <a href="#open-positions">View Open Positions</a>
           </Button>
         </div>
@@ -2156,18 +1360,18 @@ const Careers = () => {
 
       {/* Why Work With Us */}
       <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-white text-center mb-16">Why Work With Us?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="bg-zion-blue-dark border-zion-purple/20 hover:border-zion-purple/40 transition-colors">
-                <CardHeader className="text-center">
+              <Card key={index} className="bg-zion-blue-dark border-zion-purple/20 hover: border-zion-purple/40 transition-colors"></Card>
+                <CardHeader className="text-center"></CardHeader>
                   <div className="w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     {benefit.icon}
                   </div>
                   <CardTitle className="text-zion-cyan">{benefit.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent ></CardContent>
                   <p className="text-zion-slate-light text-center">
                     {benefit.description}
                   </p>
@@ -2181,7 +1385,7 @@ const Careers = () => {
       </div>
 
       {/* Open Positions */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
+      <div className="px-4 sm: px-6 lg:px-8 pb-16">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -2203,12 +1407,12 @@ const Careers = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-32 pb-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center mr-4">
-                <Users className="w-8 h-8 text-white" />
+                <Users className="w-8 h-8 text-white" /></Users>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Join Our Team
@@ -2217,7 +1421,7 @@ const Careers = () => {
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
               Help us build the future of AI and technology. Join a team of innovators, problem-solvers, and visionaries.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105">
                 View Open Positions
               </button>
@@ -2237,7 +1441,7 @@ const Careers = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -2248,10 +1452,10 @@ const Careers = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
             {values.map((value, index) => (
               <div key={index} className="flex items-center space-x-4">
-                <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0" /></CheckCircle>
                 <span className="text-gray-300 text-lg">{value}</span>
               </div>
             ))}
@@ -2260,7 +1464,7 @@ const Careers = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -2275,9 +1479,9 @@ const Careers = () => {
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon
               return (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover: border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
-                    <Icon className="w-8 h-8 text-blue-400" />
+                    <Icon className="w-8 h-8 text-blue-400" /></Icon>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
@@ -2289,7 +1493,7 @@ const Careers = () => {
       </section>
 
       {/* Open Positions Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -2302,7 +1506,7 @@ const Careers = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {openPositions.map((position, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300">
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover: border-blue-400/50 transition-all duration-300">
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="text-xl font-semibold text-white">{position.title}</h3>
                   <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-sm rounded-full border border-blue-400/30">
@@ -2313,15 +1517,15 @@ const Careers = () => {
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center space-x-4 text-sm text-gray-300">
                     <div className="flex items-center space-x-2">
-                      <Briefcase className="w-4 h-4 text-blue-400" />
+                      <Briefcase className="w-4 h-4 text-blue-400" /></Briefcase>
                       <span>{position.department}</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <MapPin className="w-4 h-4 text-blue-400" />
+                      <MapPin className="w-4 h-4 text-blue-400" /></MapPin>
                       <span>{position.location}</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <Clock className="w-4 h-4 text-blue-400" />
+                      <Clock className="w-4 h-4 text-blue-400" /></Clock>
                       <span>{position.experience}</span>
                     </div>
                   </div>
@@ -2331,26 +1535,24 @@ const Careers = () => {
                     <ul className="space-y-2">
                       {job.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center space-x-2">
-                          <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" /></CheckCircle>
                           <span className="text-gray-300 text-sm">{benefit}</span>
     <div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO 
-        title="Careers - Join Zion Tech Group" 
+      <SEO title="Careers - Join Zion Tech Group" 
         description="Join our team of innovators and technology experts. Explore career opportunities at Zion Tech Group."
         keywords="careers, jobs, employment, Zion Tech Group, technology careers, remote jobs"
-        canonical="https://ziontechgroup.com/careers"
-      />
-
+        canonical="https: //ziontechgroup.com/careers"
+      /></SEO>
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+            <h1 className="text-4xl md: text-6xl font-bold mb-6 text-white">
               Join Our
               <span className="block bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
                 Team
@@ -2360,20 +1562,20 @@ const Careers = () => {
               Be part of a team that's shaping the future of technology. Work on cutting-edge projects, 
               learn from experts, and grow your career with us.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <$2 />
                 href="#open-positions"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center"
               >
                 View Open Positions
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5" /></ArrowRight>
               </a>
               <$2 />
                 to="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center"
               >
                 Contact Us
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5" /></Mail>
               </Link>
             </div>
       description: 'Our solutions help businesses worldwide transform and succeed in the digital age.',
@@ -2387,15 +1589,13 @@ const Careers = () => {
   ]
   return (
     <>
-      <SEO 
-        title="Careers at Zion Tech Group - Join Our Team"
+      <SEO title="Careers at Zion Tech Group - Join Our Team"
         description="Join Zion Tech Group and be part of a team that's shaping the future of technology. Explore exciting career opportunities in AI, cloud computing, cybersecurity, and more."
         keywords="careers, jobs, employment, Zion Tech Group, technology jobs, AI jobs, remote work"
-      />
-      
+      /></SEO>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <section className="relative py-20 px-4 sm: px-6 lg:px-8 overflow-hidden">
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
             <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"></div>
@@ -2408,7 +1608,7 @@ const Careers = () => {
             transition={{ duration: 0.8 }}
           >
             <motion.h1 
-              className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
+              className="text-4xl md: text-6xl lg:text-7xl font-bold mb-6"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -2420,7 +1620,7 @@ const Careers = () => {
             </motion.h1>
             
             <motion.p 
-              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
+              className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -2430,14 +1630,14 @@ const Careers = () => {
             </motion.p>
             
             <motion.div 
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              className="flex flex-col sm: flex-row gap-4 justify-center"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <$2 />
                 href="#open-positions"
-                className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
+                className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
               >
                 View Open Positions
                 <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2445,7 +1645,7 @@ const Careers = () => {
                 </svg>
               </a>
               <$2 />
-                href="mailto:careers@ziontechgroup.com"
+                href="mailto: careers@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 hover:border-gray-500 transition-all duration-300 transform hover:scale-105"
               >
                 Contact HR
@@ -2455,7 +1655,7 @@ const Careers = () => {
         </section>
 
         {/* Why Work With Us */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <motion.div 
               className="text-center mb-16"
@@ -2464,7 +1664,7 @@ const Careers = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: text-4xl lg:text-5xl font-bold text-white mb-4">
                 Why Work With Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -2473,7 +1673,7 @@ const Careers = () => {
             </motion.div>
             
             <motion.div 
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
               variants={staggerContainer}
               initial="initial"
               whileInView="animate"
@@ -2496,7 +1696,7 @@ const Careers = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div 
               className="text-center mb-16"
@@ -2505,7 +1705,7 @@ const Careers = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: text-4xl lg:text-5xl font-bold text-white mb-4">
                 Benefits & Perks
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -2523,7 +1723,7 @@ const Careers = () => {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  className="text-center p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300"
+                  className="text-center p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 hover: border-white/40 transition-all duration-300"
                   variants={fadeInUp}
                   whileHover={{ scale: 1.02 }}
                 >
@@ -2537,7 +1737,7 @@ const Careers = () => {
         </section>
 
         {/* Open Positions */}
-        <section id="open-positions" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <section id="open-positions" className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <motion.div 
               className="text-center mb-16"
@@ -2546,7 +1746,7 @@ const Careers = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: text-4xl lg:text-5xl font-bold text-white mb-4">
                 Open Positions
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -2564,7 +1764,7 @@ const Careers = () => {
               {openPositions.map((position, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:bg-white/15"
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-300 hover:bg-white/15"
                   variants={fadeInUp}
                   whileHover={{ scale: 1.02 }}
                 >
@@ -2600,7 +1800,7 @@ const Careers = () => {
                   <p className="text-gray-300 mb-4 leading-relaxed">{position.description}</p>
                   
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-white mb-2">Required Skills:</h4>
+                    <h4 className="text-sm font-semibold text-white mb-2">Required Skills: </h4>
                     <div className="flex flex-wrap gap-2">
                       {position.skills.map((skill, skillIndex) => (
                         <$2 />
@@ -2614,8 +1814,8 @@ const Careers = () => {
                   </div>
                   
                   <$2 />
-                    href={`mailto:careers@ziontechgroup.com?subject=Application for ${position.title}`}
-                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+                    href={`mailto: careers@ziontechgroup.com?subject=Application for ${position.title}`}
+                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
                   >
                     Apply Now
                     <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2632,7 +1832,7 @@ const Careers = () => {
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
           <div className="max-w-4xl mx-auto text-center px-4">
             <motion.h2 
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
+              className="text-3xl md: text-4xl lg:text-5xl font-bold text-white mb-6"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -2657,7 +1857,7 @@ const Careers = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <$2 />
-                href="mailto:careers@ziontechgroup.com?subject=General Application"
+                href="mailto: careers@ziontechgroup.com?subject=General Application"
                 className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
               >
                 Send Your Resume
@@ -2673,7 +1873,7 @@ const Careers = () => {
   )
 }
             {openPositions.map((position, index) => (
-              <div key={index} className="p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300">
+              <div key={index} className="p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover: border-cyan-400/50 transition-all duration-300">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">{position.title}</h3>
@@ -2692,7 +1892,7 @@ const Careers = () => {
                       </span>
                     </div>
                   </div>
-                  <button className="lg:ml-4 px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-400 hover:to-blue-400 transition-all duration-300">
+                  <button className="lg: ml-4 px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-400 hover:to-blue-400 transition-all duration-300">
                     Apply Now
                   </button>
                 </div>
@@ -2700,7 +1900,7 @@ const Careers = () => {
                 <p className="text-gray-300 mb-4">{position.description}</p>
                 
                 <div>
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Required Skills:</h4>
+                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Required Skills: </h4>
                   <div className="flex flex-wrap gap-2">
                     {position.skills.map((skill, skillIndex) => (
                       <span key={skillIndex} className="px-2 py-1 bg-gray-700 text-gray-300 rounded text-sm">
@@ -2711,8 +1911,8 @@ const Careers = () => {
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%, rgba(0, 255, 255, 0.1), transparent_50%)]"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 pt-32 pb-20">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Join Our Team
@@ -2726,39 +1926,39 @@ const Careers = () => {
             {/* Search and Filter */}
             <div className="max-w-4xl mx-auto mb-8">
               <div className="relative mb-6">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Search>
                 <input
                   type="text"
                   placeholder="Search jobs, departments, or keywords..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
               
               <div className="flex flex-wrap gap-4 justify-center">
                 <div className="flex items-center gap-2">
-                  <Filter className="w-4 h-4 text-gray-400" />
+                  <Filter className="w-4 h-4 text-gray-400" /></Filter>
                   <select
                     value={selectedDepartment}
                     onChange={(e) => setSelectedDepartment(e.target.value)}
-                    className="px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    className="px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500"
                   >
                     {departments.map((dept) => (
-                      <option key={dept} value={dept}>{dept}</option>
+                      <option key={dept} value=>{dept}{dept}</option>
                     ))}
                   </select>
                 </div>
                 
                 <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-gray-400" />
+                  <MapPin className="w-4 h-4 text-gray-400" /></MapPin>
                   <select
                     value={selectedLocation}
                     onChange={(e) => setSelectedLocation(e.target.value)}
-                    className="px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    className="px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500"
                   >
                     {locations.map((location) => (
-                      <option key={location} value={location}>{location}</option>
+                      <option key={location} value=>{location}{location}</option>
                     ))}
                   </select>
                 </div>
@@ -2767,15 +1967,15 @@ const Careers = () => {
 
             <div className="flex items-center justify-center space-x-8 text-gray-400">
               <div className="flex items-center">
-                <Building className="w-5 h-5 mr-2" />
+                <Building className="w-5 h-5 mr-2" /></Building>
                 <span>{jobOpenings.length} Open Positions</span>
               </div>
               <div className="flex items-center">
-                <Globe className="w-5 h-5 mr-2" />
+                <Globe className="w-5 h-5 mr-2" /></Globe>
                 <span>Multiple Locations</span>
               </div>
               <div className="flex items-center">
-                <Users className="w-5 h-5 mr-2" />
+                <Users className="w-5 h-5 mr-2" /></Users>
                 <span>Growing Team</span>
               </div>
             </div>
@@ -2785,13 +1985,13 @@ const Careers = () => {
 
       {/* Featured Jobs */}
       {featuredJobs.length > 0 && (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 pb-20">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Positions</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {featuredJobs.map((job) => (
               <$2 />
                 key={job.id}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover: transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-4">
@@ -2813,15 +2013,15 @@ const Careers = () => {
                   
                   <div className="flex items-center space-x-6 mb-6 text-sm text-gray-400">
                     <div className="flex items-center">
-                      <MapPin className="w-4 h-4 mr-2" />
+                      <MapPin className="w-4 h-4 mr-2" /></MapPin>
                       {job.location}
                     </div>
                     <div className="flex items-center">
-                      <Clock className="w-4 h-4 mr-2" />
+                      <Clock className="w-4 h-4 mr-2" /></Clock>
                       {job.type}
                     </div>
                     <div className="flex items-center">
-                      <Users className="w-4 h-4 mr-2" />
+                      <Users className="w-4 h-4 mr-2" /></Users>
                       {job.experience}
                     </div>
                   </div>
@@ -2838,9 +2038,9 @@ const Careers = () => {
                     </ul>
                   </div>
                   
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">
                     Apply Now
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" /></ArrowRight>
                   </button>
                 </div>
               </div>
@@ -2850,7 +2050,7 @@ const Careers = () => {
       )}
 
       {/* All Job Openings */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 pb-20">
         <h2 className="text-3xl font-bold text-white mb-8 text-center">
           All Open Positions
         </h2>
@@ -2858,7 +2058,7 @@ const Careers = () => {
           {regularJobs.map((job) => (
             <$2 />
               key={job.id}
-              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover: transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
             >
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-4">
@@ -2877,11 +2077,11 @@ const Careers = () => {
                 
                 <div className="flex items-center space-x-4 mb-6 text-sm text-gray-400">
                   <div className="flex items-center">
-                    <MapPin className="w-4 h-4 mr-2" />
+                    <MapPin className="w-4 h-4 mr-2" /></MapPin>
                     {job.location}
                   </div>
                   <div className="flex items-center">
-                    <Clock className="w-4 h-4 mr-2" />
+                    <Clock className="w-4 h-4 mr-2" /></Clock>
                     {job.type}
                   </div>
                 </div>
@@ -2900,9 +2100,9 @@ const Careers = () => {
                   </div>
                 </div>
                 
-                <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">
+                <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">
                   Apply Now
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" /></ArrowRight>
                 </button>
               </div>
             </div>
@@ -2912,7 +2112,7 @@ const Careers = () => {
 
       {/* Company Values */}
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {companyValues.map((value, index) => {
@@ -2923,7 +2123,7 @@ const Careers = () => {
                   className="text-center"
                 >
                   <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Icon className="w-10 h-10 text-white" />
+                    <Icon className="w-10 h-10 text-white" /></Icon>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
                   <p className="text-gray-300">{value.description}</p>
@@ -2935,7 +2135,7 @@ const Careers = () => {
       </div>
 
       {/* Benefits */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20">
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Work With Us</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => {
@@ -2943,17 +2143,17 @@ const Careers = () => {
             return (
               <$2 />
                 key={index}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 text-center hover: transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Icon className="w-8 h-8 text-white" />
+                  <Icon className="w-8 h-8 text-white" /></Icon>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
               </div>
       {/* Application Process */}
       <section className="py-20 bg-zion-blue-dark">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">Application Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
@@ -2962,7 +2162,7 @@ const Careers = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
             )
           })}
         </div>
@@ -2970,7 +2170,7 @@ const Careers = () => {
 
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-20">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
               Don't See the Right Fit?
@@ -2985,7 +2185,7 @@ const Careers = () => {
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
               >
                 Send Your Resume
-                <Mail className="w-5 h-5 ml-2" />
+                <Mail className="w-5 h-5 ml-2" /></Mail>
               </a>
               <$2 />
                 to="/contact"
@@ -2999,13 +2199,13 @@ const Careers = () => {
       </div>
       {/* Open Positions */}
       <section id="open-positions" className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-white text-center mb-16">Open Positions</h2>
           <div className="grid gap-6">
             {openPositions.map((position) => (
-              <Card key={position.id} className={`bg-zion-blue-dark border-zion-purple/20 hover:border-zion-purple/40 transition-colors ${position.featured ? 'ring-2 ring-zion-cyan' : ''}`}>
-                <CardHeader>
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <Card key={position.id} className={`bg-zion-blue-dark border-zion-purple/20 hover: border-zion-purple/40 transition-colors ${position.featured ? 'ring-2 ring-zion-cyan' : ''}`}></Card>
+                <CardHeader ></CardHeader>
+                  <div className="flex flex-col md: flex-row md:items-center md:justify-between gap-4">
                     <div>
                       <div className="flex items-center gap-3 mb-2">
                         <CardTitle className="text-xl text-white">{position.title}</CardTitle>
@@ -3015,40 +2215,40 @@ const Careers = () => {
                       </div>
                       <div className="flex flex-wrap gap-2 text-sm text-zion-slate-light">
                         <span className="flex items-center gap-1">
-                          <Briefcase className="w-4 h-4" />
+                          <Briefcase className="w-4 h-4" /></Briefcase>
                           {position.department}
                         </span>
                         <span className="flex items-center gap-1">
-                          <MapPin className="w-4 h-4" />
+                          <MapPin className="w-4 h-4" /></MapPin>
                           {position.location}
                         </span>
                         <span className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
+                          <Clock className="w-4 h-4" /></Clock>
                           {position.type}
                         </span>
                         <span className="flex items-center gap-1">
-                          <Star className="w-4 h-4" />
+                          <Star className="w-4 h-4" /></Star>
                           {position.experience}
                         </span>
                         <span className="flex items-center gap-1">
-                          <DollarSign className="w-4 h-4" />
+                          <DollarSign className="w-4 h-4" /></DollarSign>
                           {position.salary}
                         </span>
                       </div>
                     </div>
-                    <Button asChild className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue-dark">
+                    <Button asChild className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue-dark"></Button>
                       <a href={`mailto:careers@ziontechgroup.com?subject=Application for ${position.title}`}>
                         Apply Now
-                        <ArrowRight className="w-4 h-4 ml-2" />
+                        <ArrowRight className="w-4 h-4 ml-2" /></ArrowRight>
                       </a>
                     </Button>
                   </div>
                 </CardHeader>
-                <CardContent>
+                <CardContent ></CardContent>
                   <p className="text-zion-slate-light mb-4">{position.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {position.skills.map((skill, index) => (
-                      <Badge key={index} variant="outline" className="border-zion-purple/30 text-zion-slate-light">
+                      <Badge key={index} variant="outline" className="border-zion-purple/30 text-zion-slate-light"></Badge>
                         {skill}
                       </Badge>
                     ))}
@@ -3062,7 +2262,7 @@ const Careers = () => {
 
       {/* Application Process */}
       <section className="py-20 bg-zion-blue-dark/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-white text-center mb-16">Application Process</h2>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
@@ -3107,7 +2307,7 @@ const Careers = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-purple to-zion-blue">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Don't See the Right Role?
           </h2>
@@ -3116,12 +2316,12 @@ const Careers = () => {
             Send us your resume and we'll keep you in mind for future opportunities.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue-dark">
+            <Button asChild size="lg" className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue-dark"></Button>
               <a href="mailto:careers@ziontechgroup.com?subject=General Application">
                 Send General Application
               </a>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue-dark">
+            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue-dark"></Button>
               <Link to="/contact">Get in Touch</Link>
             </Button>
           </div>
@@ -3166,18 +2366,18 @@ export default Careers
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-zion-purple-dark via-zion-blue to-zion-blue-dark">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Make History?</h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             Join us in building the future of technology. Your next adventure starts here.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="#open-positions">
+            <Link to="#open-positions"></Link>
               <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan/90 hover:to-zion-purple/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105">
                 Browse Openings
               </button>
             </Link>
-            <Link to="/about">
+            <Link to="/about"></Link>
               <button className="border-2 border-white text-white hover:bg-white hover:text-zion-blue px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
                 Learn More About Us
               </button>

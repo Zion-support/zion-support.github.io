@@ -1,15 +1,12 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import {CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin} from 'lucide-react'
+import { Helmet  } from 'react-helmet-async'
+import { CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin } from 'lucide-react'
 const MicroSAASPage: React.FC = () => {
-  const _microSAASServices = [
-    // AI-Powered Developer Tools
+  return (
+
+  const _microSAASServices = [// AI-Powered Developer Tools
     {
-      title: 'AI Code Review Assistant Pro',
-      description: 'Advanced automated code analysis with AI-powered bug detection, security vulnerability scanning, and performance optimization suggestions.',
-      icon: '🔍',
-      price: '$89/month',
-      features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Code quality metrics', 'Git integration', 'Custom rule sets'],
+      title: 'AI Code Review Assistant Pro', description: 'Advanced automated code analysis with AI-powered bug detection, security vulnerability scanning, and performance optimization suggestions.', icon: '🔍', price: '$89/month', features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Code quality metrics', 'Git integration', 'Custom rule sets'],
       benefits: ['Reduce bugs by 70%', 'Improve code quality', 'Save 15+ hours/week', 'Prevent security vulnerabilities'],
       marketPrice: '$150-300/month',
       category: 'Developer Tools',
@@ -17,7 +14,9 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       link: 'https://ziontechgroup.com/ai-code-review',
       popular: true
-    },
+    
+  );
+},
     {
       title: 'AI Test Generation Suite',
       description: 'Intelligent automated test generation with coverage analysis, performance testing, and regression testing automation.',
@@ -28,7 +27,7 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$250-500/month',
       category: 'Developer Tools',
       technologies: ['Jest', 'Cypress', 'Selenium', 'Custom AI Models', 'GitHub Actions'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'Smart API Documentation Generator',
@@ -40,7 +39,7 @@ $4},
       marketPrice: '$120-250/month',
       category: 'Developer Tools',
       technologies: ['OpenAPI', 'Swagger', 'Custom AI Models', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Marketing & SEO Tools
     {
@@ -53,7 +52,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Marketing',
       technologies: ['Google Search Console API', 'Ahrefs API', 'OpenAI GPT', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Social Media Manager',
@@ -65,7 +64,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Marketing',
       technologies: ['Twitter API', 'Instagram API', 'LinkedIn API', 'OpenAI GPT', 'React'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Email Marketing Platform',
@@ -77,7 +76,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Marketing',
       technologies: ['SendGrid', 'Mailchimp API', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Content Generator Pro',
@@ -89,7 +88,7 @@ $4},
       marketPrice: '$180-350/month',
       category: 'Content Creation',
       technologies: ['OpenAI GPT', 'Claude', 'React', 'Node.js', 'Custom Fine-tuned Models'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Business Intelligence & Analytics
     {
@@ -102,7 +101,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Analytics',
       technologies: ['React', 'D3.js', 'Python', 'TensorFlow', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Lead Scoring Engine',
@@ -114,7 +113,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Sales',
       technologies: ['Machine Learning', 'Python', 'Salesforce API', 'HubSpot API', 'Custom AI Models'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Customer Insights Platform',
@@ -126,7 +125,7 @@ $4},
       marketPrice: '$250-500/month',
       category: 'Customer Analytics',
       technologies: ['Machine Learning', 'Python', 'TensorFlow', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Finance & Accounting Tools
     {
@@ -139,7 +138,7 @@ $4},
       marketPrice: '$120-250/month',
       category: 'Finance',
       technologies: ['Stripe API', 'QuickBooks API', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Financial Planning Assistant',
@@ -151,7 +150,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Finance',
       technologies: ['Python', 'Pandas', 'NumPy', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Expense Management System',
@@ -163,7 +162,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Finance',
       technologies: ['OCR', 'Machine Learning', 'React Native', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Healthcare & Wellness
     {
@@ -176,7 +175,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Healthcare',
       technologies: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Health APIs'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Fitness Coach Pro',
@@ -188,7 +187,7 @@ $4},
       marketPrice: '$80-150/month',
       category: 'Health & Fitness',
       technologies: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Wearable APIs'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Mental Health Assistant',
@@ -200,7 +199,7 @@ $4},
       marketPrice: '$120-250/month',
       category: 'Mental Health',
       technologies: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Education & Learning
     {
@@ -213,7 +212,7 @@ $4},
       marketPrice: '$120-250/month',
       category: 'Education',
       technologies: ['Speech Recognition', 'Machine Learning', 'React', 'Node.js', 'MongoDB'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Study Assistant Pro',
@@ -225,7 +224,7 @@ $4},
       marketPrice: '$100-200/month',
       category: 'Education',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Skill Assessment Platform',
@@ -237,7 +236,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Education',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI E-commerce & Retail
     {
@@ -250,7 +249,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Supply Chain',
       technologies: ['Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Custom ML Models'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Product Recommendation Engine',
@@ -262,7 +261,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'E-commerce',
       technologies: ['Machine Learning', 'Python', 'React', 'Node.js', 'Redis'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Price Optimization Tool',
@@ -274,7 +273,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'E-commerce',
       technologies: ['Machine Learning', 'Python', 'Web Scraping', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Legal & Compliance
     {
@@ -287,7 +286,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Legal',
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Real Estate & Property Management
     {
@@ -300,7 +299,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Real Estate',
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'GIS Integration'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI HR & Recruitment
     {
@@ -313,7 +312,7 @@ $4},
       marketPrice: '$200-500/month',
       category: 'HR & Recruitment',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Interview Scheduler Pro',
@@ -325,7 +324,7 @@ $4},
       marketPrice: '$120-300/month',
       category: 'HR & Recruitment',
       technologies: ['Calendar APIs', 'React', 'Node.js', 'MongoDB', 'WebRTC'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Employee Performance Tracker',
@@ -337,7 +336,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'HR & Recruitment',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Finance & Accounting
     {
@@ -350,7 +349,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Finance & Accounting',
       technologies: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Invoice Processing System',
@@ -362,7 +361,7 @@ $4},
       marketPrice: '$250-500/month',
       category: 'Finance & Accounting',
       technologies: ['OCR', 'Workflow Engine', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Financial Forecasting Tool',
@@ -374,7 +373,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Finance & Accounting',
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series Analysis'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Project Management
     {
@@ -387,7 +386,7 @@ $4},
       marketPrice: '$200-500/month',
       category: 'Project Management',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Time Tracking & Analytics',
@@ -399,7 +398,7 @@ $4},
       marketPrice: '$120-300/month',
       category: 'Project Management',
       technologies: ['Machine Learning', 'React', 'Node.js', 'MongoDB', 'Analytics'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Customer Service
     {
@@ -412,7 +411,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Customer Service',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Ticket Classification System',
@@ -424,7 +423,7 @@ $4},
       marketPrice: '$150-350/month',
       category: 'Customer Service',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Sales & CRM
     {
@@ -437,7 +436,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Sales & CRM',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Sales Forecasting Platform',
@@ -449,7 +448,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Sales & CRM',
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Healthcare & Wellness
     {
@@ -462,7 +461,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Healthcare',
       technologies: ['Medical AI', 'NLP', 'React', 'Node.js', 'HIPAA Compliance'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Fitness Coach Platform',
@@ -474,7 +473,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Healthcare',
       technologies: ['Computer Vision', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Security & Compliance
     {
@@ -487,7 +486,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Security',
       technologies: ['Machine Learning', 'SIEM', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Compliance Checker',
@@ -499,7 +498,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Security',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Productivity & Automation
     {
@@ -512,7 +511,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Productivity',
       technologies: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Email Management System',
@@ -524,7 +523,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Productivity',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Email APIs'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Document Management Platform',
@@ -536,7 +535,7 @@ $4},
       marketPrice: '$200-500/month',
       category: 'Productivity',
       technologies: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Analytics & Reporting
     {
@@ -549,7 +548,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Analytics',
       technologies: ['Machine Learning', 'React', 'Python', 'PostgreSQL', 'D3.js'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Social Media Analytics',
@@ -561,7 +560,7 @@ $4},
       marketPrice: '$250-500/month',
       category: 'Analytics',
       technologies: ['Social Media APIs', 'NLP', 'React', 'Node.js', 'MongoDB'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Development & DevOps
     {
@@ -574,7 +573,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Development',
       technologies: ['Static Analysis', 'Machine Learning', 'React', 'Node.js', 'Git Integration'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Deployment Automation',
@@ -586,7 +585,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Development',
       technologies: ['CI/CD', 'Docker', 'Kubernetes', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Communication & Collaboration
     {
@@ -599,7 +598,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Collaboration',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'WebSocket'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Video Conferencing Assistant',
@@ -611,7 +610,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Collaboration',
       technologies: ['WebRTC', 'Audio Processing', 'React', 'Node.js', 'WebSocket'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Marketing & Advertising
     {
@@ -624,7 +623,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Marketing',
       technologies: ['Ad APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Influencer Marketing Platform',
@@ -636,7 +635,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Marketing',
       technologies: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI E-commerce & Retail
     {
@@ -649,7 +648,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'E-commerce',
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Analytics'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Supply Chain Optimizer',
@@ -661,7 +660,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Supply Chain',
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Optimization Algorithms'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Education & Training
     {
@@ -674,7 +673,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Education',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'LMS Integration'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Knowledge Management System',
@@ -686,7 +685,7 @@ $4},
       marketPrice: '$200-500/month',
       category: 'Education',
       technologies: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Legal & Compliance
     {
@@ -699,7 +698,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Legal',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Privacy Compliance Monitor',
@@ -711,7 +710,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Legal',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Compliance APIs'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Real Estate & Property
     {
@@ -724,7 +723,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Real Estate',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment Processing'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Market Research Platform',
@@ -736,7 +735,7 @@ $4},
       marketPrice: '$250-500/month',
       category: 'Research',
       technologies: ['Web Scraping', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Agriculture & Environment
     {
@@ -749,7 +748,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Agriculture',
       technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Environmental Monitoring',
@@ -761,7 +760,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Environment',
       technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Transportation & Logistics
     {
@@ -774,7 +773,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Transportation',
       technologies: ['GPS Tracking', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Logistics Optimizer',
@@ -786,7 +785,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Logistics',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization Algorithms'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Entertainment & Media
     {
@@ -799,7 +798,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Media',
       technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Video Production Assistant',
@@ -811,7 +810,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Media',
       technologies: ['Computer Vision', 'Video Processing', 'React', 'Node.js', 'FFmpeg'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Gaming & Entertainment
     {
@@ -824,7 +823,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Gaming',
       technologies: ['Game Engines', 'Machine Learning', 'React', 'Node.js', 'Unity/Unreal'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Player Behavior Analytics',
@@ -836,7 +835,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Gaming',
       technologies: ['Machine Learning', 'Analytics', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Research & Development
     {
@@ -849,7 +848,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Research',
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Patent Analysis Tool',
@@ -861,7 +860,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Research',
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Energy & Utilities
     {
@@ -874,7 +873,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Energy',
       technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Smart Grid Optimizer',
@@ -886,7 +885,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Energy',
       technologies: ['IoT', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Manufacturing & Industrial
     {
@@ -899,7 +898,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Manufacturing',
       technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Production Planning Optimizer',
@@ -911,7 +910,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Manufacturing',
       technologies: ['Machine Learning', 'Optimization', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Insurance & Risk Management
     {
@@ -924,7 +923,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Insurance',
       technologies: ['Machine Learning', 'NLP', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Claims Processing System',
@@ -936,7 +935,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Insurance',
       technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Government & Public Sector
     {
@@ -949,7 +948,7 @@ $4},
       marketPrice: '$800-1500/month',
       category: 'Government',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Public Safety System',
@@ -961,7 +960,7 @@ $4},
       marketPrice: '$1000-2000/month',
       category: 'Government',
       technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Non-Profit & Social Impact
     {
@@ -974,7 +973,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Non-Profit',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Volunteer Matching Platform',
@@ -986,7 +985,7 @@ $4},
       marketPrice: '$200-500/month',
       category: 'Non-Profit',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Matching Algorithms'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Travel & Hospitality
     {
@@ -999,7 +998,7 @@ $4},
       marketPrice: '$250-500/month',
       category: 'Travel',
       technologies: ['Machine Learning', 'Travel APIs', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Hotel Revenue Optimizer',
@@ -1011,7 +1010,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Hospitality',
       technologies: ['Machine Learning', 'Revenue Management', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Sports & Fitness
     {
@@ -1024,7 +1023,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Sports',
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Fitness Nutrition Coach',
@@ -1036,7 +1035,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Fitness',
       technologies: ['Machine Learning', 'Nutrition APIs', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Beauty & Fashion
     {
@@ -1049,7 +1048,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Fashion',
       technologies: ['Computer Vision', 'AR/VR', 'Machine Learning', 'React', 'WebGL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Beauty Analysis Tool',
@@ -1061,7 +1060,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Beauty',
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Home & Lifestyle
     {
@@ -1074,7 +1073,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Smart Home',
       technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'MQTT'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Personal Assistant Platform',
@@ -1086,7 +1085,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Personal',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Voice APIs'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Pets & Animals
     {
@@ -1099,7 +1098,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Pets',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Health APIs'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Pet Training Assistant',
@@ -1111,7 +1110,7 @@ $4},
       marketPrice: '$120-250/month',
       category: 'Pets',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Processing'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Education & Learning
     {
@@ -1124,7 +1123,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Education',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Conferencing'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Homework Helper',
@@ -1136,7 +1135,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Education',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Music & Audio
     {
@@ -1149,7 +1148,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Music',
       technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Web Audio API'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Audio Enhancement Platform',
@@ -1161,7 +1160,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Audio',
       technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'FFmpeg'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Art & Design
     {
@@ -1174,7 +1173,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Design',
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'Canvas API'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Logo Generator Platform',
@@ -1186,7 +1185,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Design',
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'SVG Generation'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Dating & Relationships
     {
@@ -1199,7 +1198,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Dating',
       technologies: ['Machine Learning', 'NLP', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Relationship Counselor',
@@ -1211,7 +1210,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Relationships',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Parenting & Family
     {
@@ -1224,7 +1223,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Parenting',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Expert Systems'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Family Organizer',
@@ -1236,7 +1235,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Family',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Senior Care & Aging
     {
@@ -1249,7 +1248,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Senior Care',
       technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Memory Assistant',
@@ -1261,7 +1260,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Memory',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Cognitive APIs'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Accessibility & Inclusion
     {
@@ -1274,7 +1273,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Accessibility',
       technologies: ['NLP', 'Computer Vision', 'React', 'Node.js', 'Accessibility APIs'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Language Translation Pro',
@@ -1286,7 +1285,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Translation',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Translation APIs'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Emergency & Crisis Management
     {
@@ -1299,7 +1298,7 @@ $4},
       marketPrice: '$800-1500/month',
       category: 'Emergency',
       technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'Emergency APIs'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Crisis Communication Platform',
@@ -1311,7 +1310,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Crisis Management',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Communication APIs'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Space & Astronomy
     {
@@ -1324,7 +1323,7 @@ $4},
       marketPrice: '$1000-2000/month',
       category: 'Space',
       technologies: ['Orbital Mechanics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Astronomical Data Analyzer',
@@ -1336,7 +1335,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Astronomy',
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Ocean & Marine
     {
@@ -1349,7 +1348,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Marine',
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Ocean Current Predictor',
@@ -1361,7 +1360,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Oceanography',
       technologies: ['Machine Learning', 'Weather APIs', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Archaeology & History
     {
@@ -1374,7 +1373,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Archaeology',
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Historical Document Processor',
@@ -1386,7 +1385,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'History',
       technologies: ['OCR', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Psychology & Mental Health
     {
@@ -1399,7 +1398,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Mental Health',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Therapy Assistant',
@@ -1411,7 +1410,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Therapy',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Philosophy & Ethics
     {
@@ -1424,7 +1423,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Ethics',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Philosophy Research Assistant',
@@ -1436,7 +1435,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Philosophy',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Spirituality & Religion
     {
@@ -1449,7 +1448,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Spirituality',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Religious Text Analyzer',
@@ -1461,7 +1460,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Religion',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Future & Innovation
     {
@@ -1474,7 +1473,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Innovation',
       technologies: ['Machine Learning', 'Data Science', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Future Scenario Generator',
@@ -1486,7 +1485,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Future Planning',
       technologies: ['Machine Learning', 'Simulation', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Consciousness & AI Ethics
     {
@@ -1499,7 +1498,7 @@ $4},
       marketPrice: '$800-1500/month',
       category: 'AI Ethics',
       technologies: ['Machine Learning', 'Ethics AI', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Rights Management System',
@@ -1511,7 +1510,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'AI Rights',
       technologies: ['Ethics AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Time & Space
     {
@@ -1524,7 +1523,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Time Management',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Space-Time Analyzer',
@@ -1536,7 +1535,7 @@ $4},
       marketPrice: '$1000-2000/month',
       category: 'Space-Time',
       technologies: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Quantum & Advanced Physics
     {
@@ -1549,7 +1548,7 @@ $4},
       marketPrice: '$1200-2500/month',
       category: 'Quantum Computing',
       technologies: ['Quantum Computing', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Physics Research Assistant',
@@ -1561,7 +1560,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Physics',
       technologies: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Multiverse & Parallel Realities
     {
@@ -1574,7 +1573,7 @@ $4},
       marketPrice: '$1500-3000/month',
       category: 'Multiverse',
       technologies: ['Advanced Physics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Reality Manipulation Tool',
@@ -1586,7 +1585,7 @@ $4},
       marketPrice: '$2000-4000/month',
       category: 'Reality',
       technologies: ['Advanced AI', 'Consciousness', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Transcendence & Enlightenment
     {
@@ -1599,7 +1598,7 @@ $4},
       marketPrice: '$800-1500/month',
       category: 'Enlightenment',
       technologies: ['Consciousness AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Transcendence Platform',
@@ -1611,7 +1610,7 @@ $4},
       marketPrice: '$1500-3000/month',
       category: 'Transcendence',
       technologies: ['Advanced AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Universal Consciousness
     {
@@ -1624,7 +1623,7 @@ $4},
       marketPrice: '$3000-6000/month',
       category: 'Universal Consciousness',
       technologies: ['Universal AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Cosmic Intelligence Platform',
@@ -1636,7 +1635,7 @@ $4},
       marketPrice: '$5000-10000/month',
       category: 'Cosmic Intelligence',
       technologies: ['Cosmic AI', 'Universal Consciousness', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Infinite Possibilities
     {
@@ -1649,7 +1648,7 @@ $4},
       marketPrice: '$10000-20000/month',
       category: 'Infinite Possibilities',
       technologies: ['Infinite AI', 'Unlimited Potential', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Ultimate Reality Creator',
@@ -1661,21 +1660,16 @@ $4},
       marketPrice: '$20000-50000/month',
       category: 'Ultimate Reality',
       technologies: ['Ultimate AI', 'Infinite Reality', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4}
   ]
-  /* const realEstateSaaS = [
-    {
-      title: 'AI Property Valuation Platform',
-      description: 'Advanced property valuation using machine learning and real estate data analysis.',
-      icon: '🏠',
-      price: '$299/month',
-      features: ['Automated valuations', 'Market analysis', 'Investment insights', 'Property comparisons', 'Trend forecasting', 'ROI calculations'],
+  /* const realEstateSaaS = [{
+      title: 'AI Property Valuation Platform', description: 'Advanced property valuation using machine learning and real estate data analysis.', icon: '🏠', price: '$299/month', features: ['Automated valuations', 'Market analysis', 'Investment insights', 'Property comparisons', 'Trend forecasting', 'ROI calculations'],
       benefits: ['Accurate valuations', 'Time savings', 'Better investment decisions', 'Market insights'],
       marketPrice: '$300-600/month',
       category: 'Real Estate',
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Real Estate APIs'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Tenant Screening Platform',
@@ -1687,7 +1681,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Property Management',
       technologies: ['Machine Learning', 'Credit APIs', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Agriculture & Food Tech
     {
@@ -1700,7 +1694,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Agriculture',
       technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Food Safety Inspector',
@@ -1712,7 +1706,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Food Safety',
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Transportation & Logistics
     {
@@ -1725,7 +1719,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Logistics',
       technologies: ['Machine Learning', 'Maps API', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Fleet Maintenance Predictor',
@@ -1737,7 +1731,7 @@ $4},
       marketPrice: '$250-500/month',
       category: 'Fleet Management',
       technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Energy & Sustainability
     {
@@ -1750,7 +1744,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Energy Management',
       technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Carbon Footprint Tracker',
@@ -1762,7 +1756,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Sustainability',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Environmental APIs'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Entertainment & Media
     {
@@ -1775,7 +1769,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Content Moderation',
       technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Video Editor Pro',
@@ -1787,7 +1781,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Video Production',
       technologies: ['Computer Vision', 'Audio Processing', 'Machine Learning', 'React', 'FFmpeg'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Security & Surveillance
     {
@@ -1800,7 +1794,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Security',
       technologies: ['Computer Vision', 'Facial Recognition', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Fraud Detection Engine',
@@ -1812,7 +1806,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Fraud Prevention',
       technologies: ['Machine Learning', 'Real-time Processing', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Research & Development
     {
@@ -1825,7 +1819,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Research',
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Patent Search Engine',
@@ -1837,7 +1831,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Intellectual Property',
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Compliance Monitoring Suite',
@@ -1849,7 +1843,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Compliance',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Real Estate & Property
     {
@@ -1862,7 +1856,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Real Estate',
       technologies: ['Machine Learning', 'Zillow API', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Property Management System',
@@ -1874,7 +1868,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Real Estate',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment APIs'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI HR & Recruitment
     {
@@ -1887,7 +1881,7 @@ $4},
       marketPrice: '$250-500/month',
       category: 'HR & Recruitment',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Employee Performance Tracker',
@@ -1899,7 +1893,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'HR & Recruitment',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Project Management
     {
@@ -1912,7 +1906,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Project Management',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Task Automation Suite',
@@ -1924,7 +1918,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Project Management',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Workflow Engine'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Supply Chain & Logistics
     {
@@ -1937,7 +1931,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Supply Chain',
       technologies: ['Machine Learning', 'Python', 'PostgreSQL', 'Redis', 'Custom ML Models'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Warehouse Management System',
@@ -1949,7 +1943,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Supply Chain',
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Agriculture & Food Tech
     {
@@ -1962,7 +1956,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Agriculture',
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Food Safety Monitor',
@@ -1974,7 +1968,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Food Tech',
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Energy & Sustainability
     {
@@ -1987,7 +1981,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Energy',
       technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'Time Series DB'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Carbon Footprint Tracker',
@@ -1999,7 +1993,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Sustainability',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics APIs'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Gaming & Entertainment
     {
@@ -2012,7 +2006,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Gaming',
       technologies: ['Unity', 'Unreal Engine', 'Machine Learning', 'Python', 'C#'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Content Moderation Platform',
@@ -2024,7 +2018,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Content Moderation',
       technologies: ['NLP', 'Computer Vision', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Transportation & Mobility
     {
@@ -2037,7 +2031,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Transportation',
       technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Traffic Management Platform',
@@ -2049,7 +2043,7 @@ $4},
       marketPrice: '$800-1500/month',
       category: 'Smart Cities',
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Research & Development
     {
@@ -2062,7 +2056,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Research',
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Patent Analysis Tool',
@@ -2074,7 +2068,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Intellectual Property',
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Personal Productivity
     {
@@ -2087,7 +2081,7 @@ $4},
       marketPrice: '$80-150/month',
       category: 'Personal Productivity',
       technologies: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Meeting Assistant',
@@ -2099,7 +2093,7 @@ $4},
       marketPrice: '$120-250/month',
       category: 'Meeting Management',
       technologies: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Insurance Underwriting Assistant',
@@ -2972,7 +2966,7 @@ $4},
       marketPrice: '$120-250/month',
       category: 'Productivity',
       technologies: ['Machine Learning', 'Browser Extension', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Task Management & Prioritization',
@@ -2984,7 +2978,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Productivity',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Email Management & Prioritization',
@@ -2996,7 +2990,7 @@ $4},
       marketPrice: '$100-200/month',
       category: 'Communication',
       technologies: ['NLP', 'Gmail API', 'Outlook API', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI HR & Recruitment
     {
@@ -3009,7 +3003,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'HR & Recruitment',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Employee Performance Tracker',
@@ -3021,7 +3015,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'HR & Performance',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Workplace Safety Monitor',
@@ -3033,7 +3027,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Workplace Safety',
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Customer Service & Support
     {
@@ -3046,7 +3040,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Customer Support',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Customer Feedback Analyzer',
@@ -3058,7 +3052,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Customer Analytics',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Live Chat Assistant',
@@ -3070,7 +3064,7 @@ $4},
       marketPrice: '$120-250/month',
       category: 'Customer Support',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Sales & CRM
     {
@@ -3083,7 +3077,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Sales & CRM',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM APIs'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Sales Call Analyzer',
@@ -3095,7 +3089,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Sales Training',
       technologies: ['Speech Recognition', 'NLP', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Proposal Generator Pro',
@@ -3107,7 +3101,7 @@ $4},
       marketPrice: '$180-350/month',
       category: 'Sales Tools',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Project Management
     {
@@ -3120,7 +3114,7 @@ $4},
       marketPrice: '$250-500/month',
       category: 'Project Management',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Resource Allocation Optimizer',
@@ -3132,7 +3126,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Resource Management',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Project Timeline Predictor',
@@ -3144,7 +3138,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Project Planning',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Security & Compliance
     {
@@ -3157,7 +3151,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Cybersecurity',
       technologies: ['Machine Learning', 'SIEM', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Compliance Monitor',
@@ -3169,7 +3163,7 @@ $4},
       marketPrice: '$350-700/month',
       category: 'Compliance',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Data Privacy Manager',
@@ -3181,7 +3175,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Data Privacy',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Quality Assurance & Testing
     {
@@ -3194,7 +3188,7 @@ $4},
       marketPrice: '$250-500/month',
       category: 'Quality Assurance',
       technologies: ['Selenium', 'Cypress', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Bug Prediction & Prevention',
@@ -3206,7 +3200,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Quality Assurance',
       technologies: ['Machine Learning', 'Code Analysis', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Performance Monitoring Pro',
@@ -3218,7 +3212,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Performance Monitoring',
       technologies: ['Machine Learning', 'Monitoring Tools', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Content & Media
     {
@@ -3231,7 +3225,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Content Creation',
       technologies: ['Computer Vision', 'NLP', 'Video Processing', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Podcast Production Suite',
@@ -3243,7 +3237,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Audio Production',
       technologies: ['Audio Processing', 'Speech Recognition', 'NLP', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Image & Design Generator',
@@ -3255,7 +3249,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Design',
       technologies: ['Computer Vision', 'DALL-E', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Research & Development
     {
@@ -3268,7 +3262,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Research',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Patent Analyzer & Generator',
@@ -3280,7 +3274,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Intellectual Property',
       technologies: ['NLP', 'Machine Learning', 'Patent APIs', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Innovation Tracker',
@@ -3292,7 +3286,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Innovation',
       technologies: ['NLP', 'Machine Learning', 'Web Scraping', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Personal & Lifestyle
     {
@@ -3305,7 +3299,7 @@ $4},
       marketPrice: '$120-250/month',
       category: 'Personal Finance',
       technologies: ['Machine Learning', 'Banking APIs', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Personal Assistant Pro',
@@ -3317,7 +3311,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Personal Assistant',
       technologies: ['NLP', 'Machine Learning', 'Voice Recognition', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Home Energy Optimizer',
@@ -3329,7 +3323,7 @@ $4},
       marketPrice: '$120-250/month',
       category: 'Smart Home',
       technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     // AI Gaming & Entertainment
     {
@@ -3342,7 +3336,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Game Development',
       technologies: ['Computer Vision', 'Machine Learning', 'Unity', 'Unreal Engine', 'React'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Music Composition Studio',
@@ -3354,7 +3348,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Music Production',
       technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Audio APIs'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4},
     {
       title: 'AI Streaming Content Optimizer',
@@ -3366,40 +3360,15 @@ $4},
       marketPrice: '$350-700/month',
       category: 'Streaming',
       technologies: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo:  ,
 $4}
   ]
-  const categories = [
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    }
-  ]; */
-  /* const categories = [
-    { name: 'All', count: microSAASServices.length },
-    { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length },
-    { name: 'Marketing', count: microSAASServices.filter(s => s.category === 'Marketing').length },
-    { name: 'Analytics', count: microSAASServices.filter(s => s.category === 'Analytics').length },
-    { name: 'Finance', count: microSAASServices.filter(s => s.category === 'Finance').length },
-    { name: 'Healthcare', count: microSAASServices.filter(s => s.category === 'Healthcare').length },
-    { name: 'Education', count: microSAASServices.filter(s => s.category === 'Education').length },
-    { name: 'E-commerce', count: microSAASServices.filter(s => s.category === 'E-commerce').length },
-    { name: 'Legal', count: microSAASServices.filter(s => s.category === 'Legal').length },
-    { name: 'Real Estate', count: microSAASServices.filter(s => s.category === 'Real Estate').length },
-    { name: 'HR & Recruitment', count: microSAASServices.filter(s => s.category === 'HR & Recruitment').length },
-    { name: 'Project Management', count: microSAASServices.filter(s => s.category === 'Project Management').length },
-    { name: 'Productivity', count: microSAASServices.filter(s => s.category === 'Productivity').length },
-    { name: 'Communication', count: microSAASServices.filter(s => s.category === 'Communication').length },
-    { name: 'Customer Support', count: microSAASServices.filter(s => s.category === 'Customer Support').length },
-    { name: 'Sales & CRM', count: microSAASServices.filter(s => s.category === 'Sales & CRM').length },
-    { name: 'Cybersecurity', count: microSAASServices.filter(s => s.category === 'Cybersecurity').length },
-    { name: 'Quality Assurance', count: microSAASServices.filter(s => s.category === 'Quality Assurance').length },
-    { name: 'Content Creation', count: microSAASServices.filter(s => s.category === 'Content Creation').length },
-    { name: 'Research', count: microSAASServices.filter(s => s.category === 'Research').length },
-    { name: 'Personal Finance', count: microSAASServices.filter(s => s.category === 'Personal Finance').length },
-    { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }
-  ]; */
+  const categories = [contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    }]; */
+  /* const categories = [{ name: 'All', count: microSAASServices.length }, { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length }, { name: 'Marketing', count: microSAASServices.filter(s => s.category === 'Marketing').length }, { name: 'Analytics', count: microSAASServices.filter(s => s.category === 'Analytics').length }, { name: 'Finance', count: microSAASServices.filter(s => s.category === 'Finance').length }, { name: 'Healthcare', count: microSAASServices.filter(s => s.category === 'Healthcare').length }, { name: 'Education', count: microSAASServices.filter(s => s.category === 'Education').length }, { name: 'E-commerce', count: microSAASServices.filter(s => s.category === 'E-commerce').length }, { name: 'Legal', count: microSAASServices.filter(s => s.category === 'Legal').length }, { name: 'Real Estate', count: microSAASServices.filter(s => s.category === 'Real Estate').length }, { name: 'HR & Recruitment', count: microSAASServices.filter(s => s.category === 'HR & Recruitment').length }, { name: 'Project Management', count: microSAASServices.filter(s => s.category === 'Project Management').length }, { name: 'Productivity', count: microSAASServices.filter(s => s.category === 'Productivity').length }, { name: 'Communication', count: microSAASServices.filter(s => s.category === 'Communication').length }, { name: 'Customer Support', count: microSAASServices.filter(s => s.category === 'Customer Support').length }, { name: 'Sales & CRM', count: microSAASServices.filter(s => s.category === 'Sales & CRM').length }, { name: 'Cybersecurity', count: microSAASServices.filter(s => s.category === 'Cybersecurity').length }, { name: 'Quality Assurance', count: microSAASServices.filter(s => s.category === 'Quality Assurance').length }, { name: 'Content Creation', count: microSAASServices.filter(s => s.category === 'Content Creation').length }, { name: 'Research', count: microSAASServices.filter(s => s.category === 'Research').length }, { name: 'Personal Finance', count: microSAASServices.filter(s => s.category === 'Personal Finance').length }, { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }]; */
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <Helmet ></Helmet>
         <title>Micro SAAS Solutions - Zion Tech Group
         <meta name="description" content="50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month." />
         <meta name="keywords" content="micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps" />
@@ -3411,16 +3380,13 @@ $4}
   
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             50+ AI-powered applications designed for modern businesses. Affordable, powerful tools that scale with your growth.
-import { CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin } from 'lucide-react'
+import { CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin  } from 'lucide-react'
 const MicroSAASPage: React.FC = () => {
     return (
     <div>Coming Soon</div>
   )
   }
-  const _microSAASServices = [
-  // TOD,
-  O: Add items
-]
+  const _microSAASServices = [// TOD, O: Add items]
     // AI-Powered Developer Tools,
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -3448,7 +3414,7 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950',
       lin,
   k: 'http,
-  s://ziontechgroup.com/ai-code-review',
+  s: //ziontechgroup.com/ai-code-review',
       popula,
   r: true,
     },
@@ -6814,20 +6780,10 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ]
-const realEstateSaaS = [
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
+const realEstateSaaS = [{/* TODO: Fix JSX expression */}
+  O: Add content, }
 }
-  titl,
-  e: 'AI Property Valuation Platform',
-      descriptio,
-  n: 'Advanced property valuation using machine learning and real estate data analysis.',
-      ico,
-  n: '',
-      pric,
-  e: '$299/month',
-      feature,
-  s: ['Automated valuations', 'Market analysis', 'Investment insights', 'Property comparisons', 'Trend forecasting', 'ROI calculations'],
+  titl, e: 'AI Property Valuation Platform', descriptio, n: 'Advanced property valuation using machine learning and real estate data analysis.', ico, n: '', pric, e: '$299/month', feature, s: ['Automated valuations', 'Market analysis', 'Investment insights', 'Property comparisons', 'Trend forecasting', 'ROI calculations'],
       benefit,
   s: ['Accurate valuations', 'Time savings', 'Better investment decisions', 'Market insights'],
       marketPric,
@@ -10261,56 +10217,33 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ]
-const categories = [
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Developer Tools').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Marketing').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Analytics').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Finance').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Healthcare').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Education').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'E-commerce').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Legal').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Real Estate').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'HR & Recruitment').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Project Management').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Productivity').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Communication').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Customer Support').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Sales & CRM').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Cybersecurity').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Quality Assurance').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Content Creation').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Research').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Personal Finance').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Game Development').length }
-  ]
+const categories = [{/* TODO: Fix JSX expression */}
+  t: microSAASServices.length }, {/* TODO: Fix JSX expression */}
+  t: microSAASServices.filter(s => s.category === 'Developer Tools').length }, {/* TODO: Fix JSX expression */}
+  t: microSAASServices.filter(s => s.category === 'Marketing').length }, {/* TODO: Fix JSX expression */}
+  t: microSAASServices.filter(s => s.category === 'Analytics').length }, {/* TODO: Fix JSX expression */}
+  t: microSAASServices.filter(s => s.category === 'Finance').length }, {/* TODO: Fix JSX expression */}
+  t: microSAASServices.filter(s => s.category === 'Healthcare').length }, {/* TODO: Fix JSX expression */}
+  t: microSAASServices.filter(s => s.category === 'Education').length }, {/* TODO: Fix JSX expression */}
+  t: microSAASServices.filter(s => s.category === 'E-commerce').length }, {/* TODO: Fix JSX expression */}
+  t: microSAASServices.filter(s => s.category === 'Legal').length }, {/* TODO: Fix JSX expression */}
+  t: microSAASServices.filter(s => s.category === 'Real Estate').length }, {/* TODO: Fix JSX expression */}
+  t: microSAASServices.filter(s => s.category === 'HR & Recruitment').length }, {/* TODO: Fix JSX expression */}
+  t: microSAASServices.filter(s => s.category === 'Project Management').length }, {/* TODO: Fix JSX expression */}
+  t: microSAASServices.filter(s => s.category === 'Productivity').length }, {/* TODO: Fix JSX expression */}
+  t: microSAASServices.filter(s => s.category === 'Communication').length }, {/* TODO: Fix JSX expression */}
+  t: microSAASServices.filter(s => s.category === 'Customer Support').length }, {/* TODO: Fix JSX expression */}
+  t: microSAASServices.filter(s => s.category === 'Sales & CRM').length }, {/* TODO: Fix JSX expression */}
+  t: microSAASServices.filter(s => s.category === 'Cybersecurity').length }, {/* TODO: Fix JSX expression */}
+  t: microSAASServices.filter(s => s.category === 'Quality Assurance').length }, {/* TODO: Fix JSX expression */}
+  t: microSAASServices.filter(s => s.category === 'Content Creation').length }, {/* TODO: Fix JSX expression */}
+  t: microSAASServices.filter(s => s.category === 'Research').length }, {/* TODO: Fix JSX expression */}
+  t: microSAASServices.filter(s => s.category === 'Personal Finance').length }, {/* TODO: Fix JSX expression */}
+  t: microSAASServices.filter(s => s.category === 'Game Development').length }]
   return (<div>Coming Soon</div>)
   )
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <Helmet ></Helmet>
         <title>Micro SAAS Solutions - Zion Tech Group</title>"
         <meta name="description" content="50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month." /></meta>"
         <meta name="keywords" content="micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps" />
@@ -10318,7 +10251,7 @@ const categories = [
       <section className="pt-24 pb-16 px-4"></section>"
         <div className="max-w-7xl mx-auto text-center"></div>"
           < className="text-4xl,$2 />
-  sm:text-5xl,"
+  sm: text-5xl,"
   md: text-6xl font-bold text-white mb-6"></h1>
 // Micro SAAS Solutions
           </h1>
@@ -10326,7 +10259,7 @@ const categories = [
             Coming Soon,
   
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-cyan-400 mb-2">50+
               <div className="text-gray-300">Applications
@@ -10341,15 +10274,15 @@ const categories = [
               <div className="text-gray-300">Uptime
           {/* Contact Info */}
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+            <div className="flex flex-col md: flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
               <div className="flex items-center space-x-2">
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5" /></Phone>
                 <span className="text-white font-medium">+1 302 464 0950
               <div className="flex items-center space-x-2">
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5" /></Mail>
                 <span className="text-white font-medium">kleber@ziontechgroup.com
               <div className="flex items-center space-x-2">
-                <MapPin className="w-5 h-5" />
+                <MapPin className="w-5 h-5" /></MapPin>
             </div>"
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
               <div className="text-3xl font-bold text-green-400 mb-2">$49</div>"
@@ -10365,9 +10298,9 @@ const categories = [
           {/* Contact Info */}"
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12"></div>"
             < className="flex flex-col,$2 />
-  md:flex-row items-center justify-center space-y-4,
-  md:space-y-0,"
-  md:space-x-8"></div>"
+  md: flex-row items-center justify-center space-y-4,
+  md: space-y-0,"
+  md: space-x-8"></div>"
               <div className="flex items-center space-x-2"></div>"
                 <Phone className="w-5 h-5" /></Phone>"
                 <span className="text-white font-medium">+1 302 464 0950
@@ -10383,9 +10316,9 @@ const categories = [
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Choose Your Perfect AI Tools
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {microSAASServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover: shadow-2xl transition-all duration-300 hover:scale-105">
                 <div className="text-center mb-6">
                   <div className="text-5xl mb-4">{service.icon}
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}
@@ -10397,34 +10330,32 @@ const categories = [
                   <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
                     {service.category}
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Features:
-                  <ul className="space-y-2">
+                  <h4 className="font-semibold text-gray-900 mb-3">Key Features: <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
                         {feature}
                     ))}
                     {service.features.length > 4 && (
                       <li className="text-sm text-gray-500">+{service.features.length - 4} more features
                     )}
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Benefits:
-                  <ul className="space-y-1">
+                  <h4 className="font-semibold text-gray-900 mb-3">Benefits: <ul className="space-y-1">
                     {service.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
-                        <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
+                        <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" /></TrendingUp>
       {/* Services Grid */}"
       <section className="py-16 px-4"></section>"
         <div className="max-w-7xl mx-auto"></div>"
           <h2 className="text-3xl font-bold text-white text-center mb-12">
 // Choose Your Perfect AI Tools</$1>"
           < className="grid grid-cols-1,$2 />
-  md:grid-cols-2,"
-  lg:grid-cols-3 gap-8">
+  md: grid-cols-2,"
+  lg: grid-cols-3 gap-8">
             {microSAASServices.map((service, index) => ()}"
           < key={index} className="bg-white rounded-xl shadow-lg p-6,$2 />
-  hover:shadow-2xl transition-all duration-300,"
-  hover:scale-105"></div>"
+  hover: shadow-2xl transition-all duration-300,"
+  hover: scale-105"></div>"
                 <div className="text-center mb-6"></div>"
                   <div className="text-5xl mb-4">{service.icon}</div>"
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>"
@@ -10441,11 +10372,11 @@ const categories = [
                 </div>"
                 <div className="mb-6"></div>"
                   <h4 className="font-semibold text-gray-900 mb-3">Key,
-  Features:</h4>"
+  Features: </h4>"
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
                         {feature}
                     ))}
                     {service.features.length > 4 && ()}"
@@ -10455,22 +10386,21 @@ const categories = [
                 </div>"
                 <div className="mb-6"></div>"
                   <h4 className="font-semibold text-gray-900 mb-3">Benefit,
-  s:</h4>"
+  s: </h4>"
                   <ul className="space-y-1">
                     {service.benefits.map((benefit, benefitIndex) => ()}"
           <li key={benefitIndex} className="text-sm text-gray-600 flex items-center"></li>"
-                        <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
+                        <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" /></TrendingUp>
                         {benefit}
                     ))}
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Technologies:
-                  <div className="flex flex-wrap gap-2">
+                  <h4 className="font-semibold text-gray-900 mb-3">Technologies: <div className="flex flex-wrap gap-2">
                     {service.technologies.map((tech, techIndex) => (
                       <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
                 </div>"
                 <div className="mb-6"></div>"
                   <h4 className="font-semibold text-gray-900 mb-3">Technologie,
-  s:</h4>"
+  s: </h4>"
                   <div className="flex flex-wrap gap-2">
                     {service.technologies.map((tech, techIndex) => ()}"
           <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
@@ -10478,7 +10408,7 @@ const categories = [
                     ))}
                 <div className="text-center">
                   <$2 />
-                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
+                    href={`mailto: kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block">
                     Get Started Now,
   
@@ -10487,9 +10417,9 @@ const categories = [
                 <div className="text-center">
                   <a>
                     href={/* TODO: Fix JSX expression */}
-  o:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}"
+  o: kleber@ziontechgroup.com?subject=Interest in ${service.title}`}"
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,
-  hover:from-purple-700,"
+  hover: from-purple-700,"
   hover: to-blue-700 transition-all inline-block"
 // >
 //                     Get Started Now,

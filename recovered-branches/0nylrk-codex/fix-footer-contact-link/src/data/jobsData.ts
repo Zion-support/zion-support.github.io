@@ -1,12 +1,6 @@
-import { Job } from "@/types/jobs"
-export const JOB_POSTS: Job[] = [
-  {
-    id: "job-1",
-    client_id: "client-1",
-    title: "React Developer Needed",
-    description: "Seeking a React developer for a 3 month contract building dashboards.",
-    category: "development",
-    skills: ["React", "TypeScript"],
+import { Job  } from '@/types/jobs'
+export const JOB_POSTS: Job[] = [{
+    id: "job-1", client_id: "client-1", title: "React Developer Needed", description: "Seeking a React developer for a 3 month contract building dashboards.", category: "development", skills: ["React", "TypeScript"],
     budget: { min: 40, max: 50, currency: "USD" },
     deadline: "2024-07-01",
     status: "new",

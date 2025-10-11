@@ -1,4 +1,4 @@
-import { GptClassification, MonitoredSource } from './types'
+import { GptClassification, MonitoredSource  } from './types'
 export async function classifyWithGPT(
   text: string
   source: MonitoredSource
@@ -22,13 +22,11 @@ export async function classifyWithGPT(
   const client = new OpenAI({ apiKey })
   const systemPrompt =
     'You are a strict fraud/spam/phishing detector for a marketplace. Respond ONLY in strict JSON: {"label":"SAFE|SUSPICIOUS|DANGEROUS","reason":"short","confidence":0-1}. Consider off-platform payments, scammy/vague job posts, phishing, or social-engineering.'
-  const userPrompt = `Source: ${source}\n\nText:\n${text}\n\nAnalyze this message for signs of fraud, spam, or phishing. Respond: SAFE / SUSPICIOUS / DANGEROUS with a short reason.`
+  const userPrompt = `Source: ${source}\n\nText: \n${text}\n\nAnalyze this message for signs of fraud, spam, or phishing. Respond: SAFE / SUSPICIOUS / DANGEROUS with a short reason.`
   const completion = await client.chat.completions.create({
     model: process.env.FRAUD_GPT_MODEL |'gpt-4o-mini'
-    messages: [
-      { role: 'system', content: systemPrompt }
-      { role: 'user', content: userPrompt }
-    ]
+    messages: [{ role: 'system', content: systemPrompt }
+      { role: 'user', content: userPrompt }]
     temperature: 0
     response_format: { type: 'json_object' as const }
   })
@@ -84,10 +82,7 @@ if ( {) {
   }
 }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import { GptClassification, MonitoredSource } from './types'
+import { GptClassification, MonitoredSource  } from './types'
 export async function classifyWithGPT(text: string, source: MonitoredSource): Promise<GptClassification> {
   const apiKey = process.env.OPENAI_API_KEY
   if (!apiKey) {
@@ -102,13 +97,10 @@ export async function classifyWithGPT(text: string, source: MonitoredSource): Pr
   const { OpenAI } = await import('openai')
   const client = new OpenAI({ apiKey })
   const systemPrompt = 'You are a strict fraud/spam/phishing detector for a marketplace. Respond ONLY in strict JSON: {"label":"SAFE|SUSPICIOUS|DANGEROUS","reason":"short","confidence":0-1}. Consider off-platform payments, scammy/vague job posts, phishing, or social-engineering.'
-  const userPrompt = `Source: ${source}\n\nText:\n${text}\n\nAnalyze this message for signs of fraud, spam, or phishing. Respond: SAFE / SUSPICIOUS / DANGEROUS with a short reason.`
+  const userPrompt = `Source: ${source}\n\nText: \n${text}\n\nAnalyze this message for signs of fraud, spam, or phishing. Respond: SAFE / SUSPICIOUS / DANGEROUS with a short reason.`
   const completion = await client.chat.completions.create({
     model: process.env.FRAUD_GPT_MODEL || 'gpt-4o-mini',
-    messages: [
-      { role: 'system', content: systemPrompt },
-      { role: 'user', content: userPrompt },
-    ],
+    messages: [{ role: 'system', content: systemPrompt }, { role: 'user', content: userPrompt }],
     temperature: 0,
     response_format: { type: 'json_object' as const },
   })

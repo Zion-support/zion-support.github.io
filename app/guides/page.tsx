@@ -1,20 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const GuidesPage: React.FC = () => {
-  const guides = [
-    {
-      id: 1,
-      title: 'Getting Started with AI Implementation',
-      description: 'A comprehensive guide to implementing AI solutions in your organization.',
-      category: 'AI Implementation',
-      difficulty: 'Beginner',
-      duration: '45 min',
-      topics: ['AI Strategy', 'Data Preparation', 'Model Selection', 'Deployment'],
+  return (
+
+  const guides = [{
+      id: 1, title: 'Getting Started with AI Implementation', description: 'A comprehensive guide to implementing AI solutions in your organization.', category: 'AI Implementation', difficulty: 'Beginner', duration: '45 min', topics: ['AI Strategy', 'Data Preparation', 'Model Selection', 'Deployment'],
       featured: true
-    },
+    
+  );
+},
     {
       id: 2,
       title: 'Quantum Computing Fundamentals',
@@ -100,12 +97,11 @@ const GuidesPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
+      <Navigation /></Navigation>
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Technical Guides
             </h1>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
@@ -118,7 +114,7 @@ const GuidesPage: React.FC = () => {
           <div className="mb-16">
             {guides.filter(guide => guide.featured).map(guide => (
               <div key={guide.id} className="cyber-card hologram-card overflow-hidden">
-                <div className="md:flex">
+                <div className="md: flex">
                   <div className="md:w-2/3 p-8">
                     <div className="flex items-center mb-4">
                       <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -129,14 +125,14 @@ const GuidesPage: React.FC = () => {
                       </span>
                       <span className="text-gray-400 text-sm ml-4">{guide.duration}</span>
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                    <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
                       {guide.title}
                     </h2>
                     <p className="text-gray-300 mb-6 text-lg">
                       {guide.description}
                     </p>
                     <div className="mb-6">
-                      <h3 className="text-lg font-semibold text-white mb-3">Topics Covered:</h3>
+                      <h3 className="text-lg font-semibold text-white mb-3">Topics Covered: </h3>
                       <div className="flex flex-wrap gap-2">
                         {guide.topics.map((topic, index) => (
                           <span key={index} className="bg-gray-700 text-gray-300 px-3 py-1 rounded-full text-sm">
@@ -149,7 +145,7 @@ const GuidesPage: React.FC = () => {
                       Start Learning
                     </button>
                   </div>
-                  <div className="md:w-1/3 bg-gradient-to-br from-cyan-500 to-purple-600 p-8 flex items-center justify-center">
+                  <div className="md: w-1/3 bg-gradient-to-br from-cyan-500 to-purple-600 p-8 flex items-center justify-center">
                     <div className="text-center text-white">
                       <div className="text-6xl mb-4">📚</div>
                       <div className="text-xl font-bold">Free Guide</div>
@@ -169,7 +165,7 @@ const GuidesPage: React.FC = () => {
                   className={`px-6 py-2 rounded-full transition-colors ${
                     category === 'All' 
                       ? 'bg-cyan-500 text-white' 
-                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                      : 'bg-gray-700 text-gray-300 hover: bg-gray-600'
                   }`}
                 >
                   {category}
@@ -179,7 +175,7 @@ const GuidesPage: React.FC = () => {
           </div>
 
           {/* Guides Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {guides.filter(guide => !guide.featured).map(guide => (
               <article key={guide.id} className="cyber-card hologram-card group">
                 <div className="p-6">
@@ -191,7 +187,7 @@ const GuidesPage: React.FC = () => {
                       {guide.difficulty}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover: text-cyan-400 transition-colors">
                     {guide.title}
                   </h3>
                   <p className="text-gray-300 mb-4">
@@ -211,7 +207,7 @@ const GuidesPage: React.FC = () => {
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-400 text-sm">{guide.duration}</span>
-                    <button className="text-cyan-400 hover:text-cyan-300 font-medium">
+                    <button className="text-cyan-400 hover: text-cyan-300 font-medium">
                       Read Guide →
                     </button>
                   </div>
@@ -228,18 +224,16 @@ const GuidesPage: React.FC = () => {
             <p className="text-gray-300 mb-6">
               Our expert team can help you implement any of these solutions in your organization.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <Link to="/contact" 
                 className="cyber-button"
-              >
+              ></Link>
                 Get Expert Help
               </Link>
-              <Link 
-                to="/services" 
+              <Link to="/services" 
                 className="cyber-button"
                 style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-              >
+              ></Link>
                 View Our Services
               </Link>
             </div>
@@ -247,7 +241,7 @@ const GuidesPage: React.FC = () => {
         </div>
       </main>
       
-      <Footer />
+      <Footer /></Footer>
     </div>
   );
 };

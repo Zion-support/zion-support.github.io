@@ -59,7 +59,7 @@ const storeImpressions = (impression)
  * Record banner impression
  */
 export const recordBannerImpression = (
-  impression: Omit<BannerImpression, 'timestamp' | 'sessionId'>
+  impression: Omit<BannerImpression , 'timestamp' | 'sessionId'></BannerImpression>
 ) => {
   if (typeof window === 'undefined') return
   try {

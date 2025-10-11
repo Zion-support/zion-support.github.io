@@ -1,52 +1,18 @@
-<<<<<<< HEAD
 const CACHE_NAME = 'zion-tech-group-v1';
-=======
-
-// Service Worker for Zion Tech Group
-<<<<<<< HEAD
 const CACHE_NAME = 'zion-tech-group-v1';
 const STATIC_CACHE = 'zion-static-v1';
 const DYNAMIC_CACHE = 'zion-dynamic-v1';
 
 // Files to cache immediately
-const STATIC_FILES = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/robots.txt',
-  '/sitemap.xml',
-  // Add other static assets as needed
-];
+const STATIC_FILES = ['/', '/index.html', '/manifest.json', '/robots.txt', '/sitemap.xml', // Add other static assets as needed];
 
 // Install event - cache static files
-=======
-
-const CACHE_NAME = 'zion-tech-group-v1'
->>>>>>> origin/main
-const urlsToCache = [
-  '/',
-  '/about',
-  '/services',
-  '/contact',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
-<<<<<<< HEAD
-  '/manifest.json'
-];
+const urlsToCache = ['/', '/about', '/services', '/contact', '/static/js/bundle.js', '/static/css/main.css', '/manifest.json'];
 
 // Install event
-=======
-
-  '/manifest.json',
-  '/favicon.ico'
-
-]
->>>>>>> origin/main
->>>>>>> origin/main
 self.addEventListener('install', (event) => {
   console.log('Service Worker installing...');
   event.waitUntil(
-<<<<<<< HEAD
     caches.open(STATIC_CACHE)
       .then((cache) => {
         console.log('Caching static files');
@@ -57,7 +23,7 @@ self.addEventListener('install', (event) => {
         return self.skipWaiting();
       })
       .catch((error) => {
-        console.error('Error caching static files:', error);
+        console.error('Error caching static files: ', error);
       })
   );
 });
@@ -71,7 +37,7 @@ self.addEventListener('activate', (event) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              console.log('Deleting old cache:', cacheName);
+              console.log('Deleting old cache: ', cacheName);
               return caches.delete(cacheName);
             }
           })
@@ -104,7 +70,7 @@ self.addEventListener('fetch', (event) => {
       .then((cachedResponse) => {
         // Return cached version if available
         if (cachedResponse) {
-          console.log('Serving from cache:', request.url);
+          console.log('Serving from cache: ', request.url);
           return cachedResponse;
         }
 
@@ -128,7 +94,7 @@ self.addEventListener('fetch', (event) => {
             return response;
           })
           .catch((error) => {
-            console.error('Fetch failed:', error);
+            console.error('Fetch failed: ', error);
             
             // Return offline page for navigation requests
             if (request.mode === 'navigate') {
@@ -168,18 +134,11 @@ self.addEventListener('push', (event) => {
         dateOfArrival: Date.now(),
         primaryKey: data.primaryKey
       },
-      actions: [
-        {
-          action: 'explore',
-          title: 'Explore',
-          icon: '/icon-192x192.png'
-        },
-        {
-          action: 'close',
-          title: 'Close',
-          icon: '/icon-192x192.png'
-        }
-      ]
+      actions: [{
+          action: 'explore', title: 'Explore', icon: '/icon-192x192.png'
+        }, {
+          action: 'close', title: 'Close', icon: '/icon-192x192.png'
+        }]
     };
 
     event.waitUntil(
@@ -220,12 +179,12 @@ async function handleOfflineFormSubmissions() {
           // Remove successfully submitted data
           await removeStoredFormData(data.id);
         } catch (error) {
-          console.error('Failed to submit form data:', error);
+          console.error('Failed to submit form data: ', error);
         }
       }
     }
   } catch (error) {
-    console.error('Error handling offline form submissions:', error);
+    console.error('Error handling offline form submissions: ', error);
   }
 }
 
@@ -248,22 +207,10 @@ self.addEventListener('message', (event) => {
 });
 
 console.log('Service Worker loaded successfully');
-=======
-    caches.open(CACHE_NAME)
-      .then((cache) => {
-        console.log('Opened cache')
-        return cache.addAll(urlsToCache)
-      })
-<<<<<<< HEAD
   );
 });
 
 // Fetch event
-=======
-
-  )
-})
->>>>>>> origin/main
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
@@ -280,13 +227,12 @@ self.addEventListener('activate', (event) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
           if (cacheName !== CACHE_NAME) {
-            console.log('Deleting old cache:', cacheName)
+            console.log('Deleting old cache: ', cacheName)
             return caches.delete(cacheName)
           }
         })
       )
     })
-<<<<<<< HEAD
   );
 });
 
@@ -301,9 +247,3 @@ async function syncContactForm() {
   // Handle offline form submissions
   console.log('Syncing contact form data');
 }
-=======
-
-  )
-})
->>>>>>> origin/main
->>>>>>> origin/main

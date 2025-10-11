@@ -1,35 +1,10 @@
 #!/usr/bin/env node
 /**
  * Simple Merge - Handles new branches with conflict resolution
- */ import { execSync } from 'child_process'
+ */ import { execSync  } from 'child_process'
 import fs from 'fs'
 // //List of new branches to merge (from the fetch output)
-const newBranches = [
-  'cursor/fix-errors-and-merge-to-main-214 f',
-  'cursor/fix-errors-and-merge-to-main-25 ca',
-  'cursor/fix-errors-and-merge-to-main-277 a',
-  'cursor/fix-errors-and-merge-to-main-2 bbe',
-  'cursor/fix-errors-and-merge-to-main-3 bb0',
-  'cursor/fix-errors-and-merge-to-main-4415',
-  'cursor/fix-errors-and-merge-to-main-451 b',
-  'cursor/fix-errors-and-merge-to-main-4 c51',
-  'cursor/fix-errors-and-merge-to-main-4 dbc',
-  'cursor/fix-errors-and-merge-to-main-4 feb',
-  'cursor/fix-errors-and-merge-to-main-6 b3 f',
-  'cursor/fix-errors-and-merge-to-main-7795',
-  'cursor/fix-errors-and-merge-to-main-7 f81',
-  'cursor/fix-errors-and-merge-to-main-85 b7',
-  'cursor/fix-errors-and-merge-to-main-8 f2 f',
-  'cursor/fix-errors-and-merge-to-main-90 a6',
-  'cursor/fix-errors-and-merge-to-main-921 e',
-  'cursor/fix-errors-and-merge-to-main-9 ff4',
-  'cursor/fix-errors-and-merge-to-main-b024',
-  'cursor/fix-errors-and-merge-to-main-b122',
-  'cursor/fix-errors-and-merge-to-main-bba2',
-  'cursor/fix-errors-and-merge-to-main-d4 d4',
-  'cursor/fix-errors-and-merge-to-main-e1 bd',
-  'cursor/fix-errors-and-merge-to-main-e6 b7',
-  'cursor/fix-errors-and-merge-to-main-fcbc']
+const newBranches = ['cursor/fix-errors-and-merge-to-main-214 f', 'cursor/fix-errors-and-merge-to-main-25 ca', 'cursor/fix-errors-and-merge-to-main-277 a', 'cursor/fix-errors-and-merge-to-main-2 bbe', 'cursor/fix-errors-and-merge-to-main-3 bb0', 'cursor/fix-errors-and-merge-to-main-4415', 'cursor/fix-errors-and-merge-to-main-451 b', 'cursor/fix-errors-and-merge-to-main-4 c51', 'cursor/fix-errors-and-merge-to-main-4 dbc', 'cursor/fix-errors-and-merge-to-main-4 feb', 'cursor/fix-errors-and-merge-to-main-6 b3 f', 'cursor/fix-errors-and-merge-to-main-7795', 'cursor/fix-errors-and-merge-to-main-7 f81', 'cursor/fix-errors-and-merge-to-main-85 b7', 'cursor/fix-errors-and-merge-to-main-8 f2 f', 'cursor/fix-errors-and-merge-to-main-90 a6', 'cursor/fix-errors-and-merge-to-main-921 e', 'cursor/fix-errors-and-merge-to-main-9 ff4', 'cursor/fix-errors-and-merge-to-main-b024', 'cursor/fix-errors-and-merge-to-main-b122', 'cursor/fix-errors-and-merge-to-main-bba2', 'cursor/fix-errors-and-merge-to-main-d4 d4', 'cursor/fix-errors-and-merge-to-main-e1 bd', 'cursor/fix-errors-and-merge-to-main-e6 b7', 'cursor/fix-errors-and-merge-to-main-fcbc']
 // //Function to merge a single branch
 function mergeBranch(branchName) {
 //   try {

@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { CheckCircle, Star, Phone } from 'lucide-react'
+import { Link  } from 'react-router-dom'
+import { CheckCircle, Star, Phone  } from 'lucide-react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 interface ServicePageProps {/* TODO: Fix JSX expression */}
@@ -12,8 +12,10 @@ interface ServicePageProps {/* TODO: Fix JSX expression */}
   n: string,,
     ico,
   n: React.ComponentType,
-          <{ className?: string }>
+          <>
+  {className?: string }
   service,
+</>
   s: Array<{/* TODO: Fix JSX expression */}
   s: string[],}
     pric,
@@ -28,7 +30,7 @@ const,
 }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+      <Navigation /></Navigation>
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
@@ -46,7 +48,7 @@ const,
           </Link>
             <$2 />
               href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              <Phone className="w-4 h-4 mr-2" />
+              <Phone className="w-4 h-4 mr-2" /></Phone>
 // (302) 464-0950,
           </a>
           </div>
@@ -54,11 +56,11 @@ const,
         {/* Services Grid */}"
         <section className="container mx-auto px-4 py-16"></section>"
           < className="grid grid-cols-1,$2 />
-  md:grid-cols-2,"
-  lg:grid-cols-2 gap-8">
+  md: grid-cols-2,"
+  lg: grid-cols-2 gap-8">
             {services.map((service, index) => ()}"
           < key={index} className="cyber-card p-8,"$2 />
-  hover:scale-105 transition-all duration-300"></div>"
+  hover: scale-105 transition-all duration-300"></div>"
                 <div className="flex items-center mb-6"></div>"
                   <service.icon className="w-12 h-12 text-cyan-400 mr-4" /></service>"
                   <h3 className="text-2xl font-bold text-white">{service.title}</h3>"
@@ -66,7 +68,7 @@ const,
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-gray-300"></li>"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-2" /></CheckCircle>
                       {feature}
                   ))}
                 <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}
@@ -76,8 +78,8 @@ const,
             Why Choose Our {title}?
           </h2>"
           < className="grid grid-cols-1,$2 />
-  md:grid-cols-2,"
-  lg:grid-cols-4 gap-8">
+  md: grid-cols-2,"
+  lg: grid-cols-4 gap-8">
             {benefits.map((benefit, index) => ()}"
           <div key={index} className="text-center"></div>"
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>"

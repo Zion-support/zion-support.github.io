@@ -5,7 +5,7 @@ export function getPool(): any {
   if (!pool) {
     // pool = new Pool({ connectionString: (globalThis as any).process?.env?.DATABASE_URL })
     pool = null
-import { Pool, PoolClient } from 'pg'
+import { Pool, PoolClient  } from 'pg'
 let pool: Pool | null = null
 export function getPool(): Pool {
   if (!pool) {

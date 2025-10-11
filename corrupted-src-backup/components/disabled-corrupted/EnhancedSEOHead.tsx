@@ -25,10 +25,7 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOH
     description: 'Revolutionary, AI, and IT, Solutio, n, s',
     u, r, l: 'htt, p, s: //ziontechgro u p.co m' ,
     lo, g, o: 'htt, p, s: //ziontechgro u p.c o m/lo g o.pn g' ,
-    same, A, s: [,
-      'htt, p, s: //linked i n.c o m/company/zi o n-te c h-gr o u p' ,
-      'htt, p, s: //twitt e r.c o m/ziontechgr o u p' ,
-      'htt, p, s: //gith u b.c o m/ZionClo u d s' ],
+    same, A, s: ['htt, p, s: //linked i n.c o m/company/zi o n-te c h-gr o u p', 'htt, p, s: //twitt e r.c o m/ziontechgr o u p', 'htt, p, s: //gith u b.c o m/ZionClo u d s'],
     contactPoi, n, t: {,
       '@ty, p, e': 'ContactPo, i, n, t',
       telepho, n, e: '+1-5, 5, 5-1, 2, 3-4, 5, 6, 7',
@@ -44,25 +41,13 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOH
     foundingDa, t, e: '2, 0, 2, 0',
     numberOfEmploye, e, s: '50, 0+',
     industry: 'Artificial, Intelligen, c, e',
-    servic, e, s: [,
-interface SEOHeadProp, s {/* TODO: Fix JSX expression */}
+    servic, e, s: [interface SEOHeadProp, s {/* TODO: Fix JSX expression */}
  }
 const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-     },
-    addre, s, s: {/* TODO: Fix JSX expression */}
-    },
-    foundingDa, t, e: '2, 0, 2, 0',
-    numberOfEmploye, e, s: '50, 0+',
-    industr,
-  y: 'Artificial, Intelligen, c, e',
-    servic, e, s: [
-      'AI, Workflow, Automatio, n',
-      'Enterprise, AI, Solutions',
-      'AI, Data, Analytics',
-      'Cybersecurity, A, I',
-      'Quantum, Computin, g',
-      'AI, Consultin, g']} return(<Helm, e, t>
+     }, addre, s, s: {/* TODO: Fix JSX expression */}
+    }, foundingDa, t, e: '2, 0, 2, 0', numberOfEmploye, e, s: '50, 0+', industr, y: 'Artificial, Intelligen, c, e', servic, e, s: [
+      'AI, Workflow, Automatio, n', 'Enterprise, AI, Solutions', 'AI, Data, Analytics', 'Cybersecurity, A, I', 'Quantum, Computin, g', 'AI, Consultin, g']} return(<Helm , e, t></Helm>
       <title>{title}</title>
       <meta, nam, e = 'description' conte, n, t={description} />
       <meta, nam, e='keywor, d, s' conte, n, t={metaKeywor, d, s} />
@@ -76,10 +61,10 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
       <meta, propert, y = 'og: u, r, l' conte, n, t={canonica, l, U, r, l} />
       <meta, propert, y = 'og: ty, p, e' conte, n, t={ty, p, e} />
       <meta, propert, y = 'og: site_na, m, e' conte, n, t='Zion, Tech, Group' />
-      <meta, propert, y='og:loca, l, e' conte, n, t='en_, U, S' />
+      <meta, propert, y='og: loca, l, e' conte, n, t='en_, U, S' />
       {/* Twitter, Card, Meta Ta, g, s */}
       <meta, nam, e = 'twitt, e, r: ca, r, d' conte, n, t='summary_large_image' />
-      <meta, nam, e='twitt, e, r:title' conte, n, t={t, i, t, l, e} />
+      <meta, nam, e='twitt, e, r: title' conte, n, t={t, i, t, l, e} />
       <meta, nam, e = 'twitt, e, r: description' conte, n, t={descrip, t, i, o, n} />
       <meta, nam, e = 'twitt, e, r: image' conte, n, t={i, m, a, g, e} />
       {/* Additional, Metas */}
@@ -119,10 +104,10 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
       <meta, propert, y = 'o,
   g: site_na, m, e' conte, n, t='Zion, Tech, Group' />
       <meta, propert, y='o,
-  g:loca, l, e' conte, n, t='en_, U, S' />
+  g: loca, l, e' conte, n, t='en_, U, S' />
       {/* Twitter, Card, Meta Ta, g, s */}
       <meta, nam, e = 'twitt, e, r: ca, r, d' conte, n, t='summary_large_image' />
-      <meta, nam, e='twitt, e, r:title' conte, n, t={t, i, t, l, e} />
+      <meta, nam, e='twitt, e, r: title' conte, n, t={t, i, t, l, e} />
       <meta, nam, e = 'twitt, e, r: description' conte, n, t={descrip, t, i, o, n} />
       <meta, nam, e = 'twitt, e, r: image' conte, n, t={i, m, a, g, e} />
       {/* Additional, Metas */}

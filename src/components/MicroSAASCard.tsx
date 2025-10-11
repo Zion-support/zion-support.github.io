@@ -61,26 +61,26 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
       <div className="space-y-4">
         <div></div>"
           <h4 className="text-sm font-semibold text-white mb-2">Key,
-  Features:</h4>"
+  Features: </h4>"
           <ul className="space-y-1">
             {service.features.slice(0, 4).map((feature, index) => ()}"
           <li key={index} className="flex items-center text-xs text-gray-300"></li>"
-                <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
                 {feature}
             ))}
         <div></div>"
           <h4 className="text-sm font-semibold text-white mb-2">Benefit,
-  s:</h4>"
+  s: </h4>"
           <ul className="space-y-1">
             {service.benefits.slice(0, 3).map((benefit, index) => ()}"
           <li key={index} className="flex items-center text-xs text-gray-300"></li>"
-                <Star className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0" />
+                <Star className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0" /></Star>
                 {benefit}
             ))}
         </div>"
         <div className="pt-4 border-t border-gray-700"></div>"
           <div className="text-xs text-gray-400 mb-2">Technologie,
-  s:</div>"
+  s: </div>"
           <div className="flex flex-wrap gap-1">
             {service.technologies.slice(0, 3).map((tech, index) => ()}"
           <span key={index} className="bg-gray-800 text-gray-300 px-2 py-1 rounded text-xs">
@@ -90,9 +90,9 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
         <div className="pt-4">
           <a>
             href={/* TODO: Fix JSX expression */}
-  o:kleber@ziontechgroup.com'}"
+  o: kleber@ziontechgroup.com'}"
             className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg,
-  hover:from-cyan-600,"
+  hover: from-cyan-600,"
   hover: to-blue-700 transition-all duration-300 flex items-center justify-center text-sm font-medium"
 // >
 //             Get Started,"

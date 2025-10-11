@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to fix lint warnings in a file
@@ -20,7 +20,7 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
     })
     // Fix unused imports
     content = content.replace(/import React from 'react';/g, '')
-    content = content.replace(/import { Link } from 'react-router-dom';/g, '')
+    content = content.replace(/import { Link  } from 'react-router-dom';/g, '')
     // Fix console statements in test files
     if (filePath.includes('setupTests') || filePath.includes('test')) {
       content = content.replace(/console\.(log|warn|error|info)\([^)]*\);?/g, '')
@@ -40,7 +40,7 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
     }
     
     if (filePath.includes('offline/page.tsx')) {/* TODO: Fix JSX expression */}
-      content = content.replace(/import { Link } from 'react-router-dom';/g, '')
+      content = content.replace(/import { Link  } from 'react-router-dom';/g, '')
     }
     
     if (filePath.includes('service-template.tsx')) {/* TODO: Fix JSX expression */}

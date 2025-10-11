@@ -78,16 +78,12 @@ export interface FuturisticAiService2029 {/* TODO: Fix JSX expression */}
     address: string,
   }
 }
-export const futuristicAIServices2029: FuturisticAiService2029[] = [,
-    id: "2029-futuristic-ai", name: "2029 Futuristic AI Platform",
-    tagline: "Futuristic AI for 2029", price: "$499/month"
+export const futuristicAIServices2029: FuturisticAiService2029[] = [id: "2029-futuristic-ai", name: "2029 Futuristic AI Platform", tagline: "Futuristic AI for 2029", price: "$499/month"
     description: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029."
-    features: [,
-      "Futuristic AI"
+    features: [, "Futuristic AI"
       "Advanced capabilities"
       "Breakthrough algorithms"
-      "Innovation platform",
-      "Future-ready AI"],
+      "Innovation platform", "Future-ready AI"],
     link: "/services/2029-futuristic-ai", category: "Futuristic AI 2029",
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
@@ -127,23 +123,17 @@ export const futuristicAIServices2029: FuturisticAiService2029[] = [,
   s: string}
 }
 export const,
-  futuristicAIServices2029: FuturisticAiService2029[] = [,
-    i,"
-  d: "2029-futuristic-ai", nam,"
-  e: "2029 Futuristic AI Platform",
-    taglin,"
-  e: "Futuristic AI for 2029", pric,"
-  e: "$499/month",
-    descriptio,"
-  n: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",
-    feature,
-  s: [,"
+  futuristicAIServices2029: FuturisticAiService2029[] = [i, "
+  d: "2029-futuristic-ai", nam, "
+  e: "2029 Futuristic AI Platform", taglin, "
+  e: "Futuristic AI for 2029", pric, "
+  e: "$499/month", descriptio, "
+  n: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.", feature, s: [, "
       "Futuristic AI""
       "Advanced capabilities""
       "Breakthrough algorithms""
       "Innovation platform""
-      "Future-ready AI"
-    ],
+      "Future-ready AI"],
     lin,"
   k: "/services/2029-futuristic-ai", categor,"
   y: "Futuristic AI 2029",
@@ -178,13 +168,7 @@ id: "2029-futuristic-ai"
     tagline: "Futuristic AI for 2029",
     price: "$499/month",
     description: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",
-    features: [,
-      "Futuristic AI",
-      "Advanced capabilities",
-      "Breakthrough algorithms",
-      "Innovation platform",
-      "Future-ready AI"
-    ],
+    features: ["Futuristic AI", "Advanced capabilities", "Breakthrough algorithms", "Innovation platform", "Future-ready AI"],
     link: "/services/2029-futuristic-ai"
     category: "Futuristic AI 2029"
     realImplementation: true
@@ -210,13 +194,12 @@ id: "2029-futuristic-ai"
     descriptio,"
   n: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",
     feature,
-  s: [,"
-      "Futuristic AI","
-      "Advanced capabilities","
-      "Breakthrough algorithms","
-      "Innovation platform","
-      "Future-ready AI"
-    ],
+  s: ["
+      "Futuristic AI", "
+      "Advanced capabilities", "
+      "Breakthrough algorithms", "
+      "Innovation platform", "
+      "Future-ready AI"],
     lin,"
   k: "/services/2029-futuristic-ai",
     categor,"
@@ -288,13 +271,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  futuristicAIServices2029: FuturisticAiService2029[] = [ i,"
-  d: "2029-futuristic-ai", nam,"
-  e: "2029 Futuristic AI Platform", taglin,"
-  e: "Futuristic AI for 2029", pric,"
-  e: "$499/month", descriptio,"
-  n: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.", feature,"
-  s: [ "Futuristic AI" "Advanced capabilities" "Breakthrough algorithms" "Innovation platform" "Future-ready AI" ], lin,"
+  futuristicAIServices2029: FuturisticAiService2029[] = [i, "
+  d: "2029-futuristic-ai", nam, "
+  e: "2029 Futuristic AI Platform", taglin, "
+  e: "Futuristic AI for 2029", pric, "
+  e: "$499/month", descriptio, "
+  n: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.", feature, "
+  s: [ "Futuristic AI" "Advanced capabilities" "Breakthrough algorithms" "Innovation platform" "Future-ready AI"], lin,"
   k: "/services/2029-futuristic-ai", categor,"
   y: "Futuristic AI 2029", realImplementatio,
   n: true, contactInf,
@@ -311,7 +294,7 @@ i,
   e: "Futuristic AI for 2029", pric,"
   e: "$499/month", descriptio,"
   n: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.", feature,"
-  s: [ "Futuristic AI", "Advanced capabilities", "Breakthrough algorithms", "Innovation platform", "Future-ready AI" ], lin,"
+  s: ["Futuristic AI", "Advanced capabilities", "Breakthrough algorithms", "Innovation platform", "Future-ready AI"], lin,"
   k: "/services/2029-futuristic-ai", categor,"
   y: "Futuristic AI 2029", realImplementatio,
   n: true, contactInf,

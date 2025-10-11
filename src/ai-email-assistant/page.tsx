@@ -1,15 +1,15 @@
-import { Link } from 'react-router-dom'
+import { Link  } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+      <Navigation /></Navigation>
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 holographic-text cyber-text">
+          <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 holographic-text cyber-text">
 // AI Email Assistant</h1>"
           < className="text-xl,"$2 />
-  md:text-2xl text-cyan-400 mb-8 font-medium neon-glow">
+  md: text-2xl text-cyan-400 mb-8 font-medium neon-glow">
 // Smart Email Management with AI-Powered Intelligence
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
@@ -28,8 +28,8 @@ import Footer from '../components/Footer'
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
 // Key Features</h2>"
           < className="grid grid-cols-1,$2 />
-  md:grid-cols-2,"
-  lg:grid-cols-3 gap-8"></div>"
+  md: grid-cols-2,"
+  lg: grid-cols-3 gap-8"></div>"
             <div className="cyber-card hologram-card p-6"></div>"
               <div className="text-4xl mb-4"></div>"
               <h3 className="text-xl font-bold text-white mb-4">Smart Responses</h3>"
@@ -76,7 +76,7 @@ import Footer from '../components/Footer'
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
 // Pricing Plans</h2>"
           < className="grid grid-cols-1,"$2 />
-  md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>"
+  md: grid-cols-3 gap-8 max-w-6xl mx-auto"></div>"
             <div className="cyber-card hologram-card p-8 text-center"></div>"
               <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>"
               <div className="text-4xl font-bold text-cyan-400 mb-6">$29<span className="text-lg text-gray-400">/month</span></div>"

@@ -436,7 +436,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
           wcagCriterion: '2.4.6',
           message: `Empty ${heading.tagName} at position ${index + 1}`,
           element: heading.tagName.toLowerCase(),
-          fix:         ,
+          fix:  ,
 $4})
       }
       previousLevel = level
@@ -468,7 +468,7 @@ const h1Count = element.querySelectorAll('h1').length
         wcagCriterion: '2.4.6',
         message: `Found ${h1Count} h1 elements (should have only one)`,
         element: 'h1',
-        fix:       ,
+        fix:  ,
 $4})
     }
   }
@@ -592,8 +592,7 @@ const target = link.getAttribute('target')
           message: `Link ${index + 1} opens in new window without warning`,
           element: `a[to="${link.getAttribute('href')}"]`,
           fix: 'Add indication that link opens in new window',
-          codeExample:
-            '<Link to="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Link>'
+          codeExample: '<Link to="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Link>'
         })
       }
     })
@@ -740,7 +739,7 @@ const target = link.getAttribute('target')
 
           "
           <label for="email">Emai,"
-  l:</label><input id="email" name="email" />'
+  l: </label><input id="email" name="email" />'
         }
   )
       }
@@ -759,7 +758,7 @@ const target = link.getAttribute('target')
     const elementsWithColor = element.querySelectorAll('[style*="color"]')
     elementsWithColor.forEach(el => {
       const style = el.getAttribute('style'),
-      if (style?.includes('color:') && !style.includes('background')) {
+      if (style?.includes('color: ') && !style.includes('background')) {
         this.addIssue({
           type: 'color-without-background',
    * @private
@@ -791,7 +790,7 @@ const elementsWithColor = element.querySelectorAll('[style*="color"]')
           wcagCriterion: '1.4.3',
           message: 'Element has inline color without explicit background',
           element: el.tagName.toLowerCase(),
-          fix:         ,
+          fix:  ,
 $4})
       }
     })
@@ -893,7 +892,7 @@ const clickableNonInteractive = element.querySelectorAll('[onclick]:not(a):not(b
           message: `${el.tagName.toLowerCase()} has onclick but no keyboard support`,
           element: el.tagName.toLowerCase(),
           fix: 'Add role, tabindex, and keyboard event handlers, or use a button',
-          codeExample:         ,
+          codeExample:  ,
 $4})
       }
     })
@@ -904,37 +903,19 @@ $4})
    * @private
    * @param element - Root element to check
    */
-  private checkARIA(element: Element): void {
-    const elementsWithAria = element.querySelectorAll(
+  private checkARIA(element: Element): void >{const elementsWithAria = element.querySelectorAll(
       '[role], [aria-label], [aria-labelledby], [aria-describedby]'
     )
     elementsWithAria.forEach(el => {
       const role = el.getAttribute('role')
       // Check for invalid ARIA roles
-      const validRoles = [
-        'alert',
-        'button',
-        'checkbox',
-        'dialog',
-        'link',
-        'navigation',
-        'region',
-        'search',
-        'tabpanel',
-        'banner',
-        'complementary',
-        'contentinfo',
-        'form',
-        'main',
-        'article',
-        'note',
-        'presentation']
+      const validRoles = ['alert', 'button', 'checkbox', 'dialog', 'link', 'navigation', 'region', 'search', 'tabpanel', 'banner', 'complementary', 'contentinfo', 'form', 'main', 'article', 'note', 'presentation']
       if (role && !validRoles.includes(role)) {
         this.addIssue({
           type: 'invalid-aria-role',
           codeExample: '
 
-          <button onClick={handleClick}>Click me</button>'
+          <button onClick={handleClick}Click me</button>'
         }
   )
       }
@@ -961,10 +942,7 @@ $4})
 })
       const role = el.getAttribute('role')
       // Check for invalid ARIA roles
-const validRoles = [
-  // TOD,
-  O: Add items
-],
+const validRoles = [// TOD, O: Add items],
 //         'alert',
 //         'button',
 //         'checkbox',
@@ -995,7 +973,7 @@ const validRoles = [
           wcagCriterion: '4.1.2',
           message: `Invalid ARIA role: "${role}"`,
           element: el.tagName.toLowerCase(),
-          fix:         ,
+          fix:  ,
 $4})
       }
       // Check aria-labelledby references
@@ -1029,7 +1007,7 @@ const labelledBy = el.getAttribute('aria-labelledby')
             wcagCriterion: '4.1.2',
             message: `aria-labelledby references non-existent element: "${labelledBy}"`,
             element: el.tagName.toLowerCase(),
-            fix:           ,
+            fix:  ,
 $4})
         }
       }
@@ -1082,7 +1060,7 @@ $4})
         wcagCriterion: '2.4.1',
         message: 'Page is missing a main landmark',
         fix: 'Add a <main> element or role="main"',
-        codeExample:       ,
+        codeExample:  ,
 $4})
     }
   }

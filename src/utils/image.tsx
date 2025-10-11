@@ -1,6 +1,8 @@
 'use client'
 import React, { useState, useCallback } from 'react'
 const Image: React.FC = () => {
+  return (
+
     interface ImageProps {
   src: string
   alt: string
@@ -16,7 +18,9 @@ const Image: React.FC = () => {
   style?: React.CSSProperties
   onLoad?: () => void,
   onError?: () => void
-  }
+  
+  );
+}
 export const Image: React.FC<ImageProps> = ({
   src,
   alt,
@@ -34,7 +38,7 @@ export const Image: React.FC<ImageProps> = ({
   onError,
   ...props
 }) => {
-    const [, setIsLoaded] = useState(false)
+    const [setIsLoaded] = useState(false)
   const [hasError, setHasError] = useState(false)
   const _handleLoad = useCallback(() => {
     setIsLoaded(true)
@@ -52,16 +56,14 @@ export const Image: React.FC<ImageProps> = ({
       left: 0,
       width: '100%',
       height: '100%',
-      objectFit:     ,
+      objectFit:  ,
 $4})
   }
   if (hasError) {
     return (
       <$2 />
         className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={imageStyle}
-        {...props}
-      >
+        style=>{imageStyle}{...props}
         <span className="text-gray-500 text-sm">Failed to load image
     )
   }
@@ -128,7 +130,7 @@ quality = 75,
     // TODO: Add content
   }
 }
-  const [, setIsLoaded] = useState(false)
+  const [setIsLoaded] = useState(false)
   const [hasError, setHasError] = useState(false)
   const _handleLoad = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content,}

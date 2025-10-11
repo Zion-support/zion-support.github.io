@@ -1,6 +1,6 @@
-import "https://deno.land/x/xhr@0.1.0/mod.ts"
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.7.1'
+import "https: //deno.land/x/xhr@0.1.0/mod.ts"
+import { serve  } from 'https: //deno.land/std@0.168.0/http/server.ts'
+import { createClient  } from 'https: //esm.sh/@supabase/supabase-js@2.7.1'
 const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY')
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -38,7 +38,7 @@ serve(async (req) => {
       )
     }
     // Create a request to OpenAI API
-    const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {
+    const openAIResponse = await fetch('https: //api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${OPENAI_API_KEY}`,
@@ -47,23 +47,17 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         model: 'gpt-4o-mini',
-        messages: [
-          {
-            role: 'system',
-            content: `You are an expert HR assistant. Based on the user's bio and experience, write a professional and engaging 100–150 word summary for their profile. Then extract up to 8 clear skill tags, categorized by type for better filtering.`
-          },
-          {
-            role: 'user',
-            content: `Create a professional profile summary and categorize skills based on this information:
+        messages: [{
+            role: 'system', content: `You are an expert HR assistant. Based on the user's bio and experience, write a professional and engaging 100–150 word summary for their profile. Then extract up to 8 clear skill tags, categorized by type for better filtering.`
+          }, {
+            role: 'user', content: `Create a professional profile summary and categorize skills based on this information:
             Name: ${talentData.name}
             Title: ${talentData.title}
             Bio: ${talentData.bio}
             Skills: ${talentData.skills.join(', ')}
             Location: ${talentData.location || 'Not specified'}
-            Return the result as a JSON object with these keys: 
-            {
-              "summary": "The professional summary text (100-150 words)",
-              "categorizedSkills": {
+            Return the result as a JSON object with these keys: {
+              "summary": "The professional summary text (100-150 words)", "categorizedSkills": {
                 "programming": ["skill1", "skill2"],
                 "devops": ["skill1", "skill2"],
                 "platforms": ["skill1", "skill2"],
@@ -90,7 +84,7 @@ serve(async (req) => {
     try {
       enhancedProfile = JSON.parse(responseContent)
     } catch (e) {
-      console.error("Error parsing OpenAI response:", e)
+      console.error("Error parsing OpenAI response: ", e)
       throw new Error("Failed to parse the generated content")
     }
     return new Response(
@@ -98,7 +92,7 @@ serve(async (req) => {
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   } catch (error) {
-    console.error("Error in talent-profile-enhancer function:", error)
+    console.error("Error in talent-profile-enhancer function: ", error)
     return new Response(
       JSON.stringify({ error: error.message }),
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }

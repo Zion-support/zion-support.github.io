@@ -11,15 +11,12 @@ const seedCompany: CompanyRecord = {id: 'cmp_acme'
     usageLimits: {
       monthlyJobPosts: 50
       budgetCapUsd: 10000}}
-  members: [
-    { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' }
+  members: [{ id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' }
     { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' }
     { id: 'mem_3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' }]
-  activity: [
-    { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'admin@acme.com', action: 'created_company' }
+  activity: [{ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'admin@acme.com', action: 'created_company' }
     { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'maria@acme.com', action: 'posted_job', meta: { jobId: 'job_123' } }]
-  invoices: [
-    { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' }
+  invoices: [{ id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' }
     { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]}
 const companiesById: Record<string CompanyRecord> = { [seedCompany.id]: seedCompany }
 const companiesBySlug: Record<string CompanyRecord> = { [seedCompany.slug]: seedCompany }
@@ -50,7 +47,7 @@ export const store = {getCompanyBySlug(slug: string) {
   addMember(companyId: string, name: string, email: string, role: EnterpriseRole): CompanyMember | null {const company = companiesById[companyId]
     if (!company) return null
     const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role }
-import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise'
+import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord  } from '../types/enterprise'
 const generateId = () => Math.random().toString(36).slice(2, 10)
 const seedCompany: CompanyRecord = {
   id: 'cmp_acme',
@@ -67,19 +64,9 @@ const seedCompany: CompanyRecord = {
       budgetCapUsd: 10000,
     },
   },
-  members: [
-    { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },
-    { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },
-    { id: 'mem_3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' },
-  ],
-  activity: [
-    { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'admin@acme.com', action: 'created_company' },
-    { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'maria@acme.com', action: 'posted_job', meta: { jobId: 'job_123' } },
-  ],
-  invoices: [
-    { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' },
-    { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' },
-  ],
+  members: [{ id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' }, { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' }, { id: 'mem_3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' }],
+  activity: [{ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'admin@acme.com', action: 'created_company' }, { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'maria@acme.com', action: 'posted_job', meta: { jobId: 'job_123' } }],
+  invoices: [{ id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' }, { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }],
 }
 const companiesById: Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany }
 const companiesBySlug: Record<string, CompanyRecord> = { [seedCompany.slug]: seedCompany }
@@ -165,16 +152,9 @@ export const store = {
     usageLimits: {
       monthlyJobPosts: 50,
       budgetCapUsd: 10000}},
-  members: [
-    { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },
-    { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },
-    { id: 'mem_3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' }],
-  activity: [
-    { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'admin@acme.com', action: 'created_company' },
-    { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'maria@acme.com', action: 'posted_job', meta: { job_id: 'job_123' } }],
-  invoices: [
-    { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' },
-    { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]},
+  members: [{ id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' }, { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' }, { id: 'mem_3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' }],
+  activity: [{ id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'admin@acme.com', action: 'created_company' }, { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'maria@acme.com', action: 'posted_job', meta: { job_id: 'job_123' } }],
+  invoices: [{ id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' }, { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]},
 const companiesById: Record<string CompanyRecord> = { [seedCompany.id]: seedCompany },
 const companiesBySlug: Record<string CompanyRecord> = { [seedCompany.slug]: seedCompany },
 export const store = {
@@ -259,7 +239,7 @@ export const store = {
       company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length)
       company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } })
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }

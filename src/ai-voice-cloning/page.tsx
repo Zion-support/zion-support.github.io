@@ -1,37 +1,19 @@
 import React from 'react'
-import { Music, Mic, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react'
+import { Music, Mic, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles  } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 const AIVoiceCloningPage: React.FC = () => {
-  const features = [
-    'Voice Cloning',
-    'Text-to-Speech',
-    'Emotion Control',
-    'Multi-language Support',
-    'Voice Training',
-    'API Integration',
-    'Real-time Processing',
-    'High Quality Audio',
-    'Custom Voice Models',
-    'Batch Processing'
-  ]
-  const benefits = [
-    'Natural voice quality',
-    'Cost-effective solution',
-    'Scalable technology',
-    'Custom voices',
-    'Multi-language support',
-    'Easy integration'
-  ]
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$199',
-      period: '/month',
-      features: ['5 voice clones', '10 hours/month', 'Basic emotions', 'Email support'],
+  return (
+
+  const features = ['Voice Cloning', 'Text-to-Speech', 'Emotion Control', 'Multi-language Support', 'Voice Training', 'API Integration', 'Real-time Processing', 'High Quality Audio', 'Custom Voice Models', 'Batch Processing']
+  const benefits = ['Natural voice quality', 'Cost-effective solution', 'Scalable technology', 'Custom voices', 'Multi-language support', 'Easy integration']
+  const pricingPlans = [{
+      name: 'Starter', price: '$199', period: '/month', features: ['5 voice clones', '10 hours/month', 'Basic emotions', 'Email support'],
       popular: false
-    },
+    
+  );
+},
     {
       name: 'Professional',
       price: '$299',
@@ -48,22 +30,21 @@ const AIVoiceCloningPage: React.FC = () => {
     }
   ]
   return (
-    <React.Fragment>
-      <SEOOptimizer
-        title="AI Voice Cloning Studio - Create Realistic Voice Clones | Zion Tech Group"
+    <React .Fragment></React>
+      <SEOOptimizer title="AI Voice Cloning Studio - Create Realistic Voice Clones | Zion Tech Group"
         description="Create realistic voice clones for content, presentations, and customer service with AI Voice Cloning Studio. Professional voice synthesis technology starting at $199/month."
         keywords={['AI voice cloning', 'voice synthesis', 'text to speech', 'voice generation', 'AI voices', 'voice automation']}
-        canonicalUrl="https://ziontechgroup.com/ai-voice-cloning"
-      />
+        canonicalUrl="https: //ziontechgroup.com/ai-voice-cloning"
+      /></SEOOptimizer>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
+        <Navigation /></Navigation>
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center justify-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4">
-                  <Music className="w-8 h-8 text-white" />
+                  <Music className="w-8 h-8 text-white" /></Music>
                 </div>
                 <h1 className="text-4xl md: text-5xl font-bold text-white neon-text">
                   AI Voice Cloning Studio,
@@ -80,7 +61,7 @@ const AIVoiceCloningPage: React.FC = () => {
                 <$2 />
                   href="#demo"
                   className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                  <Play className="w-5 h-5" />
+                  <Play className="w-5 h-5" /></Play>
                   Listen to Samples,
   
               </div>
@@ -89,28 +70,28 @@ const AIVoiceCloningPage: React.FC = () => {
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Advanced Voice Cloning Features
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
               {features.map((feature, index) => (
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card p-6 hover: scale-105 transition-all duration-300">
                   <div className="flex items-center mb-4">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" /></CheckCircle>
                     <h3 className="text-lg font-semibold text-white">{feature}
               ))}
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Why Choose AI Voice Cloning Studio?
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Zap className="w-8 h-8 text-white" />
+                    <Zap className="w-8 h-8 text-white" /></Zap>
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit}
               ))}
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Simple, Transparent Pricing
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {plan.popular && (
@@ -125,7 +106,7 @@ const AIVoiceCloningPage: React.FC = () => {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" /></CheckCircle>
                         {feature}
                     ))}
                   <$2 />
@@ -133,7 +114,7 @@ const AIVoiceCloningPage: React.FC = () => {
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'cyber-button'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                        : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900'
                     }`}
                   >
                     Get Started
@@ -161,7 +142,7 @@ const AIVoiceCloningPage: React.FC = () => {
             </div>
           </section>
         </main>
-        <Footer />
+        <Footer /></Footer>
       </div>
     </React.Fragment>
   ),

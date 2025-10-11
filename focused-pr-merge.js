@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Focused PR Merger - Merges specific recent branches that are likely open PRs
- */ import { execSync } from 'child_process'
+ */ import { execSync  } from 'child_process'
 import fs from 'fs'
 // //Step 1: Ensure we're on main and up to date,
 // try {,
@@ -12,40 +12,19 @@ import fs from 'fs'
   }
 
 //Step 2: Define specific branches to merge (most recent and relevant),
-const branchesToMerge = [,
-// //Step,
-  1: Ensure we're on main and up to date,
-// try {/* TODO: Fix JSX expression */}
+const branchesToMerge = [// //Step, 1: Ensure we're on main and up to date, // try {/* TODO: Fix JSX expression */}
   o: 'inherit' })
   execSync('git pull origin main', {/* TODO: Fix JSX expression */})
   o: 'inherit' })
 //   } catch (error) {/* TODO: Fix JSX expression */}
 }
 
-//Step,
-  2: Define specific branches to merge (most recent and relevant)
+//Step, 2: Define specific branches to merge (most recent and relevant)
 const branchesToMerge = [
-  //Recent error fixing branches,
-  'cursor/build-and-fix-errors-008f',
-  'cursor/build-and-fix-errors-079c',
-  'cursor/build-and-fix-errors-0ebf',
-  'cursor/build-and-fix-errors-0ec8',
-  'cursor/build-and-fix-errors-0f78',
-  //Enhancement branches
-  'cursor/automate-futuristic-front-page-enhancements-738d',
-  'cursor/automate-futuristic-front-page-enhancements-aafa',
-  'cursor/automate-project-enhancement-and-merge-cac0',
-  'cursor/automate-site-navigation-enhancement-285c',
-  //Build improvement branches
-  'cursor/automate-automation-redundancy-and-build-improvement-e3e4',
-  'cursor/automate-automation-redundancy-and-build-improvement-ea74',
-  'cursor/automate-netlify-build-fixes-and-monitoring-43ee',
-  'cursor/automate-netlify-build-fixing-and-monitoring-f10e',
-  //AI-powered features
-  'cursor/build-ai-powered-project-teams-dcf8',
-  'cursor/build-ai-powered-smart-contract-generator-b22 e',
-  'cursor/build-ai-pricing-suggestion-engine-ea4 e',
-  'cursor/build-ai-resume-and-portfolio-builder-workflow-2029']
+  //Recent error fixing branches, 'cursor/build-and-fix-errors-008f', 'cursor/build-and-fix-errors-079c', 'cursor/build-and-fix-errors-0ebf', 'cursor/build-and-fix-errors-0ec8', 'cursor/build-and-fix-errors-0f78', //Enhancement branches
+  'cursor/automate-futuristic-front-page-enhancements-738d', 'cursor/automate-futuristic-front-page-enhancements-aafa', 'cursor/automate-project-enhancement-and-merge-cac0', 'cursor/automate-site-navigation-enhancement-285c', //Build improvement branches
+  'cursor/automate-automation-redundancy-and-build-improvement-e3e4', 'cursor/automate-automation-redundancy-and-build-improvement-ea74', 'cursor/automate-netlify-build-fixes-and-monitoring-43ee', 'cursor/automate-netlify-build-fixing-and-monitoring-f10e', //AI-powered features
+  'cursor/build-ai-powered-project-teams-dcf8', 'cursor/build-ai-powered-smart-contract-generator-b22 e', 'cursor/build-ai-pricing-suggestion-engine-ea4 e', 'cursor/build-ai-resume-and-portfolio-builder-workflow-2029']
 // //Step 3: Enhanced conflict resolution function,
 function resolveConflictsAndMerge(branchName) {,
 //   try {,

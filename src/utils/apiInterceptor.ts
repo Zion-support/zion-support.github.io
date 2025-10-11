@@ -45,11 +45,11 @@ export interface APIConfig {
 }
     request?: (confi)
   g: RequestConfig) => RequestConfig | Promise,
-          <RequestConfig>
+          <RequestConfig ></RequestConfig>
     response?: (respons)
-  e: Response) => Response | Promise<Response>
+  e: Response) => Response | Promise<Response ></Response>
     error?: (erro)
-  r: Error) => Error | Promise<Error>
+  r: Error) => Error | Promise<Error ></Error>
   }
 }
 export interface RequestConfig {/* TODO: Fix JSX expression */}
@@ -154,7 +154,7 @@ export class APIInterceptor {
   O: Add content,}
 }
         return cachedResponse as APIResponse
-          <T>
+          <T ></T>
       }
     }
     // Check for pending identical requests

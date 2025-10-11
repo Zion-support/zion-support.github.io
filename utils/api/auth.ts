@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from 'next'
+import { NextApiRequest, NextApiResponse  } from 'next'
 export function getUserFromRequest(req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session
   const authHeader = req.headers.authorization
@@ -7,8 +7,7 @@ export function getUserFromRequest(req: any): User | null {
   }
   return user
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-import { NextApiRequest, NextApiResponse } from 'next'
+import { NextApiRequest, NextApiResponse  } from 'next'
 export type CurrentUser = {
   userId: string
   role: 'client' | 'talent' | 'admin'

@@ -89,18 +89,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     }
   }
   const preloadCriticalResources = () => {
-    const criticalResources = [
-      {
-        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600,700&display=swap',
-        as: 'style',
-        type: 'text/css'
-      },
-      {
-        href: '/styles/critical.css',
-        as: 'style',
-        type: 'text/css'
-      }
-    ]
+    const criticalResources = [{
+        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600, 700&display=swap', as: 'style', type: 'text/css'
+      }, {
+        href: '/styles/critical.css', as: 'style', type: 'text/css'
+      }]
     criticalResources.forEach((resource) => {
     const link = document.createElement('link')
       link.rel = 'preload'
@@ -118,14 +111,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     setOptimizationStatus(prev => ({ ...prev, codeSplit: true }))
   }
   const addResourceHints = () => {
-    const hints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
-      { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
-    ]
+    const hints = [{ rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' }, { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' }, { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' }, { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' }, { rel: 'preconnect', href: 'https://fonts.googleapis.com' }, { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }]
     hints.forEach((hint) => {
     const link = document.createElement('link')
       link.rel = hint.rel

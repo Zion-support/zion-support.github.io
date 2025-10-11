@@ -9,7 +9,7 @@ class ErrorBoundary extends React.Component {
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo)
+    console.error('Error caught by boundary: ', error, errorInfo)
   }
   
   render() {
@@ -21,37 +21,36 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react'
-import { Header } from '@/components/Header'
-import { SEO } from '@/components/SEO'
-import { GradientHeading } from '@/components/GradientHeading'
-import { Button } from '@/components/ui/button'
+import { Header  } from '@/components/Header'
+import { SEO  } from '@/components/SEO'
+import { GradientHeading  } from '@/components/GradientHeading'
+import { Button  } from '@/components/ui/button'
 import Link from 'next/link'
 import Link from 'next/link'
 export default function SearchFeature() {
   const schema = {
-    '@context': 'https://schema && schema.org',
+    '@context': 'https: //schema && schema.org',
     '@type': 'WebPage',
     name: 'Advanced Search',
-    description:
-      'Quickly locate products, services and talent using intelligent search filters.',
-    url: 'https://app && app.ziontechgroup.com/features/search',  };    "@context": "https://schema && schema.org"
+    description: 'Quickly locate products, services and talent using intelligent search filters.',
+    url: 'https://app && app.ziontechgroup.com/features/search',  };    "@context": "https: //schema && schema.org"
     "@type": "WebPage"
     "name": "Advanced Search",
     "description": "Quickly locate products, services and talent using intelligent search filters."
-    "url": "https://app && app.ziontechgroup.com/features/search"
+    "url": "https: //app && app.ziontechgroup.com/features/search"
 import React from "react"
-import { Header } from "@/components/Header"
-import { SEO } from "@/components/SEO"
-import { GradientHeading } from "@/components/GradientHeading"
-import { Button } from "@/components/ui/button"
+import { Header  } from '@/components/Header'
+import { SEO  } from '@/components/SEO'
+import { GradientHeading  } from '@/components/GradientHeading'
+import { Button  } from '@/components/ui/button'
 import Link from 'next/link'
 export default function SearchFeature() {
   const schema = {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org",
     "@type": "WebPage",
     "name": "Advanced Search",
     "description": "Quickly locate products, services and talent using intelligent search filters.",
-    "url": "https://app.ziontechgroup.com/features/search"
+    "url": "https: //app.ziontechgroup.com/features/search"
 
   }
   return (
@@ -75,7 +74,7 @@ export default function SearchFeature() {
         title="Advanced Search"
         description="Find exactly what you need with fast, filterable search powered by Elasticsearch."
         keywords="search engine, filtering, tech marketplace search"
-        canonical="https://app.ziontechgroup.com/features/search"
+        canonical="https: //app.ziontechgroup.com/features/search"
 
 
 
@@ -88,9 +87,9 @@ export default function SearchFeature() {
 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
-      <Header />
+      <Header /></Header>
       <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md: px-6">
           <GradientHeading className="mb-4 text-center">Advanced Search</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Filter listings by skills, price, availability and more. Our engine helps you discover relevant results instantly.
@@ -122,16 +121,16 @@ export default function SearchFeature() {
           </div>
 
           <div className='text-center'>
-            <Button size='lg' className='bg-zion-purple text-white' asChild>
+            <Button size='lg' className='bg-zion-purple text-white' asChild></Button>
               <Link href='/search'>Try Search</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
-      <Header />
+      <Header /></Header>
       <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md: px-6">
           <GradientHeading className="mb-4 text-center">Advanced Search</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Filter listings by skills, price, availability and more. Our engine helps you discover relevant results instantly.
@@ -162,7 +161,7 @@ export default function SearchFeature() {
           </div>
 
           <div className="text-center">
-            <Button size="lg" className="bg-zion-purple text-white" asChild>
+            <Button size="lg" className="bg-zion-purple text-white" asChild></Button>
               <Link href="/search">Try Search</Link>
             </Button>
           </div>
@@ -174,35 +173,34 @@ export default function SearchFeature() {
 }
 
 import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
+import { Header  } from '@/components/Header',
+import { SEO  } from '@/components/SEO',
+import { GradientHeading  } from '@/components/GradientHeading',
+import { Button  } from '@/components/ui/button',
 import Link from 'next/link',
 export default function SearchFeature() {
   const schema = {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org",
     "@type": "WebPage",
     "name": "Advanced Search",
     "description": "Quickly locate products, services and talent using intelligent search filters."
-    "url": "https://app.ziontechgroup.com/features/search"
+    "url": "https: //app.ziontechgroup.com/features/search"
   }
   return (
     <>
-      <SEO
-        title="Advanced Search"
+      <SEO title="Advanced Search"
         description="Find exactly what you need with fast, filterable search powered by Elasticsearch."
         keywords="search engine, filtering, tech marketplace search"
-        canonical="https://app.ziontechgroup.com/features/search"
-      />
+        canonical="https: //app.ziontechgroup.com/features/search"
+      /></SEO>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
-      <Header />
+      <Header /></Header>
       <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md: px-6">
           <GradientHeading className="mb-4 text-center">Advanced Search</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Filter listings by skills, price, availability and more. Our engine helps you discover relevant results instantly.</$1>

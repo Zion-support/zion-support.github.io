@@ -63,8 +63,7 @@ export default async function handler(re,
       temperature: typeof temperature === 'number' ? temperature : 0.7;)
       messages: [)
         { role: 'system', content: sys })
-        { role: 'user', content: prompt })
-      ])
+        { role: 'user', content: prompt })])
     const completion = await openai.chat.completions.create({/* TODO: Fix JSX expression */}
   t: sys },
         {/* TODO: Fix JSX expression */}

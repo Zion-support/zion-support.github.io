@@ -7,16 +7,13 @@ if (fs.existsSync(appMinimalTestPath)) {
   content = content.replace(/import \{ describe, it, expect \} from '@jest\/globals';/)
 if (fs.existsSync(appMinimalTestPath)) {/* TODO: Fix JSX expression */}
     /import \{ describe, it, expect \} from '@jest\/globals';/,
-    `import { describe, it, expect } from 'vitest';`
+    `import { describe, it, expect  } from 'vitest';`
   )
   fs.writeFileSync(appMinimalTestPath, content)
   //     }
 
 // 2. Fix blog page metadata - remove publishedTime completely
-// const blogPages = [
-  'app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx',
-  'app/blog/ai-2026-autonomous-agent-factories/page.tsx',
-  'app/blog/ai-2026-autonomous-enterprise-architecture/page.tsx']
+// const blogPages = ['app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx', 'app/blog/ai-2026-autonomous-agent-factories/page.tsx', 'app/blog/ai-2026-autonomous-enterprise-architecture/page.tsx']
 blogPages.forEach(pagePath => {)
   if (fs.existsSync(pagePath)) {
 
@@ -28,9 +25,7 @@ blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
     //         })
 })
 // 3. Fix OpenGraph authors - use string array instead of object array
-// const openGraphPages = [
-  'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx',
-  'app/blog/ai-2026-enterprise-automation-revolutionary-breakthrough/page.tsx']
+// const openGraphPages = ['app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx', 'app/blog/ai-2026-enterprise-automation-revolutionary-breakthrough/page.tsx']
 openGraphPages.forEach(pagePath => {)
   if (fs.existsSync(pagePath)) {
 

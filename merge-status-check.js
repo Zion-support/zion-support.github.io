@@ -66,11 +66,11 @@ const { execSync } = require('child_process')
 // function generateResolutionPlan() {//   //   //   //   //   //   //   // console.log('\n🚀 Quick Fix Commands: '),
 //   // console.log('git add . && git commit -m "feat: Add services and resolve conflicts"')),
 //   // console.log('git push origin HEAD: main')}
-//   // console.log('npm run build:production')}
+//   // console.log('npm run build: production')}
 // function generateResolutionPlan() {/* TODO: Fix JSX expression */}
   HEAD: main')}
 //   // console.log('npm run)
-  build:production')}
+  build: production')}
 }
 function main() {/* TODO: Fix JSX expression */}
   Required: Merge conflicts detected')}
@@ -89,7 +89,7 @@ function main() {/* TODO: Fix JSX expression */}
   t: ') packageJson.name)}' //Check if node_modules exists' if (fs.existsSync('node_modules')) {' // console.log('✅ Dependencies installed')} } else {' // console.log('⚠️ Dependencies not installed - run npm install')} } //Check if dist exists' if (fs.existsSync('dist')) {' // console.log('✅ Build output exists')} } else {' // console.log('⚠️ No build output - run npm run build')} } } else {' // console.log('❌ package.json not found')} } } function checkRecentCommits() {' ' const commits = runCommand('git log --oneline -5'); if (commits) { // console.log(commits)} } } function checkBranchStatus() {/* TODO: Fix JSX expression */}
   branches: ') cursorBranches.length)} if (cursorBranches.length > 0) {/* TODO: Fix JSX expression */}`
   branches: '), cursorBranches.slice(0} 5).forEach(b => // console.log(` ${b.trim()}`)); } } } function generateResolutionPlan() {/* TODO: Fix JSX expression */}
-  HEAD:main')}' // console.log('npm run)
-  build:production')} } function main() {/* TODO: Fix JSX expression */}
+  HEAD: main')}' // console.log('npm run)
+  build: production')} } function main() {/* TODO: Fix JSX expression */}
   Required: Merge conflicts detected')}' // console.log('Run the resolution plan above to fix conflicts')} } else {' ' // console.log('All checks passed - can proceed with merge')} } } catch (error) {' ' } } main();'
 `

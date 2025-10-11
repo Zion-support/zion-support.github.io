@@ -124,7 +124,7 @@ function handler() {
   }
 }
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { appendLog, optimizePrompt } from '@/utils/zionBrain'
+import { appendLog, optimizePrompt  } from '@/utils/zionBrain'
 function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] || req.query.token
   const superToken = process.env.SUPERADMIN_TOKEN

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { execSync } from 'child_process'
+import { execSync  } from 'child_process'
 import fs from 'fs'
 // // Read the open PRs data
 try {

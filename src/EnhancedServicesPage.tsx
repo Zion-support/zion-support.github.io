@@ -1,39 +1,36 @@
 import React, { useState } from 'react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card'
+import { Button  } from '@/components/ui/button'
+import { Badge  } from '@/components/ui/badge'
+import { Input  } from '@/components/ui/input'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select'
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs'
 import React, { useState } from 'react'
-import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS } from '@/data/enhancedServices'
+import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS  } from '@/data/enhancedServices'
 import React, { useState } from 'react'
-import { ENHANCED_SERVICES, SERVICE_CATEGORIES, EnhancedService } from '@/data/enhancedServices'
+import { ENHANCED_SERVICES, SERVICE_CATEGORIES, EnhancedService  } from '@/data/enhancedServices'
 import React, { useState } from 'react'
-import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS } from '@/data/enhancedServices'
-import { ProductListing } from '@/types/listings'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Input } from '@/components/ui/input'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { 
-  ENHANCED_SERVICES, 
+import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS  } from '@/data/enhancedServices'
+import { ProductListing  } from '@/types/listings'
+import { Button  } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card'
+import { Badge  } from '@/components/ui/badge'
+import { Input  } from '@/components/ui/input'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select'
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs'
+import { ENHANCED_SERVICES, 
   getServicesByCategory, 
   getPopularServices, 
   getNewServices, 
   getPremiumServices,
   type EnhancedService 
-} from "@/data/enhancedServices"
-import { 
-  Search, 
+ } from '@/data/enhancedServices'
+import { Search, 
   Filter, 
   Star, 
   Clock, 
-import React, { useState, useEffect } from 'react'
-import { 
-  Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, 
+import React, { useState, useEffect  } from 'react'
+import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, 
   Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, 
   ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, 
   Building, Factory, Store, Car, Plane, Ship, Home, Hospital, 
@@ -42,9 +39,11 @@ import {
   PieChart, Activity, Package, Wifi, ArrowRight, CheckCircle, 
   Award, Rocket, Lightbulb, Shield as ShieldIcon, Zap as ZapIcon,
   Brain as BrainIcon, Cloud as CloudIcon, Database as DatabaseIcon
-} from 'lucide-react'
-import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES } from '../data/comprehensiveServices'
+ } from 'lucide-react'
+import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES  } from '../data/comprehensiveServices'
 const EnhancedServicesPage: React.FC = () => {
+  return (
+
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedPricing, setSelectedPricing] = useState<string>('all')
@@ -63,26 +62,26 @@ const EnhancedServicesPage: React.FC = () => {
                            (selectedPricingTier === 'enterprise' && (service.price || 0) > 799 && (service.price || 0) <= 1999) ||
                            (selectedPricingTier === 'custom' && (service.price || 0) > 1999)
     return matchesSearch && matchesCategory && matchesPricing
-  })
+  
+  );
+})
   const handleContact = (service: ProductListing) => {
     setContactService(service)
   }
   return (
     <div className="min-h-screen bg-zion-blue">
-      <SEO 
-        title="Comprehensive Tech Services - Zion Tech Group" 
+      <SEO title="Comprehensive Tech Services - Zion Tech Group" 
         description="Explore our complete range of AI, IT infrastructure, and micro SAAS services. From custom AI development to cybersecurity solutions, we have everything your business needs."
         keywords="AI services, IT services, micro SAAS, cybersecurity, cloud migration, digital transformation, Zion Tech Group"
-      />
-      <Header />
-      
+      /></SEO>
+      <Header /></Header>
       <main className="flex-1 relative">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-zion-blue to-zion-blue-dark py-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20" />
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-r from-white via-zion-cyan to-zion-purple-light bg-clip-text text-transparent">
+              <h1 className="text-4xl md: text-6xl font-bold tracking-tight mb-6 bg-gradient-to-r from-white via-zion-cyan to-zion-purple-light bg-clip-text text-transparent">
                 Comprehensive Tech Services
               </h1>
               <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -92,18 +91,18 @@ const EnhancedServicesPage: React.FC = () => {
               
               {/* Contact CTA */}
               <div className="bg-zion-blue-dark/50 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/30 max-w-2xl mx-auto">
-                <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center">
+                <div className="flex flex-col md: flex-row items-center justify-center gap-4 text-center">
                   <div className="flex items-center text-zion-cyan">
-                    <Phone className="h-5 w-5 mr-2" />
+                    <Phone className="h-5 w-5 mr-2" /></Phone>
                     <span className="font-medium">+1 (302) 464-0950</span>
                   </div>
                   <div className="flex items-center text-zion-cyan">
-                    <Mail className="h-5 w-5 mr-2" />
+                    <Mail className="h-5 w-5 mr-2" /></Mail>
                     <span className="font-medium">kleber@ziontechgroup.com</span>
                   </div>
                 </div>
                 <div className="mt-3 text-sm text-zion-slate-light">
-                  <MapPin className="h-4 w-4 inline mr-1" />
+                  <MapPin className="h-4 w-4 inline mr-1" /></MapPin>
                   364 E Main St STE 1008, Middletown, DE 19709
                 </div>
               </div>
@@ -124,28 +123,28 @@ const EnhancedServicesPage: React.FC = () => {
       case 'ai automation':
       case 'ai analytics':
       case 'ai marketing':
-        return <TrendingUp className="w-5 h-5" />
+        return <TrendingUp className="w-5 h-5" /></TrendingUp>
       case 'cybersecurity':
-        return <Shield className="w-5 h-5" />
+        return <Shield className="w-5 h-5" /></Shield>
       case 'cloud services':
       case 'devops':
-        return <Cloud className="w-5 h-5" />
+        return <Cloud className="w-5 h-5" /></Cloud>
       case 'data analytics':
       case 'data management':
       case 'iot & analytics':
-        return <Database className="w-5 h-5" />
+        return <Database className="w-5 h-5" /></Database>
       case 'blockchain':
-        return <Network className="w-5 h-5" />
+        return <Network className="w-5 h-5" /></Network>
       case 'edge computing':
-        return <Monitor className="w-5 h-5" />
+        return <Monitor className="w-5 h-5" /></Monitor>
       case 'quantum computing':
-        return <Monitor className="w-5 h-5" />
+        return <Monitor className="w-5 h-5" /></Monitor>
       case 'ar/vr':
-        return <Eye className="w-5 h-5" />
+        return <Eye className="w-5 h-5" /></Eye>
       case 'fintech':
-        return <DollarSign className="w-5 h-5" />
+        return <DollarSign className="w-5 h-5" /></DollarSign>
       default:
-        return <TrendingUp className="w-5 h-5" />
+        return <TrendingUp className="w-5 h-5" /></TrendingUp>
     }
   }
   const getPriceColor = (price: number) => {
@@ -155,17 +154,15 @@ const EnhancedServicesPage: React.FC = () => {
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
-      <SEO 
-        title="Enhanced IT & AI Services - ZionTech Group" 
+      <SEO title="Enhanced IT & AI Services - ZionTech Group" 
         description="Discover our comprehensive range of innovative IT services, AI solutions, cybersecurity, cloud services, and cutting-edge technology solutions."
         keywords="AI services, IT solutions, cybersecurity, cloud services, blockchain, quantum computing, metaverse, fintech"
-        canonical="https://ziontechgroup.com/enhanced-services"
-      />
-
+        canonical="https: //ziontechgroup.com/enhanced-services"
+      /></SEO>
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-zion-blue to-zion-blue-dark py-20 px-4">
         <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
             Enhanced Micro SAAS Services
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
@@ -176,9 +173,8 @@ const EnhancedServicesPage: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-4">
             <Button 
               size="lg"
-              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-              onClick={() => handleContact(ENHANCED_SERVICES[0])}
-            >
+              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
+              onClick=>{() => handleContact(ENHANCED_SERVICES[0])}
               <span className="mr-2">{tab.icon}</span>
               {tab.label}
             </button>
@@ -187,15 +183,15 @@ const EnhancedServicesPage: React.FC = () => {
 
         {/* Search and Filter Section */}
         <div className="glass p-6 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-4">
             {/* Search */}
-            <div className="md:col-span-2">
+            <div className="md: col-span-2">
               <input
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
+                className="w-full px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
               />
             </div>
 
@@ -204,11 +200,11 @@ const EnhancedServicesPage: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
+                className="w-full px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus: border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
               >
                 <option value="all">All Categories</option>
                 {categories.map(category => (
-                  <option key={category} value={category}>{category}</option>
+                  <option key={category} value=>{category}{category}</option>
                 ))}
               </select>
             </div>
@@ -222,7 +218,7 @@ const EnhancedServicesPage: React.FC = () => {
                   setSortBy(newSortBy as any)
                   setSortOrder(newSortOrder as any)
                 }}
-                className="w-full px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
+                className="w-full px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus: border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
               >
                 <option value="name-asc">Name A-Z</option>
                 <option value="name-desc">Name Z-A</option>
@@ -309,7 +305,7 @@ const EnhancedServicesPage: React.FC = () => {
 
               {/* Key Benefits */}
               <div className="mb-4">
-                <h4 className="text-sm font-semibold text-white mb-2">Key Benefits:</h4>
+                <h4 className="text-sm font-semibold text-white mb-2">Key Benefits: </h4>
                 <ul className="space-y-1">
                   {service.benefits.slice(0, 3).map((benefit, index) => (
                     <li key={index} className="text-xs text-gray-300 flex items-start">
@@ -355,7 +351,7 @@ const EnhancedServicesPage: React.FC = () => {
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
             Contact our team of experts to discuss your specific needs and find the perfect solution for your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="btn-futuristic">
               Schedule Free Consultation
             </button>
@@ -366,13 +362,8 @@ const EnhancedServicesPage: React.FC = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12">
-          {[
-            { number: '50+', label: 'AI Services', icon: '🤖' },
-            { number: '100+', label: 'Micro SAAS Solutions', icon: '💻' },
-            { number: '25+', label: 'IT Services', icon: '🔧' },
-            { number: '24/7', label: 'Support Available', icon: '🔄' }
-          ].map((stat, index) => (
+        <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mt-12">
+          {[{ number: '50+', label: 'AI Services', icon: '🤖' }, { number: '100+', label: 'Micro SAAS Solutions', icon: '💻' }, { number: '25+', label: 'IT Services', icon: '🔧' }, { number: '24/7', label: 'Support Available', icon: '🔄' }].map((stat, index) => (
             <div key={index} className="card-futuristic text-center">
               <div className="text-4xl mb-2">{stat.icon}</div>
               <div className="text-2xl font-bold text-gradient-primary mb-1">{stat.number}</div>
@@ -401,23 +392,21 @@ const EnhancedServicesPage: React.FC = () => {
       'System Modernization': <Zap className="w-5 h-5" />,
       'Healthcare AI': <Users className="w-5 h-5" />,
       'FinTech': <TrendingUp className="w-5 h-5" />,
-      'Retail AI': <Building className="w-5 h-5" />
+      'Retail AI': <Building className="w-5 h-5" /></Building>
     }
-    return iconMap[category] || <Zap className="w-5 h-5" />
+    return iconMap[category] || <Zap className="w-5 h-5" /></Zap>
   }
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Enterprise IT & AI Services - Zion Tech Group" 
+      <SEO title="Enterprise IT & AI Services - Zion Tech Group" 
         description="Comprehensive enterprise IT services, AI solutions, cybersecurity, cloud management, and digital transformation services. Expert consulting and implementation worldwide."
         keywords="enterprise IT services, AI solutions, cybersecurity, cloud management, digital transformation, IT consulting"
-        canonical="https://ziontechgroup.com/services"
-      />
-
+        canonical="https: //ziontechgroup.com/services"
+      /></SEO>
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md: text-6xl font-bold mb-6">
             Enterprise IT & AI Services
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
@@ -425,10 +414,10 @@ const EnhancedServicesPage: React.FC = () => {
             we deliver enterprise-grade services that drive innovation and growth.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-white text-zion-blue hover:bg-zion-slate-light">
+            <Button size="lg" className="bg-white text-zion-blue hover: bg-zion-slate-light"></Button>
               Get Started Today
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue">
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue"></Button>
               View Case Studies
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white py-20">
         <div className="container mx-auto px-4 text-center">
@@ -440,12 +429,12 @@ const EnhancedServicesPage: React.FC = () => {
             we deliver innovative services that drive growth and competitive advantage.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light">
-              <Mail className="w-5 h-5 mr-2" />
+            <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover: bg-zion-cyan-light"></Button>
+              <Mail className="w-5 h-5 mr-2" /></Mail>
               Get Free Consultation
             </Button>
-            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-              <Phone className="w-5 h-5 mr-2" />
+            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"></Button>
+              <Phone className="w-5 h-5 mr-2" /></Phone>
               Call +1 302 464 0950
             </Button>
           </div>
@@ -457,15 +446,15 @@ const EnhancedServicesPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center items-center gap-8 text-zion-cyan">
             <div className="flex items-center gap-2">
-              <Phone className="w-5 h-5" />
+              <Phone className="w-5 h-5" /></Phone>
               <span>+1 302 464 0950</span>
             </div>
             <div className="flex items-center gap-2">
-              <Mail className="w-5 h-5" />
+              <Mail className="w-5 h-5" /></Mail>
               <span>kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center gap-2">
-              <MapPin className="w-5 h-5" />
+              <MapPin className="w-5 h-5" /></MapPin>
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -478,28 +467,27 @@ const EnhancedServicesPage: React.FC = () => {
         return a.title.localeCompare(b.title)
       case 'category':
         return a.category.localeCompare(b.category)
-      default:
-        return 0
+      default: return 0
     }
   })
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI & Machine Learning':
-        return <BrainIcon className="w-6 h-6 text-blue-500" />
+        return <BrainIcon className="w-6 h-6 text-blue-500" /></BrainIcon>
       case 'Cybersecurity':
-        return <ShieldIcon className="w-6 h-6 text-red-500" />
+        return <ShieldIcon className="w-6 h-6 text-red-500" /></ShieldIcon>
       case 'Blockchain & Web3':
-        return <ZapIcon className="w-6 h-6 text-yellow-500" />
+        return <ZapIcon className="w-6 h-6 text-yellow-500" /></ZapIcon>
       case 'Quantum Computing':
-        return <Cpu className="w-6 h-6 text-purple-500" />
+        return <Cpu className="w-6 h-6 text-purple-500" /></Cpu>
       case 'Internet of Things':
-        return <Wifi className="w-6 h-6 text-green-500" />
+        return <Wifi className="w-6 h-6 text-green-500" /></Wifi>
       case 'Cloud & Infrastructure':
-        return <CloudIcon className="w-6 h-6 text-gray-500" />
+        return <CloudIcon className="w-6 h-6 text-gray-500" /></CloudIcon>
       case 'Data & Analytics':
-        return <DatabaseIcon className="w-6 h-6 text-indigo-500" />
+        return <DatabaseIcon className="w-6 h-6 text-indigo-500" /></DatabaseIcon>
       default:
-        return <Settings className="w-6 h-6 text-gray-400" />
+        return <Settings className="w-6 h-6 text-gray-400" /></Settings>
     }
   }
   const getPricingBadge = (price: number) => {
@@ -515,8 +503,7 @@ const EnhancedServicesPage: React.FC = () => {
         return { text: 'Premium', color: 'bg-blue-100 text-blue-800' }
       case 'enterprise':
         return { text: 'Enterprise', color: 'bg-purple-100 text-purple-800' }
-      default:
-        return { text: 'Standard', color: 'bg-gray-100 text-gray-800' }
+      default: return { text: 'Standard', color: 'bg-gray-100 text-gray-800' }
   Users, 
   Zap, 
   TrendingUp, 
@@ -536,7 +523,7 @@ const EnhancedServicesPage: React.FC = () => {
   DollarSign,
   Calendar
 } from "lucide-react"
-import { SimpleFuturisticBackground } from "@/components/ui/FuturisticBackground"
+import { SimpleFuturisticBackground  } from '@/components/ui/FuturisticBackground'
 export default function EnhancedServicesPage() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
@@ -545,30 +532,9 @@ export default function EnhancedServicesPage() {
   const popularServices = getPopularServices()
   const newServices = getNewServices()
   const premiumServices = getPremiumServices()
-  const categories = [
-    { id: 'all', label: 'All Services', icon: <Zap className="h-4 w-4" /> },
-    { id: 'AI', label: 'AI Services', icon: <Brain className="h-4 w-4" /> },
-    { id: 'IT', label: 'IT Services', icon: <Settings className="h-4 w-4" /> },
-    { id: 'SAAS', label: 'SAAS Solutions', icon: <Cloud className="h-4 w-4" /> },
-    { id: 'Development', label: 'Development', icon: <Code className="h-4 w-4" /> },
-    { id: 'Consulting', label: 'Consulting', icon: <Users className="h-4 w-4" /> },
-    { id: 'Automation', label: 'Automation', icon: <TrendingUp className="h-4 w-4" /> },
-    { id: 'Integration', label: 'Integration', icon: <BarChart3 className="h-4 w-4" /> }
-  ]
-  const pricingModels = [
-    { id: 'all', label: 'All Pricing' },
-    { id: 'hourly', label: 'Hourly' },
-    { id: 'monthly', label: 'Monthly' },
-    { id: 'project', label: 'Project-based' },
-    { id: 'subscription', label: 'Subscription' }
-  ]
-  const sortOptions = [
-    { id: 'popularity', label: 'Most Popular' },
-    { id: 'rating', label: 'Highest Rated' },
-    { id: 'price-low', label: 'Price: Low to High' },
-    { id: 'price-high', label: 'Price: High to Low' },
-    { id: 'newest', label: 'Newest First' }
-  ]
+  const categories = [{ id: 'all', label: 'All Services', icon: <Zap className="h-4 w-4" /> }, { id: 'AI', label: 'AI Services', icon: <Brain className="h-4 w-4" /> }, { id: 'IT', label: 'IT Services', icon: <Settings className="h-4 w-4" /> }, { id: 'SAAS', label: 'SAAS Solutions', icon: <Cloud className="h-4 w-4" /> }, { id: 'Development', label: 'Development', icon: <Code className="h-4 w-4" /> }, { id: 'Consulting', label: 'Consulting', icon: <Users className="h-4 w-4" /> }, { id: 'Automation', label: 'Automation', icon: <TrendingUp className="h-4 w-4" /> }, { id: 'Integration', label: 'Integration', icon: <BarChart3 className="h-4 w-4" /> }]
+  const pricingModels = [{ id: 'all', label: 'All Pricing' }, { id: 'hourly', label: 'Hourly' }, { id: 'monthly', label: 'Monthly' }, { id: 'project', label: 'Project-based' }, { id: 'subscription', label: 'Subscription' }]
+  const sortOptions = [{ id: 'popularity', label: 'Most Popular' }, { id: 'rating', label: 'Highest Rated' }, { id: 'price-low', label: 'Price: Low to High' }, { id: 'price-high', label: 'Price: High to Low' }, { id: 'newest', label: 'Newest First' }]
   const getFilteredServices = () => {
     let filtered = ENHANCED_SERVICES
     // Category filter
@@ -624,28 +590,28 @@ export default function EnhancedServicesPage() {
   }
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'AI': return <Brain className="h-5 w-5 text-purple-400" />
-      case 'IT': return <Settings className="h-5 w-5 text-blue-400" />
-      case 'SAAS': return <Cloud className="h-5 w-5 text-cyan-400" />
-      case 'Development': return <Code className="h-5 w-5 text-green-400" />
-      case 'Consulting': return <Users className="h-5 w-5 text-orange-400" />
-      case 'Automation': return <TrendingUp className="h-5 w-5 text-pink-400" />
-      case 'Integration': return <BarChart3 className="h-5 w-5 text-yellow-400" />
-      default: return <Zap className="h-5 w-5 text-gray-400" />
+      case 'AI': return <Brain className="h-5 w-5 text-purple-400" /></Brain>
+      case 'IT': return <Settings className="h-5 w-5 text-blue-400" /></Settings>
+      case 'SAAS': return <Cloud className="h-5 w-5 text-cyan-400" /></Cloud>
+      case 'Development': return <Code className="h-5 w-5 text-green-400" /></Code>
+      case 'Consulting': return <Users className="h-5 w-5 text-orange-400" /></Users>
+      case 'Automation': return <TrendingUp className="h-5 w-5 text-pink-400" /></TrendingUp>
+      case 'Integration': return <BarChart3 className="h-5 w-5 text-yellow-400" /></BarChart3>
+      default: return <Zap className="h-5 w-5 text-gray-400" /></Zap>
     }
   }
   const filteredServices = getFilteredServices()
   return (
-    <SimpleFuturisticBackground>
+    <SimpleFuturisticBackground ></SimpleFuturisticBackground>
       <div className="min-h-screen py-20">
         <div className="container mx-auto px-4">
           {/* Header Section */}
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-full px-4 py-2 mb-6">
-              <Zap className="h-4 w-4 text-zion-cyan" />
+              <Zap className="h-4 w-4 text-zion-cyan" /></Zap>
               <span className="text-sm font-medium text-zion-cyan">Premium Services</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 bg-gradient-to-r from-white via-zion-cyan to-zion-purple bg-clip-text text-transparent">
+            <h1 className="text-4xl md: text-5xl font-bold tracking-tight mb-6 bg-gradient-to-r from-white via-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Our Premium Services
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -656,23 +622,23 @@ export default function EnhancedServicesPage() {
 
           {/* Contact Information Banner */}
           <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-2xl p-6 mb-12 backdrop-blur-sm">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-6 text-center">
               <div className="flex items-center justify-center gap-3">
-                <Phone className="h-5 w-5 text-zion-cyan" />
+                <Phone className="h-5 w-5 text-zion-cyan" /></Phone>
                 <div>
                   <div className="text-sm text-zion-slate-light">Phone</div>
                   <div className="text-white font-semibold">+1 302 464 0950</div>
                 </div>
               </div>
               <div className="flex items-center justify-center gap-3">
-                <Mail className="h-5 w-5 text-zion-cyan" />
+                <Mail className="h-5 w-5 text-zion-cyan" /></Mail>
                 <div>
                   <div className="text-sm text-zion-slate-light">Email</div>
                   <div className="text-white font-semibold">kleber@ziontechgroup.com</div>
                 </div>
               </div>
               <div className="flex items-center justify-center gap-3">
-                <MapPin className="h-5 w-5 text-zion-cyan" />
+                <MapPin className="h-5 w-5 text-zion-cyan" /></MapPin>
                 <div>
                   <div className="text-sm text-zion-slate-light">Address</div>
                   <div className="text-white font-semibold">364 E Main St STE 1008, Middletown DE 19709</div>
@@ -682,85 +648,85 @@ export default function EnhancedServicesPage() {
           </div>
 
           {/* Featured Services Tabs */}
-          <Tabs defaultValue="all" className="mb-16">
-            <TabsList className="grid w-full grid-cols-5 bg-zion-blue-dark/50 border border-zion-purple/30 p-1 rounded-lg">
-              <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple data-[state=active]:text-white">
-                <Zap className="h-4 w-4 mr-2" />
+          <Tabs defaultValue="all" className="mb-16"></Tabs>
+            <TabsList className="grid w-full grid-cols-5 bg-zion-blue-dark/50 border border-zion-purple/30 p-1 rounded-lg"></TabsList>
+              <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple data-[state=active]:text-white"></TabsTrigger>
+                <Zap className="h-4 w-4 mr-2" /></Zap>
                 All
               </TabsTrigger>
-              <TabsTrigger value="popular" className="data-[state=active]:bg-zion-purple data-[state=active]:text-white">
-                <Star className="h-4 w-4 mr-2" />
+              <TabsTrigger value="popular" className="data-[state=active]:bg-zion-purple data-[state=active]:text-white"></TabsTrigger>
+                <Star className="h-4 w-4 mr-2" /></Star>
                 Popular
               </TabsTrigger>
-              <TabsTrigger value="new" className="data-[state=active]:bg-zion-purple data-[state=active]:text-white">
-                <Zap className="h-4 w-4 mr-2" />
+              <TabsTrigger value="new" className="data-[state=active]:bg-zion-purple data-[state=active]:text-white"></TabsTrigger>
+                <Zap className="h-4 w-4 mr-2" /></Zap>
                 New
               </TabsTrigger>
-              <TabsTrigger value="premium" className="data-[state=active]:bg-zion-purple data-[state=active]:text-white">
-                <Shield className="h-4 w-4 mr-2" />
+              <TabsTrigger value="premium" className="data-[state=active]:bg-zion-purple data-[state=active]:text-white"></TabsTrigger>
+                <Shield className="h-4 w-4 mr-2" /></Shield>
                 Premium
               </TabsTrigger>
-              <TabsTrigger value="custom" className="data-[state=active]:bg-zion-purple data-[state=active]:text-white">
-                <Filter className="h-4 w-4 mr-2" />
+              <TabsTrigger value="custom" className="data-[state=active]:bg-zion-purple data-[state=active]:text-white"></TabsTrigger>
+                <Filter className="h-4 w-4 mr-2" /></Filter>
                 Custom
               </TabsTrigger>
             </TabsList>
 
-            <TabsContent value="all" className="mt-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <TabsContent value="all" className="mt-8"></TabsContent>
+              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
                 {ENHANCED_SERVICES.map((service) => (
-                  <ServiceCard key={service.id} service={service} />
+                  <ServiceCard key={service.id} service={service} /></ServiceCard>
                 ))}
               </div>
             </TabsContent>
 
-            <TabsContent value="popular" className="mt-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <TabsContent value="popular" className="mt-8"></TabsContent>
+              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
                 {popularServices.map((service) => (
-                  <ServiceCard key={service.id} service={service} />
+                  <ServiceCard key={service.id} service={service} /></ServiceCard>
                 ))}
               </div>
             </TabsContent>
 
-            <TabsContent value="new" className="mt-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <TabsContent value="new" className="mt-8"></TabsContent>
+              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
                 {newServices.map((service) => (
-                  <ServiceCard key={service.id} service={service} />
+                  <ServiceCard key={service.id} service={service} /></ServiceCard>
                 ))}
               </div>
             </TabsContent>
 
-            <TabsContent value="premium" className="mt-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <TabsContent value="premium" className="mt-8"></TabsContent>
+              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
                 {premiumServices.map((service) => (
-                  <ServiceCard key={service.id} service={service} />
+                  <ServiceCard key={service.id} service={service} /></ServiceCard>
                 ))}
               </div>
             </TabsContent>
 
-            <TabsContent value="custom" className="mt-8">
+            <TabsContent value="custom" className="mt-8"></TabsContent>
               {/* Filters and Search */}
               <div className="bg-zion-blue-dark/30 border border-zion-purple/30 rounded-xl p-6 mb-8 backdrop-blur-sm">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div className="grid grid-cols-1 md: grid-cols-4 gap-4">
                   <div>
                     <label className="text-sm font-medium text-white mb-2 block">Search Services</label>
                     <Input
                       placeholder="Search by name, description, or tags..."
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      className="bg-zion-blue-dark/50 border-zion-purple/30 text-white placeholder:text-zion-slate-light"
+                      className="bg-zion-blue-dark/50 border-zion-purple/30 text-white placeholder: text-zion-slate-light"
                     />
                   </div>
                   
                   <div>
                     <label className="text-sm font-medium text-white mb-2 block">Category</label>
-                    <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-                      <SelectTrigger className="bg-zion-blue-dark/50 border-zion-purple/30 text-white">
-                        <SelectValue placeholder="Select category" />
+                    <Select value={selectedCategory} onValueChange=>{setSelectedCategory}</Select>
+                      <SelectTrigger className="bg-zion-blue-dark/50 border-zion-purple/30 text-white"></SelectTrigger>
+                        <SelectValue placeholder="Select category" /></SelectValue>
                       </SelectTrigger>
-                      <SelectContent className="bg-zion-blue-dark border-zion-purple/30">
+                      <SelectContent className="bg-zion-blue-dark border-zion-purple/30"></SelectContent>
                         {categories.map((category) => (
-                          <SelectItem key={category.id} value={category.id} className="text-white">
+                          <SelectItem key={category.id} value={category.id} className="text-white"></SelectItem>
                             {category.label}
                           </SelectItem>
                         ))}
@@ -770,13 +736,13 @@ export default function EnhancedServicesPage() {
                   
                   <div>
                     <label className="text-sm font-medium text-white mb-2 block">Pricing Model</label>
-                    <Select value={selectedPricing} onValueChange={setSelectedPricing}>
-                      <SelectTrigger className="bg-zion-blue-dark/50 border-zion-purple/30 text-white">
-                        <SelectValue placeholder="Select pricing" />
+                    <Select value={selectedPricing} onValueChange=>{setSelectedPricing}</Select>
+                      <SelectTrigger className="bg-zion-blue-dark/50 border-zion-purple/30 text-white"></SelectTrigger>
+                        <SelectValue placeholder="Select pricing" /></SelectValue>
                       </SelectTrigger>
-                      <SelectContent className="bg-zion-blue-dark border-zion-purple/30">
+                      <SelectContent className="bg-zion-blue-dark border-zion-purple/30"></SelectContent>
                         {pricingModels.map((pricing) => (
-                          <SelectItem key={pricing.id} value={pricing.id} className="text-white">
+                          <SelectItem key={pricing.id} value={pricing.id} className="text-white"></SelectItem>
                             {pricing.label}
                           </SelectItem>
                         ))}
@@ -786,13 +752,13 @@ export default function EnhancedServicesPage() {
                   
                   <div>
                     <label className="text-sm font-medium text-white mb-2 block">Sort By</label>
-                    <Select value={sortBy} onValueChange={setSortBy}>
-                      <SelectTrigger className="bg-zion-blue-dark/50 border-zion-purple/30 text-white">
-                        <SelectValue placeholder="Sort by" />
+                    <Select value={sortBy} onValueChange=>{setSortBy}</Select>
+                      <SelectTrigger className="bg-zion-blue-dark/50 border-zion-purple/30 text-white"></SelectTrigger>
+                        <SelectValue placeholder="Sort by" /></SelectValue>
                       </SelectTrigger>
-                      <SelectContent className="bg-zion-blue-dark border-zion-purple/30">
+                      <SelectContent className="bg-zion-blue-dark border-zion-purple/30"></SelectContent>
                         {sortOptions.map((option) => (
-                          <SelectItem key={option.id} value={option.id} className="text-white">
+                          <SelectItem key={option.id} value={option.id} className="text-white"></SelectItem>
                             {option.label}
                           </SelectItem>
                         ))}
@@ -810,9 +776,9 @@ export default function EnhancedServicesPage() {
               </div>
 
               {/* Filtered Services Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredServices.map((service) => (
-                  <ServiceCard key={service.id} service={service} />
+                  <ServiceCard key={service.id} service={service} /></ServiceCard>
                 ))}
               </div>
 
@@ -827,7 +793,7 @@ export default function EnhancedServicesPage() {
                       setSortBy('popularity')
                     }}
                     variant="outline"
-                    className="border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 hover:border-zion-purple/50"
+                    className="border-zion-purple/30 text-zion-cyan hover: bg-zion-purple/10 hover:border-zion-purple/50"
                   >
                     Clear Filters
                   </Button>
@@ -846,22 +812,20 @@ export default function EnhancedServicesPage() {
                 Can't find exactly what you're looking for? Our team of experts can create custom solutions 
                 tailored to your specific business needs and requirements.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Button 
                   size="lg" 
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white gap-3"
-                  onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
-                >
-                  <ExternalLink className="h-4 w-4" />
+                  onClick=>{() => window.open('https://ziontechgroup.com/contact', '_blank')}
+                  <ExternalLink className="h-4 w-4" /></ExternalLink>
                   Contact Our Team
                 </Button>
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 hover:border-zion-purple/50 gap-3"
-                  onClick={() => window.open('https://ziontechgroup.com/demo', '_blank')}
-                >
-                  <Play className="h-4 w-4" />
+                  className="border-zion-purple/30 text-zion-cyan hover: bg-zion-purple/10 hover:border-zion-purple/50 gap-3"
+                  onClick=>{() => window.open('https://ziontechgroup.com/demo', '_blank')}
+                  <Play className="h-4 w-4" /></Play>
                   Schedule Demo
                 </Button>
               </div>
@@ -891,22 +855,22 @@ function ServiceCard({ service }: ServiceCardProps) {
   }
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'AI': return <Brain className="h-5 w-5 text-purple-400" />
-      case 'IT': return <Settings className="h-5 w-5 text-blue-400" />
-      case 'SAAS': return <Cloud className="h-5 w-5 text-cyan-400" />
-      case 'Development': return <Code className="h-5 w-5 text-green-400" />
-      case 'Consulting': return <Users className="h-5 w-5 text-orange-400" />
-      case 'Automation': return <TrendingUp className="h-5 w-5 text-pink-400" />
-      case 'Integration': return <BarChart3 className="h-5 w-5 text-yellow-400" />
-      default: return <Zap className="h-5 w-5 text-gray-400" />
+      case 'AI': return <Brain className="h-5 w-5 text-purple-400" /></Brain>
+      case 'IT': return <Settings className="h-5 w-5 text-blue-400" /></Settings>
+      case 'SAAS': return <Cloud className="h-5 w-5 text-cyan-400" /></Cloud>
+      case 'Development': return <Code className="h-5 w-5 text-green-400" /></Code>
+      case 'Consulting': return <Users className="h-5 w-5 text-orange-400" /></Users>
+      case 'Automation': return <TrendingUp className="h-5 w-5 text-pink-400" /></TrendingUp>
+      case 'Integration': return <BarChart3 className="h-5 w-5 text-yellow-400" /></BarChart3>
+      default: return <Zap className="h-5 w-5 text-gray-400" /></Zap>
     }
   }
   return (
       <div className="bg-zion-blue py-8">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
+          <div className="flex flex-col md: flex-row gap-4 items-center justify-center">
             <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" /></Search>
               <Input
                 placeholder="Search services..."
                 value={searchTerm}
@@ -914,24 +878,24 @@ function ServiceCard({ service }: ServiceCardProps) {
                 className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder-zion-slate-light"
               />
             </div>
-            <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-              <SelectTrigger className="w-48 bg-zion-blue-dark border-zion-blue-light text-white">
-                <SelectValue placeholder="All Categories" />
+            <Select value={selectedCategory} onValueChange=>{setSelectedCategory}</Select>
+              <SelectTrigger className="w-48 bg-zion-blue-dark border-zion-blue-light text-white"></SelectTrigger>
+                <SelectValue placeholder="All Categories" /></SelectValue>
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent ></SelectContent>
                 <SelectItem value="all">All Categories</SelectItem>
                 {ENHANCED_SERVICE_CATEGORIES.map(category => (
-                  <SelectItem key={category.value} value={category.value}>
+                  <SelectItem key={category.value} value=>{category.value}</SelectItem>
                     {category.label}
                   </SelectItem>
                 ))}
               </SelectContent>
             </Select>
-            <Select value={priceRange} onValueChange={setPriceRange}>
-              <SelectTrigger className="w-48 bg-zion-blue-dark border-zion-blue-light text-white">
-                <SelectValue placeholder="All Prices" />
+            <Select value={priceRange} onValueChange=>{setPriceRange}</Select>
+              <SelectTrigger className="w-48 bg-zion-blue-dark border-zion-blue-light text-white"></SelectTrigger>
+                <SelectValue placeholder="All Prices" /></SelectValue>
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent ></SelectContent>
                 <SelectItem value="all">All Prices</SelectItem>
       {/* Why Choose Zion Tech Group */}
       <div className="py-16 bg-white">
@@ -943,10 +907,10 @@ function ServiceCard({ service }: ServiceCardProps) {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-8 h-8 text-zion-blue" />
+                <Globe className="w-8 h-8 text-zion-blue" /></Globe>
               </div>
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Global Reach</h3>
               <p className="text-zion-slate">Serving clients worldwide with 24/7 support and local expertise</p>
@@ -954,7 +918,7 @@ function ServiceCard({ service }: ServiceCardProps) {
             
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-purple/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-zion-purple" />
+                <Shield className="w-8 h-8 text-zion-purple" /></Shield>
               </div>
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Enterprise Security</h3>
               <p className="text-zion-slate">Bank-grade security and compliance with industry standards</p>
@@ -962,7 +926,7 @@ function ServiceCard({ service }: ServiceCardProps) {
             
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-zion-cyan" />
+                <Zap className="w-8 h-8 text-zion-cyan" /></Zap>
               </div>
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Innovation First</h3>
               <p className="text-zion-slate">Cutting-edge AI and emerging technology solutions</p>
@@ -970,7 +934,7 @@ function ServiceCard({ service }: ServiceCardProps) {
             
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-green-600" />
+                <Users className="w-8 h-8 text-green-600" /></Users>
               </div>
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Expert Team</h3>
               <p className="text-zion-slate">Certified professionals with deep industry expertise</p>
@@ -1004,18 +968,18 @@ function ServiceCard({ service }: ServiceCardProps) {
             }}>
               Clear Filters
             </Button>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">
         <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {/* Search */}
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Search>
               <input
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
 
@@ -1023,11 +987,11 @@ function ServiceCard({ service }: ServiceCardProps) {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent"
             >
               <option value="all">All Categories</option>
               {SERVICE_CATEGORIES.map(category => (
-                <option key={category} value={category}>{category}</option>
+                <option key={category} value=>{category}{category}</option>
               ))}
             </select>
 
@@ -1035,7 +999,7 @@ function ServiceCard({ service }: ServiceCardProps) {
             <select
               value={selectedPricing}
               onChange={(e) => setSelectedPricing(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent"
             >
               <option value="all">All Pricing</option>
               <option value="budget">Budget ($0-$999)</option>
@@ -1047,7 +1011,7 @@ function ServiceCard({ service }: ServiceCardProps) {
             <select
               value={selectedSupport}
               onChange={(e) => setSelectedSupport(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent"
             >
               <option value="all">All Support Levels</option>
               <option value="basic">Basic</option>
@@ -1058,11 +1022,11 @@ function ServiceCard({ service }: ServiceCardProps) {
 
           {/* Sort Options */}
           <div className="mt-4 flex items-center gap-4">
-            <span className="text-gray-600">Sort by:</span>
+            <span className="text-gray-600">Sort by: </span>
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="px-3 py-1 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="px-3 py-1 border border-gray-300 rounded-md focus: ring-2 focus:ring-blue-500 focus:border-transparent"
             >
               <option value="name">Name</option>
               <option value="price-low">Price: Low to High</option>
@@ -1076,19 +1040,19 @@ function ServiceCard({ service }: ServiceCardProps) {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
           {sortedServices.map((service) => {
             const pricingBadge = getPricingBadge(service.price)
             const supportBadge = getSupportBadge(service.supportLevel)
             return (
-              <div key={service.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+              <div key={service.id} className="bg-white rounded-2xl shadow-lg hover: shadow-xl transition-all duration-300 overflow-hidden group">
                 {/* Service Header */}
                 <div className="p-6 border-b border-gray-100">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
                       {getCategoryIcon(service.category)}
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                        <h3 className="text-xl font-bold text-gray-900 group-hover: text-blue-600 transition-colors">
                           {service.title}
                         </h3>
                         <p className="text-sm text-gray-500">{service.category}</p>
@@ -1122,11 +1086,11 @@ function ServiceCard({ service }: ServiceCardProps) {
                   {/* Market Price Comparison */}
                   <div className="bg-gray-50 rounded-lg p-3 mb-4">
                     <div className="flex items-center justify-between text-sm">
-                      <span className="text-gray-600">Market Price:</span>
+                      <span className="text-gray-600">Market Price: </span>
                       <span className="font-semibold text-gray-900">{service.marketPrice}</span>
                     </div>
                     <div className="flex items-center justify-between text-sm mt-1">
-                      <span className="text-gray-600">Our Price:</span>
+                      <span className="text-gray-600">Our Price: </span>
                       <span className="font-bold text-green-600">${service.price.toLocaleString()}/{service.pricingModel}</span>
                     </div>
                   </div>
@@ -1135,7 +1099,7 @@ function ServiceCard({ service }: ServiceCardProps) {
                 {/* Service Features */}
                 <div className="p-6">
                   <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
+                    <CheckCircle className="w-5 h-5 text-green-500" /></CheckCircle>
                     Key Features
                   </h4>
                   <div className="grid grid-cols-1 gap-2 mb-4">
@@ -1154,7 +1118,7 @@ function ServiceCard({ service }: ServiceCardProps) {
 
                   {/* Benefits */}
                   <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                    <TrendingUp className="w-5 h-5 text-blue-500" />
+                    <TrendingUp className="w-5 h-5 text-blue-500" /></TrendingUp>
                     Key Benefits
                   </h4>
                   <div className="grid grid-cols-1 gap-2 mb-6">
@@ -1180,11 +1144,11 @@ function ServiceCard({ service }: ServiceCardProps) {
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-sm text-gray-600">
                         <div className="flex items-center gap-1 mb-1">
-                          <Phone className="w-4 h-4" />
+                          <Phone className="w-4 h-4" /></Phone>
                           <span>{service.contactInfo.phone}</span>
                         </div>
                         <div className="flex items-center gap-1">
-                          <Mail className="w-4 h-4" />
+                          <Mail className="w-4 h-4" /></Mail>
                           <span>{service.contactInfo.email}</span>
                         </div>
                       </div>
@@ -1192,19 +1156,19 @@ function ServiceCard({ service }: ServiceCardProps) {
                     
                     <div className="flex gap-3">
                       <$2 />
-                        href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}
-                        className="flex-1 bg-blue-600 text-white text-center py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
+                        href={`mailto: ${service.contactInfo.email}?subject=Inquiry about ${service.title}`}
+                        className="flex-1 bg-blue-600 text-white text-center py-2 px-4 rounded-lg hover: bg-blue-700 transition-colors flex items-center justify-center gap-2"
                       >
-                        <Mail className="w-4 h-4" />
+                        <Mail className="w-4 h-4" /></Mail>
                         Get Quote
                       </a>
                       <$2 />
                         href={service.contactInfo.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 bg-gray-100 text-gray-700 text-center py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors flex items-center justify-center gap-2"
+                        className="flex-1 bg-gray-100 text-gray-700 text-center py-2 px-4 rounded-lg hover: bg-gray-200 transition-colors flex items-center justify-center gap-2"
                       >
-                        <Globe className="w-4 h-4" />
+                        <Globe className="w-4 h-4" /></Globe>
                         Learn More
                       </a>
                     </div>
@@ -1218,7 +1182,7 @@ function ServiceCard({ service }: ServiceCardProps) {
         {/* No Results */}
         {sortedServices.length === 0 && (
           <div className="text-center py-16">
-            <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+            <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" /></Search>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">No services found</h3>
             <p className="text-gray-600">Try adjusting your search criteria or filters.</p>
           </div>
@@ -1227,25 +1191,25 @@ function ServiceCard({ service }: ServiceCardProps) {
 
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-zion-cyan mb-8 max-w-2xl mx-auto">
             Our expert team is ready to help you implement cutting-edge technology solutions that drive real business results.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light">
-              <Mail className="w-5 h-5 mr-2" />
+            <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"></Button>
+              <Mail className="w-5 h-5 mr-2" /></Mail>
               Schedule Free Consultation
             </Button>
-            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-              <Phone className="w-5 h-5 mr-2" />
+            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"></Button>
+              <Phone className="w-5 h-5 mr-2" /></Phone>
               Call +1 302 464 0950
             </Button>
           </div>
       {/* Contact Section */}
       <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Transform Your Business?
@@ -1254,44 +1218,44 @@ function ServiceCard({ service }: ServiceCardProps) {
               Connect with Zion Tech Group today and discover how our innovative micro SAAS services can revolutionize your operations, enhance security, and drive growth.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-8">
               <div className="text-center">
-                <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4" /></Phone>
                 <h3 className="text-xl font-semibold mb-2">Call Us</h3>
                 <p className="text-gray-300">+1 302 464 0950</p>
                 <p className="text-sm text-gray-400">Available Mon-Fri, 9AM-6PM EST</p>
               </div>
               
               <div className="text-center">
-                <Mail className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                <Mail className="w-12 h-12 text-blue-400 mx-auto mb-4" /></Mail>
                 <h3 className="text-xl font-semibold mb-2">Email Us</h3>
                 <p className="text-gray-300">kleber@ziontechgroup.com</p>
                 <p className="text-sm text-gray-400">24/7 support available</p>
               </div>
               
               <div className="text-center">
-                <MapPin className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                <MapPin className="w-12 h-12 text-blue-400 mx-auto mb-4" /></MapPin>
                 <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
                 <p className="text-gray-300">364 E Main St STE 1008</p>
                 <p className="text-gray-300">Middletown, DE 19709</p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <$2 />
                 href="https://ziontechgroup.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
               >
-                <Globe className="w-5 h-5" />
+                <Globe className="w-5 h-5" /></Globe>
                 Visit Our Website
               </a>
               <$2 />
                 href="mailto:kleber@ziontechgroup.com?subject=Business Consultation Request"
                 className="bg-gray-700 text-white px-8 py-3 rounded-lg hover:bg-gray-600 transition-colors flex items-center justify-center gap-2"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5" /></Mail>
                 Schedule Consultation
               </a>
             </div>
@@ -1305,29 +1269,29 @@ function ServiceCard({ service }: ServiceCardProps) {
 }
 }
 export default EnhancedServicesPage
-    <Card className="group overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-zion-purple/20 hover:border-zion-purple/50 bg-zion-blue-dark/30 border border-zion-blue-light/20 backdrop-blur-sm">
+    <Card className="group overflow-hidden transition-all duration-500 hover: shadow-2xl hover:shadow-zion-purple/20 hover:border-zion-purple/50 bg-zion-blue-dark/30 border border-zion-blue-light/20 backdrop-blur-sm"></Card>
       <div className="relative">
         <img 
           src={service.image} 
           alt={service.title}
-          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-48 object-cover transition-transform duration-500 group-hover: scale-105"
         />
         <div className="absolute top-4 left-4 flex gap-2">
           {service.isPopular && (
-            <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white border-0">
-              <Star className="h-3 w-3 mr-1" />
+            <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white border-0"></Badge>
+              <Star className="h-3 w-3 mr-1" /></Star>
               Popular
             </Badge>
           )}
           {service.isNew && (
-            <Badge className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0">
-              <Zap className="h-3 w-3 mr-1" />
+            <Badge className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0"></Badge>
+              <Zap className="h-3 w-3 mr-1" /></Zap>
               New
             </Badge>
           )}
           {service.isPremium && (
-            <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white border-0">
-              <Shield className="h-3 w-3 mr-1" />
+            <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white border-0"></Badge>
+              <Shield className="h-3 w-3 mr-1" /></Shield>
               Premium
             </Badge>
           )}
@@ -1337,25 +1301,25 @@ export default EnhancedServicesPage
         </div>
       </div>
 
-      <CardHeader className="pb-3">
+      <CardHeader className="pb-3"></CardHeader>
         <div className="flex items-start justify-between mb-2">
-          <CardTitle className="text-lg font-semibold text-white group-hover:text-zion-cyan transition-colors">
+          <CardTitle className="text-lg font-semibold text-white group-hover: text-zion-cyan transition-colors"></CardTitle>
             {service.title}
           </CardTitle>
         </div>
-        <CardDescription className="text-zion-slate-light line-clamp-2">
+        <CardDescription className="text-zion-slate-light line-clamp-2"></CardDescription>
           {service.description}
         </CardDescription>
       </CardHeader>
 
-      <CardContent className="space-y-4">
+      <CardContent className="space-y-4"></CardContent>
         {/* Price and Rating */}
         <div className="flex items-center justify-between">
           <div className="text-lg font-bold text-zion-cyan">
             {formatPrice(service)}
           </div>
           <div className="flex items-center gap-1">
-            <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+            <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" /></Star>
             <span className="text-sm text-white">{service.rating}</span>
             <span className="text-xs text-zion-slate-light">({service.reviewCount})</span>
           </div>
@@ -1368,11 +1332,11 @@ export default EnhancedServicesPage
 
         {/* Key Benefits */}
         <div className="space-y-2">
-          <h4 className="text-sm font-medium text-white">Key Benefits:</h4>
+          <h4 className="text-sm font-medium text-white">Key Benefits: </h4>
           <ul className="space-y-1">
             {service.benefits.slice(0, 3).map((benefit, index) => (
               <li key={index} className="text-xs text-zion-slate-light flex items-start gap-2">
-                <CheckCircle className="w-3 h-3 text-zion-cyan mt-0.5 flex-shrink-0" />
+                <CheckCircle className="w-3 h-3 text-zion-cyan mt-0.5 flex-shrink-0" /></CheckCircle>
                 {benefit}
               </li>
             ))}
@@ -1381,7 +1345,7 @@ export default EnhancedServicesPage
 
         {/* Delivery Time */}
         <div className="flex items-center gap-2 text-xs text-zion-slate-light">
-          <Clock className="h-3 w-3" />
+          <Clock className="h-3 w-3" /></Clock>
           {service.deliveryTime}
         </div>
 
@@ -1389,20 +1353,18 @@ export default EnhancedServicesPage
         <div className="flex gap-2 pt-2">
           <Button 
             size="sm" 
-            className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white gap-2"
-            onClick={() => window.open(service.contactLink, '_blank')}
-          >
-            <ExternalLink className="h-3 w-3" />
+            className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white gap-2"
+            onClick=>{() => window.open(service.contactLink, '_blank')}
+            <ExternalLink className="h-3 w-3" /></ExternalLink>
             Get Quote
           </Button>
-          {service.demoLink && (
+          >{service.demoLink && (
             <Button 
               size="sm" 
               variant="outline" 
-              className="border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 hover:border-zion-purple/50 gap-2"
+              className="border-zion-purple/30 text-zion-cyan hover: bg-zion-purple/10 hover:border-zion-purple/50 gap-2"
               onClick={() => window.open(service.demoLink, '_blank')}
-            >
-              <Play className="h-3 w-3" />
+              <Play className="h-3 w-3" /></Play>
               Demo
             </Button>
           )}

@@ -1,4 +1,3 @@
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import type { Config } from 'jest'
 import nextJest from 'next/jest.js'
 import type { Config } from "jest"
@@ -9,12 +8,7 @@ const config: Config = {
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["<rootDir>/jest && jest.setup.js"],
   moduleNameMapping: { "^@/(.*)$": "<rootDir>/src/$1" },
-  testMatch: [
-    "**/__tests__*.(js|jsx|ts|tsx)",
-    "***.{js,jsx,ts,tsx}",
-    "!src*.d && d.ts",
-    "!src*.stories.{js,jsx,ts,tsx}",
-  ],
+  testMatch: ["**/__tests__*.(js|jsx|ts|tsx)", "***.{js, jsx, ts, tsx}", "!src*.d && d.ts", "!src*.stories.{js, jsx, ts, tsx}"],
   coverageThreshold: {
     global: { branches: 70, functions: 70, lines: 70, statements: 70 }
   }
@@ -24,8 +18,6 @@ import type { Config } from "jest"
 import type { Config } from 'jest'
 import nextJest from 'next/jest.js'
 ursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const createJestConfig = nextJest({
   // Provide the path to your Next && Next.js app to load next && next.config.js and .env files
 import type { Config } from './jest'
@@ -36,12 +28,7 @@ const config: Config = {
   test_environment: "jsdom",
   setupFilesAfterEnv: ["<root_dir>/jest.setup.js"],
   moduleNameMapping: { "^@/(.*)$": "<root_dir>/src/$1" },
-  test_match: [
-    "**/__tests__*.(js | jsx | ts | tsx)",
-    "***.{js, jsx, ts, tsx}",
-    "!src*.d.ts",
-    "!src*.stories.{js, jsx, ts, tsx}",
-  ],
+  test_match: ["**/__tests__*.(js | jsx | ts | tsx)", "***.{js, jsx, ts, tsx}", "!src*.d.ts", "!src*.stories.{js, jsx, ts, tsx}"],
   coverage_threshold: {
     global: { branches: 70, functions: 70, lines: 70, statements: 70 },
   },
@@ -59,15 +46,11 @@ const createJestConfig = next_jest ({
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1"
   }
-  testMatch: [
-    "**/__tests__/**/*.(js|jsx|ts|tsx)"
-    "**/*.(test|spec).(js|jsx|ts|tsx)"
-  ]
-  collectCoverageFrom: [
-    "src/**/*.{js,jsx,ts,tsx}"
+  testMatch: ["**/__tests__/**/*.(js|jsx|ts|tsx)"
+    "**/*.(test|spec).(js|jsx|ts|tsx)"]
+  collectCoverageFrom: ["src/**/*.{js, jsx, ts, tsx}"
     "!src/**/*.d.ts"
-    "!src/**/*.stories.{js,jsx,ts,tsx}"
-  ]
+    "!src/**/*.stories.{js, jsx, ts, tsx}"]
   coverageThreshold: {
     global: {
       branches: 70
@@ -82,7 +65,7 @@ export default createJestConfig(config)
 ursor/integrate-build-improve-and-re-verify-8f7d
 export default createJestConfig(config)
 origin/automation-improvements-final
-import type { Config } from 'jest'; import nextJest from 'next/jest.js'; const createJestConfig = nextJest({ dir: './',}); const config: Config = { coverageProvider: 'v8',testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],moduleNameMapping: { '^@/(.*)$': '<rootDir>/src/$1',},testMatch: [ '**/__tests__*.(js|jsx|ts|tsx)','***.{js,jsx,ts,tsx}','!src*.d.ts','!src*.stories.{js,jsx,ts,tsx}',],coverageThreshold: { global: { branches: 70,functions: 70,lines: 70,statements: 70,},},}; export default createJestConfig(config)
+import type { Config } from 'jest'; import nextJest from 'next/jest.js'; const createJestConfig = nextJest({ dir: './',}); const config: Config = { coverageProvider: 'v8',testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],moduleNameMapping: { '^@/(.*)$': '<rootDir>/src/$1',},testMatch: ['**/__tests__*.(js|jsx|ts|tsx)', '***.{js, jsx, ts, tsx}', '!src*.d.ts', '!src*.stories.{js, jsx, ts, tsx}'],coverageThreshold: { global: { branches: 70,functions: 70,lines: 70,statements: 70,},},}; export default createJestConfig(config)
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 export default createJestConfig(config)
@@ -92,18 +75,15 @@ export default createJestConfig(config)
 import type { Config } from "jest"
 import nextJest from "next/jest.js"
 const createJestConfig = nextJest({ dir: "./" })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const config: Config = {
   coverageProvider: "v8"
   testEnvironment: "jsdom"
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"]
   moduleNameMapping: { "^@/(.*)$": "<rootDir>/src/$1" }
-  testMatch: [
-    "**/__tests__*.(js|jsx|ts|tsx)"
-    "***.{js,jsx,ts,tsx}"
+  testMatch: ["**/__tests__*.(js|jsx|ts|tsx)"
+    "***.{js, jsx, ts, tsx}"
     "!src*.d.ts"
-    "!src*.stories.{js,jsx,ts,tsx}"
-  ]
+    "!src*.stories.{js, jsx, ts, tsx}"]
   coverageThreshold: {
     global: { branches: 70, functions: 70, lines: 70, statements: 70 },
   },
@@ -111,7 +91,7 @@ const config: Config = {
 export default createJestConfig(config)
 export default createJestConfig(config)
 ursor/fix-lint-push-and-merge-to-main-ae4e
-import type { Config } from 'jest'; import nextJest from 'next/jest.js'; const createJestConfig = nextJest({ dir: './',}); const config: Config = { coverageProvider: 'v8',testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],moduleNameMapping: { '^@/(.*)$': '<rootDir>/src/$1',},testMatch: [ '**/__tests__*.(js|jsx|ts|tsx)','***.{js,jsx,ts,tsx}','!src*.d.ts','!src*.stories.{js,jsx,ts,tsx}',],coverageThreshold: { global: { branches: 70,functions: 70,lines: 70,statements: 70,},},}; export default createJestConfig(config)
+import type { Config } from 'jest'; import nextJest from 'next/jest.js'; const createJestConfig = nextJest({ dir: './',}); const config: Config = { coverageProvider: 'v8',testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],moduleNameMapping: { '^@/(.*)$': '<rootDir>/src/$1',},testMatch: ['**/__tests__*.(js|jsx|ts|tsx)', '***.{js, jsx, ts, tsx}', '!src*.d.ts', '!src*.stories.{js, jsx, ts, tsx}'],coverageThreshold: { global: { branches: 70,functions: 70,lines: 70,statements: 70,},},}; export default createJestConfig(config)
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
     global: { branches: 70, functions: 70, lines: 70, statements: 70 }
@@ -130,12 +110,7 @@ const config: Config = {
   test_environment: "jsdom",
   setupFilesAfterEnv: ["<root_dir>/jest.setup.js"],
   moduleNameMapping: { "^@/(.*)$": "<root_dir>/src/$1" },
-  test_match: [
-    "**/__tests__*.(js | jsx | ts | tsx)",
-    "***.{js, jsx, ts, tsx}",
-    "!src*.d.ts",
-    "!src*.stories.{js, jsx, ts, tsx}",
-  ],
+  test_match: ["**/__tests__*.(js | jsx | ts | tsx)", "***.{js, jsx, ts, tsx}", "!src*.d.ts", "!src*.stories.{js, jsx, ts, tsx}"],
   coverage_threshold: {
     global: { branches: 70, functions: 70, lines: 70, statements: 70 },
   },

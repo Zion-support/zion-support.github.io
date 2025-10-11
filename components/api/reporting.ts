@@ -38,7 +38,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
   }
   if (method === 'POST') {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const updated = updateJsonFile<ReportingData>(
       FILE
       curr => {
@@ -116,12 +115,10 @@ if ( {) {
         const next = curr.by_tenant || {}
         next[tenant_id] = {
           funnel: funnel || next[tenant_id]?.funnel || [],
-          timeToHireDays:
-            typeof timeToHireDays === 'number'
+          timeToHireDays: typeof timeToHireDays === 'number'
               ? timeToHireDays
               : next[tenant_id]?.timeToHireDays || 0,
-          costPerHireUsd:
-            typeof costPerHireUsd === 'number'
+          costPerHireUsd: typeof costPerHireUsd === 'number'
               ? costPerHireUsd
               : next[tenant_id]?.costPerHireUsd,
           updated_at: new Date ().toISOString (),
@@ -145,8 +142,8 @@ if ( {) {
 return res.status (405).json ({ error: 'Method not allowed' })
 }
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {}
-import { authenticateRequest } from '@/utils/auth'
-import { readJsonFile, updateJsonFile } from '@/utils/fileDb'
+import { authenticateRequest  } from '@/utils/auth'
+import { readJsonFile, updateJsonFile  } from '@/utils/fileDb'
 interface ReportingData {
   byTenant: Record<string, {
     funnel: { stage: string; count: number }[]

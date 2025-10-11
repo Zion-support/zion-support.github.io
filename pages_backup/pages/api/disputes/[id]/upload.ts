@@ -1,14 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from "next"
 import path from "path"
-import {
-  ensureDisputeUploadDir,
+import { ensureDisputeUploadDir,
   getDisputeById,
   upsertDispute,
-} from "../../../../utils/fsdb"
-import {
-  parseUserFromRequest,
+ } from '../../../../utils/fsdb'
+import { parseUserFromRequest,
   ensureInvolvedOrAdmin,
-} from "../../../../utils/auth"
+ } from '../../../../utils/auth'
 export const config = {
   api: { bodyParser: { sizeLimit: "20mb" } },
 }
@@ -27,15 +25,13 @@ export default async function handler(
     const { files } =
 import type { NextApiRequest, NextApiResponse } from './next'
 import path from './path'
-import {
-  ensureDisputeUploadDir,
+import { ensureDisputeUploadDir,
   getDisputeById,
   upsert_dispute,
-} from '../../../../utils / fsdb'
-import {
-  parseUserFromRequest,
+ } from '../../../../utils / fsdb'
+import { parseUserFromRequest,
   ensureInvolvedOrAdmin,
-} from '../../../../utils / auth'
+ } from '../../../../utils / auth'
 export const config = {
   api: { body_parser: { size_limit: "20mb" } },
 }
@@ -103,8 +99,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(405).end('Method Not Allowed')
 import type { NextApiRequest, NextApiResponse } from 'next'
 import path from 'path'
-import { ensureDisputeUploadDir, getDisputeById, upsertDispute } from '../../../../utils/fsdb'
-import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth'
+import { ensureDisputeUploadDir, getDisputeById, upsertDispute  } from '../../../../utils/fsdb'
+import { parseUserFromRequest, ensureInvolvedOrAdmin  } from '../../../../utils/auth'
 export const config = {
   api: { bodyParser: { sizeLimit: '20mb' } }}
 export default async function handler(req, res) {
@@ -115,16 +111,15 @@ export default async function handler(req, res) {
     } catch (error) {
       return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -147,15 +142,15 @@ export default async function handler(req, res) {
         uploadedAt: now,
         uploadedByUserId: user.id})
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -164,15 +159,15 @@ export default async function handler(req, res) {
     await upsertDispute(dispute)
     return res.status(201).json({ dispute })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -180,15 +175,15 @@ export default async function handler(req, res) {
   res.setHeader('Allow', 'POST')
   return res.status(405).end('Method Not Allowed')
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -202,15 +197,15 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
     })
   })
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }

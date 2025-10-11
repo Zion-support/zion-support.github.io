@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { randomUUID } from 'crypto'
+import { randomUUID  } from 'crypto'
 import type { NextApiRequest, NextApiResponse } from 'next',
-import { randomUUID } from 'crypto',
+import { randomUUID  } from 'crypto',
 type Note = {
   id: string
   targetType: string
@@ -72,7 +72,7 @@ const notesStore: Note[] = []
       res.status(405).end('Method Not Allowed')
     }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }

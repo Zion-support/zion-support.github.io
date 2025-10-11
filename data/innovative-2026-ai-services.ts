@@ -37,16 +37,10 @@
   rating: number
   reviews: number,
 }
-export const innovative2026AIServices: Innovative2026AIService[] = [
-  // AI-Powered Business Intelligence
-    id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite',
-    tagline: 'Transform data into actionable insights with AI', price: '$299',
-    period: '/month',
-    description: 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, predicts outcomes, and provides actionable recommendations in real-time.',
-    features: [
+export const innovative2026AIServices: Innovative2026AIService[] = [// AI-Powered Business Intelligence
+    id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite', tagline: 'Transform data into actionable insights with AI', price: '$299', period: '/month', description: 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, predicts outcomes, and provides actionable recommendations in real-time.', features: [
       'AI-powered data analysis and visualizationPredictive analytics and forecastingNatural language query interfaceAutomated report generationReal-time dashboard updatesCustom KPI tracking and alertsData integration from 100+ sourcesAdvanced machine learning models'
-      'Collaborative workspace for teamsMobile app for on-the-go insights'
-    ],
+      'Collaborative workspace for teamsMobile app for on-the-go insights'],
     popular: true, icon: '',
     color: 'from-blue-600 to-purple-700', textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-business-intelligence',
@@ -79,18 +73,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     price: '$199',
     period: '/month',
     description: 'Comprehensive AI platform that personalizes customer experiences across all touchpoints, from website interactions to customer support, driving engagement and loyalty.',
-    features: [
-      'AI-powered personalization engine',
-      'Real-time customer behavior analysis',
-      'Dynamic content optimization',
-      'Predictive customer journey mapping',
-      'Automated A/B testing',
-      'Multi-channel experience orchestration',
-      'Customer sentiment analysis',
-      'Personalized recommendations',
-      'Automated customer support',
-      'Customer lifetime value optimization'
-    ],
+    features: ['AI-powered personalization engine', 'Real-time customer behavior analysis', 'Dynamic content optimization', 'Predictive customer journey mapping', 'Automated A/B testing', 'Multi-channel experience orchestration', 'Customer sentiment analysis', 'Personalized recommendations', 'Automated customer support', 'Customer lifetime value optimization'],
     popular: true,
     icon: '🎯',
     color: 'from-green-500 to-teal-600',
@@ -131,18 +114,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     price: '$399',
     period: '/month',
     description: 'Advanced AI-powered cybersecurity platform that provides real-time threat detection, automated incident response, and comprehensive security monitoring for businesses of all sizes.',
-    features: [
-      'AI-powered threat detection',
-      'Real-time security monitoring',
-      'Automated incident response',
-      'Behavioral analysis',
-      'Vulnerability assessment',
-      'Compliance reporting',
-      'Security awareness training',
-      'Threat intelligence feeds',
-      'Incident management dashboard',
-      '24/7 security operations center'
-    ],
+    features: ['AI-powered threat detection', 'Real-time security monitoring', 'Automated incident response', 'Behavioral analysis', 'Vulnerability assessment', 'Compliance reporting', 'Security awareness training', 'Threat intelligence feeds', 'Incident management dashboard', '24/7 security operations center'],
     popular: true,
     icon: '🛡️',
     color: 'from-red-600 to-orange-600',
@@ -183,18 +155,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     price: '$149',
     period: '/month',
     description: 'Intelligent marketing automation platform that uses AI to optimize campaigns, personalize content, and maximize ROI across all marketing channels.',
-    features: [
-      'AI-powered campaign optimization',
-      'Multi-channel automation',
-      'Personalized content generation',
-      'Predictive analytics',
-      'A/B testing automation',
-      'Lead scoring and nurturing',
-      'Email marketing automation',
-      'Social media management',
-      'Marketing attribution',
-      'ROI tracking and optimization'
-    ],
+    features: ['AI-powered campaign optimization', 'Multi-channel automation', 'Personalized content generation', 'Predictive analytics', 'A/B testing automation', 'Lead scoring and nurturing', 'Email marketing automation', 'Social media management', 'Marketing attribution', 'ROI tracking and optimization'],
     popular: true,
     icon: '📈',
     color: 'from-purple-500 to-pink-600',
@@ -235,18 +196,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     price: '$179',
     period: '/month',
     description: 'Advanced sales intelligence platform that uses AI to identify prospects, predict sales outcomes, and provide actionable insights to improve sales performance.',
-    features: [
-      'AI-powered prospect identification',
-      'Sales forecasting and prediction',
-      'Lead scoring and prioritization',
-      'Competitive intelligence',
-      'Sales performance analytics',
-      'Pipeline optimization',
-      'Customer behavior analysis',
-      'Sales coaching recommendations',
-      'Revenue optimization',
-      'Integration with CRM systems'
-    ],
+    features: ['AI-powered prospect identification', 'Sales forecasting and prediction', 'Lead scoring and prioritization', 'Competitive intelligence', 'Sales performance analytics', 'Pipeline optimization', 'Customer behavior analysis', 'Sales coaching recommendations', 'Revenue optimization', 'Integration with CRM systems'],
     popular: true,
     icon: '💰',
     color: 'from-yellow-500 to-orange-600',
@@ -278,7 +228,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     customers: 1900,
     rating: 4.8,
     reviews: 950
-],import { ServiceVariant } from '../types/service-variants'
+],import { ServiceVariant  } from '../types/service-variants'
 export interface Innovative2026AIService {
   id: string
   name: string
@@ -319,19 +269,14 @@ export interface Innovative2026AIService {
   rating: number
   reviews: number,
 }
-export const innovative2026AIServices: Innovative2026AIService[] = [
-  // AI-Powered Business Intelligence
-  {,
-    id: 'ai-business-intelligence-suite'
+export const innovative2026AIServices: Innovative2026AIService[] = [// AI-Powered Business Intelligence
+  {, id: 'ai-business-intelligence-suite'
     name: 'AI Business Intelligence Suite'
     tagline: 'Transform data into actionable insights with AI'
     price: '$299'
-    period: '/month',,
-  description: 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, predicts outcomes, and provides actionable recommendations in real-time.'
-    features: [,
-      'AI-powered data analysis and visualizationPredictive analytics and forecastingNatural language query interfaceAutomated report generationReal-time dashboard updatesCustom KPI tracking and alertsData integration from 100+ sourcesAdvanced machine learning models'
-      'Collaborative workspace for teamsMobile app for on-the-go insights'
-    ]
+    period: '/month', description: 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, predicts outcomes, and provides actionable recommendations in real-time.'
+    features: [, 'AI-powered data analysis and visualizationPredictive analytics and forecastingNatural language query interfaceAutomated report generationReal-time dashboard updatesCustom KPI tracking and alertsData integration from 100+ sourcesAdvanced machine learning models'
+      'Collaborative workspace for teamsMobile app for on-the-go insights']
     popular: true
     icon: ''
     color: 'from-blue-600 to-purple-700'
@@ -372,10 +317,8 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     price: '$199'
     period: '/month',,
   description: 'Comprehensive AI platform that personalizes customer experiences across all touchpoints, from website interactions to customer support, driving engagement and loyalty.'
-    features: [,
-      'AI-powered personalization engineReal-time customer behavior analysisDynamic content optimizationPredictive customer journey mappingAutomated A/B testingMulti-channel experience orchestrationCustomer sentiment analysisPersonalized recommendations'
-      'Automated customer supportCustomer lifetime value optimization'
-    ]
+    features: ['AI-powered personalization engineReal-time customer behavior analysisDynamic content optimizationPredictive customer journey mappingAutomated A/B testingMulti-channel experience orchestrationCustomer sentiment analysisPersonalized recommendations'
+      'Automated customer supportCustomer lifetime value optimization']
     popular: true
     icon: ''
     color: 'from-green-500 to-teal-600'
@@ -416,10 +359,8 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     price: '$399'
     period: '/month',,
   description: 'Advanced AI-powered cybersecurity platform that provides real-time threat detection, automated incident response, and comprehensive security monitoring for businesses of all sizes.'
-    features: [,
-      'AI-powered threat detectionReal-time security monitoringAutomated incident responseBehavioral analysisVulnerability assessmentCompliance reportingSecurity awareness trainingThreat intelligence feeds'
-      'Incident management dashboard24/7 security operations center'
-    ]
+    features: ['AI-powered threat detectionReal-time security monitoringAutomated incident responseBehavioral analysisVulnerability assessmentCompliance reportingSecurity awareness trainingThreat intelligence feeds'
+      'Incident management dashboard24/7 security operations center']
     popular: true
     icon: ''
     color: 'from-red-600 to-orange-600'
@@ -460,10 +401,8 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     price: '$149'
     period: '/month',,
   description: 'Intelligent marketing automation platform that uses AI to optimize campaigns, personalize content, and maximize ROI across all marketing channels.'
-    features: [,
-      'AI-powered campaign optimizationMulti-channel automationPersonalized content generationPredictive analyticsA/B testing automationLead scoring and nurturingEmail marketing automationSocial media management'
-      'Marketing attributionROI tracking and optimization'
-    ]
+    features: ['AI-powered campaign optimizationMulti-channel automationPersonalized content generationPredictive analyticsA/B testing automationLead scoring and nurturingEmail marketing automationSocial media management'
+      'Marketing attributionROI tracking and optimization']
     popular: true
     icon: ''
     color: 'from-purple-500 to-pink-600'
@@ -504,10 +443,8 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     price: '$179'
     period: '/month',,
   description: 'Advanced sales intelligence platform that uses AI to identify prospects, predict sales outcomes, and provide actionable insights to improve sales window.window.window.performance.'
-    features: [,
-      'AI-powered prospect identificationSales forecasting and predictionLead scoring and prioritizationCompetitive intelligenceSales performance analyticsPipeline optimizationCustomer behavior analysisSales coaching recommendations'
-      'Revenue optimizationIntegration with CRM systems'
-    ]
+    features: ['AI-powered prospect identificationSales forecasting and predictionLead scoring and prioritizationCompetitive intelligenceSales performance analyticsPipeline optimizationCustomer behavior analysisSales coaching recommendations'
+      'Revenue optimizationIntegration with CRM systems']
     popular: true
     icon: ''
     color: 'from-yellow-500 to-orange-600'

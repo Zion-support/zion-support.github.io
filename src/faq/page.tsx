@@ -1,9 +1,11 @@
-import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide-react'
+import { ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare } from 'lucide-react'
 'use client'
 import React, { useState } from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const FAQPage: React.FC = () => {
+  return (
+
     const [searchTerm, setSearchTerm] = useState('')
   const [openItems, setOpenItems] = useState<number[]>([])
   const toggleItem = (index: number) => {
@@ -12,67 +14,58 @@ const FAQPage: React.FC = () => {
         ? prev.filter(i => i !== index)
         : [...prev, index]
     )
-  }
-  const faqData = [
-    {
-      category: 'General Questions',
-      questions: [
-          question: 'What is Zion Tech Group?',
-          answer:         ,
-$4},
-          question: 'What services do you offer?',
-          answer:           ,
-questionquestion: 'How can I get started?',
-          answer: 'Getting started is easy! Contact us for a free consultation at (302) 464-0950 or email kleber@ziontechgroup.com. We\'ll assess your needs and recommend the best solutions for your business.'
-          question: 'Do you offer custom solutions?',
-          answer:         ,
-$4}
-      ]
+  
+  );
+}
+  const faqData = [{
+      category: 'General Questions', questions: [
+          question: 'What is Zion Tech Group?', answer:, $4}, question: 'What services do you offer?', answer:, questionquestion: 'How can I get started?', answer: 'Getting started is easy! Contact us for a free consultation at (302) 464-0950 or email kleber@ziontechgroup.com. We\'ll assess your needs and recommend the best solutions for your business.'
+          question: 'Do you offer custom solutions?', answer:, $4}]
       category: 'AI Services',
           question: 'What AI services do you provide?',
-          answer:           ,
+          answer:  ,
 questionquestion: 'How much do AI services cost?',
-          answer:           ,
+          answer:  ,
 questionquestion: 'Do you provide AI training for our team?',
-          answer:           ,
+          answer:  ,
 questionquestion: 'Can you integrate AI with our existing systems?',
-          answer:       ,
+          answer:  ,
 categorycategory: 'IT Services',
           question: 'What IT services do you offer?',
-          answer:           ,
+          answer:  ,
 questionquestion: 'Do you provide 24/7 support?',
-          answer:           ,
+          answer:  ,
 questionquestion: 'Can you help with cloud migration?',
-          answer:           ,
+          answer:  ,
 questionquestion: 'What cybersecurity services do you provide?',
-          answer:       ,
+          answer:  ,
 categorycategory: 'Micro SAAS Solutions',
           question: 'What are Micro SAAS solutions?',
-          answer:           ,
+          answer:  ,
 questionquestion: 'How quickly can I deploy a Micro SAAS solution?',
-          answer:           ,
+          answer:  ,
 questionquestion: 'Do I need technical expertise to use Micro SAAS?',
-          answer:           ,
+          answer:  ,
 questionquestion: 'Can Micro SAAS solutions be customized?',
-          answer:       ,
+          answer:  ,
 categorycategory: 'Pricing & Billing',
           question: 'What are your pricing models?',
-          answer:           ,
+          answer:  ,
 questionquestion: 'Do you offer free consultations?',
-          answer:           ,
+          answer:  ,
 questionquestion: 'Are there any setup fees?',
           answer: 'Setup fees vary by service type. Some services include setup in the monthly fee, while others may have one-time setup charges. We\'ll provide clear pricing details during consultation.'
           question: 'Do you offer discounts for long-term contracts?',
-          answer:       ,
+          answer:  ,
 categorycategory: 'Support & Contact',
           question: 'How can I contact support?',
-          answer:           ,
+          answer:  ,
 questionquestion: 'What are your business hours?',
-          answer:           ,
+          answer:  ,
 questionquestion: 'Do you offer remote support?',
-          answer:           ,
+          answer:  ,
 questionquestion: 'How quickly do you respond to support requests?',
-          answer:   ,
+          answer:  ,
 $4]
   const filteredData = faqData.map(category => ({
     ...category,
@@ -82,25 +75,25 @@ $4]
     )
   })).filter(category => category.questions.length > 0)
   return (
-    <React.Fragment>
-      <Navigation />
+    <React .Fragment></React>
+      <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Frequently Asked Questions
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Find answers to common questions about our AI and IT services, pricing, and support.
             {/* Search Bar */}
             <div className="max-w-md mx-auto relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Search>
               <input
                 type="text"
                 placeholder="Search FAQs..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               />
           {/* FAQ Content */}
           <div className="max-w-4xl mx-auto">
@@ -115,12 +108,12 @@ $4]
                       <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
                         <$2 />
                           onClick={() => toggleItem(globalIndex)}
-                          className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors">
+                          className="w-full px-6 py-4 text-left flex items-center justify-between hover: bg-slate-700/50 transition-colors">
                           <span className="text-white font-medium pr-4">{item.question}
                           {isOpen ? (
-                            <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                            <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" /></ChevronUp>
                           ) : (
-                            <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                            <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" /></ChevronDown>
                           )}
                         {isOpen && (
                           <div className="px-6 pb-4">
@@ -137,20 +130,20 @@ $4]
               <$2 />
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2" /></Phone>
                 Call (302) 464-0950
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Mail className="w-4 h-4 mr-2" />
+                <Mail className="w-4 h-4 mr-2" /></Mail>
                 Email Us
                 href="/contact"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <MessageSquare className="w-4 h-4 mr-2" />
+                <MessageSquare className="w-4 h-4 mr-2" /></MessageSquare>
                 Contact Form
-      <Footer />
+      <Footer /></Footer>
     </React.Fragment>
 export default FAQPage,
-import { Link } from 'react-router-dom'
+import { Link  } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const FAQPage: React.FC = () => {
@@ -167,36 +160,17 @@ const toggleItem = (inde)
         : [...prev, index]
     )
   }
-  const faqData = [
-  // TOD,
-  O: Add items
-],
+  const faqData = [// TOD, O: Add items],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   categor,
   y: 'General Questions',
       question,
-  s: [,
-      questio,
-  n: 'What is Zion Tech Group?',
-          answe,
-  r: 'Zion Tech Group is a leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. We help businesses transform their operations with cutting-edge technology.'
-        },
-          questio,
-  n: 'What services do you offer?',
-          answe,
-  r: 'We offer comprehensive AI services, IT infrastructure solutions, micro SAAS applications, cloud migration, cybersecurity, quantum computing, and digital transformation consulting. Our services span from AI automation to complete enterprise solutions.'
-          questio,
-  n: 'How can I get started?',
-          answe,
-  r: 'Getting started is easy! Contact us for a free consultation at (302) 464-0950 or email kleber@ziontechgroup.com. We\'ll assess your needs and recommend the best solutions for your business.',
-          questio,
-  n: 'Do you offer custom solutions?',
-          answe,
-  r: 'Yes, we specialize in custom AI and IT solutions tailored to your specific business needs. Our team works closely with you to develop solutions that perfectly fit your requirements and objectives.'
-        }
-      ]
+  s: [questio, n: 'What is Zion Tech Group?', answe, r: 'Zion Tech Group is a leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. We help businesses transform their operations with cutting-edge technology.'
+        }, questio, n: 'What services do you offer?', answe, r: 'We offer comprehensive AI services, IT infrastructure solutions, micro SAAS applications, cloud migration, cybersecurity, quantum computing, and digital transformation consulting. Our services span from AI automation to complete enterprise solutions.'
+          questio, n: 'How can I get started?', answe, r: 'Getting started is easy! Contact us for a free consultation at (302) 464-0950 or email kleber@ziontechgroup.com. We\'ll assess your needs and recommend the best solutions for your business.', questio, n: 'Do you offer custom solutions?', answe, r: 'Yes, we specialize in custom AI and IT solutions tailored to your specific business needs. Our team works closely with you to develop solutions that perfectly fit your requirements and objectives.'
+        }]
       categor,
   y: 'AI Services',
           questio,
@@ -300,29 +274,29 @@ const toggleItem = (inde)
   })).filter(category => category.questions.length > 0)
   return (<div>Coming Soon</div>)
   )
-          <React.Fragment>
-      <Navigation />
+          <React .Fragment></React>
+      <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}"
           <div className="text-center mb-12"></div>"
             < className="text-4xl,"$2 />
-  md:text-5xl font-bold text-white mb-6 neon-text">
+  md: text-5xl font-bold text-white mb-6 neon-text">
 // Frequently Asked Questions</h1>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
 // Find answers to common questions about our AI and IT services, pricing, and support.
             {/* Search Bar */}
             <div className="max-w-md mx-auto relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Search>
               <input
 type="text" placeholder="Search FAQs..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400,
-  focus:outline-none,
-  focus:border-cyan-400,
-  focus:ring-2,"
-  focus:ring-cyan-400/20"
+  focus: outline-none,
+  focus: border-cyan-400,
+  focus: ring-2,"
+  focus: ring-cyan-400/20"
 // />
           {/* FAQ Content */}"
           <div className="max-w-4xl mx-auto">
@@ -343,15 +317,15 @@ type="text" placeholder="Search FAQs..."
                         <button>
                           onClick={() => toggleItem(globalIndex)}"
                           className="w-full px-6 py-4 text-left flex items-center justify-between,"
-  hover:bg-slate-700/50 transition-colors"
+  hover: bg-slate-700/50 transition-colors"
 // >
           "
           <span className="text-white font-medium pr-4">{item.question}
                           {isOpen ? ()}"
-          <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+          <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" /></ChevronUp>
                           ) : ()
                             "
-          <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+          <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" /></ChevronDown>
                           )}
                         {isOpen && ()}"
           <div className="px-6 pb-4"></div>"
@@ -367,13 +341,13 @@ type="text" placeholder="Search FAQs..."
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <$2 />
                 href="tel:+13024640950" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2" /></Phone>
 // Call (302) 464-0950
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Mail className="w-4 h-4 mr-2" />
+                <Mail className="w-4 h-4 mr-2" /></Mail>
                 Email Us
                 href="/contact" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <MessageSquare className="w-4 h-4 mr-2" />
+                <MessageSquare className="w-4 h-4 mr-2" /></MessageSquare>
                 Contact Form
       <Footer /></Footer>
     </React.Fragment>

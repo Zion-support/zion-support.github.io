@@ -6,10 +6,10 @@
  * Automatically applies various code quality and performance improvements
  */
 
-import { execSync } from 'child_process'
+import { execSync  } from 'child_process'
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 console.log('🚀 Starting comprehensive improvements...')
@@ -20,9 +20,9 @@ packageJson.scripts = {
   'build: analyze': 'vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html',
   'test: unit': 'jest --testPathPattern=src --passWithNoTests',
   'test: integration': 'jest --testPathPattern=app --passWithNoTests',
-  'lint:fix-all': 'eslint . --ext .ts,.tsx,.js,.jsx --fix --max-warnings 0',
+  'lint: fix-all': 'eslint . --ext .ts,.tsx,.js,.jsx --fix --max-warnings 0',
   'type-check: strict': 'tsc --noEmit --strict --noImplicitAny --noImplicitReturns',
-  'format:all': 'prettier --write "**/*.{ts,tsx,js,jsx,json,css,md}"',
+  'format: all': 'prettier --write "**/*.{ts,tsx,js,jsx,json,css,md}"',
   'clean: all': 'rm -rf dist node_modules/.vite .next .turbo',
   'precommit': 'npm run type-check && npm run lint && npm run test: unit',
 // // 1. Code Quality Improvements
@@ -31,11 +31,11 @@ packageJson.scripts = {
 const _packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'))
 // Add new scripts for better development experience
 packageJson.scripts = {/* TODO: Fix JSX expression */}
-  t:all': 'prettier --write "**/*.{ts,tsx,js,jsx,json,css,md}"',
+  t: all': 'prettier --write "**/*.{ts,tsx,js,jsx,json,css,md}"',
   'clea,
-  n:all': 'rm -rf dist node_modules/.vite .next .turbo',
+  n: all': 'rm -rf dist node_modules/.vite .next .turbo',
   'precommit': 'npm run type-check && npm run lint && npm run,
-  test:unit',
+  test: unit',
   'postinstall': 'npm run type-check'}
 
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
@@ -69,34 +69,16 @@ const improvedTsConfig = {
     isolatedModules: true,
     verbatimModuleSyntax: true
   },
-  include: [,
-const improvedTsConfig = {/* TODO: Fix JSX expression */}
-  },
-  includ,
-  e: [
-    'src/**/*',
-    'app/**/*',
-    '**/*.ts',
-    '**/*.tsx'],
-  exclude: [,
-  exclud,
-  e: [
-    'node_modules',
-    'dist',
-    'build',
-    '**/*.test.ts',
-    '**/*.test.tsx',
-    '**/*.spec.ts',
-    '**/*.spec.tsx']}
+  include: [const improvedTsConfig = {/* TODO: Fix JSX expression */}
+  }, includ, e: [
+    'src/**/*', 'app/**/*', '**/*.ts', '**/*.tsx'],
+  exclude: [exclud, e: [
+    'node_modules', 'dist', 'build', '**/*.test.ts', '**/*.test.tsx', '**/*.spec.ts', '**/*.spec.tsx']}
 
 fs.writeFileSync(tsConfigPath, JSON.stringify(improvedTsConfig, null, 2))
 // // 3. Create ESLint configuration improvements
 // const eslintConfig = {
-    extends: [,
-    'eslint:recommended',
-    '@typescript-eslint/recommended',
-    'plugin: react/recommended',
-    'plugin: react-hooks/recommended'],
+    extends: ['eslint: recommended', '@typescript-eslint/recommended', 'plugin: react/recommended', 'plugin: react-hooks/recommended'],
   parser: '@typescript-eslint/parser'
   parserOptions: {
     ecmaVersion: 2022,
@@ -170,12 +152,11 @@ if (fs.existsSync(viteConfigPath)) {/* TODO: Fix JSX expression */}
 }
 
 // Enhanced Vite configuration
-// const improvedViteConfig = `import { defineConfig } from 'vite'
+// const improvedViteConfig = `import { defineConfig  } from 'vite'
 import react from '@vitejs/plugin-react'
-import { visualizer } from 'rollup-plugin-visualizer'
+import { visualizer  } from 'rollup-plugin-visualizer'
 export default defineConfig({
-  plugins: [,
-    react({)
+  plugins: [react({)
       jsxImportSource: '@emotion/react')
       babel: {)
         plugins: ['@emotion/babel-plugin'])})
@@ -243,7 +224,7 @@ fs.writeFileSync(viteConfigPath, improvedViteConfig)
 // // 6. Create performance monitoring setup
 // // 6. Create performance monitoring setup;`
 // const performanceSetup = `// Performance monitoring setup
-import { errorHandler } from './src/utils/errorHandler'
+import { errorHandler  } from './src/utils/errorHandler'
 import performanceOptimizer from './src/utils/performanceOptimizer'
 // Initialize performance monitoring
 if (typeof window !== 'undefined') {
@@ -271,7 +252,7 @@ function runSEOEnhancement() {
     execSync('node scripts/seo-enhancer.js', { stdio: 'inherit' })
     console.log('✅ SEO enhancement completed')
   } catch (error) {
-    console.error('❌ SEO enhancement failed:', error.message)
+    console.error('❌ SEO enhancement failed: ', error.message)
   }
 }
 
@@ -282,7 +263,7 @@ function runAccessibilityEnhancement() {
     execSync('node scripts/accessibility-enhancer.js', { stdio: 'inherit' })
     console.log('✅ Accessibility enhancement completed')
   } catch (error) {
-    console.error('❌ Accessibility enhancement failed:', error.message)
+    console.error('❌ Accessibility enhancement failed: ', error.message)
   }
 }
 
@@ -293,7 +274,7 @@ function runBuild() {
     execSync('npm run build', { stdio: 'inherit' })
     console.log('✅ Build completed')
   } catch (error) {
-    console.error('❌ Build failed:', error.message)
+    console.error('❌ Build failed: ', error.message)
     process.exit(1)
   }
 }
@@ -304,44 +285,19 @@ function generateImprovementReport() {
   const report = {
     timestamp: new Date().toISOString()
     version: "1.0.0"
-    improvements: [,
-      {,
-        category: "Performance",
-        improvements: [,
-          "Moved service data to external files to reduce bundle size",
-          "Added service worker for caching",
-          "Generated manifest.json for PWA support",
-          "Created robots.txt and sitemap.xml for SEO",
-          "Optimized component structure for better loading"
-        ]
+    improvements: [{, category: "Performance", improvements: [, "Moved service data to external files to reduce bundle size", "Added service worker for caching", "Generated manifest.json for PWA support", "Created robots.txt and sitemap.xml for SEO", "Optimized component structure for better loading"]
       },
       {
         category: "SEO",
-        improvements: [,
-          "Generated comprehensive structured data",
-          "Created meta tags for better search visibility",
-          "Added FAQ schema for rich snippets",
-          "Generated breadcrumb schema for navigation",
-          "Created local business schema for local SEO"
-        ]
+        improvements: ["Generated comprehensive structured data", "Created meta tags for better search visibility", "Added FAQ schema for rich snippets", "Generated breadcrumb schema for navigation", "Created local business schema for local SEO"]
       },
       {
         category: "Accessibility",
-        improvements: [,
-          "Generated accessibility audit report",
-          "Created accessibility checklist for ongoing testing",
-          "Identified accessibility improvement opportunities",
-          "Generated testing guide for manual and automated testing"
-        ]
+        improvements: ["Generated accessibility audit report", "Created accessibility checklist for ongoing testing", "Identified accessibility improvement opportunities", "Generated testing guide for manual and automated testing"]
       },
       {
         category: "Code Quality",
-        improvements: [,
-          "Resolved merge conflicts in Navigation component",
-          "Cleaned up corrupted page.tsx file",
-          "Organized service data into separate modules",
-          "Improved component structure and maintainability"
-        ]
+        improvements: ["Resolved merge conflicts in Navigation component", "Cleaned up corrupted page.tsx file", "Organized service data into separate modules", "Improved component structure and maintainability"]
       }
     ],
     metrics: {
@@ -350,13 +306,7 @@ function generateImprovementReport() {
       performanceScore: "Improved",
       accessibilityScore: "WCAG AA compliant",
       seoScore: "Enhanced with structured data"},
-    nextSteps: [,
-      "Deploy changes to production",
-      "Monitor performance metrics",
-      "Continue accessibility testing",
-      "Update SEO based on search console data",
-      "Regular maintenance and updates"
-    ]
+    nextSteps: ["Deploy changes to production", "Monitor performance metrics", "Continue accessibility testing", "Update SEO based on search console data", "Regular maintenance and updates"]
   }
 
   fs.writeFileSync(
@@ -383,7 +333,7 @@ async function runAllImprovements() {
     console.log('🎉 All improvements completed successfully!')
     console.log('📋 Check the improvement-report.json for details')
   } catch (error) {
-    console.error('❌ Error during improvements:', error)
+    console.error('❌ Error during improvements: ', error)
     process.exit(1)
   }
 }

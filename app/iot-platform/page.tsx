@@ -1,20 +1,18 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
+import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight  } from 'lucide-react';
 
 const IoTPlatformPage: React.FC = () => {
-  const features = [
-    {
-      icon: Wifi,
-      title: 'Device Connectivity',
-      description: 'Connect and manage thousands of IoT devices with our robust connectivity platform.',
-      benefits: ['Multi-protocol support', 'Device management', 'Real-time monitoring']
-    },
+  return (
+
+  const features = [{
+      icon: Wifi, title: 'Device Connectivity', description: 'Connect and manage thousands of IoT devices with our robust connectivity platform.', benefits: ['Multi-protocol support', 'Device management', 'Real-time monitoring']
+    
+  );
+},
     {
       icon: Zap,
       title: 'Real-Time Processing',
@@ -61,54 +59,33 @@ const IoTPlatformPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
-    'Reduce operational costs by 50%',
-    'Improve device uptime by 95%',
-    'Scale to millions of devices',
-    'Real-time data insights',
-    'Enhanced security and compliance',
-    'Faster time to market'
-  ];
+  const benefits = ['Reduce operational costs by 50%', 'Improve device uptime by 95%', 'Scale to millions of devices', 'Real-time data insights', 'Enhanced security and compliance', 'Faster time to market'];
 
-  const useCases = [
-    {
-      title: 'Smart Manufacturing',
-      description: 'Optimize production with IoT sensors and real-time monitoring',
-      icon: '🏭'
-    },
-    {
-      title: 'Smart Cities',
-      description: 'Build intelligent city infrastructure with connected devices',
-      icon: '🏙️'
-    },
-    {
-      title: 'Agriculture',
-      description: 'Monitor crops and livestock with precision agriculture IoT',
-      icon: '🌾'
-    },
-    {
-      title: 'Healthcare',
-      description: 'Enable remote patient monitoring with medical IoT devices',
-      icon: '🏥'
-    }
-  ];
+  const useCases = [{
+      title: 'Smart Manufacturing', description: 'Optimize production with IoT sensors and real-time monitoring', icon: '🏭'
+    }, {
+      title: 'Smart Cities', description: 'Build intelligent city infrastructure with connected devices', icon: '🏙️'
+    }, {
+      title: 'Agriculture', description: 'Monitor crops and livestock with precision agriculture IoT', icon: '🌾'
+    }, {
+      title: 'Healthcare', description: 'Enable remote patient monitoring with medical IoT devices', icon: '🏥'
+    }];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <Helmet ></Helmet>
         <title>IoT Platform - Zion Tech Group | Internet of Things Solutions</title>
         <meta name="description" content="Build and scale IoT solutions with our comprehensive platform. Connect, manage, and analyze millions of devices with secure, reliable IoT technology." />
         <meta name="keywords" content="IoT platform, internet of things, device management, IoT analytics, smart devices, edge computing, IoT security" />
       </Helmet>
       
-      <Navigation />
-      
+      <Navigation /></Navigation>
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%, rgba(147, 51, 234, 0.3)_0%, transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%, rgba(59, 130, 246, 0.3)_0%, transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
             IoT Platform
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Solutions
@@ -118,7 +95,7 @@ const IoTPlatformPage: React.FC = () => {
             Build and scale IoT solutions with our comprehensive platform. Connect, manage, and analyze 
             millions of devices with secure, reliable Internet of Things technology.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
               Get IoT Platform Demo
             </button>
@@ -143,33 +120,22 @@ const IoTPlatformPage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300">
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-purple-400/50 transition-all duration-300">
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
                       {benefit}
                     </li>
-=======
-import {CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight}}from 'lucide-react';
-=======
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react'
->>>>>>> origin/main
 },
     {icon: Clock,
       title: '24/7 Monitoring',
       description: 'Continuous monitoring of IoT devices and systems with intelligent alerting.',
-<<<<<<< HEAD
       benefits: ['Continuous monitoring', 'Smart alerts', 'Predictive maintenance']},
     {}}
   ]
@@ -179,15 +145,6 @@ return(<p>)</p>
             </p>
           </div>
 
-=======
-      benefits: ['Continuous monitoring', 'Smart alerts', 'Predictive maintenance'],
-  },
-    {}
-    }
-  ]
-return ()
->>>>>>> origin/main
->>>>>>> origin/main
                   ))}
                 </ul>
 </div>
@@ -196,34 +153,22 @@ return ()
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Use Cases Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
-      {/* Use Cases Section */}
-      <section className="py-20 px-4">
-<<<<<<< HEAD
         </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               IoT Use Cases
-=======
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
->>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>IoT Use Cases;</h2>
->>>>>>> origin/main
             </h2>
             <p>Our IoT platform supports a wide range of industries and applications,</p>
               from smart manufacturing to connected cities.
@@ -239,7 +184,6 @@ return ()
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
       {/* CTA Section */}
       <section className="py-20 px-4">
@@ -256,46 +200,24 @@ return ()
           <p className="text-xl text-gray-100 mb-8">
             Get started with our IoT platform today and connect your devices to the future.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Get Free Consultation
             <button className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Start Free Trial
-=======
-<<<<<<< HEAD
 
       {/* Benefits Section */}
       <section className="py-20 px-4">
         </section>
-=======
-      {/* Benefits Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
-        <div className="max-w-7xl mx-auto" / /></div>
-          <div className="text-center mb-16" / /></div>
-            <h2></h2>
-              IoT Use Cases
-            </h2>
-            <p></p>
-              Our IoT platform supports a wide range of industries and applications,
-              from smart manufacturing to connected cities.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
-            {
-    useCases.map((useCase, index) => ()
->>>>>>> origin/main
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">IoT Use Cases
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our IoT platform supports a wide range of industries and applications, 
               from smart manufacturing to connected cities.
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300">
                 <div className="text-4xl mb-4">{useCase.icon}
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}
                 <p className="text-gray-300">{useCase.description}
@@ -305,12 +227,10 @@ return ()
           </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
->>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>Why Choose Our IoT Platform?</h2>
@@ -323,7 +243,7 @@ return ()
             {benefits.map((benefit, index) => (
                 <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
-                  <CheckCircle />
+                  <CheckCircle /></CheckCircle>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
             ))}
@@ -333,10 +253,8 @@ return ()
       {/* CTA Section */} <p>Start building your IoT platform today. Get started with a free consultation;</p>
             and discover how we can help you succeed.
           </p>
->>>>>>> origin/main
             </button>
             <button>Schedule Demo;</button>
-=======
         <div className="max-w-7xl mx-auto" / /></div>
           <div className="text-center mb-16" / /></div>
             <h2></h2>
@@ -347,7 +265,7 @@ return ()
               security, and performance.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" / /></div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6" / /></div>
             {benefits.map((benefit, index) => ()
             ))}
       {/* CTA Section */}
@@ -358,22 +276,14 @@ return ()
             </button>
             <button></button>
               Schedule Demo
->>>>>>> origin/main
             </button>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
-      <Footer />
+      <Footer /></Footer>
 </div>
   );
 };
 
 export default PagePage;
-=======
-      <Footer / /></Footer>
-  )
-}
-export default PagePage</$1>
->>>>>>> origin/main

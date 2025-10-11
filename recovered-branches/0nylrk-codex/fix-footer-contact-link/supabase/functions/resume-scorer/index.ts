@@ -1,6 +1,6 @@
-import "https://deno.land/x/xhr@0.1.0/mod.ts"
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
+import "https: //deno.land/x/xhr@0.1.0/mod.ts"
+import { serve  } from 'https: //deno.land/std@0.168.0/http/server.ts'
+import { createClient  } from 'https: //esm.sh/@supabase/supabase-js@2'
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -35,8 +35,8 @@ serve(async (req) => {
         talent_id,
         cover_letter,
         resume_id,
-        job:jobs(title, description, skills),
-        talent_profile:profiles!talent_id(bio, skills)
+        job: jobs(title, description, skills),
+        talent_profile: profiles!talent_id(bio, skills)
       `)
       .eq("id", applicationId)
       .single()
@@ -62,23 +62,20 @@ serve(async (req) => {
         .eq("id", application.resume_id)
         .single()
       if (resumeError) {
-        console.error("Error fetching resume:", resumeError)
+        console.error("Error fetching resume: ", resumeError)
       } else if (resume) {
         // Format resume content for analysis
         resumeContent = `
           Summary: ${resume.summary || ""}
           Headline: ${resume.headline || ""}
-          Work Experience:
-          ${resume.work_history.map((job: any) => 
+          Work Experience: ${resume.work_history.map((job: any) => 
             `${job.role_title} at ${job.company_name} (${new Date(job.start_date).getFullYear()} - ${job.end_date ? new Date(job.end_date).getFullYear() : 'Present'})
             ${job.description || ""}`
           ).join("\n\n")}
-          Education:
-          ${resume.education.map((edu: any) => 
+          Education: ${resume.education.map((edu: any) => 
             `${edu.degree} in ${edu.field_of_study || ""} from ${edu.institution}`
           ).join("\n")}
-          Skills:
-          ${resume.resume_skills.map((skill: any) => skill.name).join(", ")}
+          Skills: ${resume.resume_skills.map((skill: any) => skill.name).join(", ")}
         `
         resumeSkills = resume.resume_skills.map((skill: any) => skill.name)
       }
@@ -97,7 +94,7 @@ serve(async (req) => {
     const jobDescription = application.job?.description || ""
     const jobSkills = application.job?.skills || []
     // 5. Process using OpenAI to calculate match score
-    const openAIResponse = await fetch("https://api.openai.com/v1/chat/completions", {
+    const openAIResponse = await fetch("https: //api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${openAiKey}`,
@@ -106,35 +103,26 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         model: "gpt-4o-mini",
-        messages: [
-          {
-            role: "system",
-            content: `You are an expert resume analyzer that compares resumes against job descriptions
+        messages: [{
+            role: "system", content: `You are an expert resume analyzer that compares resumes against job descriptions
             to determine how well a candidate matches a job. Analyze the resume and job details 
             provided, focusing on skills, experience, and qualifications.`
-          },
-          {
-            role: "user",
-            content: `
+          }, {
+            role: "user", content: `
             # Job Details
             Title: ${jobTitle}
             Description: ${jobDescription}
             Required Skills: ${jobSkills.join(", ")}
             # Resume Content
             ${resumeContent}
-            Compare the resume to the job description and provide:
-            1. A match score between 0-100 (where 100 is a perfect match)
+            Compare the resume to the job description and provide: 1. A match score between 0-100 (where 100 is a perfect match)
             2. A brief summary of why this score was given (1-2 sentences)
             3. A detailed breakdown of how well the candidate's skills and experience align with job requirements
             4. A suggestion categorization: "Strongly Recommended", "Recommended for Review", or "Low Match"
-            Respond in JSON format with the following structure:
-            {
-              "score": 75,
-              "summary": "Good match with relevant experience in required technologies.",
-              "breakdown": {
+            Respond in JSON format with the following structure: {
+              "score": 75, "summary": "Good match with relevant experience in required technologies.", "breakdown": {
                 "skills_match": {
-                  "score": 80,
-                  "matching": ["skill1", "skill2"],
+                  "score": 80, "matching": ["skill1", "skill2"],
                   "missing": ["skill3"]
                 },
                 "experience_match": {
@@ -169,7 +157,7 @@ serve(async (req) => {
         throw new Error("Invalid response format")
       }
     } catch (error) {
-      console.error("Error parsing AI response:", error)
+      console.error("Error parsing AI response: ", error)
       throw new Error("Failed to parse AI analysis results")
     }
     // 6. Update the application with the match results
@@ -198,7 +186,7 @@ serve(async (req) => {
       }
     )
   } catch (error) {
-    console.error("Error in resume-scorer function:", error)
+    console.error("Error in resume-scorer function: ", error)
     return new Response(
       JSON.stringify({ error: error.message }),
       { 

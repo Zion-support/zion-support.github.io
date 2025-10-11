@@ -2,8 +2,8 @@ impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t'
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
 const ZeroTrustAISecurityFramework202, 5 = () => { 
-  return(<React.Fragment>
-      <Helm, e, t>
+  return(<React .Fragment></React>
+      <Helm , e, t></Helm>
         <title>
           Ze, r, o-Trust, AI, Security Framewo, r, k: Enterprise, Implementation, Guide |
           Zion, Tech, Group
@@ -26,15 +26,15 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
             <, t, o='/bl, o, g'$2 />
               className='inli, n, e-flex, item, s-center, tex, t-whi, t, e/90, hove, r: te, x, t-white, m, b-8, transitio, n-colo, r, s'
             >
-              <ArrowLeft, className='w-4 h-4, m, r-2' />
+              <ArrowLeft , className='w-4 h-4, m, r-2' /></ArrowLeft>
               Back, to, Blog
                 <div, classNam, e='flex, item, s-cent, e, r'>
               Back, to, Blog
                 <div, classNam, e='flex, item, s-cent, e, r'>
-                  <TrendingUp, classNam, e='w-5 h-5, m, r-2' />
+                  <TrendingUp , classNam, e='w-5 h-5, m, r-2' /></TrendingUp>
               <p, classNam, e='te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-4'>
                 <div, className='flex, item, s-cent, e, r'>
-                  <TrendingUp, className='w-5 h-5, m, r-2' />
+                  <TrendingUp , className='w-5 h-5, m, r-2' /></TrendingUp>
               <p, className='te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-4'>
                 AI, systems, face unprecedented, security, challenges: model, th, e, f, t,
                 data, poisonin, g, adversarial, attack, s, and, prompt, injection.
@@ -44,7 +44,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                 enterprise, AI, deployments.
             <section, classNam, e = 'mb-12'>
               <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r'>
-                <ShieldCheck, classNam, e='w-8 h-8, m, r-3, tex, t-emera, l, d-4, 0, 0' />
+                <ShieldCheck , classNam, e='w-8 h-8, m, r-3, tex, t-emera, l, d-4, 0, 0' /></ShieldCheck>
                   <p, classNam, e = 'te, x, t-gr, a, y-300, m, b-4'>
                     Every, request, to mod, e, l, s, data, store, s, and, inference, endpoints requires, authenticatio, n, authorizati, o, n, and, continuous, validation—even, from, internal servic, e, s.
                       <p, classNam, e = 'te, x, t-sm, tex, t-emera, l, d-4, 0, 0'>
@@ -68,7 +68,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                         Too, l, s: AWS, CloudTr, a, i, l, GCP, Audit, Logs, Van, t, a, Dra, t, a
             <section, classNam, e = 'mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r'>
-                <ShieldCheck, className='w-8 h-8, m, r-3, tex, t-emera, l, d-4, 0, 0' />
+                <ShieldCheck , className='w-8 h-8, m, r-3, tex, t-emera, l, d-4, 0, 0' /></ShieldCheck>
                   <p, classNam, e = 'te, x, t-gr, a, y-300, m, b-4'>
                     Every, request, to mod, e, l, s, data, store, s, and, inference, endpoints requires, authenticatio, n, authorizati, o, n, and, continuous, validation—even, from internal servic, e, s.
                       <p, classNam, e = 'te, x, t-sm, tex, t-emera, l, d-4, 0, 0'>
@@ -86,13 +86,13 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
       <div>
           <div>,"
             >
-              <ArrowLeft, className='w-4 h-4, m, r-2' />
+              <ArrowLeft , className='w-4 h-4, m, r-2' /></ArrowLeft>
               Back, to, Blog
                 <div, classNam, e='flex, item, s-cent, e, r'>
-                  <TrendingUp, classNam, e='w-5 h-5, m, r-2' />
+                  <TrendingUp , classNam, e='w-5 h-5, m, r-2' /></TrendingUp>
               <p, classNam, e='te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-4'>
                 <div, className='flex, item, s-cent, e, r'>
-                  <TrendingUp, className='w-5 h-5, m, r-2' />
+                  <TrendingUp , className='w-5 h-5, m, r-2' /></TrendingUp>
               <p, className='te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-4'>
                 AI, systems, face unprecedented, security, challenge,
   s: model, th, e, f, t,
@@ -101,7 +101,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                 enterprise, AI, deployments.
             <section, classNam, e = 'mb-12'>
               <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r'>
-                <ShieldCheck, classNam, e='w-8 h-8, m, r-3, tex, t-emera, l, d-4, 0, 0' />
+                <ShieldCheck , classNam, e='w-8 h-8, m, r-3, tex, t-emera, l, d-4, 0, 0' /></ShieldCheck>
                   <p, classNam, e = 'te, x, t-gr, a, y-300, m, b-4'>
                     Every, request, to mod, e, l, s, data, store, s, and, inference, endpoints requires, authenticatio, n, authorizati, o, n, and, continuous, validation—even, from, internal servic, e, s.
                       <p, classNam, e = 'te, x, t-sm, tex, t-emera, l, d-4, 0, 0'>
@@ -116,7 +116,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                         Too, l, s: AWS, CloudTr, a, i, l, GCP, Audit, Logs, Van, t, a, Dra, t, a
             <section, classNam, e = 'mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r'>
-                <ShieldCheck, className='w-8 h-8, m, r-3, tex, t-emera, l, d-4, 0, 0' />
+                <ShieldCheck , className='w-8 h-8, m, r-3, tex, t-emera, l, d-4, 0, 0' /></ShieldCheck>
                   <p, classNam, e = 'te, x, t-gr, a, y-300, m, b-4'>
                     Every, request, to mod, e, l, s, data, store, s, and, inference, endpoints requires, authenticatio, n, authorizati, o, n, and, continuous, validation—even, from internal servic, e, s.
                       <p, classNam, e = 'te, x, t-sm, tex, t-emera, l, d-4, 0, 0'>
@@ -138,12 +138,12 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
       </Helmet>",
 ",
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900/30 to-slate-900>,
-        {/* Hero Section */}>"
+        >{/* Hero Section */}"
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16">
       </Helmet>"
 "
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900/30 to-slate-900>
-        {/* Hero Section */}>"</div>
+        >{/* Hero Section */}"</div>
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16"></div>
           <div className="absolute inset-0 bg-black/20"> </div><div className="container mx-auto px-6 relative z-10">,"
   href="https: //ziontechgroup.com/blog/zero-trust-ai-security-framework-2025,
@@ -160,12 +160,12 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
         {/* Hero Section */}</div>
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16"></div>
           <div className="absolute inset-0 bg-black/20"> </div><div className="container mx-auto px-6 relative z-10"></div>
-            <Link to="/blog">
+            <Link to="/blog"></Link>
   className="inline-flex items-center text-white/90 hover: text-white mb-8 transition-colors">"
-              <ArrowLeft className="w-4 h-4 mr-2 ">
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <ArrowLeft className="w-4 h-4 mr-2 "></ArrowLeft>
+              <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
               <ArrowLeft className="w-4 h-4 mr-2" />>
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
   Back to Blog
             </Link>
             <div></div>
@@ -201,10 +201,10 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
         {/* Hero Section */}</div>
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16"></div>
           <div className="absolute inset-0 bg-black/20"> </div><div className="container mx-auto px-6 relative z-10"></div>
-            <Link to="/blog">
+            <Link to="/blog"></Link>
   className="inline-flex items-center text-white/90 hover: text-white mb-8 transition-colors">"
-              <ArrowLeft className="w-4 h-4 mr-2 ">
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <ArrowLeft className="w-4 h-4 mr-2 "></ArrowLeft>
+              <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
   Back to Blog
             <div>
                 <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
@@ -220,10 +220,10 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
               <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">,
   Zero-Trust AI Security Framework: Protecting Models, Data & Inference Pipelines,
               <div>
-                  <Calendar className="w-5 h-5 mr-2 ">
+                  <Calendar className="w-5 h-5 mr-2 "></Calendar>
                   <span>October 1, 2025
                 <div>
-                  <TrendingUp className="w-5 h-5 mr-2 ">
+                  <TrendingUp className="w-5 h-5 mr-2 "></TrendingUp>
               <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
 :src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx,
   </div>
@@ -241,10 +241,10 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
               <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
   Zero-Trust AI Security Framework: Protecting Models, Data & Inference Pipelines,
               <div>
-                  <Calendar className="w-5 h-5 mr-2" />
+                  <Calendar className="w-5 h-5 mr-2" /></Calendar>
                   <span>October 1, 2025
                 <div>
-                  <TrendingUp className="w-5 h-5 mr-2" />
+                  <TrendingUp className="w-5 h-5 mr-2" /></TrendingUp>
               <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">",
   Zero-Trust AI Security Framework: Protecting Models, Data & Inference Pipelines,
               <div>
@@ -255,10 +255,10 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
               <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">",
   Zero-Trust AI Security Framework: Protecting Models, Data & Inference Pipelines,
               <div>
-                  <Calendar className="w-5 h-5 mr-2" />
+                  <Calendar className="w-5 h-5 mr-2" /></Calendar>
                   <span>October 1, 2025
                 <div>
-                  <TrendingUp className="w-5 h-5 mr-2" />
+                  <TrendingUp className="w-5 h-5 mr-2" /></TrendingUp>
   conten,"
   t: "Comprehensive zero-trust security framework for AI systems. Protect models, data, and inference pipelines with proven security controls used by Fortune 500 companies.", /><meta,"
   name: "keywords,"
@@ -271,7 +271,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
       </Helmet>""
 ""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900/30 to-slate-900></div>"
-        {/* Hero Section */}>""
+        >{/* Hero Section */}""
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16"></div>"
           <div className="absolute inset-0 bg-black/20"> </div><div className="container mx-auto px-6 relative z-10">,""
   href="http,
@@ -290,7 +290,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
               <ArrowLeft className="w-4 h-4 mr-2 "></ArrowLeft>"
               <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>"
               <ArrowLeft className="w-4 h-4 mr-2" />>"
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
   Back to Blog
             <div></div>"
                 <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium"></span>
@@ -323,7 +323,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
   hover: text-white mb-8 transition-colors""
             >""
               <ArrowLeft className="w-4 h-4 mr-2 "></ArrowLeft>"
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
   Back to Blog
             <div></div>"
                 <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium"></span>
@@ -341,7 +341,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
   Zero-Trust AI Security,
   Framework: Protecting Models, Data & Inference Pipelines,
               <div></div>"
-                  <Calendar className="w-5 h-5 mr-2 ">
+                  <Calendar className="w-5 h-5 mr-2 "></Calendar>
                   <span>October 1, 2025
                 <div></div>"
                   <TrendingUp className="w-5 h-5 mr-2 "></TrendingUp>"
@@ -363,7 +363,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
   Zero-Trust AI Security,
   Framework: Protecting Models, Data & Inference Pipelines,
               <div></div>"
-                  <Calendar className="w-5 h-5 mr-2" />
+                  <Calendar className="w-5 h-5 mr-2" /></Calendar>
                   <span>October 1, 2025
                 <div></div>"
                   <TrendingUp className="w-5 h-5 mr-2" /></TrendingUp>"
@@ -381,16 +381,16 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
   Zero-Trust AI Security,
   Framework: Protecting Models, Data & Inference Pipelines,
               <div></div>"
-                  <Calendar className="w-5 h-5 mr-2" />
+                  <Calendar className="w-5 h-5 mr-2" /></Calendar>
                   <span>October 1, 2025
                 <div></div>"
-                  <TrendingUp className="w-5 h-5 mr-2" />
+                  <TrendingUp className="w-5 h-5 mr-2" /></TrendingUp>
                   <span>Mission Critical
         {/* Content */}
         <article className="container mx-auto px-6 py-16 max-w-4xl">
           <div>
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <AlertTriangle className="w-6 h-6 mr-2 text-red-400 ,>
+                <AlertTriangle className="w-6 h-6 mr-2 text-red-400 ,></AlertTriangle>
   The AI Security Crisis</$1>")
               <p className="text-gray-300 leading-relaxed mb-4">,")
               </h2>")
@@ -404,7 +404,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
             {/* Threat Landscape */}
             <div>
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <AlertTriangle className="w-6 h-6 mr-2 text-red-400" />
+                <AlertTriangle className="w-6 h-6 mr-2 text-red-400" /></AlertTriangle>
   The AI Security Crisis
               <p className="text-gray-300 leading-relaxed mb-4">"
   AI systems face unprecedented security challenges: model theft, data poisoning, adversarial attacks)
@@ -416,7 +416,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
         <article className="container mx-auto px-6 py-16 max-w-4xl">
           <div></div>"
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center"></h2>"
-                <AlertTriangle className="w-6 h-6 mr-2 text-red-400 ,>
+                <AlertTriangle className="w-6 h-6 mr-2 text-red-400 ,></AlertTriangle>
   The AI Security Crisis;"
               </h2>""
               <p className="text-gray-300 leading-relaxed mb-4">,""
@@ -428,7 +428,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
             {/* Threat Landscape */}
             <div></div>"
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center"></h2>"
-                <AlertTriangle className="w-6 h-6 mr-2 text-red-400" />
+                <AlertTriangle className="w-6 h-6 mr-2 text-red-400" /></AlertTriangle>
   The AI Security Crisis</$1>"
               <p className="text-gray-300 leading-relaxed mb-4">"
   AI systems face unprecedented security,
@@ -441,13 +441,13 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
             {/* Core Principles */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <ShieldCheck className="w-8 h-8 mr-3 text-emerald-400 ">
+                <ShieldCheck className="w-8 h-8 mr-3 text-emerald-400 "></ShieldCheck>
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
                 <ShieldCheck className=" />">
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <ShieldCheck className="w-8 h-8 mr-3 text-emerald-400" />
+                <ShieldCheck className="w-8 h-8 mr-3 text-emerald-400" /></ShieldCheck>
   Zero-Trust AI: Core Principles,
               </h2>
               <div>,
@@ -467,7 +467,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                 <ShieldCheck className=" />">"
             <section className="mb-12"></section>"
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center"></h2>"
-                <ShieldCheck className="w-8 h-8 mr-3 text-emerald-400" />
+                <ShieldCheck className="w-8 h-8 mr-3 text-emerald-400" /></ShieldCheck>
   Zero-Trust,
   AI: Core Principles,
               <div></div>"
@@ -578,7 +578,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
             {/* Implementation Architecture */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Lock className="w-8 h-8 mr-3 text-blue-400 ,>
+                <Lock className="w-8 h-8 mr-3 text-blue-400 ,></Lock>
   Reference Architecture
 :src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx
 "
@@ -593,7 +593,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
             {/* Implementation Architecture */}"
             <section className="mb-12"></section>"
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center"></h2>"
-                <Lock className="w-8 h-8 mr-3 text-blue-400 ,>
+                <Lock className="w-8 h-8 mr-3 text-blue-400 ,></Lock>
   Reference Architecture
 :src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx;"
 ""
@@ -633,8 +633,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                     <ul, className='te, x, t-sm, tex, t-gr, a, y-300, spac, e-y-1'>
                       <li>
                     <p, className='te, x, t-emera, l, d-400, fon, t-semibold, m, b-2'>
-                      Mitigatio, n, s:
-                    <ul, className='te, x, t-sm, tex, t-gr, a, y-300, spac, e-y-1'>
+                      Mitigatio, n, s: <ul, className='te, x, t-sm, tex, t-gr, a, y-300, spac, e-y-1'>
                       <li>
                         • Input, sanitization, with LLM, guardrail, s (NeMo, Guardra, i, l, s, Llama, Guar, d)
                       <li>
@@ -654,8 +653,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                     <ul, className='te, x, t-sm, tex, t-gr, a, y-300, spac, e-y-1'>
                       <li>
                     <p, className='te, x, t-cy, a, n-400, fon, t-semibold, m, b-2'>
-                      Mitigatio, n, s:
-                    <ul, className='te, x, t-sm, tex, t-gr, a, y-300, spac, e-y-1'>
+                      Mitigatio, n, s: <ul, className='te, x, t-sm, tex, t-gr, a, y-300, spac, e-y-1'>
                       <li>
                         • Data, provenance, tracking with, cryptographic, signatures
                       <li>
@@ -675,8 +673,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                     <ul, className='te, x, t-sm, tex, t-gr, a, y-300, spac, e-y-1'>
                       <li>
                     <p, className='te, x, t-bl, u, e-400, fon, t-semibold, m, b-2'>
-                      Mitigatio, n, s:
-                    <ul, className='te, x, t-sm, tex, t-gr, a, y-300, spac, e-y-1'>
+                      Mitigatio, n, s: <ul, className='te, x, t-sm, tex, t-gr, a, y-300, spac, e-y-1'>
                       <li>
                         • Rate, limitin, g (per, use, r/API, k, e, y) with, adaptive, throttling
                       <li>
@@ -690,7 +687,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                 <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-6'>
                   Request, Security, Assessment
                   Request, Security, Assessment
-                  <ArrowLeft, classNam, e='w-5 h-5, m, l-2, rotat, e-1, 8, 0' />
+                  <ArrowLeft , classNam, e='w-5 h-5, m, l-2, rotat, e-1, 8, 0' /></ArrowLeft>
                 <h3 className="text-2xl font-semibold text-white mb-6">Five-Layer Security Model
                       <h4 className="text-lg font-semibold text-white mb-2">Layer 1: Identity & Access Management</h4>,
                       <p className="text-gray-400 mb-2">,"
@@ -699,7 +696,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                       <p className="text-sm text-emerald-400">
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Lock className="w-8 h-8 mr-3 text-blue-400" />
+                <Lock className="w-8 h-8 mr-3 text-blue-400" /></Lock>
   Reference Architecture
                 <h3 className="text-2xl font-semibold text-white mb-6">Five-Layer Security Model
                       <h4 className="text-lg font-semibold text-white mb-2">Layer 1: Identity & Access Management</h4>,
@@ -721,7 +718,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                       <p className="text-sm text-emerald-400"></p>"
             <section className="mb-12"></section>"
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center"></h2>"
-                <Lock className="w-8 h-8 mr-3 text-blue-400" />
+                <Lock className="w-8 h-8 mr-3 text-blue-400" /></Lock>
   Reference Architecture
 "
                 <h3 className="text-2xl font-semibold text-white mb-6">Five-Layer Security Model</h3>"
@@ -860,7 +857,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
             {/* Attack Vectors & Mitigations */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Shield className="w-8 h-8 mr-3 text-red-400 ,>
+                <Shield className="w-8 h-8 mr-3 text-red-400 ,></Shield>
   Common AI Attack Vectors & Mitigations
 :src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx
               <div>
@@ -885,14 +882,13 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                     <ul className="text-sm text-gray-300 space-y-1">,
             <section className="mb-12">,
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">,
-                    <p className="text-emerald-400 font-semibold mb-2">Mitigations:
-                    <ul className="text-sm text-gray-300 space-y-1">
+                    <p className="text-emerald-400 font-semibold mb-2">Mitigations: <ul className="text-sm text-gray-300 space-y-1">
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
             {/* Attack Vectors & Mitigations */}"
             <section className="mb-12"></section>"
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center"></h2>"
-                <Shield className="w-8 h-8 mr-3 text-red-400 ,>
+                <Shield className="w-8 h-8 mr-3 text-red-400 ,></Shield>
   Common AI Attack Vectors & Mitigations
 :src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx
               <div></div>"
@@ -941,8 +937,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                       <li >• Separate system prompts from user prompts with clear delimiters
                       <li >• Output validation to detect leaked system instructions
                 <div>
-                    <p className="text-cyan-400 font-semibold mb-2">Mitigations:
-                    <ul className="text-sm text-gray-300 space-y-1">
+                    <p className="text-cyan-400 font-semibold mb-2">Mitigations: <ul className="text-sm text-gray-300 space-y-1">
                   <div>
                   <h3 className="text-xl font-bold text-white mb-3">☠️ Data Poisoning
                 <div></div>"
@@ -959,8 +954,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                     <ul className="text-sm text-gray-300 space-y-1">,
                       <li >• Data provenance tracking with cryptographic signatures</li>,
                   <div>
-                    <p className="text-cyan-400 font-semibold mb-2">Mitigations:
-                    <ul className="text-sm text-gray-300 space-y-1">
+                    <p className="text-cyan-400 font-semibold mb-2">Mitigations: <ul className="text-sm text-gray-300 space-y-1">
                   <div></div>"
                     <p className="text-cyan-400 font-semibold mb-2">Mitigation,
   s: </p>"
@@ -970,8 +964,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                       <li >• Differential privacy during training (DP-SGD) to limit single-sample impact
                       <li >• Model behavioral testing pre/post training for drift detection
                 <div>
-                    <p className="text-blue-400 font-semibold mb-2">Mitigations:
-                    <ul className="text-sm text-gray-300 space-y-1">
+                    <p className="text-blue-400 font-semibold mb-2">Mitigations: <ul className="text-sm text-gray-300 space-y-1">
                   <div>
                   <h3 className="text-xl font-bold text-white mb-3">🕵️ Model Extraction
                   <p className="text-gray-300 mb-3">"
@@ -1048,9 +1041,9 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                 to="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover: bg-gray-100 transition-colors">"
                   Request Security Assessment"
-                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180 ">
+                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180 "></ArrowLeft>
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180/>">
-                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
+                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180" /></ArrowLeft>
             <section className="text-center">
               <div className="bg-gradient-to-r from-red-600 to-orange-600 p-8 rounded-lg">
                 <h2 className="text-3xl font-bold text-white mb-4">"
@@ -1059,7 +1052,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                 <p className="text-xl text-white/90 mb-6">"
   Get a comprehensive security audit of your AI systems from our experts.
                 </p>to</p>="/contact"
-  className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors">"
+  className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover: bg-gray-100 transition-colors">"
                   Request Security Assessment"
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180 ">,
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />,

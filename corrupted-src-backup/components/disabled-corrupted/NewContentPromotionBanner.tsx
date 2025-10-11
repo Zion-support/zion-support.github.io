@@ -43,7 +43,7 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
         <div, className="flex, item, s-start, justif, y-betwe, e, n">
           <div, className="fl, e, x-1">
             <div, className="flex, item, s-center, ga, p-3, m, b-3">
-              <div, className="flex, item, s-center, ga, p-2"></div> <Sparkles, classNam, e = { `w-5 h-5 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-pul, s, e`} />
+              <div, className="flex, item, s-center, ga, p-2"></div> <Sparkles , classNam, e = { `w-5 h-5 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-pul, s, e`} /></Sparkles>
                 <span, classNam, e = "te, x, t-sm, fon, t-medium, uppercase, tracking-wider, opacit, y-90">
   const variantClasse, s = {/* TODO: Fix JSX expression */}
   } const iconClasse, s = {/* TODO: Fix JSX expression */}
@@ -62,8 +62,8 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
                 <span, classNam, e = "te, x, t-sm, fon, t-medium, uppercase, tracking-wider, opacit, y-90">
                   Fresh, Conten, t
               </div>"`
-              <div, className="flex, item, s-center, ga, p-1"> <TrendingUp, classNam, e = { `w-4 h-4 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-boun, c, e`} />
-              <div, className="flex, item, s-center, ga, p-1"></div> <TrendingUp, classNam, e = { `w-4 h-4 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-boun, c, e`} />
+              <div, className="flex, item, s-center, ga, p-1"> <TrendingUp , classNam, e = { `w-4 h-4 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-boun, c, e`} /></TrendingUp>
+              <div, className="flex, item, s-center, ga, p-1"></div> <TrendingUp , classNam, e = { `w-4 h-4 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-boun, c, e`} /></TrendingUp>
             <h3, classNam, e = "te, x, t-lg, fon, t-bold, m, b-2, flex, items-center, ga, p-2">
             </div>"
             <h3, classNam, e = "te, x, t-lg, fon, t-bold, m, b-2, flex, items-center, ga, p-2">
@@ -75,7 +75,7 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
             <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-3, m, b-4">
               <div, className="bg-whi, t, e/10, rounde, d-l, g, p-3, border, border-whi, t, e/20">
                 <div, className="flex, item, s-center, ga, p-2, m, b-1">
-                  <BookOpen, className="w-3 h-3" />
+                  <BookOpen , className="w-3 h-3" /></BookOpen>
             {/* Featured, Content, Preview */}"
             <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-3, m, b-4"></div>"
               <div, className="bg-whi, t, e/10, rounde, d-l, g, p-3, border, border-whi, t, e/20"></div>"
@@ -86,7 +86,7 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
                 <div, className="te, x, t-xs, opacit, y-90">Re, a, l-Time, Data, Pipelines Gui, d, e
               <div, className="bg-whi, t, e/10, rounde, d-l, g, p-3, border, border-whi, t, e/20">
                 <div, className="flex, item, s-center, ga, p-2, m, b-1">
-                  <Zap, className="w-3 h-3" />
+                  <Zap , className="w-3 h-3" /></Zap>
               </div>"
               <div, className="bg-whi, t, e/10, rounde, d-l, g, p-3, border, border-whi, t, e/20"></div>"
                 <div, className="flex, item, s-center, ga, p-2, m, b-1"></div>"
@@ -96,7 +96,7 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
                 <div, className="te, x, t-xs, opacit, y-90">Scorecards, That, Drive Adopti, o, n
               <div, className="bg-whi, t, e/10, rounde, d-l, g, p-3, border, border-whi, t, e/20">
                 <div, className="flex, item, s-center, ga, p-2, m, b-1">
-                  <Sparkles, className="w-3 h-3" />
+                  <Sparkles , className="w-3 h-3" /></Sparkles>
               </div>"
               <div, className="bg-whi, t, e/10, rounde, d-l, g, p-3, border, border-whi, t, e/20"></div>"
                 <div, className="flex, item, s-center, ga, p-2, m, b-1"></div>"
@@ -105,16 +105,16 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
                 </div>"
                 <div, className="te, x, t-xs, opacit, y-90">Production, Deployment, Patterns
             </div>"
-            <, t, o = { cta, L, i, n, k }, classNa, m, e = "inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/20, hove, r: bg-whi, t, e/30, tex, t-white, p, x-4, p, y-2, rounde, d-lg, fon, t-medium, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, border, border-whi, t, e/30"$2 />
+            <, t, o = { cta, L, i, n, k }, classNa, m, e = "inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/20, hove, r: bg-whi, t, e/30, tex, t-white, p, x-4, p, y-2, rounde, d-lg, fon, t-medium, tex, t-sm, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, border, border-whi, t, e/30"$2 />
             >
               {cta, T, e, x, t}"
-              <Link, classNam, e = "w-4 h-4" />
+              <Link , classNam, e = "w-4 h-4" /></Link>
           {/* TODO: Fix JSX expression */}"
             <, onClic, k = { handleDism, i, s, s  }, classNa, m, e = "ml-4 p-1, rounde, d-full, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s"$2 />
             >)
-                <X, className="w-5 h-5, opacit, y-75, hove, r:opaci, t, y-1, 0, 0" />)
+                <X, className="w-5 h-5, opacit, y-75, hove, r: opaci, t, y-1, 0, 0" />)
             ></button>"
-                <X, className="w-5 h-5, opacit, y-75, hove, r:opaci, t, y-1, 0, 0" />
+                <X , className="w-5 h-5, opacit, y-75, hove, r: opaci, t, y-1, 0, 0" /></X>
               </bu, t, t, o, n>)
           )}
         </div>

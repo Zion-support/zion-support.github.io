@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface Revolutionary2026FintechBlockchainService {
   id: string
   name: string
@@ -39,27 +39,10 @@ export interface Revolutionary2026FintechBlockchainService {
   rating: number
   reviews: number
 }
-export const revolutionary2026FintechBlockchainServices: Revolutionary2026FintechBlockchainService[] = [
-  // Autonomous Supply Chain Optimization AI
+export const revolutionary2026FintechBlockchainServices: Revolutionary2026FintechBlockchainService[] = [// Autonomous Supply Chain Optimization AI
   {
-    id: 'autonomous-supply-chain-optimization-ai',
-    name: 'Autonomous Supply Chain Optimization AI',
-    tagline: 'AI-powered supply chain optimization and automation',
-    price: '$899',
-    period: '/month',
-    description: 'Revolutionary AI platform that autonomously optimizes supply chains, predicts disruptions, and automates decision-making for maximum efficiency and cost reduction.',
-    features: [
-      'Autonomous optimization',
-      'Disruption prediction',
-      'Real-time monitoring',
-      'Cost optimization',
-      'Route optimization',
-      'Inventory management',
-      'Supplier selection',
-      'Demand forecasting',
-      'Risk assessment',
-      'Performance analytics'
-    ],
+    id: 'autonomous-supply-chain-optimization-ai', name: 'Autonomous Supply Chain Optimization AI', tagline: 'AI-powered supply chain optimization and automation', price: '$899', period: '/month', description: 'Revolutionary AI platform that autonomously optimizes supply chains, predicts disruptions, and automates decision-making for maximum efficiency and cost reduction.', features: [
+      'Autonomous optimization', 'Disruption prediction', 'Real-time monitoring', 'Cost optimization', 'Route optimization', 'Inventory management', 'Supplier selection', 'Demand forecasting', 'Risk assessment', 'Performance analytics'],
     popular: true,
     icon: '📦🤖',
     color: 'from-blue-600 to-green-500',
@@ -100,18 +83,7 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     price: '$1,499',
     period: '/month',
     description: 'Revolutionary AI platform that autonomously manages marketing campaigns, optimizes performance, and generates content for maximum ROI and engagement.',
-    features: [
-      'Autonomous campaign management',
-      'Content generation',
-      'Performance optimization',
-      'Audience targeting',
-      'A/B testing automation',
-      'ROI optimization',
-      'Multi-channel management',
-      'Real-time analytics',
-      'Predictive insights',
-      'Creative optimization'
-    ],
+    features: ['Autonomous campaign management', 'Content generation', 'Performance optimization', 'Audience targeting', 'A/B testing automation', 'ROI optimization', 'Multi-channel management', 'Real-time analytics', 'Predictive insights', 'Creative optimization'],
     popular: true,
     icon: '📢🤖',
     color: 'from-purple-600 to-pink-500',
@@ -152,18 +124,7 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     price: '$2,999',
     period: '/month',
     description: 'Advanced AI cybersecurity platform that provides real-time threat detection, automated response, and predictive security intelligence for comprehensive protection.',
-    features: [
-      'AI threat detection',
-      'Automated response',
-      'Predictive security',
-      'Behavioral analysis',
-      'Zero-day protection',
-      'Threat intelligence',
-      'Incident response',
-      'Compliance monitoring',
-      'Security analytics',
-      'Real-time monitoring'
-    ],
+    features: ['AI threat detection', 'Automated response', 'Predictive security', 'Behavioral analysis', 'Zero-day protection', 'Threat intelligence', 'Incident response', 'Compliance monitoring', 'Security analytics', 'Real-time monitoring'],
     popular: true,
     icon: '🔒🤖',
     color: 'from-red-600 to-orange-500',
@@ -204,18 +165,7 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     price: '$1,299',
     period: '/month',
     description: 'Revolutionary AI platform that provides autonomous business intelligence, continuously learning and evolving to deliver deeper insights and better decision support.',
-    features: [
-      'Autonomous data analysis',
-      'Self-evolving insights',
-      'Predictive analytics',
-      'Real-time dashboards',
-      'Natural language queries',
-      'Automated reporting',
-      'Intelligent alerts',
-      'Performance tracking',
-      'Trend analysis',
-      'Decision support'
-    ],
+    features: ['Autonomous data analysis', 'Self-evolving insights', 'Predictive analytics', 'Real-time dashboards', 'Natural language queries', 'Automated reporting', 'Intelligent alerts', 'Performance tracking', 'Trend analysis', 'Decision support'],
     popular: true,
     icon: '📊🤖',
     color: 'from-indigo-600 to-purple-500',
@@ -256,18 +206,7 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     price: '$8,999',
     period: '/month',
     description: 'Revolutionary platform that combines quantum computing with blockchain technology to create unbreakable, quantum-secured distributed ledgers and smart contracts.',
-    features: [
-      'Quantum-secured blockchain',
-      'Quantum smart contracts',
-      'Quantum cryptography',
-      'Distributed quantum computing',
-      'Quantum consensus mechanisms',
-      'Quantum-resistant algorithms',
-      'Quantum network security',
-      'Quantum tokenization',
-      'Quantum DeFi protocols',
-      'Quantum governance'
-    ],
+    features: ['Quantum-secured blockchain', 'Quantum smart contracts', 'Quantum cryptography', 'Distributed quantum computing', 'Quantum consensus mechanisms', 'Quantum-resistant algorithms', 'Quantum network security', 'Quantum tokenization', 'Quantum DeFi protocols', 'Quantum governance'],
     popular: true,
     icon: '⛓️⚛️',
     color: 'from-yellow-600 to-orange-500',

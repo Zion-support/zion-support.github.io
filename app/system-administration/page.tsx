@@ -1,34 +1,21 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Settings, Server, Shield, Monitor, ArrowRight, CheckCircle, Star, Clock, DollarSign, Zap } from 'lucide-react'
+import { Helmet  } from 'react-helmet-async'
+import { Settings, Server, Shield, Monitor, ArrowRight, CheckCircle, Star, Clock, DollarSign, Zap  } from 'lucide-react'
 
 const SystemAdministrationPage: React.FC = () => {
-  const features = [
-    'Server Management',
-    'System Monitoring',
-    'Security Hardening',
-    'Performance Optimization',
-    'Backup & Recovery',
-    '24/7 Support'
-  ]
+  return (
 
-  const benefits = [
-    'Reduce downtime by 90%',
-    'Improve system performance',
-    'Enhanced security posture',
-    'Automated maintenance',
-    'Proactive monitoring',
-    'Expert administration'
-  ]
+  const features = ['Server Management', 'System Monitoring', 'Security Hardening', 'Performance Optimization', 'Backup & Recovery', '24/7 Support']
 
-  const pricing = [
-    {
-      plan: 'Basic',
-      price: '$799/month',
-      features: ['Up to 5 servers', 'Basic monitoring', 'Email support', 'Standard maintenance'],
+  const benefits = ['Reduce downtime by 90%', 'Improve system performance', 'Enhanced security posture', 'Automated maintenance', 'Proactive monitoring', 'Expert administration']
+
+  const pricing = [{
+      plan: 'Basic', price: '$799/month', features: ['Up to 5 servers', 'Basic monitoring', 'Email support', 'Standard maintenance'],
       popular: false
-    },
+    
+  );
+},
     {
       plan: 'Professional',
       price: '$1,499/month',
@@ -45,7 +32,7 @@ const SystemAdministrationPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet ></Helmet>
         <title>System Administration - Zion Tech Group</title>
         <meta name="description" content="Professional system administration services. Server management, monitoring, security, and optimization for your IT infrastructure." />
         <meta name="keywords" content="system administration, server management, IT infrastructure, system monitoring, server maintenance" />
@@ -53,12 +40,12 @@ const SystemAdministrationPage: React.FC = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="flex justify-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center">
-                  <Settings className="w-8 h-8 text-white" />
+                  <Settings className="w-8 h-8 text-white" /></Settings>
                 </div>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -68,7 +55,7 @@ const SystemAdministrationPage: React.FC = () => {
                 Professional system administration services for your IT infrastructure. 
                 Server management, monitoring, security, and optimization to keep your systems running smoothly.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Get Started
                 </button>
@@ -81,7 +68,7 @@ const SystemAdministrationPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -94,9 +81,9 @@ const SystemAdministrationPage: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover: bg-white/20 transition-all duration-300">
                   <div className="flex items-center mb-4">
-                    <CheckCircle className="w-6 h-6 text-green-400 mr-3" />
+                    <CheckCircle className="w-6 h-6 text-green-400 mr-3" /></CheckCircle>
                     <h3 className="text-xl font-bold text-white">{feature}</h3>
                   </div>
                 </div>
@@ -106,7 +93,7 @@ const SystemAdministrationPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <section className="py-16 px-4 sm: px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -121,7 +108,7 @@ const SystemAdministrationPage: React.FC = () => {
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                    <ArrowRight className="w-4 h-4 text-white" />
+                    <ArrowRight className="w-4 h-4 text-white" /></ArrowRight>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">{benefit}</h3>
@@ -133,7 +120,7 @@ const SystemAdministrationPage: React.FC = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -146,7 +133,7 @@ const SystemAdministrationPage: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
-                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/20 transition-all duration-300 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {plan.popular && (
                     <div className="text-center mb-4">
                       <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -162,14 +149,14 @@ const SystemAdministrationPage: React.FC = () => {
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3" /></CheckCircle>
                         {feature}
                       </li>
                     ))}
                   </ul>
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular 
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white' 
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-600 hover:to-blue-600 text-white' 
                       : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                   }`}>
                     Get Started
@@ -181,7 +168,7 @@ const SystemAdministrationPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Optimize Your Systems?

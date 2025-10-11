@@ -51,8 +51,6 @@ export const suggestDidYouMean = (query: string) => {
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export type SearchType = 'all' | 'talent' | 'jobs' | 'projects'
 export type ParsedFilters = {
   type: SearchType
@@ -107,14 +105,12 @@ function extractType(text: string): SearchType {
 function extractLocation(text: string): string | undefined {
   const lower = text.toLowerCase()
   // Simple heuristic e.g., "in latam", "in berlin", "remote"
-  const inMatch = /in\s+([a-zA-Z\s\-]+)$/.exec(lower) || /in\s+([a-zA-Z\s\-]+)[,.\s]/.exec(lower)
+  const inMatch = /in\s+([a-zA-Z\s\-]+)$/.exec(lower) || /in\s+([a-zA-Z\s\-]+)[.\s]/.exec(lower)
   if (inMatch) return inMatch[1].trim()
   if (/remote/.test(lower)) return 'remote'
   return undefined
 }
-const COMMON_SKILLS = [
-  'react', 'next.js', 'node', 'typescript', 'javascript', 'python', 'aws', 'gcp', 'azure', 'kubernetes', 'devops', 'docker', 'terraform', 'rag', 'langchain', 'openai', 'nlp', 'pytorch', 'rust', 'postgresql'
-]
+const COMMON_SKILLS = ['react', 'next.js', 'node', 'typescript', 'javascript', 'python', 'aws', 'gcp', 'azure', 'kubernetes', 'devops', 'docker', 'terraform', 'rag', 'langchain', 'openai', 'nlp', 'pytorch', 'rust', 'postgresql']
 function extractSkills(text: string): string[] {
   const lower = text.toLowerCase()
   const found = new Set<string>()
@@ -150,7 +146,7 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
   try {
     const system = `You are Operator GPT parsing user search intent into filters for a marketplace. Return ONLY a compact JSON object with keys: type (one of: all|talent|jobs|projects), skills (array of strings), location (string|optional), minBudgetUsd (number|optional), maxBudgetUsd (number|optional), availability (full-time|part-time|contract|optional).`
     const user = `Query: ${query}`
-    const resp = await fetch('https://api.openai.com/v1/chat/completions', {
+    const resp = await fetch('https: //api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -158,10 +154,7 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
       },
       body: JSON.stringify({
         model: 'gpt-4o-mini',
-        messages: [
-          { role: 'system', content: system },
-          { role: 'user', content: user }
-        ],
+        messages: [{ role: 'system', content: system }, { role: 'user', content: user }],
         temperature: 0.1,
         response_format: { type: 'json_object' }
       })

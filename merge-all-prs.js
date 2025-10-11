@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { execSync } from 'child_process'
+import { execSync  } from 'child_process'
 import fs from 'fs'
 console.log('🚀 Starting comprehensive PR merge process...')
 // Function to get all open PRs
@@ -9,7 +9,7 @@ async function getOpenPRs() {
     const prs = await response.json(),
     return prs
   } catch (error) {
-    console.error('❌ Failed to fetch PRs:', error.message)
+    console.error('❌ Failed to fetch PRs: ', error.message)
     return []
 async function getOpenPRs() {/* TODO: Fix JSX expression */}
 }
@@ -87,14 +87,7 @@ function cleanConsoleLogs() {
 function cleanConsoleLogs() {/* TODO: Fix JSX expression */}
 }
   console.log('🧹 Cleaning up console.log statements...')
-  const commonFiles = [
-    'app/App.tsx',
-    'app/components/Footer.tsx',
-    'app/components/Navigation.tsx',
-    'app/page.tsx',
-    'app/layout.tsx',
-    'app/main.tsx'
-  ]
+  const commonFiles = ['app/App.tsx', 'app/components/Footer.tsx', 'app/components/Navigation.tsx', 'app/page.tsx', 'app/layout.tsx', 'app/main.tsx']
   commonFiles.forEach(file => {)
     if (fs.existsSync(file)) {
       try {
@@ -132,7 +125,7 @@ function optimizeBuild() {/* TODO: Fix JSX expression */}
         'build: optimized': 'NODE_OPTIONS="--max-old-space-size=4096" next build',
         'build: production': 'NODE_OPTIONS="--max-old-space-size=4096" next build',
         'analyze': 'ANALYZE=true next build',
-        'lint:fix': 'eslint . --ext .ts,.tsx,.js,.jsx --fix --max-warnings 0',
+        'lint: fix': 'eslint . --ext .ts,.tsx,.js,.jsx --fix --max-warnings 0',
         'type-check': 'tsc --noEmit --skipLibCheck',
         'clean': 'rm -rf .next out dist node_modules/.cache',
         'prebuild': 'npm run clean',

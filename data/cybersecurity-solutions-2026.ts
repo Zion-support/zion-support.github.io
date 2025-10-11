@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface CybersecuritySolutions2026 {
   id: string
   name: string
@@ -39,27 +39,10 @@ export interface CybersecuritySolutions2026 {
   rating: number
   reviews: number
 }
-export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
-  // Advanced Threat Intelligence Platform
+export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [// Advanced Threat Intelligence Platform
   {
-    id: 'advanced-threat-intelligence-platform',
-    name: 'Advanced Threat Intelligence Platform',
-    tagline: 'Real-time threat detection with AI-powered intelligence',
-    price: '$3,999',
-    period: '/month',
-    description: 'Comprehensive threat intelligence platform that provides real-time threat detection, analysis, and response using advanced AI and machine learning algorithms.',
-    features: [
-      'Real-time threat detection',
-      'AI-powered intelligence',
-      'Advanced threat analysis',
-      'Automated response systems',
-      'Threat hunting tools',
-      'Custom threat models',
-      'Integration APIs',
-      'Advanced analytics',
-      'Compliance reporting',
-      '24/7 security monitoring'
-    ],
+    id: 'advanced-threat-intelligence-platform', name: 'Advanced Threat Intelligence Platform', tagline: 'Real-time threat detection with AI-powered intelligence', price: '$3, 999', period: '/month', description: 'Comprehensive threat intelligence platform that provides real-time threat detection, analysis, and response using advanced AI and machine learning algorithms.', features: [
+      'Real-time threat detection', 'AI-powered intelligence', 'Advanced threat analysis', 'Automated response systems', 'Threat hunting tools', 'Custom threat models', 'Integration APIs', 'Advanced analytics', 'Compliance reporting', '24/7 security monitoring'],
     popular: true,
     icon: '🔍',
     color: 'from-red-500 to-pink-600',
@@ -100,18 +83,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     price: '$4,999',
     period: '/month',
     description: 'Advanced cryptography suite that provides quantum-resistant encryption algorithms, ensuring data security against future quantum computing threats.',
-    features: [
-      'Quantum-resistant algorithms',
-      'Advanced encryption protocols',
-      'Key management systems',
-      'Compliance certifications',
-      'Integration APIs',
-      'Custom encryption models',
-      'Advanced security features',
-      'Real-time monitoring',
-      'Performance optimization',
-      '24/7 technical support'
-    ],
+    features: ['Quantum-resistant algorithms', 'Advanced encryption protocols', 'Key management systems', 'Compliance certifications', 'Integration APIs', 'Custom encryption models', 'Advanced security features', 'Real-time monitoring', 'Performance optimization', '24/7 technical support'],
     popular: true,
     icon: '🔐',
     color: 'from-purple-500 to-indigo-600',
@@ -152,18 +124,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     price: '$5,999',
     period: '/month',
     description: 'Advanced AI-powered security operations center that provides intelligent security monitoring, automated threat response, and comprehensive security management.',
-    features: [
-      'AI-powered security monitoring',
-      'Automated threat response',
-      'Intelligent security analytics',
-      'Custom security models',
-      'Real-time monitoring',
-      'Advanced reporting',
-      'Integration capabilities',
-      'Compliance management',
-      'Performance optimization',
-      '24/7 AI support'
-    ],
+    features: ['AI-powered security monitoring', 'Automated threat response', 'Intelligent security analytics', 'Custom security models', 'Real-time monitoring', 'Advanced reporting', 'Integration capabilities', 'Compliance management', 'Performance optimization', '24/7 AI support'],
     popular: true,
     icon: '🛡️',
     color: 'from-cyan-500 to-blue-600',
@@ -204,18 +165,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     price: '$3,499',
     period: '/month',
     description: 'Advanced vulnerability detection system that identifies zero-day vulnerabilities using AI and machine learning, providing proactive security protection.',
-    features: [
-      'Zero-day vulnerability detection',
-      'AI-powered analysis',
-      'Proactive security protection',
-      'Custom detection models',
-      'Real-time monitoring',
-      'Advanced analytics',
-      'Integration APIs',
-      'Compliance reporting',
-      'Performance optimization',
-      '24/7 security support'
-    ],
+    features: ['Zero-day vulnerability detection', 'AI-powered analysis', 'Proactive security protection', 'Custom detection models', 'Real-time monitoring', 'Advanced analytics', 'Integration APIs', 'Compliance reporting', 'Performance optimization', '24/7 security support'],
     popular: true,
     icon: '⚠️',
     color: 'from-orange-500 to-red-600',
@@ -256,18 +206,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     price: '$2,999',
     period: '/month',
     description: 'Advanced blockchain-based identity management system that provides secure, decentralized identity verification and management with advanced security features.',
-    features: [
-      'Blockchain-based identity',
-      'Decentralized verification',
-      'Advanced security protocols',
-      'Custom identity models',
-      'Real-time verification',
-      'Integration APIs',
-      'Advanced analytics',
-      'Compliance features',
-      'Performance optimization',
-      '24/7 technical support'
-    ],
+    features: ['Blockchain-based identity', 'Decentralized verification', 'Advanced security protocols', 'Custom identity models', 'Real-time verification', 'Integration APIs', 'Advanced analytics', 'Compliance features', 'Performance optimization', '24/7 technical support'],
     popular: true,
     icon: '🆔',
     color: 'from-green-500 to-emerald-600',

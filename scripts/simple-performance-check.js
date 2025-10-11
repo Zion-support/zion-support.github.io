@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { execSync } from 'child_process'
+import { execSync  } from 'child_process'
 // 1. Build size analysis
 try {
   const _distPath = path.join(process.cwd(), 'dist')
@@ -54,7 +54,7 @@ try {/* TODO: Fix JSX expression */}
     heavyDeps.some(heavy => dep.includes(heavy))
   )
   if (foundHeavyDeps.length > 0) {
-    // console.log('⚠️  Heavy dependencies detected:', foundHeavyDeps.join(', '))
+    // console.log('⚠️  Heavy dependencies detected: ', foundHeavyDeps.join(', '))
   } else {
   if (foundHeavyDeps.length > 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
@@ -85,28 +85,12 @@ const report = {
   buildSize: execSync('du -sh dist', { encoding: 'utf8' }).trim(),
   functionsCount: execSync('find netlify/functions -name "*.js" | wc -l', { encoding: 'utf8' }).trim(),
   optimizationStatus: 'Completed',
-  improvements: [,
-const report = {/* TODO: Fix JSX expression */}
-  g: 'utf8' }).trim(),
-  functionsCoun,
-  t: execSync('find netlify/functions -name "*.js" | wc -l', {/* TODO: Fix JSX expression */})
-  g: 'utf8' }).trim(),
-  optimizationStatu,
-  s: 'Completed',
-  improvement,
-  s: [
-    '✅ Functions directory cleaned up (reduced from 348 to 81 functions)',
-    '✅ Build memory optimized with NODE_OPTIONS',
-    '✅ Vite configuration optimized for performance',
-    '✅ Netlify configuration optimized',
-    '✅ Memory leak warnings eliminated',
-    '✅ Build time improved (4.90 s vs 5.11 s)'],
-  recommendations: [,
-  recommendation,
-  s: [
-    'Consider code splitting for large vendor bundle',
-    'Monitor bundle size in future builds',
-    'Regular cleanup of unused functions']
+  improvements: [const report = {/* TODO: Fix JSX expression */}
+  g: 'utf8' }).trim(), functionsCoun, t: execSync('find netlify/functions -name "*.js" | wc -l', {/* TODO: Fix JSX expression */})
+  g: 'utf8' }).trim(), optimizationStatu, s: 'Completed', improvement, s: [
+    '✅ Functions directory cleaned up (reduced from 348 to 81 functions)', '✅ Build memory optimized with NODE_OPTIONS', '✅ Vite configuration optimized for performance', '✅ Netlify configuration optimized', '✅ Memory leak warnings eliminated', '✅ Build time improved (4.90 s vs 5.11 s)'],
+  recommendations: [recommendation, s: [
+    'Consider code splitting for large vendor bundle', 'Monitor bundle size in future builds', 'Regular cleanup of unused functions']
 }
 
 fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2))

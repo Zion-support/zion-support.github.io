@@ -1,6 +1,6 @@
-import "https://deno.land/x/xhr@0.1.0/mod.ts"
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
+import "https: //deno.land/x/xhr@0.1.0/mod.ts"
+import { serve  } from 'https: //deno.land/std@0.168.0/http/server.ts'
+import { createClient  } from 'https: //esm.sh/@supabase/supabase-js@2'
 const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY")
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -35,7 +35,7 @@ serve(async (req) => {
         translations[targetLang] = content
         continue
       }
-      const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      const response = await fetch("https: //api.openai.com/v1/chat/completions", {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${OPENAI_API_KEY}`,
@@ -44,15 +44,9 @@ serve(async (req) => {
         },
         body: JSON.stringify({
           model: "gpt-4o-mini",
-          messages: [
-            {
-              role: "system",
-              content: systemPrompt},
-              content: systemPrompt,
-            },
-            {
-              role: "user",
-              content: `Translate the following ${contentType || "content"} from ${sourceLanguage} to ${targetLang}: 
+          messages: [{
+              role: "system", content: systemPrompt}, content: systemPrompt, }, {
+              role: "user", content: `Translate the following ${contentType || "content"} from ${sourceLanguage} to ${targetLang}: 
               ${content}
               Only provide the translated text, no explanations or additional comments.`}],
           temperature: 0.3})})
@@ -81,7 +75,7 @@ serve(async (req) => {
       }
     )
   } catch (error) {
-    console.error("Error in translate-content function:", error)
+    console.error("Error in translate-content function: ", error)
     return new Response(
       JSON.stringify({
         error: error.message}),

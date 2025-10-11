@@ -13,7 +13,7 @@ let categoriesEndLine = -1
 for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
   } else if (inRealEstateArray && line.includes('// ];')) {/* TODO: Fix JSX expression */}
   } else if (line.includes('// const _categories = [')) {/* TODO: Fix JSX expression */}
-  } else if (inCategoriesArray && line.includes('// ];')) {/* TODO: Fix JSX expression */}
+  } else if (inCategoriesArray && line.includes('//];')) {/* TODO: Fix JSX expression */}
   }
   
   // Comment out lines within the arrays

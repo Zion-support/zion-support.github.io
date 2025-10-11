@@ -1,34 +1,16 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // List of files with known TypeScript errors
-const filesToFix = [
-  'app/ai-automation/page.tsx',
-  'app/ai-cloud-infrastructure/page.tsx',
-  'app/ai-code-assistant/page.tsx',
-  'app/ai-code-security-auditor/page.tsx',
-  'app/ai-cybersecurity-monitor/page.tsx',
-  'app/ai-cybersecurity/page.tsx',
-  'app/ai-expense-tracker/page.tsx',
-  'app/ai-healthcare/page.tsx',
-  'app/ai-investment-optimizer/page.tsx',
-  'app/ai-mental-health-companion/page.tsx',
-  'app/ai-sentiment-analyzer/page.tsx',
-  'app/ai-services/page.tsx',
-  'app/ai-smart-home-controller/page.tsx',
-  'app/ai-social-media-scheduler/page.tsx',
-  'app/ai-video-generator/page.tsx',
-  'app/ai-voice-cloning-studio/page.tsx'
+const filesToFix = ['app/ai-automation/page.tsx', 'app/ai-cloud-infrastructure/page.tsx', 'app/ai-code-assistant/page.tsx', 'app/ai-code-security-auditor/page.tsx', 'app/ai-cybersecurity-monitor/page.tsx', 'app/ai-cybersecurity/page.tsx', 'app/ai-expense-tracker/page.tsx', 'app/ai-healthcare/page.tsx', 'app/ai-investment-optimizer/page.tsx', 'app/ai-mental-health-companion/page.tsx', 'app/ai-sentiment-analyzer/page.tsx', 'app/ai-services/page.tsx', 'app/ai-smart-home-controller/page.tsx', 'app/ai-social-media-scheduler/page.tsx', 'app/ai-video-generator/page.tsx', 'app/ai-voice-cloning-studio/page.tsx'
 // Pattern to match commented-out variable declarations
 const patterns = [
   // Match commented-out const/let/var declarations
-  { regex: /\/\/\s*(const|let|var)\s+(\w+)\s*=/g, replacement: '$1 $2 =' },
-  // Match commented-out variable assignments
-  { regex: /\/\/\s*(\w+)\s*=/g, replacement: '$1 =' },
-  // Match commented-out variable references
+  { regex: /\/\/\s*(const|let|var)\s+(\w+)\s*=/g, replacement: '$1 $2 =' }, // Match commented-out variable assignments
+  { regex: /\/\/\s*(\w+)\s*=/g, replacement: '$1 =' }, // Match commented-out variable references
   { regex: /\/\/\s*(\w+)\s*[;)]/g, replacement: '$1' },
   // Match commented-out object property assignments
   { regex: /\/\/\s*(\w+):\s*(\w+)/g, replacement: '$1: $2' },
@@ -49,20 +31,15 @@ function fixFile(filePath) {
         modified = true
         return match + '}'
 // Pattern to match commented-out variable declarations
-const patterns = [
-  // Match commented-out const/let/var declarations
+const patterns = [// Match commented-out const/let/var declarations
   {/* TODO: Fix JSX expression */}
-  t: '$1 $2 =' },
-  // Match commented-out variable assignments
+  t: '$1 $2 =' }, // Match commented-out variable assignments
   {/* TODO: Fix JSX expression */}
-  t: '$1 =' },
-  // Match commented-out variable references
+  t: '$1 =' }, // Match commented-out variable references
   {/* TODO: Fix JSX expression */}
-  t: '$1' },
-  // Match commented-out object property assignments
+  t: '$1' }, // Match commented-out object property assignments
   {/* TODO: Fix JSX expression */}
-  t: '$1: $2' },
-  // Match commented-out function calls
+  t: '$1: $2' }, // Match commented-out function calls
   {/* TODO: Fix JSX expression */}
   t: '$1(' }]
 )
@@ -95,7 +72,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       }
       
       modified = true
-      return `${match}</${tagName}>`
+      return `${match}</$>{tagName}`
     })
     // Fix 4: Fix missing commas in object literals
     const missingCommaPattern = /(\w+):\s*([^}\n]+)\s*\n\s*(\w+):/g
@@ -107,11 +84,11 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       return match
     })
     // Fix 5: Fix malformed SVG URLs in className
-    const svgUrlPattern = /bg-\[url\('data:image\/svg\+xml,([^']+)'\)\]/g
+    const svgUrlPattern = /bg-\[url\('data:image\/svg\+xml, ([^']+)'\)\]/g
     content = content.replace(svgUrlPattern, (match, svgContent) => {
       const encodedSvg = encodeURIComponent(svgContent)
       modified = true
-      return `bg-[url('data:image/svg+xml,${encodedSvg}')]`
+      return `bg-[url('data: image/svg+xml, ${encodedSvg}')]`
     })
     // Fix 6: Fix missing closing parentheses in function calls
     const missingParenPattern = /(\w+\([^)]*)\s*\n\s*(\w+)/g

@@ -1,8 +1,8 @@
-import { useState } from "react"
-import { useAuth } from "@/hooks/useAuth"
-import { supabase } from "@/integrations/supabase/client"
-import { toast } from "@/hooks/use-toast"
-export type ApiKeyScope = 'jobs:read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage'
+import { useState  } from 'react'
+import { useAuth  } from '@/hooks/useAuth'
+import { supabase  } from '@/integrations/supabase/client'
+import { toast  } from '@/hooks/use-toast'
+export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage'
 export interface ApiKey {
   id: string
   name: string
@@ -63,7 +63,7 @@ export function useApiKeys() {
       }
       setKeys(result.keys || [])
     } catch (err) {
-      console.error('Error fetching API keys:', err)
+      console.error('Error fetching API keys: ', err)
       setError(err instanceof Error ? err.message : 'An unknown error occurred')
       toast({
         variant: "destructive",
@@ -114,7 +114,7 @@ export function useApiKeys() {
       })
       return result
     } catch (err) {
-      console.error('Error creating API key:', err)
+      console.error('Error creating API key: ', err)
       setError(err instanceof Error ? err.message : 'An unknown error occurred')
       toast({
         variant: "destructive",
@@ -163,7 +163,7 @@ export function useApiKeys() {
       })
       return result
     } catch (err) {
-      console.error('Error regenerating API key:', err)
+      console.error('Error regenerating API key: ', err)
       setError(err instanceof Error ? err.message : 'An unknown error occurred')
       toast({
         variant: "destructive",
@@ -209,7 +209,7 @@ export function useApiKeys() {
       })
       return result
     } catch (err) {
-      console.error('Error revoking API key:', err)
+      console.error('Error revoking API key: ', err)
       setError(err instanceof Error ? err.message : 'An unknown error occurred')
       toast({
         variant: "destructive",
@@ -250,7 +250,7 @@ export function useApiKeys() {
       setTotalLogs(result.count || 0)
       return result
     } catch (err) {
-      console.error('Error fetching API logs:', err)
+      console.error('Error fetching API logs: ', err)
       setError(err instanceof Error ? err.message : 'An unknown error occurred')
       toast({
         variant: "destructive",

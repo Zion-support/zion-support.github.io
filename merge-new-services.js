@@ -2,7 +2,7 @@
 /**
  * Merge New Services Branches
  * This script will merge all the new service branches that haven't been merged yet
- */ import { execSync } from 'child_process'
+ */ import { execSync  } from 'child_process'
 import fs from 'fs'
 // //Step 1: Ensure we're on main and up to date,
 // try {,
@@ -13,39 +13,15 @@ import fs from 'fs'
   }
 
 //Step 2: Get new service branches,
-// const newServiceBranches = [,
-// //Step,
-  1: Ensure we're on main and up to date,
-// try {/* TODO: Fix JSX expression */}
+// const newServiceBranches = [// //Step, 1: Ensure we're on main and up to date, // try {/* TODO: Fix JSX expression */}
   o: 'inherit' })
   execSync('git pull origin main', {/* TODO: Fix JSX expression */})
   o: 'inherit' })
 //   } catch (error) {/* TODO: Fix JSX expression */}
 }
 
-//Step,
-  2: Get new service branches,
-// const newServiceBranches = [
-  'cursor/add-new-services-and-deploy-updates-0c4f',
-  'cursor/add-new-services-and-deploy-updates-0f78',
-  'cursor/add-new-services-and-deploy-updates-1399',
-  'cursor/add-new-services-and-deploy-updates-1503',
-  'cursor/add-new-services-and-deploy-updates-1817',
-  'cursor/add-new-services-and-deploy-updates-19 c7',
-  'cursor/add-new-services-and-deploy-updates-27 d2',
-  'cursor/add-new-services-and-deploy-updates-45 bb',
-  'cursor/add-new-services-and-deploy-updates-483 a',
-  'cursor/add-new-services-and-deploy-updates-4 d5 b',
-  'cursor/add-new-services-and-deploy-updates-5200',
-  'cursor/add-new-services-and-deploy-updates-54 f2',
-  'cursor/add-new-services-and-deploy-updates-591 d',
-  'cursor/add-new-services-and-deploy-updates-6225',
-  'cursor/add-new-services-and-deploy-updates-6455',
-  'cursor/add-new-services-and-deploy-updates-67 cb',
-  'cursor/add-new-services-and-deploy-updates-6 de5',
-  'cursor/add-new-services-and-deploy-updates-6 e7 c',
-  'cursor/add-new-services-and-deploy-updates-6 e90',
-  'cursor/add-new-services-and-deploy-updates-6 ed4']
+//Step, 2: Get new service branches, // const newServiceBranches = [
+  'cursor/add-new-services-and-deploy-updates-0c4f', 'cursor/add-new-services-and-deploy-updates-0f78', 'cursor/add-new-services-and-deploy-updates-1399', 'cursor/add-new-services-and-deploy-updates-1503', 'cursor/add-new-services-and-deploy-updates-1817', 'cursor/add-new-services-and-deploy-updates-19 c7', 'cursor/add-new-services-and-deploy-updates-27 d2', 'cursor/add-new-services-and-deploy-updates-45 bb', 'cursor/add-new-services-and-deploy-updates-483 a', 'cursor/add-new-services-and-deploy-updates-4 d5 b', 'cursor/add-new-services-and-deploy-updates-5200', 'cursor/add-new-services-and-deploy-updates-54 f2', 'cursor/add-new-services-and-deploy-updates-591 d', 'cursor/add-new-services-and-deploy-updates-6225', 'cursor/add-new-services-and-deploy-updates-6455', 'cursor/add-new-services-and-deploy-updates-67 cb', 'cursor/add-new-services-and-deploy-updates-6 de5', 'cursor/add-new-services-and-deploy-updates-6 e7 c', 'cursor/add-new-services-and-deploy-updates-6 e90', 'cursor/add-new-services-and-deploy-updates-6 ed4']
 // //Step 3: Enhanced merge function with conflict resolution,
 function mergeServiceBranch(branchName) {,
 //   try {,

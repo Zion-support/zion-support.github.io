@@ -2,42 +2,37 @@
   assertTalentOrClientForOffer
   getDemoUser
 } from "../../../utils/marketplace/auth"
-import {
-  getOfferById
+import { getOfferById
   listOffers
   saveOffer
   saveProject
-import { v4 as uuidv4 } from "uuid"
-import {
-  assertClient,
+import { v4 as uuidv4  } from 'uuid'
+import { assertClient,
   assertTalentOrClientForOffer,
   getDemoUser,
-} from "../../../utils/marketplace/auth"
-import {
-  getOfferById,
+ } from '../../../utils/marketplace/auth'
+import { getOfferById,
   listOffers,
   saveOffer,
   saveProject,
-} from "../../../utils/marketplace/store"
+ } from '../../../utils/marketplace/store'
 import type { NextApiRequest, NextApiResponse } from "next"
-import { v4 as uuidv4 } from "uuid"
-import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth"
-import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store"
-import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types"
+import { v4 as uuidv4  } from 'uuid'
+import { assertClient, assertTalentOrClientForOffer, getDemoUser  } from '../../../utils/marketplace/auth'
+import { getOfferById, listOffers, saveOffer, saveProject  } from '../../../utils/marketplace/store'
+import { Offer, PaymentTerms, Project  } from '../../../utils/marketplace/types'
 import type { NextApiRequest, NextApiResponse } from './next'
-import { v4 as uuidv4  } from './uuid'
-import {
-  assert_client,
+import { v4 as uuidv4   } from './uuid'
+import { assert_client,
   assertTalentOrClientForOffer,
   getDemoUser,
-} from '../../../utils / marketplace / auth'
-import {
-  getOfferById,
+ } from '../../../utils / marketplace / auth'
+import { getOfferById,
   list_offers,
   save_offer,
   save_project,
-} from '../../../utils / marketplace / store'
-import { Offer, PaymentTerms, Project  } from '../../../utils / marketplace / types'
+ } from '../../../utils / marketplace / store'
+import { Offer, PaymentTerms, Project   } from '../../../utils / marketplace / types'
 /**
  * bad - Function description
  */
@@ -126,14 +121,12 @@ if ( {) {
               ? existing.paymentTerms.milestones |[]
               : []
           documents: existing.agreementUrl
-            ? [
-                {
+            ? [{
                   id: uuidv4()
                   name: "Agreement"
                   url: existing.agreementUrl
                   uploadedAtIso: new Date().toISOString()
-                }
-              ]
+                }]
             : []
           notes: []
         }
@@ -202,14 +195,8 @@ if ( {) {
           startDateIso: existing && existing.startDateIso,
           status: "ACTIVE",
           documents: existing.agreementUrl
-            ? [
-                {
-                  id: uuidv4(),
-                  name: "Agreement",
-                  url: existing && existing.agreementUrl,
-                  uploadedAtIso: new Date().toISOString(),
-                },
-              ]
+            ? [{
+                  id: uuidv4(), name: "Agreement", url: existing && existing.agreementUrl, uploadedAtIso: new Date().toISOString(), }]
             : []
           notes: []
         }
@@ -255,19 +242,12 @@ if ( {) {
           talent_slug: existing.talent_slug,
           startDateIso: existing.startDateIso,
           status: "ACTIVE",
-          timeline:
-            existing.payment_terms.type === "milestone"
+          timeline: existing.payment_terms.type === "milestone"
               ? existing.payment_terms.milestones || []
               : [],
           documents: existing.agreement_url
-            ? [
-                {
-                  id: uuidv4 (),
-                  name: "Agreement",
-                  url: existing.agreement_url,
-                  uploadedAtIso: new Date ().toISOString (),
-                },
-              ]
+            ? [{
+                  id: uuidv4 (), name: "Agreement", url: existing.agreement_url, uploadedAtIso: new Date ().toISOString (), }]
             : [],
           notes: [],
         }
@@ -352,14 +332,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
               ? existing.paymentTerms.milestones |[]
               : []
           documents: existing.agreementUrl
-            ? [
-                {
+            ? [{
                   id: uuidv4()
                   name: "Agreement"
                   url: existing.agreementUrl
                   uploadedAtIso: new Date().toISOString()
-                }
-              ]
+                }]
             : []
           notes: []
         }
@@ -417,14 +395,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           startDateIso: existing && existing.startDateIso,
           status: "ACTIVE",
           timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [],
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           documents: existing.agreementUrl
-            ? [
-                {
-                  id: uuidv4(),
-                  name: "Agreement",
-                  url: existing.agreementUrl,
-                  uploadedAtIso: new Date().toISOString()}]
+            ? [{
+                  id: uuidv4(), name: "Agreement", url: existing.agreementUrl, uploadedAtIso: new Date().toISOString()}]
             : [],
         }
         saveProject(project)
@@ -455,10 +428,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         saveOffer(existing),
         return res.json({ ok: true, offer: existing, project })
         } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -473,15 +446,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         saveOffer(existing),
         return res.json({ ok: true, offer: existing })
         } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -502,7 +475,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -516,27 +489,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           startDateIso: existing && existing.startDateIso,
           status: "ACTIVE",
           documents: existing.agreementUrl
-            ? [
-                {
-                  id: uuidv4(),
-                  name: "Agreement",
-                  url: existing && existing.agreementUrl,
-                  uploadedAtIso: new Date().toISOString(),
-                },
-              ]
+            ? [{
+                  id: uuidv4(), name: "Agreement", url: existing && existing.agreementUrl, uploadedAtIso: new Date().toISOString(), }]
             : []
           notes: []
         }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }

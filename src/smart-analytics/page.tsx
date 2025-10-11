@@ -1,49 +1,16 @@
 import React from 'react'
-import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users} from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users } from 'lucide-react'
+import { Link  } from 'react-router-dom'
 import React from 'react'
 const SmartAnalyticsPage: React.FC = () => {
-  const features = [
-    {
-      icon: BarChart,
-      title: 'Real-time Dashboards',
-      description: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
-      benefit:     ,
-$4},
-      icon: Brain,
-      title: 'AI-Powered Insights',
-      description: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.',
-      benefit:       ,
-iconicon: Target,
-      title: 'Custom Metrics',
-      description: 'Track exactly what matters to your business with customizable KPIs and automated reporting.',
-      benefit:       ,
-iconicon: Zap,
-      title: 'Automated Alerts',
-      description: 'Get instant notifications when important metrics change or when action is needed.',
-      benefit:       ,
-iconicon: Users,
-      title: 'Team Collaboration',
-      description: 'Share insights and reports with your team with role-based access and collaborative features.',
-      benefit:       ,
-iconicon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
-      benefit:     ,
-$4}
-  ]
-  const pricingPlans = [
-      name: 'Starter',
-      price: '$299',
-      period: '/month',
-      description: 'Perfect for small businesses getting started with analytics',
-      features: [
-        'Up to 5 data sources',
-        'Basic dashboards',
-        'Email support',
-        'Standard reports',
-        '1 user account'
-      ],
+  return (
+
+  const features = [{
+      icon: BarChart, title: 'Real-time Dashboards', description: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.', benefit:, $4
+  );
+}, icon: Brain, title: 'AI-Powered Insights', description: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.', benefit:, iconicon: Target, title: 'Custom Metrics', description: 'Track exactly what matters to your business with customizable KPIs and automated reporting.', benefit:, iconicon: Zap, title: 'Automated Alerts', description: 'Get instant notifications when important metrics change or when action is needed.', benefit:, iconicon: Users, title: 'Team Collaboration', description: 'Share insights and reports with your team with role-based access and collaborative features.', benefit:, iconicon: Shield, title: 'Enterprise Security', description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.', benefit:, $4}]
+  const pricingPlans = [name: 'Starter', price: '$299', period: '/month', description: 'Perfect for small businesses getting started with analytics', features: [
+        'Up to 5 data sources', 'Basic dashboards', 'Email support', 'Standard reports', '1 user account'],
       popular: false,
     name: 'Professional',
       price: '$799',
@@ -95,7 +62,7 @@ $4}
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center">
             Powerful Analytics Features,
   
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
                 <div className="flex items-center mb-4">
@@ -106,7 +73,7 @@ $4}
             ))}
         {/* Pricing Section */}
             Simple, Transparent Pricing
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <$2 />
                 key={index}
@@ -125,22 +92,26 @@ $4}
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" /></CheckCircle>
                       {feature}
                   className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
                     plan.popular
-                      ? 'bg-cyan-600 text-white hover:bg-cyan-700'
+                      ? 'bg-cyan-600 text-white hover: bg-cyan-700'
                       : 'bg-gray-600 text-white hover:bg-gray-700'
                   }`}
                   Get Started
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
-import { Link } from 'react-router-dom'
+import { Link  } from 'react-router-dom'
 const SmartAnalyticsPage: React.FC = () => {
+  return (
+
     const features = [],
   return (
     {// TODO: Add content
-  }
+  
+  );
+}
 }
   ico,
   n: BarChart,
@@ -160,7 +131,7 @@ import Footer from '../components/Footer'
 const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+      <Navigation /></Navigation>
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -171,7 +142,7 @@ const PagePage: React.FC = () => {
   
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
-      <Footer />
+      <Footer /></Footer>
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
@@ -198,7 +169,7 @@ const PagePage: React.FC = () => {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-gray-300"></li>"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" /></CheckCircle>
                       {feature}
                   className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${}
   // TOD,
@@ -206,9 +177,9 @@ const PagePage: React.FC = () => {
 }
 //                     plan.popular
                       ? 'bg-cyan-600 text-white,
-  hover:bg-cyan-700'
+  hover: bg-cyan-700'
                       : 'bg-gray-600 text-white,
-  hover:bg-gray-700'`
+  hover: bg-gray-700'`
                   }`}
                   Get Started
         {/* CTA Section */}
@@ -227,18 +198,18 @@ const PagePage: React.FC = () => {
             <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
             <div className="grid md: grid-cols-3 gap-6 text-gray-300">
               <div className="flex items-center justify-center">
-                <Phone className="w-5 h-5 mr-2 text-cyan-400" />
+                <Phone className="w-5 h-5 mr-2 text-cyan-400" /></Phone>
                 <a href="tel:+13024640950" className="hover:text-white transition-colors">
                   +1 (302) 464-0950
-                <Mail className="w-5 h-5 mr-2 text-cyan-400" />
+                <Mail className="w-5 h-5 mr-2 text-cyan-400" /></Mail>
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
                   kleber@ziontechgroup.com
-                <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
+                <MapPin className="w-5 h-5 mr-2 text-cyan-400" /></MapPin>
 +1 (302) 464-0950
-                <Mail className="w-5 h-5 mr-2 text-cyan-400" />
+                <Mail className="w-5 h-5 mr-2 text-cyan-400" /></Mail>
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
                   kleber@ziontechgroup.com,
-                <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
+                <MapPin className="w-5 h-5 mr-2 text-cyan-400" /></MapPin>
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
   )
 }

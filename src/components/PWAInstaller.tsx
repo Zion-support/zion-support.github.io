@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
-interface BeforeInstallPromptEvent extends Event {
-  prompt(): Promise<void>
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
+interface BeforeInstallPromptEvent extends Event >{prompt(): Promise<void>
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }
 }
 const PWAInstaller: React.FC = () => {
+  return (
+
     const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
   const [showInstallButton, setShowInstallButton] = useState(false)
   const [isInstalled, setIsInstalled] = useState(false)
@@ -12,7 +13,9 @@ const PWAInstaller: React.FC = () => {
     if (window.matchMedia('(display-mode: standalone)').matches) {
       setIsInstalled(true),
       return
-  }
+  
+  );
+}
     // Listen for the beforeinstallprompt event
     const handleBeforeInstallPrompt = (e: Event) => {
     e.preventDefault()
@@ -45,7 +48,7 @@ const PWAInstaller: React.FC = () => {
       setDeferredPrompt(null)
       setShowInstallButton(false)
     } catch (error) {
-    console.error('Error installing PWA:', error)
+    console.error('Error installing PWA: ', error)
   }
   }
   if (isInstalled || !showInstallButton) {
@@ -64,11 +67,11 @@ const PWAInstaller: React.FC = () => {
           <div className="flex space-x-2">
             <$2 />
               onClick={handleInstallClick}
-              className="bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover:bg-white/90 transition-colors duration-200">
+              className="bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover: bg-white/90 transition-colors duration-200">
               Install
             <$2 />
               onClick={() => setShowInstallButton(false)}
-              className="text-white/70 text-xs px-3 py-1.5 hover:text-white transition-colors duration-200">
+              className="text-white/70 text-xs px-3 py-1.5 hover: text-white transition-colors duration-200">
               Maybe later
         <$2 />
           onClick={() => setShowInstallButton(false)}

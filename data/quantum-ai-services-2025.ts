@@ -78,16 +78,12 @@ export interface QuantumAiService2025 {/* TODO: Fix JSX expression */}
     address: string,
   }
 }
-export const quantumAIServices2025: QuantumAiService2025[] = [,
-    id: "quantum-ai-hybrid", name: "Quantum AI Hybrid Platform",
-    tagline: "Combining quantum computing with artificial intelligence", price: "$299/month"
+export const quantumAIServices2025: QuantumAiService2025[] = [id: "quantum-ai-hybrid", name: "Quantum AI Hybrid Platform", tagline: "Combining quantum computing with artificial intelligence", price: "$299/month"
     description: "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms."
-    features: [,
-      "Quantum AI algorithms"
+    features: [, "Quantum AI algorithms"
       "Hybrid processing"
       "Advanced simulations"
-      "Real-time optimization",
-      "Enterprise support"],
+      "Real-time optimization", "Enterprise support"],
     link: "/services/quantum-ai-hybrid", category: "Quantum AI",
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
@@ -127,23 +123,17 @@ export const quantumAIServices2025: QuantumAiService2025[] = [,
   s: string}
 }
 export const,
-  quantumAIServices2025: QuantumAiService2025[] = [,
-    i,"
-  d: "quantum-ai-hybrid", nam,"
-  e: "Quantum AI Hybrid Platform",
-    taglin,"
-  e: "Combining quantum computing with artificial intelligence", pric,"
-  e: "$299/month",
-    descriptio,"
-  n: "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.",
-    feature,
-  s: [,"
+  quantumAIServices2025: QuantumAiService2025[] = [i, "
+  d: "quantum-ai-hybrid", nam, "
+  e: "Quantum AI Hybrid Platform", taglin, "
+  e: "Combining quantum computing with artificial intelligence", pric, "
+  e: "$299/month", descriptio, "
+  n: "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.", feature, s: [, "
       "Quantum AI algorithms""
       "Hybrid processing""
       "Advanced simulations""
       "Real-time optimization""
-      "Enterprise support"
-    ],
+      "Enterprise support"],
     lin,"
   k: "/services/quantum-ai-hybrid", categor,"
   y: "Quantum AI",
@@ -178,13 +168,7 @@ id: "quantum-ai-hybrid"
     tagline: "Combining quantum computing with artificial intelligence",
     price: "$299/month",
     description: "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.",
-    features: [,
-      "Quantum AI algorithms",
-      "Hybrid processing",
-      "Advanced simulations",
-      "Real-time optimization",
-      "Enterprise support"
-    ],
+    features: ["Quantum AI algorithms", "Hybrid processing", "Advanced simulations", "Real-time optimization", "Enterprise support"],
     link: "/services/quantum-ai-hybrid"
     category: "Quantum AI"
     realImplementation: true
@@ -210,13 +194,12 @@ id: "quantum-ai-hybrid"
     descriptio,"
   n: "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.",
     feature,
-  s: [,"
-      "Quantum AI algorithms","
-      "Hybrid processing","
-      "Advanced simulations","
-      "Real-time optimization","
-      "Enterprise support"
-    ],
+  s: ["
+      "Quantum AI algorithms", "
+      "Hybrid processing", "
+      "Advanced simulations", "
+      "Real-time optimization", "
+      "Enterprise support"],
     lin,"
   k: "/services/quantum-ai-hybrid",
     categor,"
@@ -288,13 +271,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  quantumAIServices2025: QuantumAiService2025[] = [ i,"
-  d: "quantum-ai-hybrid", nam,"
-  e: "Quantum AI Hybrid Platform", taglin,"
-  e: "Combining quantum computing with artificial intelligence", pric,"
-  e: "$299/month", descriptio,"
-  n: "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.", feature,"
-  s: [ "Quantum AI algorithms" "Hybrid processing" "Advanced simulations" "Real-time optimization" "Enterprise support" ], lin,"
+  quantumAIServices2025: QuantumAiService2025[] = [i, "
+  d: "quantum-ai-hybrid", nam, "
+  e: "Quantum AI Hybrid Platform", taglin, "
+  e: "Combining quantum computing with artificial intelligence", pric, "
+  e: "$299/month", descriptio, "
+  n: "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.", feature, "
+  s: [ "Quantum AI algorithms" "Hybrid processing" "Advanced simulations" "Real-time optimization" "Enterprise support"], lin,"
   k: "/services/quantum-ai-hybrid", categor,"
   y: "Quantum AI", realImplementatio,
   n: true, contactInf,
@@ -311,7 +294,7 @@ i,
   e: "Combining quantum computing with artificial intelligence", pric,"
   e: "$299/month", descriptio,"
   n: "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.", feature,"
-  s: [ "Quantum AI algorithms", "Hybrid processing", "Advanced simulations", "Real-time optimization", "Enterprise support" ], lin,"
+  s: ["Quantum AI algorithms", "Hybrid processing", "Advanced simulations", "Real-time optimization", "Enterprise support"], lin,"
   k: "/services/quantum-ai-hybrid", categor,"
   y: "Quantum AI", realImplementatio,
   n: true, contactInf,

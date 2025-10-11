@@ -78,16 +78,12 @@ export interface EnterpriseItService {/* TODO: Fix JSX expression */}
     address: string,
   }
 }
-export const enterpriseITServices: EnterpriseItService[] = [,
-    id: "enterprise-architecture", name: "Enterprise Architecture Consulting",
-    tagline: "Strategic IT architecture for large organizations", price: "$150/hour"
+export const enterpriseITServices: EnterpriseItService[] = [id: "enterprise-architecture", name: "Enterprise Architecture Consulting", tagline: "Strategic IT architecture for large organizations", price: "$150/hour"
     description: "Comprehensive enterprise architecture consulting services for digital transformation."
-    features: [,
-      "Architecture assessment"
+    features: [, "Architecture assessment"
       "Technology roadmap"
       "Integration strategy"
-      "Governance framework",
-      "Implementation support"],
+      "Governance framework", "Implementation support"],
     link: "/services/enterprise-architecture", category: "Enterprise IT",
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
@@ -127,23 +123,17 @@ export const enterpriseITServices: EnterpriseItService[] = [,
   s: string}
 }
 export const,
-  enterpriseITServices: EnterpriseItService[] = [,
-    i,"
-  d: "enterprise-architecture", nam,"
-  e: "Enterprise Architecture Consulting",
-    taglin,"
-  e: "Strategic IT architecture for large organizations", pric,"
-  e: "$150/hour",
-    descriptio,"
-  n: "Comprehensive enterprise architecture consulting services for digital transformation.",
-    feature,
-  s: [,"
+  enterpriseITServices: EnterpriseItService[] = [i, "
+  d: "enterprise-architecture", nam, "
+  e: "Enterprise Architecture Consulting", taglin, "
+  e: "Strategic IT architecture for large organizations", pric, "
+  e: "$150/hour", descriptio, "
+  n: "Comprehensive enterprise architecture consulting services for digital transformation.", feature, s: [, "
       "Architecture assessment""
       "Technology roadmap""
       "Integration strategy""
       "Governance framework""
-      "Implementation support"
-    ],
+      "Implementation support"],
     lin,"
   k: "/services/enterprise-architecture", categor,"
   y: "Enterprise IT",
@@ -178,13 +168,7 @@ id: "enterprise-architecture"
     tagline: "Strategic IT architecture for large organizations",
     price: "$150/hour",
     description: "Comprehensive enterprise architecture consulting services for digital transformation.",
-    features: [,
-      "Architecture assessment",
-      "Technology roadmap",
-      "Integration strategy",
-      "Governance framework",
-      "Implementation support"
-    ],
+    features: ["Architecture assessment", "Technology roadmap", "Integration strategy", "Governance framework", "Implementation support"],
     link: "/services/enterprise-architecture"
     category: "Enterprise IT"
     realImplementation: true
@@ -210,13 +194,12 @@ id: "enterprise-architecture"
     descriptio,"
   n: "Comprehensive enterprise architecture consulting services for digital transformation.",
     feature,
-  s: [,"
-      "Architecture assessment","
-      "Technology roadmap","
-      "Integration strategy","
-      "Governance framework","
-      "Implementation support"
-    ],
+  s: ["
+      "Architecture assessment", "
+      "Technology roadmap", "
+      "Integration strategy", "
+      "Governance framework", "
+      "Implementation support"],
     lin,"
   k: "/services/enterprise-architecture",
     categor,"
@@ -288,13 +271,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  enterpriseITServices: EnterpriseItService[] = [ i,"
-  d: "enterprise-architecture", nam,"
-  e: "Enterprise Architecture Consulting", taglin,"
-  e: "Strategic IT architecture for large organizations", pric,"
-  e: "$150/hour", descriptio,"
-  n: "Comprehensive enterprise architecture consulting services for digital transformation.", feature,"
-  s: [ "Architecture assessment" "Technology roadmap" "Integration strategy" "Governance framework" "Implementation support" ], lin,"
+  enterpriseITServices: EnterpriseItService[] = [i, "
+  d: "enterprise-architecture", nam, "
+  e: "Enterprise Architecture Consulting", taglin, "
+  e: "Strategic IT architecture for large organizations", pric, "
+  e: "$150/hour", descriptio, "
+  n: "Comprehensive enterprise architecture consulting services for digital transformation.", feature, "
+  s: [ "Architecture assessment" "Technology roadmap" "Integration strategy" "Governance framework" "Implementation support"], lin,"
   k: "/services/enterprise-architecture", categor,"
   y: "Enterprise IT", realImplementatio,
   n: true, contactInf,
@@ -311,7 +294,7 @@ i,
   e: "Strategic IT architecture for large organizations", pric,"
   e: "$150/hour", descriptio,"
   n: "Comprehensive enterprise architecture consulting services for digital transformation.", feature,"
-  s: [ "Architecture assessment", "Technology roadmap", "Integration strategy", "Governance framework", "Implementation support" ], lin,"
+  s: ["Architecture assessment", "Technology roadmap", "Integration strategy", "Governance framework", "Implementation support"], lin,"
   k: "/services/enterprise-architecture", categor,"
   y: "Enterprise IT", realImplementatio,
   n: true, contactInf,

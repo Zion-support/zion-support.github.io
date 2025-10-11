@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Heart, ArrowRight } from 'lucide-react'
+import { Heart, ArrowRight  } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 export default function AIHealthcarePage() {
@@ -20,7 +20,7 @@ export default function AIHealthcarePage() {
             <$2 />
               href="/contact"
               className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover: bg-cyan-600 transition-colors inline-flex items-center">
-              <ArrowRight className="w-5 h-5 mr-2" />
+              <ArrowRight className="w-5 h-5 mr-2" /></ArrowRight>
               Contact Us,
   
           </div>

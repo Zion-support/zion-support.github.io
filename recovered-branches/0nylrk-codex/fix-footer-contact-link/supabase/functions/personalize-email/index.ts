@@ -1,5 +1,5 @@
-import "https://deno.land/x/xhr@0.1.0/mod.ts"
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts"
+import "https: //deno.land/x/xhr@0.1.0/mod.ts"
+import { serve  } from 'https: //deno.land/std@0.190.0/http/server.ts'
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY")
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -43,13 +43,12 @@ serve(async (req) => {
         userPrompt = `Create an email for ${userData.firstName} reminding them to complete their profile. They have completed ${userData.profileCompletion || 0}% of their profile. Focus on how a complete profile increases visibility.`
         subjectContext = "Create a short, motivational subject line about profile completion."
         break
-      default:
-        userPrompt = `Create a re-engagement email for a user named ${userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`
+      default: userPrompt = `Create a re-engagement email for a user named ${userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`
     }
     // Add subject line request to the prompt
     userPrompt += `\n\n${subjectContext || "Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`
     // Call OpenAI API to generate personalized content
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    const response = await fetch("https: //api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${openAIApiKey}`,
@@ -58,10 +57,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         model: "gpt-4o-mini",
-        messages: [
-          { role: "system", content: systemPrompt },
-          { role: "user", content: userPrompt }
-        ],
+        messages: [{ role: "system", content: systemPrompt }, { role: "user", content: userPrompt }],
         temperature: 0.7})})
         temperature: 0.7,
       }),
@@ -77,8 +73,8 @@ serve(async (req) => {
     try {
       generatedContent = JSON.parse(generatedContentText)
     } catch (e) {
-      console.error("Failed to parse GPT response as JSON:", e)
-      console.log("Raw response:", generatedContentText)
+      console.error("Failed to parse GPT response as JSON: ", e)
+      console.log("Raw response: ", generatedContentText)
       // Try to extract JSON using regex as fallback
       const jsonMatch = generatedContentText.match(/\{[\s\S]*\}/)
       if (jsonMatch) {
@@ -97,7 +93,7 @@ serve(async (req) => {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     })
   } catch (error) {
-    console.error("Error in personalize-email function:", error)
+    console.error("Error in personalize-email function: ", error)
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500,
       headers: { ...corsHeaders, "Content-Type": "application/json" }})

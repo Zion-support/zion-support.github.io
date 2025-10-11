@@ -1,7 +1,6 @@
 BarChart3,
   Smartphone,
 } from 'lucide-react'
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -10,25 +9,25 @@ BarChart3,
 export default function LandingPage() {
   const { t } = useTranslation()
   const { isRTL } = useLanguage()
-import { Header } from "@/components/Header",
-import { TrustedBySection } from "@/components/TrustedBySection",
-import { TestimonialCarousel } from "@/components/TestimonialCarousel",
-import { FloatingCTA } from "@/components/FloatingCTA",
-import { HeroSection } from "@/components/HeroSection",
-import { CategoriesSection } from "@/components/CategoriesSection",
-import { BenefitsSection } from "@/components/BenefitsSection",
-import { HowItWorksSection } from "@/components/HowItWorksSection",
-import { WaitlistSection } from "@/components/WaitlistSection",
-import { BlogSection } from "@/components/BlogSection",
-import { SEO } from "@/components/SEO",
-import { Button } from "@/components/ui/button",
+import { Header  } from '@/components/Header',
+import { TrustedBySection  } from '@/components/TrustedBySection',
+import { TestimonialCarousel  } from '@/components/TestimonialCarousel',
+import { FloatingCTA  } from '@/components/FloatingCTA',
+import { HeroSection  } from '@/components/HeroSection',
+import { CategoriesSection  } from '@/components/CategoriesSection',
+import { BenefitsSection  } from '@/components/BenefitsSection',
+import { HowItWorksSection  } from '@/components/HowItWorksSection',
+import { WaitlistSection  } from '@/components/WaitlistSection',
+import { BlogSection  } from '@/components/BlogSection',
+import { SEO  } from '@/components/SEO',
+import { Button  } from '@/components/ui/button',
 import Link from "next/link",
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",
-import { FeaturesGuideSection } from "@/components/FeaturesGuideSection",
-import { SocialShareSection } from "@/components/SocialShareSection",
-import { useTranslation } from "react-i18next",
-import { useLanguage } from "@/context/LanguageContext",
-import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from 'lucide-react'
+import { FeaturedListingsSection  } from '@/components/FeaturedListingsSection',
+import { FeaturesGuideSection  } from '@/components/FeaturesGuideSection',
+import { SocialShareSection  } from '@/components/SocialShareSection',
+import { useTranslation  } from 'react-i18next',
+import { useLanguage  } from '@/context/LanguageContext',
+import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone  } from 'lucide-react'
 
 export default function LandingPage() {
   const { t } = useTranslation(),
@@ -39,51 +38,19 @@ export default function LandingPage() {
 
   // Tools and features showcase
 
-  const toolsFeatures = [
-    {
+  const toolsFeatures = [{
 
 
 
   // Tools and features showcase
   const toolsFeatures = [
     {
-      title: t('home && home.tool_ai_matcher'),
-      description: t('home && home.tool_ai_matcher_desc'),
-      icon: <Sparkles className='h-6 w-6 text-zion-cyan' />,
-      link: '/match',
-    },
-    {
-      title: t('home && home.tool_talent'),
-      description: t('home && home.tool_talent_desc'),
-      icon: <Users className='h-6 w-6 text-zion-purple' />,
-      link: '/talent',
-    },
-    {
-      title: t('home && home.tool_services'),
-      description: t('home && home.tool_services_desc'),
-      icon: <Zap className='h-6 w-6 text-zion-cyan' />,
-      link: '/services',
-    },
-    {
-      title: t('home && home.tool_equipment'),
-      description: t('home && home.tool_equipment_desc'),
-      icon: <Settings className='h-6 w-6 text-zion-purple' />,
-      link: '/equipment',
-    },
-    {
-      title: t('home && home.tool_analytics'),
-      description: t('home && home.tool_analytics_desc'),
-      icon: <BarChart3 className='h-6 w-6 text-zion-cyan' />,
-      link: '/analytics',
-    },
-    {
-      title: 'Mobile App',
-      description:
-        'Take Zion with you on the go with our mobile app for iOS and Android',
-      icon: <Smartphone className='h-6 w-6 text-zion-purple' />,
-      link: '/mobile-launch',
-    },
-export default /**
+      title: t('home && home.tool_ai_matcher'), description: t('home && home.tool_ai_matcher_desc'), icon: <Sparkles className='h-6 w-6 text-zion-cyan' />, link: '/match', }, {
+      title: t('home && home.tool_talent'), description: t('home && home.tool_talent_desc'), icon: <Users className='h-6 w-6 text-zion-purple' />, link: '/talent', }, {
+      title: t('home && home.tool_services'), description: t('home && home.tool_services_desc'), icon: <Zap className='h-6 w-6 text-zion-cyan' />, link: '/services', }, {
+      title: t('home && home.tool_equipment'), description: t('home && home.tool_equipment_desc'), icon: <Settings className='h-6 w-6 text-zion-purple' />, link: '/equipment', }, {
+      title: t('home && home.tool_analytics'), description: t('home && home.tool_analytics_desc'), icon: <BarChart3 className='h-6 w-6 text-zion-cyan' />, link: '/analytics', }, {
+      title: 'Mobile App', description: 'Take Zion with you on the go with our mobile app for iOS and Android', icon: <Smartphone className='h-6 w-6 text-zion-purple' />, link: '/mobile-launch', }, export default /**
  * LandingPage - Function description
  */
 function LandingPage() {
@@ -94,49 +61,38 @@ function LandingPage() {
     {
       title: t('home.tool_talent')
       description: t('home.tool_talent_desc')
-      icon: <Users className='h-6 w-6 text-zion-purple' />
+      icon: <Users className='h-6 w-6 text-zion-purple' /></Users>
       link: '/talent'
     }
     {
       title: t('home.tool_services')
       description: t('home.tool_services_desc')
-      icon: <Zap className='h-6 w-6 text-zion-cyan' />
+      icon: <Zap className='h-6 w-6 text-zion-cyan' /></Zap>
       link: '/services'
     }
     {
       title: t('home.tool_equipment')
       description: t('home.tool_equipment_desc')
-      icon: <Settings className='h-6 w-6 text-zion-purple' />
+      icon: <Settings className='h-6 w-6 text-zion-purple' /></Settings>
       link: '/equipment'
     }
     {
       title: t('home.tool_analytics')
       description: t('home.tool_analytics_desc')
-      icon: <BarChart3 className='h-6 w-6 text-zion-cyan' />
+      icon: <BarChart3 className='h-6 w-6 text-zion-cyan' /></BarChart3>
       link: '/analytics'
     }
     {
-      title: t ('home.tool_analytics'),
-      description: t ('home.tool_analytics_desc'),
-      icon: <BarChart3 className='h - 6 w - 6 text - zion - cyan' />,
-      link: '/analytics',
-    },
-    {
-      title: 'Mobile App',
-      description:
-        'Take Zion with you on the go with our mobile app for iOS and Android',
-      icon: <Smartphone className='h - 6 w - 6 text - zion - purple' />,
-      link: '/mobile - launch',
-    },
-  ]
+      title: t ('home.tool_analytics'), description: t ('home.tool_analytics_desc'), icon: <BarChart3 className='h - 6 w - 6 text - zion - cyan' />, link: '/analytics', }, {
+      title: 'Mobile App', description: 'Take Zion with you on the go with our mobile app for iOS and Android', icon: <Smartphone className='h - 6 w - 6 text - zion - purple' />, link: '/mobile - launch', }]
   return (
 
         title={t('home && home.seo_title')}
         description={t('home && home.seo_description')}
         keywords={t('home && home.seo_keywords')}
-        canonical='https://app && app.ziontechgroup.com/'      />
-      <Header />
-      <HeroSection />
+        canonical='https: //app && app.ziontechgroup.com/'      />
+      <Header /></Header>
+      <HeroSection /></HeroSection>
       {/* Quick Access Tools Section */}
       <section className='py-16 bg-zion-blue-dark'>
         <div className='container mx-auto px-4'>
@@ -148,12 +104,12 @@ function LandingPage() {
               {t('home && home.tools_description')}
             </p></$1>
           <$2 />
-            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
+            className={`grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
             {toolsFeatures && toolsFeatures.map((feature, index) => (
               <$2 />
                 key={index}
                 href={feature && feature.link}
-                className='bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300'>
+                className='bg-zion-blue border border-zion-blue-light hover: border-zion-purple/50 rounded-lg p-6 transition-all duration-300'>
                 <div className='bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4'>
                   {feature && feature.icon}
                 </div>
@@ -173,90 +129,66 @@ function LandingPage() {
                 <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <span>{t("general && general.explore")}</span>
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} /></$1>
-import { Header } from "@/components/Header"
-import { TrustedBySection } from "@/components/TrustedBySection"
-import { TestimonialCarousel } from "@/components/TestimonialCarousel"
-import { FloatingCTA } from "@/components/FloatingCTA"
-import { HeroSection } from "@/components/HeroSection"
-import { CategoriesSection } from "@/components/CategoriesSection"
-import { BenefitsSection } from "@/components/BenefitsSection"
-import { HowItWorksSection } from "@/components/HowItWorksSection"
-import { WaitlistSection } from "@/components/WaitlistSection"
-import { BlogSection } from "@/components/BlogSection"
-import { SEO } from "@/components/SEO"
-import { Button } from "@/components/ui/button"
+import { Header  } from '@/components/Header'
+import { TrustedBySection  } from '@/components/TrustedBySection'
+import { TestimonialCarousel  } from '@/components/TestimonialCarousel'
+import { FloatingCTA  } from '@/components/FloatingCTA'
+import { HeroSection  } from '@/components/HeroSection'
+import { CategoriesSection  } from '@/components/CategoriesSection'
+import { BenefitsSection  } from '@/components/BenefitsSection'
+import { HowItWorksSection  } from '@/components/HowItWorksSection'
+import { WaitlistSection  } from '@/components/WaitlistSection'
+import { BlogSection  } from '@/components/BlogSection'
+import { SEO  } from '@/components/SEO'
+import { Button  } from '@/components/ui/button'
 import Link from "next/link"
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection"
-import { FeaturesGuideSection } from "@/components/FeaturesGuideSection"
-import { SocialShareSection } from "@/components/SocialShareSection"
-import { useTranslation } from "react-i18next"
-import { useLanguage } from "@/context/LanguageContext"
-import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from 'lucide-react'
-import { Zap } from 'lucide-react'
+import { FeaturedListingsSection  } from '@/components/FeaturedListingsSection'
+import { FeaturesGuideSection  } from '@/components/FeaturesGuideSection'
+import { SocialShareSection  } from '@/components/SocialShareSection'
+import { useTranslation  } from 'react-i18next'
+import { useLanguage  } from '@/context/LanguageContext'
+import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone  } from 'lucide-react'
+import { Zap  } from 'lucide-react'
 export default function LandingPage() { const { t  } = useTranslation(),
   const { isRTL  } = useLanguage(),
 
   
   // Tools and features showcase
-  const toolsFeatures = [
-    {
-      title: t("home.tool_ai_matcher"), description: t("home.tool_ai_matcher_desc"),
-      icon: <Sparkles className = "h-6 w-6 text-zion-cyan" />,
-
-      title: t("home.tool_ai_matcher"),
-      description: t("home.tool_ai_matcher_desc"),
-      icon: <Sparkles className="h-6 w-6 text-zion-cyan" />,
-
-      link: "/match"
+  const toolsFeatures = [{
+      title: t("home.tool_ai_matcher"), description: t("home.tool_ai_matcher_desc"), icon: <Sparkles className = "h-6 w-6 text-zion-cyan" />, title: t("home.tool_ai_matcher"), description: t("home.tool_ai_matcher_desc"), icon: <Sparkles className="h-6 w-6 text-zion-cyan" />, link: "/match"
     }
     {
-      title: t("home.tool_talent"), description: t("home.tool_talent_desc"),
-      icon: <Users className = "h-6 w-6 text-zion-purple" />,
-      link: "/talent"
+      title: t("home.tool_talent"), description: t("home.tool_talent_desc"), icon: <Users className = "h-6 w-6 text-zion-purple" />, link: "/talent"
     }
     {
-      title: t("home.tool_services"), description: t("home.tool_services_desc"),
-      icon: <Zap className = "h-6 w-6 text-zion-cyan" />,
-      link: "/services"
+      title: t("home.tool_services"), description: t("home.tool_services_desc"), icon: <Zap className = "h-6 w-6 text-zion-cyan" />, link: "/services"
     }
     {
-      title: t("home.tool_equipment"), description: t("home.tool_equipment_desc"),
-      icon: <Settings className = "h-6 w-6 text-zion-purple" />,
-      link: "/equipment"
+      title: t("home.tool_equipment"), description: t("home.tool_equipment_desc"), icon: <Settings className = "h-6 w-6 text-zion-purple" />, link: "/equipment"
     }
     {
-      title: t("home.tool_analytics"), description: t("home.tool_analytics_desc"),
-      icon: <BarChart3 className = "h-6 w-6 text-zion-cyan" />,
-      link: "/analytics"
+      title: t("home.tool_analytics"), description: t("home.tool_analytics_desc"), icon: <BarChart3 className = "h-6 w-6 text-zion-cyan" />, link: "/analytics"
     }
     {
-      title: "Mobile App",
-      description: "Take Zion with you on the go with our mobile app for iOS and Android",
-      icon: <Smartphone className = "h-6 w-6 text-zion-purple" />,
-      link: "/mobile-launch"
-    }
-  ]
+      title: "Mobile App", description: "Take Zion with you on the go with our mobile app for iOS and Android", icon: <Smartphone className = "h-6 w-6 text-zion-purple" />, link: "/mobile-launch"
+    }]
   return (
 
     <div className='min-h-screen bg-zion-blue text-white'>
-      <SEO
-        title={t('home.seo_title')}
+      <SEO title={t('home.seo_title')}
         description={t('home.seo_description')}
         keywords={t('home.seo_keywords')}
-        canonical='https://app.ziontechgroup.com/'      />
-      <Header />
-      <HeroSection />
+        canonical='https: //app.ziontechgroup.com/'      /></SEO>
+      <Header /></Header>
+      <HeroSection /></HeroSection>
     <div className="min-h-screen bg-zion-blue text-white">
-      <SEO 
-        title={t("home.seo_title")} 
+      <SEO title={t("home.seo_title")} 
         description={t("home.seo_description")} 
         keywords={t("home.seo_keywords")}
-        canonical="https://app.ziontechgroup.com/"
-      />
-      <Header />
-      <HeroSection />
-      
-
+        canonical="https: //app.ziontechgroup.com/"
+      /></SEO>
+      <Header /></Header>
+      <HeroSection /></HeroSection>
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -269,13 +201,13 @@ export default function LandingPage() { const { t  } = useTranslation(),
             </p>
           </div>
           <$2 />
-            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}
+            className={`grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}
           >
             {toolsFeatures.map((feature, index) => (
               <$2 />
                 key={index}
                 href={feature.link}
-                className='bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300'              >
+                className='bg-zion-blue border border-zion-blue-light hover: border-zion-purple/50 rounded-lg p-6 transition-all duration-300'              >
                 <div className='bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4'>
           
           <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
@@ -283,7 +215,7 @@ export default function LandingPage() { const { t  } = useTranslation(),
               <$2 />
                 key={index} 
                 href={feature.link} 
-                className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"
+                className="bg-zion-blue border border-zion-blue-light hover: border-zion-purple/50 rounded-lg p-6 transition-all duration-300"
               >
                 <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
 
@@ -295,36 +227,29 @@ export default function LandingPage() { const { t  } = useTranslation(),
                 <p className="text-zion-slate-light mb-4">{feature.description}</p>
                 <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <span>{t("general.explore")}</span>
-                  <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
-
+                  <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} /></ArrowRight>
               </Link>
             ))}
           </div>
         </div>
       </section>
-      <CategoriesSection />
-      <BenefitsSection />
-      <CategoriesSection />
-      <BenefitsSection />
+      <CategoriesSection /></CategoriesSection>
+      <BenefitsSection /></BenefitsSection>
+      <CategoriesSection /></CategoriesSection>
+      <BenefitsSection /></BenefitsSection>
       {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />
+      <FeaturesGuideSection /></FeaturesGuideSection>
       {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />
-      <CategoriesSection />
-      <BenefitsSection />
+      <FeaturesGuideSection /></FeaturesGuideSection>
+      <CategoriesSection /></CategoriesSection>
+      <BenefitsSection /></BenefitsSection>
       {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />
-
-      
-
-      <HowItWorksSection />
-      <FeaturedListingsSection />
-      <TestimonialCarousel />
-      <TrustedBySection />
-      <BlogSection />
-
-
-
+      <FeaturesGuideSection /></FeaturesGuideSection>
+      <HowItWorksSection /></HowItWorksSection>
+      <FeaturedListingsSection /></FeaturedListingsSection>
+      <TestimonialCarousel /></TestimonialCarousel>
+      <TrustedBySection /></TrustedBySection>
+      <BlogSection /></BlogSection>
           </div></$1></$1>
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
@@ -332,7 +257,7 @@ export default function LandingPage() { const { t  } = useTranslation(),
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
             Our Services
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-lg">
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -373,15 +298,14 @@ export default function LandingPage() { const { t  } = useTranslation(),
       </section>
 
       {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />
+      <FeaturesGuideSection /></FeaturesGuideSection>
     <div className='min - h-screen bg - zion - blue text - white'>
-      <SEO
-        title={t ('home.seo_title')}
+      <SEO title={t ('home.seo_title')}
         description={t ('home.seo_description')}
         keywords={t ('home.seo_keywords')}
-        canonical='https://app.ziontechgroup.com/'      />
-      <Header />
-      <HeroSection />
+        canonical='https: //app.ziontechgroup.com/'      /></SEO>
+      <Header /></Header>
+      <HeroSection /></HeroSection>
       {/* Quick Access Tools Section */}
       <section className='py - 16 bg - zion - blue - dark'>
         <div className='container mx - auto px - 4'>
@@ -393,13 +317,13 @@ export default function LandingPage() { const { t  } = useTranslation(),
               {t ('home.tools_description')}
             </p></$1>
           <;$2 />
-            className={`grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 max - w-6xl mx - auto ${isRTL ? 'rtl' : ''}`}
+            className={`grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap - 6 max - w-6xl mx - auto ${isRTL ? 'rtl' : ''}`}
           >
             {tools_features.map ((feature, index) => (
               <;$2 />
                 key={index}
                 href={feature.link}
-                className='bg - zion - blue border border - zion - blue - light hover:border - zion - purple / 50 rounded - lg p - 6 transition - all duration - 300'              >
+                className='bg - zion - blue border border - zion - blue - light hover: border - zion - purple / 50 rounded - lg p - 6 transition - all duration - 300'              >
                 <div className='bg - zion - blue - dark rounded - full w - 12 h - 12 flex items - center justify - center mb - 4'>
                   {feature.icon}
                 </div>
@@ -421,27 +345,27 @@ export default function LandingPage() { const { t  } = useTranslation(),
                   <span>{t ("general.explore")}</span>
                   <ArrowRight className={`${isRTL ? 'ml - 0 mr - 2 rotate - 180' : 'ml - 2'} h - 4 w - 4`} /></$1>))}
           </div></$1></$1>
-      <CategoriesSection />
-      <BenefitsSection />
-      <CategoriesSection />
-      <BenefitsSection />
+      <CategoriesSection /></CategoriesSection>
+      <BenefitsSection /></BenefitsSection>
+      <CategoriesSection /></CategoriesSection>
+      <BenefitsSection /></BenefitsSection>
       {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />
+      <FeaturesGuideSection /></FeaturesGuideSection>
       {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />
-      <CategoriesSection />
-      <BenefitsSection />
+      <FeaturesGuideSection /></FeaturesGuideSection>
+      <CategoriesSection /></CategoriesSection>
+      <BenefitsSection /></BenefitsSection>
       {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />
-      <HowItWorksSection />
-      <FeaturedListingsSection />
-      <TestimonialCarousel />
-      <TrustedBySection />
-      <BlogSection />
+      <FeaturesGuideSection /></FeaturesGuideSection>
+      <HowItWorksSection /></HowItWorksSection>
+      <FeaturedListingsSection /></FeaturedListingsSection>
+      <TestimonialCarousel /></TestimonialCarousel>
+      <TrustedBySection /></TrustedBySection>
+      <BlogSection /></BlogSection>
       {/* Add social share section to encourage users to spread the word */}
-      <SocialShareSection />
+      <SocialShareSection /></SocialShareSection>
       {/* Add social share section to encourage users to spread the word */}
-      <SocialShareSection />
+      <SocialShareSection /></SocialShareSection>
       <FloatingCTA /></$1>)
 }
 </$1></div></p></p></p>

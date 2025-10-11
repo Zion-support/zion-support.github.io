@@ -7,18 +7,9 @@ export type InnovativeMicroSaasV2 = {
 	rating: number
 	reviews: number
 }
-export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
-	{
-		id: 'ai-business-intelligence-pro',
-		title: 'AI Business Intelligence Pro',
-		description: 'Transform data into insights with AI dashboards and reporting.',
-		category: 'AI',
-		price: '$299/month',
-		rating: 4.8,
-		reviews: 42,
-	},
-]
-import { ServiceVariant } from '../types/service-variants'
+export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [{
+		id: 'ai-business-intelligence-pro', title: 'AI Business Intelligence Pro', description: 'Transform data into insights with AI dashboards and reporting.', category: 'AI', price: '$299/month', rating: 4.8, reviews: 42, }]
+import { ServiceVariant  } from '../types/service-variants'
 export interface InnovativeMicroSaasV2 {
   id: string
   name: string
@@ -59,27 +50,10 @@ export interface InnovativeMicroSaasV2 {
   rating: number
   reviews: number
 }
-export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
-  // Innovative Business Solutions
+export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [// Innovative Business Solutions
   {
-    id: 'ai-powered-inventory-optimizer',
-    name: 'AI-Powered Inventory Optimizer',
-    tagline: 'Intelligent inventory management with predictive analytics',
-    price: '$299',
-    period: '/month',
-    description: 'Revolutionary inventory management platform that uses AI to predict demand, optimize stock levels, and reduce inventory costs by up to 40%. Perfect for e-commerce, retail, and manufacturing businesses.',
-    features: [
-      'AI-powered demand forecasting',
-      'Real-time inventory optimization',
-      'Automated reorder management',
-      'Multi-location inventory tracking',
-      'Supplier performance analytics',
-      'Seasonal trend analysis',
-      'Cost optimization algorithms',
-      'Mobile app and dashboard',
-      'API for integrations',
-      '24/7 inventory monitoring'
-    ],
+    id: 'ai-powered-inventory-optimizer', name: 'AI-Powered Inventory Optimizer', tagline: 'Intelligent inventory management with predictive analytics', price: '$299', period: '/month', description: 'Revolutionary inventory management platform that uses AI to predict demand, optimize stock levels, and reduce inventory costs by up to 40%. Perfect for e-commerce, retail, and manufacturing businesses.', features: [
+      'AI-powered demand forecasting', 'Real-time inventory optimization', 'Automated reorder management', 'Multi-location inventory tracking', 'Supplier performance analytics', 'Seasonal trend analysis', 'Cost optimization algorithms', 'Mobile app and dashboard', 'API for integrations', '24/7 inventory monitoring'],
     popular: true,
     icon: '📦',
     color: 'from-blue-600 to-cyan-700',
@@ -119,18 +93,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     price: '$199',
     period: '/month',
     description: 'Innovative platform that enables businesses to create, deploy, and manage smart contracts without coding knowledge. Automates business processes, reduces costs, and ensures transparency.',
-    features: [
-      'No-code smart contract creation',
-      'Template library (100+ templates)',
-      'Automated contract execution',
-      'Multi-blockchain support',
-      'Legal compliance tools',
-      'Contract monitoring and analytics',
-      'Integration with business systems',
-      'Mobile app access',
-      'API for developers',
-      '24/7 contract management'
-    ],
+    features: ['No-code smart contract creation', 'Template library (100+ templates)', 'Automated contract execution', 'Multi-blockchain support', 'Legal compliance tools', 'Contract monitoring and analytics', 'Integration with business systems', 'Mobile app access', 'API for developers', '24/7 contract management'],
     popular: true,
     icon: '📋',
     color: 'from-green-600 to-emerald-700',
@@ -170,18 +133,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     price: '$399',
     period: '/month',
     description: 'Advanced customer success platform that uses AI to predict customer churn, identify upsell opportunities, and automate customer engagement. Increases customer lifetime value by 200%.',
-    features: [
-      'AI-powered churn prediction',
-      'Automated customer engagement',
-      'Upsell and cross-sell automation',
-      'Customer health scoring',
-      'Personalized success plans',
-      'Real-time customer insights',
-      'Integration with CRM systems',
-      'Mobile app and dashboard',
-      'Advanced analytics and reporting',
-      '24/7 customer success monitoring'
-    ],
+    features: ['AI-powered churn prediction', 'Automated customer engagement', 'Upsell and cross-sell automation', 'Customer health scoring', 'Personalized success plans', 'Real-time customer insights', 'Integration with CRM systems', 'Mobile app and dashboard', 'Advanced analytics and reporting', '24/7 customer success monitoring'],
     popular: true,
     icon: '🎯',
     color: 'from-purple-600 to-pink-700',
@@ -221,18 +173,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     price: '$149',
     period: '/month',
     description: 'Smart workflow automation platform that uses AI to analyze business processes and automatically create optimized workflows. Reduces manual work by 80% and improves efficiency.',
-    features: [
-      'AI-powered process analysis',
-      'Automated workflow creation',
-      'Intelligent task routing',
-      'Process optimization suggestions',
-      'Integration with business tools',
-      'Real-time workflow monitoring',
-      'Custom automation rules',
-      'Mobile app access',
-      'API for developers',
-      '24/7 workflow management'
-    ],
+    features: ['AI-powered process analysis', 'Automated workflow creation', 'Intelligent task routing', 'Process optimization suggestions', 'Integration with business tools', 'Real-time workflow monitoring', 'Custom automation rules', 'Mobile app access', 'API for developers', '24/7 workflow management'],
     popular: false,
     icon: '⚙️',
     color: 'from-gray-600 to-slate-700',
@@ -272,18 +213,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     price: '$99',
     period: '/month',
     description: 'Intelligent financial advisory platform that provides personalized investment advice, portfolio optimization, and financial planning. Uses AI to analyze market trends and optimize investment strategies.',
-    features: [
-      'AI-powered investment recommendations',
-      'Personalized financial planning',
-      'Portfolio optimization algorithms',
-      'Risk assessment and management',
-      'Market trend analysis',
-      'Automated rebalancing',
-      'Tax optimization strategies',
-      'Mobile app and dashboard',
-      'Integration with financial accounts',
-      '24/7 financial monitoring'
-    ],
+    features: ['AI-powered investment recommendations', 'Personalized financial planning', 'Portfolio optimization algorithms', 'Risk assessment and management', 'Market trend analysis', 'Automated rebalancing', 'Tax optimization strategies', 'Mobile app and dashboard', 'Integration with financial accounts', '24/7 financial monitoring'],
     popular: true,
     icon: '💰',
     color: 'from-yellow-600 to-orange-700',

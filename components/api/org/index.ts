@@ -23,7 +23,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const filtered = filterOrgData(data, filters)
   return res && res.status(200).json(filtered);  return res && res.status(200).json(filtered)
 }
-import {readOrgData, filterOrgData} from '../../../utils / org - data'
+import { readOrgData, filterOrgData } from '../../../utils / org - data'
 import type { OrgFilters, RoleType } from '../../../types / org'
 export default /**
  * handler - Function description
@@ -69,7 +69,7 @@ const filters: OrgFilters = {
   const filtered = filterOrgData(data, filters)
   return res.status(200).json(filtered);  return res.status(200).json(filtered)
 }
-import { readOrgData, filterOrgData } from '../../../utils/org-data'
+import { readOrgData, filterOrgData  } from '../../../utils/org-data'
 import type { OrgFilters, RoleType } from '../../../types/org'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {

@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface BlockchainInnovation2026 {
   id: string
   name: string
@@ -39,27 +39,10 @@ export interface BlockchainInnovation2026 {
   rating: number
   reviews: number
 }
-export const blockchainInnovations2026: BlockchainInnovation2026[] = [
-  // Blockchain Infrastructure Platform 2026
+export const blockchainInnovations2026: BlockchainInnovation2026[] = [// Blockchain Infrastructure Platform 2026
   {
-    id: 'blockchain-infrastructure-platform-2026',
-    name: 'Blockchain Infrastructure Platform 2026',
-    tagline: 'Enterprise-grade blockchain infrastructure for modern businesses',
-    price: 'Custom pricing',
-    period: '',
-    description: 'Complete blockchain infrastructure platform that enables businesses to build, deploy, and manage enterprise blockchain applications with advanced security and scalability.',
-    features: [
-      'Multi-chain support (Ethereum, Polygon, Solana)',
-      'Smart contract development tools',
-      'Enterprise security & compliance',
-      'Scalable infrastructure',
-      'API access & SDKs',
-      'Real-time monitoring',
-      'Custom blockchain networks',
-      'Integration marketplace',
-      '24/7 support',
-      'Expert consultation'
-    ],
+    id: 'blockchain-infrastructure-platform-2026', name: 'Blockchain Infrastructure Platform 2026', tagline: 'Enterprise-grade blockchain infrastructure for modern businesses', price: 'Custom pricing', period: '', description: 'Complete blockchain infrastructure platform that enables businesses to build, deploy, and manage enterprise blockchain applications with advanced security and scalability.', features: [
+      'Multi-chain support (Ethereum, Polygon, Solana)', 'Smart contract development tools', 'Enterprise security & compliance', 'Scalable infrastructure', 'API access & SDKs', 'Real-time monitoring', 'Custom blockchain networks', 'Integration marketplace', '24/7 support', 'Expert consultation'],
     popular: true,
     icon: '⛓️',
     color: 'from-orange-600 to-yellow-600',
@@ -100,18 +83,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     price: '$99',
     period: '/month',
     description: 'Advanced DeFi platform that uses AI algorithms to automatically optimize yield farming strategies across multiple protocols, maximizing returns while minimizing risks.',
-    features: [
-      'AI-powered yield optimization',
-      'Multi-protocol support',
-      'Risk management tools',
-      'Automated rebalancing',
-      'Real-time analytics',
-      'Portfolio tracking',
-      'Tax reporting tools',
-      'Mobile app access',
-      'API integration',
-      'Expert support'
-    ],
+    features: ['AI-powered yield optimization', 'Multi-protocol support', 'Risk management tools', 'Automated rebalancing', 'Real-time analytics', 'Portfolio tracking', 'Tax reporting tools', 'Mobile app access', 'API integration', 'Expert support'],
     popular: true,
     icon: '📈',
     color: 'from-green-600 to-emerald-600',
@@ -152,18 +124,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     price: '$199',
     period: '/month',
     description: 'Complete NFT platform that enables businesses and creators to build custom NFT marketplaces, create unique digital assets, and monetize their intellectual property.',
-    features: [
-      'Custom NFT marketplace builder',
-      'AI-powered NFT generation',
-      'Multi-chain NFT support',
-      'Royalty management system',
-      'Analytics & insights',
-      'Marketing tools',
-      'Community features',
-      'Mobile app support',
-      'API access',
-      'White-label solutions'
-    ],
+    features: ['Custom NFT marketplace builder', 'AI-powered NFT generation', 'Multi-chain NFT support', 'Royalty management system', 'Analytics & insights', 'Marketing tools', 'Community features', 'Mobile app support', 'API access', 'White-label solutions'],
     popular: true,
     icon: '🎨',
     color: 'from-purple-600 to-pink-600',
@@ -204,18 +165,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     price: '$149',
     period: '/month',
     description: 'Advanced Web3 identity platform that provides secure, decentralized authentication, digital identity management, and privacy-preserving verification systems.',
-    features: [
-      'Decentralized identity (DID)',
-      'Zero-knowledge proofs',
-      'Multi-factor authentication',
-      'Privacy-preserving verification',
-      'Cross-platform compatibility',
-      'API access',
-      'SDK integration',
-      'Compliance tools',
-      'Analytics dashboard',
-      'Enterprise support'
-    ],
+    features: ['Decentralized identity (DID)', 'Zero-knowledge proofs', 'Multi-factor authentication', 'Privacy-preserving verification', 'Cross-platform compatibility', 'API access', 'SDK integration', 'Compliance tools', 'Analytics dashboard', 'Enterprise support'],
     popular: false,
     icon: '🆔',
     color: 'from-blue-600 to-cyan-600',
@@ -256,18 +206,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     price: '$299',
     period: '/month',
     description: 'Revolutionary supply chain platform that uses blockchain technology to provide end-to-end transparency, traceability, and automation for complex supply chains.',
-    features: [
-      'End-to-end traceability',
-      'Smart contract automation',
-      'Real-time monitoring',
-      'Quality assurance',
-      'Compliance reporting',
-      'Analytics dashboard',
-      'Mobile app access',
-      'API integration',
-      'IoT device support',
-      'Expert consultation'
-    ],
+    features: ['End-to-end traceability', 'Smart contract automation', 'Real-time monitoring', 'Quality assurance', 'Compliance reporting', 'Analytics dashboard', 'Mobile app access', 'API integration', 'IoT device support', 'Expert consultation'],
     popular: true,
     icon: '📦',
     color: 'from-indigo-600 to-purple-600',

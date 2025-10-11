@@ -66,7 +66,7 @@ class UserExperienceEnhancer {
         if (targetElement) {
           targetElement.scrollIntoView({
             behavior: 'smooth',
-            block:           ,
+            block:  ,
 $4})
         }
       })
@@ -299,7 +299,7 @@ $4})
   }
   private sendAnalytics(event: string, data: any): void {
     // In a real application, this would send data to your analytics service
-    console.log('Analytics:', event, data)
+    console.log('Analytics: ', event, data)
     // Example: Send to Google Analytics
     if (typeof gtag !== 'undefined') {
       gtag('event', event, data)
@@ -329,7 +329,7 @@ $4})
       new Notification(title, {
         body: body,
         icon: icon || '/favicon.ico',
-        badge:       ,
+        badge:  ,
 $4})
     }
   }
@@ -343,16 +343,7 @@ $4})
     this.setupInstallPrompt()
   }
   private addPWAMetaTags(): void {
-    const metaTags = [
-      { name: 'mobile-web-app-capable', content: 'yes' },
-      { name: 'apple-mobile-web-app-capable', content: 'yes' },
-      { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
-      { name: 'apple-mobile-web-app-title', content: 'Zion Tech Group' },
-      { name: 'application-name', content: 'Zion Tech Group' },
-      { name: 'msapplication-TileColor', content: '#4f46e5' },
-      { name: 'msapplication-config', content: '/browserconfig.xml' },
-      { name: 'theme-color', content: '#4f46e5' }
-    ]
+    const metaTags = [{ name: 'mobile-web-app-capable', content: 'yes' }, { name: 'apple-mobile-web-app-capable', content: 'yes' }, { name: 'apple-mobile-web-app-status-bar-style', content: 'default' }, { name: 'apple-mobile-web-app-title', content: 'Zion Tech Group' }, { name: 'application-name', content: 'Zion Tech Group' }, { name: 'msapplication-TileColor', content: '#4f46e5' }, { name: 'msapplication-config', content: '/browserconfig.xml' }, { name: 'theme-color', content: '#4f46e5' }]
     metaTags.forEach(tag => {
     const meta = document.createElement('meta')
       meta.setAttribute('name', tag.name)
@@ -444,10 +435,10 @@ $4})
       userVisibleOnly: true,
       applicationServerKey: 'your-vapid-public-key' // Replace with actual VAPID key
     }).then((subscription) => {
-      console.log('Push subscription:', subscription)
+      console.log('Push subscription: ', subscription)
       // Send subscription to server
     }).catch((error) => {
-    console.log('Push subscription failed:', error)
+    console.log('Push subscription failed: ', error)
   })
   }
   private setupDarkMode(): void {

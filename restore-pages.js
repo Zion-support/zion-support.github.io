@@ -1,57 +1,9 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 // List of all page files that need to be restored
-const pageFiles = [
-  'ai-services/page.tsx',
-  'ai-marketing/page.tsx',
-  'ai-automation/page.tsx',
-  'ai-healthcare/page.tsx',
-  'ai-fintech/page.tsx',
-  'ai-content-generation/page.tsx',
-  'ai-data-analytics/page.tsx',
-  'ai-cybersecurity/page.tsx',
-  'ai-workflow-automation/page.tsx',
-  'ai-mobile-app-development/page.tsx',
-  'ai-ecommerce-solutions/page.tsx',
-  'ai-customer-support/page.tsx',
-  'ai-sales-automation/page.tsx',
-  'ai-data-visualization/page.tsx',
-  'ai-lead-generation/page.tsx',
-  'ai-document-processing/page.tsx',
-  'it-services/page.tsx',
-  'it-infrastructure/page.tsx',
-  'cybersecurity/page.tsx',
-  'devops/page.tsx',
-  'database/page.tsx',
-  'networking/page.tsx',
-  'ai-crm/page.tsx',
-  'ai-analytics-dashboard/page.tsx',
-  'ai-chatbot-builder/page.tsx',
-  'ai-email-marketing/page.tsx',
-  'ai-writing-assistant/page.tsx',
-  'quantum-computing/page.tsx',
-  'autonomous-systems/page.tsx',
-  'blockchain-web3/page.tsx',
-  'iot-edge-computing/page.tsx',
-  'business-intelligence/page.tsx',
-  'robotics/page.tsx',
-  'team/page.tsx',
-  'careers/page.tsx',
-  'news/page.tsx',
-  'about/page.tsx',
-  'contact/page.tsx',
-  'services/page.tsx',
-  'blog/page.tsx',
-  'case-studies/page.tsx',
-  'pricing/page.tsx',
-  'demo/page.tsx',
-  'consultation/page.tsx',
-  'ai-project-manager/page.tsx',
-  'ai-customer-support-bot/page.tsx',
-  'ai-ml-platform/page.tsx'
-]
+const pageFiles = ['ai-services/page.tsx', 'ai-marketing/page.tsx', 'ai-automation/page.tsx', 'ai-healthcare/page.tsx', 'ai-fintech/page.tsx', 'ai-content-generation/page.tsx', 'ai-data-analytics/page.tsx', 'ai-cybersecurity/page.tsx', 'ai-workflow-automation/page.tsx', 'ai-mobile-app-development/page.tsx', 'ai-ecommerce-solutions/page.tsx', 'ai-customer-support/page.tsx', 'ai-sales-automation/page.tsx', 'ai-data-visualization/page.tsx', 'ai-lead-generation/page.tsx', 'ai-document-processing/page.tsx', 'it-services/page.tsx', 'it-infrastructure/page.tsx', 'cybersecurity/page.tsx', 'devops/page.tsx', 'database/page.tsx', 'networking/page.tsx', 'ai-crm/page.tsx', 'ai-analytics-dashboard/page.tsx', 'ai-chatbot-builder/page.tsx', 'ai-email-marketing/page.tsx', 'ai-writing-assistant/page.tsx', 'quantum-computing/page.tsx', 'autonomous-systems/page.tsx', 'blockchain-web3/page.tsx', 'iot-edge-computing/page.tsx', 'business-intelligence/page.tsx', 'robotics/page.tsx', 'team/page.tsx', 'careers/page.tsx', 'news/page.tsx', 'about/page.tsx', 'contact/page.tsx', 'services/page.tsx', 'blog/page.tsx', 'case-studies/page.tsx', 'pricing/page.tsx', 'demo/page.tsx', 'consultation/page.tsx', 'ai-project-manager/page.tsx', 'ai-customer-support-bot/page.tsx', 'ai-ml-platform/page.tsx']
 // Function to create a basic page component
 function createPageComponent(pageName) {
   const componentName = pageName.split('/')[0]

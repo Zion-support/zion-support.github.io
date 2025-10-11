@@ -4,13 +4,10 @@ import fs from 'fs'
 // Read the Footer.tsx file
 let content = fs.readFileSync('/workspace/app/components/Footer.tsx', 'utf8')
 // Fix malformed JSX tags
-const fixes = [
-  // Fix extra closing div tags
+const fixes = [// Fix extra closing div tags
   {
-    pattern: /<\/div><\/div>/g,
-    replacement: '</div>'
-  },
-  // Fix malformed div tags
+    pattern: /<\/div><\/div>/g, replacement: '</div>'
+  }, // Fix malformed div tags
   {
     pattern: /<div className="[^"]*">\s*<\/div><\/div>/g,
     replacement: (match) => {

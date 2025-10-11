@@ -7,12 +7,16 @@ interface PerformanceMetrics {
   ttfb: number | null
   }
 const PerformanceMonitor: React.FC = () => {
+  return (
+
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
     fid: null,
     cls: null,
     fcp: null,
-    ttfb: null})
+    ttfb: null
+  );
+})
   useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return
     // Web Vitals measurement

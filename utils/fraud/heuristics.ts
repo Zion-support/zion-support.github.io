@@ -1,24 +1,7 @@
-import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types',
-const suspiciousLinkHosts = [
-  'paypal.mecash.app',
-  'venmo.comwa.me',
-  't.metelegram.me',
-  'whatsapp.comwesternunion.com',
-  'moneygram.com'],
-const suspiciousPhrases = [
-  'whatsapp metelegram me',
-  'contact me on whatsappcashapp only',
-  'crypto onlysend crypto',
-  'wire transfergift card',
-  'western unionoff-platform payment',
-  'outside paymentpay outside',
-  'pay me directlydm me on',
-  'reach me on whatsappskype me',
-  'email me at'],
-const vagueScammyJobPhrases = [
-  'easy workquick money',
-  'no experience neededwork from home and earn fast',
-  'daily payoutsearn $\\d+ per day'],
+import { FraudEvent, HeuristicEvaluation, MonitoredSource  } from './types',
+const suspiciousLinkHosts = ['paypal.mecash.app', 'venmo.comwa.me', 't.metelegram.me', 'whatsapp.comwesternunion.com', 'moneygram.com'],
+const suspiciousPhrases = ['whatsapp metelegram me', 'contact me on whatsappcashapp only', 'crypto onlysend crypto', 'wire transfergift card', 'western unionoff-platform payment', 'outside paymentpay outside', 'pay me directlydm me on', 'reach me on whatsappskype me', 'email me at'],
+const vagueScammyJobPhrases = ['easy workquick money', 'no experience neededwork from home and earn fast', 'daily payoutsearn $\\d+ per day'],
 function containsSuspiciousHost(text: string): boolean {
   const lower = text.toLowerCase(),
   return suspiciousLinkHosts.some((host) => lower.includes(host))
@@ -32,7 +15,7 @@ function containsVagueJobClaims(text: string): string[] {
   const reasons: string[] = [],
   for (const pattern of vagueScammyJobPhrases) {
     const re = new RegExp(pattern, 'i'),
-    if (re.test(lower)) reasons.push(`job_vague_claim:"${pattern}"`),
+    if (re.test(lower)) reasons.push(`job_vague_claim: "${pattern}"`),
   }
   return reasons,
 }
@@ -45,47 +28,12 @@ export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps)
   if (event.source === 'signup' && event.ipAddress) {
     const recent = await deps.countEventsByIp(event.ipAddress, 'signup', 10),
     if (recent >= 3) {
-      reasons.push(`rapid_fire_signups_from_ip:${event.ipAddress}:${recent}in10m`),
+      reasons.push(`rapid_fire_signups_from_ip: ${event.ipAddress}:${recent}in10m`),
       severity = recent >= 10 ? 'high' : 'medium',
-import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types'
-const suspiciousLinkHosts = [
-  'paypal.me',
-  'cash.app',
-  'venmo.com',
-  'wa.me',
-  't.me',
-  'telegram.me',
-  'whatsapp.com',
-  'westernunion.com',
-  'moneygram.com',
-]
-const suspiciousPhrases = [
-  'whatsapp me',
-  'telegram me',
-  'contact me on whatsapp',
-  'cashapp only',
-  'crypto only',
-  'send crypto',
-  'wire transfer',
-  'gift card',
-  'western union',
-  'off-platform payment',
-  'outside payment',
-  'pay outside',
-  'pay me directly',
-  'dm me on',
-  'reach me on whatsapp',
-  'skype me',
-  'email me at',
-]
-const vagueScammyJobPhrases = [
-  'easy work',
-  'quick money',
-  'no experience needed',
-  'work from home and earn fast',
-  'daily payouts',
-  'earn $\\d+ per day',
-]
+import { FraudEvent, HeuristicEvaluation, MonitoredSource  } from './types'
+const suspiciousLinkHosts = ['paypal.me', 'cash.app', 'venmo.com', 'wa.me', 't.me', 'telegram.me', 'whatsapp.com', 'westernunion.com', 'moneygram.com']
+const suspiciousPhrases = ['whatsapp me', 'telegram me', 'contact me on whatsapp', 'cashapp only', 'crypto only', 'send crypto', 'wire transfer', 'gift card', 'western union', 'off-platform payment', 'outside payment', 'pay outside', 'pay me directly', 'dm me on', 'reach me on whatsapp', 'skype me', 'email me at']
+const vagueScammyJobPhrases = ['easy work', 'quick money', 'no experience needed', 'work from home and earn fast', 'daily payouts', 'earn $\\d+ per day']
 function containsSuspiciousHost(text: string): boolean {
   const lower = text.toLowerCase()
   return suspiciousLinkHosts.some((host) => lower.includes(host))
@@ -99,7 +47,7 @@ function containsVagueJobClaims(text: string): string[] {
   const reasons: string[] = []
   for (const pattern of vagueScammyJobPhrases) {
     const re = new RegExp(pattern, 'i')
-    if (re.test(lower)) reasons.push(`job_vague_claim:"${pattern}"`)
+    if (re.test(lower)) reasons.push(`job_vague_claim: "${pattern}"`)
   }
   return reasons
 }
@@ -112,7 +60,7 @@ export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps)
   if (event.source === 'signup' && event.ipAddress) {
     const recent = await deps.countEventsByIp(event.ipAddress, 'signup', 10)
     if (recent >= 3) {
-      reasons.push(`rapid_fire_signups_from_ip:${event.ipAddress}:${recent}in10m`)
+      reasons.push(`rapid_fire_signups_from_ip: ${event.ipAddress}:${recent}in10m`)
       severity = recent >= 10 ? 'high' : 'medium'
     }
   }
@@ -123,14 +71,14 @@ export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps)
     }
     const phrases = containsSuspiciousPhrase(event.content),
     if (phrases.length > 0) {
-      reasons.push(...phrases.map((p) => `suspicious_phrase:"${p}"`)),
+      reasons.push(...phrases.map((p) => `suspicious_phrase: "${p}"`)),
       if (severity === 'low') severity = 'medium',
       reasons.push('outside_payment_link_detected')
       severity = 'high'
     }
     const phrases = containsSuspiciousPhrase(event.content)
     if (phrases.length > 0) {
-      reasons.push(...phrases.map((p) => `suspicious_phrase:"${p}"`))
+      reasons.push(...phrases.map((p) => `suspicious_phrase: "${p}"`))
       if (severity === 'low') severity = 'medium'
     }
   }

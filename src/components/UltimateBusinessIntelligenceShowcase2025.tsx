@@ -1,26 +1,12 @@
 'use client'
 import React, { useState } from 'react'
         return (
-import { Link } from 'react-router-dom'
+import { Link  } from 'react-router-dom'
 const _UltimateBusinessIntelligenceShowcase2025 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
-  const content = [
-    {
-      id: 'ultimate-business-intelligence-revolution',
-      title: 'AI 2025: The Ultimate Business Intelligence Revolution',
-      description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
-      url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
-      type: 'Blog Post',
-      category: 'blog',
-      metrics: {
-        roi: '30,000%',
-        efficiency: '500%',
-        accuracy: '99.9%',
-        timeline:       ,
-$4},
-      readingTime: '35 min read',
-      featured: true,
-      tags: ['AI Revolution', 'Business Intelligence', 'ROI', 'Fortune 500', '30,000% ROI']
+  const content = [{
+      id: 'ultimate-business-intelligence-revolution', title: 'AI 2025: The Ultimate Business Intelligence Revolution', description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.', url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough', type: 'Blog Post', category: 'blog', metrics: {
+        roi: '30, 000%', efficiency: '500%', accuracy: '99.9%', timeline:, $4}, readingTime: '35 min read', featured: true, tags: ['AI Revolution', 'Business Intelligence', 'ROI', 'Fortune 500', '30, 000% ROI']
       id: 'fortune-500-business-intelligence-success',
       title: 'Fortune 500 Ultimate Business Intelligence Success',
       description: 'How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics.',
@@ -29,9 +15,9 @@ $4},
       category: 'case-study',
         savings: '$750B',
         company: '$15.2B',
-        timeline:       ,
+        timeline:  ,
 readingTimereadingTime: '25 min read',
-      tags: ['Fortune 500', 'Success Story', '30,000% ROI', 'Manufacturing', 'Case Study']
+      tags: ['Fortune 500', 'Success Story', '30, 000% ROI', 'Manufacturing', 'Case Study']
       id: 'business-intelligence-implementation-guide',
       title: 'AI 2025 Ultimate Business Intelligence Implementation Guide',
       description: 'Complete roadmap to 30,000% ROI through revolutionary AI-powered business intelligence transformation.',
@@ -40,16 +26,12 @@ readingTimereadingTime: '25 min read',
       category: 'resource',
         success: '99.8%',
         timeline: '18 months',
-        adoption:       ,
+        adoption:  ,
 readingTimereadingTime: '45 min read',
-      tags: ['Implementation', 'Guide', '30,000% ROI', 'Roadmap', 'Best Practices']
+      tags: ['Implementation', 'Guide', '30, 000% ROI', 'Roadmap', 'Best Practices']
     }
   ]
-  const categories = [
-    { id: 'all', name: 'All Content' },
-    { id: 'blog', name: 'Blog Posts' },
-    { id: 'case-study', name: 'Case Studies' },
-    { id: 'resource', name: 'Resources' }
+  const categories = [{ id: 'all', name: 'All Content' }, { id: 'blog', name: 'Blog Posts' }, { id: 'case-study', name: 'Case Studies' }, { id: 'resource', name: 'Resources' }
   const filteredContent = selectedCategory === 'all' 
     ? content 
     : content.filter(item => item.category === selectedCategory)
@@ -70,7 +52,7 @@ readingTimereadingTime: '45 min read',
           <h1 className="text-4xl md: text-6xl font-extrabold text-white mb-6">Revolutionary Content<span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Showcase 2025</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">Explore our comprehensive collection of AI-powered business intelligence
-            content that&apos,s transforming enterprises worldwide</p>
+            content that&apos, s transforming enterprises worldwide</p>
         {/* Category Filter */}
           {categories.map((category) => (
             <$2 />
@@ -79,7 +61,7 @@ readingTimereadingTime: '45 min read',
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === category.id
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                  : 'bg-white/10 text-gray-300 hover: bg-white/20'
               }`}
             >
               {category.name}
@@ -92,7 +74,7 @@ readingTimereadingTime: '45 min read',
                   {item.featured ? 'FEATURED' : 'NEW'}
                 <span className="text-gray-400 text-sm">{item.type}
               {/* Title */}
-              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+              <h3 className="text-xl font-bold text-white mb-4 group-hover: text-cyan-400 transition-colors">
                 {item.title}
               {/* Description */}
               <p className="text-gray-300 mb-6 text-sm leading-relaxed">
@@ -111,7 +93,7 @@ readingTimereadingTime: '45 min read',
               {/* CTA */}
               <$2 />
                 href={item.url}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 w-full justify-center"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-700 hover:to-purple-700 transition-all duration-300 w-full justify-center"
                 Read {item.readingTime}
                 <span className="text-lg">→
         {/* Call to Action */}
@@ -119,7 +101,7 @@ readingTimereadingTime: '45 min read',
               Ready to Transform Your Business?
             <p className="text-cyan-100 mb-6">Join thousands of enterprises already using our AI-powered solutions
                 to="/contact"
-                className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-2xl">Start Your Transformation<svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl hover: from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-2xl">Start Your Transformation<svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <ath$2 />
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -130,17 +112,13 @@ readingTimereadingTime: '45 min read',
                 className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover: bg-blue-400/10 transition-all duration-300">Learn More</Link>
     </section>)
 export default UltimateBusinessIntelligenceShowcase2025
-'use client',
-import React, { useState } from 'react'
-        return (import { Link } from 'react-router-dom';)
+'use client', import React, { useState } from 'react'
+        return (import { Link  } from 'react-router-dom';)
 const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  O: Add content, }
 }
   const [selectedCategory, setSelectedCategory] = useState('all')
-  const content = [
-  // TOD,
-  O: Add items
-],
+  const content = [// TOD, O: Add items],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -175,7 +153,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
       feature,
   d: true,
       tag,
-  s: ['AI Revolution', 'Business Intelligence', 'ROI', 'Fortune 500', '30,000% ROI']
+  s: ['AI Revolution', 'Business Intelligence', 'ROI', 'Fortune 500', '30, 000% ROI']
       i,
   d: 'fortune-500-business-intelligence-success',
       titl,
@@ -208,7 +186,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
                 <span className="text-gray-400 text-sm">{item.type}
               {/* Title */}"
               < className="text-xl font-bold text-white mb-4 group-hove,"$2 />
-  r:text-cyan-400 transition-colors">
+  r: text-cyan-400 transition-colors">
                 {item.title}
               {/* Description */}"
               <p className="text-gray-300 mb-6 text-sm leading-relaxed">
@@ -231,9 +209,9 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
             <p className="text-cyan-100 mb-6">Join thousands of enterprises already using our AI-powered solutions</p>"
                 to="/contact""
                 className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl,
-  hover:from-blue-700,
-  hover:to-indigo-700 transition-all duration-300 transform,"
-  hover:scale-105 shadow-2xl""
+  hover: from-blue-700,
+  hover: to-indigo-700 transition-all duration-300 transform,"
+  hover: scale-105 shadow-2xl""
               >Start Your Transformation<svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path></path>"
                     strokeLinecap="round""

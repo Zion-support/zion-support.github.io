@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next"
-import { readState, filterEventsByScope } from "../../../utils/sync/storage"
+import { readState, filterEventsByScope  } from '../../../utils/sync/storage'
 import type { NextApiRequest, NextApiResponse } from "next",
-import { readState, filterEventsByScope } from "../../../utils/sync/storage",
+import { readState, filterEventsByScope  } from '../../../utils/sync/storage',
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
@@ -20,7 +20,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     lastSyncedAt: Date.now()
   })
 import type { NextApiRequest, NextApiResponse } from "next",
-import { readState, filterEventsByScope } from "../../../utils/sync/storage",
+import { readState, filterEventsByScope  } from '../../../utils/sync/storage',
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" }),
   const state = readState(),
@@ -58,7 +58,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0
 import type { NextApiRequest, NextApiResponse } from "next"
-import { readState, filterEventsByScope } from "../../../utils/sync/storage"
+import { readState, filterEventsByScope  } from '../../../utils/sync/storage'
 export default function handler(req, res) {
   try {
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
@@ -77,28 +77,28 @@ export default function handler(req, res) {
       const p = e.payload as any
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -113,19 +113,17 @@ export default function handler(req, res) {
     totalVoteCount: globalVotes
     lastSyncedAt: state.lastSyncedAt})
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

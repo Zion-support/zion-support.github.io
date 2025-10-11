@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface EnterpriseITSolutions2026 {
   id: string
   name: string
@@ -39,27 +39,10 @@ export interface EnterpriseITSolutions2026 {
   rating: number
   reviews: number
 }
-export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
-  // Zero Trust Network Architecture
+export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [// Zero Trust Network Architecture
   {
-    id: 'zero-trust-network-architecture',
-    name: 'Zero Trust Network Architecture',
-    tagline: 'Advanced network security with zero trust principles',
-    price: '$4,999',
-    period: '/month',
-    description: 'Comprehensive zero trust network architecture that provides advanced security, continuous monitoring, and adaptive access control for enterprise networks.',
-    features: [
-      'Zero trust security model',
-      'Continuous monitoring',
-      'Adaptive access control',
-      'Multi-factor authentication',
-      'Real-time threat detection',
-      'Advanced firewall protection',
-      'Compliance certifications',
-      'Custom security policies',
-      'Integration APIs',
-      '24/7 security support'
-    ],
+    id: 'zero-trust-network-architecture', name: 'Zero Trust Network Architecture', tagline: 'Advanced network security with zero trust principles', price: '$4, 999', period: '/month', description: 'Comprehensive zero trust network architecture that provides advanced security, continuous monitoring, and adaptive access control for enterprise networks.', features: [
+      'Zero trust security model', 'Continuous monitoring', 'Adaptive access control', 'Multi-factor authentication', 'Real-time threat detection', 'Advanced firewall protection', 'Compliance certifications', 'Custom security policies', 'Integration APIs', '24/7 security support'],
     popular: true,
     icon: '🛡️',
     color: 'from-red-500 to-pink-600',
@@ -100,18 +83,7 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     price: '$3,999',
     period: '/month',
     description: 'Advanced edge computing orchestration platform that manages distributed computing resources, optimizes performance, and provides real-time analytics across edge locations.',
-    features: [
-      'Distributed computing management',
-      'AI-powered orchestration',
-      'Real-time performance optimization',
-      'Edge location management',
-      'Load balancing',
-      'Resource optimization',
-      'Real-time analytics',
-      'Custom orchestration rules',
-      'API integration',
-      '24/7 monitoring'
-    ],
+    features: ['Distributed computing management', 'AI-powered orchestration', 'Real-time performance optimization', 'Edge location management', 'Load balancing', 'Resource optimization', 'Real-time analytics', 'Custom orchestration rules', 'API integration', '24/7 monitoring'],
     popular: true,
     icon: '🌐',
     color: 'from-blue-500 to-indigo-600',
@@ -152,18 +124,7 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     price: '$5,999',
     period: '/month',
     description: 'Advanced 5G private network solutions that provide high-speed, low-latency connectivity for enterprises, with custom network configurations and advanced security.',
-    features: [
-      '5G private networks',
-      'Custom network configurations',
-      'Low-latency connectivity',
-      'Advanced security protocols',
-      'Real-time monitoring',
-      'Custom bandwidth allocation',
-      'Integration APIs',
-      'Compliance certifications',
-      'Advanced analytics',
-      '24/7 network support'
-    ],
+    features: ['5G private networks', 'Custom network configurations', 'Low-latency connectivity', 'Advanced security protocols', 'Real-time monitoring', 'Custom bandwidth allocation', 'Integration APIs', 'Compliance certifications', 'Advanced analytics', '24/7 network support'],
     popular: true,
     icon: '📡',
     color: 'from-green-500 to-emerald-600',
@@ -204,18 +165,7 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     price: '$2,999',
     period: '/month',
     description: 'Comprehensive blockchain infrastructure platform that provides secure, scalable blockchain solutions for enterprise applications, with custom smart contracts and advanced security.',
-    features: [
-      'Custom blockchain networks',
-      'Smart contract development',
-      'Advanced security protocols',
-      'Scalable infrastructure',
-      'Real-time monitoring',
-      'Custom integrations',
-      'API access',
-      'Advanced analytics',
-      'Compliance features',
-      '24/7 technical support'
-    ],
+    features: ['Custom blockchain networks', 'Smart contract development', 'Advanced security protocols', 'Scalable infrastructure', 'Real-time monitoring', 'Custom integrations', 'API access', 'Advanced analytics', 'Compliance features', '24/7 technical support'],
     popular: true,
     icon: '⛓️',
     color: 'from-purple-500 to-pink-600',
@@ -256,18 +206,7 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     price: '$4,499',
     period: '/month',
     description: 'Advanced AI-powered IT operations center that automates IT processes, provides intelligent monitoring, and optimizes IT infrastructure with minimal human intervention.',
-    features: [
-      'AI-powered automation',
-      'Intelligent monitoring',
-      'Predictive maintenance',
-      'Automated incident response',
-      'Performance optimization',
-      'Custom AI models',
-      'Real-time analytics',
-      'Integration APIs',
-      'Advanced reporting',
-      '24/7 AI support'
-    ],
+    features: ['AI-powered automation', 'Intelligent monitoring', 'Predictive maintenance', 'Automated incident response', 'Performance optimization', 'Custom AI models', 'Real-time analytics', 'Integration APIs', 'Advanced reporting', '24/7 AI support'],
     popular: true,
     icon: '🤖',
     color: 'from-cyan-500 to-blue-600',

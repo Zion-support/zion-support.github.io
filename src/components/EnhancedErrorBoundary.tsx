@@ -85,7 +85,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
           <p>Error,
   ID: {// this.state.errorId}
           {/* TODO: Fix JSX expression */}
-            <button onClick={this.handleRetry}></button>)
+            <button onClick=>{this.handleRetry}</button>)
               Retry ({this.maxRetries - this.state.retryCount} attempts left)
           )}
           )}
@@ -108,7 +108,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
               {/* TODO: Fix JSX expression */}
                   onClick={this.handleRetry}"
                   className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
-  hover:bg-indigo-700 transition-colors"
+  hover: bg-indigo-700 transition-colors"
                 >)
                   Try Again ({this.maxRetries - retryCount} attempts left)
               )}

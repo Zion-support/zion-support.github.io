@@ -46,7 +46,7 @@ function handler() {
 }
   return res.status (200).json ({ ok: true, metrics: post.metrics })
 }
-import { incrementMetric } from '@/utils/data/blogStore'
+import { incrementMetric  } from '@/utils/data/blogStore'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id, metric } = req.query
   if (req.method !== 'POST') return res.status(405).end()

@@ -9,6 +9,8 @@ const slugify = (text: string): string => {
     .replace (/-+$/, ''); // Trim - from end of text
 }
 const WhitepaperGeneratorPage: React.FC = () => {
+  return (
+
 
   const [token_name, setTokenName] = useState ('My Awesome Token')
   const [token_supply, setTokenSupply] = useState < string>('1000000000')
@@ -21,29 +23,13 @@ const WhitepaperGeneratorPage: React.FC = () => {
     'Token holders can vote on platform upgrades, fee structures, and policy changes. Staking tokens increases voting power. A decentralized council oversees proposal implementation.')
   const [legal_disclaimers, setLegalDisclaimers] = useState (
     'This whitepaper is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any security. The token is a utility token and should not be considered an investment. Please consult with a legal professional in your jurisdiction.')
-  const [distribution_data, setDistributionData] = useState < DistributionItem[]>([
-    { id: crypto.randomUUID (), name: 'Team & Advisors', percentage: '15' },
-    {
-      id: crypto.randomUUID (),
-      name: 'Private Sale Investors',
-      percentage: '20',
-    },
-    {
-      id: crypto.randomUUID (),
-      name: 'Ecosystem Development Fund',
-      percentage: '35',
-    },
-    {
-      id: crypto.randomUUID (),
-      name: 'Community Rewards & Airdrops',
-      percentage: '20',
-    },
-    {
-      id: crypto.randomUUID (),
-      name: 'Public Sale Allocation',
-      percentage: '10',
-    },
-  ])
+  const [distribution_data, setDistributionData] = useState < DistributionItem[]>([{ id: crypto.randomUUID (), name: 'Team & Advisors', percentage: '15' 
+  );
+}, {
+      id: crypto.randomUUID (), name: 'Private Sale Investors', percentage: '20', }, {
+      id: crypto.randomUUID (), name: 'Ecosystem Development Fund', percentage: '35', }, {
+      id: crypto.randomUUID (), name: 'Community Rewards & Airdrops', percentage: '20', }, {
+      id: crypto.randomUUID (), name: 'Public Sale Allocation', percentage: '10', }])
   const [is_loading, setIsLoading] = useState (false)
   const [is_downloading, setIsDownloading] = useState (false)
   const [is_sharing, setIsSharing] = useState (false)
@@ -64,16 +50,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
       set_error (null)) {
   $2
 }
-  }, [
-    token_name,
-    token_supply,
-    use_cases,
-    rewards_logic,
-    distribution_data,
-    governance_logic,
-    legal_disclaimers,
-    sections,
-  ])
+  }, [token_name, token_supply, use_cases, rewards_logic, distribution_data, governance_logic, legal_disclaimers, sections])
   const parseWhitepaperDraft = useCallback (
 
     (draft: string): WhitepaperSection[] => {
@@ -117,10 +94,7 @@ if (.length > 0) {) {
       prev.map (item => (item.id === id ? { ...item, [field]: value } : item)))
   }
   const addDistributionItem = () =>: any {
-    setDistributionData (prev => [
-      ...prev,
-      { id: crypto.randomUUID (), name: '', percentage: '' },
-    ])
+    setDistributionData (prev => [...prev, { id: crypto.randomUUID (), name: '', percentage: '' }])
   }
   const removeDistributionItem = (id: string) =>: any {
     setDistributionData (prev => prev.filter (item => item.id !== id))
@@ -239,7 +213,7 @@ if (.error) {) {
   }
   const assembleMarkdownContent = (): string => {
     let md_content = `# ${token_name} - Whitepaper\n\n`
-    md_content += `**Total Supply:** ${token_supply}\n\n`
+    md_content += `**Total Supply: ** ${token_supply}\n\n`
     sections.for_each (section => {
       md_content += `## ${section.title}\n\n${section.content}\n\n`
       if (.includes ('token distribution')) {) {
@@ -253,12 +227,12 @@ if ( {) {
           distributionChartData.for_each (item => {
             md_content += `- **${item.name}:** ${item.value}%\n`
           })
-          md_content += `\n${distribution_breakdown ? `**Additional Notes:** ${distribution_breakdown}\n\n` : ''}`
+          md_content += `\n${distribution_breakdown ? `**Additional Notes: ** ${distribution_breakdown}\n\n` : ''}`
         } else // Check condition
 if ( {) {
   $2
 }
-          md_content += `**Distribution Notes:** ${distribution_breakdown}\n\n`
+          md_content += `**Distribution Notes: ** ${distribution_breakdown}\n\n`
         }
       }
     })
@@ -416,8 +390,7 @@ if ( {) {
     }
     // Optimistically update UI, or wait for response for certainty
     const newPublicStatus = !currentSharedWhitepaperIsPublic
-    // For optimistic update:
-    // setCurrentSharedWhitepaperIsPublic (newPublicStatus)
+    // For optimistic update: // setCurrentSharedWhitepaperIsPublic (newPublicStatus)
     try {
       const { data: response, error: func_error } =
         await supabase.functions.invoke ('set - shared - whitepaper - public - status', {
@@ -578,11 +551,11 @@ if ( {) {
       toast.error ('Failed to submit to counsel: ' + e.message)
     } finally {
 
-import { supabase } from '@/integrations/supabase/client'
+import { supabase  } from '@/integrations/supabase/client'
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor'
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel'; // Import the new preview panel
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
+import { Button  } from '@/components/ui/button'
+import { Input  } from '@/components/ui/input'
     setIsSharing(true)
     setError(null)
     setShareableLink(null)
@@ -594,32 +567,32 @@ import { Input } from '@/components/ui/input'
 
 
 import React, { useState, useEffect, useCallback } from 'react',
-import { supabase } from '@/integrations/supabase/client',
+import { supabase  } from '@/integrations/supabase/client',
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Import the new preview panel
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Trash2, Download, Share2 } from 'lucide-react'
-import { Send } from 'lucide-react', // Added Send icon
+import { Button  } from '@/components/ui/button',
+import { Input  } from '@/components/ui/input',
+import { Trash2, Download, Share2  } from 'lucide-react'
+import { Send  } from 'lucide-react', // Added Send icon
 
 
 
-import { toast } from "sonner",
-import { logErrorToProduction } from '@/utils/productionLogger',
+import { toast  } from 'sonner',
+import { logErrorToProduction  } from '@/utils/productionLogger',
 interface WhitepaperSection {
   id: string,
   title: string,
   content: string
 import React, { useState, useEffect, useCallback } from 'react',
-import { supabase } from '@/integrations/supabase/client',
+import { supabase  } from '@/integrations/supabase/client',
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Import the new preview panel
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Trash2, Download, Share2 } from 'lucide-react'
-import { Send } from 'lucide-react', // Added Send icon
-import { toast } from "sonner",
-import { logErrorToProduction } from '@/utils/productionLogger',
+import { Button  } from '@/components/ui/button',
+import { Input  } from '@/components/ui/input',
+import { Trash2, Download, Share2  } from 'lucide-react'
+import { Send  } from 'lucide-react', // Added Send icon
+import { toast  } from 'sonner',
+import { logErrorToProduction  } from '@/utils/productionLogger',
 interface WhitepaperSection {
   id: string,
   title: string,
@@ -648,6 +621,8 @@ const slugify = (text: string): string => {
     .replace(/-+$/, ''),            // Trim - from end of text
 },
 const WhitepaperGeneratorPage: React.FC = () => {
+  return (
+
   const [tokenName, setTokenName] = useState('My Awesome Token'),
   const [tokenSupply, setTokenSupply] = useState<string>('1000000000'),
   const [useCases, setUseCases] = useState('To facilitate transactions and reward users in our innovative freelance AI marketplace. It will be used for payments, staking for dispute resolution, and accessing premium features.'),
@@ -655,12 +630,9 @@ const WhitepaperGeneratorPage: React.FC = () => {
   const [distributionBreakdown, setDistributionBreakdown] = useState(''),
   const [governanceLogic, setGovernanceLogic] = useState('Token holders can vote on platform upgrades, fee structures, and policy changes. Staking tokens increases voting power. A decentralized council oversees proposal implementation.'),
   const [legalDisclaimers, setLegalDisclaimers] = useState('This whitepaper is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any security. The token is a utility token and should not be considered an investment. Please consult with a legal professional in your jurisdiction.'),
-  const [distributionData, setDistributionData] = useState<DistributionItem[]>([
-    { id: crypto.randomUUID(), name: 'Team & Advisors', percentage: '15' },
-    { id: crypto.randomUUID(), name: 'Private Sale Investors', percentage: '20' },
-    { id: crypto.randomUUID(), name: 'Ecosystem Development Fund', percentage: '35' },
-    { id: crypto.randomUUID(), name: 'Community Rewards & Airdrops', percentage: '20' },
-    { id: crypto.randomUUID(), name: 'Public Sale Allocation', percentage: '10' }]),
+  const [distributionData, setDistributionData] = useState<DistributionItem[]>([{ id: crypto.randomUUID(), name: 'Team & Advisors', percentage: '15' 
+  );
+}, { id: crypto.randomUUID(), name: 'Private Sale Investors', percentage: '20' }, { id: crypto.randomUUID(), name: 'Ecosystem Development Fund', percentage: '35' }, { id: crypto.randomUUID(), name: 'Community Rewards & Airdrops', percentage: '20' }, { id: crypto.randomUUID(), name: 'Public Sale Allocation', percentage: '10' }]),
   const [isLoading, setIsLoading] = useState(false),
   const [isDownloading, setIsDownloading] = useState(false),
   const [isSharing, setIsSharing] = useState(false),
@@ -811,7 +783,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
   },
   const assembleMarkdownContent = (): string => {
     let mdContent = `# ${tokenName} - Whitepaper\n\n`,
-    mdContent += `**Total Supply:** ${tokenSupply}\n\n`,
+    mdContent += `**Total Supply: ** ${tokenSupply}\n\n`,
     sections.forEach(section => {
       mdContent += `## ${section.title}\n\n${section.content}\n\n`,
       if (section.title.toLowerCase().includes('token distribution')) {
@@ -820,9 +792,9 @@ const WhitepaperGeneratorPage: React.FC = () => {
           distributionChartData.forEach(item => {
             mdContent += `- **${item.name}:** ${item.value}%\n`
           }),
-          mdContent += `\n${distributionBreakdown ? `**Additional Notes:** ${distributionBreakdown}\n\n` : ''}`
+          mdContent += `\n${distributionBreakdown ? `**Additional Notes: ** ${distributionBreakdown}\n\n` : ''}`
         } else if (distributionBreakdown) {
-           mdContent += `**Distribution Notes:** ${distributionBreakdown}\n\n`
+           mdContent += `**Distribution Notes: ** ${distributionBreakdown}\n\n`
         }
       }
     }),
@@ -1006,8 +978,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
     }
     // Optimistically update UI, or wait for response for certainty
     const newPublicStatus = !currentSharedWhitepaperIsPublic
-    // For optimistic update:
-    // setCurrentSharedWhitepaperIsPublic(newPublicStatus)
+    // For optimistic update: // setCurrentSharedWhitepaperIsPublic(newPublicStatus)
     try {
       const { data: response, error: funcError } =
         await supabase.functions.invoke('set-shared-whitepaper-public-status', {
@@ -1187,8 +1158,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
         logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error toggling public status' }),
         setError("Failed to update public status: " + e.message),
         toast.error("Failed to update public status."),
-        // Revert optimistic update if it failed:
-        // setCurrentSharedWhitepaperIsPublic(!newPublicStatus)
+        // Revert optimistic update if it failed: // setCurrentSharedWhitepaperIsPublic(!newPublicStatus)
     }
   },
 
@@ -1294,8 +1264,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
         logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error toggling public status' }),
         setError("Failed to update public status: " + e.message),
         toast.error("Failed to update public status."),
-        // Revert optimistic update if it failed:
-        // setCurrentSharedWhitepaperIsPublic(!newPublicStatus)
+        // Revert optimistic update if it failed: // setCurrentSharedWhitepaperIsPublic(!newPublicStatus)
     }
   },
   const handleSubmitToCounsel = async () => {
@@ -1359,16 +1328,15 @@ const WhitepaperGeneratorPage: React.FC = () => {
 
 
   return (
-    <div className="flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100">
+    <div className="flex flex-col md: flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100">
       {/* Left Column: Inputs and Editors */}
-      <div className='md:w-1/2 lg:w-2/5 xl:w-1/3 p-4 bg-white rounded-lg shadow-md overflow-y-auto'>
+      <div className='md: w-1/2 lg:w-2/5 xl:w-1/3 p-4 bg-white rounded-lg shadow-md overflow-y-auto'>
         <div className='flex justify-between items-center mb-6'>
           <h1 className='text-xl font-bold text-center flex-grow'>
             Whitepaper Configuration
           </h1>
           <div className='flex space-x-1'>
-            <Button
-              onClick={handleDownloadMarkdown}
+            <Button onClick={handleDownloadMarkdown}
               disabled={
                 isDownloading |
                 sections.length === 0 |
@@ -1378,11 +1346,10 @@ const WhitepaperGeneratorPage: React.FC = () => {
               }
               variant='outline'
               size='sm'
-              title='Download as Markdown'>
+              title='Download as Markdown'></Button>
               <Download className='h-4 w-4' />{' '}
-              <span className='ml-1 hidden sm:inline'>MD</span></$1>
-            <Button
-              onClick={handleDownloadPdf}
+              <span className='ml-1 hidden sm: inline'>MD</span></$1>
+            <Button onClick={handleDownloadPdf}
               disabled={
 
                 isDownloading ||
@@ -1394,11 +1361,10 @@ const WhitepaperGeneratorPage: React.FC = () => {
               }
               variant='outline'
               size='sm'
-              title='Download as PDF'>
+              title='Download as PDF'></Button>
               <Download className='h-4 w-4' />{' '}
-              <span className='ml-1 hidden sm:inline'>PDF</span></$1>
-            <Button
-              onClick={handleGenerateShareableLink}
+              <span className='ml-1 hidden sm: inline'>PDF</span></$1>
+            <Button onClick={handleGenerateShareableLink}
               disabled={
 
                 isSharing ||
@@ -1410,10 +1376,10 @@ const WhitepaperGeneratorPage: React.FC = () => {
               }
               variant='outline'
               size='sm'
-              title='Generate Shareable Link'>
+              title='Generate Shareable Link'></Button>
               <Share2 className='h-4 w-4' />{' '}
 
-              <span className='ml-1 hidden sm:inline'>Share</span>
+              <span className='ml-1 hidden sm: inline'>Share</span>
             </Button>
           </div>
         </div>
@@ -1422,8 +1388,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
           {/* ... (Input fields remain the same) ... */}
           <div>
             <label htmlFor='tokenName' className='block text-sm font-medium'>
-              Token Name:
-            </label>
+              Token Name: </label>
             <Input
               id='tokenName'
               value={tokenName}
@@ -1432,15 +1397,14 @@ const WhitepaperGeneratorPage: React.FC = () => {
     }
   }
   return (
-    <div className='flex flex - col md:flex - row h - screen max - h-screen p - 4 gap - 4 bg - gray - 100'>
+    <div className='flex flex - col md: flex - row h - screen max - h-screen p - 4 gap - 4 bg - gray - 100'>
       {/* Left Column: Inputs and Editors */}
-      <div className='md:w - 1/2 lg:w - 2/5 xl:w - 1/3 p - 4 bg - white rounded - lg shadow - md overflow - y-auto'>
+      <div className='md: w - 1/2 lg:w - 2/5 xl:w - 1/3 p - 4 bg - white rounded - lg shadow - md overflow - y-auto'>
         <div className='flex justify - between items - center mb - 6'>
           <h1 className='text - xl font - bold text - center flex - grow'>
             Whitepaper Configuration</$1>
           <div className='flex space - x-1'>
-            <Button
-              on_click={handleDownloadMarkdown}
+            <Button on_click={handleDownloadMarkdown}
               disabled={
                 is_downloading ||
                 sections.length === 0 ||
@@ -1451,11 +1415,10 @@ const WhitepaperGeneratorPage: React.FC = () => {
               variant='outline'
               size='sm'
               title='Download as Markdown'
-            >
+            ></Button>
               <Download className='h - 4 w - 4' />{' '}
-              <span className='ml - 1 hidden sm:inline'>MD</span></$1>
-            <Button
-              on_click={handleDownloadPdf}
+              <span className='ml - 1 hidden sm: inline'>MD</span></$1>
+            <Button on_click={handleDownloadPdf}
               disabled={
                 is_downloading ||
                 sections.length === 0 ||
@@ -1466,11 +1429,10 @@ const WhitepaperGeneratorPage: React.FC = () => {
               variant='outline'
               size='sm'
               title='Download as PDF'
-            >
+            ></Button>
               <Download className='h - 4 w - 4' />{' '}
-              <span className='ml - 1 hidden sm:inline'>PDF</span></$1>
-            <Button
-              on_click={handleGenerateShareableLink}
+              <span className='ml - 1 hidden sm: inline'>PDF</span></$1>
+            <Button on_click={handleGenerateShareableLink}
               disabled={
                 is_sharing ||
                 sections.length === 0 ||
@@ -1481,14 +1443,14 @@ const WhitepaperGeneratorPage: React.FC = () => {
               variant='outline'
               size='sm'
               title='Generate Shareable Link'
-            >
+            ></Button>
               <Share2 className='h - 4 w - 4' />{' '}
-              <span className='ml - 1 hidden sm:inline'>Share</span></$1></$1></$1>
+              <span className='ml - 1 hidden sm: inline'>Share</span></$1></$1></$1>
         <form on_submit={e => e.prevent_default ()} className='space - y-6'>
           {/* ... (Input fields remain the same) ... */}
           <div>
             <label html_for='token_name' className='block text - sm font - medium'>
-              Token Name:</$1>
+              Token Name: </$1>
             <Input
               id='token_name'
               value={token_name}
@@ -1497,7 +1459,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
             /></$1>
           <div>
             <label html_for='token_supply' className='block text - sm font - medium'>
-              Token Supply:</$1>
+              Token Supply: </$1>
             <Input
               id='token_supply'
               value={token_supply}
@@ -1507,7 +1469,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
             /></$1>
           <div>
             <label html_for='use_cases' className='block text - sm font - medium'>
-              Use Cases:</$1>
+              Use Cases: </$1>
             <textarea
               id='use_cases'
               value={use_cases}
@@ -1523,21 +1485,19 @@ const WhitepaperGeneratorPage: React.FC = () => {
             <h2 className='text-lg font-semibold'>Token Distribution</h2>
             {distributionData.map(item => (
               <div key={item.id} className='flex items-center space-x-2'>
-                <Input
-                  type='text'
+                <Input type='text'
                   placeholder='Category'
                   value={item.name}
-                  onChange={e =>
+                  onChange={e =></Input>
                     handleDistributionChange(item.id, 'name', e.target.value)
                   }
                   className='flex-grow'
                 />
-                <Input
-                  type='number'
+                <Input type='number'
                   placeholder='%'
 
                   value={item && item.percentage}
-                  onChange={e =>
+                  onChange={e =></Input>
                     handleDistributionChange(
                       item && item.id,
                       'percentage',
@@ -1555,25 +1515,25 @@ const WhitepaperGeneratorPage: React.FC = () => {
                   onClick={() => removeDistributionItem(item.id)}
                   aria-label='Remove'
                 >
-                  <Trash2 className='h-4 w-4' />
+                  <Trash2 className='h-4 w-4' /></Trash2>
                 </Button>              </div>
 
         <form onSubmit={(e) => e.preventDefault()} className="space-y-6">
           {/* ... (Input fields remain the same) ... */}
            <div>
-            <label htmlFor="tokenName" className="block text-sm font-medium">Token Name:</label>
+            <label htmlFor="tokenName" className="block text-sm font-medium">Token Name: </label>
             <Input id="tokenName" value={tokenName} onChange={(e) => setTokenName(e.target.value)} required />
           </div>
           <div>
-            <label htmlFor="tokenSupply" className="block text-sm font-medium">Token Supply:</label>
+            <label htmlFor="tokenSupply" className="block text-sm font-medium">Token Supply: </label>
             <Input id="tokenSupply" value={tokenSupply} onChange={(e) => setTokenSupply(e.target.value)} required />
           </div>
           <div>
-            <label htmlFor="useCases" className="block text-sm font-medium">Use Cases:</label>
+            <label htmlFor="useCases" className="block text-sm font-medium">Use Cases: </label>
             <textarea id="useCases" value={useCases} onChange={(e) => setUseCases(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
           </div>
           <div>
-            <label htmlFor="rewardsLogic" className="block text-sm font-medium">Rewards Logic:</label>
+            <label htmlFor="rewardsLogic" className="block text-sm font-medium">Rewards Logic: </label>
             <textarea id="rewardsLogic" value={rewardsLogic} onChange={(e) => setRewardsLogic(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
           </div>
 
@@ -1603,17 +1563,15 @@ const WhitepaperGeneratorPage: React.FC = () => {
 
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
-            <Button
-
-              type='button'
+            <Button type='button'
               onClick={handleSubmitToCounsel}
               disabled={
                 isSubmittingToCounsel |isLoading |isSharing |isDownloading
               }
               variant='default'
               size='lg'
-              className='w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white'            >
-              <Send className='mr-2 h-4 w-4' />
+              className='w-full mt-4 bg-indigo-600 hover: bg-indigo-700 text-white'            ></Button>
+              <Send className='mr-2 h-4 w-4' /></Send>
               {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
             </Button>
           )}
@@ -1626,14 +1584,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
 
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
-            <Button
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-
-
-
-        </form>
+            <Button </form></Button>
         </form>
         {/* Section Editors */}
         {sections && sections.length > 0 && (
@@ -1641,11 +1592,10 @@ const WhitepaperGeneratorPage: React.FC = () => {
             <h2 className='text-xl font-bold mb-4 text-center'>
               Edit Generated Sections</$1>
             {sections && sections.map(section => (
-              <WhitepaperSectionEditor
-                key={section && section.id}
+              <WhitepaperSectionEditor key={section && section.id}
                 title={section && section.title}
                 content={section && section.content}
-                onContentChange={newContent =>
+                onContentChange={newContent =></WhitepaperSectionEditor>
                   handleSectionContentChange(section && section.id, newContent)
                 }              />
             ))}
@@ -1675,16 +1625,14 @@ const WhitepaperGeneratorPage: React.FC = () => {
               Generating shareable link...</$1>)}
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
-            <Button
-
-                type="button"
+            <Button type="button"
                 onClick={handleSubmitToCounsel}
                 disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
                 variant="default"
                 size="lg"
-                className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white"
-            >
-                <Send className="mr-2 h-4 w-4" />
+                className="w-full mt-4 bg-indigo-600 hover: bg-indigo-700 text-white"
+            ></Button>
+                <Send className="mr-2 h-4 w-4" /></Send>
                 {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
             </Button>
           )}
@@ -1696,9 +1644,9 @@ const WhitepaperGeneratorPage: React.FC = () => {
                 disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
                 variant="default"
                 size="lg"
-                className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white"
+                className="w-full mt-4 bg-indigo-600 hover: bg-indigo-700 text-white"
             >
-                <Send className="mr-2 h-4 w-4" />
+                <Send className="mr-2 h-4 w-4" /></Send>
                 {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
             </Button>
           )}
@@ -1711,11 +1659,10 @@ const WhitepaperGeneratorPage: React.FC = () => {
             <h2 className='text-xl font-bold mb-4 text-center'>
               Edit Generated Sections</$1>
             {sections && sections.map(section => (
-              <WhitepaperSectionEditor
-                key={section && section.id}
+              <WhitepaperSectionEditor key={section && section.id}
                 title={section && section.title}
                 content={section && section.content}
-                onContentChange={newContent =>
+                onContentChange={newContent =></WhitepaperSectionEditor>
                   handleSectionContentChange(section && section.id, newContent)
                 }              />
             ))}
@@ -1745,15 +1692,14 @@ const WhitepaperGeneratorPage: React.FC = () => {
               Generating shareable link...</$1>)}
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
-            <Button
-                type="button"
+            <Button type="button"
                 onClick={handleSubmitToCounsel}
                 disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
                 variant="default"
                 size="lg"
-                className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white"
-            >
-                <Send className="mr-2 h-4 w-4" />
+                className="w-full mt-4 bg-indigo-600 hover: bg-indigo-700 text-white"
+            ></Button>
+                <Send className="mr-2 h-4 w-4" /></Send>
                 {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
             </Button>
           )}
@@ -1774,11 +1720,10 @@ const WhitepaperGeneratorPage: React.FC = () => {
 
 
 
-              <WhitepaperSectionEditor
-                key={section.id}
+              <WhitepaperSectionEditor key={section.id}
                 title={section.title}
                 content={section.content}
-                onContentChange={newContent =>
+                onContentChange={newContent =></WhitepaperSectionEditor>
                   handleSectionContentChange(section.id, newContent)
                 }              />
                 onContentChange={(newContent) => handleSectionContentChange(section.id, newContent)}
@@ -1831,7 +1776,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
 
 
 
-        className='md:w - 1/2 lg:w - 3/5 xl:w - 2/3 p - 1'
+        className='md: w - 1/2 lg:w - 3/5 xl:w - 2/3 p - 1'
       >
         <WhitepaperPreviewPanel
           sections={sections}

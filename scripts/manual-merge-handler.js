@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { execSync } from 'child_process'
+import { execSync  } from 'child_process'
 import fs from 'fs'
 console.log('🔧 Starting manual merge handling...\n')
 // Function to execute git commands safely
@@ -19,17 +19,7 @@ function execGitCommand(command, description) {
 }
 
 // List of important branches to merge
-const importantBranches = [
-  'cursor/enhance-app-with-new-services-and-futuristic-design-2 e4 e',
-  'cursor/enhance-app-with-new-services-and-futuristic-design-7 bf2',
-  'cursor/enhance-app-with-new-services-and-futuristic-design-80 f7',
-  'cursor/website-audit-and-update-with-deployment-d0 c2',
-  'cursor/website-audit-and-update-with-deployment-db70',
-  'add-new-2026-content',
-  'add-revolutionary-content-2026',
-  'ai-2027-content-integration',
-  'ai-dashboard-improvements'
-]
+const importantBranches = ['cursor/enhance-app-with-new-services-and-futuristic-design-2 e4 e', 'cursor/enhance-app-with-new-services-and-futuristic-design-7 bf2', 'cursor/enhance-app-with-new-services-and-futuristic-design-80 f7', 'cursor/website-audit-and-update-with-deployment-d0 c2', 'cursor/website-audit-and-update-with-deployment-db70', 'add-new-2026-content', 'add-revolutionary-content-2026', 'ai-2027-content-integration', 'ai-dashboard-improvements']
 async function main() {
   console.log('🚀 Starting manual merge handling for important branches...\n')
   // Check current status

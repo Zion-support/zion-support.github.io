@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next"
 import JSZip from "jszip"
-import {
-  getZionDesignMap
+import { getZionDesignMap
   buildTokenSet
   buildUIKit
   UIKitKind
@@ -9,19 +8,18 @@ import {
   buildTokenSet,
   buildUIKit,
   UIKitKind,
-} from "../../../utils/design-map"
+ } from '../../../utils/design-map'
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
 import type { NextApiRequest, NextApiResponse } from './next'
 import JSZip from './jszip'
-import {
-  getZionDesignMap,
+import { getZionDesignMap,
   buildTokenSet,
   buildUIKit,
   UIKitKind,
-} from '../../../utils / design - map'
+ } from '../../../utils / design - map'
 export default async /**
  * handler - Function description
  */
@@ -79,7 +77,7 @@ export default async function handler(req, res) {
       error: e?.message || 'Export failed'
     })
 import JSZip from 'jszip'
-import { getZionDesignMap, buildTokenSet, buildUIKit, UIKitKind } from '../../../utils/design-map'
+import { getZionDesignMap, buildTokenSet, buildUIKit, UIKitKind  } from '../../../utils/design-map'
 export default async function handler(req, res) {
   try {
     const kit = (req.query.kit as string) || 'tailwind'
@@ -124,28 +122,27 @@ export default async function handler(req, res) {
   } catch (error) {
     res.status(500).json({ error: e?.message || 'Export failed' })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from "next"
+import { NextApiRequest, NextApiResponse  } from 'next'
 import fs from "fs"
 import path from "path"
 const configPath = path.join(process.cwd(), "data", "dao", "config.json")
@@ -18,7 +18,7 @@ async function fetchJson(url: string) {
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
   return resp.json()
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -29,15 +29,14 @@ function readJson(p: string) {
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, 'utf-8'))
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 function writeJson(p: string, v: any) {
   fs.writeFileSync(p, JSON.stringify(v, null, 2))
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -47,9 +46,7 @@ export default async function handler(
 ) {
   try {
 export default async function handler(req, res) {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   try {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   try {
     const cfg = readJson(configPath)
     const cache = readJson(cachePath)
@@ -110,7 +107,7 @@ export default async function handler(req, res) {
     if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
       return res.status(200).json({ ...cache, cached: true })
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -178,8 +175,7 @@ if ( {) {
     )
     const distribution = entries.map ((e) => ({
       address: e.address,
-      percent:
-        total > 0n ? Number ((BigInt (e.amount) * 10000n) / total) / 100 : 0,
+      percent: total > 0n ? Number ((BigInt (e.amount) * 10000n) / total) / 100 : 0,
     }))
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
     const active_proposals: any[] = []
@@ -213,6 +209,5 @@ if ( {) {
   }
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }

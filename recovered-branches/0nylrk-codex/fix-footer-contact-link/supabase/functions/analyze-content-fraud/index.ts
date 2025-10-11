@@ -1,6 +1,6 @@
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.38.4"
-import { corsHeaders } from "../_shared/cors.ts"
+import { serve  } from 'https: //deno.land/std@0.168.0/http/server.ts'
+import { createClient  } from 'https: //esm.sh/@supabase/supabase-js@2.38.4'
+import { corsHeaders  } from '../_shared/cors.ts'
 interface AnalyzeRequest {
   content: string
   contentType: string
@@ -43,8 +43,7 @@ const createAnalysisPrompt = (contentType: string, content: string): string => {
   return `
     You are an AI fraud detection assistant for the Zion AI Marketplace.
     Analyze this ${contentType} for signs of fraud, spam, phishing, or abuse.
-    Content to analyze:
-    """
+    Content to analyze: """
     ${content}
     """
     Respond with one of these classifications: SAFE / SUSPICIOUS / DANGEROUS
@@ -53,9 +52,10 @@ const createAnalysisPrompt = (contentType: string, content: string): string => {
   `
 }
 // Call OpenAI API for content analysis
-const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<{classification: string, explanation: string}> => {
+const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<>
+  {classification: string, explanation: string} => {
   try {
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    const response = await fetch("https: //api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -64,21 +64,18 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
       },
       body: JSON.stringify({
         model: "gpt-4o-mini",
-        messages: [
-          { role: "system", content: "You are a fraud detection assistant that analyzes content for signs of fraud, spam, or abuse." },
-          { role: "user", content: prompt }
-        ],
+        messages: [{ role: "system", content: "You are a fraud detection assistant that analyzes content for signs of fraud, spam, or abuse." }, { role: "user", content: prompt }],
         temperature: 0.3,
         max_tokens: 150
       })
     })
     const data = await response.json()
     if (!response.ok) {
-      console.error("OpenAI API error:", data.error)
+      console.error("OpenAI API error: ", data.error)
       throw new Error(`OpenAI API error: ${data.error?.message || "Unknown error"}`)
     }
     const analysisText = data.choices[0]?.message?.content || ""
-    console.log("OpenAI analysis result:", analysisText)
+    console.log("OpenAI analysis result: ", analysisText)
     // Parse the result
     let classification = "SAFE"
     let explanation = "No issues detected."
@@ -93,12 +90,13 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     }
     return { classification, explanation }
   } catch (error) {
-    console.error("Error calling OpenAI:", error)
+    console.error("Error calling OpenAI: ", error)
     throw error
   }
 }
 // Update flag in database if flagId was provided
 const updateFraudFlag = async (
+</>
   supabase: ReturnType<typeof createClient>,
   flagId: string,
   classification: string, 
@@ -114,7 +112,7 @@ const updateFraudFlag = async (
     })
     .eq("id", flagId)
   if (error) {
-    console.error("Error updating fraud flag:", error)
+    console.error("Error updating fraud flag: ", error)
     throw new Error(`Error updating fraud flag: ${error.message}`)
   }
   console.log(`Updated fraud flag ${flagId} with classification: ${classification}`)
@@ -131,7 +129,7 @@ serve(async (req) => {
     const { supabase, openaiApiKey } = initializeServices()
     // Parse and validate request
     const requestData = await req.json().catch(err => {
-      console.error("Error parsing request JSON:", err)
+      console.error("Error parsing request JSON: ", err)
       throw new Error("Invalid JSON in request body")
     })
     const { content, contentType, flagId } = validateRequest(requestData)
@@ -150,12 +148,12 @@ serve(async (req) => {
       success: true}
       success: true,
     }
-    console.log("Analysis completed successfully:", result)
+    console.log("Analysis completed successfully: ", result)
     return new Response(JSON.stringify(result), { 
       headers: { ...corsHeaders, "Content-Type": "application/json" } 
     })
   } catch (error) {
-    console.error("Error analyzing content:", error)
+    console.error("Error analyzing content: ", error)
     // Determine appropriate status code based on error
     const statusCode = error.message?.includes("Invalid") ? 400 : 500
     return new Response(

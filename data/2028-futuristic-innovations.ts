@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface Futuristic2028Service {
 export interface FuturisticInnovation2028 {
   id: string
@@ -64,41 +64,10 @@ export interface FuturisticInnovation2028 {/* TODO: Fix JSX expression */}
 }
     address: string,
   }
-export const futuristic2028Services: FuturisticInnovation2028[] = [
-    address: string,
-  }
-export const futuristic2028Services: FuturisticInnovation2028[] = [
-    id: '2028 - futuristic - innovation',
-    name: '2028 Futuristic Innovation Platform',
-    tagline: 'Futuristic innovations for 2028',
-    price: '$399 / month',
-    description: unknown,
-    addres,
-  s: string}
-export const,
-  futuristic2028Services: FuturisticInnovation2028[] = [,
-    addres,
-  s: string}
-export const,
-  futuristic2028Services: FuturisticInnovation2028[] = [,
-    i,
-  d: '2028 - futuristic - innovation',
-    nam,
-  e: '2028 Futuristic Innovation Platform',
-    taglin,
-  e: 'Futuristic innovations for 2028',
-    pric,
-  e: '$399 / month',
-    descriptio,
-  n: unknown,
-      'Futuristic innovation platform that showcases breakthrough technologies for 2028.',
-    feature,
-  s: [,
-      'Futuristic innovations',
-      'Breakthrough technologies',
-      'Future capabilities',
-      'Innovation platform',
-      'Expert insights'],
+export const futuristic2028Services: FuturisticInnovation2028[] = [address: string, }
+export const futuristic2028Services: FuturisticInnovation2028[] = [id: '2028 - futuristic - innovation', name: '2028 Futuristic Innovation Platform', tagline: 'Futuristic innovations for 2028', price: '$399 / month', description: unknown, addres, s: string}
+export const, futuristic2028Services: FuturisticInnovation2028[] = [addres, s: string}
+export const, futuristic2028Services: FuturisticInnovation2028[] = [i, d: '2028 - futuristic - innovation', nam, e: '2028 Futuristic Innovation Platform', taglin, e: 'Futuristic innovations for 2028', pric, e: '$399 / month', descriptio, n: unknown, 'Futuristic innovation platform that showcases breakthrough technologies for 2028.', feature, s: [, 'Futuristic innovations', 'Breakthrough technologies', 'Future capabilities', 'Innovation platform', 'Expert insights'],
     link: '/services / 2028 - futuristic - innovation'
     category: 'Futuristic Innovations 2028'
     real_implementation: true
@@ -112,13 +81,7 @@ export const,
     tagline: "Futuristic innovations for 2028",
     price: "$399/month",
     description: "Futuristic innovation platform that showcases breakthrough technologies for 2028.",
-    features: [,
-      "Futuristic innovations",
-      "Breakthrough technologies",
-      "Future capabilities",
-      "Innovation platform",
-      "Expert insights"
-    ],
+    features: ["Futuristic innovations", "Breakthrough technologies", "Future capabilities", "Innovation platform", "Expert insights"],
     link: "/services/2028-futuristic-innovation"
     category: "Futuristic Innovations 2028"
     realImplementation: true
@@ -140,16 +103,12 @@ export const,
     address: string,
   }
 }
-export const futuristic2028 Services: FuturisticInnovation2028[] = [,
-    id: "2028-futuristic-innovation", name: "2028 Futuristic Innovation Platform",
-    tagline: "Futuristic innovations for 2028", price: "$399/month"
+export const futuristic2028 Services: FuturisticInnovation2028[] = [id: "2028-futuristic-innovation", name: "2028 Futuristic Innovation Platform", tagline: "Futuristic innovations for 2028", price: "$399/month"
     description: "Futuristic innovation platform that showcases breakthrough technologies for 2028."
-    features: [,
-      "Futuristic innovations"
+    features: [, "Futuristic innovations"
       "Breakthrough technologies"
       "Future capabilities"
-      "Innovation platform",
-      "Expert insights"],
+      "Innovation platform", "Expert insights"],
     link: "/services/2028-futuristic-innovation", category: "Futuristic Innovations 2028",
     realImplementation: true
     contactInfo: unknown,
@@ -185,13 +144,12 @@ export const futuristic2028 Services: FuturisticInnovation2028[] = [,
     descriptio,"
   n: "Futuristic innovation platform that showcases breakthrough technologies for 2028.",
     feature,
-  s: [,"
-      "Futuristic innovations","
-      "Breakthrough technologies","
-      "Future capabilities","
-      "Innovation platform","
-      "Expert insights"
-    ],
+  s: ["
+      "Futuristic innovations", "
+      "Breakthrough technologies", "
+      "Future capabilities", "
+      "Innovation platform", "
+      "Expert insights"],
     lin,"
   k: "/services/2028-futuristic-innovation",
     categor,"
@@ -235,23 +193,17 @@ export const futuristic2028 Services: FuturisticInnovation2028[] = [,
   s: string}
 }
 export const,
-  futuristic2028Services: FuturisticInnovation2028[] = [,
-    i,"
-  d: "2028-futuristic-innovation", nam,"
-  e: "2028 Futuristic Innovation Platform",
-    taglin,"
-  e: "Futuristic innovations for 2028", pric,"
-  e: "$399/month",
-    descriptio,"
-  n: "Futuristic innovation platform that showcases breakthrough technologies for 2028.",
-    feature,
-  s: [,"
+  futuristic2028Services: FuturisticInnovation2028[] = [i, "
+  d: "2028-futuristic-innovation", nam, "
+  e: "2028 Futuristic Innovation Platform", taglin, "
+  e: "Futuristic innovations for 2028", pric, "
+  e: "$399/month", descriptio, "
+  n: "Futuristic innovation platform that showcases breakthrough technologies for 2028.", feature, s: [, "
       "Futuristic innovations""
       "Breakthrough technologies""
       "Future capabilities""
       "Innovation platform""
-      "Expert insights"
-    ],
+      "Expert insights"],
     lin,"
   k: "/services/2028-futuristic-innovation", categor,"
   y: "Futuristic Innovations 2028",
@@ -279,13 +231,7 @@ id: "2028-futuristic-innovation"
     tagline: "Futuristic innovations for 2028",
     price: "$399/month",
     description: "Futuristic innovation platform that showcases breakthrough technologies for 2028.",
-    features: [,
-      "Futuristic innovations",
-      "Breakthrough technologies",
-      "Future capabilities",
-      "Innovation platform",
-      "Expert insights"
-    ],
+    features: ["Futuristic innovations", "Breakthrough technologies", "Future capabilities", "Innovation platform", "Expert insights"],
     link: "/services/2028-futuristic-innovation"
     category: "Futuristic Innovations 2028"
     realImplementation: true
@@ -311,13 +257,12 @@ id: "2028-futuristic-innovation"
     descriptio,"
   n: "Futuristic innovation platform that showcases breakthrough technologies for 2028.",
     feature,
-  s: [,"
-      "Futuristic innovations","
-      "Breakthrough technologies","
-      "Future capabilities","
-      "Innovation platform","
-      "Expert insights"
-    ],
+  s: ["
+      "Futuristic innovations", "
+      "Breakthrough technologies", "
+      "Future capabilities", "
+      "Innovation platform", "
+      "Expert insights"],
     lin,"
   k: "/services/2028-futuristic-innovation",
     categor,"
@@ -356,15 +301,7 @@ export interface FuturisticInnovation2028 export interface FuturisticInnovation2
   l: string} addres,
   s: string} } } addres,
   s: string} export const,
-  futuristic2028Services: FuturisticInnovation2028[] = [ addres,
-  s: string} export const,
-  futuristic2028Services: FuturisticInnovation2028[] = [, i,
-  d: '2028 - futuristic - innovation',' nam,
-  e: '2028 Futuristic Innovation Platform',' taglin,
-  e: 'Futuristic innovations for 2028',' pric,
-  e: '$399 / month', descriptio,
-  n:  ,' 'Futuristic innovation platform that showcases breakthrough technologies for 2028.', feature,
-  s: [,' 'Futuristic innovations',' 'Breakthrough technologies',' 'Future capabilities',' 'Innovation platform',' 'Expert insights'],' lin,
+  futuristic2028Services: FuturisticInnovation2028[] = [addres, s: string} export const, futuristic2028Services: FuturisticInnovation2028[] = [i, d: '2028 - futuristic - innovation', ' nam, e: '2028 Futuristic Innovation Platform', ' taglin, e: 'Futuristic innovations for 2028', ' pric, e: '$399 / month', descriptio, n:, ' 'Futuristic innovation platform that showcases breakthrough technologies for 2028.', feature, s: [, ' 'Futuristic innovations', ' 'Breakthrough technologies', ' 'Future capabilities', ' 'Innovation platform', ' 'Expert insights'],' lin,
   k: '/services / 2028 - futuristic - innovation',' categor,
   y: 'Futuristic Innovations 2028', real_implementatio,
   n: true, contact_inf,
@@ -379,7 +316,7 @@ export interface FuturisticInnovation2028 export interface FuturisticInnovation2
   e: "Futuristic innovations for 2028", pric,"
   e: "$399/month", descriptio,"
   n: "Futuristic innovation platform that showcases breakthrough technologies for 2028.", feature,"
-  s: [ "Futuristic innovations", "Breakthrough technologies", "Future capabilities", "Innovation platform", "Expert insights" ], lin,"
+  s: ["Futuristic innovations", "Breakthrough technologies", "Future capabilities", "Innovation platform", "Expert insights"], lin,"
   k: "/services/2028-futuristic-innovation", categor,"
   y: "Futuristic Innovations 2028", realImplementatio,
   n: true, contactInf,
@@ -401,13 +338,13 @@ export interface FuturisticInnovation2028 export interface FuturisticInnovation2
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  futuristic2028Services: FuturisticInnovation2028[] = [ i,"
-  d: "2028-futuristic-innovation", nam,"
-  e: "2028 Futuristic Innovation Platform", taglin,"
-  e: "Futuristic innovations for 2028", pric,"
-  e: "$399/month", descriptio,"
-  n: "Futuristic innovation platform that showcases breakthrough technologies for 2028.", feature,"
-  s: [ "Futuristic innovations" "Breakthrough technologies" "Future capabilities" "Innovation platform" "Expert insights" ], lin,"
+  futuristic2028Services: FuturisticInnovation2028[] = [i, "
+  d: "2028-futuristic-innovation", nam, "
+  e: "2028 Futuristic Innovation Platform", taglin, "
+  e: "Futuristic innovations for 2028", pric, "
+  e: "$399/month", descriptio, "
+  n: "Futuristic innovation platform that showcases breakthrough technologies for 2028.", feature, "
+  s: [ "Futuristic innovations" "Breakthrough technologies" "Future capabilities" "Innovation platform" "Expert insights"], lin,"
   k: "/services/2028-futuristic-innovation", categor,"
   y: "Futuristic Innovations 2028", realImplementatio,
   n: true, contactInf,
@@ -423,7 +360,7 @@ export interface FuturisticInnovation2028 export interface FuturisticInnovation2
   e: "Futuristic innovations for 2028", pric,"
   e: "$399/month", descriptio,"
   n: "Futuristic innovation platform that showcases breakthrough technologies for 2028.", feature,"
-  s: [ "Futuristic innovations", "Breakthrough technologies", "Future capabilities", "Innovation platform", "Expert insights" ], lin,"
+  s: ["Futuristic innovations", "Breakthrough technologies", "Future capabilities", "Innovation platform", "Expert insights"], lin,"
   k: "/services/2028-futuristic-innovation", categor,"
   y: "Futuristic Innovations 2028", realImplementatio,
   n: true, contactInf,

@@ -11,8 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   try {const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role |'Talent'}\n- Return a compact outline with bullets and short labels.`
     const completion = await openai.chat.completions.create({model: 'gpt-4o-mini'
-      messages: [
-        { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' }
+      messages: [{ role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' }
         { role: 'user', content: prompt }]
       temperature: 0.4
       max_tokens: 400})
@@ -35,15 +34,15 @@ export default async function handler(req, res) {
     })
     return
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -54,15 +53,15 @@ export default async function handler(req, res) {
     })
     return
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -71,11 +70,9 @@ export default async function handler(req, res) {
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [{
-        role: 'system',
-        content: 'You are a senior product designer. Respond with a compact wireframe outline.'
+        role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.'
       }, {
-        role: 'user',
-        content: prompt
+        role: 'user', content: prompt
       }],
       temperature: 0.4,
       max_tokens: 400
@@ -96,28 +93,28 @@ export default async function handler(req, res) {
     res.status(405).json({ error: 'Method not allowed' })
     return
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   const { screenName, role } = req.body || {  } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -125,15 +122,15 @@ export default async function handler(req, res) {
     res.status(400).json({ error: 'screenName is required' })
     return
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -142,9 +139,7 @@ export default async function handler(req, res) {
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o-mini'
-      messages: [
-        { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' },
-        { role: 'user', content: prompt }]
+      messages: [{ role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' }, { role: 'user', content: prompt }]
       temperature: 0.4
       max_tokens: 400})
     const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.'
@@ -156,26 +151,25 @@ export default async function handler(req, res) {
     const message = process.env.OPENAI_API_KEY ? (e?.message || 'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.'
     res.status(500).json({ error: message })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }

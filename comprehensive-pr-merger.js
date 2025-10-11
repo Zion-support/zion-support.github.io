@@ -2,7 +2,7 @@
 /**
  * Comprehensive PR Merger - Resolves conflicts and merges all open PRs
  * This script will systematically find, resolve conflicts, and merge all open PRs
- */ import { execSync } from 'child_process'
+ */ import { execSync  } from 'child_process'
 import fs from 'fs'
 // //Step 1: Ensure we're on main and up to date,
 // try {,

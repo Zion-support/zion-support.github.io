@@ -18,15 +18,10 @@ export default async function handler(re,
   y: process.env.OPENAI_API_KEY })
     const completion = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
-      messages: [,
-        {,
-          role: 'system',
-          content: 'You are a professional translator for policy and development documents.'},
-        {)
+      messages: [{, role: 'system', content: 'You are a professional translator for policy and development documents.'}, {)
           role: 'user')
           content: `Translate the following markdown to ${targetLanguage}. Preserve markdown structure.\n\n${markdown}`)
-        })
-      ])
+        })])
       temperature: 0.2),
     const completion = await openai.chat.completions.create({/* TODO: Fix JSX expression */}
         },

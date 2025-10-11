@@ -1,5 +1,5 @@
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1"
+import { serve  } from 'https: //deno.land/std@0.168.0/http/server.ts'
+import { createClient  } from 'https: //esm.sh/@supabase/supabase-js@2.7.1'
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
 const corsHeaders = {
@@ -25,7 +25,7 @@ serve(async (req: Request) => {
     // Run the database function to create scheduled reminders
     const { data, error } = await supabase.rpc("create_scheduled_reminders")
     if (error) {
-      console.error("Failed to create scheduled reminders:", error)
+      console.error("Failed to create scheduled reminders: ", error)
       return new Response(
         JSON.stringify({ error: "Failed to create scheduled reminders", details: error }),
         {
@@ -43,7 +43,7 @@ serve(async (req: Request) => {
       .eq("status", "pending")
       .lt("scheduled_for", new Date().toISOString())
     if (jobsError) {
-      console.error("Failed to fetch pending jobs:", jobsError)
+      console.error("Failed to fetch pending jobs: ", jobsError)
       return new Response(
         JSON.stringify({ error: "Failed to fetch pending jobs", details: jobsError }),
         {
@@ -81,12 +81,12 @@ serve(async (req: Request) => {
             })
             .eq("id", job.id)
           if (updateError) {
-            console.error("Failed to update job status:", updateError)
+            console.error("Failed to update job status: ", updateError)
           } else {
             processedJobs.push(job.id)
           }
         } else {
-          console.error("Failed to send reminder for job:", job.id)
+          console.error("Failed to send reminder for job: ", job.id)
           // Update job status to failed
           await supabase
             .from("scheduled_jobs")

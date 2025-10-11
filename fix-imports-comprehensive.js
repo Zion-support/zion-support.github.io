@@ -116,7 +116,7 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
     //Fix Link component usage - replace 'to' prop with 'href'
-    content = content.replace(/<\s+to=/g, '<Link href=')$2 />
+    content = content.replace(/<\s+to=/g, '<Link href=')$2 /></Link>
     modified = true
     if (modified) {/* TODO: Fix JSX expression */}
 //       }

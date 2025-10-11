@@ -95,9 +95,9 @@ export function set_config (
   // Update the configuration
   Object.assign (current, partial)
 }
-import { randomUUID } from "crypto"
-import { tokenStore } from "./storage"
-import { TokenTransaction, WalletSummary } from "./types"
+import { randomUUID  } from 'crypto'
+import { tokenStore  } from './storage'
+import { TokenTransaction, WalletSummary  } from './types'
 export function getWalletSummary(userId: string): WalletSummary {
   const wallet = tokenStore.getWallet(userId)
   const transactions = tokenStore.getTransactions(userId)

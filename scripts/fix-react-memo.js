@@ -1,28 +1,10 @@
 #!/usr/bin/env node
 import fs from 'fs'
-import { glob } from 'glob'
+import { glob  } from 'glob'
 // Files to process
-const filePatterns = [
-  'app/**/*.{ts,tsx}',
-  'src/**/*.{ts,tsx}',
-  'components/**/*.{ts,tsx}'
-]
+const filePatterns = ['app/**/*.{ts, tsx}', 'src/**/*.{ts, tsx}', 'components/**/*.{ts, tsx}']
 // Files to exclude
-const excludePatterns = [
-  '**/node_modules/**',
-  '**/dist/**',
-  '**/.next/**',
-  '**/build/**',
-  '**/coverage/**',
-  '**/*.test.{ts,tsx}',
-  '**/*.spec.{ts,tsx}',
-  '**/scripts/**',
-  '**/automation/**',
-  '**/backup*/**',
-  '**/disabled*/**',
-  '**/corrupted*/**',
-  '**/temp*/**'
-]
+const excludePatterns = ['**/node_modules/**', '**/dist/**', '**/.next/**', '**/build/**', '**/coverage/**', '**/*.test.{ts, tsx}', '**/*.spec.{ts, tsx}', '**/scripts/**', '**/automation/**', '**/backup*/**', '**/disabled*/**', '**/corrupted*/**', '**/temp*/**']
 let totalFiles = 0
 let processedFiles = 0
 let fixedFiles = 0
@@ -62,7 +44,7 @@ function fixReactMemo(content) {
   }
 
   // Remove React.memo closing parentheses
-  // Pattern: }); at the end of component
+  // Pattern:  }); at the end of component
   const closingPattern = /(\w+)\.displayName\s*=\s*['"][^'"]+['"];\s*\}\);/g
   if (closingPattern.test(newContent)) {
     newContent = newContent.replace(closingPattern, '$1.displayName = \'$1\';')
@@ -118,7 +100,7 @@ async function main() {
   console.log(`   - Files fixed: ${fixedFiles}`)
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file: //${process.argv[1]}`) {
     main()
   }
 

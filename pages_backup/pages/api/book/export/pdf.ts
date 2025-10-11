@@ -42,7 +42,7 @@ export default async function handler(req, res) {
     res.status(405).json({ error: 'Method not allowed' })
     return
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -52,7 +52,7 @@ export default async function handler(req, res) {
     res.status(400).json({ error: 'Missing html' })
     return
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -85,18 +85,18 @@ export default async function handler(req, res) {
     res.status(200).send(pdfBuffer)
   } catch (error) {
     try { await browser.close() } catch {  } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
     res.status(500).json({ error: e?.message || 'Failed to render PDF' })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
   }
@@ -118,7 +118,5 @@ const page = await browser.new_page (),
   } catch (e: any) {
     try { await browser.close () } catch {}
     res.status (500).json ({ error: e?.message || 'Failed to render PDF' })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

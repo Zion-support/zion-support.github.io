@@ -13,154 +13,30 @@ export type SitemapItem = {
 // Current date for lastmod
 const currentDate = '2025-05-15'
 // Public Pages - Accessible to all users
-export const publicPages: SitemapItem[] = [
-  {
-    path: '/',
-    label: 'Home',
-    description: 'The world\'s first free marketplace dedicated to high-tech and artificial intelligence',
-    priority: 1.0,
-    changeFreq: 'weekly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/about',
-    label: 'About Us',
-    description: 'Learn about the Zion AI Marketplace mission and team',
-    priority: 0.8,
-    changeFreq: 'monthly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/contact',
-    label: 'Contact',
-    description: 'Get in touch with the Zion team',
-    priority: 0.8, 
-    changeFreq: 'monthly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/talent',
-    label: 'Talent Directory',
-    description: 'Browse skilled AI and tech professionals',
-    priority: 0.9,
-    changeFreq: 'daily',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/marketplace',
-    label: 'Marketplace',
-    description: 'Explore AI services, products and equipment',
-    priority: 0.9,
-    changeFreq: 'daily',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/services',
-    label: 'Services',
-    description: 'Find professional tech and AI services',
-    priority: 0.8,
-    changeFreq: 'weekly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/equipment',
-    label: 'Equipment',
-    description: 'Specialized hardware and tech equipment',
-    priority: 0.8,
-    changeFreq: 'weekly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/categories',
-    label: 'Categories',
-    description: 'Browse service and talent categories',
-    priority: 0.7,
-    changeFreq: 'monthly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/blog',
-    label: 'Blog',
-    description: 'Articles and insights about AI and tech',
-    priority: 0.9,
-    changeFreq: 'daily',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/faq',
-    label: 'FAQ',
-    description: 'Frequently asked questions about Zion',
-    priority: 0.7,
-    changeFreq: 'monthly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/terms',
-    label: 'Terms of Service',
-    description: 'Terms and conditions for using Zion',
-    priority: 0.5,
-    changeFreq: 'monthly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/privacy',
-    label: 'Privacy Policy',
-    description: 'How we handle your data',
-    priority: 0.5,
-    changeFreq: 'monthly',
-    lastmod: currentDate}]
+export const publicPages: SitemapItem[] = [{
+    path: '/', label: 'Home', description: 'The world\'s first free marketplace dedicated to high-tech and artificial intelligence', priority: 1.0, changeFreq: 'weekly', lastmod: currentDate}, lastmod: currentDate, }, {
+    path: '/about', label: 'About Us', description: 'Learn about the Zion AI Marketplace mission and team', priority: 0.8, changeFreq: 'monthly', lastmod: currentDate}, lastmod: currentDate, }, {
+    path: '/contact', label: 'Contact', description: 'Get in touch with the Zion team', priority: 0.8, changeFreq: 'monthly', lastmod: currentDate}, lastmod: currentDate, }, {
+    path: '/talent', label: 'Talent Directory', description: 'Browse skilled AI and tech professionals', priority: 0.9, changeFreq: 'daily', lastmod: currentDate}, lastmod: currentDate, }, {
+    path: '/marketplace', label: 'Marketplace', description: 'Explore AI services, products and equipment', priority: 0.9, changeFreq: 'daily', lastmod: currentDate}, lastmod: currentDate, }, {
+    path: '/services', label: 'Services', description: 'Find professional tech and AI services', priority: 0.8, changeFreq: 'weekly', lastmod: currentDate}, lastmod: currentDate, }, {
+    path: '/equipment', label: 'Equipment', description: 'Specialized hardware and tech equipment', priority: 0.8, changeFreq: 'weekly', lastmod: currentDate}, lastmod: currentDate, }, {
+    path: '/categories', label: 'Categories', description: 'Browse service and talent categories', priority: 0.7, changeFreq: 'monthly', lastmod: currentDate}, lastmod: currentDate, }, {
+    path: '/blog', label: 'Blog', description: 'Articles and insights about AI and tech', priority: 0.9, changeFreq: 'daily', lastmod: currentDate}, lastmod: currentDate, }, {
+    path: '/faq', label: 'FAQ', description: 'Frequently asked questions about Zion', priority: 0.7, changeFreq: 'monthly', lastmod: currentDate}, lastmod: currentDate, }, {
+    path: '/terms', label: 'Terms of Service', description: 'Terms and conditions for using Zion', priority: 0.5, changeFreq: 'monthly', lastmod: currentDate}, lastmod: currentDate, }, {
+    path: '/privacy', label: 'Privacy Policy', description: 'How we handle your data', priority: 0.5, changeFreq: 'monthly', lastmod: currentDate}]
     lastmod: currentDate,
   },
 ]
 // Authentication Pages
-export const authPages: SitemapItem[] = [
-  {
-    path: '/login',
-    label: 'Login',
-    description: 'Sign in to your account',
-    priority: 0.6,
-    changeFreq: 'monthly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/signup',
-    label: 'Sign Up',
-    description: 'Create a new account',
-    priority: 0.6,
-    changeFreq: 'monthly',
-    lastmod: currentDate,
-    children: [
+export const authPages: SitemapItem[] = [{
+    path: '/login', label: 'Login', description: 'Sign in to your account', priority: 0.6, changeFreq: 'monthly', lastmod: currentDate}, lastmod: currentDate, }, {
+    path: '/signup', label: 'Sign Up', description: 'Create a new account', priority: 0.6, changeFreq: 'monthly', lastmod: currentDate, children: [
       {
-        path: '/signup/talent',
-        label: 'Talent Registration',
-        description: 'Sign up as a talent or creator',
-        priority: 0.6,
-        changeFreq: 'monthly',
-        lastmod: currentDate},
-        lastmod: currentDate,
-      },
-      {
-        path: '/signup/client',
-        label: 'Client Registration',
-        description: 'Sign up as an employer or buyer',
-        priority: 0.6,
-        changeFreq: 'monthly',
-        lastmod: currentDate}
-        lastmod: currentDate,
-      }
-    ]
+        path: '/signup/talent', label: 'Talent Registration', description: 'Sign up as a talent or creator', priority: 0.6, changeFreq: 'monthly', lastmod: currentDate}, lastmod: currentDate, }, {
+        path: '/signup/client', label: 'Client Registration', description: 'Sign up as an employer or buyer', priority: 0.6, changeFreq: 'monthly', lastmod: currentDate}
+        lastmod: currentDate, }]
   },
   {
     path: '/forgot-password',
@@ -173,13 +49,8 @@ export const authPages: SitemapItem[] = [
   },
 ]
 // Talent/Creator Routes - Requires authentication and appropriate role
-export const talentRoutes: SitemapItem[] = [
-  {
-    path: '/talent-dashboard',
-    label: 'Talent Dashboard',
-    description: 'Overview for talent users',
-    requiredAuth: true,
-    requiredRoles: ['jobSeeker', 'creator'],
+export const talentRoutes: SitemapItem[] = [{
+    path: '/talent-dashboard', label: 'Talent Dashboard', description: 'Overview for talent users', requiredAuth: true, requiredRoles: ['jobSeeker', 'creator'],
     priority: 0.9,
     changeFreq: 'daily',
     lastmod: currentDate},
@@ -220,13 +91,8 @@ export const talentRoutes: SitemapItem[] = [
   },
 ]
 // Client/Employer Routes - Requires authentication and appropriate role
-export const clientRoutes: SitemapItem[] = [
-  {
-    path: '/client-dashboard',
-    label: 'Client Dashboard',
-    description: 'Overview for client users',
-    requiredAuth: true,
-    requiredRoles: ['employer', 'buyer'],
+export const clientRoutes: SitemapItem[] = [{
+    path: '/client-dashboard', label: 'Client Dashboard', description: 'Overview for client users', requiredAuth: true, requiredRoles: ['employer', 'buyer'],
     priority: 0.9,
     changeFreq: 'daily',
     lastmod: currentDate},
@@ -256,56 +122,17 @@ export const clientRoutes: SitemapItem[] = [
   },
 ]
 // Shared Routes - Authenticated Users
-export const sharedRoutes: SitemapItem[] = [
-  {
-    path: '/messages',
-    label: 'Messages',
-    description: 'Your inbox and conversations',
-    requiredAuth: true,
-    priority: 0.9,
-    changeFreq: 'hourly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/notifications',
-    label: 'Notifications',
-    description: 'Your alerts and updates',
-    requiredAuth: true,
-    priority: 0.8,
-    changeFreq: 'hourly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/project/:projectId/room',
-    label: 'Project Room',
-    description: 'Real-time meetings for collaboration',
-    requiredAuth: true,
-    priority: 0.6,
-    changeFreq: 'never',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/dashboard/disputes',
-    label: 'Disputes',
-    description: 'Manage and view disputes',
-    requiredAuth: true,
-    priority: 0.7,
-    changeFreq: 'daily',
-    lastmod: currentDate}]
+export const sharedRoutes: SitemapItem[] = [{
+    path: '/messages', label: 'Messages', description: 'Your inbox and conversations', requiredAuth: true, priority: 0.9, changeFreq: 'hourly', lastmod: currentDate}, lastmod: currentDate, }, {
+    path: '/notifications', label: 'Notifications', description: 'Your alerts and updates', requiredAuth: true, priority: 0.8, changeFreq: 'hourly', lastmod: currentDate}, lastmod: currentDate, }, {
+    path: '/project/:projectId/room', label: 'Project Room', description: 'Real-time meetings for collaboration', requiredAuth: true, priority: 0.6, changeFreq: 'never', lastmod: currentDate}, lastmod: currentDate, }, {
+    path: '/dashboard/disputes', label: 'Disputes', description: 'Manage and view disputes', requiredAuth: true, priority: 0.7, changeFreq: 'daily', lastmod: currentDate}]
     lastmod: currentDate,
   },
 ]
 // Admin Routes
-export const adminRoutes: SitemapItem[] = [
-  {
-    path: '/analytics',
-    label: 'Analytics',
-    description: 'System analytics and metrics',
-    requiredAuth: true,
-    requiredRoles: ['admin'],
+export const adminRoutes: SitemapItem[] = [{
+    path: '/analytics', label: 'Analytics', description: 'System analytics and metrics', requiredAuth: true, requiredRoles: ['admin'],
     priority: 0.9,
     changeFreq: 'daily',
     lastmod: currentDate},
@@ -346,13 +173,7 @@ export const dynamicPaths = {
   disputeDetails: '/dashboard/disputes/:disputeId',
 }
 // The complete sitemap
-export const completeSitemap: SitemapItem[] = [
-  ...publicPages,
-  ...authPages,
-  ...talentRoutes,
-  ...clientRoutes,
-  ...sharedRoutes,
-  ...adminRoutes]
+export const completeSitemap: SitemapItem[] = [...publicPages, ...authPages, ...talentRoutes, ...clientRoutes, ...sharedRoutes, ...adminRoutes]
   ...adminRoutes,
 ]
 // Helper function to get appropriate routes based on user role

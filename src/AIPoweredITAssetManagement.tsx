@@ -1,89 +1,44 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Users, Globe, BarChart3, Zap, Target, Rocket, CheckCircle, Star, Lightbulb, Cloud, Settings, Brain, Server, Printer, Clock } from 'lucide-react'
+import { Link  } from 'react-router-dom'
+import { motion  } from 'framer-motion'
+import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Users, Globe, BarChart3, Zap, Target, Rocket, CheckCircle, Star, Lightbulb, Cloud, Settings, Brain, Server, Printer, Clock  } from 'lucide-react'
 import SEOHead from '../components/SEOHead'
-import { Helmet } from 'react-helmet-async'
+import { Helmet  } from 'react-helmet-async'
 const AIPoweredITAssetManagement = () => {
-    const features = [
-        {
-            icon: Monitor,
-            title: "Real-time Asset Monitoring",
-            description: "Continuous monitoring of all IT assets with AI-powered anomaly detection and predictive maintenance."
-        },
-        {
-            icon: Shield,
-            title: "Intelligent Security",
-            description: "AI-driven threat detection and automated security response for all managed IT assets."
-        },
-        {
-            icon: TrendingUp,
-            title: "Performance Analytics",
-            description: "Advanced analytics and reporting for asset performance optimization and capacity planning."
-        },
-        {
-            icon: Database,
-            title: "Centralized Management",
-            description: "Single platform for managing all IT assets across your entire infrastructure."
-        },
-        {
-            icon: Network,
-            title: "Network Optimization",
-            description: "AI-powered network performance optimization and bandwidth management."
-        },
-        {
-            icon: Target,
-            title: "Predictive Maintenance",
-            description: "AI algorithms predict potential failures and maintenance needs before they impact operations."
-        }
-    ]
-    const capabilities = [
-        {
-            icon: Cpu,
-            title: "Intelligent Asset Discovery",
-            description: "AI-powered scanning and discovery of all IT assets across your infrastructure."
-        },
-        {
-            icon: Shield,
-            title: "Security Monitoring",
-            description: "Continuous security assessment and threat detection for all managed assets."
-        },
-        {
-            icon: BarChart3,
-            title: "Performance Analytics",
-            description: "Real-time performance monitoring and predictive maintenance insights."
-        },
-        {
-            icon: Database,
-            title: "Centralized Management",
-            description: "Unified management across Windows, Linux, macOS, cloud platforms, and mobile devices."
-        }
-    ]
-    const benefits = [
-        {
-            icon: CheckCircle,
-            title: "Reduced Downtime",
-            description: "Predictive maintenance reduces unplanned outages by up to 70%"
-        },
-        {
-            icon: TrendingUp,
-            title: "Cost Optimization",
-            description: "Identify underutilized assets and optimize resource allocation"
-        },
-        {
-            icon: Shield,
-            title: "Enhanced Security",
-            description: "Proactive threat detection and automated security responses"
-        },
-        {
-            icon: Users,
-            title: "Improved Productivity",
-            description: "Streamlined asset management reduces administrative overhead"
-        }
-    ]
+    const features = [{
+            icon: Monitor, title: "Real-time Asset Monitoring", description: "Continuous monitoring of all IT assets with AI-powered anomaly detection and predictive maintenance."
+        }, {
+            icon: Shield, title: "Intelligent Security", description: "AI-driven threat detection and automated security response for all managed IT assets."
+        }, {
+            icon: TrendingUp, title: "Performance Analytics", description: "Advanced analytics and reporting for asset performance optimization and capacity planning."
+        }, {
+            icon: Database, title: "Centralized Management", description: "Single platform for managing all IT assets across your entire infrastructure."
+        }, {
+            icon: Network, title: "Network Optimization", description: "AI-powered network performance optimization and bandwidth management."
+        }, {
+            icon: Target, title: "Predictive Maintenance", description: "AI algorithms predict potential failures and maintenance needs before they impact operations."
+        }]
+    const capabilities = [{
+            icon: Cpu, title: "Intelligent Asset Discovery", description: "AI-powered scanning and discovery of all IT assets across your infrastructure."
+        }, {
+            icon: Shield, title: "Security Monitoring", description: "Continuous security assessment and threat detection for all managed assets."
+        }, {
+            icon: BarChart3, title: "Performance Analytics", description: "Real-time performance monitoring and predictive maintenance insights."
+        }, {
+            icon: Database, title: "Centralized Management", description: "Unified management across Windows, Linux, macOS, cloud platforms, and mobile devices."
+        }]
+    const benefits = [{
+            icon: CheckCircle, title: "Reduced Downtime", description: "Predictive maintenance reduces unplanned outages by up to 70%"
+        }, {
+            icon: TrendingUp, title: "Cost Optimization", description: "Identify underutilized assets and optimize resource allocation"
+        }, {
+            icon: Shield, title: "Enhanced Security", description: "Proactive threat detection and automated security responses"
+        }, {
+            icon: Users, title: "Improved Productivity", description: "Streamlined asset management reduces administrative overhead"
+        }]
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-            <Helmet>
+            <Helmet ></Helmet>
                 <title>AI-Powered IT Asset Management | Zion Tech Group</title>
                 <meta name="description" content="Revolutionary AI-powered IT asset management solution with intelligent discovery, real-time monitoring, and predictive maintenance capabilities." />
             </Helmet>
@@ -98,14 +53,14 @@ const AIPoweredITAssetManagement = () => {
                         transition={{ duration: 0.8 }}
                         className="text-center max-w-4xl mx-auto"
                     >
-                        <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                        <h1 className="text-5xl md: text-6xl font-bold mb-6">
                             AI-Powered IT Asset Management
                         </h1>
                         <p className="text-xl md:text-2xl mb-8 opacity-90">
                             Transform your IT infrastructure with intelligent asset discovery, 
                             real-time monitoring, and predictive maintenance powered by AI.
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <div className="flex flex-col sm: flex-row gap-4 justify-center">
                             <$2 />
                                 to="/contact"
                                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
@@ -141,14 +96,14 @@ const AIPoweredITAssetManagement = () => {
                         </p>
                     </motion.div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
                         {features.map((feature, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                                className="bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow"
                             >
                                 <div className="text-blue-600 mb-4">
                                     <feature.icon className="w-12 h-12" />
@@ -178,7 +133,7 @@ const AIPoweredITAssetManagement = () => {
                         </p>
                     </motion.div>
 
-                    <div className="grid md:grid-cols-2 gap-8">
+                    <div className="grid md: grid-cols-2 gap-8">
                         {capabilities.map((capability, index) => (
                             <motion.div
                                 key={index}
@@ -219,7 +174,7 @@ const AIPoweredITAssetManagement = () => {
                         </p>
                     </motion.div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
                         {benefits.map((benefit, index) => (
                             <motion.div
                                 key={index}
@@ -255,7 +210,7 @@ const AIPoweredITAssetManagement = () => {
                             Join leading organizations that have revolutionized their IT infrastructure 
                             with our AI-powered asset management solution.
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <div className="flex flex-col sm: flex-row gap-4 justify-center">
                             <$2 />
                                 to="/contact"
                                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"

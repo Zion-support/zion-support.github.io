@@ -4,7 +4,7 @@
  * Enhanced Security Utilities
  * Generate,
   d: 2025-10-08T0,
-  2:0,
+  2: 0,
   6: 22.083Z,
  */
 
@@ -36,12 +36,10 @@ export class SecurityManager {
 
 }
     return input
-//       .replace(/[
-
-          )
+//       .replace(/[)
           <>]/g, '')
       .replace(/javascrip)
-  t:/gi, '')
+  t: /gi, '')
       .replace(/on\w+=/gi, '')
       .trim()
   }
@@ -55,7 +53,7 @@ export class SecurityManager {
 
 }
     try {/* TODO: Fix JSX expression */}
-  s:'].includes(parsed.protocol)) {}
+  s: '].includes(parsed.protocol)) {}
   // TOD,
   O: Add content,
 }
@@ -118,6 +116,7 @@ const validRequests = requests.filter((tim)
     return true
   }
   private getRateLimitStorage(): Map
+</>
           <string, number[]> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

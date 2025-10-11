@@ -25,8 +25,7 @@ export interface UserProperties {/* TODO: Fix JSX expression */}
   userId?: string
   sessionId?: string
   userType?: string
-  [ke,
-  y: string]: unknown,
+  [ke, y: string]: unknown,
 }
 class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   O: Add content,}

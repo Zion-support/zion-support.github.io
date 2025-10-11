@@ -2,8 +2,8 @@
 
 import fs from 'fs'
 import path from 'path'
-import { execSync } from 'child_process'
-import { fileURLToPath } from 'url'
+import { execSync  } from 'child_process'
+import { fileURLToPath  } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to find all TypeScript/JavaScript files
@@ -33,23 +33,18 @@ function fixFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8')
     let modified = false
     // Fix missing commas in object literals
-    const commaFixes = [
-      // Fix missing comma after array in object
+    const commaFixes = [// Fix missing comma after array in object
       {
         pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:/g,
-        replacement: '$1: [$2],\n    $3:'
+        replacement: '$1: [$2],\n    $3: '
       },
       // Fix missing comma after object property
       {
-        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
-        replacement: '$1: [$2],\n    $3: ['
-      },
-      // Fix missing comma after string array
+        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g, replacement: '$1: [$2],\n    $3: ['
+      }, // Fix missing comma after string array
       {
-        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
-        replacement: '$1: [$2],\n    $3: ['
-      }
-    ]
+        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g, replacement: '$1: [$2],\n    $3: ['
+      }]
     for (const fix of commaFixes) {
       const newContent = content.replace(fix.pattern, fix.replacement)
       if (newContent !== content) {
@@ -59,18 +54,13 @@ function fixFile(filePath) {
     }
     
     // Fix missing semicolons in array declarations
-    const semicolonFixes = [
-      // Fix missing semicolon after array declaration
+    const semicolonFixes = [// Fix missing semicolon after array declaration
       {
-        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
-        replacement: '$1: [$2];\n  const $3 = ['
-      },
-      // Fix missing semicolon after const declaration
+        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g, replacement: '$1: [$2];\n  const $3 = ['
+      }, // Fix missing semicolon after const declaration
       {
-        pattern: /const\s+(\w+)\s*=\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
-        replacement: 'const $1 = [$2];\n  const $3 = ['
-      }
-    ]
+        pattern: /const\s+(\w+)\s*=\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g, replacement: 'const $1 = [$2];\n  const $3 = ['
+      }]
     for (const fix of semicolonFixes) {
       const newContent = content.replace(fix.pattern, fix.replacement)
       if (newContent !== content) {
@@ -80,8 +70,7 @@ function fixFile(filePath) {
     }
     
     // Fix JSX closing tag issues
-    const jsxFixes = [
-      // Fix unclosed JSX elements
+    const jsxFixes = [// Fix unclosed JSX elements
       {
         pattern: /<(\w+)([^>]*?)(?<!\/)>([^<]*?)(?=<\w+|\s*$)/g,
         replacement: (match, tagName, attributes, content) => {
@@ -90,8 +79,8 @@ function fixFile(filePath) {
             return match
           }
           // Add closing tag if missing
-          if (!content.includes(`</${tagName}>`)) {
-            return `<${tagName}${attributes}>${content}</${tagName}>`
+          if (!content.includes(`</$>{tagName}`)) {
+            return `<${tagName}$>{attributes}${content}</$>{tagName}`
           }
           return match
         }
@@ -124,8 +113,7 @@ function fixFile(filePath) {
     }
     
     // Fix specific parsing errors
-    const specificFixes = [
-      // Fix missing closing bracket in features array
+    const specificFixes = [// Fix missing closing bracket in features array
       {
         pattern: /const\s+features\s*=\s*\[([^\]]+)\]\s*const\s+benefits/g,
         replacement: 'const features = [$1];\n  const benefits'
@@ -137,10 +125,8 @@ function fixFile(filePath) {
       },
       // Fix missing comma in object properties
       {
-        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
-        replacement: '$1: [$2],\n    $3: ['
-      }
-    ]
+        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g, replacement: '$1: [$2],\n    $3: ['
+      }]
     for (const fix of specificFixes) {
       const newContent = content.replace(fix.pattern, fix.replacement)
       if (newContent !== content) {
@@ -190,17 +176,19 @@ try {
 }
     let content = fs.readFileSync(filePath, 'utf8')
     // Fix common syntax issues
-    content = content.replace(/\s+return\s*\(\s*<>/g, '\n    }\n  ];\n\n  return (\n    <>')
+    content = content.replace(/\s+return\s*\(\s*<>/g, '\n    }\n  ];\n\n  return (\n    <>
+  ')
     // Fix missing closing brackets for features array
-    content = content.replace(/(benefits:\s*\[[^\]]+\])\s+return\s*\(/g, '$1\n    }\n  ];\n\n  return (')
+    content = content.replace(/(benefits: \s*\[[^\]]+\])\s+return\s*\(/g, '$1\n    }\n  ];\n\n  return (')
     // Fix malformed JSX structure
-    content = content.replace(/(benefits:\s*\[[^\]]+\])\s*}\s*return\s*\(/g, '$1\n    }\n  ];\n\n  return (')
+    content = content.replace(/(benefits: \s*\[[^\]]+\])\s*}\s*return\s*\(/g, '$1\n    }\n  ];\n\n  return (')
     // Fix missing closing tags
+</>
     content = content.replace(/<Helmet>\s*<title>[^<]+<\/title>\s*<meta[^>]+>\s*<meta[^>]+>\s*<meta[^>]+>\s*<\/Helmet>/g, 
       '<Helmet>\n        <title>AI Analytics - Zion Tech Group</title>\n        <meta name="description" content="Advanced AI-powered analytics solution for modern businesses." />\n        <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />\n      </Helmet>')
     // Ensure proper JSX structure
     if (!content.includes('export default')) {
-      content = content.replace(/(const\s+\w+Page:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?)(\s*};?\s*)$/m, '$1\n};\n\nexport default $1Page;')
+      content = content.replace(/(const\s+\w+Page: \s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?)(\s*};?\s*)$/m, '$1\n};\n\nexport default $1Page;')
     }
     
     fs.writeFileSync(filePath, content, 'utf8')

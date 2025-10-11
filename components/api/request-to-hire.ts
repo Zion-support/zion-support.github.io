@@ -60,7 +60,7 @@ if ( {) {
   }
   try {
     const timestamp = new Date ().toISOString ()
-    console.log ('[Operator] New request to hire:', {
+    console.log ('[Operator] New request to hire: ', {
       timestamp,
       talent_slug,
       requester_name,
@@ -83,12 +83,11 @@ if ( {) {
   } catch (err) {
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     console.error('Request-to-hire failed', err)
     return res.status(500).json({ error: 'Internal error' })
   }
     const timestamp = new Date().toISOString()
-    console.log('[Operator] New request to hire:', { timestamp, talentSlug, requesterName, requesterEmail, projectInfo })
+    console.log('[Operator] New request to hire: ', { timestamp, talentSlug, requesterName, requesterEmail, projectInfo })
     // Persist to data/requests as a simple CMS-like log
     const dir = path.join(process.cwd(), 'data', 'requests')
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })

@@ -73,7 +73,7 @@ export interface AppConfig {
   ui: {
     theme: 'auto',
     language: 'en',
-    timezone:   ,
+    timezone:  ,
 $4},
   logging: {
     level: 'info',
@@ -815,7 +815,7 @@ const defaultValue = this.getDefaultForKey(key)
       ui: {
         theme: 'light',
         language: 'en',
-        timezone:       ,
+        timezone:  ,
 $4},
       logging: {
         level: 'info',

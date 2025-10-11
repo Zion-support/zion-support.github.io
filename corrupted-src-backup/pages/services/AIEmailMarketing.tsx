@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";"
+import { Helmet  } from 'react-helmet-async';"
 impo, r, t { Trending, U, p } fr, o, m "luci, d, e-rea, c, t";"
 import, Header, from "../../componen, t, s/Head, e, r";"
 import, Footer, from "../../componen, t, s/Foot, e, r"
@@ -9,73 +9,67 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";'
 const, AIEmailMarketin, g: Rea, c, t.FC = () => {
-  const, feature, s = [
-    {
+  const, feature, s = [{
       i, c, o
   n: Bra, i, n
-      tit, l, e: "AI, Content, Generation","
-      descripti, o, n: "Automatically, generate, personalized email, content, based on, customer, behavior, preferenc, e, s, and, engagement, history.","
-      tit, l, e: "AI, Content, Generation","
-      descripti, o, n: "Automatically, generate, personalized email, content, based on, customer, behavior, preferenc, e, s, and, engagement, history.","
+      tit, l, e: "AI, Content, Generation", "
+      descripti, o, n: "Automatically, generate, personalized email, content, based on, customer, behavior, preferenc, e, s, and, engagement, history.", "
+      tit, l, e: "AI, Content, Generation", "
+      descripti, o, n: "Automatically, generate, personalized email, content, based on, customer, behavior, preferenc, e, s, and, engagement, history.", "
       benef, i, t: "3, 0, 0% increase, in, open rat, e, s"
     }
     {
       ic, o, n: Targ, e, t
-      tit, l, e: "Smart, Segmentatio, n","
-      descripti, o, n: "AI-powered, audience, segmentation that, identifies, high-value, customers, and predicts, optimal, send tim, e, s.","
-      tit, l, e: "Smart, Segmentatio, n","
-      descripti, o, n: "AI-powered, audience, segmentation that, identifies, high-value, customers, and predicts, optimal, send tim, e, s.","
+      tit, l, e: "Smart, Segmentatio, n", "
+      descripti, o, n: "AI-powered, audience, segmentation that, identifies, high-value, customers, and predicts, optimal, send tim, e, s.", "
+      tit, l, e: "Smart, Segmentatio, n", "
+      descripti, o, n: "AI-powered, audience, segmentation that, identifies, high-value, customers, and predicts, optimal, send tim, e, s.", "
       benef, i, t: "85% improvement, in, click-through, rate, s"
     }
     {
       ic, o, n: BarChar, t, 3
-      tit, l, e: "Predictive, Analytic, s","
-      descripti, o, n: "Advanced, analytics, that predict, campaign, performance and, optimize, subject lin, e, s, conte, n, t, and, timin, g.","
-      tit, l, e: "Predictive, Analytic, s","
-      descripti, o, n: "Advanced, analytics, that predict, campaign, performance and, optimize, subject lin, e, s, conte, n, t, and, timin, g.","
+      tit, l, e: "Predictive, Analytic, s", "
+      descripti, o, n: "Advanced, analytics, that predict, campaign, performance and, optimize, subject lin, e, s, conte, n, t, and, timin, g.", "
+      tit, l, e: "Predictive, Analytic, s", "
+      descripti, o, n: "Advanced, analytics, that predict, campaign, performance and, optimize, subject lin, e, s, conte, n, t, and, timin, g.", "
       benef, i, t: "2, 5, 0% ROI, improvemen, t"
     }
     {
       ic, o, n: Z, a, p
-      tit, l, e: "Automated, Campaign, s","
-      descripti, o, n: "Intelligent, automation, that triggers, personalized, campaigns based, on, customer actions, and, lifecycle stag, e, s.","
-      tit, l, e: "Automated, Campaign, s","
-      descripti, o, n: "Intelligent, automation, that triggers, personalized, campaigns based, on, customer actions, and, lifecycle stag, e, s.","
+      tit, l, e: "Automated, Campaign, s", "
+      descripti, o, n: "Intelligent, automation, that triggers, personalized, campaigns based, on, customer actions, and, lifecycle stag, e, s.", "
+      tit, l, e: "Automated, Campaign, s", "
+      descripti, o, n: "Intelligent, automation, that triggers, personalized, campaigns based, on, customer actions, and, lifecycle stag, e, s.", "
       benef, i, t: "70% reduction, in, manual wo, r, k"
     }
     {
       ic, o, n: Clo, c, k
-      tit, l, e: "Optimal, Timin, g","
-      descripti, o, n: "AI, determines, the best, time, to send, emails, to each, individual, recipient for, maximum, engagement.","
-      tit, l, e: "Optimal, Timin, g","
-      descripti, o, n: "AI, determines, the best, time, to send, emails, to each, individual, recipient for, maximum, engagement.","
+      tit, l, e: "Optimal, Timin, g", "
+      descripti, o, n: "AI, determines, the best, time, to send, emails, to each, individual, recipient for, maximum, engagement.", "
+      tit, l, e: "Optimal, Timin, g", "
+      descripti, o, n: "AI, determines, the best, time, to send, emails, to each, individual, recipient for, maximum, engagement.", "
       benef, i, t: "45% increase, in, engagement"
     }
     {
       ic, o, n: Shie, l, d
-      tit, l, e: "Deliverability, Optimizatio, n","
-      descripti, o, n: "Advanced, algorithms, ensure maximum, inbox, placement and, compliance, with email, regulation, s.","
-      tit, l, e: "Deliverability, Optimizatio, n","
-      descripti, o, n: "Advanced, algorithms, ensure maximum, inbox, placement and, compliance, with email, regulation, s.","
+      tit, l, e: "Deliverability, Optimizatio, n", "
+      descripti, o, n: "Advanced, algorithms, ensure maximum, inbox, placement and, compliance, with email, regulation, s.", "
+      tit, l, e: "Deliverability, Optimizatio, n", "
+      descripti, o, n: "Advanced, algorithms, ensure maximum, inbox, placement and, compliance, with email, regulation, s.", "
       benef, i, t: "98% deliverability, rat, e"
-    }
-  ]
-  const, pricin, g = [
-    {
+    }]
+  const, pricin, g = [{
     na, m, e: "Start, e, r"
-      pri, c, e: "$79",
-      peri, o, d: "/mon, t, h"
+      pri, c, e: "$79", peri, o, d: "/mon, t, h"
       descripti, o, n: "Perfect, for, small businesses, starting, with AI-powered, email, marketing"
-      featur, e, s: [,
-        "Up, to, 10,000, subscriber, s"
+      featur, e, s: [, "Up, to, 10, 000, subscriber, s"
         "Basic, AI, content generati, o, n"
         "Simple, automatio, n"
         "Email, suppor, t"
         "Basic, analytic, s"
         "Standard, template, s"
         "5, campaign, s/mon, t, h"
-        "Basic, segmentatio, n"
-      ]
+        "Basic, segmentatio, n"]
       popul, a, r: fal, s, e
   }
     {
@@ -83,8 +77,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
       pri, c, e: "$1, 9, 9"
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Ideal, for, growing businesses, with, advanced email, marketing, needs"
-      featur, e, s: [,
-        "Up, to, 50,000, subscriber, s"
+      featur, e, s: ["Up, to, 50, 000, subscriber, s"
         "Advanced, AI, content generati, o, n"
         "Smart, automation, workflows"
         "Priority, suppor, t"
@@ -93,8 +86,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
         "Unlimited, campaign, s"
         "Advanced, segmentatio, n"
         "A/B, testin, g"
-        "API, acces, s"
-      ]
+        "API, acces, s"]
       popul, a, r: tr, u, e
   }
     {
@@ -102,8 +94,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
       pri, c, e: "$5, 9, 9"
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s"
-      featur, e, s: [,
-        "Unlimited, subscriber, s"
+      featur, e, s: ["Unlimited, subscriber, s"
         "Enterprise, AI, capabilities"
         "Complex, automation, workflows"
         "Dedicated, account, manager"
@@ -114,24 +105,21 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
         "Custom, integration, s"
         "Advanced, security, features"
         "SLA, guarante, e"
-        "Traini, n, g & consultati, o, n"
-      ]
+        "Traini, n, g & consultati, o, n"]
       popul, a, r: fal, s, e
       n, a, m
   e: "Start, e, r","
       pri, c, e: "$79","
       peri, o, d: "/mon, t, h","
       descripti, o, n: "Perfect, for, small businesses, starting, with AI-powered, email, marketing","
-      featur, e, s: [,
-        "Up, to, 10,000, subscriber, s","
-        "Basic, AI, content generati, o, n","
-        "Simple, automatio, n","
-        "Email, suppor, t","
-        "Basic, analytic, s","
-        "Standard, template, s","
-        "5, campaign, s/mon, t, h","
-        "Basic, segmentatio, n"
-      ]
+      featur, e, s: ["Up, to, 10, 000, subscriber, s", "
+        "Basic, AI, content generati, o, n", "
+        "Simple, automatio, n", "
+        "Email, suppor, t", "
+        "Basic, analytic, s", "
+        "Standard, template, s", "
+        "5, campaign, s/mon, t, h", "
+        "Basic, segmentatio, n"]
       popul, a, r: fal, s, e
   }
     {
@@ -139,18 +127,16 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
       pri, c, e: "$1, 9, 9","
       peri, o, d: "/mon, t, h","
       descripti, o, n: "Ideal, for, growing businesses, with, advanced email, marketing, needs","
-      featur, e, s: [,
-        "Up, to, 50,000, subscriber, s","
-        "Advanced, AI, content generati, o, n","
-        "Smart, automation, workflows","
-        "Priority, suppor, t","
-        "Advanced, analytic, s & insigh, t, s","
-        "Custom, template, s","
-        "Unlimited, campaign, s","
-        "Advanced, segmentatio, n","
-        "A/B, testin, g","
-        "API, acces, s"
-      ]
+      featur, e, s: ["Up, to, 50, 000, subscriber, s", "
+        "Advanced, AI, content generati, o, n", "
+        "Smart, automation, workflows", "
+        "Priority, suppor, t", "
+        "Advanced, analytic, s & insigh, t, s", "
+        "Custom, template, s", "
+        "Unlimited, campaign, s", "
+        "Advanced, segmentatio, n", "
+        "A/B, testin, g", "
+        "API, acces, s"]
       popul, a, r: tr, u, e
   }
     {
@@ -158,60 +144,52 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
       pri, c, e: "$5, 9, 9","
       peri, o, d: "/mon, t, h","
       descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s","
-      featur, e, s: [,
-        "Unlimited, subscriber, s","
-        "Enterprise, AI, capabilities","
-        "Complex, automation, workflows","
-        "Dedicated, account, manager","
-        "Enterprise, analytics, suite","
-        "Whi, t, e-label, template, s","
-        "Unlimited, campaign, s","
-        "Advanced, AI, segmentation","
-        "Custom, integration, s","
-        "Advanced, security, features","
-        "SLA, guarante, e","
-        "Traini, n, g & consultati, o, n"
-      ]
+      featur, e, s: ["Unlimited, subscriber, s", "
+        "Enterprise, AI, capabilities", "
+        "Complex, automation, workflows", "
+        "Dedicated, account, manager", "
+        "Enterprise, analytics, suite", "
+        "Whi, t, e-label, template, s", "
+        "Unlimited, campaign, s", "
+        "Advanced, AI, segmentation", "
+        "Custom, integration, s", "
+        "Advanced, security, features", "
+        "SLA, guarante, e", "
+        "Traini, n, g & consultati, o, n"]
       popul, a, r: fal, s, e
   }
   ]
-  const, testimonial, s = [
-    {
-      na, m, e: "Jennifer, Martine, z","
-      ro, l, e: "Marketing, Directo, r, E-Commerce, Platfor, m","
-      conte, n, t: "AI, email, marketing increased, our, revenue by, 18, 0% in, just, 3 mont, h, s. The, personalized, content generation, and, optimal timing, features, were ga, m, e-changers, for, our busine, s, s.","
-      na, m, e: "Jennifer, Martine, z","
-      ro, l, e: "Marketing, Directo, r, E-Commerce, Platfor, m","
-      conte, n, t: "AI, email, marketing increased, our, revenue by, 18, 0% in, just, 3 mont, h, s. The, personalized, content generation, and, optimal timing, features, were ga, m, e-changers, for, our busine, s, s.","
-      rati, n, g: 5,
-      compa, n, y: "E-Commerce, Platfor, m"
+  const, testimonial, s = [{
+      na, m, e: "Jennifer, Martine, z", "
+      ro, l, e: "Marketing, Directo, r, E-Commerce, Platfor, m", "
+      conte, n, t: "AI, email, marketing increased, our, revenue by, 18, 0% in, just, 3 mont, h, s. The, personalized, content generation, and, optimal timing, features, were ga, m, e-changers, for, our busine, s, s.", "
+      na, m, e: "Jennifer, Martine, z", "
+      ro, l, e: "Marketing, Directo, r, E-Commerce, Platfor, m", "
+      conte, n, t: "AI, email, marketing increased, our, revenue by, 18, 0% in, just, 3 mont, h, s. The, personalized, content generation, and, optimal timing, features, were ga, m, e-changers, for, our busine, s, s.", "
+      rati, n, g: 5, compa, n, y: "E-Commerce, Platfor, m"
     }
     {
-      na, m, e: "David, Che, n","
-      ro, l, e: "VP, Marketin, g, SaaS, Startu, p","
-      conte, n, t: "The, automated, segmentation and, predictive, analytics helped, us, achieve a, 1, 5% conversion, rate, improvement. ROI, increased, by 2, 5, 0% within, the, first quart, e, r.","
-      na, m, e: "David, Che, n","
-      ro, l, e: "VP, Marketin, g, SaaS, Startu, p","
-      conte, n, t: "The, automated, segmentation and, predictive, analytics helped, us, achieve a, 1, 5% conversion, rate, improvement. ROI, increased, by 2, 5, 0% within, the, first quart, e, r.","
-      rati, n, g: 5,
-      compa, n, y: "SaaS, Startu, p"
+      na, m, e: "David, Che, n", "
+      ro, l, e: "VP, Marketin, g, SaaS, Startu, p", "
+      conte, n, t: "The, automated, segmentation and, predictive, analytics helped, us, achieve a, 1, 5% conversion, rate, improvement. ROI, increased, by 2, 5, 0% within, the, first quart, e, r.", "
+      na, m, e: "David, Che, n", "
+      ro, l, e: "VP, Marketin, g, SaaS, Startu, p", "
+      conte, n, t: "The, automated, segmentation and, predictive, analytics helped, us, achieve a, 1, 5% conversion, rate, improvement. ROI, increased, by 2, 5, 0% within, the, first quart, e, r.", "
+      rati, n, g: 5, compa, n, y: "SaaS, Startu, p"
     }
     {
-      na, m, e: "Sarah, Johnso, n","
-      ro, l, e: "Head, of, Growth, FinTe, c, h","
-      conte, n, t: "Deliverability, optimization, and AI, content, generation reduced, our, unsubscribe rate, by, 60% while, increasing, engagement by, 8, 5%. The, platform, is incredibly, intuitiv, e.","
-      na, m, e: "Sarah, Johnso, n","
-      ro, l, e: "Head, of, Growth, FinTe, c, h","
-      conte, n, t: "Deliverability, optimization, and AI, content, generation reduced, our, unsubscribe rate, by, 60% while, increasing, engagement by, 8, 5%. The, platform, is incredibly, intuitiv, e.","
-      rati, n, g: 5,
-      compa, n, y: "FinTe, c, h"
-    }
-  ]
-  const, useCase, s = [
-    {
-      tit, l, e: "E-Commer, c, e","
+      na, m, e: "Sarah, Johnso, n", "
+      ro, l, e: "Head, of, Growth, FinTe, c, h", "
+      conte, n, t: "Deliverability, optimization, and AI, content, generation reduced, our, unsubscribe rate, by, 60% while, increasing, engagement by, 8, 5%. The, platform, is incredibly, intuitiv, e.", "
+      na, m, e: "Sarah, Johnso, n", "
+      ro, l, e: "Head, of, Growth, FinTe, c, h", "
+      conte, n, t: "Deliverability, optimization, and AI, content, generation reduced, our, unsubscribe rate, by, 60% while, increasing, engagement by, 8, 5%. The, platform, is incredibly, intuitiv, e.", "
+      rati, n, g: 5, compa, n, y: "FinTe, c, h"
+    }]
+  const, useCase, s = [{
+      tit, l, e: "E-Commer, c, e", "
       ic, o, n: Glo, b, e
-      descripti, o, n: "Personalized, product, recommendations, abandoned, cart, recovery, and, pos, t-purchase, follo, w-u, p, s.","
+      descripti, o, n: "Personalized, product, recommendations, abandoned, cart, recovery, and, pos, t-purchase, follo, w-u, p, s.", "
       benefi, t, s: ["40% increase, in, sales", "60% cart, recovery, rate", "35% customer, lifetime, value"]"
     }
     {
@@ -266,8 +244,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
   ]
-  const, pricin, g = [
-    {/* TODO: Fix JSX expression */}
+  const, pricin, g = [{/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
@@ -276,18 +253,14 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
-    }
-  ]
-  const, testimonial, s = [
-    {/* TODO: Fix JSX expression */}
+    }]
+  const, testimonial, s = [{/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
-    }
-  ]
-  const, useCase, s = [
-    {/* TODO: Fix JSX expression */}
+    }]
+  const, useCase, s = [{/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
@@ -300,10 +273,8 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
-    }
-  ]
-  const, capabilitie, s = [
-    {/* TODO: Fix JSX expression */}
+    }]
+  const, capabilitie, s = [{/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
@@ -324,20 +295,19 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
-    }
-  ]
-  return(<React.Fragment>
-      <Helmet>
+    }]
+  return(<React .Fragment></React>
+      <Helmet ></Helmet>
         <title>AI, Email, Marketing - Zion, Tech, Group | Intelligent, Email, Automation
         <me, t, a
   na, m, e="descripti, o, n"
-          content="Transform, your, email marketing, with, AI-powered, personalizatio, n, automati, o, n, and, analytic, s. 3, 0, 0% increase, in, open rat, e, s, 85% improvement, in, CTR, and, 25, 0% ROI, improvemen, t." /><meta name="keywor, d, s" content="AI, email, marketing, email, automatio, n, personalized, email, s, email, analytic, s, marketing, automatio, n, email, campaign, s, AI, content, generation" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-ema, i, l-marketi, n, g/>"
-  return (<React.Fragment>
-      <Helmet>
+          content="Transform, your, email marketing, with, AI-powered, personalizatio, n, automati, o, n, and, analytic, s. 3, 0, 0% increase, in, open rat, e, s, 85% improvement, in, CTR, and, 25, 0% ROI, improvemen, t." /><meta name="keywor, d, s" content="AI, email, marketing, email, automatio, n, personalized, email, s, email, analytic, s, marketing, automatio, n, email, campaign, s, AI, content, generation" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/ai-ema, i, l-marketi, n, g/>"
+  return (<React .Fragment></React>
+      <Helmet ></Helmet>
         <title>AI, Email, Marketing - Zion, Tech, Group | Intelligent, Email, Automation
         <me, t, a;"
   na, m, e="descripti, o, n""
-          content="Transform, your, email marketing, with, AI-powered, personalizatio, n, automati, o, n, and, analytic, s. 3, 0, 0% increase, in, open rat, e, s, 85% improvement, in, CTR, and, 25, 0% ROI, improvemen, t." /><meta name="keywor, d, s" content="AI, email, marketing, email, automatio, n, personalized, email, s, email, analytic, s, marketing, automatio, n, email, campaign, s, AI, content, generation" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-ema, i, l-marketi, n, g/>""
+          content="Transform, your, email marketing, with, AI-powered, personalizatio, n, automati, o, n, and, analytic, s. 3, 0, 0% increase, in, open rat, e, s, 85% improvement, in, CTR, and, 25, 0% ROI, improvemen, t." /><meta name="keywor, d, s" content="AI, email, marketing, email, automatio, n, personalized, email, s, email, analytic, s, marketing, automatio, n, email, campaign, s, AI, content, generation" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/ai-ema, i, l-marketi, n, g/>""
           content="Transform, your, email marketing, with, AI-powered, personalizatio, n, automati, o, n, and, analytic, s. 3, 0, 0% increase, in, open rat, e, s, 85% improvement, in, CTR, and, 25, 0% ROI, improvemen, t."
          />"
         <meta name="keywor, d, s" content="AI, email, marketing, email, automatio, n, personalized, email, s, email, analytic, s, marketing, automatio, n, email, campaign, s, AI, content, generation" />";"
@@ -347,7 +317,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         {/* Hero, Sectio, n */}
         <section, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-white, p, y-20">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
-  g:px-8">",
+  g: px-8">",
             <div, className="te, x, t-cent, e, r">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8">"
@@ -379,7 +349,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         {/* Hero, Sectio, n */}"
         <section, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-white, p, y-20"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
-  g:px-8">""
+  g: px-8">""
             <div, className="te, x, t-cent, e, r"></div>"
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">""
                 AI, Emai, l <span, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-400, t, o-te, a, l-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Marketi, n, g
@@ -414,7 +384,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 <a></a>"
   hr, e, f="#prici, n, g""
                   classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e,"
-  r:te, x, t-emera, l, d-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
+  r: te, x, t-emera, l, d-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
                 >
                   View, Pricin, g;"
                   <Link, className="w-5 h-5, m, l-2  /></Link>"
@@ -422,7 +392,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         {/* Key, Benefit, s */}
         <section, className="py-16, b, g-gr, a, y-50">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
-  g:px-8">",
+  g: px-8">",
             <div, className="text-center mb-12">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-16, b, g-gr, a, y-50">"
@@ -440,7 +410,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         {/* Key, Benefit, s */}"
         <section, className="py-16, b, g-gr, a, y-50"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
-  g:px-8">""
+  g: px-8">""
             <div, className="text-center mb-12"></div>"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
         <section, className="py-16, b, g-gr, a, y-50">";"
@@ -455,7 +425,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">"
               <div, className="te, x, t-cent, e, r">
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-4">
-                  <Target, className="w-8 h-8, tex, t-emera, l, d-6, 0, 0  />
+                  <Target , className="w-8 h-8, tex, t-emera, l, d-6, 0, 0  /></Target>
             <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">"
               <div, className="te, x, t-cent, e, r">"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-4">"
@@ -472,7 +442,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 <p, className="te, x, t-gr, a, y-6, 0, 0">AI-optimized, content, and timi, n, g</p>"
               <div, className="te, x, t-cent, e, r">
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">
-                  <BarChart3, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />
+                  <BarChart3 , className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  /></BarChart3>
               <div, className="te, x, t-cent, e, r">"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">"
               </d, i, v>"
@@ -486,7 +456,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Predictive, analytics, and optimizati, o, n</p>"
               <div, className="te, x, t-cent, e, r">
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-4">
-                  <Zap, className="w-8 h-8, tex, t-te, a, l-6, 0, 0  />
+                  <Zap , className="w-8 h-8, tex, t-te, a, l-6, 0, 0  /></Zap>
               <div, className="te, x, t-cent, e, r">"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-4">"
               </d, i, v>"
@@ -500,7 +470,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Intelligent, automation, workflows</p>"
               <div, className="te, x, t-cent, e, r">
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">
-                  <Shield, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0  />
+                  <Shield , className="w-8 h-8, tex, t-bl, u, e-6, 0, 0  /></Shield>
               <div, className="te, x, t-cent, e, r">"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">"
               </d, i, v>"
@@ -515,7 +485,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         {/* Use, Case, s */}
         <section, className="py-20">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
-  g:px-8">",
+  g: px-8">",
             <div, className="te, x, t-center, m, b-16">)
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">)
         <section, className="py-20">";)
@@ -531,7 +501,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         {/* Use, Case, s */}"
         <section, className="py-20"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
-  g:px-8">""
+  g: px-8">""
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
         <section, className="py-20">";"
@@ -542,14 +512,14 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">"
                 AI, email, marketing solutions, tailored, for different, industries, and business, model, s.
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />
-  g:gr, i, d-co, l, s-4, ga, p-8">"
+  g: gr, i, d-co, l, s-4, ga, p-8">"
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
                 const, Ico, n = useCa, s, e.ic, o, n
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-6">
                       <Icon, className="w-8 h-8, tex, t-emera, l, d-6, 0, 0  />)
             <, className="grid, m, d: gr, i, d-co, l, s-2 l;)$2 />
-  g:gr, i, d-co, l, s-4, ga, p-8">";)
+  g: gr, i, d-co, l, s-4, ga, p-8">";)
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
                 const, Ico, n = useCa, s, e.ic, o, n
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
@@ -557,9 +527,9 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 return (
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-6">
-                      <Icon, className="w-8 h-8, tex, t-emera, l, d-6, 0, 0  />
+                      <Icon , className="w-8 h-8, tex, t-emera, l, d-6, 0, 0  /></Icon>
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />
-  g:gr, i, d-co, l, s-4, ga, p-8"></div>"
+  g: gr, i, d-co, l, s-4, ga, p-8"></div>"
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
                 const, Ico, n = useCa, s, e.ic, o, n
                 return (
@@ -571,18 +541,18 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     <ul, className="spa, c, e-y-2">";)
                       {useCa, s, e.benefi, t, s.m, a, p((benef, i, t, benefitInd, e, x) => (
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
-                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  />
+                          <CheckCircle , className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  /></CheckCircle>
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">"
                           <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0" />"</$1>"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />
-  g:gr, i, d-co, l, s-4, ga, p-8">"
+  g: gr, i, d-co, l, s-4, ga, p-8">"
               {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">""
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-6"></div>"
                       <Icon, className="w-8 h-8, tex, t-emera, l, d-6, 0, 0  /></Icon>"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />
-  g:gr, i, d-co, l, s-4, ga, p-8">"
+  g: gr, i, d-co, l, s-4, ga, p-8">"
               {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-6">";"
@@ -603,7 +573,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         {/* Capabiliti, e, s */}
         <section, className="py-20, b, g-gr, a, y-50">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
-  g:px-8">",
+  g: px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20, b, g-gr, a, y-50">"
@@ -619,7 +589,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         {/* Capabiliti, e, s */}"
         <section, className="py-20, b, g-gr, a, y-50"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
-  g:px-8">""
+  g: px-8">""
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
         <section, className="py-20, b, g-gr, a, y-50">";"
@@ -630,19 +600,19 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">"
                 Advanced, artificial, intelligence features, that, make your, email, marketing more, effectiv, e.
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />
-  g:gr, i, d-co, l, s-3, ga, p-8">"
+  g: gr, i, d-co, l, s-3, ga, p-8">"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />
-  g:gr, i, d-co, l, s-3, ga, p-8">"
+  g: gr, i, d-co, l, s-3, ga, p-8">"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />
-  g:gr, i, d-co, l, s-3, ga, p-8">"
+  g: gr, i, d-co, l, s-3, ga, p-8">"
               {capabiliti, e, s.m, a, p((capabili, t, y, ind, e, x) => (
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">"
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{capabili, t, y.tit, l, e}</h3>"</$1>"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />
-  g:gr, i, d-co, l, s-3, ga, p-8">""
+  g: gr, i, d-co, l, s-3, ga, p-8">""
             <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />
-  g:gr, i, d-co, l, s-3, ga, p-8">"
+  g: gr, i, d-co, l, s-3, ga, p-8">"
               {/* TODO: Fix JSX expression */}"
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";"
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{capabili, t, y.tit, l, e}</h3>";"
@@ -651,7 +621,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         {/* Featur, e, s */}
         <section, className="py-20">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
-  g:px-8">",
+  g: px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20">"
@@ -669,7 +639,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         {/* Featur, e, s */}"
         <section, className="py-20"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
-  g:px-8">""
+  g: px-8">""
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
         <section, className="py-20">";"
@@ -681,7 +651,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">"
                 Everything, you, need to, creat, e, se, n, d, and, optimize, high-performing, email, campaigns.
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />
-  g:gr, i, d-co, l, s-3, ga, p-8">"
+  g: gr, i, d-co, l, s-3, ga, p-8">"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
@@ -689,21 +659,21 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 return (
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-emera, l, d-100, rounde, d-lg, m, b-4">
-                      <Icon, className="w-6 h-6, tex, t-emera, l, d-6, 0, 0  />
+                      <Icon , className="w-6 h-6, tex, t-emera, l, d-6, 0, 0  /></Icon>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
                       <CheckCircle, className="w-4 h-4, m, r-1  />)
             <, className="grid, m, d: gr, i, d-co, l, s-2 l;)$2 />
-  g:gr, i, d-co, l, s-3, ga, p-8">";)
+  g: gr, i, d-co, l, s-3, ga, p-8">";)
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-emera, l, d-100, rounde, d-lg, m, b-4">"
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
-                      <CheckCircle, className="w-4 h-4, m, r-1  />
+                      <CheckCircle , className="w-4 h-4, m, r-1  /></CheckCircle>
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />
-  g:gr, i, d-co, l, s-3, ga, p-8"></div>"
+  g: gr, i, d-co, l, s-3, ga, p-8"></div>"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n
                 return (
@@ -715,18 +685,18 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">"
             </d, i, v>"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />
-  g:gr, i, d-co, l, s-3, ga, p-8">"
+  g: gr, i, d-co, l, s-3, ga, p-8">"
               {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">""
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-emera, l, d-100, rounde, d-lg, m, b-4"></div>"
-                      <Icon, className="w-6 h-6, tex, t-emera, l, d-6, 0, 0  />
+                      <Icon , className="w-6 h-6, tex, t-emera, l, d-6, 0, 0  /></Icon>
                     </d, i, v>"
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>"
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>"
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>"
                       <CheckCircle, className="w-4 h-4, m, r-1  /></CheckCircle>"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />
-  g:gr, i, d-co, l, s-3, ga, p-8">"
+  g: gr, i, d-co, l, s-3, ga, p-8">"
               {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-emera, l, d-100, rounde, d-lg, m, b-4">";"
@@ -743,7 +713,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         {/* Prici, n, g */}
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
-  g:px-8">",
+  g: px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">"
@@ -759,7 +729,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         {/* Prici, n, g */}"
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
-  g:px-8">""
+  g: px-8">""
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";"
@@ -816,7 +786,7 @@ pl, a, n.popul, a, r
 ? 'bg-emera, l, d-600, tex, t-white, hov, e
   r: bg-emera, l, d-7, 0, 0','
   }
-: 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
+: 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r: bg-gr, a, y-2, 0, 0'}
                   <a></a>"
   hr, e, f="/conta, c, t"
                     classNa, m, e={/* TODO: Fix JSX expression */}`
@@ -841,7 +811,7 @@ pl, a, n.popul, a, r
         {/* Testimonia, l, s */}
         <section, className="py-20">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
-  g:px-8">",
+  g: px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20">"
@@ -857,7 +827,7 @@ pl, a, n.popul, a, r
         {/* Testimonia, l, s */}"
         <section, className="py-20"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
-  g:px-8">""
+  g: px-8">""
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
         <section, className="py-20">";"
@@ -876,7 +846,7 @@ pl, a, n.popul, a, r
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">"
                   <div, className="flex, item, s-center, m, b-4">"
                     {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (
-                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
+                      <Star , ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  /></Star>
             </d, i, v>"
             <, className="gri, d, m,"$2 />
   d: gr, i, d-co, l, s-3, ga, p-8">""
@@ -899,20 +869,20 @@ pl, a, n.popul, a, r
         {/* CTA, Sectio, n */}
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-whi, t, e">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
-  g:px-8, tex, t-cent, e, r">"
+  g: px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-whi, t, e">"
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8, tex, t-cent, e, r">"
         {/* CTA, Sectio, n */}"
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-whi, t, e"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
-  g:px-8, tex, t-cent, e, r">""
+  g: px-8, tex, t-cent, e, r">""
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6"></h2>"
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-whi, t, e">";"
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">";"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8, tex, t-cent, e, r">";"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">"
               Ready, to, Transform Your, Email, Marketing?
             </h2>"
@@ -945,7 +915,7 @@ pl, a, n.popul, a, r
               <a></a>"
   hr, e, f="/ca, s, e-studi, e, s""
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e,"
-  r:te, x, t-emera, l, d-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
+  r: te, x, t-emera, l, d-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >
                 View, Success, Stories;"
                 <Link, className="w-5 h-5, m, l-2  /></Link>"

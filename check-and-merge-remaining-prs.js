@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { execSync } from 'child_process'
+import { execSync  } from 'child_process'
 console.log('🔍 Checking for remaining PRs to merge...')
 try {
   // Get all remote branches
@@ -50,5 +50,5 @@ try {
   execSync('git push origin main', { stdio: 'inherit' })
   console.log('🎉 All available PRs have been processed!')
 } catch (error) {
-  console.error('❌ Error processing PRs:', error.message)
+  console.error('❌ Error processing PRs: ', error.message)
 }

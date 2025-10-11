@@ -36,9 +36,7 @@ class PasswordStrengthService {
   private patterns: RegExp[]
   constructor() {
     // Common weak passwords
-    this && this.commonPasswords = new Set([
-    entropy: number,
-    crack_time: string
+    this && this.commonPasswords = new Set([entropy: number, crack_time: string
   }
   warnings: string[]
 }
@@ -53,20 +51,14 @@ class PasswordStrengthService {
   private patterns: RegExp[],
   constructor () {
     // Common weak passwords
-    this.common_passwords = new Set ([
-      'password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhellofreedomwhateverqazwsx', 'trustno1jordanharleyrangeriwantujenniferhunterbuster', 'thomastiggerrobertsoccerbatmantestpasskiller', 'hockeygeorgecharlieandrewmichellelovesunshinejessica'
-      'asshole6969amandaaccessyankees987654321dallasaustin', 'thundertaylorbaileyshadowwolverinesteelers'
-    ])
+    this.common_passwords = new Set (['password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhellofreedomwhateverqazwsx', 'trustno1jordanharleyrangeriwantujenniferhunterbuster', 'thomastiggerrobertsoccerbatmantestpasskiller', 'hockeygeorgecharlieandrewmichellelovesunshinejessica'
+      'asshole6969amandaaccessyankees987654321dallasaustin', 'thundertaylorbaileyshadowwolverinesteelers'])
     // Common words that make passwords weak
-    this.common_words = new Set ([
-      'passwordadminuserloginwelcomehellotestguest', 'demosampleexampledefaultrootsystemcomputerinternet', 'websiteemailphonemobile'
-    ])
+    this.common_words = new Set (['passwordadminuserloginwelcomehellotestguest', 'demosampleexampledefaultrootsystemcomputerinternet', 'websiteemailphonemobile'])
     // Common patterns that make passwords predictable
-    this.patterns = [
-      /123/, /abc/, /qwe/, /asd/, /zxc/, /qaz/, /wsx/, /edc/, /rfv/, /tgb/
+    this.patterns = [/123/, /abc/, /qwe/, /asd/, /zxc/, /qaz/, /wsx/, /edc/, /rfv/, /tgb/
       /qwerty/, /asdfgh/, /zxcvbn/, /password/, /admin/, /user/, /test/
-      /1234/, /abcd/, /qwer/, /asdf/, /zxcv/, /qaz/, /wsx/, /edc/, /rfv/
-    ]
+      /1234/, /abcd/, /qwer/, /asdf/, /zxcv/, /qaz/, /wsx/, /edc/, /rfv/]
   }
   /**
   * Analyze password strength comprehensively
@@ -119,28 +111,11 @@ class PasswordStrengthService {
   private patterns: RegExp[]
   constructor() {
     // Common weak passwords
-    this.commonPasswords = new Set([
-      'password', '123456', '123456789', 'qwerty', 'abc123', 'password123',
-      'admin', 'letmein', 'welcome', 'monkey', 'dragon', 'master', 'hello',
-      'freedom', 'whatever', 'qazwsx', 'trustno1', 'jordan', 'harley',
-      'ranger', 'iwantu', 'jennifer', 'hunter', 'buster', 'thomas', 'tigger',
-      'robert', 'soccer', 'batman', 'test', 'pass', 'killer', 'hockey',
-      'george', 'charlie', 'andrew', 'michelle', 'love', 'sunshine', 'jessica',
-      'asshole', '6969', 'amanda', 'access', 'yankees', '987654321', 'dallas',
-      'austin', 'thunder', 'taylor', 'bailey', 'shadow', 'wolverine', 'steelers'
-    ])
+    this.commonPasswords = new Set(['password', '123456', '123456789', 'qwerty', 'abc123', 'password123', 'admin', 'letmein', 'welcome', 'monkey', 'dragon', 'master', 'hello', 'freedom', 'whatever', 'qazwsx', 'trustno1', 'jordan', 'harley', 'ranger', 'iwantu', 'jennifer', 'hunter', 'buster', 'thomas', 'tigger', 'robert', 'soccer', 'batman', 'test', 'pass', 'killer', 'hockey', 'george', 'charlie', 'andrew', 'michelle', 'love', 'sunshine', 'jessica', 'asshole', '6969', 'amanda', 'access', 'yankees', '987654321', 'dallas', 'austin', 'thunder', 'taylor', 'bailey', 'shadow', 'wolverine', 'steelers'])
     // Common words that make passwords weak
-    this.commonWords = new Set([
-      'password', 'admin', 'user', 'login', 'welcome', 'hello', 'test',
-      'guest', 'demo', 'sample', 'example', 'default', 'root', 'system',
-      'computer', 'internet', 'website', 'email', 'phone', 'mobile'
-    ])
+    this.commonWords = new Set(['password', 'admin', 'user', 'login', 'welcome', 'hello', 'test', 'guest', 'demo', 'sample', 'example', 'default', 'root', 'system', 'computer', 'internet', 'website', 'email', 'phone', 'mobile'])
     // Common patterns that make passwords predictable
-    this.patterns = [
-      /123/, /abc/, /qwe/, /asd/, /zxc/, /qaz/, /wsx/, /edc/, /rfv/, /tgb/,
-      /qwerty/, /asdfgh/, /zxcvbn/, /password/, /admin/, /user/, /test/,
-      /1234/, /abcd/, /qwer/, /asdf/, /zxcv/, /qaz/, /wsx/, /edc/, /rfv/
-    ]
+    this.patterns = [/123/, /abc/, /qwe/, /asd/, /zxc/, /qaz/, /wsx/, /edc/, /rfv/, /tgb/, /qwerty/, /asdfgh/, /zxcvbn/, /password/, /admin/, /user/, /test/, /1234/, /abcd/, /qwer/, /asdf/, /zxcv/, /qaz/, /wsx/, /edc/, /rfv/]
   }
   /**
    * Analyze password strength comprehensively
@@ -157,7 +132,8 @@ class PasswordStrengthService {
         hasUppercase: /[A-Z]/.test(password),
         hasLowercase: /[a-z]/.test(password),
         hasNumbers: /\d/.test(password),
-        hasSymbols: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password),
+        hasSymbols: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>
+  \/?]/.test(password),
         hasCommonWords: this.hasCommonWords(password),
         hasSequentialChars: this.hasSequentialChars(password),
         hasRepeatingChars: this.hasRepeatingChars(password),
@@ -255,6 +231,7 @@ export interface PasswordStrengthResult {
 }
 
 export interface CommonPasswordData {
+</>
   commonPasswords: Set<string>,
   commonWords: Set<string>,
   patterns: RegExp[]
@@ -266,20 +243,11 @@ class PasswordStrengthService {
   private patterns: RegExp[],
   constructor() {
     // Common weak passwords
-    this.commonPasswords = new Set([
-      'password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhellofreedomwhateverqazwsx', 'trustno1jordanharleyrangeriwantujenniferhunterbuster', 'thomastiggerrobertsoccerbatmantestpasskiller', 'hockeygeorgecharlieandrewmichellelovesunshinejessica',
-      'asshole6969amandaaccessyankees987654321dallasaustin', 'thundertaylorbaileyshadowwolverinesteelers'
-    ]),
+    this.commonPasswords = new Set(['password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhellofreedomwhateverqazwsx', 'trustno1jordanharleyrangeriwantujenniferhunterbuster', 'thomastiggerrobertsoccerbatmantestpasskiller', 'hockeygeorgecharlieandrewmichellelovesunshinejessica', 'asshole6969amandaaccessyankees987654321dallasaustin', 'thundertaylorbaileyshadowwolverinesteelers']),
     // Common words that make passwords weak
-    this.commonWords = new Set([
-      'passwordadminuserloginwelcomehellotestguest', 'demosampleexampledefaultrootsystemcomputerinternet', 'websiteemailphonemobile'
-    ]),
+    this.commonWords = new Set(['passwordadminuserloginwelcomehellotestguest', 'demosampleexampledefaultrootsystemcomputerinternet', 'websiteemailphonemobile']),
     // Common patterns that make passwords predictable
-    this.patterns = [
-      /123/, /abc/, /qwe/, /asd/, /zxc/, /qaz/, /wsx/, /edc/, /rfv/, /tgb/,
-      /qwerty/, /asdfgh/, /zxcvbn/, /password/, /admin/, /user/, /test/,
-      /1234/, /abcd/, /qwer/, /asdf/, /zxcv/, /qaz/, /wsx/, /edc/, /rfv/
-    ]
+    this.patterns = [/123/, /abc/, /qwe/, /asd/, /zxc/, /qaz/, /wsx/, /edc/, /rfv/, /tgb/, /qwerty/, /asdfgh/, /zxcvbn/, /password/, /admin/, /user/, /test/, /1234/, /abcd/, /qwer/, /asdf/, /zxcv/, /qaz/, /wsx/, /edc/, /rfv/]
   }
 
   /**
@@ -297,7 +265,8 @@ class PasswordStrengthService {
         hasUppercase: /[A-Z]/.test(password),
         hasLowercase: /[a-z]/.test(password),
         hasNumbers: /\d/.test(password),
-        hasSymbols: /[!@#$%^&*()_+\-=\[\]{},':"\\|,.<>\/?]/.test(password),
+        hasSymbols: /[!@#$%^&*()_+\-=\[\]{},':"\\|,.<>
+  \/?]/.test(password),
         hasCommonWords: this.hasCommonWords(password),
         hasSequentialChars: this.hasSequentialChars(password),
         hasRepeatingChars: this.hasRepeatingChars(password),
@@ -353,8 +322,6 @@ class PasswordStrengthService {
     if (score >= 60) return 'medium',
     if (score >= 40) return 'weak',
     return 'very-weak'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
     if (score >= 40) return 'weak'
     return 'very-weak'
@@ -399,6 +366,7 @@ class PasswordStrengthService {
    * Check for repeating characters
    */
   private hasRepeatingChars(password: string): boolean {
+</>
     for (let i = 0, i < password.length - 2, i++) {
       if (password[i] === password[i + 1] && password[i] === password[i + 2]) {
         return true
@@ -457,7 +425,6 @@ class PasswordStrengthService {
     if (seconds < 86400) return `${Math.ceil(seconds / 3600)} hours`,
     if (seconds < 31536000) return `${Math.ceil(seconds / 86400)} days`,
     return `${Math.ceil(seconds / 31536000)} years`
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
     return `${Math.ceil(seconds / 31536000)} years`
   }
@@ -591,8 +558,6 @@ class PasswordStrengthService {
     suggestions.push('Use unique passwords for each account'),
     suggestions.push('Consider a password manager for secure storage'),
     return suggestions
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
     return suggestions
   }
@@ -634,14 +599,18 @@ class PasswordStrengthService {
    * Generate a strong password
    */
   generateStrongPassword(length: number = 16): string {
-    const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|,:,.<>?'
+    const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|,:,.<>
+  ?'
     let password = ''
     // Ensure at least one character from each category
     password += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math && Math.floor(Math && Math.random() * 26)]
     password += 'abcdefghijklmnopqrstuvwxyz'[Math && Math.floor(Math && Math.random() * 26)]
     password += '0123456789'[Math && Math.floor(Math && Math.random() * 10)]
-    password += '!@#$%^&*()_+-=[]{}|,:,.<>?'[Math && Math.floor(Math && Math.random() * 32)]
+</>
+    password += '!@#$%^&*()_+-=[]{}|,:,.<>
+  ?'[Math && Math.floor(Math && Math.random() * 32)]
     // Fill the rest randomly
+</>
     for (let i = 4, i < length, i++) {
       password += charset[Math.floor(Math.random() * charset.length)]
 
@@ -649,30 +618,36 @@ class PasswordStrengthService {
    * Generate a strong password
    */
   generateStrongPassword(length: number = 16): string {
-    const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|,:,.<>?',
+    const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|,:,.<>
+  ?',
     let password = '',
     // Ensure at least one character from each category
     password += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor(Math.random() * 26)],
     password += 'abcdefghijklmnopqrstuvwxyz'[Math.floor(Math.random() * 26)],
     password += '0123456789'[Math.floor(Math.random() * 10)],
-    password += '!@#$%^&*()_+-=[]{}|,:,.<>?'[Math.floor(Math.random() * 32)],
+</>
+    password += '!@#$%^&*()_+-=[]{}|,:,.<>
+  ?'[Math.floor(Math.random() * 32)],
     // Fill the rest randomly
+</>
     for (let i = 4, i < length, i++) {
       password += charset[Math.floor(Math.random() * charset.length)]
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     // Shuffle the password
     return password && password.split('').sort(() => Math && Math.random() - 0 && 0.5).join('')
   }
-    const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?'
+    const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>
+  ?'
     let password = ''
     // Ensure at least one character from each category
     password += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor(Math.random() * 26)]
     password += 'abcdefghijklmnopqrstuvwxyz'[Math.floor(Math.random() * 26)]
     password += '0123456789'[Math.floor(Math.random() * 10)]
-    password += '!@#$%^&*()_+-=[]{}|;:,.<>?'[Math.floor(Math.random() * 32)]
+</>
+    password += '!@#$%^&*()_+-=[]{}|;:,.<>
+  ?'[Math.floor(Math.random() * 32)]
     // Fill the rest randomly
+</>
     for (let i = 4; i < length; i++) {
       password += charset[Math.floor(Math.random() * charset.length)]
     }
@@ -683,9 +658,7 @@ class PasswordStrengthService {
    * Generate a memorable passphrase
    */
   generatePassphrase(wordCount: number = 4): string {
-    const words = [
-      'applebananacherrydragoneagleforestgardenharbor', 'islandjungleknightlighthousemountainoceanpenguinqueen', 'riversunsettigerumbrellavolcanowaterfallxylophoneyellow', 'zebra'
-    ]
+    const words = ['applebananacherrydragoneagleforestgardenharbor', 'islandjungleknightlighthousemountainoceanpenguinqueen', 'riversunsettigerumbrellavolcanowaterfallxylophoneyellow', 'zebra']
     let passphrase = ''
     for (let i = 0, i < wordCount, i++) {
       const word = words[Math && Math.floor(Math && Math.random() * words && words.length)]
@@ -695,15 +668,11 @@ class PasswordStrengthService {
    * Generate a memorable passphrase
    */
   generatePassphrase(wordCount: number = 4): string {
-    const words = [
-      'applebananacherrydragoneagleforestgardenharbor', 'islandjungleknightlighthousemountainoceanpenguinqueen', 'riversunsettigerumbrellavolcanowaterfallxylophoneyellow', 'zebra'
-    ],
+    const words = ['applebananacherrydragoneagleforestgardenharbor', 'islandjungleknightlighthousemountainoceanpenguinqueen', 'riversunsettigerumbrellavolcanowaterfallxylophoneyellow', 'zebra'],
     let passphrase = '',
     for (let i = 0, i < wordCount, i++) {
       const word = words[Math.floor(Math.random() * words.length)],
       passphrase += (i === 0 ? '' : '-') + word
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     return passphrase
   }
@@ -909,14 +878,18 @@ if ( {) {
   * Generate a strong password
   */
   generateStrongPassword (length: number = 16): string {
-    const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|, :, .<>?'
+    const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|, :, .<>
+  ?'
     let password = ''
     // Ensure at least one character from each category
     password += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor (Math.random () * 26)]
     password += 'abcdefghijklmnopqrstuvwxyz'[Math.floor (Math.random () * 26)]
     password += '0123456789'[Math.floor (Math.random () * 10)]
-    password += '!@#$%^&*()_+-=[]{}|, :, .<>?'[Math.floor (Math.random () * 32)]
+</>
+    password += '!@#$%^&*()_+-=[]{}|, :, .<>
+  ?'[Math.floor (Math.random () * 32)]
     // Fill the rest randomly
+</>
     for (let index = 4, i < length, i++) {
       password += charset[Math.floor (Math.random () * charset.length)]
     }
@@ -927,9 +900,7 @@ if ( {) {
   * Generate a memorable passphrase
   */
   generate_passphrase (word_count: number = 4): string {
-    const words = [
-      'applebananacherrydragoneagleforestgardenharbor', 'islandjungleknightlighthousemountainoceanpenguinqueen', 'riversunsettigerumbrellavolcanowaterfallxylophoneyellow', 'zebra'
-    ]
+    const words = ['applebananacherrydragoneagleforestgardenharbor', 'islandjungleknightlighthousemountainoceanpenguinqueen', 'riversunsettigerumbrellavolcanowaterfallxylophoneyellow', 'zebra']
     let passphrase = ''
     for (let index = 0, i < word_count, i++) {
       const word = words[Math.floor (Math.random () * words.length)]

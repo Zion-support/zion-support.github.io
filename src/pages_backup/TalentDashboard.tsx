@@ -1,10 +1,9 @@
-import { useState, useEffect } from 'react'
-import { Button } from '@/components/ui/button'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { useState, useEffect  } from 'react'
+import { Button  } from '@/components/ui/button'
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs'
 import Link from 'next/link'
-import { SEO } from '@/components/SEO'
-import {
-  BriefcaseIcon,
+import { SEO  } from '@/components/SEO'
+import { BriefcaseIcon,
   UserIcon,
   MessageSquare,
   Star,
@@ -12,25 +11,24 @@ import {
   FileText,
   Inbox,
   Video,
-} from 'lucide-react'
-import { ProtectedRoute } from '@/components/ProtectedRoute'
-import { SuggestedJobs } from '@/components/jobs/SuggestedJobs'
-import { useAuth } from '@/hooks/useAuth'
-import {
-  Card,
+ } from 'lucide-react'
+import { ProtectedRoute  } from '@/components/ProtectedRoute'
+import { SuggestedJobs  } from '@/components/jobs/SuggestedJobs'
+import { useAuth  } from '@/hooks/useAuth'
+import { Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card'
-import { Avatar } from '@/components/ui/avatar'
-import { Badge } from '@/components/ui/badge'
-import { TalentOnboardingSteps } from '@/components/onboarding/TalentOnboardingSteps'
-import { AdvancedOnboardingSteps } from '@/components/onboarding/AdvancedOnboardingSteps'
-import { useOnboardingStatus } from '@/hooks/useOnboardingStatus'
-import { MyApplications } from '@/components/jobs/MyApplications'
-import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner'
-import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard'
+ } from '@/components/ui/card'
+import { Avatar  } from '@/components/ui/avatar'
+import { Badge  } from '@/components/ui/badge'
+import { TalentOnboardingSteps  } from '@/components/onboarding/TalentOnboardingSteps'
+import { AdvancedOnboardingSteps  } from '@/components/onboarding/AdvancedOnboardingSteps'
+import { useOnboardingStatus  } from '@/hooks/useOnboardingStatus'
+import { MyApplications  } from '@/components/jobs/MyApplications'
+import { ProjectOfferBanner  } from '@/components/projects/ProjectOfferBanner'
+import { UpcomingInterviewsCard  } from '@/components/interviews/UpcomingInterviewsCard'
 function TalentDashboardContent() {
   const { user } = useAuth()
   const [activeTab, setActiveTab] = useState('job-matches')
@@ -40,13 +38,12 @@ function TalentDashboardContent() {
     onboardingStatus && onboardingStatus.skillsAdded &&
     onboardingStatus && onboardingStatus.availabilitySet &&
     onboardingStatus && onboardingStatus.matchReceived
-import { useState, useEffect } from 'react'
-import { Button } from '@/components/ui/button'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { useState, useEffect  } from 'react'
+import { Button  } from '@/components/ui/button'
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs'
 import Link from 'next/link'
-import { SEO } from '@/components/SEO'
-import {
-  BriefcaseIcon
+import { SEO  } from '@/components/SEO'
+import { BriefcaseIcon
   UserIcon
   MessageSquare
   Star
@@ -54,24 +51,24 @@ import {
   FileText
   Inbox
   Video
-} from 'lucide-react'
-import { ProtectedRoute } from '@/components/ProtectedRoute'
-import { SuggestedJobs } from '@/components/jobs/SuggestedJobs'
-import { useAuth } from '@/hooks/useAuth'
+ } from 'lucide-react'
+import { ProtectedRoute  } from '@/components/ProtectedRoute'
+import { SuggestedJobs  } from '@/components/jobs/SuggestedJobs'
+import { useAuth  } from '@/hooks/useAuth'
   Card
   CardContent
   CardDescription
   CardHeader
   CardTitle
 } from '@/components/ui/card'
-import { Avatar } from '@/components/ui/avatar'
-import { Badge } from '@/components/ui/badge'
-import { TalentOnboardingSteps } from '@/components/onboarding/TalentOnboardingSteps'
-import { AdvancedOnboardingSteps } from '@/components/onboarding/AdvancedOnboardingSteps'
-import { useOnboardingStatus } from '@/hooks/useOnboardingStatus'
-import { MyApplications } from '@/components/jobs/MyApplications'
-import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner'
-import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard'
+import { Avatar  } from '@/components/ui/avatar'
+import { Badge  } from '@/components/ui/badge'
+import { TalentOnboardingSteps  } from '@/components/onboarding/TalentOnboardingSteps'
+import { AdvancedOnboardingSteps  } from '@/components/onboarding/AdvancedOnboardingSteps'
+import { useOnboardingStatus  } from '@/hooks/useOnboardingStatus'
+import { MyApplications  } from '@/components/jobs/MyApplications'
+import { ProjectOfferBanner  } from '@/components/projects/ProjectOfferBanner'
+import { UpcomingInterviewsCard  } from '@/components/interviews/UpcomingInterviewsCard'
 
 
 
@@ -79,24 +76,24 @@ import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingIntervie
   const { user } = useAuth()
   const [activeTab, setActiveTab] = useState("job-matches")
   const onboardingStatus = null
-import { useState, useEffect } from "react",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { useState, useEffect  } from 'react',
+import { Button  } from '@/components/ui/button',
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs',
 import Link from "next/link",
-import { SEO } from "@/components/SEO",
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video } from 'lucide-react'
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { SuggestedJobs } from "@/components/jobs/SuggestedJobs",
-import { useAuth } from "@/hooks/useAuth",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Avatar } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps",
-import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps",
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
-import { MyApplications } from "@/components/jobs/MyApplications",
-import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner",
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
+import { SEO  } from '@/components/SEO',
+import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video  } from 'lucide-react'
+import { ProtectedRoute  } from '@/components/ProtectedRoute',
+import { SuggestedJobs  } from '@/components/jobs/SuggestedJobs',
+import { useAuth  } from '@/hooks/useAuth',
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card',
+import { Avatar  } from '@/components/ui/avatar',
+import { Badge  } from '@/components/ui/badge',
+import { TalentOnboardingSteps  } from '@/components/onboarding/TalentOnboardingSteps',
+import { AdvancedOnboardingSteps  } from '@/components/onboarding/AdvancedOnboardingSteps',
+import { useOnboardingStatus  } from '@/hooks/useOnboardingStatus',
+import { MyApplications  } from '@/components/jobs/MyApplications',
+import { ProjectOfferBanner  } from '@/components/projects/ProjectOfferBanner',
+import { UpcomingInterviewsCard  } from '@/components/interviews/UpcomingInterviewsCard',
 function TalentDashboardContent() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("job-matches"),
@@ -114,43 +111,42 @@ function TalentDashboardContent() {
 
   return (
     <>
-      <SEO 
-        title="Talent Dashboard | Zion AI Marketplace" 
+      <SEO title="Talent Dashboard | Zion AI Marketplace" 
         description="Your personalized talent dashboard with job matches and professional opportunities." 
-      />
+      /></SEO>
       <main className="container mx-auto px-4 py-8">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+        <div className="flex flex-col md: flex-row justify-between items-start md:items-center gap-4 mb-8">
           <div>
             <h1 className="text-3xl font-bold">Talent Dashboard</h1>
             <p className="text-muted-foreground mt-1">Find opportunities matched to your skills and experience</p>
           </div>
           <div className="flex gap-4">
-            <Button variant="outline" asChild>
-              <Link href="/settings/account">
-                <UserIcon className="h-4 w-4 mr-2" />
+            <Button variant="outline" asChild></Button>
+              <Link href="/settings/account"></Link>
+                <UserIcon className="h-4 w-4 mr-2" /></UserIcon>
                 Profile Settings
               </Link>
             </Button>
-            <Button asChild>
-              <Link href="/dashboard/talent/applications">
+            <Button asChild></Button>
+              <Link href="/dashboard/talent/applications"></Link>
                 <Inbox className="h-4 w-4 mr-2" /> Application Tracker
               </Link>
             </Button>
           </div>
         </div>
         {/* Project Offer Banner - Show pending offers */}
-        <ProjectOfferBanner />
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+        <ProjectOfferBanner /></ProjectOfferBanner>
+        <div className='grid grid-cols-1 lg: grid-cols-3 gap-8'>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
 
           <div>
-            <Card className="mb-8">
-              <CardHeader className="pb-2">
+            <Card className="mb-8"></Card>
+              <CardHeader className="pb-2"></CardHeader>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <Avatar className="h-12 w-12 border">
+                    <Avatar className="h-12 w-12 border"></Avatar>
                       {user?.avatarUrl ? (
                         <img
                           src={user.avatarUrl}
@@ -170,7 +166,7 @@ function TalentDashboardContent() {
                     </Avatar>
                     <div>
                       <CardTitle>{user?.displayName |'User'}</CardTitle>
-                      <CardDescription>
+                      <CardDescription ></CardDescription>
                         {user?.headline |'AI Professional'}
                       </CardDescription>
                       <CardTitle>{user?.displayName || "User"}</CardTitle>
@@ -180,11 +176,11 @@ function TalentDashboardContent() {
                   <Badge className="bg-green-100 text-green-800">Online</Badge>
                 </div>
               </CardHeader>
-              <CardContent>
+              <CardContent ></CardContent>
                 <div className="grid grid-cols-2 gap-4 mt-4">
                   <div className="flex flex-col items-center p-3 bg-muted/30 rounded-md">
                     <div className="flex items-center gap-1 text-lg font-bold">
-                      <Star className="h-4 w-4 text-yellow-500" />
+                      <Star className="h-4 w-4 text-yellow-500" /></Star>
                       4.9
                     </div>
                     <span className="text-xs text-muted-foreground">Rating</span>
@@ -195,17 +191,13 @@ function TalentDashboardContent() {
                   </div>
                 </div>
                 <div className='mt-4'>
-                  <Button className='w-full' asChild>
-                    <Link href='/messages'>
-                      <MessageSquare className='h-4 w-4 mr-2' />
-                
+                  <Button className='w-full' asChild></Button>
+                    <Link href='/messages'></Link>
+                      <MessageSquare className='h-4 w-4 mr-2' /></MessageSquare>
                 <div className="mt-4">
-                  <Button className="w-full" asChild>
-                    <Link href="/messages">
-                      <MessageSquare className="h-4 w-4 mr-2" />
-
-
-
+                  <Button className="w-full" asChild></Button>
+                    <Link href="/messages"></Link>
+                      <MessageSquare className="h-4 w-4 mr-2" /></MessageSquare>
                       Messages
                     </Link>
                   </Button>
@@ -220,36 +212,36 @@ function TalentDashboardContent() {
 
 
             {/* New Onboarding Progress Tracker */}
-            <TalentOnboardingSteps />
+            <TalentOnboardingSteps /></TalentOnboardingSteps>
             {showAdvanced && (
               <div className="mt-6">
-                <AdvancedOnboardingSteps />
+                <AdvancedOnboardingSteps /></AdvancedOnboardingSteps>
               </div>
 
             )}
             {/* Upcoming Interviews Card */}
             <div className='mt-8'>
-              <UpcomingInterviewsCard />
+              <UpcomingInterviewsCard /></UpcomingInterviewsCard>
             </div>
-            <Card className='mt-8'>
-import { useState, useEffect } from "react",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+            <Card className='mt-8'></Card>
+import { useState, useEffect  } from 'react',
+import { Button  } from '@/components/ui/button',
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs',
 import Link from "next/link",
-import { SEO } from "@/components/SEO",
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video } from 'lucide-react'
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { SuggestedJobs } from "@/components/jobs/SuggestedJobs",
-import { useAuth } from "@/hooks/useAuth",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Avatar } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps",
-import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps",
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
-import { MyApplications } from "@/components/jobs/MyApplications",
-import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner",
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
+import { SEO  } from '@/components/SEO',
+import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video  } from 'lucide-react'
+import { ProtectedRoute  } from '@/components/ProtectedRoute',
+import { SuggestedJobs  } from '@/components/jobs/SuggestedJobs',
+import { useAuth  } from '@/hooks/useAuth',
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card',
+import { Avatar  } from '@/components/ui/avatar',
+import { Badge  } from '@/components/ui/badge',
+import { TalentOnboardingSteps  } from '@/components/onboarding/TalentOnboardingSteps',
+import { AdvancedOnboardingSteps  } from '@/components/onboarding/AdvancedOnboardingSteps',
+import { useOnboardingStatus  } from '@/hooks/useOnboardingStatus',
+import { MyApplications  } from '@/components/jobs/MyApplications',
+import { ProjectOfferBanner  } from '@/components/projects/ProjectOfferBanner',
+import { UpcomingInterviewsCard  } from '@/components/interviews/UpcomingInterviewsCard',
 function TalentDashboardContent() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("job-matches"),
@@ -261,32 +253,31 @@ function TalentDashboardContent() {
     onboardingStatus.matchReceived
   return (
     <>
-      <SEO
-        title="Talent Dashboard | Zion AI Marketplace"
+      <SEO title="Talent Dashboard | Zion AI Marketplace"
         description="Your personalized talent dashboard with job matches and professional opportunities."
-      />
+      /></SEO>
       <main className="container mx-auto px-4 py-8">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+        <div className="flex flex-col md: flex-row justify-between items-start md:items-center gap-4 mb-8">
           <div>
             <h1 className="text-3xl font-bold">Talent Dashboard</h1>
             <p className="text-muted-foreground mt-1">Find opportunities matched to your skills and experience</p></$1>
           <div className="flex gap-4">
-            <Button variant="outline" asChild>
-              <Link href="/settings/account">
-                <UserIcon className="h-4 w-4 mr-2" />
+            <Button variant="outline" asChild></Button>
+              <Link href="/settings/account"></Link>
+                <UserIcon className="h-4 w-4 mr-2" /></UserIcon>
                 Profile Settings</$1></$1>
-            <Button asChild>
-              <Link href="/dashboard/talent/applications">
+            <Button asChild></Button>
+              <Link href="/dashboard/talent/applications"></Link>
                 <Inbox className="h-4 w-4 mr-2" /> Application Tracker</$1></$1></$1></$1>
         {/* Project Offer Banner - Show pending offers */}
-        <ProjectOfferBanner />
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <ProjectOfferBanner /></ProjectOfferBanner>
+        <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
           <div>
-            <Card className="mb-8">
-              <CardHeader className="pb-2">
+            <Card className="mb-8"></Card>
+              <CardHeader className="pb-2"></CardHeader>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <Avatar className="h-12 w-12 border">
+                    <Avatar className="h-12 w-12 border"></Avatar>
                       {user?.avatarUrl ? (
                         <img src={user.avatarUrl} alt={user.displayName || "User"} loading="lazy" />
                       ) : (
@@ -297,13 +288,12 @@ function TalentDashboardContent() {
                     </Avatar>
                     <div>
                       <CardTitle>{user?.displayName || 'User'}</CardTitle>
-import { useState, useEffect } from 'react'
-import { Button } from '@/components / ui / button'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs'
+import { useState, useEffect  } from 'react'
+import { Button  } from '@/components / ui / button'
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs'
 import Link from 'next / link'
-import { SEO } from '@/components / SEO'
-import {
-  BriefcaseIcon,
+import { SEO  } from '@/components / SEO'
+import { BriefcaseIcon,
   UserIcon,
   MessageSquare,
   Star,
@@ -311,24 +301,24 @@ import {
   FileText,
   Inbox,
   Video,
-} from 'lucide-react'
-import { ProtectedRoute } from '@/components / ProtectedRoute'
-import { SuggestedJobs } from '@/components / jobs / SuggestedJobs'
-import { use_auth } from '@/hooks / use_auth'
+ } from 'lucide-react'
+import { ProtectedRoute  } from '@/components / ProtectedRoute'
+import { SuggestedJobs  } from '@/components / jobs / SuggestedJobs'
+import { use_auth  } from '@/hooks / use_auth'
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
 } from '@/components / ui / card'
-import { Avatar } from '@/components / ui / avatar'
-import { Badge } from '@/components / ui / badge'
-import { TalentOnboardingSteps } from '@/components / onboarding / TalentOnboardingSteps'
-import { AdvancedOnboardingSteps } from '@/components / onboarding / AdvancedOnboardingSteps'
-import { useOnboardingStatus } from '@/hooks / useOnboardingStatus'
-import { MyApplications } from '@/components / jobs / MyApplications'
-import { ProjectOfferBanner } from '@/components / projects / ProjectOfferBanner'
-import { UpcomingInterviewsCard } from '@/components / interviews / UpcomingInterviewsCard'
+import { Avatar  } from '@/components / ui / avatar'
+import { Badge  } from '@/components / ui / badge'
+import { TalentOnboardingSteps  } from '@/components / onboarding / TalentOnboardingSteps'
+import { AdvancedOnboardingSteps  } from '@/components / onboarding / AdvancedOnboardingSteps'
+import { useOnboardingStatus  } from '@/hooks / useOnboardingStatus'
+import { MyApplications  } from '@/components / jobs / MyApplications'
+import { ProjectOfferBanner  } from '@/components / projects / ProjectOfferBanner'
+import { UpcomingInterviewsCard  } from '@/components / interviews / UpcomingInterviewsCard'
 /**
  * TalentDashboardContent - Function description
  */
@@ -343,33 +333,32 @@ function TalentDashboardContent() {
     onboarding_status.match_received
   return (
     <>
-      <SEO
-        title='Talent Dashboard | Zion AI Marketplace'
+      <SEO title='Talent Dashboard | Zion AI Marketplace'
         description='Your personalized talent dashboard with job matches and professional opportunities.'
-      />
+      /></SEO>
       <main className='container mx - auto px - 4 py - 8'>
-        <div className='flex flex - col md:flex - row justify - between items - start md:items - center gap - 4 mb - 8'>
+        <div className='flex flex - col md: flex - row justify - between items - start md:items - center gap - 4 mb - 8'>
           <div>
             <h1 className='text - 3xl font - bold'>Talent Dashboard</h1>
             <p className='text - muted - foreground mt - 1'>
               Find opportunities matched to your skills and experience</$1></$1>
           <div className='flex gap - 4'>
-            <Button variant='outline' as_child>
-              <Link href='/settings / account'>
-                <UserIcon className='h - 4 w - 4 mr - 2' />
+            <Button variant='outline' as_child></Button>
+              <Link href='/settings / account'></Link>
+                <UserIcon className='h - 4 w - 4 mr - 2' /></UserIcon>
                 Profile Settings</$1></$1>
-            <Button as_child>
-              <Link href='/dashboard / talent / applications'>
+            <Button as_child></Button>
+              <Link href='/dashboard / talent / applications'></Link>
                 <Inbox className='h - 4 w - 4 mr - 2' /> Application Tracker</$1></$1></$1></$1>
         {/* Project Offer Banner - Show pending offers */}
-        <ProjectOfferBanner />
-        <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8'>
+        <ProjectOfferBanner /></ProjectOfferBanner>
+        <div className='grid grid - cols - 1 lg: grid - cols - 3 gap - 8'>
           <div>
-            <Card className='mb - 8'>
-              <CardHeader className='pb - 2'>
+            <Card className='mb - 8'></Card>
+              <CardHeader className='pb - 2'></CardHeader>
                 <div className='flex items - center justify - between'>
                   <div className='flex items - center gap - 3'>
-                    <Avatar className='h - 12 w - 12 border'>
+                    <Avatar className='h - 12 w - 12 border'></Avatar>
                       {user?.avatar_url ? (
                         <img
                           src={user.avatar_url}
@@ -382,15 +371,15 @@ function TalentDashboardContent() {
                     </Avatar>
                     <div>
                       <CardTitle>{user?.display_name || 'User'}</CardTitle>
-                      <CardDescription>
+                      <CardDescription ></CardDescription>
                         {user?.headline || 'AI Professional'}
                       </CardDescription></$1></$1>
                   <Badge className='bg - green - 100 text - green - 800'>Online</Badge></$1></$1>
-              <CardContent>
+              <CardContent ></CardContent>
                 <div className='grid grid - cols - 2 gap - 4 mt - 4'>
                   <div className='flex flex - col items - center p - 3 bg - muted / 30 rounded - md'>
                     <div className='flex items - center gap - 1 text - lg font - bold'>
-                      <Star className='h - 4 w - 4 text - yellow - 500' />
+                      <Star className='h - 4 w - 4 text - yellow - 500' /></Star>
                       4.9</$1>
                     <span className="text-xs text-muted-foreground">Rating</span></$1>
                   <div className='flex flex - col items - center p - 3 bg - muted / 30 rounded - md'>
@@ -398,18 +387,15 @@ function TalentDashboardContent() {
                     <span className='text - xs text - muted - foreground'>
                       Projects</$1></$1></$1>
                 <div className='mt - 4'>
-                  <Button className='w - full' as_child>
-                    <Link href='/messages'>
-                      <MessageSquare className='h - 4 w - 4 mr - 2' />
+                  <Button className='w - full' as_child></Button>
+                    <Link href='/messages'></Link>
+                      <MessageSquare className='h - 4 w - 4 mr - 2' /></MessageSquare>
                       Messages</$1></$1></$1></$1></$1>
-            <Card className="mt-8">
-
-
-
-              <CardHeader>
+            <Card className="mt-8"></Card>
+              <CardHeader ></CardHeader>
                 <CardTitle className="text-lg">Quick Stats</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent ></CardContent>
                 <div className="space-y-3">
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Profile views</span>
@@ -431,61 +417,53 @@ function TalentDashboardContent() {
               </CardContent>
             </Card>
           </div>
-          <div className='lg:col-span-2'>
-            <Tabs defaultValue='job-matches' onValueChange={setActiveTab}>
-              <TabsList className='mb-6'>
-                <TabsTrigger value='job-matches' className='flex items-center'>
-                  <BriefcaseIcon className='h-4 w-4 mr-2' />
-          
-          <div className="lg:col-span-2">
-            <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>
-              <TabsList className="mb-6">
-                <TabsTrigger value="job-matches" className="flex items-center">
-                  <BriefcaseIcon className="h-4 w-4 mr-2" />
-
-
+          <div className='lg: col-span-2'>
+            <Tabs defaultValue='job-matches' onValueChange=>{setActiveTab}</Tabs>
+              <TabsList className='mb-6'></TabsList>
+                <TabsTrigger value='job-matches' className='flex items-center'></TabsTrigger>
+                  <BriefcaseIcon className='h-4 w-4 mr-2' /></BriefcaseIcon>
+          <div className="lg: col-span-2">
+            <Tabs defaultValue="job-matches" onValueChange=>{setActiveTab}</Tabs>
+              <TabsList className="mb-6"></TabsList>
+                <TabsTrigger value="job-matches" className="flex items-center"></TabsTrigger>
+                  <BriefcaseIcon className="h-4 w-4 mr-2" /></BriefcaseIcon>
                   AI Job Matches
                 </TabsTrigger>
                 <TabsTrigger value="applications">My Applications</TabsTrigger>
                 <TabsTrigger value="saved">Saved Jobs</TabsTrigger>
               </TabsList>
-              <TabsContent value='job-matches' className='mt-0'>
-
-                <SuggestedJobs />
+              <TabsContent value='job-matches' className='mt-0'></TabsContent>
+                <SuggestedJobs /></SuggestedJobs>
               </TabsContent>
-              <TabsContent value='applications' className='mt-0'>
-              
-              <TabsContent value="job-matches" className="mt-0">
-                <SuggestedJobs />
+              <TabsContent value='applications' className='mt-0'></TabsContent>
+              <TabsContent value="job-matches" className="mt-0"></TabsContent>
+                <SuggestedJobs /></SuggestedJobs>
               </TabsContent>
               
-              <TabsContent value="applications" className="mt-0">
-
-
-
-                <MyApplications />
+              <TabsContent value="applications" className="mt-0"></TabsContent>
+                <MyApplications /></MyApplications>
                 <div className="mt-4 flex justify-center">
-                  <Button variant="outline" asChild>
-                    <Link href="/dashboard/talent/applications">
+                  <Button variant="outline" asChild></Button>
+                    <Link href="/dashboard/talent/applications"></Link>
                       <Inbox className="h-4 w-4 mr-2" /> View Full Application Tracker
                     </Link>
                   </Button>
                 </div>
               </TabsContent>
-              <TabsContent value='saved' className='mt-0'>
-                <Card className='bg-muted/30'>
-                  <CardContent className='pt-6 text-center'>
+              <TabsContent value='saved' className='mt-0'></TabsContent>
+                <Card className='bg-muted/30'></Card>
+                  <CardContent className='pt-6 text-center'></CardContent>
                     <p className='text-muted-foreground'>
               
-              <TabsContent value="saved" className="mt-0">
-                <Card className="bg-muted/30">
-                  <CardContent className="pt-6 text-center">
+              <TabsContent value="saved" className="mt-0"></TabsContent>
+                <Card className="bg-muted/30"></Card>
+                  <CardContent className="pt-6 text-center"></CardContent>
                     <p className="text-muted-foreground">
 
 
                       You haven't saved any jobs yet.
                     </p>
-                    <Button className="mt-4" asChild>
+                    <Button className="mt-4" asChild></Button>
                       <Link href="/jobs">Browse Jobs</Link>
                     </Button>
                   </CardContent>
@@ -502,10 +480,10 @@ function TalentDashboardContent() {
 
             <div className='mt-8'>
               <UpcomingInterviewsCard /></$1>
-            <Card className='mt-8'>
-              <CardHeader>
+            <Card className='mt-8'></Card>
+              <CardHeader ></CardHeader>
                 <CardTitle className='text-lg'>Quick Stats</CardTitle></$1>
-              <CardContent>
+              <CardContent ></CardContent>
                 <div className='space-y-3'>
                   <div className='flex justify-between'>
                     <span className='text-muted-foreground'>Profile views</span>
@@ -520,29 +498,29 @@ function TalentDashboardContent() {
                     <span className='text-muted-foreground'>
                       Profile completion</$1>
                     <span className='font-medium'>85%</span></$1></$1></$1></$1></$1>
-          <div className='lg:col-span-2'>
-            <Tabs defaultValue='job-matches' onValueChange={setActiveTab}>
-              <TabsList className='mb-6'>
-                <TabsTrigger value='job-matches' className='flex items-center'>
-                  <BriefcaseIcon className='h-4 w-4 mr-2' />
+          <div className='lg: col-span-2'>
+            <Tabs defaultValue='job-matches' onValueChange=>{setActiveTab}</Tabs>
+              <TabsList className='mb-6'></TabsList>
+                <TabsTrigger value='job-matches' className='flex items-center'></TabsTrigger>
+                  <BriefcaseIcon className='h-4 w-4 mr-2' /></BriefcaseIcon>
                   AI Job Matches</$1>
                 <TabsTrigger value='applications'>My Applications</TabsTrigger>
                 <TabsTrigger value='saved'>Saved Jobs</TabsTrigger></$1>
-              <TabsContent value='job-matches' className='mt-0'>
+              <TabsContent value='job-matches' className='mt-0'></TabsContent>
                 <SuggestedJobs /></$1>
-              <TabsContent value='applications' className='mt-0'>
-                <MyApplications />
+              <TabsContent value='applications' className='mt-0'></TabsContent>
+                <MyApplications /></MyApplications>
                 <div className='mt-4 flex justify-center'>
-                  <Button variant='outline' asChild>
-                    <Link href='/dashboard/talent/applications'>
+                  <Button variant='outline' asChild></Button>
+                    <Link href='/dashboard/talent/applications'></Link>
                       <Inbox className='h-4 w-4 mr-2' /> View Full Application
                       Tracker</$1></$1></$1></$1>
-              <TabsContent value='saved' className='mt-0'>
-                <Card className='bg-muted/30'>
-                  <CardContent className='pt-6 text-center'>
+              <TabsContent value='saved' className='mt-0'></TabsContent>
+                <Card className='bg-muted/30'></Card>
+                  <CardContent className='pt-6 text-center'></CardContent>
                     <p className='text-muted-foreground'>
                       You haven't saved any jobs yet.</$1>
-                    <Button className='mt-4' asChild>
+                    <Button className='mt-4' asChild></Button>
                       <Link href='/jobs'>Browse Jobs</Link></$1></$1></$1></$1></$1></$1></$1></$1>
     </>
   )

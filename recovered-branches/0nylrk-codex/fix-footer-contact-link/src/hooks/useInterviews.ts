@@ -1,8 +1,8 @@
-import { useState } from 'react'
-import { useAuth } from "@/hooks/useAuth"
-import { supabase } from '@/integrations/supabase/client'
-import { Interview, InterviewRequest, InterviewResponse } from '@/types/interview'
-import { toast } from '@/components/ui/use-toast'
+import { useState  } from 'react'
+import { useAuth  } from '@/hooks/useAuth'
+import { supabase  } from '@/integrations/supabase/client'
+import { Interview, InterviewRequest, InterviewResponse  } from '@/types/interview'
+import { toast  } from '@/components/ui/use-toast'
 export function useInterviews() {
   const [interviews, setInterviews] = useState<Interview[]>([])
   const [isLoading, setIsLoading] = useState(false)
@@ -40,7 +40,7 @@ export function useInterviews() {
         .select('*')
         .single()
       if (insertError) {
-        console.error("Error requesting interview:", insertError)
+        console.error("Error requesting interview: ", insertError)
         setError(insertError.message)
         return null
       }
@@ -75,13 +75,13 @@ export function useInterviews() {
         .from('interviews')
         .select(`
           *,
-          clients:client_id(id, display_name, avatar_url),
-          talents:talent_id(id, full_name, profile_picture_url)
+          clients: client_id(id, display_name, avatar_url),
+          talents: talent_id(id, full_name, profile_picture_url)
         `)
         .or(`client_id.eq.${user.id},talent_id.eq.${user.id}`)
         .order('scheduled_date', { ascending: true })
       if (fetchError) {
-        console.error("Error fetching interviews:", fetchError)
+        console.error("Error fetching interviews: ", fetchError)
         setError(fetchError.message)
         return []
       }
@@ -142,7 +142,7 @@ export function useInterviews() {
         })
         .eq('id', interviewId)
       if (updateError) {
-        console.error("Error responding to interview:", updateError)
+        console.error("Error responding to interview: ", updateError)
         setError(updateError.message)
         return false
       }
@@ -153,7 +153,7 @@ export function useInterviews() {
         .eq('id', interviewId)
         .single()
       if (fetchError) {
-        console.error("Error fetching interview:", fetchError)
+        console.error("Error fetching interview: ", fetchError)
         setError(fetchError.message)
         return false
       }
@@ -206,7 +206,7 @@ export function useInterviews() {
         related_id: relatedId,
       })
     } catch (error) {
-      console.error("Error creating notification:", error)
+      console.error("Error creating notification: ", error)
     }
   }
   // Cancel an interview (either client or talent can cancel)

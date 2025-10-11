@@ -1,8 +1,7 @@
 import React from 'react'
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import { 
-  Users, 
+import { motion  } from 'framer-motion'
+import { Users, 
   Award, 
   Globe, 
   Zap, 
@@ -12,9 +11,8 @@ import {
   Rocket,
   Star,
   CheckCircle
-import { Link } from 'react-router-dom'
-import { 
-  Linkedin, 
+import { Link  } from 'react-router-dom'
+import { Linkedin, 
   Twitter, 
   Mail, 
   Globe, 
@@ -26,43 +24,22 @@ import {
   Rocket,
   Building,
   Zap
-} from 'lucide-react'
+ } from 'lucide-react'
 export default function Team() {
   const [selectedDepartment, setSelectedDepartment] = useState('all')
   const [selectedLocation, setSelectedLocation] = useState('all')
-  const departments = [
-    { id: 'all', name: 'All Departments', count: 45 },
-    { id: 'leadership', name: 'Leadership', count: 8 },
-    { id: 'engineering', name: 'Engineering', count: 18 },
-    { id: 'ai-research', name: 'AI Research', count: 12 },
-    { id: 'sales', name: 'Sales & Business', count: 7 }
-  ]
-  const locations = [
-    { id: 'all', name: 'All Locations', count: 45 },
-    { id: 'middletown', name: 'Middletown, DE', count: 25 },
-    { id: 'remote', name: 'Remote', count: 15 },
-    { id: 'amsterdam', name: 'Amsterdam, NL', count: 5 }
-  ]
-  const teamMembers = [
-    {
+  const departments = [{ id: 'all', name: 'All Departments', count: 45 }, { id: 'leadership', name: 'Leadership', count: 8 }, { id: 'engineering', name: 'Engineering', count: 18 }, { id: 'ai-research', name: 'AI Research', count: 12 }, { id: 'sales', name: 'Sales & Business', count: 7 }]
+  const locations = [{ id: 'all', name: 'All Locations', count: 45 }, { id: 'middletown', name: 'Middletown, DE', count: 25 }, { id: 'remote', name: 'Remote', count: 15 }, { id: 'amsterdam', name: 'Amsterdam, NL', count: 5 }]
+  const teamMembers = [{
 import React from 'react'
-import { SEO } from '@/components/SEO'
-import { Link } from 'react-router-dom'
+import { SEO  } from '@/components/SEO'
+import { Link  } from 'react-router-dom'
 export default function Team() {
   const leadership = [
     {
-      name: 'Kleber Santos',
-      role: 'Founder & CEO',
-      bio: 'Visionary leader with over 15 years of experience in AI and quantum computing. Former CTO at major tech companies.',
-      image: '/images/team/kleber-santos.jpg',
-      linkedin: 'https://linkedin.com/in/kleber-santos',
-      twitter: 'https://twitter.com/kleber_santos'
-    },
-    {
-      name: 'Dr. Sarah Chen',
-      role: 'Chief Executive Officer',
-      bio: 'Visionary leader with 15+ years of experience in AI and quantum computing. Former research director at leading tech institutions.',
-      expertise: ['AI Strategy', 'Quantum Computing', 'Business Innovation'],
+      name: 'Kleber Santos', role: 'Founder & CEO', bio: 'Visionary leader with over 15 years of experience in AI and quantum computing. Former CTO at major tech companies.', image: '/images/team/kleber-santos.jpg', linkedin: 'https://linkedin.com/in/kleber-santos', twitter: 'https://twitter.com/kleber_santos'
+    }, {
+      name: 'Dr. Sarah Chen', role: 'Chief Executive Officer', bio: 'Visionary leader with 15+ years of experience in AI and quantum computing. Former research director at leading tech institutions.', expertise: ['AI Strategy', 'Quantum Computing', 'Business Innovation'],
       avatar: 'SC',
       linkedin: '#',
       achievements: ['PhD Computer Science', '20+ Patents', 'Forbes 30 Under 30']
@@ -95,59 +72,22 @@ export default function Team() {
       achievements: ['MBA Business', '10+ Years Operations', 'Process Optimization']
     }
   ]
-  const departmentHeads = [
-    {
-      name: 'Alex Thompson',
-      role: 'Head of AI Solutions',
-      department: 'AI & Machine Learning',
-      bio: 'Leading our AI initiatives with expertise in deep learning and neural networks.',
-      avatar: 'AT'
-    },
-    {
-      name: 'Dr. Lisa Park',
-      role: 'Head of Cybersecurity',
-      department: 'Security & Compliance',
-      bio: 'Cybersecurity expert with certifications in CISSP, CISM, and extensive threat intelligence experience.',
-      avatar: 'LP'
-    },
-    {
-      name: 'David Chen',
-      role: 'Head of Cloud Architecture',
-      department: 'Cloud & DevOps',
-      bio: 'Cloud specialist with expertise in multi-cloud strategies and DevOps automation.',
-      avatar: 'DC'
-    },
-    {
-      name: 'Maria Garcia',
-      role: 'Head of Digital Transformation',
-      department: 'Business Solutions',
-      bio: 'Digital transformation consultant helping businesses navigate technological change.',
-      avatar: 'MG'
-    }
-  ]
-  const companyStats = [
-    {
-      number: '50+',
-      label: 'Team Members',
-      description: 'Diverse professionals from around the world'
-    },
-    {
-      number: '25+',
-      label: 'Countries',
-      description: 'Global team with local expertise'
-    },
-    {
-      name: 'Client Success',
-      icon: Users,
-      color: 'from-orange-500 to-yellow-500',
-      description: 'Ensuring client success and project delivery',
-      memberCount: 8
-      id: 1,
-      name: "Dr. Sarah Chen",
-      role: "Chief Executive Officer & Chief AI Officer",
-      department: "Executive Leadership",
-      bio: "Dr. Chen is a visionary leader with over 15 years of experience in AI research and enterprise technology. She holds a PhD in Computer Science from MIT and has led breakthrough research in autonomous AI systems.",
-      expertise: ["AI & Machine Learning", "Strategic Leadership", "Research & Development", "Enterprise Technology"],
+  const departmentHeads = [{
+      name: 'Alex Thompson', role: 'Head of AI Solutions', department: 'AI & Machine Learning', bio: 'Leading our AI initiatives with expertise in deep learning and neural networks.', avatar: 'AT'
+    }, {
+      name: 'Dr. Lisa Park', role: 'Head of Cybersecurity', department: 'Security & Compliance', bio: 'Cybersecurity expert with certifications in CISSP, CISM, and extensive threat intelligence experience.', avatar: 'LP'
+    }, {
+      name: 'David Chen', role: 'Head of Cloud Architecture', department: 'Cloud & DevOps', bio: 'Cloud specialist with expertise in multi-cloud strategies and DevOps automation.', avatar: 'DC'
+    }, {
+      name: 'Maria Garcia', role: 'Head of Digital Transformation', department: 'Business Solutions', bio: 'Digital transformation consultant helping businesses navigate technological change.', avatar: 'MG'
+    }]
+  const companyStats = [{
+      number: '50+', label: 'Team Members', description: 'Diverse professionals from around the world'
+    }, {
+      number: '25+', label: 'Countries', description: 'Global team with local expertise'
+    }, {
+      name: 'Client Success', icon: Users, color: 'from-orange-500 to-yellow-500', description: 'Ensuring client success and project delivery', memberCount: 8
+      id: 1, name: "Dr. Sarah Chen", role: "Chief Executive Officer & Chief AI Officer", department: "Executive Leadership", bio: "Dr. Chen is a visionary leader with over 15 years of experience in AI research and enterprise technology. She holds a PhD in Computer Science from MIT and has led breakthrough research in autonomous AI systems.", expertise: ["AI & Machine Learning", "Strategic Leadership", "Research & Development", "Enterprise Technology"],
       education: "PhD Computer Science, MIT",
       experience: "15+ years",
       linkedin: "https://linkedin.com/in/sarah-chen",
@@ -270,38 +210,25 @@ export default function Team() {
       featured: false
     }
   ]
-  const departments = [
-    {
+  const departments = [{
   const advisors = [
     {
-      name: 'Dr. James Wilson',
-      role: 'AI Ethics Advisor',
-      bio: 'Leading researcher in AI ethics and responsible technology development.',
-      image: '/images/team/james-wilson.jpg',
-      linkedin: 'https://linkedin.com/in/james-wilson'
-    },
-    {
-      name: 'Elena Petrova',
-      role: 'Quantum Computing Advisor',
-      bio: 'Former research director at leading quantum computing labs.',
-      image: '/images/team/elena-petrova.jpg',
-      linkedin: 'https://linkedin.com/in/elena-petrova'
-    }
-  ]
+      name: 'Dr. James Wilson', role: 'AI Ethics Advisor', bio: 'Leading researcher in AI ethics and responsible technology development.', image: '/images/team/james-wilson.jpg', linkedin: 'https://linkedin.com/in/james-wilson'
+    }, {
+      name: 'Elena Petrova', role: 'Quantum Computing Advisor', bio: 'Former research director at leading quantum computing labs.', image: '/images/team/elena-petrova.jpg', linkedin: 'https://linkedin.com/in/elena-petrova'
+    }]
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
-      <SEO 
-        title="Our Team - Zion Tech Group" 
+      <SEO title="Our Team - Zion Tech Group" 
         description="Meet the exceptional team of innovators, engineers, and industry experts driving Zion Tech Group's mission to revolutionize technology."
         tags={["team", "leadership", "experts", "AI specialists", "quantum physicists", "cybersecurity experts", "Zion Tech Group"]}
-        url="https://ziontechgroup.com/team"
-      />
-
+        url="https: //ziontechgroup.com/team"
+      /></SEO>
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%, rgba(0, 255, 255, 0.1), transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          <h1 className="text-4xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             Meet Our Team
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -311,7 +238,7 @@ export default function Team() {
           <div className="flex flex-wrap justify-center gap-4">
             <$2 />
               href="#team"
-              className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+              className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-200"
             >
               View Team
             </a>
@@ -326,7 +253,7 @@ export default function Team() {
       </section>
 
       {/* Team Stats */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
@@ -350,7 +277,7 @@ export default function Team() {
       </section>
 
       {/* Leadership Team */}
-      <section id="team" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="team" className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -412,8 +339,8 @@ export default function Team() {
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%, rgba(0, 255, 255, 0.1), transparent_50%)]"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 pt-32 pb-20">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Meet Our Team
@@ -425,15 +352,15 @@ export default function Team() {
             </p>
             <div className="flex items-center justify-center space-x-8 text-gray-400">
               <div className="flex items-center">
-                <Users className="w-5 h-5 mr-2" />
+                <Users className="w-5 h-5 mr-2" /></Users>
                 <span>{teamMembers.length} Team Members</span>
               </div>
               <div className="flex items-center">
-                <Award className="w-5 h-5 mr-2" />
+                <Award className="w-5 h-5 mr-2" /></Award>
                 <span>Industry Experts</span>
               </div>
               <div className="flex items-center">
-                <Brain className="w-5 h-5 mr-2" />
+                <Brain className="w-5 h-5 mr-2" /></Brain>
                 <span>Innovation Leaders</span>
               </div>
             </div>
@@ -442,7 +369,7 @@ export default function Team() {
       </div>
 
       {/* Department Overview */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 pb-20">
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Departments</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {departments.map((dept, index) => {
@@ -450,10 +377,10 @@ export default function Team() {
             return (
               <$2 />
                 key={index}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 text-center hover: transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Icon className="w-8 h-8 text-white" />
+                  <Icon className="w-8 h-8 text-white" /></Icon>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{dept.name}</h3>
                 <p className="text-gray-400 text-sm mb-3">{dept.description}</p>
@@ -466,13 +393,13 @@ export default function Team() {
 
       {/* Featured Team Members */}
       {featuredMembers.length > 0 && (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 pb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Leadership Team</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {featuredMembers.map((member) => (
               <$2 />
                 key={member.id}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover: transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
                 <div className="p-6">
                   {/* Member Image Placeholder */}
@@ -511,7 +438,7 @@ export default function Team() {
                     <ul className="space-y-1">
                       {member.achievements.slice(0, 2).map((achievement, index) => (
                         <li key={index} className="text-gray-300 text-xs flex items-center">
-                          <Award className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
+                          <Award className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" /></Award>
                           {achievement}
                         </li>
                       ))}
@@ -525,9 +452,9 @@ export default function Team() {
                         href={member.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                        className="text-gray-400 hover: text-cyan-400 transition-colors duration-200"
                       >
-                        <Linkedin className="w-5 h-5" />
+                        <Linkedin className="w-5 h-5" /></Linkedin>
                       </a>
                     )}
                     {member.twitter && (
@@ -535,17 +462,17 @@ export default function Team() {
                         href={member.twitter}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                        className="text-gray-400 hover: text-cyan-400 transition-colors duration-200"
                       >
-                        <Twitter className="w-5 h-5" />
+                        <Twitter className="w-5 h-5" /></Twitter>
                       </a>
                     )}
                     {member.email && (
                       <$2 />
-                        href={`mailto:${member.email}`}
-                        className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                        href={`mailto: ${member.email}`}
+                        className="text-gray-400 hover: text-cyan-400 transition-colors duration-200"
                       >
-                        <Mail className="w-5 h-5" />
+                        <Mail className="w-5 h-5" /></Mail>
                       </a>
                     )}
                   </div>
@@ -557,13 +484,13 @@ export default function Team() {
       )}
 
       {/* All Team Members */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 pb-20">
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Team</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {regularMembers.map((member) => (
             <$2 />
               key={member.id}
-              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover: transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
             >
               <div className="p-6">
                 {/* Member Image Placeholder */}
@@ -612,12 +539,7 @@ export default function Team() {
       email: "kleber@ziontechgroup.com",
       phone: "+1 302 464 0950",
       featured: true,
-      achievements: [
-        "Named 'AI Innovator of the Year' 2024",
-        "Led 50+ enterprise AI transformations",
-        "Published 25+ research papers",
-        "Speaker at major tech conferences"
-      ]
+      achievements: ["Named 'AI Innovator of the Year' 2024", "Led 50+ enterprise AI transformations", "Published 25+ research papers", "Speaker at major tech conferences"]
     },
     {
       id: 2,
@@ -635,12 +557,7 @@ export default function Team() {
       email: "sarah@ziontechgroup.com",
       phone: "+1 302 464 0951",
       featured: true,
-      achievements: [
-        "Former Google AI Research Lead",
-        "100+ AI system deployments",
-        "15 patents in AI technology",
-        "IEEE Fellow"
-      ]
+      achievements: ["Former Google AI Research Lead", "100+ AI system deployments", "15 patents in AI technology", "IEEE Fellow"]
     },
     {
       id: 3,
@@ -658,12 +575,7 @@ export default function Team() {
       email: "michael@ziontechgroup.com",
       phone: "+1 302 464 0952",
       featured: true,
-      achievements: [
-        "Quantum computing breakthroughs",
-        "Published in Nature & Science",
-        "Collaboration with CERN",
-        "Nobel Prize nominee 2023"
-      ]
+      achievements: ["Quantum computing breakthroughs", "Published in Nature & Science", "Collaboration with CERN", "Nobel Prize nominee 2023"]
     },
     {
       id: 4,
@@ -681,12 +593,7 @@ export default function Team() {
       email: "alex@ziontechgroup.com",
       phone: "+1 302 464 0953",
       featured: false,
-      achievements: [
-        "Former NSA cybersecurity analyst",
-        "SOC2 compliance automation expert",
-        "Zero security breaches in 5 years",
-        "CISSP, CISM certified"
-      ]
+      achievements: ["Former NSA cybersecurity analyst", "SOC2 compliance automation expert", "Zero security breaches in 5 years", "CISSP, CISM certified"]
     },
     {
       id: 5,
@@ -704,12 +611,7 @@ export default function Team() {
       email: "jennifer@ziontechgroup.com",
       phone: "+1 302 464 0954",
       featured: false,
-      achievements: [
-        "Led 20+ successful product launches",
-        "Managed 100+ engineering team",
-        "Reduced development time by 40%",
-        "Former Google Engineering Manager"
-      ]
+      achievements: ["Led 20+ successful product launches", "Managed 100+ engineering team", "Reduced development time by 40%", "Former Google Engineering Manager"]
     },
     {
       id: 6,
@@ -727,12 +629,7 @@ export default function Team() {
       email: "david@ziontechgroup.com",
       phone: "+1 302 464 0955",
       featured: false,
-      achievements: [
-        "5 patents in autonomous systems",
-        "Published 20+ research papers",
-        "AI optimization breakthroughs",
-        "Former Tesla AI researcher"
-      ]
+      achievements: ["5 patents in autonomous systems", "Published 20+ research papers", "AI optimization breakthroughs", "Former Tesla AI researcher"]
     },
     {
       id: 7,
@@ -750,12 +647,7 @@ export default function Team() {
       email: "emily@ziontechgroup.com",
       phone: "+31 20 123 4567",
       featured: false,
-      achievements: [
-        "Expanded to 15+ countries",
-        "$50M+ in new business",
-        "100+ strategic partnerships",
-        "Former McKinsey consultant"
-      ]
+      achievements: ["Expanded to 15+ countries", "$50M+ in new business", "100+ strategic partnerships", "Former McKinsey consultant"]
     },
     {
       id: 8,
@@ -773,12 +665,7 @@ export default function Team() {
       email: "robert@ziontechgroup.com",
       phone: "+1 302 464 0956",
       featured: false,
-      achievements: [
-        "Quantum algorithm breakthroughs",
-        "Hardware integration expert",
-        "3 quantum computing patents",
-        "Former IBM Quantum researcher"
-      ]
+      achievements: ["Quantum algorithm breakthroughs", "Hardware integration expert", "3 quantum computing patents", "Former IBM Quantum researcher"]
     }
   ]
   const filteredTeam = teamMembers.filter(member => {
@@ -791,7 +678,7 @@ export default function Team() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 pb-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             Meet Our Team
@@ -804,7 +691,7 @@ export default function Team() {
       </section>
 
       {/* Company Stats */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {companyStats.map((stat, index) => (
@@ -819,7 +706,7 @@ export default function Team() {
       </section>
 
       {/* Leadership Team */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Leadership Team</h2>
@@ -829,7 +716,7 @@ export default function Team() {
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {leadershipTeam.map((member, index) => (
-              <div key={index} className="bg-white/5 rounded-xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300">
+              <div key={index} className="bg-white/5 rounded-xl p-8 border border-white/10 hover: border-white/20 transition-all duration-300">
                 <div className="flex items-start space-x-6">
                   <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center flex-shrink-0">
                     <span className="text-white font-bold text-2xl">{member.avatar}</span>
@@ -840,7 +727,7 @@ export default function Team() {
                     <p className="text-gray-300 mb-4">{member.bio}</p>
                     
                     <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-gray-400 mb-2">Expertise:</h4>
+                      <h4 className="text-sm font-semibold text-gray-400 mb-2">Expertise: </h4>
                       <div className="flex flex-wrap gap-2">
                         {member.expertise.map((skill, idx) => (
                           <span key={idx} className="text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded-full">
@@ -851,7 +738,7 @@ export default function Team() {
                     </div>
 
                     <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-gray-400 mb-2">Achievements:</h4>
+                      <h4 className="text-sm font-semibold text-gray-400 mb-2">Achievements: </h4>
                       <div className="flex flex-wrap gap-2">
                         {member.achievements.map((achievement, idx) => (
                           <span key={idx} className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded-full">
@@ -862,17 +749,15 @@ export default function Team() {
                     </div>
 
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Our Team - Zion Tech Group" 
+      <SEO title="Our Team - Zion Tech Group" 
         description="Meet the visionary leaders and experts behind Zion Tech Group's revolutionary technology solutions"
         keywords="team, leadership, founders, experts, AI, quantum computing, Zion Tech Group"
-        canonical="https://ziontechgroup.com/team"
-      />
-
+        canonical="https: //ziontechgroup.com/team"
+      /></SEO>
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">
+          <h1 className="text-5xl md: text-6xl font-bold mb-6 text-gradient">
             Meet Our Team
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -885,9 +770,9 @@ export default function Team() {
         {/* Leadership Team */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Leadership Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {leadership.map((member, index) => (
-              <div key={index} className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 group">
+              <div key={index} className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover: border-cyan-500/50 transition-all duration-300 group">
                 <div className="text-center">
                   <div className="w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -906,31 +791,31 @@ export default function Team() {
                       target="_blank"
                       rel="noopener noreferrer"
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {departments.map((dept, index) => (
               <$2 />
                 key={index}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 group"
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-cyan-500/50 transition-all duration-300 group"
               >
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${dept.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${dept.color} flex items-center justify-center mb-4 group-hover: scale-110 transition-transform duration-300`}>
                   <dept.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{dept.name}</h3>
                 <p className="text-gray-400 mb-4 leading-relaxed">{dept.description}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-cyan-400 font-medium">{dept.memberCount} members</span>
-                  <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />
+                  <ArrowRight className="w-5 h-5 text-gray-400 group-hover: text-cyan-400 transition-colors duration-200" /></ArrowRight>
                       className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
                     >
-                      <Linkedin className="w-4 h-4" />
+                      <Linkedin className="w-4 h-4" /></Linkedin>
                     </a>
                   )}
                   {member.email && (
                     <$2 />
-                      href={`mailto:${member.email}`}
-                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                      href={`mailto: ${member.email}`}
+                      className="text-gray-400 hover: text-cyan-400 transition-colors duration-200"
                     >
-                      <Mail className="w-4 h-4" />
+                      <Mail className="w-4 h-4" /></Mail>
                     </a>
                   )}
                 </div>
@@ -946,7 +831,7 @@ export default function Team() {
 
 
         {/* Join Our Team */}
-        <div className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-3xl p-8 md:p-12 mb-16 border border-cyan-500/20">
+        <div className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-3xl p-8 md: p-12 mb-16 border border-cyan-500/20">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Join Our Team</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
@@ -966,7 +851,7 @@ export default function Team() {
                 className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 font-medium text-lg"
       {/* Join Our Team CTA */}
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-20">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
               Join Our Growing Team

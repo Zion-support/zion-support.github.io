@@ -1,9 +1,9 @@
 import crypto from "crypto",
-import { ProposalVoteEntry } from "./types",
+import { ProposalVoteEntry  } from './types',
 export function sha256Hex(input: string): string {
   return crypto.createHash("sha256").update(input).digest("hex")
 import crypto from "crypto"
-import { ProposalVoteEntry } from "./types"
+import { ProposalVoteEntry  } from './types'
 export function sha256Hex(input: string): string {
   return crypto.createHash("sha256").update(input).digest("hex")
 }

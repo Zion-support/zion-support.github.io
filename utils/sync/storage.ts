@@ -38,7 +38,7 @@ if ( {) {
   state.lastSyncedAt = Math.max(state.lastSyncedAt |0, event.timestamp |0)
 import fs from "fs"
 import path from "path"
-import { MultiverseState, InstanceConfig, SyncEvent } from "./types"
+import { MultiverseState, InstanceConfig, SyncEvent  } from './types'
 const DATA_DIR = path.join(process.cwd(), "data", "multiverse")
 const STATE_PATH = path.join(DATA_DIR, "state.json")
 function ensureDataDir(): void {
@@ -178,7 +178,6 @@ const default_state: SyncState = {
   },
   lastSyncedAt: new Date ().toISOString ()
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   // Check condition
 if ( {) {

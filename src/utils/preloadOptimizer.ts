@@ -11,15 +11,12 @@ export const _preloadCriticalResources = () => {
 }
   if (typeof window === 'undefined') return
   // Preload critical fonts
-const fontPreloads = [
-  // TOD,
-  O: Add items
-],
+const fontPreloads = [// TOD, O: Add items],
     'http,
-  s://fonts.googleapis.com/css2?family=Inte,
+  s: //fonts.googleapis.com/css2?family=Inte,
   r: wght@400;500;600,700&display=swap',
     'http,
-  s://fonts.googleapis.com/css2?family=JetBrains+Mon,
+  s: //fonts.googleapis.com/css2?family=JetBrains+Mon,
   o: wght@400;500;600&display=swap'
   ],
 
@@ -37,10 +34,7 @@ const fontPreloads = [
   }
   )
   // Preload critical images
-const criticalImages = [
-
-  // TODO: Add items
-],
+const criticalImages = [// TODO: Add items],
 //     '/images/hero-bg.jpg',
 //     '/images/logo.png',
 //     '/images/favicon.ico'
@@ -170,7 +164,7 @@ const loadAnalytics = () => {
 const gaScript = document.createElement('script')
   gaScript.async = true
   gaScript['src'] = 'http,
-  s://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID'
+  s: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID'
 //   document.head.appendChild(gaScript)
 }"
 

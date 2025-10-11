@@ -1,5 +1,5 @@
-import { withErrorLogging } from './withErrorLogging.cjs'
-const PROD_DOMAIN = 'https://ziontechgroup.com'
+import { withErrorLogging  } from './withErrorLogging.cjs'
+const PROD_DOMAIN = 'https: //ziontechgroup.com'
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405
@@ -24,8 +24,7 @@ async function handler(req, res) {
       timestamp: new Date().toISOString(),
       status: 'pending'
     }
-    // In a real implementation, you would:
-    // 1. Create a session with your payment provider (Stripe, PayPal, etc.)
+    // In a real implementation, you would: // 1. Create a session with your payment provider (Stripe, PayPal, etc.)
     // 2. Store session data in your database
     // 3. Return the session ID and checkout URL
 
@@ -40,7 +39,7 @@ async function handler(req, res) {
   } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Checkout session creation error:', error)
+      console.error('Checkout session creation error: ', error)
     }
     res.statusCode = 500
     res.setHeader('Content-Type', 'application/json')

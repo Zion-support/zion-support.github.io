@@ -6,8 +6,8 @@
 
 import fs from 'fs/promises'
 import path from 'path'
-import { execSync } from 'child_process'
-import { fileURLToPath } from 'url'
+import { execSync  } from 'child_process'
+import { fileURLToPath  } from 'url'
 // const __filename = fileURLToPath(import.meta.url)
 // const __dirname = path.dirname(__filename)
 class PerformanceEnhancer {
@@ -33,7 +33,7 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
   async analyzeBundle() {
 //     try {
       // Build with analysis
-      execSync('npm run build:analyze', { stdio: 'pipe' })
+      execSync('npm run build: analyze', { stdio: 'pipe' })
   async analyzeBundle() {/* TODO: Fix JSX expression */}
   o: 'pipe' })
 //       const distPath = path.join(process.cwd(), 'dist')
@@ -216,12 +216,7 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
       const serviceWorkerScript = `
 // Service Worker for caching and offline support
 // const CACHE_NAME = 'zion-app-v1'
-const urlsToCache = [
-  '/',
-  '/static/css/main.css',
-  '/static/js/main.js',
-  '/static/js/vendor.js'
-]
+const urlsToCache = ['/', '/static/css/main.css', '/static/js/main.js', '/static/js/vendor.js']
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)

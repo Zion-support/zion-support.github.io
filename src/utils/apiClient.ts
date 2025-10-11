@@ -102,7 +102,7 @@ class ApiClient {
     return this.request<T>({
       ...config,
       url,
-      method:     ,
+      method:  ,
 $4})
   }
   /**
@@ -145,7 +145,7 @@ $4})
     return this.request<T>({
       ...config,
       url,
-      method:     ,
+      method:  ,
 $4})
   }
   /**

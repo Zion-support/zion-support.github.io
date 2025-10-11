@@ -16,12 +16,12 @@ function App() {
     return () => {
       //       }
   }, [])
-  return(<ErrorBoundary>
+  return(<ErrorBoundary ></ErrorBoundary>
       <div>
   return (
-    <ErrorBoundary>
+    <ErrorBoundary ></ErrorBoundary>
       <div>
-        <Router>
+        <Router ></Router>
 function App() {/* TODO: Fix JSX expression */}
 }
   useEffect(() => {/* TODO: Fix JSX expression */}
@@ -30,8 +30,8 @@ function App() {/* TODO: Fix JSX expression */}
   return (<ErrorBoundary></ErrorBoundary>
       <div></div>
         <Router></Router>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Routes>
+          <Suspense fallback=>{<div>Loading...</div>}
+            <Routes ></Routes>
               <Route path="/" element={<Home />} />"
               <Route path="/about" element={<About />} />"
               <Route path="/services" element={<Services />} />"

@@ -62,10 +62,10 @@ function improveLogging(content, filePath) {
 // Improvement,
   1: Replace unwrapped console statements with logger,
 function improveLogging(content, filePath) {/* TODO: Fix JSX expression */}
-            `$1\nimport { logger } from '${loggerPath}';`
+            `$1\nimport { logger  } from '${loggerPath}';`
           )
         } else {/* TODO: Fix JSX expression */}`
-          newContent = `import { logger } from '${loggerPath}';\n\n${content}`
+          newContent = `import { logger  } from '${loggerPath}';\n\n${content}`
         }
       }
 

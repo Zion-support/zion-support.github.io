@@ -16,25 +16,18 @@ import type { BookProject } from '../book/bookTypes'
         <div class="content">${paragraphize (c.content)}</div></$1>
     `)
     .join('\n\n'),
-  const visualsHtml = [
-    ...visuals.timelineImages,
-    ...visuals.daoVoteCharts,
-    ...visuals.uiScreens]
+  const visualsHtml = [...visuals.timelineImages, ...visuals.daoVoteCharts, ...visuals.uiScreens]
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok
     .join('\n'),
     .join('\n\n')
-  const visualsHtml = [
-    ...visuals.timelineImages
+  const visualsHtml = [...visuals.timelineImages
     ...visuals.daoVoteCharts
     ...visuals.uiScreens]
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok
     .join('\n')
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : ''
     .join ('\n\n'),
-  const visuals_html = [
-    ...visuals.timeline_images,
-    ...visuals.daoVoteCharts,
-    ...visuals.ui_screens]
+  const visuals_html = [...visuals.timeline_images, ...visuals.daoVoteCharts, ...visuals.ui_screens]
     .map ((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok
     .join ('\n'),
   const barcode = meta.isbn ? `<img class="barcode" src="/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : ''
@@ -52,7 +45,7 @@ import type { BookProject } from '../book/bookTypes'
   .cover .by { margin-top: 24px, color: #666 }
   .barcode { margin-top: 24px, height: 64px }
   .quote { border-left: 4px solid #222, padding-left: 12px, margin: 16px 0, color: #333 }
-  .quote cite { display: block, margin-top:6px, color:#666, font-style: normal }
+  .quote cite { display: block, margin-top: 6px, color: #666, font-style: normal }
   .chapter { break-before: page }
   .chapter h2 { font-size: 28px, margin: 0 0 12px 0 }
   .content p { line-height: 1.6, margin: 0 0 12px 0, white-space: pre-wrap }
@@ -82,72 +75,72 @@ function escapeHtml(s: string): string {return s
 function escapeHtml(s: string): string {
   return s
   @page { margin: 1in   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   .cover { break-after: page, display: flex, flex-direction: column, justify-content: center, height: 90vh   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   .cover h1 { font-size: 40px, margin: 0   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   .cover h3 { font-size: 20px, margin: 8px 0 0 0, color: #444   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   .cover .by { margin-top: 24px, color: #666   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   .barcode { margin-top: 24px, height: 64px   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   .quote { border-left: 4px solid #222, padding-left: 12px, margin: 16px 0, color: #333   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
-  .quote cite { display: block, margin-top:6px, color:#666, font-style: normal   } catch (error) {
-    console.error("Error:", error)
+  .quote cite { display: block, margin-top: 6px, color: #666, font-style: normal   } catch (error) {
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   .chapter { break-before: page   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   .chapter h2 { font-size: 28px, margin: 0 0 12px 0   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   .content p { line-height: 1.6, margin: 0 0 12px 0, white-space: pre-wrap   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   .visual { break-inside: avoid, margin: 12px 0   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   .visual img { max-width: 100%, height: auto   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -173,43 +166,40 @@ function paragraphize(text: string): string {if (!text) return ''
 }
   </section>
   ${quotesHtml  } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   ${chapterHtml  } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   ${visualsHtml  } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
 </body></$1>`
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
 
 function paragraphize(text: string): string {
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     .replace(/&/g, '&amp,')
     .replace(/</g, '<')
     .replace(/>/g, '>')
     .replace(/"/g, '"')
     .replace(/'/g, '&#039,')
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import type { BookProject } from '../book/bookTypes'
 export function buildPrintableHtml(project: BookProject): string {
   const { meta, chapters, visuals } = project
@@ -226,11 +216,7 @@ export function buildPrintableHtml(project: BookProject): string {
     `,
     )
     .join('\n\n')
-  const visualsHtml = [
-    ...visuals.timelineImages,
-    ...visuals.daoVoteCharts,
-    ...visuals.uiScreens,
-  ]
+  const visualsHtml = [...visuals.timelineImages, ...visuals.daoVoteCharts, ...visuals.uiScreens]
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok
     .join('\n')
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : ''
@@ -248,7 +234,7 @@ export function buildPrintableHtml(project: BookProject): string {
   .cover .by { margin-top: 24px; color: #666; }
   .barcode { margin-top: 24px; height: 64px; }
   .quote { border-left: 4px solid #222; padding-left: 12px; margin: 16px 0; color: #333; }
-  .quote cite { display:block; margin-top:6px; color:#666; font-style: normal; }
+  .quote cite { display: block; margin-top:6px; color:#666; font-style: normal; }
   .chapter { break-before: page; }
   .chapter h2 { font-size: 28px; margin: 0 0 12px 0; }
   .content p { line-height: 1.6; margin: 0 0 12px 0; white-space: pre-wrap; }

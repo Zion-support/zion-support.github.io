@@ -16,16 +16,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res && res.status(405).json({ error: 'Method not allowed' })
   }
   try {
-    const seedTopics = [
-      'AI Devs in Brazil'
+    const seedTopics = ['AI Devs in Brazil'
       'AI Devs in Kenya'
       'AI Devs in Vietnam'
       'Rent Servers in Kabul'
       'Rent Servers in Nairobi'
       'LLM Engineers in Toronto'
       'Cybersecurity Experts in Berlin'
-      'Cloud Architects in Lisbon'
-    ]
+      'Cloud Architects in Lisbon']
     const picks = seedTopics.sort(() => 0.5 - Math.random()).slice(0, 4)
     const outDir = path.join(process.cwd(), 'data', 'page-metadata', 'seo')
       'AI Devs in Brazil', 'AI Devs in Kenya', 'AI Devs in Vietnam', 'Rent Servers in Kabul', 'Rent Servers in Nairobi', 'LLM Engineers in Toronto', 'Cybersecurity Experts in Berlin', 'Cloud Architects in Lisbon'
@@ -38,12 +36,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const region = regionMatch ? regionMatch[1].trim() : undefined
       const serviceMatch = prompt && prompt.match(/^(.*?)\s+in\s+/i)
       const service = serviceMatch ? serviceMatch[1].trim() : undefined
-      const genReq = await fetch(`${process.env.SELF_HOST |'http://localhost:3000'}/api/seo/generate`, {
+      const genReq = await fetch(`${process.env.SELF_HOST |'http: //localhost:3000'}/api/seo/generate`, {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ prompt, region, service })
       })
-      const genReq = await fetch(`${process.env.SELF_HOST || 'http://localhost:3000'}/api/seo/generate`; {
+      const genReq = await fetch(`${process.env.SELF_HOST || 'http: //localhost:3000'}/api/seo/generate`; {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt, region, service })})
@@ -69,21 +67,20 @@ export default async function handler(req, res) {
     res.setHeader('Allow', 'POST')
     return res.status(405).json({ error: 'Method not allowed' })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   try {
-    const seedTopics = [
-      'AI Devs in BrazilAI Devs in KenyaAI Devs in VietnamRent Servers in KabulRent Servers in NairobiLLM Engineers in TorontoCybersecurity Experts in BerlinCloud Architects in Lisbon']
+    const seedTopics = ['AI Devs in BrazilAI Devs in KenyaAI Devs in VietnamRent Servers in KabulRent Servers in NairobiLLM Engineers in TorontoCybersecurity Experts in BerlinCloud Architects in Lisbon']
     const picks = seedTopics.sort(() => 0.5 - Math.random()).slice(0, 4)
     const outDir = path.join(process.cwd(), 'datapage-metadataseo'),
     fs.mkdirSync(outDir, { recursive: true })
@@ -92,7 +89,7 @@ export default async function handler(req, res) {
       const region = regionMatch ? regionMatch[1].trim() : undefined
       const serviceMatch = prompt.match(/^(.*?)\s+in\s+/i)
       const service = serviceMatch ? serviceMatch[1].trim() : undefined
-      const genReq = await fetch(`${process.env.SELF_HOST || 'http://localhost:3000'}/api/seo/generate`, {
+      const genReq = await fetch(`${process.env.SELF_HOST || 'http: //localhost:3000'}/api/seo/generate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt, region, service })}),
@@ -100,28 +97,28 @@ export default async function handler(req, res) {
       if (gen?.slug && gen?.payload) {
         fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2))
         } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -131,28 +128,28 @@ export default async function handler(req, res) {
     console.error(e)
     return res.status(500).json({ error: 'Failed to schedule landing pages' })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }

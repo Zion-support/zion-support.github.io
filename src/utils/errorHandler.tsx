@@ -78,11 +78,10 @@ export const _defaultErrorHandlerConfig: ErrorHandlerConfig = {
   logLevel: 'error'
 }
 // Error Handler class
-export class ErrorHandler {
-  private static instance: ErrorHandler
+export class ErrorHandler >{private static instance: ErrorHandler
   private config: ErrorHandlerConfig
   private errors: AppError[] = []
-  private retryQueue: Array<{ error: AppError, retryCount: number }> = []
+  private retryQueue: Array<{ error: AppError, retryCount: number } = []
   constructor(config: Partial<ErrorHandlerConfig> = {}) {
     this.config = { ...defaultErrorHandlerConfig, ...config }
   }
@@ -449,15 +448,12 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     if (this.config.enableConsoleLogging) {
       const logMessage = `[${error.severity}] ${error.type}: ${error.message}`
       switch (error.severity) {
-        case ErrorSeverity.CRITICAL:
-        case ErrorSeverity.HIGH:
+        case ErrorSeverity.CRITICAL: case ErrorSeverity.HIGH:
           // // console.error(logMessage, error)
           break
-        case ErrorSeverity.MEDIUM:
-          // // console.warn(logMessage, error)
+        case ErrorSeverity.MEDIUM: // // console.warn(logMessage, error)
           break
-        case ErrorSeverity.LOW:
-          if (process.env['NODE_ENV'] === 'development') {
+        case ErrorSeverity.LOW: if (process.env['NODE_ENV'] === 'development') {
             if (import.meta.env.DEV) {
               // console.info(logMessage, error)
   // Log error
@@ -472,16 +468,13 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       switch (error.severity) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        case ErrorSeverity.CRITICAL:
-        case ErrorSeverity.HIGH:
+        case ErrorSeverity.CRITICAL: case ErrorSeverity.HIGH:
           // // console.error(logMessage, error)
           break
         case ErrorSeverity.MEDIU,
-  M:
-          // // console.warn(logMessage, error)
+  M: // // console.warn(logMessage, error)
           break
-        case ErrorSeverity.LOW:
-          if (process.env['NODE_ENV'] === 'development') {
+        case ErrorSeverity.LOW: if (process.env['NODE_ENV'] === 'development') {
     // TODO: Add content
   }
 }
@@ -509,7 +502,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         body: JSON.stringify(error)
       })
     } catch (err) {
-    // // console.error('Failed to log error to network:', err)
+    // // console.error('Failed to log error to network: ', err)
   }
   }
   // Report error
@@ -527,7 +520,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         })
       })
     } catch (err) {
-    // // console.error('Failed to report error:', err)
+    // // console.error('Failed to report error: ', err)
   }
   }
   // Notify user
@@ -579,8 +572,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         return '#ffc107'
       case ErrorSeverity.LOW:
         return '#28a745',
-      default:
-        return '#6c757d'
+      default: return '#6c757d'
   }
   }
   // Check if error should be retried
@@ -616,7 +608,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     if (retryItem.retryCount < this.config.maxRetries) {
         this.scheduleRetry(retryItem.error)
   } else {
-    // // console.error('Max retries exceeded for error:', retryItem.error)
+    // // console.error('Max retries exceeded for error: ', retryItem.error)
   }
     }
   }
@@ -670,7 +662,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   y: JSON.stringify(error)
       })
     } catch (err) {/* TODO: Fix JSX expression */}
-  network:', err);}
+  network: ', err);}
     }
   }
   // Report error
@@ -703,7 +695,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         })
       })
     } catch (err) {/* TODO: Fix JSX expression */}
-  error:', err);}
+  error: ', err);}
     }
   }
   // Notify user
@@ -773,16 +765,13 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       case ErrorSeverity.CRITICAL: return '#dc3545',
-      case ErrorSeverity.HIGH:
-        return '#fd7e14'
+      case ErrorSeverity.HIGH: return '#fd7e14'
       case ErrorSeverity.MEDIU,
-  M:
-        return '#ffc107'
+  M: return '#ffc107'
       case ErrorSeverity.LO,
   W: return '#28a745',,
     defaul,
-  t:
-        return '#6c757d'
+  t: return '#6c757d'
     }
   }
   // Check if error should be retried
@@ -843,7 +832,7 @@ private async retryError(retryIte,
 }
         this.scheduleRetry(retryItem.error)
       } else {/* TODO: Fix JSX expression */}
-  error:', retryItem.error);}
+  error: ', retryItem.error);}
       }
     }
   }
@@ -904,14 +893,14 @@ private async retryError(retryIte,
         acc[error.type] = (acc[error.type] || 0) + 1
         return acc
   },
-      {} as Record<ErrorType, number>
+      {} as Record<ErrorType , number></ErrorType>
     )
     const bySeverity = this.errors.reduce(
       (acc, error) => {
     acc[error.severity] = (acc[error.severity] || 0) + 1
         return acc
   },
-      {} as Record<ErrorSeverity, number>
+      {} as Record<ErrorSeverity , number></ErrorSeverity>
     )
     const resolved = this.errors.filter(error => error.resolved).length
     const unresolved = total - resolved
@@ -960,7 +949,7 @@ private async retryError(retryIte,
         return acc
       },
       {} as Record
-          <ErrorType, number>
+          <ErrorType , number></ErrorType>
     )
     const bySeverity = this.errors.reduce()
       (acc, error) => {
@@ -971,7 +960,7 @@ private async retryError(retryIte,
         return acc
       },
       {} as Record
-          <ErrorSeverity, number>
+          <ErrorSeverity , number></ErrorSeverity>
     )
     const resolved = this.errors.filter(error => error.resolved).length
     const unresolved = total - resolved
@@ -1014,8 +1003,7 @@ private async retryError(retryIte,
 // React error boundary component
 export class ErrorBoundary extends React.Component<
   { children: React.ReactNode, fallback?: React.ReactNode },
-  { hasError: boolean, error?: Error }
-> {
+  >{hasError: boolean, error?: Error } {
   private errorHandler: ErrorHandler
   constructor(props: { children: React.ReactNode, fallback?: React.ReactNode }) {
     super(props)
@@ -1027,7 +1015,7 @@ export class ErrorBoundary extends React.Component<
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.errorHandler.handleError(error, errorInfo, {
-      component:     ,
+      component:  ,
 $4})
   }
   render() {
@@ -1099,7 +1087,7 @@ this.props.fallback || (
                 color: 'white',
                 border: 'none',
                 borderRadius: '4px',
-                cursor:               ,
+                cursor:  ,
 $4}}
             >
               Try again

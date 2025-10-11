@@ -47,7 +47,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     })
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-    console.error('Error caught by boundary:', error, errorInfo)
+    console.error('Error caught by boundary: ', error, errorInfo)
   }
     // Send error report in production
     if (process.env.NODE_ENV === 'production') {
@@ -77,7 +77,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
         body: JSON.stringify(errorReport),
       })
     } catch (reportError) {
-    console.error('Failed to report error:', reportError)
+    console.error('Failed to report error: ', reportError)
   }
   }
   private handleRetry = () => {
@@ -111,8 +111,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                   We're sorry, but something unexpected happened.
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-md">
-                <h4 className="text-sm font-medium text-red-800 mb-2">Error Details:
-                <pre className="text-xs text-red-700 overflow-auto">
+                <h4 className="text-sm font-medium text-red-800 mb-2">Error Details: <pre className="text-xs text-red-700 overflow-auto">
                   {this.state.error.message}
                   {this.state.error.stack && `\n\n${this.state.error.stack}`}
             )}

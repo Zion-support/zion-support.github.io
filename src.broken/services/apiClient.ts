@@ -1,10 +1,10 @@
 import axios from 'axios'
-import { toast } from '@/hooks/use-toast'
-import { supabase } from '@/integrations/supabase/client'
+import { toast  } from '@/hooks/use-toast'
+import { supabase  } from '@/integrations/supabase/client'
 import axiosRetry from 'axios-retry'
-import { logErrorToProduction, logDebug } from '@/utils/productionLogger'
+import { logErrorToProduction, logDebug  } from '@/utils/productionLogger'
 import type { AxiosResponse } from 'axios'
-axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com/v1'
+axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL || 'https: //api.ziontechgroup.com/v1'
 // Global interceptor for all axios instances
 // Define the global error handler (exported for testing purposes)
 export const globalAxiosErrorHandler = (error: unknown) => {
@@ -28,17 +28,7 @@ export const globalAxiosErrorHandler = (error: unknown) => {
     return Promise.reject(error)
   }
   // URLs that should not trigger user-facing error toasts
-  const SILENT_ERROR_PATTERNS = [
-    '/health',
-    '/status',
-    '/heartbeat',
-    '/ping',
-    '/analytics',
-    '/metrics',
-    '/telemetry',
-    'supabase.co',
-    'googleapis.com',
-    'github.com/api']
+  const SILENT_ERROR_PATTERNS = ['/health', '/status', '/heartbeat', '/ping', '/analytics', '/metrics', '/telemetry', 'supabase.co', 'googleapis.com', 'github.com/api']
     'github.com/api',
   ]
   // Check if URL should fail silently
@@ -68,8 +58,7 @@ export const globalAxiosErrorHandler = (error: unknown) => {
       case 503:
       case 504:
         return ['POST', 'PUT', 'DELETE', 'PATCH'].includes(method)
-      default:
-        return false
+      default: return false
     }
   }
   // Only show error toast if it's a user-facing error

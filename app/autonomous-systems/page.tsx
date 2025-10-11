@@ -1,20 +1,19 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
+import { Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AutonomousSystemsPage: React.FC = () => {
-  const services = [
-    {
-      title: 'Autonomous Vehicles',
-      description: 'Self-driving vehicle systems and fleet management',
-      features: ['Path Planning', 'Object Detection', 'Fleet Coordination'],
+  return (
+
+  const services = [{
+      title: 'Autonomous Vehicles', description: 'Self-driving vehicle systems and fleet management', features: ['Path Planning', 'Object Detection', 'Fleet Coordination'],
       price: 'Starting at $2,500/month',
       icon: '🚗'
-    },
+    
+  );
+},
     {
       title: 'Smart Manufacturing',
       description: 'Autonomous production lines and quality control',
@@ -52,38 +51,28 @@ const AutonomousSystemsPage: React.FC = () => {
     }
   ];
 
-  const capabilities = [
-    { title: 'Self-Learning', description: 'Systems that improve through experience' },
-    { title: 'Adaptive Behavior', description: 'Dynamic response to changing conditions' },
-    { title: 'Predictive Maintenance', description: 'Proactive system health management' },
-    { title: 'Autonomous Decision Making', description: 'Independent problem-solving capabilities' }
-  ];
-=======
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
->>>>>>> origin/main
+  const capabilities = [{ title: 'Self-Learning', description: 'Systems that improve through experience' }, { title: 'Adaptive Behavior', description: 'Dynamic response to changing conditions' }, { title: 'Predictive Maintenance', description: 'Proactive system health management' }, { title: 'Autonomous Decision Making', description: 'Independent problem-solving capabilities' }];
+import { Helmet  } from 'react-helmet-async';
 
 const PagePage: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
+      <Navigation /></Navigation>
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
             Autonomous Systems
           </h1>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8">
             Build intelligent systems that operate independently, learn from experience, 
             and adapt to changing conditions without human intervention.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="cyber-button">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <Link to="/contact" className="cyber-button"></Link>
               Explore Autonomous Solutions
             </Link>
-            <Link to="/case-studies" className="cyber-button" style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}>
+            <Link to="/case-studies" className="cyber-button" style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}></Link>
               View Success Stories
             </Link>
           </div>
@@ -92,7 +81,7 @@ const PagePage: React.FC = () => {
         {/* Capabilities Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Autonomous Capabilities</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {capabilities.map((capability, index) => (
               <div key={index} className="text-center cyber-card">
                 <h3 className="text-lg font-bold text-white mb-2">{capability.title}</h3>
@@ -105,7 +94,7 @@ const PagePage: React.FC = () => {
         {/* Services Grid */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Autonomous Solutions</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="cyber-card hologram-card p-6">
                 <div className="text-4xl mb-4 text-center">{service.icon}</div>
@@ -121,7 +110,7 @@ const PagePage: React.FC = () => {
                 </ul>
                 <div className="text-center">
                   <div className="text-lg font-bold text-green-400 mb-3">{service.price}</div>
-                  <Link to="/contact" className="text-green-400 hover:text-green-300 font-medium">
+                  <Link to="/contact" className="text-green-400 hover: text-green-300 font-medium"></Link>
                     Learn More →
                   </Link>
                 </div>
@@ -133,7 +122,7 @@ const PagePage: React.FC = () => {
         {/* Process Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Autonomous System Development</h2>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">1</span>
@@ -173,8 +162,8 @@ const PagePage: React.FC = () => {
           <p className="text-gray-300 mb-6">
             Create intelligent systems that work independently and adapt to your business needs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="cyber-button">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <Link to="/contact" className="cyber-button"></Link>
               Start Building Autonomous Systems
             </Link>
             <a href="tel:+13024640950" className="cyber-button" style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}>
@@ -184,32 +173,12 @@ const PagePage: React.FC = () => {
         </section>
       </main>
       
-      <Footer />
+      <Footer /></Footer>
     </div>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-=======
-import {Helmet}}from 'react-helmet-async';
-const AutonomousSystemsPage: React.FC = () => {,
-    return(<>)
-      <Helmet />
-        <title>Autonomous Systems - Zion Tech Group</title>
-        <meta />
-=======
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-const AutonomousSystemsPage: React.FC = () => {
-    return (
-    <>
-  </>
->>>>>>> origin/main
-      <Helmet>
+      <Helmet ></Helmet>
         </Helmet><title>Autonomous Systems - Zion Tech Group</title>
         <meta>
->>>>>>> origin/main
       </Helmet>
-<<<<<<< HEAD
       
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
@@ -226,50 +195,13 @@ const AutonomousSystemsPage: React.FC = () => {
             >
               Get Started Today
             </a>
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="container mx-auto px-4 py-16"></div>
-          <div className="text-center mb-16"></div>
-            <h1>
-              Autonomous </h1><span className="text-cyan-400">Systems</span>
-            </h1>
-            <p>Advanced autonomous systems solutions for modern businesses.</p>
-            </p>
->>>>>>> origin/main
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
->>>>>>> origin/main
   );
 };
-=======
     </>,
-<<<<<<< HEAD
   )}};
->>>>>>> origin/main
 
-<<<<<<< HEAD
 export default PagePage;
-=======
-export default AutonomousSystemsPage;
-=======
-  )
-  }
-}
-export default AutonomousSystemsPage
-        <title>Autonomous Systems - Zion Tech Group
-        <meta name="description" content="Advanced autonomous systems solutions for modern businesses." />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Autonomous <span className="text-cyan-400">Systems
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced autonomous systems solutions for modern businesses.
-  )
-}
-export default AutonomousSystemsPage</div></div></div></span></p></h1>
->>>>>>> origin/main
->>>>>>> origin/main

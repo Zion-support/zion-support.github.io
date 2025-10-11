@@ -11,13 +11,13 @@ export const i18n = {
   resolvedLanguage: 'en'
 }
 import i18n from 'i18next'
-import { initReactI18next } from 'react-i18next'
+import { initReactI18next  } from 'react-i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import Backend from 'i18next-http-backend'
 export const supportedLocales = ['en', 'pt', 'es', 'ar'] as const
 export type SupportedLocale = typeof supportedLocales[number]
 export const isRtl = (lng?: string) => (lng || i18n.language)?.startsWith('ar')
-export const resources: Record<string, { translation: Record<string, string> }> = {
+export const resources: Record<string, >{translation: Record<string, string> } = {
   en: { translation: {} },
   pt: { translation: {} },
   es: { translation: {} },

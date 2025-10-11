@@ -13,7 +13,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     }
     let sha
     try {
-      const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
+      const getRes = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }?ref=${encodeURIComponent(githubBranch;)
       }`)
         { headers })
@@ -26,7 +26,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       'User-Agent': 'netlify-redirect-404-suggester'}
     let sha
     try {/* TODO: Fix JSX expression */}
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`,
         { headers })
@@ -40,7 +40,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         2)).toString('base64'),
       branch: githubBranch,
       sha}
-    const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
+    const putRes = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`)
       {method: 'PUT', headers)
         body: JSON.stringify(body,)})
@@ -69,7 +69,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   h: githubBranch,
       sha}`
     const putRes = await fetch(`http,
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`,
       {/* TODO: Fix JSX expression */}
       })
@@ -167,11 +167,11 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 exports.handler = async function(event, context) {const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/) '');' const githubToken = process.env.GITHUB_TOKEN || ''}' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const githubBranch = process.env.GIT_BRANCH || 'main' async function commitJson(path)
         data) {' if(!githubToken)
         return { ok: false),
-        reason: 'no_token' }' const headers = { Authorization: `token ${githubToken}`, 'Content-Type': 'application/json', 'User-Agent': 'netlify-redirect-404-suggester' } let sha; try { const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
+        reason: 'no_token' }' const headers = { Authorization: `token ${githubToken}`, 'Content-Type': 'application/json', 'User-Agent': 'netlify-redirect-404-suggester' } let sha; try { const getRes = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }?ref=${encodeURIComponent(githubBranch;)
       }`, { headers;)
       }); if (getRes.ok) {const j = await getRes.json(); sha = j.sha} } } catch {}' const body = { message: `chore: update 404 redirect suggestions (${new Date().toISOString()})`, content: Buffer.from(JSON.stringify(data, null)
-        2)).toString('base64'), branch: githubBranch, sha }' const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
+        2)).toString('base64'), branch: githubBranch, sha }' const putRes = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`, {method: 'PUT', headers)
         body: JSON.stringify(body,)}); return {ok: putRes.ok
         status: putRes.status, error: putRes.ok ? undefined : await putRes.text() } } ' if(!baseUrl)
@@ -197,7 +197,7 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
         data) {/* TODO: Fix JSX expression */}
   n: 'no_token' }' const headers = {/* TODO: Fix JSX expression */}`
   n: `token ${githubToken}`, 'Content-Type': 'application/json', 'User-Agent': 'netlify-redirect-404-suggester' } let sha; try {/* TODO: Fix JSX expression */}
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`, {/* TODO: Fix JSX expression */}
       }); if (getRes.ok) {const j = await getRes.json(); sha = j.sha} } } catch {}' const body = {/* TODO: Fix JSX expression */}`
@@ -205,7 +205,7 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
   t: Buffer.from(JSON.stringify(data, null)
         2)).toString('base64'), branc,`
   h: githubBranch, sha }' const putRes = await fetch(`http,
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`, {/* TODO: Fix JSX expression */})
       }); return {/* TODO: Fix JSX expression */}
   r: putRes.ok ? undefined : await putRes.text() } } ' if (!baseUrl,

@@ -7,8 +7,7 @@ export interface KycDocumentMeta {
   uploaded_at: string
   status: 'pending' | 'approved' | 'rejected'
 }
-export interface KycProfile {
-export interface KycProfile {
+export interface KycProfile >{export interface KycProfile {
 export interface KycProfile {
   user_id: string
   userId: string
@@ -30,7 +29,7 @@ export interface KycProfile {
     by: string
     action: string
     details?: any
-  }>
+  }
 // KYC (Know Your Customer) utilities
 export interface KycProfile {
   userId: string
@@ -104,8 +103,7 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
     missing
   }
 }
-export interface KycProfile {
-  userId: string
+export interface KycProfile >{userId: string
   role: KycRole
   fullLegalName?: string
   businessName?: string
@@ -124,7 +122,7 @@ export interface KycProfile {
     by: string
     action: string
     details?: any
-  }>
+  }
 }
 export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
   const missing: string[] = []
@@ -157,7 +155,6 @@ if ( {) {
     missing
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export type KycRole = 'client' | 'talent' | 'enterprise'
 export type KycStatus =
   | 'not_started'
@@ -182,8 +179,7 @@ export interface KycDocumentMeta {
   checksumSha256?: string
   uploadedAt: string; // ISO
 }
-export interface KycProfile {
-  userId: string
+export interface KycProfile >{userId: string
   role: KycRole
   fullLegalName?: string
   dateOfBirth?: string; // ISO
@@ -194,10 +190,10 @@ export interface KycProfile {
   status: KycStatus
   amlStatus: AmlStatus
   riskScore?: number; // 0-100
-  flags?: string[]; // e.g., ["mismatch","duplicate_ip"]
+  flags?: string[]; // e.g., ["mismatch", "duplicate_ip"]
   lastUpdatedAt: string; // ISO
   createdAt: string; // ISO
-  auditTrail: Array<{ at: string; by: string; action: string; details?: Record<string, unknown> }>
+  auditTrail: Array<{ at: string; by: string; action: string; details?: Record<string, unknown> }
 }
 export function getRequiredDocuments(role: KycRole): Array<KycDocumentMeta['kind']> {
   if (role === 'client') {

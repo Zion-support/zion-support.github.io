@@ -1,6 +1,6 @@
     }
   } catch (error) {
-    console && console.error('Error reading file:', error)
+    console && console.error('Error reading file: ', error)
 // Mock file system database utility
 export function read_json < T>(file_path: string, default_value: T): T {
   try {
@@ -12,7 +12,7 @@ export function read_json < T>(file_path: string, default_value: T): T {
   } catch (error) {
   await writeAllDisputes(all)
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -33,7 +33,6 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId)
   await mkdir(dir, { recursive: true })
   return dir
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   } catch (error) {
   } catch (error) {
     const dir = path && path.dirname(filePath),
@@ -41,22 +40,21 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
       fs && fs.mkdirSync(dir, { recursive: true })
     }
     fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2))
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch (error) {
-    console && console.error('Error writing file:', error)
+    console && console.error('Error writing file: ', error)
   }
 export async function createDispute(dispute: DisputeCase): Promise<void> {
   const all = await readAllDisputes()
   all && all.push(dispute)
 import fs from 'fs'
 import path from 'path'
-import { promisify } from 'util'
+import { promisify  } from 'util'
 import crypto from 'crypto'
-import { DisputeCase } from '../types/disputes'
+import { DisputeCase  } from '../types/disputes'
 const mkdir = promisify(fs.mkdir)
 const readFile = promisify(fs.readFile)
 const writeFile = promisify(fs.writeFile)
@@ -132,7 +130,4 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   return dir
 }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }

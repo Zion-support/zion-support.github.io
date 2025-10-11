@@ -1,14 +1,8 @@
 
-export const advancedITServices2025 = [
-    }
-    marketSize: '$15 && 15.7B',
-    targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'
+export const advancedITServices2025 = [}
+    marketSize: '$15 && 15.7B', targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
-    market_size: '$15.7B',
-    target_audience: unknown,
-      'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',
-    competitive_advantage: unknown,
-      'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration'}];      phone: '+1 302 464 0950',
+    market_size: '$15.7B', target_audience: unknown, 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms', competitive_advantage: unknown, 'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration'}];      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
     marketSiz,
   e: '$15 && 15.7B',
@@ -39,10 +33,7 @@ export const advancedITServices2025 = [
     id: 'intelligent-edge-computing-orchestrator'
     name: 'EdgeComputing AI'
     description: 'AI-powered edge computing orchestration platform that optimizes distributed computing resources and enables real-time processing at the network edge.',
-    features: [,
-      'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -86,10 +77,7 @@ export const advancedITServices2025 = [
     id: 'zero-trust-security-platform'
     name: 'ZeroTrust Security Pro',
     description: 'Comprehensive zero-trust security platform that provides continuous verification, micro-segmentation, and advanced threat protection for modern enterprises.'
-    features: [,
-      'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -132,10 +120,7 @@ export const advancedITServices2025 = [
     id: 'blockchain-enterprise-platform'
     name: 'EnterpriseBlockchain Pro',
     description: 'Enterprise-grade blockchain platform that provides secure, scalable, and compliant blockchain solutions for business applications.'
-    features: [,
-      'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   s: ['Up to 1}000 transactions/secBasic blockchainStandard support'] }
@@ -177,10 +162,7 @@ export const advancedITServices2025 = [
     id: 'ai-powered-devops-platform'
     name: 'DevOps AI Pro',
     description: 'Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery window.window.window.performance.'
-    features: [,
-      'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -224,10 +206,7 @@ export const advancedITServices2025 = [
     id: 'quantum-networking-platform'
     name: 'QuantumNet Pro',
     description: 'Next-generation quantum networking platform that provides ultra-secure, high-speed communication using quantum entanglement and advanced protocols.'
-    features: [,
-      'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -271,10 +250,7 @@ export const advancedITServices2025 = [
     id: 'autonomous-it-operations-platform'
     name: 'AutonomousIT Pro',
     description: 'AI-powered autonomous IT operations platform that self-manages infrastructure, predicts issues, and optimizes performance without human intervention.'
-    features: [,
-      'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -317,10 +293,7 @@ export const advancedITServices2025 = [
     id: 'quantum-data-center-platform'
     name: 'QuantumDataCenter Pro',
     description: 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.'
-    features: [,
-      'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -364,10 +337,7 @@ export const advancedITServices2025 = [
     id: 'quantum-cybersecurity-platform'
     name: 'QuantumCyber Pro',
     description: 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.'
-    features: [,
-      'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -410,10 +380,7 @@ export const advancedITServices2025 = [
     id: 'quantum-cloud-migration-platform'
     name: 'QuantumMigration Pro'
     description: 'Intelligent quantum-enhanced cloud migration platform that optimizes the transition to quantum cloud infrastructure with minimal disruption.',
-    features: [,
-      'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -453,18 +420,9 @@ export const advancedITServices2025 = [
   e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
 ]
-export const advancedITServices2025 = [
-    }
-    category: 'IT Operations',
-    tags: [,
-    categor,
-  y: 'IT Operations'
-    tag,
-  s: [,
-      'AI',
-      'Autonomous Operations',
-      'Infrastructure Management',
-      'Automation'],
+export const advancedITServices2025 = [}
+    category: 'IT Operations', tags: [, categor, y: 'IT Operations'
+    tag, s: [, 'AI', 'Autonomous Operations', 'Infrastructure Management', 'Automation'],
     contact: unknown,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -487,74 +445,38 @@ export const advancedITServices2025 = [
     nam,
   e: 'QuantumDataCenter Pro'
     descriptio,
-  n:
-      'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.'
+  n: 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.'
     feature,
-  s: [
-      'Quantum-enhanced computing'
+  s: ['Quantum-enhanced computing'
       'Advanced cooling and power management'
       'Ultra-secure quantum storage'
       'Real-time performance optimization'
       'Integration with cloud platforms'
       'Advanced monitoring and analytics'
       'Custom quantum solutions'
-      '24/7 data center support'
-    ]
+      '24/7 data center support']
     pricing: starter: unknown
         price: 499,
         period: 'month'
-        features: [
-    pricin,
-  g: starte,
-  r: unknown,
-        pric,
-  e: 499,
-        perio,
-  d: 'month'
-        feature,
-  s: [,
-          'Up to 100 racks'
-          'Basic quantum features',
-          'Standard support']}
+        features: [pricin, g: starte, r: unknown, pric, e: 499, perio, d: 'month'
+        feature, s: [, 'Up to 100 racks'
+          'Basic quantum features', 'Standard support']}
       professional: price: 1299,
         period: 'month'
-        features: [
-      professiona,
-  l: pric,
-  e: 1299,
-        perio,
-  d: 'month'
-        feature,
-  s: [,
-          'Up to 500 racks'
+        features: [professiona, l: pric, e: 1299, perio, d: 'month'
+        feature, s: [, 'Up to 500 racks'
           'Advanced quantum features'
-          'Custom solutions',
-          'Priority support']}
+          'Custom solutions', 'Priority support']}
       enterprise: price: 2999,
         period: 'month'
-        features: [
-      enterpris,
-  e: pric,
-  e: 2999,
-        perio,
-  d: 'month'
-        feature,
-  s: [,
-          'Unlimited racks'
+        features: [enterpris, e: pric, e: 2999, perio, d: 'month'
+        feature, s: [, 'Unlimited racks'
           'Custom quantum solutions'
-          'White-label platform',
-          'Dedicated support']}
+          'White-label platform', 'Dedicated support']}
     }
     category: 'Data Center',
-    tags: [,
-    categor,
-  y: 'Data Center'
-    tag,
-  s: [,
-      'Quantum Computing',
-      'Data Center',
-      'Infrastructure',
-      'Energy Efficiency'],
+    tags: [categor, y: 'Data Center'
+    tag, s: [, 'Quantum Computing', 'Data Center', 'Infrastructure', 'Energy Efficiency'],
     contact: unknown,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -577,76 +499,40 @@ export const advancedITServices2025 = [
     nam,
   e: 'QuantumCyber Pro'
     descriptio,
-  n:
-      'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.'
+  n: 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.'
     feature,
-  s: [
-      'Quantum-resistant encryption'
+  s: ['Quantum-resistant encryption'
       'Advanced threat detection'
       'Quantum key distribution'
       'Real-time security monitoring'
       'Integration with security tools'
       'Advanced analytics and reporting'
       'Custom security solutions'
-      '24/7 quantum security operations'
-    ]
+      '24/7 quantum security operations']
     pricing: starter: unknown
         price: 299,
         period: 'month'
-        features: [
-    pricin,
-  g: starte,
-  r: unknown,
-        pric,
-  e: 299,
-        perio,
-  d: 'month'
-        feature,
-  s: [,
-          'Up to 100 endpoints'
-          'Basic quantum security',
-          'Standard monitoring']}
+        features: [pricin, g: starte, r: unknown, pric, e: 299, perio, d: 'month'
+        feature, s: [, 'Up to 100 endpoints'
+          'Basic quantum security', 'Standard monitoring']}
       professional: price: 799,
         period: 'month',
-        features: [,
-      professiona,
-  l: pric,
-  e: 799,
-        perio,
-  d: 'month'
-        feature,
-  s: [,
-          'Up to 1,000 endpoints'
+        features: [professiona, l: pric, e: 799, perio, d: 'month'
+        feature, s: [, 'Up to 1, 000 endpoints'
           'Advanced quantum features'
           'Custom solutions'
-          'Priority support'
-        ]
+          'Priority support']
       }
       enterprise: price: 1999,
         period: 'month'
-        features: [
-      enterpris,
-  e: pric,
-  e: 1999,
-        perio,
-  d: 'month'
-        feature,
-  s: [,
-          'Unlimited endpoints'
+        features: [enterpris, e: pric, e: 1999, perio, d: 'month'
+        feature, s: [, 'Unlimited endpoints'
           'Custom quantum security'
-          'White-label solution',
-          'Dedicated support']}
+          'White-label solution', 'Dedicated support']}
     }
     category: 'Quantum Cybersecurity',
-    tags: [,
-    categor,
-  y: 'Quantum Cybersecurity'
-    tag,
-  s: [,
-      'Quantum Computing',
-      'Cybersecurity',
-      'Encryption',
-      'Threat Detection'],
+    tags: [categor, y: 'Quantum Cybersecurity'
+    tag, s: [, 'Quantum Computing', 'Cybersecurity', 'Encryption', 'Threat Detection'],
     contact: unknown,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -668,62 +554,32 @@ export const advancedITServices2025 = [
     descriptio,
   n: 'Intelligent quantum-enhanced cloud migration platform that optimizes the transition to quantum cloud infrastructure with minimal disruption.'
     feature,
-  s: [
-      'AI-powered migration planning'
+  s: ['AI-powered migration planning'
       'Quantum-enhanced migration tools'
       'Zero-downtime migration'
       'Real-time migration monitoring'
       'Integration with cloud platforms'
       'Advanced analytics and reporting'
       'Custom migration strategies'
-      '24/7 migration support'
-    ]
+      '24/7 migration support']
     pricing: starter: unknown
         price: 199,
         period: 'month'
-        features: [
-    pricin,
-  g: starte,
-  r: unknown,
-        pric,
-  e: 199,
-        perio,
-  d: 'month'
-        feature,
-  s: [,
-          'Up to 100 workloads'
-          'Basic migration tools',
-          'Standard support']}
+        features: [pricin, g: starte, r: unknown, pric, e: 199, perio, d: 'month'
+        feature, s: [, 'Up to 100 workloads'
+          'Basic migration tools', 'Standard support']}
       professional: price: 599,
         period: 'month',
-        features: [,
-      professiona,
-  l: pric,
-  e: 599,
-        perio,
-  d: 'month'
-        feature,
-  s: [,
-          'Up to 1,000 workloads'
+        features: [professiona, l: pric, e: 599, perio, d: 'month'
+        feature, s: [, 'Up to 1, 000 workloads'
           'Advanced quantum features'
           'Custom strategies'
-          'Priority support'
-        ]
+          'Priority support']
       }
       enterprise: price: 1499,
         period: 'month',
-        features: [,
-      enterpris,
-  e: pric,
-  e: 1499,
-        perio,
-  d: 'month'
-        feature,
-  s: [,
-          'Unlimited workloads',
-          'Custom quantum solutions',
-          'White - label platform',
-          'Dedicated support']}},
+        features: [enterpris, e: pric, e: 1499, perio, d: 'month'
+        feature, s: [, 'Unlimited workloads', 'Custom quantum solutions', 'White - label platform', 'Dedicated support']}},
     category: 'Cloud Migration',
     tags: ['Quantum Computing', 'Cloud Migration', 'AI', 'Zero Downtime'],
     contact: phone: '+1 302 464 0950',
@@ -743,8 +599,7 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$15.7B'
     targetAudienc,
-  e:
-      'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'
+  e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'
     competitiveAdvantag,
   e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
@@ -775,15 +630,10 @@ export const advancedITServices2025 = [
   e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
 ]
-export const advancedITServices2025 = [
-  {
+export const advancedITServices2025 = [{
     id: 'quantum-cloud-infrastructure-platform'
-    name: 'QuantumCloud Infrastructure',
-    description: 'Next-generation quantum-enhanced cloud infrastructure platform that provides unprecedented performance, security, and scalability for enterprise applications.'
-    features: [,
-      'Quantum-enhanced computing resourcesAdvanced security with quantum encryptionAuto-scaling infrastructureGlobal edge computing networkIntegration with major cloud providersAdvanced monitoring and analyticsCustom quantum algorithms24/7 technical support',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    name: 'QuantumCloud Infrastructure', description: 'Next-generation quantum-enhanced cloud infrastructure platform that provides unprecedented performance, security, and scalability for enterprise applications.'
+    features: [, 'Quantum-enhanced computing resourcesAdvanced security with quantum encryptionAuto-scaling infrastructureGlobal edge computing networkIntegration with major cloud providersAdvanced monitoring and analyticsCustom quantum algorithms24/7 technical support', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -827,10 +677,7 @@ export const advancedITServices2025 = [
     id: 'intelligent-edge-computing-orchestrator'
     name: 'EdgeComputing AI'
     description: 'AI-powered edge computing orchestration platform that optimizes distributed computing resources and enables real-time processing at the network edge.',
-    features: [,
-      'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -874,10 +721,7 @@ export const advancedITServices2025 = [
     id: 'zero-trust-security-platform'
     name: 'ZeroTrust Security Pro',
     description: 'Comprehensive zero-trust security platform that provides continuous verification, micro-segmentation, and advanced threat protection for modern enterprises.'
-    features: [,
-      'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -920,10 +764,7 @@ export const advancedITServices2025 = [
     id: 'blockchain-enterprise-platform'
     name: 'EnterpriseBlockchain Pro',
     description: 'Enterprise-grade blockchain platform that provides secure, scalable, and compliant blockchain solutions for business applications.'
-    features: [,
-      'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   s: ['Up to 1}000 transactions/secBasic blockchainStandard support'] }
@@ -965,10 +806,7 @@ export const advancedITServices2025 = [
     id: 'ai-powered-devops-platform'
     name: 'DevOps AI Pro',
     description: 'Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery window.window.window.performance.'
-    features: [,
-      'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -1012,10 +850,7 @@ export const advancedITServices2025 = [
     id: 'quantum-networking-platform'
     name: 'QuantumNet Pro',
     description: 'Next-generation quantum networking platform that provides ultra-secure, high-speed communication using quantum entanglement and advanced protocols.'
-    features: [,
-      'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -1059,10 +894,7 @@ export const advancedITServices2025 = [
     id: 'autonomous-it-operations-platform'
     name: 'AutonomousIT Pro',
     description: 'AI-powered autonomous IT operations platform that self-manages infrastructure, predicts issues, and optimizes performance without human intervention.'
-    features: [,
-      'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -1105,10 +937,7 @@ export const advancedITServices2025 = [
     id: 'quantum-data-center-platform'
     name: 'QuantumDataCenter Pro',
     description: 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.'
-    features: [,
-      'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -1152,10 +981,7 @@ export const advancedITServices2025 = [
     id: 'quantum-cybersecurity-platform'
     name: 'QuantumCyber Pro',
     description: 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.'
-    features: [,
-      'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -1198,10 +1024,7 @@ export const advancedITServices2025 = [
     id: 'quantum-cloud-migration-platform'
     name: 'QuantumMigration Pro'
     description: 'Intelligent quantum-enhanced cloud migration platform that optimizes the transition to quantum cloud infrastructure with minimal disruption.',
-    features: [,
-      'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -1272,10 +1095,7 @@ export const advancedITServices2025 = [
     id: 'intelligent-edge-computing-orchestrator',
     name: 'EdgeComputing AI',,
   description: 'AI-powered edge computing orchestration platform that optimizes distributed computing resources and enables real-time processing at the network edge.',
-    features: [,
-      'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -1319,10 +1139,7 @@ export const advancedITServices2025 = [
     id: 'zero-trust-security-platform',
     name: 'ZeroTrust Security Pro',,
   description: 'Comprehensive zero-trust security platform that provides continuous verification, micro-segmentation, and advanced threat protection for modern enterprises.'
-    features: [,
-      'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -1365,10 +1182,7 @@ export const advancedITServices2025 = [
     id: 'blockchain-enterprise-platform',
     name: 'EnterpriseBlockchain Pro',,
   description: 'Enterprise-grade blockchain platform that provides secure, scalable, and compliant blockchain solutions for business applications.'
-    features: [,
-      'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   s: ['Up to 1}000 transactions/secBasic blockchainStandard support'] }
@@ -1410,10 +1224,7 @@ export const advancedITServices2025 = [
     id: 'ai-powered-devops-platform',
     name: 'DevOps AI Pro',,
   description: 'Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery window.window.window.performance.'
-    features: [,
-      'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -1457,10 +1268,7 @@ export const advancedITServices2025 = [
     id: 'quantum-networking-platform',
     name: 'QuantumNet Pro',,
   description: 'Next-generation quantum networking platform that provides ultra-secure, high-speed communication using quantum entanglement and advanced protocols.'
-    features: [,
-      'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -1504,10 +1312,7 @@ export const advancedITServices2025 = [
     id: 'autonomous-it-operations-platform',
     name: 'AutonomousIT Pro',,
   description: 'AI-powered autonomous IT operations platform that self-manages infrastructure, predicts issues, and optimizes performance without human intervention.'
-    features: [,
-      'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -1550,10 +1355,7 @@ export const advancedITServices2025 = [
     id: 'quantum-data-center-platform',
     name: 'QuantumDataCenter Pro',,
   description: 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.'
-    features: [,
-      'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -1597,10 +1399,7 @@ export const advancedITServices2025 = [
     id: 'quantum-cybersecurity-platform',
     name: 'QuantumCyber Pro',,
   description: 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.'
-    features: [,
-      'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -1643,10 +1442,7 @@ export const advancedITServices2025 = [
     id: 'quantum-cloud-migration-platform',
     name: 'QuantumMigration Pro',,
   description: 'Intelligent quantum-enhanced cloud migration platform that optimizes the transition to quantum cloud infrastructure with minimal disruption.',
-    features: [,
-      'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support',
-  {/* TODO: Fix JSX expression */}
-    ]}
+    features: ['AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support', {/* TODO: Fix JSX expression */}]}
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
@@ -1695,19 +1491,13 @@ export const advancedITServices2025 = [
 ]
 }
 ]
-export const advancedITServices2025 = [ } marketSiz,
-  e: '$15 && 15.7B',' targetAudienc,
-  e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'' competitiveAdvantag,
-  e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration' ' market_siz,
-  e: '$15.7B', target_audienc,
-  e:  ,' 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms', competitive_advantag,
-  e:  ,' 'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration'},' ]; phon,
+export const advancedITServices2025 = [} marketSiz, e: '$15 && 15.7B', ' targetAudienc, e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'' competitiveAdvantag, e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration' ' market_siz, e: '$15.7B', target_audienc, e:, ' 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms', competitive_advantag, e:, ' 'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration'}, ']; phon,
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup.com' }' marketSiz,
   e: '$178.9B',' targetAudienc,
   e: 'Enterprise businesses, cloud providers, research institutions, government agencies';' competitiveAdvantag,
   e: 'Industry-first quantum-enhanced cloud infrastructure, advanced security with quantum encryption, and global edge computing network' } {/* TODO: Fix JSX expression */}
-  s: [,' 'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management' ]} pricin,
+  s: [' 'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 10 edge nodesBasic AI optimizationStandard monitoring'] }' professiona,
@@ -1727,7 +1517,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$43.4B',' targetAudienc,
   e: 'IoT companies, telecommunications, manufacturing, smart cities';' competitiveAdvantag,
   e: 'Advanced AI-powered edge orchestration, comprehensive distributed computing optimization, and extensive IoT device integration' } {/* TODO: Fix JSX expression */}
-  s: [,' 'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center' ]} pricin,
+  s: [' 'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 100 usersBasic zero-trustStandard monitoring'] }' professiona,
@@ -1746,7 +1536,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$173.5B',' targetAudienc,
   e: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';' competitiveAdvantag,
   e: 'Comprehensive zero-trust implementation, advanced threat detection, and extensive security tool integration' } {/* TODO: Fix JSX expression */}
-  s: [,' 'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support' ]} pricin,
+  s: [' 'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support']} pricin,
   g: {/* TODO: Fix JSX expression */}
   s: ['Up to 1}000 transactions/secBasic blockchainStandard support'] }' professiona,
   l: {/* TODO: Fix JSX expression */}
@@ -1764,7 +1554,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$19.9B',' targetAudienc,
   e: 'Financial institutions, supply chain companies, healthcare providers, government agencies';' competitiveAdvantag,
   e: 'Enterprise-grade blockchain infrastructure, comprehensive compliance tools, and seamless business system integration' } {/* TODO: Fix JSX expression */}
-  s: [,' 'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring' ]} pricin,
+  s: [' 'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 10 developersBasic AI automationStandard CI/CD'] }' professiona,
@@ -1784,7 +1574,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$8.2B',' targetAudienc,
   e: 'Development teams, DevOps engineers, software companies, enterprise businesses';' competitiveAdvantag,
   e: 'Advanced AI-powered DevOps automation, comprehensive workflow optimization, and extensive development tool integration' } {/* TODO: Fix JSX expression */}
-  s: [,' 'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support' ]} pricin,
+  s: [' 'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 1GbpsBasic quantum featuresStandard support'] }' professiona,
@@ -1804,7 +1594,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$12.8B',' targetAudienc,
   e: 'Telecommunications, financial institutions, government agencies, research institutions';' competitiveAdvantag,
   e: 'Industry-first quantum networking platform, ultra-secure quantum encryption, and advanced routing algorithms' } {/* TODO: Fix JSX expression */}
-  s: [,' 'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations' ]} pricin,
+  s: [' 'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 100 serversBasic autonomyStandard monitoring'] }' professiona,
@@ -1823,7 +1613,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$28.7B',' targetAudienc,
   e: 'IT operations teams, system administrators, enterprise businesses, managed service providers';' competitiveAdvantag,
   e: 'Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration' } {/* TODO: Fix JSX expression */}
-  s: [,' 'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support' ]} pricin,
+  s: [' 'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 100 racksBasic quantum featuresStandard support'] }' professiona,
@@ -1843,7 +1633,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$89.3B',' targetAudienc,
   e: 'Data center operators, cloud providers, enterprise businesses, government agencies';' competitiveAdvantag,
   e: 'Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration' } {/* TODO: Fix JSX expression */}
-  s: [,' 'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations' ]} pricin,
+  s: [' 'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 100 endpointsBasic quantum securityStandard monitoring'] }' professiona,
@@ -1862,7 +1652,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$173.5B',' targetAudienc,
   e: 'IT security teams, cybersecurity firms, government agencies, financial institutions';' competitiveAdvantag,
   e: 'Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection' } {/* TODO: Fix JSX expression */}
-  s: [,' 'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support' ]} pricin,
+  s: [' 'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 100 workloadsBasic migration toolsStandard support'] }' professiona,
@@ -1880,9 +1670,7 @@ export const advancedITServices2025 = [ } marketSiz,
   l: 'kleber@ziontechgroup.com' }' marketSiz,
   e: '$15.7B',' targetAudienc,
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';' competitiveAdvantag,
-  e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration' } ]; export const advancedITServices2025 = [ }' categor,
-  y: 'IT Operations' tag,
-  s: [' 'AI',' 'Autonomous Operations',' 'Infrastructure Management',' 'Automation'], contac,
+  e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration' } ]; export const advancedITServices2025 = [}' categor, y: 'IT Operations' tag, s: [' 'AI', ' 'Autonomous Operations', ' 'Infrastructure Management', ' 'Automation'], contac,
   t: ' phon,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com'}, targetAudienc,
@@ -1890,23 +1678,23 @@ export const advancedITServices2025 = [ } marketSiz,
   e: ' 'Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration' } ' i,
   d: 'quantum-data-center-platform'' nam,
   e: 'QuantumDataCenter Pro' descriptio,
-  n:' 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.' feature,
-  s: [' 'Quantum-enhanced computing'' 'Advanced cooling and power management'' 'Ultra-secure quantum storage'' 'Real-time performance optimization'' 'Integration with cloud platforms'' 'Advanced monitoring and analytics'' 'Custom quantum solutions'' '24/7 data center support' ] pricin,
+  n: ' 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.' feature,
+  s: [' 'Quantum-enhanced computing'' 'Advanced cooling and power management'' 'Ultra-secure quantum storage'' 'Real-time performance optimization'' 'Integration with cloud platforms'' 'Advanced monitoring and analytics'' 'Custom quantum solutions'' '24/7 data center support'] pricin,
   g: starte,
   r: pric,
   e: 499' perio,
   d: 'month' feature,
-  s: [' 'Up to 100 racks'' 'Basic quantum features'' 'Standard support' ] } professiona,
+  s: [' 'Up to 100 racks'' 'Basic quantum features'' 'Standard support'] } professiona,
   l: pric,
   e: 1299' perio,
   d: 'month' feature,
-  s: [' 'Up to 500 racks'' 'Advanced quantum features'' 'Custom solutions'' 'Priority support' ] } enterpris,
+  s: [' 'Up to 500 racks'' 'Advanced quantum features'' 'Custom solutions'' 'Priority support'] } enterpris,
   e: pric,
   e: 2999' perio,
   d: 'month' feature,
-  s: [' 'Unlimited racks'' 'Custom quantum solutions'' 'White-label platform'' 'Dedicated support' ] } }' categor,
+  s: [' 'Unlimited racks'' 'Custom quantum solutions'' 'White-label platform'' 'Dedicated support'] } }' categor,
   y: 'Data Center' tag,
-  s: [' 'Quantum Computing',' 'Data Center',' 'Infrastructure',' 'Energy Efficiency'], contac,
+  s: [' 'Quantum Computing', ' 'Data Center', ' 'Infrastructure', ' 'Energy Efficiency'], contac,
   t: ' phon,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com'}, targetAudienc,
@@ -1914,23 +1702,23 @@ export const advancedITServices2025 = [ } marketSiz,
   e: ' 'Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration' } ' i,
   d: 'quantum-cybersecurity-platform'' nam,
   e: 'QuantumCyber Pro' descriptio,
-  n:' 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.' feature,
-  s: [' 'Quantum-resistant encryption'' 'Advanced threat detection'' 'Quantum key distribution'' 'Real-time security monitoring'' 'Integration with security tools'' 'Advanced analytics and reporting'' 'Custom security solutions'' '24/7 quantum security operations' ] pricin,
+  n: ' 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.' feature,
+  s: [' 'Quantum-resistant encryption'' 'Advanced threat detection'' 'Quantum key distribution'' 'Real-time security monitoring'' 'Integration with security tools'' 'Advanced analytics and reporting'' 'Custom security solutions'' '24/7 quantum security operations'] pricin,
   g: starte,
   r: pric,
   e: 299' perio,
   d: 'month' feature,
-  s: [' 'Up to 100 endpoints'' 'Basic quantum security'' 'Standard monitoring' ] } professiona,
+  s: [' 'Up to 100 endpoints'' 'Basic quantum security'' 'Standard monitoring'] } professiona,
   l: pric,
   e: 799' perio,
   d: 'month' feature,
-  s: [' 'Up to 1,000 endpoints'' 'Advanced quantum features'' 'Custom solutions'' 'Priority support' ] } enterpris,
+  s: [' 'Up to 1, 000 endpoints'' 'Advanced quantum features'' 'Custom solutions'' 'Priority support'] } enterpris,
   e: pric,
   e: 1999' perio,
   d: 'month' feature,
-  s: [' 'Unlimited endpoints'' 'Custom quantum security'' 'White-label solution'' 'Dedicated support' ] } }' categor,
+  s: [' 'Unlimited endpoints'' 'Custom quantum security'' 'White-label solution'' 'Dedicated support'] } }' categor,
   y: 'Quantum Cybersecurity' tag,
-  s: [' 'Quantum Computing',' 'Cybersecurity',' 'Encryption',' 'Threat Detection'], contac,
+  s: [' 'Quantum Computing', ' 'Cybersecurity', ' 'Encryption', ' 'Threat Detection'], contac,
   t: ' phon,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com'}, targetAudienc,
@@ -1938,28 +1726,28 @@ export const advancedITServices2025 = [ } marketSiz,
   e: ' 'Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection' } ' i,
   d: 'quantum-cloud-migration-platform'' nam,
   e: 'QuantumMigration Pro' descriptio,
-  n:' 'Intelligent quantum-enhanced cloud migration platform that optimizes the transition to quantum cloud infrastructure with minimal disruption.' feature,
-  s: [' 'AI-powered migration planning'' 'Quantum-enhanced migration tools'' 'Zero-downtime migration'' 'Real-time migration monitoring'' 'Integration with cloud platforms'' 'Advanced analytics and reporting'' 'Custom migration strategies'' '24/7 migration support' ] pricin,
+  n: ' 'Intelligent quantum-enhanced cloud migration platform that optimizes the transition to quantum cloud infrastructure with minimal disruption.' feature,
+  s: [' 'AI-powered migration planning'' 'Quantum-enhanced migration tools'' 'Zero-downtime migration'' 'Real-time migration monitoring'' 'Integration with cloud platforms'' 'Advanced analytics and reporting'' 'Custom migration strategies'' '24/7 migration support'] pricin,
   g: starte,
   r: pric,
   e: 199' perio,
   d: 'month' feature,
-  s: [' 'Up to 100 workloads'' 'Basic migration tools'' 'Standard support' ] } professiona,
+  s: [' 'Up to 100 workloads'' 'Basic migration tools'' 'Standard support'] } professiona,
   l: pric,
   e: 599' perio,
   d: 'month' feature,
-  s: [' 'Up to 1,000 workloads'' 'Advanced quantum features'' 'Custom strategies'' 'Priority support' ] } enterpris,
+  s: [' 'Up to 1, 000 workloads'' 'Advanced quantum features'' 'Custom strategies'' 'Priority support'] } enterpris,
   e: pric,
   e: 1499' perio,
   d: 'month' feature,
-  s: [' 'Unlimited workloads',' 'Custom quantum solutions',' 'White - label platform',' 'Dedicated support']}},' categor,
+  s: [' 'Unlimited workloads', ' 'Custom quantum solutions', ' 'White - label platform', ' 'Dedicated support']}},' categor,
   y: 'Cloud Migration',' tag,
   s: ['Quantum Computing', 'Cloud Migration', 'AI', 'Zero Downtime'], contac,
   t: ' phon,
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup.com' }' marketSiz,
   e: '$15.7B' targetAudienc,
-  e:' 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms' competitiveAdvantag,
+  e: ' 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms' competitiveAdvantag,
   e: ' 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration' }' 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'}' ]; phon,
   e: '+1 302 464 0950' }' marketSiz,
   e: '$15 && 15.7B',' targetAudienc,
@@ -1968,8 +1756,8 @@ export const advancedITServices2025 = [ } marketSiz,
   l: 'kleber@ziontechgroup.com' }' marketSiz,
   e: '$15.7B'' targetAudienc,
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'' competitiveAdvantag,
-  e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration' } ]; export const advancedITServices2025 = [ {/* TODO: Fix JSX expression */}
-  s: [,' 'Quantum-enhanced computing resourcesAdvanced security with quantum encryptionAuto-scaling infrastructureGlobal edge computing networkIntegration with major cloud providersAdvanced monitoring and analyticsCustom quantum algorithms24/7 technical support' ]} pricin,
+  e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration' } ]; export const advancedITServices2025 = [{/* TODO: Fix JSX expression */}
+  s: [, ' 'Quantum-enhanced computing resourcesAdvanced security with quantum encryptionAuto-scaling infrastructureGlobal edge computing networkIntegration with major cloud providersAdvanced monitoring and analyticsCustom quantum algorithms24/7 technical support']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 100 vCPUsBasic quantum featuresStandard support'] }' professiona,
@@ -1989,7 +1777,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$178.9B',' targetAudienc,
   e: 'Enterprise businesses, cloud providers, research institutions, government agencies';' competitiveAdvantag,
   e: 'Industry-first quantum-enhanced cloud infrastructure, advanced security with quantum encryption, and global edge computing network' } {/* TODO: Fix JSX expression */}
-  s: [,' 'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management' ]} pricin,
+  s: [' 'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 10 edge nodesBasic AI optimizationStandard monitoring'] }' professiona,
@@ -2009,7 +1797,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$43.4B',' targetAudienc,
   e: 'IoT companies, telecommunications, manufacturing, smart cities';' competitiveAdvantag,
   e: 'Advanced AI-powered edge orchestration, comprehensive distributed computing optimization, and extensive IoT device integration' } {/* TODO: Fix JSX expression */}
-  s: [,' 'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center' ]} pricin,
+  s: [' 'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 100 usersBasic zero-trustStandard monitoring'] }' professiona,
@@ -2028,7 +1816,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$173.5B',' targetAudienc,
   e: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';' competitiveAdvantag,
   e: 'Comprehensive zero-trust implementation, advanced threat detection, and extensive security tool integration' } {/* TODO: Fix JSX expression */}
-  s: [,' 'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support' ]} pricin,
+  s: [' 'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support']} pricin,
   g: {/* TODO: Fix JSX expression */}
   s: ['Up to 1}000 transactions/secBasic blockchainStandard support'] }' professiona,
   l: {/* TODO: Fix JSX expression */}
@@ -2046,7 +1834,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$19.9B',' targetAudienc,
   e: 'Financial institutions, supply chain companies, healthcare providers, government agencies';' competitiveAdvantag,
   e: 'Enterprise-grade blockchain infrastructure, comprehensive compliance tools, and seamless business system integration' } {/* TODO: Fix JSX expression */}
-  s: [,' 'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring' ]} pricin,
+  s: [' 'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 10 developersBasic AI automationStandard CI/CD'] }' professiona,
@@ -2066,7 +1854,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$8.2B',' targetAudienc,
   e: 'Development teams, DevOps engineers, software companies, enterprise businesses';' competitiveAdvantag,
   e: 'Advanced AI-powered DevOps automation, comprehensive workflow optimization, and extensive development tool integration' } {/* TODO: Fix JSX expression */}
-  s: [,' 'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support' ]} pricin,
+  s: [' 'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 1GbpsBasic quantum featuresStandard support'] }' professiona,
@@ -2086,7 +1874,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$12.8B',' targetAudienc,
   e: 'Telecommunications, financial institutions, government agencies, research institutions';' competitiveAdvantag,
   e: 'Industry-first quantum networking platform, ultra-secure quantum encryption, and advanced routing algorithms' } {/* TODO: Fix JSX expression */}
-  s: [,' 'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations' ]} pricin,
+  s: [' 'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 100 serversBasic autonomyStandard monitoring'] }' professiona,
@@ -2105,7 +1893,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$28.7B',' targetAudienc,
   e: 'IT operations teams, system administrators, enterprise businesses, managed service providers';' competitiveAdvantag,
   e: 'Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration' } {/* TODO: Fix JSX expression */}
-  s: [,' 'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support' ]} pricin,
+  s: [' 'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 100 racksBasic quantum featuresStandard support'] }' professiona,
@@ -2125,7 +1913,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$89.3B',' targetAudienc,
   e: 'Data center operators, cloud providers, enterprise businesses, government agencies';' competitiveAdvantag,
   e: 'Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration' } {/* TODO: Fix JSX expression */}
-  s: [,' 'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations' ]} pricin,
+  s: [' 'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 100 endpointsBasic quantum securityStandard monitoring'] }' professiona,
@@ -2144,7 +1932,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$173.5B',' targetAudienc,
   e: 'IT security teams, cybersecurity firms, government agencies, financial institutions';' competitiveAdvantag,
   e: 'Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection' } {/* TODO: Fix JSX expression */}
-  s: [,' 'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support' ]} pricin,
+  s: [' 'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 100 workloadsBasic migration toolsStandard support'] }' professiona,
@@ -2171,7 +1959,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$178.9B',' targetAudienc,
   e: 'Enterprise businesses, cloud providers, research institutions, government agencies';' competitiveAdvantag,
   e: 'Industry-first quantum-enhanced cloud infrastructure, advanced security with quantum encryption, and global edge computing network' } {/* TODO: Fix JSX expression */}
-  s: [,' 'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management' ]} pricin,
+  s: [' 'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 10 edge nodesBasic AI optimizationStandard monitoring'] }' professiona,
@@ -2191,7 +1979,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$43.4B',' targetAudienc,
   e: 'IoT companies, telecommunications, manufacturing, smart cities';' competitiveAdvantag,
   e: 'Advanced AI-powered edge orchestration, comprehensive distributed computing optimization, and extensive IoT device integration' } {/* TODO: Fix JSX expression */}
-  s: [,' 'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center' ]} pricin,
+  s: [' 'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 100 usersBasic zero-trustStandard monitoring'] }' professiona,
@@ -2210,7 +1998,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$173.5B',' targetAudienc,
   e: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';' competitiveAdvantag,
   e: 'Comprehensive zero-trust implementation, advanced threat detection, and extensive security tool integration' } {/* TODO: Fix JSX expression */}
-  s: [,' 'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support' ]} pricin,
+  s: [' 'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support']} pricin,
   g: {/* TODO: Fix JSX expression */}
   s: ['Up to 1}000 transactions/secBasic blockchainStandard support'] }' professiona,
   l: {/* TODO: Fix JSX expression */}
@@ -2228,7 +2016,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$19.9B',' targetAudienc,
   e: 'Financial institutions, supply chain companies, healthcare providers, government agencies';' competitiveAdvantag,
   e: 'Enterprise-grade blockchain infrastructure, comprehensive compliance tools, and seamless business system integration' } {/* TODO: Fix JSX expression */}
-  s: [,' 'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring' ]} pricin,
+  s: [' 'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 10 developersBasic AI automationStandard CI/CD'] }' professiona,
@@ -2248,7 +2036,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$8.2B',' targetAudienc,
   e: 'Development teams, DevOps engineers, software companies, enterprise businesses';' competitiveAdvantag,
   e: 'Advanced AI-powered DevOps automation, comprehensive workflow optimization, and extensive development tool integration' } {/* TODO: Fix JSX expression */}
-  s: [,' 'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support' ]} pricin,
+  s: [' 'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 1GbpsBasic quantum featuresStandard support'] }' professiona,
@@ -2268,7 +2056,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$12.8B',' targetAudienc,
   e: 'Telecommunications, financial institutions, government agencies, research institutions';' competitiveAdvantag,
   e: 'Industry-first quantum networking platform, ultra-secure quantum encryption, and advanced routing algorithms' } {/* TODO: Fix JSX expression */}
-  s: [,' 'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations' ]} pricin,
+  s: [' 'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 100 serversBasic autonomyStandard monitoring'] }' professiona,
@@ -2287,7 +2075,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$28.7B',' targetAudienc,
   e: 'IT operations teams, system administrators, enterprise businesses, managed service providers';' competitiveAdvantag,
   e: 'Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration' } {/* TODO: Fix JSX expression */}
-  s: [,' 'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support' ]} pricin,
+  s: [' 'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 100 racksBasic quantum featuresStandard support'] }' professiona,
@@ -2307,7 +2095,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$89.3B',' targetAudienc,
   e: 'Data center operators, cloud providers, enterprise businesses, government agencies';' competitiveAdvantag,
   e: 'Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration' } {/* TODO: Fix JSX expression */}
-  s: [,' 'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations' ]} pricin,
+  s: [' 'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 100 endpointsBasic quantum securityStandard monitoring'] }' professiona,
@@ -2326,7 +2114,7 @@ export const advancedITServices2025 = [ } marketSiz,
   e: '$173.5B',' targetAudienc,
   e: 'IT security teams, cybersecurity firms, government agencies, financial institutions';' competitiveAdvantag,
   e: 'Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection' } {/* TODO: Fix JSX expression */}
-  s: [,' 'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support' ]} pricin,
+  s: [' 'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support']} pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,
   s: ['Up to 100 workloadsBasic migration toolsStandard support'] }' professiona,

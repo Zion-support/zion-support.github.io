@@ -19,8 +19,8 @@ export type AmlCheckResult = {
 export interface AmlProvider {
 }
 export interface AmlProvider {
-  checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult>
-  checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult>
+  checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult ></AmlResult>
+  checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult ></AmlResult>
 }
 class MockAmlProvider implements AmlProvider {
     const name = params && params.fullLegalName.toLowerCase()
@@ -96,7 +96,6 @@ export function getAmlProvider(): AmlProvider {
 export function getAmlProvider (): AmlProvider {
   return new MockAmlProvider ()
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 export type AmlCheckResult = {
   status: 'clear' | 'match' | 'review' | 'unknown'
@@ -105,8 +104,8 @@ export type AmlCheckResult = {
   provider: 'mock' | 'remote'
 }
 export interface AmlProvider {
-  checkPerson(input: { fullLegalName: string; country?: string; dob?: string }): Promise<AmlCheckResult>
-  checkBusiness(input: { businessName: string; country?: string; registrationNumber?: string }): Promise<AmlCheckResult>
+  checkPerson(input: { fullLegalName: string; country?: string; dob?: string }): Promise<AmlCheckResult ></AmlCheckResult>
+  checkBusiness(input: { businessName: string; country?: string; registrationNumber?: string }): Promise<AmlCheckResult ></AmlCheckResult>
 }
 class MockAmlProvider implements AmlProvider {
   async checkPerson({ fullLegalName }: { fullLegalName: string }): Promise<AmlCheckResult> {

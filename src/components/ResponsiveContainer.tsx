@@ -69,7 +69,7 @@ const,
   O: Add content,}
 }
     return fallback || 
-          <div className={className}>{children}</div>
+          <div className=>{className}{children}</div>
   }
   const getResponsiveClasses = () => {/* TODO: Fix JSX expression */}
   O: Add content,}

@@ -1,17 +1,13 @@
 // January 2026 - New Revolutionary Content
 // Brand new cutting-edge AI breakthroughs and enterprise solutions
 export const january2026NewContent = {
-  featuredArticles: [
-    {
+  featuredArticles: [{
       id: 'ai-2026-january-autonomous-enterprise-mesh'
       title: '🚀 Autonomous Enterprise Mesh 2026: Self-Organizing Business Intelligence'
       description: 'Revolutionary self-organizing AI mesh networks achieving 99.7% operational efficiency with zero human intervention'
       link: '/blog/ai-2026-january-autonomous-enterprise-mesh'
       type: 'article'
-      featured: true,
-      publishDate: '2026-01-15',
-      category: 'Enterprise AI',
-      tags: ['autonomous', 'mesh', 'enterprise', 'intelligence', '2026'],
+      featured: true, publishDate: '2026-01-15', category: 'Enterprise AI', tags: ['autonomous', 'mesh', 'enterprise', 'intelligence', '2026'],
       readTime: '12 min',
       excerpt: 'Discover how autonomous enterprise mesh networks are revolutionizing business operations with self-healing infrastructure and intelligent orchestration.'},
     {
@@ -40,21 +36,14 @@ export const january2026NewContent = {
       readTime: '18 min',
       excerpt:,
         'Witness the emergence of truly conscious AI systems that demonstrate self-awareness, emotional understanding, and creative problem-solving capabilities.'}],
-  featuredServices: [
-    {
+  featuredServices: [{
       id: 'ai-2026-autonomous-enterprise-solutions'
       title: 'Autonomous Enterprise Solutions 2026'
       description: 'Self-organizing AI systems for complete business automation with 99.7% efficiency'
       link: '/services/ai-2026-autonomous-enterprise-solutions'
       type: 'service'
-      featured: true,
-      category: 'Enterprise AI'
-      pricing: 'Custom',
-      features: [,
-        'Self-healing infrastructure',
-        'Intelligent orchestration',
-        'Zero human intervention',
-        '99.7% efficiency']},
+      featured: true, category: 'Enterprise AI'
+      pricing: 'Custom', features: [, 'Self-healing infrastructure', 'Intelligent orchestration', 'Zero human intervention', '99.7% efficiency']},
     {
       id: 'ai-2026-quantum-edge-platform'
       title: 'Quantum Edge Computing Platform 2026'
@@ -64,25 +53,14 @@ export const january2026NewContent = {
       featured: true,
       category: 'Quantum Computing'
       pricing: 'Starting at $50K/month',
-      features: [,
-        'Sub-millisecond latency',
-        '200-250 x speed improvement',
-        'Quantum processing',
-        'Edge optimization']}],
-  caseStudies: [
-    {
+      features: ['Sub-millisecond latency', '200-250 x speed improvement', 'Quantum processing', 'Edge optimization']}],
+  caseStudies: [{
       id: 'fortune-100-autonomous-transformation'
       title: 'Fortune 100 Autonomous Business Transformation'
       description: 'Complete enterprise automation achieving 95% operational efficiency with $2.8B value creation'
       link: '/case-studies/fortune-100-autonomous-transformation'
       type: 'case-study'
-      featured: true,
-      industry: 'Enterprise',
-      results: [,
-        '95% automation rate',
-        '$2.8 B value creation',
-        '99.7% efficiency',
-        'Zero human error'],
+      featured: true, industry: 'Enterprise', results: [, '95% automation rate', '$2.8 B value creation', '99.7% efficiency', 'Zero human error'],
       duration: '6 months',
 export const january2026NewContent = {/* TODO: Fix JSX expression */}
     },
@@ -91,14 +69,11 @@ export const january2026NewContent = {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }],
   featuredService,
-  s: [
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
+  s: [{/* TODO: Fix JSX expression */}
+    }, {/* TODO: Fix JSX expression */}
     }],
   caseStudie,
-  s: [
-    {/* TODO: Fix JSX expression */}
+  s: [{/* TODO: Fix JSX expression */}
     }]}
 
 export default january2026 NewContent

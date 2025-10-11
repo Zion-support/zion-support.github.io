@@ -2,7 +2,7 @@
 /**
  * Comprehensive Final Merge - Handles all remaining branches systematically
  * This script processes all remaining branches in batches to avoid conflicts
- */ import { execSync } from 'child_process'
+ */ import { execSync  } from 'child_process'
 import fs from 'fs'
 // //Step 1: Ensure we're on main and up to date,
 // try {,

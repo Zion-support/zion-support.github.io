@@ -1,10 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import {
-  authenticateRequest
+import { authenticateRequest
   calculateUsageSummary
   authenticateRequest,
   calculateUsageSummary,
-} from '../../../utils/api/partnerAuth'
+ } from '../../../utils/api/partnerAuth'
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -36,7 +35,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res && res.status(200).json({ summary })
 }
 import type { NextApiRequest, NextApiResponse } from "next"
-import { authenticateRequest, calculateUsageSummary } from "../../../utils/api/partnerAuth"
+import { authenticateRequest, calculateUsageSummary  } from '../../../utils/api/partnerAuth'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") {
     res.setHeader("Allow", "GET")

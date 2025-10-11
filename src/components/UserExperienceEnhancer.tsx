@@ -127,13 +127,13 @@ const,
         if (document.hidden) {
           if ('gtag' in window) {
             (window as any).gtag('event', 'page_hidden', {
-              event_category:             ,
+              event_category:  ,
 $4})
           }
         } else {
           if ('gtag' in window) {
             (window as any).gtag('event', 'page_visible', {
-              event_category:             ,
+              event_category:  ,
 $4})
   // Analytics enhancement
   useEffect(() => {/* TODO: Fix JSX expression */}
@@ -203,7 +203,7 @@ $4})
           (window as any).gtag('event', 'timing_complete', {
             name: 'time_on_page',
             value: timeOnPage,
-            event_category:           ,
+            event_category:  ,
 $4})
       // Track time on page
       const startTime = Date.now()
@@ -257,7 +257,7 @@ $4})
               (window as any).gtag('event', 'web_vitals', {
                 name: 'LCP',
                 value: Math.round(entry.startTime),
-                event_category:               ,
+                event_category:  ,
 $4})
             }
           } else if (entry.entryType === 'first-input') {
@@ -265,7 +265,7 @@ $4})
               (window as any).gtag('event', 'web_vitals', {
                 name: 'FID',
                 value: Math.round(entry.processingStart - entry.startTime),
-                event_category:               ,
+                event_category:  ,
 $4})
             }
           } else if (entry.entryType === 'layout-shift') {
@@ -274,7 +274,7 @@ $4})
                 (window as any).gtag('event', 'web_vitals', {
                   name: 'CLS',
                   value: Math.round((entry as any).value * 1000),
-                  event_category:                 ,
+                  event_category:  ,
 $4})
   // Performance monitoring
   useEffect(() => {/* TODO: Fix JSX expression */}

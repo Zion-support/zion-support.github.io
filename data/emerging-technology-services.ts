@@ -78,16 +78,12 @@ export interface EmergingTechnologyService {/* TODO: Fix JSX expression */}
     address: string,
   }
 }
-export const emergingTechnologyServices: EmergingTechnologyService[] = [,
-    id: "blockchain-platform", name: "Blockchain Development Platform",
-    tagline: "Build and deploy blockchain applications", price: "$179/month"
+export const emergingTechnologyServices: EmergingTechnologyService[] = [id: "blockchain-platform", name: "Blockchain Development Platform", tagline: "Build and deploy blockchain applications", price: "$179/month"
     description: "Comprehensive blockchain development platform for creating decentralized applications."
-    features: [,
-      "Smart contract development"
+    features: [, "Smart contract development"
       "DApp deployment"
       "Blockchain integration"
-      "Security auditing",
-      "Performance monitoring"],
+      "Security auditing", "Performance monitoring"],
     link: "/services/blockchain-platform", category: "Emerging Tech",
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
@@ -127,23 +123,17 @@ export const emergingTechnologyServices: EmergingTechnologyService[] = [,
   s: string}
 }
 export const,
-  emergingTechnologyServices: EmergingTechnologyService[] = [,
-    i,"
-  d: "blockchain-platform", nam,"
-  e: "Blockchain Development Platform",
-    taglin,"
-  e: "Build and deploy blockchain applications", pric,"
-  e: "$179/month",
-    descriptio,"
-  n: "Comprehensive blockchain development platform for creating decentralized applications.",
-    feature,
-  s: [,"
+  emergingTechnologyServices: EmergingTechnologyService[] = [i, "
+  d: "blockchain-platform", nam, "
+  e: "Blockchain Development Platform", taglin, "
+  e: "Build and deploy blockchain applications", pric, "
+  e: "$179/month", descriptio, "
+  n: "Comprehensive blockchain development platform for creating decentralized applications.", feature, s: [, "
       "Smart contract development""
       "DApp deployment""
       "Blockchain integration""
       "Security auditing""
-      "Performance monitoring"
-    ],
+      "Performance monitoring"],
     lin,"
   k: "/services/blockchain-platform", categor,"
   y: "Emerging Tech",
@@ -178,13 +168,7 @@ id: "blockchain-platform"
     tagline: "Build and deploy blockchain applications",
     price: "$179/month",
     description: "Comprehensive blockchain development platform for creating decentralized applications.",
-    features: [,
-      "Smart contract development",
-      "DApp deployment",
-      "Blockchain integration",
-      "Security auditing",
-      "Performance monitoring"
-    ],
+    features: ["Smart contract development", "DApp deployment", "Blockchain integration", "Security auditing", "Performance monitoring"],
     link: "/services/blockchain-platform"
     category: "Emerging Tech"
     realImplementation: true
@@ -210,13 +194,12 @@ id: "blockchain-platform"
     descriptio,"
   n: "Comprehensive blockchain development platform for creating decentralized applications.",
     feature,
-  s: [,"
-      "Smart contract development","
-      "DApp deployment","
-      "Blockchain integration","
-      "Security auditing","
-      "Performance monitoring"
-    ],
+  s: ["
+      "Smart contract development", "
+      "DApp deployment", "
+      "Blockchain integration", "
+      "Security auditing", "
+      "Performance monitoring"],
     lin,"
   k: "/services/blockchain-platform",
     categor,"
@@ -288,13 +271,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  emergingTechnologyServices: EmergingTechnologyService[] = [ i,"
-  d: "blockchain-platform", nam,"
-  e: "Blockchain Development Platform", taglin,"
-  e: "Build and deploy blockchain applications", pric,"
-  e: "$179/month", descriptio,"
-  n: "Comprehensive blockchain development platform for creating decentralized applications.", feature,"
-  s: [ "Smart contract development" "DApp deployment" "Blockchain integration" "Security auditing" "Performance monitoring" ], lin,"
+  emergingTechnologyServices: EmergingTechnologyService[] = [i, "
+  d: "blockchain-platform", nam, "
+  e: "Blockchain Development Platform", taglin, "
+  e: "Build and deploy blockchain applications", pric, "
+  e: "$179/month", descriptio, "
+  n: "Comprehensive blockchain development platform for creating decentralized applications.", feature, "
+  s: [ "Smart contract development" "DApp deployment" "Blockchain integration" "Security auditing" "Performance monitoring"], lin,"
   k: "/services/blockchain-platform", categor,"
   y: "Emerging Tech", realImplementatio,
   n: true, contactInf,
@@ -311,7 +294,7 @@ i,
   e: "Build and deploy blockchain applications", pric,"
   e: "$179/month", descriptio,"
   n: "Comprehensive blockchain development platform for creating decentralized applications.", feature,"
-  s: [ "Smart contract development", "DApp deployment", "Blockchain integration", "Security auditing", "Performance monitoring" ], lin,"
+  s: ["Smart contract development", "DApp deployment", "Blockchain integration", "Security auditing", "Performance monitoring"], lin,"
   k: "/services/blockchain-platform", categor,"
   y: "Emerging Tech", realImplementatio,
   n: true, contactInf,

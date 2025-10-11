@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { fileURLToPath  } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -10,13 +10,13 @@ const __dirname = path.dirname(__filename);
 // Template for Zion AI service pages
 const zionAIServiceTemplate = (serviceName, title, description, keywords) => `'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock, Cpu } from 'lucide-react';
+import { Helmet  } from 'react-helmet-async';
+import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock, Cpu  } from 'lucide-react';
 
 const ${serviceName}Page: React.FC = () => {
   return (
     <>
-      <Helmet>
+      <Helmet ></Helmet>
         <title>${title} | Zion Tech Group</title>
         <meta name="description" content="${description}" />
         <meta name="keywords" content="${keywords}" />
@@ -24,11 +24,11 @@ const ${serviceName}Page: React.FC = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-8">
-                <Cpu className="w-5 h-5 text-cyan-400 mr-2" />
+                <Cpu className="w-5 h-5 text-cyan-400 mr-2" /></Cpu>
                 <span className="text-cyan-400 font-medium">Zion Micro SAAS</span>
               </div>
               
@@ -40,10 +40,10 @@ const ${serviceName}Page: React.FC = () => {
                 ${description}
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                   Try Free
-                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                  <ArrowRight className="w-5 h-5 ml-2 inline" /></ArrowRight>
                 </button>
                 <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                   View Demo
@@ -54,7 +54,7 @@ const ${serviceName}Page: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -66,10 +66,10 @@ const ${serviceName}Page: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
-                  <Brain className="w-6 h-6 text-white" />
+                  <Brain className="w-6 h-6 text-white" /></Brain>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">AI-Powered Intelligence</h3>
                 <p className="text-gray-300 mb-4">
@@ -78,23 +78,23 @@ const ${serviceName}Page: React.FC = () => {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" /></CheckCircle>
                     Machine learning models
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" /></CheckCircle>
                     Predictive analytics
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" /></CheckCircle>
                     Smart automation
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover: border-purple-500/40 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6">
-                  <Zap className="w-6 h-6 text-white" />
+                  <Zap className="w-6 h-6 text-white" /></Zap>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Automated Workflows</h3>
                 <p className="text-gray-300 mb-4">
@@ -103,15 +103,15 @@ const ${serviceName}Page: React.FC = () => {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-purple-400 mr-2" /></CheckCircle>
                     Process automation
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-purple-400 mr-2" /></CheckCircle>
                     Smart scheduling
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-purple-400 mr-2" /></CheckCircle>
                     Dynamic optimization
                   </li>
                 </ul>
@@ -119,7 +119,7 @@ const ${serviceName}Page: React.FC = () => {
 
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6">
-                  <Shield className="w-6 h-6 text-white" />
+                  <Shield className="w-6 h-6 text-white" /></Shield>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Enterprise Security</h3>
                 <p className="text-gray-300 mb-4">
@@ -128,15 +128,15 @@ const ${serviceName}Page: React.FC = () => {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                     End-to-end encryption
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                     Compliance standards
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                     Access controls
                   </li>
                 </ul>
@@ -146,7 +146,7 @@ const ${serviceName}Page: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -163,7 +163,7 @@ const ${serviceName}Page: React.FC = () => {
                 <div className="space-y-8">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-6 h-6 text-white" />
+                      <Clock className="w-6 h-6 text-white" /></Clock>
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-2">Save 80% Time</h3>
@@ -176,7 +176,7 @@ const ${serviceName}Page: React.FC = () => {
 
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Users className="w-6 h-6 text-white" />
+                      <Users className="w-6 h-6 text-white" /></Users>
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-2">Easy to Use</h3>
@@ -189,7 +189,7 @@ const ${serviceName}Page: React.FC = () => {
 
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <BarChart className="w-6 h-6 text-white" />
+                      <BarChart className="w-6 h-6 text-white" /></BarChart>
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-2">Real-time Insights</h3>
@@ -228,7 +228,7 @@ const ${serviceName}Page: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Get Started?
@@ -240,7 +240,7 @@ const ${serviceName}Page: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <ArrowRight className="w-5 h-5 ml-2 inline" /></ArrowRight>
               </button>
               <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                 Schedule Demo

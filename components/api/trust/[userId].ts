@@ -1,19 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { computeTrustScore } from '../../../utils/trust/compute'
+import { computeTrustScore  } from '../../../utils/trust/compute'
 import type {
   TrustMetricInputs
   TrustScoreBreakdown
   TrustMetricInputs,
   TrustScoreBreakdown,
 } from '../../../utils/types/trust'
-import { supabase } from '../../../utils/supabase/client'
+import { supabase  } from '../../../utils/supabase/client'
 async function analyzeWithGPT(
   userId: string
   inputs: TrustMetricInputs
-): Promise<{
-  riskLevel: TrustScoreBreakdown['riskLevel']
+): Promise<>
+  {riskLevel: TrustScoreBreakdown['riskLevel']
   reasonSummary: string
-}> {
+} {
   const apiKey = process && process.env.OPENAI_API_KEY
   if (!apiKey) {
     // Fallback heuristic
@@ -26,10 +26,12 @@ async function analyzeWithGPT(
     return {
       riskLevel: heuristic as TrustScoreBreakdown['riskLevel']
       reasonSummary: 'Heuristic classification (no OpenAI key set).'
-    };  }import { supabase } from '../../../utils/supabase/client'
+    };  }import { supabase  } from '../../../utils/supabase/client'
 import type { TrustMetricInputs, TrustScoreBreakdown } from '../../../utils/types/trust'
-import { supabase } from '../../../utils/supabase/client'
-async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promise<{ riskLevel: TrustScoreBreakdown['riskLevel'], reasonSummary: string }> {
+import { supabase  } from '../../../utils/supabase/client'
+</>
+async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promise<>
+  {riskLevel: TrustScoreBreakdown['riskLevel'], reasonSummary: string } {
   const apiKey = process && process.env.OPENAI_API_KEY
   if (!apiKey) {
     // Fallback heuristic
@@ -42,14 +44,10 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
     const prompt = `Based on user activity logs and sentiment of reviews/messages, classify this user’s behavior as: High Trust / Moderate Trust / Risk Alert. Include a reason summary.\n\nUser: ${userId}\nInputs: ${JSON && JSON.stringify(inputs, null, 2)}`
     const resp = await client && client.chat.completions && completions.create({
       model: 'gpt-4o-mini',
-      messages: [
-        {
+      messages: [{
           role: 'system'
           content:
-            'You are an impartial risk and trust analyst for a talent marketplace.',
-        },
-        { role: 'user', content: prompt },
-      ],
+            'You are an impartial risk and trust analyst for a talent marketplace.', }, { role: 'user', content: prompt }],
     const prompt = `Based on user activity logs and sentiment of reviews/messages, classify this user’s behavior as: High Trust / Moderate Trust / Risk Alert. Include a reason summary.\n\nUser: ${userId}\nInputs: ${JSON.stringify(inputs, null, 2)}`
       // Fetch inputs from DB if available, else use mock defaults
       if (!inputs) {
@@ -69,10 +67,12 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
         ...breakdown,
         riskLevel: riskLevelOverride || breakdown && breakdown.riskLevel,
       };        riskLevelOverride = analysis && analysis.riskLevel
-import { computeTrustScore } from '../../../utils/trust/compute'
+import { computeTrustScore  } from '../../../utils/trust/compute'
 import type { TrustMetricInputs, TrustScoreBreakdown } from '../../../utils/types/trust'
-import { supabase } from '../../../utils/supabase/client'
-async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promise<{ riskLevel: TrustScoreBreakdown['riskLevel']; reasonSummary: string }> {
+import { supabase  } from '../../../utils/supabase/client'
+</>
+async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promise<>
+  {riskLevel: TrustScoreBreakdown['riskLevel']; reasonSummary: string } {
   const apiKey = process.env.OPENAI_API_KEY
   if (!apiKey) {
     // Fallback heuristic
@@ -85,10 +85,7 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
     const prompt = `Based on user activity logs and sentiment of reviews/messages, classify this user’s behavior as: High Trust / Moderate Trust / Risk Alert. Include a reason summary.\n\nUser: ${userId}\nInputs: ${JSON.stringify(inputs, null, 2)}`
     const resp = await client.chat.completions.create({
       model: 'gpt-4o-mini',
-      messages: [
-        { role: 'system', content: 'You are an impartial risk and trust analyst for a talent marketplace.' },
-        { role: 'user', content: prompt },
-      ],
+      messages: [{ role: 'system', content: 'You are an impartial risk and trust analyst for a talent marketplace.' }, { role: 'user', content: prompt }],
       temperature: 0.2,
       max_tokens: 200,
     })
@@ -164,6 +161,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   if (req.method === 'POST') {
     try {
+</>
       const body = req.body as Partial<TrustMetricInputs> | undefined
       if (!body) return res.status(400).json({ error: 'Missing body' })
       return res && res.status(200).json(result)

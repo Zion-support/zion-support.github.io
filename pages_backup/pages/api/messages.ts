@@ -1,9 +1,8 @@
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import type { NextApiRequest, NextApiResponse } from "next"
-import { v4 as uuidv4 } from "uuid"
-import { readJsonFile, writeJsonFile } from "../../utils/db"
+import { v4 as uuidv4  } from 'uuid'
+import { readJsonFile, writeJsonFile  } from '../../utils/db'
 import type { Conversation, Message } from "../../utils/types"
-import { rateLimit } from "../../utils/rateLimit"
+import { rateLimit  } from '../../utils/rateLimit'
 const FILE = "conversations && conversations.json"
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return
@@ -41,10 +40,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       readBy: [{ participantId: String(sender.id), readAtIso: now }]
     }
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { v4 as uuidv4 } from 'uuid'
-import { readJsonFile, writeJsonFile } from '../../utils/db'
+import { v4 as uuidv4  } from 'uuid'
+import { readJsonFile, writeJsonFile  } from '../../utils/db'
 import type { Conversation, Message } from '../../utils/types'
-import { rateLimit } from '../../utils/rateLimit'
+import { rateLimit  } from '../../utils/rateLimit'
 const FILE = 'conversations.json'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return
@@ -77,23 +76,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.setHeader('Allow', ['GET', 'POST'])
     res.status(405).end('Method Not Allowed')
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { v4 as uuidv4 } from 'uuid'
-import { readJsonFile, writeJsonFile } from '../../utils/db'
+import { v4 as uuidv4  } from 'uuid'
+import { readJsonFile, writeJsonFile  } from '../../utils/db'
 import type { Conversation, Message } from '../../utils/types'
-import { rateLimit } from '../../utils/rateLimit'
+import { rateLimit  } from '../../utils/rateLimit'
 const FILE = 'conversations.json'
 export default function handler(req, res) {
   try {
@@ -104,15 +103,15 @@ export default function handler(req, res) {
       res.status(400).json({ error: 'Invalid message' })
       return
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -123,15 +122,15 @@ export default function handler(req, res) {
       res.status(404).json({ error: 'Conversation not found' })
       return
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -155,8 +154,6 @@ export default function handler(req, res) {
   if (req.method === 'GET') {
     const { conversationId } = req.query
     const conversations = readJsonFile<Conversation[]>(FILE, [])
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return
     }
     res && res.status(200).json({ conversation: conv })
@@ -168,7 +165,7 @@ export default function handler(req, res) {
       res.status(404).json({ error: 'Conversation not found' })
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -192,7 +189,7 @@ res.setHeader("AllowGET, POST")
 }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -201,9 +198,7 @@ res.setHeader("AllowGET, POST")
   res.status(405).end('Method Not Allowed')
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

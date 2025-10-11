@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 // Function to fix remaining lint issues in a file
 function fixRemainingLintIssues(filePath) {
     try {
@@ -91,163 +91,12 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
         !line.includes('//')
       ) {
         if(varName &&,
-          [,
-            'Page',
-            'AIAutonomousBusinessSystems2026',
-            'AICostOptimizationBreakthrough2026',
-            'AI2026 ImplementationRoadmap',
-            'AI2027 ImplementationRoadmap',
-            'HomePage',
-            'OptimizedHomePage',
-            'withSentry',
-            'handler',
-            'path',
-            'reportWebVitals',
-            'getPerformanceScore',
-            'collectPerformanceMetrics',
-            'calculatePerformanceScore',
-            'getMemoryInfo',
-            'getNetworkInfo',
-            'addMetaTag',
-            'updateCanonicalUrl',
-            'addStructuredData',
-            'trackPageView',
-            'trackPerformanceMetrics',
-            'generateStructuredData',
-            'generateBreadcrumbStructuredData',
-            'generateFAQStructuredData',
-            'validateForm',
-            'getFormErrors',
-            'ValidationResult',
-            'useContext',
-            'AccessibilityService',
-            'ErrorType',
-            'performanceOptimizer',
-            'markName',
-            'errorInfo',
-            'reportingError',
-            'errorReport',
-            'placeholder',
-            'totalPenalty',
-            'focusableElements',
-            'structuredData',
-            'defaultStructuredData',
-            'location',
-            'blob',
-            'nav',
-            'formData',
-            'options',
-            'prefix',
-            'orders',
-            'key',
-            'd',
-            'now',
-            'value',
-            'modal',
-            'menu',
-            'request',
-            'next',
-            'transformer',
-            'context',
-            'url',
-            'method',
-            'name',
-            'e',
-            'navEntry',
-            'resourceEntry',
-            'error',
-            'performanceOptimizer',
-            'markName',
-            'errorInfo',
-            'reportingError',
-            'placeholder',
-            'totalPenalty',
-            'focusableElements',
-            'structuredData',
-            'defaultStructuredData',
-            'location',
-            'blob',
-            'nav',
-            'dir',
-            'file',
-            'timestamp',
-            'apiKey',
-            'PROD_DOMAIN',
-            'withSentry',
-            'handler',
-            'path',
-            'reportWebVitals',
-            'getPerformanceScore',
-            'collectPerformanceMetrics',
-            'calculatePerformanceScore',
-            'getMemoryInfo',
-            'getNetworkInfo',
-            'addMetaTag',
-            'updateCanonicalUrl',
-            'addStructuredData',
-            'trackPageView',
-            'trackPerformanceMetrics',
-            'generateStructuredData',
-            'generateBreadcrumbStructuredData',
-            'generateFAQStructuredData',
-            'validateForm',
-            'getFormErrors',
-            'ValidationResult',
-            'useContext',
-            'AccessibilityService',
-            'ErrorType',
-            'performanceOptimizer',
-            'markName',
-            'errorInfo',
-            'reportingError',
-            'errorReport',
-            'placeholder',
-            'totalPenalty',
-            'focusableElements',
-            'structuredData',
-            'defaultStructuredData',
-            'location',
-            'blob',
-            'nav',
-            'formData',
-            'options',
-            'prefix',
-            'orders',
-            'key',
-            'd',
-            'now',
-            'value',
-            'modal',
-            'menu',
-            'request',
-            'next',
-            'transformer',
-            'context',
-            'url',
-            'method',
-            'name',
-            'e',
-            'navEntry',
-            'resourceEntry',
-            'error',
-            'performanceOptimizer',
-            'markName',
-            'errorInfo',
-            'reportingError',
-            'placeholder',
-            'totalPenalty',
-            'focusableElements',
-            'structuredData',
-            'defaultStructuredData',
-            'location',
-            'blob',
-            'nav')
+          ['Page', 'AIAutonomousBusinessSystems2026', 'AICostOptimizationBreakthrough2026', 'AI2026 ImplementationRoadmap', 'AI2027 ImplementationRoadmap', 'HomePage', 'OptimizedHomePage', 'withSentry', 'handler', 'path', 'reportWebVitals', 'getPerformanceScore', 'collectPerformanceMetrics', 'calculatePerformanceScore', 'getMemoryInfo', 'getNetworkInfo', 'addMetaTag', 'updateCanonicalUrl', 'addStructuredData', 'trackPageView', 'trackPerformanceMetrics', 'generateStructuredData', 'generateBreadcrumbStructuredData', 'generateFAQStructuredData', 'validateForm', 'getFormErrors', 'ValidationResult', 'useContext', 'AccessibilityService', 'ErrorType', 'performanceOptimizer', 'markName', 'errorInfo', 'reportingError', 'errorReport', 'placeholder', 'totalPenalty', 'focusableElements', 'structuredData', 'defaultStructuredData', 'location', 'blob', 'nav', 'formData', 'options', 'prefix', 'orders', 'key', 'd', 'now', 'value', 'modal', 'menu', 'request', 'next', 'transformer', 'context', 'url', 'method', 'name', 'e', 'navEntry', 'resourceEntry', 'error', 'performanceOptimizer', 'markName', 'errorInfo', 'reportingError', 'placeholder', 'totalPenalty', 'focusableElements', 'structuredData', 'defaultStructuredData', 'location', 'blob', 'nav', 'dir', 'file', 'timestamp', 'apiKey', 'PROD_DOMAIN', 'withSentry', 'handler', 'path', 'reportWebVitals', 'getPerformanceScore', 'collectPerformanceMetrics', 'calculatePerformanceScore', 'getMemoryInfo', 'getNetworkInfo', 'addMetaTag', 'updateCanonicalUrl', 'addStructuredData', 'trackPageView', 'trackPerformanceMetrics', 'generateStructuredData', 'generateBreadcrumbStructuredData', 'generateFAQStructuredData', 'validateForm', 'getFormErrors', 'ValidationResult', 'useContext', 'AccessibilityService', 'ErrorType', 'performanceOptimizer', 'markName', 'errorInfo', 'reportingError', 'errorReport', 'placeholder', 'totalPenalty', 'focusableElements', 'structuredData', 'defaultStructuredData', 'location', 'blob', 'nav', 'formData', 'options', 'prefix', 'orders', 'key', 'd', 'now', 'value', 'modal', 'menu', 'request', 'next', 'transformer', 'context', 'url', 'method', 'name', 'e', 'navEntry', 'resourceEntry', 'error', 'performanceOptimizer', 'markName', 'errorInfo', 'reportingError', 'placeholder', 'totalPenalty', 'focusableElements', 'structuredData', 'defaultStructuredData', 'location', 'blob', 'nav')
             'dir')
             'file')
             'timestamp')
             'apiKey')
-            'PROD_DOMAIN')
-          ].includes(varName)
+            'PROD_DOMAIN')].includes(varName)
         ) {
           if (
             !content.includes(varName + '.') &&
@@ -258,71 +107,19 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
             fixedLines.push('// ' + line)
             modified = true
             continue
-    // Fix,
-  2: Comment out unused variable declarations
+    // Fix, 2: Comment out unused variable declarations
     for (let i = 0; i < lines.length, i++) {/* TODO: Fix JSX expression */}
           }
         }
       }
 
-      // Fix 3: Add underscore prefix to unused function parameters,
-      if (line.includes('function') && line.includes('(') && line.includes(')')) {
+      // Fix 3: Add underscore prefix to unused function parameters, if (line.includes('function') && line.includes('(') && line.includes(')')) {
         if (paramMatch) {
           const fixedParams = params.map(p => {)
             if ()
               p &&)
               !p.startsWith('_') &&
-              !p.includes('=') &&,
-              [,
-                'error',
-                'errorInfo',
-                'event',
-                'metric',
-                'color1',
-                'color2',
-                'val',
-                'element',
-                'foreground',
-                'background',
-                'currentElement',
-                'formData',
-                'ttl',
-                'key',
-                'item',
-                'orders',
-                'a',
-                'b',
-                'decimals',
-                'd',
-                'now',
-                'value',
-                'modal',
-                'menu',
-                'request',
-                'next',
-                'transformer',
-                'context',
-                'url',
-                'method',
-                'name',
-                'e',
-                'navEntry',
-                'resourceEntry',
-                'errorReport',
-                'reportingError',
-                'placeholder',
-                'totalPenalty',
-                'focusableElements',
-                'structuredData',
-                'defaultStructuredData',
-                'location',
-                'blob',
-                'nav',
-                'dir',
-                'file',
-                'timestamp',
-                'apiKey',
-                'PROD_DOMAIN'].includes(p)
+              !p.includes('=') &&, [, 'error', 'errorInfo', 'event', 'metric', 'color1', 'color2', 'val', 'element', 'foreground', 'background', 'currentElement', 'formData', 'ttl', 'key', 'item', 'orders', 'a', 'b', 'decimals', 'd', 'now', 'value', 'modal', 'menu', 'request', 'next', 'transformer', 'context', 'url', 'method', 'name', 'e', 'navEntry', 'resourceEntry', 'errorReport', 'reportingError', 'placeholder', 'totalPenalty', 'focusableElements', 'structuredData', 'defaultStructuredData', 'location', 'blob', 'nav', 'dir', 'file', 'timestamp', 'apiKey', 'PROD_DOMAIN'].includes(p)
             ) {
       // Fix,
   3: Add underscore prefix to unused function parameters,
@@ -357,7 +154,7 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
   4: Remove unused imports,
     if (content.includes('import { useContext }') && !content.includes('useContext(')) {/* TODO: Fix JSX expression */}
       if (content.includes('import { useContext }')) {/* TODO: Fix JSX expression */}
-        content = content.replace(/import { useContext } from 'react';\n?/g, '')
+        content = content.replace(/import { useContext  } from 'react';\n?/g, '')
       }
       modified = true
     }
@@ -371,7 +168,7 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
   5: Remove unused lazy imports,
     if (content.includes('lazy') && !content.includes('lazy(')) {/* TODO: Fix JSX expression */}
       if (content.includes('import { lazy }')) {/* TODO: Fix JSX expression */}
-        content = content.replace(/import { lazy } from 'react';\n?/g, '')
+        content = content.replace(/import { lazy  } from 'react';\n?/g, '')
       }
       modified = true
     }

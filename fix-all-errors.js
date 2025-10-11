@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import fs from 'fs'
-import { execSync } from 'child_process'
+import { execSync  } from 'child_process'
 // Fix common syntax errors in a file
 function fixFile(filePath) {
   if (!fs.existsSync(filePath)) {
@@ -13,14 +13,14 @@ function fixFile(filePath) {
   // Fix malformed object literals in arrays
   const objectInArrayPattern = /\[\s*\{\}\s*(\w+):/g
   if (objectInArrayPattern.test(content)) {
-    content = content.replace(objectInArrayPattern, '[\n    {\n      $1:')
+    content = content.replace(objectInArrayPattern, '[\n    {\n      $1: ')
     modified = true
   }
 
   // Fix malformed object literals
   const objectPattern = /\{\}\s*(\w+):/g
   if (objectPattern.test(content)) {
-    content = content.replace(objectPattern, '{\n      $1:')
+    content = content.replace(objectPattern, '{\n      $1: ')
     modified = true
   }
 
@@ -49,7 +49,7 @@ function fixFile(filePath) {
   // Fix missing commas in object properties
   const missingCommaPattern = /(\w+):\s*([^}]+)\s*\n\s*(\w+):/g
   if (missingCommaPattern.test(content)) {
-    content = content.replace(missingCommaPattern, '$1: $2,\n      $3:')
+    content = content.replace(missingCommaPattern, '$1: $2,\n      $3: ')
     modified = true
   }
 

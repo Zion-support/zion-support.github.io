@@ -1,6 +1,5 @@
 // Messaging storage utilities
-export interface Message {
-  id: string
+export interface Message >{id: string
   conversationId: string
   senderId: string
   recipientId: string
@@ -21,7 +20,7 @@ export interface Message {
     user_id: string
     emoji: string
     createdAt: string
-  }>
+  }
 }
   id: string
   participants: string[]
@@ -904,7 +903,7 @@ export function createMessageData(
   senderId: string
   recipientId: string
   body: string
-  additionalData?: Partial<Message>
+  additionalData?: Partial<Message ></Message>
 ): Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'> {
   return {
     conversationId
@@ -922,7 +921,7 @@ export function createMessageData(
 }
 export function createConversationData(
   participants: string[]
-  additionalData?: Partial<Conversation>
+  additionalData?: Partial<Conversation ></Conversation>
 ): Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'> {
   return {
     participants
@@ -953,7 +952,6 @@ export function generateConversationId(): string {
   return `conv_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
 }
 export function formatMessageTime(isoString: string): string {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const date = new Date(isoString)
   const now = new Date()
   const diffInHours = (now && now.getTime() - date && date.getTime()) / (1000 * 60 * 60)
@@ -990,20 +988,17 @@ export function formatMessageTime(isoString: string): string {
     return `${Math.floor(diffInHours / 24)}d ago`
   } else {
     return date.toLocaleDateString()
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 import fs from 'fs'
 import path from 'path'
-import { v4 as uuidv4 } from 'uuid'
-import {
-  Conversation,
+import { v4 as uuidv4  } from 'uuid'
+import { Conversation,
   ConversationContext,
   InboxItem,
   Message,
   NewMessageInput,
   UserSummary,
-} from './types'
+ } from './types'
 const DATA_DIR = path.join(process.cwd(), 'data', 'messaging')
 const CONVERSATIONS_FILE = path.join(DATA_DIR, 'conversations.json')
 const MESSAGES_FILE = path.join(DATA_DIR, 'messages.json')
@@ -1096,7 +1091,7 @@ function saveAttachmentIfProvided(base64?: string, name?: string): string | unde
   if (!base64) return undefined
   ensureFiles()
   try {
-    const matches = base64.match(/^data:(.*?);base64,(.*)$/)
+    const matches = base64.match(/^data: (.*?);base64,(.*)$/)
     const buffer = Buffer.from(matches ? matches[2] : base64, 'base64')
     const ext = name?.split('.').pop() || 'bin'
     const filename = `${uuidv4()}.${ext}`

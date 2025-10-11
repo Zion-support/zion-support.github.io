@@ -45,15 +45,13 @@ class EnvironmentConfig {
 }
 //       nodeEnv,
       apiUr,
-  l:
-        process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'htt,
-  p://localhos,
-  t:3000/api',
+  l: process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'htt,
+  p: //localhos,
+  t: 3000/api',
       apiKe,
   y: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY,
       enableAnalytic,
-  s:
-        process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production',
+  s: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production',
       enableLoggin,
   g: nodeEnv !== 'test',
       logLeve,

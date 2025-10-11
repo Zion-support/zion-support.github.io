@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { execSync } from 'child_process'
-import { fileURLToPath } from 'url'
+import { execSync  } from 'child_process'
+import { fileURLToPath  } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to fix merge conflicts and syntax errors
@@ -41,7 +41,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       // Fix missing semicolons
       .replace(/(\w+)\s*\n\s*(import|export|const|let|var|function|class|interface|type)/g, '$1;\n$2')
       // Fix missing commas in object literals
-      .replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n  $2:')
+      .replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n  $2: ')
       // Fix missing commas in arrays
       .replace(/(\w+)\s*\n\s*\]/g, '$1,\n]')
       // Fix missing commas in function parameters
@@ -197,7 +197,7 @@ for (const file of files) {/* TODO: Fix JSX expression */}
 }
 `
 console.log(`\nMerge conflict resolution)`
-  complete:`);`
+  complete: `);`
 console.log(`- Files)`
   processed: ${files.length}`);`
 console.log(`- Files)`

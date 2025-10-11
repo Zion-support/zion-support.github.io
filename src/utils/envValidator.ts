@@ -59,8 +59,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
 }
       throw new Error()
         `Environment validation,`
-  failed:
-${validation.errors.join('
+  failed: ${validation.errors.join('
 ')}`
 //       )
     }

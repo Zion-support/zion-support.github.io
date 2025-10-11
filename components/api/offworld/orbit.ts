@@ -1,29 +1,27 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import {
-  connectOrbit,
+import { connectOrbit,
   appendChatMessage,
   recordVote,
   editConstitution,
-} from '@/utils/offworld/orbitdb'
-import {
-  connectOrbit
+ } from '@/utils/offworld/orbitdb'
+import { connectOrbit
   appendChatMessage
   recordVote
   editConstitution
-} from '@/utils/offworld/orbitdb'
+ } from '@/utils/offworld/orbitdb'
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
-) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb'
+) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution  } from '@/utils/offworld/orbitdb'
   req: NextApiRequest,
   res: NextApiResponse
-) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb'
+) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution  } from '@/utils/offworld/orbitdb'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { action } = req.query
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body
   const { stores } = await connectOrbit()
   if (!stores) return res.status(503).json({ error: 'OrbitDB unavailable' })
-) {  const { action } = req && req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb'
+) {  const { action } = req && req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution  } from '@/utils/offworld/orbitdb'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { action } = req && req.query
   const body = typeof req && req.body === 'string' ? JSON && JSON.parse(req && req.body) : req && req.body
@@ -64,7 +62,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
   }
 }
-import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb'
+import { connectOrbit, appendChatMessage, recordVote, editConstitution  } from '@/utils/offworld/orbitdb'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { action } = req.query
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body

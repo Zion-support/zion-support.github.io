@@ -1,13 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from "next"
-import { PDFDocument, StandardFonts } from "pdf-lib"
+import { PDFDocument, StandardFonts  } from 'pdf-lib'
 import crypto from "crypto"
-import {
-  updateArtifacts,
+import { updateArtifacts,
   getProposal,
   savePdf,
-} from "../../../utils/data/proposals"
-import { create as createIpfsClient } from "ipfs-http-client"
-import { ethers } from "ethers"
+ } from '../../../utils/data/proposals'
+import { create as createIpfsClient  } from 'ipfs-http-client'
+import { ethers  } from 'ethers'
 import fs from "fs"
 import path from "path"
 function buildIpfsClient() {
@@ -28,11 +27,11 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ export: 'PDF export' })
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { PDFDocument, StandardFonts } from 'pdf-lib'
+import { PDFDocument, StandardFonts  } from 'pdf-lib'
 import crypto from 'crypto'
-import { updateArtifacts, getProposal, savePdf } from '../../../utils/data/proposals'
-import { create as createIpfsClient } from 'ipfs-http-client'
-import { ethers } from 'ethers'
+import { updateArtifacts, getProposal, savePdf  } from '../../../utils/data/proposals'
+import { create as createIpfsClient  } from 'ipfs-http-client'
+import { ethers  } from 'ethers'
 import fs from 'fs'
 import path from 'path'
 function buildIpfsClient() {
@@ -45,7 +44,7 @@ function buildIpfsClient() {
 }
 async function generatePdfFromMarkdown(markdown: string, title: string) {
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -162,28 +161,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: error?.message |"Export failed" })
     return res.status(500).json({ error: error?.message || "Export failed" })
       } catch {  } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -196,35 +195,35 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
     return res.status(500).json({ error: error?.message || "Export failed" })
       } catch {  } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -236,20 +235,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }

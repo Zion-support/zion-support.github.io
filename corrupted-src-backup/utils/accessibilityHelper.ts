@@ -17,8 +17,7 @@ export class FocusTrap {
   }
 
   private updateFocusableElements(): void {
-    const focusableSelectors = [
-      'button: not([disabled])',
+    const focusableSelectors = ['button: not([disabled])',
       'input: not([disabled])',
       'select: not([disabled])',
       'textarea: not([disabled])',

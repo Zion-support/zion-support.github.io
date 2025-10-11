@@ -1,7 +1,7 @@
-import { useState } from 'react'
-import { supabase } from '@/integrations/supabase/client'
-import { useAuth } from '@/hooks/useAuth'
-import { toast } from 'sonner'
+import { useState  } from 'react'
+import { supabase  } from '@/integrations/supabase/client'
+import { useAuth  } from '@/hooks/useAuth'
+import { toast  } from 'sonner'
 export const useDeleteMilestone = () => {
   const { user } = useAuth()
   const [isSubmitting, setIsSubmitting] = useState(false)

@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
-import { ArrowLeft, Calendar, User, Clock, Tag } from 'lucide-react'
+import { Link  } from 'react-router-dom'
+import { ArrowLeft, Calendar, User, Clock, Tag  } from 'lucide-react'
 export const metadata = {/* TODO: Fix JSX expression */}
 }
 export default function AI2026ImplementationRoadmap() {
@@ -16,7 +16,7 @@ export default function AI2026ImplementationRoadmap() {
           <$2 />
             href="/"
             className="inline-flex items-center text-blue-600 hover: text-blue-800 transition-colors">
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
             Back to Home
         </div>,
       </header>,
@@ -27,13 +27,13 @@ export default function AI2026ImplementationRoadmap() {
         <div className="mb-8">
           <div className="flex items-center space-x-6 text-sm text-gray-600 mb-4">
             <div className="flex items-center">
-              <Calendar className="w-4 h-4 mr-2" />
+              <Calendar className="w-4 h-4 mr-2" /></Calendar>
               <span>January 22, 2026
             <div className="flex items-center">
-              <User className="w-4 h-4 mr-2" />
+              <User className="w-4 h-4 mr-2" /></User>
               <span>Zion Tech Group
             <div className="flex items-center">
-              <Clock className="w-4 h-4 mr-2" />
+              <Clock className="w-4 h-4 mr-2" /></Clock>
               <span>25 min read
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             AI 2026 Implementation Roadmap: Your Complete Guide to Enterprise AI Transformation;)
@@ -44,7 +44,7 @@ export default function AI2026ImplementationRoadmap() {
           <div className="flex flex-wrap gap-2">
             {['AI Implementation', 'Enterprise AI', 'Digital Transformation', 'AI Strategy', '2026 Roadmap'].map((tag) => (
               <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800">
-                <Tag className="w-3 h-3 mr-1" />
+                <Tag className="w-3 h-3 mr-1" /></Tag>
 export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expression */}
 }
   return (<div className="min-h-screen bg-white">
@@ -54,9 +54,9 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
           <Link></Link>"
             href="/""
             className="inline-flex items-center text-blue-600,"
-  hover:text-blue-800 transition-colors"
+  hover: text-blue-800 transition-colors"
           >"
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
             Back to Home
       {/* Article Content */}"
       <article className="max-w-4xl mx-auto px-4 py-8">
@@ -64,15 +64,15 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
         <div className="mb-8"></div>"
           <div className="flex items-center space-x-6 text-sm text-gray-600 mb-4"></div>"
             <div className="flex items-center"></div>"
-              <Calendar className="w-4 h-4 mr-2" />
+              <Calendar className="w-4 h-4 mr-2" /></Calendar>
               <span>January 22, 2026
             </div>"
             <div className="flex items-center"></div>"
-              <User className="w-4 h-4 mr-2" />
+              <User className="w-4 h-4 mr-2" /></User>
               <span>Zion Tech Group
             </div>"
             <div className="flex items-center"></div>"
-              <Clock className="w-4 h-4 mr-2" />
+              <Clock className="w-4 h-4 mr-2" /></Clock>
               <span>25 min read
           "
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -85,7 +85,7 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
           <div className="flex flex-wrap gap-2">
             {/* TODO: Fix JSX expression */}"
               <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800"></span>"
-                <Tag className="w-3 h-3 mr-1" />
+                <Tag className="w-3 h-3 mr-1" /></Tag>
                 {tag}
               </span>)
             ))}
@@ -116,7 +116,7 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
         <div className="mb-12"></div>"
           <h2 className="text-3xl font-bold text-gray-900 mb-6">🎯 Executive Summary</h2>"
           < className="grid grid-cols-2,"$2 />
-  md:grid-cols-4 gap-6 mb-8"></div>"
+  md: grid-cols-4 gap-6 mb-8"></div>"
             <div className="text-center p-4 bg-blue-50 rounded-lg"></div>"
               <div className="text-3xl font-bold text-blue-600">$2.8T</div>"
               <div className="text-sm text-gray-600">AI market by 2026
@@ -161,7 +161,7 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
               <ul className="space-y-2">
           "
           < className="grid,"$2 />
-  md:grid-cols-2 gap-6"></div>"
+  md: grid-cols-2 gap-6"></div>"
             <div className="bg-blue-50 p-6 rounded-lg"></div>"
               <h4 className="font-semibold mb-4">Data Readiness</h4>"
               <ul className="space-y-2">
@@ -186,7 +186,7 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
               <ul className="space-y-2">
 "
           < className="grid,"$2 />
-  md:grid-cols-2 gap-6 mt-6"></div>"
+  md: grid-cols-2 gap-6 mt-6"></div>"
             <div className="bg-purple-50 p-6 rounded-lg"></div>"
               <h4 className="font-semibold mb-4">Organizational Readiness</h4>"
               <ul className="space-y-2">
@@ -222,20 +222,20 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
           <div className="bg-gray-50 p-6 rounded-lg"></div>"
             <h4 className="font-semibold mb-4">Criteria for Pilot Selection</h4>"
             < className="grid,"$2 />
-  md:grid-cols-2 gap-6"></div>"
+  md: grid-cols-2 gap-6"></div>"
               <ul className="space-y-2">
                 <li>• <strong>Business,
-  Impact:</strong> High potential for measurable business value
+  Impact: </strong> High potential for measurable business value
                 <li>• <strong>Technical,
-  Feasibility:</strong> Achievable with current resources and technology
+  Feasibility: </strong> Achievable with current resources and technology
                 <li>• <strong>Data,
-  Availability:</strong> Sufficient quality data for AI model development
+  Availability: </strong> Sufficient quality data for AI model development
               </ul>"
               <ul className="space-y-2">
                 <li>• <strong>Risk,
-  Level:</strong> Low risk with high probability of success
+  Level: </strong> Low risk with high probability of success
                 <li>• <strong>Scalabilit,
-  y:</strong> Potential for enterprise-wide deployment
+  y: </strong> Potential for enterprise-wide deployment
           <h3>2.2 Common Pilot Use Cases
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-blue-50 p-6 rounded-lg">
@@ -243,7 +243,7 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
               <ul className="space-y-2">
           "
           < className="grid,"$2 />
-  md:grid-cols-2 gap-6"></div>"
+  md: grid-cols-2 gap-6"></div>"
             <div className="bg-blue-50 p-6 rounded-lg"></div>"
               <h4 className="font-semibold mb-4">Customer Service Automation</h4>"
               <ul className="space-y-2">
@@ -266,7 +266,7 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
               <ul className="space-y-2">
 "
           < className="grid,"$2 />
-  md:grid-cols-2 gap-6 mt-6"></div>"
+  md: grid-cols-2 gap-6 mt-6"></div>"
             <div className="bg-purple-50 p-6 rounded-lg"></div>"
               <h4 className="font-semibold mb-4">Financial Process Automation</h4>"
               <ul className="space-y-2">
@@ -299,18 +299,18 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
           <div className="bg-gray-50 p-6 rounded-lg"></div>"
             <h4 className="font-semibold mb-4">Scaling Strategy</h4>"
             < className="grid,"$2 />
-  md:grid-cols-2 gap-6"></div>"
+  md: grid-cols-2 gap-6"></div>"
               <ul className="space-y-2">
                 <li>• <strong>Horizontal,
-  Scaling:</strong> Deploy across multiple business units
+  Scaling: </strong> Deploy across multiple business units
                 <li>• <strong>Vertical,
-  Scaling:</strong> Expand functionality within existing use cases
+  Scaling: </strong> Expand functionality within existing use cases
               </ul>"
               <ul className="space-y-2">
                 <li>• <strong>Geographic,
-  Expansion:</strong> Deploy across different regions
+  Expansion: </strong> Deploy across different regions
                 <li>• <strong>Channel,
-  Expansion:</strong> Extend to different customer touchpoints
+  Expansion: </strong> Extend to different customer touchpoints
           <h3>3.2 Advanced AI Capabilities
           <div className="bg-blue-50 p-6 rounded-lg">
             <h4 className="font-semibold mb-4">Autonomous Decision Making
@@ -330,7 +330,7 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
           <div className="bg-blue-50 p-6 rounded-lg"></div>"
             <h4 className="font-semibold mb-4">Autonomous Decision Making</h4>"
             < className="grid,"$2 />
-  md:grid-cols-2 gap-6"></div>"
+  md: grid-cols-2 gap-6"></div>"
               <div className="text-center"></div>"
                 <div className="text-2xl font-bold text-blue-600">Real-time</div>"
                 <div className="text-sm text-gray-600">Decision Processing
@@ -361,18 +361,18 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
           <div className="bg-gray-50 p-6 rounded-lg"></div>"
             <h4 className="font-semibold mb-4">Executive Sponsorship</h4>"
             < className="grid,"$2 />
-  md:grid-cols-2 gap-6"></div>"
+  md: grid-cols-2 gap-6"></div>"
               <ul className="space-y-2">
                 <li>• <strong>CEO,
-  Commitment:</strong> Clear leadership support and commitment
+  Commitment: </strong> Clear leadership support and commitment
                 <li>• <strong>Cross-Functional,
-  Teams:</strong> Multi-disciplinary implementation teams
+  Teams: </strong> Multi-disciplinary implementation teams
               </ul>"
               <ul className="space-y-2">
                 <li>• <strong>Regular,
-  Reviews:</strong> Monthly progress reviews and course corrections
+  Reviews: </strong> Monthly progress reviews and course corrections
                 <li>• <strong>Success,
-  Communication:</strong> Regular communication of successes and learnings
+  Communication: </strong> Regular communication of successes and learnings
           <h3>2. Skills and Capabilities
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-blue-50 p-6 rounded-lg">
@@ -380,7 +380,7 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
               <ul className="space-y-2">
           "
           < className="grid,"$2 />
-  md:grid-cols-2 gap-6"></div>"
+  md: grid-cols-2 gap-6"></div>"
             <div className="bg-blue-50 p-6 rounded-lg"></div>"
               <h4 className="font-semibold mb-4">Team Development</h4>"
               <ul className="space-y-2">
@@ -418,7 +418,7 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
           <div className="bg-gray-50 p-6 rounded-lg"></div>"
             <h3 className="font-semibold mb-6">Business Impact Metrics</h3>"
             < className="grid,"$2 />
-  md:grid-cols-2 gap-6"></div>"
+  md: grid-cols-2 gap-6"></div>"
               <div className="text-center"></div>"
                 <div className="text-3xl font-bold text-green-600">156%</div>"
                 <div className="text-sm text-gray-600">Average ROI
@@ -441,7 +441,7 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
               <ul className="space-y-2 text-sm">
           "
           < className="grid,"$2 />
-  md:grid-cols-3 gap-6"></div>"
+  md: grid-cols-3 gap-6"></div>"
             <div className="bg-red-50 p-6 rounded-lg"></div>"
               <h4 className="font-semibold mb-4 text-red-800">Strategic Pitfalls</h4>"
               <ul className="space-y-2 text-sm">
@@ -490,12 +490,12 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
                 href="/case-studies/fortune-500-ai-transformation-success"
                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors">
                 View Success Stories
-                <Link className="w-4 h-4 ml-2" />
+                <Link className="w-4 h-4 ml-2" /></Link>
               <$2 />
                 href="/tools/ai-roi-calculator"
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
                 Calculate Your ROI
-                <Link className="w-4 h-4 ml-2" />
+                <Link className="w-4 h-4 ml-2" /></Link>
           {/* CTA Section */}"
           <div className="bg-blue-50 p-8 rounded-lg mt-12"></div>"
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Begin Your AI Transformation Journey?</h3>"
@@ -506,17 +506,17 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
               <Link></Link>"
                 href="/case-studies/fortune-500-ai-transformation-success""
                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg,"
-  hover:bg-blue-700 transition-colors"
+  hover: bg-blue-700 transition-colors"
               >
                 View Success Stories;"
-                <Link className="w-4 h-4 ml-2" />
+                <Link className="w-4 h-4 ml-2" /></Link>
               <Link></Link>"
                 href="/tools/ai-roi-calculator""
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg,"
-  hover:bg-blue-50 transition-colors"
+  hover: bg-blue-50 transition-colors"
               >
                 Calculate Your ROI;"
-                <Link className="w-4 h-4 ml-2" />
+                <Link className="w-4 h-4 ml-2" /></Link>
       </article>,
     </div>)
 }

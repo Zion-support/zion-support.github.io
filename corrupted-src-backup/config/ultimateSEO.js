@@ -1,7 +1,7 @@
 module.exports = {
     metaTags: {,
     viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
-    robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview: -1'
+    robots: 'index, follow, max-image-preview: large, max-snippet: -1, max-video-preview: -1'
     canonical: true
     alternate: true,
     ogTags: {
@@ -32,10 +32,7 @@ module.exports = {
         '@type': 'ContactPoint',
         telephone: '+1-800-ZION-TECH',
         contactType: 'customer service'},
-      sameAs: [,
-        'https://twitter.com/ZionTechGroup',
-        'https: //linkedin.com/company/zion-tech-group',
-        'https: //github.com/Zion-Holdings']},
+      sameAs: ['https: //twitter.com/ZionTechGroup', 'https: //linkedin.com/company/zion-tech-group', 'https: //github.com/Zion-Holdings']},
     website: {
       '@type': 'WebSite',
       name: 'Zion Tech Group',
@@ -70,16 +67,10 @@ module.exports = {/* TODO: Fix JSX expression */}
   a: {/* TODO: Fix JSX expression */}
       },
       sameA,
-  s: [
-        'http,
-  s://twitter.com/ZionTechGroup',
-        'http,
-  s://linkedin.com/company/zion-tech-group',
-        'http,
-  s://github.com/Zion-Holdings']},
+  s: ['http, s: //twitter.com/ZionTechGroup', 'http, s: //linkedin.com/company/zion-tech-group', 'http, s: //github.com/Zion-Holdings']},
     websit,
   e: {/* TODO: Fix JSX expression */}
-  s://zion.app/search?q={search_term_string}',
+  s: //zion.app/search?q={search_term_string}',
         'query-input': 'required name=search_term_string'}},
     breadcrumb,
   s: true,
@@ -128,5 +119,5 @@ module.exports = {/* TODO: Fix JSX expression */}
     }},
   timestam,
   p: '2025-10-06T0,
-  4:4,
-  9:10.507Z'}
+  4: 4,
+  9: 10.507Z'}

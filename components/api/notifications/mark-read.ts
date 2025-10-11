@@ -28,7 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const userId = getUserId(req)
     const { id } = req && req.body as { id?: string }
     if (!id) return res && res.status(400).json({ error: 'Missing id' })
-import { supabase } from '../../../utils/supabase/client'
+import { supabase  } from '../../../utils/supabase/client'
 function getUserId(req: NextApiRequest): string {
   const cookie = req.headers.cookie || ''
   const match = cookie.split(';').map((c) => c.trim()).find((c) => c.startsWith('user_id='))

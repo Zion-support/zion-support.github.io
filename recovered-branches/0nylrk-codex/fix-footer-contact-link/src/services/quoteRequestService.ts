@@ -1,4 +1,4 @@
-import { supabase } from "@/integrations/supabase/client"
+import { supabase  } from '@/integrations/supabase/client'
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes"
 export const quoteRequestService = {
   // Get all quote requests (for admin)
@@ -7,7 +7,7 @@ export const quoteRequestService = {
       .from('quote_requests')
       .select(`
         *,
-        talent:talent_id (
+        talent: talent_id (
           display_name
         )
       `)
@@ -36,7 +36,7 @@ export const quoteRequestService = {
       .from('quote_requests')
       .select(`
         *,
-        talent:talent_id (
+        talent: talent_id (
           display_name
         )
       `)

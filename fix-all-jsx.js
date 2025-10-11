@@ -2,8 +2,8 @@
 
 import fs from 'fs'
 import path from 'path'
-import { execSync } from 'child_process'
-import { fileURLToPath } from 'url'
+import { execSync  } from 'child_process'
+import { fileURLToPath  } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to find all TypeScript/JavaScript files
@@ -32,13 +32,10 @@ function fixMalformedJSX(filePath) {
     let content = fs.readFileSync(filePath, 'utf8')
     let modified = false
     // Fix malformed JSX patterns
-    const fixes = [
-      // Fix extra closing div tags
+    const fixes = [// Fix extra closing div tags
       {
-        pattern: /<\/div><\/div>/g,
-        replacement: '</div>'
-      },
-      // Fix malformed nav tags
+        pattern: /<\/div><\/div>/g, replacement: '</div>'
+      }, // Fix malformed nav tags
       {
         pattern: /<\/nav><div className="[^"]*">/g,
         replacement: '<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">'
@@ -133,7 +130,7 @@ console.log(`Errors: ${errorCount} files`)
 // Try building again
 console.log('\nTrying build again...')
 try {
-  execSync('pnpm run build:no-check', { stdio: 'inherit' })
+  execSync('pnpm run build: no-check', { stdio: 'inherit' })
   console.log('Build successful!')
 } catch (error) {
   console.log('Build still has issues, continuing with merge...')

@@ -31,10 +31,10 @@
   f: (depErrors) {/* TODO: Fix JSX expression */}
   s: depErrors.slice()0} 3)})} retur,
   n: errors} async applyTimeoutFixes(causes) {/* TODO: Fix JSX expression */}
-  n: }' awai,
+  n:  }' awai,
   t: this.fixDependencyResolution(), brea}k} } this.log(} asyn)
   c: applyBuildFixes(errors) {/* TODO: Fix JSX expression */}
-  y: }' awai,
+  y:  }' awai,
   t: this.fixDependencyErrors(), brea}k} } const recentBuilds = this.buildHistory.slice(-20); i,
   f: (recentBuilds.length >= 5) {/* TODO: Fix JSX expression */}
   d: => build.duration)} i,`
@@ -43,10 +43,10 @@
   f: (logs) {/* TODO: Fix JSX expression */}
   d: timeout during deployment}' '})}' retur,
   n: errors} async applyDeploymentFixes(errors) {/* TODO: Fix JSX expression */}
-  t: }' awai,
+  t:  }' awai,
   t: this.fixDeploymentTimeout(), brea}k} } this.log(, this.error(, Failed to fix missing files)' ') error)}'} } asyn,
   c: stop() {/* TODO: Fix JSX expression */}
-  n: ,?}' ***': 'No,
+  n:  ,?}' ***': 'No,
   t: set}}'} } // Mai,
   n: execution; i,
   f: (require.main === module) {const automation = new NetlifyBuildAutomation()} process.exit(1)})} module.export,

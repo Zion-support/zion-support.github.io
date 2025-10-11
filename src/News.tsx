@@ -1,80 +1,28 @@
-import { motion } from 'framer-motion'
-import { SEO } from '../components/SEO'
+import { motion  } from 'framer-motion'
+import { SEO  } from '../components/SEO'
 const News: React.FC = () => {
+  return (
+
   const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
+    initial: { opacity: 0, y: 60 
+  );
+},
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 }
   }
-  const categories = [
-  Calendar, 
-  User, 
-  Tag, 
-  ArrowRight, 
-  Search, 
-  Filter,
-  Clock,
-  Eye,
-  ExternalLink,
-  TrendingUp,
-  Award,
-  Globe
+  const categories = [Calendar, User, Tag, ArrowRight, Search, Filter, Clock, Eye, ExternalLink, TrendingUp, Award, Globe
 } from 'lucide-react'
 export default function News() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('All')
-  const categories = [
-    'All',
-    'Company News',
-    'Product Updates',
-    'Industry Insights',
-    'Awards & Recognition',
-    'Partnerships',
-    'Research & Development',
-    'Market Trends'
-  ]
-  const sources = [
-    'All Sources',
-    'Company Press Releases',
-    'Industry Reports',
-    'Technology News',
-    'Research Papers',
-    'Partner Updates',
-    'Customer Success Stories'
-  ]
-  const timeframes = [
-    'All Time',
-    'Last 24 Hours',
-    'Last Week',
-    'Last Month',
-    'Last 3 Months',
-    'Last Year'
+  const categories = ['All', 'Company News', 'Product Updates', 'Industry Insights', 'Awards & Recognition', 'Partnerships', 'Research & Development', 'Market Trends']
+  const sources = ['All Sources', 'Company Press Releases', 'Industry Reports', 'Technology News', 'Research Papers', 'Partner Updates', 'Customer Success Stories']
+  const timeframes = ['All Time', 'Last 24 Hours', 'Last Week', 'Last Month', 'Last 3 Months', 'Last Year'
   const [selectedYear, setSelectedYear] = useState('all')
-  const categories = [
-    { id: 'all', name: 'All News', icon: Newspaper, count: 67 },
-    { id: 'company', name: 'Company News', icon: Building, count: 23 },
-    { id: 'technology', name: 'Technology', icon: Zap, count: 18 },
-    { id: 'partnerships', name: 'Partnerships', icon: Globe, count: 12 },
-    { id: 'awards', name: 'Awards & Recognition', icon: Award, count: 8 },
-    { id: 'industry', name: 'Industry Insights', icon: TrendingUp, count: 6 }
-  ]
-  const years = [
-    { id: 'all', name: 'All Years', count: 67 },
-    { id: '2025', name: '2025', count: 23 },
-    { id: '2024', name: '2024', count: 28 },
-    { id: '2023', name: '2023', count: 16 }
-  ]
-  const newsArticles = [
-    {
-      id: 1,
-      title: "Zion Tech Group Launches Revolutionary Quantum Neural Network Platform",
-      excerpt: "The company introduces a breakthrough quantum computing solution that combines neural networks with quantum processing for unprecedented computational power.",
-      content: "Zion Tech Group today announced the launch of its revolutionary Quantum Neural Network Platform, marking a significant milestone in the convergence of quantum computing and artificial intelligence. This breakthrough technology represents a paradigm shift in computational capabilities, enabling organizations to solve complex problems that were previously impossible with classical computing methods...",
-      author: "Zion Tech Group Press",
-      publishDate: "2025-01-20",
-      readTime: "5 min read",
-      category: "technology",
-      tags: ["quantum-computing", "ai", "innovation", "breakthrough"],
+  const categories = [{ id: 'all', name: 'All News', icon: Newspaper, count: 67 }, { id: 'company', name: 'Company News', icon: Building, count: 23 }, { id: 'technology', name: 'Technology', icon: Zap, count: 18 }, { id: 'partnerships', name: 'Partnerships', icon: Globe, count: 12 }, { id: 'awards', name: 'Awards & Recognition', icon: Award, count: 8 }, { id: 'industry', name: 'Industry Insights', icon: TrendingUp, count: 6 }]
+  const years = [{ id: 'all', name: 'All Years', count: 67 }, { id: '2025', name: '2025', count: 23 }, { id: '2024', name: '2024', count: 28 }, { id: '2023', name: '2023', count: 16 }]
+  const newsArticles = [{
+      id: 1, title: "Zion Tech Group Launches Revolutionary Quantum Neural Network Platform", excerpt: "The company introduces a breakthrough quantum computing solution that combines neural networks with quantum processing for unprecedented computational power.", content: "Zion Tech Group today announced the launch of its revolutionary Quantum Neural Network Platform, marking a significant milestone in the convergence of quantum computing and artificial intelligence. This breakthrough technology represents a paradigm shift in computational capabilities, enabling organizations to solve complex problems that were previously impossible with classical computing methods...", author: "Zion Tech Group Press", publishDate: "2025-01-20", readTime: "5 min read", category: "technology", tags: ["quantum-computing", "ai", "innovation", "breakthrough"],
       featured: true,
       image: "/news/quantum-neural-network.jpg",
       views: 15420,
@@ -188,20 +136,12 @@ export default function News() {
   ]
   const filteredNews = newsArticles.filter(article => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
-  const categories = [
-    "All News",
-    "Product Launch",
-    "Research & Development",
-    "Cybersecurity",
-    "Industry Insights",
-    "Company News",
-    "Product Updates"
-  ]
+  const categories = ["All News", "Product Launch", "Research & Development", "Cybersecurity", "Industry Insights", "Company News", "Product Updates"]
   const featuredArticle = newsArticles.find(article => article.featured)
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-32 pb-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
     const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory
@@ -217,10 +157,9 @@ export default function News() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-import { motion } from 'framer-motion'
-import { 
-  Search, 
+      <section className="pt-32 pb-20 px-4 sm: px-6 lg:px-8">
+import { motion  } from 'framer-motion'
+import { Search, 
   Calendar, 
   User, 
   Clock, 
@@ -242,29 +181,14 @@ import {
   ImageIcon,
   Video,
   FileText
-} from 'lucide-react'
+ } from 'lucide-react'
 const News = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [sortBy, setSortBy] = useState('latest')
-  const categories = [
-    { id: 'all', name: 'All News', icon: Newspaper, count: 89, color: 'from-gray-500 to-slate-500' },
-    { id: 'company', name: 'Company News', icon: Building, count: 23, color: 'from-blue-500 to-cyan-500' },
-    { id: 'industry', name: 'Industry Updates', icon: Globe, count: 31, color: 'from-green-500 to-emerald-500' },
-    { id: 'awards', name: 'Awards & Recognition', icon: Award, count: 12, color: 'from-yellow-500 to-orange-500' },
-    { id: 'partnerships', name: 'Partnerships', icon: Users, count: 18, color: 'from-purple-500 to-pink-500' },
-    { id: 'technology', name: 'Technology', icon: TrendingUp, count: 25, color: 'from-red-500 to-rose-500' }
-  ]
-  const featuredNews = [
-    {
-      id: 1,
-      title: "Zion Tech Group Named Top AI Solutions Provider by TechCrunch 2025",
-      excerpt: "Leading technology publication recognizes Zion Tech Group for innovative AI solutions and exceptional client success rates in enterprise digital transformation.",
-      author: "Zion Tech Group",
-      publishDate: "2025-01-15",
-      readTime: "3 min read",
-      category: "awards",
-      tags: ["Awards", "AI", "Recognition", "TechCrunch"],
+  const categories = [{ id: 'all', name: 'All News', icon: Newspaper, count: 89, color: 'from-gray-500 to-slate-500' }, { id: 'company', name: 'Company News', icon: Building, count: 23, color: 'from-blue-500 to-cyan-500' }, { id: 'industry', name: 'Industry Updates', icon: Globe, count: 31, color: 'from-green-500 to-emerald-500' }, { id: 'awards', name: 'Awards & Recognition', icon: Award, count: 12, color: 'from-yellow-500 to-orange-500' }, { id: 'partnerships', name: 'Partnerships', icon: Users, count: 18, color: 'from-purple-500 to-pink-500' }, { id: 'technology', name: 'Technology', icon: TrendingUp, count: 25, color: 'from-red-500 to-rose-500' }]
+  const featuredNews = [{
+      id: 1, title: "Zion Tech Group Named Top AI Solutions Provider by TechCrunch 2025", excerpt: "Leading technology publication recognizes Zion Tech Group for innovative AI solutions and exceptional client success rates in enterprise digital transformation.", author: "Zion Tech Group", publishDate: "2025-01-15", readTime: "3 min read", category: "awards", tags: ["Awards", "AI", "Recognition", "TechCrunch"],
       image: "/api/placeholder/600/400",
       views: "15.2k",
       type: "press-release",
@@ -284,54 +208,21 @@ const News = () => {
       views: "12.8k",
       type: "announcement",
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link  } from 'react-router-dom'
 export default function News() {
-  const featuredNews = [
-    {
-      id: 1,
-      title: 'Zion Tech Group Launches Revolutionary Quantum AI Platform',
-      excerpt: 'Our latest quantum computing platform combines AI and quantum mechanics to solve previously unsolvable problems.',
-      category: 'Product Launch',
-      date: '2024-08-25',
-      readTime: '5 min read',
-      image: '🚀',
-import React from 'react'
-import { SEO } from '@/components/SEO'
-import { Link } from 'react-router-dom'
+  const featuredNews = [{
+      id: 1, title: 'Zion Tech Group Launches Revolutionary Quantum AI Platform', excerpt: 'Our latest quantum computing platform combines AI and quantum mechanics to solve previously unsolvable problems.', category: 'Product Launch', date: '2024-08-25', readTime: '5 min read', image: '🚀', import React from 'react'
+import { SEO  } from '@/components/SEO'
+import { Link  } from 'react-router-dom'
 export default function News() {
   const newsItems = [
     {
-      id: 1,
-      title: 'Zion Tech Group Launches Revolutionary Quantum Edge Computing Platform',
-      excerpt: 'Our latest quantum computing solution delivers unprecedented performance for distributed applications, marking a major milestone in edge computing technology.',
-      date: '2025-01-15',
-      category: 'Product Launch',
-      image: '/images/news/quantum-edge-launch.jpg',
-      featured: true
-    },
-    {
-      id: 2,
-      title: 'New Cybersecurity Framework for Quantum Threats',
-      excerpt: 'Introducing quantum-safe security protocols to protect against future quantum computing threats.',
-      category: 'Security',
-      date: '2024-08-15',
-      readTime: '7 min read',
-      image: '🔒',
-      featured: true
-    }
-  ]
-  const recentNews = [
-    {
-      id: 4,
-      title: "Zion Tech Group Named Top AI Solutions Provider 2025",
-      excerpt: "Leading technology research firm recognizes Zion Tech Group for excellence in AI-powered business solutions and innovation.",
-      content: "Zion Tech Group has been recognized as a Top AI Solutions Provider for 2025 by TechResearch Insights, a leading technology research and advisory firm. This recognition highlights our commitment to delivering cutting-edge AI solutions that drive real business value...",
-      author: "Zion Tech Group",
-      publishDate: "2025-01-20",
-      readTime: "3 min read",
-      views: "5.2k",
-      category: "Awards & Recognition",
-      tags: ["Award", "AI Solutions", "Recognition", "2025"],
+      id: 1, title: 'Zion Tech Group Launches Revolutionary Quantum Edge Computing Platform', excerpt: 'Our latest quantum computing solution delivers unprecedented performance for distributed applications, marking a major milestone in edge computing technology.', date: '2025-01-15', category: 'Product Launch', image: '/images/news/quantum-edge-launch.jpg', featured: true
+    }, {
+      id: 2, title: 'New Cybersecurity Framework for Quantum Threats', excerpt: 'Introducing quantum-safe security protocols to protect against future quantum computing threats.', category: 'Security', date: '2024-08-15', readTime: '7 min read', image: '🔒', featured: true
+    }]
+  const recentNews = [{
+      id: 4, title: "Zion Tech Group Named Top AI Solutions Provider 2025", excerpt: "Leading technology research firm recognizes Zion Tech Group for excellence in AI-powered business solutions and innovation.", content: "Zion Tech Group has been recognized as a Top AI Solutions Provider for 2025 by TechResearch Insights, a leading technology research and advisory firm. This recognition highlights our commitment to delivering cutting-edge AI solutions that drive real business value...", author: "Zion Tech Group", publishDate: "2025-01-20", readTime: "3 min read", views: "5.2k", category: "Awards & Recognition", tags: ["Award", "AI Solutions", "Recognition", "2025"],
       featured: true,
       image: "/images/news/award-2025.jpg",
       externalLink: null,
@@ -500,7 +391,7 @@ export default function News() {
     })
   }
       {/* Newsletter Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
           <p className="text-xl text-gray-300 mb-8">
@@ -519,7 +410,7 @@ export default function News() {
         </div>
       </section>
       {/* Press Contact CTA */}
-      <section className="pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="pb-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -527,20 +418,20 @@ export default function News() {
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-3xl p-12 border border-cyan-500/20 text-center"
           >
-            <Newspaper className="w-16 h-16 text-cyan-400 mx-auto mb-6" />
+            <Newspaper className="w-16 h-16 text-cyan-400 mx-auto mb-6" /></Newspaper>
             <h2 className="text-3xl font-bold text-white mb-4">Press & Media Inquiries</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               For press releases, media interviews, or company information, please contact our communications team.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                 Contact Press Team
               </button>
               <button className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300">
                 Media Kit
       {/* Recent News Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -553,7 +444,7 @@ export default function News() {
             <p className="text-xl text-gray-300">Stay updated with our newest announcements and updates</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {sortedNews.slice(3).map((news, index) => (
               <motion.article
                 key={news.id}
@@ -561,7 +452,7 @@ export default function News() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden group"
+                className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover: border-cyan-500/50 transition-all duration-300 overflow-hidden group"
               >
                 {/* News Type Badge */}
                 <div className="absolute top-4 left-4 z-10">
@@ -574,7 +465,7 @@ export default function News() {
                 <div className="relative h-40 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <Newspaper className="w-12 h-12 text-cyan-400/50" />
+                    <Newspaper className="w-12 h-12 text-cyan-400/50" /></Newspaper>
                   </div>
                 </div>
 
@@ -588,7 +479,7 @@ export default function News() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2">
+                  <h3 className="text-lg font-bold text-white mb-3 group-hover: text-cyan-400 transition-colors duration-300 line-clamp-2">
                     {news.title}
                   </h3>
 
@@ -601,12 +492,12 @@ export default function News() {
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                     <div className="flex items-center gap-2">
                       <span className="flex items-center gap-1">
-                        <User className="w-3 h-3" />
+                        <User className="w-3 h-3" /></User>
                         {news.author}
                       </span>
                     </div>
                     <span className="flex items-center gap-1">
-                      <Clock className="w-3 h-3" />
+                      <Clock className="w-3 h-3" /></Clock>
                       {news.readTime}
                     </span>
                   </div>
@@ -615,7 +506,7 @@ export default function News() {
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                     <div className="flex items-center gap-3">
                       <span className="flex items-center gap-1">
-                        <Eye className="w-3 h-3" />
+                        <Eye className="w-3 h-3" /></Eye>
                         {news.views}
                       </span>
                     </div>
@@ -627,15 +518,15 @@ export default function News() {
                       href={news.externalLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 group-hover:gap-3"
+                      className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-600 hover:to-blue-600 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 group-hover:gap-3"
                     >
                       Read Full Article
-                      <ExternalLink className="w-4 h-4" />
+                      <ExternalLink className="w-4 h-4" /></ExternalLink>
                     </a>
                   ) : (
                     <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 group-hover:gap-3">
                       Read More
-                      <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                      <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" /></ArrowRight>
                     </button>
                   )}
                 </div>
@@ -646,7 +537,7 @@ export default function News() {
           {/* Load More Button */}
           {sortedNews.length > 9 && (
             <div className="text-center mt-12">
-              <button className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 border border-white/20 hover:border-cyan-500/50">
+              <button className="bg-white/10 hover: bg-white/20 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 border border-white/20 hover:border-cyan-500/50">
                 Load More News
               </button>
             </div>
@@ -655,7 +546,7 @@ export default function News() {
       </section>
 
       {/* Press Kit CTA */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -670,7 +561,7 @@ export default function News() {
             <p className="text-xl text-gray-300 mb-8">
               Access our press kit, company logos, executive bios, and media contact information for journalists and media professionals.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
                 Download Press Kit
               </button>
@@ -734,21 +625,11 @@ export default function News() {
       image: '🏭'
     }
   ]
-  const categories = [
-    'All News',
-    'Product Launch',
-    'Partnership',
-    'Security',
-    'Company',
-    'Events',
-    'Research',
-    'Case Study',
-    'Awards'
-  ]
+  const categories = ['All News', 'Product Launch', 'Partnership', 'Security', 'Company', 'Events', 'Research', 'Case Study', 'Awards']
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}
-      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+      <div className="pt-32 pb-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
             News & Updates
@@ -756,7 +637,7 @@ export default function News() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Stay informed about our latest innovations, partnerships, and industry insights. Discover how we're shaping the future of AI and technology.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
               Subscribe to Newsletter
             </button>
@@ -767,8 +648,8 @@ export default function News() {
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%, rgba(0, 255, 255, 0.1), transparent_50%)]"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 pt-32 pb-20">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Latest News & Updates
@@ -781,13 +662,13 @@ export default function News() {
             {/* Search and Filter */}
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Search>
                 <input
                   type="text"
                   placeholder="Search news, updates, or topics..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
             </div>
@@ -801,7 +682,7 @@ export default function News() {
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                     selectedCategory === category
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                      : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
+                      : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white'
                   }`}
                 >
                   {category}
@@ -813,7 +694,7 @@ export default function News() {
       </div>
 
       {featuredArticle && (
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div 
               className="text-center mb-16"
@@ -822,7 +703,7 @@ export default function News() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: text-4xl lg:text-5xl font-bold text-white mb-4">
                 Latest News
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -840,7 +721,7 @@ export default function News() {
               {newsArticles.filter(article => !article.featured).map((article, index) => (
                 <motion.article
                   key={article.id}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:bg-white/15 hover:shadow-xl hover:shadow-blue-500/10 transform hover:-translate-y-1"
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-300 hover:bg-white/15 hover:shadow-xl hover:shadow-blue-500/10 transform hover:-translate-y-1"
                   variants={fadeInUp}
                   whileHover={{ scale: 1.02 }}
                 >
@@ -854,16 +735,16 @@ export default function News() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4 text-sm text-gray-400">
                       <div className="flex items-center space-x-2">
-                        <User className="w-4 h-4 text-green-400" />
+                        <User className="w-4 h-4 text-green-400" /></User>
                         <span>{featuredArticle.author}</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <Calendar className="w-4 h-4 text-green-400" />
+                        <Calendar className="w-4 h-4 text-green-400" /></Calendar>
                         <span>{new Date(featuredArticle.date).toLocaleDateString()}</span>
                       </div>
                     </div>
                     
-                    <button className="px-6 py-3 bg-gradient-to-r from-green-500 to-teal-500 text-white font-semibold rounded-lg hover:from-green-400 hover:to-teal-400 transition-all duration-300 transform hover:scale-105">
+                    <button className="px-6 py-3 bg-gradient-to-r from-green-500 to-teal-500 text-white font-semibold rounded-lg hover: from-green-400 hover:to-teal-400 transition-all duration-300 transform hover:scale-105">
                       Read Full Article
                     </button>
                   </div>
@@ -871,7 +752,7 @@ export default function News() {
                 
                 <div className="relative">
                   <div className="w-full h-64 bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-xl border border-green-400/30 flex items-center justify-center">
-                    <Newspaper className="w-16 h-16 text-green-400" />
+                    <Newspaper className="w-16 h-16 text-green-400" /></Newspaper>
                   </div>
                 </div>
               </div>
@@ -881,7 +762,7 @@ export default function News() {
       )}
 
       {/* Categories Filter */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
+      <section className="py-12 px-4 sm: px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category, index) => (
@@ -890,7 +771,7 @@ export default function News() {
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                   index === 0
                     ? 'bg-gradient-to-r from-green-500 to-teal-500 text-white'
-                    : 'bg-gray-800/50 text-gray-300 hover:bg-green-500/20 hover:text-green-400 border border-gray-700/50 hover:border-green-400/50'
+                    : 'bg-gray-800/50 text-gray-300 hover: bg-green-500/20 hover:text-green-400 border border-gray-700/50 hover:border-green-400/50'
                 }`}
               >
                 {category}
@@ -900,13 +781,13 @@ export default function News() {
         </div>
       {/* Featured News */}
       {featuredNews.length > 0 && (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 pb-20">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured News</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {featuredNews.map((item) => (
               <rticle$2 />
                 key={item.id}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover: transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-4">
@@ -934,20 +815,20 @@ export default function News() {
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center space-x-4 text-sm text-gray-400">
                       <div className="flex items-center">
-                        <User className="w-4 h-4 mr-2" />
+                        <User className="w-4 h-4 mr-2" /></User>
                         {item.author}
                       </div>
                       <div className="flex items-center">
-                        <Calendar className="w-4 h-4 mr-2" />
+                        <Calendar className="w-4 h-4 mr-2" /></Calendar>
                         {formatDate(item.publishDate)}
                       </div>
                       <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-2" />
+                        <Clock className="w-4 h-4 mr-2" /></Clock>
                         {item.readTime}
                       </div>
                     </div>
                     <div className="flex items-center text-sm text-gray-400">
-                      <Eye className="w-4 h-4 mr-2" />
+                      <Eye className="w-4 h-4 mr-2" /></Eye>
                       {item.views}
                     </div>
                   </div>
@@ -963,9 +844,9 @@ export default function News() {
                     ))}
                   </div>
                   
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">
                     Read Full Article
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" /></ArrowRight>
                   </button>
                 </div>
               </article>
@@ -977,7 +858,7 @@ export default function News() {
       </section>
 
       {/* News Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-4">Latest News</h2>
@@ -986,9 +867,9 @@ export default function News() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {newsArticles.filter(article => !article.featured).map((article) => (
-              <article key={article.id} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-green-400/50 transition-all duration-300 hover:transform hover:scale-105">
+              <article key={article.id} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover: border-green-400/50 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="p-6">
                   <div className="flex items-center space-x-4 mb-4">
                     <span className="px-3 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full border border-blue-600/30">
@@ -1007,7 +888,7 @@ export default function News() {
                   
                   <div className="flex items-center justify-between">
                     <span className="text-gray-400 text-xs">{formatDate(article.date)}</span>
-                    <button className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-300">
+                    <button className="text-blue-400 hover: text-blue-300 text-sm font-medium transition-colors duration-300">
                       Read More →
                     </button>
                   </div>
@@ -1018,7 +899,7 @@ export default function News() {
         </section>
 
         {/* Press Releases */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <motion.div 
               className="text-center mb-16"
@@ -1027,7 +908,7 @@ export default function News() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: text-4xl lg:text-5xl font-bold text-white mb-4">
                 Press Releases
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1045,7 +926,7 @@ export default function News() {
               {pressReleases.map((release, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-300"
                   variants={fadeInUp}
                   whileHover={{ scale: 1.02 }}
                 >
@@ -1063,7 +944,7 @@ export default function News() {
                   
                   <div className="flex items-center justify-between">
                     <span className="text-gray-400 text-xs">{formatDate(release.date)}</span>
-                    <button className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-300">
+                    <button className="text-blue-400 hover: text-blue-300 text-sm font-medium transition-colors duration-300">
                       Read Full Release →
                     </button>
                   </div>
@@ -1077,7 +958,7 @@ export default function News() {
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
           <div className="max-w-4xl mx-auto text-center px-4">
             <motion.h2 
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
+              className="text-3xl md: text-4xl lg:text-5xl font-bold text-white mb-6"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -1100,7 +981,7 @@ export default function News() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">
                 <input
                   type="email"
                   placeholder="Enter your email"
@@ -1161,17 +1042,15 @@ export default News
   const categories = ['All', 'Product Launch', 'Awards', 'Partnerships', 'Research', 'Company News', 'Security']
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="News & Updates - Zion Tech Group" 
+      <SEO title="News & Updates - Zion Tech Group" 
         description="Stay updated with the latest news, press releases, and announcements from Zion Tech Group"
         keywords="news, updates, press releases, announcements, Zion Tech Group"
-        canonical="https://ziontechgroup.com/news"
-      />
-
+        canonical="https: //ziontechgroup.com/news"
+      /></SEO>
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">
+          <h1 className="text-5xl md: text-6xl font-bold mb-6 text-gradient">
             News & Updates
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -1185,7 +1064,7 @@ export default News
           <h2 className="text-3xl font-bold text-white mb-8">Featured News</h2>
           {newsItems.filter(item => item.featured).map((item) => (
             <div key={item.id} className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-3xl p-8 border border-cyan-500/20">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 items-center">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <span className="px-3 py-1 bg-cyan-500 text-white text-sm font-medium rounded-full">
@@ -1203,7 +1082,7 @@ export default News
                   <p className="text-gray-300 text-lg leading-relaxed mb-6">{item.excerpt}</p>
                   <$2 />
                     to={`/news/${item.id}`}
-                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-medium"
+                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-300 font-medium"
                   >
                     Read Full Article
                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1224,9 +1103,9 @@ export default News
         {/* Latest News Grid */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8">Latest News</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {newsItems.filter(item => !item.featured).map((item) => (
-              <div key={item.id} className="bg-gray-800/30 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 group">
+              <div key={item.id} className="bg-gray-800/30 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover: border-cyan-500/50 transition-all duration-300 group">
                 <div className="w-full h-48 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-t-2xl flex items-center justify-center">
                   <svg className="w-12 h-12 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -1245,7 +1124,7 @@ export default News
                       })}
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-200">
+                  <h3 className="text-lg font-bold text-white mb-3 group-hover: text-cyan-400 transition-colors duration-200">
                     {item.title}
                   </h3>
                   <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
@@ -1253,7 +1132,7 @@ export default News
                   </p>
                   <$2 />
                     to={`/news/${item.id}`}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium group"
+                    className="inline-flex items-center text-cyan-400 hover: text-cyan-300 transition-colors duration-200 text-sm font-medium group"
                   >
                     Read More
                     <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1274,7 +1153,7 @@ export default News
               Journalists and media professionals can access our press kit, company logos, 
               high-resolution images, and executive bios for media coverage.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <$2 />
                 href="/press-kit.zip"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 font-medium"
@@ -1286,7 +1165,7 @@ export default News
               </a>
               <$2 />
                 to="/contact"
-                className="inline-flex items-center px-6 py-3 border border-purple-500 text-purple-400 rounded-lg hover:bg-purple-500/10 transition-all duration-300 font-medium"
+                className="inline-flex items-center px-6 py-3 border border-purple-500 text-purple-400 rounded-lg hover: bg-purple-500/10 transition-all duration-300 font-medium"
               >
                 Contact PR Team
               </Link>
@@ -1306,12 +1185,12 @@ export default News
               <input 
                 type="email" 
                 placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-l-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-r-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-medium">
                 Subscribe
       {/* Regular News */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 pb-20">
         <h2 className="text-3xl font-bold text-white mb-8 text-center">
           Latest Updates
         </h2>
@@ -1319,7 +1198,7 @@ export default News
           {regularNews.map((item) => (
             <rticle$2 />
               key={item.id}
-              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover: transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
             >
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-4">
@@ -1344,16 +1223,16 @@ export default News
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-4 text-sm text-gray-400">
                     <div className="flex items-center">
-                      <User className="w-4 h-4 mr-2" />
+                      <User className="w-4 h-4 mr-2" /></User>
                       {item.author}
                     </div>
                     <div className="flex items-center">
-                      <Calendar className="w-4 h-4 mr-2" />
+                      <Calendar className="w-4 h-4 mr-2" /></Calendar>
                       {formatDate(item.publishDate)}
                     </div>
                   </div>
                   <div className="flex items-center text-sm text-gray-400">
-                    <Clock className="w-4 h-4 mr-2" />
+                    <Clock className="w-4 h-4 mr-2" /></Clock>
                     {item.readTime}
                   </div>
                 </div>
@@ -1369,9 +1248,9 @@ export default News
                   ))}
                 </div>
                 
-                <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">
+                <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">
                   Read Article
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" /></ArrowRight>
                 </button>
               </div>
             </article>
@@ -1381,7 +1260,7 @@ export default News
 
       {/* Press Room CTA */}
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-20">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
               Press & Media Inquiries
@@ -1390,13 +1269,13 @@ export default News
               Journalists and media representatives can access our press kit, 
               high-resolution images, and contact our media relations team.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <$2 />
                 to="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
               >
                 Contact Media Relations
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
               </Link>
               <button className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200">
                 Download Press Kit

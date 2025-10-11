@@ -78,16 +78,12 @@ export interface RealOperationalService {/* TODO: Fix JSX expression */}
     address: string,
   }
 }
-export const realOperationalServices: RealOperationalService[] = [,
-    id: "operational-intelligence", name: "Operational Intelligence Platform",
-    tagline: "Real-time operational insights and optimization", price: "$99/month"
+export const realOperationalServices: RealOperationalService[] = [id: "operational-intelligence", name: "Operational Intelligence Platform", tagline: "Real-time operational insights and optimization", price: "$99/month"
     description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations."
-    features: [,
-      "Real-time monitoring"
+    features: [, "Real-time monitoring"
       "Performance analytics"
       "Operational insights"
-      "Optimization recommendations",
-      "Alert system"],
+      "Optimization recommendations", "Alert system"],
     link: "/services/operational-intelligence", category: "Operational Services",
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
@@ -127,23 +123,17 @@ export const realOperationalServices: RealOperationalService[] = [,
   s: string}
 }
 export const,
-  realOperationalServices: RealOperationalService[] = [,
-    i,"
-  d: "operational-intelligence", nam,"
-  e: "Operational Intelligence Platform",
-    taglin,"
-  e: "Real-time operational insights and optimization", pric,"
-  e: "$99/month",
-    descriptio,"
-  n: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",
-    feature,
-  s: [,"
+  realOperationalServices: RealOperationalService[] = [i, "
+  d: "operational-intelligence", nam, "
+  e: "Operational Intelligence Platform", taglin, "
+  e: "Real-time operational insights and optimization", pric, "
+  e: "$99/month", descriptio, "
+  n: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.", feature, s: [, "
       "Real-time monitoring""
       "Performance analytics""
       "Operational insights""
       "Optimization recommendations""
-      "Alert system"
-    ],
+      "Alert system"],
     lin,"
   k: "/services/operational-intelligence", categor,"
   y: "Operational Services",
@@ -178,13 +168,7 @@ id: "operational-intelligence"
     tagline: "Real-time operational insights and optimization",
     price: "$99/month",
     description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",
-    features: [,
-      "Real-time monitoring",
-      "Performance analytics",
-      "Operational insights",
-      "Optimization recommendations",
-      "Alert system"
-    ],
+    features: ["Real-time monitoring", "Performance analytics", "Operational insights", "Optimization recommendations", "Alert system"],
     link: "/services/operational-intelligence"
     category: "Operational Services"
     realImplementation: true
@@ -210,13 +194,12 @@ id: "operational-intelligence"
     descriptio,"
   n: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",
     feature,
-  s: [,"
-      "Real-time monitoring","
-      "Performance analytics","
-      "Operational insights","
-      "Optimization recommendations","
-      "Alert system"
-    ],
+  s: ["
+      "Real-time monitoring", "
+      "Performance analytics", "
+      "Operational insights", "
+      "Optimization recommendations", "
+      "Alert system"],
     lin,"
   k: "/services/operational-intelligence",
     categor,"
@@ -288,13 +271,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  realOperationalServices: RealOperationalService[] = [ i,"
-  d: "operational-intelligence", nam,"
-  e: "Operational Intelligence Platform", taglin,"
-  e: "Real-time operational insights and optimization", pric,"
-  e: "$99/month", descriptio,"
-  n: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.", feature,"
-  s: [ "Real-time monitoring" "Performance analytics" "Operational insights" "Optimization recommendations" "Alert system" ], lin,"
+  realOperationalServices: RealOperationalService[] = [i, "
+  d: "operational-intelligence", nam, "
+  e: "Operational Intelligence Platform", taglin, "
+  e: "Real-time operational insights and optimization", pric, "
+  e: "$99/month", descriptio, "
+  n: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.", feature, "
+  s: [ "Real-time monitoring" "Performance analytics" "Operational insights" "Optimization recommendations" "Alert system"], lin,"
   k: "/services/operational-intelligence", categor,"
   y: "Operational Services", realImplementatio,
   n: true, contactInf,
@@ -311,7 +294,7 @@ i,
   e: "Real-time operational insights and optimization", pric,"
   e: "$99/month", descriptio,"
   n: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.", feature,"
-  s: [ "Real-time monitoring", "Performance analytics", "Operational insights", "Optimization recommendations", "Alert system" ], lin,"
+  s: ["Real-time monitoring", "Performance analytics", "Operational insights", "Optimization recommendations", "Alert system"], lin,"
   k: "/services/operational-intelligence", categor,"
   y: "Operational Services", realImplementatio,
   n: true, contactInf,

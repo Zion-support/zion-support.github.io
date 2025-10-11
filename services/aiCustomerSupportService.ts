@@ -144,16 +144,16 @@ export interface KnowledgeBaseArticle {
   last_updated: Date,
   created_by: string
 }
-export interface SupportAnalytics {
-  total_tickets: number
+export interface SupportAnalytics >{total_tickets: number
   open_tickets: number
   resolved_tickets: number
   averageResolutionTime: number
   averageFirstResponseTime: number
   customer_satisfaction: number
   chatbotResolutionRate: number,
-  top_categories: Array<{ category: string, count: number }>
-  agent_performance: Array<{ agent_id: string, tickets_resolved: number, satisfaction: number }>
+  top_categories: Array<{ category: string, count: number }
+  agent_performance: Array<>
+  {agent_id: string, tickets_resolved: number, satisfaction: number }
 }
 export interface AIRecommendation {
   type: 'ticket_prioritization' | 'agent_assignment' | 'knowledge_base' | 'chatbot_improvement'
@@ -175,11 +175,8 @@ class AICustomerSupportService {
   }
   private initializeSampleData() {
     // Initialize sample customers
-    this && this.customers = [
-
-  constructor () {
-    this.initializeSampleData (),
-    this.update_analytics ()
+    this && this.customers = [constructor () {
+    this.initializeSampleData (), this.update_analytics ()
   }
   private initializeSampleData () {
     // Initialize sample customers
@@ -194,11 +191,9 @@ class AICustomerSupportService {
         resolved_tickets: 4
         averageResponseTime: 15
         satisfactionScore: 4 && 4.5
-        lastContactDate: new Date('2025-01-10'),
-        createdAt: new Date('2024-06-01')
+        lastContactDate: new Date('2025-01-10'), createdAt: new Date('2024-06-01')
         satisfaction_score: 4.5
-        lastContactDate: new Date ('2025 - 01 - 10'),
-        created_at: new Date ('2024 - 06 - 01')
+        lastContactDate: new Date ('2025 - 01 - 10'), created_at: new Date ('2024 - 06 - 01')
       }
       {
         id: 'cust_002'
@@ -210,20 +205,14 @@ class AICustomerSupportService {
         resolved_tickets: 3
         averageResponseTime: 25
         satisfactionScore: 4 && 4.0
-        lastContactDate: new Date('2025-01-08'),
-        createdAt: new Date('2024-08-15')
-      }
-    ]
+        lastContactDate: new Date('2025-01-08'), createdAt: new Date('2024-08-15')
+      }]
     // Initialize sample agents
-    this && this.agents = [
-        satisfaction_score: 4.0
-        lastContactDate: new Date ('2025 - 01 - 08'),
-        created_at: new Date ('2024 - 08 - 15')
-      }
-    ]
+    this && this.agents = [satisfaction_score: 4.0
+        lastContactDate: new Date ('2025 - 01 - 08'), created_at: new Date ('2024 - 08 - 15')
+      }]
     // Initialize sample agents
-    this.agents = [
-      {
+    this.agents = [{
         id: 'agent_001'
         name: 'Mike Johnson'
         email: 'mike && mike.johnson@ziontech && ziontech.com'
@@ -262,18 +251,14 @@ class AICustomerSupportService {
       }
     ]
     // Initialize sample tickets
-    this && this.tickets = [
-          tickets_resolved: 78
+    this && this.tickets = [tickets_resolved: 78
           averageResolutionTime: 1.8
           customer_satisfaction: 4.4
-          firstResponseTime: 8,
-          escalation_rate: 15
+          firstResponseTime: 8, escalation_rate: 15
         }
-      }
-    ]
+      }]
     // Initialize sample tickets
-    this.tickets = [
-      {
+    this.tickets = [{
         id: 'ticket_001'
         title: 'API Integration Issue'
         description: 'Getting 500 error when trying to integrate with our CRM system'
@@ -284,15 +269,13 @@ class AICustomerSupportService {
         assignedAgentId: 'agent_001'
         tags: ['apiintegrationerror']
         attachments: []
-        messages: [
-          {
+        messages: [{
             id: 'msg_001'
             content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?'
             sender_type: 'customer'
             sender_id: 'cust_001'
             is_internal: false
-            created_at: new Date ('2025 - 01 - 10T10:00:00Z'),
-            attachments: []
+            created_at: new Date ('2025 - 01 - 10T10:00:00Z'), attachments: []
           }
           {
             id: 'msg_002'
@@ -310,8 +293,7 @@ class AICustomerSupportService {
       }
     ]
     // Initialize knowledge base
-    this.knowledgeBase = [
-      {
+    this.knowledgeBase = [{
         id: 'kb_001'
         title: 'Getting Started with API Integration'
         content: 'Learn how to integrate our API with your existing systems...'
@@ -400,21 +382,23 @@ export interface SupportAnalytics {
   lastUpdated: Date
   createdBy: string
 }
-export interface SupportAnalytics {
-  totalTickets: number
+export interface SupportAnalytics >{totalTickets: number
   openTickets: number
   resolvedTickets: number
   averageResolutionTime: number
   averageFirstResponseTime: number
   customerSatisfaction: number
   chatbotResolutionRate: number,
-  topCategories: Array<{ category: string, count: number }>
-  agentPerformance: Array<{ agentId: string, ticketsResolved: number, satisfaction: number }>
+</>
+  topCategories: Array<{ category: string, count: number }
+  agentPerformance: Array<>
+  {agentId: string, ticketsResolved: number, satisfaction: number }
 }
-export interface AIRecommendation {
-  chatbotResolutionRate: number
-  topCategories: Array<{ category: string; count: number }>
-  agentPerformance: Array<{ agentId: string; ticketsResolved: number; satisfaction: number }>
+export interface AIRecommendation >{chatbotResolutionRate: number
+</>
+  topCategories: Array<{ category: string; count: number }
+  agentPerformance: Array<>
+  {agentId: string; ticketsResolved: number; satisfaction: number }
 }
 export interface AIRecommendation {
   type: 'ticket_prioritization' | 'agent_assignment' | 'knowledge_base' | 'chatbot_improvement'
@@ -441,8 +425,7 @@ class AICustomerSupportService {
   }
   private initializeSampleData() {
     // Initialize sample customers
-    this.customers = [
-      {
+    this.customers = [{
         id: 'cust_001'
         name: 'John Doe'
         email: 'john.doe@company.com'
@@ -452,8 +435,7 @@ class AICustomerSupportService {
         resolvedTickets: 4
         averageResponseTime: 15
         satisfactionScore: 4.5
-        lastContactDate: new Date('2025-01-10'),
-        createdAt: new Date('2024-06-01')
+        lastContactDate: new Date('2025-01-10'), createdAt: new Date('2024-06-01')
       }
       {
         id: 'cust_002'
@@ -465,35 +447,12 @@ class AICustomerSupportService {
         resolvedTickets: 3
         averageResponseTime: 25
         satisfactionScore: 4.0
-        id: 'cust_001',
-        name: 'John Doe',
-        email: 'john.doe@company.com',
-        company: 'TechCorp Inc.',
-        plan: 'pro',
-        totalTickets: 5,
-        resolvedTickets: 4,
-        averageResponseTime: 15,
-        satisfactionScore: 4.5,
-        lastContactDate: new Date('2025-01-10'),
-        createdAt: new Date('2024-06-01')
-      },
-      {
-        id: 'cust_002',
-        name: 'Jane Smith',
-        email: 'jane.smith@startup.com',
-        company: 'StartupXYZ',
-        plan: 'basic',
-        totalTickets: 3,
-        resolvedTickets: 3,
-        averageResponseTime: 25,
-        satisfactionScore: 4.0,
-        lastContactDate: new Date('2025-01-08'),
-        createdAt: new Date('2024-08-15')
-      }
-    ]
+        id: 'cust_001', name: 'John Doe', email: 'john.doe@company.com', company: 'TechCorp Inc.', plan: 'pro', totalTickets: 5, resolvedTickets: 4, averageResponseTime: 15, satisfactionScore: 4.5, lastContactDate: new Date('2025-01-10'), createdAt: new Date('2024-06-01')
+      }, {
+        id: 'cust_002', name: 'Jane Smith', email: 'jane.smith@startup.com', company: 'StartupXYZ', plan: 'basic', totalTickets: 3, resolvedTickets: 3, averageResponseTime: 25, satisfactionScore: 4.0, lastContactDate: new Date('2025-01-08'), createdAt: new Date('2024-08-15')
+      }]
     // Initialize sample agents
-    this.agents = [
-      {
+    this.agents = [{
         id: 'agent_001'
         name: 'Mike Johnson'
         email: 'mike.johnson@ziontech.com'
@@ -558,8 +517,7 @@ class AICustomerSupportService {
       }
     ]
     // Initialize sample tickets
-    this.tickets = [
-      {
+    this.tickets = [{
         id: 'ticket_001'
         title: 'API Integration Issue'
         description: 'Getting 500 error when trying to integrate with our CRM system'
@@ -570,15 +528,13 @@ class AICustomerSupportService {
         assignedAgentId: 'agent_001'
         tags: ['apiintegrationerror']
         attachments: []
-        messages: [
-          {
+        messages: [{
             id: 'msg_001'
             content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?'
             senderType: 'customer'
             senderId: 'cust_001'
             isInternal: false
-            createdAt: new Date('2025-01-10T10:00:00Z'),
-            attachments: []
+            createdAt: new Date('2025-01-10T10:00:00Z'), attachments: []
           }
           {
             id: 'msg_002',
@@ -601,15 +557,8 @@ class AICustomerSupportService {
         assignedAgentId: 'agent_001',
         tags: ['api', 'integration', 'error'],
         attachments: [],
-        messages: [
-          {
-            id: 'msg_001',
-            content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?',
-            senderType: 'customer',
-            senderId: 'cust_001',
-            isInternal: false,
-            createdAt: new Date('2025-01-10T10:00:00Z'),
-            attachments: []
+        messages: [{
+            id: 'msg_001', content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?', senderType: 'customer', senderId: 'cust_001', isInternal: false, createdAt: new Date('2025-01-10T10:00:00Z'), attachments: []
           },
           {
             id: 'msg_002',
@@ -627,8 +576,7 @@ class AICustomerSupportService {
       }
     ]
     // Initialize knowledge base
-    this.knowledgeBase = [
-      {
+    this.knowledgeBase = [{
         id: 'kb_001'
         title: 'Getting Started with API Integration'
         content: 'Learn how to integrate our API with your existing systems...'
@@ -747,16 +695,17 @@ export interface KnowledgeBaseArticle {
   createdBy: string
 }
 
-export interface SupportAnalytics {
-  totalTickets: number,
+export interface SupportAnalytics >{totalTickets: number,
   openTickets: number,
   resolvedTickets: number,
   averageResolutionTime: number,
   averageFirstResponseTime: number,
   customerSatisfaction: number,
   chatbotResolutionRate: number,
-  topCategories: Array<{ category: string, count: number }>,
-  agentPerformance: Array<{ agentId: string, ticketsResolved: number, satisfaction: number }>
+</>
+  topCategories: Array<{ category: string, count: number },
+  agentPerformance: Array<>
+  {agentId: string, ticketsResolved: number, satisfaction: number }
 }
 
 export interface AIRecommendation {
@@ -782,42 +731,14 @@ class AICustomerSupportService {
 
   private initializeSampleData() {
     // Initialize sample customers
-    this.customers = [
-      {
-        id: 'cust_001',
-        name: 'John Doe',
-        email: 'john.doe@company.com',
-        company: 'TechCorp Inc.',
-        plan: 'pro',
-        totalTickets: 5,
-        resolvedTickets: 4,
-        averageResponseTime: 15,
-        satisfactionScore: 4.5,
-        lastContactDate: new Date('2025-01-10'),
-        createdAt: new Date('2024-06-01')
-      },
-      {
-        id: 'cust_002',
-        name: 'Jane Smith',
-        email: 'jane.smith@startup.com',
-        company: 'StartupXYZ',
-        plan: 'basic',
-        totalTickets: 3,
-        resolvedTickets: 3,
-        averageResponseTime: 25,
-        satisfactionScore: 4.0,
-        lastContactDate: new Date('2025-01-08'),
-        createdAt: new Date('2024-08-15')
-      }
-    ],
+    this.customers = [{
+        id: 'cust_001', name: 'John Doe', email: 'john.doe@company.com', company: 'TechCorp Inc.', plan: 'pro', totalTickets: 5, resolvedTickets: 4, averageResponseTime: 15, satisfactionScore: 4.5, lastContactDate: new Date('2025-01-10'), createdAt: new Date('2024-06-01')
+      }, {
+        id: 'cust_002', name: 'Jane Smith', email: 'jane.smith@startup.com', company: 'StartupXYZ', plan: 'basic', totalTickets: 3, resolvedTickets: 3, averageResponseTime: 25, satisfactionScore: 4.0, lastContactDate: new Date('2025-01-08'), createdAt: new Date('2024-08-15')
+      }],
     // Initialize sample agents
-    this.agents = [
-      {
-        id: 'agent_001',
-        name: 'Mike Johnson',
-        email: 'mike.johnson@ziontech.com',
-        role: 'tier2',
-        skills: ['Technical SupportAPI IntegrationDatabase Issues'],
+    this.agents = [{
+        id: 'agent_001', name: 'Mike Johnson', email: 'mike.johnson@ziontech.com', role: 'tier2', skills: ['Technical SupportAPI IntegrationDatabase Issues'],
         isAvailable: true,
         currentTickets: 2,
         maxTickets: 5,
@@ -848,27 +769,11 @@ class AICustomerSupportService {
       }
     ],
     // Initialize sample tickets
-    this.tickets = [
-      {
-        id: 'ticket_001',
-        title: 'API Integration Issue',
-        description: 'Getting 500 error when trying to integrate with our CRM system',
-        status: 'in_progress',
-        priority: 'high',
-        category: 'technical',
-        customerId: 'cust_001',
-        assignedAgentId: 'agent_001',
-        tags: ['apiintegrationerror'],
+    this.tickets = [{
+        id: 'ticket_001', title: 'API Integration Issue', description: 'Getting 500 error when trying to integrate with our CRM system', status: 'in_progress', priority: 'high', category: 'technical', customerId: 'cust_001', assignedAgentId: 'agent_001', tags: ['apiintegrationerror'],
         attachments: [],
-        messages: [
-          {
-            id: 'msg_001',
-            content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?',
-            senderType: 'customer',
-            senderId: 'cust_001',
-            isInternal: false,
-            createdAt: new Date('2025-01-10T10:00:00Z'),
-            attachments: []
+        messages: [{
+            id: 'msg_001', content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?', senderType: 'customer', senderId: 'cust_001', isInternal: false, createdAt: new Date('2025-01-10T10:00:00Z'), attachments: []
           },
           {
             id: 'msg_002',
@@ -886,8 +791,7 @@ class AICustomerSupportService {
       }
     ]
     // Initialize knowledge base
-    this.knowledge_base = [
-      {
+    this.knowledge_base = [{
         id: 'kb_001'
         title: 'Getting Started with API Integration'
         content: 'Learn how to integrate our API with your existing systems...'
@@ -918,6 +822,7 @@ export interface Attachment {
       }
     ]
   }
+</>
   async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {
     const ticket: SupportTicket = {
       id: `ticket_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`
@@ -985,8 +890,6 @@ export interface Attachment {
         ticket.resolvedAt = new Date(),
         if (ticket.createdAt && ticket.resolvedAt) {
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       }
       this.updateAnalytics()
@@ -1202,7 +1105,6 @@ if ( {) {
   private detectIntent(message: string): { intent: string, confidence: number } {
     const lowerMessage = message.toLowerCase(),
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return { intent: 'authentication_issue', confidence: 0.9 }
     } else if (lowerMessage.includes('billing') |lowerMessage.includes('payment')) {
       return { intent: 'billing_question', confidence: 0.85 }
@@ -1381,9 +1283,7 @@ if ( {) {
     if (availableAgents && availableAgents.length > 0 && unassignedTickets > 0) {
       recommendations && recommendations.push({
         confidence: 90,
-        action_items: [
-          'Reallocate agents to handle high priority tickets_implement automated prioritization system_review ticket classification criteria'
-        ]
+        action_items: ['Reallocate agents to handle high priority tickets_implement automated prioritization system_review ticket classification criteria']
       })
     }
     // Agent assignment recommendation
@@ -1399,9 +1299,7 @@ if ( {) {
         description: 'There are unassigned tickets and available agents'
         impact: 'medium'
         confidence: 85,
-        action_items: [
-          'Automatically assign tickets to available agents_implement load balancing for ticket distribution_review agent availability and workload'
-        ]
+        action_items: ['Automatically assign tickets to available agents_implement load balancing for ticket distribution_review agent availability and workload']
       })
     }
     // Knowledge base recommendation
@@ -1416,9 +1314,7 @@ if ( {) {
         description: 'Several articles have very low view counts'
         impact: 'low'
         confidence: 75
-        actionItems: [
-          'Review and update low-performing articlesImprove article discoverabilityConsider consolidating similar articles'
-        ]
+        actionItems: ['Review and update low-performing articlesImprove article discoverabilityConsider consolidating similar articles']
       })
 
   async getAIRecommendations(): Promise<AIRecommendation[]> {
@@ -1434,9 +1330,7 @@ if ( {) {
         description: 'Too many high priority tickets are waiting for attention',
         impact: 'high',
         confidence: 90,
-        actionItems: [
-          'Reallocate agents to handle high priority ticketsImplement automated prioritization systemReview ticket classification criteria'
-        ]
+        actionItems: ['Reallocate agents to handle high priority ticketsImplement automated prioritization systemReview ticket classification criteria']
       })
     }
 
@@ -1450,9 +1344,7 @@ if ( {) {
         description: 'There are unassigned tickets and available agents',
         impact: 'medium',
         confidence: 85,
-        actionItems: [
-          'Automatically assign tickets to available agentsImplement load balancing for ticket distributionReview agent availability and workload'
-        ]
+        actionItems: ['Automatically assign tickets to available agentsImplement load balancing for ticket distributionReview agent availability and workload']
       })
     }
 
@@ -1465,14 +1357,11 @@ if ( {) {
         description: 'Several articles have very low view counts',
         impact: 'low',
         confidence: 75,
-        actionItems: [
-          'Review and update low-performing articlesImprove article discoverabilityConsider consolidating similar articles'
-        ]
+        actionItems: ['Review and update low-performing articlesImprove article discoverabilityConsider consolidating similar articles']
       })
     }
     return recommendations
   }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     return recommendations
   }
@@ -1517,9 +1406,7 @@ if ( {) {
       openTickets
       resolvedTickets
         confidence: 75,
-        action_items: [
-          'Review and update low - performing articles_improve article discoverability_consider consolidating similar articles'
-        ]
+        action_items: ['Review and update low - performing articles_improve article discoverability_consider consolidating similar articles']
       })
     }
     return recommendations
@@ -1617,8 +1504,6 @@ if ( {) {
       chatbotResolutionRate,
       topCategories,
       agentPerformance
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
     return this && this.tickets.find(t => t && t.id === ticketId) || null
@@ -1799,11 +1684,7 @@ export const aiCustomerSupportService = new AICustomerSupportService()
         description: 'Too many high priority tickets are waiting for attention',
         impact: 'high',
         confidence: 90,
-        actionItems: [
-          'Reallocate agents to handle high priority tickets',
-          'Implement automated prioritization system',
-          'Review ticket classification criteria'
-        ]
+        actionItems: ['Reallocate agents to handle high priority tickets', 'Implement automated prioritization system', 'Review ticket classification criteria']
       })
     }
     // Agent assignment recommendation
@@ -1816,11 +1697,7 @@ export const aiCustomerSupportService = new AICustomerSupportService()
         description: 'There are unassigned tickets and available agents',
         impact: 'medium',
         confidence: 85,
-        actionItems: [
-          'Automatically assign tickets to available agents',
-          'Implement load balancing for ticket distribution',
-          'Review agent availability and workload'
-        ]
+        actionItems: ['Automatically assign tickets to available agents', 'Implement load balancing for ticket distribution', 'Review agent availability and workload']
       })
     }
     // Knowledge base recommendation
@@ -1832,11 +1709,7 @@ export const aiCustomerSupportService = new AICustomerSupportService()
         description: 'Several articles have very low view counts',
         impact: 'low',
         confidence: 75,
-        actionItems: [
-          'Review and update low-performing articles',
-          'Improve article discoverability',
-          'Consider consolidating similar articles'
-        ]
+        actionItems: ['Review and update low-performing articles', 'Improve article discoverability', 'Consider consolidating similar articles']
       })
     }
     return recommendations

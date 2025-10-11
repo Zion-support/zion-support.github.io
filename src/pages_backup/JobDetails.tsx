@@ -4,42 +4,40 @@ Calendar,
   Tag,
   Users
   Briefcase
-import {
-  Calendar,
+import { Calendar,
   Clock,
   DollarSign,
   Tag,
   Users,
   Briefcase,
-} from 'lucide-react';import { formatDistanceToNow } from 'date-fns'
-import { toast } from 'sonner'
-import { useAuth } from '@/hooks/useAuth'
+ } from 'lucide-react';import { formatDistanceToNow  } from 'date-fns'
+import { toast  } from 'sonner'
+import { useAuth  } from '@/hooks/useAuth'
 import useJobDetails from '@/hooks/useJobDetails'
-import { ApplyToJobModal  } from '@/components/messaging/job-application'
-import { SEO  } from '@/components/SEO'
-import { useWhitelabel  } from '@/context/WhitelabelContext'
-import { JobDetailsSkeleton } from '@/components/jobs'
+import { ApplyToJobModal   } from '@/components/messaging/job-application'
+import { SEO   } from '@/components/SEO'
+import { useWhitelabel   } from '@/context/WhitelabelContext'
+import { JobDetailsSkeleton  } from '@/components/jobs'
 interface Job {
-import { use_router } from 'next / router'; // Changed from use_params, use_navigate
-import { Header } from '@/components / Header'
-import { Button } from '@/components / ui / button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card'
-import { Badge } from '@/components / ui / badge'
-import {
-  Calendar,
+import { use_router  } from 'next / router'; // Changed from use_params, use_navigate
+import { Header  } from '@/components / Header'
+import { Button  } from '@/components / ui / button'
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card'
+import { Badge  } from '@/components / ui / badge'
+import { Calendar,
   Clock,
   DollarSign,
   Tag,
   Users,
   Briefcase,
-} from 'lucide-react';import { formatDistanceToNow } from 'date - fns'
-import { toast } from 'sonner'
-import { use_auth } from '@/hooks / use_auth'
+ } from 'lucide-react';import { formatDistanceToNow  } from 'date - fns'
+import { toast  } from 'sonner'
+import { use_auth  } from '@/hooks / use_auth'
 import useJobDetails from '@/hooks / useJobDetails'
-import { ApplyToJobModal } from '@/components / messaging / job - application'
-import { SEO } from '@/components / SEO'
-import { use_whitelabel } from '@/context / WhitelabelContext'
-import { JobDetailsSkeleton } from '@/components / jobs'
+import { ApplyToJobModal  } from '@/components / messaging / job - application'
+import { SEO  } from '@/components / SEO'
+import { use_whitelabel  } from '@/context / WhitelabelContext'
+import { JobDetailsSkeleton  } from '@/components / jobs'
 interface Job {
   id: string
   title: string
@@ -83,20 +81,20 @@ export default function JobDetails() {
   }
   const { user, isAuthenticated } = useAuth()
 import React, { useState, useEffect } from 'react',
-import { useRouter } from 'next/router', // Changed from useParams, useNavigate
-import { Header } from '@/components/Header',
-import { Button } from '@/components/ui/button',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
-import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from 'lucide-react'
-import { formatDistanceToNow } from 'date-fns',
-import { toast } from 'sonner',
-import { useAuth } from '@/hooks/useAuth',
+import { useRouter  } from 'next/router', // Changed from useParams, useNavigate
+import { Header  } from '@/components/Header',
+import { Button  } from '@/components/ui/button',
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card',
+import { Badge  } from '@/components/ui/badge',
+import { Calendar, Clock, DollarSign, Tag, Users, Briefcase  } from 'lucide-react'
+import { formatDistanceToNow  } from 'date-fns',
+import { toast  } from 'sonner',
+import { useAuth  } from '@/hooks/useAuth',
 import useJobDetails from '@/hooks/useJobDetails',
-import { ApplyToJobModal } from '@/components/messaging/job-application',
-import { SEO } from '@/components/SEO',
-import { useWhitelabel } from '@/context/WhitelabelContext',
-import { JobDetailsSkeleton } from '@/components/jobs',
+import { ApplyToJobModal  } from '@/components/messaging/job-application',
+import { SEO  } from '@/components/SEO',
+import { useWhitelabel  } from '@/context/WhitelabelContext',
+import { JobDetailsSkeleton  } from '@/components/jobs',
 interface Job {
   id: string,
   title: string,
@@ -126,19 +124,15 @@ export default function JobDetails() {
 
   return (
     <>
-      <SEO 
-        title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
+      <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={job.description.substring(0, 160)}
-      />
-      <Header />
-
-
-
+      /></SEO>
+      <Header /></Header>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" />
+                  <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" /></Briefcase>
                   <div className="ml-3">
                     <p className="text-sm text-muted-foreground">Job Type</p>
                     <p className="font-medium">Freelance / Remote</p>
@@ -146,11 +140,9 @@ export default function JobDetails() {
                 </div>
                 
                 {!isOwnJob && (
-                  <Button 
-                    className="w-full mt-4" 
+                  <Button className="w-full mt-4" 
                     onClick={handleApply}
-                    disabled={isOwnJob}
-                  >
+                    disabled=>{isOwnJob}</Button>
                     Apply Now</$1>
                 )}
 
@@ -166,7 +158,7 @@ export default function JobDetails() {
 
                 
                 <div className="flex items-start">
-                  <Clock className="mt-1 h-5 w-5 text-muted-foreground" />
+                  <Clock className="mt-1 h-5 w-5 text-muted-foreground" /></Clock>
                   <div className="ml-3">
                     <p className="text-sm text-muted-foreground">Deadline</p>
                     <p className="font-medium">
@@ -176,7 +168,7 @@ export default function JobDetails() {
                 </div>
                 
                 <div className="flex items-start">
-                  <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" />
+                  <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" /></Briefcase>
                   <div className="ml-3">
                     <p className="text-sm text-muted-foreground">Job Type</p>
                     <p className="font-medium">Freelance / Remote</p>
@@ -184,11 +176,9 @@ export default function JobDetails() {
                 </div>
                 
                 {!isOwnJob && (
-                  <Button 
-                    className="w-full mt-4" 
+                  <Button className="w-full mt-4" 
                     onClick={handleApply}
-                    disabled={isOwnJob}
-                  >
+                    disabled=>{isOwnJob}</Button>
                     Apply Now</$1>
                 )}
 
@@ -223,7 +213,7 @@ if (return 'Not specified') {
 if ( {) {
   $2
 }
-    return <JobDetailsSkeleton />
+    return <JobDetailsSkeleton /></JobDetailsSkeleton>
   }
   // Check condition
 if ( {) {
@@ -231,12 +221,12 @@ if ( {) {
 }
     return (
       <>
-        <Header />
+        <Header /></Header>
         <div className='container mx - auto px - 4 py - 16 text - center'>
           <h1 className='text - 2xl font - bold mb - 4'>Job Not Found</h1>
           <p className='mb - 8'>
             The job you're looking for doesn't exist or has been removed.</$1>
-          <Button on_click={() => router.push ('/careers')}>View All Jobs</Button>        </div>
+          <Button on_click=>{() => router.push ('/careers')}View All Jobs</Button>        </div>
       </>)
   }
   const handle_apply = () =>: any {
@@ -266,27 +256,26 @@ if ( {) {
   const isOwnJob = user?.id === job.client_id
   return (
     <>
-      <SEO
-        title={`${job.title} - ${is_whitelabel ? brand_name : 'Zion AI Marketplace'}`}
+      <SEO title={`${job.title} - ${is_whitelabel ? brand_name : 'Zion AI Marketplace'}`}
         description = {job.description.substring (0, 160), }
-      />
-      <Header />
+      /></SEO>
+      <Header /></Header>
       <main className='container mx - auto px - 4 py - 8'>
         <div className='mb - 6'>
           <Button
             variant='outline'
             size='sm'
-            on_click={() => router.push ('/careers')}          >
+            on_click=>{() => router.push ('/careers')}
             ← Back to Jobs</$1></$1>
-        <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 6'>
+        <div className='grid grid - cols - 1 lg: grid - cols - 3 gap - 6'>
           <div className='lg:col - span - 2'>
-            <Card>
-              <CardHeader>
+            <Card ></Card>
+              <CardHeader ></CardHeader>
                 <div className='flex justify - between items - start'>
                   <div>
                     <CardTitle className='text - 2xl mb - 2'>{job.title}</CardTitle>
                     <div className='flex items - center text - muted - foreground'>
-                      <Calendar className='mr - 2 h - 4 w - 4' />
+                      <Calendar className='mr - 2 h - 4 w - 4' /></Calendar>
                       <span>
                         Posted{' '}
                         {formatDistanceToNow (new Date (job.created_at), {
@@ -294,7 +283,7 @@ if ( {) {
                         })}
                       </span></$1></$1>
                   <Badge>{job.category}</Badge></$1></$1>
-              <CardContent className='space - y-6'>
+              <CardContent className='space - y-6'></CardContent>
                 <div>
                   <h3 className='font - semibold text - lg mb - 3'>
                     Job Description</$1>
@@ -308,15 +297,15 @@ if ( {) {
                       </Badge>))}
                   </div></$1></$1></$1></$1>
           <div>
-            <Card>
-              <CardContent className='pt - 6 space - y-4'>
+            <Card ></Card>
+              <CardContent className='pt - 6 space - y-4'></CardContent>
                 <div className='flex items - start'>
-                  <DollarSign className='mt - 1 h - 5 w - 5 text - muted - foreground' />
+                  <DollarSign className='mt - 1 h - 5 w - 5 text - muted - foreground' /></DollarSign>
                   <div className='ml - 3'>
                     <p className='text - sm text - muted - foreground'>Budget</p>
                     <p className='font - medium'>{format_budget (job.budget)}</p></$1></$1>
                 <div className='flex items - start'>
-                  <Clock className='mt - 1 h - 5 w - 5 text - muted - foreground' />
+                  <Clock className='mt - 1 h - 5 w - 5 text - muted - foreground' /></Clock>
                   <div className='ml - 3'>
                     <p className='text - sm text - muted - foreground'>Deadline</p>
                     <p className='font - medium'>
@@ -325,15 +314,14 @@ if ( {) {
                         : 'Flexible'}
                     </p></$1></$1>
                 <div className='flex items - start'>
-                  <Briefcase className='mt - 1 h - 5 w - 5 text - muted - foreground' />
+                  <Briefcase className='mt - 1 h - 5 w - 5 text - muted - foreground' /></Briefcase>
                   <div className='ml - 3'>
                     <p className='text - sm text - muted - foreground'>Job Type</p>
                     <p className='font - medium'>Freelance / Remote</p></$1></$1>
                 {!isOwnJob && (
-                  <Button
-                    className='w - full mt - 4'
+                  <Button className='w - full mt - 4'
                     on_click={handle_apply}
-                    disabled={isOwnJob}                  >
+                    disabled=>{isOwnJob}</Button>
                     Apply Now</$1>)}
                 {isOwnJob && (
                   <div className='text - center p - 2 bg - muted rounded - md mt - 4'>
@@ -362,9 +350,9 @@ if ( {) {
       )}
     </>
   )
-  return (<> <Header /> <div className="container mx-auto px-4 py-16 text-center" > <h1 className="text-2xl font-bold mb-4" >Job Not Found</h1> <p className="mb-8" >The job you're looking for doesn't exist or has been removed.</p> <ButtononClick={'
+  return (<> <Header /> <div className="container mx-auto px-4 py-16 text-center" > <h1 className="text-2xl font-bold mb-4" >Job Not Found</h1> <p className="mb-8" >The job you're looking for doesn't exist or has been removed.</p> <ButtononClick=>{'
   () => router && router.push ('/careers') 
-}>View All Jobs</Button> </div> </>) 
+}View All Jobs</Button> </div> </>) 
 }router && router.push (`/login?redirect=$ {
   encodeURIComponent (`/jobs/$ {'
   jobId || '' 
@@ -382,9 +370,9 @@ if ( {) {
           is_open={isApplyModalOpen}
           on_close={() => setIsApplyModalOpen (false)}        />)}
     </>)
-  return (<> <Header /> <div className="container mx - auto px - 4 py - 16 text - center" > <h1 className="text - 2xl font - bold mb - 4" >Job Not Found</h1> <p className="mb - 8" >The job you're looking for doesn't exist or has been removed.</p> <Button on_click={'
+  return (<> <Header /> <div className="container mx - auto px - 4 py - 16 text - center" > <h1 className="text - 2xl font - bold mb - 4" >Job Not Found</h1> <p className="mb - 8" >The job you're looking for doesn't exist or has been removed.</p> <Button on_click=>{'
   () => router.push ('/careers') 
-}>View All Jobs</Button> </div> </>) 
+}View All Jobs</Button> </div> </>) 
 }router.push (`/login?redirect=$ {
   encodeURIComponent (`/jobs/$ {'
   job_id || '' 
@@ -405,15 +393,14 @@ const isOwnJob = user?.id === job.client id
 }` 
 }description= {
   job.description.substring (0, 160) "
-}/> <Header /> <main className="container mx - auto px - 4 py - 8" > <div className="mb - 6" > <Button > ← Back to Jobs </Button> </div> <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6" > <div className="lg:col - span - 2" > <Card> <CardHeader> <div className="flex justify - between items - start" > <div> </div> </div> <Badge> {
+}/> <Header /> <main className="container mx - auto px - 4 py - 8" > <div className="mb - 6" > <Button > ← Back to Jobs </Button> </div> <div className="grid grid - cols - 1 lg: grid - cols - 3 gap - 6" > <div className="lg:col - span - 2" > <Card> <CardHeader> <div className="flex justify - between items - start" > <div> </div> </div> <Badge> {
   job.category "
 }</Badge> </div> </CardHeader> <CardContent className="space - y-6" > <div> </div> </div> <div> </Badge>) ) "
 }</div> </div> </CardContent> </Card> </div> <div> <Card> </p> </div> </div> <div className="flex items - start" > <Briefcase className="mt - 1 h - 5 w - 5 text - muted - foreground" /> <div className="ml - 3" > <p className="text - sm text - muted - foreground" >Job Type</p> <p className="font - medium" >Freelance / Remote</p> </div> </div> {"
   !isOwnJob && (<Button className="w - full mt - 4" on_click={
   handle_apply 
-}disabled= {
-  isOwnJob 
-}> Apply Now </Button>) 
+}disabled= >{isOwnJob 
+} Apply Now </Button>) 
 }</div>) 
 }</CardContent> </Card> </div> </div> </main> {
   /* Job application modal */ 

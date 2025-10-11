@@ -1,13 +1,9 @@
 export default function ServicesSection() {
-  const services = [
-    {
-      title: 'AI & Machine Learning',
-      description: 'Custom AI solutions including predictive analytics, natural language processing, and computer vision.',
-      icon: (
+  const services = [{
+      title: 'AI & Machine Learning', description: 'Custom AI solutions including predictive analytics, natural language processing, and computer vision.', icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-      ),
-      features: ['Predictive Analytics', 'NLP Solutions', 'Computer Vision', 'Deep Learning']
+      ), features: ['Predictive Analytics', 'NLP Solutions', 'Computer Vision', 'Deep Learning']
     },
     {
       title: 'Cloud Solutions',
@@ -57,25 +53,25 @@ export default function ServicesSection() {
   ]
   return (
     <section id="services" className="py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
             <span className="holographic-text">Our Services
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Comprehensive technology solutions designed to accelerate your business growth 
             and digital transformation journey.
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <$2 />
               key={index}
-              className="cyber-card-advanced p-8 group hover:scale-105 transition-all duration-300">
+              className="cyber-card-advanced p-8 group hover: scale-105 transition-all duration-300">
               {/* Icon */}
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mb-6 text-black group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mb-6 text-black group-hover: scale-110 transition-transform duration-300">
                 {service.icon}
               {/* Content */}
-              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+              <h3 className="text-xl font-bold text-white mb-4 group-hover: text-cyan-400 transition-colors duration-300">
                 {service.title}
               <p className="text-gray-400 mb-6 leading-relaxed">
                 {service.description}
@@ -91,7 +87,7 @@ export default function ServicesSection() {
               <div className="mt-6">
                 <$2 />
                   href="#contact"
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-300">
+                  className="inline-flex items-center text-cyan-400 hover: text-cyan-300 font-medium transition-colors duration-300">
                   Learn More
                   <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

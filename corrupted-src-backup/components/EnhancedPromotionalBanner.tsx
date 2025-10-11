@@ -42,6 +42,6 @@ const,
               <h3, classNam, e='fo, n, t-bold, tex, t-lg'>{bann, e, r.title}
               <p, classNam, e='te, x, t-sm, opacit, y-90'>{bann, e, r.description}
             {bann, e, r.cta, T, e, x, t}
-            <Link, classNam, e = 'w-4 h-4' />
+            <Link , classNam, e = 'w-4 h-4' /></Link>
             {banner.ctaText}
 }`</div></div></div></div></div></div></div></div></div></div></span></span></span></Link></p></h3>

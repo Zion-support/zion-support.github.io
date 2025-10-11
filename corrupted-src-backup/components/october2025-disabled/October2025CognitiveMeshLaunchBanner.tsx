@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { Link } from 'react-router-dom'
+import { Link  } from 'react-router-dom'
 /**
  * October 2025 Cognitive Mesh Orchestration Platform Launch Banner
  * Promotes the new Cognitive Mesh content including blog case study and services
@@ -16,8 +16,7 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float">
         <$2 />
 const,
-  October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {/* TODO: Fix JSX expression */}
-     > {/* Animated background elements - purely decorative */}
+  October2025CognitiveMeshLaunchBanner: React.FC = memo(() => >{/* TODO: Fix JSX expression */} {/* Animated background elements - purely decorative */}
       <div className="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true"></div>"
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float">
         <div></div>"
@@ -109,21 +108,21 @@ const,
                className="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/10 text-white border-2 border-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300"
               aria-label="Learn more about Cognitive Mesh technology"
             >
-              <Network  className="w-5 h-5" aria-hidden="true" />
+              <Network className="w-5 h-5" aria-hidden="true" /></Network>
               Learn More,
             </Link>
           </div>
           <p  className="text-white/80 text-sm mt-6 max-w-2xl mx-auto">
-            ✨</p> <strong>Limited Time Offer:</strong> Get 50% off implementation fees for October 2025 sign-ups. 
+            ✨</p> <strong>Limited Time Offer: </strong> Get 50% off implementation fees for October 2025 sign-ups. 
         {/* Call to Action */}"
         <div  className="text-center" role="region" aria-label="Call to action"></div>"
           <  className="inline-flex flex-col,"$2 />
-  sm:flex-row gap-4">
+  sm: flex-row gap-4">
             <Link></Link>"
               to="/contact""
                className="inline-flex items-center justify-center gap-2 bg-white,
-  hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg,
-  hover:shadow-2xl transform,"
+  hover: bg-gray-100 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg,
+  hover: shadow-2xl transform,"
   hover: scale-105""
               aria-label="Schedule a free consultation about Cognitive Mesh Platform"
             >
@@ -141,7 +140,7 @@ const,
           </div>"
           <p  className="text-white/80 text-sm mt-6 max-w-2xl mx-auto">
             ✨ <strong>Limited Time,
-  Offer:</strong> Get 50% off implementation fees for October 2025 sign-ups. 
+  Offer: </strong> Get 50% off implementation fees for October 2025 sign-ups. 
             Free 2-week assessment included. No commitment required.
         </div>,
     </section>)

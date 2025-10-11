@@ -30,7 +30,7 @@ function fixRemainingJsx() {
     console.log('✅ Fixed remaining JSX issues in main page')
     return true
   } catch (error) {
-    console.error('Error fixing remaining JSX:', error.message)
+    console.error('Error fixing remaining JSX: ', error.message)
     return false
   }
 }

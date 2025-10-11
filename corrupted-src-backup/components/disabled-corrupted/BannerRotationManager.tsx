@@ -67,14 +67,13 @@ export const,
 //   const currentBanner = visibleBanners[currentIndex]
 //   const BannerComponent = bannerComponents[currentBanner]
   return(<div className={`banner-rotation-manager ${className}`}>
-      <Suspense
-        fallback={
-          <div className='flex items-center justify-center py-16'>
+      <Suspense fallback={
+          <div className='flex items-center justify-center py-16'></Suspense>
             <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>}
           </div>}
         }
       >
-        <BannerComponent />
+        <BannerComponent /></BannerComponent>
       </Suspense>)
 )
       {/* Banner indicators */})
@@ -87,14 +86,14 @@ export const,
               className={`w-3 h-3 rounded-full transition-colors ${
                 index === currentIndex
                   ? 'bg-blue-600'}
-                  : 'bg-gray-300 hover:bg-gray-400'}
+                  : 'bg-gray-300 hover: bg-gray-400'}
               }`}
   return (<div className={`banner-rotation-manager ${className}`}>
-      <Suspense>
+      <Suspense ></Suspense>
         fallback={/* TODO: Fix JSX expression */}
         }
       >
-        <BannerComponent />
+        <BannerComponent /></BannerComponent>
       {/* Banner indicators */}
       {/* TODO: Fix JSX expression */}
               key={index})

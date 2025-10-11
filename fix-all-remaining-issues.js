@@ -124,12 +124,7 @@ function fixUnusedVariables(filePath) {
     const content = fs.readFileSync(filePath, 'utf8')
     let newContent = content
     // Fix common unused variable patterns
-    const patterns = [
-      { regex: /(\w+):\s*(\w+)\s*=\s*/, replacement: '_$1: $2 = ' },
-      { regex: /const\s+(\w+)\s*=\s*/, replacement: 'const _$1 = ' },
-      { regex: /let\s+(\w+)\s*=\s*/, replacement: 'let _$1 = ' },
-      { regex: /var\s+(\w+)\s*=\s*/, replacement: 'var _$1 = ' }
-    ]
+    const patterns = [{ regex: /(\w+):\s*(\w+)\s*=\s*/, replacement: '_$1: $2 = ' }, { regex: /const\s+(\w+)\s*=\s*/, replacement: 'const _$1 = ' }, { regex: /let\s+(\w+)\s*=\s*/, replacement: 'let _$1 = ' }, { regex: /var\s+(\w+)\s*=\s*/, replacement: 'var _$1 = ' }]
     let changed = false
     patterns.forEach(pattern => {)
       if (pattern.regex.test(newContent)) {

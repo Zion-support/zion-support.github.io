@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import fs from 'fs'
-import { glob } from 'glob'
+import { glob  } from 'glob'
 async function main() {
   //Find all TSX files in src/components
   //   files.forEach(file => {)

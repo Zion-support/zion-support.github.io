@@ -82,16 +82,13 @@ export interface Ultimate2026Service {/* TODO: Fix JSX expression */}
 ]
   }
 }
-export const ultimate2026Services: Ultimate2026Service[] = [
-  {
-    feature,
-  s: [
+export const ultimate2026Services: Ultimate2026Service[] = [{
+    feature, s: [
       'Ultimate platform'
       'All technologies'
       'Maximum capabilities'
       'Premium features'
-      '24/7 support'
-    ]
+      '24/7 support']
     link: '/services/2026-ultimate-service'
     category: 'Ultimate 2026 Services'
     realImplementation: true,
@@ -114,16 +111,11 @@ export const ultimate2026Services: Ultimate2026Service[] = [
     address: string,
   }
 }
-export const ultimate2026 Services: Ultimate2026 Service[] = [,
-    id: "2026-ultimate-service", name: "2026 Ultimate Service Platform",
-    tagline: "The ultimate platform for 2026", price: "$699/month",
-    description: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities."
-    features: [,
-      "Ultimate platform"
+export const ultimate2026 Services: Ultimate2026 Service[] = [id: "2026-ultimate-service", name: "2026 Ultimate Service Platform", tagline: "The ultimate platform for 2026", price: "$699/month", description: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities."
+    features: [, "Ultimate platform"
       "All technologies"
       "Maximum capabilities"
-      "Premium features",
-      "24/7 support"],
+      "Premium features", "24/7 support"],
     link: "/services/2026-ultimate-service", category: "Ultimate 2026 Services",
     realImplementation: true
     contactInfo: unknown,
@@ -180,23 +172,17 @@ export const ultimate2026 Services: Ultimate2026 Service[] = [,
   s: string}
 }
 export const,
-  ultimate2026Services: Ultimate2026Service[] = [,
-    i,"
-  d: "2026-ultimate-service", nam,"
-  e: "2026 Ultimate Service Platform",
-    taglin,"
-  e: "The ultimate platform for 2026", pric,"
-  e: "$699/month",
-    descriptio,"
-  n: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.",
-  feature,
-  s: [,"
+  ultimate2026Services: Ultimate2026Service[] = [i, "
+  d: "2026-ultimate-service", nam, "
+  e: "2026 Ultimate Service Platform", taglin, "
+  e: "The ultimate platform for 2026", pric, "
+  e: "$699/month", descriptio, "
+  n: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.", feature, s: [, "
       "Ultimate platform""
       "All technologies""
       "Maximum capabilities""
       "Premium features""
-      "24/7 support"
-    ],
+      "24/7 support"],
     lin,"
   k: "/services/2026-ultimate-service", categor,"
   y: "Ultimate 2026 Services",
@@ -230,23 +216,12 @@ i,"
     descriptio,"
   n: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.",
     feature,
-  s: [,"
-      "Ultimate platform","
-      "All technologies","
-      "Maximum capabilities","
-      "Premium features","
-    id: "2026-ultimate-service",
-    name: "2026 Ultimate Service Platform",
-    tagline: "The ultimate platform for 2026",
-    price: "$699/month",
-    description: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.",
-    features: [,
-      "Ultimate platform",
-      "All technologies",
-      "Maximum capabilities",
-      "Premium features",
-      "24/7 support"
-    ]
+  s: ["
+      "Ultimate platform", "
+      "All technologies", "
+      "Maximum capabilities", "
+      "Premium features", "
+    id: "2026-ultimate-service", name: "2026 Ultimate Service Platform", tagline: "The ultimate platform for 2026", price: "$699/month", description: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.", features: [, "Ultimate platform", "All technologies", "Maximum capabilities", "Premium features", "24/7 support"]
     link: "/services/2026-ultimate-service", category: "Ultimate 2026 Services",
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
@@ -300,8 +275,7 @@ i,
   s: string} addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; } } addres,
   s: string} export const,
-  ultimate2026Services: Ultimate2026Service[] = [ feature,
-  s: [ 'Ultimate platform'' 'All technologies'' 'Maximum capabilities'' 'Premium features'' '24/7 support' ]' lin,
+  ultimate2026Services: Ultimate2026Service[] = [feature, s: [ 'Ultimate platform'' 'All technologies'' 'Maximum capabilities'' 'Premium features'' '24/7 support']' lin,
   k: '/services/2026-ultimate-service'' categor,
   y: 'Ultimate 2026 Services' realImplementatio,
   n: true,
@@ -326,14 +300,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  ultimate2026Services: Ultimate2026Service[] = [ i,"
-  d: "2026-ultimate-service", nam,"
-  e: "2026 Ultimate Service Platform", taglin,"
-  e: "The ultimate platform for 2026", pric,"
-  e: "$699/month", descriptio,"
-  n: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.",
-  feature,"
-  s: [ "Ultimate platform" "All technologies" "Maximum capabilities" "Premium features" "24/7 support" ], lin,"
+  ultimate2026Services: Ultimate2026Service[] = [i, "
+  d: "2026-ultimate-service", nam, "
+  e: "2026 Ultimate Service Platform", taglin, "
+  e: "The ultimate platform for 2026", pric, "
+  e: "$699/month", descriptio, "
+  n: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.", feature, "
+  s: [ "Ultimate platform" "All technologies" "Maximum capabilities" "Premium features" "24/7 support"], lin,"
   k: "/services/2026-ultimate-service", categor,"
   y: "Ultimate 2026 Services", realImplementatio,
   n: true, contactInf,
@@ -349,7 +322,7 @@ i,
   e: "The ultimate platform for 2026", pric,"
   e: "$699/month", descriptio,"
   n: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.", feature,"
-  s: [ "Ultimate platform", "All technologies", "Maximum capabilities", "Premium features", "24/7 support" ]; lin,"
+  s: ["Ultimate platform", "All technologies", "Maximum capabilities", "Premium features", "24/7 support"]; lin,"
   k: "/services/2026-ultimate-service", categor,"
   y: "Ultimate 2026 Services", realImplementatio,
   n: true, contactInf,

@@ -37,10 +37,10 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
         {/* Header, Sectio, n */}
         <div, className="te, x, t-center, m, b-16">
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-whi, t, e/20, t, o-whi, t, e/10, backdro, p-bl, u, r-md, p, x-8, p, y-3, rounde, d-full, m, b-8, border, border-whi, t, e/30">
-            <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  />
+            <Zap , className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  /></Zap>
             <span, className="te, x, t-white, fon, t-bold, tex, t-lg, trackin, g-wi, d, e">
               🚀 NEW, BREAKTHROUGH, CONTENT · OCTOBE, R, 2, 20, 2, 5
-            <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  />
+            <Zap , className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  /></Zap>
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t">"
         <div, className="te, x, t-center, m, b-16">"
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-whi, t, e/20, t, o-whi, t, e/10, backdro, p-bl, u, r-md, p, x-8, p, y-3, rounde, d-full, m, b-8, border, border-whi, t, e/30">"
@@ -51,7 +51,7 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  /></Zap>"
             <span, className="te, x, t-white, fon, t-bold, tex, t-lg, trackin, g-wi, d, e">
               🚀 NEW, BREAKTHROUGH, CONTENT · OCTOBE, R, 2, 20, 2, 5</$1>"
-            <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  />
+            <Zap , className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  /></Zap>
           </d, i, v>"
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t">""
         <div, className="te, x, t-center, m, b-16">";"
@@ -84,15 +84,15 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
           {octoberNewBreakthroughConte, n, t.m, a, p((conte, n, t) => {
             const, Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n
             return (
-              <Li, n, k
+              <Li , n, k
   k, e, y={conte, n, t.id}
                 to={`/bl, o, g/${conte, n, t.sl, u, g}`}`;`
-                classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r:to-whi, t, e/10, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
-  r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0"
-              >
+                classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r: to-whi, t, e/10, hove, r: sca, l, e-105, hove, r: shad, o, w-2xl, hov, e
+  r: shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0"
+              ></Li>
                 <div, className="flex, item, s-start, ga, p-4, m, b-6">
                   <div, className={`bg-gradie, n, t-to-br ${conte, n, t.gradie, n, t} p-4, rounde, d-xl, shado, w-lg`}>`;`
-                    <Icon, className="w-8 h-8, tex, t-whi, t, e  />
+                    <Icon , className="w-8 h-8, tex, t-whi, t, e  /></Icon>
                 <div, className="flex, item, s-start, ga, p-4, m, b-6">"
                   <div, className={`bg-gradie, n, t-to-br ${conte, n, t.gradie, n, t} p-4, rounde, d-xl, shado, w-lg`}>`;`
                     <Icon, className="w-8 h-8, tex, t-whi, t, e" />"
@@ -106,8 +106,8 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
           {/* TODO: Fix JSX expression */}
   k, e, y={conte, n, t.id}
                 to={`/bl, o, g/${conte, n, t.sl, u, g}`}`;`"
-                classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r:to-whi, t, e/10, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
-  r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0"
+                classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r: to-whi, t, e/10, hove, r: sca, l, e-105, hove, r: shad, o, w-2xl, hov, e,"
+  r: shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0"
               ></Li>"
                 <div, className="flex, item, s-start, ga, p-4, m, b-6"></div>`
                   <div, className={`bg-gradie, n, t-to-br ${conte, n, t.gradie, n, t} p-4, rounde, d-xl, shado, w-lg`}>`;`"
@@ -162,7 +162,7 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                 </ul>"
                 <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-yell, o, w-300, fon, t-bold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                   Read, Full, Guide
-                  <Link, className="w-5 h-5  />
+                  <Link , className="w-5 h-5  /></Link>
                 <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-yell, o, w-300, fon, t-bold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                   Read, Full, Guide
                   Read, Full, Guide;"
@@ -175,7 +175,7 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
         {/* CTA, Sectio, n */}
         <div, className="bg-gradie, n, t-to-r, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/30, rounde, d-2x, l, p-12, m, b-12, shado, w-2, x, l">
           <div, className="flex, item, s-center, ga, p-4, m, b-6, justif, y-cent, e, r">
-            <Target, className="w-1, 0, h-10, tex, t-yell, o, w-3, 0, 0  />
+            <Target , className="w-1, 0, h-10, tex, t-yell, o, w-3, 0, 0  /></Target>
             <h3, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">
         <div, className="bg-gradie, n, t-to-r, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/30, rounde, d-2x, l, p-12, m, b-12, shado, w-2, x, l">"
           <div, className="flex, item, s-center, ga, p-4, m, b-6, justif, y-cent, e, r">"
@@ -200,25 +200,25 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
           <div, className="flex, fle, x-wrap, ga, p-6, justif, y-cent, e, r">"
             <Li, n, k
   to="/conta, c, t"
-              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: fr, o, m-yell, o, w-300, hove, r:to-oran, g, e-400, transitio, n-all, shado, w-lg, hove, r:shad, o, w-2xl, hov, e</$1>"
+              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: fr, o, m-yell, o, w-300, hove, r: to-oran, g, e-400, transitio, n-all, shado, w-lg, hove, r: shad, o, w-2xl, hov, e</$1>"
           <div, className="flex, fle, x-wrap, ga, p-6, justif, y-cent, e, r">"
             <Li, n, k;"
   to="/conta, c, t""
-              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: fr, o, m-yell, o, w-300, hove, r:to-oran, g, e-400, transitio, n-all, shado, w-lg, hove, r:shad, o, w-2xl, hov, e,"
-  r:sca, l, e-1, 0, 5"
+              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: fr, o, m-yell, o, w-300, hove, r: to-oran, g, e-400, transitio, n-all, shado, w-lg, hove, r: shad, o, w-2xl, hov, e,"
+  r: sca, l, e-1, 0, 5"
             ></Li>"
-              <Target, className="w-6 h-6  />
+              <Target , className="w-6 h-6  /></Target>
               Get, Free, Enterprise Assessme, n, t;"
               <Link, className="w-6 h-6  /></Link>"
               <Target, className="w-6 h-6" />"
               Get, Free, Enterprise Assessme, n, t;"
               <Link, className="w-6 h-6" />"
-            <Li, n, k
+            <Li , n, k
   to="/bl, o, g"
             <Li, n, k;"
   to="/bl, o, g""
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/30, tex, t-white, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-whi, t, e/20, transitio, n-a, l, l"
-            >
+            ></Li>
               Explore, All, Articles;"
               <Link, className="w-6 h-6  /></Link>"
               <Link, className="w-6 h-6" />"

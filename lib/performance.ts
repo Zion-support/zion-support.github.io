@@ -1,4 +1,4 @@
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals'
+import { getCLS, getFID, getFCP, getLCP, getTTFB  } from 'web-vitals'
 /**
  * Performance Monitoring Utility
  * Tracks and reports web vitals and performance metrics
@@ -139,7 +139,7 @@ function sendToAnalytics(metric: Metric): void {
 
   // Log in development
   if (process.env.NODE_ENV === 'development') {
-    console.log('Performance metric:', performanceMetric)
+    console.log('Performance metric: ', performanceMetric)
   }
 
   // Send to analytics
@@ -690,7 +690,7 @@ export function measurePerformance(name: string, fn: () => void): void {
 
 export function measureAsyncPerformance<T>(
   name: string,
-  fn: () => Promise<T>
+  fn: () => Promise<T ></T>
 ): Promise<T> {
   const start = performance.now()
   return fn().then((result) => {

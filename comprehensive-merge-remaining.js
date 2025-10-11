@@ -2,7 +2,7 @@
 /**
  * Comprehensive Merge Remaining - Merges all remaining important branches
  * This script targets the remaining branches that need to be merged
- */ import { execSync } from 'child_process'
+ */ import { execSync  } from 'child_process'
 import fs from 'fs'
 // //Step 1: Ensure we're on main and up to date,
 // try {,
@@ -13,33 +13,15 @@ import fs from 'fs'
   }
 
 //Step 2: Define remaining branches to merge,
-const remainingBranches = [,
-// //Step,
-  1: Ensure we're on main and up to date,
-// try {/* TODO: Fix JSX expression */}
+const remainingBranches = [// //Step, 1: Ensure we're on main and up to date, // try {/* TODO: Fix JSX expression */}
   o: 'inherit' })
   execSync('git pull origin main', {/* TODO: Fix JSX expression */})
   o: 'inherit' })
 //   } catch (error) {/* TODO: Fix JSX expression */}
 }
 
-//Step,
-  2: Define remaining branches to merge,
-const remainingBranches = [
-  'ai-dashboard-improvements-merged',
-  'bw06 m0-codex/fix-typescript-errors-in-components',
-  'bwren1-codex/fix-typescript-errors-in-files',
-  'candidate/build-fix-postcss-esm',
-  'cursor/add-new-services-and-deploy-updates-0 c4 f',
-  'cursor/add-new-services-and-deploy-updates-0 f78',
-  'cursor/add-new-services-and-deploy-updates-1399',
-  'cursor/add-new-services-and-deploy-updates-1503',
-  'cursor/add-new-services-and-deploy-updates-1817',
-  'cursor/add-new-services-and-deploy-updates-19 c7',
-  'cursor/add-new-services-and-deploy-updates-27 d2',
-  'cursor/add-new-services-and-deploy-updates-45 bb',
-  'cursor/add-new-services-and-deploy-updates-483 a',
-  'cursor/add-new-services-and-deploy-updates-4 d5 b']
+//Step, 2: Define remaining branches to merge, const remainingBranches = [
+  'ai-dashboard-improvements-merged', 'bw06 m0-codex/fix-typescript-errors-in-components', 'bwren1-codex/fix-typescript-errors-in-files', 'candidate/build-fix-postcss-esm', 'cursor/add-new-services-and-deploy-updates-0 c4 f', 'cursor/add-new-services-and-deploy-updates-0 f78', 'cursor/add-new-services-and-deploy-updates-1399', 'cursor/add-new-services-and-deploy-updates-1503', 'cursor/add-new-services-and-deploy-updates-1817', 'cursor/add-new-services-and-deploy-updates-19 c7', 'cursor/add-new-services-and-deploy-updates-27 d2', 'cursor/add-new-services-and-deploy-updates-45 bb', 'cursor/add-new-services-and-deploy-updates-483 a', 'cursor/add-new-services-and-deploy-updates-4 d5 b']
 // //Step 3: Enhanced conflict resolution function,
 function resolveConflictsAndMerge(branchName) {,
 //   try {,

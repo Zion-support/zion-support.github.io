@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { execSync } from 'child_process'
+import { execSync  } from 'child_process'
 import fs from 'fs'
 import path from 'path'
 console.log('🔧 Starting merge conflict resolution and PR management...\n')
@@ -77,7 +77,7 @@ function resolveAllMergeConflicts() {
     console.log(`✅ Resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`)
     return resolvedCount === conflictedFiles.length
   } catch (error) {
-    console.log('❌ Error finding merge conflicts:', error.message)
+    console.log('❌ Error finding merge conflicts: ', error.message)
     return false
   }
 }
@@ -115,13 +115,7 @@ async function main() {
   // Step 7: Check for other branches that need merging
   console.log('\n🔍 Checking for other branches to merge...'),
   ,
-  const branchesToMerge = [,
-    'cursor/website-audit-and-update-with-deployment-f31a',
-    'add-new-2026-content',
-    'add-revolutionary-content-2026',
-    'ai-2027-content-integration',
-    'ai-dashboard-improvements'
-  ]
+  const branchesToMerge = ['cursor/website-audit-and-update-with-deployment-f31a', 'add-new-2026-content', 'add-revolutionary-content-2026', 'ai-2027-content-integration', 'ai-dashboard-improvements']
   for (const branch of branchesToMerge) {
     console.log(`\n🔄 Attempting to merge ${branch}...`)
     try {

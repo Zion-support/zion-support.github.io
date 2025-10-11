@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Website audit script to check all links and identify missing pages
@@ -68,26 +68,7 @@ missingPages.forEach(page => {)
   console.log(`  🚫 ${page}`)
 })
 // Check for other common missing pages
-const commonPages = [
-  '/about',
-  '/contact',
-  '/team',
-  '/careers',
-  '/case-studies',
-  '/blog',
-  '/pricing',
-  '/support',
-  '/docs',
-  '/api-docs',
-  '/status',
-  '/health',
-  '/privacy',
-  '/terms',
-  '/cookies',
-  '/gdpr',
-  '/security',
-  '/compliance'
-]
+const commonPages = ['/about', '/contact', '/team', '/careers', '/case-studies', '/blog', '/pricing', '/support', '/docs', '/api-docs', '/status', '/health', '/privacy', '/terms', '/cookies', '/gdpr', '/security', '/compliance']
 const additionalMissing = commonPages.filter(page => )
   !existingRoutes.includes(page) && !missingPages.includes(page)
 )

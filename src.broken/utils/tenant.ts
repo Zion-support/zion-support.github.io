@@ -1,5 +1,5 @@
 import crypto from 'crypto'
-import { readJsonFile, writeJsonFile, updateJsonFile } from './fileDb'
+import { readJsonFile, writeJsonFile, updateJsonFile  } from './fileDb'
 export type TenantRole = 'owner' | 'admin' | 'recruiter' | 'viewer'
 export interface TenantMember {
   userId: string

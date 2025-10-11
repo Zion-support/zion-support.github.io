@@ -78,16 +78,12 @@ export interface EmergingTech2026ServiceV3 {/* TODO: Fix JSX expression */}
     address: string,
   }
 }
-export const emergingTech2026 ServicesV3: EmergingTech2026 ServiceV3[] = [,
-    id: "2026-emerging-tech-v3", name: "2026 Emerging Tech Platform V3",
-    tagline: "Third generation emerging tech", price: "$399/month"
+export const emergingTech2026 ServicesV3: EmergingTech2026 ServiceV3[] = [id: "2026-emerging-tech-v3", name: "2026 Emerging Tech Platform V3", tagline: "Third generation emerging tech", price: "$399/month"
     description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features."
-    features: [,
-      "Third generation tech"
+    features: [, "Third generation tech"
       "Enhanced capabilities"
       "Advanced features"
-      "Improved platform",
-      "Better performance"],
+      "Improved platform", "Better performance"],
     link: "/services/2026-emerging-tech-v3", category: "Emerging Tech 2026 V3",
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
@@ -127,23 +123,17 @@ export const emergingTech2026 ServicesV3: EmergingTech2026 ServiceV3[] = [,
   s: string}
 }
 export const,
-  emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [,
-    i,"
-  d: "2026-emerging-tech-v3", nam,"
-  e: "2026 Emerging Tech Platform V3",
-    taglin,"
-  e: "Third generation emerging tech", pric,"
-  e: "$399/month",
-    descriptio,"
-  n: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",
-    feature,
-  s: [,"
+  emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [i, "
+  d: "2026-emerging-tech-v3", nam, "
+  e: "2026 Emerging Tech Platform V3", taglin, "
+  e: "Third generation emerging tech", pric, "
+  e: "$399/month", descriptio, "
+  n: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.", feature, s: [, "
       "Third generation tech""
       "Enhanced capabilities""
       "Advanced features""
       "Improved platform""
-      "Better performance"
-    ],
+      "Better performance"],
     lin,"
   k: "/services/2026-emerging-tech-v3", categor,"
   y: "Emerging Tech 2026 V3",
@@ -178,13 +168,7 @@ id: "2026-emerging-tech-v3"
     tagline: "Third generation emerging tech",
     price: "$399/month",
     description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",
-    features: [,
-      "Third generation tech",
-      "Enhanced capabilities",
-      "Advanced features",
-      "Improved platform",
-      "Better performance"
-    ],
+    features: ["Third generation tech", "Enhanced capabilities", "Advanced features", "Improved platform", "Better performance"],
     link: "/services/2026-emerging-tech-v3"
     category: "Emerging Tech 2026 V3"
     realImplementation: true
@@ -210,13 +194,12 @@ id: "2026-emerging-tech-v3"
     descriptio,"
   n: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",
     feature,
-  s: [,"
-      "Third generation tech","
-      "Enhanced capabilities","
-      "Advanced features","
-      "Improved platform","
-      "Better performance"
-    ],
+  s: ["
+      "Third generation tech", "
+      "Enhanced capabilities", "
+      "Advanced features", "
+      "Improved platform", "
+      "Better performance"],
     lin,"
   k: "/services/2026-emerging-tech-v3",
     categor,"
@@ -288,13 +271,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ i,"
-  d: "2026-emerging-tech-v3", nam,"
-  e: "2026 Emerging Tech Platform V3", taglin,"
-  e: "Third generation emerging tech", pric,"
-  e: "$399/month", descriptio,"
-  n: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.", feature,"
-  s: [ "Third generation tech" "Enhanced capabilities" "Advanced features" "Improved platform" "Better performance" ], lin,"
+  emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [i, "
+  d: "2026-emerging-tech-v3", nam, "
+  e: "2026 Emerging Tech Platform V3", taglin, "
+  e: "Third generation emerging tech", pric, "
+  e: "$399/month", descriptio, "
+  n: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.", feature, "
+  s: [ "Third generation tech" "Enhanced capabilities" "Advanced features" "Improved platform" "Better performance"], lin,"
   k: "/services/2026-emerging-tech-v3", categor,"
   y: "Emerging Tech 2026 V3", realImplementatio,
   n: true, contactInf,
@@ -311,7 +294,7 @@ i,
   e: "Third generation emerging tech", pric,"
   e: "$399/month", descriptio,"
   n: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.", feature,"
-  s: [ "Third generation tech", "Enhanced capabilities", "Advanced features", "Improved platform", "Better performance" ], lin,"
+  s: ["Third generation tech", "Enhanced capabilities", "Advanced features", "Improved platform", "Better performance"], lin,"
   k: "/services/2026-emerging-tech-v3", categor,"
   y: "Emerging Tech 2026 V3", realImplementatio,
   n: true, contactInf,

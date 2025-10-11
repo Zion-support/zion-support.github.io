@@ -1,8 +1,8 @@
-import { useState } from "react"
-import { supabase } from "@/integrations/supabase/client"
-import { toast } from "@/hooks/use-toast"
+import { useState  } from 'react'
+import { supabase  } from '@/integrations/supabase/client'
+import { toast  } from '@/hooks/use-toast'
 import type { UserProfile } from "@/types/auth"
-import { cleanupAuthState } from "@/utils/authUtils"
+import { cleanupAuthState  } from '@/utils/authUtils'
 export const useEmailAuth = (
   setUser: (user: UserProfile | null) => void,
   setIsLoading: (loading: boolean) => void
@@ -50,7 +50,7 @@ export const useEmailAuth = (
         await supabase.auth.signOut({ scope: 'global' })
       } catch (err) {
         // Continue even if signout fails
-        console.log("Sign out before signup failed:", err)
+        console.log("Sign out before signup failed: ", err)
       }
       // Create a proper options object
       const { data, error } = await supabase.auth.signUp({

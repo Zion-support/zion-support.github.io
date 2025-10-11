@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next"
-import { getServerSupabase } from "../../../utils/supabase/server"
+import { getServerSupabase  } from '../../../utils/supabase/server'
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
@@ -9,8 +9,7 @@ export default async function handler(
   try {
     if (usingPlaceholder) {
       return res.status(200).json({
-        leaders: [
-    }
+        leaders: [}
     for (const row of data || []) {
       if (row && row.event !== "profile_completed") continue
       const key = row && row.partner_code as string
@@ -25,34 +24,31 @@ export default async function handler(
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
     res.status(500).json({ error: 'Internal server error' })
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { getServerSupabase } from '../../../utils/supabase/server'
+import { getServerSupabase  } from '../../../utils/supabase/server'
 export default async function handler(req, res) {
   try {
   const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key'
   try {
     if (usingPlaceholder) {
       return res.status(200).json({
-        leaders: [
-          { code: 'aihub', profile_completions: 9 },
-          { code: 'modelmasters', profile_completions: 7 },
-          { code: 'promptpro', profile_completions: 5 }]})
+        leaders: [{ code: 'aihub', profile_completions: 9 }, { code: 'modelmasters', profile_completions: 7 }, { code: 'promptpro', profile_completions: 5 }]})
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -85,15 +81,15 @@ export default async function handler(req, res) {
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
       map.set(key, (map.get(key) || 0) + 1)
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -106,10 +102,10 @@ export default async function handler(req, res) {
   } catch (error) {
     return res.status(500).json({ error: e?.message })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }

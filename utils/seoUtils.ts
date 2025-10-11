@@ -24,7 +24,7 @@ export const generateMetaTags = (confi)
   }
 
   if (ogImage) {/* TODO: Fix JSX expression */}"`
-  g:image" content="${ogImage}" />`
+  g: image" content="${ogImage}" />`
   }
 
   if (canonicalUrl) {/* TODO: Fix JSX expression */}"`

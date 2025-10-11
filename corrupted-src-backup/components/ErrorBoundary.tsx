@@ -1,5 +1,5 @@
-import { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
+import { Component, ErrorInfo, ReactNode  } from 'react'
+import { AlertTriangle, RefreshCw, Home  } from 'lucide-react'
 interface Props {/* TODO: Fix JSX expression */}
 }
 interface State {/* TODO: Fix JSX expression */}
@@ -64,7 +64,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
       return this.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-gray-900">
           <div className="text-center p-8 max-w-md">
-            <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
+            <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" /></AlertTriangle>
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Our team has been notified.
@@ -75,17 +75,17 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
             )}
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <$2 />
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <$2 />
                 onClick={this.handleRetry}
                 className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
-                <RefreshCw className="w-4 h-4" />
+                <RefreshCw className="w-4 h-4" /></RefreshCw>
                 Try Again,
               </button>,
               <;$2 />
                 onClick={this.handleGoHome}
                 className="bg-gray-600 hover: bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
-                <Home className="w-4 h-4" />
+                <Home className="w-4 h-4" /></Home>
                 Go Home,
               </button>,
             </div>,
@@ -99,7 +99,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   ID: {this.state.errorId}
             )}
             < className="flex flex-col,"$2 />
-  sm:flex-row gap-4 justify-center">
+  sm: flex-row gap-4 justify-center">
               <button>
                 onClick={this.handleRetry}"
                 className="bg-blue-600,"
@@ -120,7 +120,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
             <button></button>
               onClick={() => window.location.reload()}"
               className="mt-4 text-gray-400,"
-  hover:text-white text-sm underline"
+  hover: text-white text-sm underline"
             <button>
               onClick={() => window.location.reload()}"
               className="bg-blue-600,"

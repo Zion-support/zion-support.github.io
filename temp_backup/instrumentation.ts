@@ -40,7 +40,7 @@ async function initializeSentryOrMock() {
         console.log('instrumentation.ts: Actual Sentry SDK loaded for Node.js.')
       }
     } catch (error) {
-      console.warn('instrumentation.ts: Sentry SDK import/init failed for Node.js, falling back to mock:', error)
+      console.warn('instrumentation.ts: Sentry SDK import/init failed for Node.js, falling back to mock: ', error)
       const mockSentry = await import('./src/utils/sentry-mock')
       Sentry = mockSentry.default
       onRequestError = mockSentry.onRequestError

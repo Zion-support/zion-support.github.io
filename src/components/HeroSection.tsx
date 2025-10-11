@@ -5,7 +5,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 particle-field">
       <div className="absolute inset-0 cyber-scan-effect">
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
         <div className="space-y-8">
           {/* Main Heading */}
           <h1 className="text-4xl md: text-6xl lg:text-7xl font-bold leading-tight">
@@ -17,11 +17,11 @@ export default function HeroSection() {
   
           </h1>
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md: text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Transforming businesses through cutting-edge artificial intelligence, 
             machine learning, and innovative IT solutions. We build the future, today.
           {/* Key Features */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
             <div className="cyber-card p-6 text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -54,7 +54,7 @@ export default function HeroSection() {
   
           </div>
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mt-16">
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-4xl mx-auto mt-16">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-cyan-400 neon-pulse">500+
               <div className="text-gray-400 text-sm mt-2">Projects Completed

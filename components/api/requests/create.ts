@@ -1,11 +1,10 @@
   model: 'gpt-4o-mini'
-messages: [ {
+messages: [{
   role: 'system', content: 'You are a helpful assistant.' 
 // Create utility
 export const Create = () => {
   // Implementation here
   return null
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 {
   role: 'user', content: prompt
@@ -44,8 +43,7 @@ async function summarizeWithOpenAI(description: string) {
     const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n"""${description}"""`
     const response = await client.chat.completions.create({
       model: 'gpt-4o-mini'
-      messages: [
-    })
+      messages: [})
     const content = response.choices[0]?.message?.content |''
     const typeMatch = content.match(/type\s*:\s*(.+)$/im)
     return {
@@ -144,10 +142,7 @@ function handler() {
     const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n"""${description}"""`
     const response = await client.chat.completions.create({
       model: 'gpt-4o-mini',
-      messages: [
-        { role: 'system', content: 'You are a helpful assistant.' },
-        { role: 'user', content: prompt },
-      ],
+      messages: [{ role: 'system', content: 'You are a helpful assistant.' }, { role: 'user', content: prompt }],
       temperature: 0.3,
     })
     const content = response.choices[0]?.message?.content || ''

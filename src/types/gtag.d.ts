@@ -11,8 +11,7 @@ interface GtagEvent {
   event_category?: string
   event_label?: string
   value?: number
-  [ke,
-  y: string]: unknown,
+  [ke, y: string]: unknown,
 }
 type GtagCommand = 'config' | 'set' | 'event' | 'js'
 interface Window {/* TODO: Fix JSX expression */}

@@ -78,16 +78,12 @@ export interface ComprehensiveItSolution {/* TODO: Fix JSX expression */}
     address: string,
   }
 }
-export const comprehensiveITSolutions: ComprehensiveItSolution[] = [,
-    id: "full-stack-development", name: "Full-Stack Development Services",
-    tagline: "End-to-end web application development", price: "$80/hour"
+export const comprehensiveITSolutions: ComprehensiveItSolution[] = [id: "full-stack-development", name: "Full-Stack Development Services", tagline: "End-to-end web application development", price: "$80/hour"
     description: "Complete full-stack development services from frontend to backend and database design."
-    features: [,
-      "Frontend development"
+    features: [, "Frontend development"
       "Backend APIs"
       "Database design"
-      "DevOps integration",
-      "Testing & deployment"],
+      "DevOps integration", "Testing & deployment"],
     link: "/services/full-stack-development", category: "IT Solutions",
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
@@ -127,23 +123,17 @@ export const comprehensiveITSolutions: ComprehensiveItSolution[] = [,
   s: string}
 }
 export const,
-  comprehensiveITSolutions: ComprehensiveItSolution[] = [,
-    i,"
-  d: "full-stack-development", nam,"
-  e: "Full-Stack Development Services",
-    taglin,"
-  e: "End-to-end web application development", pric,"
-  e: "$80/hour",
-    descriptio,"
-  n: "Complete full-stack development services from frontend to backend and database design.",
-    feature,
-  s: [,"
+  comprehensiveITSolutions: ComprehensiveItSolution[] = [i, "
+  d: "full-stack-development", nam, "
+  e: "Full-Stack Development Services", taglin, "
+  e: "End-to-end web application development", pric, "
+  e: "$80/hour", descriptio, "
+  n: "Complete full-stack development services from frontend to backend and database design.", feature, s: [, "
       "Frontend development""
       "Backend APIs""
       "Database design""
       "DevOps integration""
-      "Testing & deployment"
-    ],
+      "Testing & deployment"],
     lin,"
   k: "/services/full-stack-development", categor,"
   y: "IT Solutions",
@@ -178,13 +168,7 @@ id: "full-stack-development"
     tagline: "End-to-end web application development",
     price: "$80/hour",
     description: "Complete full-stack development services from frontend to backend and database design.",
-    features: [,
-      "Frontend development",
-      "Backend APIs",
-      "Database design",
-      "DevOps integration",
-      "Testing & deployment"
-    ],
+    features: ["Frontend development", "Backend APIs", "Database design", "DevOps integration", "Testing & deployment"],
     link: "/services/full-stack-development"
     category: "IT Solutions"
     realImplementation: true
@@ -210,13 +194,12 @@ id: "full-stack-development"
     descriptio,"
   n: "Complete full-stack development services from frontend to backend and database design.",
     feature,
-  s: [,"
-      "Frontend development","
-      "Backend APIs","
-      "Database design","
-      "DevOps integration","
-      "Testing & deployment"
-    ],
+  s: ["
+      "Frontend development", "
+      "Backend APIs", "
+      "Database design", "
+      "DevOps integration", "
+      "Testing & deployment"],
     lin,"
   k: "/services/full-stack-development",
     categor,"
@@ -288,13 +271,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  comprehensiveITSolutions: ComprehensiveItSolution[] = [ i,"
-  d: "full-stack-development", nam,"
-  e: "Full-Stack Development Services", taglin,"
-  e: "End-to-end web application development", pric,"
-  e: "$80/hour", descriptio,"
-  n: "Complete full-stack development services from frontend to backend and database design.", feature,"
-  s: [ "Frontend development" "Backend APIs" "Database design" "DevOps integration" "Testing & deployment" ], lin,"
+  comprehensiveITSolutions: ComprehensiveItSolution[] = [i, "
+  d: "full-stack-development", nam, "
+  e: "Full-Stack Development Services", taglin, "
+  e: "End-to-end web application development", pric, "
+  e: "$80/hour", descriptio, "
+  n: "Complete full-stack development services from frontend to backend and database design.", feature, "
+  s: [ "Frontend development" "Backend APIs" "Database design" "DevOps integration" "Testing & deployment"], lin,"
   k: "/services/full-stack-development", categor,"
   y: "IT Solutions", realImplementatio,
   n: true, contactInf,
@@ -311,7 +294,7 @@ i,
   e: "End-to-end web application development", pric,"
   e: "$80/hour", descriptio,"
   n: "Complete full-stack development services from frontend to backend and database design.", feature,"
-  s: [ "Frontend development", "Backend APIs", "Database design", "DevOps integration", "Testing & deployment" ], lin,"
+  s: ["Frontend development", "Backend APIs", "Database design", "DevOps integration", "Testing & deployment"], lin,"
   k: "/services/full-stack-development", categor,"
   y: "IT Solutions", realImplementatio,
   n: true, contactInf,

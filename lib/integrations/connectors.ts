@@ -1,17 +1,19 @@
-import { ProviderConnection, SyncLogEntry } from './types'
-import { ProviderConnection, SyncLogEntry } from "./types"
-import { v4 as uuidv4 } from "uuid"
+import { ProviderConnection, SyncLogEntry  } from './types'
+import { ProviderConnection, SyncLogEntry  } from './types'
+import { v4 as uuidv4  } from 'uuid'
 async function mockProviderCall<T>(
   connection: ProviderConnection
   action: string
   details: Record<string, any>
-): Promise<{ log: SyncLogEntry; result: T }> {
+): Promise<>
+  {log: SyncLogEntry; result: T } {
   const log: SyncLogEntry = {
 }
 // CRM actions
 export const crm = {
   async syncContact(
     connection: ProviderConnection
+</>
     contact: Record<string, any>
   ) {
     connection: ProviderConnection,
@@ -19,19 +21,20 @@ export const crm = {
   ) {
     return mockProviderCall(connection, "sync_contact", { contact })
   }
-import { ProviderConnection, SyncLogEntry } from './types'
-import { v4 as uuidv4 } from 'uuid'
+import { ProviderConnection, SyncLogEntry  } from './types'
+import { v4 as uuidv4  } from 'uuid'
 import type { ProviderConnection, SyncLogEntry } from './types'
 import type { ProviderConnection, SyncLogEntry } from './types'
 export async function simulateAction<T = unknown>(
   connection: ProviderConnection
   action: string,
-import { ProviderConnection, SyncLogEntry } from './types'
+import { ProviderConnection, SyncLogEntry  } from './types'
 export async function simulateAction<T = unknown>(
   connection: ProviderConnection
   action: string
   details: Record<string, unknown> = {}
-): Promise<{ log: SyncLogEntry, result: T }> {
+): Promise<>
+  {log: SyncLogEntry, result: T } {
     const log: SyncLogEntry = {,
     id: Math.random().toString(36).substr(2, 9),
 // Simple UUID generator since uuid package is not available
@@ -43,11 +46,13 @@ const generateId = (): string => {
     return Math.random().toString(36).substr(2, 9)
   }
 
+</>
 export async function simulateAction<T = any>(
   connection: ProviderConnection
   action: string,
   details: Record<string, any> = {}
-): Promise<{ log: SyncLogEntry, result: T }> {
+): Promise<>
+  {log: SyncLogEntry, result: T } {
   const log: SyncLogEntry = {,
     id: `log_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     id: uuidv4()
@@ -69,6 +74,7 @@ export async function simulateAction<T = any>(
     providerId: connection.providerId
     level: 'info',
     connectionId: connection.id
+</>
 export async function simulateAction<T = any>(connectio,
   n: ProviderConnection,
   actio,

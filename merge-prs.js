@@ -1,4 +1,4 @@
-import { execSync } from 'child_process'
+import { execSync  } from 'child_process'
 import fs from 'fs'
 console.log('🚀 Starting PR merge process...')
 try {
@@ -25,17 +25,13 @@ for (const pr of prs) {
       execSync(`git show-ref --verify --quiet refs/remotes/origin/${pr.branch}`)
         { stdio: 'pipe' }
 #!/usr/bin/env node
-import { execSync } from 'child_process'
+import { execSync  } from 'child_process'
 import fs from 'fs'
 //PR information from the JSON files
-const prs = [
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
+const prs = [{/* TODO: Fix JSX expression */}
+  }, {/* TODO: Fix JSX expression */}
+  }, {/* TODO: Fix JSX expression */}
+  }, {/* TODO: Fix JSX expression */}
   }]
 // //Ensure we're on main branch
 try {/* TODO: Fix JSX expression */}
@@ -90,7 +86,7 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
     // Check for conflicts
     const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
     if (conflictFiles.trim()) {
-      console.log('🔧 Conflict files found:', conflictFiles)
+      console.log('🔧 Conflict files found: ', conflictFiles)
       // Auto-resolve conflicts by accepting our changes
       const files = conflictFiles.trim().split('\n')
       for (const file of files) {
@@ -121,7 +117,7 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
   execSync('git push origin --delete cursor/website-audit-and-update-with-deployment-1500', { stdio: 'inherit' })
   console.log('✨ All done! Feature branch merged and cleaned up.')
 } catch (error) {
-    console.error('❌ Error during merge process:', error.message)
+    console.error('❌ Error during merge process: ', error.message)
   process.exit(1)
   }
   } catch (error) {/* TODO: Fix JSX expression */}

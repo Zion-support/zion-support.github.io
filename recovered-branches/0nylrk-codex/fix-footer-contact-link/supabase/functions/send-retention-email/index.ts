@@ -1,6 +1,6 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts"
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0"
-import { Resend } from "npm:resend@2.0.0"
+import { serve  } from 'https: //deno.land/std@0.190.0/http/server.ts'
+import { createClient  } from 'https: //esm.sh/@supabase/supabase-js@2.45.0'
+import { Resend  } from 'npm: resend@2.0.0'
 // Initialize Resend with API key
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"))
 // Initialize Supabase client
@@ -106,7 +106,7 @@ serve(async (req) => {
       }
     )
   } catch (error) {
-    console.error("Error in send-retention-email function:", error)
+    console.error("Error in send-retention-email function: ", error)
     return new Response(
       JSON.stringify({
         success: false,
@@ -128,7 +128,8 @@ serve(async (req) => {
     )
   }
 })
-async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string; html: string }> {
+async function generateEmail(emailData: EmailData, userData: any): Promise<>
+  {subject: string; html: string } {
   const { email_type, display_name, user_type } = emailData
   const firstName = display_name?.split(" ")[0] || "there"
   // Get onboarding status for personalized content
@@ -141,11 +142,12 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
       return {
         subject: `Welcome to Zion AI Marketplace, ${firstName}!`,
         html: `
+</>
           <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
             <h2>Welcome to Zion AI Marketplace!</h2>
             <p>Hi ${firstName},</p>
             <p>We're excited to have you join our community of talented AI professionals.</p>
-            <p>Here's what to do next to get started:</p>
+            <p>Here's what to do next to get started: </p>
             <ol>
               <li>Complete your profile to help clients find you</li>
               <li>Add your skills and expertise</li>
@@ -170,7 +172,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
             <h2>Welcome to Zion AI Marketplace!</h2>
             <p>Hi ${firstName},</p>
             <p>We're excited to have you join our community of innovative businesses and entrepreneurs.</p>
-            <p>Here's what to do next to get started:</p>
+            <p>Here's what to do next to get started: </p>
             <ol>
               <li>Complete your company profile</li>
               <li>Post your first job or project</li>
@@ -285,7 +287,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
             <h2>We miss you! Special offer inside</h2>
             <p>Hi ${firstName},</p>
             <p>It's been a while since we've seen you on Zion AI Marketplace. We've noticed many new jobs that match your skills have been posted.</p>
-            <p><strong>Special Offer:</strong> Return this week and complete your profile to unlock 2 weeks of premium visibility absolutely free.</p>
+            <p><strong>Special Offer: </strong> Return this week and complete your profile to unlock 2 weeks of premium visibility absolutely free.</p>
             <div style="margin: 25px 0;">
               <a href="${supabaseUrl}/dashboard" style="background-color: #9b87f5; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px;">Claim Your Offer</a>
             </div>
@@ -303,7 +305,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
             <h2>Exclusive hiring discount inside</h2>
             <p>Hi ${firstName},</p>
             <p>We haven't seen you for a while on Zion AI Marketplace. Our talent pool has grown significantly since your last visit.</p>
-            <p><strong>Special Offer:</strong> Post a job this week and receive 20% off our platform fees for your next hire.</p>
+            <p><strong>Special Offer: </strong> Post a job this week and receive 20% off our platform fees for your next hire.</p>
             <div style="margin: 25px 0;">
               <a href="${supabaseUrl}/post-job" style="background-color: #9b87f5; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px;">Post a Job</a>
             </div>
@@ -321,7 +323,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
           <h2>Boost your profile visibility</h2>
           <p>Hi ${firstName},</p>
-          <p>We noticed you haven't received applications recently. Here are some tips to make your profile stand out:</p>
+          <p>We noticed you haven't received applications recently. Here are some tips to make your profile stand out: </p>
           <ul>
             <li>Add more details to your skills and experience</li>
             <li>Upload samples of your work to your portfolio</li>
@@ -344,7 +346,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
           <h2>Let's find talent for your job</h2>
           <p>Hi ${firstName},</p>
-          <p>We noticed your job "${emailData.job_title}" has been open for a while. Here are some tips to attract more qualified candidates:</p>
+          <p>We noticed your job "${emailData.job_title}" has been open for a while. Here are some tips to attract more qualified candidates: </p>
           <ul>
             <li>Review and update your job description with more details</li>
             <li>Consider adjusting your budget range if possible</li>

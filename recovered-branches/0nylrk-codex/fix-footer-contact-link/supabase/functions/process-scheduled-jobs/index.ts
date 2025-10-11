@@ -1,5 +1,5 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts"
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0"
+import { serve  } from 'https: //deno.land/std@0.190.0/http/server.ts'
+import { createClient  } from 'https: //esm.sh/@supabase/supabase-js@2.45.0'
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -105,7 +105,7 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
     // Here you could also add logic to send an email
     // For example, call another edge function to send email
   } catch (error) {
-    console.error("Error processing onboarding reminder:", error)
+    console.error("Error processing onboarding reminder: ", error)
   }
 }
 async function processResumeScoring(supabase, applicationId) {
@@ -154,7 +154,7 @@ async function processResumeScoring(supabase, applicationId) {
       }
     }
   } catch (error) {
-    console.error("Error processing resume scoring:", error)
+    console.error("Error processing resume scoring: ", error)
   }
 }
 async function processContentGeneration(supabase, contentType) {
@@ -227,6 +227,6 @@ async function processContentGeneration(supabase, contentType) {
     }
     return contentData
   } catch (error) {
-    console.error(`Error processing ${contentType} generation:`, error)
+    console.error(`Error processing ${contentType} generation: `, error)
   }
 }

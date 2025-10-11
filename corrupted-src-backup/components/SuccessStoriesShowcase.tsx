@@ -1,16 +1,13 @@
 const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
-  const, storie, s = [
-    {
+  const, storie, s = [{
       comp, a, n
   y: "TechCorp, Internationa, l"
       indust, r, y: "Technolo, g, y"
       ic, o, n: <TrendingUp, className="w-8 h-8" /></TrendingUp>resu</TrendingUp>, l, t: "3, 0, 0% Revenue, Growt, h"
       descripti, o, n: "Implemented, multimodal, AI achieving, unprecedented, customer engagement, and, conversion rat, e, s."
-      metri, c, s: [,
-        "98% prediction, accurac, y"
+      metri, c, s: [, "98% prediction, accurac, y"
         "60% cost, reductio, n"
-        "2 M, users, impacted"
-      ]
+        "2 M, users, impacted"]
       col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
     }
     {
@@ -18,11 +15,9 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
       indust, r, y: "Manufacturi, n, g"
       ic, o, n: <Target, className="w-8 h-8" /></Target>resu</Target>, l, t: "85% Downtime, Reductio, n"
       descripti, o, n: "AI, predictive, maintenance transformed, operation, s, eliminating, unplanned, downtime and, reducing, costs."
-      metri, c, s: [,
-        "$2M, annual, savings"
+      metri, c, s: ["$2M, annual, savings"
         "40% lower, maintenance, costs"
-        "99.9% uptime, achieve, d"
-      ]
+        "99.9% uptime, achieve, d"]
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
     }
     {
@@ -31,14 +26,10 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
       icon: <Users className="w-8 h-8" />,
       result: "99.95% Fraud Detection",
       description: "AI fraud prevention system achieved industry-leading accuracy while reducing false positives by 95%.",
-      metrics: [,
-        "$5M fraud prevented",
-        "Sub-100ms detection",
-        "95% fewer false positives"
-      ],
+      metrics: ["$5M fraud prevented", "Sub-100ms detection", "95% fewer false positives"],
       color: "from-purple-500 to-pink-500",
         </div>,
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">,
+        <div className="grid md: grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">,
           {stories.map((story, index) => (
             <$2 />
 key={index}
@@ -50,7 +41,7 @@ key={index}
           {stories.map((story, index) => (
             <$2 />
 key={index}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300">
+              className="bg-white rounded-2xl shadow-xl overflow-hidden hover: scale-105 transition-all duration-300">
               <div className={`bg-gradient-to-r ${story.color} text-white p-6`}>
                 <div className="flex items-center gap-3 mb-4">
                   {story.icon}
@@ -63,7 +54,7 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
     {/* TODO: Fix JSX expression */}
 key={index}
               className="bg-white rounded-2xl shadow-xl overflow-hidden,"
-  hover:scale-105 transition-all duration-300"
+  hover: scale-105 transition-all duration-300"
             >
               <div className={`bg-gradient-to-r ${story.color} text-white p-6`}></div>"
                 <div className="flex items-center gap-3 mb-4">
@@ -81,9 +72,9 @@ key={index}
                       <div className="w-2 h-2 bg-green-500 rounded-full">
                       <span className="text-sm text-gray-700">{metric}
                   Read Full Story
-                  <Link className="w-4 h-4" />
+                  <Link className="w-4 h-4" /></Link>
             View All Success Stories
-            <Link className="w-6 h-6" />
+            <Link className="w-6 h-6" /></Link>
               </div>"
               <div className="p-6"></div>"
                 <p className="text-gray-600 mb-6">{story.description}</p>"
@@ -93,7 +84,7 @@ key={index}
                       <div className="w-2 h-2 bg-green-500 rounded-full"></div>"
                       <span className="text-sm text-gray-700">{metric}
                   Read Full Story;"
-                  <Link className="w-4 h-4" />
+                  <Link className="w-4 h-4" /></Link>
             View All Success Stories;"
-            <Link className="w-6 h-6" />
+            <Link className="w-6 h-6" /></Link>
 }}}}"`</div></div></div></div></div></div></div></div></div></div></span></span></Link></Link></Link></Link></p></p></h3>

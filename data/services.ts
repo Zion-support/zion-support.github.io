@@ -17,27 +17,10 @@ export interface Service {
   tags: string[]
 }
 
-export const aiServices: Service[] = [
-  {
-    id: 'ai-chatbot-builder',
-    title: 'AI Chatbot Builder',
-    description: 'Create intelligent chatbots with natural language processing and machine learning capabilities.',
-    icon: '🤖',
-    category: 'AI',
-    features: [
-      'Natural Language Processing',
-      'Multi-language Support',
-      'Integration with CRM Systems',
-      'Analytics Dashboard',
-      'Custom Training Models',
-      'Voice Recognition'
-    ],
-    benefits: [
-      '24/7 Customer Support',
-      'Reduce Support Costs by 60%',
-      'Instant Response Time',
-      'Scalable Solutions'
-    ],
+export const aiServices: Service[] = [{
+    id: 'ai-chatbot-builder', title: 'AI Chatbot Builder', description: 'Create intelligent chatbots with natural language processing and machine learning capabilities.', icon: '🤖', category: 'AI', features: [
+      'Natural Language Processing', 'Multi-language Support', 'Integration with CRM Systems', 'Analytics Dashboard', 'Custom Training Models', 'Voice Recognition'],
+    benefits: ['24/7 Customer Support', 'Reduce Support Costs by 60%', 'Instant Response Time', 'Scalable Solutions'],
     pricing: {
       starting: '$299/month',
       popular: '$599/month',
@@ -54,20 +37,8 @@ export const aiServices: Service[] = [
     description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
     icon: '✍️',
     category: 'AI',
-    features: [
-      'Blog Post Generation',
-      'Social Media Content',
-      'Email Marketing Copy',
-      'SEO Optimization',
-      'Multiple Content Formats',
-      'Brand Voice Training'
-    ],
-    benefits: [
-      'Save 80% Content Creation Time',
-      'Consistent Brand Voice',
-      'SEO-Optimized Content',
-      'Scalable Content Production'
-    ],
+    features: ['Blog Post Generation', 'Social Media Content', 'Email Marketing Copy', 'SEO Optimization', 'Multiple Content Formats', 'Brand Voice Training'],
+    benefits: ['Save 80% Content Creation Time', 'Consistent Brand Voice', 'SEO-Optimized Content', 'Scalable Content Production'],
     pricing: {
       starting: '$199/month',
       popular: '$399/month',
@@ -84,20 +55,8 @@ export const aiServices: Service[] = [
     description: 'Advanced data analytics with AI-powered insights and predictive modeling.',
     icon: '📊',
     category: 'AI',
-    features: [
-      'Predictive Analytics',
-      'Real-time Dashboards',
-      'Custom Report Generation',
-      'Data Visualization',
-      'Machine Learning Models',
-      'API Integration'
-    ],
-    benefits: [
-      'Data-Driven Decision Making',
-      'Predict Future Trends',
-      'Automated Reporting',
-      'ROI Optimization'
-    ],
+    features: ['Predictive Analytics', 'Real-time Dashboards', 'Custom Report Generation', 'Data Visualization', 'Machine Learning Models', 'API Integration'],
+    benefits: ['Data-Driven Decision Making', 'Predict Future Trends', 'Automated Reporting', 'ROI Optimization'],
     pricing: {
       starting: '$499/month',
       popular: '$999/month',
@@ -114,20 +73,8 @@ export const aiServices: Service[] = [
     description: 'Comprehensive AI-powered customer support with ticket management and automated responses.',
     icon: '🎧',
     category: 'AI',
-    features: [
-      'Automated Ticket Routing',
-      'Sentiment Analysis',
-      'Knowledge Base Integration',
-      'Multi-channel Support',
-      'Performance Analytics',
-      'Custom AI Training'
-    ],
-    benefits: [
-      'Reduce Response Time by 90%',
-      'Improve Customer Satisfaction',
-      '24/7 Availability',
-      'Cost Reduction'
-    ],
+    features: ['Automated Ticket Routing', 'Sentiment Analysis', 'Knowledge Base Integration', 'Multi-channel Support', 'Performance Analytics', 'Custom AI Training'],
+    benefits: ['Reduce Response Time by 90%', 'Improve Customer Satisfaction', '24/7 Availability', 'Cost Reduction'],
     pricing: {
       starting: '$399/month',
       popular: '$799/month',
@@ -144,20 +91,8 @@ export const aiServices: Service[] = [
     description: 'Advanced AI-powered cybersecurity monitoring and threat detection system.',
     icon: '🔒',
     category: 'AI',
-    features: [
-      'Real-time Threat Detection',
-      'Behavioral Analysis',
-      'Automated Incident Response',
-      'Compliance Monitoring',
-      'Security Dashboards',
-      'Machine Learning Models'
-    ],
-    benefits: [
-      'Proactive Threat Detection',
-      'Reduce Security Incidents',
-      'Compliance Assurance',
-      'Cost-Effective Security'
-    ],
+    features: ['Real-time Threat Detection', 'Behavioral Analysis', 'Automated Incident Response', 'Compliance Monitoring', 'Security Dashboards', 'Machine Learning Models'],
+    benefits: ['Proactive Threat Detection', 'Reduce Security Incidents', 'Compliance Assurance', 'Cost-Effective Security'],
     pricing: {
       starting: '$599/month',
       popular: '$1199/month',
@@ -174,20 +109,8 @@ export const aiServices: Service[] = [
     description: 'Optimize e-commerce operations with AI-powered recommendations and automation.',
     icon: '🛒',
     category: 'AI',
-    features: [
-      'Product Recommendation Engine',
-      'Price Optimization',
-      'Inventory Management',
-      'Customer Segmentation',
-      'Sales Forecasting',
-      'A/B Testing Automation'
-    ],
-    benefits: [
-      'Increase Sales by 25%',
-      'Optimize Inventory Levels',
-      'Personalized Shopping Experience',
-      'Automated Operations'
-    ],
+    features: ['Product Recommendation Engine', 'Price Optimization', 'Inventory Management', 'Customer Segmentation', 'Sales Forecasting', 'A/B Testing Automation'],
+    benefits: ['Increase Sales by 25%', 'Optimize Inventory Levels', 'Personalized Shopping Experience', 'Automated Operations'],
     pricing: {
       starting: '$299/month',
       popular: '$599/month',
@@ -199,27 +122,10 @@ export const aiServices: Service[] = [
     tags: ['E-commerce', 'Optimization', 'AI']
   }
 ]
-export const itServices: Service[] = [
-  {
-    id: 'cloud-migration',
-    title: 'Cloud Migration Services',
-    description: 'Seamless migration to cloud platforms with zero downtime and optimized performance.',
-    icon: '☁️',
-    category: 'IT',
-    features: [
-      'AWS/Azure/GCP Migration',
-      'Zero Downtime Migration',
-      'Performance Optimization',
-      'Security Configuration',
-      'Cost Optimization',
-      '24/7 Support'
-    ],
-    benefits: [
-      'Reduce Infrastructure Costs',
-      'Improved Scalability',
-      'Enhanced Security',
-      'Better Performance'
-    ],
+export const itServices: Service[] = [{
+    id: 'cloud-migration', title: 'Cloud Migration Services', description: 'Seamless migration to cloud platforms with zero downtime and optimized performance.', icon: '☁️', category: 'IT', features: [
+      'AWS/Azure/GCP Migration', 'Zero Downtime Migration', 'Performance Optimization', 'Security Configuration', 'Cost Optimization', '24/7 Support'],
+    benefits: ['Reduce Infrastructure Costs', 'Improved Scalability', 'Enhanced Security', 'Better Performance'],
     pricing: {
       starting: '$2,000/project',
       popular: '$5,000/project',
@@ -236,20 +142,8 @@ export const itServices: Service[] = [
     description: 'Complete DevOps solutions with automated CI/CD pipelines and infrastructure management.',
     icon: '⚙️',
     category: 'IT',
-    features: [
-      'Automated CI/CD Pipelines',
-      'Infrastructure as Code',
-      'Container Orchestration',
-      'Monitoring & Logging',
-      'Security Scanning',
-      'Performance Testing'
-    ],
-    benefits: [
-      'Faster Deployment',
-      'Reduced Errors',
-      'Improved Collaboration',
-      'Cost Efficiency'
-    ],
+    features: ['Automated CI/CD Pipelines', 'Infrastructure as Code', 'Container Orchestration', 'Monitoring & Logging', 'Security Scanning', 'Performance Testing'],
+    benefits: ['Faster Deployment', 'Reduced Errors', 'Improved Collaboration', 'Cost Efficiency'],
     pricing: {
       starting: '$1,500/month',
       popular: '$3,000/month',
@@ -266,20 +160,8 @@ export const itServices: Service[] = [
     description: 'Comprehensive security assessment and vulnerability testing for your IT infrastructure.',
     icon: '🛡️',
     category: 'IT',
-    features: [
-      'Penetration Testing',
-      'Vulnerability Assessment',
-      'Compliance Auditing',
-      'Security Policy Review',
-      'Incident Response Planning',
-      'Security Training'
-    ],
-    benefits: [
-      'Identify Security Gaps',
-      'Compliance Assurance',
-      'Risk Mitigation',
-      'Security Best Practices'
-    ],
+    features: ['Penetration Testing', 'Vulnerability Assessment', 'Compliance Auditing', 'Security Policy Review', 'Incident Response Planning', 'Security Training'],
+    benefits: ['Identify Security Gaps', 'Compliance Assurance', 'Risk Mitigation', 'Security Best Practices'],
     pricing: {
       starting: '$2,500/audit',
       popular: '$5,000/audit',
@@ -296,20 +178,8 @@ export const itServices: Service[] = [
     description: 'Complete IT management with 24/7 monitoring, support, and maintenance.',
     icon: '💻',
     category: 'IT',
-    features: [
-      '24/7 IT Support',
-      'Network Monitoring',
-      'Backup & Recovery',
-      'Software Updates',
-      'Security Management',
-      'Help Desk Services'
-    ],
-    benefits: [
-      'Reduced IT Costs',
-      'Proactive Maintenance',
-      'Expert Support',
-      'Business Continuity'
-    ],
+    features: ['24/7 IT Support', 'Network Monitoring', 'Backup & Recovery', 'Software Updates', 'Security Management', 'Help Desk Services'],
+    benefits: ['Reduced IT Costs', 'Proactive Maintenance', 'Expert Support', 'Business Continuity'],
     pricing: {
       starting: '$500/month',
       popular: '$1,200/month',
@@ -326,20 +196,8 @@ export const itServices: Service[] = [
     description: 'Optimize database performance, security, and scalability for better application performance.',
     icon: '🗄️',
     category: 'IT',
-    features: [
-      'Performance Tuning',
-      'Query Optimization',
-      'Index Management',
-      'Backup Strategies',
-      'Security Hardening',
-      'Scalability Planning'
-    ],
-    benefits: [
-      'Improved Performance',
-      'Reduced Costs',
-      'Better Security',
-      'Enhanced Scalability'
-    ],
+    features: ['Performance Tuning', 'Query Optimization', 'Index Management', 'Backup Strategies', 'Security Hardening', 'Scalability Planning'],
+    benefits: ['Improved Performance', 'Reduced Costs', 'Better Security', 'Enhanced Scalability'],
     pricing: {
       starting: '$1,000/month',
       popular: '$2,500/month',
@@ -356,20 +214,8 @@ export const itServices: Service[] = [
     description: 'Comprehensive network security with firewalls, monitoring, and threat protection.',
     icon: '🌐',
     category: 'IT',
-    features: [
-      'Firewall Configuration',
-      'Intrusion Detection',
-      'VPN Setup',
-      'Network Monitoring',
-      'Threat Prevention',
-      'Compliance Management'
-    ],
-    benefits: [
-      'Enhanced Security',
-      'Threat Prevention',
-      'Compliance Assurance',
-      'Network Performance'
-    ],
+    features: ['Firewall Configuration', 'Intrusion Detection', 'VPN Setup', 'Network Monitoring', 'Threat Prevention', 'Compliance Management'],
+    benefits: ['Enhanced Security', 'Threat Prevention', 'Compliance Assurance', 'Network Performance'],
     pricing: {
       starting: '$800/month',
       popular: '$1,800/month',
@@ -381,27 +227,10 @@ export const itServices: Service[] = [
     tags: ['Network', 'Security', 'Firewall']
   }
 ]
-export const microSaasServices: Service[] = [
-  {
-    id: 'analytics-dashboard',
-    title: 'Analytics Dashboard Pro',
-    description: 'Real-time business analytics dashboard with customizable widgets and automated reporting.',
-    icon: '📈',
-    category: 'Micro SaaS',
-    features: [
-      'Real-time Data Visualization',
-      'Custom Widgets',
-      'Automated Reports',
-      'Multi-source Integration',
-      'Mobile Responsive',
-      'Export Capabilities'
-    ],
-    benefits: [
-      'Data-Driven Decisions',
-      'Time Savings',
-      'Better Insights',
-      'Easy Setup'
-    ],
+export const microSaasServices: Service[] = [{
+    id: 'analytics-dashboard', title: 'Analytics Dashboard Pro', description: 'Real-time business analytics dashboard with customizable widgets and automated reporting.', icon: '📈', category: 'Micro SaaS', features: [
+      'Real-time Data Visualization', 'Custom Widgets', 'Automated Reports', 'Multi-source Integration', 'Mobile Responsive', 'Export Capabilities'],
+    benefits: ['Data-Driven Decisions', 'Time Savings', 'Better Insights', 'Easy Setup'],
     pricing: {
       starting: '$29/month',
       popular: '$59/month',
@@ -418,20 +247,8 @@ export const microSaasServices: Service[] = [
     description: 'Advanced email marketing platform with AI-powered personalization and automation workflows.',
     icon: '📧',
     category: 'Micro SaaS',
-    features: [
-      'AI-Powered Personalization',
-      'Automated Workflows',
-      'A/B Testing',
-      'Segmentation Tools',
-      'Analytics & Reporting',
-      'Template Library'
-    ],
-    benefits: [
-      'Increase Open Rates by 40%',
-      'Automated Campaigns',
-      'Better Targeting',
-      'ROI Tracking'
-    ],
+    features: ['AI-Powered Personalization', 'Automated Workflows', 'A/B Testing', 'Segmentation Tools', 'Analytics & Reporting', 'Template Library'],
+    benefits: ['Increase Open Rates by 40%', 'Automated Campaigns', 'Better Targeting', 'ROI Tracking'],
     pricing: {
       starting: '$39/month',
       popular: '$79/month',
@@ -448,20 +265,8 @@ export const microSaasServices: Service[] = [
     description: 'Schedule and manage social media posts across multiple platforms with analytics.',
     icon: '📱',
     category: 'Micro SaaS',
-    features: [
-      'Multi-platform Scheduling',
-      'Content Calendar',
-      'Analytics Dashboard',
-      'Hashtag Suggestions',
-      'Team Collaboration',
-      'Auto-posting'
-    ],
-    benefits: [
-      'Save Time',
-      'Consistent Posting',
-      'Better Engagement',
-      'Analytics Insights'
-    ],
+    features: ['Multi-platform Scheduling', 'Content Calendar', 'Analytics Dashboard', 'Hashtag Suggestions', 'Team Collaboration', 'Auto-posting'],
+    benefits: ['Save Time', 'Consistent Posting', 'Better Engagement', 'Analytics Insights'],
     pricing: {
       starting: '$19/month',
       popular: '$39/month',
@@ -478,20 +283,8 @@ export const microSaasServices: Service[] = [
     description: 'AI-powered expense tracking with receipt scanning and automated categorization.',
     icon: '💰',
     category: 'Micro SaaS',
-    features: [
-      'Receipt Scanning',
-      'AI Categorization',
-      'Expense Reports',
-      'Budget Tracking',
-      'Tax Preparation',
-      'Mobile App'
-    ],
-    benefits: [
-      'Automated Tracking',
-      'Tax Compliance',
-      'Budget Control',
-      'Time Savings'
-    ],
+    features: ['Receipt Scanning', 'AI Categorization', 'Expense Reports', 'Budget Tracking', 'Tax Preparation', 'Mobile App'],
+    benefits: ['Automated Tracking', 'Tax Compliance', 'Budget Control', 'Time Savings'],
     pricing: {
       starting: '$15/month',
       popular: '$29/month',
@@ -508,20 +301,8 @@ export const microSaasServices: Service[] = [
     description: 'Comprehensive project management with task tracking, team collaboration, and reporting.',
     icon: '📋',
     category: 'Micro SaaS',
-    features: [
-      'Task Management',
-      'Team Collaboration',
-      'Time Tracking',
-      'Gantt Charts',
-      'File Sharing',
-      'Progress Reporting'
-    ],
-    benefits: [
-      'Better Organization',
-      'Team Productivity',
-      'Project Visibility',
-      'Deadline Management'
-    ],
+    features: ['Task Management', 'Team Collaboration', 'Time Tracking', 'Gantt Charts', 'File Sharing', 'Progress Reporting'],
+    benefits: ['Better Organization', 'Team Productivity', 'Project Visibility', 'Deadline Management'],
     pricing: {
       starting: '$25/month',
       popular: '$49/month',
@@ -538,20 +319,8 @@ export const microSaasServices: Service[] = [
     description: 'Smart inventory management with automated reordering and real-time tracking.',
     icon: '📦',
     category: 'Micro SaaS',
-    features: [
-      'Real-time Tracking',
-      'Automated Reordering',
-      'Barcode Scanning',
-      'Multi-location Support',
-      'Analytics Dashboard',
-      'Integration APIs'
-    ],
-    benefits: [
-      'Reduce Stockouts',
-      'Optimize Inventory',
-      'Cost Savings',
-      'Better Control'
-    ],
+    features: ['Real-time Tracking', 'Automated Reordering', 'Barcode Scanning', 'Multi-location Support', 'Analytics Dashboard', 'Integration APIs'],
+    benefits: ['Reduce Stockouts', 'Optimize Inventory', 'Cost Savings', 'Better Control'],
     pricing: {
       starting: '$35/month',
       popular: '$69/month',

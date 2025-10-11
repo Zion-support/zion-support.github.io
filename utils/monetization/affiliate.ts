@@ -15,7 +15,7 @@ export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AF
   u.searchParams.set('ref', code)
   return u.toString()
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }

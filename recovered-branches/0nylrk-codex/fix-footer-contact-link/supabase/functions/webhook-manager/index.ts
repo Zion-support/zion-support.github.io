@@ -1,5 +1,5 @@
-import { serve } from "https://deno.land/std@0.177.0/http/server.ts"
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.38.0'
+import { serve  } from 'https: //deno.land/std@0.177.0/http/server.ts'
+import { createClient  } from 'https: //esm.sh/@supabase/supabase-js@2.38.0'
 interface CreateWebhookRequest {
   name: string
   url: string
@@ -75,7 +75,7 @@ serve(async (req) => {
       headers: { 'Content-Type': 'application/json' },
     })
   } catch (error) {
-    console.error('Error processing request:', error)
+    console.error('Error processing request: ', error)
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }})
@@ -96,7 +96,7 @@ async function createWebhook(userId: string, name: string, url: string, eventTyp
       })
       .select('id, name, url, event_types, is_active, created_at')
     if (error) {
-      console.error('Error creating webhook:', error)
+      console.error('Error creating webhook: ', error)
       return new Response(JSON.stringify({ error: 'Failed to create webhook' }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' }})
@@ -112,7 +112,7 @@ async function createWebhook(userId: string, name: string, url: string, eventTyp
       headers: { 'Content-Type': 'application/json' },
     })
   } catch (error) {
-    console.error('Error in createWebhook:', error)
+    console.error('Error in createWebhook: ', error)
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }})
@@ -128,7 +128,7 @@ async function getUserWebhooks(userId: string) {
       .eq('user_id', userId)
       .order('created_at', { ascending: false })
     if (error) {
-      console.error('Error fetching webhooks:', error)
+      console.error('Error fetching webhooks: ', error)
       return new Response(JSON.stringify({ error: 'Failed to fetch webhooks' }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' }})
@@ -141,7 +141,7 @@ async function getUserWebhooks(userId: string) {
       headers: { 'Content-Type': 'application/json' },
     })
   } catch (error) {
-    console.error('Error in getUserWebhooks:', error)
+    console.error('Error in getUserWebhooks: ', error)
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }})
@@ -158,7 +158,7 @@ async function toggleWebhook(userId: string, webhookId: string, isActive: boolea
       .eq('user_id', userId)
       .select('id, name, is_active')
     if (error || !data || data.length === 0) {
-      console.error('Error toggling webhook:', error)
+      console.error('Error toggling webhook: ', error)
       return new Response(JSON.stringify({ error: 'Failed to update webhook or webhook not found' }), {
         status: error ? 500 : 404,
         headers: { 'Content-Type': 'application/json' }})
@@ -174,7 +174,7 @@ async function toggleWebhook(userId: string, webhookId: string, isActive: boolea
       headers: { 'Content-Type': 'application/json' },
     })
   } catch (error) {
-    console.error('Error in toggleWebhook:', error)
+    console.error('Error in toggleWebhook: ', error)
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }})
@@ -191,7 +191,7 @@ async function deleteWebhook(userId: string, webhookId: string) {
       .eq('user_id', userId)
       .select('id')
     if (error) {
-      console.error('Error deleting webhook:', error)
+      console.error('Error deleting webhook: ', error)
       return new Response(JSON.stringify({ error: 'Failed to delete webhook' }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' }})
@@ -214,7 +214,7 @@ async function deleteWebhook(userId: string, webhookId: string) {
       headers: { 'Content-Type': 'application/json' },
     })
   } catch (error) {
-    console.error('Error in deleteWebhook:', error)
+    console.error('Error in deleteWebhook: ', error)
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }})
@@ -274,7 +274,7 @@ async function testWebhook(userId: string, webhookId: string, eventType: string)
         headers: { 'Content-Type': 'application/json' },
       })
     } catch (fetchError) {
-      console.error('Error sending test webhook:', fetchError)
+      console.error('Error sending test webhook: ', fetchError)
       return new Response(JSON.stringify({ 
         error: 'Failed to send test webhook', 
         details: fetchError.message 
@@ -285,7 +285,7 @@ async function testWebhook(userId: string, webhookId: string, eventType: string)
       })
     }
   } catch (error) {
-    console.error('Error in testWebhook:', error)
+    console.error('Error in testWebhook: ', error)
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }})
@@ -376,8 +376,7 @@ function createTestPayload(eventType: string) {
           status: 'offer_accepted'
         }
       }
-    default:
-      return {
+    default: return {
         event_type: 'test_event',
         event_id: eventId,
         timestamp,

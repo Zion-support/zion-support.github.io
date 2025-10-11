@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import fs from 'fs'
-import { glob } from 'glob'
+import { glob  } from 'glob'
 // Function to process a file
 function processFile(filePath) {
   try {
@@ -37,18 +37,18 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     // Fix Link component href prop
     if (content.includes('< href=')) {$2 />
-      content = content.replace(/< href=/g, '<Link to=')$2 />
+      content = content.replace(/< href=/g, '<Link to=')$2 /></Link>
       modified = true
     }
 
     // Fix Next.js imports in sitemap
-    if (content.includes("import { Metadata } from 'next';")) {
+    if (content.includes("import { Metadata  } from 'next';")) {
     if (content.includes('< href=')) {/* TODO: Fix JSX expression */}$2 />
     }
 
     // Fix Next.js imports in sitemap;"
-    if (content.includes("import { Metadata } from 'next';")) {/* TODO: Fix JSX expression */}"
-      content = content.replace(/import { Metadata } from 'next';/g, "import React from 'react';")
+    if (content.includes("import { Metadata  } from 'next';")) {/* TODO: Fix JSX expression */}"
+      content = content.replace(/import { Metadata  } from 'next';/g, "import React from 'react';")
       modified = true
     }
 

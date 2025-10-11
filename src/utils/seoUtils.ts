@@ -31,7 +31,7 @@ export class SEOUtils {
       description,
       keywords,
       canonicalUrl,
-      ogImage = 'https://ziontechgroup.com/og-image.jpg',
+      ogImage = 'https: //ziontechgroup.com/og-image.jpg',
       ogType = 'website',
       twitterCard = 'summary_large_image',
       robots = 'index, follow',
@@ -51,32 +51,32 @@ export class SEOUtils {
     // Canonical URL
     metaTags += `<link rel="canonical" href="${canonicalUrl}">\n`
     // Open Graph tags
-    metaTags += `<meta property="og:title" content="${this.escapeHtml(title)}">\n`
-    metaTags += `<meta property="og:description" content="${this.escapeHtml(description)}">\n`
-    metaTags += `<meta property="og:url" content="${canonicalUrl}">\n`
-    metaTags += `<meta property="og:type" content="${ogType}">\n`
-    metaTags += `<meta property="og:image" content="${ogImage}">\n`
-    metaTags += `<meta property="og:site_name" content="Zion Tech Group">\n`
+    metaTags += `<meta property="og: title" content="${this.escapeHtml(title)}">\n`
+    metaTags += `<meta property="og: description" content="${this.escapeHtml(description)}">\n`
+    metaTags += `<meta property="og: url" content="${canonicalUrl}">\n`
+    metaTags += `<meta property="og: type" content="${ogType}">\n`
+    metaTags += `<meta property="og: image" content="${ogImage}">\n`
+    metaTags += `<meta property="og: site_name" content="Zion Tech Group">\n`
     // Twitter Card tags
     metaTags += `<meta name="twitter:card" content="${twitterCard}">\n`
-    metaTags += `<meta name="twitter:title" content="${this.escapeHtml(title)}">\n`
-    metaTags += `<meta name="twitter:description" content="${this.escapeHtml(description)}">\n`
-    metaTags += `<meta name="twitter:image" content="${ogImage}">\n`
-    metaTags += `<meta name="twitter:site" content="@ziontechgroup">\n`
+    metaTags += `<meta name="twitter: title" content="${this.escapeHtml(title)}">\n`
+    metaTags += `<meta name="twitter: description" content="${this.escapeHtml(description)}">\n`
+    metaTags += `<meta name="twitter: image" content="${ogImage}">\n`
+    metaTags += `<meta name="twitter: site" content="@ziontechgroup">\n`
     metaTags += `<meta name="twitter:creator" content="@ziontechgroup">\n`
     // Additional meta tags
     if (publishedTime) {
       metaTags += `<meta property="article:published_time" content="${publishedTime}">\n`
     }
     if (modifiedTime) {
-      metaTags += `<meta property="article:modified_time" content="${modifiedTime}">\n`
+      metaTags += `<meta property="article: modified_time" content="${modifiedTime}">\n`
     }
     if (section) {
-      metaTags += `<meta property="article:section" content="${this.escapeHtml(section)}">\n`
+      metaTags += `<meta property="article: section" content="${this.escapeHtml(section)}">\n`
     }
     if (tags && tags.length > 0) {
       tags.forEach(tag => {
-        metaTags += `<meta property="article:tag" content="${this.escapeHtml(tag)}">\n`
+        metaTags += `<meta property="article: tag" content="${this.escapeHtml(tag)}">\n`
       })
     }
 
@@ -88,11 +88,11 @@ export class SEOUtils {
    */
   static generateOrganizationStructuredData(): any {
     return {
-      "@context": "https://schema.org",
+      "@context": "https: //schema.org",
       "@type": "Organization",
       "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com",
-      "logo": "https://ziontechgroup.com/logo.png",
+      "url": "https: //ziontechgroup.com",
+      "logo": "https: //ziontechgroup.com/logo.png",
       "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
       "foundingDate": "2020",
       "numberOfEmployees": "50-100",
@@ -112,27 +112,15 @@ export class SEOUtils {
         "postalCode": "19709",
         "addressCountry": "US"
       },
-      "sameAs": [
-        "https://twitter.com/ziontechgroup",
-        "https://linkedin.com/company/ziontechgroup"
-      ],
+      "sameAs": ["https: //twitter.com/ziontechgroup", "https: //linkedin.com/company/ziontechgroup"],
       "offers": {
         "@type": "AggregateOffer",
         "offerCount": "50+",
-        "offers": [
-          {
-            "@type": "Offer",
-            "name": "AI Services",
-            "description": "AI-powered enterprise solutions",
-            "priceRange": "$1,500-$5,000/month"
-          },
-          {
-            "@type": "Offer",
-            "name": "IT Services",
-            "description": "Comprehensive IT solutions",
-            "priceRange": "$800-$3,000/month"
-          }
-        ]
+        "offers": [{
+            "@type": "Offer", "name": "AI Services", "description": "AI-powered enterprise solutions", "priceRange": "$1, 500-$5, 000/month"
+          }, {
+            "@type": "Offer", "name": "IT Services", "description": "Comprehensive IT solutions", "priceRange": "$800-$3, 000/month"
+          }]
       }
     }
   }
@@ -140,9 +128,10 @@ export class SEOUtils {
   /**
    * Generate FAQ structured data
    */
-  static generateFAQStructuredData(faqs: Array<{question: string, answer: string}>): any {
+  static generateFAQStructuredData(faqs: Array<>
+  {question: string, answer: string}): any {
     return {
-      "@context": "https://schema.org",
+      "@context": "https: //schema.org",
       "@type": "FAQPage",
       "mainEntity": faqs.map(faq => ({
         "@type": "Question",
@@ -158,9 +147,11 @@ export class SEOUtils {
   /**
    * Generate breadcrumb structured data
    */
-  static generateBreadcrumbStructuredData(breadcrumbs: Array<{name: string, url: string}>): any {
+</>
+  static generateBreadcrumbStructuredData(breadcrumbs: Array<>
+  {name: string, url: string}): any {
     return {
-      "@context": "https://schema.org",
+      "@context": "https: //schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": breadcrumbs.map((crumb, index) => ({
         "@type": "ListItem",
@@ -182,7 +173,7 @@ export class SEOUtils {
     provider: string
   }): any {
     return {
-      "@context": "https://schema.org",
+      "@context": "https: //schema.org",
       "@type": "Service",
       "name": service.name,
       "description": service.description,
@@ -202,9 +193,12 @@ export class SEOUtils {
   /**
    * Generate sitemap data
    */
-  static generateSitemapData(pages: Array<{url: string, lastmod: string, changefreq: string, priority: string}>): string {
+</>
+  static generateSitemapData(pages: Array<>
+  {url: string, lastmod: string, changefreq: string, priority: string}): string {
+</>
     let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n'
-    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    sitemap += '<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">\n'
     pages.forEach(page => {
       sitemap += '  <url>\n'
       sitemap += `    <loc>${page.url}</loc>\n`
@@ -280,25 +274,7 @@ Disallow: /private/`
    * Generate keyword suggestions
    */
   static generateKeywordSuggestions(baseKeywords: string[]): string[] {
-    const variations = [
-      'AI solutions',
-      'artificial intelligence',
-      'machine learning',
-      'quantum computing',
-      'autonomous systems',
-      'digital transformation',
-      'enterprise AI',
-      'IT services',
-      'cloud computing',
-      'cybersecurity',
-      'data analytics',
-      'business intelligence',
-      'automation',
-      'DevOps',
-      'blockchain',
-      'IoT',
-      'edge computing'
-    ]
+    const variations = ['AI solutions', 'artificial intelligence', 'machine learning', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'IT services', 'cloud computing', 'cybersecurity', 'data analytics', 'business intelligence', 'automation', 'DevOps', 'blockchain', 'IoT', 'edge computing']
     return [...new Set([...baseKeywords, ...variations])]
   }
 
@@ -337,8 +313,10 @@ Disallow: /private/`
       '"': '&quot;',
       "'": '&#039;'
     }
-    return text.replace(/[&<>"']/g, (m) => map[m])
+    return text.replace(/[&<>
+  "']/g, (m) => map[m])
   }
 }
 
+</>
 export default SEOUtils</$1></li></li>

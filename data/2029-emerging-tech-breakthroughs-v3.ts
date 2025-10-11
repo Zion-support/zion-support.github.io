@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface EmergingTechBreakthrough2029V3 {
   id: string
   name: string
@@ -39,39 +39,12 @@ export interface EmergingTechBreakthrough2029V3 {
   rating: number
   reviews: number
 }
-export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] = [
-  // Photonic Computing Infrastructure
+export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] = [// Photonic Computing Infrastructure
   {
-    id: 'photonic-computing-infrastructure',
-    name: 'Photonic Computing Infrastructure',
-    tagline: 'Light-speed computing with photonic processors',
-    price: '$699',
-    period: '/month',
-    description: 'Revolutionary photonic computing infrastructure that uses light instead of electricity for computation, enabling 1000x faster processing speeds and ultra-low power consumption.',
-    features: [
-      'Photonic processors',
-      'Light-speed computation',
-      'Ultra-low power consumption',
-      'Optical interconnects',
-      'Photonic memory systems',
-      'Quantum photonic integration',
-      'Optical neural networks',
-      'Photonic AI acceleration',
-      'Real-time photonic processing',
-      'Photonic optimization algorithms'
-    description: 'Revolutionary photonic computing infrastructure that uses light instead of electricity for ultra-fast, energy-efficient computing. Enables light-speed data processing and quantum-like performance.',
-    features: [
-      'Photonic processors',
-      'Light-speed data transfer',
-      'Energy-efficient computing',
-      'Optical interconnects',
-      'Photonic memory systems',
-      'Light-based logic gates',
-      'Photonic neural networks',
-      'Optical computing',
-      'Light-speed algorithms',
-      'Photonic optimization'
-    ],
+    id: 'photonic-computing-infrastructure', name: 'Photonic Computing Infrastructure', tagline: 'Light-speed computing with photonic processors', price: '$699', period: '/month', description: 'Revolutionary photonic computing infrastructure that uses light instead of electricity for computation, enabling 1000x faster processing speeds and ultra-low power consumption.', features: [
+      'Photonic processors', 'Light-speed computation', 'Ultra-low power consumption', 'Optical interconnects', 'Photonic memory systems', 'Quantum photonic integration', 'Optical neural networks', 'Photonic AI acceleration', 'Real-time photonic processing', 'Photonic optimization algorithms'
+    description: 'Revolutionary photonic computing infrastructure that uses light instead of electricity for ultra-fast, energy-efficient computing. Enables light-speed data processing and quantum-like performance.', features: [
+      'Photonic processors', 'Light-speed data transfer', 'Energy-efficient computing', 'Optical interconnects', 'Photonic memory systems', 'Light-based logic gates', 'Photonic neural networks', 'Optical computing', 'Light-speed algorithms', 'Photonic optimization'],
     popular: true,
     icon: '💡',
     color: 'from-amber-600 via-yellow-600 to-orange-600',
@@ -126,33 +99,9 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
     price: '$499',
     period: '/month',
     description: 'Advanced metaverse development platform that enables creators to build immersive virtual worlds, experiences, and digital assets for the next generation of the internet.',
-    features: [
-      '3D world building tools',
-      'Virtual asset creation',
-      'Multi-user experiences',
-      'VR/AR integration',
-      'Blockchain integration',
-      'Digital economy tools',
-      'Avatar customization',
-      'Social interaction systems',
-      'Content monetization',
-      'Cross-platform deployment'
-    tagline: 'Build immersive virtual worlds and digital experiences',
-    price: '$499',
-    period: '/month',
-    description: 'Advanced metaverse development platform for creating immersive virtual worlds, digital experiences, and 3D environments. Enables rapid development of metaverse applications and virtual reality experiences.',
-    features: [
-      '3D world building tools',
-      'Virtual reality integration',
-      'Avatar creation systems',
-      'Social interaction tools',
-      'Digital asset management',
-      'Virtual economy systems',
-      'Cross-platform compatibility',
-      'Real-time collaboration',
-      'AI-powered NPCs',
-      'Metaverse analytics'
-    ],
+    features: ['3D world building tools', 'Virtual asset creation', 'Multi-user experiences', 'VR/AR integration', 'Blockchain integration', 'Digital economy tools', 'Avatar customization', 'Social interaction systems', 'Content monetization', 'Cross-platform deployment'
+    tagline: 'Build immersive virtual worlds and digital experiences', price: '$499', period: '/month', description: 'Advanced metaverse development platform for creating immersive virtual worlds, digital experiences, and 3D environments. Enables rapid development of metaverse applications and virtual reality experiences.', features: [
+      '3D world building tools', 'Virtual reality integration', 'Avatar creation systems', 'Social interaction tools', 'Digital asset management', 'Virtual economy systems', 'Cross-platform compatibility', 'Real-time collaboration', 'AI-powered NPCs', 'Metaverse analytics'],
     popular: true,
     icon: '🌌',
     color: 'from-indigo-600 via-purple-600 to-pink-600',
@@ -215,18 +164,7 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
     price: '$7,999',
     period: '/month',
     description: 'Advanced AI-powered health analytics platform that predicts health outcomes, identifies risk factors, and provides personalized health recommendations. Enables proactive healthcare and preventive medicine.',
-    features: [
-      'Health outcome prediction',
-      'Risk factor identification',
-      'Personalized recommendations',
-      'Medical data analysis',
-      'Predictive modeling',
-      'Health trend analysis',
-      'Early warning systems',
-      'Treatment optimization',
-      'Population health insights',
-      'Clinical decision support'
-    ],
+    features: ['Health outcome prediction', 'Risk factor identification', 'Personalized recommendations', 'Medical data analysis', 'Predictive modeling', 'Health trend analysis', 'Early warning systems', 'Treatment optimization', 'Population health insights', 'Clinical decision support'],
     popular: true,
     icon: '🏥',
     color: 'from-red-600 via-pink-600 to-rose-600',
@@ -293,18 +231,7 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
     price: '$399',
     period: '/month',
     description: 'Revolutionary blockchain-based supply chain transparency platform that provides end-to-end traceability, authenticity verification, and compliance monitoring for global supply chains.',
-    features: [
-      'End-to-end traceability',
-      'Authenticity verification',
-      'Compliance monitoring',
-      'Smart contracts',
-      'Real-time tracking',
-      'Quality assurance',
-      'Sustainability tracking',
-      'Cost optimization',
-      'Risk management',
-      'Stakeholder collaboration'
-    ],
+    features: ['End-to-end traceability', 'Authenticity verification', 'Compliance monitoring', 'Smart contracts', 'Real-time tracking', 'Quality assurance', 'Sustainability tracking', 'Cost optimization', 'Risk management', 'Stakeholder collaboration'],
     popular: true,
     icon: '🔗',
     color: 'from-green-600 via-emerald-600 to-teal-600',
@@ -316,18 +243,7 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
     price: '$399',
     period: '/month',
     description: 'Revolutionary blockchain-based supply chain transparency platform that provides end-to-end traceability, authenticity verification, and real-time monitoring of products throughout the supply chain.',
-    features: [
-      'End-to-end traceability',
-      'Product authenticity verification',
-      'Real-time monitoring',
-      'Smart contracts',
-      'Immutable records',
-      'Supply chain mapping',
-      'Quality assurance',
-      'Compliance tracking',
-      'Sustainability monitoring',
-      'Transparency reporting'
-    ],
+    features: ['End-to-end traceability', 'Product authenticity verification', 'Real-time monitoring', 'Smart contracts', 'Immutable records', 'Supply chain mapping', 'Quality assurance', 'Compliance tracking', 'Sustainability monitoring', 'Transparency reporting'],
     popular: true,
     icon: '🔗',
     color: 'from-blue-600 via-cyan-600 to-teal-600',
@@ -380,18 +296,7 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
     price: '$199',
     period: '/month',
     description: 'Advanced AI-powered customer success automation platform that predicts churn, automates onboarding, and optimizes customer retention through intelligent automation and personalization.',
-    features: [
-      'Churn prediction',
-      'Automated onboarding',
-      'Personalized engagement',
-      'Success milestone tracking',
-      'Automated interventions',
-      'Customer health scoring',
-      'Retention optimization',
-      'Success analytics',
-      'Automated workflows',
-      'Performance insights'
-    ],
+    features: ['Churn prediction', 'Automated onboarding', 'Personalized engagement', 'Success milestone tracking', 'Automated interventions', 'Customer health scoring', 'Retention optimization', 'Success analytics', 'Automated workflows', 'Performance insights'],
     popular: true,
     icon: '🎯',
     color: 'from-blue-600 via-cyan-600 to-teal-600',
@@ -403,18 +308,7 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
     price: '$199',
     period: '/month',
     description: 'Advanced AI-powered customer success automation platform that predicts churn, identifies upsell opportunities, and automates customer engagement. Drives customer retention and revenue growth.',
-    features: [
-      'Churn prediction',
-      'Upsell opportunity identification',
-      'Automated customer engagement',
-      'Success score tracking',
-      'Personalized recommendations',
-      'Proactive support',
-      'Customer health monitoring',
-      'Retention optimization',
-      'Revenue expansion',
-      'Success analytics'
-    ],
+    features: ['Churn prediction', 'Upsell opportunity identification', 'Automated customer engagement', 'Success score tracking', 'Personalized recommendations', 'Proactive support', 'Customer health monitoring', 'Retention optimization', 'Revenue expansion', 'Success analytics'],
     popular: true,
     icon: '🎯',
     color: 'from-green-600 via-emerald-600 to-teal-600',
@@ -466,18 +360,7 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
     price: '$599',
     period: '/month',
     description: 'Advanced quantum-secure communication platform that provides unbreakable encryption for messaging, voice, and video communications using quantum key distribution and quantum-resistant algorithms.',
-    features: [
-      'Quantum key distribution',
-      'Quantum-resistant encryption',
-      'Secure messaging',
-      'Voice encryption',
-      'Video encryption',
-      'File encryption',
-      'Quantum authentication',
-      'Secure key exchange',
-      'Compliance monitoring',
-      'Audit trails'
-    ],
+    features: ['Quantum key distribution', 'Quantum-resistant encryption', 'Secure messaging', 'Voice encryption', 'Video encryption', 'File encryption', 'Quantum authentication', 'Secure key exchange', 'Compliance monitoring', 'Audit trails'],
     popular: true,
     icon: '🔒',
     color: 'from-violet-600 via-purple-600 to-indigo-600',
@@ -497,18 +380,7 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
     marketSize: '$12B quantum security market',
     growthRate: '350% annual growth',
     description: 'Advanced quantum-secure communication platform that provides unbreakable encryption for all forms of communication. Uses quantum key distribution and post-quantum cryptography for ultimate security.',
-    features: [
-      'Quantum key distribution',
-      'Post-quantum cryptography',
-      'End-to-end encryption',
-      'Quantum-resistant algorithms',
-      'Secure messaging',
-      'Video call encryption',
-      'File encryption',
-      'Quantum authentication',
-      'Security compliance',
-      'Threat detection'
-    ],
+    features: ['Quantum key distribution', 'Post-quantum cryptography', 'End-to-end encryption', 'Quantum-resistant algorithms', 'Secure messaging', 'Video call encryption', 'File encryption', 'Quantum authentication', 'Security compliance', 'Threat detection'],
     popular: true,
     icon: '🔒',
     color: 'from-indigo-600 via-purple-600 to-violet-600',
@@ -554,21 +426,8 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
     price: '$299',
     period: '/month',
     description: 'Advanced AI-powered business intelligence suite that provides intelligent insights, predictive analytics, and automated reporting to drive data-driven decision making and business growth.',
-    features: [
-      'Intelligent insights',
-    description: 'Advanced AI-powered business intelligence suite that provides intelligent insights, predictive analytics, and automated reporting. Transforms data into actionable business intelligence.',
-    features: [
-      'AI-powered insights',
-      'Predictive analytics',
-      'Automated reporting',
-      'Data visualization',
-      'Natural language queries',
-      'Real-time analytics',
-      'Performance monitoring',
-      'Trend analysis',
-      'Anomaly detection',
-      'Actionable recommendations'
-    ],
+    features: ['Intelligent insights', description: 'Advanced AI-powered business intelligence suite that provides intelligent insights, predictive analytics, and automated reporting. Transforms data into actionable business intelligence.', features: [
+      'AI-powered insights', 'Predictive analytics', 'Automated reporting', 'Data visualization', 'Natural language queries', 'Real-time analytics', 'Performance monitoring', 'Trend analysis', 'Anomaly detection', 'Actionable recommendations'],
     popular: true,
     icon: '📊',
     color: 'from-slate-600 via-gray-600 to-zinc-600',

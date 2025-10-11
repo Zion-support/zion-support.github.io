@@ -4,8 +4,8 @@
  * Checks for common issues before building the application
  */
 
-import { readFileSync, existsSync } from 'fs'
-import { resolve } from 'path'
+import { readFileSync, existsSync  } from 'fs'
+import { resolve  } from 'path'
 const _errors = []
 const _warnings = []
 // // Check Node version
@@ -18,12 +18,7 @@ if (currentNodeVersion < requiredNodeVersion) {/* TODO: Fix JSX expression */}
 //   }
 
 // Check for required files
-const requiredFiles = [
-  'package.json',
-  'next.config.js',
-  'tsconfig.json',
-  'tailwind.config.cjs',
-  'postcss.config.cjs']
+const requiredFiles = ['package.json', 'next.config.js', 'tsconfig.json', 'tailwind.config.cjs', 'postcss.config.cjs']
 requiredFiles.forEach((file) => {/* TODO: Fix JSX expression */}`
   missing: ${file}`)
   } else {/* TODO: Fix JSX expression */}

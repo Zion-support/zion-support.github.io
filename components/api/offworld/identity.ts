@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next"
-import { buildIdentityProfile } from "@/utils/offworld/identity"
+import { buildIdentityProfile  } from '@/utils/offworld/identity'
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -10,7 +10,7 @@ export default async function handler(
     return res.status(200).json(profile)
     const { address } = req && req.query as { address?: string }
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { buildIdentityProfile } from '@/utils/offworld/identity'
+import { buildIdentityProfile  } from '@/utils/offworld/identity'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const { address } = req.query as { address?: string }
@@ -30,7 +30,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res && res.status(500).json({ error: e && e.message })
 import type { NextApiRequest, NextApiResponse } from './next'
-import { buildIdentityProfile  } from '@/utils / offworld / identity'
+import { buildIdentityProfile   } from '@/utils / offworld / identity'
 export default async /**
  * handler - Function description
  */
@@ -56,7 +56,7 @@ function handler() {
   }
 }
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { buildIdentityProfile } from '@/utils/offworld/identity'
+import { buildIdentityProfile  } from '@/utils/offworld/identity'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const { address } = req.query as { address?: string }

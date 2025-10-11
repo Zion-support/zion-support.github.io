@@ -78,16 +78,12 @@ export interface PracticalBusinessSolution2028 {/* TODO: Fix JSX expression */}
     address: string,
   }
 }
-export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [,
-    id: "2028-practical-business-solution", name: "2028 Practical Business Solution Platform",
-    tagline: "Practical business solutions for 2028", price: "$249/month"
+export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [id: "2028-practical-business-solution", name: "2028 Practical Business Solution Platform", tagline: "Practical business solutions for 2028", price: "$249/month"
     description: "Practical business solution platform that provides real-world solutions for 2028."
-    features: [,
-      "Practical solutions"
+    features: [, "Practical solutions"
       "Business applications"
       "Real-world use cases"
-      "Easy integration",
-      "Affordable pricing"],
+      "Easy integration", "Affordable pricing"],
     link: "/services/2028-practical-business-solution", category: "Practical Business Solutions 2028",
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
@@ -127,23 +123,17 @@ export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
   s: string}
 }
 export const,
-  practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [,
-    i,"
-  d: "2028-practical-business-solution", nam,"
-  e: "2028 Practical Business Solution Platform",
-    taglin,"
-  e: "Practical business solutions for 2028", pric,"
-  e: "$249/month",
-    descriptio,"
-  n: "Practical business solution platform that provides real-world solutions for 2028.",
-    feature,
-  s: [,"
+  practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [i, "
+  d: "2028-practical-business-solution", nam, "
+  e: "2028 Practical Business Solution Platform", taglin, "
+  e: "Practical business solutions for 2028", pric, "
+  e: "$249/month", descriptio, "
+  n: "Practical business solution platform that provides real-world solutions for 2028.", feature, s: [, "
       "Practical solutions""
       "Business applications""
       "Real-world use cases""
       "Easy integration""
-      "Affordable pricing"
-    ],
+      "Affordable pricing"],
     lin,"
   k: "/services/2028-practical-business-solution", categor,"
   y: "Practical Business Solutions 2028",
@@ -178,13 +168,7 @@ id: "2028-practical-business-solution"
     tagline: "Practical business solutions for 2028",
     price: "$249/month",
     description: "Practical business solution platform that provides real-world solutions for 2028.",
-    features: [,
-      "Practical solutions",
-      "Business applications",
-      "Real-world use cases",
-      "Easy integration",
-      "Affordable pricing"
-    ],
+    features: ["Practical solutions", "Business applications", "Real-world use cases", "Easy integration", "Affordable pricing"],
     link: "/services/2028-practical-business-solution"
     category: "Practical Business Solutions 2028"
     realImplementation: true
@@ -210,13 +194,12 @@ id: "2028-practical-business-solution"
     descriptio,"
   n: "Practical business solution platform that provides real-world solutions for 2028.",
     feature,
-  s: [,"
-      "Practical solutions","
-      "Business applications","
-      "Real-world use cases","
-      "Easy integration","
-      "Affordable pricing"
-    ],
+  s: ["
+      "Practical solutions", "
+      "Business applications", "
+      "Real-world use cases", "
+      "Easy integration", "
+      "Affordable pricing"],
     lin,"
   k: "/services/2028-practical-business-solution",
     categor,"
@@ -288,13 +271,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [ i,"
-  d: "2028-practical-business-solution", nam,"
-  e: "2028 Practical Business Solution Platform", taglin,"
-  e: "Practical business solutions for 2028", pric,"
-  e: "$249/month", descriptio,"
-  n: "Practical business solution platform that provides real-world solutions for 2028.", feature,"
-  s: [ "Practical solutions" "Business applications" "Real-world use cases" "Easy integration" "Affordable pricing" ], lin,"
+  practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [i, "
+  d: "2028-practical-business-solution", nam, "
+  e: "2028 Practical Business Solution Platform", taglin, "
+  e: "Practical business solutions for 2028", pric, "
+  e: "$249/month", descriptio, "
+  n: "Practical business solution platform that provides real-world solutions for 2028.", feature, "
+  s: [ "Practical solutions" "Business applications" "Real-world use cases" "Easy integration" "Affordable pricing"], lin,"
   k: "/services/2028-practical-business-solution", categor,"
   y: "Practical Business Solutions 2028", realImplementatio,
   n: true, contactInf,
@@ -311,7 +294,7 @@ i,
   e: "Practical business solutions for 2028", pric,"
   e: "$249/month", descriptio,"
   n: "Practical business solution platform that provides real-world solutions for 2028.", feature,"
-  s: [ "Practical solutions", "Business applications", "Real-world use cases", "Easy integration", "Affordable pricing" ], lin,"
+  s: ["Practical solutions", "Business applications", "Real-world use cases", "Easy integration", "Affordable pricing"], lin,"
   k: "/services/2028-practical-business-solution", categor,"
   y: "Practical Business Solutions 2028", realImplementatio,
   n: true, contactInf,

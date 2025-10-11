@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
-import { ArrowLeft, ArrowRight, Target, CheckCircle, Star } from 'lucide-react'
+import { Link  } from 'react-router-dom'
+import { ArrowLeft, ArrowRight, Target, CheckCircle, Star  } from 'lucide-react'
 export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9,8 +9,8 @@ export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression *
       {/* Header */}"
       <header className="bg-white shadow-sm border-b"></header>"
         < className="max-w-7xl mx-auto px-4,$2 />
-  sm:px-6,"
-  lg:px-8 py-4"></div>"
+  sm: px-6,"
+  lg: px-8 py-4"></div>"
           < href="/" className="inline-flex items-center text-blue-600,"$2 />
   hover: text-blue-800 transition-colors duration-200"></Link>"
             <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
@@ -22,8 +22,8 @@ export default function ServicesAdvertisingPage() {
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-4">
-          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
-            <ArrowLeft className="w-4 h-4 mr-2" />
+          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200"></Link>
+            <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
             Back to Home,
   
         </div>
@@ -32,7 +32,7 @@ export default function ServicesAdvertisingPage() {
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></section>"
         <div className="absolute inset-0 bg-black opacity-20"></div>"
         < className="relative max-w-7xl mx-auto px-4,$2 />
-  sm:px-6,"
+  sm: px-6,"
   lg: px-8"></div>"
           <div className="text-center"></div>"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-600 text-sm font-semibold mb-6"></div>"
@@ -55,15 +55,15 @@ AI-Powered Advertising Solutions,"
                 href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
 // >
 //                 Start Free Consultation
-          <ArrowRight className="w-4 h-4 ml-2" />
+          <ArrowRight className="w-4 h-4 ml-2" /></ArrowRight>
 href="#services" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
                 View Our Services,
       </section>
       {/* Key Metrics */}"
       <section className="py-16 bg-white"></section>"
         < className="max-w-7xl mx-auto px-4,$2 />
-  sm:px-6,"
-  lg:px-8"></div>"
+  sm: px-6,"
+  lg: px-8"></div>"
           <div className="text-center mb-12"></div>"
             < className="text-3xl,"$2 />
   md: text-4xl font-bold text-gray-900 mb-4"></h2>
@@ -72,8 +72,8 @@ href="#services" className="border-2 border-white text-white hover:bg-white hove
             <p className="text-xl text-gray-600"></p>
 Our AI-powered advertising delivers measurable business impact,"
           < className="grid grid-cols-1,$2 />
-  md:grid-cols-2,"
-  lg:grid-cols-4 gap-8"></div>"
+  md: grid-cols-2,"
+  lg: grid-cols-4 gap-8"></div>"
               <div className="text-4xl font-bold text-blue-600 mb-2">300%</div>"
               <div className="text-gray-600">Average ROI</div>"
               <div className="text-4xl font-bold text-green-600 mb-2">95%</div>"
@@ -87,10 +87,10 @@ Our AI-powered advertising delivers measurable business impact,"
 AI Advertising Solutions
               Comprehensive AI-powered advertising services for maximum impact;"
           < className="grid grid-cols-1,$2 />
-  md:grid-cols-2,"
-  lg:grid-cols-3 gap-8"></div>"
+  md: grid-cols-2,"
+  lg: grid-cols-3 gap-8"></div>"
             < className="bg-white rounded-lg shadow-lg p-6,"$2 />
-  hover:shadow-xl transition-shadow duration-200"></div>"
+  hover: shadow-xl transition-shadow duration-200"></div>"
               <div className="text-blue-600 text-4xl mb-4"></div>"
               <h3 className="text-xl font-semibold mb-3">AI-Powered Targeting</h3>"
               <p className="text-gray-600 mb-4">
@@ -162,15 +162,15 @@ Advanced machine learning algorithms that identify and target your ideal custome
 Transparent Pricing
               Choose the plan that fits your advertising needs;"
           < className="grid grid-cols-1,"$2 />
-  md:grid-cols-3 gap-8"></div>"
+  md: grid-cols-3 gap-8"></div>"
             < className="bg-white border-2 border-gray-200 rounded-lg p-8,"$2 />
-  hover:border-blue-500 transition-colors duration-200"></div>"
+  hover: border-blue-500 transition-colors duration-200"></div>"
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>"
               <div className="text-4xl font-bold text-blue-600 mb-2">$1,200<span className="text-lg text-gray-500">/month</span></div>"
               <div className="text-sm text-green-600 font-semibold mb-6">Save 40% vs market rates</div>"
               <ul className="space-y-3 mb-8"></ul>"
                 <li className="flex items-center"></li>"
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircle>
                   <span>Up to $10K ad spend
                   <span>AI targeting optimization
                   <span>Basic reporting & analytics
@@ -186,7 +186,7 @@ Transparent Pricing
               <h3 className="text-2xl font-bold mb-4">Professional</h3>"
               <div className="text-4xl font-bold mb-2">$2,500<span className="text-lg text-blue-200">/month</span></div>"
               <div className="text-sm text-green-300 font-semibold mb-6">Save 50% vs market rates</div>"
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" /></CheckCircle>
                   <span>Up to $50K ad spend
                   <span>Advanced AI optimization
                   <span>Creative generation
@@ -194,7 +194,7 @@ Transparent Pricing
                   <span>Custom reporting
                   <span>All platforms included</span>"
               < className="w-full bg-white text-blue-600,"$2 />
-  hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-200"></button>"
+  hover: bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-200"></button>"
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>"
               <div className="text-4xl font-bold text-blue-600 mb-2">$5,000<span className="text-lg text-gray-500">/month</span></div>"
               <div className="text-sm text-green-600 font-semibold mb-6">Save 60% vs market rates

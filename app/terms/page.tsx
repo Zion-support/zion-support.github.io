@@ -1,41 +1,7 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 
 const TermsPage: React.FC = () => {
-=======
-import { Helmet } from 'react-helmet-async';
-import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
-  const sections = [
-    {
-      title: 'Acceptance of Terms',
-      icon: CheckCircle,
-      content: 'By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.'
-    },
-    {
-      title: 'Use License',
-      icon: Key,
-      content: 'Permission is granted to temporarily download one copy of the materials on our website for personal, non-commercial transitory viewing only.'
-    },
-    {
-      title: 'Service Availability',
-      icon: Server,
-    },
-    {
-      title: 'Governing Law',
-      icon: Scale,
-      content: 'These terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States.'
-    }
-  ]
-
-  const contactInfo = {
-    email: 'legal@ziontechgroup.com',
-    phone: '+1 (302) 464-0950',
-    address: '364 E Main St STE 1008, Middletown, DE 19709'
-  }
-
->>>>>>> main
   return (
     <div className="min-h-screen pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -46,9 +12,8 @@ import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe,
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Terms and conditions for using our services.
           </p>
-<<<<<<< HEAD
           <div></div>
-            <Calendar className="h-4 w-4 mr-2" />
+            <Calendar className="h-4 w-4 mr-2" /></Calendar>
             Last updated: {lastUpdated}
           </div>
         </div>
@@ -81,23 +46,22 @@ import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe,
             <div></div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4"></h>Contact Information</h3>
               <p className="text-gray-700 mb-6"></p>
-                If you have any questions about these Terms of Service, please contact us:
-              </p>
+                If you have any questions about these Terms of Service, please contact us: </p>
               <div></div>
                 <div></div>
-                  <Mail className="h-5 w-5 text-blue-600 mr-3" />
+                  <Mail className="h-5 w-5 text-blue-600 mr-3" /></Mail>
                   <span className="text-gray-700"></spa>legal@ziontechgroup.com</span>
                 </div>
                 <div></div>
-                  <Phone className="h-5 w-5 text-blue-600 mr-3" />
+                  <Phone className="h-5 w-5 text-blue-600 mr-3" /></Phone>
                   <span className="text-gray-700"></spa>(302) 464-0950</span>
                 </div>
                 <div></div>
-                  <Globe className="h-5 w-5 text-blue-600 mr-3" />
+                  <Globe className="h-5 w-5 text-blue-600 mr-3" /></Globe>
                   <span className="text-gray-700"></spa>ziontechgroup.com</span>
                 </div>
                 <div></div>
-                  <User className="h-5 w-5 text-blue-600 mr-3" />
+                  <User className="h-5 w-5 text-blue-600 mr-3" /></User>
                   <span className="text-gray-700"></spa>Zion Tech Group Legal Team</span>
                 </div>
               </div>
@@ -109,8 +73,6 @@ import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe,
               </p>
             </div>
           </div>
-=======
->>>>>>> origin/main
         </div>
       </div>
     </div>
@@ -118,7 +80,6 @@ import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe,
 };
 
 export default TermsPage;
-=======
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
@@ -127,10 +88,9 @@ import Footer from '../components/Footer'
 const TermsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
+      <Navigation /></Navigation>
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -144,7 +104,7 @@ const TermsPage: React.FC = () => {
       </section>
 
       {/* Content Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 space-y-8">
             <div>
@@ -185,10 +145,9 @@ const TermsPage: React.FC = () => {
         </div>
       </section>
 
-      <Footer />
+      <Footer /></Footer>
     </div>
   )
 }
 
 export default TermsPage
->>>>>>> origin/main

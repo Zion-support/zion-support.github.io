@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import https from 'https'
-import { execSync } from 'child_process'
+import { execSync  } from 'child_process'
 // GitHub API configuration
 function makeGitHubRequest(endpoint) {
   return new Promise((resolve, reject) => {

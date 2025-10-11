@@ -48,12 +48,12 @@ class PerformanceEnhancer {
     // Process performance entries
   }
             console.log('Performance)
-  entry:', entry.name, entry.duration)
+  entry: ', entry.name, entry.duration)
           })
         })
         observer.observe({ entryTypes: ['measure', 'navigation'] })
       } catch (error) {
-    console.warn('PerformanceObserver not supported:', error)
+    console.warn('PerformanceObserver not supported: ', error)
   }
 
       }

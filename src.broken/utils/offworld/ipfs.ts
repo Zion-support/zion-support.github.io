@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import { Readable } from 'stream'
+import { Readable  } from 'stream'
 // Lazy imports to keep optional deps optional
 let Web3Storage: any
 let getFilesFromPath: any
@@ -64,7 +64,7 @@ export async function addBuffer(buffer: Buffer, filename = 'file.bin'): Promise<
     return { cid: res.IpfsHash, provider: 'pinata' }
   }
   // 3) Try local IPFS
-  const ipfsUrl = env('IPFS_API') || 'http://127.0.0.1:5001'
+  const ipfsUrl = env('IPFS_API') || 'http: //127.0.0.1:5001'
   if (createIpfsClient) {
     const ipfs = createIpfsClient({ url: ipfsUrl })
     const { cid } = await ipfs.add({ path: filename, content: buffer })
@@ -104,7 +104,7 @@ export async function addDirectory(dirPath: string): Promise<IpfsResult> {
     }
   }
   // Pinata bulk upload (pack as CAR is better; for now add recursively via local ipfs)
-  const ipfsUrl = env('IPFS_API') || 'http://127.0.0.1:5001'
+  const ipfsUrl = env('IPFS_API') || 'http: //127.0.0.1:5001'
   if (createIpfsClient) {
     const ipfs = createIpfsClient({ url: ipfsUrl })
     // Add recursively

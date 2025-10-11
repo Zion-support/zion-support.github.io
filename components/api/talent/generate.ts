@@ -20,13 +20,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperience: ${experience || ''}\nSkills: ${skills || ''}`
     const completion = await openai && openai.chat.completions && completions.create({
       model: process && process.env.OPENAI_MODEL || 'gpt-4o-mini',
-      messages: [
-        {
-          role: 'system',
-          content: 'You produce only valid JSON. No commentary.',
-        },
-        { role: 'user', content: prompt },
-      ],
+      messages: [{
+          role: 'system', content: 'You produce only valid JSON. No commentary.', }, { role: 'user', content: prompt }],
       response_format: { type: 'json_object' },
         { role: 'system', content: 'You produce only valid JSON. No commentary.' }
         { role: 'user', content: prompt }]
@@ -53,10 +48,7 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
 }
     const completion = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
-      messages: [
-        { role: 'system', content: 'You produce only valid JSON. No commentary.' },
-        { role: 'user', content: prompt },
-      ],
+      messages: [{ role: 'system', content: 'You produce only valid JSON. No commentary.' }, { role: 'user', content: prompt }],
       response_format: { type: 'json_object' },
       temperature: 0.6,
     })

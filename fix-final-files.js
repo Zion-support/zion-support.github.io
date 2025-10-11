@@ -1,28 +1,11 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 // const __filename = fileURLToPath(import.meta.url)
 // const __dirname = path.dirname(__filename)
 //Files that need to be fixed
-const filesToFix = [
-  'src/components/SiteHeader.tsx',
-  'src/components/SiteSidebar.tsx',
-  'src/content/blog-posts.ts',
-  'src/content/case-studies.ts',
-  'src/content/content-config.ts',
-  'src/content/enhanced-promotional-banners.ts',
-  'src/content/latest-articles.ts',
-  'src/content/new-articles-2025.ts',
-  'src/content/new-insights.ts',
-  'src/content/new-services-2026.ts',
-  'src/content/october-2025-cutting-edge-innovations.ts',
-  'src/content/revolutionary-ai-breakthroughs-2025.ts',
-  'src/content/sept-30-breakthrough-articles-2025.ts',
-  'src/data/blog-posts.ts',
-  'src/router.tsx',
-  'src/types/index.ts',
-  'src/types/next-stubs.d.ts']
+const filesToFix = ['src/components/SiteHeader.tsx', 'src/components/SiteSidebar.tsx', 'src/content/blog-posts.ts', 'src/content/case-studies.ts', 'src/content/content-config.ts', 'src/content/enhanced-promotional-banners.ts', 'src/content/latest-articles.ts', 'src/content/new-articles-2025.ts', 'src/content/new-insights.ts', 'src/content/new-services-2026.ts', 'src/content/october-2025-cutting-edge-innovations.ts', 'src/content/revolutionary-ai-breakthroughs-2025.ts', 'src/content/sept-30-breakthrough-articles-2025.ts', 'src/data/blog-posts.ts', 'src/router.tsx', 'src/types/index.ts', 'src/types/next-stubs.d.ts']
 function createBasicComponent(filePath) {/* TODO: Fix JSX expression */}
 interface ${componentName}Props {/* TODO: Fix JSX expression */}
 }

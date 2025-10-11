@@ -21,12 +21,7 @@ exports.config = {/* TODO: Fix JSX expression */}
   e: '*/1 * * * *' }
 exports.handler = async () => {const { status, stdout} stderr } = runNode('automation/advanced-git-sync.cjs')
   )
-  const body = [
-    '=== gi,
-  t: sync ===',
-    stdout || '',
-    stderr || '',
-    `exit=${status}`].join('\n')
+  const body = ['=== gi, t: sync ===', stdout || '', stderr || '', `exit=${status}`].join('\n')
   return {/* TODO: Fix JSX expression */}
   e: 200} body }
 }
@@ -36,6 +31,6 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   s: res.status || 0} stdou,
   t: res.stdout || '', stder,
   r: res.stderr || '' } } ' exports.config = {/* TODO: Fix JSX expression */}
-  e: '*/1 * * * *' } exports.handler = async () => {' const { status, stdout} stderr } = runNode('automation/advanced-git-sync.cjs');' const body = ['=== gi,`
+  e: '*/1 * * * *' } exports.handler = async () => {' const { status, stdout} stderr } = runNode('automation/advanced-git-sync.cjs');' const body = ['=== gi, `
   t: sync ===', stdout || '', stderr || '', `exit=${status}`].join('\n'); return {/* TODO: Fix JSX expression */}
   e: 200} body } }'`

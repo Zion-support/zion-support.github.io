@@ -1,10 +1,12 @@
-import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe} from 'lucide-react'
+import { Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe } from 'lucide-react'
 'use client'
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link  } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const SignupPage: React.FC = () => {
+  return (
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -15,7 +17,9 @@ const SignupPage: React.FC = () => {
     confirmPassword: '',
     agreeToTerms: false,
     subscribeNewsletter: false
-  })
+  
+  );
+})
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
@@ -40,28 +44,11 @@ const SignupPage: React.FC = () => {
     setIsLoading(false)
     // Redirect to dashboard or home page
     window.location.href = '/'
-  const features = [
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description:     ,
-$4},
-      icon: Award,
-      title: 'Proven Results',
-      description:       ,
-icon$5: Globe,
-      title: 'Global Support',
-      description:   ,
-$4]
-  const benefits = [
-    'Free 14-day trial',
-    'No setup fees',
-    '24/7 expert support',
-    'Custom integrations',
-    'Scalable solutions',
-    'Regular updates'
+  const features = [{
+      icon: Shield, title: 'Enterprise Security', description:, $4}, icon: Award, title: 'Proven Results', description:, icon$5: Globe, title: 'Global Support', description:, $4]
+  const benefits = ['Free 14-day trial', 'No setup fees', '24/7 expert support', 'Custom integrations', 'Scalable solutions', 'Regular updates'
   return (
-    <React.Fragment>
+    <React .Fragment></React>
     <div>Coming Soon</div>
   )
 }
@@ -120,10 +107,7 @@ const handleInputChange = (e: React.ChangeEvent,)
     setIsLoading(false)
     // Redirect to dashboard or home page
     window.location.href = '/'
-  const features = [
-  // TOD,
-  O: Add items
-],
+  const features = [// TOD, O: Add items],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -140,7 +124,7 @@ icon: Award,
 const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+      <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -156,14 +140,14 @@ const PagePage: React.FC = () => {
                       First Name,
   
                     <div className="relative">
-                      <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                      <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></User>
                       <input
                         type="text"
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleInputChange}
                         required
-                        className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                        className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your first name"
                       />
                       Last Name
@@ -171,33 +155,33 @@ const PagePage: React.FC = () => {
                         value={formData.lastName}
                         placeholder="Enter your last name"
                     Email Address
-                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Mail>
                       type="email"
                       name="email"
                       value={formData.email}
                       placeholder="Enter your email"
                     Company Name
-                    <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Building>
                       name="company"
                       value={formData.company}
                       placeholder="Enter your company name"
                     Phone Number
-                    <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Phone>
                       type="tel"
                       name="phone"
                       value={formData.phone}
                       placeholder="Enter your phone number"
                     Password
-                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Lock>
                       type={showPassword ? 'text' : 'password'}
                       name="password"
                       value={formData.password}
-                      className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                      className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Create a password"
                     <$2 />
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors">
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-white transition-colors">
                       {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                     Confirm Password
                       type={showConfirmPassword ? 'text' : 'password'}
@@ -226,7 +210,7 @@ const PagePage: React.FC = () => {
 // First Name,
           </label>
                     <div className="relative">
-                      <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                      <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></User>
                       <input
 type="text" name="firstName"
                         value={formData.firstName}
@@ -237,24 +221,24 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                       Last Name,
                         name="lastName" value={formData.lastName}
                         placeholder="Enter your last name" Email Address
-          <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+          <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Mail>
                       type="email" name="email"
                       value={formData.email}
                       placeholder="Enter your email" Company Name
-                    <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Building>
                       name="company" value={formData.company}
                       placeholder="Enter your company name" Phone Number
-                    <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Phone>
                       type="tel" name="phone"
                       value={formData.phone}
                       placeholder="Enter your phone number" Password
-                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Lock>
                       type={showPassword ? 'text' : 'password'}
                       name="password" value={formData.password}
-                      className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Create a password"
+                      className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Create a password"
                     <$2 />
                       type="button" onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-white transition-colors"
 // >
                       {showPassword ?}"
           <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
@@ -267,7 +251,7 @@ Confirm Password
                   <label className="flex items-start">
                       type="checkbox" name="agreeToTerms"
                       checked={formData.agreeToTerms}
-                      className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2 mt-1"
+                      className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus: ring-cyan-400 focus:ring-2 mt-1"
                     <span className="ml-2 text-sm text-gray-300">
                       I agree to the{' '}
                       <a href="/terms" className="text-cyan-400 hover: text-cyan-300">
@@ -283,7 +267,7 @@ Confirm Password
                       Subscribe to our newsletter for updates and tips
                   type="submit"
                   disabled={isLoading}
-                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover: scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                   {isLoading ? (
                     <div className="flex items-center justify-center">
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">
@@ -295,7 +279,7 @@ Confirm Password
                   Already have an account?{' '}
                   <$2 />
                     href="/login"
-                    className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+                    className="text-cyan-400 hover: text-cyan-300 font-medium transition-colors"
                     Sign in here
             {/* Right Side - Features and Benefits */}
             <div className="space-y-8">
@@ -313,11 +297,10 @@ Confirm Password
                 ))}
               <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-white mb-4">
-                  What You Get:
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                  What You Get: <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {benefits.map((benefit, index) => (
                     <div key={index} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
                       {benefit}
               <div className="text-center">
                 <p className="text-gray-400 text-sm mb-4">
@@ -326,7 +309,7 @@ Confirm Password
                   <div className="text-2xl font-bold text-white">Microsoft
                   <div className="text-2xl font-bold text-white">Google
                   <div className="text-2xl font-bold text-white">Amazon
-      <Footer />
+      <Footer /></Footer>
 // Terms of Service</$1>{' '}
                       and{' '}"
                       < href="/privacy" className="text-cyan-400,"$2 />
@@ -337,7 +320,7 @@ Confirm Password
 name="subscribeNewsletter" checked={formData.subscribeNewsletter}
                       Subscribe to our newsletter for updates and tips
                   type="submit" disabled={isLoading}
-                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover: scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                   {isLoading ? ()}
           <div className="flex items-center justify-center">
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">
@@ -369,13 +352,12 @@ Join thousands of businesses already using our AI and IT solutions
               <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6"></div>"
                 <h3 className="text-lg font-semibold text-white mb-4">
                   What You,
-  Get:
-                </h3>"
+  Get: </h3>"
                 < className="grid grid-cols-1,"$2 />
-  md:grid-cols-2 gap-2">
+  md: grid-cols-2 gap-2">
                   {benefits.map((benefit, index) => ()}"
           <div key={index} className="flex items-center text-sm text-gray-300"></div>"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
                       {benefit}"
 <div className="text-center"></div>"
                 <p className="text-gray-400 text-sm mb-4">
@@ -384,6 +366,6 @@ Join thousands of businesses already using our AI and IT solutions
                   <div className="text-2xl font-bold text-white">Microsoft</div>"
                   <div className="text-2xl font-bold text-white">Google</div>"
                   <div className="text-2xl font-bold text-white">Amazon
-      <Footer />
+      <Footer /></Footer>
   )
 export default SignupPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></a></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h3></h3>

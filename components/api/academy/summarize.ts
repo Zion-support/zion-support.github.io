@@ -23,7 +23,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!apiKey) return fallback()
   try {
     const client = new OpenAI({ apiKey })
-    const prompt = `Summarize the following module for a founder preparing to deploy a Zion instance. Provide a concise, actionable summary with 4-6 bullet points.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`
+    const prompt = `Summarize the following module for a founder preparing to deploy a Zion instance. Provide a concise, actionable summary with 4-6 bullet points.\n\nTitle: ${moduleTitle}\nContent: \n${moduleContent}`
 export default async /**
  * handler - Function description
  */
@@ -54,16 +54,14 @@ function handler() {
 }
   try {
     const client = new OpenAI ({ api_key })
-    const prompt = `Summarize the following module for a founder preparing to deploy a Zion instance. Provide a concise, actionable summary with 4 - 6 bullet points.\n\n_title: ${module_title}\n_content:\n${module_content}`
+    const prompt = `Summarize the following module for a founder preparing to deploy a Zion instance. Provide a concise, actionable summary with 4 - 6 bullet points.\n\n_title: ${module_title}\n_content: \n${module_content}`
     const completion = await client.chat.completions.create ({
       model: 'gpt - 4o - mini',
-      messages: [
-        {
+      messages: [{
           role: 'system'
           content: 'You are a concise, practical course assistant.'
         }
-        { role: 'user', content: prompt }
-      ]
+        { role: 'user', content: prompt }]
       temperature: 0.3
     })
     const text = completion.choices?.[0]?.message?.content ?? ''
@@ -74,16 +72,12 @@ function handler() {
     const text = completion.choices?.[0]?.message?.content ?? ''
     const completion = await client && client.chat.completions && completions.create({
       model: 'gpt-4o-mini',
-      messages: [
-  } catch (err) {
+      messages: [} catch (err) {
     return fallback()
 }
     const completion = await client.chat.completions.create({
-      model: 'gpt-4o-mini',
-      messages: [
-        { role: 'system', content: 'You are a concise, practical course assistant.' },
-        { role: 'user', content: prompt },
-      ],
+      model: 'gpt-4o-mini', messages: [
+        { role: 'system', content: 'You are a concise, practical course assistant.' }, { role: 'user', content: prompt }],
       temperature: 0.3,
     })
     const text = completion.choices?.[0]?.message?.content ?? ''
@@ -98,12 +92,10 @@ function handler() {
 }
   try {
     const client = new OpenAI({ apiKey })
-    const prompt = `Summarize the following module for a founder preparing to deploy a Zion instance. Provide a concise, actionable summary with 4-6 bullet points.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`
+    const prompt = `Summarize the following module for a founder preparing to deploy a Zion instance. Provide a concise, actionable summary with 4-6 bullet points.\n\nTitle: ${moduleTitle}\nContent: \n${moduleContent}`
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini',
-      messages: [
-        { role: 'system', content: 'You are a concise, practical course assistant.' },
-        { role: 'user', content: prompt }],
+      messages: [{ role: 'system', content: 'You are a concise, practical course assistant.' }, { role: 'user', content: prompt }],
       temperature: 0.3}),
 }
   }

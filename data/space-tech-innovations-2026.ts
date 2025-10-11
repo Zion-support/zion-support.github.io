@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface SpaceTechInnovation2026 {
   id: string
   name: string
@@ -39,27 +39,10 @@ export interface SpaceTechInnovation2026 {
   rating: number
   reviews: number
 }
-export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
-  // Space Technology AI Platform
+export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [// Space Technology AI Platform
   {
-    id: 'space-technology-ai-platform',
-    name: 'Space Technology AI Platform',
-    tagline: 'AI-powered space exploration and satellite operations',
-    price: '$3,999',
-    period: '/month',
-    description: 'Revolutionary AI platform that combines space technology with artificial intelligence to enable autonomous space exploration, satellite operations, and space data analysis.',
-    features: [
-      'AI-powered satellite operations',
-      'Autonomous space exploration',
-      'Space data analytics',
-      'Satellite constellation management',
-      'Space debris tracking',
-      'Real-time monitoring',
-      'Predictive maintenance',
-      'Mission planning tools',
-      'API access',
-      'Expert consultation'
-    ],
+    id: 'space-technology-ai-platform', name: 'Space Technology AI Platform', tagline: 'AI-powered space exploration and satellite operations', price: '$3, 999', period: '/month', description: 'Revolutionary AI platform that combines space technology with artificial intelligence to enable autonomous space exploration, satellite operations, and space data analysis.', features: [
+      'AI-powered satellite operations', 'Autonomous space exploration', 'Space data analytics', 'Satellite constellation management', 'Space debris tracking', 'Real-time monitoring', 'Predictive maintenance', 'Mission planning tools', 'API access', 'Expert consultation'],
     popular: false,
     icon: '🛰️',
     color: 'from-blue-600 to-indigo-600',
@@ -100,18 +83,7 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     price: '$1,299',
     period: '/month',
     description: 'Advanced platform that uses quantum computing and AI to identify, analyze, and plan extraction of valuable resources from asteroids, moons, and other celestial bodies.',
-    features: [
-      'Quantum-powered resource analysis',
-      'Asteroid composition mapping',
-      'Mining feasibility assessment',
-      'Resource extraction planning',
-      'Risk assessment tools',
-      'ROI calculations',
-      'Regulatory compliance',
-      'Mission planning',
-      'Expert consultation',
-      'Investment analysis'
-    ],
+    features: ['Quantum-powered resource analysis', 'Asteroid composition mapping', 'Mining feasibility assessment', 'Resource extraction planning', 'Risk assessment tools', 'ROI calculations', 'Regulatory compliance', 'Mission planning', 'Expert consultation', 'Investment analysis'],
     popular: false,
     icon: '⛏️',
     color: 'from-yellow-600 to-orange-600',
@@ -152,18 +124,7 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     price: '$2,999',
     period: '/month',
     description: 'AI-powered platform that automates satellite operations, monitoring, and maintenance, enabling efficient management of satellite constellations and individual satellites.',
-    features: [
-      'Autonomous satellite operations',
-      'Predictive maintenance',
-      'Anomaly detection',
-      'Orbit optimization',
-      'Power management',
-      'Communication optimization',
-      'Real-time monitoring',
-      'Performance analytics',
-      'API access',
-      '24/7 support'
-    ],
+    features: ['Autonomous satellite operations', 'Predictive maintenance', 'Anomaly detection', 'Orbit optimization', 'Power management', 'Communication optimization', 'Real-time monitoring', 'Performance analytics', 'API access', '24/7 support'],
     popular: true,
     icon: '🛸',
     color: 'from-green-600 to-emerald-600',
@@ -204,18 +165,7 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     price: '$1,999',
     period: '/month',
     description: 'Comprehensive space debris tracking system that monitors orbital debris, predicts potential collisions, and provides collision avoidance recommendations for satellites and spacecraft.',
-    features: [
-      'Real-time debris tracking',
-      'Collision prediction',
-      'Avoidance recommendations',
-      'Orbital analysis',
-      'Risk assessment',
-      'Historical data analysis',
-      'API access',
-      'Mobile app',
-      'Expert consultation',
-      '24/7 monitoring'
-    ],
+    features: ['Real-time debris tracking', 'Collision prediction', 'Avoidance recommendations', 'Orbital analysis', 'Risk assessment', 'Historical data analysis', 'API access', 'Mobile app', 'Expert consultation', '24/7 monitoring'],
     popular: false,
     icon: '🚨',
     color: 'from-red-600 to-orange-600',
@@ -256,18 +206,7 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     price: '$899',
     period: '/month',
     description: 'Advanced platform that monitors space weather conditions, predicts solar storms, and provides early warning systems to protect satellites, power grids, and communication systems.',
-    features: [
-      'Real-time space weather monitoring',
-      'Solar storm prediction',
-      'Geomagnetic storm alerts',
-      'Satellite protection recommendations',
-      'Power grid protection',
-      'Communication system alerts',
-      'Historical data analysis',
-      'API access',
-      'Mobile app',
-      'Expert consultation'
-    ],
+    features: ['Real-time space weather monitoring', 'Solar storm prediction', 'Geomagnetic storm alerts', 'Satellite protection recommendations', 'Power grid protection', 'Communication system alerts', 'Historical data analysis', 'API access', 'Mobile app', 'Expert consultation'],
     popular: false,
     icon: '☀️',
     color: 'from-yellow-600 to-red-600',

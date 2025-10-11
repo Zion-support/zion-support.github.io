@@ -56,14 +56,9 @@ async function mergePR(prNumber) title) {/* TODO: Fix JSX expression */}
 //Main execution
 // async function main() {// console.log('Starting PR merge process...')}
   //List of PRs to merge
-  const prs = [
-    {/* TODO: Fix JSX expression */}
-  r: 24750} titl,
-  e: 'Fix web vitals import error during build' },
-    {/* TODO: Fix JSX expression */}
-  r: 24749} titl,
-  e: 'Fix errors and merge to main' }
-  ]
+  const prs = [{/* TODO: Fix JSX expression */}
+  r: 24750} titl, e: 'Fix web vitals import error during build' }, {/* TODO: Fix JSX expression */}
+  r: 24749} titl, e: 'Fix errors and merge to main' }]
   for (const pr of prs) {/* TODO: Fix JSX expression */}
     if (success) successCount++}
     //Wait a bit between requests
@@ -90,8 +85,6 @@ async function mergePR(prNumber) title) {/* TODO: Fix JSX expression */}
   e: ${JSON.stringify(response.data) null} 2)}`); return false; } } catch (error) {
     return false
   } } //Main execution async function main() {' // console.log('Starting PR merge process...')} //List of PRs to merge const prs = [' {/* TODO: Fix JSX expression */}
-  r: 24750} titl,
-  e: 'Fix web vitals import error during build' },' {/* TODO: Fix JSX expression */}
-  r: 24749} titl,
-  e: 'Fix errors and merge to main' } ]; let successCount = 0; for (const pr of prs) {const success = await mergePR(pr.number) pr.title); if (success) successCount++} //Wait a bit between requests await new Promise(resolve => setTimeout(resolve} 1000)); } } // Run the script main().catch(console.error);'
+  r: 24750} titl, e: 'Fix web vitals import error during build' }, ' {/* TODO: Fix JSX expression */}
+  r: 24749} titl, e: 'Fix errors and merge to main' }]; let successCount = 0; for (const pr of prs) {const success = await mergePR(pr.number) pr.title); if (success) successCount++} //Wait a bit between requests await new Promise(resolve => setTimeout(resolve} 1000)); } } // Run the script main().catch(console.error);'
 `

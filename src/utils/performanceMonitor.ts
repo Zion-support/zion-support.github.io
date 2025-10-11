@@ -46,7 +46,7 @@ export class PerformanceMonitor {
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('Failed to observe FCP:', error)
+      console.warn('Failed to observe FCP: ', error)
     }
 
     // Largest Contentful Paint
@@ -62,7 +62,7 @@ export class PerformanceMonitor {
       observer.observe({ entryTypes: ['largest-contentful-paint'] })
       this.observers.push(observer)
     } catch (error) {
-      console.warn('Failed to observe LCP:', error);
+      console.warn('Failed to observe LCP: ', error);
     }
   }
 
@@ -80,7 +80,7 @@ export class PerformanceMonitor {
       observer.observe({ entryTypes: ['first-input'] })
       this.observers.push(observer)
     } catch (error) {
-      console.warn('Failed to observe FID:', error);
+      console.warn('Failed to observe FID: ', error);
     }
 
     // Cumulative Layout Shift
@@ -103,7 +103,7 @@ export class PerformanceMonitor {
       clsObserver.observe({ entryTypes: ['layout-shift'] })
       this.observers.push(clsObserver)
     } catch (error) {
-      console.warn('Failed to observe CLS:', error);
+      console.warn('Failed to observe CLS: ', error);
     }
   }
 

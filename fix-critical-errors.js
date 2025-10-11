@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to fix critical parsing errors
@@ -58,10 +58,10 @@ function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/(\w+)\s*$/gm, '$1;')
     // Fix specific patterns
     if (filePath.includes('App.tsx')) {
-      content = content.replace(/catch\s*{\s*}/g, 'catch (error) { console.warn("Error:", error); }')
+      content = content.replace(/catch\s*{\s*}/g, 'catch (error) { console.warn("Error: ", error); }')
     if (filePath.includes('App.tsx')) {/* TODO: Fix JSX expression */}
       content = content.replace(/catch\s*{\s*}/g, 'catch (error) {/* TODO: Fix JSX expression */}
-  r:", error); }')
+  r: ", error); }')
     }
     
     if (filePath.includes('middleware')) {/* TODO: Fix JSX expression */}

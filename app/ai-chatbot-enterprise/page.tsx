@@ -1,12 +1,12 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { MessageCircle, Brain, Shield, Users, Zap, CheckCircle, ArrowRight, Star, BarChart, Globe, Lock, Target } from 'lucide-react';
+import { Helmet  } from 'react-helmet-async';
+import { MessageCircle, Brain, Shield, Users, Zap, CheckCircle, ArrowRight, Star, BarChart, Globe, Lock, Target  } from 'lucide-react';
 
 const AIChatbotEnterprisePage: React.FC = () => {
   return (
     <>
-      <Helmet>
+      <Helmet ></Helmet>
         <title>AI Enterprise Chatbot | Zion Tech Group</title>
         <meta name="description" content="Deploy enterprise-grade AI chatbots with advanced natural language processing, multi-channel support, and seamless integration for large-scale customer service operations." />
         <meta name="keywords" content="enterprise chatbot, AI customer service, conversational AI, enterprise automation, AI support" />
@@ -14,11 +14,11 @@ const AIChatbotEnterprisePage: React.FC = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-8">
-                <Brain className="w-5 h-5 text-cyan-400 mr-2" />
+                <Brain className="w-5 h-5 text-cyan-400 mr-2" /></Brain>
                 <span className="text-cyan-400 font-medium">Enterprise AI</span>
               </div>
               
@@ -35,10 +35,10 @@ const AIChatbotEnterprisePage: React.FC = () => {
                 service operations and internal automation.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                   Get Enterprise Demo
-                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                  <ArrowRight className="w-5 h-5 ml-2 inline" /></ArrowRight>
                 </button>
                 <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                   Contact Sales
@@ -49,7 +49,7 @@ const AIChatbotEnterprisePage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -61,10 +61,10 @@ const AIChatbotEnterprisePage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
-                  <MessageCircle className="w-6 h-6 text-white" />
+                  <MessageCircle className="w-6 h-6 text-white" /></MessageCircle>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Advanced NLP</h3>
                 <p className="text-gray-300 mb-4">
@@ -73,23 +73,23 @@ const AIChatbotEnterprisePage: React.FC = () => {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" /></CheckCircle>
                     Context-aware conversations
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" /></CheckCircle>
                     Multi-language support
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" /></CheckCircle>
                     Sentiment analysis
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover: border-purple-500/40 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6">
-                  <Shield className="w-6 h-6 text-white" />
+                  <Shield className="w-6 h-6 text-white" /></Shield>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Enterprise Security</h3>
                 <p className="text-gray-300 mb-4">
@@ -98,23 +98,23 @@ const AIChatbotEnterprisePage: React.FC = () => {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-purple-400 mr-2" /></CheckCircle>
                     End-to-end encryption
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-purple-400 mr-2" /></CheckCircle>
                     SOC 2 compliance
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-purple-400 mr-2" /></CheckCircle>
                     Role-based access
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 hover: border-green-500/40 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6">
-                  <Globe className="w-6 h-6 text-white" />
+                  <Globe className="w-6 h-6 text-white" /></Globe>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Multi-Channel Support</h3>
                 <p className="text-gray-300 mb-4">
@@ -123,23 +123,23 @@ const AIChatbotEnterprisePage: React.FC = () => {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                     Web & mobile integration
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                     Social media channels
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                     Unified dashboard
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-orange-500/20 hover: border-orange-500/40 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-6">
-                  <Zap className="w-6 h-6 text-white" />
+                  <Zap className="w-6 h-6 text-white" /></Zap>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">High Performance</h3>
                 <p className="text-gray-300 mb-4">
@@ -148,15 +148,15 @@ const AIChatbotEnterprisePage: React.FC = () => {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-orange-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-orange-400 mr-2" /></CheckCircle>
                     Sub-second responses
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-orange-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-orange-400 mr-2" /></CheckCircle>
                     99.9% uptime SLA
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-orange-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-orange-400 mr-2" /></CheckCircle>
                     Auto-scaling
                   </li>
                 </ul>
@@ -164,7 +164,7 @@ const AIChatbotEnterprisePage: React.FC = () => {
 
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6">
-                  <Users className="w-6 h-6 text-white" />
+                  <Users className="w-6 h-6 text-white" /></Users>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Team Collaboration</h3>
                 <p className="text-gray-300 mb-4">
@@ -173,23 +173,23 @@ const AIChatbotEnterprisePage: React.FC = () => {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-blue-400 mr-2" /></CheckCircle>
                     Agent handoff
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-blue-400 mr-2" /></CheckCircle>
                     Supervisor dashboard
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-blue-400 mr-2" /></CheckCircle>
                     Training tools
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-pink-500/20 hover:border-pink-500/40 transition-all duration-300">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-pink-500/20 hover: border-pink-500/40 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
-                  <BarChart className="w-6 h-6 text-white" />
+                  <BarChart className="w-6 h-6 text-white" /></BarChart>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Advanced Analytics</h3>
                 <p className="text-gray-300 mb-4">
@@ -198,15 +198,15 @@ const AIChatbotEnterprisePage: React.FC = () => {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-pink-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-pink-400 mr-2" /></CheckCircle>
                     Real-time insights
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-pink-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-pink-400 mr-2" /></CheckCircle>
                     Conversation analytics
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-pink-400 mr-2" />
+                    <CheckCircle className="w-4 h-4 text-pink-400 mr-2" /></CheckCircle>
                     Performance metrics
                   </li>
                 </ul>
@@ -216,7 +216,7 @@ const AIChatbotEnterprisePage: React.FC = () => {
         </section>
 
         {/* Integration Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -234,7 +234,7 @@ const AIChatbotEnterprisePage: React.FC = () => {
                 <div className="space-y-6">
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
-                      <Lock className="w-6 h-6 text-white" />
+                      <Lock className="w-6 h-6 text-white" /></Lock>
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold text-white">CRM Integration</h4>
@@ -244,7 +244,7 @@ const AIChatbotEnterprisePage: React.FC = () => {
 
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center">
-                      <Target className="w-6 h-6 text-white" />
+                      <Target className="w-6 h-6 text-white" /></Target>
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold text-white">ERP Systems</h4>
@@ -254,7 +254,7 @@ const AIChatbotEnterprisePage: React.FC = () => {
 
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
-                      <MessageCircle className="w-6 h-6 text-white" />
+                      <MessageCircle className="w-6 h-6 text-white" /></MessageCircle>
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold text-white">Communication Platforms</h4>
@@ -264,7 +264,7 @@ const AIChatbotEnterprisePage: React.FC = () => {
 
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center">
-                      <BarChart className="w-6 h-6 text-white" />
+                      <BarChart className="w-6 h-6 text-white" /></BarChart>
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold text-white">Analytics Platforms</h4>
@@ -304,7 +304,7 @@ const AIChatbotEnterprisePage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready for Enterprise AI?
@@ -316,7 +316,7 @@ const AIChatbotEnterprisePage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                 Schedule Enterprise Demo
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <ArrowRight className="w-5 h-5 ml-2 inline" /></ArrowRight>
               </button>
               <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                 Contact Enterprise Sales

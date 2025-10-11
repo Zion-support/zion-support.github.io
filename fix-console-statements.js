@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 // Function to properly fix console statements
 function fixConsoleStatements(content) {
   // Fix console statements that are already wrapped in if conditions
@@ -32,19 +32,7 @@ function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
 }
 
 // Files that need console statement fixes
-const filesToFix = [
-  'app/components/AdvancedPerformanceMonitor.tsx',
-  'app/components/EnhancedErrorBoundary.tsx',
-  'app/components/ImprovedErrorBoundary.tsx',
-  'app/components/PWAInstaller.tsx',
-  'app/components/PerformanceMonitor.tsx',
-  'app/components/SystemMonitor.tsx',
-  'app/hooks/useEnhancedPerformance.ts',
-  'app/hooks/useForm.ts',
-  'app/utils/advancedAnalytics.ts',
-  'app/utils/advancedCaching.ts',
-  'app/utils/analytics.ts',
-  'app/utils/analyticsTracker.ts']
+const filesToFix = ['app/components/AdvancedPerformanceMonitor.tsx', 'app/components/EnhancedErrorBoundary.tsx', 'app/components/ImprovedErrorBoundary.tsx', 'app/components/PWAInstaller.tsx', 'app/components/PerformanceMonitor.tsx', 'app/components/SystemMonitor.tsx', 'app/hooks/useEnhancedPerformance.ts', 'app/hooks/useForm.ts', 'app/utils/advancedAnalytics.ts', 'app/utils/advancedCaching.ts', 'app/utils/analytics.ts', 'app/utils/analyticsTracker.ts']
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
     }
 

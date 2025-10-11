@@ -32,7 +32,7 @@ export default function handler(req, res) {
   } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error reading existing wallets:', error)
+      console.error('Error reading existing wallets: ', error)
     }
     existing = []
   }
@@ -68,7 +68,7 @@ export default function handler(req, res) {
   } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error saving wallet:', error)
+      console.error('Error saving wallet: ', error)
     }
     res.statusCode = 500
     res.setHeader('Content-Type', 'application/json')

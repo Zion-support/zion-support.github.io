@@ -19,16 +19,16 @@ export default function NextGenSecurityOperations20, 2, 5() {
       <article, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, tex, t-whi, t, e'>
         <div, className='container, m, x-auto, p, x-4, p, y-12, ma, x-w-4, x, l'>
           <, t, o='/bl, o, g'$2 />
-            className='inli, n, e-flex, item, s-center, tex, t-purp, l, e-400, hove, r:te, x, t-purp, l, e-300, m, b-8, transitio, n-colo, r, s'
+            className='inli, n, e-flex, item, s-center, tex, t-purp, l, e-400, hove, r: te, x, t-purp, l, e-300, m, b-8, transitio, n-colo, r, s'
           >
-            <ArrowLeft, className='mr-2 h-4 w-4' />
+            <ArrowLeft , className='mr-2 h-4 w-4' /></ArrowLeft>
             Back, to, Blog
                 <li, classNam, e='flex, item, s-start, ga, p-3'>
-                  <AlertTriangle, classNam, e='h-6 w-6, tex, t-r, e, d-400, m, t-1, fle, x-shri, n, k-0' />
+                  <AlertTriangle , classNam, e='h-6 w-6, tex, t-r, e, d-400, m, t-1, fle, x-shri, n, k-0' /></AlertTriangle>
                 <li, className='flex, item, s-start, ga, p-3'>
-                  <AlertTriangle, className='h-6 w-6, tex, t-r, e, d-400, m, t-1, fle, x-shri, n, k-0' />
+                  <AlertTriangle , className='h-6 w-6, tex, t-r, e, d-400, m, t-1, fle, x-shri, n, k-0' /></AlertTriangle>
                   <sp, a, n>
-                    <stro, n, g>95% Faster, MTT, R:</stro, n, g> Mean, time, to resolution, reduced, from hours, to, minutes
+                    <stro, n, g>95% Faster, MTT, R: </stro, n, g> Mean, time, to resolution, reduced, from hours, to, minutes
             <section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
                 The, Security, Crisis
@@ -136,15 +136,15 @@ export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX ex
                 s, u, b-second, response, times, and, dramatically, reduced cos, t, s. The, question, is not, whether, to adopt, autonomous, SecOps, but, how, quickly you, can, deploy it, before, the next, breac, h.
                 Schedule, Your, Security Assessme, n, t
                 Schedule, Your, Security Assessme, n, t
-                <ArrowLeft, classNam, e='ml-2 h-5 w-5, rotat, e-1, 8, 0' />
+                <ArrowLeft , classNam, e='ml-2 h-5 w-5, rotat, e-1, 8, 0' /></ArrowLeft>
               <p, className='te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'>
                 Leading, enterprises, have achieved, security, postures that, were, unimaginable just, two, years a, g, o: ne, a, r-perfect, threat, detecti, o, n,
                 s, u, b-second, response, times, and, dramatically, reduced cos, t, s. The, question, is not, whether, to adopt, autonomous, SecOps, but, how, quickly you, can, deploy it, before, the next, breac, h.
                 Schedule, Your, Security Assessme, n, t
                 Schedule, Your, Security Assessme, n, t
-                <ArrowLeft, className='ml-2 h-5 w-5, rotat, e-1, 8, 0' />
+                <ArrowLeft , className='ml-2 h-5 w-5, rotat, e-1, 8, 0' /></ArrowLeft>
                 Schedule, Your, Security Assessme, n, t
-                <ArrowLeft, classNam, e='ml-2 h-5 w-5, rotat, e-1, 8, 0' />
+                <ArrowLeft , classNam, e='ml-2 h-5 w-5, rotat, e-1, 8, 0' /></ArrowLeft>
               <p, className='te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'>
                 Leading, enterprises, have achieved, security, postures that, were, unimaginable just, two, years a, g, o: ne, a, r-perfect, threat, detecti, o, n,
                 s, u, b-second, response, times, and, dramatically, reduced cos, t, s. The, question, is not, whether, to adopt, autonomous, SecOps, but, how, quickly you, can, deploy it, before, the next, breac, h.

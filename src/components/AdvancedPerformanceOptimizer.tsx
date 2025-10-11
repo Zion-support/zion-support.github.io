@@ -73,13 +73,13 @@ const,
   }, [])
   // Resource hints for better performance
   const addResourceHints = useCallback(() => {/* TODO: Fix JSX expression */}
-  s://fonts.googleapis.com' },
+  s: //fonts.googleapis.com' },
       {/* TODO: Fix JSX expression */}
-  s://fonts.gstatic.com' },
+  s: //fonts.gstatic.com' },
       {/* TODO: Fix JSX expression */}
-  s://www.googletagmanager.com' },
+  s: //www.googletagmanager.com' },
       {/* TODO: Fix JSX expression */}
-  s://www.google-analytics.com' }
+  s: //www.google-analytics.com' }
     ]
     hints.forEach((hint) => {/* TODO: Fix JSX expression */}
       }
@@ -94,7 +94,7 @@ const,
       .cyber-button {/* TODO: Fix JSX expression */}
   n: all 0.3s ease, }
       .cyber-butto,
-  n:hover {/* TODO: Fix JSX expression */}
+  n: hover {/* TODO: Fix JSX expression */}
   w: 0 10px 20px rgba(0,0,0,0.2); }`
     `
     const style = document.createElement('style')

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Helmet } from 'react-helmet-async'
+import { Helmet  } from 'react-helmet-async'
 interface SEOProps {/* TODO: Fix JSX expression */}
 }
 const EnhancedSEO: React.FC<SEOProps> = ({,
@@ -32,20 +32,9 @@ const,
     description: description
     url: window.location.origin,
     logo: `${window.location.origin}/images/logo.png`,
-    sameAs: [,
-      'https://linkedin.com/company/zion-tech-group',
-      'https: //twitter.com/ziontechgroup',
-      'https: //github.com/zion-tech-group',
-  const structuredData = {/* TODO: Fix JSX expression */}`
-  o: `${window.location.origin}/images/logo.png`,
-    sameA,
-  s: [
-      'http,
-  s://linkedin.com/company/zion-tech-group',
-      'http,
-  s://twitter.com/ziontechgroup',
-      'http,
-  s://github.com/zion-tech-group'],
+    sameAs: ['https: //linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup', 'https: //github.com/zion-tech-group', const structuredData = {/* TODO: Fix JSX expression */}`
+  o: `${window.location.origin}/images/logo.png`, sameA, s: [
+      'http, s: //linkedin.com/company/zion-tech-group', 'http, s: //twitter.com/ziontechgroup', 'http, s: //github.com/zion-tech-group'],
     contactPoin,
   t: {/* TODO: Fix JSX expression */}
     },
@@ -120,7 +109,7 @@ const,
       })
     }
   }, [title, currentUrl, type])
-  return(<Helmet>
+  return(<Helmet ></Helmet>
       {/* Basic Meta Tags */}
       <title>{title}
       <meta name="description" content={description} />
@@ -134,27 +123,27 @@ const,
       {/* Canonical URL */}
       <link rel="canonical" href={canonicalUrl} />
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:title" content={title} />)
-      <meta property="og:description" content={description} />)
+      <meta property="og: type" content={type} />
+      <meta property="og: title" content={title} />)
+      <meta property="og: description" content={description} />)
       <meta;)
         property="og: image"),
         content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
       />
-      <meta property="og:url" content={currentUrl} />
+      <meta property="og: url" content={currentUrl} />
       <meta property="og: site_name" content="Zion Tech Group" />,
-      <meta property="og:locale" content="en_US" />,
+      <meta property="og: locale" content="en_US" />,
 ,
       {/* Twitter */}
       <meta name="twitter: card" content="summary_large_image" />,
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
+      <meta name="twitter: title" content={title} />
+      <meta name="twitter: description" content={description} />
       <meta
         name="twitter: image",
         content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
       />
       <meta name="twitter: site" content="@ziontechgroup" />,
-      <meta name="twitter:creator" content="@ziontechgroup" />,
+      <meta name="twitter: creator" content="@ziontechgroup" />,
 ,
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -174,8 +163,8 @@ const,
       <link rel="manifest" href="/site.webmanifest" />
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https: //fonts.googleapis.com" />,
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,
-      <link rel="preconnect" href="https://www.google-analytics.com" />,
+      <link rel="preconnect" href="https: //fonts.gstatic.com" crossOrigin="anonymous" />,
+      <link rel="preconnect" href="https: //www.google-analytics.com" />,
 ,
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
@@ -189,20 +178,15 @@ const,
           {JSON.stringify({
             '@context': 'https: //schema.org',
             '@type': 'BreadcrumbList',
-            itemListElement: [
-              {
+            itemListElement: [{
                 '@type': 'ListItem'
-                position: 1,
-                name: 'Home',
-                item: window.location.origin
-  },
-              {
+                position: 1, name: 'Home', item: window.location.origin
+  }, {
                 '@type': 'ListItem')
                 position: 2;)
                 name: title;)
-                item: currentUrl,)})
-            ])
-  return (<Helmet>
+                item: currentUrl, )})])
+  return (<Helmet ></Helmet>
       {/* Basic Meta Tags */}
       <title>{title}
       <meta name="description" content={description} /></meta>"
@@ -217,38 +201,38 @@ const,
       <link rel="canonical" href={canonicalUrl} />
       {/* Open Graph / Facebook */}"
       <meta property="o,"
-  g:type" content={type} /></meta>"
+  g: type" content={type} /></meta>"
       <meta property="o,"
-  g:title" content={title} /></meta>"
+  g: title" content={title} /></meta>"
       <meta property="o,"
-  g:description" content={description} />
+  g: description" content={description} />
       <meta></meta>"
         property="o,"
-  g:image")`
+  g: image")`
         content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
       />"
       <meta property="o,"
-  g:url" content={currentUrl} /></meta>"
+  g: url" content={currentUrl} /></meta>"
       <meta property="o,"
-  g:site_name" content="Zion Tech Group" /></meta>"
+  g: site_name" content="Zion Tech Group" /></meta>"
       <meta property="o,"
-  g:locale" content="en_US" />
+  g: locale" content="en_US" />
       {/* Twitter */}"
       <meta name="twitte,"
-  r:card" content="summary_large_image" /></meta>"
+  r: card" content="summary_large_image" /></meta>"
       <meta name="twitte,"
-  r:title" content={title} /></meta>"
+  r: title" content={title} /></meta>"
       <meta name="twitte,"
-  r:description" content={description} />
+  r: description" content={description} />
       <meta></meta>"
         name="twitte,"
-  r:image"`
+  r: image"`
         content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
       />"
       <meta name="twitte,"
-  r:site" content="@ziontechgroup" /></meta>"
+  r: site" content="@ziontechgroup" /></meta>"
       <meta name="twitte,"
-  r:creator" content="@ziontechgroup" />
+  r: creator" content="@ziontechgroup" />
       {/* Additional Meta Tags */}"
       <meta name="viewport" content="width=device-width, initial-scale=1.0" /></meta>"
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" /></meta>"
@@ -267,11 +251,11 @@ const,
       <link rel="manifest" href="/site.webmanifest" />
       {/* Preconnect to external domains */}"
       <nk rel="preconnect" href="http,"$2 />
-  s://fonts.googleapis.com" /></link>"
+  s: //fonts.googleapis.com" /></link>"
       <nk rel="preconnect" href="http,"$2 />
-  s://fonts.gstatic.com" crossOrigin="anonymous" /></link>"
+  s: //fonts.gstatic.com" crossOrigin="anonymous" /></link>"
       <nk rel="preconnect" href="http,"$2 />
-  s://www.google-analytics.com" />
+  s: //www.google-analytics.com" />
       {/* DNS Prefetch */}"
       <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>"
       <link rel="dns-prefetch" href="//www.google-analytics.com" />

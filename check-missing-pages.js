@@ -1,19 +1,12 @@
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { fileURLToPath  } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Pages referenced in App.tsx routes
-const requiredPages = [
-  'about', 'contact', 'services', 'pricing', 'blog', 'case-studies', 
-  'careers', 'ai-services', 'it-services', 'micro-saas', 'tutorials',
-  'consultation', 'demo', 'support', 'privacy', 'terms', 'cookies',
-  'sitemap', 'ai-analytics', 'ai-automation', 'ai-chatbot-builder',
-  'ai-cybersecurity', 'cloud-infrastructure', 'cybersecurity-solutions',
-  'web-development', 'mobile-development', 'team'
-];
+const requiredPages = ['about', 'contact', 'services', 'pricing', 'blog', 'case-studies', 'careers', 'ai-services', 'it-services', 'micro-saas', 'tutorials', 'consultation', 'demo', 'support', 'privacy', 'terms', 'cookies', 'sitemap', 'ai-analytics', 'ai-automation', 'ai-chatbot-builder', 'ai-cybersecurity', 'cloud-infrastructure', 'cybersecurity-solutions', 'web-development', 'mobile-development', 'team'];
 
 // Check if pages exist
 const missingPages = [];
@@ -28,11 +21,11 @@ requiredPages.forEach(page => {
   }
 });
 
-console.log('✅ Existing pages:', existingPages.length);
-console.log('❌ Missing pages:', missingPages.length);
+console.log('✅ Existing pages: ', existingPages.length);
+console.log('❌ Missing pages: ', missingPages.length);
 
 if (missingPages.length > 0) {
-  console.log('\nMissing pages:');
+  console.log('\nMissing pages: ');
   missingPages.forEach(page => console.log(`  - ${page}`));
 }
 
@@ -64,7 +57,7 @@ console.log(`\n📁 Total pages found: ${allPages.length}`);
 console.log(`📄 Extra pages (not in routes): ${extraPages.length}`);
 
 if (extraPages.length > 0) {
-  console.log('\nExtra pages:');
+  console.log('\nExtra pages: ');
   extraPages.slice(0, 20).forEach(page => console.log(`  - ${page}`));
   if (extraPages.length > 20) {
     console.log(`  ... and ${extraPages.length - 20} more`);

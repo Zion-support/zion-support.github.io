@@ -225,7 +225,7 @@ export class ErrorReporter {
       low: 'color: #2196F3, font-weight: bold',
       medium: 'color: #FF9800, font-weight: bold',
       high: 'color: #F44336, font-weight: bold',
-      critical:     ,
+      critical:  ,
 $4}
     return styles[severity]
   }
@@ -245,7 +245,7 @@ $4}
     } catch (error) {
     // Silently fail to avoid infinite loop
       if (this.config.enableConsoleLogging) {
-        logger.warn('Failed to send error to remote endpoint:', error)
+        logger.warn('Failed to send error to remote endpoint: ', error)
    * Log error to console with formatting
    */
 
@@ -342,7 +342,7 @@ $4}
   O: Add content,}
 }
 
-        logger.warn('Failed to send error to remote endpoint:', error)
+        logger.warn('Failed to send error to remote endpoint: ', error)
       }
     }
   }

@@ -30,7 +30,7 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
                 <div, className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>
                   Au, t, o-Resolution, Rat, e
             <, t, o='/bl, o, g/ai-20, 2, 5-octob, e, r-2-agent, i, c-se, l, f-heali, n, g-infrastructu, r, e-<revoluti, o, n'$2 />
-              className='inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: fr, o, m-purp, l, e-600, hove, r:to-pi, n, k-600, transitio, n-all, shado, w-lg, hove, r:shad, o, w-xl'
+              className='inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: fr, o, m-purp, l, e-600, hove, r: to-pi, n, k-600, transitio, n-all, shado, w-lg, hove, r: shad, o, w-xl'
             ></Link>Read</Link>, Complete, Guide + Fortune, 500, Case Stu, d, y →
           <div, className='fl, e, x-1'>
             <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/2, 0, p-8, rounde, d-2xl, borde, r-2, borde, r-purp, l, e-5, 0, 0/50'>

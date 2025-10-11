@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Read the footer component to extract all links
 const footerContent = fs.readFileSync('/workspace/app/components/Footer.tsx', 'utf8')
 // Extract all href values from the footer
-const hrefMatches = footerContent.match(/href:\s*'([^']+)'/g)
+const hrefMatches = footerContent.match(/href: \s*'([^']+)'/g)
 const footerLinks = hrefMatches ? hrefMatches.map(match => {
   const result = match.match(/href:\s*'([^']+)'/)
   return result ? result[1] : null

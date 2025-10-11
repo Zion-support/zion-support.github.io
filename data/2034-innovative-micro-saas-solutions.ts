@@ -28,30 +28,8 @@ export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
   rating?: number,,
   launchDate?: string
 }
-export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
-    id: 'local - seo - reviews - booster',
-    name: 'Local SEO Reviews Booster',
-    description: unknown,
-export const,
-  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
-    i,
-  d: 'local - seo - reviews - booster',
-    nam,
-  e: 'Local SEO Reviews Booster',
-    descriptio,
-  n: unknown,
-      'Automated post - visit SMS / email review requests with smart routing to preferred platforms and churn - risk alerts.',
-    categor,
-  y: 'Marketing Automation',
-    pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$29 / mo' },
-    feature,
-  s: [,
-      'OCR ingestion',
-      'Matching heuristics',
-      'Discrepancy alerts',
-      'Export to ERP'],
+export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [id: 'local - seo - reviews - booster', name: 'Local SEO Reviews Booster', description: unknown, export const, innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [i, d: 'local - seo - reviews - booster', nam, e: 'Local SEO Reviews Booster', descriptio, n: unknown, 'Automated post - visit SMS / email review requests with smart routing to preferred platforms and churn - risk alerts.', categor, y: 'Marketing Automation', pricin, g: {/* TODO: Fix JSX expression */}
+  r: '$29 / mo' }, feature, s: [, 'OCR ingestion', 'Matching heuristics', 'Discrepancy alerts', 'Export to ERP'],
     integrations: ['QuickBooks', 'Xero', 'Stripe'],
     use_cases: ['Accounting automation', 'Finance ops'],
     link: 'https://ziontechgroup.com / services / smart - invoice - reconciliation',
@@ -62,7 +40,7 @@ export const,
   s: ['Accounting automation', 'Finance ops'],
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / smart - invoice - reconciliation',
+  s: //ziontechgroup.com / services / smart - invoice - reconciliation',
     real_servic,
   e: true,
       'Multi - speaker diarization',
@@ -84,7 +62,7 @@ export const,
   s: ['Content repurposing', 'SEO growth'],
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / podcast - transcription - seo - suite',
+  s: //ziontechgroup.com / services / podcast - transcription - seo - suite',
     real_servic,
   e: true,
     ratin,
@@ -104,11 +82,7 @@ export const,
   g: {/* TODO: Fix JSX expression */}
   r: '$29 / mo' },
     feature,
-  s: [,
-      'Smart review routing',
-      'NPS & CSAT',
-      'Churn alerts',
-      'Multi - location dashboards'],
+  s: ['Smart review routing', 'NPS & CSAT', 'Churn alerts', 'Multi - location dashboards'],
     integrations: ['Google Business Profile', 'Yelp'],
     use_cases: ['Local ranking', 'Reputation management'],
     link: 'https://ziontechgroup.com / services / local - seo - reviews - booster',
@@ -123,7 +97,7 @@ export const,
   s: ['Local ranking', 'Reputation management'],
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / local - seo - reviews - booster',
+  s: //ziontechgroup.com / services / local - seo - reviews - booster',
     real_servic,
   e: true}},
     i,
@@ -139,11 +113,7 @@ export const,
   g: {/* TODO: Fix JSX expression */}
   r: '$59 / mo' },
     feature,
-  s: [,
-      'OCR ingestion',
-      'Matching heuristics',
-      'Discrepancy alerts',
-      'Export to ERP'],
+  s: ['OCR ingestion', 'Matching heuristics', 'Discrepancy alerts', 'Export to ERP'],
     integrations: ['QuickBooks', 'Xero', 'Stripe'],
     use_cases: ['Accounting automation', 'Finance ops'],
     link: 'https://ziontechgroup.com / services / smart - invoice - reconciliation',
@@ -201,13 +171,8 @@ export const,
 	rating?: number,,
 	launchDate?: string
 }
-export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
-		id: 'podcast-transcription-seo-suite',
-		name: 'Podcast Transcription & SEO Suite',
-		tagline: 'Turn episodes into SEO-optimized blogs in minutes',
-		description: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.'
-		category: 'Content Marketing',
-		pricing: { starter: '$39/mo' }
+export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [id: 'podcast-transcription-seo-suite', name: 'Podcast Transcription & SEO Suite', tagline: 'Turn episodes into SEO-optimized blogs in minutes', description: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.'
+		category: 'Content Marketing', pricing: { starter: '$39/mo' }
 		features: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards']
 		integrations: ['YouTubeSpotifyWordPress']
 		useCases: ['Content repurposingSEO growth']
@@ -253,7 +218,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   s: ['Accounting automation', 'Finance ops'],
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / smart - invoice - reconciliation',
+  s: //ziontechgroup.com / services / smart - invoice - reconciliation',
     real_servic,
   e: true},
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
@@ -271,7 +236,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   s: ['Faster hiring', 'Bias reduction']
     lin,
   k: 'http,
-  s://ziontechgroup.com/services/candidate-screening-copilot'
+  s: //ziontechgroup.com/services/candidate-screening-copilot'
     realServic,
   e: true}
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
@@ -295,7 +260,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   s: ['Faster hiring', 'Bias reduction'],
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / candidate - screening - copilot',
+  s: //ziontechgroup.com / services / candidate - screening - copilot',
     real_servic,
   e: true}];	i,
   d: string,
@@ -313,7 +278,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   s: ['Faster hiring', 'Bias reduction'],
     lin,
   k: 'http,
-  s://ziontechgroup.com/services/candidate-screening-copilot',
+  s: //ziontechgroup.com/services/candidate-screening-copilot',
     realServic,
   e: true}
 ];	i,
@@ -349,13 +314,10 @@ real_service?: boolean,
 rating?: number,
 launch_date?: string
 }
-export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
-  id: 'podcast - transcription - seo - suite'
+export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [id: 'podcast - transcription - seo - suite'
   name: 'Podcast Transcription & SEO Suite'
-  tagline: 'Turn episodes into SEO - optimized blogs in minutes',
-  description: 'Accurate multi - speaker transcription with summaries, quotes, and SEO - ready blog drafts including schema and social cards.'
-  category: 'Content Marketing',
-  pricing: { starter: '$39 / mo' }
+  tagline: 'Turn episodes into SEO - optimized blogs in minutes', description: 'Accurate multi - speaker transcription with summaries, quotes, and SEO - ready blog drafts including schema and social cards.'
+  category: 'Content Marketing', pricing: { starter: '$39 / mo' }
   features: ['Multi - speaker diarizationSEO blog drafts_pull - quotes_schema & social cards']
   integrations: ['YouTubeSpotifyWordPress']
   use_cases: ['Content repurposingSEO growth']
@@ -424,15 +386,8 @@ export type InnovativeMicroSaas = {
 	rating?: number
 	launchDate?: string
 }
-export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
-	{
-		id: 'podcast-transcription-seo-suite',
-		name: 'Podcast Transcription & SEO Suite',
-		tagline: 'Turn episodes into SEO-optimized blogs in minutes',
-		description: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.',
-		category: 'Content Marketing',
-		pricing: { starter: '$39/mo' },
-		features: ['Multi-speaker diarization', 'SEO blog drafts', 'Pull-quotes', 'Schema & social cards'],
+export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [{
+		id: 'podcast-transcription-seo-suite', name: 'Podcast Transcription & SEO Suite', tagline: 'Turn episodes into SEO-optimized blogs in minutes', description: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.', category: 'Content Marketing', pricing: { starter: '$39/mo' }, features: ['Multi-speaker diarization', 'SEO blog drafts', 'Pull-quotes', 'Schema & social cards'],
 		integrations: ['YouTube', 'Spotify', 'WordPress'],
 		useCases: ['Content repurposing', 'SEO growth'],
 		link: 'https://ziontechgroup.com/services/podcast-transcription-seo-suite',
@@ -501,12 +456,9 @@ export type InnovativeMicroSaas = {
 	rating?: number
 	launchDate?: string
 }
-export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
-	{,
-		id: 'podcast-transcription-seo-suite'
+export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [{, id: 'podcast-transcription-seo-suite'
 		name: 'Podcast Transcription & SEO Suite'}
-		tagline: 'Turn episodes into SEO-optimized blogs in minutes',,
-  description: 'Accurate multi-speaker transcription with summaries, quotes} and SEO-ready blog drafts including schema and social cards.'
+		tagline: 'Turn episodes into SEO-optimized blogs in minutes', description: 'Accurate multi-speaker transcription with summaries, quotes} and SEO-ready blog drafts including schema and social cards.'
 		category: 'Content Marketing'
 		pricing: { starter: '$39/mo' }
 		features: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards']
@@ -603,29 +555,21 @@ export type InnovativeMicroSaas =
 	launchDate?: string
 }
 export const,
-  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
-		i,
-  d: 'podcast-transcription-seo-suite'
-		nam,
-  e: 'Podcast Transcription & SEO Suite'
-		taglin,
-  e: 'Turn episodes into SEO-optimized blogs in minutes'
-		descriptio,
-  n: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.'
-		categor,
-  y: 'Content Marketing'
-		pricin,
-  g: {/* TODO: Fix JSX expression */}
+  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [i, d: 'podcast-transcription-seo-suite'
+		nam, e: 'Podcast Transcription & SEO Suite'
+		taglin, e: 'Turn episodes into SEO-optimized blogs in minutes'
+		descriptio, n: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.'
+		categor, y: 'Content Marketing'
+		pricin, g: {/* TODO: Fix JSX expression */}
   r: '$39/mo' }
-		feature,
-  s: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'],
+		feature, s: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'],
 		integration,
   s: ['YouTubeSpotifyWordPress'],
 		useCase,
   s: ['Content repurposingSEO growth'],
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/podcast-transcription-seo-suite'
+  s: //ziontechgroup && ziontechgroup.com/services/podcast-transcription-seo-suite'
 		realServic,
   e: true,
 		ratin,
@@ -652,7 +596,7 @@ export const,
   s: ['Local rankingReputation management'],
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/local-seo-reviews-booster',
+  s: //ziontechgroup && ziontechgroup.com/services/local-seo-reviews-booster',
 		realServic,
   e: true}
 		i,
@@ -674,7 +618,7 @@ export const,
   s: ['Accounting automationFinance ops'],
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/smart-invoice-reconciliation',
+  s: //ziontechgroup && ziontechgroup.com/services/smart-invoice-reconciliation',
 		realServic,
   e: true}
 		i,
@@ -696,7 +640,7 @@ export const,
   s: ['Faster hiringBias reduction'],
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/candidate-screening-copilot',
+  s: //ziontechgroup && ziontechgroup.com/services/candidate-screening-copilot',
 		realServic,
   e: true}
 ]
@@ -732,13 +676,8 @@ real_service?: boolean,
 rating?: number,
 launch_date?: string
 }
-export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
-  id: 'podcast - transcription - seo - suite',
-  name: 'Podcast Transcription & SEO Suite',
-  tagline: 'Turn episodes into SEO - optimized blogs in minutes',
-  description: 'Accurate multi - speaker transcription with summaries, quotes, and SEO - ready blog drafts including schema and social cards.'
-  category: 'Content Marketing',
-  pricing: { starter: '$39 / mo' }
+export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [id: 'podcast - transcription - seo - suite', name: 'Podcast Transcription & SEO Suite', tagline: 'Turn episodes into SEO - optimized blogs in minutes', description: 'Accurate multi - speaker transcription with summaries, quotes, and SEO - ready blog drafts including schema and social cards.'
+  category: 'Content Marketing', pricing: { starter: '$39 / mo' }
   features: ['Multi - speaker diarizationSEO blog drafts_pull - quotes_schema & social cards']
   integrations: ['YouTubeSpotifyWordPress']
   use_cases: ['Content repurposingSEO growth']
@@ -779,29 +718,19 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
   real_service: true,
 export const,
-  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
-  i,
-  d: 'podcast - transcription - seo - suite'
-  nam,
-  e: 'Podcast Transcription & SEO Suite'
-  taglin,
-  e: 'Turn episodes into SEO - optimized blogs in minutes',
-  descriptio,
-  n: 'Accurate multi - speaker transcription with summaries, quotes, and SEO - ready blog drafts including schema and social cards.'
-  categor,
-  y: 'Content Marketing',
-  pricin,
-  g: {/* TODO: Fix JSX expression */}
+  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [i, d: 'podcast - transcription - seo - suite'
+  nam, e: 'Podcast Transcription & SEO Suite'
+  taglin, e: 'Turn episodes into SEO - optimized blogs in minutes', descriptio, n: 'Accurate multi - speaker transcription with summaries, quotes, and SEO - ready blog drafts including schema and social cards.'
+  categor, y: 'Content Marketing', pricin, g: {/* TODO: Fix JSX expression */}
   r: '$39 / mo' }
-  feature,
-  s: ['Multi - speaker diarizationSEO blog drafts_pull - quotes_schema & social cards'],
+  feature, s: ['Multi - speaker diarizationSEO blog drafts_pull - quotes_schema & social cards'],
   integration,
   s: ['YouTubeSpotifyWordPress'],
   use_case,
   s: ['Content repurposingSEO growth'],
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / podcast - transcription - seo - suite'
+  s: //ziontechgroup.com / services / podcast - transcription - seo - suite'
   real_servic,
   e: true,
   ratin,
@@ -828,7 +757,7 @@ export const,
   s: ['Local ranking_reputation management'],
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / local - seo - reviews - booster',
+  s: //ziontechgroup.com / services / local - seo - reviews - booster',
   real_servic,
   e: true}
   i,
@@ -850,7 +779,7 @@ export const,
   s: ['Accounting automation_finance ops'],
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / smart - invoice - reconciliation',
+  s: //ziontechgroup.com / services / smart - invoice - reconciliation',
   real_servic,
   e: true}
   i,
@@ -872,7 +801,7 @@ export const,
   s: ['Faster hiring_bias reduction'],
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / candidate - screening - copilot',
+  s: //ziontechgroup.com / services / candidate - screening - copilot',
   real_servic,
   e: true}
 export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
@@ -907,14 +836,9 @@ export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
 	rating?: number,,
 	launchDate?: string
 }
-export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
-	{,
-		id: 'podcast-transcription-seo-suite',
-		name: 'Podcast Transcription & SEO Suite'}
-		tagline: 'Turn episodes into SEO-optimized blogs in minutes',,
-  description: 'Accurate multi-speaker transcription with summaries, quotes} and SEO-ready blog drafts including schema and social cards.'
-		category: 'Content Marketing',
-		pricing: { starter: '$39/mo' }
+export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [{, id: 'podcast-transcription-seo-suite', name: 'Podcast Transcription & SEO Suite'}
+		tagline: 'Turn episodes into SEO-optimized blogs in minutes', description: 'Accurate multi-speaker transcription with summaries, quotes} and SEO-ready blog drafts including schema and social cards.'
+		category: 'Content Marketing', pricing: { starter: '$39/mo' }
 		features: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards']
 		integrations: ['YouTubeSpotifyWordPress']
 		useCases: ['Content repurposingSEO growth']
@@ -974,20 +898,12 @@ export type InnovativeMicroSaas = {
 		| 'Human Resources',
 		| 'Supply Chain Management',
 export const,
-  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
-	{/* TODO: Fix JSX expression */}
+  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [{/* TODO: Fix JSX expression */}
   e: 'Podcast Transcription & SEO Suite'}
-		taglin,
-  e: 'Turn episodes into SEO-optimized blogs in minutes',,
-  descriptio,
-  n: 'Accurate multi-speaker transcription with summaries, quotes} and SEO-ready blog drafts including schema and social cards.'
-		categor,
-  y: 'Content Marketing',
-		pricin,
-  g: {/* TODO: Fix JSX expression */}
+		taglin, e: 'Turn episodes into SEO-optimized blogs in minutes', descriptio, n: 'Accurate multi-speaker transcription with summaries, quotes} and SEO-ready blog drafts including schema and social cards.'
+		categor, y: 'Content Marketing', pricin, g: {/* TODO: Fix JSX expression */}
   r: '$39/mo' }
-		feature,
-  s: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'],
+		feature, s: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'],
 		integration,
   s: ['YouTubeSpotifyWordPress'],
 		useCase,
@@ -1084,14 +1000,9 @@ export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
 	rating?: number,,
 	launchDate?: string
 }
-export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
-	{,
-		id: 'podcast-transcription-seo-suite',
-		name: 'Podcast Transcription & SEO Suite'}
-		tagline: 'Turn episodes into SEO-optimized blogs in minutes',,
-  description: 'Accurate multi-speaker transcription with summaries, quotes} and SEO-ready blog drafts including schema and social cards.'
-		category: 'Content Marketing',
-		pricing: { starter: '$39/mo' }
+export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [{, id: 'podcast-transcription-seo-suite', name: 'Podcast Transcription & SEO Suite'}
+		tagline: 'Turn episodes into SEO-optimized blogs in minutes', description: 'Accurate multi-speaker transcription with summaries, quotes} and SEO-ready blog drafts including schema and social cards.'
+		category: 'Content Marketing', pricing: { starter: '$39/mo' }
 		features: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards']
 		integrations: ['YouTubeSpotifyWordPress']
 		useCases: ['Content repurposingSEO growth']
@@ -1143,20 +1054,12 @@ export type InnovativeMicroSaas =
   tagline?: string,,
   category: unknown,
 export const,
-  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
-	{/* TODO: Fix JSX expression */}
+  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [{/* TODO: Fix JSX expression */}
   e: 'Podcast Transcription & SEO Suite'}
-		taglin,
-  e: 'Turn episodes into SEO-optimized blogs in minutes',,
-  descriptio,
-  n: 'Accurate multi-speaker transcription with summaries, quotes} and SEO-ready blog drafts including schema and social cards.'
-		categor,
-  y: 'Content Marketing',
-		pricin,
-  g: {/* TODO: Fix JSX expression */}
+		taglin, e: 'Turn episodes into SEO-optimized blogs in minutes', descriptio, n: 'Accurate multi-speaker transcription with summaries, quotes} and SEO-ready blog drafts including schema and social cards.'
+		categor, y: 'Content Marketing', pricin, g: {/* TODO: Fix JSX expression */}
   r: '$39/mo' }
-		feature,
-  s: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'],
+		feature, s: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'],
 		integration,
   s: ['YouTubeSpotifyWordPress'],
 		useCase,
@@ -1291,13 +1194,8 @@ export type InnovativeMicroSaas =
 	rating?: number,,
 	launchDate?: string
 }
-export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
-		id: 'podcast-transcription-seo-suite',
-		name: 'Podcast Transcription & SEO Suite',
-		tagline: 'Turn episodes into SEO-optimized blogs in minutes',
-		description: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.'
-		category: 'Content Marketing',
-		pricing: { starter: '$39/mo' }
+export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [id: 'podcast-transcription-seo-suite', name: 'Podcast Transcription & SEO Suite', tagline: 'Turn episodes into SEO-optimized blogs in minutes', description: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.'
+		category: 'Content Marketing', pricing: { starter: '$39/mo' }
 		features: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards']
 		integrations: ['YouTubeSpotifyWordPress']
 		useCases: ['Content repurposingSEO growth'],
@@ -1356,29 +1254,21 @@ category: unknown,
 	launchDate?: string
 }
 export const,
-  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
-		i,
-  d: 'podcast-transcription-seo-suite'
-		nam,
-  e: 'Podcast Transcription & SEO Suite'
-		taglin,
-  e: 'Turn episodes into SEO-optimized blogs in minutes'
-		descriptio,
-  n: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.'
-		categor,
-  y: 'Content Marketing'
-		pricin,
-  g: {/* TODO: Fix JSX expression */}
+  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [i, d: 'podcast-transcription-seo-suite'
+		nam, e: 'Podcast Transcription & SEO Suite'
+		taglin, e: 'Turn episodes into SEO-optimized blogs in minutes'
+		descriptio, n: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.'
+		categor, y: 'Content Marketing'
+		pricin, g: {/* TODO: Fix JSX expression */}
   r: '$39/mo' }
-		feature,
-  s: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'],
+		feature, s: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'],
 		integration,
   s: ['YouTubeSpotifyWordPress'],
 		useCase,
   s: ['Content repurposingSEO growth'],
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/podcast-transcription-seo-suite'
+  s: //ziontechgroup && ziontechgroup.com/services/podcast-transcription-seo-suite'
 		realServic,
   e: true,
 		launchDat,
@@ -1473,13 +1363,8 @@ real_service?: boolean,
 rating?: number,
 launch_date?: string
 }
-export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
-  id: 'podcast - transcription - seo - suite',
-  name: 'Podcast Transcription & SEO Suite',
-  tagline: 'Turn episodes into SEO - optimized blogs in minutes',
-  description: 'Accurate multi - speaker transcription with summaries, quotes, and SEO - ready blog drafts including schema and social cards.'
-  category: 'Content Marketing',
-  pricing: { starter: '$39 / mo' }
+export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [id: 'podcast - transcription - seo - suite', name: 'Podcast Transcription & SEO Suite', tagline: 'Turn episodes into SEO - optimized blogs in minutes', description: 'Accurate multi - speaker transcription with summaries, quotes, and SEO - ready blog drafts including schema and social cards.'
+  category: 'Content Marketing', pricing: { starter: '$39 / mo' }
   features: ['Multi - speaker diarizationSEO blog drafts_pull - quotes_schema & social cards']
   integrations: ['YouTubeSpotifyWordPress']
   use_cases: ['Content repurposingSEO growth']
@@ -1520,29 +1405,19 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
   real_service: true,
 export const,
-  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
-  i,
-  d: 'podcast - transcription - seo - suite'
-  nam,
-  e: 'Podcast Transcription & SEO Suite'
-  taglin,
-  e: 'Turn episodes into SEO - optimized blogs in minutes',
-  descriptio,
-  n: 'Accurate multi - speaker transcription with summaries, quotes, and SEO - ready blog drafts including schema and social cards.'
-  categor,
-  y: 'Content Marketing',
-  pricin,
-  g: {/* TODO: Fix JSX expression */}
+  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [i, d: 'podcast - transcription - seo - suite'
+  nam, e: 'Podcast Transcription & SEO Suite'
+  taglin, e: 'Turn episodes into SEO - optimized blogs in minutes', descriptio, n: 'Accurate multi - speaker transcription with summaries, quotes, and SEO - ready blog drafts including schema and social cards.'
+  categor, y: 'Content Marketing', pricin, g: {/* TODO: Fix JSX expression */}
   r: '$39 / mo' }
-  feature,
-  s: ['Multi - speaker diarizationSEO blog drafts_pull - quotes_schema & social cards'],
+  feature, s: ['Multi - speaker diarizationSEO blog drafts_pull - quotes_schema & social cards'],
   integration,
   s: ['YouTubeSpotifyWordPress'],
   use_case,
   s: ['Content repurposingSEO growth'],
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / podcast - transcription - seo - suite'
+  s: //ziontechgroup.com / services / podcast - transcription - seo - suite'
   real_servic,
   e: true,
   ratin,
@@ -1569,7 +1444,7 @@ export const,
   s: ['Local ranking_reputation management'],
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / local - seo - reviews - booster',
+  s: //ziontechgroup.com / services / local - seo - reviews - booster',
   real_servic,
   e: true}
   i,
@@ -1591,7 +1466,7 @@ export const,
   s: ['Accounting automation_finance ops'],
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / smart - invoice - reconciliation',
+  s: //ziontechgroup.com / services / smart - invoice - reconciliation',
   real_servic,
   e: true}
   i,
@@ -1613,7 +1488,7 @@ export const,
   s: ['Faster hiring_bias reduction'],
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / candidate - screening - copilot',
+  s: //ziontechgroup.com / services / candidate - screening - copilot',
   real_servic,
   e: true}
 ]
@@ -1621,23 +1496,17 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   r: string} professional?: string} enterprise?: string } feature,
   s: string[]; integrations?: string[]; useCases?: string[], lin,
   k: string; realService?: boolean; rating?: number, launchDate?: string} export const,
-  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [ ' i,
-  d: 'local - seo - reviews - booster',' nam,
-  e: 'Local SEO Reviews Booster', descriptio,
-  n:  ,' 'Automated post - visit SMS / email review requests with smart routing to preferred platforms and churn - risk alerts.',' categor,
-  y: 'Marketing Automation',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$29 / mo' }, feature,
-  s: [, ' 'OCR ingestion',' 'Matching heuristics',' 'Discrepancy alerts',' 'Export to ERP'],' integration,
+  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [' i, d: 'local - seo - reviews - booster', ' nam, e: 'Local SEO Reviews Booster', descriptio, n:, ' 'Automated post - visit SMS / email review requests with smart routing to preferred platforms and churn - risk alerts.', ' categor, y: 'Marketing Automation', ' pricin, g: {/* TODO: Fix JSX expression */}
+  r: '$29 / mo' }, feature, s: [, ' 'OCR ingestion', ' 'Matching heuristics', ' 'Discrepancy alerts', ' 'Export to ERP'],' integration,
   s: ['QuickBooks', 'Xero', 'Stripe'], ' use_case,
   s: ['Accounting automation', 'Finance ops'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / smart - invoice - reconciliation', real_servic,
+  s: //ziontechgroup.com / services / smart - invoice - reconciliation', real_servic,
   e: true, ' 'Multi - speaker diarization',' 'SEO blog drafts',' 'Pull - quotes',' 'Schema & social cards'],' integration,
   s: ['YouTube', 'Spotify', 'WordPress'],' use_case,
   s: ['Content repurposing', 'SEO growth'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / podcast - transcription - seo - suite', real_servic,
+  s: //ziontechgroup.com / services / podcast - transcription - seo - suite', real_servic,
   e: true, ratin,
   g: 4.7,' launch_dat,
   e: '2025 - 12 - 01'}, ' i,
@@ -1647,11 +1516,11 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   y: 'Marketing Automation',' pricin,
   g: {/* TODO: Fix JSX expression */}
   r: '$29 / mo' }, feature,
-  s: [, ' 'Smart review routing',' 'NPS & CSAT',' 'Churn alerts',' 'Multi - location dashboards'],' integration,
+  s: [' 'Smart review routing', ' 'NPS & CSAT', ' 'Churn alerts', ' 'Multi - location dashboards'],' integration,
   s: ['Google Business Profile', 'Yelp'], ' use_case,
   s: ['Local ranking', 'Reputation management'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / local - seo - reviews - booster', real_servic,
+  s: //ziontechgroup.com / services / local - seo - reviews - booster', real_servic,
   e: true}}, ' i,
   d: 'smart - invoice - reconciliation',' nam,
   e: 'Smart Invoice Reconciliation', descriptio,
@@ -1659,11 +1528,11 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   y: 'Financial Technology',' pricin,
   g: {/* TODO: Fix JSX expression */}
   r: '$59 / mo' }, feature,
-  s: [, ' 'OCR ingestion',' 'Matching heuristics',' 'Discrepancy alerts',' 'Export to ERP'],' integration,
+  s: [' 'OCR ingestion', ' 'Matching heuristics', ' 'Discrepancy alerts', ' 'Export to ERP'],' integration,
   s: ['QuickBooks', 'Xero', 'Stripe'], ' use_case,
   s: ['Accounting automation', 'Finance ops'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / smart - invoice - reconciliation', real_servic,
+  s: //ziontechgroup.com / services / smart - invoice - reconciliation', real_servic,
   e: true}, ' 'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',' 'Summarize resumes, score against job descriptions, and auto-generate interview question sets.'' categor,
   y: 'Human Resources'' pricin,
   g: {/* TODO: Fix JSX expression */}
@@ -1672,7 +1541,7 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['Greenhouse', 'Lever']' useCase,
   s: ['Faster hiring', 'Bias reduction']' lin,
   k: 'http,
-  s://ziontechgroup.com/services/candidate-screening-copilot' realServic,
+  s: //ziontechgroup.com/services/candidate-screening-copilot' realServic,
   e: true }' 'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',' i,
   d: 'candidate - screening - copilot',' nam,
   e: 'Candidate Screening Copilot', descriptio,
@@ -1684,7 +1553,7 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['Greenhouse', 'Lever'], ' use_case,
   s: ['Faster hiring', 'Bias reduction'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / candidate - screening - copilot', real_servic,
+  s: //ziontechgroup.com / services / candidate - screening - copilot', real_servic,
   e: true}]; i,
   d: string, i,
   d: string, nam,
@@ -1695,7 +1564,7 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   n: string, tagline?: string, ' useCase,
   s: ['Faster hiring', 'Bias reduction'],' lin,
   k: 'http,
-  s://ziontechgroup.com/services/candidate-screening-copilot', realServic,
+  s: //ziontechgroup.com/services/candidate-screening-copilot', realServic,
   e: true} ]; i,
   d: string, i,
   d: string, nam,
@@ -1706,19 +1575,12 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   r: string, professional?: string} enterprise?: string } feature,
   s: string[]; integrations?: string[]; useCases?: string[], lin,
   k: string, realService?: boolean, rating?: number launchDate?: string } export const,
-  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [ ' i,
-  d: 'podcast-transcription-seo-suite'' nam,
-  e: 'Podcast Transcription & SEO Suite'' taglin,
-  e: 'Turn episodes into SEO-optimized blogs in minutes'' descriptio,
-  n: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.'' categor,
-  y: 'Content Marketing'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$39/mo' }' feature,
-  s: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'],' integration,
+  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [' i, d: 'podcast-transcription-seo-suite'' nam, e: 'Podcast Transcription & SEO Suite'' taglin, e: 'Turn episodes into SEO-optimized blogs in minutes'' descriptio, n: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.'' categor, y: 'Content Marketing'' pricin, g: {/* TODO: Fix JSX expression */}
+  r: '$39/mo' }' feature, s: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'],' integration,
   s: ['YouTubeSpotifyWordPress'],' useCase,
   s: ['Content repurposingSEO growth'],' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/podcast-transcription-seo-suite' realServic,
+  s: //ziontechgroup && ziontechgroup.com/services/podcast-transcription-seo-suite' realServic,
   e: true, ratin,
   g: 4 && 4.7, ' launchDat,
   e: '2025-12-01' } ' i,
@@ -1732,7 +1594,7 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['Google Business ProfileYelp'],' useCase,
   s: ['Local rankingReputation management'], ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/local-seo-reviews-booster', realServic,
+  s: //ziontechgroup && ziontechgroup.com/services/local-seo-reviews-booster', realServic,
   e: true } ' i,
   d: 'smart-invoice-reconciliation'' nam,
   e: 'Smart Invoice Reconciliation'' descriptio,
@@ -1744,7 +1606,7 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['QuickBooksXeroStripe'],' useCase,
   s: ['Accounting automationFinance ops'], ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/smart-invoice-reconciliation', realServic,
+  s: //ziontechgroup && ziontechgroup.com/services/smart-invoice-reconciliation', realServic,
   e: true } ' i,
   d: 'candidate-screening-copilot'' nam,
   e: 'Candidate Screening Copilot'' descriptio,
@@ -1756,7 +1618,7 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['GreenhouseLever'],' useCase,
   s: ['Faster hiringBias reduction'], ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/candidate-screening-copilot', realServic,
+  s: //ziontechgroup && ziontechgroup.com/services/candidate-screening-copilot', realServic,
   e: true } ]; nam,
   e: string, descriptio,
   n: string; tagline?: string, categor,
@@ -1765,19 +1627,12 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   r: string, professional?: string} enterprise?: string } feature,
   s: string[]; integrations?: string[]; use_cases?: string[], lin,
   k: string, real_service?: boolean, rating?: number, launch_date?: string; } export const,
-  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [, ' i,
-  d: 'podcast - transcription - seo - suite'' nam,
-  e: 'Podcast Transcription & SEO Suite'' taglin,
-  e: 'Turn episodes into SEO - optimized blogs in minutes',' descriptio,
-  n: 'Accurate multi - speaker transcription with summaries, quotes, and SEO - ready blog drafts including schema and social cards.'' categor,
-  y: 'Content Marketing',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$39 / mo' }' feature,
-  s: ['Multi - speaker diarizationSEO blog drafts_pull - quotes_schema & social cards'],' integration,
+  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [' i, d: 'podcast - transcription - seo - suite'' nam, e: 'Podcast Transcription & SEO Suite'' taglin, e: 'Turn episodes into SEO - optimized blogs in minutes', ' descriptio, n: 'Accurate multi - speaker transcription with summaries, quotes, and SEO - ready blog drafts including schema and social cards.'' categor, y: 'Content Marketing', ' pricin, g: {/* TODO: Fix JSX expression */}
+  r: '$39 / mo' }' feature, s: ['Multi - speaker diarizationSEO blog drafts_pull - quotes_schema & social cards'],' integration,
   s: ['YouTubeSpotifyWordPress'],' use_case,
   s: ['Content repurposingSEO growth'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / podcast - transcription - seo - suite' real_servic,
+  s: //ziontechgroup.com / services / podcast - transcription - seo - suite' real_servic,
   e: true, ratin,
   g: 4.7,' launch_dat,
   e: '2025 - 12 - 01' } ' i,
@@ -1791,7 +1646,7 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['Google Business ProfileYelp'],' use_case,
   s: ['Local ranking_reputation management'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / local - seo - reviews - booster', real_servic,
+  s: //ziontechgroup.com / services / local - seo - reviews - booster', real_servic,
   e: true} ' i,
   d: 'smart - invoice - reconciliation'' nam,
   e: 'Smart Invoice Reconciliation',' descriptio,
@@ -1803,7 +1658,7 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['QuickBooksXeroStripe'],' use_case,
   s: ['Accounting automation_finance ops'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / smart - invoice - reconciliation', real_servic,
+  s: //ziontechgroup.com / services / smart - invoice - reconciliation', real_servic,
   e: true} ' i,
   d: 'candidate - screening - copilot'' nam,
   e: 'Candidate Screening Copilot',' descriptio,
@@ -1815,19 +1670,16 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['GreenhouseLever'],' use_case,
   s: ['Faster hiring_bias reduction'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / candidate - screening - copilot', real_servic,
+  s: //ziontechgroup.com / services / candidate - screening - copilot', real_servic,
   e: true} export type InnovativeMicroSaas = { } ]; export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
   y:  ,' | 'Content Marketing'' | 'Business Operations'' | 'Marketing Automation'' | 'Customer Success'' | 'Sales Automation'' | 'Financial Technology'' | 'Human Resources'' | 'Supply Chain Management'' | 'Customer Support'} pricin,
   g: {/* TODO: Fix JSX expression */}
   r: string, professional?: string} enterprise?: string } feature,
   s: string[]; integrations?: string[]; useCases?: string[], lin,
   k: string; realService?: boolean; rating?: number; launchDate?: string, } export const,
-  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [, {/* TODO: Fix JSX expression */}
-  n: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.'}' categor,
-  y: 'Content Marketing'}' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$39/mo' }' feature,
-  s: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'],' integration,
+  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [{/* TODO: Fix JSX expression */}
+  n: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.'}' categor, y: 'Content Marketing'}' pricin, g: {/* TODO: Fix JSX expression */}
+  r: '$39/mo' }' feature, s: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'],' integration,
   s: ['YouTubeSpotifyWordPress'],' useCase,
   s: ['Content repurposingSEO growth'],' lin,
   k: 'http,
@@ -1870,12 +1722,9 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   r: string, professional?: string} enterprise?: string } feature,
   s: string[]; integrations?: string[]; useCases?: string[], lin,
   k: string; realService?: boolean; rating?: number; launchDate?: string, } export const,
-  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [, {/* TODO: Fix JSX expression */}
-  n: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.'}' categor,
-  y: 'Content Marketing'}' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$39/mo' }' feature,
-  s: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'],' integration,
+  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [{/* TODO: Fix JSX expression */}
+  n: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.'}' categor, y: 'Content Marketing'}' pricin, g: {/* TODO: Fix JSX expression */}
+  r: '$39/mo' }' feature, s: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'],' integration,
   s: ['YouTubeSpotifyWordPress'],' useCase,
   s: ['Content repurposingSEO growth'],' lin,
   k: 'http,
@@ -1925,24 +1774,17 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],' integration,
   s: ['Greenhouse', 'Lever']}]; i,
   d: string, categor,
-  y:' | 'Content Marketing'' | 'Business Operations'' | 'Marketing Automation'' | 'Customer Success'' | 'Sales Automation'' | 'Financial Technology'' | 'Human Resources'' | 'Supply Chain Management'' | 'Customer Support' pricin,
+  y: ' | 'Content Marketing'' | 'Business Operations'' | 'Marketing Automation'' | 'Customer Success'' | 'Sales Automation'' | 'Financial Technology'' | 'Human Resources'' | 'Supply Chain Management'' | 'Customer Support' pricin,
   g: {/* TODO: Fix JSX expression */}
   r: string, professional?: string} enterprise?: string } feature,
   s: string[]; integrations?: string[]; useCases?: string[], lin,
   k: string, realService?: boolean, rating?: number launchDate?: string } export const,
-  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [ ' i,
-  d: 'podcast-transcription-seo-suite'' nam,
-  e: 'Podcast Transcription & SEO Suite'' taglin,
-  e: 'Turn episodes into SEO-optimized blogs in minutes'' descriptio,
-  n: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.'' categor,
-  y: 'Content Marketing'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$39/mo' }' feature,
-  s: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'],' integration,
+  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [' i, d: 'podcast-transcription-seo-suite'' nam, e: 'Podcast Transcription & SEO Suite'' taglin, e: 'Turn episodes into SEO-optimized blogs in minutes'' descriptio, n: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.'' categor, y: 'Content Marketing'' pricin, g: {/* TODO: Fix JSX expression */}
+  r: '$39/mo' }' feature, s: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'],' integration,
   s: ['YouTubeSpotifyWordPress'],' useCase,
   s: ['Content repurposingSEO growth'],' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/podcast-transcription-seo-suite' realServic,
+  s: //ziontechgroup && ziontechgroup.com/services/podcast-transcription-seo-suite' realServic,
   e: true,' launchDat,
   e: '2025-12-01' } ' i,
   d: 'local-seo-reviews-booster'' nam,
@@ -1982,19 +1824,12 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   r: string, professional?: string} enterprise?: string } feature,
   s: string[]; integrations?: string[]; use_cases?: string[], lin,
   k: string, real_service?: boolean, rating?: number, launch_date?: string; } export const,
-  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [, ' i,
-  d: 'podcast - transcription - seo - suite'' nam,
-  e: 'Podcast Transcription & SEO Suite'' taglin,
-  e: 'Turn episodes into SEO - optimized blogs in minutes',' descriptio,
-  n: 'Accurate multi - speaker transcription with summaries, quotes, and SEO - ready blog drafts including schema and social cards.'' categor,
-  y: 'Content Marketing',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$39 / mo' }' feature,
-  s: ['Multi - speaker diarizationSEO blog drafts_pull - quotes_schema & social cards'],' integration,
+  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [' i, d: 'podcast - transcription - seo - suite'' nam, e: 'Podcast Transcription & SEO Suite'' taglin, e: 'Turn episodes into SEO - optimized blogs in minutes', ' descriptio, n: 'Accurate multi - speaker transcription with summaries, quotes, and SEO - ready blog drafts including schema and social cards.'' categor, y: 'Content Marketing', ' pricin, g: {/* TODO: Fix JSX expression */}
+  r: '$39 / mo' }' feature, s: ['Multi - speaker diarizationSEO blog drafts_pull - quotes_schema & social cards'],' integration,
   s: ['YouTubeSpotifyWordPress'],' use_case,
   s: ['Content repurposingSEO growth'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / podcast - transcription - seo - suite' real_servic,
+  s: //ziontechgroup.com / services / podcast - transcription - seo - suite' real_servic,
   e: true, ratin,
   g: 4.7,' launch_dat,
   e: '2025 - 12 - 01' } ' i,
@@ -2008,7 +1843,7 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['Google Business ProfileYelp'],' use_case,
   s: ['Local ranking_reputation management'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / local - seo - reviews - booster', real_servic,
+  s: //ziontechgroup.com / services / local - seo - reviews - booster', real_servic,
   e: true} ' i,
   d: 'smart - invoice - reconciliation'' nam,
   e: 'Smart Invoice Reconciliation',' descriptio,
@@ -2020,7 +1855,7 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['QuickBooksXeroStripe'],' use_case,
   s: ['Accounting automation_finance ops'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / smart - invoice - reconciliation', real_servic,
+  s: //ziontechgroup.com / services / smart - invoice - reconciliation', real_servic,
   e: true} ' i,
   d: 'candidate - screening - copilot'' nam,
   e: 'Candidate Screening Copilot',' descriptio,
@@ -2032,5 +1867,5 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['GreenhouseLever'],' use_case,
   s: ['Faster hiring_bias reduction'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / candidate - screening - copilot', real_servic,
+  s: //ziontechgroup.com / services / candidate - screening - copilot', real_servic,
   e: true} ]; '

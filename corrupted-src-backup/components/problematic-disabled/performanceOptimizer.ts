@@ -199,10 +199,7 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
 
   public, preloadCriticalResource, s(): vo, i, d {
-    const criticalResource, s = [
-      '/asse, t, s/c, s, s/ma, i, n.cs, s',
-      '/asse, t, s/js/vend, o, r.js',
-      '/asse, t, s/js/ma, i, n.js']; criticalResourc, e, s.forEa, c, h((resour, c, e) = > {
+    const criticalResource, s = ['/asse, t, s/c, s, s/ma, i, n.cs, s', '/asse, t, s/js/vend, o, r.js', '/asse, t, s/js/ma, i, n.js']; criticalResourc, e, s.forEa, c, h((resour, c, e) = > {
       const lin, k = docume, n, t.createEleme, n, t('l, i, n, k'); li, n, k.r, e, l = 'prelo, a, d'; li, n, k.hr, e, f = resour, c, e; li, n, k.as = resour, c, e.endsWi, t, h('.cs, s')  ? 'sty, l, e'  : 'scri, p, t'; docume, n, t.he, a, d.appendChi, l, d(li, n, k)
   })
   }
@@ -211,7 +208,7 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     if ('serviceWork, e, r' in, navigato, r) {
       navigat, o, r.serviceWork, e, r.regist, e, r('/sw.js')
         .th, e, n((registrati, o, n) = > {
-          conso, l, e.l, o, g('Service, Worker, registered:', registrati, o, n)
+          conso, l, e.l, o, g('Service, Worker, registered: ', registrati, o, n)
   private, analyzeCSSRule, s(rul, e, s: CSSRuleLi, s, t): vo, i, d {/* TODO: Fix JSX expression */}
   }
 

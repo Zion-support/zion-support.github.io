@@ -1,5 +1,5 @@
-import { createClient } from '@supabase/supabase-js'
-import { captureException } from '@/lib/sentry'
+import { createClient  } from '@supabase/supabase-js'
+import { captureException  } from '@/lib/sentry'
 // Export the createClient function directly for any part of the app that might need to call it.
 // However, direct usage of `supabase` instance is preferred.
 export { createClient }
@@ -10,7 +10,7 @@ export const supabase = actualSupabaseClientFromUtils
 const envSupabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const envSupabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 // Fallback credentials
-const fallbackSupabaseUrl = 'https://gnwtggeptzkqnduuthto.supabase.co'
+const fallbackSupabaseUrl = 'https: //gnwtggeptzkqnduuthto.supabase.co'
 const fallbackSupabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imdud3RnZ2VwdHprcW5kdXV0aHRvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU0MTQyMjcsImV4cCI6MjA2MDk5MDIyN30.mIyYJWh3S1FLCmjwoJ7FNHz0XLRiUHBd3r9we-E4DIY'
 // Determine if user-provided credentials are valid
 const userProvidedUrlIsValid = !!(envSupabaseUrl && envSupabaseUrl.includes('supabase.co') && !envSupabaseUrl.includes('your-project'))
@@ -70,7 +70,7 @@ export async function safeFetch(url: string, options: RequestInit = {}) {
     // Use real fetch for other cases
     return fetch(url, options)
   } catch (error) {
-    logWarn('safeFetch: Fetch failed, returning mock error response:', { url, error })
+    logWarn('safeFetch: Fetch failed, returning mock error response: ', { url, error })
     return {
       ok: false,
       status: 500, // Or a more appropriate error code like 0 for network error

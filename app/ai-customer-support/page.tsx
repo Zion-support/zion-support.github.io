@@ -1,20 +1,18 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { MessageCircle, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Brain, Target, Activity, TrendingUp, Award, Lock, Database, Cloud, Code, Smartphone, Settings, Search, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Compass, Navigation as NavIcon, PieChart, TrendingDown, Phone, Mail, MapPin } from 'lucide-react';
+import { MessageCircle, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Brain, Target, Activity, TrendingUp, Award, Lock, Database, Cloud, Code, Smartphone, Settings, Search, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Compass, Navigation as NavIcon, PieChart, TrendingDown, Phone, Mail, MapPin  } from 'lucide-react';
 
 const AICustomerSupportPage: React.FC = () => {
-  const features = [
-    {
-      icon: Bot,
-      title: 'AI-Powered Chatbots',
-      description: 'Intelligent chatbots that understand context, handle complex queries, and provide instant responses 24/7.',
-      benefits: ['99.9% uptime', 'Instant responses', 'Multi-language support', 'Context understanding']
-    },
+  return (
+
+  const features = [{
+      icon: Bot, title: 'AI-Powered Chatbots', description: 'Intelligent chatbots that understand context, handle complex queries, and provide instant responses 24/7.', benefits: ['99.9% uptime', 'Instant responses', 'Multi-language support', 'Context understanding']
+    
+  );
+},
     {
       icon: MessageCircle,
       title: 'Omnichannel Communication',
@@ -47,82 +45,30 @@ const AICustomerSupportPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
-    'Increase customer satisfaction by 95%',
-    'Reduce response time by 90%',
-    'Lower support costs by 70%',
-    'Handle 10x more inquiries',
-    'Enable 24/7 support',
-    'Improve resolution rates',
-    'Scale support operations',
-    'Enhance customer experience'
-  ];
+  const benefits = ['Increase customer satisfaction by 95%', 'Reduce response time by 90%', 'Lower support costs by 70%', 'Handle 10x more inquiries', 'Enable 24/7 support', 'Improve resolution rates', 'Scale support operations', 'Enhance customer experience'];
 
-  const useCases = [
-    {
-      title: 'E-commerce Support',
-      description: 'Handle product inquiries, order tracking, and returns with AI assistance',
-      icon: '🛒'
-    },
-    {
-      title: 'Technical Support',
-      description: 'Provide technical assistance and troubleshooting for software and hardware',
-      icon: '🔧'
-    },
-    {
-      title: 'Billing & Payments',
-      description: 'Assist with billing questions, payment issues, and account management',
-      icon: '💳'
-    },
-    {
-      title: 'Product Information',
-      description: 'Answer questions about products, features, and specifications',
-      icon: '📋'
-    },
-    {
-      title: 'Appointment Scheduling',
-      description: 'Help customers schedule appointments and manage bookings',
-      icon: '📅'
-    },
-    {
-      title: 'General Inquiries',
-      description: 'Handle general questions and provide information about services',
-      icon: '❓'
+  const useCases = [{
+      title: 'E-commerce Support', description: 'Handle product inquiries, order tracking, and returns with AI assistance', icon: '🛒'
+    }, {
+      title: 'Technical Support', description: 'Provide technical assistance and troubleshooting for software and hardware', icon: '🔧'
+    }, {
+      title: 'Billing & Payments', description: 'Assist with billing questions, payment issues, and account management', icon: '💳'
+    }, {
+      title: 'Product Information', description: 'Answer questions about products, features, and specifications', icon: '📋'
+    }, {
+      title: 'Appointment Scheduling', description: 'Help customers schedule appointments and manage bookings', icon: '📅'
+    }, {
+      title: 'General Inquiries', description: 'Handle general questions and provide information about services', icon: '❓'
     }
-=======
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
-const AiCustomerSupportPage: React.FC = () => {,
-=======
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Brain, MessageCircle, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin } from 'lucide-react'
-
-const AiCustomerSupportPage: React.FC = () => {
-<<<<<<< HEAD
->>>>>>> origin/main
     const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
+      icon: Brain, title: 'AI-Powered Intelligence', description: 'Advanced AI algorithms that provide intelligent insights and recommendations.', benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
     {icon: BarChart,
-=======
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
-=======
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'],
->>>>>>> origin/main
   },
     {
     icon: BarChart,
->>>>>>> origin/main
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-<<<<<<< HEAD
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
     {icon: Target,
       title: 'Precision Targeting',
@@ -131,14 +77,7 @@ const AiCustomerSupportPage: React.FC = () => {
     {icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-<<<<<<< HEAD
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
-=======
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-  },
-  ];];
->>>>>>> origin/main
-=======
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'],
   },
     {
@@ -154,48 +93,34 @@ const AiCustomerSupportPage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
   }
     ]
->>>>>>> origin/main
-const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-<<<<<<< HEAD
-    'Gain competitive advantage with advanced technology';
-<<<<<<< HEAD
-  ]
-return(<>)
-      <Helmet />
-=======
->>>>>>> origin/main
+const benefits = ['Increase efficiency by up to 50%', 'Reduce costs by 30% with automation', 'Improve decision-making with AI insights', 'Scale operations without proportional staff increases', 'Gain competitive advantage with advanced technology';]
+return(<>
+  )
+</>
+      <Helmet /></Helmet>
   ];
 return (
     <>
   </>
-      <Helmet>
->>>>>>> origin/main
+      <Helmet ></Helmet>
         <title>Ai Customer Support - Zion Tech Group</title>
-=======
     'Gain competitive advantage with advanced technology'
   ]
 return (
     <>
-      <Helmet>
+      <Helmet ></Helmet>
         </Helmet><title>Ai Customer Support - Zion Tech Group</title>
->>>>>>> origin/main
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
-<<<<<<< HEAD
 
-      <Navigation />
-
+      <Navigation /></Navigation>
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full mb-8">
-              <MessageCircle className="w-10 h-10 text-white" />
+              <MessageCircle className="w-10 h-10 text-white" /></MessageCircle>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Customer Support
@@ -204,53 +129,36 @@ return (
               Transform your customer support with our AI Customer Support solutions. Intelligent automation, 
               omnichannel communication, and human-AI collaboration for better customer experience.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center">
                 Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
-=======
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900"></div>
-<<<<<<< HEAD
+                <ArrowRight className="ml-2 w-5 h-5" /></ArrowRight>
         {/* Hero Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
-        {/* Hero Section */}
-<<<<<<< HEAD
         <section className="relative py-20 px-4 overflow-hidden">
         </section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%, rgba(147, 51, 234, 0.3)_0%, transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%, rgba(59, 130, 246, 0.3)_0%, transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
               Ai Customer Support
-=======
-        <section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
->>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%, rgba(147, 51, 234, 0.3)_0%, transparent_50%)] animate-pulse" /></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%, rgba(59, 130, 246, 0.3)_0%, transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
           <div className="relative max-w-7xl mx-auto text-center"></div>
             <h1>Ai Customer Support;</h1>
->>>>>>> origin/main
             </h1>
-<<<<<<< HEAD
             <p>Advanced AI-powered ai customer support solution for modern businesses.</p>
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
               <button>Get Started;</button>
->>>>>>> origin/main
               </button>
               <button>View Demo,</button>
-=======
             <p></p>
               Advanced AI-powered ai customer support solution for modern businesses.
             </p>
@@ -260,29 +168,23 @@ return (
               </button>
               <button></button>
                 View Demo,
->>>>>>> origin/main
               </button>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
         {/* Features Section */}
         <section className="py-20 px-4">
         </section>
-=======
-<<<<<<< HEAD
         {/* Features Section */} <section className="py-20 px-4">
->>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
         <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%, rgba(147, 51, 234, 0.3)_0%, transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%, rgba(59, 130, 246, 0.3)_0%, transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Ai Customer Support
+            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">Ai Customer Support
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AI-powered ai customer support solution for modern businesses.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -293,49 +195,29 @@ return (
           </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
->>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2>Key Features;</h2>
               </h2>
               <p>Advanced AI technology that drives results;</p>
-=======
-          <div className="max-w-7xl mx-auto" / /></div>
-            <div className="text-center mb-16" / /></div>
-              <h2></h2>
-                Key Features
-              </h2>
-              <p></p>
-                Advanced AI technology that drives results
->>>>>>> origin/main
               </p>
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
               {features.map((feature, index) => (
-<<<<<<< HEAD
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-=======
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
-                    <feature />
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-<<<<<<< HEAD
                   <p className="text-gray-300 mb-4">{feature.description</p>}</p>
                   {feature.benefits && (;
                     <ul>
                       {feature.benefits.map((benefit, idx) => (} <li>
-                          <CheckCircle />
-=======
->>>>>>> origin/main
+                          <CheckCircle /></CheckCircle>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {
     feature.benefits && (
@@ -343,12 +225,9 @@ return (
                       {feature.benefits.map((benefit, idx) => (
   }
                         </ul><li>
-                          </li><CheckCircle>
->>>>>>> origin/main
-
-<<<<<<< HEAD
+                          </li><CheckCircle ></CheckCircle>
         {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -358,25 +237,14 @@ return (
                 From e-commerce to technical support, our AI Customer Support serves diverse needs
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 text-center">
                   <div className="text-4xl mb-4">{useCase.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300">{useCase.description}</p>
-=======
-                          {benefit} </li>
-                      ))}
-                    </ul>
-                  )}
->>>>>>> origin/main
-=======
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Chatbots',
-      description: 'Intelligent conversational AI that understands context and provides accurate responses',
-      details: ['Natural Language Processing', 'Context Awareness', 'Multi-language Support', 'Learning Capabilities']
+  const features = [{
+      icon: Brain, title: 'AI-Powered Chatbots', description: 'Intelligent conversational AI that understands context and provides accurate responses', details: ['Natural Language Processing', 'Context Awareness', 'Multi-language Support', 'Learning Capabilities']
     },
     {
       icon: MessageCircle,
@@ -410,19 +278,9 @@ return (
     }
   ]
 
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$99',
-      period: '/month',
-      description: 'Perfect for small businesses',
-      features: [
-        'Up to 1,000 conversations/month',
-        'Basic AI chatbot',
-        'Email support',
-        'Standard analytics',
-        '1 integration'
-      ],
+  const pricingPlans = [{
+      name: 'Starter', price: '$99', period: '/month', description: 'Perfect for small businesses', features: [
+        'Up to 1, 000 conversations/month', 'Basic AI chatbot', 'Email support', 'Standard analytics', '1 integration'],
       popular: false
     },
     {
@@ -430,14 +288,7 @@ return (
       price: '$299',
       period: '/month',
       description: 'Ideal for growing companies',
-      features: [
-        'Up to 10,000 conversations/month',
-        'Advanced AI with learning',
-        'Multi-channel support',
-        'Advanced analytics',
-        '5 integrations',
-        'Priority support'
-      ],
+      features: ['Up to 10, 000 conversations/month', 'Advanced AI with learning', 'Multi-channel support', 'Advanced analytics', '5 integrations', 'Priority support'],
       popular: true
     },
     {
@@ -445,56 +296,26 @@ return (
       price: '$799',
       period: '/month',
       description: 'For large organizations',
-      features: [
-        'Unlimited conversations',
-        'Custom AI training',
-        'All channels included',
-        'Custom analytics dashboard',
-        'Unlimited integrations',
-        'Dedicated support',
-        'Custom deployment'
-      ],
+      features: ['Unlimited conversations', 'Custom AI training', 'All channels included', 'Custom analytics dashboard', 'Unlimited integrations', 'Dedicated support', 'Custom deployment'],
       popular: false
     }
   ]
 
-  const stats = [
-    { value: '95%', label: 'Customer Satisfaction', icon: <Star className="w-8 h-8 text-yellow-400" /> },
-    { value: '2.3s', label: 'Average Response Time', icon: <Clock className="w-8 h-8 text-green-400" /> },
-    { value: '24/7', label: 'Availability', icon: <Zap className="w-8 h-8 text-blue-400" /> },
-    { value: '50%', label: 'Cost Reduction', icon: <BarChart className="w-8 h-8 text-purple-400" /> }
-  ]
+  const stats = [{ value: '95%', label: 'Customer Satisfaction', icon: <Star className="w-8 h-8 text-yellow-400" /> }, { value: '2.3s', label: 'Average Response Time', icon: <Clock className="w-8 h-8 text-green-400" /> }, { value: '24/7', label: 'Availability', icon: <Zap className="w-8 h-8 text-blue-400" /> }, { value: '50%', label: 'Cost Reduction', icon: <BarChart className="w-8 h-8 text-purple-400" /> }]
 
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      role: 'Customer Success Manager, TechCorp',
-      content: 'Our AI customer support reduced response time by 80% and increased customer satisfaction to 95%.',
-      rating: 5,
-      company: 'TechCorp'
-    },
-    {
-      name: 'Michael Chen',
-      role: 'VP Operations, DataFlow Inc',
-      content: 'The AI system handles 90% of our customer inquiries automatically, allowing our team to focus on complex issues.',
-      rating: 5,
-      company: 'DataFlow Inc'
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Head of Support, InnovateLab',
-      content: 'Implementation was seamless and the results exceeded our expectations. Highly recommended!',
-      rating: 5,
-      company: 'InnovateLab'
-    }
-  ]
+  const testimonials = [{
+      name: 'Sarah Johnson', role: 'Customer Success Manager, TechCorp', content: 'Our AI customer support reduced response time by 80% and increased customer satisfaction to 95%.', rating: 5, company: 'TechCorp'
+    }, {
+      name: 'Michael Chen', role: 'VP Operations, DataFlow Inc', content: 'The AI system handles 90% of our customer inquiries automatically, allowing our team to focus on complex issues.', rating: 5, company: 'DataFlow Inc'
+    }, {
+      name: 'Emily Rodriguez', role: 'Head of Support, InnovateLab', content: 'Implementation was seamless and the results exceeded our expectations. Highly recommended!', rating: 5, company: 'InnovateLab'
+    }]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
+      <Navigation /></Navigation>
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -517,16 +338,15 @@ return (
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
                   {stat.icon}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                <div className="text-3xl md: text-4xl font-bold text-white mb-2">
                   {stat.value}
                 </div>
                 <div className="text-gray-300">
@@ -539,7 +359,7 @@ return (
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -549,25 +369,18 @@ return (
               Our AI customer support platform combines cutting-edge technology with user-friendly design.
             </p>
           </div>
-<<<<<<< HEAD
         </section>
-<<<<<<< HEAD
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-=======
-<<<<<<< HEAD
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
         {/* Benefits Section */} <section className="py-20 px-4">
-=======
->>>>>>> origin/main
->>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Features
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">Key Features
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced AI technology that drives results
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}
@@ -576,25 +389,11 @@ return (
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                           {benefit}
                       ))}
-<<<<<<< HEAD
                     </ul>
                   </div>
-=======
-                  )}
-              ))}
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-<<<<<<< HEAD
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2>Why Choose Our Solution?</h2>
@@ -604,56 +403,40 @@ return (
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
               {benefits.map((benefit, index) => (
-<<<<<<< HEAD
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg mb-4">
-                    <CheckCircle className="w-6 h-6 text-white" />
+                    <CheckCircle className="w-6 h-6 text-white" /></CheckCircle>
                   </div>
                   <p className="text-white font-medium">{benefit}</p>
-=======
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
-                    <CheckCircle />
-                  <p className="text-lg text-white font-medium">{benefit</p>}</p>
->>>>>>> origin/main
->>>>>>> origin/main
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-teal-500 to-cyan-500 rounded-2xl p-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Customer Support?
-=======
-<<<<<<< HEAD
 
         {/* Benefits Section */}
         <section className="py-20 px-4">
         </section>
-=======
-        {/* CTA Section */} <section className="py-20 px-4">
->>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
           <div className="max-w-7xl mx-auto" / /></div>
             <div className="text-center mb-16" / /></div>
               <h2></h2>
                 Why Choose Our Solution?
->>>>>>> origin/main
               </h2>
               <p></p>
                 Proven results that drive business growth and efficiency
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
               {benefits.map((benefit, index) => ()
               ))}
         {/* CTA Section */}
@@ -661,21 +444,17 @@ return (
           </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
->>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           ))
         </section>
-<<<<<<< HEAD
 
         {/* CTA Section */}
         <section className="py-20 px-4">
         </section>
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-=======
-<<<<<<< HEAD
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
           <div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
               <h2>Ready to Get Started?</h2>
@@ -686,11 +465,6 @@ return (
                 <button>Contact Us;</button>
                 </button>
                 <button>Learn More;</button>
-=======
-          <div className="max-w-4xl mx-auto text-center" / /></div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12" / /></div>
-              <h2></h2>
->>>>>>> origin/main
                 Ready to Get Started?
               </h2>
               <p></p>
@@ -702,32 +476,21 @@ return (
                 </button>
                 <button></button>
                   Learn More
->>>>>>> origin/main
                 </button>
               </div>
             </div>
           ))
         </section>
       </div>
-<<<<<<< HEAD
-      <Footer />
-
+      <Footer /></Footer>
   );
 };
 
 export default AiCustomerSupportPage;
-=======
-      <Footer></Footer>
-    </>
-  ),
-}
-export default AiCustomerSupportPage</$1></h3>
->>>>>>> origin/main
-=======
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/20 transition-all duration-300">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -738,7 +501,7 @@ export default AiCustomerSupportPage</$1></h3>
                 <ul className="space-y-2">
                   {feature.details.map((detail, detailIndex) => (
                     <li key={detailIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                       {detail}
                     </li>
                   ))}
@@ -750,7 +513,7 @@ export default AiCustomerSupportPage</$1></h3>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -761,7 +524,7 @@ export default AiCustomerSupportPage</$1></h3>
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-2xl p-8 relative ${
                 plan.popular ? 'ring-2 ring-cyan-400 bg-white/15' : ''
@@ -784,14 +547,14 @@ export default AiCustomerSupportPage</$1></h3>
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" /></CheckCircle>
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-300 ${
                   plan.popular 
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white transform hover:scale-105' 
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-600 hover:to-blue-600 text-white transform hover:scale-105' 
                     : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                 }`}>
                   Start Free Trial
@@ -803,7 +566,7 @@ export default AiCustomerSupportPage</$1></h3>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -819,7 +582,7 @@ export default AiCustomerSupportPage</$1></h3>
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" /></Star>
                   ))}
                 </div>
                 <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
@@ -835,7 +598,7 @@ export default AiCustomerSupportPage</$1></h3>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Customer Support?
@@ -845,7 +608,7 @@ export default AiCustomerSupportPage</$1></h3>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
-              <ArrowRight className="w-5 h-5 mr-2" />
+              <ArrowRight className="w-5 h-5 mr-2" /></ArrowRight>
               Start Free Trial
             </button>
             <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300">
@@ -855,10 +618,9 @@ export default AiCustomerSupportPage</$1></h3>
         </div>
       </section>
 
-      <Footer />
+      <Footer /></Footer>
     </div>
   )
 }
 
 export default AiCustomerSupportPage
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9

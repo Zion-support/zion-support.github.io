@@ -2,113 +2,17 @@
 
 import fs from 'fs'
 // Critical files that are preventing build
-const criticalFiles = [
-  './app/careers/page.tsx',
-  './app/analytics-tools/page.tsx',
-  './app/api-docs/page.tsx',
-  './app/ar-vr-platform/page.tsx',
-  './app/backup-recovery/page.tsx',
-  './app/blockchain-integration-services/page.tsx',
-  './app/blockchain/page.tsx',
-  './app/business-apps/page.tsx',
-  './app/business-intelligence/page.tsx',
-  './app/cloud-infrastructure/page.tsx',
-  './app/cloud-migration/page.tsx',
-  './app/cloud-migration-services/page.tsx',
-  './app/cloud-security/page.tsx',
-  './app/cloud-services/page.tsx',
-  './app/community/page.tsx',
-  './app/compliance/page.tsx',
-  './app/computer-vision/page.tsx',
-  './app/consultation/page.tsx',
-  './app/cookies/page.tsx',
-  './app/crm-lite/page.tsx',
-  './app/custom-development/page.tsx',
-  './app/cybersecurity/page.tsx',
-  './app/database/page.tsx',
-  './app/database-services/page.tsx',
-  './app/data-center/page.tsx',
-  './app/data-protection/page.tsx',
-  './app/developer-tools/page.tsx',
-  './app/devops-cicd/page.tsx',
-  './app/devops/page.tsx',
-  './app/digital-transformation/page.tsx',
-  './app/digital-twin-platform/page.tsx',
-  './app/docs/page.tsx',
-  './app/email-optimizer/page.tsx',
-  './app/enterprise-security/page.tsx',
-  './app/enterprise/page.tsx',
-  './app/error.tsx',
-  './app/gdpr/page.tsx',
-  './app/global-error.tsx',
-  './app/health/page.tsx',
-  './app/healthcare-it/page.tsx',
-  './app/help/page.tsx',
-  './app/innovation-labs/page.tsx',
-  './app/intelligent-database-migration/page.tsx',
-  './app/intelligent-email-infrastructure/page.tsx',
-  './app/investors/page.tsx',
-  './app/iot-edge-computing/page.tsx',
-  './app/iot-edge/page.tsx',
-  './app/iot-platform/page.tsx',
-  './app/iot/page.tsx',
-  './app/it-asset-management/page.tsx',
-  './app/it-consulting/page.tsx',
-  './app/it-infrastructure/page.tsx',
-  './app/it-performance/page.tsx',
-  './app/it-services/page.tsx',
-  './app/it-training/page.tsx',
-  './app/landing-page-builder/page.tsx',
-  './app/loading.tsx',
-  './app/machine-learning/page.tsx',
-  './app/marketing-tools/page.tsx',
-  './app/micro-saas-services/page.tsx',
-  './app/mobile-development/page.tsx',
-  './app/network-design/page.tsx',
-  './app/network-infrastructure/page.tsx',
-  './app/network-security/page.tsx',
-  './app/news/page.tsx',
-  './app/nlp/page.tsx',
-  './app/offline/page.tsx',
-  './app/partners/page.tsx',
-  './app/performance-optimization/page.tsx',
-  './app/privacy/page.tsx',
-  './app/productivity/page.tsx',
-  './app/quantum-ai/page.tsx',
-  './app/quantum-computing/page.tsx',
-  './app/robotics-integration/page.tsx',
-  './app/robotics/page.tsx',
-  './app/security/page.tsx',
-  './app/seo-optimizer/page.tsx',
-  './app/services-advertising/page.tsx',
-  './app/sitemap/page.tsx',
-  './app/smart-city-infrastructure/page.tsx',
-  './app/smart-contract-security-audit/page.tsx',
-  './app/specialized-services/page.tsx',
-  './app/status/page.tsx',
-  './app/support/page.tsx',
-  './app/system-admin/page.tsx',
-  './app/system-status/page.tsx',
-  './app/task-manager-pro/page.tsx',
-  './app/team/page.tsx',
-  './app/terms/page.tsx',
-  './app/training/page.tsx',
-  './app/web-development/page.tsx'
-]
+const criticalFiles = ['./app/careers/page.tsx', './app/analytics-tools/page.tsx', './app/api-docs/page.tsx', './app/ar-vr-platform/page.tsx', './app/backup-recovery/page.tsx', './app/blockchain-integration-services/page.tsx', './app/blockchain/page.tsx', './app/business-apps/page.tsx', './app/business-intelligence/page.tsx', './app/cloud-infrastructure/page.tsx', './app/cloud-migration/page.tsx', './app/cloud-migration-services/page.tsx', './app/cloud-security/page.tsx', './app/cloud-services/page.tsx', './app/community/page.tsx', './app/compliance/page.tsx', './app/computer-vision/page.tsx', './app/consultation/page.tsx', './app/cookies/page.tsx', './app/crm-lite/page.tsx', './app/custom-development/page.tsx', './app/cybersecurity/page.tsx', './app/database/page.tsx', './app/database-services/page.tsx', './app/data-center/page.tsx', './app/data-protection/page.tsx', './app/developer-tools/page.tsx', './app/devops-cicd/page.tsx', './app/devops/page.tsx', './app/digital-transformation/page.tsx', './app/digital-twin-platform/page.tsx', './app/docs/page.tsx', './app/email-optimizer/page.tsx', './app/enterprise-security/page.tsx', './app/enterprise/page.tsx', './app/error.tsx', './app/gdpr/page.tsx', './app/global-error.tsx', './app/health/page.tsx', './app/healthcare-it/page.tsx', './app/help/page.tsx', './app/innovation-labs/page.tsx', './app/intelligent-database-migration/page.tsx', './app/intelligent-email-infrastructure/page.tsx', './app/investors/page.tsx', './app/iot-edge-computing/page.tsx', './app/iot-edge/page.tsx', './app/iot-platform/page.tsx', './app/iot/page.tsx', './app/it-asset-management/page.tsx', './app/it-consulting/page.tsx', './app/it-infrastructure/page.tsx', './app/it-performance/page.tsx', './app/it-services/page.tsx', './app/it-training/page.tsx', './app/landing-page-builder/page.tsx', './app/loading.tsx', './app/machine-learning/page.tsx', './app/marketing-tools/page.tsx', './app/micro-saas-services/page.tsx', './app/mobile-development/page.tsx', './app/network-design/page.tsx', './app/network-infrastructure/page.tsx', './app/network-security/page.tsx', './app/news/page.tsx', './app/nlp/page.tsx', './app/offline/page.tsx', './app/partners/page.tsx', './app/performance-optimization/page.tsx', './app/privacy/page.tsx', './app/productivity/page.tsx', './app/quantum-ai/page.tsx', './app/quantum-computing/page.tsx', './app/robotics-integration/page.tsx', './app/robotics/page.tsx', './app/security/page.tsx', './app/seo-optimizer/page.tsx', './app/services-advertising/page.tsx', './app/sitemap/page.tsx', './app/smart-city-infrastructure/page.tsx', './app/smart-contract-security-audit/page.tsx', './app/specialized-services/page.tsx', './app/status/page.tsx', './app/support/page.tsx', './app/system-admin/page.tsx', './app/system-status/page.tsx', './app/task-manager-pro/page.tsx', './app/team/page.tsx', './app/terms/page.tsx', './app/training/page.tsx', './app/web-development/page.tsx']
 // Template for a basic page
 const createBasicPageTemplate = (pageName, title, description) => `'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import { Helmet  } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings  } from 'lucide-react'
 const ${pageName}Page: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+  const features = [{
+      icon: Brain, title: 'AI-Powered Intelligence', description: 'Advanced AI algorithms that provide intelligent insights and recommendations.', benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
       icon: BarChart,
@@ -131,28 +35,27 @@ const ${pageName}Page: React.FC = () => {
   ]
   return (
     <>
-      <Helmet>
+      <Helmet ></Helmet>
         <title>${title} - Zion Tech Group
         <meta name="description" content="${description}" />
         <meta name="keywords" content="${title.toLowerCase()}, AI solutions, IT services, business transformation" />
-      <Navigation />
-      
+      <Navigation /></Navigation>
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
                 ${title}
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                 ${description}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                   Get Started
                 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
                   Learn More
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -161,7 +64,7 @@ const ${pageName}Page: React.FC = () => {
                 Discover how our solutions can help transform your business.
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
                     <h3 className="text-xl font-semibold text-gray-900">{feature.title}
@@ -169,12 +72,12 @@ const ${pageName}Page: React.FC = () => {
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
                         {benefit}
                     ))}
               ))}
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
@@ -182,7 +85,7 @@ const ${pageName}Page: React.FC = () => {
               Contact us today to learn more about our services.
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
               Contact Us
-      <Footer />
+      <Footer /></Footer>
     </>
   )
 }

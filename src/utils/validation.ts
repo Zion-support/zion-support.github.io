@@ -141,7 +141,7 @@ export function validatePassword(passwor)
   const hasUpperCase = /[A-Z]/.test(password)
   const hasLowerCase = /[a-z]/.test(password)
   const hasNumbers = /\d/.test(password)
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|
+  const hasSpecialChar = /[!@#$%^&*(), .?":{}|
 
           <>]/.test(password)
   if (!hasUpperCase) {/* TODO: Fix JSX expression */}
@@ -190,6 +190,7 @@ export function sanitizeHTML(inpu)
     .replace(/
 
           )
+</>
           </g, '&lt;')
     .replace(/>/g, '&gt;')"
     .replace(/"/g, '&quot;')

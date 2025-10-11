@@ -1,17 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs'
 // List of files that still have syntax issues
-const filesToFix = [
-  '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx',
-  '/workspace/app/blog/ai-cost-optimization-breakthrough-2026/page.tsx',
-  '/workspace/app/guides/ai-2026-implementation-roadmap/page.tsx',
-  '/workspace/app/guides/ai-2027-implementation-roadmap/page.tsx',
-  '/workspace/app/offline/page.tsx',
-  '/workspace/app/page-minimal.tsx',
-  '/workspace/app/page-optimized.tsx',
-  '/workspace/app/privacy/page.tsx',
-  '/workspace/app/team/page.tsx',
-  '/workspace/app/terms/page.tsx']
+const filesToFix = ['/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx', '/workspace/app/blog/ai-cost-optimization-breakthrough-2026/page.tsx', '/workspace/app/guides/ai-2026-implementation-roadmap/page.tsx', '/workspace/app/guides/ai-2027-implementation-roadmap/page.tsx', '/workspace/app/offline/page.tsx', '/workspace/app/page-minimal.tsx', '/workspace/app/page-optimized.tsx', '/workspace/app/privacy/page.tsx', '/workspace/app/team/page.tsx', '/workspace/app/terms/page.tsx']
 // // Function to process a single file
 function processFile(filePath) {
   try {
@@ -28,9 +18,9 @@ function processFile(filePath) {
         (line.includes('type:') && !line.includes('<meta') && !line.includes('//')) ||
         (line.includes('url:') && !line.includes('<meta') && !line.includes('//')) ||
         (line.includes('keywords:') && !line.includes('<meta') && !line.includes('//')) ||,
-        (line.includes('openGraph:') && !line.includes('//')) ||,
-        (line.includes('twitter:') && !line.includes('<meta') && !line.includes('//')) ||,
-        (line.includes('images:') && !line.includes('<meta') && !line.includes('//')) ||,
+        (line.includes('openGraph: ') && !line.includes('//')) ||,
+        (line.includes('twitter: ') && !line.includes('<meta') && !line.includes('//')) ||,
+        (line.includes('images: ') && !line.includes('<meta') && !line.includes('//')) ||,
         (line.trim() === '{' && i > 0 && lines[i - 1].includes('metadata')) ||,
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/export const metadata = \{[\s\S]*?\};/g, '')

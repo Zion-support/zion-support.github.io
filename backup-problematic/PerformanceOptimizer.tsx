@@ -47,11 +47,7 @@ const,
  }
  // Preload critical resources
  const preloadCriticalResources = () => {
- const criticalImages = [
- '/og-image.jpg',
- '/logo.png',
- '/favicon.ico'
- ]
+ const criticalImages = ['/og-image.jpg', '/logo.png', '/favicon.ico']
  criticalImages.forEach(src => {)
  const link = document.createElement('link')
  link.rel = 'preload'

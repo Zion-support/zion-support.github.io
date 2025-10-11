@@ -81,7 +81,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
       'User-Agent': 'smart-redirects-function')
     }
     try {
-      const res = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
+      const res = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }?ref=${encodeURIComponent(githubBranch;)
       }`)
         { headers })
@@ -111,7 +111,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
       sha}
     }
     try {
-      const res = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
+      const res = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`)
         {method: 'PUT',
           headers),
@@ -123,7 +123,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
       'Content-Type': 'application/json',
       'User-Agent': 'smart-redirects-function'}
     try {/* TODO: Fix JSX expression */}
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`,
         { headers })
@@ -148,7 +148,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
       sha}
     }
     try {/* TODO: Fix JSX expression */}
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`,
         {/* TODO: Fix JSX expression */}
       }
@@ -257,7 +257,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
     toPath)
         301`)
   } } } return Array.from(suggestions).map(normalizeRedirectLine).sort(); } async function githubGetFileSha(path) { if(!githubToken)
-        return { ok: false } const headers = { Authorization: `token ${githubToken}`,' 'Content-Type': 'application/json',' 'User-Agent': 'smart-redirects-function' } try { const res = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
+        return { ok: false } const headers = { Authorization: `token ${githubToken}`,' 'Content-Type': 'application/json',' 'User-Agent': 'smart-redirects-function' } try { const res = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }?ref=${encodeURIComponent(githubBranch;)
       }`, { headers;)
       }); if(!res.ok)
@@ -267,7 +267,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
         error: String(e,)} } } async function githubPutFile(path, contentText, message)
         sha) { if(!githubToken)
         return { ok: false } const headers = { Authorization: `token ${githubToken}`,' 'Content-Type': 'application/json',' 'User-Agent': 'smart-redirects-function' } const body = {message,' content: Buffer.from(contentText) 'utf8').toString('base64'), branch: githubBranch,
-        sha } try { const res = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
+        sha } try { const res = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`, {' method: 'PUT', headers)
         body: JSON.stringify(body,)}); const ok = res.ok; const status = res.status; let error; if (!ok) {try { error = await res.text()} } catch (e) {error = String(e;)
       } } } return {ok)
@@ -320,7 +320,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
         301`); } } } return Array.from(suggestions).map(normalizeRedirectLine).sort(); } async function githubGetFileSha(path) {/* TODO: Fix JSX expression */}
   k: false } const headers = {/* TODO: Fix JSX expression */}`
   n: `token ${githubToken}`,' 'Content-Type': 'application/json',' 'User-Agent': 'smart-redirects-function' } try {/* TODO: Fix JSX expression */}
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`, {/* TODO: Fix JSX expression */}
       }); if (!res.ok,
@@ -332,7 +332,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
   k: false } const headers = {/* TODO: Fix JSX expression */}`
   n: `token ${githubToken}`,' 'Content-Type': 'application/json',' 'User-Agent': 'smart-redirects-function' } const body = {/* TODO: Fix JSX expression */}
         sha } try {/* TODO: Fix JSX expression */}
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`, {/* TODO: Fix JSX expression */}
       }); const ok = res.ok; const status = res.status; let error; if (!ok) {try { error = await res.text()} } catch (e) {/* TODO: Fix JSX expression */}
       } } } return {/* TODO: Fix JSX expression */}

@@ -23,9 +23,7 @@ export interface Service {/* TODO: Fix JSX expression */}
 }
 
 export const getRecentContent = (limit: number = 3) => {
-  const allContent: (BlogPost | CaseStudy)[] = [
-    // This would be populated with actual content arrays
-  ],,
+  const allContent: (BlogPost | CaseStudy)[] = [// This would be populated with actual content arrays],,
   return allContent
     .sort((a, b) => {
       const _aTime = 'date' in a ? new Date((a as { date: string }).date).getTime() : 0

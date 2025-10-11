@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface InnovativeMicroSaas2026 {
   id: string
   name: string
@@ -45,26 +45,9 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 }
-export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [
-  {
-    id: 'ai-powered-customer-feedback-analyzer',
-    name: 'AI-Powered Customer Feedback Analyzer',
-    tagline: 'Transform customer feedback into actionable insights',
-    price: '$199',
-    period: '/month',
-    description: 'Intelligent feedback analysis platform that uses AI to categorize, analyze, and extract actionable insights from customer feedback across multiple channels.',
-    features: [
-      'Multi-channel feedback collection',
-      'AI-powered sentiment analysis',
-      'Automatic feedback categorization',
-      'Trend identification and reporting',
-      'Customer satisfaction scoring',
-      'Priority issue detection',
-      'Action item recommendations',
-      'Integration with CRM systems',
-      'Custom feedback forms',
-      'Real-time analytics dashboard'
-    ],
+export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [{
+    id: 'ai-powered-customer-feedback-analyzer', name: 'AI-Powered Customer Feedback Analyzer', tagline: 'Transform customer feedback into actionable insights', price: '$199', period: '/month', description: 'Intelligent feedback analysis platform that uses AI to categorize, analyze, and extract actionable insights from customer feedback across multiple channels.', features: [
+      'Multi-channel feedback collection', 'AI-powered sentiment analysis', 'Automatic feedback categorization', 'Trend identification and reporting', 'Customer satisfaction scoring', 'Priority issue detection', 'Action item recommendations', 'Integration with CRM systems', 'Custom feedback forms', 'Real-time analytics dashboard'],
     popular: true,
     icon: '💬🧠',
     color: 'from-blue-600 to-indigo-700',
@@ -99,18 +82,7 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [
     price: '$299',
     period: '/month',
     description: 'Next-generation VR meeting platform that creates immersive virtual environments for remote collaboration, training, and presentations.',
-    features: [
-      'Customizable virtual meeting spaces',
-      '3D avatar customization',
-      'Interactive whiteboards and tools',
-      'Screen sharing and presentations',
-      'Breakout room functionality',
-      'Recording and playback',
-      'Cross-platform compatibility',
-      'Integration with calendar systems',
-      'Analytics and engagement tracking',
-      'Custom branding options'
-    ],
+    features: ['Customizable virtual meeting spaces', '3D avatar customization', 'Interactive whiteboards and tools', 'Screen sharing and presentations', 'Breakout room functionality', 'Recording and playback', 'Cross-platform compatibility', 'Integration with calendar systems', 'Analytics and engagement tracking', 'Custom branding options'],
     popular: false,
     icon: '🥽🌐',
     color: 'from-purple-600 to-pink-700',
@@ -145,18 +117,7 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [
     price: '$399',
     period: '/month',
     description: 'Smart inventory management platform that uses AI to predict demand, optimize stock levels, and reduce inventory costs while maintaining service levels.',
-    features: [
-      'AI-powered demand forecasting',
-      'Dynamic reorder point calculation',
-      'Seasonal trend analysis',
-      'Multi-location inventory management',
-      'Automated purchase order generation',
-      'Stock level optimization',
-      'Dead stock identification',
-      'Integration with ERP systems',
-      'Real-time inventory tracking',
-      'Cost optimization analytics'
-    ],
+    features: ['AI-powered demand forecasting', 'Dynamic reorder point calculation', 'Seasonal trend analysis', 'Multi-location inventory management', 'Automated purchase order generation', 'Stock level optimization', 'Dead stock identification', 'Integration with ERP systems', 'Real-time inventory tracking', 'Cost optimization analytics'],
     popular: true,
     icon: '📦🤖',
     color: 'from-green-600 to-teal-700',
@@ -191,18 +152,7 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [
     price: '$249',
     period: '/month',
     description: 'Blockchain-based supply chain tracking platform that provides end-to-end visibility, transparency, and security for global supply chains.',
-    features: [
-      'End-to-end supply chain tracking',
-      'Blockchain-based data immutability',
-      'Real-time shipment monitoring',
-      'Smart contract automation',
-      'Compliance documentation',
-      'Multi-stakeholder access',
-      'Custom tracking workflows',
-      'Integration with logistics systems',
-      'Analytics and reporting',
-      'Mobile app for field workers'
-    ],
+    features: ['End-to-end supply chain tracking', 'Blockchain-based data immutability', 'Real-time shipment monitoring', 'Smart contract automation', 'Compliance documentation', 'Multi-stakeholder access', 'Custom tracking workflows', 'Integration with logistics systems', 'Analytics and reporting', 'Mobile app for field workers'],
     popular: false,
     icon: '⛓️📦',
     color: 'from-orange-600 to-red-700',
@@ -237,18 +187,7 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [
     price: '$149',
     period: '/month',
     description: 'Advanced social media management platform that uses AI to optimize posting times, content performance, and engagement across multiple social networks.',
-    features: [
-      'AI-powered posting time optimization',
-      'Multi-platform content scheduling',
-      'Content performance prediction',
-      'Hashtag optimization',
-      'Engagement rate analysis',
-      'Competitor analysis',
-      'Content calendar management',
-      'Automated posting',
-      'Analytics and reporting',
-      'Team collaboration tools'
-    ],
+    features: ['AI-powered posting time optimization', 'Multi-platform content scheduling', 'Content performance prediction', 'Hashtag optimization', 'Engagement rate analysis', 'Competitor analysis', 'Content calendar management', 'Automated posting', 'Analytics and reporting', 'Team collaboration tools'],
     popular: true,
     icon: '📱🤖',
     color: 'from-pink-600 to-rose-700',

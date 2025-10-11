@@ -2,7 +2,7 @@
 
 import fs from 'fs'
 import path from 'path'
-import { glob } from 'glob'
+import { glob  } from 'glob'
 // Function to fix emoji characters in JSX
 function fixEmojis(content) {
   const emojiMap = {
@@ -10,8 +10,8 @@ function fixEmojis(content) {
     '📈': 'trending-up',
     '💰': 'dollar-sign',
     '👥': 'users',
-    '📧': 'Email:',
-    '📍': 'Address:',
+    '📧': 'Email: ',
+    '📍': 'Address: ',
     '🚀': 'rocket',
     '⚡': 'zap',
     '🔒': 'lock',
@@ -96,22 +96,12 @@ function fixJSXStructure(content) {
 
 // Main function to process files
 async function processFiles() {
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'App.tsx'
-  ]
+  const patterns = ['app/**/*.tsx', 'app/**/*.ts', 'App.tsx']
   let processedCount = 0
   let errorCount = 0
   for (const pattern of patterns) {
     const files = await glob(pattern, { 
-      ignore: [
-        'node_modules/**',
-        'dist/**',
-        'build/**',
-        '**/*.d.ts',
-        '**/node_modules/**'
-      ]
+      ignore: ['node_modules/**', 'dist/**', 'build/**', '**/*.d.ts', '**/node_modules/**']
     })
     for (const file of files) {
       try {

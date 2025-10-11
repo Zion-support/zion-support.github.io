@@ -80,11 +80,11 @@ return res
 }
         reviews_count: 0,
         created_at: new Date ().toISOString (),
-import { supabase as supabaseClient } from '@/utils/supabase/client'
-import { TALENT_PROFILES as LOCAL } from '@/data/talent'
+import { supabase as supabaseClient  } from '@/utils/supabase/client'
+import { TALENT_PROFILES as LOCAL  } from '@/data/talent'
 import type { TalentProfile } from '@/utils/types/talent'
-import { v4 as uuid } from 'uuid'
-import { translateText, detectLanguageSimple } from '@/utils/api/translate'
+import { v4 as uuid  } from 'uuid'
+import { translateText, detectLanguageSimple  } from '@/utils/api/translate'
 const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh').split(',').map((x) => x.trim())
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -102,7 +102,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   if (req.method === 'POST') {
     try {
-      const payload = req.body as Partial<TalentProfile>
+      const payload = req.body as Partial<TalentProfile ></TalentProfile>
       const slug = (payload.name || 'talent').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') + '-' + uuid().slice(0, 6)
       const item: TalentProfile = {
         ...payload,
@@ -215,7 +215,7 @@ if ( {) {
           translations: item.translations as any,
   if (req.method === 'POST') {
     try {
-      const payload = req.body as Partial<TalentProfile>
+      const payload = req.body as Partial<TalentProfile ></TalentProfile>
       const slug =
         (payload.name |'talent')
           .toLowerCase()

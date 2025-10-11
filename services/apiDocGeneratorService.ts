@@ -124,15 +124,9 @@ export interface DocumentationConfig {
   }
 }
 export class APIDocGeneratorService {
-  private supportedFrameworks = [
-    'express', 'fastify', 'koa', 'hapi', 'django', 'flask', 'fastapi', 'spring', 'aspnet', 'laravel'
-  ]
-  private supportedLanguages = [
-    'javascript', 'typescript', 'python', 'java', 'csharp', 'php', 'go', 'ruby'
-  ]
-  private supportedLanguages = [
-    'javascript', 'typescript', 'python', 'java', 'csharp', 'php', 'go', 'ruby'
-  ]
+  private supportedFrameworks = ['express', 'fastify', 'koa', 'hapi', 'django', 'flask', 'fastapi', 'spring', 'aspnet', 'laravel']
+  private supportedLanguages = ['javascript', 'typescript', 'python', 'java', 'csharp', 'php', 'go', 'ruby']
+  private supportedLanguages = ['javascript', 'typescript', 'python', 'java', 'csharp', 'php', 'go', 'ruby']
   async generateDocumentation(
     sourcePath: string,
     config: DocumentationConfig
@@ -171,7 +165,7 @@ export class APIDocGeneratorService {
       // Calculate coverage
       documentation.metadata.coverage = this.calculateCoverage(documentation.endpoints)
     } catch (error) {
-      console.error('Error generating documentation:', error)
+      console.error('Error generating documentation: ', error)
       // Fallback to basic documentation
       documentation.endpoints = this.generateFallbackEndpoints()
       documentation.metadata.totalEndpoints = documentation.endpoints.length
@@ -180,12 +174,12 @@ export class APIDocGeneratorService {
   }
     return documentation
   }
-  private async analyzeSourceCode(sourcePath: string): Promise<{
-    endpoints: APIEndpoint[]
+  private async analyzeSourceCode(sourcePath: string): Promise<>
+  {endpoints: APIEndpoint[]
     schemas: APISchema[]
     languages: string[]
     frameworks: string[]
-  }> {
+  } {
     const endpoints: APIEndpoint[] = []
     const schemas: APISchema[] = []
     const languages: string[] = []
@@ -221,17 +215,10 @@ export class APIDocGeneratorService {
       frameworks: uniqueFrameworks
     }
   }
+</>
   private async scanDirectory(path: string): Promise<string[]> {
     // Simulate directory scanning
-    return [
-      'src/routes/users.js',
-      'src/routes/products.js',
-      'src/routes/orders.js',
-      'src/models/User.js',
-      'src/models/Product.js',
-      'src/middleware/auth.js',
-      'src/config/database.js'
-    ]
+    return ['src/routes/users.js', 'src/routes/products.js', 'src/routes/orders.js', 'src/models/User.js', 'src/models/Product.js', 'src/middleware/auth.js', 'src/config/database.js']
   }
   private analyzeJavaScriptFile(filePath: string): APIEndpoint[] {
     const endpoints: APIEndpoint[] = []
@@ -244,45 +231,27 @@ export class APIDocGeneratorService {
           method: 'GET',
           summary: 'Get all users',
           description: 'Retrieve a list of all users with optional filtering and pagination',
-          parameters: [
-            {
-              name: 'page',
-              in: 'query',
-              required: false,
-              schema: { type: 'integer', minimum: 1, default: 1 },
-              description: 'Page number for pagination'
-            },
-            {
-              name: 'limit',
-              in: 'query',
-              required: false,
-              schema: { type: 'integer', minimum: 1, maximum: 100, default: 20 },
-              description: 'Number of users per page'
-            }
-          ],
+          parameters: [{
+              name: 'page', in: 'query', required: false, schema: { type: 'integer', minimum: 1, default: 1 }, description: 'Page number for pagination'
+            }, {
+              name: 'limit', in: 'query', required: false, schema: { type: 'integer', minimum: 1, maximum: 100, default: 20 }, description: 'Number of users per page'
+            }],
           requestBody: undefined,
-          responses: [
-            {
-              code: '200',
-              description: 'Successful response',
-              content: {
+          responses: [{
+              code: '200', description: 'Successful response', content: {
                 'application/json': {
                   schema: {
-                    type: 'object',
-                    properties: {
+                    type: 'object', properties: {
                       users: {
-                        type: 'array',
-                        items: { $ref: '#/components/schemas/User' }
-                      },
-                      pagination: {
+                        type: 'array', items: { $ref: '#/components/schemas/User' }
+                      }, pagination: {
                         $ref: '#/components/schemas/Pagination'
                       }
                     }
                   }
                 }
               }
-            }
-          ],
+            }],
           tags: ['Users'],
           deprecated: false,
           rateLimit: {
@@ -301,31 +270,19 @@ export class APIDocGeneratorService {
           method: 'GET',
           summary: 'Get user by ID',
           description: 'Retrieve a specific user by their unique identifier',
-          parameters: [
-            {
-              name: 'id',
-              in: 'path',
-              required: true,
-              schema: { type: 'string', format: 'uuid' },
-              description: 'User unique identifier'
-            }
-          ],
+          parameters: [{
+              name: 'id', in: 'path', required: true, schema: { type: 'string', format: 'uuid' }, description: 'User unique identifier'
+            }],
           requestBody: undefined,
-          responses: [
-            {
-              code: '200',
-              description: 'User found successfully',
-              content: {
+          responses: [{
+              code: '200', description: 'User found successfully', content: {
                 'application/json': {
                   schema: { $ref: '#/components/schemas/User' }
                 }
               }
-            },
-            {
-              code: '404',
-              description: 'User not found'
-            }
-          ],
+            }, {
+              code: '404', description: 'User not found'
+            }],
           tags: ['Users'],
           deprecated: false
         }
@@ -354,21 +311,15 @@ export class APIDocGeneratorService {
             }
           }
         },
-        responses: [
-          {
-            code: '201',
-            description: 'Product created successfully',
-            content: {
+        responses: [{
+            code: '201', description: 'Product created successfully', content: {
               'application/json': {
                 schema: { $ref: '#/components/schemas/Product' }
               }
             }
-          },
-          {
-            code: '400',
-            description: 'Invalid input data'
-          }
-        ],
+          }, {
+            code: '400', description: 'Invalid input data'
+          }],
         tags: ['Products'],
         deprecated: false
       })
@@ -387,30 +338,21 @@ export class APIDocGeneratorService {
         method: 'GET',
         summary: 'Get all orders',
         description: 'Retrieve a list of all orders with optional filtering',
-        parameters: [
-          {
-            name: 'status',
-            in: 'query',
-            required: false,
-            schema: { type: 'string', enum: ['pending', 'processing', 'completed', 'cancelled'] },
+        parameters: [{
+            name: 'status', in: 'query', required: false, schema: { type: 'string', enum: ['pending', 'processing', 'completed', 'cancelled'] },
             description: 'Filter orders by status'
           }
         ],
         requestBody: undefined,
-        responses: [
-          {
-            code: '200',
-            description: 'Successful response',
-            content: {
+        responses: [{
+            code: '200', description: 'Successful response', content: {
               'application/json': {
                 schema: {
-                  type: 'array',
-                  items: { $ref: '#/components/schemas/Order' }
+                  type: 'array', items: { $ref: '#/components/schemas/Order' }
                 }
               }
             }
-          }
-        ],
+          }],
         tags: ['Orders'],
         deprecated: false
       })
@@ -420,17 +362,10 @@ export class APIDocGeneratorService {
     return endpoints
   }
   private generateSchemas(endpoints: APIEndpoint[]): APISchema[] {
-    const schemas: APISchema[] = [
-      {
-        type: 'object',
-        properties: {
-          id: { type: 'string', format: 'uuid' },
-          email: { type: 'string', format: 'email' },
-          name: { type: 'string', minLength: 1, maxLength: 100 },
-          createdAt: { type: 'string', format: 'date-time' },
-          updatedAt: { type: 'string', format: 'date-time' }
-        },
-        required: ['id', 'email', 'name'],
+    const schemas: APISchema[] = [{
+        type: 'object', properties: {
+          id: { type: 'string', format: 'uuid' }, email: { type: 'string', format: 'email' }, name: { type: 'string', minLength: 1, maxLength: 100 }, createdAt: { type: 'string', format: 'date-time' }, updatedAt: { type: 'string', format: 'date-time' }
+        }, required: ['id', 'email', 'name'],
         description: 'User entity schema'
       },
       {
@@ -537,21 +472,12 @@ export class APIDocGeneratorService {
     return null
   }
   private generateFallbackEndpoints(): APIEndpoint[] {
-    return [
-      {
-        id: `fallback_${Date.now()}`,
-        path: '/api/health',
-        method: 'GET',
-        summary: 'Health check endpoint',
-        description: 'Simple health check to verify API is running',
-        parameters: [],
+    return [{
+        id: `fallback_${Date.now()}`, path: '/api/health', method: 'GET', summary: 'Health check endpoint', description: 'Simple health check to verify API is running', parameters: [],
         requestBody: undefined,
-        responses: [
-          {
-            code: '200',
-            description: 'API is healthy'
-          }
-        ],
+        responses: [{
+            code: '200', description: 'API is healthy'
+          }],
         tags: ['System'],
         deprecated: false
       }
@@ -595,7 +521,7 @@ export class APIDocGeneratorService {
   }
   async updateDocumentation(
     documentationId: string,
-    changes: Partial<APIDocumentation>
+    changes: Partial<APIDocumentation ></APIDocumentation>
   ): Promise<APIDocumentation> {
     // Simulate documentation update
     return {

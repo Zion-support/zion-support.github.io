@@ -1,20 +1,10 @@
 #!/usr/bin/env node
 /**
  * Merge New Cursor Branches - Process the latest cursor branches
- */ import { execSync } from 'child_process'
+ */ import { execSync  } from 'child_process'
 import fs from 'fs'
 // //New cursor branches to merge
-const newCursorBranches = [
-  'cursor/fix-errors-and-merge-to-main-016 f',
-  'cursor/fix-errors-and-merge-to-main-073 a',
-  'cursor/fix-errors-and-merge-to-main-0 ebe',
-  'cursor/fix-errors-and-merge-to-main-0 fc7',
-  'cursor/fix-errors-and-merge-to-main-214 f',
-  'cursor/fix-errors-and-merge-to-main-277 a',
-  'cursor/fix-errors-and-merge-to-main-4 feb',
-  'cursor/fix-errors-and-merge-to-main-5597',
-  'cursor/fix-errors-and-merge-to-main-77 cd',
-  'cursor/fix-errors-and-merge-to-main-921 e']
+const newCursorBranches = ['cursor/fix-errors-and-merge-to-main-016 f', 'cursor/fix-errors-and-merge-to-main-073 a', 'cursor/fix-errors-and-merge-to-main-0 ebe', 'cursor/fix-errors-and-merge-to-main-0 fc7', 'cursor/fix-errors-and-merge-to-main-214 f', 'cursor/fix-errors-and-merge-to-main-277 a', 'cursor/fix-errors-and-merge-to-main-4 feb', 'cursor/fix-errors-and-merge-to-main-5597', 'cursor/fix-errors-and-merge-to-main-77 cd', 'cursor/fix-errors-and-merge-to-main-921 e']
 // //Function to safely execute git commands
 function safeGitCommand(command, description) {
   try {
@@ -109,7 +99,7 @@ if (mergedCount > 0) {
   'TypeScript type checking')
 )
 const buildCheck = safeGitCommand('pnpm run,
-  build:no-check',
+  build: no-check',
   'Production build')
 )
 //Push changes if any were merged

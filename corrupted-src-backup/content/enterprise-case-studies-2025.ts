@@ -23,8 +23,7 @@ export interface EnterpriseCaseStudy {/* TODO: Fix JSX expression */}
   s: string[],
 }
 
-export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
-  {
+export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [{
     id: 'fortune-500-ai-automation'
     slug: 'fortune-500-ai-automation-case-study'
     title: 'Fortune 500 AI Automation: 85% Cost Reduction'
@@ -33,14 +32,7 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     challenge: 'Manual processes causing delays and high operational costs'
     solution: 'Implemented AI-powered automation platform with intelligent workflow optimization'
     results: 'Achieved 85% cost reduction and 300% efficiency improvement'
-    metrics: {,
-      costSavings: '$50M annually',
-      efficiencyGain: '300%',
-      roi: '450%',
-      timeline: '6 months'},
-    featured: true,
-    publishedAt: '2025-10-01',
-    tags: ['AI Automation', 'Manufacturing', 'Cost Reduction', 'ROI']},
+    metrics: {, costSavings: '$50M annually', efficiencyGain: '300%', roi: '450%', timeline: '6 months'}, featured: true, publishedAt: '2025-10-01', tags: ['AI Automation', 'Manufacturing', 'Cost Reduction', 'ROI']},
   {
     id: 'financial-services-ai-analytics'
     slug: 'financial-services-ai-analytics-case-study'
@@ -59,15 +51,8 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     publishedAt: '2025-10-02',
     tags: ['AI Analytics', 'Financial Services', 'Fraud Detection', 'Accuracy'],
 export const,
-  enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
-  {/* TODO: Fix JSX expression */}
-    },
-    feature,
-  d: true,
-    publishedA,
-  t: '2025-10-01',
-    tag,
-  s: ['AI Automation', 'Manufacturing', 'Cost Reduction', 'ROI']},
+  enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [{/* TODO: Fix JSX expression */}
+    }, feature, d: true, publishedA, t: '2025-10-01', tag, s: ['AI Automation', 'Manufacturing', 'Cost Reduction', 'ROI']},
   {/* TODO: Fix JSX expression */}
     },
     feature,

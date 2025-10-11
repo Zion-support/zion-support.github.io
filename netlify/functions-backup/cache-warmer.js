@@ -27,28 +27,14 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       return routes
     } catch (e) {/* TODO: Fix JSX expression */}
   read: ${e.message}`)
-      return [
-        '/',
-        '/automation',
-        '/main/front',
-        '/reports/seo',
-        '/reports/ai-trends',
-        '/newsroom'
-      ]
+      return ['/', '/automation', '/main/front', '/reports/seo', '/reports/ai-trends', '/newsroom']
     }
   }
   function getFunctionNames() {/* TODO: Fix JSX expression */}
         return manifest.functions.filter(n => n !== 'cache-warmer')}
     } catch (e) {}
     // Fallback to a small curated list
-    return [
-      'front-enhancer',
-      'frontpage-enhancer',
-      'homepage_advertiser',
-      'cloud_orchestrator',
-      'readme-advertiser',
-      'features-capabilities-benefits-advertiser'
-    ]
+    return ['front-enhancer', 'frontpage-enhancer', 'homepage_advertiser', 'cloud_orchestrator', 'readme-advertiser', 'features-capabilities-benefits-advertiser']
   }
   async function fetchWithTimeout(_url) {/* TODO: Fix JSX expression */}
     const startedAt = Date.now()}
@@ -109,12 +95,12 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     // get sha if exists
     let sha
     try {
-      const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(repoPath;)
+      const getRes = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(repoPath;)
       }?ref=${encodeURIComponent(githubBranch;)
       }`)
         { headers })
     try {/* TODO: Fix JSX expression */}
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`,
         { headers })
@@ -127,7 +113,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       content,
       branch: githubBranch,
       sha}
-    const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(repoPath;)
+    const putRes = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(repoPath;)
       }`)
       {method: 'PUT',
         headers),
@@ -137,7 +123,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   h: githubBranch,
       sha}`
     const putRes = await fetch(`http,
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`,
       {/* TODO: Fix JSX expression */}
       }
@@ -246,10 +232,10 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         messageSuffix = '') {' if(!githubToken)
         return { ok: false),
         status: 0, error: 'No GITHUB_TOKEN provided' }' const content = Buffer.from(JSON.stringify(contentObj, null)
-        2) + '\n').toString('base64'); const headers = { Authorization: `token ${githubToken}`,' 'Content-Type': 'application/json',' 'User-Agent': 'netlify-cache-warmer' } // get sha if exists let sha; try { const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(repoPath;)
+        2) + '\n').toString('base64'); const headers = { Authorization: `token ${githubToken}`,' 'Content-Type': 'application/json',' 'User-Agent': 'netlify-cache-warmer' } // get sha if exists let sha; try { const getRes = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(repoPath;)
       }?ref=${encodeURIComponent(githubBranch;)
       }`, { headers;)
-      }); if (getRes.ok) {const json = await getRes.json(); sha = json.sha} } } catch {} const body = { message: `chore(cache): warmup report ${messageSuffix} (${new Date().toISOString()})`, content, branch: githubBranch, sha } const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(repoPath;)
+      }); if (getRes.ok) {const json = await getRes.json(); sha = json.sha} } } catch {} const body = { message: `chore(cache): warmup report ${messageSuffix} (${new Date().toISOString()})`, content, branch: githubBranch, sha } const putRes = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(repoPath;)
       }`, {' method: 'PUT', headers)
         body: JSON.stringify(body,)}); const ok = putRes.ok; const status = putRes.status; let error; if (!ok) {try { error = await putRes.text()} } catch (e) {error = String(e;)
       } } } return {ok)
@@ -271,13 +257,13 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   r: 'No GITHUB_TOKEN provided' }' const content = Buffer.from(JSON.stringify(contentObj, null)
         2) + '\n').toString('base64'); const headers = {/* TODO: Fix JSX expression */}`
   n: `token ${githubToken}`,' 'Content-Type': 'application/json',' 'User-Agent': 'netlify-cache-warmer' } // get sha if exists let sha; try {/* TODO: Fix JSX expression */}
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`, {/* TODO: Fix JSX expression */}
       }); if (getRes.ok) {const json = await getRes.json(); sha = json.sha} } } catch {} const body = {/* TODO: Fix JSX expression */}`
   e: `chore(cache): warmup report ${messageSuffix} (${new Date().toISOString()})`, content, branc,`
   h: githubBranch, sha } const putRes = await fetch(`http,
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`, {/* TODO: Fix JSX expression */})
       }); const ok = putRes.ok; const status = putRes.status; let error; if (!ok) {try { error = await putRes.text()} } catch (e) {/* TODO: Fix JSX expression */}
       } } } return {/* TODO: Fix JSX expression */}`

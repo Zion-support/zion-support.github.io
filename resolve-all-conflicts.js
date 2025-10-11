@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { execSync } from 'child_process'
-import { readFileSync, writeFileSync } from 'fs'
+import { execSync  } from 'child_process'
+import { readFileSync, writeFileSync  } from 'fs'
 console.log('🔧 Resolving all merge conflicts...')
 function resolveConflicts(filePath) {
   try {
@@ -94,7 +94,7 @@ try {
   execSync('git commit -m "feat: Resolve all merge conflicts and integrate latest enhancements"', { stdio: 'inherit' })
   console.log('✅ All conflicts resolved and committed!')
 } catch (error) {
-    console.error('❌ Error resolving conflicts:', error.message)
+    console.error('❌ Error resolving conflicts: ', error.message)
   process.exit(1)
   }
 console.log('🎉 Merge conflict resolution completed!');`

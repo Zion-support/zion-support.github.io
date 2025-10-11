@@ -31,8 +31,8 @@ export interface TokenStoreData {
 export interface TokenStoreData {
 import fs from "fs"
 import path from "path"
-import { TokenConfig, TokenTransaction, Wallet } from "./types"
-import { DEFAULT_TOKEN_CONFIG } from "./rules"
+import { TokenConfig, TokenTransaction, Wallet  } from './types'
+import { DEFAULT_TOKEN_CONFIG  } from './rules'
 const DATA_DIR = path.join(process.cwd(), "data")
 const STORE_FILE = path.join(DATA_DIR, "token_store.json")
 export interface TokenStoreData {
@@ -64,8 +64,6 @@ function readFromDisk(): TokenStoreData | null {
     return this && this.data
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 function writeToDisk(data: TokenStoreData): void {
   try {

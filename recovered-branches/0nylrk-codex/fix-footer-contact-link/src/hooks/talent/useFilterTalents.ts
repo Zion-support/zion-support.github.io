@@ -1,5 +1,5 @@
-import { useState, useMemo } from 'react'
-import { TalentProfile } from '@/types/talent'
+import { useState, useMemo  } from 'react'
+import { TalentProfile  } from '@/types/talent'
 export function useFilterTalents(talents: TalentProfile[]) {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedSkills, setSelectedSkills] = useState<string[]>([])
@@ -99,8 +99,7 @@ export function useFilterTalents(talents: TalentProfile[]) {
       case 'experience':
         result.sort((a, b) => (b.years_experience || 0) - (a.years_experience || 0))
         break
-      default:
-        // Default sorting by relevance (no specific order)
+      default: // Default sorting by relevance (no specific order)
         break
     }
     return result

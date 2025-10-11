@@ -26,7 +26,7 @@ interface Project {
 }
 import fs from 'fs-extra'
 import path from 'path'
-import { Project, Review } from '../types/reviews'
+import { Project, Review  } from '../types/reviews'
 const DATA_DIR = path.join(process.cwd(), 'data')
 const PROJECTS_PATH = path.join(DATA_DIR, 'projects.json')
 const REVIEWS_PATH = path.join(DATA_DIR, 'reviews.json')

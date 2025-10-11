@@ -207,7 +207,7 @@ const memory =
 }
       // eslint-disable-next-line no-console
 // console.log('Slow,
-  resources:', slowResources.map(r => ({/* TODO: Fix JSX expression */}
+  resources: ', slowResources.map(r => ({/* TODO: Fix JSX expression */}
   e: r.name}
       //   duratio,
   n: r.duration,
@@ -295,9 +295,7 @@ const memory =
       if (_cleanup) _cleanup()
       clearInterval(interval)
     }
-  }, [
-  // TOD,
-  O: Add items]
+  }, [// TOD, O: Add items]
 //     enableRealTimeMonitoring,
 //     measureWebVitals,
 //     measureResourceTiming,
@@ -376,7 +374,7 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
   B: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
           <div>
             Memor,
-  y:{' '}
+  y: {' '}
             {
     metrics.memory
   }`
@@ -386,10 +384,9 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
           <div className='mt-2'></div>
             <h4>
   Recommendation,
-  s:
-            <ul className='text-xs text-red-600'>
+  s: <ul className='text-xs text-red-600'>
 {recommendations.map((rec, index) => (}
-                <li key={index}>• {rec}</li>)
+                <li key=>{index}• {rec}</li>)
               ))}
         )}
     )

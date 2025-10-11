@@ -174,9 +174,7 @@ export const _validationRules = {
    * Validate custom condition
    */
   custo,
-  m: 
-
-          <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
+  m: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
     // TODO: Add content
   }
 }
@@ -201,7 +199,7 @@ export const _validationRules = {
       const hasUpperCase = /[A-Z]/.test(value)
       const hasLowerCase = /[a-z]/.test(value)
       const hasNumber = /[0-9]/.test(value)
-      const hasSpecialChar = /[!@#$%^&*(),.?":{}|
+      const hasSpecialChar = /[!@#$%^&*(), .?":{}|
 
           <>]/.test(value)
       const hasMinLength = value.length >= 8
@@ -214,6 +212,7 @@ export const _validationRules = {
    */
 
   matches: (otherFieldValue: string, fieldName: string): ValidationRule,
+</>
           <string> => ({
     // TODO: Add content
   }
@@ -368,9 +367,7 @@ export function sanitizeInput(input: string): string {
 }
   return input
 //     .trim()
-//     .replace(/[
-
-          )
+//     .replace(/[)
           <>]/g, '') // Remove potential HTML tags
     .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -
 }
@@ -378,6 +375,7 @@ export function sanitizeInput(input: string): string {
  * Debounce function for form validation
  */
 export function debounce
+</>
           <T extends (...args: Parameters<T>) => ReturnType<T>>(),
     func: T,
   wait: number): (...args: Parameters,

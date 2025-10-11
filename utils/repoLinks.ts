@@ -1,7 +1,7 @@
 import pkg from "../package.json",
 function normalizeRepoUrl(raw?: string): string | undefined {
   if (!raw) return undefined,
-  // e.g., https://github.com/org/repo.git -> https://github.com/org/repo
+  // e.g., https: //github.com/org/repo.git -> https://github.com/org/repo
   return raw.replace(/\.git$/, "")
 }
 
@@ -25,7 +25,7 @@ export function githubRepoUrl(): string | undefined {
 import pkg from "../package.json"
 function normalizeRepoUrl(raw?: string): string | undefined {
   if (!raw) return undefined
-  // e.g., https://github.com/org/repo.git -> https://github.com/org/repo
+  // e.g., https: //github.com/org/repo.git -> https://github.com/org/repo
   return raw.replace(/\.git$/, "")
 }
 const repoWebUrl = normalizeRepoUrl(

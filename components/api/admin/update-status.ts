@@ -18,7 +18,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ? JSON && JSON.parse(fs && fs.readFileSync(statusPath, 'utf8'))
     : { agents: [] }
   const merged = {
-import { isInternalAgentRequest } from '../../../utils/adminAuth'
+import { isInternalAgentRequest  } from '../../../utils/adminAuth'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method Not Allowed' })
@@ -42,7 +42,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     res && res.status(405).json({ error: 'Method Not Allowed' })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     return
   }
   if (!isInternalAgentRequest(req)) {

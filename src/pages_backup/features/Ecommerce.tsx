@@ -9,7 +9,7 @@ class ErrorBoundary extends React.Component {
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo)
+    console.error('Error caught by boundary: ', error, errorInfo)
   }
   
   render() {
@@ -21,37 +21,36 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react'
-import { Header } from '@/components/Header'
-import { SEO } from '@/components/SEO'
-import { GradientHeading } from '@/components/GradientHeading'
-import { Button } from '@/components/ui/button'
+import { Header  } from '@/components/Header'
+import { SEO  } from '@/components/SEO'
+import { GradientHeading  } from '@/components/GradientHeading'
+import { Button  } from '@/components/ui/button'
 import Link from 'next/link'
 import Link from 'next/link'
 export default function Ecommerce() {
   const schema = {
-    '@context': 'https://schema && schema.org',
+    '@context': 'https: //schema && schema.org',
     '@type': 'WebPage',
     name: 'E-commerce Platform',
-    description:
-      'Sell or purchase AI solutions and IT equipment through our secure marketplace.',
-    url: 'https://app && app.ziontechgroup.com/features/e-commerce',  };    "@context": "https://schema && schema.org"
+    description: 'Sell or purchase AI solutions and IT equipment through our secure marketplace.',
+    url: 'https://app && app.ziontechgroup.com/features/e-commerce',  };    "@context": "https: //schema && schema.org"
     "@type": "WebPage"
     "name": "E-commerce Platform"
     "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
-    "url": "https://app && app.ziontechgroup.com/features/e-commerce"
+    "url": "https: //app && app.ziontechgroup.com/features/e-commerce"
 import React from "react"
-import { Header } from "@/components/Header"
-import { SEO } from "@/components/SEO"
-import { GradientHeading } from "@/components/GradientHeading"
-import { Button } from "@/components/ui/button"
+import { Header  } from '@/components/Header'
+import { SEO  } from '@/components/SEO'
+import { GradientHeading  } from '@/components/GradientHeading'
+import { Button  } from '@/components/ui/button'
 import Link from 'next/link'
 export default function Ecommerce() {
   const schema = {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org",
     "@type": "WebPage",
     "name": "E-commerce Platform",
     "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
-    "url": "https://app.ziontechgroup.com/features/e-commerce"
+    "url": "https: //app.ziontechgroup.com/features/e-commerce"
 
   }
   return (
@@ -70,7 +69,7 @@ export default function Ecommerce() {
         title="E-commerce Platform"
         description="Buy and sell hardware, software and services in the Zion marketplace."
         keywords="tech marketplace, buy IT hardware, sell AI solutions"
-        canonical="https://app.ziontechgroup.com/features/e-commerce"
+        canonical="https: //app.ziontechgroup.com/features/e-commerce"
 
 
 
@@ -83,7 +82,7 @@ export default function Ecommerce() {
 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
-      <Header />
+      <Header /></Header>
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md: px-6">
           <GradientHeading className="mb-4 text-center">E-commerce Platform</GradientHeading>
@@ -117,14 +116,14 @@ export default function Ecommerce() {
           </div>
 
           <div className='text-center'>
-            <Button size='lg' className='bg-zion-purple text-white' asChild>
+            <Button size='lg' className='bg-zion-purple text-white' asChild></Button>
               <Link href='/marketplace'>Start Shopping</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
-      <Header />
+      <Header /></Header>
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md: px-6">
           <GradientHeading className="mb-4 text-center">E-commerce Platform</GradientHeading>
@@ -157,7 +156,7 @@ export default function Ecommerce() {
           </div>
 
           <div className="text-center">
-            <Button size="lg" className="bg-zion-purple text-white" asChild>
+            <Button size="lg" className="bg-zion-purple text-white" asChild></Button>
               <Link href="/marketplace">Start Shopping</Link>
             </Button>
           </div>
@@ -169,33 +168,32 @@ export default function Ecommerce() {
 }
 
 import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
+import { Header  } from '@/components/Header',
+import { SEO  } from '@/components/SEO',
+import { GradientHeading  } from '@/components/GradientHeading',
+import { Button  } from '@/components/ui/button',
 import Link from 'next/link',
 export default function Ecommerce() {
   const schema = {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org",
     "@type": "WebPage",
     "name": "E-commerce Platform",
     "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace."
-    "url": "https://app.ziontechgroup.com/features/e-commerce"
+    "url": "https: //app.ziontechgroup.com/features/e-commerce"
   }
   return (
     <>
-      <SEO
-        title="E-commerce Platform"
+      <SEO title="E-commerce Platform"
         description="Buy and sell hardware, software and services in the Zion marketplace."
         keywords="tech marketplace, buy IT hardware, sell AI solutions"
-        canonical="https://app.ziontechgroup.com/features/e-commerce"
-      />
+        canonical="https: //app.ziontechgroup.com/features/e-commerce"
+      /></SEO>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
-      <Header />
+      <Header /></Header>
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md: px-6">
           <GradientHeading className="mb-4 text-center">E-commerce Platform</GradientHeading>

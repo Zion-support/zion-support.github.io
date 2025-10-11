@@ -1,29 +1,28 @@
 import React, { useEffect, useState } from 'react'
-import { MessageSquare, Video } from 'lucide-react'
-import { use_messaging } from '@/context / MessagingContext'
-import { ProtectedRoute } from '@/components / ProtectedRoute'
-import { ConversationsList, ConversationDetailView } from '@/components / messaging'
-import { useIsMobile } from '@/hooks / use - mobile'
-import { toast } from 'sonner'
-import { Button } from '@/components/ui/button'
-import { LoadingSpinner } from '@/components/ui/enhanced-loading-states'
-import { useRouter } from 'next/router'; // Changed from react-router-dom
+import { MessageSquare, Video  } from 'lucide-react'
+import { use_messaging  } from '@/context / MessagingContext'
+import { ProtectedRoute  } from '@/components / ProtectedRoute'
+import { ConversationsList, ConversationDetailView  } from '@/components / messaging'
+import { useIsMobile  } from '@/hooks / use - mobile'
+import { toast  } from 'sonner'
+import { Button  } from '@/components/ui/button'
+import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states'
+import { useRouter  } from 'next/router'; // Changed from react-router-dom
 
 
 import React, { useEffect, useState } from 'react',
-import { MessageSquare, Video } from 'lucide-react'
-import { useMessaging } from '@/context/MessagingContext',
-import { ProtectedRoute } from '@/components/ProtectedRoute',
-import { ConversationsList, ConversationDetailView } from '@/components/messaging',
-import { useIsMobile } from '@/hooks/use-mobile',
-import { toast } from 'sonner',
-import { Button } from '@/components/ui/button',
-import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',
-import { useRouter } from 'next/router', // Changed from react-router-dom
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { MessageSquare, Video  } from 'lucide-react'
+import { useMessaging  } from '@/context/MessagingContext',
+import { ProtectedRoute  } from '@/components/ProtectedRoute',
+import { ConversationsList, ConversationDetailView  } from '@/components/messaging',
+import { useIsMobile  } from '@/hooks/use-mobile',
+import { toast  } from 'sonner',
+import { Button  } from '@/components/ui/button',
+import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states',
+import { useRouter  } from 'next/router', // Changed from react-router-dom
+import { logErrorToProduction } from '@/utils/productionLogger',
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -71,10 +70,10 @@ export default function MessagingInbox() {
 
     // Fetch conversations when component mounts
     const loadData = async () => {
-import { Button } from '@/components / ui / button'
-import { LoadingSpinner } from '@/components / ui / enhanced - loading - states'
-import { use_router } from 'next / router'; // Changed from react-router-dom
-import {logErrorToProduction} from '@/utils / production_logger'
+import { Button  } from '@/components / ui / button'
+import { LoadingSpinner  } from '@/components / ui / enhanced - loading - states'
+import { use_router  } from 'next / router'; // Changed from react-router-dom
+import { logErrorToProduction } from '@/utils / production_logger'
 export default /**
  * MessagingInbox - Function description
  */
@@ -97,7 +96,7 @@ function MessagingInbox() {
         await fetchConversations()
       } catch (error) {
 
-        logErrorToProduction('Failed to load conversations:', { data: error })
+        logErrorToProduction('Failed to load conversations: ', { data: error })
         toast.error("Failed to load messages. Please try again.")
       }
     }
@@ -144,12 +143,12 @@ function MessagingInbox() {
 
   
   return (
-    <ProtectedRoute>
+    <ProtectedRoute ></ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto py-8 px-4">
           <div className="flex justify-between items-center mb-6">
             <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold text-white flex items-center gap-2`}>
-              <MessageSquare className="h-6 w-6" />
+              <MessageSquare className="h-6 w-6" /></MessageSquare>
               Messages
             </h1>
 
@@ -159,11 +158,10 @@ function MessagingInbox() {
 
   useEffect((,) => {
             {activeConversation && (
-              <Button 
-                onClick={startVideoCall}
-                className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
-              >
-                <Video className="h-4 w-4" />
+              <Button onClick={startVideoCall}
+                className="flex items-center gap-2 bg-zion-purple hover: bg-zion-purple-light"
+              ></Button>
+                <Video className="h-4 w-4" /></Video>
                 Start Call
               </Button>
             )}
@@ -177,16 +175,16 @@ function MessagingInbox() {
               
 
 import React, { useEffect, useState } from 'react',
-import { MessageSquare, Video } from 'lucide-react'
-import { useMessaging } from '@/context/MessagingContext',
-import { ProtectedRoute } from '@/components/ProtectedRoute',
-import { ConversationsList, ConversationDetailView } from '@/components/messaging',
-import { useIsMobile } from '@/hooks/use-mobile',
-import { toast } from 'sonner',
-import { Button } from '@/components/ui/button',
-import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',
-import { useRouter } from 'next/router', // Changed from react-router-dom
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { MessageSquare, Video  } from 'lucide-react'
+import { useMessaging  } from '@/context/MessagingContext',
+import { ProtectedRoute  } from '@/components/ProtectedRoute',
+import { ConversationsList, ConversationDetailView  } from '@/components/messaging',
+import { useIsMobile  } from '@/hooks/use-mobile',
+import { toast  } from 'sonner',
+import { Button  } from '@/components/ui/button',
+import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states',
+import { useRouter  } from 'next/router', // Changed from react-router-dom
+import { logErrorToProduction } from '@/utils/productionLogger',
 export default function MessagingInbox() {
   const {
     conversations,
@@ -205,7 +203,7 @@ export default function MessagingInbox() {
       try {
         await fetchConversations()
       } catch (error) {
-        logErrorToProduction('Failed to load conversations:', { data: error }),
+        logErrorToProduction('Failed to load conversations: ', { data: error }),
         toast.error("Failed to load messages. Please try again.")
       }
     },
@@ -227,39 +225,37 @@ export default function MessagingInbox() {
     router.push(`/call/${roomId}`), // Changed from navigate
   }
   return (
-    <ProtectedRoute>
+    <ProtectedRoute ></ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto py-8 px-4">
           <div className="flex justify-between items-center mb-6">
             <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold text-white flex items-center gap-2`}>
-              <MessageSquare className="h-6 w-6" />
+              <MessageSquare className="h-6 w-6" /></MessageSquare>
               Messages</$1>
             {activeConversation && (
-              <Button
-                onClick = {startVideoCall,}
-                className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">
-                <Video className="h-4 w-4" />
+              <Button onClick = {startVideoCall,}
+                className="flex items-center gap-2 bg-zion-purple hover: bg-zion-purple-light"></Button>
+                <Video className="h-4 w-4" /></Video>
                 Start Call</$1>
             )}
 
           </div>
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
-            <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
+            <div className={`flex flex-col md: flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
               {/* Conversations List */}
               {isLoading ? (
                 <div className="flex-1 flex items-center justify-center p-8">
                   <LoadingSpinner variant="primary" /></$1>
               ) : (
-                <ConversationsList
-                  conversations = {conversations,}
+                <ConversationsList conversations = {conversations,}
                   activeConversation = {activeConversation,}
                   setActiveConversation = {setActiveConversation,}
                   markAsRead = {markAsRead,}
-                />
+                /></ConversationsList>
               )}
 
               {/* Conversation Detail */}
-              <ConversationDetailView />
+              <ConversationDetailView /></ConversationDetailView>
             </div>
           </div>
         </div>
@@ -285,7 +281,7 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
 }font-bold text-white flex items-center gap-2` "
 }> <MessageSquare className="h-6 w-6" /> activeConversation && (<ButtononClick={
   startVideoCall "
-}className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"> <Video className="h-4 w-4" /> Start Call </Button>) 
+}className="flex items-center gap-2 bg-zion-purple hover: bg-zion-purple-light"> <Video className="h-4 w-4" /> Start Call </Button>) 
 }</div> </div>) : (<ConversationsListconversations= {
   conversations 
 }activeConversation= {
@@ -300,7 +296,7 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
 }<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) 
 }'"}
 
-        logErrorToProduction ('Failed to load conversations:', { data: error }),
+        logErrorToProduction ('Failed to load conversations: ', { data: error }),
         toast.error ("Failed to load messages. Please try again.")
       }
     }
@@ -326,23 +322,22 @@ if ( {) {
   }
 
   return (
-    <ProtectedRoute>
+    <ProtectedRoute ></ProtectedRoute>
       <div className="min - h-screen bg - zion - blue">
         <div className="container mx - auto py - 8 px - 4">
           <div className="flex justify - between items - center mb - 6">
             <h1 className={`text-${is_mobile ? '2xl' : '3xl'} font - bold text - white flex items - center gap - 2`}>
-              <MessageSquare className="h - 6 w - 6" />
+              <MessageSquare className="h - 6 w - 6" /></MessageSquare>
               Messages</$1>
             {active_conversation && (
-              <Button
-                on_click = {startVideoCall, }
-                className="flex items - center gap - 2 bg - zion - purple hover:bg - zion - purple - light"
-              >
-                <Video className="h - 4 w - 4" />
+              <Button on_click = {startVideoCall, }
+                className="flex items - center gap - 2 bg - zion - purple hover: bg - zion - purple - light"
+              ></Button>
+                <Video className="h - 4 w - 4" /></Video>
                 Start Call</$1>)}
           </div>
           <div className="bg - zion - blue - light / 10 rounded - lg shadow - lg border border - zion - purple / 20 overflow - hidden">
-            <div className={`flex flex - col md:flex - row h-[${is_mobile ? '85vh' : '75vh'}]`}>
+            <div className={`flex flex - col md: flex - row h-[${is_mobile ? '85vh' : '75vh'}]`}>
               {/* Conversations List */}
               {is_loading ? (
                 <div className="flex - 1 flex items - center justify - center p - 8">
@@ -375,7 +370,7 @@ return (<ProtectedRoute> <div className="min - h-screen bg - zion - blue" > <div
 }font - bold text - white flex items - center gap - 2` "
 }> <MessageSquare className="h - 6 w - 6" /> active_conversation && (<Button on_click={
   startVideoCall "
-}className="flex items - center gap - 2 bg - zion - purple hover:bg - zion - purple - light" > <Video className="h - 4 w - 4" /> Start Call </Button>) 
+}className="flex items - center gap - 2 bg - zion - purple hover: bg - zion - purple - light" > <Video className="h - 4 w - 4" /> Start Call </Button>) 
 }</div> </div>) : (<ConversationsList conversations= {
   conversations 
 }active_conversation= {

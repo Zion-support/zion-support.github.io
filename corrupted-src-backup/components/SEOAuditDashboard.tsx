@@ -77,108 +77,106 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
     }
   con, s, t [selectedCatego, r, y, setSelectedCatego, r, y] = useSta, t, e<stri, n, g>('a, l, l');'
   con, s, t [selectedImpa, c, t, setSelectedImpa, c, t] = useSta, t, e<stri, n, g>('a, l, l');'
-  const, commonSEOIssue, s: SEOIss, u, e[] = [
-    {
-    id: 'tit, l, e-leng, t, h','
-      ty, p, e: 'warni, n, g','
-      tit, l, e: 'Title, Length','
-      descripti, o, n: 'Page, title, should be, between, 30-60, character, s','
-      impa, c, t: 'medi, u, m','
-      catego, r, y: 'conte, n, t','
-      f, i, x: 'Optimize, title, length for, better, search engine, visibilit, y','
+  const, commonSEOIssue, s: SEOIss, u, e[] = [{
+    id: 'tit, l, e-leng, t, h', '
+      ty, p, e: 'warni, n, g', '
+      tit, l, e: 'Title, Length', '
+      descripti, o, n: 'Page, title, should be, between, 30-60, character, s', '
+      impa, c, t: 'medi, u, m', '
+      catego, r, y: 'conte, n, t', '
+      f, i, x: 'Optimize, title, length for, better, search engine, visibilit, y', '
       sco, r, e: 75
   }
     {
-    id: 'me, t, a-descripti, o, n','
-      ty, p, e: 'warni, n, g','
-      tit, l, e: 'Meta, Descriptio, n','
-      descripti, o, n: 'Meta, description, should be, between, 120-160, character, s','
-      impa, c, t: 'medi, u, m','
-      catego, r, y: 'conte, n, t','
-      f, i, x: 'Write, compelling, meta descriptions, that, encourage clic, k, s','
+    id: 'me, t, a-descripti, o, n', '
+      ty, p, e: 'warni, n, g', '
+      tit, l, e: 'Meta, Descriptio, n', '
+      descripti, o, n: 'Meta, description, should be, between, 120-160, character, s', '
+      impa, c, t: 'medi, u, m', '
+      catego, r, y: 'conte, n, t', '
+      f, i, x: 'Write, compelling, meta descriptions, that, encourage clic, k, s', '
       sco, r, e: 80
   }
     {
-    id: 'headi, n, g-structu, r, e','
-      ty, p, e: 'in, f, o','
-      tit, l, e: 'Heading, Structur, e','
-      descripti, o, n: 'Ensure, proper, H1-H6, hierarch, y','
-      impa, c, t: 'medi, u, m','
-      catego, r, y: 'conte, n, t','
-      f, i, x: 'Use, only, one H1, tag, and maintain, logical, heading ord, e, r','
+    id: 'headi, n, g-structu, r, e', '
+      ty, p, e: 'in, f, o', '
+      tit, l, e: 'Heading, Structur, e', '
+      descripti, o, n: 'Ensure, proper, H1-H6, hierarch, y', '
+      impa, c, t: 'medi, u, m', '
+      catego, r, y: 'conte, n, t', '
+      f, i, x: 'Use, only, one H1, tag, and maintain, logical, heading ord, e, r', '
       sco, r, e: 85
   }
     {
-    id: 'ima, g, e-a, l, t-te, x, t','
-      ty, p, e: 'warni, n, g','
-      tit, l, e: 'Missing, Alt, Text','
-      descripti, o, n: 'Some, images, are missing, alt, text attribut, e, s','
-      impa, c, t: 'hi, g, h','
-      catego, r, y: 'accessibili, t, y','
-      f, i, x: 'Add, descriptive, alt text, to, all imag, e, s','
+    id: 'ima, g, e-a, l, t-te, x, t', '
+      ty, p, e: 'warni, n, g', '
+      tit, l, e: 'Missing, Alt, Text', '
+      descripti, o, n: 'Some, images, are missing, alt, text attribut, e, s', '
+      impa, c, t: 'hi, g, h', '
+      catego, r, y: 'accessibili, t, y', '
+      f, i, x: 'Add, descriptive, alt text, to, all imag, e, s', '
       sco, r, e: 60
   }
     {
-    id: 'mobi, l, e-friend, l, y','
-      ty, p, e: 'in, f, o','
-      tit, l, e: 'Mobile, Optimizatio, n','
-      descripti, o, n: 'Check, mobile, responsiveness and, usabilit, y','
-      impa, c, t: 'hi, g, h','
-      catego, r, y: 'mobi, l, e','
-      f, i, x: 'Ensure, all, content is, accessible, on mobile, device, s','
+    id: 'mobi, l, e-friend, l, y', '
+      ty, p, e: 'in, f, o', '
+      tit, l, e: 'Mobile, Optimizatio, n', '
+      descripti, o, n: 'Check, mobile, responsiveness and, usabilit, y', '
+      impa, c, t: 'hi, g, h', '
+      catego, r, y: 'mobi, l, e', '
+      f, i, x: 'Ensure, all, content is, accessible, on mobile, device, s', '
       sco, r, e: 90
   }
     {
-    id: 'pa, g, e-spe, e, d','
-      ty, p, e: 'warni, n, g','
-      tit, l, e: 'Page, Load, Speed','
-      descripti, o, n: 'Page, loading, time affects, SEO, rankings','
-      impa, c, t: 'hi, g, h','
-      catego, r, y: 'performan, c, e','
-      f, i, x: 'Optimize, image, s, minimize, CS, S/JS, and, use, CDN','
+    id: 'pa, g, e-spe, e, d', '
+      ty, p, e: 'warni, n, g', '
+      tit, l, e: 'Page, Load, Speed', '
+      descripti, o, n: 'Page, loading, time affects, SEO, rankings', '
+      impa, c, t: 'hi, g, h', '
+      catego, r, y: 'performan, c, e', '
+      f, i, x: 'Optimize, image, s, minimize, CS, S/JS, and, use, CDN', '
       sco, r, e: 70
   }
     {
-    id: 'intern, a, l-linki, n, g','
-      ty, p, e: 'in, f, o','
-      tit, l, e: 'Internal, Linkin, g','
-      descripti, o, n: 'Improve, internal, link structu, r, e','
-      impa, c, t: 'medi, u, m','
-      catego, r, y: 'technic, a, l','
-      f, i, x: 'Create, a, logical internal, linking, structure','
+    id: 'intern, a, l-linki, n, g', '
+      ty, p, e: 'in, f, o', '
+      tit, l, e: 'Internal, Linkin, g', '
+      descripti, o, n: 'Improve, internal, link structu, r, e', '
+      impa, c, t: 'medi, u, m', '
+      catego, r, y: 'technic, a, l', '
+      f, i, x: 'Create, a, logical internal, linking, structure', '
       sco, r, e: 65
   }
     {
-    id: 'sche, m, a-mark, u, p','
-      ty, p, e: 'in, f, o','
-      tit, l, e: 'Schema, Marku, p','
-      descripti, o, n: 'Implement, structured, data mark, u, p','
-      impa, c, t: 'medi, u, m','
-      catego, r, y: 'technic, a, l','
-      f, i, x: 'Add, JSO, N-LD, schema, markup for, better, search resul, t, s','
+    id: 'sche, m, a-mark, u, p', '
+      ty, p, e: 'in, f, o', '
+      tit, l, e: 'Schema, Marku, p', '
+      descripti, o, n: 'Implement, structured, data mark, u, p', '
+      impa, c, t: 'medi, u, m', '
+      catego, r, y: 'technic, a, l', '
+      f, i, x: 'Add, JSO, N-LD, schema, markup for, better, search resul, t, s', '
       sco, r, e: 50
   }
     {
-    id: 's, s, l-certifica, t, e','
-      ty, p, e: 'in, f, o','
-      tit, l, e: 'SSL, Certificat, e','
-      descripti, o, n: 'Ensure, HTTPS, is properly, configure, d','
-      impa, c, t: 'hi, g, h','
-      catego, r, y: 'technic, a, l','
-      f, i, x: 'Maintain, valid, SSL certificate, and, redirect HTTP, to, HTTPS','
+    id: 's, s, l-certifica, t, e', '
+      ty, p, e: 'in, f, o', '
+      tit, l, e: 'SSL, Certificat, e', '
+      descripti, o, n: 'Ensure, HTTPS, is properly, configure, d', '
+      impa, c, t: 'hi, g, h', '
+      catego, r, y: 'technic, a, l', '
+      f, i, x: 'Maintain, valid, SSL certificate, and, redirect HTTP, to, HTTPS', '
       sco, r, e: 95
   }
     {
-    id: 'brok, e, n-lin, k, s','
-      ty, p, e: 'err, o, r','
-      tit, l, e: 'Broken, Link, s','
-      descripti, o, n: 'Check, for, broken internal, and, external lin, k, s','
-      impa, c, t: 'medi, u, m','
-      catego, r, y: 'technic, a, l','
-      f, i, x: 'Fix, or, remove broken, links, to improve, user, experience','
+    id: 'brok, e, n-lin, k, s', '
+      ty, p, e: 'err, o, r', '
+      tit, l, e: 'Broken, Link, s', '
+      descripti, o, n: 'Check, for, broken internal, and, external lin, k, s', '
+      impa, c, t: 'medi, u, m', '
+      catego, r, y: 'technic, a, l', '
+      f, i, x: 'Fix, or, remove broken, links, to improve, user, experience', '
       sco, r, e: 40
-  }
-  ]
+  }]
   const, runSEOAudi, t = asy, n, c () => {
     setIsRunni, n, g(tr, u, e)
     // Simulate, audit, process
@@ -305,7 +303,7 @@ ca, s, e 'err, o, r':';"
 retu, r, n <XCircle>"
 ca, s, e 'warni, n, g':';"
 retu, r, n <AlertTriangle>"
-defau, l, t:"
+defau, l, t: "
 retu, r, n <CheckCircle>"
 }
   }
@@ -321,8 +319,7 @@ retu, r, n 'bg-r, e, d-100, tex, t-r, e, d-800, borde, r-r, e, d-2, 0, 0';'
 ca, s, e 'medi, u, m':'
 retu, r, n 'bg-yell, o, w-100, tex, t-yell, o, w-800, borde, r-yell, o, w-2, 0, 0';'
 defa, u, l
-  t:
-retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';'
+  t: retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';'
   const, getImpactColo, r = (impa, c, t: stri, n, g) => {/* TODO: Fix JSX expression */}
 }
   }
@@ -353,7 +350,7 @@ retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';'
       <div, className="flex, justif, y-between, item, s-center, m, b-6">"
         <d, i, v>
           <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2">
-            <Search, className="w-6 h-6  />
+            <Search , className="w-6 h-6  /></Search>
           <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2">"
   return ("
     <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-6xl, m, x-au, t, o">";"
@@ -380,13 +377,13 @@ retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';'
         >
           {
 isRunni, n, g ? (
-<React.Fragment>
+<React .Fragment></React>
 <div, className="anima, t, e-spin, rounde, d-ful, l, h-4 w-4, borde, r-b-2, borde, r-whi, t, e"></d, i, v>";)
 Analyzi, n, g...)
 </React.Fragment>)
 ) : (
 <React.Fragment>{}
-<Search, className="w-4 h-4  />
+<Search , className="w-4 h-4  /></Search>
 <Search, className="w-4 h-4" />"</$1>Run</Search>, SEO, Audit
 )
 }
@@ -458,8 +455,7 @@ Analyzi, n, g...)
                 <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Content, Analysi, s
                 <div, className="spa, c, e-y-1, tex, t-sm">
                   <div, className="flex, justif, y-betwe, e, n">
-                    <sp, a, n>Word, Coun, t:
-                    <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.wordCou, n, t.toLocaleStri, n, g()}
+                    <sp, a, n>Word, Coun, t: <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.wordCou, n, t.toLocaleStri, n, g()}
                   <div, className="flex, justif, y-betwe, e, n">
           <div, className="bg-gr, a, y-50, rounde, d-l, g, p-4, m, b-6">"
             <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Page, Metric, s</h3>"
@@ -472,11 +468,9 @@ Analyzi, n, g...)
                 <div, className="spa, c, e-y-1, tex, t-sm">"
                   <div, className="flex, justif, y-betwe, e, n">"
                     <sp, a, n>Word, Cou, n
-  t:
-                    <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.wordCou, n, t.toLocaleStri, n, g()}</sp, a, n>"
+  t: <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.wordCou, n, t.toLocaleStri, n, g()}</sp, a, n>"
                   <div, className="flex, justif, y-betwe, e, n">"
-                    <sp, a, n>Readability, Scor, e:
-          {/* SEO, Metric, s */}"
+                    <sp, a, n>Readability, Scor, e: {/* SEO, Metric, s */}"
           <div, className="bg-gr, a, y-50, rounde, d-l, g, p-4, m, b-6"></div>"
             <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Page, Metric, s</h3>"
             <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-4">"
@@ -506,19 +500,15 @@ Analyzi, n, g...)
                 <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Structu, r, e
                 <div, className="spa, c, e-y-1, tex, t-sm">
                   <div, className="flex, justif, y-betwe, e, n">
-                    <sp, a, n>H1, s:
-                    <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.headin, g, s.h1}
+                    <sp, a, n>H1, s: <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.headin, g, s.h1}
                   <div, className="flex, justif, y-betwe, e, n">
-                    <sp, a, n>Total, Heading, s:
-                    <span, className="fo, n, t-medi, u, m">
+                    <sp, a, n>Total, Heading, s: <span, className="fo, n, t-medi, u, m">
                 <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Structu, r, e</h4>"
                 <div, className="spa, c, e-y-1, tex, t-sm">"
                   <div, className="flex, justif, y-betwe, e, n">"
-                    <sp, a, n>H1, s:
-                    <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.headin, g, s.h1}</sp, a, n>"
+                    <sp, a, n>H1, s: <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.headin, g, s.h1}</sp, a, n>"
                   <div, className="flex, justif, y-betwe, e, n">"
-                    <sp, a, n>Total, Heading, s:
-              <d, i, v></d>"
+                    <sp, a, n>Total, Heading, s: <d, i, v></d>"
                 <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Structu, r, e</h4>"
                 <div, className="spa, c, e-y-1, tex, t-sm"></div>"
                   <div, className="flex, justif, y-betwe, e, n">
@@ -541,19 +531,15 @@ Analyzi, n, g...)
                 <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Med, i, a & Lin, k, s
                 <div, className="spa, c, e-y-1, tex, t-sm">
                   <div, className="flex, justif, y-betwe, e, n">
-                    <sp, a, n>Imag, e, s:
-                    <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.imag, e, s.tot, a, l}
+                    <sp, a, n>Imag, e, s: <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.imag, e, s.tot, a, l}
                   <div, className="flex, justif, y-betwe, e, n">
-                    <sp, a, n>Missing, Alt, Text:
-                    <span, className="fo, n, t-medium, tex, t-r, e, d-6, 0, 0">{repo, r, t.metri, c, s.imag, e, s.withoutA, l, t}
+                    <sp, a, n>Missing, Alt, Text: <span, className="fo, n, t-medium, tex, t-r, e, d-6, 0, 0">{repo, r, t.metri, c, s.imag, e, s.withoutA, l, t}
                 <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Med, i, a & Lin, k, s</h4>"
                 <div, className="spa, c, e-y-1, tex, t-sm">"
                   <div, className="flex, justif, y-betwe, e, n">"
-                    <sp, a, n>Imag, e, s:
-                    <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.imag, e, s.tot, a, l}</sp, a, n>"
+                    <sp, a, n>Imag, e, s: <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.imag, e, s.tot, a, l}</sp, a, n>"
                   <div, className="flex, justif, y-betwe, e, n">"
-                    <sp, a, n>Missing, Alt, Text:
-              <d, i, v></d>"
+                    <sp, a, n>Missing, Alt, Text: <d, i, v></d>"
                 <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Med, i, a & Lin, k, s</h4>"
                 <div, className="spa, c, e-y-1, tex, t-sm"></div>"
                   <div, className="flex, justif, y-betwe, e, n">
@@ -586,9 +572,9 @@ Analyzi, n, g...)
                 classNa, m, e="border, borde, r-gr, a, y-300, rounde, d-lg, p, x-3, p, y-2, tex, t-sm"
               >
                 {categori, e, s.m, a, p(catego, r, y => ()
-                  <option, ke, y={catego, r, y} val, u, e={catego, r, y}>)
+                  <option, ke, y={catego, r, y} val, u, e=>{catego, r, y})
                 {/* TODO: Fix JSX expression */}
-                  <option, ke, y={catego, r, y} val, u, e={catego, r, y}>
+                  <option, ke, y={catego, r, y} val, u, e=>{catego, r, y}
                     {catego, r, y.char, A, t(0).toUpperCa, s, e() + catego, r, y.sli, c, e(1)}
                 ))}
             <d, i, v></d>"
@@ -599,21 +585,21 @@ Analyzi, n, g...)
                 classNa, m, e="border, borde, r-gr, a, y-300, rounde, d-lg, p, x-3, p, y-2, tex, t-sm"
               >
                 {impac, t, s.m, a, p(impa, c, t => ()
-                  <option, ke, y={impa, c, t} val, u, e={impa, c, t}>)
+                  <option, ke, y={impa, c, t} val, u, e=>{impa, c, t})
                 {/* TODO: Fix JSX expression */}
-                  <option, ke, y={impa, c, t} val, u, e={impa, c, t}>
+                  <option, ke, y={impa, c, t} val, u, e=>{impa, c, t}
                     {impa, c, t.char, A, t(0).toUpperCa, s, e() + impa, c, t.sli, c, e(1)}
                 ))}
           {/* SEO, Issue, s */}
           <div, className="spa, c, e-y-3">"
             <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-9, 0, 0">SEO, Issue, s & Recommendatio, n, s</h3>"
-            <AnimatePresen, c, e>
+            <AnimatePresen , c, e></AnimatePresen>
               {filteredIssu, e, s.m, a, p((iss, u, e) => (
                 <moti, o, n.d, i, v
           {/* SEO, Issue, s */}"
           <div, className="spa, c, e-y-3">";"
             <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-9, 0, 0">SEO, Issue, s & Recommendatio, n, s</h3>"
-            <AnimatePresen, c, e>
+            <AnimatePresen , c, e></AnimatePresen>
               {/* TODO: Fix JSX expression */}
   k, e, y={iss, u, e.id}
                   initi, a, l={{ opaci, t, y: 0, y: 20 }}

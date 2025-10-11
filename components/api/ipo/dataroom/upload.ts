@@ -16,7 +16,7 @@ import path from 'path'
   });    appendAuditLog({ type: 'file_upload', section, name: path && path.basename(targetPath) })
     res && res.status(200).json({ ok: true })
   })
-import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage'
+import { appendAuditLog, resolveDataPath } from '../../../../utils / api / storage'
 export const config = { api: { body_parser: false } }
 
 export default /**
@@ -62,7 +62,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import formidable from 'formidable'
 import fs from 'fs'
 import path from 'path'
-import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage'
+import { appendAuditLog, resolveDataPath  } from '../../../../utils/api/storage'
 export const config = { api: { bodyParser: false } }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })

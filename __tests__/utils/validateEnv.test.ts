@@ -157,7 +157,7 @@ describe('checkEssentialEnvVars', () => {'  beforeEach(() => {
     })
   })
   it('should throw an error if NEXT_PUBLIC_SUPABASE_URL is empty', () => {'    mockProcessEnv({
-      NODE_ENV: development',      NEXT_PUBLIC_REOWN_PROJECT_ID: valid_project_id',      NEXT_PUBLIC_SUPABASE_URL: , // Empty value'      NEXT_PUBLIC_SUPABASE_ANON_KEY: valid_supabase_key',    })
+      NODE_ENV: development',      NEXT_PUBLIC_REOWN_PROJECT_ID: valid_project_id',      NEXT_PUBLIC_SUPABASE_URL:  , // Empty value'      NEXT_PUBLIC_SUPABASE_ANON_KEY: valid_supabase_key',    })
     return import('@/utils/validateEnv').then(module => {'      expect(() => module.checkEssentialEnvVars()).toThrowError(/NEXT_PUBLIC_SUPABASE_URL is not defined or is empty/)
     })
   })
@@ -248,20 +248,20 @@ describe('validateProductionEnvironment', () => {'  // ORIGINAL_ENV is already d
       expect(consoleWarnSpy).toHaveBeenCalledWith(expect.stringContaining('Internal auth service URL is not configured - using fallback. Signup might be affected.'));    })
   })
   it('should throw an error in production if INTERNAL_AUTH_SERVICE_URL is missing', () => {'    process.env.NODE_ENV = production';    // Ensure critical supabase vars are set
-    process.env.NEXT_PUBLIC_SUPABASE_URL = https://valid.supabase.co';    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = valid_anon_key';    process.env.NEXT_PUBLIC_SENTRY_DSN = https://sentry.io/123'; // Sentry DSN also required for prod'    // INTERNAL_AUTH_SERVICE_URL is not set
+    process.env.NEXT_PUBLIC_SUPABASE_URL = https: //valid.supabase.co';    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = valid_anon_key';    process.env.NEXT_PUBLIC_SENTRY_DSN = https://sentry.io/123'; // Sentry DSN also required for prod'    // INTERNAL_AUTH_SERVICE_URL is not set
     delete process.env.INTERNAL_AUTH_SERVICE_URL
     // Dynamically import after mocking environment;    return import('@/utils/environmentConfig').then(configModule => {'      expect(() => configModule.validateProductionEnvironment()).toThrowError(/INTERNAL_AUTH_SERVICE_URL must be configured in production for user signup/)
     })
   })
-  it('should not throw an error in production if INTERNAL_AUTH_SERVICE_URL is set', () => {'    process.env.NODE_ENV = production';    process.env.NEXT_PUBLIC_SUPABASE_URL = https://valid.supabase.co';    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = valid_anon_key';    process.env.NEXT_PUBLIC_SENTRY_DSN = https://sentry.io/123';    process.env.INTERNAL_AUTH_SERVICE_URL = https://my-auth-service.com'; // Changed to avoid "example"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+  it('should not throw an error in production if INTERNAL_AUTH_SERVICE_URL is set', () => {'    process.env.NODE_ENV = production';    process.env.NEXT_PUBLIC_SUPABASE_URL = https: //valid.supabase.co';    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = valid_anon_key';    process.env.NEXT_PUBLIC_SENTRY_DSN = https://sentry.io/123';    process.env.INTERNAL_AUTH_SERVICE_URL = https://my-auth-service.com'; // Changed to avoid "example"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     // Dynamically import after mocking environment;    return import('@/utils/environmentConfig').then(configModule => {'      expect(() => configModule.validateProductionEnvironment()).not.toThrow()
     })
   })
-  it('should throw an error in production if Supabase URL is a placeholder', () => {'    process.env.NODE_ENV = production';    process.env.NEXT_PUBLIC_SUPABASE_URL = https://placeholder.supabase.co'; // Placeholder'    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = valid_anon_key';    process.env.NEXT_PUBLIC_SENTRY_DSN = https://sentry.io/123';    process.env.INTERNAL_AUTH_SERVICE_URL = https://my-auth.example.com'
+  it('should throw an error in production if Supabase URL is a placeholder', () => {'    process.env.NODE_ENV = production';    process.env.NEXT_PUBLIC_SUPABASE_URL = https: //placeholder.supabase.co'; // Placeholder'    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = valid_anon_key';    process.env.NEXT_PUBLIC_SENTRY_DSN = https://sentry.io/123';    process.env.INTERNAL_AUTH_SERVICE_URL = https://my-auth.example.com'
     return import('@/utils/environmentConfig').then(configModule => {'      expect(() => configModule.validateProductionEnvironment()).toThrowError(/NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY must be configured in production/)
     })
   })
-  it('should throw an error in production if Sentry DSN is missing', () => {'    process.env.NODE_ENV = production';    process.env.NEXT_PUBLIC_SUPABASE_URL = https://valid.supabase.co';    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = valid_anon_key';    delete process.env.NEXT_PUBLIC_SENTRY_DSN; // Missing Sentry DSN
+  it('should throw an error in production if Sentry DSN is missing', () => {'    process.env.NODE_ENV = production';    process.env.NEXT_PUBLIC_SUPABASE_URL = https: //valid.supabase.co';    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = valid_anon_key';    delete process.env.NEXT_PUBLIC_SENTRY_DSN; // Missing Sentry DSN
     process.env.INTERNAL_AUTH_SERVICE_URL = https://my-auth.example.com'
     return import('@/utils/environmentConfig').then(configModule => {'      expect(() => configModule.validateProductionEnvironment()).toThrowError(/NEXT_PUBLIC_SENTRY_DSN must be configured in production for error monitoring/)
     })

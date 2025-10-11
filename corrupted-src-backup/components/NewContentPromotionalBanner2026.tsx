@@ -20,7 +20,7 @@ const, NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */
         {/* Content, G, r, i, d */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">
           { newConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
-            <, ke, y = { in, d, e, x  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"$2 />
+            <, ke, y = { in, d, e, x  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r: transform, hove, r: sca, l, e-105, hove, r: shad, o, w-2xl, hove, r: shad, o, w-viol, e, t-5, 0, 0/20"$2 />
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
              > {/* Card, glow, effect */}
               <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.co, l, o, r }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} />
@@ -29,14 +29,14 @@ const, NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */
                   {conte, n, t.t, i, t, l, e}
                 <div, classNam, e="te, x, t-center, m, b-6">
                   <div, classNam, e="flex, item, s-center, justif, y-center, ga, p-2, tex, t-gr, a, y-4, 0, 0">
-                    <Users, classNam, e="w-4 h-4" />
+                    <Users , classNam, e="w-4 h-4" /></Users>
                     <span, classNam, e="te, x, t-sm">{conte, n, t.reade, r, s} reade, r, s
-                  <Link, classNam, e = "w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />
+                  <Link , classNam, e = "w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" /></Link>
               <div, ke, y = { in, d, e, x }, classNa, m, e = "te, x, t-cent, e, r" ></div> <div, classNam, e = { `${st, a, t.co, l, o, r }, mb-2, flex, justify-cent, e, r`}>
               <p, classNam, e="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o">
                 Be, among, the first, to, access revolutionary, AI, insight, s, breakthrough, researc, h,
-                  <Rocket, classNam, e="w-5 h-5" />
-                  <Link, classNam, e="w-5 h-5" />
+                  <Rocket , classNam, e="w-5 h-5" /></Rocket>
+                  <Link , classNam, e="w-5 h-5" /></Link>
 }}}
     {/* TODO: Fix JSX expression */}
         <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>"
@@ -46,7 +46,7 @@ const, NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */
         {/* Content, G, r, i, d */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">
           {/* TODO: Fix JSX expression */}"
-            <, ke, y = { in, d, e, x  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"$2 />
+            <, ke, y = { in, d, e, x  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r: transform, hove, r: sca, l, e-105, hove, r: shad, o, w-2xl, hove, r: shad, o, w-viol, e, t-5, 0, 0/20"$2 />
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
              > {/* Card, glow, effect */}`
               <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.co, l, o, r }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} /></div>"
@@ -62,6 +62,6 @@ const, NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */
               <p, classNam, e="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o">
                 Be, among, the first, to, access revolutionary, AI, insight, s, breakthrough, researc, h, "
                   <Rocket, classNam, e="w-5 h-5" /></Rocket>"
-                  <Link, classNam, e="w-5 h-5" />
+                  <Link , classNam, e="w-5 h-5" /></Link>
 }}}"`
 </div></div></div></div></div></div></div></div></div></div></div></div></span></span></Link></Link></Link></p></p></h2></h2></h3></h3>

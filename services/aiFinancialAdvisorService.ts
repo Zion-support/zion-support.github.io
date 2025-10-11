@@ -273,7 +273,7 @@ export class AIFinancialAdvisorService {
       const data = await response && response.json()
       return data && data.portfolio
     } catch (error) {
-      console && console.error('Error analyzing portfolio:', error)
+      console && console.error('Error analyzing portfolio: ', error)
       throw error
     }
   }
@@ -291,7 +291,7 @@ export class AIFinancialAdvisorService {
       const data = await response && response.json()
       return data && data.recommendations || []
     } catch (error) {
-      console && console.error('Error getting investment recommendations:', error)
+      console && console.error('Error getting investment recommendations: ', error)
       throw error
     }
   }
@@ -309,7 +309,7 @@ export class AIFinancialAdvisorService {
       const data = await response && response.json()
       return data && data.plan
     } catch (error) {
-      console && console.error('Error creating financial plan:', error)
+      console && console.error('Error creating financial plan: ', error)
       throw error
     }
   }
@@ -324,7 +324,7 @@ export class AIFinancialAdvisorService {
       const data = await response && response.json()
       return data && data.goals || []
     } catch (error) {
-      console && console.error('Error tracking financial goals:', error)
+      console && console.error('Error tracking financial goals: ', error)
       throw error
     }
   }
@@ -339,7 +339,7 @@ export class AIFinancialAdvisorService {
       const data = await response && response.json()
       return data && data.analysis
     } catch (error) {
-      console && console.error('Error getting market analysis:', error)
+      console && console.error('Error getting market analysis: ', error)
       throw error
     }
   }
@@ -371,7 +371,7 @@ export class AIFinancialAdvisorService {
       const data = await response.json()
       return data.portfolio
     } catch (error) {
-      console.error('Error analyzing portfolio:', error)
+      console.error('Error analyzing portfolio: ', error)
       throw error
     }
   }
@@ -391,7 +391,7 @@ export class AIFinancialAdvisorService {
       const data = await response.json()
       return data.recommendations || []
     } catch (error) {
-      console.error('Error getting investment recommendations:', error)
+      console.error('Error getting investment recommendations: ', error)
       throw error
     }
   }
@@ -411,7 +411,7 @@ export class AIFinancialAdvisorService {
       const data = await response.json()
       return data.plan
     } catch (error) {
-      console.error('Error creating financial plan:', error)
+      console.error('Error creating financial plan: ', error)
       throw error
     }
   }
@@ -428,7 +428,7 @@ export class AIFinancialAdvisorService {
       const data = await response.json()
       return data.goals || []
     } catch (error) {
-      console.error('Error tracking financial goals:', error)
+      console.error('Error tracking financial goals: ', error)
       throw error
     }
   }
@@ -445,19 +445,18 @@ export class AIFinancialAdvisorService {
       const data = await response.json()
       return data.analysis
     } catch (error) {
-      console.error('Error getting market analysis:', error)
+      console.error('Error getting market analysis: ', error)
       throw error
     }
   }
-  async rebalancePortfolio(portfolioId: string, targetAllocation: Record<string, number>): Promise<{
-    currentAllocation: Record<string, number>
+  async rebalancePortfolio(portfolioId: string, targetAllocation: Record<string, number>): Promise<>{currentAllocation: Record<string, number>
     targetAllocation: Record<string, number>
     rebalancingActions: Array<{
       action: 'buy' | 'sell'
       symbol: string
       quantity: number
       estimatedCost: number
-    }>
+    }
     estimatedFees: number
     expectedImpact: string
   }> {
@@ -474,17 +473,18 @@ export class AIFinancialAdvisorService {
       const data = await response && response.json()
       return data && data.rebalancing
     } catch (error) {
-      console && console.error('Error rebalancing portfolio:', error)
+      console && console.error('Error rebalancing portfolio: ', error)
       throw error
     }
   }
-  async calculateRetirementNeeds(userId: string, targetAge: number, desiredIncome: number): Promise<{
-    estimatedNeeds: number
+  async calculateRetirementNeeds(userId: string, targetAge: number, desiredIncome: number): Promise<>
+  {estimatedNeeds: number
     monthlyContribution: number
     projectedValue: number
+</>
     assumptions: Record<string, any>
     recommendations: string[]
-  }> {
+  } {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/retirement-calculator`, {
         method: 'POST',
@@ -498,7 +498,7 @@ export class AIFinancialAdvisorService {
       const data = await response && response.json()
       return data && data.calculation
     } catch (error) {
-      console && console.error('Error calculating retirement needs:', error)
+      console && console.error('Error calculating retirement needs: ', error)
       throw error
     }
   }
@@ -532,7 +532,7 @@ if ( {) {
       const data = await response.json ()
       return data.portfolio
     } catch (error) {
-      console.error ('Error analyzing portfolio:', error)
+      console.error ('Error analyzing portfolio: ', error)
       throw error
     }
   }
@@ -553,7 +553,7 @@ if ( {) {
       const data = await response.json ()
       return data.recommendations || []
     } catch (error) {
-      console.error ('Error getting investment recommendations:', error)
+      console.error ('Error getting investment recommendations: ', error)
       throw error
     }
   }
@@ -574,7 +574,7 @@ if ( {) {
       const data = await response.json ()
       return data.plan
     } catch (error) {
-      console.error ('Error creating financial plan:', error)
+      console.error ('Error creating financial plan: ', error)
       throw error
     }
   }
@@ -592,7 +592,7 @@ if ( {) {
       const data = await response.json ()
       return data.goals || []
     } catch (error) {
-      console.error ('Error tracking financial goals:', error)
+      console.error ('Error tracking financial goals: ', error)
       throw error
     }
   }
@@ -610,19 +610,18 @@ if ( {) {
       const data = await response.json ()
       return data.analysis
     } catch (error) {
-      console.error ('Error getting market analysis:', error)
+      console.error ('Error getting market analysis: ', error)
       throw error
     }
   }
-  async rebalance_portfolio (portfolio_id: string, target_allocation: Record < string, number>): Promise<{
-    current_allocation: Record < string, number>
+  async rebalance_portfolio (portfolio_id: string, target_allocation: Record < string, number>): Promise<>{current_allocation: Record < string, number>
     target_allocation: Record < string, number>
     rebalancing_actions: Array<{
       action: 'buy' | 'sell'
       symbol: string
       quantity: number,
       estimated_cost: number
-    }>
+    }
     estimated_fees: number,
     expected_impact: string
   }> {
@@ -642,17 +641,18 @@ if ( {) {
       const data = await response.json ()
       return data.rebalancing
     } catch (error) {
-      console.error ('Error rebalancing portfolio:', error)
+      console.error ('Error rebalancing portfolio: ', error)
       throw error
     }
   }
-  async calculateRetirementNeeds (user_id: string, target_age: number, desired_income: number): Promise<{
-    estimated_needs: number
+  async calculateRetirementNeeds (user_id: string, target_age: number, desired_income: number): Promise<>
+  {estimated_needs: number
     monthly_contribution: number
     projected_value: number,
+</>
     assumptions: Record < string, any>
     recommendations: string[]
-  }> {
+  } {
     try {
       const response = await fetch (`${this.base_url}/api / financial / retirement - calculator`, {
         method: 'POST',
@@ -669,7 +669,7 @@ if ( {) {
       const data = await response.json ()
       return data.calculation
     } catch (error) {
-      console.error ('Error calculating retirement needs:', error)
+      console.error ('Error calculating retirement needs: ', error)
       throw error
     }
   }
@@ -689,18 +689,19 @@ if ( {) {
       const data = await response && response.json()
       return data && data.optimization
     } catch (error) {
-      console && console.error('Error getting tax optimization strategies:', error)
+      console && console.error('Error getting tax optimization strategies: ', error)
       throw error
     }
   }
-  async generateFinancialReport(userId: string, reportType: 'comprehensive' | 'portfolio' | 'goals' | 'tax'): Promise<{
-    reportId: string
+  async generateFinancialReport(userId: string, reportType: 'comprehensive' | 'portfolio' | 'goals' | 'tax'): Promise<>
+  {reportId: string
     downloadUrl: string
     summary: string
+</>
     keyMetrics: Record<string, any>
     recommendations: string[]
     nextSteps: string[]
-  }> {
+  } {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/report`, {
         method: 'POST',
@@ -714,7 +715,7 @@ if ( {) {
       const data = await response && response.json()
       return data && data.report
     } catch (error) {
-      console && console.error('Error generating financial report:', error)
+      console && console.error('Error generating financial report: ', error)
       throw error
     }
   }
@@ -739,18 +740,19 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.e
       const data = await response.json ()
       return data.optimization
     } catch (error) {
-      console.error ('Error getting tax optimization strategies:', error)
+      console.error ('Error getting tax optimization strategies: ', error)
       throw error
     }
   }
-  async generateFinancialReport (user_id: string, report_type: 'comprehensive' | 'portfolio' | 'goals' | 'tax'): Promise<{
-    report_id: string
+  async generateFinancialReport (user_id: string, report_type: 'comprehensive' | 'portfolio' | 'goals' | 'tax'): Promise<>
+  {report_id: string
     download_url: string
     summary: string,
+</>
     key_metrics: Record < string, any>
     recommendations: string[],
     next_steps: string[]
-  }> {
+  } {
     try {
       const response = await fetch (`${this.base_url}/api / financial / report`, {
         method: 'POST',
@@ -766,11 +768,10 @@ if ( {) {
       }
       const data = await response.json ()
       return data.report
-    } catch (error) {
-      console.error ('Error generating financial report:', error)
+    } catch (error) >{console.error ('Error generating financial report: ', error)
       quantity: number
       estimatedCost: number
-    }>
+    }
     estimatedFees: number
     expectedImpact: string
   }> {
@@ -789,17 +790,18 @@ if ( {) {
       const data = await response.json()
       return data.rebalancing
     } catch (error) {
-      console.error('Error rebalancing portfolio:', error)
+      console.error('Error rebalancing portfolio: ', error)
       throw error
     }
   }
-  async calculateRetirementNeeds(userId: string, targetAge: number, desiredIncome: number): Promise<{
-    estimatedNeeds: number
+  async calculateRetirementNeeds(userId: string, targetAge: number, desiredIncome: number): Promise<>
+  {estimatedNeeds: number
     monthlyContribution: number
     projectedValue: number
+</>
     assumptions: Record<string, any>
     recommendations: string[]
-  }> {
+  } {
     try {
       const response = await fetch(`${this.baseUrl}/api/financial/retirement-calculator`, {
         method: 'POST',
@@ -815,17 +817,18 @@ if ( {) {
       const data = await response.json()
       return data.calculation
     } catch (error) {
-      console.error('Error calculating retirement needs:', error)
+      console.error('Error calculating retirement needs: ', error)
       throw error
     }
   }
-  async getTaxOptimizationStrategies(userId: string, taxYear: number): Promise<{
-    strategies: string[]
+  async getTaxOptimizationStrategies(userId: string, taxYear: number): Promise<>
+  {strategies: string[]
     estimatedSavings: number
     implementation: string[]
     risks: string[]
+</>
     deadlines: Record<string, Date>
-  }> {
+  } {
     try {
       const response = await fetch(`${this.baseUrl}/api/financial/tax-optimization`, {
         method: 'POST',
@@ -841,18 +844,19 @@ if ( {) {
       const data = await response.json()
       return data.optimization
     } catch (error) {
-      console.error('Error getting tax optimization strategies:', error)
+      console.error('Error getting tax optimization strategies: ', error)
       throw error
     }
   }
-  async generateFinancialReport(userId: string, reportType: 'comprehensive' | 'portfolio' | 'goals' | 'tax'): Promise<{
-    reportId: string
+  async generateFinancialReport(userId: string, reportType: 'comprehensive' | 'portfolio' | 'goals' | 'tax'): Promise<>
+  {reportId: string
     downloadUrl: string
     summary: string
+</>
     keyMetrics: Record<string, any>
     recommendations: string[]
     nextSteps: string[]
-  }> {
+  } {
     try {
       const response = await fetch(`${this.baseUrl}/api/financial/report`, {
         method: 'POST',
@@ -868,7 +872,7 @@ if ( {) {
       const data = await response.json()
       return data.report
     } catch (error) {
-      console.error('Error generating financial report:', error)
+      console.error('Error generating financial report: ', error)
       throw error
     }
   }

@@ -1,8 +1,8 @@
-import { createClient, SupabaseClient } from '@supabase/supabase-js'
+import { createClient, SupabaseClient  } from '@supabase/supabase-js'
 export type ZionSupabase = SupabaseClient | undefined
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL |process.env.SUPABASE_URL |''
 const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |process.env.SUPABASE_ANON_KEY |''
-import { createClient, SupabaseClient } from '@supabase/supabase-js',
+import { createClient, SupabaseClient  } from '@supabase/supabase-js',
 export type ZionSupabase = SupabaseClient | undefined,
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || '',
 const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY || '',
@@ -18,8 +18,8 @@ export function getSupabaseClient(): ZionSupabase {try {
     // Server-side: create a new client per call to avoid cross-request state
     return createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
   } catch {return undefined
-import { createClient, SupabaseClient } from '@supabase/supabase-js'
-import { createClient, SupabaseClient } from '@supabase/supabase-js'
+import { createClient, SupabaseClient  } from '@supabase/supabase-js'
+import { createClient, SupabaseClient  } from '@supabase/supabase-js'
 export type ZionSupabase = SupabaseClient | undefined
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || ''
 const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY || ''
@@ -29,13 +29,13 @@ export function getSupabaseClient(): ZionSupabase {
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
         browserClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
         } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
       return browserClient
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -48,12 +48,12 @@ export function getSupabaseClient(): ZionSupabase {
   } catch {
     return undefined
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }

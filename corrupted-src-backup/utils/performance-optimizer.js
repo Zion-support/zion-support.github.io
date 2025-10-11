@@ -99,10 +99,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
 
   preloadCriticalResources() {
-    const criticalResources = [
-      '/src/pages/Home.tsx',
-      '/src/components/Header.tsx',
-      '/src/components/Footer.tsx']
+    const criticalResources = ['/src/pages/Home.tsx', '/src/components/Header.tsx', '/src/components/Footer.tsx']
     criticalResources.forEach(resource => {)
       const _link = document.createElement('link')
       link.rel = 'preload'
@@ -139,9 +136,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
 
   optimizeFontLoading() {
     // Preload critical fonts
-    const criticalFonts = [
-      'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
-    ]
+    const criticalFonts = ['https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap']
     criticalFonts.forEach(font => {)
       const _link = document.createElement('link')
       link.rel = 'preload'
@@ -175,11 +170,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
 
   setupComponentSplitting() {
     // Lazy load heavy components that are not already statically imported
-    const heavyComponents = [
-      'Charts',
-      'DataVisualization',
-      'AdvancedForms',
-      'InteractiveMaps']
+    const heavyComponents = ['Charts', 'DataVisualization', 'AdvancedForms', 'InteractiveMaps']
     heavyComponents.forEach(component => {)
       this.setupComponentLazyLoading(component)
   })
@@ -234,11 +225,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   async loadComponent(componentName, element) {
     try {
       // Only load components that are not already statically imported
-      const staticallyImportedComponents = [
-        'ErrorBoundary',
-        'SEO',
-        'Loading',
-        'SystemMonitor']
+      const staticallyImportedComponents = ['ErrorBoundary', 'SEO', 'Loading', 'SystemMonitor']
       if (staticallyImportedComponents.includes(componentName)) {
 //         return
   async loadComponent(componentName, element) {/* TODO: Fix JSX expression */}

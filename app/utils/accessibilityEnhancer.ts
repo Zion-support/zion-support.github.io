@@ -1,27 +1,11 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { Helmet  } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
 
-=======
-/**
- * Accessibility Enhancer Utility;
- * Provides comprehensive accessibility improvements for web applications;
- */
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export class AccessibilityEnhancer {private focusableElements: HTMLElement[] = [],}
   private skipLinks: HTMLElement[] = [],
   private landmarks: HTMLElement[] = [],
-=======
-export class AccessibilityEnhancer {
-  private focusableElements: HTMLElement[] = []
-  private skipLinks: HTMLElement[] = []
-  private landmarks: HTMLElement[] = []
->>>>>>> main
   private isInitialized = false;
 
   constructor() {
@@ -52,10 +36,10 @@ export class AccessibilityEnhancer {
    */
   private updateFocusableElements(): void {const selectors = [}
       'a[href]',
-      'button:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
+      'button: not([disabled])',
+      'input: not([disabled])',
+      'select: not([disabled])',
+      'textarea: not([disabled])',
       '[tabindex]:not([tabindex="-1"])',
       '[contenteditable="true"]'
     ]
@@ -101,43 +85,24 @@ export class AccessibilityEnhancer {
   /**
    * Handle escape key;
    */
-<<<<<<< HEAD
   private handleEscapeKey(event: KeyboardEvent): void {,}
     // Close any open modals or dropdowns;
-=======
-=======
->>>>>>> origin/main
 const AccessibilityEnhancerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-<<<<<<< HEAD
-  ];
+  return (
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-=======
-<<<<<<< HEAD
-focusableElements[nextIndex]?.focus();
+  const features = [{
+      icon: Brain, title: 'AI-Powered Solutions', description: 'Advanced AI technology to transform your business operations and improve efficiency'
+    
+  );
+}, {
+      icon: Zap, title: 'High Performance', description: 'Lightning-fast processing and real-time analytics for optimal results'
+    }, {
+      icon: Shield, title: 'Enterprise Security', description: 'Bank-level security with encryption and compliance standards'
+    }, {
+      icon: Globe, title: 'Global Reach', description: 'Worldwide deployment and support for international businesses'
+    }];
+
+  const benefits = ['Advanced AI technology integration', 'Real-time processing and analytics', focusableElements[nextIndex]?.focus();
     event.preventDefault();
   }
   /**
@@ -255,7 +220,7 @@ focusableElements[nextIndex]?.focus();
         z-index: 1000;
         transition: top 0.3s;
       }
-      .skip-link:focus {
+      .skip-link: focus {
         top: 6px;
       }
     `;
@@ -399,7 +364,7 @@ focusableElements[nextIndex]?.focus();
    */
   private setupAriaLabels(): void {
     // Add ARIA labels to interactive elements without text
-    const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+    const buttons = document.querySelectorAll('button: not([aria-label]):not([aria-labelledby])');
     buttons.forEach((button) => {
       const element = button as HTMLElement;
       if (!element.textContent?.trim()) {
@@ -407,7 +372,7 @@ focusableElements[nextIndex]?.focus();
       }
     });
     // Add ARIA labels to links without text
-    const links = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])');
+    const links = document.querySelectorAll('a: not([aria-label]):not([aria-labelledby])');
     links.forEach((link) => {
       const element = link as HTMLElement;
       if (!element.textContent?.trim()) {
@@ -525,7 +490,7 @@ focusableElements[nextIndex]?.focus();
    */
   private scanAccessibility(): void {
     this.metrics.focusableElements = this.getFocusableElements().length;
-    this.metrics.imagesWithoutAlt = document.querySelectorAll('img:not([alt])').length;
+    this.metrics.imagesWithoutAlt = document.querySelectorAll('img: not([alt])').length;
     this.metrics.linksWithoutText = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby]):empty').length;
     this.metrics.headingsWithoutContent = document.querySelectorAll('h1, h2, h3, h4, h5, h6').length - 
       Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6')).filter(h => h.textContent?.trim()).length;
@@ -571,12 +536,11 @@ focusableElements[nextIndex]?.focus();
    * Get focusable elements
    */
   private getFocusableElements(): HTMLElement[] {
-    const focusableSelectors = [
-      'a[href]',
-      'button:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
+    const focusableSelectors = ['a[href]',
+      'button: not([disabled])',
+      'input: not([disabled])',
+      'select: not([disabled])',
+      'textarea: not([disabled])',
       '[tabindex]:not([tabindex="-1"])',
       '[contenteditable="true"]'
     ];
@@ -609,25 +573,19 @@ focusableElements[nextIndex]?.focus();
   getReport(): string {
     const metrics = this.getMetrics();
     return `
-Accessibility Report:
-- Color Contrast Score: ${metrics.colorContrastScore}/100
+Accessibility Report: - Color Contrast Score: ${metrics.colorContrastScore}/100
 - Keyboard Navigation Score: ${metrics.keyboardNavigationScore}/100
 - Screen Reader Score: ${metrics.screenReaderScore}/100
 - ARIA Implementation Score: ${metrics.ariaImplementationScore}/100
 - Overall Score: ${metrics.overallScore}/100
 
-Recommendations:
-- Focus on improving color contrast for better accessibility
+Recommendations: - Focus on improving color contrast for better accessibility
 - Ensure all interactive elements are keyboard accessible
 - Implement proper ARIA labels and roles
 - Test with screen readers regularly
 `;
-=======
-  }
->>>>>>> main
   private handleEscapeKey(event: KeyboardEvent): void {
     // Close any open modals or dropdowns
->>>>>>> origin/main
     const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
     modals.forEach(modal => {)
       const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
@@ -638,7 +596,6 @@ Recommendations:
     menus.forEach(menu => {)
       const trigger = document.querySelector(`[aria-controls="${menu.id)}"]`) as HTMLElement;
       trigger?.click();
-=======
 
   private handleEscapeKey(event: KeyboardEvent): void {
     // Close any open modals or dropdowns
@@ -653,14 +610,12 @@ Recommendations:
     menus.forEach()
       const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement
       trigger?.click()
->>>>>>> origin/main
     })
   }
 
   /**
    * Handle arrow key navigation;
    */
-<<<<<<< HEAD
   private handleArrowKeys(event: KeyboardEvent): void {,}
     const activeElement = document.activeElement as HTMLElement;
     
@@ -668,27 +623,12 @@ Recommendations:
     if (activeElement.getAttribute('role') === 'menuitem' || 
         activeElement.getAttribute('type') === 'radio') {
       this.handleMenuNavigation(event);}}
-=======
-  private handleArrowKeys(event: KeyboardEvent): void {
-    const activeElement = document.activeElement as HTMLElement
-    // Handle arrow keys for radio groups, menus, etc.
-    if (activeElement.getAttribute('role') === 'menuitem' || 
-        activeElement.getAttribute('type') === 'radio') {
-      this.handleMenuNavigation(event)
-    }
-  }
->>>>>>> origin/main
 
   /**
    * Handle menu navigation with arrow keys;
    */
-<<<<<<< HEAD
   private handleMenuNavigation(event: KeyboardEvent): void {,}
     const activeElement = document.activeElement as HTMLElement;
-=======
-  private handleMenuNavigation(event: KeyboardEvent): void {
-    const activeElement = document.activeElement as HTMLElement
->>>>>>> origin/main
     const menuItems = Array.from()
       activeElement.closest('[role="menu"]')?.querySelectorAll('[role="menuitem"]') || []
     ) as HTMLElement[]
@@ -706,24 +646,14 @@ Recommendations:
         nextIndex = (currentIndex + 1) % menuItems.length
         break
       case 'ArrowLeft':
-<<<<<<< HEAD
         nextIndex = currentIndex > 0 ? currentIndex - 1 : menuItems.length - 1;
         break;}menuItems[nextIndex]?.focus();
     event.preventDefault();
-=======
-        nextIndex = currentIndex > 0 ? currentIndex - 1 : menuItems.length - 1
-        break
-    }
-    
-    menuItems[nextIndex]?.focus()
-    event.preventDefault()
->>>>>>> origin/main
   }
 
   /**
    * Setup skip links;
    */
-<<<<<<< HEAD
   private setupSkipLinks(): void {// Create skip to main content link;}
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
@@ -750,54 +680,10 @@ Recommendations:
     if (header) {header.setAttribute('role', 'banner');}// Setup contentinfo landmark;
     const footer = document.querySelector('footer');
     if (footer) {footer.setAttribute('role', 'contentinfo');}}
-=======
-  private setupSkipLinks(): void {
-    // Create skip to main content link
-    const skipLink = document.createElement('a')
-    skipLink.href = '#main-content'
-    skipLink.textContent = 'Skip to main content'
-    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
-    document.body.insertBefore(skipLink, document.body.firstChild)
-    this.skipLinks.push(skipLink)
-  }
-
-  /**
-   * Setup landmarks
-   */
-  private setupLandmarks(): void {
-    // Ensure main content has proper landmark
-    const mainContent = document.querySelector('main') || document.querySelector('#main-content')
-    if (mainContent) {
-      mainContent.setAttribute('role', 'main')
-      mainContent.id = 'main-content'
-    }
-    
-    // Setup navigation landmarks
-    const navs = document.querySelectorAll('nav')
-    navs.forEach((nav, index) => {
-      if (!nav.getAttribute('aria-label') && !nav.getAttribute('aria-labelledby')) {
-        nav.setAttribute('aria-label', `Navigation ${index + 1}`)
-      }
-    })
-    
-    // Setup banner landmark
-    const header = document.querySelector('header')
-    if (header) {
-      header.setAttribute('role', 'banner')
-    }
-    
-    // Setup contentinfo landmark
-    const footer = document.querySelector('footer')
-    if (footer) {
-      footer.setAttribute('role', 'contentinfo')
-    }
-  }
->>>>>>> origin/main
 
   /**
    * Setup ARIA labels;
    */
-<<<<<<< HEAD
   private setupAriaLabels(): void {// Add ARIA labels to buttons without text;}
     const iconButtons = document.querySelectorAll('button: not([aria-label]):not([aria-labelledby])');,
     iconButtons.forEach(button => {)
@@ -812,27 +698,6 @@ Recommendations:
       const label = document.querySelector(`label[for="${input.id)}"]`);
       if (label) {input.setAttribute('aria-labelledby', label.id || `label-${input.id)}`);
         if (!label.id) {label.id = `label-${input.id}`;
-=======
-  private setupAriaLabels(): void {
-    // Add ARIA labels to buttons without text
-    const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])')
-    iconButtons.forEach()
-      const icon = button.querySelector('svg')
-      if (icon) {
-        const iconName = icon.getAttribute('data-icon') || 'button'
-        button.setAttribute('aria-label', iconName)
-      }
-    })
-    
-    // Add ARIA labels to form inputs
-    const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])')
-    inputs.forEach()
-      const label = document.querySelector(`label[for="${input.id}"]`)
-      if (label) {
-        input.setAttribute('aria-labelledby', label.id || `label-${input.id}`)
-        if (!label.id) {
-          label.id = `label-${input.id}`
->>>>>>> origin/main
         }
       }
     })
@@ -841,20 +706,12 @@ Recommendations:
   /**
    * Setup color contrast improvements;
    */
-<<<<<<< HEAD
   private setupColorContrast(): void {// Add high contrast mode support;}
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');,
     
-<<<<<<< HEAD
     const handleContrastChange = (e: MediaQueryListEvent) => {,
       if (e.matches) {
         document.body.classList.add('high-contrast');}else {document.body.classList.remove('high-contrast');}}}
-=======
-=======
-  private setupColorContrast(): void {
-    // Add high contrast mode support
-    const mediaQuery = window.matchMedia('(prefers-contrast: high)')
->>>>>>> origin/main
     const handleContrastChange = (e: MediaQueryListEvent) => {
       if (e.matches) {
         document.body.classList.add('high-contrast')
@@ -862,7 +719,6 @@ Recommendations:
         document.body.classList.remove('high-contrast')
       }
     }
->>>>>>> origin/main
     
     mediaQuery.addEventListener('change', handleContrastChange)
     handleContrastChange(mediaQuery)
@@ -871,7 +727,6 @@ Recommendations:
   /**
    * Setup screen reader support;
    */
-<<<<<<< HEAD
   private setupScreenReaderSupport(): void {// Add live region for announcements;}
     const liveRegion = document.createElement('div');
     liveRegion.setAttribute('aria-live', 'polite');
@@ -888,67 +743,26 @@ Recommendations:
     const liveRegion = document.getElementById('live-region');
     if (liveRegion) {
       liveRegion.textContent = `Page loaded: ${title,}`;
-=======
-  private setupScreenReaderSupport(): void {
-    // Add live region for announcements
-    const liveRegion = document.createElement('div')
-    liveRegion.setAttribute('aria-live', 'polite')
-    liveRegion.setAttribute('aria-atomic', 'true')
-    liveRegion.className = 'sr-only'
-    liveRegion.id = 'live-region'
-    document.body.appendChild(liveRegion)
-    // Announce page changes
-    this.announcePageChange()
-  }
-
-  /**
-   * Announce page changes to screen readers
-   */
-  private announcePageChange(): void {
-    const title = document.title
-    const liveRegion = document.getElementById('live-region')
-    if (liveRegion) {
-      liveRegion.textContent = `Page loaded: ${title}`
->>>>>>> origin/main
     }
   }
 
   /**
    * Announce messages to screen readers;
    */
-<<<<<<< HEAD
   public announce(message: string): void {,}
     const liveRegion = document.getElementById('live-region');
     if (liveRegion) {
       liveRegion.textContent = message;}}
-=======
-  public announce(message: string): void {
-    const liveRegion = document.getElementById('live-region')
-    if (liveRegion) {
-      liveRegion.textContent = message
-    }
-  }
->>>>>>> origin/main
 
   /**
    * Update focusable elements (call when DOM changes)
    */
-<<<<<<< HEAD
   public updateFocusableElements(): void {this.updateFocusableElements();}}/**
    * Get current focusable elements;
-=======
-  public updateFocusableElements(): void {
-    this.updateFocusableElements()
-  }
-
-  /**
-   * Get current focusable elements
->>>>>>> origin/main
    */
   public getFocusableElements(): HTMLElement[] {return [...this.focusableElements]}/**
    * Focus first focusable element;
    */
-<<<<<<< HEAD
   public focusFirst(): void {this.focusableElements[0]?.focus();}}/**
    * Focus last focusable element;
    */
@@ -956,27 +770,8 @@ Recommendations:
    * Cleanup and destroy;
    */
   public destroy(): void {this.isInitialized = false;}
-=======
-  public focusFirst(): void {
-    this.focusableElements[0]?.focus()
-  }
-
-  /**
-   * Focus last focusable element
-   */
-  public focusLast(): void {
-    this.focusableElements[this.focusableElements.length - 1]?.focus()
-  }
-
-  /**
-   * Cleanup and destroy
-   */
-  public destroy(): void {
-    this.isInitialized = false
->>>>>>> origin/main
     this.focusableElements = []
     this.skipLinks = []
-<<<<<<< HEAD
     this.landmarks = []}}
 
 // Create global instance;
@@ -985,36 +780,25 @@ export const accessibilityEnhancer = new AccessibilityEnhancer();
 // Export utility functions;
 export const announceToScreenReader = (message: string) => {,
   accessibilityEnhancer.announce(message);}export const updateFocusableElements = () => {accessibilityEnhancer.updateFocusableElements();}export const focusFirstElement = () => {accessibilityEnhancer.focusFirst();}export const focusLastElement = () => {accessibilityEnhancer.focusLast();}
-=======
-    this.landmarks = []
->>>>>>> origin/main
   }
-<<<<<<< HEAD
-=======
-}
-
-// Create global instance
-export const accessibilityEnhancer = new AccessibilityEnhancer();
->>>>>>> origin/main
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-<<<<<<< HEAD
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <Helmet ></Helmet>
         <title>AccessibilityEnhancer | Zion Tech Group</title>
         <meta name="description" content="Professional AccessibilityEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="accessibilityEnhancer, AI solutions, IT services, Zion Tech Group, accessibilityenhancer" />
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -1031,7 +815,7 @@ export const accessibilityEnhancer = new AccessibilityEnhancer();
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
@@ -1042,7 +826,7 @@ export const accessibilityEnhancer = new AccessibilityEnhancer();
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1053,9 +837,9 @@ export const accessibilityEnhancer = new AccessibilityEnhancer();
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
@@ -1068,7 +852,7 @@ export const accessibilityEnhancer = new AccessibilityEnhancer();
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1082,17 +866,13 @@ export const accessibilityEnhancer = new AccessibilityEnhancer();
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" /></CheckCircle>
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-=======
-  ]
->>>>>>> main
->>>>>>> origin/main
 
 
 // Export utility functions
@@ -1116,11 +896,6 @@ export const focusFirstElement = () => {
 export const focusLastElement = () => {
   accessibilityEnhancer.focusLast()
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
 
 export const updateFocusableElements = () => {
   accessibilityEnhancer.updateFocusableElements();
@@ -1134,5 +909,3 @@ export const focusLastElement = () => {
   accessibilityEnhancer.focusLast();
 }
 export default AccessibilityEnhancerPage;
->>>>>>> main
->>>>>>> origin/main

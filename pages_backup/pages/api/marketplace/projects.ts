@@ -1,23 +1,21 @@
-import { v4 as uuidv4 } from "uuid"
-import { getDemoUser } from "../../../utils/marketplace/auth"
-import { getProjectById, saveProject } from "../../../utils/marketplace/store"
-import {
-  Project
+import { v4 as uuidv4  } from 'uuid'
+import { getDemoUser  } from '../../../utils/marketplace/auth'
+import { getProjectById, saveProject  } from '../../../utils/marketplace/store'
+import { Project
   ProjectDocument
   ProjectNote
-} from "../../../utils/marketplace/types"
+ } from '../../../utils/marketplace/types'
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res && res.status(code).json({ ok: false, error: message })
 }
 import type { NextApiRequest, NextApiResponse } from "next"
-import { v4 as uuidv4 } from "uuid"
-import { getDemoUser } from "../../../utils/marketplace/auth"
-import { getProjectById, saveProject } from "../../../utils/marketplace/store"
-import {
-  Project,
+import { v4 as uuidv4  } from 'uuid'
+import { getDemoUser  } from '../../../utils/marketplace/auth'
+import { getProjectById, saveProject  } from '../../../utils/marketplace/store'
+import { Project,
   ProjectDocument,
   ProjectNote,
-} from "../../../utils/marketplace/types"
+ } from '../../../utils/marketplace/types'
 import type { NextApiRequest, NextApiResponse } from 'next'
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({
@@ -25,21 +23,20 @@ function bad(res: NextApiResponse, message: string, code = 400) {
     error: message
   })
 import type { NextApiRequest, NextApiResponse } from "next",
-import { v4 as uuidv4 } from "uuid",
-import { getDemoUser } from "../../../utils/marketplace/auth",
-import { getProjectById, saveProject } from "../../../utils/marketplace/store",
-import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplace/types",
+import { v4 as uuidv4  } from 'uuid',
+import { getDemoUser  } from '../../../utils/marketplace/auth',
+import { getProjectById, saveProject  } from '../../../utils/marketplace/store',
+import { Project, ProjectDocument, ProjectNote  } from '../../../utils/marketplace/types',
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user && user.role === "client" && user && user.id === project && project.clientId) return true
   if (user && user.role === "talent" && user && user.talentSlug === project && project.talentSlug)
     return true
   return false
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -48,15 +45,15 @@ function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user.role === "talent" && user.talentSlug === project.talentSlug) return true
   return false
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -114,15 +111,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.setHeader('Allow', ['GET', 'POST'])
       res.status(405).end('Method Not Allowed')
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -137,15 +134,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === "GET") {
       return res.json({ ok: true, project })
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -180,15 +177,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         saveProject(project),
         return res.json({ ok: true, project })
         } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -250,15 +247,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         saveProject(project),
         return res.json({ ok: true, project })
         } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -268,15 +265,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         saveProject(project),
         return res.json({ ok: true, project })
         } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -286,30 +283,30 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         saveProject(project)
         return return res.json({ ok: true, project })
         } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
 
       return bad(res, "Unknown action")
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -321,20 +318,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }

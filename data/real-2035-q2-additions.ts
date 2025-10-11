@@ -1,26 +1,13 @@
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'
+import { EnhancedRealMicroSaasService  } from './enhanced-real-micro-saas-services'
 const contact = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
 }
-export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
-	{
-		id: 'ai-rfp-bid-writer',
-		name: 'AI RFP & Bid Writer',
-		tagline: 'Draft compliant proposals with auto-outline, checklists, and reviewer workflows',
-		price: '$149',
-		period: '/month',
-		description: 'Accelerate RFP responses with AI-assisted outlines, requirement mapping, compliance checklists, team review routing, and export to DOCX/PDF. Maintains a reusable answer library and audit trail.',
-		features: [
-			'Requirement extraction and mapping',
-			'Answer library with versioning',
-			'Compliance and exceptions tracker',
-			'Multi-reviewer workflows and approvals',
-			'Privacy-safe local embeddings option',
-			'Export to DOCX/PDF with branding'
-		],
+export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [{
+		id: 'ai-rfp-bid-writer', name: 'AI RFP & Bid Writer', tagline: 'Draft compliant proposals with auto-outline, checklists, and reviewer workflows', price: '$149', period: '/month', description: 'Accelerate RFP responses with AI-assisted outlines, requirement mapping, compliance checklists, team review routing, and export to DOCX/PDF. Maintains a reusable answer library and audit trail.', features: [
+			'Requirement extraction and mapping', 'Answer library with versioning', 'Compliance and exceptions tracker', 'Multi-reviewer workflows and approvals', 'Privacy-safe local embeddings option', 'Export to DOCX/PDF with branding'],
 		popular: true,
 		icon: '🧠',
 		color: 'from-cyan-600 to-blue-700',
@@ -55,12 +42,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		price: '$79',
 		period: '/month',
 		description: 'Analyze database CPU, memory, IOPS, and storage usage to recommend instance class changes, storage lifecycle, and backup retention—emitting safe pull requests.',
-		features: [
-			'Instance rightsizing and autoscaling guidance',
-			'Idle/unused instance detection',
-			'Backup retention and PITR cost tuning',
-			'Weekly savings reports and anomaly alerts'
-		],
+		features: ['Instance rightsizing and autoscaling guidance', 'Idle/unused instance detection', 'Backup retention and PITR cost tuning', 'Weekly savings reports and anomaly alerts'],
 		popular: true,
 		icon: '💾',
 		color: 'from-emerald-600 to-teal-700',
@@ -95,12 +77,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		price: '$39',
 		period: '/month',
 		description: 'Turn user interviews into structured insights: themes, quotes, Jobs-To-Be-Done, and prioritized opportunities. Export to slides and docs.',
-		features: [
-			'Transcription with diarization',
-			'Theme clustering and highlights',
-			'JTBD extraction and prioritization',
-			'Auto slide deck and PRD snippets'
-		],
+		features: ['Transcription with diarization', 'Theme clustering and highlights', 'JTBD extraction and prioritization', 'Auto slide deck and PRD snippets'],
 		popular: false,
 		icon: '🎙️',
 		color: 'from-purple-600 to-pink-700',
@@ -135,12 +112,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		price: '$129',
 		period: '/month',
 		description: 'Discover unmanaged IT assets and exposed services across SaaS and cloud, with risk scoring, owner assignment, and remediation playbooks.',
-		features: [
-			'Agentless discovery (SSO, APIs)',
-			'Exposure and configuration drift scoring',
-			'Owner assignment and notifications',
-			'Remediation playbooks and ticket sync'
-		],
+		features: ['Agentless discovery (SSO, APIs)', 'Exposure and configuration drift scoring', 'Owner assignment and notifications', 'Remediation playbooks and ticket sync'],
 		popular: true,
 		icon: '🛰️',
 		color: 'from-amber-600 to-orange-700',
@@ -175,12 +147,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		price: '$59',
 		period: '/month',
 		description: 'Analyze SQL in your data warehouse to flag anti-patterns, propose rewrites, and estimate cost/latency impact. Enforce policies via PR comments.',
-		features: [
-			'Query linting and rewrite suggestions',
-			'Cost/latency impact estimates',
-			'Policy enforcement in CI',
-			'Weekly reports and top offenders'
-		],
+		features: ['Query linting and rewrite suggestions', 'Cost/latency impact estimates', 'Policy enforcement in CI', 'Weekly reports and top offenders'],
 		popular: false,
 		icon: '📊',
 		color: 'from-blue-600 to-indigo-700',
@@ -215,12 +182,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		price: '$49',
 		period: '/month',
 		description: 'Run audience and geo-targeted experiments at the edge. Includes holdouts, guardrail metrics, exposure logging, and export to BI tools.',
-		features: [
-			'Edge cookie/ID routing',
-			'Holdouts and guardrail metrics',
-			'Exposure events and attribution',
-			'Client and server SDKs'
-		],
+		features: ['Edge cookie/ID routing', 'Holdouts and guardrail metrics', 'Exposure events and attribution', 'Client and server SDKs'],
 		popular: true,
 		icon: '🚀',
 		color: 'from-pink-600 to-rose-700',
@@ -255,12 +217,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		price: '$35',
 		period: '/agent/month',
 		description: 'Predict SLA breaches on tickets using historical patterns. Suggest mitigations, auto-notify stakeholders, and prioritize queues.',
-		features: [
-			'Historical pattern modeling',
-			'Queue impact and what-if analysis',
-			'Escalation workflows and alerts',
-			'Weekly performance reports'
-		],
+		features: ['Historical pattern modeling', 'Queue impact and what-if analysis', 'Escalation workflows and alerts', 'Weekly performance reports'],
 		popular: false,
 		icon: '⏱️',
 		color: 'from-slate-600 to-gray-700',
@@ -295,12 +252,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		price: '$89',
 		period: '/month',
 		description: 'Detect PII/PHI in PDFs, images, and office files; apply redactions with reversible workflows and export auditor-ready evidence.',
-		features: [
-			'Document OCR and entity detection',
-			'Template and custom rules',
-			'Reversible redaction workflows',
-			'Audit logs and access controls'
-		],
+		features: ['Document OCR and entity detection', 'Template and custom rules', 'Reversible redaction workflows', 'Audit logs and access controls'],
 		popular: true,
 		icon: '🗄️',
 		color: 'from-red-600 to-rose-700',
@@ -335,12 +287,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		price: '$59',
 		period: '/month',
 		description: 'Install lightweight SDKs to measure latency and availability SLIs for each API, compute SLO error budgets, and trigger on-call alerts with context.',
-		features: [
-			'SDKs for Node/Python',
-			'Error budget tracking',
-			'SLO policies and alerts',
-			'Service dependency view'
-		],
+		features: ['SDKs for Node/Python', 'Error budget tracking', 'SLO policies and alerts', 'Service dependency view'],
 		popular: false,
 		icon: '📈',
 		color: 'from-lime-600 to-green-700',
@@ -375,12 +322,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		price: '$39',
 		period: '/month',
 		description: 'Continuously test key pages for Core Web Vitals, identify bottlenecks, and raise PRs with code/config changes such as image formats, font strategies, and caching headers.',
-		features: [
-			'CWV testing and trends',
-			'Actionable fix suggestions',
-			'Auto PRs to repos',
-			'A/B compare after merge'
-		],
+		features: ['CWV testing and trends', 'Actionable fix suggestions', 'Auto PRs to repos', 'A/B compare after merge'],
 		popular: true,
 		icon: '⚙️',
 		color: 'from-indigo-600 to-violet-700',
@@ -415,12 +357,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		price: '$69',
 		period: '/month',
 		description: 'Upload contracts to summarize key clauses, flag risky language, and suggest edits aligned to your negotiation playbook. Export clean markups.',
-		features: [
-			'Entity and clause extraction',
-			'Risk scoring and redlines',
-			'Playbook mapping and suggestions',
-			'Clean export and share links'
-		],
+		features: ['Entity and clause extraction', 'Risk scoring and redlines', 'Playbook mapping and suggestions', 'Clean export and share links'],
 		popular: false,
 		icon: '📄',
 		color: 'from-teal-600 to-green-700',
@@ -455,12 +392,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		price: '$59',
 		period: '/month',
 		description: 'Upload vendor questionnaires and automatically fill answers from your security policy library, SOC 2 evidence, and past responses with reviewer approval.',
-		features: [
-			'Policy/evidence library',
-			'Suggested answers with confidence',
-			'Reviewer workflow and change logs',
-			'Export to XLSX/CSV/portal formats'
-		],
+		features: ['Policy/evidence library', 'Suggested answers with confidence', 'Reviewer workflow and change logs', 'Export to XLSX/CSV/portal formats'],
 		popular: true,
 		icon: '🔐',
 		color: 'from-red-600 to-rose-700',
@@ -495,12 +427,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		price: '$69',
 		period: '/month',
 		description: 'Continuously audit Kubernetes manifests and live clusters against OPA/Rego policies, detect drift, and open pull requests with remediations.',
-		features: [
-			'Policy packs and custom rules',
-			'Live drift detection',
-			'PRs with suggested fixes',
-			'Compliance dashboards'
-		],
+		features: ['Policy packs and custom rules', 'Live drift detection', 'PRs with suggested fixes', 'Compliance dashboards'],
 		popular: false,
 		icon: '📜',
 		color: 'from-yellow-600 to-amber-700',
@@ -535,12 +462,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		price: '$29',
 		period: '/month',
 		description: 'Track email authentication and sender reputation, run inbox placement tests, and open PRs to DNS/Terraform for configuration fixes.',
-		features: [
-			'DMARC/DKIM/SPF monitoring',
-			'Reputation and blocklist checks',
-			'Inbox placement tests',
-			'Fix PRs to DNS/IaC'
-		],
+		features: ['DMARC/DKIM/SPF monitoring', 'Reputation and blocklist checks', 'Inbox placement tests', 'Fix PRs to DNS/IaC'],
 		popular: true,
 		icon: '✉️',
 		color: 'from-sky-600 to-blue-700',
@@ -575,12 +497,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		price: '$25',
 		period: '/user/month',
 		description: 'Lightweight experiment tracking for small teams: runs, params, metrics, artifacts, and automatic model cards with governance exports.',
-		features: [
-			'Runs and metrics UI',
-			'Artifact storage and lineage',
-			'Auto-generated model cards',
-			'Governance export and webhooks'
-		],
+		features: ['Runs and metrics UI', 'Artifact storage and lineage', 'Auto-generated model cards', 'Governance export and webhooks'],
 		popular: false,
 		icon: '🧪',
 		color: 'from-fuchsia-600 to-rose-700',
@@ -615,12 +532,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		price: '$79',
 		period: '/month',
 		description: 'Build a graph of IAM identities, roles, and resource access to detect excessive permissions and generate least-privilege proposals.',
-		features: [
-			'Effective permission graph',
-			'Privilege creep detection',
-			'Least-privilege proposals',
-			'PRs for policy updates'
-		],
+		features: ['Effective permission graph', 'Privilege creep detection', 'Least-privilege proposals', 'PRs for policy updates'],
 		popular: true,
 		icon: '🧩',
 		color: 'from-green-600 to-emerald-700',
@@ -655,12 +567,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		price: '$45',
 		period: '/month',
 		description: 'Monitors ETL/ELT jobs for failures and anomalies, suggests root causes, and drafts PRs to fix schema changes, timeouts, or flaky steps.',
-		features: [
-			'Job monitoring and anomaly detection',
-			'Root-cause hints from logs',
-			'PR drafts for common fixes',
-			'Post-incident summaries'
-		],
+		features: ['Job monitoring and anomaly detection', 'Root-cause hints from logs', 'PR drafts for common fixes', 'Post-incident summaries'],
 		popular: false,
 		icon: '🛠️',
 		color: 'from-stone-600 to-neutral-700',
@@ -738,20 +645,10 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		link: '/services/mobile-first-surveys',
 		marketPosition: 'Simple alternative to Typeform for mobile use-cases.',
 		targetAudience: 'Marketing, Research, Founders',
-export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
-	{
-		id: 'ai-email-responder',
-		name: 'AI Email Responder',
-    color: 'from-cyan-600 to-blue-700',
-    textColor: 'text-cyan-300',
-    link: 'https://ziontechgroup.com/services/ai-email-responder',
-    marketPosition: 'Competes with Superhuman/Front add-ons, turnkey for SMBs'
+export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [{
+		id: 'ai-email-responder', name: 'AI Email Responder', color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-300', link: 'https://ziontechgroup.com/services/ai-email-responder', marketPosition: 'Competes with Superhuman/Front add-ons, turnkey for SMBs'
     targetAudience: 'Sales, support, founder-led teams'
-    trialDays: 14,
-    setupTime: '30 minutes',
-    category: 'Developer Tools',
-    realService: true,
-    technology: ['Gmail/Outlook APIs', 'LLM', 'Webhook']
+    trialDays: 14, setupTime: '30 minutes', category: 'Developer Tools', realService: true, technology: ['Gmail/Outlook APIs', 'LLM', 'Webhook']
     integrations: ['Gmail', 'Outlook', 'HubSpot', 'Pipedrive', 'Slack']
     useCases: ['Inbound triage', 'Nurture sequences', 'SLA reporting']
     roi: 'Cuts manual email time by 6080%',
@@ -771,7 +668,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text-cyan-300'
     lin,
   k: 'http,
-  s://ziontechgroup.com/services/ai-email-responder'
+  s: //ziontechgroup.com/services/ai-email-responder'
     marketPositio,
   n: 'Competes with Superhuman/Front add-ons, turnkey for SMBs'
     targetAudienc,
@@ -880,7 +777,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - cyan - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / ai - email - responder',
+  s: //ziontechgroup.com / services / ai - email - responder',
     market_positio,
   n: 'Competes with Superhuman / Front add - ons, turnkey for SMBs',
     target_audienc,
@@ -1009,12 +906,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Build conversational surveys that adapt in real time. Increase completion with SMS / WhatsApp delivery and one - tap choices.',
     feature,
-  s: [,
-      'Branching logic + A / B prompts',
-      'SMS / WhatsApp / web delivery',
-      'Real - time analytics',
-      'CSV / Sheets export',
-      'Webhooks + API'],
+  s: ['Branching logic + A / B prompts', 'SMS / WhatsApp / web delivery', 'Real - time analytics', 'CSV / Sheets export', 'Webhooks + API'],
     popular: false,
     icon: ''
     color: 'from - emerald - 600 to - teal - 700',
@@ -1060,7 +952,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - emerald - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / mobile - survey - studio',
+  s: //ziontechgroup.com / services / mobile - survey - studio',
     market_positio,
   n: 'Faster than legacy survey tools, better mobile UX',
     target_audienc,
@@ -1119,12 +1011,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.',
     feature,
-  s: [,
-      'Industry templates',
-      'Calendar + task sync',
-      'Benchmark KPIs',
-      'Export to PDF',
-      'Role - based views'],
+  s: ['Industry templates', 'Calendar + task sync', 'Benchmark KPIs', 'Export to PDF', 'Role - based views'],
     popular: false
     icon: ''
     color: 'from - purple - 600 to - indigo - 700'
@@ -1170,7 +1057,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - purple - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / niche - productivity - planner',
+  s: //ziontechgroup.com / services / niche - productivity - planner',
     market_positio,
   n: 'Purpose - built vs generic task apps',
     target_audienc,
@@ -1229,12 +1116,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Run webinars or in - person events with landing pages, reminders, QR tickets, and feedback analytics.',
     feature,
-  s: [,
-      'QR tickets + check - in',
-      'Email / SMS reminders',
-      'Agenda builder',
-      'Feedback forms',
-      'Post - event reports'],
+  s: ['QR tickets + check - in', 'Email / SMS reminders', 'Agenda builder', 'Feedback forms', 'Post - event reports'],
     popular: true,
     icon: ''
     color: 'from - pink - 600 to - rose - 700'
@@ -1278,7 +1160,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - pink - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / event - management - dashboard',
+  s: //ziontechgroup.com / services / event - management - dashboard',
     market_positio,
   n: 'Lightweight alternative to enterprise suites',
     target_audienc,
@@ -1335,12 +1217,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Create affiliate programs with branded links, flexible commission rules, and payout exports.',
     feature,
-  s: [,
-      'Custom referral links',
-      'UTM attribution',
-      'Rule - based commissions',
-      'Payout exports',
-      'Fraud checks'],
+  s: ['Custom referral links', 'UTM attribution', 'Rule - based commissions', 'Payout exports', 'Fraud checks'],
     popular: false,
     icon: ''
     color: 'from - amber - 600 to - orange - 700'
@@ -1384,7 +1261,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - amber - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / affiliate - tracking - suite',
+  s: //ziontechgroup.com / services / affiliate - tracking - suite',
     market_positio,
   n: 'Simple and affordable affiliate ops',
     target_audienc,
@@ -1441,12 +1318,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Privacy - friendly analytics for small businesses with funnel insights and weekly summaries.',
     feature,
-  s: [,
-      'Page + event analytics',
-      'Funnels + cohorts',
-      'Weekly email summaries',
-      'CSV export',
-      'No cookies mode'],
+  s: ['Page + event analytics', 'Funnels + cohorts', 'Weekly email summaries', 'CSV export', 'No cookies mode'],
     popular: false,
     icon: ''
     color: 'from - sky - 600 to - indigo - 700',
@@ -1491,7 +1363,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - sky - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / smb - analytics - lite',
+  s: //ziontechgroup.com / services / smb - analytics - lite',
     market_positio,
   n: 'Simpler than GA4, clearer funnels for SMBs',
     target_audienc,
@@ -1549,12 +1421,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Managed ticketing for MSPs and internal IT with automation rules, approval flows, and client - visible status.',
     feature,
-  s: [,
-      'Email - to - ticket',
-      'KB + article templates',
-      'SLAs + escalations',
-      'Client portal',
-      'Reports'],
+  s: ['Email - to - ticket', 'KB + article templates', 'SLAs + escalations', 'Client portal', 'Reports'],
     popular: true,
     icon: ''
     color: 'from - blue - 600 to - indigo - 700'
@@ -1599,7 +1466,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - blue - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / it - helpdesk - portal',
+  s: //ziontechgroup.com / services / it - helpdesk - portal',
     market_positio,
   n: 'Modern alternative to legacy ITSM for SMBs',
     target_audienc,
@@ -1657,12 +1524,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Automate RMAs, label generation, and status notifications. Analytics to reduce avoidable returns.',
     feature,
-  s: [,
-      'Self - serve returns portal',
-      'Label generation',
-      'Return reasons analytics',
-      'Inventory sync',
-      'Notifications'],
+  s: ['Self - serve returns portal', 'Label generation', 'Return reasons analytics', 'Inventory sync', 'Notifications'],
     popular: true,
     icon: ''
     color: 'from - violet - 600 to - fuchsia - 700'
@@ -1706,7 +1568,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - violet - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / ecommerce - returns - manager',
+  s: //ziontechgroup.com / services / ecommerce - returns - manager',
     market_positio,
   n: 'Affordable alternative to enterprise returns suites',
     target_audienc,
@@ -1763,12 +1625,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Simple sequencer to follow up on stale leads and open tickets with natural language and auto - scheduling.',
     feature,
-  s: [,
-      'Sequences + delays',
-      'Inbox integration',
-      'Smart stop on reply',
-      'Templates',
-      'Analytics'],
+  s: ['Sequences + delays', 'Inbox integration', 'Smart stop on reply', 'Templates', 'Analytics'],
     popular: false,
     icon: ''
     color: 'from - cyan - 600 to - teal - 700'
@@ -1805,7 +1662,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - cyan - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / automated - email - followups',
+  s: //ziontechgroup.com / services / automated - email - followups',
     market_positio,
   n: 'Lightweight + affordable outreach',
     target_audienc,
@@ -1862,12 +1719,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Upload or link to podcast episodes, get transcripts, summaries, chapters, and Wordpress - ready blog exports.',
     feature,
-  s: [,
-      'Fast transcripts',
-      'Timestamps + chapters',
-      'Summaries + highlights',
-      'Blog export',
-      'Glossary'],
+  s: ['Fast transcripts', 'Timestamps + chapters', 'Summaries + highlights', 'Blog export', 'Glossary'],
     popular: false,
     icon: ''
     color: 'from - indigo - 600 to - blue - 700'
@@ -1912,7 +1764,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - indigo - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / podcast - transcription - service',
+  s: //ziontechgroup.com / services / podcast - transcription - service',
     market_positio,
   n: 'Affordable + content - ready outputs',
     target_audienc,
@@ -1970,12 +1822,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'In - editor SEO suggestions, competitive gap analysis, and AI rewrites targeting featured snippets.',
     feature,
-  s: [,
-      'On - page audits',
-      'Topic clustering',
-      'SERP intent match',
-      'Internal link hints',
-      'Rewrite suggestions'],
+  s: ['On - page audits', 'Topic clustering', 'SERP intent match', 'Internal link hints', 'Rewrite suggestions'],
     popular: true,
     icon: ''
     color: 'from - emerald - 600 to - green - 700'
@@ -2019,7 +1866,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - emerald - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / ai - seo - content - optimizer',
+  s: //ziontechgroup.com / services / ai - seo - content - optimizer',
     market_positio,
   n: 'Content - focused vs technical SEO suites',
     target_audienc,
@@ -2076,12 +1923,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Turn links, videos, or blog posts into tailored social snippets and schedule them with best - time predictions.',
     feature,
-  s: [,
-      'Content repurposing',
-      'Calendar + auto - times',
-      'Hashtag + emoji assistant',
-      'Link tracking',
-      'Client approvals'],
+  s: ['Content repurposing', 'Calendar + auto - times', 'Hashtag + emoji assistant', 'Link tracking', 'Client approvals'],
     popular: false,
     icon: ''
     color: 'from - fuchsia - 600 to - pink - 700'
@@ -2125,7 +1967,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - fuchsia - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / social - scheduler - ai',
+  s: //ziontechgroup.com / services / social - scheduler - ai',
     market_positio,
   n: 'Repurpose - first for SMBs',
     target_audienc,
@@ -2182,12 +2024,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'REST API to enrich leads with verified firmographics and social signals for scoring and routing.',
     feature,
-  s: [,
-      'Firmographics',
-      'Role detection',
-      'Validated email signals',
-      'Confidence scoring',
-      'Usage dashboards'],
+  s: ['Firmographics', 'Role detection', 'Validated email signals', 'Confidence scoring', 'Usage dashboards'],
     popular: false,
     icon: ''
     color: 'from - blue - 600 to - sky - 700'
@@ -2231,7 +2068,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - blue - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / lead - enrichment - api',
+  s: //ziontechgroup.com / services / lead - enrichment - api',
     market_positio,
   n: 'Usage - based simple pricing',
     target_audienc,
@@ -2288,12 +2125,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Deploy branded consent banners, a preferences center, and downloadable audit logs. Geo - aware rules.',
     feature,
-  s: [,
-      'Geo rules',
-      'IAB TCF',
-      'Preference center',
-      'Audit logs',
-      'Multi - brand themes'],
+  s: ['Geo rules', 'IAB TCF', 'Preference center', 'Audit logs', 'Multi - brand themes'],
     popular: true,
     icon: ''
     color: 'from - emerald - 600 to - teal - 700',
@@ -2337,7 +2169,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - emerald - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / consent - management - cmp',
+  s: //ziontechgroup.com / services / consent - management - cmp',
     market_positio,
   n: 'Fast to implement, compliant defaults',
     target_audienc,
@@ -2394,12 +2226,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Scan your site for cookies / trackers, classify them, and generate policy updates with change diffs.',
     feature,
-  s: [,
-      'Site scan',
-      'Tracker classification',
-      'Policy generator',
-      'Diffs + history',
-      'CI hook'],
+  s: ['Site scan', 'Tracker classification', 'Policy generator', 'Diffs + history', 'CI hook'],
     popular: false,
     icon: ''
     color: 'from - amber - 600 to - yellow - 700'
@@ -2443,7 +2270,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - amber - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / cookie - scanner - pro',
+  s: //ziontechgroup.com / services / cookie - scanner - pro',
     market_positio,
   n: 'Affordable compliance hygiene',
     target_audienc,
@@ -2500,12 +2327,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Connect monitors, log incidents, and share public SLA / uptime reports with customers.',
     feature,
-  s: [,
-      'Incident log',
-      'Public status page',
-      'SLA calculator',
-      'RSS + webhooks',
-      'Exports'],
+  s: ['Incident log', 'Public status page', 'SLA calculator', 'RSS + webhooks', 'Exports'],
     popular: false
     icon: ''
     color: 'from - sky - 600 to - cyan - 700'
@@ -2549,7 +2371,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - sky - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / statuspage - sla - tracker',
+  s: //ziontechgroup.com / services / statuspage - sla - tracker',
     market_positio,
   n: 'Simple + transparent status for SMB SaaS',
     target_audienc,
@@ -2606,12 +2428,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.',
     feature,
-  s: [,
-      'Qualifying flows',
-      'Calendar booking',
-      'CRM routing',
-      'Visitor insights',
-      'Hand - off to human'],
+  s: ['Qualifying flows', 'Calendar booking', 'CRM routing', 'Visitor insights', 'Hand - off to human'],
     popular: true,
     category: 'AI & Data',
     real_service: true,
@@ -2684,12 +2501,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Hosted portal for DSARs with identity verification, workflow, and export helpers.',
     feature,
-  s: [,
-      'Request intake',
-      'Identity check',
-      'Triage + workflow',
-      'Exports',
-      'Audit logs'],
+  s: ['Request intake', 'Identity check', 'Triage + workflow', 'Exports', 'Audit logs'],
     popular: true,
     integrations: ['Zendesk', 'Google Drive'],
     use_cases: ['DSAR fulfillment'],
@@ -2744,12 +2556,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.',
     feature,
-  s: [,
-      'Qualifying flows',
-      'Calendar booking',
-      'CRM routing',
-      'Visitor insights',
-      'Hand - off to human'],
+  s: ['Qualifying flows', 'Calendar booking', 'CRM routing', 'Visitor insights', 'Hand - off to human'],
     popular: true,
     icon: ''
     color: 'from - teal - 600 to - emerald - 700'
@@ -2793,7 +2600,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - teal - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / agentic - lead - qualifier',
+  s: //ziontechgroup.com / services / agentic - lead - qualifier',
     market_positio,
   n: 'Focused on B2B lead capture',
     target_audienc,
@@ -2850,12 +2657,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Hosted portal for DSARs with identity verification, workflow, and export helpers.',
     feature,
-  s: [,
-      'Request intake',
-      'Identity check',
-      'Triage + workflow',
-      'Exports',
-      'Audit logs'],
+  s: ['Request intake', 'Identity check', 'Triage + workflow', 'Exports', 'Audit logs'],
     popular: true
     icon: ''
     color: 'from - red - 600 to - rose - 700'
@@ -2899,7 +2701,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - red - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / gdpr - dsar - portal - lite',
+  s: //ziontechgroup.com / services / gdpr - dsar - portal - lite',
     market_positio,
   n: 'SMB - friendly DSAR processing',
     target_audienc,
@@ -2953,16 +2755,13 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto-open PRs.'
+  n: 'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto-open PRs.'
     feature,
-  s: [
-      'Repo scanner'
+  s: ['Repo scanner'
       'Flag inventory'
       'Risk detection'
       'PR suggestions'
-      'CI integration'
-    ]
+      'CI integration']
     popular: false
     icon: ''
     color: 'from-rose-600 to-pink-700'
@@ -2999,7 +2798,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text-rose-300'
     lin,
   k: 'http,
-  s://ziontechgroup.com/services/feature-flag-auditor'
+  s: //ziontechgroup.com/services/feature-flag-auditor'
     marketPositio,
   n: 'Proactive hygiene vs manual debt'
     targetAudienc,
@@ -3090,7 +2889,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - rose - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / feature - flag - auditor',
+  s: //ziontechgroup.com / services / feature - flag - auditor',
     market_positio,
   n: 'Proactive hygiene vs manual debt',
     target_audienc,
@@ -3147,12 +2946,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.',
     feature,
-  s: [,
-      'Slow query capture',
-      'Index suggestions',
-      'Risk scoring',
-      'PR generation',
-      'Rollback assist'],
+  s: ['Slow query capture', 'Index suggestions', 'Risk scoring', 'PR generation', 'Rollback assist'],
     popular: true,
     category: 'Developer Tools',
     real_service: true,
@@ -3297,11 +3091,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: unknown,
       'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.',
-    features: [,
-    id: 'api - breaking - change - watcher',
-    category: 'Developer Tools',
-    real_service: true,
-    technology: ['OpenAPI', 'GraphQL'],
+    features: [id: 'api - breaking - change - watcher', category: 'Developer Tools', real_service: true, technology: ['OpenAPI', 'GraphQL'],
     integrations: ['GitHub', 'Slack'],
     use_cases: ['Schema governance', 'Release safety'],
     roi: 'Fewer incidents, faster integration',
@@ -3373,15 +3163,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.',
     feature,
-  s: [,
-    i,
-  d: 'api - breaking - change - watcher',
-    categor,
-  y: 'Developer Tools',
-    real_servic,
-  e: true,
-    technolog,
-  y: ['OpenAPI', 'GraphQL'],
+  s: [i, d: 'api - breaking - change - watcher', categor, y: 'Developer Tools', real_servic, e: true, technolog, y: ['OpenAPI', 'GraphQL'],
     integration,
   s: ['GitHub', 'Slack'],
     use_case,
@@ -3421,16 +3203,13 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.'
+  n: 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.'
     feature,
-  s: [
-      'Slow query capture'
+  s: ['Slow query capture'
       'Index suggestions'
       'Risk scoring'
       'PR generation'
-      'Rollback assist'
-    ]
+      'Rollback assist']
     popular: true
     icon: ''
     color: 'from-blue-700 to-indigo-800'
@@ -3467,7 +3246,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text-blue-300'
     lin,
   k: 'http,
-  s://ziontechgroup.com/services/postgres-index-advisor-pro'
+  s: //ziontechgroup.com/services/postgres-index-advisor-pro'
     marketPositio,
   n: 'Productized tuning for small teams'
     targetAudienc,
@@ -3523,13 +3302,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     descriptio,
   n: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.'
     feature,
-  s: [
-      'Usage analysis'
+  s: ['Usage analysis'
       'Rule suggestions'
       'Cost simulator'
       'Change sets'
-      'Alerting'
-    ]
+      'Alerting']
     popular: false
     icon: ''
     color: 'from-emerald-700 to-teal-800'
@@ -3573,7 +3350,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text-emerald-300'
     lin,
   k: 'http,
-  s://ziontechgroup.com/services/s3-lifecycle-optimizer'
+  s: //ziontechgroup.com/services/s3-lifecycle-optimizer'
     marketPositio,
   n: 'No-friction cost hygiene'
     targetAudienc,
@@ -3627,16 +3404,13 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Find PII in cloud storage and databases, redact samples, and export auditor-friendly evidence.'
+  n: 'Find PII in cloud storage and databases, redact samples, and export auditor-friendly evidence.'
     feature,
-  s: [
-      'Connectors'
+  s: ['Connectors'
       'Sensitive entity detection'
       'Sampling with redaction'
       'Findings export'
-      'Alerting'
-    ]
+      'Alerting']
     popular: true,
     icon: ''
     color: 'from-red-700 to-rose-800'
@@ -3673,7 +3447,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text-red-300'
     lin,
   k: 'http,
-  s://ziontechgroup.com/services/pii-discovery-scanner'
+  s: //ziontechgroup.com/services/pii-discovery-scanner'
     marketPositio,
   n: 'Compliance-first discovery'
     targetAudienc,
@@ -3764,7 +3538,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text-rose-300',
     lin,
   k: 'http,
-  s://ziontechgroup.com/services/feature-flag-auditor',
+  s: //ziontechgroup.com/services/feature-flag-auditor',
     marketPositio,
   n: 'Proactive hygiene vs manual debt',
     targetAudienc,
@@ -3821,12 +3595,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.',
     feature,
-  s: [,
-      'Slow query capture',
-      'Index suggestions',
-      'Risk scoring',
-      'PR generation',
-      'Rollback assist'],
+  s: ['Slow query capture', 'Index suggestions', 'Risk scoring', 'PR generation', 'Rollback assist'],
     popular: true
     icon: ''
     color: 'from - blue - 700 to - indigo - 800'
@@ -3870,7 +3639,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - blue - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / postgres - index - advisor - pro',
+  s: //ziontechgroup.com / services / postgres - index - advisor - pro',
     market_positio,
   n: 'Productized tuning for small teams',
     target_audienc,
@@ -3927,12 +3696,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.',
     feature,
-  s: [,
-      'Usage analysis',
-      'Rule suggestions',
-      'Cost simulator',
-      'Change sets',
-      'Alerting'],
+  s: ['Usage analysis', 'Rule suggestions', 'Cost simulator', 'Change sets', 'Alerting'],
     popular: false
     icon: ''
     color: 'from - emerald - 700 to - teal - 800'
@@ -3976,7 +3740,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - emerald - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / s3 - lifecycle - optimizer',
+  s: //ziontechgroup.com / services / s3 - lifecycle - optimizer',
     market_positio,
   n: 'No - friction cost hygiene',
     target_audienc,
@@ -4033,12 +3797,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Find PII in cloud storage and databases, redact samples, and export auditor - friendly evidence.',
     feature,
-  s: [,
-      'Connectors',
-      'Sensitive entity detection',
-      'Sampling with redaction',
-      'Findings export',
-      'Alerting'],
+  s: ['Connectors', 'Sensitive entity detection', 'Sampling with redaction', 'Findings export', 'Alerting'],
     popular: true,
     icon: ''
     color: 'from - red - 700 to - rose - 800'
@@ -4089,7 +3848,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - red - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / pii - discovery - scanner',
+  s: //ziontechgroup.com / services / pii - discovery - scanner',
     market_positio,
   n: 'Compliance - first discovery',
     target_audienc,
@@ -4143,8 +3902,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.'
+  n: 'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.'
     i,
   d: 'api-breaking-change-watcher',
     nam,
@@ -4159,12 +3917,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Monitor OpenAPI / GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.',
     feature,
-  s: [,
-      'Schema registry',
-      'Diff rules',
-      'Owner mapping',
-      'CI checks',
-      'Changelog hints'],
+  s: ['Schema registry', 'Diff rules', 'Owner mapping', 'CI checks', 'Changelog hints'],
     popular: false
     icon: ''
     color: 'from - indigo - 700 to - violet - 800'
@@ -4201,7 +3954,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - indigo - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / api - breaking - change - watcher',
+  s: //ziontechgroup.com / services / api - breaking - change - watcher',
     market_positio,
   n: 'Operationalize API hygiene',
     target_audienc,
@@ -4246,13 +3999,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   s: 3},
       'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.',
     feature,
-  s: [
-      'Schema registry'
+  s: ['Schema registry'
       'Diff rules'
       'Owner mapping'
       'CI checks'
-      'Changelog hints'
-    ]
+      'Changelog hints']
     popular: false
     icon: ''
     color: 'from-indigo-700 to-violet-800'
@@ -4296,7 +4047,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text-indigo-300'
     lin,
   k: 'http,
-  s://ziontechgroup.com/services/api-breaking-change-watcher'
+  s: //ziontechgroup.com/services/api-breaking-change-watcher'
     marketPositio,
   n: 'Operationalize API hygiene'
     targetAudienc,
@@ -4353,12 +4104,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto - open PRs.',
     feature,
-  s: [,
-      'Repo scanner',
-      'Flag inventory',
-      'Risk detection',
-      'PR suggestions',
-      'CI integration'],
+  s: ['Repo scanner', 'Flag inventory', 'Risk detection', 'PR suggestions', 'CI integration'],
     popular: false
     icon: ''
     color: 'from - rose - 600 to - pink - 700'
@@ -4402,7 +4148,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - rose - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / feature - flag - auditor',
+  s: //ziontechgroup.com / services / feature - flag - auditor',
     market_positio,
   n: 'Proactive hygiene vs manual debt',
     target_audienc,
@@ -4459,12 +4205,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.',
     feature,
-  s: [,
-      'Slow query capture',
-      'Index suggestions',
-      'Risk scoring',
-      'PR generation',
-      'Rollback assist'],
+  s: ['Slow query capture', 'Index suggestions', 'Risk scoring', 'PR generation', 'Rollback assist'],
     popular: true
     icon: ''
     color: 'from - blue - 700 to - indigo - 800'
@@ -4508,7 +4249,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - blue - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / postgres - index - advisor - pro',
+  s: //ziontechgroup.com / services / postgres - index - advisor - pro',
     market_positio,
   n: 'Productized tuning for small teams',
     target_audienc,
@@ -4565,12 +4306,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.',
     feature,
-  s: [,
-      'Usage analysis',
-      'Rule suggestions',
-      'Cost simulator',
-      'Change sets',
-      'Alerting'],
+  s: ['Usage analysis', 'Rule suggestions', 'Cost simulator', 'Change sets', 'Alerting'],
     popular: false
     icon: ''
     color: 'from - emerald - 700 to - teal - 800'
@@ -4614,7 +4350,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - emerald - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / s3 - lifecycle - optimizer',
+  s: //ziontechgroup.com / services / s3 - lifecycle - optimizer',
     market_positio,
   n: 'No - friction cost hygiene',
     target_audienc,
@@ -4671,12 +4407,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Find PII in cloud storage and databases, redact samples, and export auditor - friendly evidence.',
     feature,
-  s: [,
-      'Connectors',
-      'Sensitive entity detection',
-      'Sampling with redaction',
-      'Findings export',
-      'Alerting'],
+  s: ['Connectors', 'Sensitive entity detection', 'Sampling with redaction', 'Findings export', 'Alerting'],
     popular: true,
     icon: ''
     color: 'from - red - 700 to - rose - 800'
@@ -4711,38 +4442,8 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: unknown,
       'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.',
-    features: [
-    id: 'api - breaking - change - watcher'
-    name: 'API Breaking Change Watcher',
-    tagline: 'Schema diffs with CI gates and notifications',
-    price: '$49',
-    period: '/month',
-    description: unknown,
-    popula,
-  r: true,
-    ico,
-  n: '',
-    colo,
-  r: 'from - red - 700 to - rose - 800',
-    text_colo,
-  r: 'text - red - 300',
-    lin,
-  k: 'http,
-  s://ziontechgroup.com / services / pii - discovery - scanner',
-    market_positio,
-  n: 'Compliance - first discovery',
-    target_audienc,
-  e: 'Security, compliance',
-    trial_day,
-  s: 7,
-    setup_tim,
-  e: '12 days',
-    categor,
-  y: 'Quality & Monitoring',
-    real_servic,
-  e: true,
-    technolog,
-  y: ['DLP', 'Connectors'],
+    features: [id: 'api - breaking - change - watcher'
+    name: 'API Breaking Change Watcher', tagline: 'Schema diffs with CI gates and notifications', price: '$49', period: '/month', description: unknown, popula, r: true, ico, n: '', colo, r: 'from - red - 700 to - rose - 800', text_colo, r: 'text - red - 300', lin, k: 'http, s: //ziontechgroup.com / services / pii - discovery - scanner', market_positio, n: 'Compliance - first discovery', target_audienc, e: 'Security, compliance', trial_day, s: 7, setup_tim, e: '12 days', categor, y: 'Quality & Monitoring', real_servic, e: true, technolog, y: ['DLP', 'Connectors'],
     integration,
   s: ['AWS', 'GCP', 'Snowflake'],
     use_case,
@@ -4785,27 +4486,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.',
     feature,
-  s: [,
-    i,
-  d: 'api - breaking - change - watcher',
-    nam,
-  e: 'API Breaking Change Watcher',
-    taglin,
-  e: 'Schema diffs with CI gates and notifications',
-    pric,
-  e: '$49',
-    perio,
-  d: '/month',
-    descriptio,
-  n: unknown,
-      'Monitor OpenAPI / GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.',
-    feature,
-  s: [,
-      'Schema registry',
-      'Diff rules',
-      'Owner mapping',
-      'CI checks',
-      'Changelog hints'],
+  s: [i, d: 'api - breaking - change - watcher', nam, e: 'API Breaking Change Watcher', taglin, e: 'Schema diffs with CI gates and notifications', pric, e: '$49', perio, d: '/month', descriptio, n: unknown, 'Monitor OpenAPI / GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.', feature, s: [, 'Schema registry', 'Diff rules', 'Owner mapping', 'CI checks', 'Changelog hints'],
     popular: false
     icon: ''
     color: 'from - indigo - 700 to - violet - 800'
@@ -4849,7 +4530,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - indigo - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / api - breaking - change - watcher',
+  s: //ziontechgroup.com / services / api - breaking - change - watcher',
     market_positio,
   n: 'Operationalize API hygiene',
     target_audienc,
@@ -4906,12 +4587,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Browser - based recorder creates resilient journeys, run on a schedule and alert on SLO errors or latency.',
     feature,
-  s: [,
-      'Recorder',
-      'Selector healing',
-      'Schedules',
-      'SLO alerts',
-      'Reports'],
+  s: ['Recorder', 'Selector healing', 'Schedules', 'SLO alerts', 'Reports'],
     popular: false,
     icon: ''
     color: 'from - cyan - 700 to - blue - 800'
@@ -4956,7 +4632,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - cyan - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / synthetic - journey - monitor',
+  s: //ziontechgroup.com / services / synthetic - journey - monitor',
     market_positio,
   n: 'Affordable synthetic monitoring',
     target_audienc,
@@ -5014,12 +4690,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Continuously analyze IAM policies / usage to propose safe permission reductions and open PRs.',
     feature,
-  s: [,
-      'Policy inventory',
-      'Usage analysis',
-      'Recommendations',
-      'PR generation',
-      'Alerting'],
+  s: ['Policy inventory', 'Usage analysis', 'Recommendations', 'PR generation', 'Alerting'],
     popular: true
     icon: ''
     color: 'from - blue - 700 to - slate - 800'
@@ -5063,7 +4734,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - blue - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / iam - permission - analyzer',
+  s: //ziontechgroup.com / services / iam - permission - analyzer',
     market_positio,
   n: 'Practical least - privilege for SMB clouds',
     target_audienc,
@@ -5120,12 +4791,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake / BigQuery costs.',
     feature,
-  s: [,
-      'Query profiling',
-      'Size / schedule proposals',
-      'Cost simulator',
-      'PR templates',
-      'Alerts'],
+  s: ['Query profiling', 'Size / schedule proposals', 'Cost simulator', 'PR templates', 'Alerts'],
     popular: true
     icon: ''
     color: 'from - indigo - 700 to - violet - 800'
@@ -5169,7 +4835,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - indigo - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / warehouse - cost - optimizer',
+  s: //ziontechgroup.com / services / warehouse - cost - optimizer',
     market_positio,
   n: 'Practical finops for analytics teams',
     target_audienc,
@@ -5226,12 +4892,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Run warmup campaigns and monitor deliverability metrics to stay out of spam.',
     feature,
-  s: [,
-      'Warmup campaigns',
-      'Seed inbox tests',
-      'Domain / auth checks',
-      'Alerts',
-      'Reports'],
+  s: ['Warmup campaigns', 'Seed inbox tests', 'Domain / auth checks', 'Alerts', 'Reports'],
     popular: false
     icon: ''
     color: 'from - orange - 600 to - rose - 700'
@@ -5275,7 +4936,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   r: 'text - orange - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / email - warmup - monitor',
+  s: //ziontechgroup.com / services / email - warmup - monitor',
     market_positio,
   n: 'Hands - off deliverability hygiene',
     target_audienc,
@@ -5332,12 +4993,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   n: unknown,
       'Transcribe meetings, extract action items, and open tickets with owners and due dates.',
     feature,
-  s: [,
-      'Transcription',
-      'Action extraction',
-      'Ticket creation',
-      'Owner mapping',
-      'Summaries'],
+  s: ['Transcription', 'Action extraction', 'Ticket creation', 'Owner mapping', 'Summaries'],
     popular: true,
     icon: ''
     color: 'from - cyan - 700 to - blue - 800'
@@ -5379,7 +5035,7 @@ const contact =
   r: 'text - cyan - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / ai - meeting - to - ticket',
+  s: //ziontechgroup.com / services / ai - meeting - to - ticket',
     market_positio,
   n: 'Bridges meetings to delivery',
     target_audienc,
@@ -5430,28 +5086,12 @@ const contact =
   s: '364 E Main St STE 1008 Middletown DE 19709',
 	websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
 }
 export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [,
-		i,
-  d: 'ai-email-responder', nam,
-  e: 'AI Email Responder',
-		taglin,
-  e: 'Autonomous email triage, drafting, and follow-ups for sales and support',
-    pric,
-  e: '$39', perio,
-  d: '/month',
-		descriptio,
-  n: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.',
-    feature,
-  s: [
-		tagline: 'Autonomous email triage, drafting, and follow-ups for sales and support',
-    price: '$39', period: '/month',
-		description: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.',
-    features: [
-			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs'
-		]
+  real2035Q2Additions: EnhancedRealMicroSaasService[] = [i, d: 'ai-email-responder', nam, e: 'AI Email Responder', taglin, e: 'Autonomous email triage, drafting, and follow-ups for sales and support', pric, e: '$39', perio, d: '/month', descriptio, n: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.', feature, s: [
+		tagline: 'Autonomous email triage, drafting, and follow-ups for sales and support', price: '$39', period: '/month', description: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.', features: [
+			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs']
 		popular: true,
 			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs'
 		]
@@ -5491,9 +5131,7 @@ export const,
 		price: '$19'
 		period: '/month'
   description: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.'
-		features: [
-			'Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API'
-		]
+		features: ['Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API']
 		popular: false,
 		icon: ''
 		color: 'from-emerald-600 to-teal-700',
@@ -5527,9 +5165,7 @@ export const,
 		price: '$12',
 		period: '/month',
 		description: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.'
-		features: [
-			'Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views'
-		]
+		features: ['Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views']
 		popular: false
 		icon: ''
 		color: 'from-purple-600 to-indigo-700'
@@ -5563,9 +5199,7 @@ export const,
 		price: '$49',
 		period: '/month',
 		description: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.'
-		features: [
-			'QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports'
-		]
+		features: ['QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports']
 		popular: true,
 		icon: ''
 		color: 'from-pink-600 to-rose-700'
@@ -6416,9 +6050,7 @@ export const,
   price: '$39',
   period: '/month',
   description: 'Reads inbound emails, classifies intent, drafts high - quality replies, and schedules polite follow - ups. Escalates edge cases to humans with context summaries.'
-  features: [
-  'Intent classification + prioritization_on - brand response drafting_automatic polite follow - ups_lead / contact enrichment_analytics and response SLAs'
-  ]
+  features: ['Intent classification + prioritization_on - brand response drafting_automatic polite follow - ups_lead / contact enrichment_analytics and response SLAs']
   popular: true,
   icon: ''
   color: 'from - cyan - 600 to - blue - 700',
@@ -6452,9 +6084,7 @@ export const,
   price: '$19'
   period: '/month'
   description: 'Build conversational surveys that adapt in real time. Increase completion with SMS / WhatsApp delivery and one - tap choices.'
-  features: [
-  'Branching logic + A / B promptsSMS / WhatsApp / web delivery_real - time analyticsCSV / Sheets export_webhooks + API'
-  ]
+  features: ['Branching logic + A / B promptsSMS / WhatsApp / web delivery_real - time analyticsCSV / Sheets export_webhooks + API']
   popular: false,
   icon: ''
   color: 'from - emerald - 600 to - teal - 700',
@@ -6488,9 +6118,7 @@ export const,
   price: '$12',
   period: '/month',
   description: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.'
-  features: [
-  'Industry templates_calendar + task sync_benchmark KPIsExport to PDFRole - based views'
-  ]
+  features: ['Industry templates_calendar + task sync_benchmark KPIsExport to PDFRole - based views']
   popular: false
   icon: ''
   color: 'from - purple - 600 to - indigo - 700'
@@ -6524,9 +6152,7 @@ export const,
   price: '$49',
   period: '/month',
   description: 'Run webinars or in - person events with landing pages, reminders, QR tickets, and feedback analytics.'
-  features: [
-  'QR tickets + check - in_email / SMS reminders_agenda builder_feedback forms_post - event reports'
-  ]
+  features: ['QR tickets + check - in_email / SMS reminders_agenda builder_feedback forms_post - event reports']
   popular: true,
   icon: ''
   color: 'from - pink - 600 to - rose - 700'
@@ -7377,17 +7003,12 @@ export const,
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com'}
-export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
-	{,
-		id: 'ai-email-responder'
-		name: 'AI Email Responder',
-		tagline: 'Autonomous email triage, drafting, and follow-ups for sales and support'
+export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [{, id: 'ai-email-responder'
+		name: 'AI Email Responder', tagline: 'Autonomous email triage, drafting, and follow-ups for sales and support'
 		price: '$39'
-		period: '/month',
-		description: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.'
+		period: '/month', description: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.'
 		features: [
-			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs'
-		]
+			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs']
 		popular: true
 		icon: ''
 		color: 'from-cyan-600 to-blue-700'
@@ -7422,9 +7043,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		price: '$19'
 		period: '/month'
 		description: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.'
-		features: [
-			'Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API'
-		]
+		features: ['Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API']
 		popular: false
 		icon: ''
 		color: 'from-emerald-600 to-teal-700'
@@ -7459,9 +7078,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		price: '$12'
 		period: '/month',
 		description: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.'
-		features: [
-			'Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views'
-		]
+		features: ['Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views']
 		popular: false
 		icon: ''
 		color: 'from-purple-600 to-indigo-700'
@@ -7496,9 +7113,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		price: '$49'
 		period: '/month',
 		description: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.'
-		features: [
-			'QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports'
-		]
+		features: ['QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports']
 		popular: true
 		icon: ''
 		color: 'from-pink-600 to-rose-700'
@@ -7535,7 +7150,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-cyan-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/ai-email-responder',
+  s: //ziontechgroup && ziontechgroup.com/services/ai-email-responder',
 		marketPositio,
   n: 'Competes with Superhuman/Front add-ons, turnkey for SMBs'
 		targetAudienc,
@@ -7591,9 +7206,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   descriptio,
   n: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.'
 		feature,
-  s: [
-			'Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API'
-		],
+  s: ['Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API'],
 		popula,
   r: false,
 		ico,
@@ -7604,7 +7217,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-emerald-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/mobile-survey-studio',
+  s: //ziontechgroup && ziontechgroup.com/services/mobile-survey-studio',
 		marketPositio,
   n: 'Faster than legacy survey tools, better mobile UX'
 		targetAudienc,
@@ -7660,9 +7273,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		descriptio,
   n: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.'
 		feature,
-  s: [
-			'Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views'
-		],
+  s: ['Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views'],
 		popula,
   r: false,
 		ico,
@@ -7673,7 +7284,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-purple-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/niche-productivity-planner'
+  s: //ziontechgroup && ziontechgroup.com/services/niche-productivity-planner'
 		marketPositio,
   n: 'Purpose-built vs generic task apps'
 		targetAudienc,
@@ -7729,9 +7340,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		descriptio,
   n: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.'
 		feature,
-  s: [
-			'QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports'
-		],
+  s: ['QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports'],
 		popula,
   r: true,
 		ico,
@@ -7742,7 +7351,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-pink-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/event-management-dashboard'
+  s: //ziontechgroup && ziontechgroup.com/services/event-management-dashboard'
 		marketPositio,
   n: 'Lightweight alternative to enterprise suites',
 		targetAudienc,
@@ -7809,7 +7418,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-amber-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/affiliate-tracking-suite'
+  s: //ziontechgroup && ziontechgroup.com/services/affiliate-tracking-suite'
 		marketPositio,
   n: 'Simple and affordable affiliate ops',
 		targetAudienc,
@@ -7876,7 +7485,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-sky-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/smb-analytics-lite',
+  s: //ziontechgroup && ziontechgroup.com/services/smb-analytics-lite',
 		marketPositio,
   n: 'Simpler than GA4, clearer funnels for SMBs'
 		targetAudienc,
@@ -7943,7 +7552,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-blue-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/it-helpdesk-portal'
+  s: //ziontechgroup && ziontechgroup.com/services/it-helpdesk-portal'
 		marketPositio,
   n: 'Modern alternative to legacy ITSM for SMBs',
 		targetAudienc,
@@ -8010,7 +7619,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-violet-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/ecommerce-returns-manager'
+  s: //ziontechgroup && ziontechgroup.com/services/ecommerce-returns-manager'
 		marketPositio,
   n: 'Affordable alternative to enterprise returns suites',
 		targetAudienc,
@@ -8077,7 +7686,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-cyan-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/automated-email-followups'
+  s: //ziontechgroup && ziontechgroup.com/services/automated-email-followups'
 		marketPositio,
   n: 'Lightweight + affordable outreach',
 		targetAudienc,
@@ -8144,7 +7753,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-indigo-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/podcast-transcription-service'
+  s: //ziontechgroup && ziontechgroup.com/services/podcast-transcription-service'
 		marketPositio,
   n: 'Affordable + content-ready outputs',
 		targetAudienc,
@@ -8211,7 +7820,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-emerald-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/ai-seo-content-optimizer'
+  s: //ziontechgroup && ziontechgroup.com/services/ai-seo-content-optimizer'
 		marketPositio,
   n: 'Content-focused vs technical SEO suites',
 		targetAudienc,
@@ -8278,7 +7887,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-fuchsia-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/social-scheduler-ai'
+  s: //ziontechgroup && ziontechgroup.com/services/social-scheduler-ai'
 		marketPositio,
   n: 'Repurpose-first for SMBs',
 		targetAudienc,
@@ -8345,7 +7954,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-blue-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/lead-enrichment-api'
+  s: //ziontechgroup && ziontechgroup.com/services/lead-enrichment-api'
 		marketPositio,
   n: 'Usage-based simple pricing',
 		targetAudienc,
@@ -8412,7 +8021,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-emerald-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/consent-management-cmp',
+  s: //ziontechgroup && ziontechgroup.com/services/consent-management-cmp',
 		marketPositio,
   n: 'Fast to implement, compliant defaults'
 		targetAudienc,
@@ -8479,7 +8088,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-amber-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/cookie-scanner-pro'
+  s: //ziontechgroup && ziontechgroup.com/services/cookie-scanner-pro'
 		marketPositio,
   n: 'Affordable compliance hygiene',
 		targetAudienc,
@@ -8546,7 +8155,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-sky-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/statuspage-sla-tracker'
+  s: //ziontechgroup && ziontechgroup.com/services/statuspage-sla-tracker'
 		marketPositio,
   n: 'Simple + transparent status for SMB SaaS'
 		targetAudienc,
@@ -8613,7 +8222,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-teal-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/agentic-lead-qualifier'
+  s: //ziontechgroup && ziontechgroup.com/services/agentic-lead-qualifier'
 		marketPositio,
   n: 'Focused on B2B lead capture',
 		targetAudienc,
@@ -8680,7 +8289,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-red-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/gdpr-dsar-portal-lite'
+  s: //ziontechgroup && ziontechgroup.com/services/gdpr-dsar-portal-lite'
 		marketPositio,
   n: 'SMB-friendly DSAR processing'
 		targetAudienc,
@@ -8747,7 +8356,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-rose-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/feature-flag-auditor'
+  s: //ziontechgroup && ziontechgroup.com/services/feature-flag-auditor'
 		marketPositio,
   n: 'Proactive hygiene vs manual debt'
 		targetAudienc,
@@ -8814,7 +8423,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-blue-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/postgres-index-advisor-pro'
+  s: //ziontechgroup && ziontechgroup.com/services/postgres-index-advisor-pro'
 		marketPositio,
   n: 'Productized tuning for small teams'
 		targetAudienc,
@@ -8881,7 +8490,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-emerald-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/s3-lifecycle-optimizer'
+  s: //ziontechgroup && ziontechgroup.com/services/s3-lifecycle-optimizer'
 		marketPositio,
   n: 'No-friction cost hygiene'
 		targetAudienc,
@@ -8948,7 +8557,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-red-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/pii-discovery-scanner'
+  s: //ziontechgroup && ziontechgroup.com/services/pii-discovery-scanner'
 		marketPositio,
   n: 'Compliance-first discovery',
 		targetAudienc,
@@ -9015,7 +8624,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-indigo-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/api-breaking-change-watcher'
+  s: //ziontechgroup && ziontechgroup.com/services/api-breaking-change-watcher'
 		marketPositio,
   n: 'Operationalize API hygiene'
 		targetAudienc,
@@ -9082,7 +8691,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-cyan-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/synthetic-journey-monitor'
+  s: //ziontechgroup && ziontechgroup.com/services/synthetic-journey-monitor'
 		marketPositio,
   n: 'Affordable synthetic monitoring',
 		targetAudienc,
@@ -9149,7 +8758,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-blue-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/iam-permission-analyzer'
+  s: //ziontechgroup && ziontechgroup.com/services/iam-permission-analyzer'
 		marketPositio,
   n: 'Practical least-privilege for SMB clouds'
 		targetAudienc,
@@ -9216,7 +8825,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-indigo-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/warehouse-cost-optimizer'
+  s: //ziontechgroup && ziontechgroup.com/services/warehouse-cost-optimizer'
 		marketPositio,
   n: 'Practical finops for analytics teams'
 		targetAudienc,
@@ -9283,7 +8892,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-orange-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/email-warmup-monitor'
+  s: //ziontechgroup && ziontechgroup.com/services/email-warmup-monitor'
 		marketPositio,
   n: 'Hands-off deliverability hygiene'
 		targetAudienc,
@@ -9350,7 +8959,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text-cyan-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/ai-meeting-to-ticket'
+  s: //ziontechgroup && ziontechgroup.com/services/ai-meeting-to-ticket'
 		marketPositio,
   n: 'Bridges meetings to delivery',
 		targetAudienc,
@@ -9407,9 +9016,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   descriptio,
   n: 'Reads inbound emails, classifies intent, drafts high - quality replies, and schedules polite follow - ups. Escalates edge cases to humans with context summaries.'
   feature,
-  s: [
-  'Intent classification + prioritization_on - brand response drafting_automatic polite follow - ups_lead / contact enrichment_analytics and response SLAs'
-  ],
+  s: ['Intent classification + prioritization_on - brand response drafting_automatic polite follow - ups_lead / contact enrichment_analytics and response SLAs'],
   popula,
   r: true,
   ico,
@@ -9420,7 +9027,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - cyan - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / ai - email - responder',
+  s: //ziontechgroup.com / services / ai - email - responder',
   market_positio,
   n: 'Competes with Superhuman / Front add - ons, turnkey for SMBs'
   target_audienc,
@@ -9476,9 +9083,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   descriptio,
   n: 'Build conversational surveys that adapt in real time. Increase completion with SMS / WhatsApp delivery and one - tap choices.'
   feature,
-  s: [
-  'Branching logic + A / B promptsSMS / WhatsApp / web delivery_real - time analyticsCSV / Sheets export_webhooks + API'
-  ],
+  s: ['Branching logic + A / B promptsSMS / WhatsApp / web delivery_real - time analyticsCSV / Sheets export_webhooks + API'],
   popula,
   r: false,
   ico,
@@ -9489,7 +9094,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - emerald - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / mobile - survey - studio',
+  s: //ziontechgroup.com / services / mobile - survey - studio',
   market_positio,
   n: 'Faster than legacy survey tools, better mobile UX'
   target_audienc,
@@ -9545,9 +9150,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   descriptio,
   n: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.'
   feature,
-  s: [
-  'Industry templates_calendar + task sync_benchmark KPIsExport to PDFRole - based views'
-  ],
+  s: ['Industry templates_calendar + task sync_benchmark KPIsExport to PDFRole - based views'],
   popula,
   r: false,
   ico,
@@ -9558,7 +9161,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - purple - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / niche - productivity - planner'
+  s: //ziontechgroup.com / services / niche - productivity - planner'
   market_positio,
   n: 'Purpose - built vs generic task apps'
   target_audienc,
@@ -9614,9 +9217,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   descriptio,
   n: 'Run webinars or in - person events with landing pages, reminders, QR tickets, and feedback analytics.'
   feature,
-  s: [
-  'QR tickets + check - in_email / SMS reminders_agenda builder_feedback forms_post - event reports'
-  ],
+  s: ['QR tickets + check - in_email / SMS reminders_agenda builder_feedback forms_post - event reports'],
   popula,
   r: true,
   ico,
@@ -9627,7 +9228,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - pink - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / event - management - dashboard'
+  s: //ziontechgroup.com / services / event - management - dashboard'
   market_positio,
   n: 'Lightweight alternative to enterprise suites',
   target_audienc,
@@ -9694,7 +9295,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - amber - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / affiliate - tracking - suite'
+  s: //ziontechgroup.com / services / affiliate - tracking - suite'
   market_positio,
   n: 'Simple and affordable affiliate ops',
   target_audienc,
@@ -9761,7 +9362,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - sky - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / smb - analytics - lite',
+  s: //ziontechgroup.com / services / smb - analytics - lite',
   market_positio,
   n: 'Simpler than GA4, clearer funnels for SMBs'
   target_audienc,
@@ -9828,7 +9429,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - blue - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / it - helpdesk - portal'
+  s: //ziontechgroup.com / services / it - helpdesk - portal'
   market_positio,
   n: 'Modern alternative to legacy ITSM for SMBs',
   target_audienc,
@@ -9895,7 +9496,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - violet - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / ecommerce - returns - manager'
+  s: //ziontechgroup.com / services / ecommerce - returns - manager'
   market_positio,
   n: 'Affordable alternative to enterprise returns suites',
   target_audienc,
@@ -9962,7 +9563,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - cyan - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / automated - email - followups'
+  s: //ziontechgroup.com / services / automated - email - followups'
   market_positio,
   n: 'Lightweight + affordable outreach',
   target_audienc,
@@ -10029,7 +9630,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - indigo - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / podcast - transcription - service'
+  s: //ziontechgroup.com / services / podcast - transcription - service'
   market_positio,
   n: 'Affordable + content - ready outputs',
   target_audienc,
@@ -10096,7 +9697,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - emerald - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / ai - seo - content - optimizer'
+  s: //ziontechgroup.com / services / ai - seo - content - optimizer'
   market_positio,
   n: 'Content - focused vs technical SEO suites',
   target_audienc,
@@ -10163,7 +9764,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - fuchsia - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / social - scheduler - ai'
+  s: //ziontechgroup.com / services / social - scheduler - ai'
   market_positio,
   n: 'Repurpose - first for SMBs',
   target_audienc,
@@ -10230,7 +9831,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - blue - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / lead - enrichment - api'
+  s: //ziontechgroup.com / services / lead - enrichment - api'
   market_positio,
   n: 'Usage - based simple pricing',
   target_audienc,
@@ -10297,7 +9898,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - emerald - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / consent - management - cmp',
+  s: //ziontechgroup.com / services / consent - management - cmp',
   market_positio,
   n: 'Fast to implement, compliant defaults'
   target_audienc,
@@ -10364,7 +9965,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - amber - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / cookie - scanner - pro'
+  s: //ziontechgroup.com / services / cookie - scanner - pro'
   market_positio,
   n: 'Affordable compliance hygiene',
   target_audienc,
@@ -10431,7 +10032,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - sky - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / statuspage - sla - tracker'
+  s: //ziontechgroup.com / services / statuspage - sla - tracker'
   market_positio,
   n: 'Simple + transparent status for SMB SaaS'
   target_audienc,
@@ -10498,7 +10099,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - teal - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / agentic - lead - qualifier'
+  s: //ziontechgroup.com / services / agentic - lead - qualifier'
   market_positio,
   n: 'Focused on B2B lead capture',
   target_audienc,
@@ -10565,7 +10166,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - red - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / gdpr - dsar - portal - lite'
+  s: //ziontechgroup.com / services / gdpr - dsar - portal - lite'
   market_positio,
   n: 'SMB - friendly DSAR processing'
   target_audienc,
@@ -10632,7 +10233,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - rose - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / feature - flag - auditor'
+  s: //ziontechgroup.com / services / feature - flag - auditor'
   market_positio,
   n: 'Proactive hygiene vs manual debt'
   target_audienc,
@@ -10699,7 +10300,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - blue - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / postgres - index - advisor - pro'
+  s: //ziontechgroup.com / services / postgres - index - advisor - pro'
   market_positio,
   n: 'Productized tuning for small teams'
   target_audienc,
@@ -10766,7 +10367,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - emerald - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / s3 - lifecycle - optimizer'
+  s: //ziontechgroup.com / services / s3 - lifecycle - optimizer'
   market_positio,
   n: 'No - friction cost hygiene'
   target_audienc,
@@ -10833,7 +10434,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - red - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / pii - discovery - scanner'
+  s: //ziontechgroup.com / services / pii - discovery - scanner'
   market_positio,
   n: 'Compliance - first discovery',
   target_audienc,
@@ -10900,7 +10501,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - indigo - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / api - breaking - change - watcher'
+  s: //ziontechgroup.com / services / api - breaking - change - watcher'
   market_positio,
   n: 'Operationalize API hygiene'
   target_audienc,
@@ -10967,7 +10568,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - cyan - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / synthetic - journey - monitor'
+  s: //ziontechgroup.com / services / synthetic - journey - monitor'
   market_positio,
   n: 'Affordable synthetic monitoring',
   target_audienc,
@@ -11034,7 +10635,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - blue - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / iam - permission - analyzer'
+  s: //ziontechgroup.com / services / iam - permission - analyzer'
   market_positio,
   n: 'Practical least - privilege for SMB clouds'
   target_audienc,
@@ -11101,7 +10702,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - indigo - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / warehouse - cost - optimizer'
+  s: //ziontechgroup.com / services / warehouse - cost - optimizer'
   market_positio,
   n: 'Practical finops for analytics teams'
   target_audienc,
@@ -11168,7 +10769,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - orange - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / email - warmup - monitor'
+  s: //ziontechgroup.com / services / email - warmup - monitor'
   market_positio,
   n: 'Hands - off deliverability hygiene'
   target_audienc,
@@ -11235,7 +10836,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   r: 'text - cyan - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / ai - meeting - to - ticket'
+  s: //ziontechgroup.com / services / ai - meeting - to - ticket'
   market_positio,
   n: 'Bridges meetings to delivery',
   target_audienc,
@@ -11286,167 +10887,132 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
 }
 export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [,
-	{/* TODO: Fix JSX expression */}
+  real2035Q2Additions: EnhancedRealMicroSaasService[] = [{/* TODO: Fix JSX expression */}
   g: 4.7}
-		review,
-  s: 12}
+		review, s: 12}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
-		review,
-  s: 9}
+		review, s: 9}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 7}
+		review, s: 7}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
-		review,
-  s: 11}
+		review, s: 11}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 5}
+		review, s: 5}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
-		review,
-  s: 8}
+		review, s: 8}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
-		review,
-  s: 6}
+		review, s: 6}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
-		review,
-  s: 5}
+		review, s: 5}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 8}
+		review, s: 8}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
-		review,
-  s: 6}
+		review, s: 6}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
-		review,
-  s: 10}
+		review, s: 10}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 7}
+		review, s: 7}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
-		review,
-  s: 4}
+		review, s: 4}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
-		review,
-  s: 10}
+		review, s: 10}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 5}
+		review, s: 5}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
-		review,
-  s: 3}
+		review, s: 3}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
-		review,
-  s: 7}
+		review, s: 7}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 4}
+		review, s: 4}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
-		review,
-  s: 3}
+		review, s: 3}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
-		review,
-  s: 5}
+		review, s: 5}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 4}
+		review, s: 4}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
-		review,
-  s: 5}
+		review, s: 5}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 3}
+		review, s: 3}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 6}
+		review, s: 6}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
-		review,
-  s: 3}
+		review, s: 3}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 3}
+		review, s: 3}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 4}
+		review, s: 4}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
-		review,
-  s: 6}
-	}
-]
+		review, s: 6}
+	}]
 // const contact = {
 	mobile: '+1 302 464 0950'
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com'}
-export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
-	{,
-		id: 'ai-email-responder'
-		name: 'AI Email Responder',
-		tagline: 'Autonomous email triage, drafting, and follow-ups for sales and support'
+export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [{, id: 'ai-email-responder'
+		name: 'AI Email Responder', tagline: 'Autonomous email triage, drafting, and follow-ups for sales and support'
 		price: '$39'
-		period: '/month',
-		description: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.'
+		period: '/month', description: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.'
 		features: [
-			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs'
-		]
+			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs']
 		popular: true
 		icon: ''
 		color: 'from-cyan-600 to-blue-700'
@@ -11481,9 +11047,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		price: '$19'
 		period: '/month'
 		description: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.'
-		features: [
-			'Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API'
-		]
+		features: ['Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API']
 		popular: false
 		icon: ''
 		color: 'from-emerald-600 to-teal-700'
@@ -11518,9 +11082,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		price: '$12'
 		period: '/month',
 		description: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.'
-		features: [
-			'Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views'
-		]
+		features: ['Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views']
 		popular: false
 		icon: ''
 		color: 'from-purple-600 to-indigo-700'
@@ -11555,9 +11117,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		price: '$49'
 		period: '/month',
 		description: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.'
-		features: [
-			'QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports'
-		]
+		features: ['QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports']
 		popular: true
 		icon: ''
 		color: 'from-pink-600 to-rose-700'
@@ -11588,248 +11148,200 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
 }
 export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [,
-	{/* TODO: Fix JSX expression */}
+  real2035Q2Additions: EnhancedRealMicroSaasService[] = [{/* TODO: Fix JSX expression */}
   g: 4.7}
-		review,
-  s: 12}
+		review, s: 12}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
-		review,
-  s: 9}
+		review, s: 9}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 7}
+		review, s: 7}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
-		review,
-  s: 11}
+		review, s: 11}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 5}
+		review, s: 5}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
-		review,
-  s: 8}
+		review, s: 8}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
-		review,
-  s: 6}
+		review, s: 6}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
-		review,
-  s: 5}
+		review, s: 5}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 8}
+		review, s: 8}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
-		review,
-  s: 6}
+		review, s: 6}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
-		review,
-  s: 10}
+		review, s: 10}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 7}
+		review, s: 7}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
-		review,
-  s: 4}
+		review, s: 4}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
-		review,
-  s: 10}
+		review, s: 10}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 5}
+		review, s: 5}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
-		review,
-  s: 3}
+		review, s: 3}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
-		review,
-  s: 7}
+		review, s: 7}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 4}
+		review, s: 4}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
-		review,
-  s: 3}
+		review, s: 3}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
-		review,
-  s: 5}
+		review, s: 5}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 4}
+		review, s: 4}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
-		review,
-  s: 5}
+		review, s: 5}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 3}
+		review, s: 3}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 6}
+		review, s: 6}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
-		review,
-  s: 3}
+		review, s: 3}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 3}
+		review, s: 3}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 4}
+		review, s: 4}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
-		review,
-  s: 6}
+		review, s: 6}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
-		review,
-  s: 10}
+		review, s: 10}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 7}
+		review, s: 7}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
-		review,
-  s: 4}
+		review, s: 4}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
-		review,
-  s: 10}
+		review, s: 10}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 5}
+		review, s: 5}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
-		review,
-  s: 3}
+		review, s: 3}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
-		review,
-  s: 7}
+		review, s: 7}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 4}
+		review, s: 4}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
-		review,
-  s: 3}
+		review, s: 3}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
-		review,
-  s: 5}
+		review, s: 5}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 4}
+		review, s: 4}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
-		review,
-  s: 5}
+		review, s: 5}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 3}
+		review, s: 3}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 6}
+		review, s: 6}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
-		review,
-  s: 3}
+		review, s: 3}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 3}
+		review, s: 3}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
-		review,
-  s: 4}
+		review, s: 4}
 	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
-		review,
-  s: 6}
-	}
-]
+		review, s: 6}
+	}]
 'Intent classification + prioritization'' 'On-brand response drafting'' 'Automatic polite follow-ups'' 'Lead/contact enrichment'' 'Analytics and response SLAs' ] popula,
   r: true' ico,
   n: '📧'' colo,
   r: 'from-cyan-600 to-blue-700'' textColo,
   r: 'text-cyan-300'' lin,
   k: 'http,
-  s://ziontechgroup.com/services/ai-email-responder'' marketPositio,
+  s: //ziontechgroup.com/services/ai-email-responder'' marketPositio,
   n: 'Competes with Superhuman/Front add-ons, turnkey for SMBs'' targetAudienc,
   e: 'Sales, support, founder-led teams' trialDay,
   s: 14' setupTim,
@@ -11851,7 +11363,7 @@ export const,
   r: 'from - cyan - 600 to - blue - 700',' text_colo,
   r: 'text - cyan - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / ai - email - responder',' market_positio,
+  s: //ziontechgroup.com / services / ai - email - responder',' market_positio,
   n: 'Competes with Superhuman / Front add - ons, turnkey for SMBs',' target_audienc,
   e: 'Sales, support, founder - led teams', trial_day,
   s: 14,' setup_tim,
@@ -11862,7 +11374,7 @@ export const,
   s: ['Gmail', 'Outlook', 'HubSpot', 'Pipedrive', 'Slack'],' use_case,
   s: ['Inbound triage', 'Nurture sequences', 'SLA reporting'],' ro,
   i: 'Cuts manual email time by 60–80%', implementationDetail,
-  s:' 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard'' launchDat,
+  s: ' 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard'' launchDat,
   e: '2025-08-20' customer,
   s: 48,
   rating: 4.7,
@@ -11898,7 +11410,7 @@ export const,
   t: 'network-futuristic', contactInf,
   o: contact, realImplementatio,
   n: true, implementationDetail,
-  s:' 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard'' launchDat,
+  s: ' 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard'' launchDat,
   e: '2025-08-20' customer,
   s: 48,
   rating: 4.7,
@@ -11909,13 +11421,13 @@ export const,
   e: '$19',' perio,
   d: '/month', descriptio,
   n:  ,' 'Build conversational surveys that adapt in real time. Increase completion with SMS / WhatsApp delivery and one - tap choices.', feature,
-  s: [,' 'Branching logic + A / B prompts',' 'SMS / WhatsApp / web delivery',' 'Real - time analytics',' 'CSV / Sheets export', ' 'Webhooks + API'], popula,
+  s: [' 'Branching logic + A / B prompts', ' 'SMS / WhatsApp / web delivery', ' 'Real - time analytics', ' 'CSV / Sheets export', ' 'Webhooks + API'], popula,
   r: false,' ico,
   n: '📱', ' colo,
   r: 'from - emerald - 600 to - teal - 700',' text_colo,
   r: 'text - emerald - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / mobile - survey - studio',' market_positio,
+  s: //ziontechgroup.com / services / mobile - survey - studio',' market_positio,
   n: 'Faster than legacy survey tools, better mobile UX',' target_audienc,
   e: 'Product, CX, research teams', trial_day,
   s: 7,' setup_tim,
@@ -11943,13 +11455,13 @@ export const,
   e: '$12',' perio,
   d: '/month', descriptio,
   n:  ,' 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.', feature,
-  s: [, ' 'Industry templates',' 'Calendar + task sync',' 'Benchmark KPIs',' 'Export to PDF',' 'Role - based views'], popula,
+  s: [' 'Industry templates', ' 'Calendar + task sync', ' 'Benchmark KPIs', ' 'Export to PDF', ' 'Role - based views'], popula,
   r: false,' ico,
   n: '🗂️', ' colo,
   r: 'from - purple - 600 to - indigo - 700',' text_colo,
   r: 'text - purple - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / niche - productivity - planner',' market_positio,
+  s: //ziontechgroup.com / services / niche - productivity - planner',' market_positio,
   n: 'Purpose - built vs generic task apps',' target_audienc,
   e: 'SMBs by vertical', trial_day,
   s: 7,' setup_tim,
@@ -11977,13 +11489,13 @@ export const,
   e: '$49',' perio,
   d: '/month', descriptio,
   n:  ,' 'Run webinars or in - person events with landing pages, reminders, QR tickets, and feedback analytics.', feature,
-  s: [,' 'QR tickets + check - in',' 'Email / SMS reminders', ' 'Agenda builder',' 'Feedback forms',' 'Post - event reports'], popula,
+  s: [' 'QR tickets + check - in', ' 'Email / SMS reminders', ' 'Agenda builder', ' 'Feedback forms', ' 'Post - event reports'], popula,
   r: true,' ico,
   n: '🎟️', ' colo,
   r: 'from - pink - 600 to - rose - 700',' text_colo,
   r: 'text - pink - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / event - management - dashboard',' market_positio,
+  s: //ziontechgroup.com / services / event - management - dashboard',' market_positio,
   n: 'Lightweight alternative to enterprise suites',' target_audienc,
   e: 'Marketing, HR, community teams', trial_day,
   s: 14,' setup_tim,
@@ -12011,13 +11523,13 @@ export const,
   e: '$29',' perio,
   d: '/month', descriptio,
   n:  ,' 'Create affiliate programs with branded links, flexible commission rules, and payout exports.', feature,
-  s: [, ' 'Custom referral links',' 'UTM attribution',' 'Rule - based commissions',' 'Payout exports',' 'Fraud checks'], popula,
+  s: [' 'Custom referral links', ' 'UTM attribution', ' 'Rule - based commissions', ' 'Payout exports', ' 'Fraud checks'], popula,
   r: false,' ico,
   n: '🔗', ' colo,
   r: 'from - amber - 600 to - orange - 700',' text_colo,
   r: 'text - amber - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / affiliate - tracking - suite',' market_positio,
+  s: //ziontechgroup.com / services / affiliate - tracking - suite',' market_positio,
   n: 'Simple and affordable affiliate ops',' target_audienc,
   e: 'SaaS, courses, marketplaces', trial_day,
   s: 7,' setup_tim,
@@ -12045,13 +11557,13 @@ export const,
   e: '$15',' perio,
   d: '/month', descriptio,
   n:  ,' 'Privacy - friendly analytics for small businesses with funnel insights and weekly summaries.', feature,
-  s: [, ' 'Page + event analytics',' 'Funnels + cohorts',' 'Weekly email summaries',' 'CSV export',' 'No cookies mode'], popula,
+  s: [' 'Page + event analytics', ' 'Funnels + cohorts', ' 'Weekly email summaries', ' 'CSV export', ' 'No cookies mode'], popula,
   r: false,' ico,
   n: '📊', ' colo,
   r: 'from - sky - 600 to - indigo - 700',' text_colo,
   r: 'text - sky - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / smb - analytics - lite',' market_positio,
+  s: //ziontechgroup.com / services / smb - analytics - lite',' market_positio,
   n: 'Simpler than GA4, clearer funnels for SMBs',' target_audienc,
   e: 'Small business owners', trial_day,
   s: 14,' setup_tim,
@@ -12079,13 +11591,13 @@ export const,
   e: '$59',' perio,
   d: '/month', descriptio,
   n:  ,' 'Managed ticketing for MSPs and internal IT with automation rules, approval flows, and client - visible status.', feature,
-  s: [,' 'Email - to - ticket', ' 'KB + article templates',' 'SLAs + escalations',' 'Client portal',' 'Reports'], popula,
+  s: [' 'Email - to - ticket', ' 'KB + article templates', ' 'SLAs + escalations', ' 'Client portal', ' 'Reports'], popula,
   r: true,' ico,
   n: '🆘', ' colo,
   r: 'from - blue - 600 to - indigo - 700',' text_colo,
   r: 'text - blue - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / it - helpdesk - portal',' market_positio,
+  s: //ziontechgroup.com / services / it - helpdesk - portal',' market_positio,
   n: 'Modern alternative to legacy ITSM for SMBs',' target_audienc,
   e: 'MSPs, internal IT', trial_day,
   s: 14,' setup_tim,
@@ -12113,13 +11625,13 @@ export const,
   e: '$39',' perio,
   d: '/month', descriptio,
   n:  ,' 'Automate RMAs, label generation, and status notifications. Analytics to reduce avoidable returns.', feature,
-  s: [,' 'Self - serve returns portal', ' 'Label generation',' 'Return reasons analytics',' 'Inventory sync',' 'Notifications'], popula,
+  s: [' 'Self - serve returns portal', ' 'Label generation', ' 'Return reasons analytics', ' 'Inventory sync', ' 'Notifications'], popula,
   r: true,' ico,
   n: '📦', ' colo,
   r: 'from - violet - 600 to - fuchsia - 700',' text_colo,
   r: 'text - violet - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / ecommerce - returns - manager',' market_positio,
+  s: //ziontechgroup.com / services / ecommerce - returns - manager',' market_positio,
   n: 'Affordable alternative to enterprise returns suites',' target_audienc,
   e: 'DTC brands, Shopify stores', trial_day,
   s: 14,' setup_tim,
@@ -12147,13 +11659,13 @@ export const,
   e: '$15',' perio,
   d: '/month', descriptio,
   n:  ,' 'Simple sequencer to follow up on stale leads and open tickets with natural language and auto - scheduling.', feature,
-  s: [, ' 'Sequences + delays',' 'Inbox integration',' 'Smart stop on reply',' 'Templates',' 'Analytics'], popula,
+  s: [' 'Sequences + delays', ' 'Inbox integration', ' 'Smart stop on reply', ' 'Templates', ' 'Analytics'], popula,
   r: false,' ico,
   n: '📨', ' colo,
   r: 'from - cyan - 600 to - teal - 700',' text_colo,
   r: 'text - cyan - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / automated - email - followups',' market_positio,
+  s: //ziontechgroup.com / services / automated - email - followups',' market_positio,
   n: 'Lightweight + affordable outreach',' target_audienc,
   e: 'Sales, success, support', trial_day,
   s: 7,' setup_tim,
@@ -12181,13 +11693,13 @@ export const,
   e: '$12',' perio,
   d: '/month', descriptio,
   n:  ,' 'Upload or link to podcast episodes, get transcripts, summaries, chapters, and Wordpress - ready blog exports.', feature,
-  s: [, ' 'Fast transcripts',' 'Timestamps + chapters',' 'Summaries + highlights',' 'Blog export',' 'Glossary'], popula,
+  s: [' 'Fast transcripts', ' 'Timestamps + chapters', ' 'Summaries + highlights', ' 'Blog export', ' 'Glossary'], popula,
   r: false,' ico,
   n: '🎙️', ' colo,
   r: 'from - indigo - 600 to - blue - 700',' text_colo,
   r: 'text - indigo - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / podcast - transcription - service',' market_positio,
+  s: //ziontechgroup.com / services / podcast - transcription - service',' market_positio,
   n: 'Affordable + content - ready outputs',' target_audienc,
   e: 'Podcasters, media teams', trial_day,
   s: 7,' setup_tim,
@@ -12215,13 +11727,13 @@ export const,
   e: '$29',' perio,
   d: '/month', descriptio,
   n:  ,' 'In - editor SEO suggestions, competitive gap analysis, and AI rewrites targeting featured snippets.', feature,
-  s: [,' 'On - page audits', ' 'Topic clustering',' 'SERP intent match',' 'Internal link hints',' 'Rewrite suggestions'], popula,
+  s: [' 'On - page audits', ' 'Topic clustering', ' 'SERP intent match', ' 'Internal link hints', ' 'Rewrite suggestions'], popula,
   r: true,' ico,
   n: '🔎', ' colo,
   r: 'from - emerald - 600 to - green - 700',' text_colo,
   r: 'text - emerald - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / ai - seo - content - optimizer',' market_positio,
+  s: //ziontechgroup.com / services / ai - seo - content - optimizer',' market_positio,
   n: 'Content - focused vs technical SEO suites',' target_audienc,
   e: 'Content teams, agencies', trial_day,
   s: 7,' setup_tim,
@@ -12249,13 +11761,13 @@ export const,
   e: '$15',' perio,
   d: '/month', descriptio,
   n:  ,' 'Turn links, videos, or blog posts into tailored social snippets and schedule them with best - time predictions.', feature,
-  s: [, ' 'Content repurposing',' 'Calendar + auto - times',' 'Hashtag + emoji assistant',' 'Link tracking',' 'Client approvals'], popula,
+  s: [' 'Content repurposing', ' 'Calendar + auto - times', ' 'Hashtag + emoji assistant', ' 'Link tracking', ' 'Client approvals'], popula,
   r: false,' ico,
   n: '📆', ' colo,
   r: 'from - fuchsia - 600 to - pink - 700',' text_colo,
   r: 'text - fuchsia - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / social - scheduler - ai',' market_positio,
+  s: //ziontechgroup.com / services / social - scheduler - ai',' market_positio,
   n: 'Repurpose - first for SMBs',' target_audienc,
   e: 'Agencies, creators', trial_day,
   s: 7,' setup_tim,
@@ -12283,13 +11795,13 @@ export const,
   e: '$49',' perio,
   d: '/month', descriptio,
   n:  ,' 'REST API to enrich leads with verified firmographics and social signals for scoring and routing.', feature,
-  s: [, ' 'Firmographics',' 'Role detection',' 'Validated email signals',' 'Confidence scoring',' 'Usage dashboards'], popula,
+  s: [' 'Firmographics', ' 'Role detection', ' 'Validated email signals', ' 'Confidence scoring', ' 'Usage dashboards'], popula,
   r: false,' ico,
   n: '🧩', ' colo,
   r: 'from - blue - 600 to - sky - 700',' text_colo,
   r: 'text - blue - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / lead - enrichment - api',' market_positio,
+  s: //ziontechgroup.com / services / lead - enrichment - api',' market_positio,
   n: 'Usage - based simple pricing',' target_audienc,
   e: 'B2B SaaS, sales ops', trial_day,
   s: 14,' setup_tim,
@@ -12317,13 +11829,13 @@ export const,
   e: '$25',' perio,
   d: '/month', descriptio,
   n:  ,' 'Deploy branded consent banners, a preferences center, and downloadable audit logs. Geo - aware rules.', feature,
-  s: [, ' 'Geo rules',' 'IAB TCF',' 'Preference center',' 'Audit logs',' 'Multi - brand themes'], popula,
+  s: [' 'Geo rules', ' 'IAB TCF', ' 'Preference center', ' 'Audit logs', ' 'Multi - brand themes'], popula,
   r: true,' ico,
   n: '✅', ' colo,
   r: 'from - emerald - 600 to - teal - 700',' text_colo,
   r: 'text - emerald - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / consent - management - cmp',' market_positio,
+  s: //ziontechgroup.com / services / consent - management - cmp',' market_positio,
   n: 'Fast to implement, compliant defaults',' target_audienc,
   e: 'Websites, SaaS apps', trial_day,
   s: 14,' setup_tim,
@@ -12351,13 +11863,13 @@ export const,
   e: '$9',' perio,
   d: '/month', descriptio,
   n:  ,' 'Scan your site for cookies / trackers, classify them, and generate policy updates with change diffs.', feature,
-  s: [, ' 'Site scan',' 'Tracker classification',' 'Policy generator',' 'Diffs + history',' 'CI hook'], popula,
+  s: [' 'Site scan', ' 'Tracker classification', ' 'Policy generator', ' 'Diffs + history', ' 'CI hook'], popula,
   r: false,' ico,
   n: '🍪', ' colo,
   r: 'from - amber - 600 to - yellow - 700',' text_colo,
   r: 'text - amber - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / cookie - scanner - pro',' market_positio,
+  s: //ziontechgroup.com / services / cookie - scanner - pro',' market_positio,
   n: 'Affordable compliance hygiene',' target_audienc,
   e: 'Websites, agencies', trial_day,
   s: 7,' setup_tim,
@@ -12385,13 +11897,13 @@ export const,
   e: '$19',' perio,
   d: '/month', descriptio,
   n:  ,' 'Connect monitors, log incidents, and share public SLA / uptime reports with customers.', feature,
-  s: [, ' 'Incident log',' 'Public status page',' 'SLA calculator',' 'RSS + webhooks',' 'Exports'], popula,
+  s: [' 'Incident log', ' 'Public status page', ' 'SLA calculator', ' 'RSS + webhooks', ' 'Exports'], popula,
   r: false,' ico,
   n: '📈', ' colo,
   r: 'from - sky - 600 to - cyan - 700',' text_colo,
   r: 'text - sky - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / statuspage - sla - tracker',' market_positio,
+  s: //ziontechgroup.com / services / statuspage - sla - tracker',' market_positio,
   n: 'Simple + transparent status for SMB SaaS',' target_audienc,
   e: 'SaaS teams', trial_day,
   s: 7,' setup_tim,
@@ -12419,7 +11931,7 @@ export const,
   e: '$29',' perio,
   d: '/month', descriptio,
   n:  ,' 'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.', feature,
-  s: [, ' 'Qualifying flows',' 'Calendar booking',' 'CRM routing',' 'Visitor insights',' 'Hand - off to human'], popula,
+  s: [' 'Qualifying flows', ' 'Calendar booking', ' 'CRM routing', ' 'Visitor insights', ' 'Hand - off to human'], popula,
   r: true,' categor,
   y: 'AI & Data', real_servic,
   e: true,' technolog,
@@ -12443,7 +11955,7 @@ export const,
   e: '$49',' perio,
   d: '/month', descriptio,
   n:  ,' 'Hosted portal for DSARs with identity verification, workflow, and export helpers.', feature,
-  s: [, ' 'Request intake',' 'Identity check',' 'Triage + workflow',' 'Exports',' 'Audit logs'], popula,
+  s: [' 'Request intake', ' 'Identity check', ' 'Triage + workflow', ' 'Exports', ' 'Audit logs'], popula,
   r: true,' integration,
   s: ['Zendesk', 'Google Drive'],' use_case,
   s: ['DSAR fulfillment'],' ro,
@@ -12461,13 +11973,13 @@ export const,
   s: 4}, ' perio,
   d: '/month', descriptio,
   n:  ,' 'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.', feature,
-  s: [, ' 'Qualifying flows',' 'Calendar booking',' 'CRM routing',' 'Visitor insights',' 'Hand - off to human'], popula,
+  s: [' 'Qualifying flows', ' 'Calendar booking', ' 'CRM routing', ' 'Visitor insights', ' 'Hand - off to human'], popula,
   r: true,' ico,
   n: '🤖',' colo,
   r: 'from - teal - 600 to - emerald - 700',' text_colo,
   r: 'text - teal - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / agentic - lead - qualifier',' market_positio,
+  s: //ziontechgroup.com / services / agentic - lead - qualifier',' market_positio,
   n: 'Focused on B2B lead capture',' target_audienc,
   e: 'B2B SaaS, agencies', trial_day,
   s: 14,' setup_tim,
@@ -12495,13 +12007,13 @@ export const,
   e: '$49',' perio,
   d: '/month', descriptio,
   n:  ,' 'Hosted portal for DSARs with identity verification, workflow, and export helpers.', feature,
-  s: [,' 'Request intake',' 'Identity check',' 'Triage + workflow',' 'Exports',' 'Audit logs'], popula,
+  s: [' 'Request intake', ' 'Identity check', ' 'Triage + workflow', ' 'Exports', ' 'Audit logs'], popula,
   r: true,' ico,
   n: '🛡️',' colo,
   r: 'from - red - 600 to - rose - 700',' text_colo,
   r: 'text - red - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / gdpr - dsar - portal - lite',' market_positio,
+  s: //ziontechgroup.com / services / gdpr - dsar - portal - lite',' market_positio,
   n: 'SMB - friendly DSAR processing',' target_audienc,
   e: 'SaaS + e‑commerce', trial_day,
   s: 7,' setup_tim,
@@ -12528,14 +12040,14 @@ export const,
   e: 'Flag hygiene checks and end-of-life automation'' pric,
   e: '$19'' perio,
   d: '/month' descriptio,
-  n:' 'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto-open PRs.' feature,
-  s: [' 'Repo scanner'' 'Flag inventory'' 'Risk detection'' 'PR suggestions'' 'CI integration' ] popula,
+  n: ' 'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto-open PRs.' feature,
+  s: [' 'Repo scanner'' 'Flag inventory'' 'Risk detection'' 'PR suggestions'' 'CI integration'] popula,
   r: false' ico,
   n: '🚩'' colo,
   r: 'from-rose-600 to-pink-700'' textColo,
   r: 'text-rose-300'' lin,
   k: 'http,
-  s://ziontechgroup.com/services/feature-flag-auditor'' marketPositio,
+  s: //ziontechgroup.com/services/feature-flag-auditor'' marketPositio,
   n: 'Proactive hygiene vs manual debt'' targetAudienc,
   e: 'Platform + app teams' trialDay,
   s: 7' setupTim,
@@ -12562,7 +12074,7 @@ export const,
   r: 'from - rose - 600 to - pink - 700',' text_colo,
   r: 'text - rose - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / feature - flag - auditor',' market_positio,
+  s: //ziontechgroup.com / services / feature - flag - auditor',' market_positio,
   n: 'Proactive hygiene vs manual debt',' target_audienc,
   e: 'Platform + app teams', trial_day,
   s: 7,' setup_tim,
@@ -12590,7 +12102,7 @@ export const,
   e: '$79',' perio,
   d: '/month', descriptio,
   n:  ,' 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.', feature,
-  s: [,' 'Slow query capture',' 'Index suggestions',' 'Risk scoring',' 'PR generation',' 'Rollback assist'], popula,
+  s: [' 'Slow query capture', ' 'Index suggestions', ' 'Risk scoring', ' 'PR generation', ' 'Rollback assist'], popula,
   r: true,' categor,
   y: 'Developer Tools', real_servic,
   e: true,' technolog,
@@ -12651,11 +12163,7 @@ export const,
   e: '$49',' perio,
   d: '/month', descriptio,
   n:  ,' 'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.', feature,
-  s: [ ' i,
-  d: 'api - breaking - change - watcher',' categor,
-  y: 'Developer Tools', real_servic,
-  e: true,' technolog,
-  y: ['OpenAPI', 'GraphQL'],' integration,
+  s: [' i, d: 'api - breaking - change - watcher', ' categor, y: 'Developer Tools', real_servic, e: true, ' technolog, y: ['OpenAPI', 'GraphQL'],' integration,
   s: ['GitHub', 'Slack'],' use_case,
   s: ['Schema governance', 'Release safety'],' ro,
   i: 'Fewer incidents, faster integration',' competitor,
@@ -12675,14 +12183,14 @@ export const,
   e: 'Index recommendations and controlled PR rollouts'' pric,
   e: '$79'' perio,
   d: '/month' descriptio,
-  n:' 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.' feature,
-  s: [' 'Slow query capture'' 'Index suggestions'' 'Risk scoring'' 'PR generation'' 'Rollback assist' ] popula,
+  n: ' 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.' feature,
+  s: [' 'Slow query capture'' 'Index suggestions'' 'Risk scoring'' 'PR generation'' 'Rollback assist'] popula,
   r: true' ico,
   n: '🗄️'' colo,
   r: 'from-blue-700 to-indigo-800'' textColo,
   r: 'text-blue-300'' lin,
   k: 'http,
-  s://ziontechgroup.com/services/postgres-index-advisor-pro'' marketPositio,
+  s: //ziontechgroup.com/services/postgres-index-advisor-pro'' marketPositio,
   n: 'Productized tuning for small teams'' targetAudienc,
   e: 'Data + platform teams' trialDay,
   s: 14' setupTim,
@@ -12709,14 +12217,14 @@ export const,
   e: 'Move objects between storage classes to cut costs'' pric,
   e: '$59'' perio,
   d: '/month' descriptio,
-  n:' 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.' feature,
-  s: [' 'Usage analysis'' 'Rule suggestions'' 'Cost simulator'' 'Change sets'' 'Alerting' ] popula,
+  n: ' 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.' feature,
+  s: [' 'Usage analysis'' 'Rule suggestions'' 'Cost simulator'' 'Change sets'' 'Alerting'] popula,
   r: false' ico,
   n: '🗂️'' colo,
   r: 'from-emerald-700 to-teal-800'' textColo,
   r: 'text-emerald-300'' lin,
   k: 'http,
-  s://ziontechgroup.com/services/s3-lifecycle-optimizer'' marketPositio,
+  s: //ziontechgroup.com/services/s3-lifecycle-optimizer'' marketPositio,
   n: 'No-friction cost hygiene'' targetAudienc,
   e: 'Cloud + finops' trialDay,
   s: 7' setupTim,
@@ -12743,14 +12251,14 @@ export const,
   e: 'Scan buckets and DBs for PII/PHI with evidence exports'' pric,
   e: '$89'' perio,
   d: '/month' descriptio,
-  n:' 'Find PII in cloud storage and databases, redact samples, and export auditor-friendly evidence.' feature,
-  s: [' 'Connectors'' 'Sensitive entity detection'' 'Sampling with redaction'' 'Findings export'' 'Alerting' ] popula,
+  n: ' 'Find PII in cloud storage and databases, redact samples, and export auditor-friendly evidence.' feature,
+  s: [' 'Connectors'' 'Sensitive entity detection'' 'Sampling with redaction'' 'Findings export'' 'Alerting'] popula,
   r: true' ico,
   n: '🕵️'' colo,
   r: 'from-red-700 to-rose-800'' textColo,
   r: 'text-red-300'' lin,
   k: 'http,
-  s://ziontechgroup.com/services/pii-discovery-scanner'' marketPositio,
+  s: //ziontechgroup.com/services/pii-discovery-scanner'' marketPositio,
   n: 'Compliance-first discovery'' targetAudienc,
   e: 'Security, compliance' trialDay,
   s: 7' setupTim,
@@ -12777,7 +12285,7 @@ export const,
   r: 'from-rose-600 to-pink-700',' textColo,
   r: 'text-rose-300',' lin,
   k: 'http,
-  s://ziontechgroup.com/services/feature-flag-auditor',' marketPositio,
+  s: //ziontechgroup.com/services/feature-flag-auditor',' marketPositio,
   n: 'Proactive hygiene vs manual debt',' targetAudienc,
   e: 'Platform + app teams', trialDay,
   s: 7,' setupTim,
@@ -12805,13 +12313,13 @@ export const,
   e: '$79',' perio,
   d: '/month', descriptio,
   n:  ,' 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.', feature,
-  s: [,' 'Slow query capture',' 'Index suggestions',' 'Risk scoring',' 'PR generation',' 'Rollback assist'], popula,
+  s: [' 'Slow query capture', ' 'Index suggestions', ' 'Risk scoring', ' 'PR generation', ' 'Rollback assist'], popula,
   r: true,' ico,
   n: '🗄️',' colo,
   r: 'from - blue - 700 to - indigo - 800',' text_colo,
   r: 'text - blue - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / postgres - index - advisor - pro',' market_positio,
+  s: //ziontechgroup.com / services / postgres - index - advisor - pro',' market_positio,
   n: 'Productized tuning for small teams',' target_audienc,
   e: 'Data + platform teams', trial_day,
   s: 14,' setup_tim,
@@ -12839,13 +12347,13 @@ export const,
   e: '$59',' perio,
   d: '/month', descriptio,
   n:  ,' 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.', feature,
-  s: [,' 'Usage analysis',' 'Rule suggestions',' 'Cost simulator',' 'Change sets',' 'Alerting'], popula,
+  s: [' 'Usage analysis', ' 'Rule suggestions', ' 'Cost simulator', ' 'Change sets', ' 'Alerting'], popula,
   r: false,' ico,
   n: '🗂️',' colo,
   r: 'from - emerald - 700 to - teal - 800',' text_colo,
   r: 'text - emerald - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / s3 - lifecycle - optimizer',' market_positio,
+  s: //ziontechgroup.com / services / s3 - lifecycle - optimizer',' market_positio,
   n: 'No - friction cost hygiene',' target_audienc,
   e: 'Cloud + finops', trial_day,
   s: 7,' setup_tim,
@@ -12873,13 +12381,13 @@ export const,
   e: '$89',' perio,
   d: '/month', descriptio,
   n:  ,' 'Find PII in cloud storage and databases, redact samples, and export auditor - friendly evidence.', feature,
-  s: [,' 'Connectors',' 'Sensitive entity detection',' 'Sampling with redaction',' 'Findings export',' 'Alerting'], popula,
+  s: [' 'Connectors', ' 'Sensitive entity detection', ' 'Sampling with redaction', ' 'Findings export', ' 'Alerting'], popula,
   r: true,' ico,
   n: '🕵️',' colo,
   r: 'from - red - 700 to - rose - 800',' text_colo,
   r: 'text - red - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / pii - discovery - scanner',' market_positio,
+  s: //ziontechgroup.com / services / pii - discovery - scanner',' market_positio,
   n: 'Compliance - first discovery',' target_audienc,
   e: 'Security, compliance', trial_day,
   s: 7,' setup_tim,
@@ -12906,20 +12414,20 @@ export const,
   e: 'Schema diffs with CI gates and notifications'' pric,
   e: '$49'' perio,
   d: '/month' descriptio,
-  n:' 'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.'' i,
+  n: ' 'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.'' i,
   d: 'api-breaking-change-watcher',' nam,
   e: 'API Breaking Change Watcher',' taglin,
   e: 'Schema diffs with CI gates and notifications',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
   n:  ,' 'Monitor OpenAPI / GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.', feature,
-  s: [, ' 'Schema registry',' 'Diff rules',' 'Owner mapping',' 'CI checks',' 'Changelog hints'], popula,
+  s: [' 'Schema registry', ' 'Diff rules', ' 'Owner mapping', ' 'CI checks', ' 'Changelog hints'], popula,
   r: false,' ico,
   n: '🧭', ' colo,
   r: 'from - indigo - 700 to - violet - 800',' text_colo,
   r: 'text - indigo - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / api - breaking - change - watcher',' market_positio,
+  s: //ziontechgroup.com / services / api - breaking - change - watcher',' market_positio,
   n: 'Operationalize API hygiene',' target_audienc,
   e: 'Platform + API teams', trial_day,
   s: 7,' setup_tim,
@@ -12941,13 +12449,13 @@ export const,
   s: 12, ratin,
   g: 4 && 4.5, review,
   s: 3}, ' 'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.', feature,
-  s: [' 'Schema registry'' 'Diff rules'' 'Owner mapping'' 'CI checks'' 'Changelog hints' ] popula,
+  s: [' 'Schema registry'' 'Diff rules'' 'Owner mapping'' 'CI checks'' 'Changelog hints'] popula,
   r: false' ico,
   n: '🧭'' colo,
   r: 'from-indigo-700 to-violet-800'' textColo,
   r: 'text-indigo-300'' lin,
   k: 'http,
-  s://ziontechgroup.com/services/api-breaking-change-watcher'' marketPositio,
+  s: //ziontechgroup.com/services/api-breaking-change-watcher'' marketPositio,
   n: 'Operationalize API hygiene'' targetAudienc,
   e: 'Platform + API teams' trialDay,
   s: 7' setupTim,
@@ -12975,13 +12483,13 @@ export const,
   e: '$19',' perio,
   d: '/month', descriptio,
   n:  ,' 'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto - open PRs.', feature,
-  s: [, ' 'Repo scanner',' 'Flag inventory',' 'Risk detection',' 'PR suggestions',' 'CI integration'], popula,
+  s: [' 'Repo scanner', ' 'Flag inventory', ' 'Risk detection', ' 'PR suggestions', ' 'CI integration'], popula,
   r: false,' ico,
   n: '🚩', ' colo,
   r: 'from - rose - 600 to - pink - 700',' text_colo,
   r: 'text - rose - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / feature - flag - auditor',' market_positio,
+  s: //ziontechgroup.com / services / feature - flag - auditor',' market_positio,
   n: 'Proactive hygiene vs manual debt',' target_audienc,
   e: 'Platform + app teams', trial_day,
   s: 7,' setup_tim,
@@ -13009,13 +12517,13 @@ export const,
   e: '$79',' perio,
   d: '/month', descriptio,
   n:  ,' 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.', feature,
-  s: [, ' 'Slow query capture',' 'Index suggestions',' 'Risk scoring',' 'PR generation',' 'Rollback assist'], popula,
+  s: [' 'Slow query capture', ' 'Index suggestions', ' 'Risk scoring', ' 'PR generation', ' 'Rollback assist'], popula,
   r: true,' ico,
   n: '🗄️', ' colo,
   r: 'from - blue - 700 to - indigo - 800',' text_colo,
   r: 'text - blue - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / postgres - index - advisor - pro',' market_positio,
+  s: //ziontechgroup.com / services / postgres - index - advisor - pro',' market_positio,
   n: 'Productized tuning for small teams',' target_audienc,
   e: 'Data + platform teams', trial_day,
   s: 14,' setup_tim,
@@ -13043,13 +12551,13 @@ export const,
   e: '$59',' perio,
   d: '/month', descriptio,
   n:  ,' 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.', feature,
-  s: [, ' 'Usage analysis',' 'Rule suggestions',' 'Cost simulator',' 'Change sets',' 'Alerting'], popula,
+  s: [' 'Usage analysis', ' 'Rule suggestions', ' 'Cost simulator', ' 'Change sets', ' 'Alerting'], popula,
   r: false,' ico,
   n: '🗂️', ' colo,
   r: 'from - emerald - 700 to - teal - 800',' text_colo,
   r: 'text - emerald - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / s3 - lifecycle - optimizer',' market_positio,
+  s: //ziontechgroup.com / services / s3 - lifecycle - optimizer',' market_positio,
   n: 'No - friction cost hygiene',' target_audienc,
   e: 'Cloud + finops', trial_day,
   s: 7,' setup_tim,
@@ -13077,13 +12585,13 @@ export const,
   e: '$89',' perio,
   d: '/month', descriptio,
   n:  ,' 'Find PII in cloud storage and databases, redact samples, and export auditor - friendly evidence.', feature,
-  s: [, ' 'Connectors',' 'Sensitive entity detection',' 'Sampling with redaction',' 'Findings export',' 'Alerting'], popula,
+  s: [' 'Connectors', ' 'Sensitive entity detection', ' 'Sampling with redaction', ' 'Findings export', ' 'Alerting'], popula,
   r: true,' ico,
   n: '🕵️', ' colo,
   r: 'from - red - 700 to - rose - 800',' text_colo,
   r: 'text - red - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / pii - discovery - scanner',' market_positio,
+  s: //ziontechgroup.com / services / pii - discovery - scanner',' market_positio,
   n: 'Compliance - first discovery',' target_audienc,
   e: 'Security, compliance', trial_day,
   s: 7,' setup_tim,
@@ -13111,20 +12619,13 @@ export const,
   e: '$49',' perio,
   d: '/month', descriptio,
   n:  ,' 'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.', feature,
-  s: [ ' i,
-  d: 'api - breaking - change - watcher',' nam,
-  e: 'API Breaking Change Watcher',' taglin,
-  e: 'Schema diffs with CI gates and notifications',' pric,
-  e: '$49',' perio,
-  d: '/month', descriptio,
-  n:  ,' 'Monitor OpenAPI / GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.', feature,
-  s: [, ' 'Schema registry',' 'Diff rules',' 'Owner mapping',' 'CI checks',' 'Changelog hints'], popula,
+  s: [' i, d: 'api - breaking - change - watcher', ' nam, e: 'API Breaking Change Watcher', ' taglin, e: 'Schema diffs with CI gates and notifications', ' pric, e: '$49', ' perio, d: '/month', descriptio, n:, ' 'Monitor OpenAPI / GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.', feature, s: [, ' 'Schema registry', ' 'Diff rules', ' 'Owner mapping', ' 'CI checks', ' 'Changelog hints'], popula,
   r: false,' ico,
   n: '🧭', ' colo,
   r: 'from - indigo - 700 to - violet - 800',' text_colo,
   r: 'text - indigo - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / api - breaking - change - watcher',' market_positio,
+  s: //ziontechgroup.com / services / api - breaking - change - watcher',' market_positio,
   n: 'Operationalize API hygiene',' target_audienc,
   e: 'Platform + API teams', trial_day,
   s: 7,' setup_tim,
@@ -13152,13 +12653,13 @@ export const,
   e: '$39',' perio,
   d: '/month', descriptio,
   n:  ,' 'Browser - based recorder creates resilient journeys, run on a schedule and alert on SLO errors or latency.', feature,
-  s: [, ' 'Recorder',' 'Selector healing',' 'Schedules',' 'SLO alerts',' 'Reports'], popula,
+  s: [' 'Recorder', ' 'Selector healing', ' 'Schedules', ' 'SLO alerts', ' 'Reports'], popula,
   r: false,' ico,
   n: '🧪', ' colo,
   r: 'from - cyan - 700 to - blue - 800',' text_colo,
   r: 'text - cyan - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / synthetic - journey - monitor',' market_positio,
+  s: //ziontechgroup.com / services / synthetic - journey - monitor',' market_positio,
   n: 'Affordable synthetic monitoring',' target_audienc,
   e: 'QA, SRE, growth', trial_day,
   s: 7,' setup_tim,
@@ -13186,13 +12687,13 @@ export const,
   e: '$79',' perio,
   d: '/month', descriptio,
   n:  ,' 'Continuously analyze IAM policies / usage to propose safe permission reductions and open PRs.', feature,
-  s: [, ' 'Policy inventory',' 'Usage analysis',' 'Recommendations',' 'PR generation',' 'Alerting'], popula,
+  s: [' 'Policy inventory', ' 'Usage analysis', ' 'Recommendations', ' 'PR generation', ' 'Alerting'], popula,
   r: true,' ico,
   n: '🔐', ' colo,
   r: 'from - blue - 700 to - slate - 800',' text_colo,
   r: 'text - blue - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / iam - permission - analyzer',' market_positio,
+  s: //ziontechgroup.com / services / iam - permission - analyzer',' market_positio,
   n: 'Practical least - privilege for SMB clouds',' target_audienc,
   e: 'Cloud + security', trial_day,
   s: 14,' setup_tim,
@@ -13220,13 +12721,13 @@ export const,
   e: '$99',' perio,
   d: '/month', descriptio,
   n:  ,' 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake / BigQuery costs.', feature,
-  s: [, ' 'Query profiling',' 'Size / schedule proposals',' 'Cost simulator',' 'PR templates',' 'Alerts'], popula,
+  s: [' 'Query profiling', ' 'Size / schedule proposals', ' 'Cost simulator', ' 'PR templates', ' 'Alerts'], popula,
   r: true,' ico,
   n: '🧱', ' colo,
   r: 'from - indigo - 700 to - violet - 800',' text_colo,
   r: 'text - indigo - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / warehouse - cost - optimizer',' market_positio,
+  s: //ziontechgroup.com / services / warehouse - cost - optimizer',' market_positio,
   n: 'Practical finops for analytics teams',' target_audienc,
   e: 'Data engineering', trial_day,
   s: 14,' setup_tim,
@@ -13254,13 +12755,13 @@ export const,
   e: '$39',' perio,
   d: '/month', descriptio,
   n:  ,' 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.', feature,
-  s: [, ' 'Warmup campaigns',' 'Seed inbox tests',' 'Domain / auth checks',' 'Alerts',' 'Reports'], popula,
+  s: [' 'Warmup campaigns', ' 'Seed inbox tests', ' 'Domain / auth checks', ' 'Alerts', ' 'Reports'], popula,
   r: false,' ico,
   n: '🔥', ' colo,
   r: 'from - orange - 600 to - rose - 700',' text_colo,
   r: 'text - orange - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / email - warmup - monitor',' market_positio,
+  s: //ziontechgroup.com / services / email - warmup - monitor',' market_positio,
   n: 'Hands - off deliverability hygiene',' target_audienc,
   e: 'Growth + lifecycle', trial_day,
   s: 7,' setup_tim,
@@ -13288,13 +12789,13 @@ export const,
   e: '$25',' perio,
   d: '/user / mo', descriptio,
   n:  ,' 'Transcribe meetings, extract action items, and open tickets with owners and due dates.', feature,
-  s: [, ' 'Transcription',' 'Action extraction',' 'Ticket creation',' 'Owner mapping',' 'Summaries'], popula,
+  s: [' 'Transcription', ' 'Action extraction', ' 'Ticket creation', ' 'Owner mapping', ' 'Summaries'], popula,
   r: true,' ico,
   n: '📝', ' colo,
   r: 'from - cyan - 700 to - blue - 800',' text_colo,
   r: 'text - cyan - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / ai - meeting - to - ticket',' market_positio,
+  s: //ziontechgroup.com / services / ai - meeting - to - ticket',' market_positio,
   n: 'Bridges meetings to delivery',' target_audienc,
   e: 'Engineering, product, CX', trial_day,
   s: 7,' setup_tim,
@@ -13320,21 +12821,14 @@ export const,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' } export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [ ' i,
-  d: 'ai-email-responder', nam,
-  e: 'AI Email Responder',' taglin,
-  e: 'Autonomous email triage, drafting, and follow-ups for sales and support',' pric,
-  e: '$39', perio,
-  d: '/month',' descriptio,
-  n: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.', feature,
-  s: [ ' 'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs' ], popula,
+  s: //ziontechgroup.com' } export const,
+  real2035Q2Additions: EnhancedRealMicroSaasService[] = [' i, d: 'ai-email-responder', nam, e: 'AI Email Responder', ' taglin, e: 'Autonomous email triage, drafting, and follow-ups for sales and support', ' pric, e: '$39', perio, d: '/month', ' descriptio, n: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.', feature, s: [ ' 'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs'], popula,
   r: true,' ico,
   n: '📧'' colo,
   r: 'from-cyan-600 to-blue-700'' textColo,
   r: 'text-cyan-300' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/ai-email-responder', ' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/ai-email-responder', ' marketPositio,
   n: 'Competes with Superhuman/Front add-ons, turnkey for SMBs'' targetAudienc,
   e: 'Sales, support, founder-led teams' trialDay,
   s: 14,' setupTim,
@@ -13362,13 +12856,13 @@ export const,
   e: '$19'' perio,
   d: '/month',' descriptio,
   n: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.' feature,
-  s: [' 'Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API' ], popula,
+  s: [' 'Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API'], popula,
   r: false,' ico,
   n: '📱'' colo,
   r: 'from-emerald-600 to-teal-700'' textColo,
   r: 'text-emerald-300' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/mobile-survey-studio', ' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/mobile-survey-studio', ' marketPositio,
   n: 'Faster than legacy survey tools, better mobile UX'' targetAudienc,
   e: 'Product, CX, research teams' trialDay,
   s: 7,' setupTim,
@@ -13396,13 +12890,13 @@ export const,
   e: '$12'' perio,
   d: '/month'' descriptio,
   n: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.' feature,
-  s: [' 'Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views' ], popula,
+  s: [' 'Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views'], popula,
   r: false,' ico,
   n: '🗂️'' colo,
   r: 'from-purple-600 to-indigo-700'' textColo,
   r: 'text-purple-300'' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/niche-productivity-planner'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/niche-productivity-planner'' marketPositio,
   n: 'Purpose-built vs generic task apps'' targetAudienc,
   e: 'SMBs by vertical' trialDay,
   s: 7,' setupTim,
@@ -13430,13 +12924,13 @@ export const,
   e: '$49'' perio,
   d: '/month'' descriptio,
   n: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.' feature,
-  s: [' 'QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports' ], popula,
+  s: [' 'QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports'], popula,
   r: true,' ico,
   n: '🎟️'' colo,
   r: 'from-pink-600 to-rose-700'' textColo,
   r: 'text-pink-300' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/event-management-dashboard'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/event-management-dashboard'' marketPositio,
   n: 'Lightweight alternative to enterprise suites', ' targetAudienc,
   e: 'Marketing, HR, community teams' trialDay,
   s: 14,' setupTim,
@@ -13470,7 +12964,7 @@ export const,
   r: 'from-amber-600 to-orange-700'' textColo,
   r: 'text-amber-300' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/affiliate-tracking-suite'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/affiliate-tracking-suite'' marketPositio,
   n: 'Simple and affordable affiliate ops', ' targetAudienc,
   e: 'SaaS, courses, marketplaces' trialDay,
   s: 7,' setupTim,
@@ -13504,7 +12998,7 @@ export const,
   r: 'from-sky-600 to-indigo-700'' textColo,
   r: 'text-sky-300' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/smb-analytics-lite', ' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/smb-analytics-lite', ' marketPositio,
   n: 'Simpler than GA4, clearer funnels for SMBs'' targetAudienc,
   e: 'Small business owners' trialDay,
   s: 14,' setupTim,
@@ -13538,7 +13032,7 @@ export const,
   r: 'from-blue-600 to-indigo-700'' textColo,
   r: 'text-blue-300' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/it-helpdesk-portal'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/it-helpdesk-portal'' marketPositio,
   n: 'Modern alternative to legacy ITSM for SMBs', ' targetAudienc,
   e: 'MSPs, internal IT' trialDay,
   s: 14,' setupTim,
@@ -13572,7 +13066,7 @@ export const,
   r: 'from-violet-600 to-fuchsia-700'' textColo,
   r: 'text-violet-300' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/ecommerce-returns-manager'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/ecommerce-returns-manager'' marketPositio,
   n: 'Affordable alternative to enterprise returns suites', ' targetAudienc,
   e: 'DTC brands, Shopify stores' trialDay,
   s: 14,' setupTim,
@@ -13606,7 +13100,7 @@ export const,
   r: 'from-cyan-600 to-teal-700'' textColo,
   r: 'text-cyan-300' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/automated-email-followups'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/automated-email-followups'' marketPositio,
   n: 'Lightweight + affordable outreach', ' targetAudienc,
   e: 'Sales, success, support' trialDay,
   s: 7,' setupTim,
@@ -13640,7 +13134,7 @@ export const,
   r: 'from-indigo-600 to-blue-700'' textColo,
   r: 'text-indigo-300' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/podcast-transcription-service'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/podcast-transcription-service'' marketPositio,
   n: 'Affordable + content-ready outputs', ' targetAudienc,
   e: 'Podcasters, media teams' trialDay,
   s: 7,' setupTim,
@@ -13674,7 +13168,7 @@ export const,
   r: 'from-emerald-600 to-green-700'' textColo,
   r: 'text-emerald-300' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/ai-seo-content-optimizer'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/ai-seo-content-optimizer'' marketPositio,
   n: 'Content-focused vs technical SEO suites', ' targetAudienc,
   e: 'Content teams, agencies' trialDay,
   s: 7,' setupTim,
@@ -13708,7 +13202,7 @@ export const,
   r: 'from-fuchsia-600 to-pink-700'' textColo,
   r: 'text-fuchsia-300' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/social-scheduler-ai'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/social-scheduler-ai'' marketPositio,
   n: 'Repurpose-first for SMBs', ' targetAudienc,
   e: 'Agencies, creators' trialDay,
   s: 7,' setupTim,
@@ -13742,7 +13236,7 @@ export const,
   r: 'from-blue-600 to-sky-700'' textColo,
   r: 'text-blue-300' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/lead-enrichment-api'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/lead-enrichment-api'' marketPositio,
   n: 'Usage-based simple pricing', ' targetAudienc,
   e: 'B2B SaaS, sales ops' trialDay,
   s: 14,' setupTim,
@@ -13776,7 +13270,7 @@ export const,
   r: 'from-emerald-600 to-teal-700'' textColo,
   r: 'text-emerald-300' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/consent-management-cmp', ' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/consent-management-cmp', ' marketPositio,
   n: 'Fast to implement, compliant defaults'' targetAudienc,
   e: 'Websites, SaaS apps' trialDay,
   s: 14,' setupTim,
@@ -13810,7 +13304,7 @@ export const,
   r: 'from-amber-600 to-yellow-700'' textColo,
   r: 'text-amber-300' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/cookie-scanner-pro'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/cookie-scanner-pro'' marketPositio,
   n: 'Affordable compliance hygiene', ' targetAudienc,
   e: 'Websites, agencies' trialDay,
   s: 7,' setupTim,
@@ -13844,7 +13338,7 @@ export const,
   r: 'from-sky-600 to-cyan-700'' textColo,
   r: 'text-sky-300'' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/statuspage-sla-tracker'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/statuspage-sla-tracker'' marketPositio,
   n: 'Simple + transparent status for SMB SaaS'' targetAudienc,
   e: 'SaaS teams' trialDay,
   s: 7,' setupTim,
@@ -13878,7 +13372,7 @@ export const,
   r: 'from-teal-600 to-emerald-700'' textColo,
   r: 'text-teal-300' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/agentic-lead-qualifier'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/agentic-lead-qualifier'' marketPositio,
   n: 'Focused on B2B lead capture', ' targetAudienc,
   e: 'B2B SaaS, agencies' trialDay,
   s: 14,' setupTim,
@@ -13912,7 +13406,7 @@ export const,
   r: 'from-red-600 to-rose-700'' textColo,
   r: 'text-red-300'' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/gdpr-dsar-portal-lite'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/gdpr-dsar-portal-lite'' marketPositio,
   n: 'SMB-friendly DSAR processing'' targetAudienc,
   e: 'SaaS + e‑commerce' trialDay,
   s: 7,' setupTim,
@@ -13946,7 +13440,7 @@ export const,
   r: 'from-rose-600 to-pink-700'' textColo,
   r: 'text-rose-300'' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/feature-flag-auditor'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/feature-flag-auditor'' marketPositio,
   n: 'Proactive hygiene vs manual debt'' targetAudienc,
   e: 'Platform + app teams' trialDay,
   s: 7,' setupTim,
@@ -13980,7 +13474,7 @@ export const,
   r: 'from-blue-700 to-indigo-800'' textColo,
   r: 'text-blue-300'' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/postgres-index-advisor-pro'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/postgres-index-advisor-pro'' marketPositio,
   n: 'Productized tuning for small teams'' targetAudienc,
   e: 'Data + platform teams' trialDay,
   s: 14,' setupTim,
@@ -14014,7 +13508,7 @@ export const,
   r: 'from-emerald-700 to-teal-800'' textColo,
   r: 'text-emerald-300'' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/s3-lifecycle-optimizer'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/s3-lifecycle-optimizer'' marketPositio,
   n: 'No-friction cost hygiene'' targetAudienc,
   e: 'Cloud + finops' trialDay,
   s: 7,' setupTim,
@@ -14048,7 +13542,7 @@ export const,
   r: 'from-red-700 to-rose-800'' textColo,
   r: 'text-red-300' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/pii-discovery-scanner'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/pii-discovery-scanner'' marketPositio,
   n: 'Compliance-first discovery', ' targetAudienc,
   e: 'Security, compliance' trialDay,
   s: 7,' setupTim,
@@ -14082,7 +13576,7 @@ export const,
   r: 'from-indigo-700 to-violet-800'' textColo,
   r: 'text-indigo-300'' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/api-breaking-change-watcher'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/api-breaking-change-watcher'' marketPositio,
   n: 'Operationalize API hygiene'' targetAudienc,
   e: 'Platform + API teams' trialDay,
   s: 7,' setupTim,
@@ -14116,7 +13610,7 @@ export const,
   r: 'from-cyan-700 to-blue-800'' textColo,
   r: 'text-cyan-300' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/synthetic-journey-monitor'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/synthetic-journey-monitor'' marketPositio,
   n: 'Affordable synthetic monitoring', ' targetAudienc,
   e: 'QA, SRE, growth' trialDay,
   s: 7,' setupTim,
@@ -14150,7 +13644,7 @@ export const,
   r: 'from-blue-700 to-slate-800'' textColo,
   r: 'text-blue-300'' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/iam-permission-analyzer'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/iam-permission-analyzer'' marketPositio,
   n: 'Practical least-privilege for SMB clouds'' targetAudienc,
   e: 'Cloud + security' trialDay,
   s: 14,' setupTim,
@@ -14184,7 +13678,7 @@ export const,
   r: 'from-indigo-700 to-violet-800'' textColo,
   r: 'text-indigo-300'' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/warehouse-cost-optimizer'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/warehouse-cost-optimizer'' marketPositio,
   n: 'Practical finops for analytics teams'' targetAudienc,
   e: 'Data engineering' trialDay,
   s: 14,' setupTim,
@@ -14218,7 +13712,7 @@ export const,
   r: 'from-orange-600 to-rose-700'' textColo,
   r: 'text-orange-300'' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/email-warmup-monitor'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/email-warmup-monitor'' marketPositio,
   n: 'Hands-off deliverability hygiene'' targetAudienc,
   e: 'Growth + lifecycle' trialDay,
   s: 7,' setupTim,
@@ -14252,7 +13746,7 @@ export const,
   r: 'from-cyan-700 to-blue-800'' textColo,
   r: 'text-cyan-300' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/ai-meeting-to-ticket'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/ai-meeting-to-ticket'' marketPositio,
   n: 'Bridges meetings to delivery', ' targetAudienc,
   e: 'Engineering, product, CX' trialDay,
   s: 7,' setupTim,
@@ -14280,13 +13774,13 @@ export const,
   e: '$39'' perio,
   d: '/month',' descriptio,
   n: 'Reads inbound emails, classifies intent, drafts high - quality replies, and schedules polite follow - ups. Escalates edge cases to humans with context summaries.' feature,
-  s: [;' 'Intent classification + prioritization_on - brand response drafting_automatic polite follow - ups_lead / contact enrichment_analytics and response SLAs' ], popula,
+  s: [;' 'Intent classification + prioritization_on - brand response drafting_automatic polite follow - ups_lead / contact enrichment_analytics and response SLAs'], popula,
   r: true,' ico,
   n: '📧'' colo,
   r: 'from - cyan - 600 to - blue - 700'' text_colo,
   r: 'text - cyan - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / ai - email - responder',' market_positio,
+  s: //ziontechgroup.com / services / ai - email - responder',' market_positio,
   n: 'Competes with Superhuman / Front add - ons, turnkey for SMBs'' target_audienc,
   e: 'Sales, support, founder - led teams' trial_day,
   s: 14,' setup_tim,
@@ -14314,13 +13808,13 @@ export const,
   e: '$19'' perio,
   d: '/month',' descriptio,
   n: 'Build conversational surveys that adapt in real time. Increase completion with SMS / WhatsApp delivery and one - tap choices.' feature,
-  s: [;' 'Branching logic + A / B promptsSMS / WhatsApp / web delivery_real - time analyticsCSV / Sheets export_webhooks + API' ], popula,
+  s: [;' 'Branching logic + A / B promptsSMS / WhatsApp / web delivery_real - time analyticsCSV / Sheets export_webhooks + API'], popula,
   r: false,' ico,
   n: '📱'' colo,
   r: 'from - emerald - 600 to - teal - 700'' text_colo,
   r: 'text - emerald - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / mobile - survey - studio',' market_positio,
+  s: //ziontechgroup.com / services / mobile - survey - studio',' market_positio,
   n: 'Faster than legacy survey tools, better mobile UX'' target_audienc,
   e: 'Product, CX, research teams' trial_day,
   s: 7,' setup_tim,
@@ -14348,13 +13842,13 @@ export const,
   e: '$12'' perio,
   d: '/month',' descriptio,
   n: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.' feature,
-  s: [;' 'Industry templates_calendar + task sync_benchmark KPIsExport to PDFRole - based views' ], popula,
+  s: [;' 'Industry templates_calendar + task sync_benchmark KPIsExport to PDFRole - based views'], popula,
   r: false,' ico,
   n: '🗂️'' colo,
   r: 'from - purple - 600 to - indigo - 700'' text_colo,
   r: 'text - purple - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / niche - productivity - planner'' market_positio,
+  s: //ziontechgroup.com / services / niche - productivity - planner'' market_positio,
   n: 'Purpose - built vs generic task apps'' target_audienc,
   e: 'SMBs by vertical' trial_day,
   s: 7,' setup_tim,
@@ -14382,13 +13876,13 @@ export const,
   e: '$49'' perio,
   d: '/month',' descriptio,
   n: 'Run webinars or in - person events with landing pages, reminders, QR tickets, and feedback analytics.' feature,
-  s: [;' 'QR tickets + check - in_email / SMS reminders_agenda builder_feedback forms_post - event reports' ], popula,
+  s: [;' 'QR tickets + check - in_email / SMS reminders_agenda builder_feedback forms_post - event reports'], popula,
   r: true,' ico,
   n: '🎟️'' colo,
   r: 'from - pink - 600 to - rose - 700'' text_colo,
   r: 'text - pink - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / event - management - dashboard'' market_positio,
+  s: //ziontechgroup.com / services / event - management - dashboard'' market_positio,
   n: 'Lightweight alternative to enterprise suites',' target_audienc,
   e: 'Marketing, HR, community teams' trial_day,
   s: 14,' setup_tim,
@@ -14422,7 +13916,7 @@ export const,
   r: 'from - amber - 600 to - orange - 700'' text_colo,
   r: 'text - amber - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / affiliate - tracking - suite'' market_positio,
+  s: //ziontechgroup.com / services / affiliate - tracking - suite'' market_positio,
   n: 'Simple and affordable affiliate ops',' target_audienc,
   e: 'SaaS, courses, marketplaces' trial_day,
   s: 7,' setup_tim,
@@ -14456,7 +13950,7 @@ export const,
   r: 'from - sky - 600 to - indigo - 700'' text_colo,
   r: 'text - sky - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / smb - analytics - lite',' market_positio,
+  s: //ziontechgroup.com / services / smb - analytics - lite',' market_positio,
   n: 'Simpler than GA4, clearer funnels for SMBs'' target_audienc,
   e: 'Small business owners' trial_day,
   s: 14,' setup_tim,
@@ -14490,7 +13984,7 @@ export const,
   r: 'from - blue - 600 to - indigo - 700'' text_colo,
   r: 'text - blue - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / it - helpdesk - portal'' market_positio,
+  s: //ziontechgroup.com / services / it - helpdesk - portal'' market_positio,
   n: 'Modern alternative to legacy ITSM for SMBs',' target_audienc,
   e: 'MSPs, internal IT' trial_day,
   s: 14,' setup_tim,
@@ -14524,7 +14018,7 @@ export const,
   r: 'from - violet - 600 to - fuchsia - 700'' text_colo,
   r: 'text - violet - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / ecommerce - returns - manager'' market_positio,
+  s: //ziontechgroup.com / services / ecommerce - returns - manager'' market_positio,
   n: 'Affordable alternative to enterprise returns suites',' target_audienc,
   e: 'DTC brands, Shopify stores' trial_day,
   s: 14,' setup_tim,
@@ -14558,7 +14052,7 @@ export const,
   r: 'from - cyan - 600 to - teal - 700'' text_colo,
   r: 'text - cyan - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / automated - email - followups'' market_positio,
+  s: //ziontechgroup.com / services / automated - email - followups'' market_positio,
   n: 'Lightweight + affordable outreach',' target_audienc,
   e: 'Sales, success, support' trial_day,
   s: 7,' setup_tim,
@@ -14592,7 +14086,7 @@ export const,
   r: 'from - indigo - 600 to - blue - 700'' text_colo,
   r: 'text - indigo - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / podcast - transcription - service'' market_positio,
+  s: //ziontechgroup.com / services / podcast - transcription - service'' market_positio,
   n: 'Affordable + content - ready outputs',' target_audienc,
   e: 'Podcasters, media teams' trial_day,
   s: 7,' setup_tim,
@@ -14626,7 +14120,7 @@ export const,
   r: 'from - emerald - 600 to - green - 700'' text_colo,
   r: 'text - emerald - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / ai - seo - content - optimizer'' market_positio,
+  s: //ziontechgroup.com / services / ai - seo - content - optimizer'' market_positio,
   n: 'Content - focused vs technical SEO suites',' target_audienc,
   e: 'Content teams, agencies' trial_day,
   s: 7,' setup_tim,
@@ -14660,7 +14154,7 @@ export const,
   r: 'from - fuchsia - 600 to - pink - 700'' text_colo,
   r: 'text - fuchsia - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / social - scheduler - ai'' market_positio,
+  s: //ziontechgroup.com / services / social - scheduler - ai'' market_positio,
   n: 'Repurpose - first for SMBs',' target_audienc,
   e: 'Agencies, creators' trial_day,
   s: 7,' setup_tim,
@@ -14694,7 +14188,7 @@ export const,
   r: 'from - blue - 600 to - sky - 700'' text_colo,
   r: 'text - blue - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / lead - enrichment - api'' market_positio,
+  s: //ziontechgroup.com / services / lead - enrichment - api'' market_positio,
   n: 'Usage - based simple pricing',' target_audienc,
   e: 'B2B SaaS, sales ops' trial_day,
   s: 14,' setup_tim,
@@ -14728,7 +14222,7 @@ export const,
   r: 'from - emerald - 600 to - teal - 700'' text_colo,
   r: 'text - emerald - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / consent - management - cmp',' market_positio,
+  s: //ziontechgroup.com / services / consent - management - cmp',' market_positio,
   n: 'Fast to implement, compliant defaults'' target_audienc,
   e: 'Websites, SaaS apps' trial_day,
   s: 14,' setup_tim,
@@ -14762,7 +14256,7 @@ export const,
   r: 'from - amber - 600 to - yellow - 700'' text_colo,
   r: 'text - amber - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / cookie - scanner - pro'' market_positio,
+  s: //ziontechgroup.com / services / cookie - scanner - pro'' market_positio,
   n: 'Affordable compliance hygiene',' target_audienc,
   e: 'Websites, agencies' trial_day,
   s: 7,' setup_tim,
@@ -14796,7 +14290,7 @@ export const,
   r: 'from - sky - 600 to - cyan - 700'' text_colo,
   r: 'text - sky - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / statuspage - sla - tracker'' market_positio,
+  s: //ziontechgroup.com / services / statuspage - sla - tracker'' market_positio,
   n: 'Simple + transparent status for SMB SaaS'' target_audienc,
   e: 'SaaS teams' trial_day,
   s: 7,' setup_tim,
@@ -14830,7 +14324,7 @@ export const,
   r: 'from - teal - 600 to - emerald - 700'' text_colo,
   r: 'text - teal - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / agentic - lead - qualifier'' market_positio,
+  s: //ziontechgroup.com / services / agentic - lead - qualifier'' market_positio,
   n: 'Focused on B2B lead capture',' target_audienc,
   e: 'B2B SaaS, agencies' trial_day,
   s: 14,' setup_tim,
@@ -14864,7 +14358,7 @@ export const,
   r: 'from - red - 600 to - rose - 700'' text_colo,
   r: 'text - red - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / gdpr - dsar - portal - lite'' market_positio,
+  s: //ziontechgroup.com / services / gdpr - dsar - portal - lite'' market_positio,
   n: 'SMB - friendly DSAR processing'' target_audienc,
   e: 'SaaS + e‑commerce' trial_day,
   s: 7,' setup_tim,
@@ -14898,7 +14392,7 @@ export const,
   r: 'from - rose - 600 to - pink - 700'' text_colo,
   r: 'text - rose - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / feature - flag - auditor'' market_positio,
+  s: //ziontechgroup.com / services / feature - flag - auditor'' market_positio,
   n: 'Proactive hygiene vs manual debt'' target_audienc,
   e: 'Platform + app teams' trial_day,
   s: 7,' setup_tim,
@@ -14932,7 +14426,7 @@ export const,
   r: 'from - blue - 700 to - indigo - 800'' text_colo,
   r: 'text - blue - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / postgres - index - advisor - pro'' market_positio,
+  s: //ziontechgroup.com / services / postgres - index - advisor - pro'' market_positio,
   n: 'Productized tuning for small teams'' target_audienc,
   e: 'Data + platform teams' trial_day,
   s: 14,' setup_tim,
@@ -14966,7 +14460,7 @@ export const,
   r: 'from - emerald - 700 to - teal - 800'' text_colo,
   r: 'text - emerald - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / s3 - lifecycle - optimizer'' market_positio,
+  s: //ziontechgroup.com / services / s3 - lifecycle - optimizer'' market_positio,
   n: 'No - friction cost hygiene'' target_audienc,
   e: 'Cloud + finops' trial_day,
   s: 7,' setup_tim,
@@ -15000,7 +14494,7 @@ export const,
   r: 'from - red - 700 to - rose - 800'' text_colo,
   r: 'text - red - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / pii - discovery - scanner'' market_positio,
+  s: //ziontechgroup.com / services / pii - discovery - scanner'' market_positio,
   n: 'Compliance - first discovery',' target_audienc,
   e: 'Security, compliance' trial_day,
   s: 7,' setup_tim,
@@ -15034,7 +14528,7 @@ export const,
   r: 'from - indigo - 700 to - violet - 800'' text_colo,
   r: 'text - indigo - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / api - breaking - change - watcher'' market_positio,
+  s: //ziontechgroup.com / services / api - breaking - change - watcher'' market_positio,
   n: 'Operationalize API hygiene'' target_audienc,
   e: 'Platform + API teams' trial_day,
   s: 7,' setup_tim,
@@ -15068,7 +14562,7 @@ export const,
   r: 'from - cyan - 700 to - blue - 800'' text_colo,
   r: 'text - cyan - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / synthetic - journey - monitor'' market_positio,
+  s: //ziontechgroup.com / services / synthetic - journey - monitor'' market_positio,
   n: 'Affordable synthetic monitoring',' target_audienc,
   e: 'QA, SRE, growth' trial_day,
   s: 7,' setup_tim,
@@ -15102,7 +14596,7 @@ export const,
   r: 'from - blue - 700 to - slate - 800'' text_colo,
   r: 'text - blue - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / iam - permission - analyzer'' market_positio,
+  s: //ziontechgroup.com / services / iam - permission - analyzer'' market_positio,
   n: 'Practical least - privilege for SMB clouds'' target_audienc,
   e: 'Cloud + security' trial_day,
   s: 14,' setup_tim,
@@ -15136,7 +14630,7 @@ export const,
   r: 'from - indigo - 700 to - violet - 800'' text_colo,
   r: 'text - indigo - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / warehouse - cost - optimizer'' market_positio,
+  s: //ziontechgroup.com / services / warehouse - cost - optimizer'' market_positio,
   n: 'Practical finops for analytics teams'' target_audienc,
   e: 'Data engineering' trial_day,
   s: 14,' setup_tim,
@@ -15170,7 +14664,7 @@ export const,
   r: 'from - orange - 600 to - rose - 700'' text_colo,
   r: 'text - orange - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / email - warmup - monitor'' market_positio,
+  s: //ziontechgroup.com / services / email - warmup - monitor'' market_positio,
   n: 'Hands - off deliverability hygiene'' target_audienc,
   e: 'Growth + lifecycle' trial_day,
   s: 7,' setup_tim,
@@ -15204,7 +14698,7 @@ export const,
   r: 'from - cyan - 700 to - blue - 800'' text_colo,
   r: 'text - cyan - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / ai - meeting - to - ticket'' market_positio,
+  s: //ziontechgroup.com / services / ai - meeting - to - ticket'' market_positio,
   n: 'Bridges meetings to delivery',' target_audienc,
   e: 'Engineering, product, CX' trial_day,
   s: 7,' setup_tim,
@@ -15227,126 +14721,70 @@ export const,
   g: 4.6, review,
   s: 6} ratin,
   g: 4.6,
-  reviews: 6 ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
+  reviews: 6 ' import { EnhancedRealMicroSaasService  } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [, {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 12} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 9} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 7} } {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 11} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 5} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 8} } {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 6} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 5} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 8} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 6} } {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 10} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 7} } {/* TODO: Fix JSX expression */}
-  g: 4.4} review,
-  s: 4} } {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 10} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 5} } {/* TODO: Fix JSX expression */}
-  g: 4.4} review,
-  s: 3} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 7} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 4} } {/* TODO: Fix JSX expression */}
-  g: 4.4} review,
-  s: 3} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 5} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 4} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 5} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 3} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 6} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 3} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 3} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 4} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 6} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
+  s: //ziontechgroup.com' } export const,
+  real2035Q2Additions: EnhancedRealMicroSaasService[] = [{/* TODO: Fix JSX expression */}
+  g: 4.7} review, s: 12} } {/* TODO: Fix JSX expression */}
+  g: 4.6} review, s: 9} } {/* TODO: Fix JSX expression */}
+  g: 4.5} review, s: 7} } {/* TODO: Fix JSX expression */}
+  g: 4.7} review, s: 11} } {/* TODO: Fix JSX expression */}
+  g: 4.5} review, s: 5} } {/* TODO: Fix JSX expression */}
+  g: 4.6} review, s: 8} } {/* TODO: Fix JSX expression */}
+  g: 4.7} review, s: 6} } {/* TODO: Fix JSX expression */}
+  g: 4.6} review, s: 5} } {/* TODO: Fix JSX expression */}
+  g: 4.5} review, s: 8} } {/* TODO: Fix JSX expression */}
+  g: 4.6} review, s: 6} } {/* TODO: Fix JSX expression */}
+  g: 4.7} review, s: 10} } {/* TODO: Fix JSX expression */}
+  g: 4.5} review, s: 7} } {/* TODO: Fix JSX expression */}
+  g: 4.4} review, s: 4} } {/* TODO: Fix JSX expression */}
+  g: 4.7} review, s: 10} } {/* TODO: Fix JSX expression */}
+  g: 4.5} review, s: 5} } {/* TODO: Fix JSX expression */}
+  g: 4.4} review, s: 3} } {/* TODO: Fix JSX expression */}
+  g: 4.6} review, s: 7} } {/* TODO: Fix JSX expression */}
+  g: 4.5} review, s: 4} } {/* TODO: Fix JSX expression */}
+  g: 4.4} review, s: 3} } {/* TODO: Fix JSX expression */}
+  g: 4.6} review, s: 5} } {/* TODO: Fix JSX expression */}
+  g: 4.5} review, s: 4} } {/* TODO: Fix JSX expression */}
+  g: 4.6} review, s: 5} } {/* TODO: Fix JSX expression */}
+  g: 4.5} review, s: 3} } {/* TODO: Fix JSX expression */}
+  g: 4.5} review, s: 6} } {/* TODO: Fix JSX expression */}
+  g: 4.6} review, s: 3} } {/* TODO: Fix JSX expression */}
+  g: 4.5} review, s: 3} } {/* TODO: Fix JSX expression */}
+  g: 4.5} review, s: 4} } {/* TODO: Fix JSX expression */}
+  g: 4.6} review, s: 6} }]; ' import { EnhancedRealMicroSaasService  } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [, {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 12} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 9} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 7} } {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 11} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 5} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 8} } {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 6} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 5} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 8} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 6} } {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 10} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 7} } {/* TODO: Fix JSX expression */}
-  g: 4.4} review,
-  s: 4} } {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 10} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 5} } {/* TODO: Fix JSX expression */}
-  g: 4.4} review,
-  s: 3} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 7} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 4} } {/* TODO: Fix JSX expression */}
-  g: 4.4} review,
-  s: 3} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 5} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 4} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 5} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 3} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 6} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 3} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 3} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 4} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 6} } ]; '
+  s: //ziontechgroup.com' } export const,
+  real2035Q2Additions: EnhancedRealMicroSaasService[] = [{/* TODO: Fix JSX expression */}
+  g: 4.7} review, s: 12} } {/* TODO: Fix JSX expression */}
+  g: 4.6} review, s: 9} } {/* TODO: Fix JSX expression */}
+  g: 4.5} review, s: 7} } {/* TODO: Fix JSX expression */}
+  g: 4.7} review, s: 11} } {/* TODO: Fix JSX expression */}
+  g: 4.5} review, s: 5} } {/* TODO: Fix JSX expression */}
+  g: 4.6} review, s: 8} } {/* TODO: Fix JSX expression */}
+  g: 4.7} review, s: 6} } {/* TODO: Fix JSX expression */}
+  g: 4.6} review, s: 5} } {/* TODO: Fix JSX expression */}
+  g: 4.5} review, s: 8} } {/* TODO: Fix JSX expression */}
+  g: 4.6} review, s: 6} } {/* TODO: Fix JSX expression */}
+  g: 4.7} review, s: 10} } {/* TODO: Fix JSX expression */}
+  g: 4.5} review, s: 7} } {/* TODO: Fix JSX expression */}
+  g: 4.4} review, s: 4} } {/* TODO: Fix JSX expression */}
+  g: 4.7} review, s: 10} } {/* TODO: Fix JSX expression */}
+  g: 4.5} review, s: 5} } {/* TODO: Fix JSX expression */}
+  g: 4.4} review, s: 3} } {/* TODO: Fix JSX expression */}
+  g: 4.6} review, s: 7} } {/* TODO: Fix JSX expression */}
+  g: 4.5} review, s: 4} } {/* TODO: Fix JSX expression */}
+  g: 4.4} review, s: 3} } {/* TODO: Fix JSX expression */}
+  g: 4.6} review, s: 5} } {/* TODO: Fix JSX expression */}
+  g: 4.5} review, s: 4} } {/* TODO: Fix JSX expression */}
+  g: 4.6} review, s: 5} } {/* TODO: Fix JSX expression */}
+  g: 4.5} review, s: 3} } {/* TODO: Fix JSX expression */}
+  g: 4.5} review, s: 6} } {/* TODO: Fix JSX expression */}
+  g: 4.6} review, s: 3} } {/* TODO: Fix JSX expression */}
+  g: 4.5} review, s: 3} } {/* TODO: Fix JSX expression */}
+  g: 4.5} review, s: 4} } {/* TODO: Fix JSX expression */}
+  g: 4.6} review, s: 6} }]; '

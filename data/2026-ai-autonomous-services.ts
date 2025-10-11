@@ -15,20 +15,9 @@ export interface AiAutonomousService2026 {
     address: string
   }
 }
-export const aiAutonomousServices2026: AiAutonomousService2026[] = [
-  {
-    id: "2026-ai-autonomous",
-    name: "2026 AI Autonomous Platform",
-    tagline: "Fully autonomous AI systems",
-    price: "$499/month",
-    description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",
-    features: [
-      "Autonomous operation",
-      "Self-learning capabilities",
-      "Independent decision making",
-      "Advanced AI algorithms",
-      "24/7 operation"
-    ],
+export const aiAutonomousServices2026: AiAutonomousService2026[] = [{
+    id: "2026-ai-autonomous", name: "2026 AI Autonomous Platform", tagline: "Fully autonomous AI systems", price: "$499/month", description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.", features: [
+      "Autonomous operation", "Self-learning capabilities", "Independent decision making", "Advanced AI algorithms", "24/7 operation"],
     link: "/services/2026-ai-autonomous",
     category: "AI Autonomous 2026",
     realImplementation: true,

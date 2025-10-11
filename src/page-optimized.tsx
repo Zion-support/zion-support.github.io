@@ -33,10 +33,10 @@ export default function OptimizedHomePage() {
           <div>Coming Soon
   )
           <div className="min-h-screen bg-white">
-      <SEOOptimizer />
-      <AccessibilityEnhancer>
+      <SEOOptimizer /></SEOOptimizer>
+      <AccessibilityEnhancer ></AccessibilityEnhancer>
         <div />
-      <PerformanceMonitor />
+      <PerformanceMonitor /></PerformanceMonitor>
       {/* Main Content */}
       <main className="relative">
         {/* Hero Section */}
@@ -50,7 +50,7 @@ export default function OptimizedHomePage() {
 // That Delivers Results,
           </span>
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
+              <p className="text-xl md: text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
 // Transform your enterprise with AI-powered solutions that deliver 300% ROI,
 //                 70% cost reduction, and 90% efficiency gains. Expert AI consulting,
 //                 autonomous systems, and digital transformation services.
@@ -66,7 +66,7 @@ View Success Stories
               </div>
         </section>
       </main>
-      <Footer />
+      <Footer /></Footer>
     </div>
   ),
 }

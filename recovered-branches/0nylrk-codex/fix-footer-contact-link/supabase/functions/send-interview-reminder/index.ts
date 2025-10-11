@@ -1,6 +1,6 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts"
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
-import { Resend } from "npm:resend@2.0.0"
+import { serve  } from 'https: //deno.land/std@0.190.0/http/server.ts'
+import { createClient  } from 'https: //esm.sh/@supabase/supabase-js@2'
+import { Resend  } from 'npm: resend@2.0.0'
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -24,8 +24,8 @@ serve(async (req) => {
       .from('interviews')
       .select(`
         *,
-        clients:client_id(*),
-        talents:talent_id(*)
+        clients: client_id(*),
+        talents: talent_id(*)
       `)
       .eq('status', 'confirmed')
       .gte('scheduled_date', now.toISOString())
@@ -49,9 +49,9 @@ serve(async (req) => {
               html: `
                 <h1>Interview Reminder</h1>
                 <p>Your scheduled interview with ${talentName} is starting in 30 minutes.</p>
-                <p><strong>Time:</strong> ${interviewDate.toLocaleTimeString()}</p>
-                <p><strong>Duration:</strong> ${interview.duration_minutes} minutes</p>
-                ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}</a></p>` : ''}
+                <p><strong>Time: </strong> ${interviewDate.toLocaleTimeString()}</p>
+                <p><strong>Duration: </strong> ${interview.duration_minutes} minutes</p>
+                ${interview.meeting_link ? `<p><strong>Meeting Link: </strong> <a href="${interview.meeting_link}">${interview.meeting_link}</a></p>` : ''}
                 <p>Please be ready on time!</p>
               `})
               `,
@@ -73,9 +73,9 @@ serve(async (req) => {
               html: `
                 <h1>Interview Reminder</h1>
                 <p>Your scheduled interview with ${clientName} is starting in 30 minutes.</p>
-                <p><strong>Time:</strong> ${interviewDate.toLocaleTimeString()}</p>
-                <p><strong>Duration:</strong> ${interview.duration_minutes} minutes</p>
-                ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}</a></p>` : ''}
+                <p><strong>Time: </strong> ${interviewDate.toLocaleTimeString()}</p>
+                <p><strong>Duration: </strong> ${interview.duration_minutes} minutes</p>
+                ${interview.meeting_link ? `<p><strong>Meeting Link: </strong> <a href="${interview.meeting_link}">${interview.meeting_link}</a></p>` : ''}
                 <p>Please be ready on time!</p>
               `})
               `,
@@ -98,7 +98,7 @@ serve(async (req) => {
       status: 200,
     })
   } catch (error) {
-    console.error("Error in send-interview-reminder function:", error)
+    console.error("Error in send-interview-reminder function: ", error)
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})

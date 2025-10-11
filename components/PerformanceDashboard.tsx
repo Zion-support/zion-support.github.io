@@ -6,8 +6,12 @@ interface PerformanceMetrics {
   fps: number
   }
 const PerformanceDashboard: React.FC = () => {
+  return (
+
   const [metrics, setMetrics] = useState<PerformanceMetrics>()
-  })
+  
+  );
+})
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
     const updateMetrics = const updateMetrics = const updateMetrics = () => {
@@ -31,7 +35,7 @@ const PerformanceDashboard: React.FC = () => {
   }
   return ()
         onClick={() => setIsVisible(!isVisible)}
-        className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+        className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover: bg-blue-700 transition-colors"
         aria-label="Toggle performance dashboard"
       >
         Perf</span>
@@ -39,11 +43,11 @@ const PerformanceDashboard: React.FC = () => {
               <span className="font-mono">{metrics?.loadTime.toFixed(2)}ms</span>
             </div>
             <div className="flex justify-between" /></div>
-              <span className="text-gray-600">Memory:</span>
+              <span className="text-gray-600">Memory: </span>
               <span className="font-mono">{metrics?.memoryUsage.toFixed(2)}MB</span>
             </div>
             <div className="flex justify-between" /></div>
-              <span className="text-gray-600">FPS:</span>
+              <span className="text-gray-600">FPS: </span>
               <span className="font-mono">{metrics?.fps.toFixed(1)}</span>
             </div>
           </div>

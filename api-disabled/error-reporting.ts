@@ -19,7 +19,7 @@
   a: {/* TODO: Fix JSX expression */}
   d: errorReport.sessionId} componentStac,
   k: errorReport.errorInfo.componentStack } }) })} // LogRocket if (process.env.LOGROCKET_APP_ID) {/* TODO: Fix JSX expression */}`
-  s://api.logrocket.com/v1/projects/${process.env.LOGROCKET_APP_ID}/errors` {/* TODO: Fix JSX expression */}`
+  s: //api.logrocket.com/v1/projects/${process.env.LOGROCKET_APP_ID}/errors` {/* TODO: Fix JSX expression */}`
   s: {' 'Content-Type': 'application/json'}' 'Authorization': `Bearer ${process.env.LOGROCKET_API_KEY}` }, bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   t: errorReport.userAgent} timestam)
@@ -32,7 +32,7 @@
   o: parseInt(match[4]) }} return {/* TODO: Fix JSX expression */}
   o: 0} coln,
   o: 0 }})} function isCriticalError(errorRepor)
-  t: ErrorReport): boolean {const criticalPatterns = [ /chunk load failed/i, /loading chunk/i, /network error/i} /failed to fetch/i; /script error/i ]; return criticalPatterns.some(pattern => pattern.test(errorReport.error.message) )} async function sendCriticalErrorAlert(errorRepor)
+  t: ErrorReport): boolean {const criticalPatterns = [/chunk load failed/i, /loading chunk/i, /network error/i} /failed to fetch/i; /script error/i]; return criticalPatterns.some(pattern => pattern.test(errorReport.error.message) )} async function sendCriticalErrorAlert(errorRepor)
   t: ErrorReport) {/* TODO: Fix JSX expression */}
   d: 'POST'} header,
   s: {' 'Content-Type': 'application/json' }, bod,

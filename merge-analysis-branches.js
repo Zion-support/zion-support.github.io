@@ -2,7 +2,7 @@
 /**
  * Merge Analysis and Improvement Branches
  * This script will merge all the analysis and improvement branches
- */ import { execSync } from 'child_process'
+ */ import { execSync  } from 'child_process'
 import fs from 'fs'
 // //Step 1: Ensure we're on main and up to date,
 // try {,
@@ -13,29 +13,15 @@ import fs from 'fs'
   }
 
 //Step 2: Get analysis and improvement branches,
-// const analysisBranches = [,
-// //Step,
-  1: Ensure we're on main and up to date,
-// try {/* TODO: Fix JSX expression */}
+// const analysisBranches = [// //Step, 1: Ensure we're on main and up to date, // try {/* TODO: Fix JSX expression */}
   o: 'inherit' })
   execSync('git pull origin main', {/* TODO: Fix JSX expression */})
   o: 'inherit' })
 //   } catch (error) {/* TODO: Fix JSX expression */}
 }
 
-//Step,
-  2: Get analysis and improvement branches,
-// const analysisBranches = [
-  'cursor/analyze-improve-and-deploy-application-0472',
-  'cursor/analyze-improve-and-deploy-application-05 dd',
-  'cursor/analyze-improve-and-deploy-application-06 c2',
-  'cursor/analyze-improve-and-deploy-application-08 d3',
-  'cursor/analyze-improve-and-deploy-application-2650',
-  'cursor/analyze-improve-and-deploy-application-2 fdd',
-  'cursor/analyze-improve-and-deploy-application-360 d',
-  'cursor/analyze-improve-and-deploy-application-3647',
-  'cursor/analyze-improve-and-deploy-application-3 cc7',
-  'cursor/analyze-improve-and-deploy-application-3 db4']
+//Step, 2: Get analysis and improvement branches, // const analysisBranches = [
+  'cursor/analyze-improve-and-deploy-application-0472', 'cursor/analyze-improve-and-deploy-application-05 dd', 'cursor/analyze-improve-and-deploy-application-06 c2', 'cursor/analyze-improve-and-deploy-application-08 d3', 'cursor/analyze-improve-and-deploy-application-2650', 'cursor/analyze-improve-and-deploy-application-2 fdd', 'cursor/analyze-improve-and-deploy-application-360 d', 'cursor/analyze-improve-and-deploy-application-3647', 'cursor/analyze-improve-and-deploy-application-3 cc7', 'cursor/analyze-improve-and-deploy-application-3 db4']
 // //Step 3: Enhanced merge function with conflict resolution,
 function mergeAnalysisBranch(branchName) {,
 //   try {,

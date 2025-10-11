@@ -94,7 +94,7 @@ class MonitoringService {
         })
         fcpObserver.observe({ entryTypes: ['paint'] })
       } catch (error) {
-    // console.error('Error setting up performance observers:', error)
+    // console.error('Error setting up performance observers: ', error)
   }
     }
   }
@@ -104,7 +104,7 @@ class MonitoringService {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            // console.warn('Long task detected:', {
+            // console.warn('Long task detected: ', {
             //   duration: entry.duration,
             //   startTime: entry.startTime
             // })
@@ -125,7 +125,7 @@ class MonitoringService {
           entries.forEach((entry: PerformanceEntry) => {
             const resourceEntry = entry as PerformanceResourceTiming,
             if (resourceEntry.duration && resourceEntry.duration > 1000) {
-              // console.warn('Slow resource detected:', {
+              // console.warn('Slow resource detected: ', {
               //   name: resourceEntry.name,
               //   duration: resourceEntry.duration,
               //   type: resourceEntry.initiatorType
@@ -135,7 +135,7 @@ class MonitoringService {
         })
         resourceObserver.observe({ entryTypes: ['resource'] })
       } catch (_error) {
-    // console.error('Error monitoring resources:', _error)
+    // console.error('Error monitoring resources: ', _error)
   }
     }
   }

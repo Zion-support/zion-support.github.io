@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { execSync } from 'child_process'
-import { readFileSync, writeFileSync } from 'fs'
+import { execSync  } from 'child_process'
+import { readFileSync, writeFileSync  } from 'fs'
 console.log('🔄 Merging branches with automatic conflict resolution...')
 function resolveConflicts(filePath) {
     try {
@@ -85,13 +85,7 @@ function mergeBranch(branchName) {
 
 try {
   // List of branches to merge (most recent first)
-  const branchesToMerge = [
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fcae',
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd44',
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd72',
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-feb1',
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-ff2 c'
-  ]
+  const branchesToMerge = ['origin/cursor/enhance-app-with-new-services-and-futuristic-design-fcae', 'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd44', 'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd72', 'origin/cursor/enhance-app-with-new-services-and-futuristic-design-feb1', 'origin/cursor/enhance-app-with-new-services-and-futuristic-design-ff2 c']
   let mergedCount = 0
   let failedCount = 0
   for (const branch of branchesToMerge) {
@@ -125,6 +119,6 @@ try {
   execSync('git push origin main', { stdio: 'inherit' })
   console.log('🎉 Merge process completed!')
 } catch (error) {
-    console.error('❌ Error during merge process:', error.message)
+    console.error('❌ Error during merge process: ', error.message)
   process.exit(1)
   }

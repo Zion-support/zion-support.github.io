@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { authenticateRequest } from '@/utils/auth'
-import { generateText } from '@/utils/ai'
+import { authenticateRequest  } from '@/utils/auth'
+import { generateText  } from '@/utils/ai'
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -12,7 +12,7 @@ export default async function handler(
     return res && res.status(405).json({ error: 'Method not allowed' })
   const auth = authenticateRequest(req, false)
   if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error })
-import { Star } from 'lucide-react'
+import { Star  } from 'lucide-react'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const auth = authenticateRequest(req, false)
@@ -33,8 +33,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const auth = authenticateRequest(req, false)
   if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error })
   const prompt = `Draft a professional, friendly job offer email.\n` +
-import { authenticateRequest } from '@/utils/auth'
-import { generateText } from '@/utils/ai'
+import { authenticateRequest  } from '@/utils/auth'
+import { generateText  } from '@/utils/ai'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'POST').toUpperCase()
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })

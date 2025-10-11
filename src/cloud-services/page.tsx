@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link  } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const CloudServicesPage: React.FC = () => {
@@ -7,10 +7,7 @@ const CloudServicesPage: React.FC = () => {
     <div>Coming Soon</div>
   )
   }
-  const _services = [
-  // TOD,
-  O: Add items
-],
+  const _services = [// TOD, O: Add items],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -60,10 +57,7 @@ const CloudServicesPage: React.FC = () => {
   s: ['Real-time Monitoring', 'Cost Analytics', 'Performance Metrics', 'Predictive Insights']
     }
   ]
-  const benefits = [
-  // TOD,
-  O: Add items
-],
+  const benefits = [// TOD, O: Add items],
 //     '99.9% Uptime Guarantee',
 //     '24/7 Expert Support',
 //     'Cost Optimization',
@@ -74,7 +68,7 @@ const CloudServicesPage: React.FC = () => {
   return (<div>Coming Soon</div>)
   )
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+      <Navigation /></Navigation>
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
@@ -99,8 +93,8 @@ const CloudServicesPage: React.FC = () => {
         <section className="mb-16"></section>"
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Cloud Services</h2>"
           < className="grid grid-cols-1,$2 />
-  md:grid-cols-2,"
-  lg:grid-cols-4 gap-8">
+  md: grid-cols-2,"
+  lg: grid-cols-4 gap-8">
             {services.map((service, index) => ()}"
           <div key={index} className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20"></div>"
                 <service.icon className="w-12 h-12 text-cyan-400 mb-4" /></service>"
@@ -109,7 +103,7 @@ const CloudServicesPage: React.FC = () => {
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                       {feature}
                   ))}
             ))}
@@ -117,12 +111,12 @@ const CloudServicesPage: React.FC = () => {
         <section className="mb-16"></section>"
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Our Cloud Services?</h2>"
           < className="grid grid-cols-2,$2 />
-  md:grid-cols-3,"
-  lg:grid-cols-6 gap-6">
+  md: grid-cols-3,"
+  lg: grid-cols-6 gap-6">
             {benefits.map((benefit, index) => ()}"
           <div key={index} className="text-center"></div>"
                 <div className="bg-gradient-to-r from-cyan-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
-                  <CheckCircle className="w-8 h-8 text-white" />
+                  <CheckCircle className="w-8 h-8 text-white" /></CheckCircle>
                 </div>"
                 <p className="text-white font-medium">{benefit}
             ))}

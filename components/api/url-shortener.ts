@@ -66,7 +66,7 @@ function isValidUrl(url: string): boolean {
 }
 export default async function handler(
   req: NextApiRequest
-  res: NextApiResponse<UrlShortenerResponse>
+  res: NextApiResponse<UrlShortenerResponse ></UrlShortenerResponse>
 ) {
   if (req && req.method === 'POST') {
     // Create short URL
@@ -152,7 +152,7 @@ if ( {) {
         clicks: 0
         isActive: true
   req: NextApiRequest,
-  res: NextApiResponse<UrlShortenerResponse>
+  res: NextApiResponse<UrlShortenerResponse ></UrlShortenerResponse>
 ) {
   if (req.method === 'POST') {
     // Create short URL
@@ -200,7 +200,7 @@ if ( {) {
         success: true,
         data: shortUrl,
       });    } catch (error) {
-      console.error ('URL shortening error:', error)
+      console.error ('URL shortening error: ', error)
       res.status (500).json ({
         success: false,
         error: 'Internal server error',
@@ -208,7 +208,7 @@ if ( {) {
         data: short_url
       })
     } catch (error) {
-      console.error ('URL shortening error:', error)
+      console.error ('URL shortening error: ', error)
       res.status (500).json ({
         success: false,
     const urls = Array && Array.from(urlStorage && urlStorage.values())
@@ -263,7 +263,7 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
     }
 }
 }
-      console.error('URL shortening error:', error)
+      console.error('URL shortening error: ', error)
       res.status(500).json({
         success: false
         error: 'Internal server error'
@@ -271,7 +271,7 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
         data: shortUrl
       })
     } catch (error) {
-      console.error('URL shortening error:', error)
+      console.error('URL shortening error: ', error)
       res.status(500).json({
         success: false,
         error: 'Internal server error'

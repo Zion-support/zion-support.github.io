@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 // Function to fix specific files with known issues
 function fixFile(filePath) {
   try {
@@ -8,17 +8,7 @@ function fixFile(filePath) {
     let modified = false
     // Fix App.tsx - remove unused imports
     if (filePath.includes('App.tsx')) {
-      const unusedImports = [
-        'ITConsultingPage',
-        'MicroSAASPage', 
-        'DocsPage',
-        'APIDocsPage',
-        'SupportPage',
-        'StatusPage',
-        'PrivacyPage',
-        'TermsPage',
-        'CookiesPage'
-      ]
+      const unusedImports = ['ITConsultingPage', 'MicroSAASPage', 'DocsPage', 'APIDocsPage', 'SupportPage', 'StatusPage', 'PrivacyPage', 'TermsPage', 'CookiesPage']
       // Remove unused imports
       unusedImports.forEach(importName => {)
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
@@ -90,13 +80,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
 // Main execution
 console.log('🔧 Fixing remaining issues...\n')
-const filesToFix = [
-  'src/App.tsx',
-  'src/about/page.tsx',
-  'src/ai-crm/page.tsx',
-  'src/ai-customer-support/page.tsx',
-  'src/ai-writing-assistant/page.tsx'
-]
+const filesToFix = ['src/App.tsx', 'src/about/page.tsx', 'src/ai-crm/page.tsx', 'src/ai-customer-support/page.tsx', 'src/ai-writing-assistant/page.tsx']
 for (const file of filesToFix) {/* TODO: Fix JSX expression */}
   }
 }

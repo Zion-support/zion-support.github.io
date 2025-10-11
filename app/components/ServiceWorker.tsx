@@ -1,52 +1,48 @@
 'use client'
 import React, { useEffect } from 'react'
 const ServiceWorker: React.FC = () => {
+  return (
+
   useEffect(() => {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-<<<<<<< HEAD
           if (process.env.NODE_ENV === 'development') {
             console.log('Service Worker registered successfully:', registration)
-          }
-=======
-<<<<<<< HEAD
-          console.log('Service Worker registered:', registration);
+          
+  );
+}
+          console.log('Service Worker registered: ', registration);
         })
         .catch((error) => {
-          console.log('Service Worker registration failed:', error);
+          console.log('Service Worker registration failed: ', error);
         });
-=======
-          console.log('Service Worker registered successfully:', registration)
->>>>>>> origin/main
         })
         .catch((error) => {
           if (process.env.NODE_ENV === 'development') {
-            console.log('Service Worker registration failed:', error)
+            console.log('Service Worker registration failed: ', error)
           }
         })
->>>>>>> origin/main
     }
-<<<<<<< HEAD
   ];
 
   return (
     <>
   </>
-      <Helmet>
+      <Helmet ></Helmet>
         <title>ServiceWorker - Zion Tech Group</title>
         <meta name="description" content="Advanced serviceworker solutions powered by AI technology." />
       </Helmet>
 
-      <Navigation />
+      <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
         </section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%, rgba(147, 51, 234, 0.3)_0%, transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%, rgba(59, 130, 246, 0.3)_0%, transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
               ServiceWorker
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -68,7 +64,7 @@ const ServiceWorker: React.FC = () => {
         </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Key Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -78,7 +74,7 @@ const ServiceWorker: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -88,7 +84,7 @@ const ServiceWorker: React.FC = () => {
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                           {benefit}
                         </li>
                       ))}
@@ -105,7 +101,7 @@ const ServiceWorker: React.FC = () => {
         </section>
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -123,15 +119,8 @@ const ServiceWorker: React.FC = () => {
           </div>
         </section>
       ))
-      <Footer />
-
+      <Footer /></Footer>
   );
 };
 
 export default ServiceWorkerPage;
-=======
-  }, [])
-  return null
-}
-export default ServiceWorker
->>>>>>> origin/main

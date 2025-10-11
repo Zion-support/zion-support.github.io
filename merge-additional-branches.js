@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Merge Additional Branches - Merges the remaining codex and cursor branches
- */ import { execSync } from 'child_process'
+ */ import { execSync  } from 'child_process'
 import fs from 'fs'
 // //Step 1: Ensure we're on main and up to date,
 // try {,
@@ -12,39 +12,15 @@ import fs from 'fs'
   }
 
 //Step 2: Get additional branches to merge,
-const additionalBranches = [,
-// //Step,
-  1: Ensure we're on main and up to date,
-// try {/* TODO: Fix JSX expression */}
+const additionalBranches = [// //Step, 1: Ensure we're on main and up to date, // try {/* TODO: Fix JSX expression */}
   o: 'inherit' })
   execSync('git pull origin main', {/* TODO: Fix JSX expression */})
   o: 'inherit' })
 //   } catch (error) {/* TODO: Fix JSX expression */}
 }
 
-//Step,
-  2: Get additional branches to merge,
-const additionalBranches = [
-  'y7v6qh-codex/implement-eprivacy-directive-consent-banner',
-  'y8b6t3-codex/fix-type-errors-in-typescript-files',
-  'y8pqmi-codex/fix-services-fetch-and-fallback-logic',
-  'ybn8hb-codex/fix-npm-eio-error-during-install',
-  'ye4cs2-codex/add-i18n-support-with-next-i18next',
-  'ye7hs1-codex/fix-npm-eio-error-during-install',
-  'yggxu4-codex/implement-checkout-flow-with-auth-redirect',
-  'yjjjqb-codex/check-logs-and-fix-errors',
-  'ypnv26-codex/fix-talent-profile-rendering-issues',
-  'yuysa9-codex/fix-errors-and-improve-project',
-  'yvyz2 j-codex/add-i18 n-support-with-next-i18 next',
-  'yw5 tz2-codex/implement-instant-messaging-for-negotiations',
-  'yxewy6-codex/fix-toggle-icon-layout-issue',
-  'z4 gpnj-codex/implement-axios-interceptor-for-api-failures',
-  'z5 t0 go-codex/fix-login-form-submission',
-  'zdh03 e-codex/fix-link-under-register-form',
-  'zhnryo-codex/implement-eprivacy-directive-consent-banner',
-  'zjqw50-codex/fix-ui-and-functional-bugs',
-  'zreeup-codex/check-logs-and-fix-errors',
-  'zzdg1 a-codex/add-i18 n-support-with-next-i18 next']
+//Step, 2: Get additional branches to merge, const additionalBranches = [
+  'y7v6qh-codex/implement-eprivacy-directive-consent-banner', 'y8b6t3-codex/fix-type-errors-in-typescript-files', 'y8pqmi-codex/fix-services-fetch-and-fallback-logic', 'ybn8hb-codex/fix-npm-eio-error-during-install', 'ye4cs2-codex/add-i18n-support-with-next-i18next', 'ye7hs1-codex/fix-npm-eio-error-during-install', 'yggxu4-codex/implement-checkout-flow-with-auth-redirect', 'yjjjqb-codex/check-logs-and-fix-errors', 'ypnv26-codex/fix-talent-profile-rendering-issues', 'yuysa9-codex/fix-errors-and-improve-project', 'yvyz2 j-codex/add-i18 n-support-with-next-i18 next', 'yw5 tz2-codex/implement-instant-messaging-for-negotiations', 'yxewy6-codex/fix-toggle-icon-layout-issue', 'z4 gpnj-codex/implement-axios-interceptor-for-api-failures', 'z5 t0 go-codex/fix-login-form-submission', 'zdh03 e-codex/fix-link-under-register-form', 'zhnryo-codex/implement-eprivacy-directive-consent-banner', 'zjqw50-codex/fix-ui-and-functional-bugs', 'zreeup-codex/check-logs-and-fix-errors', 'zzdg1 a-codex/add-i18 n-support-with-next-i18 next']
 // //Step 3: Enhanced conflict resolution function,
 function resolveConflictsAndMerge(branchName) {,
 //   try {,

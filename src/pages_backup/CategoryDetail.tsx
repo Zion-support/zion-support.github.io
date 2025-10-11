@@ -1,5 +1,4 @@
-const AUTO_SERVICE_TITLES = [
-  "AI-Powered Customer Support"
+const AUTO_SERVICE_TITLES = ["AI-Powered Customer Support"
   "Cloud Infrastructure Management"
   "Predictive Analytics Consulting"
   "Cybersecurity Automation Suite"
@@ -18,26 +17,25 @@ const AUTO_SERVICE_TITLES = [
   "Robotic Process Automation"
   "Machine Learning Model Tuning"
   "IoT Device Integration Service"
-  "Blockchain Data Solutions"
-]
+  "Blockchain Data Solutions"]
 function generateInnovationListing (index: number): ProductListing {
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service'
   const price = Math.floor (Math.random () * 9500) + 500, // $500 - $10, 000
   const rating = Math.floor (Math.random () * 2) + 4, // 4 - 5 stars
   const params = router.query as { slug?: string }
   const slug = slugProp ?? params.slug
-      icon: <Briefcase className="w-6 h-6" />
+      icon: <Briefcase className="w-6 h-6" /></Briefcase>
     }
     'talents': {
 
       title: "Talents"
       description: "Connect with AI experts, developers, and tech specialists"
-      icon: <Brain className="w-6 h-6" />
+      icon: <Brain className="w-6 h-6" /></Brain>
     }
     'equipment': {
       title: "Equipment"
       description: "Rent or buy specialized hardware, servers, and devices"
-      icon: <Code className="w-6 h-6" />
+      icon: <Code className="w-6 h-6" /></Code>
     }
 ],
 
@@ -66,52 +64,50 @@ function generateInnovationListing(index: number): ProductListing {
     location: "Global",
     availability: "Immediate",
     aiScore: Math.floor(Math.random() * 20) + 80
-import { GradientHeading } from "@/components/GradientHeading",
-import { ProductListingCard } from "@/components/ProductListingCard",
-import { useState, useEffect, useRef, Suspense } from "react",
-import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from 'lucide-react'
-import { MARKETPLACE_LISTINGS } from "@/data/listingData",
-import { ProductListing } from "@/types/listings",
-import { useRouter } from 'next/router',
+import { GradientHeading  } from '@/components/GradientHeading',
+import { ProductListingCard  } from '@/components/ProductListingCard',
+import { useState, useEffect, useRef, Suspense  } from 'react',
+import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase  } from 'lucide-react'
+import { MARKETPLACE_LISTINGS  } from '@/data/listingData',
+import { ProductListing  } from '@/types/listings',
+import { useRouter  } from 'next/router',
 import Link from 'next/link',
-import { toast } from "@/hooks/use-toast",
-import { NextSeo } from '@/components/NextSeo',
-import { Header } from "@/components/Header",
+import { toast  } from '@/hooks/use-toast',
+import { NextSeo  } from '@/components/NextSeo',
+import { Header  } from '@/components/Header',
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton',
-import {logErrorToProduction} from '@/utils/productionLogger',
-const AUTO_SERVICE_TITLES = [
-  "AI - Powered Customer Support"
+import { logErrorToProduction } from '@/utils/productionLogger',
+const AUTO_SERVICE_TITLES = ["AI - Powered Customer Support"
   "Cloud Infrastructure Management"
   "Predictive Analytics Consulting"
   "Cybersecurity Automation Suite"
   "Robotic Process Automation"
   "Machine Learning Model Tuning"
   "IoT Device Integration Service"
-  "Blockchain Data Solutions"
-]
+  "Blockchain Data Solutions"]
 function generateInnovationListing (index: number): ProductListing {
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service'
   const price = Math.floor (Math.random () * 9500) + 500, // $500 - $10, 000
   const rating = Math.floor (Math.random () * 2) + 4, // 4 - 5 stars
   const params = router.query as { slug?: string }
   const slug = slug_prop ?? params.slug
-      icon: <Briefcase className="w - 6 h - 6" />
+      icon: <Briefcase className="w - 6 h - 6" /></Briefcase>
     }
     'talents': {
       title: "Talents",
       description: "Connect with AI experts, developers, and tech specialists",
-      icon: <Brain className="w-6 h-6" />
+      icon: <Brain className="w-6 h-6" /></Brain>
     },
     'equipment': {
       title: "Equipment",
       description: "Rent or buy specialized hardware, servers, and devices",
-      icon: <Code className="w-6 h-6" />
+      icon: <Code className="w-6 h-6" /></Code>
     },
 
     'innovation': {
       title: "Innovation"
       description: "Discover cutting-edge solutions and tech breakthroughs"
-      icon: <Bot className="w-6 h-6" />
+      icon: <Bot className="w-6 h-6" /></Bot>
     }
     },
 
@@ -122,7 +118,7 @@ function generateInnovationListing (index: number): ProductListing {
     'ai-models-apis': {
       title: "AI Models & APIs"
       description: "Access cutting-edge AI models with easy integration"
-      icon: <Brain className="w-6 h-6" />
+      icon: <Brain className="w-6 h-6" /></Brain>
     }
     },
 
@@ -130,7 +126,7 @@ function generateInnovationListing (index: number): ProductListing {
     'content-creation': {
       title: "Content Creation"
       description: "Generate high-quality content for your projects"
-      icon: <PenLine className="w-6 h-6" />
+      icon: <PenLine className="w-6 h-6" /></PenLine>
     }
     },
 
@@ -138,7 +134,7 @@ function generateInnovationListing (index: number): ProductListing {
     'data-analysis': {
       title: "Data Analysis"
       description: "Extract insights from complex datasets"
-      icon: <BarChart className="w-6 h-6" />
+      icon: <BarChart className="w-6 h-6" /></BarChart>
     }
     },
 
@@ -146,7 +142,7 @@ function generateInnovationListing (index: number): ProductListing {
     'computer-vision': {
       title: "Computer Vision"
       description: "Image and video processing solutions"
-      icon: <Eye className="w-6 h-6" />
+      icon: <Eye className="w-6 h-6" /></Eye>
     }
     },
 
@@ -154,7 +150,7 @@ function generateInnovationListing (index: number): ProductListing {
     'virtual-assistants': {
       title: "Virtual Assistants"
       description: "Intelligent automation for your workflow"
-      icon: <Bot className="w-6 h-6" />
+      icon: <Bot className="w-6 h-6" /></Bot>
     }
     },
 
@@ -162,16 +158,14 @@ function generateInnovationListing (index: number): ProductListing {
     'voice-speech': {
       title: "Voice & Speech"
       description: "Speech recognition and synthesis tools"
-      icon: <Mic className="w-6 h-6" />
-
-
+      icon: <Mic className="w-6 h-6" /></Mic>
     },
 
 
     'developer-tools': {
       title: "Developer Tools",
       description: "AI-powered coding assistance and automation",
-      icon: <Code className="w-6 h-6" />
+      icon: <Code className="w-6 h-6" /></Code>
     };          icon: <Bot className="w-6 h-6" />},
     },
 
@@ -179,21 +173,12 @@ function generateInnovationListing (index: number): ProductListing {
     'developer-tools': {
       title: "Developer Tools"
       description: "AI-powered coding assistance and automation"
-      icon: <Code className="w-6 h-6" />
-
-
-
-
-
-
-
-
-
+      icon: <Code className="w-6 h-6" /></Code>
     },
     'business-solutions': {
       title: "Business Solutions",
       description: "Enterprise AI integrations and services",
-      icon: <Briefcase className="w-6 h-6" />
+      icon: <Briefcase className="w-6 h-6" /></Briefcase>
     }
   },
 
@@ -244,7 +229,7 @@ function generateInnovationListing (index: number): ProductListing {
 
         setListings(listingsToShow)
       } catch (err) {
-        logErrorToProduction('Category load error:', { data: err }),
+        logErrorToProduction('Category load error: ', { data: err }),
         toast({ title: 'Error', description: 'Failed to load category' })
       } finally {
         setIsLoading(false)
@@ -259,9 +244,7 @@ function generateInnovationListing (index: number): ProductListing {
 
     const interval = setInterval(() => {
       innovationCounterRef.current += 1,
-      setListings((prev) => [
-        generateInnovationListing(innovationCounterRef.current),
-        ...prev])
+      setListings((prev) => [generateInnovationListing(innovationCounterRef.current), ...prev])
     }, 120000), // every 2 minutes
 
     return () => clearInterval(interval)
@@ -301,15 +284,15 @@ function generateInnovationListing (index: number): ProductListing {
 
   return (
     <>
-      <NextSeo title={seoTitle} description={seoDescription} />
-      <Header />
-      <Suspense fallback={<ListingGridSkeleton />}>
+      <NextSeo title={seoTitle} description={seoDescription} /></NextSeo>
+      <Header /></Header>
+      <Suspense fallback=>{<ListingGridSkeleton />}
 
-      <Suspense fallback={<ListingGridSkeleton />}> 
+      <Suspense fallback=>{<ListingGridSkeleton />} 
         <div className="min-h-screen bg-zion-blue">
           <div className="container mx-auto px-4 py-12">
           <div className="mb-4">
-            <Link href="/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center">
+            <Link href="/categories" className="text-zion-cyan hover: text-zion-cyan-light transition-colors inline-flex items-center"></Link>
                Back to Categories
             </Link>
           </div>
@@ -322,52 +305,52 @@ function generateInnovationListing (index: number): ProductListing {
               <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
       title: "Talents",
       description: "Connect with AI experts, developers, and tech specialists"
-      icon: <Brain className="w - 6 h - 6" />
+      icon: <Brain className="w - 6 h - 6" /></Brain>
     }
     'equipment': {
       title: "Equipment",
       description: "Rent or buy specialized hardware, servers, and devices"
-      icon: <Code className="w - 6 h - 6" />
+      icon: <Code className="w - 6 h - 6" /></Code>
     }
     'innovation': {
       title: "Innovation",
       description: "Discover cutting - edge solutions and tech breakthroughs",
-      icon: <Bot className="w - 6 h - 6" />
+      icon: <Bot className="w - 6 h - 6" /></Bot>
     }
     'ai - models - apis': {
       title: "AI Models & APIs",
       description: "Access cutting - edge AI models with easy integration",
-      icon: <Brain className="w - 6 h - 6" />
+      icon: <Brain className="w - 6 h - 6" /></Brain>
     }
     'content - creation': {
       title: "Content Creation",
       description: "Generate high - quality content for your projects",
-      icon: <PenLine className="w - 6 h - 6" />
+      icon: <PenLine className="w - 6 h - 6" /></PenLine>
     }
     'data - analysis': {
       title: "Data Analysis",
       description: "Extract insights from complex datasets",
-      icon: <BarChart className="w - 6 h - 6" />
+      icon: <BarChart className="w - 6 h - 6" /></BarChart>
     }
     'computer - vision': {
       title: "Computer Vision",
       description: "Image and video processing solutions",
-      icon: <Eye className="w - 6 h - 6" />
+      icon: <Eye className="w - 6 h - 6" /></Eye>
     }
     'virtual - assistants': {
       title: "Virtual Assistants",
       description: "Intelligent automation for your workflow",
-      icon: <Bot className="w - 6 h - 6" />
+      icon: <Bot className="w - 6 h - 6" /></Bot>
     }
     'voice - speech': {
       title: "Voice & Speech",
       description: "Speech recognition and synthesis tools",
-      icon: <Mic className="w - 6 h - 6" />
+      icon: <Mic className="w - 6 h - 6" /></Mic>
     }
     'developer - tools': {
       title: "Developer Tools",
       description: "AI - powered coding assistance and automation",
-      icon: <Code className="w - 6 h - 6" />
+      icon: <Code className="w - 6 h - 6" /></Code>
     }          icon: <Bot className="w - 6 h - 6" />},
         set_category (current_category)
         innovationCounterRef.current = 0
@@ -376,13 +359,13 @@ function generateInnovationListing (index: number): ProductListing {
     category.description || 'Explore listings in this category.'
   return (
     <>
-      <NextSeo title={seo_title} description={seo_description} />
-      <Header />
-      <Suspense fallback={<ListingGridSkeleton />}>
+      <NextSeo title={seo_title} description={seo_description} /></NextSeo>
+      <Header /></Header>
+      <Suspense fallback=>{<ListingGridSkeleton />}
         <div className="min - h-screen bg - zion - blue">
           <div className="container mx - auto px - 4 py - 12">
           <div className="mb - 4">
-            <Link href="/categories" className="text - zion - cyan hover:text - zion - cyan - light transition - colors inline - flex items - center">
+            <Link href="/categories" className="text - zion - cyan hover: text - zion - cyan - light transition - colors inline - flex items - center"></Link>
               ← Back to Categories</$1></$1>
           <div className="text - center mb - 12">
             <div className="flex justify - center mb - 6">
@@ -390,7 +373,7 @@ function generateInnovationListing (index: number): ProductListing {
                 {category.icon}
               </div>
             </div>
-            <GradientHeading className="text-4xl md:text-5xl font-bold mb-4">
+            <GradientHeading className="text-4xl md: text-5xl font-bold mb-4"></GradientHeading>
               {category.title}
             </GradientHeading>
             <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
@@ -398,23 +381,21 @@ function generateInnovationListing (index: number): ProductListing {
 
 
 
-import { useRouter } from 'next/router'
+import { useRouter  } from 'next/router'
 import Link from 'next/link'
-import {toast} from "@/hooks/use-toast"
-import {NextSeo} from '@/components/NextSeo'
-import {Header} from "@/components/Header"
+import { toast } from '@/hooks/use-toast'
+import { NextSeo } from '@/components/NextSeo'
+import { Header } from '@/components/Header'
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton'
-import {logErrorToProduction} from '@/utils/productionLogger'
-const AUTO_SERVICE_TITLES = [
-  "AI-Powered Customer Support"
+import { logErrorToProduction } from '@/utils/productionLogger'
+const AUTO_SERVICE_TITLES = ["AI-Powered Customer Support"
   "Cloud Infrastructure Management"
   "Predictive Analytics Consulting"
   "Cybersecurity Automation Suite"
   "Robotic Process Automation"
   "Machine Learning Model Tuning"
   "IoT Device Integration Service"
-  "Blockchain Data Solutions"
-]
+  "Blockchain Data Solutions"]
 function generateInnovationListing(): any (index: number): ProductListing {
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES && AUTO_SERVICE_TITLES.length] || 'AI Service'
   const price = Math && Math.floor(Math && Math.random() * 9500) + 500, // $500 - $10,000
@@ -422,18 +403,19 @@ function generateInnovationListing(): any (index: number): ProductListing {
   const params = router && router.query as { slug?: string }
   const slug = slugProp ?? params && params.slug
               {listings.map((listing) => (
-                <ProductListingCard
-                  key={listing.id}
+                <ProductListingCard key={listing.id}
                   listing={listing}
                   onRequestQuote={handleRequestQuote}
                   detailBasePath="/marketplace/listing"
-                />
+                /></ProductListingCard>
   const [isLoading, setIsLoading] = useState(true),
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
-  const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
+  const [category, setCategory] = useState<>
+  {title: string, description: string, icon: JSX.Element}({
     title: "",
     description: "",
-    icon: <Bot className="w-6 h-6" />
+</>
+    icon: <Bot className="w-6 h-6" /></Bot>
   }),
   const innovationCounterRef = useRef(0),
   // Map of category slugs to their display data
@@ -441,62 +423,62 @@ function generateInnovationListing(): any (index: number): ProductListing {
     'services': {
       title: "Services",
       description: "On-demand IT support, consulting, development, and more",
-      icon: <Briefcase className="w-6 h-6" />
+      icon: <Briefcase className="w-6 h-6" /></Briefcase>
     },
     'talents': {
       title: "Talents",
       description: "Connect with AI experts, developers, and tech specialists",
-      icon: <Brain className="w-6 h-6" />
+      icon: <Brain className="w-6 h-6" /></Brain>
     },
     'equipment': {
       title: "Equipment",
       description: "Rent or buy specialized hardware, servers, and devices",
-      icon: <Code className="w-6 h-6" />
+      icon: <Code className="w-6 h-6" /></Code>
     },
     'innovation': {
       title: "Innovation",
       description: "Discover cutting-edge solutions and tech breakthroughs",
-      icon: <Bot className="w-6 h-6" />
+      icon: <Bot className="w-6 h-6" /></Bot>
     },
     'ai-models-apis': {
       title: "AI Models & APIs",
       description: "Access cutting-edge AI models with easy integration",
-      icon: <Brain className="w-6 h-6" />
+      icon: <Brain className="w-6 h-6" /></Brain>
     },
     'content-creation': {
       title: "Content Creation",
       description: "Generate high-quality content for your projects",
-      icon: <PenLine className="w-6 h-6" />
+      icon: <PenLine className="w-6 h-6" /></PenLine>
     },
     'data-analysis': {
       title: "Data Analysis",
       description: "Extract insights from complex datasets",
-      icon: <BarChart className="w-6 h-6" />
+      icon: <BarChart className="w-6 h-6" /></BarChart>
     },
     'computer-vision': {
       title: "Computer Vision",
       description: "Image and video processing solutions",
-      icon: <Eye className="w-6 h-6" />
+      icon: <Eye className="w-6 h-6" /></Eye>
     },
     'virtual-assistants': {
       title: "Virtual Assistants",
       description: "Intelligent automation for your workflow",
-      icon: <Bot className="w-6 h-6" />
+      icon: <Bot className="w-6 h-6" /></Bot>
     },
     'voice-speech': {
       title: "Voice & Speech",
       description: "Speech recognition and synthesis tools",
-      icon: <Mic className="w-6 h-6" />
+      icon: <Mic className="w-6 h-6" /></Mic>
     },
     'developer-tools': {
       title: "Developer Tools",
       description: "AI-powered coding assistance and automation",
-      icon: <Code className="w-6 h-6" />
+      icon: <Code className="w-6 h-6" /></Code>
     },
     'business-solutions': {
       title: "Business Solutions",
       description: "Enterprise AI integrations and services",
-      icon: <Briefcase className="w-6 h-6" />
+      icon: <Briefcase className="w-6 h-6" /></Briefcase>
     }
   },
   useEffect(() => {
@@ -542,7 +524,7 @@ function generateInnovationListing(): any (index: number): ProductListing {
                   reviewCount: Math.floor(Math.random() * 100)})),
         setListings(listingsToShow)
       } catch (err) {
-        logErrorToProduction('Category load error:', { data: err }),
+        logErrorToProduction('Category load error: ', { data: err }),
         toast({ title: 'Error', description: 'Failed to load category' })
       } finally {
         setIsLoading(false)
@@ -555,9 +537,7 @@ function generateInnovationListing(): any (index: number): ProductListing {
     if (slug !== 'innovation') return,
     const interval = setInterval(() => {
       innovationCounterRef.current += 1,
-      setListings((prev) => [
-        generateInnovationListing(innovationCounterRef.current),
-        ...prev])
+      setListings((prev) => [generateInnovationListing(innovationCounterRef.current), ...prev])
     }, 120000), // every 2 minutes
     return () => clearInterval(interval)
   }, [slug]),
@@ -587,36 +567,35 @@ function generateInnovationListing(): any (index: number): ProductListing {
     category.description || 'Explore listings in this category.'
   return (
     <>
-      <NextSeo title={seoTitle} description={seoDescription} />
-      <Header />
-      <Suspense fallback={<ListingGridSkeleton />}>
+      <NextSeo title={seoTitle} description={seoDescription} /></NextSeo>
+      <Header /></Header>
+      <Suspense fallback=>{<ListingGridSkeleton />}
         <div className="min-h-screen bg-zion-blue">
           <div className="container mx-auto px-4 py-12">
           <div className="mb-4">
-            <Link href="/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center">
+            <Link href="/categories" className="text-zion-cyan hover: text-zion-cyan-light transition-colors inline-flex items-center"></Link>
               ← Back to Categories</$1></$1>
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
               <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
                 {category.icon}
               </div></$1>
-            <GradientHeading className="text-4xl md:text-5xl font-bold mb-4">
+            <GradientHeading className="text-4xl md: text-5xl font-bold mb-4"></GradientHeading>
               {category.title}
             </GradientHeading>
             <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
               {category.description}
             </p></$1>
           {isLoading ? (
-            <ListingGridSkeleton />
+            <ListingGridSkeleton /></ListingGridSkeleton>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {listings && listings.map((listing,) => (
-                <ProductListingCard
-                  key = {listing && listing.id,}
+                <ProductListingCard key = {listing && listing.id,}
                   listing = {listing,}
                   onRequestQuote = {handleRequestQuote,}
                   detailBasePath="/marketplace/listing"
-                />
+                /></ProductListingCard>
               ))}
             </div>
           )}
@@ -640,7 +619,7 @@ function generateInnovationListing(): any (index: number): ProductListing {
             </p></$1>
           {is_loading ? (
             <ListingGridSkeleton />) : (
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 4 gap - 6">
+            <div className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 4 gap - 6">
               {listings.map ((listing, ) => (
                 <ProductListingCard
                   key = {listing.id, }

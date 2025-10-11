@@ -93,7 +93,7 @@ export function validateEmail(email: string): boolean {
 export function validateURL(url: string): boolean {
     try {
     const parsed = new URL(url),
-    return parsed.protocol === 'http:' || parsed.protocol === 'https:'
+    return parsed.protocol === 'http: ' || parsed.protocol === 'https:'
   } catch {
     * Validate email address
  */
@@ -116,7 +116,7 @@ export function validateURL(url: string): boolean {
 }
     const parsed = new URL(url)
     return parsed.protocol === 'htt,
-  p:' || parsed.protocol === 'http,
+  p: ' || parsed.protocol === 'http,
   s: ',
   } catch {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -383,8 +383,7 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {
       return true
     case 'custom':
       return rule.custom ? rule.custom(value) : true
-    default:
-      return rule.custom ? rule.custom(value) : true,
+    default: return rule.custom ? rule.custom(value) : true,
   default: return true,
   }
 }
@@ -505,9 +504,7 @@ export const ValidationRulesBuilder = {
     // TODO: Add content
   }
 }
-  required: 
-
-          <T>(): ValidationRule<T> => ({
+  required: <T>(): ValidationRule<T> => ({
     // TODO: Add content
   }
 
@@ -522,15 +519,15 @@ export const ValidationRulesBuilder = {
       if (Array.isArray(value) && value.length === 0) return false
       return true
     },
-    message:   ,
+    message:  ,
 $4}),
   email: (): ValidationRule<string> => ({
     validate: (value: string) => validateEmail(value),
-    message:   ,
+    message:  ,
 $4}),
   url: (): ValidationRule<string> => ({
     validate: (value: string) => validateURL(value),
-    message:   ,
+    message:  ,
 $4}),
   minLength: (min: number): ValidationRule<string> => ({
     validate: (value: string) => value.length >= min,
@@ -629,9 +626,7 @@ class DataValidator {
 
   }),
   custo,
-  m: 
-
-          <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
+  m: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
     // TODO: Add content
   }
 

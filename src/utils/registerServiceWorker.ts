@@ -63,7 +63,7 @@ export async function registerServiceWorker()
   }
     })
     const registration = await navigator.serviceWorker.register('/service-worker.js', {
-      scope:     ,
+      scope:  ,
 $4})
     // Handle updates
     registration.addEventListener('updatefound', () => {
@@ -141,9 +141,9 @@ $4})
     })
     return registration
   } catch (error) {
-    // // console.error('[SW] Registration failed:', error)
+    // // console.error('[SW] Registration failed: ', error)
     if (config.onError && error instanceof Error) {} catch (error) {/* TODO: Fix JSX expression */}
-  failed:', error);}
+  failed: ', error);}
     if (config.onError && error instanceof Error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -163,7 +163,7 @@ export async function unregisterServiceWorker(): Promise<boolean> {
     const result = await registration.unregister()
     return result
   } catch (error) {
-    // // console.error('[SW] Unregistration failed:', error)
+    // // console.error('[SW] Unregistration failed: ', error)
  * Unregister service worker
  */
 export async function unregisterServiceWorker(): Promise
@@ -182,7 +182,7 @@ export async function unregisterServiceWorker(): Promise
     const result = await registration.unregister()
     return result
   } catch (error) {/* TODO: Fix JSX expression */}
-  failed:', error);}
+  failed: ', error);}
     return false
   }
 }
@@ -197,7 +197,7 @@ export async function checkForUpdates(): Promise<void> {
     const registration = await navigator.serviceWorker.ready
     await registration.update()
   } catch (error) {
-    // // console.error('[SW] Update check failed:', error)
+    // // console.error('[SW] Update check failed: ', error)
   }
 }
 /**
@@ -221,11 +221,11 @@ export function clearCaches(): void {
 /**
  * Get service worker registration status
  */
-export async function getServiceWorkerStatus(): Promise<{
-    supported: boolean
+export async function getServiceWorkerStatus(): Promise<>
+  {supported: boolean
   registered: boolean,
   active: boolean
-  }> {
+  } {
   if (!('serviceWorker' in navigator)) {
     return {
       supported: false,
@@ -251,6 +251,7 @@ export async function getServiceWorkerStatus(): Promise<{
  * Check for service worker updates
  */
 export async function checkForUpdates(): Promise
+</>
           <void> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -265,7 +266,7 @@ export async function checkForUpdates(): Promise
     const registration = await navigator.serviceWorker.ready
     await registration.update()
     } catch (error) {
-    // // console.error('[SW] Update check failed:', error)
+    // // console.error('[SW] Update check failed: ', error)
   }
 
   }

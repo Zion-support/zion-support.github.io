@@ -130,14 +130,12 @@ async function callOpenAIForClientBudget(input: ClientBudgetRequest): Promise<Bu
     const client = new OpenAI({ apiKey })
     const weeks = input.timelineWeeks ?? 2
     const prompt = `You are an expert hiring economist. Suggest a realistic budget range in USD for the following contract. Output STRICT JSON only with keys: currency, min, max, confidence, rationale.
-Contract:
-- Title: ${input.title}
+Contract: - Title: ${input.title}
 - Category: ${input.category}
 - Timeline: ${weeks} weeks
 - Scope: ${input.scope || 'Not specified'}
 - Experience Level: ${input.experienceLevel || 'mid'}
-Constraints:
-- Assume remote contractor.
+Constraints: - Assume remote contractor.
 - Use current global market rates.
 - currency must be "USD".
 - min and max are numbers with no commas.
@@ -146,9 +144,7 @@ Constraints:
     const response = await client.chat.completions.create({
       model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
       temperature: 0.2,
-      messages: [
-        { role: 'system', content: 'You output only JSON. No prose. Be concise and factual.' },
-        { role: 'user', content: prompt }]})
+      messages: [{ role: 'system', content: 'You output only JSON. No prose. Be concise and factual.' }, { role: 'user', content: prompt }]})
         { role: 'user', content: prompt },
       ],
     })
@@ -180,12 +176,10 @@ async function callOpenAIForTalentRate(input: TalentRateRequest): Promise<Talent
   try {
     const client = new OpenAI({ apiKey })
     const prompt = `You are an expert compensation analyst. Recommend an hourly rate in USD and a reasonable range for a candidate profile. Output STRICT JSON with keys: currency, hourlyRate, min, max, confidence, rationale.
-Candidate:
-- Skills: ${input.skills.join(', ')}
+Candidate: - Skills: ${input.skills.join(', ')}
 - Years Experience: ${input.yearsExperience}
 - Location: ${input.location}
-Constraints:
-- Consider global averages and location factor.
+Constraints: - Consider global averages and location factor.
 - currency must be "USD".
 - hourlyRate, min, max are numbers with no commas.
 - confidence is one of: Low, Medium, High.
@@ -193,9 +187,7 @@ Constraints:
     const response = await client.chat.completions.create({
       model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
       temperature: 0.2,
-      messages: [
-        { role: 'system', content: 'You output only JSON. No prose. Be concise and factual.' },
-        { role: 'user', content: prompt }]})
+      messages: [{ role: 'system', content: 'You output only JSON. No prose. Be concise and factual.' }, { role: 'user', content: prompt }]})
         { role: 'user', content: prompt },
       ],
     })

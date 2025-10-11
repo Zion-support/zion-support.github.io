@@ -8,7 +8,7 @@ export const reportError = (error: Error, context?: Record<string, any>) => {
   
   // Also log to console in development
   if (process.env.NODE_ENV === 'development') {
-    console.error('Error reported:', error, context)
+    console.error('Error reported: ', error, context)
   }
 }
 
@@ -390,9 +390,9 @@ const,
   l: number,,
     byCategor,
   y: Record,
-          <ErrorCategory>
+          <ErrorCategory ></ErrorCategory>
     bySeverit,
-  y: Record<ErrorSeverity>
+  y: Record<ErrorSeverity ></ErrorSeverity>
     topError,
   s: TrackedError[],
   } {/* TODO: Fix JSX expression */}
@@ -400,8 +400,8 @@ const,
 }
     const errors = this.getErrors()
     const byCategory = {} as Record
-          <ErrorCategory>
-    const bySeverity = {} as Record<ErrorSeverity>
+          <ErrorCategory ></ErrorCategory>
+    const bySeverity = {} as Record<ErrorSeverity ></ErrorSeverity>
     errors.forEach(error => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

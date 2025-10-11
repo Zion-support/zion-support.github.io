@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { execSync } from 'child_process'
-import { fileURLToPath } from 'url'
+import { execSync  } from 'child_process'
+import { fileURLToPath  } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 console.log('🧹 Starting cleanup of unused imports and console statements...')
@@ -96,7 +96,7 @@ console.log(`\n🎉 Cleanup complete! Modified ${cleanedCount} files.`)
 // Run ESLint fix to clean up remaining issues
 console.log('\n🔧 Running ESLint fix...')
 try {
-  execSync('npm run lint:fix', { stdio: 'inherit' })
+  execSync('npm run lint: fix', { stdio: 'inherit' })
   console.log('✅ ESLint fix completed')
 } catch (error) {
     console.log('⚠️ ESLint fix had some issues, but continuing...')

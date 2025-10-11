@@ -1,29 +1,29 @@
 import type { NextApiRequest, NextApiResponse } from "next",
 import axios from "axios",
-import { readState, writeState, upsertEvent, getEntityId } from "../../../utils/sync/storage"
-import { verifySignature } from "../../../utils/sync/signature"
-import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle"
-import { SyncEvent } from "../../../utils/sync/types"
+import { readState, writeState, upsertEvent, getEntityId  } from '../../../utils/sync/storage'
+import { verifySignature  } from '../../../utils/sync/signature'
+import { computeMerkleRootFromVotes  } from '../../../utils/sync/merkle'
+import { SyncEvent  } from '../../../utils/sync/types'
 function isAllowedByScope(stateType: string, scope: string): boolean {
   if (scope === "full") return true
   if (scope === "dao") return stateType === "proposal" |stateType === "dao_endorsement"
   if (scope === "marketplace") return stateType === "token_transfer" |stateType === "talent_mobility" |stateType === "leaderboard_entry"
 import type { NextApiRequest, NextApiResponse } from "next"
 import axios from "axios"
-import {readState, writeState, upsertEvent, getEntityId} from "../../../utils/sync/storage"
-import {verifySignature} from "../../../utils/sync/signature"
-import {computeMerkleRootFromVotes} from "../../../utils/sync/merkle"
-import {SyncEvent} from "../../../utils/sync/types"
+import { readState, writeState, upsertEvent, getEntityId } from '../../../utils/sync/storage'
+import { verifySignature } from '../../../utils/sync/signature'
+import { computeMerkleRootFromVotes } from '../../../utils/sync/merkle'
+import { SyncEvent } from '../../../utils/sync/types'
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default async function handler(req, res) {
   try {
   res.status(200).json({ message: 'Event published' })
 import type { NextApiRequest, NextApiResponse } from "next",
 import axios from "axios",
-import { readState, writeState, upsertEvent, getEntityId } from "../../../utils/sync/storage",
-import { verifySignature } from "../../../utils/sync/signature",
-import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle",
-import { SyncEvent } from "../../../utils/sync/types",
+import { readState, writeState, upsertEvent, getEntityId  } from '../../../utils/sync/storage',
+import { verifySignature  } from '../../../utils/sync/signature',
+import { computeMerkleRootFromVotes  } from '../../../utils/sync/merkle',
+import { SyncEvent  } from '../../../utils/sync/types',
 function isAllowedByScope(stateType: string, scope: string): boolean {
   if (scope === "full") return true,
   if (scope === "dao") return stateType === "proposal" || stateType === "dao_endorsement",
@@ -38,7 +38,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -54,7 +54,7 @@ export default async function handler(req, res) {
   const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array.isArray(signature) ? signature[0] : undefined)
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -77,7 +77,7 @@ export default async function handler(req, res) {
     if (!Array.isArray(votes) |!providedRoot) {
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -85,15 +85,15 @@ export default async function handler(req, res) {
   if (!event || !event.type || !event.eventId) {
     return res.status(400).json({ error: "Invalid event" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -101,15 +101,15 @@ export default async function handler(req, res) {
   if (!isAllowedByScope(event.type, state.config.scope)) {
     return res.status(403).json({ error: "Event type not allowed by current scope" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -149,10 +149,10 @@ export default async function handler(req, res) {
     if (sig) headers["x-zion-signature"] = sig
       return res.status(400).json({ error: "Merkle root mismatch" })
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
   const entityId = getEntityId(event)
@@ -168,20 +168,20 @@ export default async function handler(req, res) {
     if (sig) headers["x-zion-signature"] = sig
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -260,22 +260,22 @@ if (headers["x - zion - signature"] = sig) {
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
         })
     )
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -283,15 +283,15 @@ if (headers["x - zion - signature"] = sig) {
 
   return res.status(200).json({ status: "accepted", entityId })
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }

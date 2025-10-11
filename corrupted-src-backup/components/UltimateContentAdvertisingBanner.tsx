@@ -1,10 +1,9 @@
 const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
-  const, advertisingFeature, s = [
-    {
+  const, advertisingFeature, s = [{
       i, c, o
-  n: "🚀","
-      tit, l, e: "Revolutionary, AI, Technologies","
-      descripti, o, n: "Me, t, a-cognitive, A, I, quant, u, m-neural, network, s, and, autonomous, operations","
+  n: "🚀", "
+      tit, l, e: "Revolutionary, AI, Technologies", "
+      descripti, o, n: "Me, t, a-cognitive, A, I, quant, u, m-neural, network, s, and, autonomous, operations", "
       highlig, h, t: "1000x, Performanc, e"
 const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
@@ -13,16 +12,16 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
     {/* TODO: Fix JSX expression */}
     }
     {
-      ic, o, n: "🤖","
-      tit, l, e: "Autonomous, Operation, s","
-      descripti, o, n: "98% automation, rates, with se, l, f-healing, system, s","
+      ic, o, n: "🤖", "
+      tit, l, e: "Autonomous, Operation, s", "
+      descripti, o, n: "98% automation, rates, with se, l, f-healing, system, s", "
 const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
   const, advertisingFeature, s = [
     {
       i, c, o
-  n: "🚀","
-      tit, l, e: "Revolutionary, AI, Technologies","
-      descripti, o, n: "Me, t, a-cognitive, A, I, quant, u, m-neural, network, s, and, autonomous, operations","
+  n: "🚀", "
+      tit, l, e: "Revolutionary, AI, Technologies", "
+      descripti, o, n: "Me, t, a-cognitive, A, I, quant, u, m-neural, network, s, and, autonomous, operations", "
       highlig, h, t: "1000x, Performanc, e"
     {/* TODO: Fix JSX expression */}
     }
@@ -31,18 +30,15 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
-    }
-  ]
-  const, successStat, s = [
-    { val, u, e: "5, 0, 0+", lab, e, l: "Enterprise, Client, s", ic, o, n: Use, r, s }"
+    }]
+  const, successStat, s = [{ val, u, e: "5, 0, 0+", lab, e, l: "Enterprise, Client, s", ic, o, n: Use, r, s }"
     { val, u, e: "$50, 0, M+", lab, e, l: "Cost, Saving, s", ic, o, n: DollarSi, g, n }"
     { val, u, e: "98%", lab, e, l: "Automation, Rat, e", ic, o, n: Targ, e, t }"
     { val, u, e: "99.99%", lab, e, l: "Security, Accurac, y", ic, o, n: Shie, l, d }"
-    { val, u, e: "5, 0, 0+", lab, e, l: "Enterprise, Client, s", ic, o, n: Use, r, s },";"
-    { val, u, e: "$50, 0, M+", lab, e, l: "Cost, Saving, s", ic, o, n: DollarSi, g, n },";"
-    { val, u, e: "98%", lab, e, l: "Automation, Rat, e", ic, o, n: Targ, e, t },";"
-    { val, u, e: "99.99%", lab, e, l: "Security, Accurac, y", ic, o, n: Shie, l, d }"
-  ]
+    { val, u, e: "5, 0, 0+", lab, e, l: "Enterprise, Client, s", ic, o, n: Use, r, s }, ";"
+    { val, u, e: "$50, 0, M+", lab, e, l: "Cost, Saving, s", ic, o, n: DollarSi, g, n }, ";"
+    { val, u, e: "98%", lab, e, l: "Automation, Rat, e", ic, o, n: Targ, e, t }, ";"
+    { val, u, e: "99.99%", lab, e, l: "Security, Accurac, y", ic, o, n: Shie, l, d }"]
   return(<div, className="py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">"
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
@@ -79,12 +75,12 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
   anima, t, e={{ rota, t, e: [0, 3, 6, 0] }}
               transiti, o, n={{ durati, o, n: 6, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}"
             >
-              <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  />
+              <Sparkles , className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  /></Sparkles>
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-purp, l, e-5, 0, 0/30">
-              <Rocket, className="w-5 h-5, tex, t-purp, l, e-4, 0, 0  />
+              <Rocket , className="w-5 h-5, tex, t-purp, l, e-4, 0, 0  /></Rocket>
               <span, className="te, x, t-sm, fon, t-bold, tex, t-whi, t, e">ULTIMATE, CONTENT, ADVERTISING
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-4, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-yell, o, w-4, 0, 0/30">
-              <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
+              <Zap , className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  /></Zap>
         {/* Head, e, r */}"
         <div, className="te, x, t-center, m, b-20">";"
           <div, className="flex, item, s-center, justif, y-center, ga, p-4, m, b-8, fle, x-wr, a, p">"
@@ -92,7 +88,7 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
   anima, t, e={{ rota, t, e: [0, 3, 6, 0] }}"
               transiti, o, n={{ durati, o, n: 6, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}"
             ></moti>"
-              <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  />
+              <Sparkles , className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  /></Sparkles>
             </moti, o, n.d, i, v>"
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-purp, l, e-5, 0, 0/30"></div>"
               <Rocket, className="w-5 h-5, tex, t-purp, l, e-4, 0, 0  /></Rocket>"
@@ -132,7 +128,7 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
           {/* Urgency, Banne, r */}
           <div, className="inli, n, e-block, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-r, e, d-5, 0, 0/30, m, b-12">
             <div, className="flex, item, s-center, ga, p-3">
-              <Clock, className="w-6 h-6, tex, t-r, e, d-400, animat, e-pul, s, e  />
+              <Clock , className="w-6 h-6, tex, t-r, e, d-400, animat, e-pul, s, e  /></Clock>
               <span, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">LIMITED, TIM, E: Exclusive, Early, Access to, 2026, Content</sp, a, n>"
           <div, className="inli, n, e-block, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-r, e, d-5, 0, 0/30, m, b-12">"
             <div, className="flex, item, s-center, ga, p-3">"
@@ -148,22 +144,22 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
               <span, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">LIMITED, TIM, E: Exclusive, Early, Access to, 2026, Content</sp, a, n>"
         {/* Features, Gri, d */}
         <, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l$2 />
-  g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">")
+  g: gr, i, d-co, l, s-4, ga, p-8, m, b-20">")
         <, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l;)$2 />
-  g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">";)
+  g: gr, i, d-co, l, s-4, ga, p-8, m, b-20">";)
           {advertisingFeatur, e, s.m, a, p((featu, r, e, ind, e, x) => (
             <moti, o, n.d, i, v
         <, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l$2 />
-  g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">"
+  g: gr, i, d-co, l, s-4, ga, p-8, m, b-20">"
         <, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l$2 />
-  g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">"
+  g: gr, i, d-co, l, s-4, ga, p-8, m, b-20">"
           {advertisingFeatur, e, s.m, a, p((featu, r, e, ind, e, x) => (
             <moti, o, n.d, i, v
         {/* Features, Gri, d */}"
         <, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l,"$2 />
-  g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">""
+  g: gr, i, d-co, l, s-4, ga, p-8, m, b-20">""
         <, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l,"$2 />
-  g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">"
+  g: gr, i, d-co, l, s-4, ga, p-8, m, b-20">"
           {/* TODO: Fix JSX expression */}
   k, e, y={ind, e, x}
               initi, a, l={{ opaci, t, y: 0, y: 20 }}
@@ -172,26 +168,26 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
               whileHov, e, r={{ sca, l, e: 1.05 }}"
               classNa, m, e="group, relativ, e"
             >
-              <, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-ho, v, e$2 />
-  r:to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l"></d, i, v>"
+              <, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r: v, i, a-bl, u, e-5, 0, 0/10, grou, p-ho, v, e$2 />
+  r: to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l"></d, i, v>"
               <div, className="relative, b, g-whi, t, e/8, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-8, border, border-whi, t, e/15, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-30, 0, h-fu, l, l">"
                 <div, className="te, x, t-6xl, m, b-6, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">"
                   {featu, r, e.ic, o, n}
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-3, 0, 0">"
-              <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-hov, e, r:to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l"></d, i, v>"
+              <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r: v, i, a-bl, u, e-5, 0, 0/10, grou, p-hov, e, r: to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l"></d, i, v>"
               <div, className="relative, b, g-whi, t, e/8, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-8, border, border-whi, t, e/15, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-30, 0, h-fu, l, l">"
                 <, className="te, x, t-6xl, m, b-6, grou, p-ho, v, e$2 />
               <div, className="relative, b, g-whi, t, e/8, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-8, border, border-whi, t, e/15, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-30, 0, h-fu, l, l">"
                 <, className="te, x, t-6xl, m, b-6, grou, p-ho, v, e$2 />
             ></moti>"
-              <, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-ho, v, e,"$2 />
-  r:to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l"></d, i, v>""
+              <, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r: v, i, a-bl, u, e-5, 0, 0/10, grou, p-ho, v, e,"$2 />
+  r: to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l"></d, i, v>""
               <div, className="relative, b, g-whi, t, e/8, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-8, border, border-whi, t, e/15, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-30, 0, h-fu, l, l">""
                 <div, className="te, x, t-6xl, m, b-6, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">"
                   {featu, r, e.ic, o, n}
                 </d, i, v>"
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-3, 0, 0">""
-              <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-hov, e, r:to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l"></d, i, v>";"
+              <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r: v, i, a-bl, u, e-5, 0, 0/10, grou, p-hov, e, r: to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l"></d, i, v>";"
               <div, className="relative, b, g-whi, t, e/8, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-8, border, border-whi, t, e/15, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-30, 0, h-fu, l, l">";"
                 <, className="te, x, t-6xl, m, b-6, grou, p-ho, v, e,"$2 />
   r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">"
@@ -241,7 +237,7 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
                 What, Our, Clients S, a, y</$1>"
               <div, className="flex, item, s-center, justif, y-center, ga, p-2, m, b-6">"
                 {[...Arr, a, y(5)].m, a, p((_, i) => (
-                  <Star, ke, y={i} classNa, m, e="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t  />
+                  <Star , ke, y={i} classNa, m, e="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t  /></Star>
                 {/* TODO: Fix JSX expression */}"
                   <Star, ke, y={i} classNa, m, e="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t  /></Star>"
                   <Star, ke, y={i} classNa, m, e="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t" />"
@@ -313,13 +309,13 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
               {/* Benefits, Lis, t */}
               <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">"
                 <div, className="flex, item, s-center, ga, p-3, tex, t-gre, e, n-4, 0, 0">
-                  <CheckCircle, className="w-6 h-6  />
+                  <CheckCircle , className="w-6 h-6  /></CheckCircle>
                   <span, className="te, x, t-lg, fon, t-semibo, l, d">Exclusive, Early, Access
                 <div, className="flex, item, s-center, ga, p-3, tex, t-bl, u, e-4, 0, 0">
-                  <CheckCircle, className="w-6 h-6  />
+                  <CheckCircle , className="w-6 h-6  /></CheckCircle>
                   <span, className="te, x, t-lg, fon, t-semibo, l, d">Expert, Consultation, s
                 <div, className="flex, item, s-center, ga, p-3, tex, t-purp, l, e-4, 0, 0">
-                  <CheckCircle, className="w-6 h-6  />
+                  <CheckCircle , className="w-6 h-6  /></CheckCircle>
                   <span, className="te, x, t-lg, fon, t-semibo, l, d">Fortune, 500, Case Studi, e, s
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-6, justif, y-cent, e, r">"
               <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">"
@@ -335,7 +331,7 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-6, justif, y-cent, e, r">"
                 <, titl, e="Internal, lin, k"$2 />
                   hr, e, f="/conta, c, t"
-                  classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-6, p, x-12, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-xl, hov, e
+                  classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r: to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-6, p, x-12, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-xl, hov, e
               {/* Benefits, Lis, t */}"
               <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">""
                 <div, className="flex, item, s-center, ga, p-3, tex, t-gre, e, n-4, 0, 0"></div>"
@@ -365,8 +361,8 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-6, justif, y-cent, e, r">";"
                 <, titl, e="Internal, lin, k""$2 />
                   hr, e, f="/conta, c, t""
-                  classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-6, p, x-12, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-xl, hov, e,"
-  r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-3, tex, t-lg"
+                  classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r: to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-6, p, x-12, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-xl, hov, e,"
+  r: shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-3, tex, t-lg"
                 ></a>"
                   <Rocket, className="w-6 h-6  /></Rocket>"
                   <Rocket, className="w-6 h-6" />"
@@ -377,7 +373,7 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
                 <, titl, e="Internal, lin, k""$2 />
                   hr, e, f="/bl, o, g""
                   classNa, m, e="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r: bg-purp, l, e-500, hov, e,"
-  r:te, x, t-white, fon, t-bold, p, y-6, p, x-12, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-3, tex, t-lg"
+  r: te, x, t-white, fon, t-bold, p, y-6, p, x-12, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-3, tex, t-lg"
                 >
                   <sp, a, n>Explore, Content, Library</sp, a, n>"
                   <Link, className="w-6 h-6  /></Link>"

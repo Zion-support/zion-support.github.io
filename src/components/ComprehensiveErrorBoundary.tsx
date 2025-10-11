@@ -183,7 +183,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 }
         return (<div>Coming Soon</div>)
   )
-          <ModernLoadingSpinner>
+          <ModernLoadingSpinner ></ModernLoadingSpinner>
             size="lg""
             text="Retrying..."
             fullScreen={true}
@@ -203,21 +203,21 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
           </p>"
             <div className="bg-gray-800 rounded-lg p-4 mb-6 text-left"></div>"
               <h3 className="text-white font-semibold mb-2">Error,
-  Details:</h3>"
+  Details: </h3>"
               <p className="text-sm text-gray-300 mb-2">
                 <strong>Error,
-  ID:</strong> {this.state.errorId}
+  ID: </strong> {this.state.errorId}
               </p>"
               <p className="text-sm text-gray-300 mb-2">
                 <strong>Messag,
-  e:</strong> {this.state.error?.message || 'Unknown error'}
+  e: </strong> {this.state.error?.message || 'Unknown error'}
               </p>"
               <p className="text-sm text-gray-300">
                 <strong>Retry,
-  Attempts:</strong> {this.state.retryCount} / {this.maxRetries}
+  Attempts: </strong> {this.state.retryCount} / {this.maxRetries}
             </div>"
             < className="flex flex-col,"$2 />
-  sm:flex-row gap-4 justify-center">
+  sm: flex-row gap-4 justify-center">
               {this.state.retryCount < this.maxRetries && ()}
           <button>
                   onClick={this.handleRetry}"
@@ -241,7 +241,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
             {process.env.NODE_ENV === 'development' && this.state.error?.stack && ()}"
           <details className="mt-6 text-left"></details>"
                 <summary className="text-white cursor-pointer,"
-  hover:text-cyan-400">
+  hover: text-cyan-400">
 // Technical Details (Development)
           </summary>"
                 <pre className="mt-2 p-4 bg-gray-900 rounded text-xs text-gray-300 overflow-auto">

@@ -1,4 +1,4 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts"
+import { serve  } from 'https: //deno.land/std@0.190.0/http/server.ts'
 import "https://deno.land/x/xhr@0.1.0/mod.ts"
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -24,14 +24,13 @@ serve(async (req) => {
     if (!finetuneJobId) {
       // This would require a database lookup in the real implementation
       // For now, we'll simulate a response
-      // In a real implementation, you would:
-      // 1. Query your database to find the job ID associated with this model ID
+      // In a real implementation, you would: // 1. Query your database to find the job ID associated with this model ID
       // 2. Then use that job ID to check status with OpenAI
       // Mock response for demonstration (in real code, fetch from DB)
       finetuneJobId = `ft-job-${modelId}-${Date.now()}`
     }
     // Check the status from OpenAI API
-    const response = await fetch(`https://api.openai.com/v1/fine_tuning/jobs/${finetuneJobId}`, {
+    const response = await fetch(`https: //api.openai.com/v1/fine_tuning/jobs/${finetuneJobId}`, {
       method: "GET",
       headers: {
         "Authorization": `Bearer ${openAIApiKey}`,
@@ -69,8 +68,7 @@ serve(async (req) => {
       case "running":
         status = "running"
         break
-      default:
-        status = "queued"
+      default: status = "queued"
     }
     return new Response(
       JSON.stringify({ 
@@ -85,7 +83,7 @@ serve(async (req) => {
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   } catch (error) {
-    console.error("Error in check-training-status function:", error)
+    console.error("Error in check-training-status function: ", error)
     return new Response(
       JSON.stringify({ error: error.message }),
       {

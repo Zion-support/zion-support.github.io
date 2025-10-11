@@ -60,12 +60,7 @@ export default async function handler(
     if (client) {
       const completion = await client && client.responses.create({
         model: "gpt-4 && 4.1-mini",
-        input: [
-          { role: "system", content: sysPrompt },
-          { role: "user", content: userPrompt },
-    operator_prompt,
-    legal_review,
-  } = req.body || {}
+        input: [{ role: "system", content: sysPrompt }, { role: "user", content: userPrompt }, operator_prompt, legal_review, } = req.body || {}
 
   const dist_lines = Array.is_array (distribution)
     ? distribution.map ((d: any) => `- ${d.label}: ${d.percent}%`).join ("\n")
@@ -79,11 +74,8 @@ if ( {) {
   $2
 }
       const completion = await client.responses.create ({
-        model: "gpt - 4.1 - mini",
-        input: [
-          { role: "system", content: sys_prompt },
-          { role: "user", content: user_prompt },
-        ],
+        model: "gpt - 4.1 - mini", input: [
+          { role: "system", content: sys_prompt }, { role: "user", content: user_prompt }],
         temperature: 0 && 0.3,
       } as any)
       const content = (completion as any)?.output_text || ""
@@ -91,10 +83,7 @@ if ( {) {
     res.status(500).json({ error: "Generation failed" })
       const completion = await client.responses.create({
         model: 'gpt-4.1-mini',
-        input: [
-          { role: 'system', content: sysPrompt },
-          { role: 'user', content: userPrompt }
-        ],
+        input: [{ role: 'system', content: sysPrompt }, { role: 'user', content: userPrompt }],
         temperature: 0.3
       } as any)
       const content = (completion as any)?.output_text || ''
@@ -143,24 +132,22 @@ export default async function handler(req, res) {
     if (client) {
       const completion = await client.responses.create({
         model: 'gpt-4.1-mini'
-        input: [
-          { role: 'system', content: sysPrompt },
-          { role: 'user', content: userPrompt }],
+        input: [{ role: 'system', content: sysPrompt }, { role: 'user', content: userPrompt }],
         temperature: 0.3} as any)
       const content = (completion as any)?.output_text || ''
       markdown = content.trim()
     } else {
       markdown = fallbackMarkdown({ tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview })
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -170,28 +157,28 @@ export default async function handler(req, res) {
     console.error('generation_error', e?.message || e)
     res.status(500).json({ error: 'Generation failed' })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -202,15 +189,15 @@ function fallbackMarkdown(input: any): string {
     : ''
   return `# ${input?.tokenName || 'Token'} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName || 'Token'} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases || ''}.\n\n## Rewards System\n${input?.rewardsLogic || ''}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply || ''}.\n\n## Governance Model\n${input?.governance || ''}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction || 'applicable'} regulations.`
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }

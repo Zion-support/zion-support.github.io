@@ -12,7 +12,7 @@ interface BannerModule {/* TODO: Fix JSX expression */}
  * Lazy load a banner component with retry logic
  */
 export const lazyLoadBanner = (
-  importFn: () => Promise<BannerModule>
+  importFn: () => Promise<BannerModule ></BannerModule>
       // Retry once after a delay,
       return new Promise<BannerModule>(resolve => {
         setTimeout(() => {

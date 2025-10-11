@@ -16,15 +16,8 @@ export interface AdditionalQ42025Service {
 	trialDays?: number
 	setupTime?: string
 }
-export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
-	{
-		id: 'devsecops-copilot',
-		name: 'DevSecOps Copilot',
-		tagline: 'Security checks, SBOM, IaC drift and CI/CD policy gates',
-		price: '$199',
-		period: '/month',
-		description: 'Continuously scans repos and pipelines for secrets, vulnerabilities, misconfigurations and IaC drift; enforces policy gates in CI/CD with auto-fix PRs.',
-		features: ['Secret scanning', 'SBOM generation', 'IaC drift detection', 'CI policy gates', 'Auto-fix pull requests'],
+export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [{
+		id: 'devsecops-copilot', name: 'DevSecOps Copilot', tagline: 'Security checks, SBOM, IaC drift and CI/CD policy gates', price: '$199', period: '/month', description: 'Continuously scans repos and pipelines for secrets, vulnerabilities, misconfigurations and IaC drift; enforces policy gates in CI/CD with auto-fix PRs.', features: ['Secret scanning', 'SBOM generation', 'IaC drift detection', 'CI policy gates', 'Auto-fix pull requests'],
 		category: 'Quality & Monitoring',
 		link: 'https://ziontechgroup.com/services/devsecops-copilot',
 		marketPosition: 'Lightweight, practical guardrails integrated with your CI/CD.',

@@ -17,7 +17,7 @@ export const initAnalytics = (measurementId: string) => {
     // Load Google Analytics script
     const script = document.createElement('script')
     script.async = true,
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`
+    script.src = `https: //www.googletagmanager.com/gtag/js?id=${measurementId}`
     document.head.appendChild(script)
     // Initialize gtag
     window.dataLayer = window.dataLayer || []

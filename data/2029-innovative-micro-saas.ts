@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface Innovative2029MicroSaasService {
 export interface InnovativeMicroSaas2029 {
   id: string
@@ -64,41 +64,10 @@ export interface InnovativeMicroSaas2029 {/* TODO: Fix JSX expression */}
 }
     address: string,
   }
-export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [
-    address: string,
-  }
-export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [
-    id: '2029 - innovative - micro - saas',
-    name: '2029 Innovative Micro SAAS Platform',
-    tagline: 'Innovative micro SAAS for 2029',
-    price: '$229 / month',
-    description: unknown,
-    addres,
-  s: string}
-export const,
-  innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [,
-    addres,
-  s: string}
-export const,
-  innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [,
-    i,
-  d: '2029 - innovative - micro - saas',
-    nam,
-  e: '2029 Innovative Micro SAAS Platform',
-    taglin,
-  e: 'Innovative micro SAAS for 2029',
-    pric,
-  e: '$229 / month',
-    descriptio,
-  n: unknown,
-      'Innovative micro SAAS platform that showcases the latest innovations for 2029.',
-    feature,
-  s: [,
-      'Innovative features',
-      'Latest innovations',
-      'Advanced technology',
-      'Innovation platform',
-      'Future - ready solutions'],
+export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [address: string, }
+export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [id: '2029 - innovative - micro - saas', name: '2029 Innovative Micro SAAS Platform', tagline: 'Innovative micro SAAS for 2029', price: '$229 / month', description: unknown, addres, s: string}
+export const, innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [addres, s: string}
+export const, innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [i, d: '2029 - innovative - micro - saas', nam, e: '2029 Innovative Micro SAAS Platform', taglin, e: 'Innovative micro SAAS for 2029', pric, e: '$229 / month', descriptio, n: unknown, 'Innovative micro SAAS platform that showcases the latest innovations for 2029.', feature, s: [, 'Innovative features', 'Latest innovations', 'Advanced technology', 'Innovation platform', 'Future - ready solutions'],
     link: '/services / 2029 - innovative - micro - saas'
     category: 'Innovative Micro SAAS 2029'
     real_implementation: true
@@ -112,13 +81,7 @@ export const,
     tagline: "Innovative micro SAAS for 2029",
     price: "$229/month",
     description: "Innovative micro SAAS platform that showcases the latest innovations for 2029.",
-    features: [,
-      "Innovative features",
-      "Latest innovations",
-      "Advanced technology",
-      "Innovation platform",
-      "Future-ready solutions"
-    ],
+    features: ["Innovative features", "Latest innovations", "Advanced technology", "Innovation platform", "Future-ready solutions"],
     link: "/services/2029-innovative-micro-saas"
     category: "Innovative Micro SAAS 2029"
     realImplementation: true
@@ -140,16 +103,12 @@ export const,
     address: string,
   }
 }
-export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [,
-    id: "2029-innovative-micro-saas", name: "2029 Innovative Micro SAAS Platform",
-    tagline: "Innovative micro SAAS for 2029", price: "$229/month"
+export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [id: "2029-innovative-micro-saas", name: "2029 Innovative Micro SAAS Platform", tagline: "Innovative micro SAAS for 2029", price: "$229/month"
     description: "Innovative micro SAAS platform that showcases the latest innovations for 2029."
-    features: [,
-      "Innovative features"
+    features: [, "Innovative features"
       "Latest innovations"
       "Advanced technology"
-      "Innovation platform",
-      "Future-ready solutions"],
+      "Innovation platform", "Future-ready solutions"],
     link: "/services/2029-innovative-micro-saas", category: "Innovative Micro SAAS 2029",
     realImplementation: true
     contactInfo: unknown,
@@ -185,13 +144,12 @@ export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [,
     descriptio,"
   n: "Innovative micro SAAS platform that showcases the latest innovations for 2029.",
     feature,
-  s: [,"
-      "Innovative features","
-      "Latest innovations","
-      "Advanced technology","
-      "Innovation platform","
-      "Future-ready solutions"
-    ],
+  s: ["
+      "Innovative features", "
+      "Latest innovations", "
+      "Advanced technology", "
+      "Innovation platform", "
+      "Future-ready solutions"],
     lin,"
   k: "/services/2029-innovative-micro-saas",
     categor,"
@@ -235,23 +193,17 @@ export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [,
   s: string}
 }
 export const,
-  innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [,
-    i,"
-  d: "2029-innovative-micro-saas", nam,"
-  e: "2029 Innovative Micro SAAS Platform",
-    taglin,"
-  e: "Innovative micro SAAS for 2029", pric,"
-  e: "$229/month",
-    descriptio,"
-  n: "Innovative micro SAAS platform that showcases the latest innovations for 2029.",
-    feature,
-  s: [,"
+  innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [i, "
+  d: "2029-innovative-micro-saas", nam, "
+  e: "2029 Innovative Micro SAAS Platform", taglin, "
+  e: "Innovative micro SAAS for 2029", pric, "
+  e: "$229/month", descriptio, "
+  n: "Innovative micro SAAS platform that showcases the latest innovations for 2029.", feature, s: [, "
       "Innovative features""
       "Latest innovations""
       "Advanced technology""
       "Innovation platform""
-      "Future-ready solutions"
-    ],
+      "Future-ready solutions"],
     lin,"
   k: "/services/2029-innovative-micro-saas", categor,"
   y: "Innovative Micro SAAS 2029",
@@ -279,13 +231,7 @@ id: "2029-innovative-micro-saas"
     tagline: "Innovative micro SAAS for 2029",
     price: "$229/month",
     description: "Innovative micro SAAS platform that showcases the latest innovations for 2029.",
-    features: [,
-      "Innovative features",
-      "Latest innovations",
-      "Advanced technology",
-      "Innovation platform",
-      "Future-ready solutions"
-    ],
+    features: ["Innovative features", "Latest innovations", "Advanced technology", "Innovation platform", "Future-ready solutions"],
     link: "/services/2029-innovative-micro-saas"
     category: "Innovative Micro SAAS 2029"
     realImplementation: true
@@ -311,13 +257,12 @@ id: "2029-innovative-micro-saas"
     descriptio,"
   n: "Innovative micro SAAS platform that showcases the latest innovations for 2029.",
     feature,
-  s: [,"
-      "Innovative features","
-      "Latest innovations","
-      "Advanced technology","
-      "Innovation platform","
-      "Future-ready solutions"
-    ],
+  s: ["
+      "Innovative features", "
+      "Latest innovations", "
+      "Advanced technology", "
+      "Innovation platform", "
+      "Future-ready solutions"],
     lin,"
   k: "/services/2029-innovative-micro-saas",
     categor,"
@@ -356,15 +301,7 @@ export interface InnovativeMicroSaas2029 export interface InnovativeMicroSaas202
   l: string} addres,
   s: string} } } addres,
   s: string} export const,
-  innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [ addres,
-  s: string} export const,
-  innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [, i,
-  d: '2029 - innovative - micro - saas',' nam,
-  e: '2029 Innovative Micro SAAS Platform',' taglin,
-  e: 'Innovative micro SAAS for 2029',' pric,
-  e: '$229 / month', descriptio,
-  n:  ,' 'Innovative micro SAAS platform that showcases the latest innovations for 2029.', feature,
-  s: [,' 'Innovative features',' 'Latest innovations',' 'Advanced technology',' 'Innovation platform',' 'Future - ready solutions'],' lin,
+  innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [addres, s: string} export const, innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [i, d: '2029 - innovative - micro - saas', ' nam, e: '2029 Innovative Micro SAAS Platform', ' taglin, e: 'Innovative micro SAAS for 2029', ' pric, e: '$229 / month', descriptio, n:, ' 'Innovative micro SAAS platform that showcases the latest innovations for 2029.', feature, s: [, ' 'Innovative features', ' 'Latest innovations', ' 'Advanced technology', ' 'Innovation platform', ' 'Future - ready solutions'],' lin,
   k: '/services / 2029 - innovative - micro - saas',' categor,
   y: 'Innovative Micro SAAS 2029', real_implementatio,
   n: true, contact_inf,
@@ -379,7 +316,7 @@ export interface InnovativeMicroSaas2029 export interface InnovativeMicroSaas202
   e: "Innovative micro SAAS for 2029", pric,"
   e: "$229/month", descriptio,"
   n: "Innovative micro SAAS platform that showcases the latest innovations for 2029.", feature,"
-  s: [ "Innovative features", "Latest innovations", "Advanced technology", "Innovation platform", "Future-ready solutions" ], lin,"
+  s: ["Innovative features", "Latest innovations", "Advanced technology", "Innovation platform", "Future-ready solutions"], lin,"
   k: "/services/2029-innovative-micro-saas", categor,"
   y: "Innovative Micro SAAS 2029", realImplementatio,
   n: true, contactInf,
@@ -401,13 +338,13 @@ export interface InnovativeMicroSaas2029 export interface InnovativeMicroSaas202
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [ i,"
-  d: "2029-innovative-micro-saas", nam,"
-  e: "2029 Innovative Micro SAAS Platform", taglin,"
-  e: "Innovative micro SAAS for 2029", pric,"
-  e: "$229/month", descriptio,"
-  n: "Innovative micro SAAS platform that showcases the latest innovations for 2029.", feature,"
-  s: [ "Innovative features" "Latest innovations" "Advanced technology" "Innovation platform" "Future-ready solutions" ], lin,"
+  innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [i, "
+  d: "2029-innovative-micro-saas", nam, "
+  e: "2029 Innovative Micro SAAS Platform", taglin, "
+  e: "Innovative micro SAAS for 2029", pric, "
+  e: "$229/month", descriptio, "
+  n: "Innovative micro SAAS platform that showcases the latest innovations for 2029.", feature, "
+  s: [ "Innovative features" "Latest innovations" "Advanced technology" "Innovation platform" "Future-ready solutions"], lin,"
   k: "/services/2029-innovative-micro-saas", categor,"
   y: "Innovative Micro SAAS 2029", realImplementatio,
   n: true, contactInf,
@@ -423,7 +360,7 @@ export interface InnovativeMicroSaas2029 export interface InnovativeMicroSaas202
   e: "Innovative micro SAAS for 2029", pric,"
   e: "$229/month", descriptio,"
   n: "Innovative micro SAAS platform that showcases the latest innovations for 2029.", feature,"
-  s: [ "Innovative features", "Latest innovations", "Advanced technology", "Innovation platform", "Future-ready solutions" ], lin,"
+  s: ["Innovative features", "Latest innovations", "Advanced technology", "Innovation platform", "Future-ready solutions"], lin,"
   k: "/services/2029-innovative-micro-saas", categor,"
   y: "Innovative Micro SAAS 2029", realImplementatio,
   n: true, contactInf,

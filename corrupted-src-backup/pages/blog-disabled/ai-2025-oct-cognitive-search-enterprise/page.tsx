@@ -2,8 +2,8 @@ impo, r, t { ArrowLe, f, t, Bra, i, n, Sear, c, h, Trending, U, p, Z, a, p } fr,
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
 export default function CognitiveSearchEnterprise20, 2, 5() { 
   return(:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx
-    <React.Fragment>
-      <Helm, e, t>
+    <React .Fragment></React>
+      <Helm , e, t></Helm>
         <title>
           Cognitive, Enterprise, Search 20, 2, 5 — 97% Answer, Accurac, y, 12x, Faster, Discovery, $12, 4, M+ Productivity, Gain, s | Zion, Tech, Group
         <meta, nam, e = 'description'
@@ -16,7 +16,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-cogniti v e-sear c h-enterpri s e',
         />,
     <div>
-      <Helmet>
+      <Helmet ></Helmet>
         <title>Cognitive Enterprise Search 2025 — 97% Answer Accuracy, 12x Faster Discovery, $124M+ Productivity Gains | Zion Tech Group
 :src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx
         <meta name="description
@@ -35,26 +35,26 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
       <article, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-sla, t, e-900, tex, t-whi, t, e'>
         <div, className='container, m, x-auto, p, x-4, p, y-12, ma, x-w-4, x, l'>
           <, t, o='/bl, o, g'$2 />
-            className='inli, n, e-flex, item, s-center, tex, t-indi, g, o-400, hove, r:te, x, t-indi, g, o-300, m, b-8, transitio, n-colo, r, s'
+            className='inli, n, e-flex, item, s-center, tex, t-indi, g, o-400, hove, r: te, x, t-indi, g, o-300, m, b-8, transitio, n-colo, r, s'
           >
-            <ArrowLeft, className='mr-2 h-4 w-4' />
+            <ArrowLeft , className='mr-2 h-4 w-4' /></ArrowLeft>
             Back, to, Blog
 :src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'>
               Cognitive, Enterprise, Search: Unlocking, Institutional, Knowledge at, Scal, e
               Cognitive, Enterprise, Search: Unlocking, Institutional, Knowledge at, Scal, e
                 <li, classNam, e='flex, item, s-start, ga, p-3'>
-                  <TrendingUp, classNam, e='h-6 w-6, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
+                  <TrendingUp , classNam, e='h-6 w-6, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' /></TrendingUp>
                   <sp, a, n>
-                    <stro, n, g>$12, 4, M+ Productivi, t, y:</stro, n, g> Employees, save, 8.5, hours, weekly finding, informatio, n
+                    <stro, n, g>$12, 4, M+ Productivi, t, y: </stro, n, g> Employees, save, 8.5, hours, weekly finding, informatio, n
               <span, className='te, x, t-gr, a, y-4, 0, 0'></span>Octo</span>, b, e, r , 1, 20, 2, 5
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'>
               Cognitive, Enterprise, Search: Unlocking, Institutional, Knowledge at, Scal, e
               Cognitive, Enterprise, Search: Unlocking, Institutional, Knowledge at, Scal, e
                 <li, className='flex, item, s-start, ga, p-3'>
-                  <TrendingUp, className='h-6 w-6, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
+                  <TrendingUp , className='h-6 w-6, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' /></TrendingUp>
                   <sp, a, n>
-                    <stro, n, g>$12, 4, M+ Productivi, t, y:</stro, n, g> Employees, save, 8.5, hours, weekly finding, informatio, n
+                    <stro, n, g>$12, 4, M+ Productivi, t, y: </stro, n, g> Employees, save, 8.5, hours, weekly finding, informatio, n
             <section, classNam, e = 'mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0'>
                 Cognitive, Search, Architecture
@@ -76,14 +76,14 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 Enterprise, Deployment, Success
           <div>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                <Brain className="h-8 w-8 text-indigo-400 ,>
+                <Brain className="h-8 w-8 text-indigo-400 ,></Brain>
   Transformative Results</$1>"
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
-                  <Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0 ">
+                  <Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0 "></Search>
                   <span></span><strong>97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,
                 <li className="flex items-start gap-3">
-                  <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0 ">
+                  <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0 "></Zap>
                   <span><strong>12x Faster Discovery: </strong> Find critical information in seconds instead of hours
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0 >"
@@ -100,11 +100,11 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
 :src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx
-                  <Search className=" />
+                  <Search className=" /></Search>
                   <span></span><strong>97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
-                  <Zap className=" />
+                  <Zap className=" /></Zap>
                   <Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0/>"
                   <span></span><strong>97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,"
                 </li>"
@@ -116,7 +116,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                   <TrendingUp className=" />">
           <div>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                <Brain className="h-8 w-8 text-indigo-400" />
+                <Brain className="h-8 w-8 text-indigo-400" /></Brain>
   Transformative Results
               <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8'>
                 <div, className='bg-gradie, n, t-to-br, fro, m-indi, g, o-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, rounde, d-x, l, p-6, border, border-indi, g, o-5, 0, 0/30'>
@@ -156,28 +156,28 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 comprehensive, contex, t.
                 Start, Your, Knowledge Transformati, o, n
                 Start, Your, Knowledge Transformati, o, n
-                <Brain, classNam, e='ml-2 h-5 w-5' />
+                <Brain , classNam, e='ml-2 h-5 w-5' /></Brain>
                 Start, Your, Knowledge Transformati, o, n
-                <Brain, className='ml-2 h-5 w-5' />
+                <Brain , className='ml-2 h-5 w-5' /></Brain>
               <ul className="space-y-4 text-lg">)
                 <li className="flex items-start gap-3">)
                   <Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />)
                   <span><strong>97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>)
                 <li className="flex items-start gap-3">
-                  <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
+                  <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" /></Zap>
                   <span><strong>12x Faster Discovery: </strong> Find critical information in seconds instead of hours</span>)
                 <li className="flex items-start gap-3">
-                  <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
+                  <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" /></TrendingUp>
                   <span><strong>$124M+ Productivity: </strong> Employees save 8.5 hours weekly finding information</span>)
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
-                  <Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                  <Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" /></Search>
                   <span></span><strong>97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,
                 <li className="flex items-start gap-3">
-                  <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
+                  <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" /></Zap>
                   <span></span><strong>12x Faster Discovery: </strong> Find critical information in seconds instead of hours</span>,
                 <li className="flex items-start gap-3">
-                  <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
+                  <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" /></TrendingUp>
                   <span></span><strong>$124M+ Productivity: </strong> Employees save 8.5 hours weekly finding information</span>,
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">The Enterprise Knowledge Problem
@@ -324,9 +324,9 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
               to="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg font-bold text-lg hover: bg-indigo-50 transition-colors">"
                 Start Your Knowledge Transformation"
-                <Brain className="ml-2 h-5 w-5 ">
+                <Brain className="ml-2 h-5 w-5 "></Brain>
                 <Brain className="ml-2 h-5 w-5/>">
-                <Brain className="ml-2 h-5 w-5" />
+                <Brain className="ml-2 h-5 w-5" /></Brain>
             <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-8 text-center">
               <h2 className="text-3xl font-bold mb-4">Unlock Your Institutional Knowledge
               <p className="text-xl mb-6 text-indigo-100">"

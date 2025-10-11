@@ -32,7 +32,7 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
         {/* Header, Sectio, n */}
         <div, className="te, x, t-center, m, b-10">
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-4">
-            <Sparkles, className="w-5 h-5, tex, t-cy, a, n-400, animat, e-pul, s, e  />
+            <Sparkles , className="w-5 h-5, tex, t-cy, a, n-400, animat, e-pul, s, e  /></Sparkles>
             <span, className="te, x, t-sm, fon, t-semibold, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-purp, l, e-4, 0, 0">
         <div, className="te, x, t-center, m, b-10">"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-4">"
@@ -72,7 +72,7 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
             <Li, n, k
   k, e, y={ind, e, x}
               to={artic, l, e.li, n, k}
-              classNa, m, e="group, relative, overflow-hidden, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-2xl, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e</$1>"
+              classNa, m, e="group, relative, overflow-hidden, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-2xl, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r: shad, o, w-2xl, hov, e</$1>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-au, t, o"></p>"
             🚀 <span, className="fo, n, t-semibold, tex, t-purp, l, e-3, 0, 0">Master, autonomous, systems</sp, a, n> with, sel, f-healing, capabilitie, s;"
             <span, className="fo, n, t-semibold, tex, t-cy, a, n-3, 0, 0"> unlock, 10x, LLM performan, c, e</sp, a, n> with, advanced, prompting, a, n, d;"
@@ -89,11 +89,11 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
           {/* TODO: Fix JSX expression */}
   k, e, y={ind, e, x}
               to={artic, l, e.li, n, k}"
-              classNa, m, e="group, relative, overflow-hidden, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-2xl, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
-  r:shad, o, w-purp, l, e-5, 0, 0/20"
+              classNa, m, e="group, relative, overflow-hidden, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-2xl, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r: shad, o, w-2xl, hov, e,"
+  r: shad, o, w-purp, l, e-5, 0, 0/20"
             >
               {/* Card, gradient, overlay */}
-              <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-10, transitio, n-opacity, duratio, n-3, 0, 0`}></d, i, v>`;`"
+              <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-opacity, duratio, n-3, 0, 0`}></d, i, v>`;`"
               <div, className="relativ, e, p-6">"
                 {/* Icon, and, Category */}
                 <div, className="flex, item, s-center, justif, y-between, m, b-4">
@@ -107,17 +107,17 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
                   <span, className="te, x, t-xs, fon, t-semibold, p, x-3, p, y-1, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, border, border-purp, l, e-5, 0, 0/30">"
                     {artic, l, e.catego, r, y}
                 {/* Tit, l, e */}
-                <, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2, grou, p-hov, e, r: te, x, t-transparent, grou, p-hov, e, r:bg-cl, i, p-text, grou, p-hov, e, r:bg-gradie, n, t-to-r, grou, p-hov, e, r:fr, o, m-purp, l, e-400, grou, p-ho, v, e$2 />
-  r:to-cy, a, n-400, transitio, n-all, duratio, n-3, 0, 0">"
-                <, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2, grou, p-hov, e, r: te, x, t-transparent, grou, p-hov, e, r:bg-cl, i, p-text, grou, p-hov, e, r:bg-gradie, n, t-to-r, grou, p-hov, e, r:fr, o, m-purp, l, e-400, grou, p-ho, v, e$2 />
-                <, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2, grou, p-hov, e, r: te, x, t-transparent, grou, p-hov, e, r:bg-cl, i, p-text, grou, p-hov, e, r:bg-gradie, n, t-to-r, grou, p-hov, e, r:fr, o, m-purp, l, e-400, grou, p-ho, v, e$2 />
-  r:to-cy, a, n-400, transitio, n-all, duratio, n-3, 0, 0">"
-                <, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2, grou, p-hov, e, r: te, x, t-transparent, grou, p-hov, e, r:bg-cl, i, p-text, grou, p-hov, e, r:bg-gradie, n, t-to-r, grou, p-hov, e, r:fr, o, m-purp, l, e-400, grou, p-ho, v, e$2 />
+                <, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2, grou, p-hov, e, r: te, x, t-transparent, grou, p-hov, e, r: bg-cl, i, p-text, grou, p-hov, e, r: bg-gradie, n, t-to-r, grou, p-hov, e, r: fr, o, m-purp, l, e-400, grou, p-ho, v, e$2 />
+  r: to-cy, a, n-400, transitio, n-all, duratio, n-3, 0, 0">"
+                <, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2, grou, p-hov, e, r: te, x, t-transparent, grou, p-hov, e, r: bg-cl, i, p-text, grou, p-hov, e, r: bg-gradie, n, t-to-r, grou, p-hov, e, r: fr, o, m-purp, l, e-400, grou, p-ho, v, e$2 />
+                <, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2, grou, p-hov, e, r: te, x, t-transparent, grou, p-hov, e, r: bg-cl, i, p-text, grou, p-hov, e, r: bg-gradie, n, t-to-r, grou, p-hov, e, r: fr, o, m-purp, l, e-400, grou, p-ho, v, e$2 />
+  r: to-cy, a, n-400, transitio, n-all, duratio, n-3, 0, 0">"
+                <, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2, grou, p-hov, e, r: te, x, t-transparent, grou, p-hov, e, r: bg-cl, i, p-text, grou, p-hov, e, r: bg-gradie, n, t-to-r, grou, p-hov, e, r: fr, o, m-purp, l, e-400, grou, p-ho, v, e$2 />
                 {/* Tit, l, e */}"
-                <, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2, grou, p-hov, e, r: te, x, t-transparent, grou, p-hov, e, r:bg-cl, i, p-text, grou, p-hov, e, r:bg-gradie, n, t-to-r, grou, p-hov, e, r:fr, o, m-purp, l, e-400, grou, p-ho, v, e,"$2 />
-  r:to-cy, a, n-400, transitio, n-all, duratio, n-3, 0, 0">""
-                <, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2, grou, p-hov, e, r: te, x, t-transparent, grou, p-hov, e, r:bg-cl, i, p-text, grou, p-hov, e, r:bg-gradie, n, t-to-r, grou, p-hov, e, r:fr, o, m-purp, l, e-400, grou, p-ho, v, e,"$2 />
-  r:to-cy, a, n-400, transitio, n-all, duratio, n-3, 0, 0">"
+                <, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2, grou, p-hov, e, r: te, x, t-transparent, grou, p-hov, e, r: bg-cl, i, p-text, grou, p-hov, e, r: bg-gradie, n, t-to-r, grou, p-hov, e, r: fr, o, m-purp, l, e-400, grou, p-ho, v, e,"$2 />
+  r: to-cy, a, n-400, transitio, n-all, duratio, n-3, 0, 0">""
+                <, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2, grou, p-hov, e, r: te, x, t-transparent, grou, p-hov, e, r: bg-cl, i, p-text, grou, p-hov, e, r: bg-gradie, n, t-to-r, grou, p-hov, e, r: fr, o, m-purp, l, e-400, grou, p-ho, v, e,"$2 />
+  r: to-cy, a, n-400, transitio, n-all, duratio, n-3, 0, 0">"
                   {artic, l, e.tit, l, e}
                 {/* Subtit, l, e */}"
                 <p, className="te, x, t-sm, tex, t-gr, a, y-400, m, b-4, lin, e-cla, m, p-2">"
@@ -157,14 +157,14 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"
         <div, className="te, x, t-cent, e, r">"
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"
-            <Li, n, k
-        <div, className="te, x, t-cent, e, r">
+            <Li , n, k
+        <div, className="te, x, t-cent, e, r"></Li>
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"
         <div, className="te, x, t-cent, e, r">"
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"
             <Li, n, k
   to="/bl, o, g"
-              classNa, m, e="group, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-cy, a, n-600, tex, t-white, fon, t-bold, rounde, d-xl, hove, r: fr, o, m-purp, l, e-500, hove, r:to-cy, a, n-500, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, hov, e
+              classNa, m, e="group, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-cy, a, n-600, tex, t-white, fon, t-bold, rounde, d-xl, hove, r: fr, o, m-purp, l, e-500, hove, r: to-cy, a, n-500, transitio, n-all, duratio, n-300, shado, w-lg, hove, r: shad, o, w-purp, l, e-5, 0, 0/50, hov, e
         {/* CTA, Sectio, n */}"
         <div, className="te, x, t-cent, e, r"></div>"
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">""
@@ -172,8 +172,8 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"
             <Li, n, k;"
   to="/bl, o, g""
-              classNa, m, e="group, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-cy, a, n-600, tex, t-white, fon, t-bold, rounde, d-xl, hove, r: fr, o, m-purp, l, e-500, hove, r:to-cy, a, n-500, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, hov, e,"
-  r:sca, l, e-1, 0, 5"
+              classNa, m, e="group, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-cy, a, n-600, tex, t-white, fon, t-bold, rounde, d-xl, hove, r: fr, o, m-purp, l, e-500, hove, r: to-cy, a, n-500, transitio, n-all, duratio, n-300, shado, w-lg, hove, r: shad, o, w-purp, l, e-5, 0, 0/50, hov, e,"
+  r: sca, l, e-1, 0, 5"
             ></Li>"
               <span, className="flex, item, s-center, ga, p-2">"
                 Explore, All, Latest Conte, n, t
@@ -185,11 +185,11 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
                 Explore, All, Latest Conte, n, t;"
                 <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
                 <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
-            <Li, n, k;"
+            <Li , n, k;"
   to="/conta, c, t""
               classNa, m, e="px-8, p, y-4, b, g-sla, t, e-8, 0, 0/80, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-xl, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-500, hov, e,"
-  r:bg-sla, t, e-7, 0, 0/80, transitio, n-all, duratio, n-3, 0, 0"
-            >
+  r: bg-sla, t, e-7, 0, 0/80, transitio, n-all, duratio, n-3, 0, 0"
+            ></Li>
               Schedule, Expert, Consultation
         {/* Additional, Inf, o */}
         <div, className="mt-8, tex, t-cent, e, r">

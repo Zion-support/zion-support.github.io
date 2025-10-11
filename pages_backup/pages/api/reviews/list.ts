@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next"
-import { readReviews, readProjects } from "../../../utils/dataStore"
+import { readReviews, readProjects  } from '../../../utils/dataStore'
 import type { PublicReview, ReviewsSummary } from "../../../types/reviews"
-import { TALENT_PROFILES } from "../../../data/talent"
+import { TALENT_PROFILES  } from '../../../data/talent'
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -9,9 +9,9 @@ export default async function handler(
   if (req.method !== "GET") {
     return res.status(405).json({ error: "Method not allowed" })
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { readReviews, readProjects } from '../../../utils/dataStore'
+import { readReviews, readProjects  } from '../../../utils/dataStore'
 import type { PublicReview, ReviewsSummary } from '../../../types/reviews'
-import { TALENT_PROFILES } from '../../../data/talent'
+import { TALENT_PROFILES  } from '../../../data/talent'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' })
@@ -134,23 +134,23 @@ if (author_name = "Anonymous") {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ reviews: [] })
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { readReviews, readProjects } from '../../../utils/dataStore'
+import { readReviews, readProjects  } from '../../../utils/dataStore'
 import type { PublicReview, ReviewsSummary } from '../../../types/reviews'
-import { TALENT_PROFILES } from '../../../data/talent'
+import { TALENT_PROFILES  } from '../../../data/talent'
 export default async function handler(req, res) {
   try {
   if (req.method !== '$1') {
     return res.status(405).json({ error: 'Method not allowed' })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -160,30 +160,30 @@ export default async function handler(req, res) {
     if (!targetType || !targetId) {
       return res.status(400).json({ error: 'Missing targetType or targetId' })
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
     if (targetType !== 'talent' && targetType !== 'client') {
       return res.status(400).json({ error: 'Invalid targetType' })
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -199,15 +199,15 @@ export default async function handler(req, res) {
           const t = TALENT_PROFILES.find((tp) => tp.slug === r.fromId)
           authorName = t ? t.name : r.fromId
           } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -215,15 +215,15 @@ export default async function handler(req, res) {
         return {
           ...r,
           authorName  } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -246,29 +246,28 @@ export default async function handler(req, res) {
   } catch (error) {
     return res.status(500).json({ error: 'Internal server error', details: error?.message })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

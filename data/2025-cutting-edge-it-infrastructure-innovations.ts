@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface CuttingEdgeITInfrastructureInnovation2025 {
   id: string
   name: string
@@ -39,53 +39,14 @@ export interface CuttingEdgeITInfrastructureInnovation2025 {
   rating: number
   reviews: number
 }
-export const cuttingEdgeITInfrastructureInnovations2025 = [
-  // Quantum-Safe Cloud Infrastructure Platform
+export const cuttingEdgeITInfrastructureInnovations2025 = [// Quantum-Safe Cloud Infrastructure Platform
   {
-    id: 'quantum-safe-cloud-infrastructure-platform',
-    name: 'Quantum-Safe Cloud Infrastructure Platform',
-    tagline: 'Future-proof cloud infrastructure resistant to quantum computing attacks',
-    description: 'Revolutionary cloud infrastructure platform built with quantum-resistant cryptography and advanced security protocols. Ensures data protection against both current and future quantum computing threats while maintaining exceptional performance.',
-    category: 'IT Infrastructure & Security',
-    type: 'Micro SAAS',
-    pricing: {
-      starter: '$899/month',
-      professional: '$1,999/month',
-      enterprise: '$4,999/month',
-      custom: 'Contact for pricing'
-    },
-    features: [
-      'Quantum-resistant encryption algorithms',
-      'Post-quantum cryptography implementation',
-      'Advanced threat detection and prevention',
-      'Zero-trust security architecture',
-      'Multi-cloud deployment options',
-      'Automated security compliance',
-      'Real-time security monitoring',
-      'Quantum-safe key management',
-      'Disaster recovery and backup',
-      'Global edge computing network',
-      'API-first infrastructure',
-      'Enterprise-grade SLA guarantees'
-    ],
-    benefits: [
-      'Future-proof against quantum threats',
-      'Unprecedented security levels',
-      'Compliance with emerging standards',
-      'Reduced security breach risks',
-      'Competitive security advantage',
-      'Long-term infrastructure investment',
-      'Advanced threat protection',
-      'Global compliance readiness'
-    ],
-    useCases: [
-      'Financial services and banking',
-      'Healthcare and medical data',
-      'Government and defense',
-      'Critical infrastructure',
-      'Research and development',
-      'Enterprise data centers'
-    ],
+    id: 'quantum-safe-cloud-infrastructure-platform', name: 'Quantum-Safe Cloud Infrastructure Platform', tagline: 'Future-proof cloud infrastructure resistant to quantum computing attacks', description: 'Revolutionary cloud infrastructure platform built with quantum-resistant cryptography and advanced security protocols. Ensures data protection against both current and future quantum computing threats while maintaining exceptional performance.', category: 'IT Infrastructure & Security', type: 'Micro SAAS', pricing: {
+      starter: '$899/month', professional: '$1, 999/month', enterprise: '$4, 999/month', custom: 'Contact for pricing'
+    }, features: [
+      'Quantum-resistant encryption algorithms', 'Post-quantum cryptography implementation', 'Advanced threat detection and prevention', 'Zero-trust security architecture', 'Multi-cloud deployment options', 'Automated security compliance', 'Real-time security monitoring', 'Quantum-safe key management', 'Disaster recovery and backup', 'Global edge computing network', 'API-first infrastructure', 'Enterprise-grade SLA guarantees'],
+    benefits: ['Future-proof against quantum threats', 'Unprecedented security levels', 'Compliance with emerging standards', 'Reduced security breach risks', 'Competitive security advantage', 'Long-term infrastructure investment', 'Advanced threat protection', 'Global compliance readiness'],
+    useCases: ['Financial services and banking', 'Healthcare and medical data', 'Government and defense', 'Critical infrastructure', 'Research and development', 'Enterprise data centers'],
     marketSize: '$14.3B by 2025',
     targetAudience: 'Enterprises requiring quantum-safe security, government agencies, financial institutions',
     competitiveAdvantage: 'First commercial quantum-safe cloud infrastructure with proven quantum resistance',
@@ -109,38 +70,9 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       enterprise: '$2,999/month',
       custom: 'Contact for pricing'
     },
-    features: [
-      'AI-powered edge resource management',
-      'Autonomous load balancing and scaling',
-      'Predictive performance optimization',
-      'Global edge node deployment',
-      'Real-time latency optimization',
-      'Intelligent content delivery',
-      'Edge AI model deployment',
-      'Autonomous fault detection and recovery',
-      'Dynamic resource allocation',
-      'Multi-cloud edge orchestration',
-      'Advanced analytics and insights',
-      'Custom edge application deployment'
-    ],
-    benefits: [
-      'Reduce latency by 80%',
-      'Improve user experience globally',
-      'Reduce bandwidth costs by 60%',
-      'Enable autonomous edge management',
-      'Scale edge computing automatically',
-      'Optimize performance in real-time',
-      'Reduce operational overhead',
-      'Global edge presence'
-    ],
-    useCases: [
-      'Content delivery networks',
-      'IoT and edge computing',
-      'Mobile applications',
-      'Gaming and entertainment',
-      'E-commerce platforms',
-      'Real-time applications'
-    ],
+    features: ['AI-powered edge resource management', 'Autonomous load balancing and scaling', 'Predictive performance optimization', 'Global edge node deployment', 'Real-time latency optimization', 'Intelligent content delivery', 'Edge AI model deployment', 'Autonomous fault detection and recovery', 'Dynamic resource allocation', 'Multi-cloud edge orchestration', 'Advanced analytics and insights', 'Custom edge application deployment'],
+    benefits: ['Reduce latency by 80%', 'Improve user experience globally', 'Reduce bandwidth costs by 60%', 'Enable autonomous edge management', 'Scale edge computing automatically', 'Optimize performance in real-time', 'Reduce operational overhead', 'Global edge presence'],
+    useCases: ['Content delivery networks', 'IoT and edge computing', 'Mobile applications', 'Gaming and entertainment', 'E-commerce platforms', 'Real-time applications'],
     marketSize: '$11.7B by 2025',
     targetAudience: 'CDN providers, IoT companies, mobile app developers, global businesses',
     competitiveAdvantage: 'Only autonomous edge computing network with AI-driven optimization',
@@ -164,38 +96,9 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       enterprise: '$14,999/month',
       custom: 'Contact for pricing'
     },
-    features: [
-      'Neuromorphic chip architecture',
-      'Brain-inspired neural networks',
-      'Ultra-low power consumption',
-      'Real-time learning capabilities',
-      'Cognitive computing processing',
-      'Advanced pattern recognition',
-      'Neuromorphic AI models',
-      'Scalable neural architecture',
-      'Custom neuromorphic designs',
-      'Research and development tools',
-      'Academic licensing options',
-      'Enterprise integration support'
-    ],
-    benefits: [
-      '1000x more energy efficient than traditional computing',
-      'Real-time learning and adaptation',
-      'Unprecedented AI processing speed',
-      'Cognitive computing capabilities',
-      'Breakthrough in computing architecture',
-      'Future-proof technology investment',
-      'Research and development platform',
-      'Competitive technological advantage'
-    ],
-    useCases: [
-      'AI research and development',
-      'Autonomous vehicles and robotics',
-      'Edge AI applications',
-      'Cognitive computing systems',
-      'Scientific research',
-      'Advanced AI applications'
-    ],
+    features: ['Neuromorphic chip architecture', 'Brain-inspired neural networks', 'Ultra-low power consumption', 'Real-time learning capabilities', 'Cognitive computing processing', 'Advanced pattern recognition', 'Neuromorphic AI models', 'Scalable neural architecture', 'Custom neuromorphic designs', 'Research and development tools', 'Academic licensing options', 'Enterprise integration support'],
+    benefits: ['1000x more energy efficient than traditional computing', 'Real-time learning and adaptation', 'Unprecedented AI processing speed', 'Cognitive computing capabilities', 'Breakthrough in computing architecture', 'Future-proof technology investment', 'Research and development platform', 'Competitive technological advantage'],
+    useCases: ['AI research and development', 'Autonomous vehicles and robotics', 'Edge AI applications', 'Cognitive computing systems', 'Scientific research', 'Advanced AI applications'],
     marketSize: '$19.8B by 2025',
     targetAudience: 'AI research institutions, autonomous vehicle companies, robotics manufacturers',
     competitiveAdvantage: 'First commercial neuromorphic computing infrastructure with proven brain-inspired architecture',
@@ -219,38 +122,9 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       enterprise: '$7,999/month',
       custom: 'Contact for pricing'
     },
-    features: [
-      'Autonomous power management',
-      'AI-driven cooling optimization',
-      'Predictive maintenance scheduling',
-      'Real-time security monitoring',
-      'Dynamic resource allocation',
-      'Energy efficiency optimization',
-      'Automated disaster recovery',
-      'Performance monitoring and alerting',
-      'Capacity planning and scaling',
-      'Multi-data center orchestration',
-      'Compliance and audit automation',
-      'Custom automation workflows'
-    ],
-    benefits: [
-      'Reduce energy costs by 40%',
-      'Improve uptime to 99.999%',
-      'Reduce operational costs by 60%',
-      'Enable 24/7 autonomous operation',
-      'Predict and prevent failures',
-      'Optimize resource utilization',
-      'Reduce carbon footprint',
-      'Scale operations automatically'
-    ],
-    useCases: [
-      'Enterprise data centers',
-      'Cloud service providers',
-      'Colocation facilities',
-      'Edge computing locations',
-      'Government data centers',
-      'Research and educational institutions'
-    ],
+    features: ['Autonomous power management', 'AI-driven cooling optimization', 'Predictive maintenance scheduling', 'Real-time security monitoring', 'Dynamic resource allocation', 'Energy efficiency optimization', 'Automated disaster recovery', 'Performance monitoring and alerting', 'Capacity planning and scaling', 'Multi-data center orchestration', 'Compliance and audit automation', 'Custom automation workflows'],
+    benefits: ['Reduce energy costs by 40%', 'Improve uptime to 99.999%', 'Reduce operational costs by 60%', 'Enable 24/7 autonomous operation', 'Predict and prevent failures', 'Optimize resource utilization', 'Reduce carbon footprint', 'Scale operations automatically'],
+    useCases: ['Enterprise data centers', 'Cloud service providers', 'Colocation facilities', 'Edge computing locations', 'Government data centers', 'Research and educational institutions'],
     marketSize: '$16.4B by 2025',
     targetAudience: 'Data center operators, cloud providers, enterprises with large IT infrastructure',
     competitiveAdvantage: 'Only fully autonomous data center management platform with AI-driven optimization',

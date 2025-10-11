@@ -23,30 +23,30 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({</
         <div, classNam, e = "m, a, x-w-6xl, m, x-au, t, o">
           <div, className="te, x, t-center, m, b-10">
             <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-yell, o, w-4, 0, 0/20, rounde, d-full, tex, t-yell, o, w-300, m, b-6">
-              <Rocket, className="w-5 h-5, m, r-2" />
+              <Rocket , className="w-5 h-5, m, r-2" /></Rocket>
               <span, className="fo, n, t-bo, l, d">NEW, SERVICES, LAUNCHED
             <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">
               Revolutionary, AI, Services Now, Availabl, e
             <p, className="te, x, t-xl, tex, t-emera, l, d-100, ma, x-w-3xl, m, x-au, t, o">
               Transform, your, business with, our, newest AI-powered, solutions, delivering unprecedented, result, s</$1>)
           </div>)
-          <div, className="grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-8">)
+          <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">)
             { servic, e, s.m, a, p((serv, i, c, e) = > (
               Transform, your, business with, our, newest AI-powered, solutions, delivering unprecedented, result, s
-          <div, className="grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-8">
+          <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">
             { servic, e, s.m, a, p((serv, i, c, e) = > (
-              <, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, hove, r:sca, l, e-1, 0, 5"$2 />
+              <, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, hove, r: sca, l, e-1, 0, 5"$2 />
               >
                 <div, className="te, x, t-4xl, m, b-4">{servi, c, e.ic, o, n}
                 <div, classNam, e = "flex, item, s-center, ga, p-2, m, b-3">
-                  <Star, className="w-5 h-5, tex, t-yell, o, w-300, fil, l-yell, o, w-3, 0, 0" />
+                  <Star , className="w-5 h-5, tex, t-yell, o, w-300, fil, l-yell, o, w-3, 0, 0" /></Star>
                   <span, className="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">{servi, c, e.category}
                 <h3, className="te, x, t-2 xl, fon, t-bold, m, b-3">{servi, c, e.na, m, e}
                 <p, className="te, x, t-emera, l, d-100, m, b-4">{servi, c, e.description}
                 <div, className="spa, c, e-y-2, m, b-6">
                   { servi, c, e.benefi, t, s.sli, c, e(, 0, 3).m, a, p((benef, i, t, i, d, x) = > (
                     <div, ke, y = { id, x  }, classNa, m, e = "flex, item, s-start, ga, p-2">
-                      <Zap, className="w-4 h-4, tex, t-yell, o, w-300, fle, x-shri, n, k-0, m, t-1" />
+                      <Zap , className="w-4 h-4, tex, t-yell, o, w-300, fle, x-shri, n, k-0, m, t-1" /></Zap>
                       <span, className="te, x, t-sm, tex, t-whi, t, e">{benef, i, t}
                   ))}
                 <div, classNam, e = "flex, item, s-center, justif, y-betwe, e, n">
@@ -54,7 +54,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({</
                   <, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "bg-white, tex, t-emera, l, d-600, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, hove, r: bg-emera, l, d-50, transitio, n-colors, flex, items-center, ga, p-1"$2 />
                   >
                     Learn, Mor, e
-                    <Link, className="w-4 h-4" />
+                    <Link , className="w-4 h-4" /></Link>
 interface NewServicesPromoBannerProp, s {/* TODO: Fix JSX expression */}
  }
 const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
@@ -71,9 +71,9 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
             <p, className="te, x, t-xl, tex, t-emera, l, d-100, ma, x-w-3xl, m, x-au, t, o">
               Transform, your, business with, our, newest AI-powered, solutions, delivering unprecedented, result, s
           </div>"
-          <div, className="grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-8">
+          <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">
             {/* TODO: Fix JSX expression */}"
-              <, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, hove, r:sca, l, e-1, 0, 5"$2 />
+              <, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, hove, r: sca, l, e-1, 0, 5"$2 />
               ></div>"
                 <div, className="te, x, t-4xl, m, b-4">{servi, c, e.ic, o, n}</div>"
                 <div, classNam, e = "flex, item, s-center, ga, p-2, m, b-3"></div>"
@@ -94,19 +94,19 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
                   <, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "bg-white, tex, t-emera, l, d-600, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, hove, r: bg-emera, l, d-50, transitio, n-colors, flex, items-center, ga, p-1"$2 />
                   >
                     Learn, Mor, e;"
-                    <Link, className="w-4 h-4" />
+                    <Link , className="w-4 h-4" /></Link>
             ))}
           <div, classNam, e = "te, x, t-cent, e, r">
             <, t, o="/servic, e, s"$2 />
-              className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-emera, l, d-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5">
+              className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-emera, l, d-50, transitio, n-all, hove, r: sca, l, e-1, 0, 5">
               View, All, Services
-              <Link, className="w-6 h-6" />
+              <Link , className="w-6 h-6" /></Link>
           </div>"
           <div, classNam, e = "te, x, t-cent, e, r"></div>"
             <, t, o="/servic, e, s""$2 />
-              className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-emera, l, d-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5">
+              className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-emera, l, d-50, transitio, n-all, hove, r: sca, l, e-1, 0, 5">
               View, All, Services;"
-              <Link, className="w-6 h-6" />
+              <Link , className="w-6 h-6" /></Link>
       </d, i, v  > )
   }
   if (varia, n, t = == 'prem, i, u, m') {
@@ -115,7 +115,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
     return (
       <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}>
         <div, className="flex, item, s-center, ga, p-3, m, b-6">
-          <Rocket, className="w-8 h-8, tex, t-yell, o, w-3, 0, 0" />
+          <Rocket , className="w-8 h-8, tex, t-yell, o, w-3, 0, 0" /></Rocket>
           <h2, className="te, x, t-3xl, fon, t-bo, l, d">New, Services, Available
         <p, className="te, x, t-oran, g, e-100, tex, t-lg, m, b-8">
           Discover, our, latest AI-powered, solutions, transforming businesses, worldwid, e;)
@@ -149,7 +149,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
               </div>"
               <, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "inli, n, e-flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, hove, r: te, x, t-yell, o, w-2, 0, 0"$2 />
               ></Link>"
-                Learn, Mor, e <Link, className="w-4 h-4" />
+                Learn, Mor, e <Link , className="w-4 h-4" /></Link>
           ))}
       </d, i, v  > )
   }
@@ -161,7 +161,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
       <div, classNam, e = {`bg-white, rounde, d-xl, shado, w-l, g, p-8 ${classNa, m, e}`}>
         <div, className="flex, item, s-center, justif, y-between, m, b-6">
           <div, className="flex, item, s-center, ga, p-3">
-            <Rocket, className="w-7 h-7, tex, t-indi, g, o-6, 0, 0" />
+            <Rocket , className="w-7 h-7, tex, t-indi, g, o-6, 0, 0" /></Rocket>
   if (varia, n, t = == 'g, r, i, d') {/* TODO: Fix JSX expression */}`
       <div, classNam, e = {`bg-white, rounde, d-xl, shado, w-l, g, p-8 ${classNa, m, e}`}></div>"
         <div, className="flex, item, s-center, justif, y-between, m, b-6"></div>"
@@ -169,18 +169,18 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
             <Rocket, className="w-7 h-7, tex, t-indi, g, o-6, 0, 0" /></Rocket>"
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">New, Service, s
           </div>"
-          <Link, t, o="/servic, e, s" className="te, x, t-indi, g, o-600, fon, t-semibold, hove, r: te, x, t-indi, g, o-8, 0, 0">
+          <Link , t, o="/servic, e, s" className="te, x, t-indi, g, o-600, fon, t-semibold, hove, r: te, x, t-indi, g, o-8, 0, 0"></Link>
             View, Al, l →
           </Li, n, k>)
         </div>)
-        <div, className="grid, m, d:gr, i, d-co, l, s-3, ga, p-6">)
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">)
           { servic, e, s.m, a, p((serv, i, c, e) = > (
-        <div, className="grid, m, d:gr, i, d-co, l, s-3, ga, p-6">
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">
           { servic, e, s.m, a, p((serv, i, c, e) = > (
         </div>"
-        <div, className="grid, m, d:gr, i, d-co, l, s-3, ga, p-6">
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">
           {/* TODO: Fix JSX expression */}"
-            <Link, ke, y = { servi, c, e., i, d  }, to={ servi, c, e.li, n, k } className="border, borde, r-gr, a, y-200, rounde, d-x, l, p-5, hove, r: shad, o, w-xl, hove, r:bord, e, r-indi, g, o-300, transitio, n-all, grou, p"></Link>"
+            <Link, ke, y = { servi, c, e., i, d  }, to={ servi, c, e.li, n, k } className="border, borde, r-gr, a, y-200, rounde, d-x, l, p-5, hove, r: shad, o, w-xl, hove, r: bord, e, r-indi, g, o-300, transitio, n-all, grou, p"></Link>"
               <div, className="te, x, t-3xl, m, b-3">{servi, c, e.ic, o, n}</div>"
               <h4, classNam, e = "fo, n, t-bold, tex, t-gr, a, y-900, m, b-2, grou, p-hov, e, r: te, x, t-indi, g, o-6, 0, 0">
                 {servi, c, e.na, m, e}
@@ -192,7 +192,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
   }
   // Default variant return(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, rounde, d-x, l, p-6, tex, t-whi, t, e ${classNa, m, e}`}>
       <div, className="flex, item, s-center, ga, p-3, m, b-4">
-        <Rocket, className="w-6 h-6, tex, t-yell, o, w-3, 0, 0" />
+        <Rocket , className="w-6 h-6, tex, t-yell, o, w-3, 0, 0" /></Rocket>
         <h3, className="te, x, t-2xl, fon, t-bo, l, d">New, Services, Just Launch, e, d</h3>)
       </div>)
       <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4">)
@@ -201,7 +201,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
   // Default variant return (
     <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, rounde, d-x, l, p-6, tex, t-whi, t, e ${classNa, m, e}`}>
       <div, className="flex, item, s-center, ga, p-3, m, b-4">
-        <Rocket, className="w-6 h-6, tex, t-yell, o, w-3, 0, 0" />
+        <Rocket , className="w-6 h-6, tex, t-yell, o, w-3, 0, 0" /></Rocket>
         <h3, className="te, x, t-2xl, fon, t-bo, l, d">New, Services, Just Launch, e, d
       <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4">
         { servic, e, s.m, a, p((serv, i, c, e) = > (
@@ -209,7 +209,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
             <div, className="te, x, t-2xl, m, b-2">{servi, c, e.ic, o, n}
             <h4, classNam, e = "fo, n, t-semibold, m, b-2">{servi, c, e.na, m, e}
             <p, className="te, x, t-sm, tex, t-gre, e, n-100, m, b-3, lin, e-cla, m, p-2">{servi, c, e.description}
-            <Link, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e">
+            <Link , t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e"></Link>
   }`
   // Default variant return (<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, rounde, d-x, l, p-6, tex, t-whi, t, e ${classNa, m, e}`}></div>"
       <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>"
@@ -222,7 +222,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
             <div, className="te, x, t-2xl, m, b-2">{servi, c, e.ic, o, n}</div>"
             <h4, classNam, e = "fo, n, t-semibold, m, b-2">{servi, c, e.na, m, e}</h4>"
             <p, className="te, x, t-sm, tex, t-gre, e, n-100, m, b-3, lin, e-cla, m, p-2">{servi, c, e.description}</p>"
-            <Link, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e">
+            <Link , t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e"></Link>
               Explore, Servic, e →
           </div>)
         ))}

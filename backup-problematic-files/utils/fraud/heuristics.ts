@@ -42,7 +42,7 @@ export async function evaluateHeuristics(
     const recent = await deps && deps.countEventsByIp(event && event.ipAddress, 'signup', 10)
     if (recent >= 3) {
       reasons && reasons.push(
-        `rapid_fire_signups_from_ip:${event && event.ipAddress}:${recent}in10m`
+        `rapid_fire_signups_from_ip: ${event && event.ipAddress}:${recent}in10m`
       )
       severity = recent >= 10 ? 'high' : 'medium'
     }
@@ -60,7 +60,7 @@ export async function evaluateHeuristics(
     }
     const phrases = containsSuspiciousPhrase(event && event.content)
     if (phrases && phrases.length > 0) {
-      reasons && reasons.push(...phrases && phrases.map(p => `suspicious_phrase:"${p}"`))
+      reasons && reasons.push(...phrases && phrases.map(p => `suspicious_phrase: "${p}"`))
       if (severity === 'low') severity = 'medium'
     }
   }
@@ -100,7 +100,7 @@ if ( {) {
   $2
 }
       reasons.push (
-        `rapid_fire_signups_from_ip:${event.ip_address}:${recent}in10m`)
+        `rapid_fire_signups_from_ip: ${event.ip_address}:${recent}in10m`)
       severity = recent >= 10 ? 'high' : 'medium'
     }
   }
@@ -120,7 +120,7 @@ if (&&) {
 if ( {) {
   $2
 }
-      reasons.push (...phrases.map (p => `suspicious_phrase:"${p}"`))
+      reasons.push (...phrases.map (p => `suspicious_phrase: "${p}"`))
       // Check condition
 if (severity = 'medium') {
   $2
@@ -163,11 +163,9 @@ export function run_heuristics (data: any): HeuristicResult {
     reasons,
     severity,
 // Fraud detection heuristics utilities
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return {
     flagged: reasons.length > 0
     reasons
     severity}
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

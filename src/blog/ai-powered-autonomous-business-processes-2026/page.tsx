@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
-import { ArrowLeft } from 'lucide-react'
-// import { Metadata } from 'next'; // Removed for Vite
+import { Link  } from 'react-router-dom'
+import { ArrowLeft  } from 'lucide-react'
+// import { Metadata  } from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
 export default function AutonomousBusinessProcessesBlog() {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -24,12 +24,12 @@ export default function AutonomousBusinessProcessesBlog() {/* TODO: Fix JSX expr
               Our autonomous business processes leverage cutting-edge AI technologies to create,
               self-managing systems that operate with minimal human intervention."
             </p><h3 className="text-xl font-semibold text-gray-800 mb-4">Core Components</h3><ul className="list-disc list-inside text-gray-700 mb-6 space-y-2"><li>• <strong>AI Decision,
-  Engine:</strong> Real-time autonomous decision making</li><li>• <strong>Process,
-  Orchestrator:</strong> Automated workflow management</li><li>• <strong>Learning,
-  System:</strong> Continuous improvement and adaptation</li><li>• <strong>Monitoring,"
-  Hub:</strong> Real-time system health and performance</li></ul><h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Implementation Strategy</h2><p className="text-gray-700 mb-6">
+  Engine: </strong> Real-time autonomous decision making</li><li>• <strong>Process,
+  Orchestrator: </strong> Automated workflow management</li><li>• <strong>Learning,
+  System: </strong> Continuous improvement and adaptation</li><li>• <strong>Monitoring,"
+  Hub: </strong> Real-time system health and performance</li></ul><h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Implementation Strategy</h2><p className="text-gray-700 mb-6">
               The path to autonomous operations requires a systematic approach across multiple business,
-  functions:"
+  functions: "
             </p><h3 className="text-xl font-semibold text-gray-800 mb-4">Phase,")
   1: Foundation (Months 1-6)</h3><ul className="list-disc list-inside text-gray-700 mb-4 space-y-2"><li>• Deploy AI decision engines for core business processes</li><li>• Implement automated workflow orchestration</li><li>• Establish real-time monitoring and alerting</li><li>• Train AI models on historical business data</li></ul><h2 className="text-2xl font-bold text-gray-900 mb-6">💰 ROI & Impact</h2><p className="text-gray-700 mb-6">
               Autonomous business processes deliver measurable value across multiple,

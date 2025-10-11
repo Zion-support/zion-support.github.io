@@ -1,20 +1,9 @@
 #!/usr/bin/env node
-import { execSync } from 'child_process'
+import { execSync  } from 'child_process'
 console.log('🔄 Merging latest enhancement branches...')
 try {
   // List of recent branches to check and potentially merge
-  const branchesToCheck = [
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fcae',
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd25',
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd44',
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd72',
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86',
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fe75',
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-feb1',
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-feb6',
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fee1',
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-ff2 c'
-  ]
+  const branchesToCheck = ['origin/cursor/enhance-app-with-new-services-and-futuristic-design-fcae', 'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd25', 'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd44', 'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd72', 'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86', 'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fe75', 'origin/cursor/enhance-app-with-new-services-and-futuristic-design-feb1', 'origin/cursor/enhance-app-with-new-services-and-futuristic-design-feb6', 'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fee1', 'origin/cursor/enhance-app-with-new-services-and-futuristic-design-ff2 c']
   let mergedCount = 0
   let skippedCount = 0
   for (const branch of branchesToCheck) {
@@ -54,6 +43,6 @@ try {
   execSync('git push origin main', { stdio: 'inherit' })
   console.log('🎉 All merges completed successfully!')
 } catch (error) {
-    console.error('❌ Error during merge process:', error.message)
+    console.error('❌ Error during merge process: ', error.message)
   process.exit(1)
   }

@@ -206,48 +206,48 @@ class SEOOptimizer {
     this.setMetaTag('author', this.currentPageData.author || this.config.siteName)
     this.setMetaTag('robots', this.getRobotsContent())
     // Open Graph tags
-    this.setMetaTag('og:title', title, 'property')
-    this.setMetaTag('og:description', description, 'property')
-    this.setMetaTag('og:image', image, 'property')
-    this.setMetaTag('og:url', url, 'property')
-    this.setMetaTag('og:type', this.currentPageData.type || 'website', 'property')
-    this.setMetaTag('og:site_name', this.config.siteName, 'property')
+    this.setMetaTag('og: title', title, 'property')
+    this.setMetaTag('og: description', description, 'property')
+    this.setMetaTag('og: image', image, 'property')
+    this.setMetaTag('og: url', url, 'property')
+    this.setMetaTag('og: type', this.currentPageData.type || 'website', 'property')
+    this.setMetaTag('og: site_name', this.config.siteName, 'property')
     // Twitter Card tags
     if (this.config.twitterHandle) {
-      this.setMetaTag('twitter:card', 'summary_large_image')
-      this.setMetaTag('twitter:site', `@${this.config.twitterHandle}`)
-      this.setMetaTag('twitter:title', title)
-      this.setMetaTag('twitter:description', description)
-      this.setMetaTag('twitter:image', image)
+      this.setMetaTag('twitter: card', 'summary_large_image')
+      this.setMetaTag('twitter: site', `@${this.config.twitterHandle}`)
+      this.setMetaTag('twitter: title', title)
+      this.setMetaTag('twitter: description', description)
+      this.setMetaTag('twitter: image', image)
     }
     // Additional meta tags
     // Open Graph tags
     this.setMetaTag('o)
-  g:title', title, 'property')
+  g: title', title, 'property')
     this.setMetaTag('o)
-  g:description', description, 'property')
+  g: description', description, 'property')
     this.setMetaTag('o)
-  g:image', image, 'property')
+  g: image', image, 'property')
     this.setMetaTag('o)
-  g:url', url, 'property')
+  g: url', url, 'property')
     this.setMetaTag('o)
-  g:type', this.currentPageData.type || 'website', 'property')
+  g: type', this.currentPageData.type || 'website', 'property')
     this.setMetaTag('o)
-  g:site_name', this.config.siteName, 'property')
+  g: site_name', this.config.siteName, 'property')
     // Twitter Card tags
     if (this.config.twitterHandle) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       this.setMetaTag('twitte)
-  r:card', 'summary_large_image')
+  r: card', 'summary_large_image')
       this.setMetaTag('twitte)`
-  r:site', `@${this.config.twitterHandle}`)
+  r: site', `@${this.config.twitterHandle}`)
       this.setMetaTag('twitte)
-  r:title', title)
+  r: title', title)
       this.setMetaTag('twitte)
-  r:description', description)
+  r: description', description)
       this.setMetaTag('twitte)
-  r:image', image)
+  r: image', image)
     }
     // Additional meta tags
     this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0')
@@ -331,7 +331,7 @@ class SEOOptimizer {
   O: Add content,}
 }
 
-      '@context': 'https://schema.org',
+      '@context': 'https: //schema.org',
       '@type': 'WebSite',
       name: this.config.siteName,
       url: this.config.siteUrl,
@@ -375,7 +375,7 @@ class SEOOptimizer {
   O: Add content,}
 }
 
-      '@context': 'https://schema.org',
+      '@context': 'https: //schema.org',
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
       headline: this.generateTitle(),
       description: this.generateDescription(),
@@ -457,23 +457,18 @@ class SEOOptimizer {
       (window as any).gtag('event', 'seo_metric', {
         metric_name: metric,
         metric_value: Math.round(value),
-        event_category:       ,
+        event_category:  ,
 $4})
     }
   }
   /**
    * Generate sitemap data
    */
-  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string, priority: number }> {
+  generateSitemapData(): Array<>
+  {url: string; lastmod: string; changefreq: string, priority: number } {
     // This would typically come from your CMS or routing system
-    return [
-      {
-        url: this.config.siteUrl,
-        lastmod: new Date().toISOString(),
-        changefreq: 'daily',
-        priority:       ,
-$4}
-    ]
+    return [{
+        url: this.config.siteUrl, lastmod: new Date().toISOString(), changefreq: 'daily', priority:, $4}]
   }
   /**
    * Generate robots.txt content
@@ -496,6 +491,7 @@ Disallow: /static/`,
     const issues: string[] = []
     // Check title length
     const title = document.title,
+</>
     if (title.length < 30) {
       issues.push('Title is too short (less than 30 characters)')
   } else if (title.length > 60) {
@@ -696,9 +692,7 @@ private addStructuredData(data: unknown): void {
   O: Add content,}
 }
     // This would typically come from your CMS or routing system
-    return [
-  // TOD,
-  O: Add items]
+    return [// TOD, O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

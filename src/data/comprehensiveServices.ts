@@ -48,46 +48,13 @@ export interface ComprehensiveService {
     website: string
   }
 }
-export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
-  // AI & Machine Learning Services
+export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [// AI & Machine Learning Services
   {
-    id: "ai-powered-crm",
-    title: "AI-Powered Customer Relationship Management",
-    description: "Intelligent CRM system that uses machine learning to predict customer behavior, automate follow-ups, and optimize sales strategies.",
-    category: "AI & Machine Learning",
-    subcategory: "Chatbot Development",
-    price: 3500,
-    currency: "$",
-    pricingModel: "project-based",
-    features: [
-      "Predictive customer analytics",
-      "Automated lead scoring",
-      "Smart email campaigns",
-      "Sales forecasting",
-      "Customer sentiment analysis",
-      "Integration with existing tools"
-    ],
-    benefits: [
-      "Increase sales conversion by 35%",
-      "Reduce manual follow-up time by 60%",
-      "Improve customer retention",
-      "Data-driven decision making",
-      "Scalable automation"
-    ],
-    useCases: [
-      "Sales teams",
-      "Marketing departments",
-      "Customer service",
-      "E-commerce businesses",
-      "B2B companies"
-    ],
-    targetAudience: [
-      "Sales teams",
-      "Marketing teams",
-      "Customer service managers",
-      "Business owners",
-      "Sales managers"
-    ],
+    id: "ai-powered-crm", title: "AI-Powered Customer Relationship Management", description: "Intelligent CRM system that uses machine learning to predict customer behavior, automate follow-ups, and optimize sales strategies.", category: "AI & Machine Learning", subcategory: "Chatbot Development", price: 3500, currency: "$", pricingModel: "project-based", features: [
+      "Predictive customer analytics", "Automated lead scoring", "Smart email campaigns", "Sales forecasting", "Customer sentiment analysis", "Integration with existing tools"],
+    benefits: ["Increase sales conversion by 35%", "Reduce manual follow-up time by 60%", "Improve customer retention", "Data-driven decision making", "Scalable automation"],
+    useCases: ["Sales teams", "Marketing departments", "Customer service", "E-commerce businesses", "B2B companies"],
+    targetAudience: ["Sales teams", "Marketing teams", "Customer service managers", "Business owners", "Sales managers"],
     tags: ["AI", "CRM", "Sales Automation", "Customer Analytics", "Machine Learning"],
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
@@ -107,36 +74,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 5000,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Quantum circuit simulator",
-      "Algorithm optimization tools",
-      "Performance benchmarking",
-      "Multi-qubit support",
-      "Cloud-based access",
-      "Real-time collaboration"
-    ],
-    benefits: [
-      "Accelerate quantum research",
-      "Reduce hardware costs",
-      "Faster algorithm development",
-      "Collaborative development",
-      "Scalable simulations",
-      "Future-proof technology"
-    ],
-    useCases: [
-      "Research institutions",
-      "Pharmaceutical companies",
-      "Financial services",
-      "Cybersecurity firms",
-      "Academic research"
-    ],
-    targetAudience: [
-      "Quantum researchers",
-      "Data scientists",
-      "Academic institutions",
-      "Enterprise R&D teams",
-      "Technology consultants"
-    ],
+    features: ["Quantum circuit simulator", "Algorithm optimization tools", "Performance benchmarking", "Multi-qubit support", "Cloud-based access", "Real-time collaboration"],
+    benefits: ["Accelerate quantum research", "Reduce hardware costs", "Faster algorithm development", "Collaborative development", "Scalable simulations", "Future-proof technology"],
+    useCases: ["Research institutions", "Pharmaceutical companies", "Financial services", "Cybersecurity firms", "Academic research"],
+    targetAudience: ["Quantum researchers", "Data scientists", "Academic institutions", "Enterprise R&D teams", "Technology consultants"],
     tags: ["Quantum Computing", "AI", "Research", "Simulation", "Advanced Computing"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
@@ -157,37 +98,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 299,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "AI-powered keyword research",
-      "Content optimization suggestions",
-      "Technical SEO auditing",
-      "Competitor analysis",
-      "Ranking predictions",
-      "Automated reporting",
-      "Local SEO optimization",
-      "Voice search optimization"
-    ],
-    benefits: [
-      "Improve search rankings by 40-60%",
-      "Reduce SEO management time by 70%",
-      "Increase organic traffic",
-      "Predictive SEO insights",
-      "Automated optimization"
-    ],
-    useCases: [
-      "Digital marketing agencies",
-      "E-commerce businesses",
-      "Content creators",
-      "Local businesses",
-      "Enterprise websites"
-    ],
-    targetAudience: [
-      "SEO specialists",
-      "Digital marketers",
-      "Business owners",
-      "Content managers",
-      "Web developers"
-    ],
+    features: ["AI-powered keyword research", "Content optimization suggestions", "Technical SEO auditing", "Competitor analysis", "Ranking predictions", "Automated reporting", "Local SEO optimization", "Voice search optimization"],
+    benefits: ["Improve search rankings by 40-60%", "Reduce SEO management time by 70%", "Increase organic traffic", "Predictive SEO insights", "Automated optimization"],
+    useCases: ["Digital marketing agencies", "E-commerce businesses", "Content creators", "Local businesses", "Enterprise websites"],
+    targetAudience: ["SEO specialists", "Digital marketers", "Business owners", "Content managers", "Web developers"],
     tags: ["AI", "SEO", "Digital Marketing", "Analytics", "Automation"],
     estimatedDelivery: "1-2 weeks",
     supportLevel: "premium",
@@ -205,52 +119,16 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     category: "Blockchain & Web3",
     subcategory: "Smart Contracts",
     price: 2500,
-export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
-  // AI & Machine Learning Services
+export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [// AI & Machine Learning Services
   {
-    id: "ai-ml-001",
-    title: "AI-Powered Customer Service Bot Development",
-    description: "Custom AI chatbot development with natural language processing, sentiment analysis, and multi-language support. Integrates with your existing CRM and website for 24/7 customer support.",
-    category: "AI & Machine Learning",
-    subcategory: "Chatbot Development",
-    price: 3500,
-    currency: "$",
-    pricingModel: "project-based",
-    features: [
-      "Natural Language Processing (NLP)",
-    aiScore: 95,
-    rating: 4.9,
-    reviewCount: 156,
-    estimatedDelivery: "2-3 weeks",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    id: "ai-ml-001", title: "AI-Powered Customer Service Bot Development", description: "Custom AI chatbot development with natural language processing, sentiment analysis, and multi-language support. Integrates with your existing CRM and website for 24/7 customer support.", category: "AI & Machine Learning", subcategory: "Chatbot Development", price: 3500, currency: "$", pricingModel: "project-based", features: [
+      "Natural Language Processing (NLP)", aiScore: 95, rating: 4.9, reviewCount: 156, estimatedDelivery: "2-3 weeks", contactInfo: {
+      phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com"
     }
-  },
-  {
-    id: "ai-content-generation",
-    title: "AI Content Generation & Marketing",
-    description: "AI-powered content creation for blogs, social media, and marketing campaigns. Generate engaging, SEO-optimized content at scale.",
-    category: "AI Services",
-    subcategory: "Content Generation",
-    price: 800,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Blog post generation",
-      "Social media content",
-      "Email marketing copy",
-      "SEO optimization",
-      "Brand voice consistency",
-      "Content calendar management"
-    ],
-    benefits: [
-      "Save 20+ hours per week on content creation",
-      "Improve SEO rankings with optimized content",
-      "Maintain consistent brand messaging",
-      "Scale content production without hiring"
-    ],
+  }, {
+    id: "ai-content-generation", title: "AI Content Generation & Marketing", description: "AI-powered content creation for blogs, social media, and marketing campaigns. Generate engaging, SEO-optimized content at scale.", category: "AI Services", subcategory: "Content Generation", price: 800, currency: "$", pricingModel: "monthly", features: [
+      "Blog post generation", "Social media content", "Email marketing copy", "SEO optimization", "Brand voice consistency", "Content calendar management"],
+    benefits: ["Save 20+ hours per week on content creation", "Improve SEO rankings with optimized content", "Maintain consistent brand messaging", "Scale content production without hiring"],
     targetAudience: ["Marketing agencies", "Content creators", "Small businesses", "E-commerce"],
     tags: ["AI", "Content Creation", "Marketing", "SEO", "Automation"],
     author: {
@@ -279,33 +157,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 3500,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Process mining and analysis",
-      "Workflow automation",
-      "Analytics dashboard",
-      "Integration capabilities"
-    ],
-    benefits: [
-      "Reduce review time by 80%",
-      "Improve accuracy by 90%",
-      "Cost-effective legal services",
-      "Risk mitigation",
-      "Compliance automation"
-    ],
-    useCases: [
-      "Law firms",
-      "Corporate legal departments",
-      "Compliance teams",
-      "Contract managers",
-      "Legal consultants"
-    ],
-    targetAudience: [
-      "Legal professionals",
-      "Compliance officers",
-      "Contract managers",
-      "Legal departments",
-      "Risk managers"
-    ],
+    features: ["Process mining and analysis", "Workflow automation", "Analytics dashboard", "Integration capabilities"],
+    benefits: ["Reduce review time by 80%", "Improve accuracy by 90%", "Cost-effective legal services", "Risk mitigation", "Compliance automation"],
+    useCases: ["Law firms", "Corporate legal departments", "Compliance teams", "Contract managers", "Legal consultants"],
+    targetAudience: ["Legal professionals", "Compliance officers", "Contract managers", "Legal departments", "Risk managers"],
     tags: ["AI", "Legal Services", "Document Review", "Compliance", "Risk Management"],
     estimatedDelivery: "3-4 weeks",
     supportLevel: "enterprise",
@@ -325,37 +180,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 2000,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Patient outcome prediction",
-      "Clinical decision support",
-      "Operational optimization",
-      "Population health analytics",
-      "Risk stratification",
-      "Quality metrics tracking",
-      "Compliance monitoring",
-      "Integration capabilities"
-    ],
-    benefits: [
-      "Improve patient outcomes by 25%",
-      "Reduce operational costs by 20%",
-      "Better clinical decisions",
-      "Population health insights",
-      "Regulatory compliance"
-    ],
-    useCases: [
-      "Hospitals",
-      "Clinics",
-      "Healthcare systems",
-      "Research institutions",
-      "Insurance companies"
-    ],
-    targetAudience: [
-      "Healthcare administrators",
-      "Clinical teams",
-      "Data analysts",
-      "Quality managers",
-      "Compliance officers"
-    ],
+    features: ["Patient outcome prediction", "Clinical decision support", "Operational optimization", "Population health analytics", "Risk stratification", "Quality metrics tracking", "Compliance monitoring", "Integration capabilities"],
+    benefits: ["Improve patient outcomes by 25%", "Reduce operational costs by 20%", "Better clinical decisions", "Population health insights", "Regulatory compliance"],
+    useCases: ["Hospitals", "Clinics", "Healthcare systems", "Research institutions", "Insurance companies"],
+    targetAudience: ["Healthcare administrators", "Clinical teams", "Data analysts", "Quality managers", "Compliance officers"],
     tags: ["AI", "Healthcare", "Analytics", "Patient Care", "Clinical Decision Support"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
@@ -367,28 +195,9 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       "Cloud-based access",
       "Real-time collaboration"
     ],
-    benefits: [
-      "Accelerate quantum research",
-      "Reduce hardware costs",
-      "Faster algorithm development",
-      "Collaborative development",
-      "Scalable simulations",
-      "Future-proof technology"
-    ],
-    useCases: [
-      "Research institutions",
-      "Pharmaceutical companies",
-      "Financial modeling",
-      "Cryptography research",
-      "Material science"
-    ],
-    targetAudience: [
-      "Quantum researchers",
-      "Data scientists",
-      "Research institutions",
-      "Technology companies",
-      "Academic institutions"
-    ],
+    benefits: ["Accelerate quantum research", "Reduce hardware costs", "Faster algorithm development", "Collaborative development", "Scalable simulations", "Future-proof technology"],
+    useCases: ["Research institutions", "Pharmaceutical companies", "Financial modeling", "Cryptography research", "Material science"],
+    targetAudience: ["Quantum researchers", "Data scientists", "Research institutions", "Technology companies", "Academic institutions"],
     tags: ["Quantum Computing", "Simulation", "Research Platform", "AI", "Advanced Computing"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
@@ -408,72 +217,14 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 3000,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "24/7 business monitoring",
-      "Automated decision making",
-      "Process optimization",
-      "Performance analytics",
-      "Resource management",
-      "Strategic planning",
-      "Risk assessment",
-      "Continuous learning"
-    ],
-    benefits: [
-      "Reduce operational costs by 40%",
-      "Improve efficiency by 60%",
-      "24/7 business operations",
-      "Data-driven decisions",
-      "Scalable growth"
-    ],
-    useCases: [
-      "Small businesses",
-      "Medium enterprises",
-      "Startups",
-      "Service companies",
-      "E-commerce businesses"
-    ],
-    targetAudience: [
-      "Business owners",
-      "Operations managers",
-    id: "autonomous-financial-advisory-platform",
-    title: "Autonomous Financial Advisory Platform",
-    description: "AI-driven financial planning and investment advisory platform that provides personalized financial advice, portfolio optimization, and risk management.",
-    category: "AI & Machine Learning",
-    subcategory: "Financial Technology",
-    price: 1499,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI-powered financial planning",
-      "Portfolio optimization algorithms",
-      "Risk assessment and management",
-      "Tax optimization strategies",
-      "Real-time market analysis",
-      "Goal-based planning",
-      "Retirement planning tools",
-      "Estate planning assistance"
-    ],
-    benefits: [
-      "Improve investment returns by 15-25%",
-      "Reduce financial planning costs by 60%",
-      "Personalized financial strategies",
-      "24/7 financial guidance",
-      "Comprehensive wealth management"
-    ],
-    useCases: [
-      "Financial advisors",
-      "Wealth management firms",
-      "Individual investors",
-      "Retirement planning",
-      "Estate planning"
-    ],
-    targetAudience: [
-      "Financial advisors",
-      "High-net-worth individuals",
-      "Retirement planners",
-      "Investment managers",
-      "Financial planners"
-    ],
+    features: ["24/7 business monitoring", "Automated decision making", "Process optimization", "Performance analytics", "Resource management", "Strategic planning", "Risk assessment", "Continuous learning"],
+    benefits: ["Reduce operational costs by 40%", "Improve efficiency by 60%", "24/7 business operations", "Data-driven decisions", "Scalable growth"],
+    useCases: ["Small businesses", "Medium enterprises", "Startups", "Service companies", "E-commerce businesses"],
+    targetAudience: ["Business owners", "Operations managers", id: "autonomous-financial-advisory-platform", title: "Autonomous Financial Advisory Platform", description: "AI-driven financial planning and investment advisory platform that provides personalized financial advice, portfolio optimization, and risk management.", category: "AI & Machine Learning", subcategory: "Financial Technology", price: 1499, currency: "$", pricingModel: "monthly", features: [
+      "AI-powered financial planning", "Portfolio optimization algorithms", "Risk assessment and management", "Tax optimization strategies", "Real-time market analysis", "Goal-based planning", "Retirement planning tools", "Estate planning assistance"],
+    benefits: ["Improve investment returns by 15-25%", "Reduce financial planning costs by 60%", "Personalized financial strategies", "24/7 financial guidance", "Comprehensive wealth management"],
+    useCases: ["Financial advisors", "Wealth management firms", "Individual investors", "Retirement planning", "Estate planning"],
+    targetAudience: ["Financial advisors", "High-net-worth individuals", "Retirement planners", "Investment managers", "Financial planners"],
     tags: ["AI", "Financial Planning", "Investment Advisory", "Wealth Management", "Risk Management"],
     estimatedDelivery: "4-5 weeks",
     supportLevel: "enterprise",
@@ -493,37 +244,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 8000,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Quantum neural networks",
-      "Quantum optimization algorithms",
-      "Hybrid classical-quantum computing",
-      "Quantum feature selection",
-      "Quantum clustering algorithms",
-      "Real-time quantum simulations",
-      "API for quantum algorithms",
-      "Performance benchmarking tools"
-    ],
-    benefits: [
-      "Solve previously intractable problems",
-      "Exponential speedup for ML tasks",
-      "Superior pattern recognition",
-      "Future-proof technology investment",
-      "Competitive advantage in research"
-    ],
-    useCases: [
-      "Drug discovery",
-      "Financial modeling",
-      "Climate modeling",
-      "Cryptography",
-      "Material science research"
-    ],
-    targetAudience: [
-      "Research institutions",
-      "Pharmaceutical companies",
-      "Financial institutions",
-      "Government agencies",
-      "Technology companies"
-    ],
+    features: ["Quantum neural networks", "Quantum optimization algorithms", "Hybrid classical-quantum computing", "Quantum feature selection", "Quantum clustering algorithms", "Real-time quantum simulations", "API for quantum algorithms", "Performance benchmarking tools"],
+    benefits: ["Solve previously intractable problems", "Exponential speedup for ML tasks", "Superior pattern recognition", "Future-proof technology investment", "Competitive advantage in research"],
+    useCases: ["Drug discovery", "Financial modeling", "Climate modeling", "Cryptography", "Material science research"],
+    targetAudience: ["Research institutions", "Pharmaceutical companies", "Financial institutions", "Government agencies", "Technology companies"],
     tags: ["Quantum Computing", "Machine Learning", "AI", "Research", "Advanced Computing"],
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
@@ -543,37 +267,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 3500,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "AI-powered threat detection",
-      "Automated incident response",
-      "Zero-day threat prevention",
-      "Behavioral anomaly detection",
-      "Threat intelligence correlation",
-      "Automated remediation",
-      "Compliance automation",
-      "Real-time threat hunting"
-    ],
-    benefits: [
-      "Reduce response time to seconds",
-      "Eliminate human error in security",
-      "24/7 automated protection",
-      "Reduce security team workload by 80%",
-      "Proactive threat prevention"
-    ],
-    useCases: [
-      "Enterprise security operations",
-      "Critical infrastructure protection",
-      "Financial services security",
-      "Healthcare security",
-      "Government cybersecurity"
-    ],
-    targetAudience: [
-      "CISOs",
-      "Security operations teams",
-      "Critical infrastructure operators",
-      "Financial institutions",
-      "Government agencies"
-    ],
+    features: ["AI-powered threat detection", "Automated incident response", "Zero-day threat prevention", "Behavioral anomaly detection", "Threat intelligence correlation", "Automated remediation", "Compliance automation", "Real-time threat hunting"],
+    benefits: ["Reduce response time to seconds", "Eliminate human error in security", "24/7 automated protection", "Reduce security team workload by 80%", "Proactive threat prevention"],
+    useCases: ["Enterprise security operations", "Critical infrastructure protection", "Financial services security", "Healthcare security", "Government cybersecurity"],
+    targetAudience: ["CISOs", "Security operations teams", "Critical infrastructure operators", "Financial institutions", "Government agencies"],
     tags: ["Cybersecurity", "AI", "Automation", "SOC", "Threat Response"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
@@ -592,20 +289,8 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 6000,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Data integration",
-      "Real-time dashboards",
-      "Predictive analytics",
-      "Machine learning models",
-      "Data visualization",
-      "Automated reporting"
-    ],
-    benefits: [
-      "Make data-driven decisions",
-      "Identify business opportunities",
-      "Improve operational efficiency",
-      "Predict future trends"
-    ],
+    features: ["Data integration", "Real-time dashboards", "Predictive analytics", "Machine learning models", "Data visualization", "Automated reporting"],
+    benefits: ["Make data-driven decisions", "Identify business opportunities", "Improve operational efficiency", "Predict future trends"],
     targetAudience: ["Retail", "Manufacturing", "Healthcare", "Financial services"],
     tags: ["Data Analytics", "Business Intelligence", "Predictive Analytics", "Dashboards"],
     author: {
@@ -628,37 +313,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 899,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Real-time equipment monitoring",
-      "AI-powered failure prediction",
-      "Maintenance scheduling optimization",
-      "Performance analytics dashboard",
-      "Alert system for anomalies",
-      "Integration with existing systems",
-      "Mobile app for technicians",
-      "Historical data analysis"
-    ],
-    benefits: [
-      "Reduce unplanned downtime by 70%",
-      "Lower maintenance costs by 40%",
-      "Extend equipment lifespan",
-      "Improve operational efficiency",
-      "Data-driven maintenance decisions"
-    ],
-    useCases: [
-      "Manufacturing plants",
-      "Power plants",
-      "Oil and gas facilities",
-      "Transportation systems",
-      "Building management"
-    ],
-    targetAudience: [
-      "Maintenance managers",
-      "Operations directors",
-      "Facility managers",
-      "Plant engineers",
-      "Asset managers"
-    ],
+    features: ["Real-time equipment monitoring", "AI-powered failure prediction", "Maintenance scheduling optimization", "Performance analytics dashboard", "Alert system for anomalies", "Integration with existing systems", "Mobile app for technicians", "Historical data analysis"],
+    benefits: ["Reduce unplanned downtime by 70%", "Lower maintenance costs by 40%", "Extend equipment lifespan", "Improve operational efficiency", "Data-driven maintenance decisions"],
+    useCases: ["Manufacturing plants", "Power plants", "Oil and gas facilities", "Transportation systems", "Building management"],
+    targetAudience: ["Maintenance managers", "Operations directors", "Facility managers", "Plant engineers", "Asset managers"],
     tags: ["IoT", "Predictive Maintenance", "AI", "Equipment Monitoring", "Operational Efficiency"],
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
@@ -679,37 +337,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 800,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Multi-language voice recognition",
-      "Natural language processing",
-      "Integration with CRM systems",
-      "Voice analytics dashboard",
-      "Custom voice training",
-      "API for developers",
-      "Real-time transcription",
-      "Voice biometrics"
-    ],
-    benefits: [
-      "Reduce customer service costs by 40%",
-      "Improve customer satisfaction",
-      "24/7 voice support availability",
-      "Scalable voice interactions",
-      "Data-driven insights"
-    ],
-    useCases: [
-      "Customer service centers",
-      "Sales teams",
-      "Healthcare providers",
-      "Financial institutions",
-      "E-commerce platforms"
-    ],
-    targetAudience: [
-      "Customer service managers",
-      "Sales directors",
-      "IT managers",
-      "Business owners",
-      "Operations managers"
-    ],
+    features: ["Multi-language voice recognition", "Natural language processing", "Integration with CRM systems", "Voice analytics dashboard", "Custom voice training", "API for developers", "Real-time transcription", "Voice biometrics"],
+    benefits: ["Reduce customer service costs by 40%", "Improve customer satisfaction", "24/7 voice support availability", "Scalable voice interactions", "Data-driven insights"],
+    useCases: ["Customer service centers", "Sales teams", "Healthcare providers", "Financial institutions", "E-commerce platforms"],
+    targetAudience: ["Customer service managers", "Sales directors", "IT managers", "Business owners", "Operations managers"],
     tags: ["AI", "Voice Recognition", "Customer Service", "Automation", "NLP"],
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
@@ -729,37 +360,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 3000,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Post-quantum cryptography",
-      "Quantum key distribution",
-      "Multi-layer encryption",
-      "Compliance certifications",
-      "Real-time threat monitoring",
-      "Automated key rotation",
-      "Integration APIs",
-      "Audit logging"
-    ],
-    benefits: [
-      "Future-proof security",
-      "Quantum-resistant protection",
-      "Regulatory compliance",
-      "Reduced security risks",
-      "Advanced encryption standards"
-    ],
-    useCases: [
-      "Financial institutions",
-      "Government agencies",
-      "Healthcare organizations",
-      "Defense contractors",
-      "Research institutions"
-    ],
-    targetAudience: [
-      "CISOs",
-      "Security architects",
-      "Compliance officers",
-      "IT directors",
-      "Risk managers"
-    ],
+    features: ["Post-quantum cryptography", "Quantum key distribution", "Multi-layer encryption", "Compliance certifications", "Real-time threat monitoring", "Automated key rotation", "Integration APIs", "Audit logging"],
+    benefits: ["Future-proof security", "Quantum-resistant protection", "Regulatory compliance", "Reduced security risks", "Advanced encryption standards"],
+    useCases: ["Financial institutions", "Government agencies", "Healthcare organizations", "Defense contractors", "Research institutions"],
+    targetAudience: ["CISOs", "Security architects", "Compliance officers", "IT directors", "Risk managers"],
     tags: ["Quantum Security", "Encryption", "Cybersecurity", "Compliance", "Future-Proof"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
@@ -779,37 +383,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 199,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Multi-format content generation",
-      "SEO-optimized writing",
-      "Brand voice customization",
-      "Plagiarism detection",
-      "Content scheduling",
-      "Performance analytics",
-      "Multi-language support",
-      "Collaboration tools"
-    ],
-    benefits: [
-      "Increase content production by 300%",
-      "Reduce content creation costs",
-      "Improve SEO rankings",
-      "Consistent brand messaging",
-      "Faster time to market"
-    ],
-    useCases: [
-      "Marketing agencies",
-      "Content creators",
-      "E-commerce businesses",
-      "Bloggers",
-      "Social media managers"
-    ],
-    targetAudience: [
-      "Content marketers",
-      "Digital marketers",
-      "Business owners",
-      "Agency managers",
-      "SEO specialists"
-    ],
+    features: ["Multi-format content generation", "SEO-optimized writing", "Brand voice customization", "Plagiarism detection", "Content scheduling", "Performance analytics", "Multi-language support", "Collaboration tools"],
+    benefits: ["Increase content production by 300%", "Reduce content creation costs", "Improve SEO rankings", "Consistent brand messaging", "Faster time to market"],
+    useCases: ["Marketing agencies", "Content creators", "E-commerce businesses", "Bloggers", "Social media managers"],
+    targetAudience: ["Content marketers", "Digital marketers", "Business owners", "Agency managers", "SEO specialists"],
     tags: ["AI", "Content Creation", "Marketing", "SEO", "Automation"],
     estimatedDelivery: "1-2 weeks",
     supportLevel: "standard",
@@ -829,37 +406,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 1500,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Decentralized identity verification",
-      "Multi-factor authentication",
-      "Biometric integration",
-      "Compliance reporting",
-      "Cross-border verification",
-      "Privacy protection",
-      "API integration",
-      "Audit trails"
-    ],
-    benefits: [
-      "Enhanced security",
-      "Reduced fraud",
-      "Global compliance",
-      "Privacy protection",
-      "Cost-effective verification"
-    ],
-    useCases: [
-      "Financial services",
-      "Healthcare",
-      "Education",
-      "Travel industry",
-      "Government services"
-    ],
-    targetAudience: [
-      "Compliance officers",
-      "Security managers",
-      "HR directors",
-      "Business owners",
-      "IT managers"
-    ],
+    features: ["Decentralized identity verification", "Multi-factor authentication", "Biometric integration", "Compliance reporting", "Cross-border verification", "Privacy protection", "API integration", "Audit trails"],
+    benefits: ["Enhanced security", "Reduced fraud", "Global compliance", "Privacy protection", "Cost-effective verification"],
+    useCases: ["Financial services", "Healthcare", "Education", "Travel industry", "Government services"],
+    targetAudience: ["Compliance officers", "Security managers", "HR directors", "Business owners", "IT managers"],
     tags: ["Blockchain", "Identity Verification", "Security", "Compliance", "Web3"],
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
@@ -879,37 +429,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 1200,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Predictive sales analytics",
-      "Market trend analysis",
-      "Pricing optimization",
-      "Customer behavior insights",
-      "Revenue forecasting",
-      "Scenario planning",
-      "Integration with CRM",
-      "Real-time dashboards"
-    ],
-    benefits: [
-      "Improve forecast accuracy by 60%",
-      "Increase revenue by 25%",
-      "Better resource planning",
-      "Data-driven decisions",
-      "Competitive advantage"
-    ],
-    useCases: [
-      "Sales teams",
-      "Business development",
-      "Marketing departments",
-      "Executive leadership",
-      "Financial planning"
-    ],
-    targetAudience: [
-      "Sales directors",
-      "Business development managers",
-      "CFOs",
-      "Marketing directors",
-      "Business owners"
-    ],
+    features: ["Predictive sales analytics", "Market trend analysis", "Pricing optimization", "Customer behavior insights", "Revenue forecasting", "Scenario planning", "Integration with CRM", "Real-time dashboards"],
+    benefits: ["Improve forecast accuracy by 60%", "Increase revenue by 25%", "Better resource planning", "Data-driven decisions", "Competitive advantage"],
+    useCases: ["Sales teams", "Business development", "Marketing departments", "Executive leadership", "Financial planning"],
+    targetAudience: ["Sales directors", "Business development managers", "CFOs", "Marketing directors", "Business owners"],
     tags: ["AI", "Sales Forecasting", "Analytics", "Revenue Optimization", "Machine Learning"],
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
@@ -929,37 +452,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 2500,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Automated threat detection",
-      "Real-time incident response",
-      "Threat intelligence feeds",
-      "Forensic analysis",
-      "Compliance reporting",
-      "Integration with SIEM",
-      "Mobile app alerts",
-      "Custom playbooks"
-    ],
-    benefits: [
-      "Reduce response time by 90%",
-      "Minimize security incidents",
-      "Automated compliance",
-      "24/7 protection",
-      "Cost-effective security"
-    ],
-    useCases: [
-      "Enterprise organizations",
-      "Financial institutions",
-      "Healthcare providers",
-      "Government agencies",
-      "Educational institutions"
-    ],
-    targetAudience: [
-      "CISOs",
-      "Security analysts",
-      "IT managers",
-      "Compliance officers",
-      "Risk managers"
-    ],
+    features: ["Automated threat detection", "Real-time incident response", "Threat intelligence feeds", "Forensic analysis", "Compliance reporting", "Integration with SIEM", "Mobile app alerts", "Custom playbooks"],
+    benefits: ["Reduce response time by 90%", "Minimize security incidents", "Automated compliance", "24/7 protection", "Cost-effective security"],
+    useCases: ["Enterprise organizations", "Financial institutions", "Healthcare providers", "Government agencies", "Educational institutions"],
+    targetAudience: ["CISOs", "Security analysts", "IT managers", "Compliance officers", "Risk managers"],
     tags: ["Cybersecurity", "Incident Response", "Automation", "AI", "Security"],
     estimatedDelivery: "3-4 weeks",
     supportLevel: "enterprise",
@@ -979,37 +475,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 899,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Churn prediction models",
-      "Customer behavior analysis",
-      "Retention scoring",
-      "Intervention recommendations",
-      "A/B testing tools",
-      "Integration with CRM",
-      "Real-time alerts",
-      "Performance analytics"
-    ],
-    benefits: [
-      "Reduce churn by 30%",
-      "Increase customer lifetime value",
-      "Improve retention strategies",
-      "Data-driven insights",
-      "Proactive customer care"
-    ],
-    useCases: [
-      "Subscription businesses",
-      "E-commerce platforms",
-      "SaaS companies",
-      "Telecommunications",
-      "Financial services"
-    ],
-    targetAudience: [
-      "Customer success managers",
-      "Marketing directors",
-      "Business owners",
-      "Product managers",
-      "Analytics teams"
-    ],
+    features: ["Churn prediction models", "Customer behavior analysis", "Retention scoring", "Intervention recommendations", "A/B testing tools", "Integration with CRM", "Real-time alerts", "Performance analytics"],
+    benefits: ["Reduce churn by 30%", "Increase customer lifetime value", "Improve retention strategies", "Data-driven insights", "Proactive customer care"],
+    useCases: ["Subscription businesses", "E-commerce platforms", "SaaS companies", "Telecommunications", "Financial services"],
+    targetAudience: ["Customer success managers", "Marketing directors", "Business owners", "Product managers", "Analytics teams"],
     tags: ["AI", "Customer Analytics", "Churn Prediction", "Retention", "Machine Learning"],
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
@@ -1029,37 +498,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 599,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "AI content generation",
-      "Multi-channel publishing",
-      "SEO optimization",
-      "Content performance analytics",
-      "Audience targeting",
-      "Automated distribution",
-      "Content calendar management",
-      "ROI tracking and reporting"
-    ],
-    benefits: [
-      "Increase content engagement by 50%",
-      "Reduce content creation time by 60%",
-      "Improve SEO rankings",
-      "Better audience targeting",
-      "Measurable marketing ROI"
-    ],
-    useCases: [
-      "Marketing agencies",
-      "E-commerce businesses",
-      "Content creators",
-      "B2B companies",
-      "Brand managers"
-    ],
-    targetAudience: [
-      "Marketing managers",
-      "Content creators",
-      "SEO specialists",
-      "Brand managers",
-      "Digital marketers"
-    ],
+    features: ["AI content generation", "Multi-channel publishing", "SEO optimization", "Content performance analytics", "Audience targeting", "Automated distribution", "Content calendar management", "ROI tracking and reporting"],
+    benefits: ["Increase content engagement by 50%", "Reduce content creation time by 60%", "Improve SEO rankings", "Better audience targeting", "Measurable marketing ROI"],
+    useCases: ["Marketing agencies", "E-commerce businesses", "Content creators", "B2B companies", "Brand managers"],
+    targetAudience: ["Marketing managers", "Content creators", "SEO specialists", "Brand managers", "Digital marketers"],
     tags: ["AI", "Content Marketing", "SEO", "Digital Marketing", "Content Creation"],
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
@@ -1079,37 +521,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 1200,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Decentralized identity verification",
-      "Zero-knowledge proof technology",
-      "Multi-factor authentication",
-      "Biometric integration",
-      "Compliance with regulations",
-      "API for integration",
-      "Real-time verification",
-      "Audit trail and transparency"
-    ],
-    benefits: [
-      "Eliminate identity fraud",
-      "Reduce verification costs by 60%",
-      "Comply with privacy regulations",
-      "User-controlled identity",
-      "Tamper-proof verification"
-    ],
-    useCases: [
-      "Financial services",
-      "Healthcare verification",
-      "Government services",
-      "E-commerce verification",
-      "Employment screening"
-    ],
-    targetAudience: [
-      "Financial institutions",
-      "Healthcare providers",
-      "Government agencies",
-      "E-commerce platforms",
-      "HR departments"
-    ],
+    features: ["Decentralized identity verification", "Zero-knowledge proof technology", "Multi-factor authentication", "Biometric integration", "Compliance with regulations", "API for integration", "Real-time verification", "Audit trail and transparency"],
+    benefits: ["Eliminate identity fraud", "Reduce verification costs by 60%", "Comply with privacy regulations", "User-controlled identity", "Tamper-proof verification"],
+    useCases: ["Financial services", "Healthcare verification", "Government services", "E-commerce verification", "Employment screening"],
+    targetAudience: ["Financial institutions", "Healthcare providers", "Government agencies", "E-commerce platforms", "HR departments"],
     tags: ["Blockchain", "Identity Verification", "Web3", "Security", "Privacy"],
       "Entrepreneurs",
       "COOs",
@@ -1134,37 +549,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 899,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Multi-platform voice shopping",
-      "Natural language product search",
-      "Voice-activated checkout",
-      "Personalized recommendations",
-      "Multi-language support",
-      "Voice biometrics",
-      "Shopping list management",
-      "Price comparison voice alerts"
-    ],
-    benefits: [
-      "Increase conversion rates by 45%",
-      "Reduce cart abandonment by 60%",
-      "Enhance accessibility for all users",
-      "Faster shopping experience",
-      "Mobile-first voice interface"
-    ],
-    useCases: [
-      "E-commerce platforms",
-      "Retail mobile apps",
-      "Smart home devices",
-      "Automotive shopping",
-      "Accessibility solutions"
-    ],
-    targetAudience: [
-      "E-commerce businesses",
-      "Retail chains",
-      "Mobile app developers",
-      "Accessibility advocates",
-      "Smart home companies"
-    ],
+    features: ["Multi-platform voice shopping", "Natural language product search", "Voice-activated checkout", "Personalized recommendations", "Multi-language support", "Voice biometrics", "Shopping list management", "Price comparison voice alerts"],
+    benefits: ["Increase conversion rates by 45%", "Reduce cart abandonment by 60%", "Enhance accessibility for all users", "Faster shopping experience", "Mobile-first voice interface"],
+    useCases: ["E-commerce platforms", "Retail mobile apps", "Smart home devices", "Automotive shopping", "Accessibility solutions"],
+    targetAudience: ["E-commerce businesses", "Retail chains", "Mobile app developers", "Accessibility advocates", "Smart home companies"],
     tags: ["Voice AI", "E-commerce", "Accessibility", "Mobile Commerce", "Natural Language Processing"],
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
@@ -1184,37 +572,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 3500,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Quantum risk modeling",
-      "Portfolio optimization algorithms",
-      "Real-time market analysis",
-      "Stress testing scenarios",
-      "Regulatory compliance reporting",
-      "Multi-asset class support",
-      "Machine learning integration",
-      "API for trading platforms"
-    ],
-    benefits: [
-      "Improve risk assessment accuracy by 85%",
-      "Reduce portfolio volatility by 30%",
-      "Faster computation than classical methods",
-      "Enhanced regulatory compliance",
-      "Competitive advantage in trading"
-    ],
-    useCases: [
-      "Investment banks",
-      "Hedge funds",
-      "Asset management firms",
-      "Insurance companies",
-      "Regulatory bodies"
-    ],
-    targetAudience: [
-      "Quantitative analysts",
-      "Risk managers",
-      "Portfolio managers",
-      "Compliance officers",
-      "Financial executives"
-    ],
+    features: ["Quantum risk modeling", "Portfolio optimization algorithms", "Real-time market analysis", "Stress testing scenarios", "Regulatory compliance reporting", "Multi-asset class support", "Machine learning integration", "API for trading platforms"],
+    benefits: ["Improve risk assessment accuracy by 85%", "Reduce portfolio volatility by 30%", "Faster computation than classical methods", "Enhanced regulatory compliance", "Competitive advantage in trading"],
+    useCases: ["Investment banks", "Hedge funds", "Asset management firms", "Insurance companies", "Regulatory bodies"],
+    targetAudience: ["Quantitative analysts", "Risk managers", "Portfolio managers", "Compliance officers", "Financial executives"],
     tags: ["Quantum Computing", "Financial Risk", "Portfolio Optimization", "Trading", "Compliance"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
@@ -1234,37 +595,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 2200,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Autonomous threat hunting",
-      "Behavioral analysis",
-      "Zero-day threat detection",
-      "Automated incident response",
-      "Threat intelligence sharing",
-      "Machine learning adaptation",
-      "24/7 autonomous monitoring",
-      "Integration with SIEM systems"
-    ],
-    benefits: [
-      "Reduce threat detection time by 90%",
-      "Eliminate false positives by 75%",
-      "24/7 autonomous protection",
-      "Continuous learning and adaptation",
-      "Reduced security team workload"
-    ],
-    useCases: [
-      "Enterprise networks",
-      "Cloud infrastructure",
-      "Critical infrastructure",
-      "Financial institutions",
-      "Healthcare organizations"
-    ],
-    targetAudience: [
-      "CISOs",
-      "Security operations teams",
-      "Network administrators",
-      "Compliance officers",
-      "IT security managers"
-    ],
+    features: ["Autonomous threat hunting", "Behavioral analysis", "Zero-day threat detection", "Automated incident response", "Threat intelligence sharing", "Machine learning adaptation", "24/7 autonomous monitoring", "Integration with SIEM systems"],
+    benefits: ["Reduce threat detection time by 90%", "Eliminate false positives by 75%", "24/7 autonomous protection", "Continuous learning and adaptation", "Reduced security team workload"],
+    useCases: ["Enterprise networks", "Cloud infrastructure", "Critical infrastructure", "Financial institutions", "Healthcare organizations"],
+    targetAudience: ["CISOs", "Security operations teams", "Network administrators", "Compliance officers", "IT security managers"],
     tags: ["Autonomous Security", "Threat Hunting", "AI Defense", "Incident Response", "Zero-Day Protection"],
     estimatedDelivery: "4-5 weeks",
     supportLevel: "enterprise",
@@ -1284,37 +618,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 1200,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Real-time sensor monitoring",
-      "AI failure prediction",
-      "Maintenance scheduling optimization",
-      "Equipment health scoring",
-      "Cost-benefit analysis",
-      "Integration with CMMS",
-      "Mobile alerts and notifications",
-      "Historical data analytics"
-    ],
-    benefits: [
-      "Reduce unplanned downtime by 50%",
-      "Lower maintenance costs by 30%",
-      "Extend equipment lifespan by 25%",
-      "Improve safety and compliance",
-      "Data-driven decision making"
-    ],
-    useCases: [
-      "Manufacturing plants",
-      "Power generation facilities",
-      "Transportation fleets",
-      "Building management systems",
-      "Oil and gas operations"
-    ],
-    targetAudience: [
-      "Maintenance managers",
-      "Operations directors",
-      "Facility managers",
-      "Plant engineers",
-      "Asset management teams"
-    ],
+    features: ["Real-time sensor monitoring", "AI failure prediction", "Maintenance scheduling optimization", "Equipment health scoring", "Cost-benefit analysis", "Integration with CMMS", "Mobile alerts and notifications", "Historical data analytics"],
+    benefits: ["Reduce unplanned downtime by 50%", "Lower maintenance costs by 30%", "Extend equipment lifespan by 25%", "Improve safety and compliance", "Data-driven decision making"],
+    useCases: ["Manufacturing plants", "Power generation facilities", "Transportation fleets", "Building management systems", "Oil and gas operations"],
+    targetAudience: ["Maintenance managers", "Operations directors", "Facility managers", "Plant engineers", "Asset management teams"],
     tags: ["IoT", "Predictive Maintenance", "AI", "Industrial Automation", "Asset Management"],
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
@@ -1334,37 +641,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 1800,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Decentralized identity verification",
-      "Zero-knowledge proofs",
-      "Multi-factor authentication",
-      "Regulatory compliance",
-      "Cross-border verification",
-      "Privacy-preserving analytics",
-      "API integration",
-      "Audit trail management"
-    ],
-    benefits: [
-      "Reduce verification costs by 60%",
-      "Improve compliance accuracy by 90%",
-      "Enhanced user privacy",
-      "Faster onboarding process",
-      "Global compliance standards"
-    ],
-    useCases: [
-      "Financial institutions",
-      "Cryptocurrency exchanges",
-      "Healthcare providers",
-      "Government agencies",
-      "E-commerce platforms"
-    ],
-    targetAudience: [
-      "Compliance officers",
-      "Risk managers",
-      "Product managers",
-      "Legal teams",
-      "Security professionals"
-    ],
+    features: ["Decentralized identity verification", "Zero-knowledge proofs", "Multi-factor authentication", "Regulatory compliance", "Cross-border verification", "Privacy-preserving analytics", "API integration", "Audit trail management"],
+    benefits: ["Reduce verification costs by 60%", "Improve compliance accuracy by 90%", "Enhanced user privacy", "Faster onboarding process", "Global compliance standards"],
+    useCases: ["Financial institutions", "Cryptocurrency exchanges", "Healthcare providers", "Government agencies", "E-commerce platforms"],
+    targetAudience: ["Compliance officers", "Risk managers", "Product managers", "Legal teams", "Security professionals"],
     tags: ["Blockchain", "Identity Verification", "KYC/AML", "Privacy", "Compliance"],
     estimatedDelivery: "4-5 weeks",
     supportLevel: "enterprise",
@@ -1384,37 +664,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 650,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Multi-language content adaptation",
-      "Cultural sensitivity analysis",
-      "Brand voice preservation",
-      "Regional compliance checking",
-      "Automated translation quality assurance",
-      "Cultural context validation",
-      "Content performance analytics",
-      "Workflow automation"
-    ],
-    benefits: [
-      "Reduce localization costs by 70%",
-      "Speed up market entry by 80%",
-      "Improve cultural relevance",
-      "Maintain brand consistency",
-      "Global market expansion"
-    ],
-    useCases: [
-      "Global marketing campaigns",
-      "E-commerce internationalization",
-      "Software localization",
-      "Educational content",
-      "Media and entertainment"
-    ],
-    targetAudience: [
-      "Marketing teams",
-      "Content managers",
-      "Localization specialists",
-      "Product managers",
-      "International business teams"
-    ],
+    features: ["Multi-language content adaptation", "Cultural sensitivity analysis", "Brand voice preservation", "Regional compliance checking", "Automated translation quality assurance", "Cultural context validation", "Content performance analytics", "Workflow automation"],
+    benefits: ["Reduce localization costs by 70%", "Speed up market entry by 80%", "Improve cultural relevance", "Maintain brand consistency", "Global market expansion"],
+    useCases: ["Global marketing campaigns", "E-commerce internationalization", "Software localization", "Educational content", "Media and entertainment"],
+    targetAudience: ["Marketing teams", "Content managers", "Localization specialists", "Product managers", "International business teams"],
     tags: ["AI Localization", "Cultural Adaptation", "Multi-language", "Global Marketing", "Content Management"],
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
@@ -1434,37 +687,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 4500,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Quantum key distribution",
-      "Unbreakable encryption",
-      "Real-time secure communication",
-      "Multi-party secure channels",
-      "Quantum random number generation",
-      "Post-quantum cryptography",
-      "Compliance certifications",
-      "API for secure applications"
-    ],
-    benefits: [
-      "Unbreakable encryption security",
-      "Future-proof against quantum attacks",
-      "Regulatory compliance",
-      "Competitive security advantage",
-      "Trusted communication channels"
-    ],
-    useCases: [
-      "Government communications",
-      "Financial transactions",
-      "Healthcare data transmission",
-      "Military communications",
-      "Critical infrastructure"
-    ],
-    targetAudience: [
-      "Government agencies",
-      "Financial institutions",
-      "Healthcare organizations",
-      "Defense contractors",
-      "Security-conscious enterprises"
-    ],
+    features: ["Quantum key distribution", "Unbreakable encryption", "Real-time secure communication", "Multi-party secure channels", "Quantum random number generation", "Post-quantum cryptography", "Compliance certifications", "API for secure applications"],
+    benefits: ["Unbreakable encryption security", "Future-proof against quantum attacks", "Regulatory compliance", "Competitive security advantage", "Trusted communication channels"],
+    useCases: ["Government communications", "Financial transactions", "Healthcare data transmission", "Military communications", "Critical infrastructure"],
+    targetAudience: ["Government agencies", "Financial institutions", "Healthcare organizations", "Defense contractors", "Security-conscious enterprises"],
     tags: ["Quantum Cryptography", "Secure Communication", "Encryption", "Government", "Financial Security"],
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
@@ -1484,37 +710,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 1400,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Real-time experience monitoring",
-      "Automatic optimization",
-      "Multi-channel integration",
-      "Sentiment analysis",
-      "Personalization engine",
-      "A/B testing automation",
-      "Customer journey mapping",
-      "ROI measurement"
-    ],
-    benefits: [
-      "Increase customer satisfaction by 35%",
-      "Improve retention rates by 40%",
-      "Reduce customer service costs",
-      "Automated optimization",
-      "Data-driven improvements"
-    ],
-    useCases: [
-      "E-commerce platforms",
-      "SaaS applications",
-      "Mobile apps",
-      "Customer service centers",
-      "Retail experiences"
-    ],
-    targetAudience: [
-      "Customer experience managers",
-      "Product managers",
-      "Marketing teams",
-      "Customer service leaders",
-      "Business analysts"
-    ],
+    features: ["Real-time experience monitoring", "Automatic optimization", "Multi-channel integration", "Sentiment analysis", "Personalization engine", "A/B testing automation", "Customer journey mapping", "ROI measurement"],
+    benefits: ["Increase customer satisfaction by 35%", "Improve retention rates by 40%", "Reduce customer service costs", "Automated optimization", "Data-driven improvements"],
+    useCases: ["E-commerce platforms", "SaaS applications", "Mobile apps", "Customer service centers", "Retail experiences"],
+    targetAudience: ["Customer experience managers", "Product managers", "Marketing teams", "Customer service leaders", "Business analysts"],
     tags: ["Customer Experience", "AI Optimization", "Personalization", "Customer Analytics", "Automation"],
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
@@ -1534,37 +733,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 2800,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Traffic flow optimization",
-      "Utility management systems",
-      "Environmental monitoring",
-      "Public safety integration",
-      "Energy efficiency optimization",
-      "Waste management",
-      "Citizen engagement portal",
-      "Data visualization dashboards"
-    ],
-    benefits: [
-      "Reduce traffic congestion by 30%",
-      "Lower utility costs by 25%",
-      "Improve public safety response",
-      "Enhanced citizen services",
-      "Sustainable urban development"
-    ],
-    useCases: [
-      "Municipal governments",
-      "Urban planning departments",
-      "Utility companies",
-      "Transportation authorities",
-      "Public safety agencies"
-    ],
-    targetAudience: [
-      "City managers",
-      "Urban planners",
-      "Infrastructure managers",
-      "Public works directors",
-      "Technology officers"
-    ],
+    features: ["Traffic flow optimization", "Utility management systems", "Environmental monitoring", "Public safety integration", "Energy efficiency optimization", "Waste management", "Citizen engagement portal", "Data visualization dashboards"],
+    benefits: ["Reduce traffic congestion by 30%", "Lower utility costs by 25%", "Improve public safety response", "Enhanced citizen services", "Sustainable urban development"],
+    useCases: ["Municipal governments", "Urban planning departments", "Utility companies", "Transportation authorities", "Public safety agencies"],
+    targetAudience: ["City managers", "Urban planners", "Infrastructure managers", "Public works directors", "Technology officers"],
     tags: ["Smart Cities", "IoT", "Urban Infrastructure", "Sustainability", "Public Services"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
@@ -1584,37 +756,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 1100,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Contract risk analysis",
-      "Clause identification",
-      "Compliance checking",
-      "Risk scoring",
-      "Automated recommendations",
-      "Document comparison",
-      "Version control",
-      "Legal research integration"
-    ],
-    benefits: [
-      "Reduce contract review time by 80%",
-      "Identify risks with 95% accuracy",
-      "Improve compliance",
-      "Cost-effective legal review",
-      "Standardized processes"
-    ],
-    useCases: [
-      "Corporate legal departments",
-      "Law firms",
-      "Contract management teams",
-      "Compliance officers",
-      "Business development teams"
-    ],
-    targetAudience: [
-      "Legal professionals",
-      "Contract managers",
-      "Compliance officers",
-      "Business executives",
-      "Risk managers"
-    ],
+    features: ["Contract risk analysis", "Clause identification", "Compliance checking", "Risk scoring", "Automated recommendations", "Document comparison", "Version control", "Legal research integration"],
+    benefits: ["Reduce contract review time by 80%", "Identify risks with 95% accuracy", "Improve compliance", "Cost-effective legal review", "Standardized processes"],
+    useCases: ["Corporate legal departments", "Law firms", "Contract management teams", "Compliance officers", "Business development teams"],
+    targetAudience: ["Legal professionals", "Contract managers", "Compliance officers", "Business executives", "Risk managers"],
     tags: ["Legal Tech", "Contract Analysis", "Risk Assessment", "AI", "Compliance"],
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
@@ -1634,37 +779,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 1600,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "End-to-end traceability",
-      "Product authentication",
-      "Sustainability tracking",
-      "Compliance monitoring",
-      "Real-time visibility",
-      "Smart contract automation",
-      "Integration APIs",
-      "Analytics dashboard"
-    ],
-    benefits: [
-      "Improve supply chain visibility by 100%",
-      "Reduce counterfeit products by 90%",
-      "Enhance compliance",
-      "Build consumer trust",
-      "Optimize logistics"
-    ],
-    useCases: [
-      "Food and beverage industry",
-      "Pharmaceutical supply chains",
-      "Luxury goods",
-      "Electronics manufacturing",
-      "Fashion and apparel"
-    ],
-    targetAudience: [
-      "Supply chain managers",
-      "Quality assurance teams",
-      "Compliance officers",
-      "Brand managers",
-      "Logistics coordinators"
-    ],
+    features: ["End-to-end traceability", "Product authentication", "Sustainability tracking", "Compliance monitoring", "Real-time visibility", "Smart contract automation", "Integration APIs", "Analytics dashboard"],
+    benefits: ["Improve supply chain visibility by 100%", "Reduce counterfeit products by 90%", "Enhance compliance", "Build consumer trust", "Optimize logistics"],
+    useCases: ["Food and beverage industry", "Pharmaceutical supply chains", "Luxury goods", "Electronics manufacturing", "Fashion and apparel"],
+    targetAudience: ["Supply chain managers", "Quality assurance teams", "Compliance officers", "Brand managers", "Logistics coordinators"],
     tags: ["Blockchain", "Supply Chain", "Traceability", "Transparency", "Compliance"],
     estimatedDelivery: "4-5 weeks",
     supportLevel: "premium",
@@ -1684,37 +802,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 6000,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Quantum molecular modeling",
-      "Drug interaction prediction",
-      "Toxicity assessment",
-      "Clinical trial optimization",
-      "Patent analysis",
-      "Research collaboration tools",
-      "Regulatory compliance",
-      "API for research platforms"
-    ],
-    benefits: [
-      "Accelerate drug discovery by 10x",
-      "Reduce development costs by 60%",
-      "Improve success rates",
-      "Faster time to market",
-      "Competitive advantage"
-    ],
-    useCases: [
-      "Pharmaceutical companies",
-      "Biotechnology firms",
-      "Research institutions",
-      "Clinical research organizations",
-      "Drug development startups"
-    ],
-    targetAudience: [
-      "Research scientists",
-      "Drug developers",
-      "Clinical researchers",
-      "Pharmaceutical executives",
-      "Regulatory affairs teams"
-    ],
+    features: ["Quantum molecular modeling", "Drug interaction prediction", "Toxicity assessment", "Clinical trial optimization", "Patent analysis", "Research collaboration tools", "Regulatory compliance", "API for research platforms"],
+    benefits: ["Accelerate drug discovery by 10x", "Reduce development costs by 60%", "Improve success rates", "Faster time to market", "Competitive advantage"],
+    useCases: ["Pharmaceutical companies", "Biotechnology firms", "Research institutions", "Clinical research organizations", "Drug development startups"],
+    targetAudience: ["Research scientists", "Drug developers", "Clinical researchers", "Pharmaceutical executives", "Regulatory affairs teams"],
     tags: ["Quantum Computing", "Drug Discovery", "Healthcare", "Machine Learning", "Pharmaceuticals"],
     estimatedDelivery: "10-12 weeks",
     supportLevel: "enterprise",
@@ -1734,37 +825,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 3200,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Grid load balancing",
-      "Demand prediction",
-      "Renewable energy integration",
-      "Fault detection and prevention",
-      "Energy storage optimization",
-      "Real-time monitoring",
-      "Predictive maintenance",
-      "Regulatory compliance"
-    ],
-    benefits: [
-      "Reduce energy waste by 25%",
-      "Improve grid stability by 40%",
-      "Lower operational costs",
-      "Enhanced renewable integration",
-      "Proactive maintenance"
-    ],
-    useCases: [
-      "Utility companies",
-      "Grid operators",
-      "Energy management systems",
-      "Smart cities",
-      "Industrial facilities"
-    ],
-    targetAudience: [
-      "Grid operators",
-      "Energy managers",
-      "Utility executives",
-      "Facility managers",
-      "Sustainability officers"
-    ],
+    features: ["Grid load balancing", "Demand prediction", "Renewable energy integration", "Fault detection and prevention", "Energy storage optimization", "Real-time monitoring", "Predictive maintenance", "Regulatory compliance"],
+    benefits: ["Reduce energy waste by 25%", "Improve grid stability by 40%", "Lower operational costs", "Enhanced renewable integration", "Proactive maintenance"],
+    useCases: ["Utility companies", "Grid operators", "Energy management systems", "Smart cities", "Industrial facilities"],
+    targetAudience: ["Grid operators", "Energy managers", "Utility executives", "Facility managers", "Sustainability officers"],
     tags: ["Energy Management", "Grid Optimization", "AI", "Renewable Energy", "Smart Grid"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
@@ -1784,37 +848,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 950,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Soil monitoring sensors",
-      "Drone crop imaging",
-      "Weather integration",
-      "Irrigation automation",
-      "Fertilizer optimization",
-      "Crop health monitoring",
-      "Yield prediction",
-      "Mobile farm management"
-    ],
-    benefits: [
-      "Increase crop yields by 30%",
-      "Reduce water usage by 40%",
-      "Lower fertilizer costs",
-      "Improve sustainability",
-      "Data-driven farming"
-    ],
-    useCases: [
-      "Large-scale farming",
-      "Greenhouse operations",
-      "Vineyards and orchards",
-      "Organic farming",
-      "Research farms"
-    ],
-    targetAudience: [
-      "Farm managers",
-      "Agricultural consultants",
-      "Crop advisors",
-      "Sustainability officers",
-      "Agricultural researchers"
-    ],
+    features: ["Soil monitoring sensors", "Drone crop imaging", "Weather integration", "Irrigation automation", "Fertilizer optimization", "Crop health monitoring", "Yield prediction", "Mobile farm management"],
+    benefits: ["Increase crop yields by 30%", "Reduce water usage by 40%", "Lower fertilizer costs", "Improve sustainability", "Data-driven farming"],
+    useCases: ["Large-scale farming", "Greenhouse operations", "Vineyards and orchards", "Organic farming", "Research farms"],
+    targetAudience: ["Farm managers", "Agricultural consultants", "Crop advisors", "Sustainability officers", "Agricultural researchers"],
     tags: ["Precision Farming", "IoT", "Agriculture", "Sustainability", "Crop Management"],
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
@@ -1834,37 +871,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 750,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Personalized learning paths",
-      "Adaptive content delivery",
-      "Progress tracking",
-      "Learning analytics",
-      "Student engagement monitoring",
-      "Performance prediction",
-      "Parent communication tools",
-      "Curriculum optimization"
-    ],
-    benefits: [
-      "Improve student performance by 35%",
-      "Increase engagement by 50%",
-      "Reduce dropout rates",
-      "Personalized learning",
-      "Data-driven teaching"
-    ],
-    useCases: [
-      "K-12 schools",
-      "Higher education",
-      "Corporate training",
-      "Online learning platforms",
-      "Special education"
-    ],
-    targetAudience: [
-      "Educators",
-      "School administrators",
-      "Training managers",
-      "Curriculum developers",
-      "Educational technologists"
-    ],
+    features: ["Personalized learning paths", "Adaptive content delivery", "Progress tracking", "Learning analytics", "Student engagement monitoring", "Performance prediction", "Parent communication tools", "Curriculum optimization"],
+    benefits: ["Improve student performance by 35%", "Increase engagement by 50%", "Reduce dropout rates", "Personalized learning", "Data-driven teaching"],
+    useCases: ["K-12 schools", "Higher education", "Corporate training", "Online learning platforms", "Special education"],
+    targetAudience: ["Educators", "School administrators", "Training managers", "Curriculum developers", "Educational technologists"],
     tags: ["Education", "Personalization", "Learning Analytics", "AI", "Student Success"],
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
@@ -1884,37 +894,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 1200,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "NFT minting tools",
-      "Marketplace functionality",
-      "Royalty management",
-      "Multi-chain support",
-      "Auction and bidding",
-      "Creator analytics",
-      "Community features",
-      "Mobile app support"
-    ],
-    benefits: [
-      "Monetize digital assets",
-      "Build creator communities",
-      "Secure blockchain transactions",
-      "Global marketplace access",
-      "Automated royalty distribution"
-    ],
-    useCases: [
-      "Digital artists",
-      "Content creators",
-      "Brands and companies",
-      "Gaming platforms",
-      "Collectors and investors"
-    ],
-    targetAudience: [
-      "Digital artists",
-      "Content creators",
-      "Brand managers",
-      "Gaming developers",
-      "NFT collectors"
-    ],
+    features: ["NFT minting tools", "Marketplace functionality", "Royalty management", "Multi-chain support", "Auction and bidding", "Creator analytics", "Community features", "Mobile app support"],
+    benefits: ["Monetize digital assets", "Build creator communities", "Secure blockchain transactions", "Global marketplace access", "Automated royalty distribution"],
+    useCases: ["Digital artists", "Content creators", "Brands and companies", "Gaming platforms", "Collectors and investors"],
+    targetAudience: ["Digital artists", "Content creators", "Brand managers", "Gaming developers", "NFT collectors"],
     tags: ["NFT", "Blockchain", "Digital Assets", "Marketplace", "Creator Economy"],
     estimatedDelivery: "4-5 weeks",
     supportLevel: "premium",
@@ -1934,37 +917,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 2800,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Collaborative research tools",
-      "Quantum algorithm development",
-      "AI model training",
-      "Research project management",
-      "Data sharing protocols",
-      "Publication management",
-      "Patent tracking",
-      "Industry partnership tools"
-    ],
-    benefits: [
-      "Accelerate research breakthroughs",
-      "Foster industry collaboration",
-      "Reduce research costs",
-      "Improve innovation efficiency",
-      "Global research network"
-    ],
-    useCases: [
-      "Research institutions",
-      "Technology companies",
-      "Government labs",
-      "Academic partnerships",
-      "Industry consortia"
-    ],
-    targetAudience: [
-      "Research scientists",
-      "Academic researchers",
-      "Technology executives",
-      "Innovation managers",
-      "Government officials"
-    ],
+    features: ["Collaborative research tools", "Quantum algorithm development", "AI model training", "Research project management", "Data sharing protocols", "Publication management", "Patent tracking", "Industry partnership tools"],
+    benefits: ["Accelerate research breakthroughs", "Foster industry collaboration", "Reduce research costs", "Improve innovation efficiency", "Global research network"],
+    useCases: ["Research institutions", "Technology companies", "Government labs", "Academic partnerships", "Industry consortia"],
+    targetAudience: ["Research scientists", "Academic researchers", "Technology executives", "Innovation managers", "Government officials"],
     tags: ["Quantum Computing", "AI Research", "Collaboration", "Innovation", "Research Management"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
@@ -1984,37 +940,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 1900,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Route optimization",
-      "Warehouse automation",
-      "Demand forecasting",
-      "Inventory optimization",
-      "Real-time tracking",
-      "Cost analysis",
-      "Sustainability metrics",
-      "API integrations"
-    ],
-    benefits: [
-      "Reduce logistics costs by 35%",
-      "Improve delivery times by 40%",
-      "Optimize warehouse space",
-      "Enhanced sustainability",
-      "Automated operations"
-    ],
-    useCases: [
-      "E-commerce logistics",
-      "Manufacturing supply chains",
-      "Retail distribution",
-      "Third-party logistics",
-      "Cold chain management"
-    ],
-    targetAudience: [
-      "Logistics managers",
-      "Supply chain directors",
-      "Operations managers",
-      "Fleet managers",
-      "Warehouse supervisors"
-    ],
+    features: ["Route optimization", "Warehouse automation", "Demand forecasting", "Inventory optimization", "Real-time tracking", "Cost analysis", "Sustainability metrics", "API integrations"],
+    benefits: ["Reduce logistics costs by 35%", "Improve delivery times by 40%", "Optimize warehouse space", "Enhanced sustainability", "Automated operations"],
+    useCases: ["E-commerce logistics", "Manufacturing supply chains", "Retail distribution", "Third-party logistics", "Cold chain management"],
+    targetAudience: ["Logistics managers", "Supply chain directors", "Operations managers", "Fleet managers", "Warehouse supervisors"],
     tags: ["Logistics", "Supply Chain", "AI Optimization", "Warehouse Management", "Route Planning"],
     estimatedDelivery: "4-5 weeks",
     supportLevel: "premium",
@@ -2034,37 +963,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 1500,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Remote patient monitoring",
-      "Vital signs tracking",
-      "Early warning systems",
-      "Telemedicine integration",
-      "Medication adherence",
-      "Health analytics",
-      "Care team communication",
-      "Mobile health apps"
-    ],
-    benefits: [
-      "Improve patient outcomes by 45%",
-      "Reduce hospital readmissions by 30%",
-      "Lower healthcare costs",
-      "Enhanced patient engagement",
-      "Proactive care delivery"
-    ],
-    useCases: [
-      "Hospitals and clinics",
-      "Home healthcare",
-      "Chronic disease management",
-      "Senior care facilities",
-      "Rural healthcare"
-    ],
-    targetAudience: [
-      "Healthcare providers",
-      "Hospital administrators",
-      "Care coordinators",
-      "Health IT managers",
-      "Patient care teams"
-    ],
+    features: ["Remote patient monitoring", "Vital signs tracking", "Early warning systems", "Telemedicine integration", "Medication adherence", "Health analytics", "Care team communication", "Mobile health apps"],
+    benefits: ["Improve patient outcomes by 45%", "Reduce hospital readmissions by 30%", "Lower healthcare costs", "Enhanced patient engagement", "Proactive care delivery"],
+    useCases: ["Hospitals and clinics", "Home healthcare", "Chronic disease management", "Senior care facilities", "Rural healthcare"],
+    targetAudience: ["Healthcare providers", "Hospital administrators", "Care coordinators", "Health IT managers", "Patient care teams"],
     tags: ["Healthcare IoT", "Remote Monitoring", "Telemedicine", "Patient Care", "Health Analytics"],
     estimatedDelivery: "4-5 weeks",
     supportLevel: "premium",
@@ -2084,37 +986,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 850,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Customer journey mapping",
-      "Multi-channel automation",
-      "Personalization engine",
-      "Campaign optimization",
-      "Lead scoring",
-      "ROI analytics",
-      "A/B testing automation",
-      "Integration ecosystem"
-    ],
-    benefits: [
-      "Increase conversion rates by 50%",
-      "Reduce marketing costs by 40%",
-      "Improve customer engagement",
-      "Automated optimization",
-      "Data-driven decisions"
-    ],
-    useCases: [
-      "B2B marketing",
-      "E-commerce marketing",
-      "SaaS marketing",
-      "Retail marketing",
-      "Lead generation"
-    ],
-    targetAudience: [
-      "Marketing managers",
-      "Digital marketers",
-      "Growth hackers",
-      "Sales teams",
-      "Business owners"
-    ],
+    features: ["Customer journey mapping", "Multi-channel automation", "Personalization engine", "Campaign optimization", "Lead scoring", "ROI analytics", "A/B testing automation", "Integration ecosystem"],
+    benefits: ["Increase conversion rates by 50%", "Reduce marketing costs by 40%", "Improve customer engagement", "Automated optimization", "Data-driven decisions"],
+    useCases: ["B2B marketing", "E-commerce marketing", "SaaS marketing", "Retail marketing", "Lead generation"],
+    targetAudience: ["Marketing managers", "Digital marketers", "Growth hackers", "Sales teams", "Business owners"],
     tags: ["Marketing Automation", "Customer Journey", "AI", "Personalization", "ROI Optimization"],
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
@@ -2134,37 +1009,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 2200,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Lending and borrowing",
-      "Yield farming protocols",
-      "Decentralized exchanges",
-      "Staking services",
-      "Liquidity pools",
-      "Smart contract security",
-      "Cross-chain bridges",
-      "Mobile DeFi apps"
-    ],
-    benefits: [
-      "Access to DeFi services",
-      "Higher yield opportunities",
-      "Reduced intermediary costs",
-      "Global financial access",
-      "Transparent operations"
-    ],
-    useCases: [
-      "Cryptocurrency investors",
-      "DeFi protocols",
-      "Financial institutions",
-      "Trading platforms",
-      "Liquidity providers"
-    ],
-    targetAudience: [
-      "DeFi developers",
-      "Cryptocurrency investors",
-      "Financial institutions",
-      "Trading platforms",
-      "Liquidity providers"
-    ],
+    features: ["Lending and borrowing", "Yield farming protocols", "Decentralized exchanges", "Staking services", "Liquidity pools", "Smart contract security", "Cross-chain bridges", "Mobile DeFi apps"],
+    benefits: ["Access to DeFi services", "Higher yield opportunities", "Reduced intermediary costs", "Global financial access", "Transparent operations"],
+    useCases: ["Cryptocurrency investors", "DeFi protocols", "Financial institutions", "Trading platforms", "Liquidity providers"],
+    targetAudience: ["DeFi developers", "Cryptocurrency investors", "Financial institutions", "Trading platforms", "Liquidity providers"],
     tags: ["DeFi", "Blockchain", "Cryptocurrency", "Lending", "Yield Farming"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
@@ -2184,37 +1032,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 3800,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Quantum threat simulation",
-      "Vulnerability assessment",
-      "Penetration testing",
-      "Security audit tools",
-      "Compliance reporting",
-      "Risk analysis",
-      "Remediation guidance",
-      "Continuous monitoring"
-    ],
-    benefits: [
-      "Future-proof security testing",
-      "Identify quantum vulnerabilities",
-      "Enhanced threat detection",
-      "Regulatory compliance",
-      "Competitive security advantage"
-    ],
-    useCases: [
-      "Financial institutions",
-      "Government agencies",
-      "Healthcare organizations",
-      "Critical infrastructure",
-      "Technology companies"
-    ],
-    targetAudience: [
-      "Security professionals",
-      "Penetration testers",
-      "Compliance officers",
-      "Risk managers",
-      "Security consultants"
-    ],
+    features: ["Quantum threat simulation", "Vulnerability assessment", "Penetration testing", "Security audit tools", "Compliance reporting", "Risk analysis", "Remediation guidance", "Continuous monitoring"],
+    benefits: ["Future-proof security testing", "Identify quantum vulnerabilities", "Enhanced threat detection", "Regulatory compliance", "Competitive security advantage"],
+    useCases: ["Financial institutions", "Government agencies", "Healthcare organizations", "Critical infrastructure", "Technology companies"],
+    targetAudience: ["Security professionals", "Penetration testers", "Compliance officers", "Risk managers", "Security consultants"],
     tags: ["Quantum Security", "Penetration Testing", "Vulnerability Assessment", "Cybersecurity", "Compliance"],
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
@@ -2226,14 +1047,9 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     }
   }
 ]
-export const serviceCategories = [
-  {
-    id: "ai-services",
-    name: "AI Services",
-    description: "Artificial Intelligence and Machine Learning solutions",
-    icon: "🤖",
-    count: 3
-import { ProductListing } from "@/types/listings"
+export const serviceCategories = [{
+    id: "ai-services", name: "AI Services", description: "Artificial Intelligence and Machine Learning solutions", icon: "🤖", count: 3
+import { ProductListing  } from '@/types/listings'
 export interface ServiceCategory {
   id: string
   name: string
@@ -2241,95 +1057,36 @@ export interface ServiceCategory {
   icon: string
   color: string
 }
-export const SERVICE_CATEGORIES: ServiceCategory[] = [
-  {
-    id: "ai-services",
-    name: "AI & Machine Learning",
-    description: "Cutting-edge artificial intelligence and machine learning solutions",
-    icon: "🤖",
-    color: "from-purple-500 to-indigo-600"
-  },
-  {
-    id: "it-services",
-    name: "IT & Infrastructure",
-    description: "Comprehensive IT support and infrastructure management",
-    icon: "💻",
-    color: "from-blue-500 to-cyan-600"
-  },
-  {
-    id: "cloud-services",
-    name: "Cloud & DevOps",
-    description: "Cloud migration, management, and DevOps automation",
-    icon: "☁️",
-    color: "from-cyan-500 to-teal-600"
-  },
-  {
-    id: "cybersecurity",
-    name: "Cybersecurity",
-    description: "Advanced security solutions and threat protection",
-    icon: "🔒",
-    color: "from-red-500 to-pink-600"
-  },
-  {
-    id: "data-services",
-    name: "Data & Analytics",
-    description: "Data engineering, analytics, and business intelligence",
-    icon: "📊",
-    color: "from-green-500 to-emerald-600"
-  },
-  {
-    id: "web-development",
-    name: "Web & Mobile Development",
-    description: "Custom web and mobile application development",
-    icon: "🌐",
-    color: "from-orange-500 to-amber-600"
-  },
-  {
-    id: "business-solutions",
-    name: "Business Solutions",
-    description: "Digital transformation and business process optimization",
-    icon: "💼",
-    color: "from-indigo-500 to-purple-600"
-  },
-  {
-    id: "consulting",
-    name: "IT Consulting",
-    description: "Strategic technology consulting and advisory services",
-    icon: "🎯",
-    color: "from-teal-500 to-green-600"
-  }
-]
-import { ProductListing } from "@/types/listings"
-export const COMPREHENSIVE_SERVICES: ProductListing[] = [
-  supportLevel: 'basic' | 'premium' | 'enterprise'
+export const SERVICE_CATEGORIES: ServiceCategory[] = [{
+    id: "ai-services", name: "AI & Machine Learning", description: "Cutting-edge artificial intelligence and machine learning solutions", icon: "🤖", color: "from-purple-500 to-indigo-600"
+  }, {
+    id: "it-services", name: "IT & Infrastructure", description: "Comprehensive IT support and infrastructure management", icon: "💻", color: "from-blue-500 to-cyan-600"
+  }, {
+    id: "cloud-services", name: "Cloud & DevOps", description: "Cloud migration, management, and DevOps automation", icon: "☁️", color: "from-cyan-500 to-teal-600"
+  }, {
+    id: "cybersecurity", name: "Cybersecurity", description: "Advanced security solutions and threat protection", icon: "🔒", color: "from-red-500 to-pink-600"
+  }, {
+    id: "data-services", name: "Data & Analytics", description: "Data engineering, analytics, and business intelligence", icon: "📊", color: "from-green-500 to-emerald-600"
+  }, {
+    id: "web-development", name: "Web & Mobile Development", description: "Custom web and mobile application development", icon: "🌐", color: "from-orange-500 to-amber-600"
+  }, {
+    id: "business-solutions", name: "Business Solutions", description: "Digital transformation and business process optimization", icon: "💼", color: "from-indigo-500 to-purple-600"
+  }, {
+    id: "consulting", name: "IT Consulting", description: "Strategic technology consulting and advisory services", icon: "🎯", color: "from-teal-500 to-green-600"
+  }]
+import { ProductListing  } from '@/types/listings'
+export const COMPREHENSIVE_SERVICES: ProductListing[] = [supportLevel: 'basic' | 'premium' | 'enterprise'
 }
-export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
-  // AI & Machine Learning Services
+export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [// AI & Machine Learning Services
   {
-    id: "ai-chatbot-development",
-    title: "Custom AI Chatbot Development",
-    description: "Intelligent chatbot solutions powered by GPT-4, Claude, or custom models. Includes training on your business data, multi-language support, and seamless integration with your existing systems.",
-    category: "AI Development",
-    subcategory: "Chatbots & Conversational AI",
-    price: 2500,
-    currency: "$",
-    tags: ["AI Chatbot", "GPT-4", "Customer Service", "Automation"],
-import { ProductListing } from "@/types/listings"
+    id: "ai-chatbot-development", title: "Custom AI Chatbot Development", description: "Intelligent chatbot solutions powered by GPT-4, Claude, or custom models. Includes training on your business data, multi-language support, and seamless integration with your existing systems.", category: "AI Development", subcategory: "Chatbots & Conversational AI", price: 2500, currency: "$", tags: ["AI Chatbot", "GPT-4", "Customer Service", "Automation"],
+import { ProductListing  } from '@/types/listings'
 // Comprehensive Micro SAAS Services & Solutions
-import { ProductListing } from "@/types/listings"
+import { ProductListing  } from '@/types/listings'
 // Comprehensive Micro SAAS Services and Solutions
-export const COMPREHENSIVE_SERVICES: ProductListing[] = [
-  // AI & Machine Learning Services
+export const COMPREHENSIVE_SERVICES: ProductListing[] = [// AI & Machine Learning Services
   {
-    id: "ai-chatbot-enterprise",
-    title: "Enterprise AI Chatbot Platform",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-    description: "Custom AI chatbot solution for enterprise customer service, sales, and support. Features multi-language support, sentiment analysis, and seamless CRM integration. Includes training data preparation and ongoing optimization.",
-    category: "AI & Machine Learning",
-    subcategory: "Chatbots & Conversational AI",
-    price: 2999,
-    currency: "$",
-    tags: ["AI Chatbot", "Customer Service", "CRM Integration", "Multi-language"],
+    id: "ai-chatbot-enterprise", title: "Enterprise AI Chatbot Platform", avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100", description: "Custom AI chatbot solution for enterprise customer service, sales, and support. Features multi-language support, sentiment analysis, and seamless CRM integration. Includes training data preparation and ongoing optimization.", category: "AI & Machine Learning", subcategory: "Chatbots & Conversational AI", price: 2999, currency: "$", tags: ["AI Chatbot", "Customer Service", "CRM Integration", "Multi-language"],
     author: {
       name: "Zion Tech Group",
       id: "zion-tech",
@@ -2379,18 +1136,11 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-20T14:30:00.000Z",
     rating: 4.8,
-import { ProductListing } from "@/types/listings"
+import { ProductListing  } from '@/types/listings'
 // Comprehensive Micro SAAS Services & Solutions
-export const COMPREHENSIVE_SERVICES: ProductListing[] = [
-  // AI & Machine Learning Services
+export const COMPREHENSIVE_SERVICES: ProductListing[] = [// AI & Machine Learning Services
   {
-    id: "ai-automation-suite",
-    title: "AI Process Automation Suite",
-    description: "End-to-end automation solution for business processes using AI. Includes workflow design, RPA integration, and intelligent decision-making capabilities. Perfect for enterprises looking to reduce manual work by 80%.",
-    category: "AI Automation",
-    price: 2999,
-    currency: "$",
-    tags: ["Process Automation", "RPA", "Workflow", "Enterprise"],
+    id: "ai-automation-suite", title: "AI Process Automation Suite", description: "End-to-end automation solution for business processes using AI. Includes workflow design, RPA integration, and intelligent decision-making capabilities. Perfect for enterprises looking to reduce manual work by 80%.", category: "AI Automation", price: 2999, currency: "$", tags: ["Process Automation", "RPA", "Workflow", "Enterprise"],
     author: {
       name: "Zion Tech Group",
       id: "ziontech",
@@ -2459,28 +1209,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 2500,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Multi-platform integration (Web, WhatsApp, Telegram, Discord)",
-      "Custom training on your business data",
-      "Multi-language support",
-      "Analytics dashboard",
-      "API integration capabilities",
-      "24/7 monitoring and maintenance"
-    ],
-    benefits: [
-      "Reduce customer service costs by 60%",
-      "24/7 customer support availability",
-      "Scalable customer interactions",
-      "Data-driven insights and analytics",
-      "Improved customer satisfaction scores"
-    ],
-    useCases: [
-      "E-commerce customer support",
-      "Lead qualification and sales",
-      "HR and recruitment",
-      "Technical support automation",
-      "Booking and appointment scheduling"
-    ],
+    features: ["Multi-platform integration (Web, WhatsApp, Telegram, Discord)", "Custom training on your business data", "Multi-language support", "Analytics dashboard", "API integration capabilities", "24/7 monitoring and maintenance"],
+    benefits: ["Reduce customer service costs by 60%", "24/7 customer support availability", "Scalable customer interactions", "Data-driven insights and analytics", "Improved customer satisfaction scores"],
+    useCases: ["E-commerce customer support", "Lead qualification and sales", "HR and recruitment", "Technical support automation", "Booking and appointment scheduling"],
     marketPrice: "$2,000 - $8,000",
     contactLink: "https://ziontechgroup.com/contact",
     tags: ["AI Chatbot", "GPT-4", "Customer Service", "Automation", "Multi-platform"],
@@ -2506,28 +1237,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 1500,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Blog post generation with SEO optimization",
-      "Social media content calendar",
-      "Email marketing campaigns",
-      "Technical documentation",
-      "Multilingual content creation",
-      "Brand voice customization"
-    ],
-    benefits: [
-      "10x faster content creation",
-      "Consistent brand messaging",
-      "SEO-optimized content",
-      "Cost-effective content marketing",
-      "Scalable content operations"
-    ],
-    useCases: [
-      "Marketing agencies",
-      "E-commerce businesses",
-      "SaaS companies",
-      "Educational platforms",
-      "News and media outlets"
-    ],
+    features: ["Blog post generation with SEO optimization", "Social media content calendar", "Email marketing campaigns", "Technical documentation", "Multilingual content creation", "Brand voice customization"],
+    benefits: ["10x faster content creation", "Consistent brand messaging", "SEO-optimized content", "Cost-effective content marketing", "Scalable content operations"],
+    useCases: ["Marketing agencies", "E-commerce businesses", "SaaS companies", "Educational platforms", "News and media outlets"],
     marketPrice: "$1,200 - $3,500/month",
     contactLink: "https://ziontechgroup.com/contact",
     tags: ["Content Generation", "AI Writing", "SEO", "Marketing", "Automation"],
@@ -2551,13 +1263,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       "API access for custom integrations",
       "30-day support and training"
     ],
-    benefits: [
-      "Reduce customer service costs by 60-80%",
-      "24/7 availability for global customers",
-      "Instant response times under 2 seconds",
-      "Scalable to handle unlimited conversations",
-      "Improve customer satisfaction scores"
-    ],
+    benefits: ["Reduce customer service costs by 60-80%", "24/7 availability for global customers", "Instant response times under 2 seconds", "Scalable to handle unlimited conversations", "Improve customer satisfaction scores"],
     marketPrice: "$3,000 - $8,000",
     deliveryTime: "4-6 weeks",
     tags: ["AI", "Chatbot", "NLP", "Customer Service", "Automation"],
@@ -2586,23 +1292,8 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 2800,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Real-time data visualization",
-      "ML-powered forecasting models",
-      "Automated anomaly detection",
-      "Custom KPI tracking",
-      "Interactive dashboards",
-      "Data source integration (SQL, APIs, Excel)",
-      "Automated reporting and alerts",
-      "Mobile-responsive design"
-    ],
-    benefits: [
-      "Improve decision-making accuracy by 40%",
-      "Identify business opportunities faster",
-      "Reduce manual reporting time by 80%",
-      "Predict market trends and customer behavior",
-      "Optimize resource allocation"
-    ],
+    features: ["Real-time data visualization", "ML-powered forecasting models", "Automated anomaly detection", "Custom KPI tracking", "Interactive dashboards", "Data source integration (SQL, APIs, Excel)", "Automated reporting and alerts", "Mobile-responsive design"],
+    benefits: ["Improve decision-making accuracy by 40%", "Identify business opportunities faster", "Reduce manual reporting time by 80%", "Predict market trends and customer behavior", "Optimize resource allocation"],
     marketPrice: "$2,500 - $6,000",
     deliveryTime: "3-5 weeks",
     tags: ["AI", "Analytics", "Dashboard", "Forecasting", "Business Intelligence"],
@@ -2631,23 +1322,8 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 1200,
     currency: "$",
     pricingModel: "subscription",
-    features: [
-      "Blog post generation (500-2000 words)",
-      "Social media content creation",
-      "Marketing copy and ad copy",
-      "Product description generation",
-      "Brand voice training and customization",
-      "SEO optimization suggestions",
-      "Plagiarism checking",
-      "Content calendar planning"
-    ],
-    benefits: [
-      "Generate 10x more content in less time",
-      "Maintain consistent brand voice across all channels",
-      "Improve SEO rankings with optimized content",
-      "Reduce content creation costs by 70%",
-      "Scale content marketing efforts instantly"
-    ],
+    features: ["Blog post generation (500-2000 words)", "Social media content creation", "Marketing copy and ad copy", "Product description generation", "Brand voice training and customization", "SEO optimization suggestions", "Plagiarism checking", "Content calendar planning"],
+    benefits: ["Generate 10x more content in less time", "Maintain consistent brand voice across all channels", "Improve SEO rankings with optimized content", "Reduce content creation costs by 70%", "Scale content marketing efforts instantly"],
     marketPrice: "$99 - $299/month",
     deliveryTime: "1-2 weeks setup",
     tags: ["AI", "Content Generation", "Marketing", "SEO", "Automation"],
@@ -2685,28 +1361,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 3000,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Detailed cost analysis and reporting",
-      "Reserved instance optimization",
-      "Spot instance strategies",
-      "Auto-scaling configuration",
-      "Cost alerting and monitoring",
-      "Monthly optimization reports"
-    ],
-    benefits: [
-      "Reduce AWS costs by 30-50%",
-      "Improved resource utilization",
-      "Predictable monthly spending",
-      "Performance optimization",
-      "Compliance and governance"
-    ],
-    useCases: [
-      "Startups and scale-ups",
-      "Enterprise organizations",
-      "E-commerce platforms",
-      "SaaS applications",
-      "Media and gaming companies"
-    ],
+    features: ["Detailed cost analysis and reporting", "Reserved instance optimization", "Spot instance strategies", "Auto-scaling configuration", "Cost alerting and monitoring", "Monthly optimization reports"],
+    benefits: ["Reduce AWS costs by 30-50%", "Improved resource utilization", "Predictable monthly spending", "Performance optimization", "Compliance and governance"],
+    useCases: ["Startups and scale-ups", "Enterprise organizations", "E-commerce platforms", "SaaS applications", "Media and gaming companies"],
     marketPrice: "$2,500 - $8,000",
     contactLink: "https://ziontechgroup.com/contact",
     tags: ["AWS", "Cost Optimization", "Cloud Management", "DevOps", "FinOps"],
@@ -2732,28 +1389,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 4500,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Multi-cluster management",
-      "Auto-scaling configuration",
-      "Monitoring and alerting setup",
-      "Security hardening",
-      "Backup and disaster recovery",
-      "Performance optimization"
-    ],
-    benefits: [
-      "99.9% uptime guarantee",
-      "Automated scaling and management",
-      "Enhanced security posture",
-      "Reduced operational overhead",
-      "Cost-effective resource utilization"
-    ],
-    useCases: [
-      "Microservices architectures",
-      "Cloud-native applications",
-      "High-traffic web services",
-      "Data processing pipelines",
-      "IoT platforms"
-    ],
+    features: ["Multi-cluster management", "Auto-scaling configuration", "Monitoring and alerting setup", "Security hardening", "Backup and disaster recovery", "Performance optimization"],
+    benefits: ["99.9% uptime guarantee", "Automated scaling and management", "Enhanced security posture", "Reduced operational overhead", "Cost-effective resource utilization"],
+    useCases: ["Microservices architectures", "Cloud-native applications", "High-traffic web services", "Data processing pipelines", "IoT platforms"],
     marketPrice: "$3,500 - $12,000/month",
     contactLink: "https://ziontechgroup.com/contact",
     tags: ["Kubernetes", "DevOps", "Container Management", "Cloud Native", "Microservices"],
@@ -2780,28 +1418,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 5000,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Web application security testing",
-      "Mobile app security assessment",
-      "API security testing",
-      "Infrastructure penetration testing",
-      "Social engineering assessment",
-      "Detailed remediation report"
-    ],
-    benefits: [
-      "Identify security vulnerabilities",
-      "Meet compliance requirements",
-      "Protect customer data",
-      "Reduce security risks",
-      "Build customer trust"
-    ],
-    useCases: [
-      "Financial services",
-      "Healthcare organizations",
-      "E-commerce platforms",
-      "SaaS applications",
-      "Government agencies"
-    ],
+    features: ["Web application security testing", "Mobile app security assessment", "API security testing", "Infrastructure penetration testing", "Social engineering assessment", "Detailed remediation report"],
+    benefits: ["Identify security vulnerabilities", "Meet compliance requirements", "Protect customer data", "Reduce security risks", "Build customer trust"],
+    useCases: ["Financial services", "Healthcare organizations", "E-commerce platforms", "SaaS applications", "Government agencies"],
     marketPrice: "$4,000 - $15,000",
     contactLink: "https://ziontechgroup.com/contact",
     tags: ["Penetration Testing", "Security Assessment", "Compliance", "Vulnerability", "Cybersecurity"],
@@ -2827,28 +1446,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 2500,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Real-time threat detection",
-      "SIEM implementation and management",
-      "Incident response automation",
-      "Security event correlation",
-      "Threat intelligence feeds",
-      "Monthly security reports"
-    ],
-    benefits: [
-      "Proactive threat detection",
-      "Reduced incident response time",
-      "Compliance with security standards",
-      "Peace of mind for business owners",
-      "Cost-effective security operations"
-    ],
-    useCases: [
-      "Critical infrastructure",
-      "Financial institutions",
-      "Healthcare providers",
-      "E-commerce businesses",
-      "Technology companies"
-    ],
+    features: ["Real-time threat detection", "SIEM implementation and management", "Incident response automation", "Security event correlation", "Threat intelligence feeds", "Monthly security reports"],
+    benefits: ["Proactive threat detection", "Reduced incident response time", "Compliance with security standards", "Peace of mind for business owners", "Cost-effective security operations"],
+    useCases: ["Critical infrastructure", "Financial institutions", "Healthcare providers", "E-commerce businesses", "Technology companies"],
     marketPrice: "$2,000 - $8,000/month",
     contactLink: "https://ziontechgroup.com/contact",
     tags: ["Security Monitoring", "SIEM", "Incident Response", "Threat Detection", "24/7 Support"],
@@ -3095,28 +1695,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 6000,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Real-time data streaming pipelines",
-      "ETL/ELT process development",
-      "Data warehouse optimization",
-      "Data quality monitoring",
-      "Performance optimization",
-      "Documentation and training"
-    ],
-    benefits: [
-      "Real-time business insights",
-      "Improved data quality",
-      "Faster decision-making",
-      "Scalable data infrastructure",
-      "Reduced data processing costs"
-    ],
-    useCases: [
-      "E-commerce analytics",
-      "Financial reporting",
-      "Customer behavior analysis",
-      "IoT data processing",
-      "Marketing attribution"
-    ],
+    features: ["Real-time data streaming pipelines", "ETL/ELT process development", "Data warehouse optimization", "Data quality monitoring", "Performance optimization", "Documentation and training"],
+    benefits: ["Real-time business insights", "Improved data quality", "Faster decision-making", "Scalable data infrastructure", "Reduced data processing costs"],
+    useCases: ["E-commerce analytics", "Financial reporting", "Customer behavior analysis", "IoT data processing", "Marketing attribution"],
     marketPrice: "$5,000 - $20,000",
     contactLink: "https://ziontechgroup.com/contact",
     tags: ["Data Engineering", "ETL", "Data Pipelines", "Real-time", "Analytics"],
@@ -3142,28 +1723,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 3500,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Custom dashboard design",
-      "Real-time data integration",
-      "Interactive visualizations",
-      "Automated reporting",
-      "Mobile-responsive design",
-      "User access management"
-    ],
-    benefits: [
-      "Data-driven decision making",
-      "Improved operational efficiency",
-      "Real-time business insights",
-      "Reduced reporting time",
-      "Better stakeholder communication"
-    ],
-    useCases: [
-      "Executive reporting",
-      "Sales performance tracking",
-      "Marketing campaign analysis",
-      "Financial reporting",
-      "Operational metrics"
-    ],
+    features: ["Custom dashboard design", "Real-time data integration", "Interactive visualizations", "Automated reporting", "Mobile-responsive design", "User access management"],
+    benefits: ["Data-driven decision making", "Improved operational efficiency", "Real-time business insights", "Reduced reporting time", "Better stakeholder communication"],
+    useCases: ["Executive reporting", "Sales performance tracking", "Marketing campaign analysis", "Financial reporting", "Operational metrics"],
     marketPrice: "$3,000 - $12,000",
     contactLink: "https://ziontechgroup.com/contact",
     tags: ["Business Intelligence", "Dashboards", "Data Visualization", "Reporting", "Analytics"],
@@ -3458,28 +2020,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 4000,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Offline functionality",
-      "Push notifications",
-      "App-like navigation",
-      "Service worker implementation",
-      "Performance optimization",
-      "Cross-platform compatibility"
-    ],
-    benefits: [
-      "Improved user engagement",
-      "Faster loading times",
-      "Offline functionality",
-      "Reduced development costs",
-      "Better user experience"
-    ],
-    useCases: [
-      "E-commerce platforms",
-      "News and media sites",
-      "Social networking apps",
-      "Business applications",
-      "Educational platforms"
-    ],
+    features: ["Offline functionality", "Push notifications", "App-like navigation", "Service worker implementation", "Performance optimization", "Cross-platform compatibility"],
+    benefits: ["Improved user engagement", "Faster loading times", "Offline functionality", "Reduced development costs", "Better user experience"],
+    useCases: ["E-commerce platforms", "News and media sites", "Social networking apps", "Business applications", "Educational platforms"],
     marketPrice: "$3,500 - $15,000",
     contactLink: "https://ziontechgroup.com/contact",
     tags: ["PWA", "Web Development", "Mobile", "Offline", "Performance"],
@@ -3505,28 +2048,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 8000,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Cross-platform development",
-      "Native performance",
-      "Custom UI/UX design",
-      "API integration",
-      "Push notifications",
-      "App store deployment"
-    ],
-    benefits: [
-      "Single codebase for both platforms",
-      "Native performance",
-      "Faster development time",
-      "Cost-effective solution",
-      "Easy maintenance"
-    ],
-    useCases: [
-      "Business applications",
-      "E-commerce apps",
-      "Social networking",
-      "Utility apps",
-      "Entertainment platforms"
-    ],
+    features: ["Cross-platform development", "Native performance", "Custom UI/UX design", "API integration", "Push notifications", "App store deployment"],
+    benefits: ["Single codebase for both platforms", "Native performance", "Faster development time", "Cost-effective solution", "Easy maintenance"],
+    useCases: ["Business applications", "E-commerce apps", "Social networking", "Utility apps", "Entertainment platforms"],
     marketPrice: "$7,000 - $25,000",
     contactLink: "https://ziontechgroup.com/contact",
     tags: ["React Native", "Mobile Development", "iOS", "Android", "Cross-platform"],
@@ -3558,23 +2082,8 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 8500,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Cloud readiness assessment",
-      "Multi-cloud architecture design",
-      "Data migration and synchronization",
-      "Security and compliance setup",
-      "Performance optimization",
-      "Cost monitoring and optimization",
-      "Disaster recovery planning",
-      "24/7 monitoring and support"
-    ],
-    benefits: [
-      "Reduce infrastructure costs by 30-50%",
-      "Improve application performance by 40%",
-      "Enhanced security and compliance",
-      "Scalable and flexible infrastructure",
-      "Reduced maintenance overhead"
-    ],
+    features: ["Cloud readiness assessment", "Multi-cloud architecture design", "Data migration and synchronization", "Security and compliance setup", "Performance optimization", "Cost monitoring and optimization", "Disaster recovery planning", "24/7 monitoring and support"],
+    benefits: ["Reduce infrastructure costs by 30-50%", "Improve application performance by 40%", "Enhanced security and compliance", "Scalable and flexible infrastructure", "Reduced maintenance overhead"],
     marketPrice: "$7,000 - $25,000",
     deliveryTime: "8-12 weeks",
     tags: ["Cloud", "Migration", "AWS", "Azure", "DevOps", "Security"],
@@ -3603,23 +2112,8 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 4200,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Git-based workflow automation",
-      "Automated testing (unit, integration, E2E)",
-      "Container orchestration (Docker, Kubernetes)",
-      "Infrastructure as Code (Terraform, CloudFormation)",
-      "Monitoring and alerting setup",
-      "Security scanning integration",
-      "Performance testing automation",
-      "Rollback and recovery procedures"
-    ],
-    benefits: [
-      "Reduce deployment time by 80%",
-      "Improve code quality and reliability",
-      "Faster time to market",
-      "Reduced human error in deployments",
-      "Better collaboration between teams"
-    ],
+    features: ["Git-based workflow automation", "Automated testing (unit, integration, E2E)", "Container orchestration (Docker, Kubernetes)", "Infrastructure as Code (Terraform, CloudFormation)", "Monitoring and alerting setup", "Security scanning integration", "Performance testing automation", "Rollback and recovery procedures"],
+    benefits: ["Reduce deployment time by 80%", "Improve code quality and reliability", "Faster time to market", "Reduced human error in deployments", "Better collaboration between teams"],
     marketPrice: "$3,500 - $8,000",
     deliveryTime: "4-6 weeks",
     tags: ["DevOps", "CI/CD", "Automation", "Docker", "Kubernetes", "Testing"],
@@ -3649,23 +2143,8 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 6500,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Vulnerability assessment and scanning",
-      "Penetration testing (web, mobile, network)",
-      "Social engineering testing",
-      "Compliance review (SOC2, ISO27001, GDPR)",
-      "Security architecture review",
-      "Incident response planning",
-      "Security awareness training",
-      "Detailed remediation roadmap"
-    ],
-    benefits: [
-      "Identify and fix security vulnerabilities",
-      "Meet compliance requirements",
-      "Protect against data breaches",
-      "Improve security posture",
-      "Reduce cyber insurance costs"
-    ],
+    features: ["Vulnerability assessment and scanning", "Penetration testing (web, mobile, network)", "Social engineering testing", "Compliance review (SOC2, ISO27001, GDPR)", "Security architecture review", "Incident response planning", "Security awareness training", "Detailed remediation roadmap"],
+    benefits: ["Identify and fix security vulnerabilities", "Meet compliance requirements", "Protect against data breaches", "Improve security posture", "Reduce cyber insurance costs"],
     marketPrice: "$5,000 - $15,000",
     deliveryTime: "3-4 weeks",
     tags: ["Cybersecurity", "Penetration Testing", "Compliance", "Security Audit", "Vulnerability Assessment"],
@@ -3694,14 +2173,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 12000,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-    title: "Enterprise Data Warehouse Design & Implementation",
-    description: "Design and build scalable data warehouses using modern cloud technologies. Features data modeling, ETL pipeline development, and business intelligence integration. Includes data governance and quality assurance.",
-    category: "Data & Analytics",
-    subcategory: "Data Warehousing",
-    price: 15999,
-    currency: "$",
-    tags: ["Data Warehouse", "ETL", "Business Intelligence", "Data Governance"],
+    features: [title: "Enterprise Data Warehouse Design & Implementation", description: "Design and build scalable data warehouses using modern cloud technologies. Features data modeling, ETL pipeline development, and business intelligence integration. Includes data governance and quality assurance.", category: "Data & Analytics", subcategory: "Data Warehousing", price: 15999, currency: "$", tags: ["Data Warehouse", "ETL", "Business Intelligence", "Data Governance"],
     author: {
       name: "Zion Tech Group",
       id: "zion-tech",
@@ -3794,13 +2266,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       "Threat detection and response",
       "Compliance reporting and auditing"
     ],
-    benefits: [
-      "Reduce attack surface by 80%",
-      "Improve security posture significantly",
-      "Meet regulatory compliance requirements",
-      "Better visibility into security threats",
-      "Reduced risk of data breaches"
-    ],
+    benefits: ["Reduce attack surface by 80%", "Improve security posture significantly", "Meet regulatory compliance requirements", "Better visibility into security threats", "Reduced risk of data breaches"],
     marketPrice: "$10,000 - $30,000",
     deliveryTime: "10-16 weeks",
     tags: ["Cybersecurity", "Zero Trust", "IAM", "Network Security", "Compliance"],
@@ -3830,13 +2296,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 15000,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-    description: "Modernize legacy applications and systems with cloud-native technologies. Includes code refactoring, database migration, and API development. Features automated testing and zero-downtime deployment.",
-    category: "Digital Transformation",
-    subcategory: "System Modernization",
-    price: 24999,
-    currency: "$",
-    tags: ["Legacy Modernization", "Cloud Native", "API Development", "Zero Downtime"],
+    features: [description: "Modernize legacy applications and systems with cloud-native technologies. Includes code refactoring, database migration, and API development. Features automated testing and zero-downtime deployment.", category: "Digital Transformation", subcategory: "System Modernization", price: 24999, currency: "$", tags: ["Legacy Modernization", "Cloud Native", "API Development", "Zero Downtime"],
     author: {
       name: "Zion Tech Group",
       id: "zion-tech",
@@ -3947,13 +2407,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       "Data governance and quality management",
       "Scalable cloud infrastructure"
     ],
-    benefits: [
-      "Process and analyze massive datasets",
-      "Real-time insights and decision making",
-      "Improved data quality and governance",
-      "Scalable architecture for growth",
-      "Competitive advantage through data"
-    ],
+    benefits: ["Process and analyze massive datasets", "Real-time insights and decision making", "Improved data quality and governance", "Scalable architecture for growth", "Competitive advantage through data"],
     marketPrice: "$12,000 - $50,000",
     deliveryTime: "12-20 weeks",
     tags: ["Big Data", "Analytics", "Data Pipeline", "Machine Learning", "Data Warehouse"],
@@ -3983,23 +2437,8 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 5800,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Responsive design for all devices",
-      "Offline functionality and caching",
-      "Push notifications",
-      "App-like user experience",
-      "Service worker implementation",
-      "Performance optimization",
-      "SEO optimization",
-      "Cross-browser compatibility"
-    ],
-    benefits: [
-      "Better user engagement and retention",
-      "Faster loading times",
-      "Works offline and on slow connections",
-      "No app store approval required",
-      "Easier updates and maintenance"
-    ],
+    features: ["Responsive design for all devices", "Offline functionality and caching", "Push notifications", "App-like user experience", "Service worker implementation", "Performance optimization", "SEO optimization", "Cross-browser compatibility"],
+    benefits: ["Better user engagement and retention", "Faster loading times", "Works offline and on slow connections", "No app store approval required", "Easier updates and maintenance"],
     marketPrice: "$4,000 - $12,000",
     deliveryTime: "6-8 weeks",
     tags: ["PWA", "Web Development", "Mobile", "Offline", "Performance"],
@@ -4103,23 +2542,8 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 8500,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Smart contract development (Solidity, Rust)",
-      "Security audit and testing",
-      "Gas optimization",
-      "Multi-chain deployment",
-      "Frontend integration",
-      "Testing and documentation",
-      "Deployment and verification",
-      "Post-deployment support"
-    ],
-    benefits: [
-      "Secure and audited smart contracts",
-      "Reduced gas costs and optimization",
-      "Multi-chain compatibility",
-      "Professional development standards",
-      "Long-term support and maintenance"
-    ],
+    features: ["Smart contract development (Solidity, Rust)", "Security audit and testing", "Gas optimization", "Multi-chain deployment", "Frontend integration", "Testing and documentation", "Deployment and verification", "Post-deployment support"],
+    benefits: ["Secure and audited smart contracts", "Reduced gas costs and optimization", "Multi-chain compatibility", "Professional development standards", "Long-term support and maintenance"],
     marketPrice: "$6,000 - $20,000",
     deliveryTime: "6-10 weeks",
     tags: ["Blockchain", "Smart Contracts", "DeFi", "NFTs", "Web3", "Security"],
@@ -4666,29 +3090,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
   }
 ]
 // Service categories for filtering
-export const SERVICE_CATEGORIES = [
-  { label: 'AI Automation', value: 'ai-automation' },
-  { label: 'Content AI', value: 'content-ai' },
-  { label: 'Customer Analytics', value: 'customer-analytics' },
-  { label: 'Cybersecurity', value: 'cybersecurity' },
-  { label: 'Compliance', value: 'compliance' },
-  { label: 'Cloud Management', value: 'cloud-management' },
-  { label: 'Edge Computing', value: 'edge-computing' },
-  { label: 'Real-Time Analytics', value: 'real-time-analytics' },
-  { label: 'Data Governance', value: 'data-governance' },
-  { label: 'Development Tools', value: 'development-tools' },
-  { label: 'DevOps', value: 'devops' },
-  { label: 'Business Intelligence', value: 'business-intelligence' },
-  { label: 'Reporting', value: 'reporting' },
-  { label: 'IoT', value: 'iot' },
-  { label: 'Smart Buildings', value: 'smart-buildings' },
-  { label: 'FinTech', value: 'fintech' },
-  { label: 'Fraud Detection', value: 'fraud-detection' },
-  { label: 'Healthcare Tech', value: 'healthcare-tech' },
-  { label: 'Telemedicine', value: 'telemedicine' },
-  { label: 'EdTech', value: 'edtech' },
-  { label: 'Virtual Learning', value: 'virtual-learning' }
-]
+export const SERVICE_CATEGORIES = [{ label: 'AI Automation', value: 'ai-automation' }, { label: 'Content AI', value: 'content-ai' }, { label: 'Customer Analytics', value: 'customer-analytics' }, { label: 'Cybersecurity', value: 'cybersecurity' }, { label: 'Compliance', value: 'compliance' }, { label: 'Cloud Management', value: 'cloud-management' }, { label: 'Edge Computing', value: 'edge-computing' }, { label: 'Real-Time Analytics', value: 'real-time-analytics' }, { label: 'Data Governance', value: 'data-governance' }, { label: 'Development Tools', value: 'development-tools' }, { label: 'DevOps', value: 'devops' }, { label: 'Business Intelligence', value: 'business-intelligence' }, { label: 'Reporting', value: 'reporting' }, { label: 'IoT', value: 'iot' }, { label: 'Smart Buildings', value: 'smart-buildings' }, { label: 'FinTech', value: 'fintech' }, { label: 'Fraud Detection', value: 'fraud-detection' }, { label: 'Healthcare Tech', value: 'healthcare-tech' }, { label: 'Telemedicine', value: 'telemedicine' }, { label: 'EdTech', value: 'edtech' }, { label: 'Virtual Learning', value: 'virtual-learning' }]
 // Pricing tiers for different service levels
 export const PRICING_TIERS = {
   basic: { name: 'Basic', multiplier: 0.7, features: ['Core functionality', 'Basic support', 'Standard SLA'] },
@@ -4910,23 +3312,8 @@ export const CONTACT_INFO = {
     price: 12000,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "IoT device management platform",
-      "Real-time data collection and processing",
-      "Custom dashboard and visualization",
-      "Device provisioning and authentication",
-      "Data analytics and insights",
-      "Alert and notification system",
-      "API for third-party integrations",
-      "Scalable cloud infrastructure"
-    ],
-    benefits: [
-      "Monitor and control devices remotely",
-      "Real-time insights and analytics",
-      "Automated alerts and notifications",
-      "Scalable platform for growth",
-      "Integration with existing systems"
-    ],
+    features: ["IoT device management platform", "Real-time data collection and processing", "Custom dashboard and visualization", "Device provisioning and authentication", "Data analytics and insights", "Alert and notification system", "API for third-party integrations", "Scalable cloud infrastructure"],
+    benefits: ["Monitor and control devices remotely", "Real-time insights and analytics", "Automated alerts and notifications", "Scalable platform for growth", "Integration with existing systems"],
     marketPrice: "$8,000 - $25,000",
     deliveryTime: "10-16 weeks",
     tags: ["IoT", "Hardware", "Device Management", "Real-time", "Analytics"],
@@ -4956,23 +3343,8 @@ export const CONTACT_INFO = {
     price: 25000,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Technology assessment and audit",
-      "Digital maturity evaluation",
-      "Transformation roadmap development",
-      "Change management strategy",
-      "Technology stack selection",
-      "Implementation planning",
-      "Training and adoption support",
-      "Performance measurement and optimization"
-    ],
-    benefits: [
-      "Modernize business processes and technology",
-      "Improve operational efficiency",
-      "Enhance customer experience",
-      "Increase competitive advantage",
-      "Future-proof your business"
-    ],
+    features: ["Technology assessment and audit", "Digital maturity evaluation", "Transformation roadmap development", "Change management strategy", "Technology stack selection", "Implementation planning", "Training and adoption support", "Performance measurement and optimization"],
+    benefits: ["Modernize business processes and technology", "Improve operational efficiency", "Enhance customer experience", "Increase competitive advantage", "Future-proof your business"],
     marketPrice: "$20,000 - $100,000",
     deliveryTime: "16-24 weeks",
     tags: ["Digital Transformation", "Strategy", "Consulting", "Change Management", "Technology"],
@@ -4994,8 +3366,7 @@ export const CONTACT_INFO = {
   }
 ]
 // Service categories for filtering
-export const SERVICE_CATEGORIES = [
-    images: ["https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&h=500"],
+export const SERVICE_CATEGORIES = [images: ["https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-03-30T12:00:00.000Z",
     rating: 4.9,
     reviewCount: 89,
@@ -5006,15 +3377,7 @@ export const SERVICE_CATEGORIES = [
   }
 ]
 // Service Categories for filtering
-export const SERVICE_CATEGORIES = [
-  { id: "ai-services", name: "AI Services", description: "Artificial Intelligence & Machine Learning Solutions" },
-  { id: "it-services", name: "IT Services", description: "Infrastructure, Cloud & Cybersecurity" },
-  { id: "business-solutions", name: "Business Solutions", description: "Process Automation & Optimization" },
-  { id: "digital-solutions", name: "Digital Solutions", description: "E-commerce & Marketing" },
-  { id: "specialized-solutions", name: "Specialized Solutions", description: "Healthcare, FinTech & Industry-Specific" },
-  { id: "iot-solutions", name: "IoT Solutions", description: "Internet of Things & Smart Systems" },
-  { id: "education-solutions", name: "Education Solutions", description: "Learning & Training Platforms" }
-]
+export const SERVICE_CATEGORIES = [{ id: "ai-services", name: "AI Services", description: "Artificial Intelligence & Machine Learning Solutions" }, { id: "it-services", name: "IT Services", description: "Infrastructure, Cloud & Cybersecurity" }, { id: "business-solutions", name: "Business Solutions", description: "Process Automation & Optimization" }, { id: "digital-solutions", name: "Digital Solutions", description: "E-commerce & Marketing" }, { id: "specialized-solutions", name: "Specialized Solutions", description: "Healthcare, FinTech & Industry-Specific" }, { id: "iot-solutions", name: "IoT Solutions", description: "Internet of Things & Smart Systems" }, { id: "education-solutions", name: "Education Solutions", description: "Learning & Training Platforms" }]
 // Service Subcategories
 export const SERVICE_SUBCATEGORIES = {
   "ai-services": ["Chatbots & Virtual Assistants", "Content Creation", "Data Analytics", "Computer Vision", "Natural Language Processing"],
@@ -5037,28 +3400,9 @@ export const PRICING_TIERS = {
     price: 7000,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Smart contract development",
-      "Security audit and testing",
-      "Gas optimization",
-      "Multi-chain deployment",
-      "Documentation and testing",
-      "Ongoing support"
-    ],
-    benefits: [
-      "Secure and audited contracts",
-      "Gas cost optimization",
-      "Multi-chain compatibility",
-      "Reduced security risks",
-      "Professional development standards"
-    ],
-    useCases: [
-      "DeFi applications",
-      "NFT marketplaces",
-      "DAO governance",
-      "Supply chain tracking",
-      "Gaming platforms"
-    ],
+    features: ["Smart contract development", "Security audit and testing", "Gas optimization", "Multi-chain deployment", "Documentation and testing", "Ongoing support"],
+    benefits: ["Secure and audited contracts", "Gas cost optimization", "Multi-chain compatibility", "Reduced security risks", "Professional development standards"],
+    useCases: ["DeFi applications", "NFT marketplaces", "DAO governance", "Supply chain tracking", "Gaming platforms"],
     marketPrice: "$5,000 - $25,000",
     contactLink: "https://ziontechgroup.com/contact",
     tags: ["Smart Contracts", "Blockchain", "DeFi", "NFTs", "Security Audit"],
@@ -5085,28 +3429,9 @@ export const PRICING_TIERS = {
     price: 10000,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "IoT device management",
-      "Real-time data collection",
-      "Edge computing implementation",
-      "Dashboard and analytics",
-      "Alert and notification system",
-      "Scalable architecture"
-    ],
-    benefits: [
-      "Real-time monitoring and control",
-      "Predictive maintenance",
-      "Operational efficiency",
-      "Data-driven insights",
-      "Cost reduction"
-    ],
-    useCases: [
-      "Industrial monitoring",
-      "Smart buildings",
-      "Agriculture automation",
-      "Healthcare monitoring",
-      "Logistics tracking"
-    ],
+    features: ["IoT device management", "Real-time data collection", "Edge computing implementation", "Dashboard and analytics", "Alert and notification system", "Scalable architecture"],
+    benefits: ["Real-time monitoring and control", "Predictive maintenance", "Operational efficiency", "Data-driven insights", "Cost reduction"],
+    useCases: ["Industrial monitoring", "Smart buildings", "Agriculture automation", "Healthcare monitoring", "Logistics tracking"],
     marketPrice: "$8,000 - $35,000",
     contactLink: "https://ziontechgroup.com/contact",
     tags: ["IoT", "Edge Computing", "Device Management", "Real-time", "Monitoring"],
@@ -5133,28 +3458,9 @@ export const PRICING_TIERS = {
     price: 25000,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Quantum readiness assessment",
-      "Algorithm optimization strategies",
-      "Hybrid classical-quantum solutions",
-      "Quantum software development",
-      "Partnership recommendations",
-      "ROI analysis and planning"
-    ],
-    benefits: [
-      "Future-proof technology strategy",
-      "Competitive advantage in research",
-      "Optimization of complex problems",
-      "Access to cutting-edge technology",
-      "Strategic technology positioning"
-    ],
-    useCases: [
-      "Pharmaceutical research",
-      "Financial modeling",
-      "Logistics optimization",
-      "Cryptography and security",
-      "Machine learning acceleration"
-    ],
+    features: ["Quantum readiness assessment", "Algorithm optimization strategies", "Hybrid classical-quantum solutions", "Quantum software development", "Partnership recommendations", "ROI analysis and planning"],
+    benefits: ["Future-proof technology strategy", "Competitive advantage in research", "Optimization of complex problems", "Access to cutting-edge technology", "Strategic technology positioning"],
+    useCases: ["Pharmaceutical research", "Financial modeling", "Logistics optimization", "Cryptography and security", "Machine learning acceleration"],
     marketPrice: "$20,000 - $100,000",
     contactLink: "https://ziontechgroup.com/contact",
     tags: ["Quantum Computing", "Emerging Tech", "Strategy", "Algorithm Development", "Future Tech"],
@@ -5180,28 +3486,9 @@ export const PRICING_TIERS = {
     price: 35000,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "3D virtual world creation",
-      "Avatar customization system",
-      "Social interaction features",
-      "Virtual commerce integration",
-      "Cross-platform compatibility",
-      "Analytics and user tracking"
-    ],
-    benefits: [
-      "Immersive brand experiences",
-      "New revenue streams",
-      "Enhanced customer engagement",
-      "Virtual event hosting",
-      "Innovative marketing platform"
-    ],
-    useCases: [
-      "Virtual events and conferences",
-      "Brand experiences",
-      "Educational platforms",
-      "Gaming and entertainment",
-      "Virtual real estate"
-    ],
+    features: ["3D virtual world creation", "Avatar customization system", "Social interaction features", "Virtual commerce integration", "Cross-platform compatibility", "Analytics and user tracking"],
+    benefits: ["Immersive brand experiences", "New revenue streams", "Enhanced customer engagement", "Virtual event hosting", "Innovative marketing platform"],
+    useCases: ["Virtual events and conferences", "Brand experiences", "Educational platforms", "Gaming and entertainment", "Virtual real estate"],
     marketPrice: "$30,000 - $150,000",
     contactLink: "https://ziontechgroup.com/contact",
     tags: ["Metaverse", "VR/AR", "3D Development", "Virtual Worlds", "Social VR"],
@@ -5227,28 +3514,9 @@ export const PRICING_TIERS = {
     price: 8000,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "AI ethics framework development",
-      "Bias detection and mitigation",
-      "Transparency and explainability",
-      "Regulatory compliance assessment",
-      "Ethics training and guidelines",
-      "Ongoing monitoring and auditing"
-    ],
-    benefits: [
-      "Regulatory compliance",
-      "Reduced legal risks",
-      "Enhanced brand reputation",
-      "Ethical AI deployment",
-      "Stakeholder trust"
-    ],
-    useCases: [
-      "Financial services AI",
-      "Healthcare AI systems",
-      "HR and recruitment AI",
-      "Autonomous vehicles",
-      "Facial recognition systems"
-    ],
+    features: ["AI ethics framework development", "Bias detection and mitigation", "Transparency and explainability", "Regulatory compliance assessment", "Ethics training and guidelines", "Ongoing monitoring and auditing"],
+    benefits: ["Regulatory compliance", "Reduced legal risks", "Enhanced brand reputation", "Ethical AI deployment", "Stakeholder trust"],
+    useCases: ["Financial services AI", "Healthcare AI systems", "HR and recruitment AI", "Autonomous vehicles", "Facial recognition systems"],
     marketPrice: "$6,000 - $25,000",
     contactLink: "https://ziontechgroup.com/contact",
     tags: ["AI Ethics", "Compliance", "Responsible AI", "Governance", "Regulatory"],
@@ -5266,82 +3534,17 @@ export const PRICING_TIERS = {
     supportLevel: "premium"
   }
 ]
-export const SERVICE_CATEGORIES = [
-  "AI & Machine Learning",
-  "Cloud & DevOps",
-  "Cybersecurity",
-  "Data & Analytics",
-  "Web & Mobile Development",
-  "Digital Transformation",
-  "Blockchain & Web3",
-  "IoT & Edge Computing",
-  "Emerging Technologies"
-]
+export const SERVICE_CATEGORIES = ["AI & Machine Learning", "Cloud & DevOps", "Cybersecurity", "Data & Analytics", "Web & Mobile Development", "Digital Transformation", "Blockchain & Web3", "IoT & Edge Computing", "Emerging Technologies"]
 export const SERVICE_SUBCATEGORIES = {
-  "AI & Machine Learning": [
-    "Chatbots & Conversational AI",
-    "Content Generation",
-    "Computer Vision",
-    "Natural Language Processing",
-    "Predictive Analytics",
-    "AI Ethics & Governance"
-  ],
-  "Cloud & DevOps": [
-    "Cost Optimization",
-    "Container Orchestration",
-    "Infrastructure as Code",
-    "CI/CD Pipelines",
-    "Cloud Migration"
-  ],
-  "Cybersecurity": [
-    "Security Testing",
-    "Monitoring & Response",
-    "Compliance & Governance",
-    "Identity & Access Management",
-    "Threat Intelligence"
-  ],
-  "Data & Analytics": [
-    "Data Engineering",
-    "Business Intelligence",
-    "Machine Learning",
-    "Data Visualization",
-    "Data Governance"
-  ],
-  "Web & Mobile Development": [
-    "Progressive Web Apps",
-    "Mobile Apps",
-    "Web Applications",
-    "API Development",
-    "E-commerce Solutions"
-  ],
-  "Digital Transformation": [
-    "Strategy & Consulting",
-    "System Modernization",
-    "Process Automation",
-    "Change Management",
-    "Technology Assessment"
-  ],
-  "Blockchain & Web3": [
-    "Smart Contracts",
-    "DeFi Development",
-    "NFT Marketplaces",
-    "Blockchain Integration",
-    "Web3 Applications"
-  ],
-  "IoT & Edge Computing": [
-    "Platform Development",
-    "Device Management",
-    "Edge Analytics",
-    "Sensor Integration",
-    "Remote Monitoring"
-  ],
-  "Emerging Technologies": [
-    "Quantum Computing",
-    "Metaverse & VR",
-    "AI Ethics & Governance",
-    "Augmented Reality",
-    "Extended Reality (XR)"
-  ]
+  "AI & Machine Learning": ["Chatbots & Conversational AI", "Content Generation", "Computer Vision", "Natural Language Processing", "Predictive Analytics", "AI Ethics & Governance"],
+  "Cloud & DevOps": ["Cost Optimization", "Container Orchestration", "Infrastructure as Code", "CI/CD Pipelines", "Cloud Migration"],
+  "Cybersecurity": ["Security Testing", "Monitoring & Response", "Compliance & Governance", "Identity & Access Management", "Threat Intelligence"],
+  "Data & Analytics": ["Data Engineering", "Business Intelligence", "Machine Learning", "Data Visualization", "Data Governance"],
+  "Web & Mobile Development": ["Progressive Web Apps", "Mobile Apps", "Web Applications", "API Development", "E-commerce Solutions"],
+  "Digital Transformation": ["Strategy & Consulting", "System Modernization", "Process Automation", "Change Management", "Technology Assessment"],
+  "Blockchain & Web3": ["Smart Contracts", "DeFi Development", "NFT Marketplaces", "Blockchain Integration", "Web3 Applications"],
+  "IoT & Edge Computing": ["Platform Development", "Device Management", "Edge Analytics", "Sensor Integration", "Remote Monitoring"],
+  "Emerging Technologies": ["Quantum Computing", "Metaverse & VR", "AI Ethics & Governance", "Augmented Reality", "Extended Reality (XR)"]
 }
     description: "Develop comprehensive disaster recovery and business continuity plans. Includes risk assessment, recovery procedures, testing protocols, and ongoing maintenance. Features cloud-based backup solutions and failover systems.",
     category: "Managed IT Services",
@@ -5364,78 +3567,27 @@ export const SERVICE_SUBCATEGORIES = {
   }
 ]
 // Service Categories for better organization
-export const SERVICE_CATEGORIES = [
-  {
-    id: "ai-machine-learning",
-    name: "AI & Machine Learning",
-    description: "Advanced artificial intelligence and machine learning solutions",
-    icon: "🤖",
-    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "AI & Machine Learning")
-  },
-  {
-    id: "cloud-infrastructure",
-    name: "Cloud & Infrastructure",
-    description: "Cloud migration, DevOps, and infrastructure management",
-    icon: "☁️",
-    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Cloud & Infrastructure")
-  },
-  {
-    id: "cybersecurity",
-    name: "Cybersecurity",
-    description: "Comprehensive security solutions and compliance",
-    icon: "🔒",
-    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Cybersecurity")
-  },
-  {
-    id: "data-analytics",
-    name: "Data & Analytics",
-    description: "Data warehousing, analytics, and business intelligence",
-    icon: "📊",
-    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Data & Analytics")
-  },
-  {
-    id: "digital-transformation",
-    name: "Digital Transformation",
-    description: "Strategic consulting and system modernization",
-    icon: "🚀",
-    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Digital Transformation")
-  },
-  {
-    id: "mobile-web-development",
-    name: "Mobile & Web Development",
-    description: "Custom applications and digital solutions",
-    icon: "💻",
-    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Mobile & Web Development")
-  },
-  {
-    id: "blockchain-web3",
-    name: "Blockchain & Web3",
-    description: "Decentralized applications and smart contracts",
-    icon: "⛓️",
-    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Blockchain & Web3")
-  },
-  {
-    id: "iot-edge-computing",
-    name: "IoT & Edge Computing",
-    description: "Internet of Things and edge computing solutions",
-    icon: "🌐",
-    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "IoT & Edge Computing")
-  },
-  {
-    id: "enterprise-software",
-    name: "Enterprise Software",
-    description: "ERP, CRM, and enterprise system solutions",
-    icon: "🏢",
-    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Enterprise Software")
-  },
-  {
-    id: "managed-it-services",
-    name: "Managed IT Services",
-    description: "24/7 support and managed IT solutions",
-    icon: "🛠️",
-    services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Managed IT Services")
-  }
-]
+export const SERVICE_CATEGORIES = [{
+    id: "ai-machine-learning", name: "AI & Machine Learning", description: "Advanced artificial intelligence and machine learning solutions", icon: "🤖", services: COMPREHENSIVE_SERVICES.filter(s => s.category === "AI & Machine Learning")
+  }, {
+    id: "cloud-infrastructure", name: "Cloud & Infrastructure", description: "Cloud migration, DevOps, and infrastructure management", icon: "☁️", services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Cloud & Infrastructure")
+  }, {
+    id: "cybersecurity", name: "Cybersecurity", description: "Comprehensive security solutions and compliance", icon: "🔒", services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Cybersecurity")
+  }, {
+    id: "data-analytics", name: "Data & Analytics", description: "Data warehousing, analytics, and business intelligence", icon: "📊", services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Data & Analytics")
+  }, {
+    id: "digital-transformation", name: "Digital Transformation", description: "Strategic consulting and system modernization", icon: "🚀", services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Digital Transformation")
+  }, {
+    id: "mobile-web-development", name: "Mobile & Web Development", description: "Custom applications and digital solutions", icon: "💻", services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Mobile & Web Development")
+  }, {
+    id: "blockchain-web3", name: "Blockchain & Web3", description: "Decentralized applications and smart contracts", icon: "⛓️", services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Blockchain & Web3")
+  }, {
+    id: "iot-edge-computing", name: "IoT & Edge Computing", description: "Internet of Things and edge computing solutions", icon: "🌐", services: COMPREHENSIVE_SERVICES.filter(s => s.category === "IoT & Edge Computing")
+  }, {
+    id: "enterprise-software", name: "Enterprise Software", description: "ERP, CRM, and enterprise system solutions", icon: "🏢", services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Enterprise Software")
+  }, {
+    id: "managed-it-services", name: "Managed IT Services", description: "24/7 support and managed IT solutions", icon: "🛠️", services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Managed IT Services")
+  }]
 // Featured Services for homepage display
 export const FEATURED_SERVICES = COMPREHENSIVE_SERVICES.filter(service => service.featured)
 // Services by price range
@@ -5454,13 +3606,8 @@ export const SERVICES_BY_PRICE = {
   { id: "digital-transformation", name: "Digital Transformation", description: "Business transformation consulting" }
 ]
 // Pricing tiers for subscription services
-export const SUBSCRIPTION_TIERS = [
-  {
-    name: "Starter",
-    price: 99,
-    currency: "$",
-    period: "month",
-    features: ["Basic features", "Email support", "5 projects", "Standard templates"]
+export const SUBSCRIPTION_TIERS = [{
+    name: "Starter", price: 99, currency: "$", period: "month", features: ["Basic features", "Email support", "5 projects", "Standard templates"]
   },
   {
     name: "Professional",

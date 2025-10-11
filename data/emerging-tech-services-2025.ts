@@ -78,16 +78,12 @@ export interface EmergingTechService2025 {/* TODO: Fix JSX expression */}
     address: string,
   }
 }
-export const emergingTechServices2025: EmergingTechService2025[] = [,
-    id: "metaverse-platform", name: "Metaverse Development Platform",
-    tagline: "Create immersive virtual experiences", price: "$249/month"
+export const emergingTechServices2025: EmergingTechService2025[] = [id: "metaverse-platform", name: "Metaverse Development Platform", tagline: "Create immersive virtual experiences", price: "$249/month"
     description: "Advanced metaverse development platform for building virtual worlds and experiences."
-    features: [,
-      "3 D world building"
+    features: [, "3 D world building"
       "Avatar customization"
       "Virtual commerce"
-      "Social interactions",
-      "Cross-platform support"],
+      "Social interactions", "Cross-platform support"],
     link: "/services/metaverse-platform", category: "Emerging Tech 2025",
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
@@ -127,23 +123,17 @@ export const emergingTechServices2025: EmergingTechService2025[] = [,
   s: string}
 }
 export const,
-  emergingTechServices2025: EmergingTechService2025[] = [,
-    i,"
-  d: "metaverse-platform", nam,"
-  e: "Metaverse Development Platform",
-    taglin,"
-  e: "Create immersive virtual experiences", pric,"
-  e: "$249/month",
-    descriptio,"
-  n: "Advanced metaverse development platform for building virtual worlds and experiences.",
-    feature,
-  s: [,"
+  emergingTechServices2025: EmergingTechService2025[] = [i, "
+  d: "metaverse-platform", nam, "
+  e: "Metaverse Development Platform", taglin, "
+  e: "Create immersive virtual experiences", pric, "
+  e: "$249/month", descriptio, "
+  n: "Advanced metaverse development platform for building virtual worlds and experiences.", feature, s: [, "
       "3D world building""
       "Avatar customization""
       "Virtual commerce""
       "Social interactions""
-      "Cross-platform support"
-    ],
+      "Cross-platform support"],
     lin,"
   k: "/services/metaverse-platform", categor,"
   y: "Emerging Tech 2025",
@@ -178,13 +168,7 @@ id: "metaverse-platform"
     tagline: "Create immersive virtual experiences",
     price: "$249/month",
     description: "Advanced metaverse development platform for building virtual worlds and experiences.",
-    features: [,
-      "3 D world building",
-      "Avatar customization",
-      "Virtual commerce",
-      "Social interactions",
-      "Cross-platform support"
-    ],
+    features: ["3 D world building", "Avatar customization", "Virtual commerce", "Social interactions", "Cross-platform support"],
     link: "/services/metaverse-platform"
     category: "Emerging Tech 2025"
     realImplementation: true
@@ -210,13 +194,12 @@ id: "metaverse-platform"
     descriptio,"
   n: "Advanced metaverse development platform for building virtual worlds and experiences.",
     feature,
-  s: [,"
-      "3D world building","
-      "Avatar customization","
-      "Virtual commerce","
-      "Social interactions","
-      "Cross-platform support"
-    ],
+  s: ["
+      "3D world building", "
+      "Avatar customization", "
+      "Virtual commerce", "
+      "Social interactions", "
+      "Cross-platform support"],
     lin,"
   k: "/services/metaverse-platform",
     categor,"
@@ -288,13 +271,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  emergingTechServices2025: EmergingTechService2025[] = [ i,"
-  d: "metaverse-platform", nam,"
-  e: "Metaverse Development Platform", taglin,"
-  e: "Create immersive virtual experiences", pric,"
-  e: "$249/month", descriptio,"
-  n: "Advanced metaverse development platform for building virtual worlds and experiences.", feature,"
-  s: [ "3D world building" "Avatar customization" "Virtual commerce" "Social interactions" "Cross-platform support" ], lin,"
+  emergingTechServices2025: EmergingTechService2025[] = [i, "
+  d: "metaverse-platform", nam, "
+  e: "Metaverse Development Platform", taglin, "
+  e: "Create immersive virtual experiences", pric, "
+  e: "$249/month", descriptio, "
+  n: "Advanced metaverse development platform for building virtual worlds and experiences.", feature, "
+  s: [ "3D world building" "Avatar customization" "Virtual commerce" "Social interactions" "Cross-platform support"], lin,"
   k: "/services/metaverse-platform", categor,"
   y: "Emerging Tech 2025", realImplementatio,
   n: true, contactInf,
@@ -311,7 +294,7 @@ i,
   e: "Create immersive virtual experiences", pric,"
   e: "$249/month", descriptio,"
   n: "Advanced metaverse development platform for building virtual worlds and experiences.", feature,"
-  s: [ "3D world building", "Avatar customization", "Virtual commerce", "Social interactions", "Cross-platform support" ], lin,"
+  s: ["3D world building", "Avatar customization", "Virtual commerce", "Social interactions", "Cross-platform support"], lin,"
   k: "/services/metaverse-platform", categor,"
   y: "Emerging Tech 2025", realImplementatio,
   n: true, contactInf,

@@ -1,15 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs - extra'
 import path from 'path'
-import {
-  authenticateRequest
+import { authenticateRequest
   enforceRateLimit
   recordRequest
   authenticateRequest,
   enforceRateLimit,
   recordRequest,
-} from '../../utils/api/partnerAuth'
-import { v4 as uuidv4 } from 'uuid'
+ } from '../../utils/api/partnerAuth'
+import { v4 as uuidv4  } from 'uuid'
 const REDEMPTIONS_FILE = path.join(
   process.cwd()
   'data'
@@ -40,8 +39,8 @@ export default async function handler(
 import type { NextApiRequest, NextApiResponse } from "next"
 import fs from "fs-extra"
 import path from "path"
-import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth"
-import { v4 as uuidv4 } from "uuid"
+import { authenticateRequest, enforceRateLimit, recordRequest  } from '../../utils/api/partnerAuth'
+import { v4 as uuidv4  } from 'uuid'
 const REDEMPTIONS_FILE = path.join(process.cwd(), "data", "partners", "grant-redemptions.json")
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -86,7 +85,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   enforceRateLimit,
   record_request,
 } from '../../utils / api / partner_auth'
-import { v4 as uuidv4 } from 'uuid'
+import { v4 as uuidv4  } from 'uuid'
 const REDEMPTIONS_FILE = path.join (
   process.cwd (),
   'data',
@@ -242,7 +241,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
   const { studentEmail, grantCode, courseId } = req.body || {}
   if (!studentEmail || !grantCode || !courseId) {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     redeemedAt: now,
   }
   records.push(record)

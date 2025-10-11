@@ -7,7 +7,7 @@ realImplementation?: boolean; implementationDetails?: string; launchDate?: strin
   s: unknown[]): EnhancedRealMicroSaasService[] =>, (item)
   s: || []).map((s) => ({ ...s })); expor,
   t: const,
-  enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [ ...mapToEnhanced(realMarketService)
+  enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [...mapToEnhanced(realMarketService)
   s: as unknown as [])), ...mapToEnhanced(additionalEnhancedServices as unknown as [])]; expor,
   t: const,
   serviceCategories: string[] = Array.from(ne)

@@ -25,14 +25,13 @@ async function handler(req, res) {
     }
 
     // Save subscription logic here
-    // In a real application, you would:
-    // 1. Save to your database
+    // In a real application, you would: // 1. Save to your database
     // 2. Add to your email marketing service (Mailchimp, ConvertKit, etc.)
     // 3. Send confirmation email
 
     // Log subscription for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Newsletter subscription:', { email, timestamp: new Date().toISOString() })
+      console.log('Newsletter subscription: ', { email, timestamp: new Date().toISOString() })
     }
 
     res.statusCode = 200
@@ -45,7 +44,7 @@ async function handler(req, res) {
   } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Newsletter subscription error:', error)
+      console.error('Newsletter subscription error: ', error)
     }
     res.statusCode = 500
     res.setHeader('Content-Type', 'application/json')

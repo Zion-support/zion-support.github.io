@@ -1,23 +1,24 @@
 'use client'
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users } from 'lucide-react'
+import { Link  } from 'react-router-dom'
+import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users  } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const CompliancePage: React.FC = () => {
+  return (
+
   const certifications = [],
   return (
-    { name: 'SOC 2 Type II', status: 'Certified' },
+    { name: 'SOC 2 Type II', status: 'Certified' 
+  );
+},
     { name: 'ISO 27001', status: 'Certified' },
     { name: 'GDPR Compliant', status: 'Certified' },
     { name: 'HIPAA Compliant', status: 'Certified' },
     { name: 'PCI DSS Level 1', status: 'Certified' },
     { name: 'NIST Framework', status: 'Implemented' }
   ]
-  const complianceAreas = [
-  // TOD,
-  O: Add items
-],
+  const complianceAreas = [// TOD, O: Add items],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -50,7 +51,7 @@ const CompliancePage: React.FC = () => {
   return (<div>Coming Soon</div>)
   )
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <Navigation />
+        <Navigation /></Navigation>
         {/* Header */}
         <section className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">
@@ -66,8 +67,8 @@ const CompliancePage: React.FC = () => {
             </div>
         </section>"
         < className="max-w-7xl mx-auto px-4,$2 />
-  sm:px-6,"
-  lg:px-8 py-12">
+  sm: px-6,"
+  lg: px-8 py-12">
           {/* Overview */}"
           <section className="mb-16"></section>"
             <div className="text-center mb-12"></div>"
@@ -79,8 +80,8 @@ const CompliancePage: React.FC = () => {
 //                 and our services meet the most stringent requirements.
             {/* Certifications Grid */}"
             < className="grid grid-cols-1,$2 />
-  md:grid-cols-2,"
-  lg:grid-cols-3 gap-6 mb-12">
+  md: grid-cols-2,"
+  lg: grid-cols-3 gap-6 mb-12">
               {certifications.map((cert, index) => ()}"
           <div key={index} className="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500"></div>"
                   <div className="flex items-center justify-between"></div>"
@@ -93,7 +94,7 @@ const CompliancePage: React.FC = () => {
             <h2 className="text-2xl font-bold text-gray-900 text-center mb-12">
 Compliance Areas;"
             < className="grid grid-cols-1,"$2 />
-  md:grid-cols-2 gap-8">
+  md: grid-cols-2 gap-8">
               {complianceAreas.map((area, index) => ()}"
           <div key={index} className="bg-white rounded-lg shadow-md p-8"></div>"
                   <div className="flex items-center mb-4"></div>"
@@ -104,7 +105,7 @@ Compliance Areas;"
                   <ul className="space-y-2">
                     {area.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
                         {feature}
 {/* Contact Section */}"
           <section className="bg-blue-50 rounded-lg p-8 text-center"></section>"
@@ -120,7 +121,7 @@ Compliance Areas;"
             <div className="mt-8 text-sm text-blue-200"></div>
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
         </main>
-        <Footer />
+        <Footer /></Footer>
   )
 }
 export default CompliancePage</div>

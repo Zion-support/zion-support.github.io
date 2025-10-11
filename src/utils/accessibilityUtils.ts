@@ -15,10 +15,9 @@ export interface AccessibilityConfig {
   enableVoiceNavigation: boolean
 }
 
-export class AccessibilityUtils {
-  private config: AccessibilityConfig
+export class AccessibilityUtils >{private config: AccessibilityConfig
   private observers: MutationObserver[] = []
-  private eventListeners: Array<{element: Element, event: string, handler: EventListener}> = []
+  private eventListeners: Array<{element: Element, event: string, handler: EventListener} = []
   constructor(config: AccessibilityConfig) {
     this.config = config
     this.initialize()
@@ -119,8 +118,8 @@ export class AccessibilityUtils {
         outline-offset: 2px
       }
       
-      .keyboard-navigation button:focus,
-      .keyboard-navigation a:focus {
+      .keyboard-navigation button: focus,
+      .keyboard-navigation a: focus {
         outline: 2px solid #00ffff
         outline-offset: 2px
         box-shadow: 0 0 0 4px rgba(0, 255, 255, 0.2)
@@ -138,7 +137,7 @@ export class AccessibilityUtils {
         border: 0
       }
       
-      .sr-only:focus {
+      .sr-only: focus {
         position: static
         width: auto
         height: auto
@@ -170,16 +169,12 @@ export class AccessibilityUtils {
   }
 
   private setupSkipLinks() {
-    const skipLinks = [
-      { href: '#main-content', text: 'Skip to main content' },
-      { href: '#navigation', text: 'Skip to navigation' },
-      { href: '#footer', text: 'Skip to footer' }
-    ]
+    const skipLinks = [{ href: '#main-content', text: 'Skip to main content' }, { href: '#navigation', text: 'Skip to navigation' }, { href: '#footer', text: 'Skip to footer' }]
     skipLinks.forEach(link => {
       const skipLink = document.createElement('a')
       skipLink.href = link.href
       skipLink.textContent = link.text
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50'
+      skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50'
       skipLink.setAttribute('tabindex', '1')
       document.body.insertBefore(skipLink, document.body.firstChild)
     })
@@ -272,13 +267,7 @@ export class AccessibilityUtils {
   }
 
   private addARIALandmarks() {
-    const landmarks = [
-      { selector: 'nav', role: 'navigation', label: 'Main navigation' },
-      { selector: 'main', role: 'main', label: 'Main content' },
-      { selector: 'footer', role: 'contentinfo', label: 'Footer' },
-      { selector: 'aside', role: 'complementary', label: 'Sidebar' },
-      { selector: 'header', role: 'banner', label: 'Page header' }
-    ]
+    const landmarks = [{ selector: 'nav', role: 'navigation', label: 'Main navigation' }, { selector: 'main', role: 'main', label: 'Main content' }, { selector: 'footer', role: 'contentinfo', label: 'Footer' }, { selector: 'aside', role: 'complementary', label: 'Sidebar' }, { selector: 'header', role: 'banner', label: 'Page header' }]
     landmarks.forEach(landmark => {
       const element = document.querySelector(landmark.selector)
       if (element && !element.getAttribute('role')) {
@@ -290,7 +279,7 @@ export class AccessibilityUtils {
 
   private addARIALabelsToElements() {
     // Add ARIA labels to buttons without text
-    const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])')
+    const buttons = document.querySelectorAll('button: not([aria-label]):not([aria-labelledby])')
     buttons.forEach((button, index) => {
       const icon = button.querySelector('svg')
       if (icon && !button.textContent?.trim()) {
@@ -298,12 +287,12 @@ export class AccessibilityUtils {
       }
     })
     // Add ARIA labels to images without alt text
-    const images = document.querySelectorAll('img:not([alt])')
+    const images = document.querySelectorAll('img: not([alt])')
     images.forEach((img, index) => {
       img.setAttribute('alt', `Image ${index + 1}`)
     })
     // Add ARIA labels to form inputs
-    const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])')
+    const inputs = document.querySelectorAll('input: not([aria-label]):not([aria-labelledby])')
     inputs.forEach((input) => {
       const label = document.querySelector(`label[for="${input.id}"]`)
       if (label) {

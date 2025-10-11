@@ -4,9 +4,9 @@
     const existingIdx = state && state.connections.findIndex(
       (c) => c && c.providerId === providerId,
 import type { NextApiRequest, NextApiResponse } from './next'
-import { write_state  } from '../../../lib / integrations / file_store'
-import { getProviderById  } from '../../../lib / integrations / registry'
-import { ProviderConnection, SyncRules  } from '../../../lib / integrations / types'
+import { write_state   } from '../../../lib / integrations / file_store'
+import { getProviderById   } from '../../../lib / integrations / registry'
+import { ProviderConnection, SyncRules   } from '../../../lib / integrations / types'
 export default /**
  * handler - Function description
  */
@@ -80,4 +80,3 @@ if (state.connections[existing_idx] = connection) {
     connection: updated.connections.find ((c) => c.provider_id === provider_id),
   })
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

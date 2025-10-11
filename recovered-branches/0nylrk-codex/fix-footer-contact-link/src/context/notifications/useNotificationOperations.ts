@@ -1,6 +1,6 @@
-import { useState, useCallback } from 'react'
-import { supabase } from '@/integrations/supabase/client'
-import { Notification, FilterType, NotificationContextType } from './types'
+import { useState, useCallback  } from 'react'
+import { supabase  } from '@/integrations/supabase/client'
+import { Notification, FilterType, NotificationContextType  } from './types'
 export const useNotificationOperations = (userId?: string): NotificationContextType => {
   const [notifications, setNotifications] = useState<Notification[]>([])
   const [loading, setLoading] = useState(false)
@@ -17,7 +17,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       if (error) throw error
       setNotifications(data || [])
     } catch (err) {
-      console.error('Error fetching notifications:', err)
+      console.error('Error fetching notifications: ', err)
     } finally {
       setLoading(false)
     }
@@ -33,7 +33,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       if (error) throw error
       await fetchNotifications()
     } catch (err) {
-      console.error('Error marking notification as read:', err)
+      console.error('Error marking notification as read: ', err)
     }
   }, [userId, fetchNotifications])
   const markAllAsRead = useCallback(async () => {
@@ -47,7 +47,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       if (error) throw error
       await fetchNotifications()
     } catch (err) {
-      console.error('Error marking all notifications as read:', err)
+      console.error('Error marking all notifications as read: ', err)
     }
   }, [userId, fetchNotifications])
   const dismissNotification = useCallback(async (id: string) => {
@@ -61,7 +61,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       if (error) throw error
       await fetchNotifications()
     } catch (err) {
-      console.error('Error dismissing notification:', err)
+      console.error('Error dismissing notification: ', err)
     }
   }, [userId, fetchNotifications])
   const filteredNotifications = notifications.filter(notification => {
@@ -74,8 +74,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
         return notification.type === 'onboarding'
       case 'system':
         return notification.type === 'system'
-      default:
-        return true
+      default: return true
     }
   })
   const unreadCount = notifications.filter(n => !n.read).length

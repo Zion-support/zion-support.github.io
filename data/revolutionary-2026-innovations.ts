@@ -78,16 +78,12 @@ export interface Revolutionary2026Innovation {/* TODO: Fix JSX expression */}
     address: string,
   }
 }
-export const revolutionary2026 Innovations: Revolutionary2026 Innovation[] = [,
-    id: "2026-revolutionary-innovation", name: "2026 Revolutionary Innovation Platform",
-    tagline: "Breakthrough innovations for 2026", price: "$399/month"
+export const revolutionary2026 Innovations: Revolutionary2026 Innovation[] = [id: "2026-revolutionary-innovation", name: "2026 Revolutionary Innovation Platform", tagline: "Breakthrough innovations for 2026", price: "$399/month"
     description: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026."
-    features: [,
-      "Revolutionary innovations"
+    features: [, "Revolutionary innovations"
       "Breakthrough technologies"
       "Future capabilities"
-      "Innovation platform",
-      "Expert insights"],
+      "Innovation platform", "Expert insights"],
     link: "/services/2026-revolutionary-innovation", category: "Revolutionary 2026 Innovations",
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
@@ -127,23 +123,17 @@ export const revolutionary2026 Innovations: Revolutionary2026 Innovation[] = [,
   s: string}
 }
 export const,
-  revolutionary2026Innovations: Revolutionary2026Innovation[] = [,
-    i,"
-  d: "2026-revolutionary-innovation", nam,"
-  e: "2026 Revolutionary Innovation Platform",
-    taglin,"
-  e: "Breakthrough innovations for 2026", pric,"
-  e: "$399/month",
-    descriptio,"
-  n: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026.",
-    feature,
-  s: [,"
+  revolutionary2026Innovations: Revolutionary2026Innovation[] = [i, "
+  d: "2026-revolutionary-innovation", nam, "
+  e: "2026 Revolutionary Innovation Platform", taglin, "
+  e: "Breakthrough innovations for 2026", pric, "
+  e: "$399/month", descriptio, "
+  n: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026.", feature, s: [, "
       "Revolutionary innovations""
       "Breakthrough technologies""
       "Future capabilities""
       "Innovation platform""
-      "Expert insights"
-    ],
+      "Expert insights"],
     lin,"
   k: "/services/2026-revolutionary-innovation", categor,"
   y: "Revolutionary 2026 Innovations",
@@ -178,13 +168,7 @@ id: "2026-revolutionary-innovation"
     tagline: "Breakthrough innovations for 2026",
     price: "$399/month",
     description: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026.",
-    features: [,
-      "Revolutionary innovations",
-      "Breakthrough technologies",
-      "Future capabilities",
-      "Innovation platform",
-      "Expert insights"
-    ],
+    features: ["Revolutionary innovations", "Breakthrough technologies", "Future capabilities", "Innovation platform", "Expert insights"],
     link: "/services/2026-revolutionary-innovation"
     category: "Revolutionary 2026 Innovations"
     realImplementation: true
@@ -210,13 +194,12 @@ id: "2026-revolutionary-innovation"
     descriptio,"
   n: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026.",
     feature,
-  s: [,"
-      "Revolutionary innovations","
-      "Breakthrough technologies","
-      "Future capabilities","
-      "Innovation platform","
-      "Expert insights"
-    ],
+  s: ["
+      "Revolutionary innovations", "
+      "Breakthrough technologies", "
+      "Future capabilities", "
+      "Innovation platform", "
+      "Expert insights"],
     lin,"
   k: "/services/2026-revolutionary-innovation",
     categor,"
@@ -288,13 +271,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  revolutionary2026Innovations: Revolutionary2026Innovation[] = [ i,"
-  d: "2026-revolutionary-innovation", nam,"
-  e: "2026 Revolutionary Innovation Platform", taglin,"
-  e: "Breakthrough innovations for 2026", pric,"
-  e: "$399/month", descriptio,"
-  n: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026.", feature,"
-  s: [ "Revolutionary innovations" "Breakthrough technologies" "Future capabilities" "Innovation platform" "Expert insights" ], lin,"
+  revolutionary2026Innovations: Revolutionary2026Innovation[] = [i, "
+  d: "2026-revolutionary-innovation", nam, "
+  e: "2026 Revolutionary Innovation Platform", taglin, "
+  e: "Breakthrough innovations for 2026", pric, "
+  e: "$399/month", descriptio, "
+  n: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026.", feature, "
+  s: [ "Revolutionary innovations" "Breakthrough technologies" "Future capabilities" "Innovation platform" "Expert insights"], lin,"
   k: "/services/2026-revolutionary-innovation", categor,"
   y: "Revolutionary 2026 Innovations", realImplementatio,
   n: true, contactInf,
@@ -311,7 +294,7 @@ i,
   e: "Breakthrough innovations for 2026", pric,"
   e: "$399/month", descriptio,"
   n: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026.", feature,"
-  s: [ "Revolutionary innovations", "Breakthrough technologies", "Future capabilities", "Innovation platform", "Expert insights" ], lin,"
+  s: ["Revolutionary innovations", "Breakthrough technologies", "Future capabilities", "Innovation platform", "Expert insights"], lin,"
   k: "/services/2026-revolutionary-innovation", categor,"
   y: "Revolutionary 2026 Innovations", realImplementatio,
   n: true, contactInf,

@@ -1,6 +1,6 @@
 'use client'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
+import { AlertTriangle, RefreshCw, Home, Mail  } from 'lucide-react'
 interface Props {/* TODO: Fix JSX expression */}
 }
 interface State {/* TODO: Fix JSX expression */}
@@ -18,7 +18,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
     })
     // Log error to monitoring service
     // console.error('ErrorBoundary caught an)
-  error:', error, errorInfo)
+  error: ', error, errorInfo)
     // You can also log to external services here
     if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
       })
@@ -73,9 +73,9 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               </a>
               <a></a>"
                 href="mailt,"
-  o:support@ziontechgroup.com?subject=Error Report""
+  o: support@ziontechgroup.com?subject=Error Report""
                 className="w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold,
-  hover:bg-cyan-400,"
+  hover: bg-cyan-400,"
   hover: text-slate-900 transition-colors flex items-center justify-center gap-2"
               >"
                 <Mail className="w-4 h-4" /></Mail>
@@ -85,17 +85,17 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
 "
             <div className="mt-6 text-sm text-gray-400">
               <p>If this problem persists, please contact our support,
-  team:</p>"
+  team: </p>"
               <p className="mt-1"></p>"
                 < href="mailt,"$2 />
-  o:support@ziontechgroup.com" className="text-cyan-400,"
+  o: support@ziontechgroup.com" className="text-cyan-400,"
   hover: text-cyan-300"></a>
                   support@ziontechgroup.com,
                 </a>
               </p>"
               <p className="mt-1"></p>"
                 < href="te,"$2 />
-  l:+13024640950" className="text-cyan-400,"
+  l: +13024640950" className="text-cyan-400,"
   hover: text-cyan-300"></a>
                   (302) 464-0950
                 </a>

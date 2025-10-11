@@ -62,7 +62,7 @@
     }
     return res.status (500).json ({ error: "Failed to create partner" })
 import type { NextApiRequest, NextApiResponse } from "next"
-import { createPartner } from "../../../utils/api/partnerAuth"
+import { createPartner  } from '../../../utils/api/partnerAuth'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST")
@@ -108,7 +108,7 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
       dashboardUrl: `/partners/dashboard?pid=${_partner.id}`})
   } catch (e) {_return res.status(500).json({ error: "Failed to create partner"})
 import type { NextApiRequest, NextApiResponse } from "next"
-import { createPartner } from "../../../utils/api/partnerAuth"
+import { createPartner  } from '../../../utils/api/partnerAuth'
   }
 }
         createdAt: partner.createdAt,

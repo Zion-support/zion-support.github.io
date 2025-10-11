@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Get all files with errors
@@ -36,7 +36,7 @@ const fixComponentNames = () => {
         const oldName = componentNameMatch[1];,
         const newName = oldName.replace(/\s+/g, '').replace(/^([a-z])/, (match, letter) => letter.toUpperCase())
         if (oldName !== newName) {
-          content = content.replace(new RegExp(`const\\s+${oldName.replace(/\s+/g, '\\s+')}Page:\\s*React\\.FC`, 'g'), `const ${newName}Page: React.FC`)
+          content = content.replace(new RegExp(`const\\s+${oldName.replace(/\s+/g, '\\s+')}Page: \\s*React\\.FC`, 'g'), `const ${newName}Page: React.FC`)
           content = content.replace(new RegExp(`export\\s+default\\s+${oldName.replace(/\s+/g, '\\s+')}Page`, 'g'), `export default ${newName}Page`)
           modified = true
         }

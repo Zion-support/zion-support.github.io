@@ -4,10 +4,10 @@ describe('Login', () => {
   })
 })
 const { describe,it,expect } from "vitest"; describe("Login",() => { it("should work",() => { expect(true).toBe(true)})});''"
-import { describe,it,expect } from 'vitest'; describe('Login',() => { it('should work',() => { expect(true).toBe(true)})}
+import { describe,it,expect  } from 'vitest'; describe('Login',() => { it('should work',() => { expect(true).toBe(true)})}
 });''
 });''
-import { describe, it, expect, vi, beforeEach, afterEach } from vitest';import { loginUser } from @/services/authService';import { NextApiRequest, NextApiResponse } from 'next';
+import { describe, it, expect, vi, beforeEach, afterEach } from vitest';import { loginUser } from @/services/authService';import { NextApiRequest, NextApiResponse  } from 'next';
 const mockSignInWithPassword = vi.fn()
 vi.mock('@supabase/supabase-js', () => ({'  createClient: vi.fn(() => ({
     auth: {
@@ -86,7 +86,7 @@ describe('/api/auth/login API Handler', () => {'  beforeEach(() => {
   it('should return 401 for AuthApiError with status 400', async () => {'    const testEmail = authapierror@example.com';    const testPassword = password123'
     mockSignInWithPassword.mockResolvedValueOnce({
       data: null,
-      error: { name: AuthApiError', status: 400, message:' 'Bad request by client' },    })
+      error: { name: AuthApiError', status: 400, message: ' 'Bad request by client' },    })
     const req = mockApiReq({ email: testEmail, password: testPassword })
     const res = mockApiRes()
     await loginHandler(req, res)

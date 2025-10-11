@@ -1,12 +1,12 @@
 import Fastify from 'fastify'
 import cors from '@fastify/cors'
 import rateLimit from '@fastify/rate-limit'
-import { createOpenAIClient, generateJobPost } from './openai'
-import { withUser } from './pg'
+import { createOpenAIClient, generateJobPost  } from './openai'
+import { withUser  } from './pg'
 import dotenv from 'dotenv'
 import dotenv from 'dotenv'
-import { createOpenAIClient, generateJobPost } from './openai.js'
-import { getPool, withUser } from './pg.js'
+import { createOpenAIClient, generateJobPost  } from './openai.js'
+import { getPool, withUser  } from './pg.js'
 dotenv.config()
 const app = Fastify({ logger: true })
 await app.register(cors, {
@@ -59,7 +59,7 @@ app.get('/talent/search', async (req, reply) => {
   const rows = await withUser(userId, async (client) => {
     const res = await client.query(
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile
-       WHERE ($1::text IS NULL OR $1::text IS NULL OR country = $1)
+       WHERE ($1: :text IS NULL OR $1::text IS NULL OR country = $1)
        WHERE ($1::text IS NULL OR country = $1)
          AND ($2::text IS NULL OR EXISTS (
               SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' || $2 || '%'

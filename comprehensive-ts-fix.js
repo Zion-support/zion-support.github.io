@@ -2,7 +2,7 @@
 
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Get all TypeScript files in the app directory
@@ -31,7 +31,7 @@ function fixTsxFile(filePath) {
     content = content.replace(malformedJsxPattern, (match, tagName, attributes, text) => {
       if (text.trim()) {
         modified = true
-        return `<${tagName}${attributes}>${text}</${tagName}>`
+        return `<${tagName}$>{attributes}${text}</$>{tagName}`
       }
       return match
     })
@@ -40,7 +40,7 @@ function fixTsxFile(filePath) {
     content = content.replace(selfClosingWithContentPattern, (match, tagName, attributes, text) => {
       if (text.trim() && !text.includes('<')) {
         modified = true
-        return `<${tagName}${attributes}>${text}</${tagName}>`
+        return `<${tagName}$>{attributes}${text}</$>{tagName}`
       }
       return match
     })
@@ -54,11 +54,11 @@ function fixTsxFile(filePath) {
       return match
     })
     // Fix 4: Fix malformed SVG URLs
-    const svgUrlPattern = /bg-\[url\('data:image\/svg\+xml,([^']+)'\)\]/g
+    const svgUrlPattern = /bg-\[url\('data:image\/svg\+xml, ([^']+)'\)\]/g
     content = content.replace(svgUrlPattern, (match, svgContent) => {
       const encodedSvg = encodeURIComponent(svgContent)
       modified = true
-      return `bg-[url('data:image/svg+xml,${encodedSvg}')]`
+      return `bg-[url('data: image/svg+xml, ${encodedSvg}')]`
     })
     // Fix 5: Fix missing closing parentheses in function calls
     const missingParenPattern = /(\w+\([^)]*)\s*\n\s*(\w+)/g,
@@ -74,7 +74,7 @@ function fixTsxFile(filePath) {
     content = content.replace(emptyJsxPattern, (match, tagName, attributes, content) => {
       if (content.trim()) {
         modified = true
-        return `<${tagName}${attributes}>${content}</${tagName}>`
+        return `<${tagName}$>{attributes}${content}</$>{tagName}`
       }
       return match
     })
@@ -83,14 +83,13 @@ function fixTsxFile(filePath) {
     content = content.replace(malformedClassPattern, (match, className, rest) => {
       const fixedClassName = className.replace(/"/g, '&quot;')
       modified = true
-      return `className="${fixedClassName}"${rest}>`
+      return `className="${fixedClassName}"$>{rest}`
     })
     // Fix 8: Fix missing closing tags in JSX
     const unclosedTagPattern = /<(\w+)([^>]*)>\s*$/gm
     const lines = content.split('\n')
     let newContent = content
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i]
+    for (let i = 0; i < lines.length; i++) >{const line = lines[i]
       const match = line.match(unclosedTagPattern)
       if (match) {
         const tagName = match[1]
@@ -99,7 +98,7 @@ function fixTsxFile(filePath) {
         let foundClosing = false
         for (let j = i + 1; j < lines.length; j++) {
           const nextLine = lines[j].trim(),
-          if (nextLine.startsWith(`</${tagName}>`)) {
+          if (nextLine.startsWith(`</${tagName}`)) {
     foundClosing = true
             break
   }
@@ -108,9 +107,8 @@ function fixTsxFile(filePath) {
   }
         }
         
-        if (!foundClosing) {
-          // Add closing tag
-          newContent = newContent.replace(line, line + `</${tagName}>`)
+        if (!foundClosing) >{// Add closing tag
+          newContent = newContent.replace(line, line + `</${tagName}`)
           modified = true
         }
       }

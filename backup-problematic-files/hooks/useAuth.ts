@@ -1,4 +1,4 @@
-import { useState, useEffect  } from './react'
+import { useState, useEffect   } from './react'
 interface User {
   id: string
   email: string
@@ -21,7 +21,6 @@ export const use_auth = () =>: any {
   useEffect(() => {
     // Simulate auth check
     setLoading(false)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/hooks/useAuth.ts
   }, [])
   return {
     user

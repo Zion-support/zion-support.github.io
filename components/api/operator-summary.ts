@@ -20,13 +20,11 @@ export default async function handler(
     const instances =
       metrics?.multiverse?.find((m: any) => m && m.key === 'active_instances')
         ?.value || 0
-    const summary = [
-      `Marketplace steady: ${jobs24} jobs posted in the last 24h, fill rates improving`
+    const summary = [`Marketplace steady: ${jobs24} jobs posted in the last 24h, fill rates improving`
       `DAO engagement at ${voters}% voter participation with active delegates`
       `Token momentum: ${wallets} active wallets; daily volume around ${Number(tx).toLocaleString()}`
       `Multiverse scale: ${instances} active sub-instances with cross-instance flows`
-      `Treasury stable and contributors earning consistently across regions`
-    ]
+      `Treasury stable and contributors earning consistently across regions`]
   } catch (e) {
     res && res.status(200).json({ summary: [], error: 'Failed to compute summary' })
   }
@@ -50,13 +48,7 @@ function handler() {
     const instances =
       metrics?.multiverse?.find ((m: any) => m.key === 'active_instances')
         ?.value || 0
-    const summary = [
-      `Marketplace steady: ${jobs24} jobs posted in the last 24h, fill rates improving`,
-      `DAO engagement at ${voters}% voter participation with active delegates`,
-      `Token momentum: ${wallets} active wallets; daily volume around ${Number (tx).toLocaleString ()}`,
-      `Multiverse scale: ${instances} active sub - instances with cross - instance flows`,
-      `Treasury stable and contributors earning consistently across regions`,
-    ]
+    const summary = [`Marketplace steady: ${jobs24} jobs posted in the last 24h, fill rates improving`, `DAO engagement at ${voters}% voter participation with active delegates`, `Token momentum: ${wallets} active wallets; daily volume around ${Number (tx).toLocaleString ()}`, `Multiverse scale: ${instances} active sub - instances with cross - instance flows`, `Treasury stable and contributors earning consistently across regions`]
     res.status (200).json ({ summary, timestamp: new Date ().toISOString () })
   } catch (e) {
     res.status (200).json ({ summary: [], error: 'Failed to compute summary' })
@@ -71,13 +63,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const wallets = metrics?.token?.find((m: any) => m.key === 'active_wallets')?.value || 0
     const tx = metrics?.token?.find((m: any) => m.key === 'tx_volume_daily')?.value || 0
     const instances = metrics?.multiverse?.find((m: any) => m.key === 'active_instances')?.value || 0
-    const summary = [
-      `Marketplace steady: ${jobs24} jobs posted in the last 24h, fill rates improving`,
-      `DAO engagement at ${voters}% voter participation with active delegates`,
-      `Token momentum: ${wallets} active wallets; daily volume around ${Number(tx).toLocaleString()}`,
-      `Multiverse scale: ${instances} active sub-instances with cross-instance flows`,
-      `Treasury stable and contributors earning consistently across regions`,
-    ]
+    const summary = [`Marketplace steady: ${jobs24} jobs posted in the last 24h, fill rates improving`, `DAO engagement at ${voters}% voter participation with active delegates`, `Token momentum: ${wallets} active wallets; daily volume around ${Number(tx).toLocaleString()}`, `Multiverse scale: ${instances} active sub-instances with cross-instance flows`, `Treasury stable and contributors earning consistently across regions`]
     res.status(200).json({ summary, timestamp: new Date().toISOString() })
   } catch (e) {
     res.status(200).json({ summary: [], error: 'Failed to compute summary' })

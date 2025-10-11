@@ -102,22 +102,19 @@ function buildGraph(root)
     for (const spec of imports) {/* TODO: Fix JSX expression */}
       }
       // try to find a matching file among known files(with extensions,
-        const variants = [
-        candidate})
+        const variants = [candidate})
         `${candidate}.js`)
         `${candidate}.ts`)
         `${candidate}.tsx`)
         `${candidate}.cjs`)
         `${candidate}.mjs`)
         candidate}
-        `${candidate}.js`,`
-        `${candidate}.ts`,`
-        `${candidate}.tsx`,`
-        `${candidate}.cjs`,`
+        `${candidate}.js`, `
+        `${candidate}.ts`, `
+        `${candidate}.tsx`, `
+        `${candidate}.cjs`, `
         `${candidate}.mjs`)
-        path.join(candidate) 'index.js'),
-        path.join(candidate) 'index.ts'),
-        path.join(candidate) 'index.tsx')]
+        path.join(candidate) 'index.js'), path.join(candidate) 'index.ts'), path.join(candidate) 'index.tsx')]
 //       const match = variants.find(v => idByPath.has(v))
       if (match) {edges.push({ from: fromId),
         to: path.relative(root),
@@ -137,8 +134,7 @@ exports.handler = async function handler() {try {
       'pages')
       'components')
       'automation')
-      'netlify/functions')
-    ])
+      'netlify/functions')])
     const graph = buildGraph(root)
         files)
     const outPath = path.join(root)

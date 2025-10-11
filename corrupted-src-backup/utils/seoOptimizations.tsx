@@ -2,7 +2,7 @@
  * SEO Optimization Utilities
  * Comprehensive SEO enhancements for the Zion website
  */
-import { Helmet } from 'react-helmet-async'
+import { Helmet  } from 'react-helmet-async'
 // Meta tags utilities
 export const seoUtils = {/* content */}
   // Generate structured data for organization
@@ -13,10 +13,10 @@ export const seoUtils = {/* content */}
     "url": "https: //zion.app",
     "logo": "https: //zion.app/logo.png",
     "description": "Advanced AI and IT Solutions",
-    "sameAs": [
-      "https: //linkedin.com/company/zion-tech"]}),
+    "sameAs": ["https: //linkedin.com/company/zion-tech"]}),
   // Generate breadcrumb structured data
-  generateBreadcrumbSchema: (items: Array<{name: string, url: string}>) => ({/* content */}
+  generateBreadcrumbSchema: (items: Array<>
+  {name: string, url: string}) => ({/* content */}
     "@context": "https: //schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": items.map((item, index) => ({/* content */}
@@ -27,7 +27,9 @@ export const seoUtils = {/* content */}
     }))
   }),
   // Generate FAQ structured data
-  generateFAQSchema: (faqs: Array<{question: string, answer: string}>) => ({/* content */}
+</>
+  generateFAQSchema: (faqs: Array<>
+  {question: string, answer: string}) => ({/* content */}
     "@context": "https: //schema.org",
     "@type": "FAQPage",
     "mainEntity": faqs.map(faq => ({/* content */})
@@ -62,25 +64,25 @@ export const seoUtils = {/* content */}
   // Generate structured data for organization,
   generateOrganizationSchema: () => ({/* content */}
     "@context": "http,"
-  s://schema.org","
+  s: //schema.org","
     "@type": "Organization","
     "name": "Zion Tech Group","
     "url": "http,"
-  s://zion.app","
+  s: //zion.app","
     "logo": "http,"
-  s://zion.app/logo.png","
+  s: //zion.app/logo.png","
     "description": "Advanced AI and IT Solutions","
     "sameAs": ["
-      "http,"
-  s://linkedin.com/company/zion-tech"
-    ])
+      "http, "
+  s: //linkedin.com/company/zion-tech"])
   }),
   // Generate breadcrumb structured data,
   generateBreadcrumbSchema: (item,
+</>
   s: Array<{/* TODO: Fix JSX expression */})
   l: string}>) => ({/* content */}"
     "@context": "http,"
-  s://schema.org","
+  s: //schema.org","
     "@type": "BreadcrumbList",")
     "itemListElement": items.map((item, index) => ({/* content */}"
       "@type": "ListItem","
@@ -94,7 +96,7 @@ export const seoUtils = {/* content */}
   s: Array<{/* TODO: Fix JSX expression */})
   r: string}>) => ({/* content */}"
     "@context": "http,"
-  s://schema.org","
+  s: //schema.org","
     "@type": "FAQPage","
     "mainEntity": faqs.map(faq => ({/* content */}"
       "@type": "Question","
@@ -123,7 +125,7 @@ export const seoUtils = {/* content */}
   l: string,)
   }) => ({/* content */}"
     "@context": "http,"
-  s://schema.org","
+  s: //schema.org","
     "@type": "Article","
     "headline": article.title,"
     "description": article.description,"
@@ -133,7 +135,7 @@ export const seoUtils = {/* content */}
     },"
     "image": {/* content */}"
       "url": article.image || "http,"
-  s://zion.app/logo.png"
+  s: //zion.app/logo.png"
     })
   })
 })
@@ -229,7 +231,7 @@ export const contentOptimization = {/* content */}
       acc[word] = (acc[word] || 0) + 1
       return acc
     }, {} as Record<string, number>)</$1>return</string> Object.entries(wordCount)
-      .sort(([,a], [,b]) => b - a)
+      .sort(([a], [b]) => b - a)
       .slice(0, 10)
       .map(([word]) => word)
   },
@@ -258,14 +260,10 @@ export const performanceSEO = {/* content */}
   // Preload critical resources
   // Preload critical resources,
   preloadCriticalResources: () => {/* content */}
-    const criticalResources = [
-      {/* TODO: Fix JSX expression */}
-  e: 'font/woff2' },
-      {/* TODO: Fix JSX expression */}
-  s: 'style' },
-      {/* TODO: Fix JSX expression */}
-  s: 'image' }
-    ]
+    const criticalResources = [{/* TODO: Fix JSX expression */}
+  e: 'font/woff2' }, {/* TODO: Fix JSX expression */}
+  s: 'style' }, {/* TODO: Fix JSX expression */}
+  s: 'image' }]
     criticalResources.forEach(resource => {/* content */})
       const _link = document.createElement('link')
       link.rel = 'preload'
@@ -421,50 +419,50 @@ export const SEOComponent = ({/* content */}
 //   const fullTitle = title ? `${title} | ${siteName}` : siteName;`
 //   const fullUrl = url ? `${siteUrl}${url}` : siteUrl;`
 //   const fullImage = image ? `${siteUrl}${image}` : defaultImage
-  return(<div> </div><Helmet>
+  return(<div> </div><Helmet ></Helmet>
       <title>{fullTitle}
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={fullUrl} />
       {/* Open Graph */}
-      <meta property="og:type" content={type} />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />)
-      <meta property="og:url" content={fullUrl} />)
-      <meta property="og:image" content={fullImage} />)
-      <meta property="og:site_name" content={siteName} />)
+      <meta property="og: type" content={type} />
+      <meta property="og: title" content={fullTitle} />
+      <meta property="og: description" content={description} />)
+      <meta property="og: url" content={fullUrl} />)
+      <meta property="og: image" content={fullImage} />)
+      <meta property="og: site_name" content={siteName} />)
       {/* Twitter Card */})
       <meta name="twitter: card" content="summary_large_image" />),
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullImage} />
-  return (<div> </div><Helmet>
+      <meta name="twitter: title" content={fullTitle} />
+      <meta name="twitter: description" content={description} />
+      <meta name="twitter: image" content={fullImage} />
+  return (<div> </div><Helmet ></Helmet>
       <title>{fullTitle}</title>"
       <meta name="description" content={description} /></meta>"
       <meta name="keywords" content={keywords} /></meta>"
       <link rel="canonical" href={fullUrl} />
       {/* Open Graph */}"
       <meta property="o,"
-  g:type" content={type} /></meta>"
+  g: type" content={type} /></meta>"
       <meta property="o,"
-  g:title" content={fullTitle} /></meta>"
+  g: title" content={fullTitle} /></meta>"
       <meta property="o,"
-  g:description" content={description} /></meta>"
+  g: description" content={description} /></meta>"
       <meta property="o,"
-  g:url" content={fullUrl} /></meta>"
+  g: url" content={fullUrl} /></meta>"
       <meta property="o,"
-  g:image" content={fullImage} /></meta>"
+  g: image" content={fullImage} /></meta>"
       <meta property="o,"
-  g:site_name" content={siteName} />
+  g: site_name" content={siteName} />
       {/* Twitter Card */}"
       <meta name="twitte,"
-  r:card" content="summary_large_image" /></meta>"
+  r: card" content="summary_large_image" /></meta>"
       <meta name="twitte,"
-  r:title" content={fullTitle} /></meta>"
+  r: title" content={fullTitle} /></meta>"
       <meta name="twitte,"
-  r:description" content={description} /></meta>"
+  r: description" content={description} /></meta>"
       <meta name="twitte,"
-  r:image" content={fullImage} />
+  r: image" content={fullImage} />
       {/* Structured Data */}
       {/* TODO: Fix JSX expression */})
           {JSON.stringify(structuredData)}

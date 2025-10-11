@@ -78,16 +78,12 @@ export interface Revolutionary2026AiService {/* TODO: Fix JSX expression */}
     address: string,
   }
 }
-export const revolutionary2026 AIServices: Revolutionary2026 AiService[] = [,
-    id: "2026-revolutionary-ai", name: "2026 Revolutionary AI Platform",
-    tagline: "Revolutionary AI for 2026", price: "$249/month"
+export const revolutionary2026 AIServices: Revolutionary2026 AiService[] = [id: "2026-revolutionary-ai", name: "2026 Revolutionary AI Platform", tagline: "Revolutionary AI for 2026", price: "$249/month"
     description: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2026."
-    features: [,
-      "Revolutionary AI"
+    features: [, "Revolutionary AI"
       "Transformative capabilities"
       "Advanced algorithms"
-      "Innovation platform",
-      "Future-ready AI"],
+      "Innovation platform", "Future-ready AI"],
     link: "/services/2026-revolutionary-ai", category: "Revolutionary 2026 AI",
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
@@ -127,23 +123,17 @@ export const revolutionary2026 AIServices: Revolutionary2026 AiService[] = [,
   s: string}
 }
 export const,
-  revolutionary2026AIServices: Revolutionary2026AiService[] = [,
-    i,"
-  d: "2026-revolutionary-ai", nam,"
-  e: "2026 Revolutionary AI Platform",
-    taglin,"
-  e: "Revolutionary AI for 2026", pric,"
-  e: "$249/month",
-    descriptio,"
-  n: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2026.",
-    feature,
-  s: [,"
+  revolutionary2026AIServices: Revolutionary2026AiService[] = [i, "
+  d: "2026-revolutionary-ai", nam, "
+  e: "2026 Revolutionary AI Platform", taglin, "
+  e: "Revolutionary AI for 2026", pric, "
+  e: "$249/month", descriptio, "
+  n: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2026.", feature, s: [, "
       "Revolutionary AI""
       "Transformative capabilities""
       "Advanced algorithms""
       "Innovation platform""
-      "Future-ready AI"
-    ],
+      "Future-ready AI"],
     lin,"
   k: "/services/2026-revolutionary-ai", categor,"
   y: "Revolutionary 2026 AI",
@@ -178,13 +168,7 @@ id: "2026-revolutionary-ai"
     tagline: "Revolutionary AI for 2026",
     price: "$249/month",
     description: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2026.",
-    features: [,
-      "Revolutionary AI",
-      "Transformative capabilities",
-      "Advanced algorithms",
-      "Innovation platform",
-      "Future-ready AI"
-    ],
+    features: ["Revolutionary AI", "Transformative capabilities", "Advanced algorithms", "Innovation platform", "Future-ready AI"],
     link: "/services/2026-revolutionary-ai"
     category: "Revolutionary 2026 AI"
     realImplementation: true
@@ -210,13 +194,12 @@ id: "2026-revolutionary-ai"
     descriptio,"
   n: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2026.",
     feature,
-  s: [,"
-      "Revolutionary AI","
-      "Transformative capabilities","
-      "Advanced algorithms","
-      "Innovation platform","
-      "Future-ready AI"
-    ],
+  s: ["
+      "Revolutionary AI", "
+      "Transformative capabilities", "
+      "Advanced algorithms", "
+      "Innovation platform", "
+      "Future-ready AI"],
     lin,"
   k: "/services/2026-revolutionary-ai",
     categor,"
@@ -288,13 +271,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  revolutionary2026AIServices: Revolutionary2026AiService[] = [ i,"
-  d: "2026-revolutionary-ai", nam,"
-  e: "2026 Revolutionary AI Platform", taglin,"
-  e: "Revolutionary AI for 2026", pric,"
-  e: "$249/month", descriptio,"
-  n: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2026.", feature,"
-  s: [ "Revolutionary AI" "Transformative capabilities" "Advanced algorithms" "Innovation platform" "Future-ready AI" ], lin,"
+  revolutionary2026AIServices: Revolutionary2026AiService[] = [i, "
+  d: "2026-revolutionary-ai", nam, "
+  e: "2026 Revolutionary AI Platform", taglin, "
+  e: "Revolutionary AI for 2026", pric, "
+  e: "$249/month", descriptio, "
+  n: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2026.", feature, "
+  s: [ "Revolutionary AI" "Transformative capabilities" "Advanced algorithms" "Innovation platform" "Future-ready AI"], lin,"
   k: "/services/2026-revolutionary-ai", categor,"
   y: "Revolutionary 2026 AI", realImplementatio,
   n: true, contactInf,
@@ -311,7 +294,7 @@ i,
   e: "Revolutionary AI for 2026", pric,"
   e: "$249/month", descriptio,"
   n: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2026.", feature,"
-  s: [ "Revolutionary AI", "Transformative capabilities", "Advanced algorithms", "Innovation platform", "Future-ready AI" ], lin,"
+  s: ["Revolutionary AI", "Transformative capabilities", "Advanced algorithms", "Innovation platform", "Future-ready AI"], lin,"
   k: "/services/2026-revolutionary-ai", categor,"
   y: "Revolutionary 2026 AI", realImplementatio,
   n: true, contactInf,

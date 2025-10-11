@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom'
+import { Link  } from 'react-router-dom'
 export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   return (<div>
             < href="/blog" className="text-indigo-600,"$2 />
-  hover:text-indigo-700 flex items-center mb-4">← Back to Blog
+  hover: text-indigo-700 flex items-center mb-4">← Back to Blog
           </div>"
             <span className="inline-block bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-4">AUTONOMOUS 2026</span>"
             <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Autonomous Business Systems,
@@ -28,17 +28,17 @@ export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expr
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Core Components</h3>"
             <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
               <li> <strong>AI Decision,
-  Engine:</strong> Real-time autonomous decision making
+  Engine: </strong> Real-time autonomous decision making
               <li> <strong>Process,
-  Orchestrator:</strong> Automated workflow management
+  Orchestrator: </strong> Automated workflow management
               <li> <strong>Learning,
-  System:</strong> Continuous improvement and adaptation
+  System: </strong> Continuous improvement and adaptation
               <li> <strong>Monitoring,
-  Hub:</strong> Real-time system health and performance
+  Hub: </strong> Real-time system health and performance
             </ul>"
 <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Implementation Strategy
               The path to 95% automation requires a systematic approach across multiple business,
-  functions:"
+  functions: "
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase)
   1: Foundation (Months 1-6)</h3>"
             <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
@@ -54,7 +54,7 @@ export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expr
               <li>• Achieve 80%+ process automation</li>"
             <h2 className="text-2xl font-bold text-gray-900 mb-6">💰 ROI & Impact
               Autonomous business systems deliver measurable value across multiple,
-  dimensions:"
+  dimensions: "
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Operational Benefits
 <li>• <strong>$100M+ annual savings</strong> from reduced manual operations
               <li>• <strong>99.9% uptime</strong> through autonomous system management
@@ -86,7 +86,7 @@ export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expr
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Begin Your Automation Transformation</h3>"
               <p className="text-gray-700 mb-4">Join leading enterprises achieving 95% automation with AI autonomous business systems
                 <$2 />
-                  href="/contact" className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">Get Automation Assessment
+                  href="/contact" className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover: bg-purple-700 transition-colors">Get Automation Assessment
                   href="/services" className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">Explore AI Services
     </div>)
 }

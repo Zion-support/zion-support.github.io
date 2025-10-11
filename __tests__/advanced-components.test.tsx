@@ -1,6 +1,6 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react'
-import { HelmetProvider } from 'react-helmet-async'
-import { MemoryRouter } from 'react-router-dom'
+import { render, screen, fireEvent, waitFor  } from '@testing-library/react'
+import { HelmetProvider  } from 'react-helmet-async'
+import { MemoryRouter  } from 'react-router-dom'
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
@@ -12,8 +12,8 @@ describe('Advanced Components', () => {
   it('renders test content without error', () => {
 
     render(
-      <MemoryRouter>
-        <ThrowError shouldThrow={false} />
+      <MemoryRouter ></MemoryRouter>
+        <ThrowError shouldThrow={false} /></ThrowError>
       </MemoryRouter>
     )
     expect(screen.getByText('Test content')).toBeInTheDocument()
@@ -26,8 +26,8 @@ describe('Advanced Components', () => {
     // We just verify the component doesn't crash the test
     expect(() => {
       render(
-        <MemoryRouter>
-          <ThrowError shouldThrow={true} />
+        <MemoryRouter ></MemoryRouter>
+          <ThrowError shouldThrow={true} /></ThrowError>
         </MemoryRouter>
       )
     }).not.toThrow()

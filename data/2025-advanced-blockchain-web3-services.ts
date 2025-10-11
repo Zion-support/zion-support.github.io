@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface AdvancedBlockchainWeb3Service {
   id: string
   name: string
@@ -46,26 +46,9 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 }
-export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[] = [
-  {
-    id: 'ai-powered-defi-protocol',
-    name: 'AI-Powered DeFi Protocol',
-    tagline: 'Intelligent decentralized finance with AI-driven optimization',
-    price: '$2,999',
-    period: '/month',
-    description: 'Revolutionary AI-powered DeFi protocol that uses machine learning to optimize yield farming, risk management, and portfolio allocation. Features intelligent trading strategies and automated risk assessment.',
-    features: [
-      'AI-powered yield optimization',
-      'Intelligent risk management',
-      'Automated portfolio rebalancing',
-      'Predictive market analysis',
-      'Smart contract automation',
-      'Cross-chain interoperability',
-      'Real-time analytics',
-      'Mobile app access',
-      'API for developers',
-      'Advanced security features'
-    ],
+export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[] = [{
+    id: 'ai-powered-defi-protocol', name: 'AI-Powered DeFi Protocol', tagline: 'Intelligent decentralized finance with AI-driven optimization', price: '$2, 999', period: '/month', description: 'Revolutionary AI-powered DeFi protocol that uses machine learning to optimize yield farming, risk management, and portfolio allocation. Features intelligent trading strategies and automated risk assessment.', features: [
+      'AI-powered yield optimization', 'Intelligent risk management', 'Automated portfolio rebalancing', 'Predictive market analysis', 'Smart contract automation', 'Cross-chain interoperability', 'Real-time analytics', 'Mobile app access', 'API for developers', 'Advanced security features'],
     popular: true,
     icon: '💰',
     color: 'from-green-600 to-emerald-700',
@@ -99,18 +82,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     price: '$4,999',
     period: '/month',
     description: 'Groundbreaking quantum-resistant blockchain platform that implements post-quantum cryptography to protect against future quantum computing threats. Features quantum-safe consensus mechanisms and encryption.',
-    features: [
-      'Post-quantum cryptography',
-      'Quantum-safe consensus',
-      'Quantum-resistant wallets',
-      'Advanced encryption',
-      'Cross-chain bridges',
-      'Smart contract platform',
-      'DeFi integration',
-      'NFT marketplace',
-      'Developer tools',
-      'Enterprise solutions'
-    ],
+    features: ['Post-quantum cryptography', 'Quantum-safe consensus', 'Quantum-resistant wallets', 'Advanced encryption', 'Cross-chain bridges', 'Smart contract platform', 'DeFi integration', 'NFT marketplace', 'Developer tools', 'Enterprise solutions'],
     popular: false,
     icon: '⚛️',
     color: 'from-purple-600 to-violet-700',
@@ -144,18 +116,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     price: '$1,299',
     period: '/month',
     description: 'Comprehensive Web3 identity platform that provides decentralized identity management, verifiable credentials, and privacy-preserving authentication. Features self-sovereign identity and zero-knowledge proofs.',
-    features: [
-      'Self-sovereign identity',
-      'Verifiable credentials',
-      'Zero-knowledge proofs',
-      'Privacy-preserving authentication',
-      'Cross-platform compatibility',
-      'Mobile app support',
-      'API integration',
-      'Enterprise features',
-      'Compliance tools',
-      'Developer SDK'
-    ],
+    features: ['Self-sovereign identity', 'Verifiable credentials', 'Zero-knowledge proofs', 'Privacy-preserving authentication', 'Cross-platform compatibility', 'Mobile app support', 'API integration', 'Enterprise features', 'Compliance tools', 'Developer SDK'],
     popular: true,
     icon: '🆔',
     color: 'from-blue-600 to-cyan-700',
@@ -189,18 +150,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     price: '$899',
     period: '/month',
     description: 'Revolutionary AI-powered NFT marketplace that provides intelligent trading insights, automated portfolio management, and AI-generated content. Features predictive pricing and market analysis.',
-    features: [
-      'AI-powered trading insights',
-      'Predictive pricing models',
-      'Automated portfolio management',
-      'AI-generated content',
-      'Market analysis tools',
-      'Cross-chain NFT support',
-      'Mobile app access',
-      'Social features',
-      'Creator tools',
-      'Analytics dashboard'
-    ],
+    features: ['AI-powered trading insights', 'Predictive pricing models', 'Automated portfolio management', 'AI-generated content', 'Market analysis tools', 'Cross-chain NFT support', 'Mobile app access', 'Social features', 'Creator tools', 'Analytics dashboard'],
     popular: false,
     icon: '🎨',
     color: 'from-pink-600 to-rose-700',
@@ -234,18 +184,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     price: '$1,899',
     period: '/month',
     description: 'Advanced blockchain-based supply chain orchestration platform that provides end-to-end transparency, traceability, and automation. Features smart contracts, IoT integration, and real-time monitoring.',
-    features: [
-      'End-to-end traceability',
-      'Smart contract automation',
-      'IoT sensor integration',
-      'Real-time monitoring',
-      'Compliance management',
-      'Quality assurance',
-      'Inventory optimization',
-      'Supplier management',
-      'Analytics dashboard',
-      'API integration'
-    ],
+    features: ['End-to-end traceability', 'Smart contract automation', 'IoT sensor integration', 'Real-time monitoring', 'Compliance management', 'Quality assurance', 'Inventory optimization', 'Supplier management', 'Analytics dashboard', 'API integration'],
     popular: true,
     icon: '📦',
     color: 'from-orange-600 to-red-600',
@@ -279,18 +218,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     price: '$2,499',
     period: '/month',
     description: 'Comprehensive metaverse development platform that enables creators to build immersive virtual worlds with AI-powered content generation, blockchain-based ownership, and cross-platform compatibility.',
-    features: [
-      '3D world building tools',
-      'AI content generation',
-      'Blockchain ownership',
-      'Cross-platform compatibility',
-      'VR/AR support',
-      'Social features',
-      'Monetization tools',
-      'Analytics dashboard',
-      'Developer SDK',
-      'Marketplace integration'
-    ],
+    features: ['3D world building tools', 'AI content generation', 'Blockchain ownership', 'Cross-platform compatibility', 'VR/AR support', 'Social features', 'Monetization tools', 'Analytics dashboard', 'Developer SDK', 'Marketplace integration'],
     popular: true,
     icon: '🌍',
     color: 'from-indigo-600 to-purple-700',
@@ -316,27 +244,10 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     customers: 18,
     rating: 4.7,
     reviews: 35
-export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[] = [
-  // DeFi Yield Optimization Platform
+export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[] = [// DeFi Yield Optimization Platform
   {
-    id: 'defi-yield-optimization',
-    name: 'DeFi Yield Optimization Platform',
-    tagline: 'Maximize your DeFi returns with intelligent yield farming',
-    price: '$99',
-    period: '/month',
-    description: 'Advanced DeFi platform that automatically optimizes yield farming strategies, rebalances portfolios, and maximizes returns across multiple DeFi protocols and chains.',
-    features: [
-      'Automated yield farming across multiple protocols',
-      'Intelligent portfolio rebalancing',
-      'Risk management and diversification',
-      'Multi-chain support (Ethereum, Polygon, BSC, Solana)',
-      'Real-time yield monitoring and alerts',
-      'Gas optimization and cost management',
-      'Historical performance analytics',
-      'Custom strategy builder',
-      'Mobile app for portfolio management',
-      'API for institutional clients'
-    ],
+    id: 'defi-yield-optimization', name: 'DeFi Yield Optimization Platform', tagline: 'Maximize your DeFi returns with intelligent yield farming', price: '$99', period: '/month', description: 'Advanced DeFi platform that automatically optimizes yield farming strategies, rebalances portfolios, and maximizes returns across multiple DeFi protocols and chains.', features: [
+      'Automated yield farming across multiple protocols', 'Intelligent portfolio rebalancing', 'Risk management and diversification', 'Multi-chain support (Ethereum, Polygon, BSC, Solana)', 'Real-time yield monitoring and alerts', 'Gas optimization and cost management', 'Historical performance analytics', 'Custom strategy builder', 'Mobile app for portfolio management', 'API for institutional clients'],
     popular: true,
     icon: '🌾',
     color: 'from-green-600 to-emerald-600',
@@ -377,18 +288,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     price: '$299',
     period: '/month',
     description: 'Comprehensive NFT platform that provides marketplace creation, NFT minting, trading, analytics, and management tools for creators, collectors, and businesses.',
-    features: [
-      'Custom NFT marketplace creation',
-      'Multi-chain NFT minting and management',
-      'Advanced trading and auction systems',
-      'Royalty management and distribution',
-      'Analytics and market insights',
-      'Brand and IP protection tools',
-      'Multi-wallet support',
-      'API for third-party integrations',
-      'Mobile app for trading',
-      'Enterprise NFT solutions'
-    ],
+    features: ['Custom NFT marketplace creation', 'Multi-chain NFT minting and management', 'Advanced trading and auction systems', 'Royalty management and distribution', 'Analytics and market insights', 'Brand and IP protection tools', 'Multi-wallet support', 'API for third-party integrations', 'Mobile app for trading', 'Enterprise NFT solutions'],
     popular: true,
     icon: '🎨',
     color: 'from-purple-600 to-pink-600',
@@ -429,18 +329,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     price: '$199',
     period: '/month',
     description: 'Comprehensive DAO platform that provides governance tools, voting systems, treasury management, and community engagement features for decentralized organizations.',
-    features: [
-      'Custom governance token creation',
-      'Advanced voting and proposal systems',
-      'Treasury management and budgeting',
-      'Community engagement tools',
-      'Multi-signature wallet integration',
-      'Governance analytics and reporting',
-      'Integration with DeFi protocols',
-      'Mobile governance app',
-      'API for custom integrations',
-      'Enterprise DAO solutions'
-    ],
+    features: ['Custom governance token creation', 'Advanced voting and proposal systems', 'Treasury management and budgeting', 'Community engagement tools', 'Multi-signature wallet integration', 'Governance analytics and reporting', 'Integration with DeFi protocols', 'Mobile governance app', 'API for custom integrations', 'Enterprise DAO solutions'],
     popular: true,
     icon: '🏛️',
     color: 'from-blue-600 to-indigo-600',
@@ -481,18 +370,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     price: '$399',
     period: '/month',
     description: 'Advanced cross-chain platform that enables seamless asset transfers, liquidity provision, and interoperability between different blockchain networks with enhanced security and efficiency.',
-    features: [
-      'Multi-chain asset bridging',
-      'Liquidity provision and management',
-      'Cross-chain smart contracts',
-      'Security and audit tools',
-      'Real-time bridge monitoring',
-      'Fee optimization and routing',
-      'Integration with major chains',
-      'API for developers',
-      'Mobile bridge app',
-      'Enterprise bridge solutions'
-    ],
+    features: ['Multi-chain asset bridging', 'Liquidity provision and management', 'Cross-chain smart contracts', 'Security and audit tools', 'Real-time bridge monitoring', 'Fee optimization and routing', 'Integration with major chains', 'API for developers', 'Mobile bridge app', 'Enterprise bridge solutions'],
     popular: true,
     icon: '🌉',
     color: 'from-cyan-600 to-blue-600',
@@ -533,18 +411,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     price: '$149',
     period: '/month',
     description: 'Comprehensive Web3 identity platform that provides decentralized identity management, authentication, reputation systems, and privacy-preserving verification for Web3 applications.',
-    features: [
-      'Decentralized identity (DID) creation',
-      'Zero-knowledge proof verification',
-      'Reputation and credential systems',
-      'Privacy-preserving authentication',
-      'Multi-chain identity support',
-      'Integration with Web3 apps',
-      'Mobile identity wallet',
-      'API for developers',
-      'Enterprise identity solutions',
-      'Compliance and audit tools'
-    ],
+    features: ['Decentralized identity (DID) creation', 'Zero-knowledge proof verification', 'Reputation and credential systems', 'Privacy-preserving authentication', 'Multi-chain identity support', 'Integration with Web3 apps', 'Mobile identity wallet', 'API for developers', 'Enterprise identity solutions', 'Compliance and audit tools'],
     popular: true,
     icon: '🆔',
     color: 'from-orange-600 to-red-600',

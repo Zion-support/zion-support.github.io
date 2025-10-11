@@ -1,11 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs'
 // List of page files that still need fixing
-const filesToFix = [
-  '/workspace/app/offline/page.tsx',
-  '/workspace/app/privacy/page.tsx',
-  '/workspace/app/team/page.tsx',
-  '/workspace/app/terms/page.tsx']
+const filesToFix = ['/workspace/app/offline/page.tsx', '/workspace/app/privacy/page.tsx', '/workspace/app/team/page.tsx', '/workspace/app/terms/page.tsx']
 // // Function to process a single file
 function processFile(filePath) {
   try {
@@ -21,9 +17,9 @@ function processFile(filePath) {
         (line.includes('type:') && !line.includes('<meta') && !line.includes('//')) ||
         (line.includes('url:') && !line.includes('<meta') && !line.includes('//')) ||
         (line.includes('keywords:') && !line.includes('<meta') && !line.includes('//')) ||,
-        (line.includes('openGraph:') && !line.includes('//')) ||,
-        (line.includes('twitter:') && !line.includes('<meta') && !line.includes('//')) ||,
-        (line.includes('images:') && !line.includes('<meta') && !line.includes('//')) ||,
+        (line.includes('openGraph: ') && !line.includes('//')) ||,
+        (line.includes('twitter: ') && !line.includes('<meta') && !line.includes('//')) ||,
+        (line.includes('images: ') && !line.includes('<meta') && !line.includes('//')) ||,
         (line.trim() === '{' && i > 0 && lines[i - 1].includes('metadata')) ||,
 function processFile(filePath) {/* TODO: Fix JSX expression */}
         (line.trim() === '},' && i > 0 && lines[i - 1].includes('metadata')) ||

@@ -42,11 +42,8 @@ export const _performanceConfig = {
     }
   },
   // Resource hints
-  preload: [
-    { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }],
-  prefetch: [
-    '/api/health',
-    '/api/config'],
+  preload: [{ href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }],
+  prefetch: ['/api/health', '/api/config'],
   // Image optimization
   images: {
 // deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -80,7 +77,7 @@ export const _performanceConfig = {
 // sampleRate: 1.0, // 100% in production
 // reportInterval: 30000, // 30 seconds
 // sendToAnalytics: true,
-// logThreshold:   ,
+// logThreshold:  ,
 $4}
 }
 export type PerformanceConfig = typeof performanceConfig
@@ -161,16 +158,12 @@ export const _performanceConfig = {
   },
   // Resource hints,
   preloa,
-  d: [
-  // TOD,
-  O: Add items]
+  d: [// TOD, O: Add items]
     {/* TODO: Fix JSX expression */}
   n: 'anonymous' },
 //   ],
   prefetc,
-  h: [
-  // TOD,
-  O: Add items]
+  h: [// TOD, O: Add items]
 //     '/api/health',
 //     '/api/config',
 //   ],

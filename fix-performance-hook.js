@@ -7,7 +7,7 @@ const fixedContent = `/**
  * Performance Monitoring Hook
  * Provides React hooks for performance monitoring and optimization
  */
-import { analytics } from '../utils/analytics'
+import { analytics  } from '../utils/analytics'
 /**
  * Hook for monitoring page load performance
  */

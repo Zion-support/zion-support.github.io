@@ -1,13 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import {
-  authenticateRequest
+import { authenticateRequest
   listApiKeys
   saveApiKeys
   authenticateRequest,
   listApiKeys,
   saveApiKeys,
-} from '../../../utils/api/partnerAuth'
-import { v4 as uuidv4 } from 'uuid'
+ } from '../../../utils/api/partnerAuth'
+import { v4 as uuidv4  } from 'uuid'
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -26,15 +25,15 @@ export default async function handler(
   // Create new key
   const now = new Date().toISOString()
   const newKey = {import type { NextApiRequest, NextApiResponse } from "next"
-import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth"
-import { v4 as uuidv4 } from "uuid"
+import { authenticateRequest, listApiKeys, saveApiKeys  } from '../../../utils/api/partnerAuth'
+import { v4 as uuidv4  } from 'uuid'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST")
     return res.status(405).json({ error: "Method Not Allowed" })
 import type { NextApiRequest, NextApiResponse } from "next"
-import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth"
-import { v4 as uuidv4 } from "uuid"
+import { authenticateRequest, listApiKeys, saveApiKeys  } from '../../../utils/api/partnerAuth'
+import { v4 as uuidv4  } from 'uuid'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST")
@@ -80,8 +79,8 @@ if (existing.active = false) {
   // Create new key
   const now = new Date ().toISOString ()
   const new_key = {import type { NextApiRequest, NextApiResponse } from './next'
-import { authenticate_request, listApiKeys, saveApiKeys  } from '../../../utils / api / partner_auth'
-import { v4 as uuidv4  } from './uuid'
+import { authenticate_request, listApiKeys, saveApiKeys   } from '../../../utils / api / partner_auth'
+import { v4 as uuidv4   } from './uuid'
 export default async /**
  * handler - Function description
  */

@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import { glob } from 'glob'
+import { glob  } from 'glob'
 // SEO optimization script
 class SEOOptimizer {
     constructor() {
@@ -174,13 +174,13 @@ class SEOOptimizer {
       this.generateReport()
       console.log('\n✅ SEO optimization completed!')
   } catch (error) {
-    console.error('❌ SEO optimization failed:', error.message)
+    console.error('❌ SEO optimization failed: ', error.message)
   }
   }
 }
 
 // Run the optimizer
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file: //${process.argv[1]}`) {
     const optimizer = new SEOOptimizer()
   optimizer.run()
   }
@@ -207,66 +207,12 @@ function optimizeSEO() {/* TODO: Fix JSX expression */}
 
 function generateSitemap() {/* TODO: Fix JSX expression */}
 }
-  const pages = [
-    '/',
-    '/about',
-    '/ai-services',
-    '/it-services',
-    '/contact',
-    '/ai-analytics-dashboard',
-    '/ai-chatbot-builder',
-    '/ai-content-generation',
-    '/ai-crm',
-    '/ai-customer-support',
-    '/ai-cybersecurity',
-    '/ai-data-analytics',
-    '/ai-data-visualization',
-    '/ai-document-processing',
-    '/ai-ecommerce-solutions',
-    '/ai-email-assistant',
-    '/ai-fintech',
-    '/ai-healthcare',
-    '/ai-lead-generation',
-    '/ai-marketing',
-    '/ai-mobile-app-development',
-    '/ai-sales-automation',
-    '/ai-scheduler',
-    '/ai-workflow-automation',
-    '/ai-writing-assistant',
-    '/analytics-tools',
-    '/autonomous-systems',
-    '/blockchain',
-    '/business-intelligence',
-    '/careers',
-    '/case-studies',
-    '/cloud-services',
-    '/compliance',
-    '/cybersecurity',
-    '/database',
-    '/developer-tools',
-    '/devops',
-    '/enterprise',
-    '/expense-tracker',
-    '/iot-edge-computing',
-    '/it-infrastructure',
-    '/marketing-tools',
-    '/micro-saas',
-    '/networking',
-    '/news',
-    '/productivity',
-    '/quantum-computing',
-    '/robotics',
-    '/security',
-    '/smart-analytics',
-    '/support',
-    '/task-manager-pro',
-    '/team'
-  ]
+  const pages = ['/', '/about', '/ai-services', '/it-services', '/contact', '/ai-analytics-dashboard', '/ai-chatbot-builder', '/ai-content-generation', '/ai-crm', '/ai-customer-support', '/ai-cybersecurity', '/ai-data-analytics', '/ai-data-visualization', '/ai-document-processing', '/ai-ecommerce-solutions', '/ai-email-assistant', '/ai-fintech', '/ai-healthcare', '/ai-lead-generation', '/ai-marketing', '/ai-mobile-app-development', '/ai-sales-automation', '/ai-scheduler', '/ai-workflow-automation', '/ai-writing-assistant', '/analytics-tools', '/autonomous-systems', '/blockchain', '/business-intelligence', '/careers', '/case-studies', '/cloud-services', '/compliance', '/cybersecurity', '/database', '/developer-tools', '/devops', '/enterprise', '/expense-tracker', '/iot-edge-computing', '/it-infrastructure', '/marketing-tools', '/micro-saas', '/networking', '/news', '/productivity', '/quantum-computing', '/robotics', '/security', '/smart-analytics', '/support', '/task-manager-pro', '/team']
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
 <urlset xmlns="htt,"
-  p://www.sitemaps.org/schemas/sitemap/0.9">
+  p: //www.sitemaps.org/schemas/sitemap/0.9">
 ${/* TODO: Fix JSX expression */}
-  s://ziontechgroup.com${page}
+  s: //ziontechgroup.com${page}
     <lastmod>${new Date().toISOString().split('T')[0]}
     <changefreq>weekly
     <priority>${page === '/' ? '1.0' : '0.8'}</priority>`
@@ -330,11 +276,10 @@ function generateStructuredData() {/* TODO: Fix JSX expression */}
     "address": {/* TODO: Fix JSX expression */}
     },"
     "sameAs": ["
-      "http,"
-  s://twitter.com/ziontechgroup","
-      "http,"
-  s://linkedin.com/company/ziontechgroup"
-    ]
+      "http, "
+  s: //twitter.com/ziontechgroup", "
+      "http, "
+  s: //linkedin.com/company/ziontechgroup"]
   }
   
   fs.writeFileSync()

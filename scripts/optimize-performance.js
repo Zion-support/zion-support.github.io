@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import fs from 'fs'
-import { glob } from 'glob'
+import { glob  } from 'glob'
 // Function to optimize React components for better performance
 function optimizeComponent(filePath) {
   try {

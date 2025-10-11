@@ -1,6 +1,6 @@
 
 async function fetchFromGitHub(): Promise<any[]> {/* TODO: Fix JSX expression */}
-  s://api.github.com/repos/${owner}/${repo}/contents/automation_logs`
+  s: //api.github.com/repos/${owner}/${repo}/contents/automation_logs`
     const,
   headers: Record<string, string> = { 'User-Agent': 'zion-autonomy' };`
     if (process.env.GITHUB_TOKEN) headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`

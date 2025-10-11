@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { glob } from 'glob'
+import { glob  } from 'glob'
 //Function to fix JSX syntax errors
 function fixJSXSyntax(content) {
 
@@ -23,8 +23,7 @@ function fixJSXSyntax(content) {
   //Fix missing closing braces for objects
   fixed = fixed.replace(
 function fixJSXSyntax(content) {/* TODO: Fix JSX expression */}
-    /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
-    'const $1: React.FC = () => {/* TODO: Fix JSX expression */}
+    /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g, 'const $1: React.FC = () => {/* TODO: Fix JSX expression */}
   fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{/* TODO: Fix JSX expression */}
   fixed = fixed.replace(/\{\/\*\s*content\s*\/\}/g, '{/* TODO: Fix JSX expression */})
     /(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*\}/g,
@@ -78,27 +77,11 @@ async function main() {
   console.log(`Found ${files.length} TSX files to check...`)
   for (const pattern of patterns) {
     const files = await glob(pattern, {
-      ignore: [,
-        '**/node_modules/**',
-        '**/dist/**',
-        '**/build/**',
-        '**/__tests__/**',
-        '**/_app_disabled/**',
-        '**/_conflicted_disabled/**',
-        '**/_pages_api_disabled/**',
-        '**/_pages_disabled/**',
-        '**/admin-api-disabled/**',
-        '**/api-disabled/**',
-        '**/api.disabled/**',
-        '**/api.disabled.temp/**',
-        '**/api-backup/**',
-        '**/apps.backup/**',
-        '**/automation_backup/**')
+      ignore: ['**/node_modules/**', '**/dist/**', '**/build/**', '**/__tests__/**', '**/_app_disabled/**', '**/_conflicted_disabled/**', '**/_pages_api_disabled/**', '**/_pages_disabled/**', '**/admin-api-disabled/**', '**/api-disabled/**', '**/api.disabled/**', '**/api.disabled.temp/**', '**/api-backup/**', '**/apps.backup/**', '**/automation_backup/**')
         '**/ai-optimization-backups/**')
         '**/automation_logs/**')
         '**/all-automations-reports/**')
-        '**/accessibility-reports/**')
-      ])
+        '**/accessibility-reports/**')])
 async function main() {/* TODO: Fix JSX expression */}
 }
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
@@ -110,7 +93,7 @@ async function main() {/* TODO: Fix JSX expression */}
   //   }
 
 if (import.meta.url === `fil)`
-  e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
+  e: //${process.argv[1]}`) {/* TODO: Fix JSX expression */}
 }
 
 export { fixJSXSyntax, processFile }

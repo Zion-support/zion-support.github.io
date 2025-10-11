@@ -1,4 +1,4 @@
-import { supabase } from '@/integrations/supabase/client'
+import { supabase  } from '@/integrations/supabase/client'
 import type { OrderStatus } from '@/lib/orderStatusMachine'
 export async function holdInEscrow(params: {
   amount: number

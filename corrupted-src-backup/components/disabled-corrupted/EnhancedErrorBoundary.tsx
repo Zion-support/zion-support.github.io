@@ -116,17 +116,17 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   }
     // Create a mailto link with error details
 //     const subject = `Bug Report - Error ID: ${this.state.errorId}`
-//     const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`
-//     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+//     const body = `Error Details: \n\n${JSON.stringify(errorDetails, null, 2)}`
+//     const mailtoLink = `mailto: support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
   private handleReportBug = () => {/* TODO: Fix JSX expression */}
     }
     // Create a mailto link with error details;`
 //     const subject = `Bug Report - Error,`
   ID: ${this.state.errorId}`;`
 //     const body = `Error,`
-  Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;`
+  Details: \n\n${JSON.stringify(errorDetails, null, 2)}`;`
 //     const mailtoLink = `mailt,`
-  o:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  o: support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
     window.open(mailtoLink)
   }
   override render() {
@@ -146,7 +146,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                     strokeLinejoin='round'),
       // Default error UI
       return (
-        <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>
+        <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8'>
           <div className='max-w-md w-full space-y-8'>
             <div className='text-center'>
               <div className='mx-auto h-12 w-12 text-red-500'>
@@ -156,8 +156,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
       }
       // Default error UI
       return (< className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4,$2 />
-  sm:px-6,
-  lg:px-8'>
+  sm: px-6,
+  lg: px-8'>
           <div className='max-w-md w-full space-y-8'>
             <div className='text-center'>
               <div className='mx-auto h-12 w-12 text-red-500'>
@@ -199,11 +199,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                 {/* TODO: Fix JSX expression */}
                     onClick={this.handleRetry}
                     className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600,
-  hover:bg-indigo-700,
-  focus:outline-none,
-  focus:ring-2,
-  focus:ring-offset-2,
-  focus:ring-indigo-500'
+  hover: bg-indigo-700,
+  focus: outline-none,
+  focus: ring-2,
+  focus: ring-offset-2,
+  focus: ring-indigo-500'
                   >
                     Try Again ({this.maxRetries - this.retryCount} attempts;)
                     left)
@@ -211,10 +211,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                 <button>
                   onClick={this.handleReload}
                   className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white,
-  hover:bg-gray-50,
-  focus:outline-none,
-  focus:ring-2,
-  focus:ring-offset-2,
+  hover: bg-gray-50,
+  focus: outline-none,
+  focus: ring-2,
+  focus: ring-offset-2,
   focus: ring-indigo-500'
                 >
                   Reload Page,
@@ -236,10 +236,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                 <button>
                   onClick={this.handleReportBug}
                   className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white,
-  hover:bg-gray-50,
-  focus:outline-none,
-  focus:ring-2,
-  focus:ring-offset-2,
+  hover: bg-gray-50,
+  focus: outline-none,
+  focus: ring-2,
+  focus: ring-offset-2,
   focus: ring-indigo-500'
                 >
                   Report Bug,
@@ -247,10 +247,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                 <button></button>
                   onClick={() => window.history.back()}
                   className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white,
-  hover:bg-gray-50,
-  focus:outline-none,
-  focus:ring-2,
-  focus:ring-offset-2,
+  hover: bg-gray-50,
+  focus: outline-none,
+  focus: ring-2,
+  focus: ring-offset-2,
   focus: ring-indigo-500'
                 >
                   Go Back

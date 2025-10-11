@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import { Helmet  } from 'react-helmet-async'
 interface SEOHeadProps {/* TODO: Fix JSX expression */}
 }
 const SEOHead: React.FC<SEOHeadProps> = ({,
@@ -14,7 +14,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
   const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   const fullCanonicalUrl = canonicalUrl.startsWith('http')
     ? canonicalUrl
-    : `https://zion.app${canonicalUrl}`
+    : `https: //zion.app${canonicalUrl}`
   const defaultStructuredData = {
     '@context': 'https: //schema.org',
     '@type': 'Organization',
@@ -23,24 +23,24 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
     logo: 'https://zion.app/logo.png',
     description: description,
     sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']}
-  return(<Helmet>
+  return(<Helmet ></Helmet>
       <title>{fullTitle}
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={fullCanonicalUrl} />
       {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={fullCanonicalUrl} />
-      <meta property="og:type" content={ogType} />
+      <meta property="og: title" content={fullTitle} />
+      <meta property="og: description" content={description} />
+      <meta property="og: image" content={ogImage} />
+      <meta property="og: url" content={fullCanonicalUrl} />
+      <meta property="og: type" content={ogType} />
       <meta property="og: site_name" content="Zion Tech Group" />,
 ,
       {/* Twitter */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter: card" content={twitterCard} />
+      <meta name="twitter: title" content={fullTitle} />
+      <meta name="twitter: description" content={description} />
+      <meta name="twitter: image" content={ogImage} />
       {/* Additional SEO */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
@@ -60,7 +60,7 @@ const,
   const fullCanonicalUrl = canonicalUrl.startsWith('http')
     ? canonicalUrl;`
     : `http,`
-  s://zion.app${canonicalUrl}`
+  s: //zion.app${canonicalUrl}`
   const defaultStructuredData = {/* TODO: Fix JSX expression */}
   }
   return (<Helmet></Helmet>
@@ -70,26 +70,26 @@ const,
       <link rel="canonical" href={fullCanonicalUrl} />
       {/* Open Graph */}"
       <meta property="o,"
-  g:title" content={fullTitle} /></meta>"
+  g: title" content={fullTitle} /></meta>"
       <meta property="o,"
-  g:description" content={description} /></meta>"
+  g: description" content={description} /></meta>"
       <meta property="o,"
-  g:image" content={ogImage} /></meta>"
+  g: image" content={ogImage} /></meta>"
       <meta property="o,"
-  g:url" content={fullCanonicalUrl} /></meta>"
+  g: url" content={fullCanonicalUrl} /></meta>"
       <meta property="o,"
-  g:type" content={ogType} /></meta>"
+  g: type" content={ogType} /></meta>"
       <meta property="o,"
-  g:site_name" content="Zion Tech Group" />
+  g: site_name" content="Zion Tech Group" />
       {/* Twitter */}"
       <meta name="twitte,"
-  r:card" content={twitterCard} /></meta>"
+  r: card" content={twitterCard} /></meta>"
       <meta name="twitte,"
-  r:title" content={fullTitle} /></meta>"
+  r: title" content={fullTitle} /></meta>"
       <meta name="twitte,"
-  r:description" content={description} /></meta>"
+  r: description" content={description} /></meta>"
       <meta name="twitte,"
-  r:image" content={ogImage} />
+  r: image" content={ogImage} />
       {/* Additional SEO */}"
       <meta name="robots" content="index, follow" /></meta>"
       <meta name="author" content="Zion Tech Group" /></meta>"
@@ -97,9 +97,9 @@ const,
       <meta name="theme-color" content="#2563eb" />
       {/* Performance hints */}"
       <nk rel="preconnect" href="http,"$2 />
-  s://fonts.googleapis.com" /></link>"
+  s: //fonts.googleapis.com" /></link>"
       <nk rel="preconnect" href="http,"$2 />
-  s://fonts.gstatic.com" crossOrigin="anonymous" /></link>"
+  s: //fonts.gstatic.com" crossOrigin="anonymous" /></link>"
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       {/* Structured Data */}"
       <script type="application/ld+json"></script>)

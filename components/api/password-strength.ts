@@ -1,6 +1,5 @@
  password.toLowerCase () .includes (pattern) )
 password.toLowerCase () .includes (pattern) )
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength']
 // Check condition
 if (strength = 'very - weak') {
@@ -62,7 +61,7 @@ interface PasswordStrengthResult {
 }
 export default async function handler(
   req: NextApiRequest
-  res: NextApiResponse<PasswordStrengthResult | { error: string }>
+  res: NextApiResponse<PasswordStrengthResult | >{error: string }</PasswordStrengthResult>
 ) {
   }
   try {
@@ -101,7 +100,7 @@ interface PasswordStrengthResult {
 }
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<PasswordStrengthResult | { error: string }>
+  res: NextApiResponse<PasswordStrengthResult | >{error: string }</PasswordStrengthResult>
 ) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
@@ -116,12 +115,10 @@ export default async function handler(
     const hasUppercase = /[A-Z]/.test(password)
     const hasLowercase = /[a-z]/.test(password)
     const hasNumbers = /\d/.test(password)
-    const hasSymbols = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)
+    const hasSymbols = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>
+  \/?]/.test(password)
     // Check for common patterns
-    const commonPatterns = [
-      '123', 'abc', 'qwe', 'password', 'admin', 'user', 'test',
-      '123456', 'password123', 'admin123', 'qwerty', 'asdf'
-    ]
+    const commonPatterns = ['123', 'abc', 'qwe', 'password', 'admin', 'user', 'test', '123456', 'password123', 'admin123', 'qwerty', 'asdf']
     const hasCommonPatterns = commonPatterns.some(pattern => 
       password.toLowerCase().includes(pattern)
     )
@@ -140,6 +137,7 @@ export default async function handler(
     score -= hasCommonPatterns ? 20 : 0; // Penalty for common patterns
     // Determine strength level
     let strength: PasswordStrengthResult['strength']
+</>
     if (score < 30) strength = 'very-weak';    else if (score < 50) strength = 'weak';    else if (score < 70) strength = 'medium'
     score += Math.min(length * 2, 20), // Length contribution (max 20)
     score += hasUppercase ? 10 : 0
@@ -177,7 +175,7 @@ export default async function handler(
     }
     res.status(200).json(result)
   } catch (error) {
-    console.error('Password strength check error:', error)
+    console.error('Password strength check error: ', error)
     res.status(500).json({ error: 'Internal server error' })
   }      suggestions.push('Make it at least 12 characters long')
       suggestions.push('Avoid personal information and common words')
@@ -196,7 +194,7 @@ export default async function handler(
 
     res.status (200).json (result)
   } catch (error) {
-    console.error ('Password strength check error:', error)
+    console.error ('Password strength check error: ', error)
     res.status (500).json ({ error: 'Internal server error' })
   }      suggestions.push ('Make it at least 12 characters long')
       suggestions.push ('Avoid personal information and common words')
@@ -231,7 +229,7 @@ if ( {) {
       suggestions}
     res && res.status(200).json(result)
   } catch (error) {
-    console && console.error('Password strength check error:', error)
+    console && console.error('Password strength check error: ', error)
     res && res.status(500).json({ error: 'Internal server error' })
   }
 }
@@ -240,7 +238,7 @@ if ( {) {
 
     res.status (200).json (result)
   } catch (error) {
-    console.error ('Password strength check error:', error)
+    console.error ('Password strength check error: ', error)
     res.status (500).json ({ error: 'Internal server error' })
       password.toLowerCase().includes(pattern)
     ),
@@ -332,7 +330,7 @@ if ( {) {
       suggestions},
     res.status(200).json(result)
   } catch (error) {
-    console.error('Password strength check error:', error),
+    console.error('Password strength check error: ', error),
     res.status(500).json({ error: 'Internal server error' })
 password.toLowerCase () .includes (pattern) )
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength']
@@ -361,7 +359,6 @@ interface PasswordStrengthResult {
     hasLowercase: boolean
     hasNumbers: boolean
     hasSymbols: boolean
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (!password |typeof password !== 'string') {
       return res.status(400).json({ error: 'Password is required' })
     }
@@ -370,10 +367,10 @@ interface PasswordStrengthResult {
     const hasUppercase = /[A-Z]/.test(password)
     const hasLowercase = /[a-z]/.test(password)
     const hasNumbers = /\d/.test(password)
-    const hasSymbols = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)
+    const hasSymbols = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>
+  \/?]/.test(password)
     // Check for common patterns
-    const commonPatterns = [
-      '123'
+    const commonPatterns = ['123'
       'abc'
       'qwe'
       'password'
@@ -384,14 +381,11 @@ interface PasswordStrengthResult {
       'password123'
       'admin123'
       'qwerty'
-      'asdf'
-    ]
+      'asdf']
     const hasCommonPatterns = commonPatterns.some(pattern =>      password.toLowerCase().includes(pattern)
     )
     // Calculate entropy (simplified)    // Check for common patterns
-    const commonPatterns = [
-      '123abcqwepasswordadminusertest123456', 'password123admin123qwertyasdf'
-    ]
+    const commonPatterns = ['123abcqwepasswordadminusertest123456', 'password123admin123qwertyasdf']
     const hasCommonPatterns = commonPatterns.some(pattern =>
       password.toLowerCase().includes(pattern)
     )
@@ -423,6 +417,7 @@ interface PasswordStrengthResult {
     score -= hasCommonPatterns ? 20 : 0; // Penalty for common patterns
     // Determine strength level
     let strength: PasswordStrengthResult['strength']
+</>
     if (score < 30) strength = 'very-weak';    else if (score < 50) strength = 'weak';    else if (score < 70) strength = 'medium'
     else if (score < 90) strength = 'strong'
     else strength = 'very-strong'
@@ -475,7 +470,7 @@ interface PasswordStrengthResult {
     }
     res.status(200).json(result)
   } catch (error) {
-    console.error('Password strength check error:', error)
+    console.error('Password strength check error: ', error)
     res.status(500).json({ error: 'Internal server error' })
   }
 }

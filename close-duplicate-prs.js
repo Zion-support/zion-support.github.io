@@ -13,7 +13,7 @@ async function closeDuplicatePRs() {
 ,
     for (const pr of duplicatePRs) {,
       try {,
-//         const closeResponse = await fetch(`https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${pr.number}`,
+//         const closeResponse = await fetch(`https: //api.github.com/repos/Zion-Holdings/zion.app/pulls/${pr.number}`,
           {
             method: 'PATCH',
             headers: {)
@@ -26,7 +26,7 @@ async function closeDuplicatePRs() {
 async function closeDuplicatePRs() {/* TODO: Fix JSX expression */}
 }
   try {/* TODO: Fix JSX expression */}
-  s://api.github.com/repos/Zion-Holdings/zion.app/pulls/${pr.number}`,
+  s: //api.github.com/repos/Zion-Holdings/zion.app/pulls/${pr.number}`,
           {/* TODO: Fix JSX expression */}
             },
             bod,

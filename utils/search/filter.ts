@@ -1,5 +1,5 @@
 import type { ParsedFilters } from './parser',
-import { TALENT_PROFILES } from '../../data/talent',
+import { TALENT_PROFILES  } from '../../data/talent',
 import type { TalentProfile } from '../../data/talent',
 export type AccessLevel = 'public' | 'member' | 'admin',
 export type SearchResult = {
@@ -69,7 +69,7 @@ export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'
       const priceScore = budgetScore(p.hourlyRateUsd, filters.minBudgetUsd, filters.maxBudgetUsd),
       const relevance = skillScore + textScore + priceScore,
 import type { ParsedFilters } from './parser'
-import { TALENT_PROFILES } from '../../data/talent'
+import { TALENT_PROFILES  } from '../../data/talent'
 import type { TalentProfile } from '../../data/talent'
 export type AccessLevel = 'public' | 'member' | 'admin'
 export type SearchResult = {

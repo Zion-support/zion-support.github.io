@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
-import { useState, useMemo } from 'react'
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES } from '../data/comprehensiveServices'
+import { useState, useMemo  } from 'react'
+import { useState  } from 'react'
+import { motion  } from 'framer-motion'
+import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES  } from '../data/comprehensiveServices'
 import React, { useState, useEffect } from 'react'
-import { SEO } from "@/components/SEO"
+import { SEO  } from '@/components/SEO'
 import React from 'react'
-import { motion } from 'framer-motion'
-import { SEO } from '@/components/SEO'
-import { Link } from 'react-router-dom'
-import { 
-  Brain, 
+import { motion  } from 'framer-motion'
+import { SEO  } from '@/components/SEO'
+import { Link  } from 'react-router-dom'
+import { Brain, 
   Cpu, 
   Cloud, 
   Shield, 
@@ -26,24 +25,14 @@ import {
   Settings,
   Database,
   Network
-} from 'lucide-react'
+ } from 'lucide-react'
 export default function Services() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
-  const serviceCategories = [
-    {
-      id: 'ai-ml',
-      title: 'AI & Machine Learning',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      description: 'Intelligent solutions powered by artificial intelligence',
-      services: [
+  const serviceCategories = [{
+      id: 'ai-ml', title: 'AI & Machine Learning', icon: Brain, color: 'from-purple-500 to-pink-500', description: 'Intelligent solutions powered by artificial intelligence', services: [
         {
-          name: 'AI Autonomous Systems',
-          path: '/services/ai-autonomous-systems',
-          description: 'Advanced autonomous AI systems that operate independently',
-          icon: Brain,
-          features: ['Self-learning algorithms', 'Predictive analytics', 'Automated decision making'],
+          name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', description: 'Advanced autonomous AI systems that operate independently', icon: Brain, features: ['Self-learning algorithms', 'Predictive analytics', 'Automated decision making'],
           pricing: 'Starting from $5,000/month'
         },
         {
@@ -78,13 +67,8 @@ export default function Services() {
       icon: Brain,
       color: 'from-blue-500 to-cyan-500',
       description: 'Next-generation quantum computing solutions',
-      services: [
-        {
-          name: 'Quantum Neural Networks',
-          path: '/quantum-neural-network-platform',
-          description: 'Quantum-powered neural networks for complex problems',
-          icon: Brain,
-          features: ['Quantum algorithms', 'Superior performance', 'Future-proof technology'],
+      services: [{
+          name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', description: 'Quantum-powered neural networks for complex problems', icon: Brain, features: ['Quantum algorithms', 'Superior performance', 'Future-proof technology'],
           pricing: 'Starting from $15,000/month'
         },
         {
@@ -103,13 +87,8 @@ export default function Services() {
       icon: Shield,
       color: 'from-red-500 to-pink-500',
       description: 'Comprehensive security and compliance solutions',
-      services: [
-        {
-          name: 'Cybersecurity Services',
-          path: '/services/cybersecurity',
-          description: 'Complete security solutions for your business',
-          icon: Shield,
-          features: ['Threat detection', 'Vulnerability assessment', 'Incident response'],
+      services: [{
+          name: 'Cybersecurity Services', path: '/services/cybersecurity', description: 'Complete security solutions for your business', icon: Shield, features: ['Threat detection', 'Vulnerability assessment', 'Incident response'],
           pricing: 'Starting from $3,500/month'
         },
         {
@@ -128,13 +107,8 @@ export default function Services() {
       icon: Cpu,
       color: 'from-blue-500 to-indigo-500',
       description: 'Scalable cloud solutions and infrastructure management',
-      services: [
-        {
-          name: 'Cloud DevOps',
-          path: '/cloud-devops',
-          description: 'Cloud development and operations automation',
-          icon: Cloud,
-          features: ['CI/CD pipelines', 'Infrastructure as code', 'Monitoring & alerting'],
+      services: [{
+          name: 'Cloud DevOps', path: '/cloud-devops', description: 'Cloud development and operations automation', icon: Cloud, features: ['CI/CD pipelines', 'Infrastructure as code', 'Monitoring & alerting'],
           pricing: 'Starting from $3,000/month'
         },
         {
@@ -161,13 +135,8 @@ export default function Services() {
       icon: Building,
       color: 'from-green-500 to-emerald-500',
       description: 'Streamlined business process automation',
-      services: [
-        {
-          name: 'Autonomous Business Platform',
-          path: '/autonomous-business-operations-platform',
-          description: 'Self-operating business systems and automation',
-          icon: Building,
-          features: ['Process automation', 'Workflow optimization', 'Performance analytics'],
+      services: [{
+          name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', description: 'Self-operating business systems and automation', icon: Building, features: ['Process automation', 'Workflow optimization', 'Performance analytics'],
           pricing: 'Starting from $6,000/month'
         },
         {
@@ -186,13 +155,8 @@ export default function Services() {
       icon: Target,
       color: 'from-orange-500 to-yellow-500',
       description: 'Tailored solutions for specific industries',
-      services: [
-        {
-          name: 'Healthcare Technology',
-          path: '/solutions/healthcare',
-          description: 'Technology solutions for healthcare industry',
-          icon: Heart,
-          features: ['Patient management', 'Medical analytics', 'Compliance'],
+      services: [{
+          name: 'Healthcare Technology', path: '/solutions/healthcare', description: 'Technology solutions for healthcare industry', icon: Heart, features: ['Patient management', 'Medical analytics', 'Compliance'],
           pricing: 'Starting from $8,000/month'
         },
         {
@@ -226,7 +190,7 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Comprehensive
@@ -237,7 +201,7 @@ export default function Services() {
     <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan text-white py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Our Services
@@ -262,7 +226,7 @@ export default function Services() {
             </div>
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Our <span className="bg-gradient-to-r from-zion-cyan to-zion-purple-light bg-clip-text text-transparent">Services</span>
@@ -272,8 +236,8 @@ export default function Services() {
           </p>
 import React from 'react'
 import React from 'react'
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { motion  } from 'framer-motion'
+import { Link  } from 'react-router-dom'
 import { 
   Brain, 
   Cloud, 
@@ -294,14 +258,14 @@ import {
               className={`px-6 py-3 rounded-full font-medium transition-all ${
                 selectedCategory === 'all'
                   ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/30'
-                  : 'bg-white/10 text-zion-slate-light hover:bg-white/20 border border-zion-cyan/30'
+                  : 'bg-white/10 text-zion-slate-light hover: bg-white/20 border border-zion-cyan/30'
               }`}
             >
               Get Started
             </Link>
             <$2 />
               to="/pricing" 
-              className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="border border-zion-cyan text-zion-cyan hover: bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               View Pricing
             </Link>
@@ -311,7 +275,7 @@ import {
 
       {/* Service Categories */}
       <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
               Service Categories
@@ -323,7 +287,7 @@ import {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceCategories.map((category, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">
+              <div key={index} className="bg-white rounded-xl shadow-lg hover: shadow-xl transition-shadow p-6">
                 <div className="flex justify-center mb-4">
                   <category.icon className="w-16 h-16 text-zion-cyan" />
                 </div>
@@ -332,7 +296,7 @@ import {
                 </h3>
                 <p className="text-zion-slate mb-6 text-center leading-relaxed">
       {/* Service Categories */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Core Service Categories</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -348,7 +312,7 @@ import {
 
       <div className="relative z-10">
         {/* Hero Section */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+        <section className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-24 lg:py-32">
           <motion.div
             className="text-center"
     <div className="min-h-screen bg-zion-blue-dark text-white">
@@ -367,9 +331,9 @@ import {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-                className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 backdrop-blur-sm"
+                className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 backdrop-blur-sm"
               />
-              <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-6 h-6" />
+              <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-6 h-6" /></Search>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Comprehensive AI-powered technology solutions designed to transform your business and drive innovation across all industries.
           </p>
@@ -377,13 +341,13 @@ import {
           {/* Search and Filter */}
           <div className="max-w-2xl mx-auto mb-8">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Search>
               <input
                 type="text"
                 placeholder="Search services..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
             </div>
           </div>
@@ -392,7 +356,7 @@ import {
                 className={`px-6 py-3 rounded-full font-medium transition-all ${
                   selectedCategory === category
                     ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/30'
-                    : 'bg-white/10 text-zion-slate-light hover:bg-white/20 border border-zion-cyan/30'
+                    : 'bg-white/10 text-zion-slate-light hover: bg-white/20 border border-zion-cyan/30'
                 }`}
               >
                 {category.name}
@@ -402,7 +366,7 @@ import {
               className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                 selectedCategory === 'all'
                   ? 'bg-cyan-500 text-white'
-                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                  : 'bg-gray-800 text-gray-300 hover: bg-gray-700'
               }`}
             >
               All Services
@@ -414,7 +378,7 @@ import {
                 className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                   selectedCategory === category.id
                     ? 'bg-cyan-500 text-white'
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                    : 'bg-gray-800 text-gray-300 hover: bg-gray-700'
                 }`}
               >
                 {category.title}
@@ -424,7 +388,7 @@ import {
         </section>
         </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-zion-cyan to-zion-purple bg-clip-text text-transparent">
+            <h1 className="text-5xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-white via-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Revolutionary Technology Services
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
@@ -433,19 +397,19 @@ import {
             </p>
             <div className="flex flex-wrap justify-center gap-6 mt-8 text-sm text-zion-slate-light">
               <span className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                <Zap className="w-4 h-4 text-zion-cyan" />
+                <Zap className="w-4 h-4 text-zion-cyan" /></Zap>
                 {services.length}+ Revolutionary Services
               </span>
               <span className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                <Shield className="w-4 h-4 text-zion-cyan" />
+                <Shield className="w-4 h-4 text-zion-cyan" /></Shield>
                 99.9% Uptime Guarantee
               </span>
               <span className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                <Brain className="w-4 h-4 text-zion-cyan" />
+                <Brain className="w-4 h-4 text-zion-cyan" /></Brain>
                 AI-Powered Solutions
               </span>
               <span className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                <Star className="w-4 h-4 text-zion-cyan" />
+                <Star className="w-4 h-4 text-zion-cyan" /></Star>
                 Competitive Pricing
               </span>
             </div>
@@ -462,26 +426,26 @@ import {
             transition={{ duration: 0.6 }}
             className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 shadow-2xl"
           >
-            <div className="grid md:grid-cols-4 gap-6">
+            <div className="grid md: grid-cols-4 gap-6">
               {/* Category Filter */}
               <div>
                 <label className="block text-sm font-medium text-zion-slate-light mb-2">Category</label>
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all duration-300"
+                  className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan transition-all duration-300"
           className="mb-12"
         >
           <div className="bg-zion-blue-light/20 backdrop-blur-md border border-zion-purple/30 rounded-2xl p-6">
             {/* Search Bar */}
             <div className="relative mb-6">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" /></Search>
               <input
                 type="text"
                 placeholder="Search services, features, or use cases..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
+                className="w-full pl-12 pr-4 py-3 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
               />
             </div>
 
@@ -493,10 +457,10 @@ import {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-3 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan"
+                  className="w-full px-3 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white focus: outline-none focus:border-zion-cyan"
                 >
                   {categories.map(category => (
-                    <option key={category} value={category}>{category}</option>
+                    <option key={category} value=>{category}{category}</option>
                   ))}
                 </select>
               </div>
@@ -507,26 +471,26 @@ import {
                 <select
                   value={selectedPricing}
                   onChange={(e) => setSelectedPricing(e.target.value)}
-                  className="w-full px-3 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan"
+                  className="w-full px-3 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white focus: outline-none focus:border-zion-cyan"
                 >
                   {pricingModels.map(model => (
-                    <option key={model} value={model}>{model.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}</option>
+                    <option key={model} value=>{model}{model.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}</option>
                   ))}
                 </select>
               </div>
 
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <section className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-24">
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20"
+            className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-20"
           >
             {filteredServices.map((service) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
-                className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 transform hover:-translate-y-2"
+                className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 transform hover:-translate-y-2"
               >
                 {/* Service Header */}
                 <div className="mb-6">
@@ -546,7 +510,7 @@ import {
                       </span>
                     )}
                   </div>
-                  <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-zion-cyan transition-colors duration-300">
+                  <h3 className="text-2xl font-bold mb-2 text-white group-hover: text-zion-cyan transition-colors duration-300">
                     {service.title}
                   </h3>
                   <p className="text-zion-slate-light leading-relaxed mb-4">
@@ -571,7 +535,7 @@ import {
 
                 {/* Key Features */}
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-zion-purple mb-2">Key Features:</h4>
+                  <h4 className="text-sm font-semibold text-zion-purple mb-2">Key Features: </h4>
                   <ul className="space-y-1">
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <li key={idx} className="text-xs text-zion-slate-light flex items-center gap-2">
@@ -587,11 +551,11 @@ import {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-6 hover:bg-white/10 transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/20"
+                className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-6 hover: bg-white/10 transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/20"
               >
                 {/* Service Header */}
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover: scale-110 transition-transform duration-300">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex gap-2">
@@ -605,7 +569,7 @@ import {
                 </div>
 
                 {/* Service Content */}
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover: text-zion-cyan transition-colors">
                   {service.name}
                 </h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">
@@ -625,13 +589,12 @@ import {
                 {/* Key Benefits */}
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-white mb-2 flex items-center gap-2">
-                    <TrendingUp className="w-4 h-4 text-zion-cyan" />
-                    Key Benefits:
-                  </h4>
+                    <TrendingUp className="w-4 h-4 text-zion-cyan" /></TrendingUp>
+                    Key Benefits: </h4>
                   <ul className="space-y-1">
                     {service.benefits.slice(0, 2).map((benefit, idx) => (
                       <li key={idx} className="text-sm text-zion-slate-light flex items-center gap-2">
-                        <CheckCircle className="w-3 h-3 text-zion-cyan" />
+                        <CheckCircle className="w-3 h-3 text-zion-cyan" /></CheckCircle>
                         {benefit}
                       </li>
                     ))}
@@ -652,7 +615,7 @@ import {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {filteredServices.map((service, index) => {
             const IconComponent = service.icon
@@ -662,10 +625,10 @@ import {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:border-blue-400/50 hover:bg-white/20 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-400/20"
+                className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover: border-blue-400/50 hover:bg-white/20 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-400/20"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
-                  <IconComponent className="w-8 h-8" />
+                  <IconComponent className="w-8 h-8" /></IconComponent>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
                   {service.name}
@@ -683,24 +646,24 @@ import {
                 </ul>
                 <$2 />
                   to={service.link}
-                  className="inline-flex items-center gap-2 text-blue-400 hover:text-white transition-colors group-hover:translate-x-1 transition-transform duration-300"
+                  className="inline-flex items-center gap-2 text-blue-400 hover: text-white transition-colors group-hover:translate-x-1 transition-transform duration-300"
                 >
                   Learn More
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4" /></ArrowRight>
                 </Link>
               </motion.div>
             )
           })}
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service, idx) => (
             <$2 />
               key={idx}
-              className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 group"
+              className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 group"
             >
               {/* Service Header */}
               <div className="flex items-start space-x-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center group-hover: scale-110 transition-transform duration-300">
                   <service.icon className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
@@ -715,11 +678,11 @@ import {
 
               {/* Features */}
               <div className="mb-4">
-                <h4 className="text-sm font-medium text-gray-300 mb-2">Key Features:</h4>
+                <h4 className="text-sm font-medium text-gray-300 mb-2">Key Features: </h4>
                 <ul className="space-y-1">
                   {service.features.map((feature, featureIdx) => (
                     <li key={featureIdx} className="flex items-center space-x-2 text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" /></CheckCircle>
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -729,7 +692,7 @@ import {
               {/* Pricing */}
               <div className="mb-4 p-3 bg-gray-700/50 rounded-lg">
                 <div className="flex items-center space-x-2 text-sm text-gray-300">
-                  <DollarSign className="w-4 h-4 text-green-400" />
+                  <DollarSign className="w-4 h-4 text-green-400" /></DollarSign>
                   <span>{service.pricing}</span>
                 </div>
               </div>
@@ -737,10 +700,10 @@ import {
               {/* CTA Button */}
               <$2 />
                 to={service.path}
-                className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 group-hover:scale-105"
+                className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-200 group-hover:scale-105"
               >
                 <span>Learn More</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" /></ArrowRight>
               </Link>
             </div>
           ))}
@@ -749,7 +712,7 @@ import {
         {/* Empty State */}
         {filteredServices.length === 0 && (
           <div className="text-center py-16">
-            <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
+            <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" /></Search>
             <h3 className="text-xl font-semibold text-gray-400 mb-2">No services found</h3>
             <p className="text-gray-500">Try adjusting your search or filter criteria.</p>
           </div>
@@ -760,7 +723,7 @@ import {
           <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/20 rounded-2xl p-8">
             <div className="text-center mb-8">
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-4">
-                <Sparkles className="h-5 w-5 text-purple-400" />
+                <Sparkles className="h-5 w-5 text-purple-400" /></Sparkles>
                 <span className="text-purple-400 font-medium">New & Enhanced</span>
               </div>
               <h2 className="text-3xl font-bold text-white mb-4">
@@ -769,7 +732,7 @@ import {
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Let our AI experts help you implement the right technology solutions to drive growth and innovation.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <$2 />
                   to="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
@@ -796,7 +759,7 @@ import {
         {/* Additional Services Links */}
         <section className="py-16 px-4">
           <div className="container mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Explore More Services</h2>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">Explore More Services</h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
               Discover our comprehensive portfolio of innovative micro SAAS and specialized IT solutions.
             </p>
@@ -810,7 +773,7 @@ import {
                   Explore our complete portfolio of micro SAAS and IT solutions with transparent pricing and detailed features.
                 </p>
                 <div className="text-zion-cyan hover:text-zion-cyan-light flex items-center justify-center group">
-                  View All Services <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  View All Services <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRight>
                 </div>
               </Link>
               
@@ -823,7 +786,7 @@ import {
                   Discover cutting-edge solutions including AI-powered business intelligence and advanced cybersecurity platforms.
                 </p>
                 <div className="text-zion-cyan hover:text-zion-cyan-light flex items-center justify-center group">
-                  Explore Innovations <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  Explore Innovations <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRight>
                 </div>
               </Link>
             </div>
@@ -840,7 +803,7 @@ import {
               Let's discuss how our technology solutions can accelerate your growth and 
               give you a competitive edge in the market.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <$2 />
                 to="/contact"
                 className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
@@ -881,15 +844,13 @@ import {
   }
   return (
     <div className="min-h-screen relative">
-      <SEO 
-        title="Comprehensive Technology Services - Zion Tech Group"
+      <SEO title="Comprehensive Technology Services - Zion Tech Group"
         description="Transform your business with our comprehensive technology services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, Digital Transformation, IT Consulting, and Global Solutions. Expert consulting and implementation services."
-        url="https://ziontechgroup.com/services"
+        url="https: //ziontechgroup.com/services"
         keywords="AI services, cybersecurity, cloud computing, digital transformation, IT consulting, technology services, Zion Tech Group"
-        ogImage="https://ziontechgroup.com/services-og-image.jpg"
+        ogImage="https: //ziontechgroup.com/services-og-image.jpg"
         twitterCard="summary_large_image"
-      />
-
+      /></SEO>
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-blue-900">
         <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float"></div>
@@ -901,7 +862,7 @@ import {
       <section className="relative pt-24 pb-16 px-4 overflow-hidden">
         <div className="relative z-10 container mx-auto text-center">
           <div className={`animate-fade-in-up transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <h1 className="text-5xl md: text-7xl font-bold mb-6">
               <span className="neon-text">
                 Our Services
               </span>
@@ -914,13 +875,13 @@ import {
             {/* Search and Filter */}
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Search>
                 <input
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none transition-colors"
+                  className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: border-cyan-400 focus:outline-none transition-colors"
                 />
               </div>
               
@@ -933,7 +894,7 @@ import {
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                       selectedCategory === category
                         ? 'bg-cyan-500 text-black'
-                        : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white'
+                        : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50 hover:text-white'
                     }`}
                   >
                     {category === 'all' ? 'All Services' : category}
@@ -949,7 +910,7 @@ import {
       <section className="relative py-16 px-4">
         <div className="relative z-10 container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               What We <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Offer</span>
             </h2>
             <p className="text-gray-300">
@@ -957,11 +918,11 @@ import {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
               <$2 />
                 key={index} 
-                className={`group bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 animate-fade-in-up`}
+                className={`group bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 hover: border-cyan-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 animate-fade-in-up`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Service Header */}
@@ -978,7 +939,7 @@ import {
                   </div>
                 )}
                 
-                <div className="text-cyan-400 mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-cyan-400 mb-4 group-hover: scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
 
@@ -1008,10 +969,9 @@ import {
                 <div className="flex items-center mb-4">
                   <div className="flex items-center">
                     {[...Array(5)].map((_, i) => (
-                      <Star 
-                        key={i} 
+                      <Star key={i} 
                         className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-600'}`} 
-                      />
+                      /></Star>
                     ))}
                   </div>
                   <span className="text-gray-400 text-sm ml-2">{service.rating}</span>
@@ -1019,11 +979,11 @@ import {
                 
                 {/* Features */}
                 <div className="mb-6">
-                  <h4 className="text-sm font-medium text-white mb-3">Key Features:</h4>
+                  <h4 className="text-sm font-medium text-white mb-3">Key Features: </h4>
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                      <li key={idx} className="flex items-center gap-2 text-sm text-gray-400 group-hover: text-gray-300 transition-colors duration-300">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" /></CheckCircle>
                         {feature}
                       </li>
                     ))}
@@ -1032,7 +992,7 @@ import {
 
                 {/* Benefits */}
                 <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-green-400 mb-3">Benefits:</h4>
+                  <h4 className="text-sm font-semibold text-green-400 mb-3">Benefits: </h4>
                   <div className="space-y-1">
                     {service.benefits.slice(0, 3).map((benefit, idx) => (
                       <div key={idx} className="flex items-center text-sm text-gray-300">
@@ -1048,45 +1008,45 @@ import {
                   {service.serviceType === 'Micro SAAS' ? (
                     <>
                       <div className="flex justify-between">
-                        <span className="text-gray-400">Setup Time:</span>
+                        <span className="text-gray-400">Setup Time: </span>
                         <span className="text-white">{(service as any).setupTime}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-400">ROI:</span>
+                        <span className="text-gray-400">ROI: </span>
                         <span className="text-green-400">{(service as any).roi}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-400">Users:</span>
+                        <span className="text-gray-400">Users: </span>
                         <span className="text-white">{(service as any).userLimit}</span>
                       </div>
                     </>
                   ) : service.serviceType === 'IT Service' ? (
                     <>
                       <div className="flex justify-between">
-                        <span className="text-gray-400">Response Time:</span>
+                        <span className="text-gray-400">Response Time: </span>
                         <span className="text-white">{(service as any).responseTime}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-400">SLA:</span>
+                        <span className="text-gray-400">SLA: </span>
                         <span className="text-green-400">{(service as any).sla}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-400">Delivery:</span>
+                        <span className="text-gray-400">Delivery: </span>
                         <span className="text-white">{(service as any).deliveryTime}</span>
                       </div>
                     </>
                   ) : (
                     <>
                       <div className="flex justify-between">
-                        <span className="text-gray-400">AI Score:</span>
+                        <span className="text-gray-400">AI Score: </span>
                         <span className="text-green-400">{(service as any).aiScore}/100</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-400">Accuracy:</span>
+                        <span className="text-gray-400">Accuracy: </span>
                         <span className="text-white">{(service as any).accuracy}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-400">Models:</span>
+                        <span className="text-gray-400">Models: </span>
                         <span className="text-white">{(service as any).aiModels?.length || 0}</span>
                       </div>
                     </>
@@ -1108,10 +1068,10 @@ import {
                 {/* CTA */}
                 <$2 />
                   to={`/services/${service.category.toLowerCase()}`}
-                  className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
+                  className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover: from-cyan-400 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
                 >
                   Learn More 
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRight>
                 </Link>
               </div>
             ))}
@@ -1128,21 +1088,21 @@ import {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8"
+            className="flex flex-col md: flex-row items-center justify-between gap-4 mb-8"
           >
             <div className="flex items-center gap-4">
               <$2 />
                 onClick={() => setShowFilters(!showFilters)}
-                className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-zion-slate-light rounded-lg transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-white/10 hover: bg-white/20 text-zion-slate-light rounded-lg transition-colors"
               >
-                <Filter className="w-4 h-4" />
+                <Filter className="w-4 h-4" /></Filter>
                 Filters
               </button>
               
               {Object.keys(filters).length > 0 && (
                 <$2 />
                   onClick={clearFilters}
-                  className="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm hover:bg-red-500/30 transition-colors"
+                  className="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm hover: bg-red-500/30 transition-colors"
                 >
                   Clear Filters
                 </button>
@@ -1150,27 +1110,27 @@ import {
             </div>
 
             <div className="flex items-center gap-2">
-              <span className="text-zion-slate-light text-sm">Sort by:</span>
+              <span className="text-zion-slate-light text-sm">Sort by: </span>
               <$2 />
                 onClick={() => handleSort('title')}
                 className={`flex items-center gap-1 px-3 py-2 rounded-lg transition-colors ${
-                  sortBy === 'title' ? 'bg-zion-cyan/20 text-zion-cyan' : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
+                  sortBy === 'title' ? 'bg-zion-cyan/20 text-zion-cyan' : 'bg-white/10 text-zion-slate-light hover: bg-white/20'
                 }`}
               >
                 Name
                 {sortBy === 'title' && (
-                  sortOrder === 'asc' ? <SortAsc className="w-4 h-4" /> : <SortDesc className="w-4 h-4" />
+                  sortOrder === 'asc' ? <SortAsc className="w-4 h-4" /> : <SortDesc className="w-4 h-4" /></SortDesc>
                 )}
               </button>
               <$2 />
                 onClick={() => handleSort('price')}
                 className={`flex items-center gap-1 px-3 py-2 rounded-lg transition-colors ${
-                  sortBy === 'price' ? 'bg-zion-cyan/20 text-zion-cyan' : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
+                  sortBy === 'price' ? 'bg-zion-cyan/20 text-zion-cyan' : 'bg-white/10 text-zion-slate-light hover: bg-white/20'
                 }`}
               >
                 Price
                 {sortBy === 'price' && (
-                  sortOrder === 'asc' ? <SortAsc className="w-4 h-4" /> : <SortDesc className="w-4 h-4" />
+                  sortOrder === 'asc' ? <SortAsc className="w-4 h-4" /> : <SortDesc className="w-4 h-4" /></SortDesc>
                 )}
               </button>
             </div>
@@ -1184,13 +1144,13 @@ import {
               exit={{ opacity: 0, height: 0 }}
               className="bg-white/10 backdrop-blur-sm border border-zion-cyan/30 rounded-xl p-6 mb-8"
             >
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
                 <div>
                   <label className="block text-zion-slate-light text-sm font-medium mb-2">Pricing Model</label>
                   <select
                     value={filters.pricingModel || ''}
                     onChange={(e) => setFilter('pricingModel', e.target.value || '')}
-                    className="w-full px-3 py-2 bg-white/10 border border-zion-cyan/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                    className="w-full px-3 py-2 bg-white/10 border border-zion-cyan/30 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                   >
                     <option value="">All Models</option>
                     <option value="monthly">Monthly</option>
@@ -1204,7 +1164,7 @@ import {
                   <select
                     value={filters.supportLevel || ''}
                     onChange={(e) => setFilter('supportLevel', e.target.value || '')}
-                    className="w-full px-3 py-2 bg-white/10 border border-zion-cyan/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                    className="w-full px-3 py-2 bg-white/10 border border-zion-cyan/30 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                   >
                     <option value="">All Levels</option>
                     <option value="basic">Basic</option>
@@ -1221,14 +1181,14 @@ import {
                       placeholder="Min"
                       value={filters.minPrice || ''}
                       onChange={(e) => setFilter('minPrice', e.target.value ? Number(e.target.value) : '')}
-                      className="flex-1 px-3 py-2 bg-white/10 border border-zion-cyan/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                      className="flex-1 px-3 py-2 bg-white/10 border border-zion-cyan/30 rounded-lg text-white placeholder-gray-300 focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                     />
                     <input
                       type="number"
                       placeholder="Max"
                       value={filters.maxPrice || ''}
                       onChange={(e) => setFilter('maxPrice', e.target.value ? Number(e.target.value) : '')}
-                      className="flex-1 px-3 py-2 bg-white/10 border border-zion-cyan/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                      className="flex-1 px-3 py-2 bg-white/10 border border-zion-cyan/30 rounded-lg text-white placeholder-gray-300 focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                     />
                   </div>
                 </div>
@@ -1239,12 +1199,8 @@ import {
       </section>
 
 const Services = () => {
-  const services = [
-    {
-      icon: Brain,
-      title: "AI & Machine Learning",
-      description: "Transform your business with cutting-edge AI solutions including predictive analytics, natural language processing, and automated decision-making systems.",
-      features: ["Predictive Analytics", "NLP Solutions", "Computer Vision", "AI Automation"],
+  const services = [{
+      icon: Brain, title: "AI & Machine Learning", description: "Transform your business with cutting-edge AI solutions including predictive analytics, natural language processing, and automated decision-making systems.", features: ["Predictive Analytics", "NLP Solutions", "Computer Vision", "AI Automation"],
       price: "From $2,500/month",
       color: "from-purple-500 to-pink-500",
       link: "/ai-services"
@@ -1295,48 +1251,21 @@ const Services = () => {
       link: "/emerging-tech"
     }
   ]
-  const benefits = [
-    {
-      icon: Target,
-      title: "Custom Solutions",
-      description: "Tailored technology solutions designed specifically for your business needs and requirements."
-    },
-    {
-      icon: Award,
-      title: "Proven Expertise",
-      description: "15+ years of experience delivering complex technology solutions across industries."
-    },
-    {
-      icon: Globe,
-      title: "Global Reach",
-      description: "Serve customers worldwide with scalable, cloud-based solutions and global infrastructure."
-    },
-    {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "Bank-level security protocols and compliance frameworks for enterprise environments."
-  BarChart3,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Users,
-  Clock,
-  Award
+  const benefits = [{
+      icon: Target, title: "Custom Solutions", description: "Tailored technology solutions designed specifically for your business needs and requirements."
+    }, {
+      icon: Award, title: "Proven Expertise", description: "15+ years of experience delivering complex technology solutions across industries."
+    }, {
+      icon: Globe, title: "Global Reach", description: "Serve customers worldwide with scalable, cloud-based solutions and global infrastructure."
+    }, {
+      icon: Shield, title: "Enterprise Security", description: "Bank-level security protocols and compliance frameworks for enterprise environments."
+  BarChart3, CheckCircle, ArrowRight, Star, Users, Clock, Award
 } from 'lucide-react'
 export default function Services() {
   const services = [
     {
-      icon: Brain,
-      title: 'AI Solutions & Machine Learning',
-      description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
-      features: [
-        'Machine Learning Models',
-        'Natural Language Processing',
-        'Computer Vision',
-        'Predictive Analytics',
-        'AI-Powered Automation',
-        'Custom AI Solutions'
-      ],
+      icon: Brain, title: 'AI Solutions & Machine Learning', description: 'Cutting-edge artificial intelligence solutions that transform your business operations.', features: [
+        'Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI-Powered Automation', 'Custom AI Solutions'],
       href: '/services/ai',
       color: 'from-purple-500 to-pink-500',
       bgColor: 'bg-purple-500/10',
@@ -1346,14 +1275,7 @@ export default function Services() {
       icon: Cloud,
       title: 'Cloud Infrastructure & DevOps',
       description: 'Scalable cloud solutions and automated deployment pipelines for modern applications.',
-      features: [
-        'AWS, Azure & GCP Migration',
-        'Container Orchestration',
-        'Serverless Architecture',
-        'CI/CD Pipelines',
-        'Infrastructure as Code',
-        'Cloud Security & Compliance'
-      ],
+      features: ['AWS, Azure & GCP Migration', 'Container Orchestration', 'Serverless Architecture', 'CI/CD Pipelines', 'Infrastructure as Code', 'Cloud Security & Compliance'],
       href: '/services/cloud',
       color: 'from-blue-500 to-cyan-500',
       bgColor: 'bg-blue-500/10',
@@ -1363,14 +1285,7 @@ export default function Services() {
       icon: Shield,
       title: 'Cybersecurity & Compliance',
       description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
-      features: [
-        'Zero Trust Security',
-        'Penetration Testing',
-        'Security Audits',
-        'Compliance Management',
-        'Incident Response',
-        'Security Training'
-      ],
+      features: ['Zero Trust Security', 'Penetration Testing', 'Security Audits', 'Compliance Management', 'Incident Response', 'Security Training'],
       href: '/services/security',
       color: 'from-green-500 to-emerald-500',
       bgColor: 'bg-green-500/10',
@@ -1380,14 +1295,7 @@ export default function Services() {
       icon: Zap,
       title: 'Digital Transformation',
       description: 'End-to-end business process modernization and digital strategy implementation.',
-      features: [
-        'Process Automation',
-        'Legacy System Modernization',
-        'API Integration',
-        'Data Migration',
-        'Change Management',
-        'Digital Strategy Consulting'
-      ],
+      features: ['Process Automation', 'Legacy System Modernization', 'API Integration', 'Data Migration', 'Change Management', 'Digital Strategy Consulting'],
       href: '/services/transformation',
       color: 'from-yellow-500 to-orange-500',
       bgColor: 'bg-yellow-500/10',
@@ -1397,14 +1305,7 @@ export default function Services() {
       icon: Smartphone,
       title: 'Web & Mobile Development',
       description: 'Custom web and mobile applications built with modern technologies and best practices.',
-      features: [
-        'React & Next.js Development',
-        'Mobile App Development',
-        'Progressive Web Apps',
-        'E-commerce Solutions',
-        'API Development',
-        'Performance Optimization'
-      ],
+      features: ['React & Next.js Development', 'Mobile App Development', 'Progressive Web Apps', 'E-commerce Solutions', 'API Development', 'Performance Optimization'],
       href: '/services/development',
       color: 'from-indigo-500 to-purple-500',
       bgColor: 'bg-indigo-500/10',
@@ -1414,22 +1315,14 @@ export default function Services() {
       icon: BarChart3,
       title: 'Data Analytics & BI',
       description: 'Transform your data into actionable insights with advanced analytics and visualization.',
-      features: [
-        'Data Warehousing',
-        'Business Intelligence',
-        'Real-time Analytics',
-        'Data Visualization',
-        'Predictive Modeling',
-        'Data Governance'
-      ],
+      features: ['Data Warehousing', 'Business Intelligence', 'Real-time Analytics', 'Data Visualization', 'Predictive Modeling', 'Data Governance'],
       href: '/services/analytics',
       color: 'from-red-500 to-pink-500',
       bgColor: 'bg-red-500/10',
       borderColor: 'border-red-500/30'
     }
   ]
-  const stats = [
-        {/* No Results */}
+  const stats = [{/* No Results */}
         {sortedServices.length === 0 && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -1465,14 +1358,14 @@ export default function Services() {
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-white" />
+                  <Award className="w-8 h-8 text-white" /></Award>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Proven Excellence</h3>
                 <p className="text-gray-300">Trusted by enterprises worldwide with a track record of successful implementations</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-white" />
+                  <Users className="w-8 h-8 text-white" /></Users>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Expert Support</h3>
                 <p className="text-gray-300">24/7 expert support and dedicated success managers for your business</p>
@@ -1482,7 +1375,7 @@ export default function Services() {
             <div className="border-t border-zion-blue-light mt-8 pt-8 text-center">
               <p className="text-zion-slate-light text-sm">
                 © 2024 Zion Tech Group. All rights reserved. | 
-                <a href="/contact" className="ml-2 hover:text-zion-cyan transition-colors">Privacy Policy</a> | 
+                <a href="/contact" className="ml-2 hover: text-zion-cyan transition-colors">Privacy Policy</a> | 
                 <a href="/contact" className="ml-2 hover:text-zion-cyan transition-colors">Terms of Service</a>
               </p>
             </div>
@@ -1497,12 +1390,11 @@ export default function Services() {
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-1">
                     {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
+                      <Star key={i}
                         className={`w-4 h-4 ${
                           i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-zion-slate-light'
                         }`}
-                      />
+                      /></Star>
                     ))}
                     <span className="text-zion-slate-light text-sm ml-2">
                       {service.rating} ({service.reviewCount} reviews)
@@ -1515,7 +1407,7 @@ export default function Services() {
 
                 {/* Contact Info */}
                 <div className="mb-6 p-4 bg-zion-blue-light/5 rounded-lg border border-zion-cyan/20">
-                  <h4 className="text-sm font-semibold text-zion-cyan mb-2">Contact Information:</h4>
+                  <h4 className="text-sm font-semibold text-zion-cyan mb-2">Contact Information: </h4>
                   <p>📧 {service.author.name}</p>
                   <p>📱 {service.author.id}</p>
                 </div>
@@ -1524,7 +1416,7 @@ export default function Services() {
                 <div className="flex space-x-3">
                   <$2 />
                     to={service.link}
-                    className="flex-1 px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium text-center hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
+                    className="flex-1 px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium text-center hover: shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
                   >
                     Learn More
                   </Link>
@@ -1556,13 +1448,12 @@ export default function Services() {
                   setSearchTerm('')
                   setSelectedCategory('all')
                 }}
-                className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+                className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover: shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
                 {/* Technology Stack */}
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-white mb-2 flex items-center gap-2">
-                    <Code className="w-4 h-4 text-zion-cyan" />
-                    Technology:
-                  </h4>
+                    <Code className="w-4 h-4 text-zion-cyan" /></Code>
+                    Technology: </h4>
                   <div className="flex flex-wrap gap-2">
                     {service.technology.slice(0, 3).map((tech, idx) => (
                       <span key={idx} className="bg-white/10 text-zion-slate-light text-xs px-2 py-1 rounded-full">
@@ -1577,10 +1468,10 @@ export default function Services() {
                   href={service.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold py-3 px-4 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 flex items-center justify-center gap-2 group-hover:scale-105 transform"
+                  className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold py-3 px-4 rounded-lg hover: from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 flex items-center justify-center gap-2 group-hover:scale-105 transform"
                 >
                   <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></ArrowRight>
                 </a>
               </motion.div>
             ))}
@@ -1599,7 +1490,7 @@ export default function Services() {
                   setSearchTerm('')
                   setPriceRange('all')
                 }}
-                className="bg-zion-cyan text-white px-6 py-3 rounded-lg hover:bg-zion-cyan-dark transition-colors"
+                className="bg-zion-cyan text-white px-6 py-3 rounded-lg hover: bg-zion-cyan-dark transition-colors"
               >
                 Clear Filters
               </button>
@@ -1607,7 +1498,7 @@ export default function Services() {
           )}
       {/* Featured Services */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
               Featured Services
@@ -1619,32 +1510,15 @@ export default function Services() {
     { value: '24/7', label: 'Support Available', icon: Clock, color: 'text-purple-400' },
     { value: '15+', label: 'Years Experience', icon: Award, color: 'text-yellow-400' }
   ]
-  const process = [
-    {
-      step: '01',
-      title: 'Discovery & Analysis',
-      description: 'We analyze your requirements and business objectives to understand your needs.',
-      icon: Globe
-    },
-    {
-      step: '02',
-      title: 'Solution Design',
-      description: 'Our experts design a tailored solution that aligns with your goals and budget.',
-      icon: Brain
-    },
-    {
-      step: '03',
-      title: 'Development & Testing',
-      description: 'We build and thoroughly test your solution using industry best practices.',
-      icon: Zap
-    },
-    {
-      step: '04',
-      title: 'Deployment & Support',
-      description: 'Smooth deployment followed by ongoing support and maintenance.',
-      icon: Cloud
-    }
-  ]
+  const process = [{
+      step: '01', title: 'Discovery & Analysis', description: 'We analyze your requirements and business objectives to understand your needs.', icon: Globe
+    }, {
+      step: '02', title: 'Solution Design', description: 'Our experts design a tailored solution that aligns with your goals and budget.', icon: Brain
+    }, {
+      step: '03', title: 'Development & Testing', description: 'We build and thoroughly test your solution using industry best practices.', icon: Zap
+    }, {
+      step: '04', title: 'Deployment & Support', description: 'Smooth deployment followed by ongoing support and maintenance.', icon: Cloud
+    }]
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
@@ -1655,7 +1529,7 @@ export default function Services() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Our Services
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
@@ -1665,7 +1539,7 @@ export default function Services() {
           </div>
           <div className="grid lg:grid-cols-3 gap-8">
             {featuredServices.map((service, index) => (
-              <div key={index} className="bg-gradient-to-br from-zion-blue-dark to-zion-blue text-white rounded-xl p-8 hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-gradient-to-br from-zion-blue-dark to-zion-blue text-white rounded-xl p-8 hover: shadow-xl transition-shadow">
                 <div className="flex justify-center mb-6">
                   <service.icon className="w-16 h-16 text-zion-cyan" />
       {/* Services Grid */}
@@ -1685,18 +1559,17 @@ export default function Services() {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
+            className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
           >
             {paginatedResults.results.map((service) => (
-              <motion.div key={service.id} variants={itemVariants}>
-                <div className="group bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm rounded-xl overflow-hidden border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-cyan/20">
+              <motion.div key={service.id} variants=>{itemVariants}
+                <div className="group bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm rounded-xl overflow-hidden border border-zion-blue-light/30 hover: border-zion-cyan/50 transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-cyan/20">
                   {/* Service Image */}
                   <div className="relative h-48 overflow-hidden">
-                    <OptimizedImage
-                      src={`https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`}
+                    <OptimizedImage src={`https: //images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`}
                       alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
+                      className="w-full h-full object-cover group-hover: scale-110 transition-transform duration-500"
+                    /></OptimizedImage>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <div className="absolute top-4 right-4">
                       <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs font-medium rounded-full">
@@ -1707,7 +1580,7 @@ export default function Services() {
                   
                   {/* Service Content */}
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover: text-zion-cyan transition-colors duration-300">
                       {service.title}
                     </h3>
                     
@@ -1727,11 +1600,11 @@ export default function Services() {
                     {/* Service Details */}
                     <div className="space-y-2 mb-4 text-sm text-zion-slate-light">
                       <div className="flex items-center gap-2">
-                        <Clock className="w-4 h-4 text-zion-cyan" />
+                        <Clock className="w-4 h-4 text-zion-cyan" /></Clock>
                         <span>Delivery: {service.estimatedDelivery}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Shield className="w-4 h-4 text-zion-cyan" />
+                        <Shield className="w-4 h-4 text-zion-cyan" /></Shield>
                         <span>Support: {service.supportLevel}</span>
                       </div>
                     </div>
@@ -1742,7 +1615,7 @@ export default function Services() {
                         {service.currency}{service.price.toLocaleString()}
                         <span className="text-sm text-zion-slate-light font-normal">/{service.pricingModel}</span>
                       </div>
-                      <button className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-300 transform hover:scale-105">
+                      <button className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover: from-zion-cyan-light hover:to-zion-purple-light transition-all duration-300 transform hover:scale-105">
                         Get Quote
                       </button>
                     </div>
@@ -1765,7 +1638,7 @@ export default function Services() {
                 <div className="text-center">
                   <$2 />
                     to={service.link}
-                    className="inline-flex items-center px-6 py-2 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
+                    className="inline-flex items-center px-6 py-2 bg-zion-cyan text-white font-semibold rounded-lg hover: bg-zion-cyan-light transition-colors"
                   >
                     {service.cta}
                   </Link>
@@ -1780,7 +1653,7 @@ export default function Services() {
               <$2 />
                 onClick={() => setCurrentPage(currentPage - 1)}
                 disabled={!paginatedResults.hasPrevPage}
-                className="px-4 py-2 bg-white/10 text-zion-slate-light rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
+                className="px-4 py-2 bg-white/10 text-zion-slate-light rounded-lg disabled: opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
               >
                 Previous
               </button>
@@ -1792,7 +1665,7 @@ export default function Services() {
               <$2 />
                 onClick={() => setCurrentPage(currentPage + 1)}
                 disabled={!paginatedResults.hasNextPage}
-                className="px-4 py-2 bg-white/10 text-zion-slate-light rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
+                className="px-4 py-2 bg-white/10 text-zion-slate-light rounded-lg disabled: opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
               >
                 Next
               </button>
@@ -1808,7 +1681,7 @@ export default Services
           className="text-center mt-20"
         >
           <div className="bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 border border-blue-400/30 rounded-2xl p-12 backdrop-blur-md">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
+            <h2 className="text-3xl md: text-5xl font-bold mb-4 text-white">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -1820,7 +1693,7 @@ export default Services
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center gap-2 justify-center"
               >
                 Get Free Consultation
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5" /></ArrowRight>
               </Link>
               <$2 />
                 to="/request-quote"
@@ -1844,7 +1717,7 @@ export default Services
                 </ul>
                 <$2 />
                   to={category.link}
-                  className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light font-semibold text-sm transition-colors"
+                  className="inline-flex items-center gap-2 text-zion-cyan hover: text-zion-cyan-light font-semibold text-sm transition-colors"
                 >
                   Learn More
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1858,12 +1731,12 @@ export default Services
       </section>
 
       {/* Emerging Technologies */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Emerging Technologies</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {emergingTech.map((tech, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center hover:border-zion-cyan/50 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center hover: border-zion-cyan/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-zion-cyan/20 rounded-xl flex items-center justify-center text-zion-cyan mx-auto mb-4">
                   {tech.icon}
                 </div>
@@ -1878,7 +1751,7 @@ export default Services
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -1886,7 +1759,7 @@ export default Services
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <div className="w-8 h-8 bg-zion-cyan rounded-lg flex items-center justify-center flex-shrink-0">
-                    <CheckCircle className="w-5 h-5 text-white" />
+                    <CheckCircle className="w-5 h-5 text-white" /></CheckCircle>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-1">Expert Team</h3>
@@ -1895,7 +1768,7 @@ export default Services
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-8 h-8 bg-zion-cyan rounded-lg flex items-center justify-center flex-shrink-0">
-                    <CheckCircle className="w-5 h-5 text-white" />
+                    <CheckCircle className="w-5 h-5 text-white" /></CheckCircle>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-1">Proven Results</h3>
@@ -1904,7 +1777,7 @@ export default Services
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-8 h-8 bg-zion-cyan rounded-lg flex items-center justify-center flex-shrink-0">
-                    <CheckCircle className="w-5 h-5 text-white" />
+                    <CheckCircle className="w-5 h-5 text-white" /></CheckCircle>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-1">24/7 Support</h3>
@@ -1913,7 +1786,7 @@ export default Services
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-8 h-8 bg-zion-cyan rounded-lg flex items-center justify-center flex-shrink-0">
-                    <CheckCircle className="w-5 h-5 text-white" />
+                    <CheckCircle className="w-5 h-5 text-white" /></CheckCircle>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-1">Scalable Solutions</h3>
@@ -1947,7 +1820,7 @@ export default Services
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Transform Your Business Today</h2>
           <p className="text-lg text-zion-slate-light mb-8">
@@ -1981,7 +1854,7 @@ export default Services
   )
       {/* Stats Section */}
       <section className="py-16 bg-zion-blue-dark">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => {
               const IconComponent = stat.icon
@@ -1994,7 +1867,7 @@ export default Services
                   className="text-center"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-8 h-8 text-white" />
+                    <IconComponent className="w-8 h-8 text-white" /></IconComponent>
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-zion-slate-light">{stat.label}</div>
@@ -2007,14 +1880,14 @@ export default Services
 
       {/* Services Section */}
       <section className="py-20 bg-zion-blue">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Our Technology Services
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
@@ -2031,20 +1904,20 @@ export default Services
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300"
+                  className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6 hover: border-zion-cyan/50 transition-all duration-300"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-6`}>
-                    <IconComponent className="w-8 h-8 text-white" />
+                    <IconComponent className="w-8 h-8 text-white" /></IconComponent>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
                   <p className="text-zion-slate-light mb-6">{service.description}</p>
                   
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-zion-cyan mb-3">Key Features:</h4>
+                    <h4 className="text-sm font-semibold text-zion-cyan mb-3">Key Features: </h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-zion-slate-light">
-                          <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" /></CheckCircle>
                           {feature}
                         </li>
                       ))}
@@ -2055,10 +1928,10 @@ export default Services
                     <div className="text-2xl font-bold text-zion-cyan mb-4">{service.price}</div>
                     <$2 />
                       to={service.link}
-                      className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+                      className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover: shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
                     >
                       Learn More
-                      <ArrowRight className="ml-2 w-4 h-4" />
+                      <ArrowRight className="ml-2 w-4 h-4" /></ArrowRight>
                     </Link>
                   </div>
                 </motion.div>
@@ -2070,14 +1943,14 @@ export default Services
 
       {/* Industries Section */}
       <section className="py-20 bg-zion-blue-dark">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Industries We Serve
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
@@ -2092,7 +1965,7 @@ export default Services
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
+                className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 text-center hover: border-zion-cyan/50 transition-all duration-300"
               >
                 <div className="text-4xl mb-3">{industry.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{industry.name}</h3>
@@ -2105,14 +1978,14 @@ export default Services
 
       {/* Benefits Section */}
       <section className="py-20 bg-zion-blue">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Why Choose Our Services?
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
@@ -2132,7 +2005,7 @@ export default Services
                   className="flex items-start gap-6"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center flex-shrink-0">
-                    <IconComponent className="w-8 h-8 text-white" />
+                    <IconComponent className="w-8 h-8 text-white" /></IconComponent>
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
@@ -2147,13 +2020,13 @@ export default Services
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan to-zion-blue">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
@@ -2165,7 +2038,7 @@ export default Services
                 className="inline-flex items-center px-8 py-4 bg-white text-zion-blue-dark font-semibold rounded-xl hover:shadow-lg transition-all duration-300"
               >
                 Schedule Consultation
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5" /></ArrowRight>
               </Link>
               <$2 />
                 to="/request-quote"
@@ -2191,7 +2064,7 @@ export default Services
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
               Let's discuss how our technology services can help you achieve your goals and stay ahead of the competition. 
               Our team of experts is ready to guide you through the digital transformation journey.
@@ -2202,14 +2075,14 @@ export default Services
                 className="bg-white text-zion-purple font-semibold py-4 px-8 rounded-lg hover:bg-zion-slate-light transition-all duration-300 flex items-center justify-center space-x-2 group"
               >
                 <span>Get Started</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /></ArrowRight>
               </a>
               <$2 />
                 href="tel:+13024640950"
                 className="bg-transparent text-white font-semibold py-4 px-8 rounded-lg border-2 border-white hover:bg-white hover:text-zion-purple transition-all duration-300 flex items-center justify-center space-x-2 group"
               >
                 <span>Call Now</span>
-                <Phone className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                <Phone className="w-5 h-5 group-hover:scale-110 transition-transform" /></Phone>
               </a>
             </div>
           </motion.div>
@@ -2217,7 +2090,7 @@ export default Services
       </section>
     </div>
   )
-              <div key={index} className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:border-zion-cyan/50 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover: border-zion-cyan/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-zion-cyan rounded-lg flex items-center justify-center mb-4 text-white">
                   {category.icon}
                 </div>
@@ -2233,7 +2106,7 @@ export default Services
                 </ul>
                 <$2 />
                   to={category.link}
-                  className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium"
+                  className="inline-flex items-center gap-2 text-zion-cyan hover: text-zion-cyan-light transition-colors font-medium"
                 >
                   Learn More
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2247,7 +2120,7 @@ export default Services
       </section>
 
       {/* Emerging Technologies */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Emerging Technologies</h2>
           <p className="text-lg text-zion-slate-light text-center max-w-3xl mx-auto mb-12">
@@ -2268,13 +2141,13 @@ export default Services
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Zion Tech Group?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
+                <Users className="w-8 h-8 text-white" /></Users>
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Expert Team</h3>
               <p className="text-zion-slate-light">
@@ -2285,7 +2158,7 @@ export default Services
 
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <BarChart3 className="w-8 h-8 text-white" />
+                <BarChart3 className="w-8 h-8 text-white" /></BarChart3>
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
               <p className="text-zion-slate-light">
@@ -2296,7 +2169,7 @@ export default Services
 
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <Lock className="w-8 h-8 text-white" />
+                <Lock className="w-8 h-8 text-white" /></Lock>
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Security First</h3>
               <p className="text-zion-slate-light">
@@ -2307,7 +2180,7 @@ export default Services
 
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <Rocket className="w-8 h-8 text-white" />
+                <Rocket className="w-8 h-8 text-white" /></Rocket>
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Innovation Driven</h3>
               <p className="text-zion-slate-light">
@@ -2318,7 +2191,7 @@ export default Services
 
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-8 h-8 text-white" />
+                <Globe className="w-8 h-8 text-white" /></Globe>
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Global Reach</h3>
               <p className="text-zion-slate-light">
@@ -2329,7 +2202,7 @@ export default Services
 
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-white" />
+                <Zap className="w-8 h-8 text-white" /></Zap>
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Fast Delivery</h3>
               <p className="text-zion-slate-light">
@@ -2342,7 +2215,7 @@ export default Services
       </section>
 
       {/* Service Process */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Our Service Process</h2>
           <div className="grid md:grid-cols-4 gap-8">
@@ -2394,7 +2267,7 @@ export default Services
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
           <p className="text-lg text-zion-slate-light mb-8">
@@ -2438,7 +2311,7 @@ export default Services
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {filteredServices.map((service, index) => (
             <motion.div
@@ -2446,7 +2319,7 @@ export default Services
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-6 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
+              className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-6 hover: border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
             >
               {/* Service Header */}
               <div className="flex items-start justify-between mb-4">
@@ -2455,7 +2328,7 @@ export default Services
                     {getCategoryIcon(service.category)}
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg text-white group-hover:text-zion-cyan transition-colors">
+                    <h3 className="font-semibold text-lg text-white group-hover: text-zion-cyan transition-colors">
                       {service.title}
                     </h3>
                     <p className="text-zion-slate-light text-sm">{service.category}</p>
@@ -2479,13 +2352,13 @@ export default Services
               {/* Key Features */}
               <div className="mb-4">
                 <h4 className="text-white font-medium mb-2 flex items-center gap-2">
-                  <Star className="w-4 h-4 text-zion-cyan" />
+                  <Star className="w-4 h-4 text-zion-cyan" /></Star>
                   Key Features
                 </h4>
                 <div className="space-y-1">
                   {service.features.slice(0, 3).map((feature, idx) => (
                     <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
-                      <CheckCircle className="w-3 h-3 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-3 h-3 text-zion-cyan flex-shrink-0" /></CheckCircle>
                       <span className="line-clamp-1">{feature}</span>
                     </div>
                   ))}
@@ -2495,11 +2368,11 @@ export default Services
               {/* Service Details */}
               <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
                 <div className="flex items-center gap-2 text-zion-slate-light">
-                  <Clock className="w-4 h-4 text-zion-cyan" />
+                  <Clock className="w-4 h-4 text-zion-cyan" /></Clock>
                   <span>{service.estimatedDelivery}</span>
                 </div>
                 <div className="flex items-center gap-2 text-zion-slate-light">
-                  <Shield className="w-4 h-4 text-zion-cyan" />
+                  <Shield className="w-4 h-4 text-zion-cyan" /></Shield>
                   <span className="capitalize">{service.supportLevel}</span>
                 </div>
               </div>
@@ -2532,10 +2405,10 @@ export default Services
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-sm font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2"
+                    className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-sm font-medium hover: shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2"
                   >
                     Get Quote
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4" /></ArrowRight>
                   </motion.button>
                 </div>
               </div>
@@ -2551,7 +2424,7 @@ export default Services
           className="mt-20 text-center"
         >
           <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 border border-zion-cyan/30 rounded-2xl p-12 backdrop-blur-md">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            <h2 className="text-3xl md: text-4xl font-bold mb-4 text-white">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
@@ -2561,14 +2434,14 @@ export default Services
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300"
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover: shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300"
               >
                 Schedule Consultation
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
+                className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover: bg-zion-cyan hover:text-white transition-all duration-300"
               >
                 View Case Studies
               </motion.button>

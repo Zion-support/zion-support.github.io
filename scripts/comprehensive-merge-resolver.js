@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { execSync } from 'child_process'
+import { execSync  } from 'child_process'
 import fs from 'fs'
 import path from 'path'
 console.log('🚀 Starting comprehensive merge conflict resolution and PR management...\n')
@@ -80,7 +80,7 @@ function resolveAllMergeConflicts() {
     console.log(`✅ Resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`)
     return resolvedCount === conflictedFiles.length
   } catch (error) {
-    console.log('❌ Error finding merge conflicts:', error.message)
+    console.log('❌ Error finding merge conflicts: ', error.message)
     return false
   }
 }
@@ -97,7 +97,7 @@ function getAllRemoteBranches() {
       .filter(branch => !branch.includes('main'))
     return branches
   } catch (error) {
-    console.log('❌ Error getting remote branches:', error.message)
+    console.log('❌ Error getting remote branches: ', error.message)
     return []
   }
 }
@@ -176,16 +176,7 @@ async function main() {
   }
   
   // Priority branches to merge first
-  const priorityBranches = [
-    'cursor/website-audit-and-update-with-deployment-f31 a',
-    'add-new-2026-content',
-    'add-revolutionary-content-2026',
-    'ai-2027-content-integration',
-    'ai-dashboard-improvements',
-    'cursor/enhance-app-with-new-services-and-futuristic-design-2 e4 e',
-    'cursor/enhance-app-with-new-services-and-futuristic-design-7 bf2',
-    'cursor/enhance-app-with-new-services-and-futuristic-design-80 f7'
-  ]
+  const priorityBranches = ['cursor/website-audit-and-update-with-deployment-f31 a', 'add-new-2026-content', 'add-revolutionary-content-2026', 'ai-2027-content-integration', 'ai-dashboard-improvements', 'cursor/enhance-app-with-new-services-and-futuristic-design-2 e4 e', 'cursor/enhance-app-with-new-services-and-futuristic-design-7 bf2', 'cursor/enhance-app-with-new-services-and-futuristic-design-80 f7']
   // Merge priority branches first
   console.log('\n🎯 Merging priority branches...')
   for (const branch of priorityBranches) {

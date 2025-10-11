@@ -23,7 +23,7 @@ class OptimizedErrorBoundary extends Component
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId:     ,
+      errorId:  ,
 $4}
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
@@ -105,7 +105,7 @@ $4}
         hasError: false,
         error: null,
         errorInfo: null,
-        errorId:       ,
+        errorId:  ,
 $4})
     }, 100)
   }
@@ -118,12 +118,11 @@ $4})
         return this.props.fallback
   }
       return (
-        <ErrorFallback
-          error={this.state.error}
+        <ErrorFallback error={this.state.error}
           errorInfo={this.state.errorInfo}
           errorId={this.state.errorId}
           onRetry={this.handleRetry}
-        />
+        /></ErrorFallback>
       )
     }
     return this.props.children
@@ -159,7 +158,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(
           We&apos;re sorry, but something unexpected happened. Please try again.
         {process.env['NODE_ENV'] === 'development' && error && (
           <details className='mb-4 text-left'>
-            <summary className='cursor-pointer text-sm text-gray-500 hover:text-gray-700'>
+            <summary className='cursor-pointer text-sm text-gray-500 hover: text-gray-700'>
               Error Details (Development)
             <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'>
               <div className='mb-2'>
@@ -167,46 +166,43 @@ const ErrorFallback = memo<ErrorFallbackProps>(
         {process.env['NODE_ENV'] === 'development' && error && ()}
           <details className='mb-4 text-left'>
             <summary className='cursor-pointer text-sm text-gray-500,
-  hover:text-gray-700'>
+  hover: text-gray-700'>
 // Error Details (Development)
             <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'>
               <div className='mb-2'>
                 <strong>Erro,
-  r:</strong> {error.message}
+  r: </strong> {error.message}
               <div className='mb-2'>
                 <strong>Stac,
-  k:
-                <pre className='whitespace-pre-wrap'>{error.stack}
+  k: <pre className='whitespace-pre-wrap'>{error.stack}
               {errorInfo && (
                 <div>
-                  <strong>Component Stack:
-                  <pre className='whitespace-pre-wrap'>
+                  <strong>Component Stack: <pre className='whitespace-pre-wrap'>
               {errorInfo && ()}
           <div>
                   <strong>Component,
-  Stack:
-                  <pre className='whitespace-pre-wrap'>
+  Stack: <pre className='whitespace-pre-wrap'>
                     {errorInfo.componentStack}
               )}
         )}
         < className='flex flex-col,$2 />
-  sm:flex-row gap-2 justify-center'>
+  sm: flex-row gap-2 justify-center'>
           <button>
             onClick={onRetry}
-            className='px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors'
+            className='px-4 py-2 bg-blue-600 text-white rounded-md hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors'
           >
             Try Again
             className='px-4 py-2 bg-blue-600 text-white rounded-md,
-  hover:bg-blue-700,
-  focus:outline-none,
-  focus:ring-2,
-  focus:ring-blue-500,
-  focus:ring-offset-2 transition-colors'
+  hover: bg-blue-700,
+  focus: outline-none,
+  focus: ring-2,
+  focus: ring-blue-500,
+  focus: ring-offset-2 transition-colors'
 // >
 //             Try Again
           <button>
             onClick={() => window.location.reload()}
-            className='px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors'
+            className='px-4 py-2 bg-gray-600 text-white rounded-md hover: bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors'
           >
             Reload Page
         {errorId && (
@@ -216,11 +212,11 @@ const ErrorFallback = memo<ErrorFallbackProps>(
 )
 ErrorFallback.displayName = 'ErrorFallback'
             className='px-4 py-2 bg-gray-600 text-white rounded-md,
-  hover:bg-gray-700,
-  focus:outline-none,
-  focus:ring-2,
-  focus:ring-gray-500,
-  focus:ring-offset-2 transition-colors'
+  hover: bg-gray-700,
+  focus: outline-none,
+  focus: ring-2,
+  focus: ring-gray-500,
+  focus: ring-offset-2 transition-colors'
 // >
 //             Reload Page
         {errorId && ()}

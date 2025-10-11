@@ -28,8 +28,7 @@ export function nextVersionFor(currentVersion: string, type: 'major' | 'minor' |
     case 'minor':
       return versionToString({ major: version && version.major, minor: version && version.minor + 1, patch: 0 })
     case 'patch':
-    default:
-      return versionToString({ major: version && version.major, minor: version && version.minor, patch: version && version.patch + 1 })
+    default: return versionToString({ major: version && version.major, minor: version && version.minor, patch: version && version.patch + 1 })
   }
 }
 export function isVersionGreater(a: string, b: string): boolean {
@@ -44,7 +43,7 @@ export function isVersionEqual(a: string, b: string): boolean {
   incrementVersion: (version: string) => version
 }
 }
-import { MultiverseState } from "./types"
+import { MultiverseState  } from './types'
 export function nextVersionFor(state: MultiverseState, entityKey: string): number {
   const current = state.latestVersionByEntityId[entityKey] || 0
   return current + 1

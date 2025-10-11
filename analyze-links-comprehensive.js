@@ -2,8 +2,8 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
-import { fileURLToPath } from 'url';
+import { execSync  } from 'child_process';
+import { fileURLToPath  } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -36,8 +36,7 @@ function findPageFiles(dir) {
 
 // Function to extract links from file content
 function extractLinks(content, filePath) {
-  const linkPatterns = [
-    // React Router links
+  const linkPatterns = [// React Router links
     /to=["']([^"']+)["']/g,
     // href attributes
     /href=["']([^"']+)["']/g,
@@ -46,9 +45,9 @@ function extractLinks(content, filePath) {
     // Route definitions
     /path=["']([^"']+)["']/g,
     // Navigation links
-    /href:\s*["']([^"']+)["']/g,
+    /href: \s*["']([^"']+)["']/g,
     // URL patterns
-    /url:\s*["']([^"']+)["']/g
+    /url: \s*["']([^"']+)["']/g
   ];
 
   const links = new Set();
@@ -60,7 +59,7 @@ function extractLinks(content, filePath) {
       
       // Skip external links, mailto, tel, etc.
       if (link.startsWith('http') || 
-          link.startsWith('mailto:') || 
+          link.startsWith('mailto: ') || 
           link.startsWith('tel:') || 
           link.startsWith('#') ||
           link.startsWith('//')) {
@@ -105,7 +104,7 @@ function analyzeFile(filePath) {
 console.log('📁 Scanning for page files...');
 findPageFiles(appDir);
 
-console.log(`Found ${allPages.size} page routes:`);
+console.log(`Found ${allPages.size} page routes: `);
 Array.from(allPages).sort().forEach(page => {
   console.log(`  - ${page}`);
 });
@@ -141,12 +140,12 @@ componentFiles.forEach(file => {
   }
 });
 
-console.log(`\n📊 Link Analysis Results:`);
+console.log(`\n📊 Link Analysis Results: `);
 console.log(`Total unique links found: ${allLinks.size}`);
 console.log(`Files with links: ${fileAnalysis.length}`);
 
 // Check which links are broken (don't have corresponding pages)
-console.log('\n❌ Broken Links Analysis:');
+console.log('\n❌ Broken Links Analysis: ');
 const brokenLinksByFile = {};
 
 fileAnalysis.forEach(analysis => {
@@ -167,13 +166,13 @@ fileAnalysis.forEach(analysis => {
   }
 });
 
-console.log(`Found ${brokenLinks.length} broken links:`);
+console.log(`Found ${brokenLinks.length} broken links: `);
 brokenLinks.sort().forEach(link => {
   console.log(`  - ${link}`);
 });
 
 // Show broken links by file
-console.log('\n📄 Broken Links by File:');
+console.log('\n📄 Broken Links by File: ');
 Object.entries(brokenLinksByFile).forEach(([file, links]) => {
   console.log(`\n${file}:`);
   links.forEach(link => {
@@ -182,21 +181,15 @@ Object.entries(brokenLinksByFile).forEach(([file, links]) => {
 });
 
 // Generate missing pages list
-console.log('\n📝 Missing Pages to Create:');
+console.log('\n📝 Missing Pages to Create: ');
 const missingPagesSorted = [...new Set(missingPages)].sort();
 missingPagesSorted.forEach(page => {
   console.log(`  - ${page}`);
 });
 
 // Check for navigation inconsistencies
-console.log('\n🧭 Navigation Analysis:');
-const navigationLinks = [
-  '/about', '/services', '/pricing', '/case-studies', '/blog', '/tutorials', '/contact',
-  '/ai-services', '/it-services', '/micro-saas', '/team', '/partners', '/support', '/status',
-  '/faq', '/docs', '/api-docs', '/community', '/demo', '/compliance',
-  '/enterprise', '/digital-transformation', '/business-intelligence', '/edge-computing',
-  '/consultation', '/privacy', '/terms', '/cookies', '/sitemap'
-];
+console.log('\n🧭 Navigation Analysis: ');
+const navigationLinks = ['/about', '/services', '/pricing', '/case-studies', '/blog', '/tutorials', '/contact', '/ai-services', '/it-services', '/micro-saas', '/team', '/partners', '/support', '/status', '/faq', '/docs', '/api-docs', '/community', '/demo', '/compliance', '/enterprise', '/digital-transformation', '/business-intelligence', '/edge-computing', '/consultation', '/privacy', '/terms', '/cookies', '/sitemap'];
 
 const missingNavLinks = navigationLinks.filter(link => !allPages.has(link));
 console.log(`Missing navigation pages: ${missingNavLinks.length}`);

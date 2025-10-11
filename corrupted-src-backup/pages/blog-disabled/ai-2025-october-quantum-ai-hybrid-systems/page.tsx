@@ -3,8 +3,8 @@ impo, r, t {/* TODO: Fix JSX expression */}
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
 const QuantumAIHybrid202, 5 = () => { 
   return(:src/pages/blog/ai-2025-october-quantum-ai-hybrid-systems/page.tsx
-    <React.Fragment>
-      <Helm, e, t>
+    <React .Fragment></React>
+      <Helm , e, t></Helm>
         <title>
           Quant, u, m-AI, Hybrid, Systems 20, 2, 5: Practical, Nea, r-Term, Implementatio, n |
           Zion, Tech, Group
@@ -24,35 +24,33 @@ const QuantumAIHybrid202, 5 = () => {
         <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-lg, borde, r-b, borde, r-whi, t, e/20'>
           <div, className='container, m, x-auto, p, x-6, p, y-4'>
             <, t, o='/'$2 />
-              className='te, x, t-white, hove, r:te, x, t-cy, a, n-400, transitio, n-colo, r, s'
+              className='te, x, t-white, hove, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s'
             >
               ← Back, to, Home
         <div, className='container, m, x-auto, p, x-6, p, y-12'>
           <div, className='m, a, x-w-4xl, m, x-auto, tex, t-center, m, b-12'>
             <div, className='inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-sm, fon, t-medium, m, b-6, border, border-purp, l, e-4, 0, 0/30'>
-              <Brain, className='w-4 h-4, m, r-2' />
+              <Brain , className='w-4 h-4, m, r-2' /></Brain>
               October, 202, 5 • Quantum, Computin, g
-            <h1, className='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
-              Quant, u, m-AI, Hybrid, Systems 20, 2, 5:
-              <span, className='bg-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
+            <h1, className='te, x, t-4xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
+              Quant, u, m-AI, Hybrid, Systems 20, 2, 5: <span, className='bg-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
                 Practical, Nea, r-Term, Implementatio, n
                 Practical, Nea, r-Term, Implementatio, n
-            <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
-              Quant, u, m-AI, Hybrid, Systems 20, 2, 5:
-              <span, classNam, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
+            <h1, classNam, e='te, x, t-4xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
+              Quant, u, m-AI, Hybrid, Systems 20, 2, 5: <span, classNam, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
                 Practical, Nea, r-Term, Implementatio, n
             <div, classNam, e = 'flex, fle, x-wrap, justif, y-center, ga, p-4, tex, t-sm, tex, t-gr, a, y-4, 0, 0'>
               <div, className='flex, item, s-cent, e, r'>
                 Practical, Nea, r-Term, Implementatio, n
             <div, classNam, e = 'flex, fle, x-wrap, justif, y-center, ga, p-4, tex, t-sm, tex, t-gr, a, y-4, 0, 0'>
               <div, className='flex, item, s-cent, e, r'>
-                <Clock, className='w-4 h-4, m, r-2' />
+                <Clock , className='w-4 h-4, m, r-2' /></Clock>
                 15, min, read
               <div, className='flex, item, s-cent, e, r'>
-                <Users, className='w-4 h-4, m, r-2' />
+                <Users , className='w-4 h-4, m, r-2' /></Users>
                 Quantum, Computin, g
               <div, className='flex, item, s-cent, e, r'>
-                <CheckCircle, className='w-4 h-4, m, r-2' />
+                <CheckCircle , className='w-4 h-4, m, r-2' /></CheckCircle>
                 Featur, e, d
           <article, className='m, a, x-w-4xl, m, x-au, t, o'>
             <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, m, d: p-12, border, border-whi, t, e/10'>
@@ -72,12 +70,12 @@ const QuantumAIHybrid202, 5 = () => {
                     <stro, n, g>unprecedented</g>, optimization, capabilities</stro, n, g>for</g>, enterprise, applications tod, a, y.
 :src/pages/blog/ai-2025-october-quantum-ai-hybrid-systems/page.tsx
     <div>
-      <Helmet>
+      <Helmet ></Helmet>
         <title>Quantum-AI Hybrid Systems 2025: Practical Near-Term Implementation | Zion Tech Group</title>, />
-        <meta name="description" content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /><meta property="og:title", content="Quantum-AI Hybrid Systems 2025: Practical Near-Term Implementation" />",
-        <meta property="og:description", content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." />"
-        <meta name="description" content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /><meta property="og:title", content="Quantum-AI Hybrid Systems 2025: Practical Near-Term Implementation" />,
-        <meta property="og:description", content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." />
+        <meta name="description" content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /><meta property="og: title", content="Quantum-AI Hybrid Systems 2025: Practical Near-Term Implementation" />",
+        <meta property="og: description", content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." />"
+        <meta name="description" content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /><meta property="og: title", content="Quantum-AI Hybrid Systems 2025: Practical Near-Term Implementation" />,
+        <meta property="og: description", content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." />
         <link rel="canonical", href=" " />
         <div>
             <Link to="/", className="text-white hover: text-cyan-400 transition-colors">← Back to Home</Link>,
@@ -85,7 +83,7 @@ const QuantumAIHybrid202, 5 = () => {
   </div>,
           <div>,
         <div>
-            <Link to="/", className="text-white hover:text-cyan-400 transition-colors">← Back to Home
+            <Link to="/", className="text-white hover: text-cyan-400 transition-colors">← Back to Home
           <div>
               <Brain className=" />,"
   October 2025 • Quantum Computing
@@ -95,8 +93,8 @@ const QuantumAIHybrid202, 5 = () => {
   Quantum-AI Hybrid Systems 2025:</h1> <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
         <meta name="description" content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." />
             "
-    <React.Fragment>
-      <Helmet >
+    <React .Fragment></React>
+      <Helmet ></Helmet>
         <title>Quantum-AI Hybrid Systems 2025: Practical Near-Term Implementation | Zion Tech Group</title>),
         <meta name="description", content ="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /><meta property: "og:title", content="Quantum-AI Hybrid Systems 2025: Practical Near-Term Implementation" />",
         <meta property: "og:description", content ="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." />"
@@ -123,11 +121,11 @@ const QuantumAIHybrid202, 5 = () => {
       <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
         <div className="bg-white/10 backdrop-blur-lg border-b border-white/20">
           <div className="container mx-auto px-6 py-4">
-            <Link to="/", className="text-white hover:text-cyan-400 transition-colors">← Back to Home
+            <Link to="/", className="text-white hover: text-cyan-400 transition-colors">← Back to Home
         <div className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 text-purple-300 text-sm font-medium mb-6 border border-purple-400/30">
-              <Brain className="w-4 h-4 mr-2 ,>
+              <Brain className="w-4 h-4 mr-2 ,></Brain>
   October 2025 • Quantum Computing
             "
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">,
@@ -167,7 +165,7 @@ const QuantumAIHybrid202, 5 = () => {
   </div>
   </div>
           <div></div>
-              <Brain className="w-4 h-4 mr-2" />
+              <Brain className="w-4 h-4 mr-2" /></Brain>
   October 2025 • Quantum Computing
   </div>
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">"
@@ -188,23 +186,23 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
                     for, enterprise, applications tod, a, y.
 :src/pages/blog/ai-2025-october-quantum-ai-hybrid-systems/page.tsx
     <div>
-      <Helmet>
+      <Helmet ></Helmet>
         <title>Quantum-AI Hybrid Systems,
   2025: Practical Near-Term Implementation | Zion Tech Group</title>, />
         <meta name="description" content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /><meta property="o,"
-  g:title", content="Quantum-AI Hybrid Systems,"
+  g: title", content="Quantum-AI Hybrid Systems,"
   2025: Practical Near-Term Implementation" />""
         <meta property="o,"
-  g:description", content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." />""
+  g: description", content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." />""
         <meta name="description" content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /><meta property="o,"
-  g:title", content="Quantum-AI Hybrid Systems,"
+  g: title", content="Quantum-AI Hybrid Systems,"
   2025: Practical Near-Term Implementation" /></meta>"
         <meta property="o,"
-  g:description", content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /></meta>"
+  g: description", content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /></meta>"
         <link rel="canonical", href=" " />
         <div></div>"
             < to="/", className="text-white,"$2 />
-  hover:text-cyan-400 transition-colors">← Back to Home
+  hover: text-cyan-400 transition-colors">← Back to Home
           <div></div>"
               <Brain className=" />,"
   October 2025 • Quantum Computing</$1>"
@@ -214,27 +212,27 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
   2025: <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"></span>"
         <meta name="description" content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /></meta>"
             "
-    <React.Fragment>
-      <Helmet >
+    <React .Fragment></React>
+      <Helmet ></Helmet>
         <title>Quantum-AI Hybrid Systems,
   2025: Practical Near-Term Implementation | Zion Tech Group</title>,"
         <meta name="description", content ="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /><meta,"
   property: "o,"
-  g:title", content="Quantum-AI Hybrid Systems,"
+  g: title", content="Quantum-AI Hybrid Systems,"
   2025: Practical Near-Term Implementation" />"
         <meta,"
   property: "o,"
-  g:description", content ="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." />""
+  g: description", content ="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." />""
         <meta name="description" content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /><meta,"
   property: "o,"
-  g:title", content="Quantum-AI Hybrid Systems,"
+  g: title", content="Quantum-AI Hybrid Systems,"
   2025: Practical Near-Term Implementation" />
         <meta,"
   property: "o,"
-  g:description", content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." />
+  g: description", content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." />
         <nk,"$2 />
   rel: "canonical", href="http,
-  s://ziontechgroup.com/blog/ai-2025-october-quantum-ai-hybrid-systems/></link>"
+  s: //ziontechgroup.com/blog/ai-2025-october-quantum-ai-hybrid-systems/></link>"
       </Helmet>""
 ""
       <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900"></div>"
@@ -244,12 +242,12 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
         <div className="bg-white/10 backdrop-blur-lg border-b border-white/20"></div>"
           <div className="container mx-auto px-6 py-4"></div>"
             < to="/", className="text-white,"$2 />
-  hover:text-cyan-400 transition-colors">← Back to Home
+  hover: text-cyan-400 transition-colors">← Back to Home
 "
         <div className="container mx-auto px-6 py-12"></div>"
           <div className="max-w-4xl mx-auto text-center mb-12"></div>"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 text-purple-300 text-sm font-medium mb-6 border border-purple-400/30"></div>"
-              <Brain className="w-4 h-4 mr-2 ,>
+              <Brain className="w-4 h-4 mr-2 ,></Brain>
   October 2025 • Quantum Computing</$1>"
             ""
             < className="text-4xl,"$2 />
@@ -358,12 +356,12 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
                       100, 0, x
                     <div, classNam, e='te, x, t-white, tex, t-sm'>Processing, Spee, d
                     <li, classNam, e='flex, item, s-sta, r, t'>
-                      <CheckCircle, classNam, e='w-5 h-5, tex, t-emera, l, d-400, m, r-3, m, t-0.5, fle, x-shri, n, k-0' />
+                      <CheckCircle , classNam, e='w-5 h-5, tex, t-emera, l, d-400, m, r-3, m, t-0.5, fle, x-shri, n, k-0' /></CheckCircle>
                       <span, classNam, e='te, x, t-whi, t, e'>
                         Machine, Learnin, g: Quant, u, m-enhanced, neural, networks
-                  <div, classNam, e='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
+                  <div, classNam, e='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
                     <li, className='flex, item, s-sta, r, t'>
-                      <CheckCircle, className='w-5 h-5, tex, t-emera, l, d-400, m, r-3, m, t-0.5, fle, x-shri, n, k-0' />
+                      <CheckCircle , className='w-5 h-5, tex, t-emera, l, d-400, m, r-3, m, t-0.5, fle, x-shri, n, k-0' /></CheckCircle>
                       <span, className='te, x, t-whi, t, e'>
 :src/pages/blog/ai-2025-october-quantum-ai-hybrid-systems/page.tsx
                 <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8'>
@@ -372,20 +370,20 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
                       100, 0, x
                     <div, classNam, e='te, x, t-white, tex, t-sm'>Processing, Spee, d
                     <li, classNam, e='flex, item, s-sta, r, t'>
-                      <CheckCircle, classNam, e='w-5 h-5, tex, t-emera, l, d-400, m, r-3, m, t-0.5, fle, x-shri, n, k-0' />
+                      <CheckCircle , classNam, e='w-5 h-5, tex, t-emera, l, d-400, m, r-3, m, t-0.5, fle, x-shri, n, k-0' /></CheckCircle>
                       <span, classNam, e='te, x, t-whi, t, e'>
                         Machine, Learnin, g: Quant, u, m-enhanced, neural, networks
-                  <div, classNam, e='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
+                  <div, classNam, e='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
                     <li, className='flex, item, s-sta, r, t'>
-                      <CheckCircle, className='w-5 h-5, tex, t-emera, l, d-400, m, r-3, m, t-0.5, fle, x-shri, n, k-0' />
+                      <CheckCircle , className='w-5 h-5, tex, t-emera, l, d-400, m, r-3, m, t-0.5, fle, x-shri, n, k-0' /></CheckCircle>
                       <span, className='te, x, t-whi, t, e'>
                         Machine, Learnin, g: Quant, u, m-enhanced, neural, networks
-                  <div, className='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
+                  <div, className='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
                     <, t, o='/conta, c, t'$2 />
-                      className='bg-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, hove, r:bg-purp, l, e-600, transitio, n-colors, inlin, e-flex, item, s-center, justif, y-center, ga, p-2'
+                      className='bg-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, hove, r: bg-purp, l, e-600, transitio, n-colors, inlin, e-flex, item, s-center, justif, y-center, ga, p-2'
                     >
                       Explore, Quantu, m-AI, Solution, s
-                      <Link, classNam, e='w-5 h-5' />
+                      <Link , classNam, e='w-5 h-5' /></Link>
               <section className="mb-12">
                 <h2 className="text-3xl font-bold text-white mb-6">Real-World Quantum-AI Applications</h2>"
                 <p className="text-gray-300 mb-6 leading-relaxed">,"
@@ -424,16 +422,16 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
                   <h3 className="text-xl font-bold text-white mb-4">Key Quantum-AI Use Cases
                   <ul className="space-y-3">
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" /></CheckCircle>
                       <span className="text-white">Financial Risk Modeling: 100 x faster portfolio optimization
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" /></CheckCircle>
                       <span className="text-white">Supply Chain Optimization: 95% efficiency improvements
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" /></CheckCircle>
                       <span className="text-white">Drug Discovery: 10 x faster molecular simulation
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" /></CheckCircle>
                       <span className="text-white">Machine Learning: Quantum-enhanced neural networks
                 <div>
                   <h2 className="text-2xl font-bold text-white mb-4">
@@ -495,10 +493,10 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
                     to="/contact"
   className="bg-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-600 transition-colors inline-flex items-center justify-center gap-2">"
                       Explore Quantum-AI Solutions"
-                      <Link className="w-5 h-5 " />
+                      <Link className="w-5 h-5 " /></Link>
                       <Link className=" />" />
-                      <Link className="w-5 h-5" />
-                    <Link to="/services/quantum-computing-consulting">
+                      <Link className="w-5 h-5" /></Link>
+                    <Link to="/services/quantum-computing-consulting"></Link>
   className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-colors>"
               <section className="text-center">
                 <div>
@@ -506,7 +504,7 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
                     to="/contact"
   className="bg-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-600 transition-colors inline-flex items-center justify-center gap-2">"
                       Explore Quantum-AI Solutions"
-                      <Link className="w-5 h-5 " />
+                      <Link className="w-5 h-5 " /></Link>
                       <Link className="w-5 h-5" />,
                     </Link>,
                     <Link to="/services/quantum-computing-consulting">,
@@ -514,28 +512,28 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
                   <div></div>"
                     to="/contact""
   className="bg-purple-500 text-white px-8 py-4 rounded-lg font-semibold,"
-  hover:bg-purple-600 transition-colors inline-flex items-center justify-center gap-2""
+  hover: bg-purple-600 transition-colors inline-flex items-center justify-center gap-2""
                     >""
                       Explore Quantum-AI Solutions""
                       <Link className="w-5 h-5 " /></Link>"
                       <Link className=" />" />"
-                      <Link className="w-5 h-5" />
+                      <Link className="w-5 h-5" /></Link>
                     </Link>"
                     <Link to="/services/quantum-computing-consulting"></Link>"
   className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold,
-  hover:bg-purple-400,"
-  hover:text-white transition-colors>""
+  hover: bg-purple-400,"
+  hover: text-white transition-colors>""
               <section className="text-center">
                 <div></div>"
                   < className="flex flex-col,"$2 />
-  sm:flex-row gap-4 justify-center"></div>"
+  sm: flex-row gap-4 justify-center"></div>"
                     to="/contact""
   className="bg-purple-500 text-white px-8 py-4 rounded-lg font-semibold,"
   hover: bg-purple-600 transition-colors inline-flex items-center justify-center gap-2""
                     >""
                       Explore Quantum-AI Solutions""
                       <Link className="w-5 h-5 " /></Link>"
-                      <Link className="w-5 h-5" />
+                      <Link className="w-5 h-5" /></Link>
                     </Link>"
                     <Link to="/services/quantum-computing-consulting"></Link>"
   className= " />

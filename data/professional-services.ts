@@ -78,16 +78,12 @@ export interface ProfessionalService {/* TODO: Fix JSX expression */}
     address: string,
   }
 }
-export const professionalServices: ProfessionalService[] = [,
-    id: "it-consulting", name: "IT Consulting Services",
-    tagline: "Expert IT consulting for business growth", price: "$120/hour"
+export const professionalServices: ProfessionalService[] = [id: "it-consulting", name: "IT Consulting Services", tagline: "Expert IT consulting for business growth", price: "$120/hour"
     description: "Professional IT consulting services to help businesses optimize their technology investments."
-    features: [,
-      "Technology assessment"
+    features: [, "Technology assessment"
       "Strategic planning"
       "Implementation guidance"
-      "Performance optimization",
-      "Ongoing support"],
+      "Performance optimization", "Ongoing support"],
     link: "/services/it-consulting", category: "Professional Services",
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
@@ -127,23 +123,17 @@ export const professionalServices: ProfessionalService[] = [,
   s: string}
 }
 export const,
-  professionalServices: ProfessionalService[] = [,
-    i,"
-  d: "it-consulting", nam,"
-  e: "IT Consulting Services",
-    taglin,"
-  e: "Expert IT consulting for business growth", pric,"
-  e: "$120/hour",
-    descriptio,"
-  n: "Professional IT consulting services to help businesses optimize their technology investments.",
-    feature,
-  s: [,"
+  professionalServices: ProfessionalService[] = [i, "
+  d: "it-consulting", nam, "
+  e: "IT Consulting Services", taglin, "
+  e: "Expert IT consulting for business growth", pric, "
+  e: "$120/hour", descriptio, "
+  n: "Professional IT consulting services to help businesses optimize their technology investments.", feature, s: [, "
       "Technology assessment""
       "Strategic planning""
       "Implementation guidance""
       "Performance optimization""
-      "Ongoing support"
-    ],
+      "Ongoing support"],
     lin,"
   k: "/services/it-consulting", categor,"
   y: "Professional Services",
@@ -178,13 +168,7 @@ id: "it-consulting"
     tagline: "Expert IT consulting for business growth",
     price: "$120/hour",
     description: "Professional IT consulting services to help businesses optimize their technology investments.",
-    features: [,
-      "Technology assessment",
-      "Strategic planning",
-      "Implementation guidance",
-      "Performance optimization",
-      "Ongoing support"
-    ],
+    features: ["Technology assessment", "Strategic planning", "Implementation guidance", "Performance optimization", "Ongoing support"],
     link: "/services/it-consulting"
     category: "Professional Services"
     realImplementation: true
@@ -210,13 +194,12 @@ id: "it-consulting"
     descriptio,"
   n: "Professional IT consulting services to help businesses optimize their technology investments.",
     feature,
-  s: [,"
-      "Technology assessment","
-      "Strategic planning","
-      "Implementation guidance","
-      "Performance optimization","
-      "Ongoing support"
-    ],
+  s: ["
+      "Technology assessment", "
+      "Strategic planning", "
+      "Implementation guidance", "
+      "Performance optimization", "
+      "Ongoing support"],
     lin,"
   k: "/services/it-consulting",
     categor,"
@@ -288,13 +271,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  professionalServices: ProfessionalService[] = [ i,"
-  d: "it-consulting", nam,"
-  e: "IT Consulting Services", taglin,"
-  e: "Expert IT consulting for business growth", pric,"
-  e: "$120/hour", descriptio,"
-  n: "Professional IT consulting services to help businesses optimize their technology investments.", feature,"
-  s: [ "Technology assessment" "Strategic planning" "Implementation guidance" "Performance optimization" "Ongoing support" ], lin,"
+  professionalServices: ProfessionalService[] = [i, "
+  d: "it-consulting", nam, "
+  e: "IT Consulting Services", taglin, "
+  e: "Expert IT consulting for business growth", pric, "
+  e: "$120/hour", descriptio, "
+  n: "Professional IT consulting services to help businesses optimize their technology investments.", feature, "
+  s: [ "Technology assessment" "Strategic planning" "Implementation guidance" "Performance optimization" "Ongoing support"], lin,"
   k: "/services/it-consulting", categor,"
   y: "Professional Services", realImplementatio,
   n: true, contactInf,
@@ -311,7 +294,7 @@ i,
   e: "Expert IT consulting for business growth", pric,"
   e: "$120/hour", descriptio,"
   n: "Professional IT consulting services to help businesses optimize their technology investments.", feature,"
-  s: [ "Technology assessment", "Strategic planning", "Implementation guidance", "Performance optimization", "Ongoing support" ], lin,"
+  s: ["Technology assessment", "Strategic planning", "Implementation guidance", "Performance optimization", "Ongoing support"], lin,"
   k: "/services/it-consulting", categor,"
   y: "Professional Services", realImplementatio,
   n: true, contactInf,

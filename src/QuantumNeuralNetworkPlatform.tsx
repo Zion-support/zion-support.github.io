@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link  } from 'react-router-dom'
       description: 'Unbreakable encryption using quantum key distribution and post-quantum cryptography.'
     },
     {
@@ -56,12 +56,11 @@ import { Link } from 'react-router-dom'
     "Scalable architecture for enterprise needs",
     "Quantum-resistant security protocols"
   ]
-  const benefits = [
-      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+  const benefits = [<section className="relative pt-20 pb-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <div className="flex items-center justify-center mb-6">
-              <Atom className="w-12 h-12 text-cyan-400 mr-3" />
+              <Atom className="w-12 h-12 text-cyan-400 mr-3" /></Atom>
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                 Quantum Neural Network Platform
               </h1>
@@ -70,28 +69,28 @@ import { Link } from 'react-router-dom'
               Experience the future of computing with our revolutionary Quantum Neural Network Platform. 
               Combine the power of quantum computing with advanced neural networks to solve 
               previously impossible problems.
-import { Helmet } from 'react-helmet-async'
-import { Brain, Cpu, Zap, Shield, Database, Network, ArrowRight, Star, Rocket, Globe } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Helmet  } from 'react-helmet-async'
+import { Brain, Cpu, Zap, Shield, Database, Network, ArrowRight, Star, Rocket, Globe  } from 'lucide-react'
+import { Link  } from 'react-router-dom'
 const QuantumNeuralNetworkPlatform: React.FC = () => {
   return (
     <>
-      <Helmet>
+      <Helmet ></Helmet>
         <title>Quantum Neural Network Platform - Zion Tech Group</title>
         <meta name="description" content="Revolutionary quantum neural network platform combining quantum computing with advanced AI neural networks. Experience unprecedented computational power and AI capabilities." />
         <meta name="keywords" content="quantum neural networks, quantum computing, AI neural networks, quantum AI, neural network platform, quantum technology" />
-        <link rel="canonical" href="https://ziontechgroup.com/quantum-neural-network-platform" />
+        <link rel="canonical" href="https: //ziontechgroup.com/quantum-neural-network-platform" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%, rgba(0, 255, 255, 0.1), transparent_50%)]"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center">
               <div className="flex justify-center mb-6">
                 <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4">
-                  <Brain className="w-10 h-10 text-white" />
+                  <Brain className="w-10 h-10 text-white" /></Brain>
                 </div>
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -111,7 +110,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
                 >
                   <span>Get Started</span>
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-5 h-5" /></ArrowRight>
                 </Link>
                 <$2 />
                   to="/services/quantum-technology"
@@ -124,7 +123,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2" />
+              <Brain className="w-4 h-4 mr-2" /></Brain>
               Quantum AI Innovation
             </div>
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
@@ -147,7 +146,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
                 Revolutionary Quantum AI Technology
@@ -161,7 +160,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
-                  <Brain className="w-6 h-6 text-white" />
+                  <Brain className="w-6 h-6 text-white" /></Brain>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Quantum Neural Processing</h3>
                 <p className="text-gray-300">
@@ -171,7 +170,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
 
               <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
-                  <Cpu className="w-6 h-6 text-white" />
+                  <Cpu className="w-6 h-6 text-white" /></Cpu>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Hybrid Quantum-Classical</h3>
                 <p className="text-gray-300">
@@ -181,7 +180,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
 
               <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
-                  <Zap className="w-6 h-6 text-white" />
+                  <Zap className="w-6 h-6 text-white" /></Zap>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Real-time Learning</h3>
                 <p className="text-gray-300">
@@ -191,7 +190,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
 
               <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
-                  <Shield className="w-6 h-6 text-white" />
+                  <Shield className="w-6 h-6 text-white" /></Shield>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Quantum Security</h3>
                 <p className="text-gray-300">
@@ -201,7 +200,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
 
               <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-4">
-                  <Database className="w-6 h-6 text-white" />
+                  <Database className="w-6 h-6 text-white" /></Database>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Quantum Memory</h3>
                 <p className="text-gray-300">
@@ -211,7 +210,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
 
               <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
-                  <Network className="w-6 h-6 text-white" />
+                  <Network className="w-6 h-6 text-white" /></Network>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Quantum Networking</h3>
                 <p className="text-gray-300">
@@ -224,7 +223,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
 
         {/* Applications Section */}
         <section className="py-20 bg-gray-900/50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
                 Transformative Applications
@@ -239,7 +238,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Star className="w-4 h-4 text-white" />
+                    <Star className="w-4 h-4 text-white" /></Star>
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Drug Discovery & Healthcare</h3>
@@ -252,7 +251,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
 
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Rocket className="w-4 h-4 text-white" />
+                    <Rocket className="w-4 h-4 text-white" /></Rocket>
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Financial Modeling</h3>
@@ -265,7 +264,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
 
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Globe className="w-4 h-4 text-white" />
+                    <Globe className="w-4 h-4 text-white" /></Globe>
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Climate Prediction</h3>
@@ -280,7 +279,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Brain className="w-4 h-4 text-white" />
+                    <Brain className="w-4 h-4 text-white" /></Brain>
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">AI Research & Development</h3>
@@ -293,7 +292,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
 
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Shield className="w-4 h-4 text-white" />
+                    <Shield className="w-4 h-4 text-white" /></Shield>
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Cybersecurity</h3>
@@ -306,7 +305,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
 
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Cpu className="w-4 h-4 text-white" />
+                    <Cpu className="w-4 h-4 text-white" /></Cpu>
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Optimization Problems</h3>
@@ -323,25 +322,25 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center px-4 sm: px-6 lg:px-8">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Experience the Future of AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join the quantum revolution and transform your business with the most advanced 
               neural network technology ever created.
-import { Brain, Cpu, Zap, Shield, ArrowRight, Star, Users, Target } from 'lucide-react'
+import { Brain, Cpu, Zap, Shield, ArrowRight, Star, Users, Target  } from 'lucide-react'
 export default function QuantumNeuralNetworkPlatform() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%, rgba(0, 255, 255, 0.1), transparent_50%)]"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4">
-                <Brain className="w-8 h-8 text-white" />
+                <Brain className="w-8 h-8 text-white" /></Brain>
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -353,7 +352,7 @@ export default function QuantumNeuralNetworkPlatform() {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Revolutionary quantum computing meets artificial intelligence in our next-generation 
               neural network platform. Experience unprecedented computational power and AI capabilities.
-import { Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight } from 'lucide-react'
+import { Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight  } from 'lucide-react'
 export default function QuantumNeuralNetworkPlatform() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue to-zion-purple">
@@ -361,7 +360,7 @@ export default function QuantumNeuralNetworkPlatform() {
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">
               Quantum Neural Network
               <span className="block bg-gradient-to-r from-zion-cyan to-zion-purple-light bg-clip-text text-transparent">
                 Platform
@@ -377,7 +376,7 @@ export default function QuantumNeuralNetworkPlatform() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5" /></ArrowRight>
               </Link>
               <$2 />
                 to="/services"
@@ -393,7 +392,7 @@ export default function QuantumNeuralNetworkPlatform() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+            <h1 className="text-5xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Quantum Neural Network Platform
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -406,8 +405,8 @@ export default function QuantumNeuralNetworkPlatform() {
               </button>
               <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
                 Schedule Demo
-import { motion } from 'framer-motion'
-import { Brain, Zap, Cpu, Network, Shield, TrendingUp } from 'lucide-react'
+import { motion  } from 'framer-motion'
+import { Brain, Zap, Cpu, Network, Shield, TrendingUp  } from 'lucide-react'
 const QuantumNeuralNetworkPlatform: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -421,7 +420,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">
               Quantum Neural Network
               <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Platform
@@ -440,7 +439,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
               >
                 Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5" /></ArrowRight>
               </Link>
               <$2 />
                 to="/services/quantum-technology"
@@ -448,18 +447,16 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
               >
                 Learn More
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      <SEOHead 
-        title="Quantum Neural Network Platform - Zion Tech Group"
+      <SEOHead title="Quantum Neural Network Platform - Zion Tech Group"
         description="Revolutionary quantum neural network platform combining quantum computing with advanced AI for unprecedented computational power and capabilities."
         keywords="quantum neural networks, quantum computing, AI platform, quantum AI, neural networks, quantum processing"
-      />
-      
+      /></SEOHead>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-32 pb-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex justify-center mb-8">
             <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full">
-              <Brain className="h-12 w-12 text-white" />
+              <Brain className="h-12 w-12 text-white" /></Brain>
             </div>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -475,7 +472,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
             >
               Get Started
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
             </Link>
             <$2 />
               to="/services/quantum-technology"
@@ -488,44 +485,24 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
       description: "Distributed quantum neural networks across multiple locations"
     }
   ]
-  const useCases = [
-    {
-      title: 'Financial Modeling',
-      description: 'Advanced risk assessment, portfolio optimization, and market prediction using quantum neural networks.',
-      icon: TrendingUp
-    },
-    {
-      title: 'Drug Discovery',
-      description: 'Accelerated molecular simulation and drug candidate screening for pharmaceutical research.',
-      icon: Globe
-    },
-    {
-      title: 'Climate Modeling',
-      description: 'Complex climate pattern analysis and prediction with quantum-enhanced computational power.',
-      icon: Globe
-    },
-    {
-      title: 'AI Training',
-      description: 'Faster and more efficient training of large language models and neural networks.',
-      icon: Brain
-    }
-  ]
-  const benefits = [
-    'Exponential speedup in complex computations',
-    'Enhanced accuracy in pattern recognition',
-    'Scalable architecture for growing datasets',
-    'Energy-efficient quantum-inspired algorithms',
-    'Seamless integration with existing AI systems',
-    'Real-time decision making capabilities'
-  ]
+  const useCases = [{
+      title: 'Financial Modeling', description: 'Advanced risk assessment, portfolio optimization, and market prediction using quantum neural networks.', icon: TrendingUp
+    }, {
+      title: 'Drug Discovery', description: 'Accelerated molecular simulation and drug candidate screening for pharmaceutical research.', icon: Globe
+    }, {
+      title: 'Climate Modeling', description: 'Complex climate pattern analysis and prediction with quantum-enhanced computational power.', icon: Globe
+    }, {
+      title: 'AI Training', description: 'Faster and more efficient training of large language models and neural networks.', icon: Brain
+    }]
+  const benefits = ['Exponential speedup in complex computations', 'Enhanced accuracy in pattern recognition', 'Scalable architecture for growing datasets', 'Energy-efficient quantum-inspired algorithms', 'Seamless integration with existing AI systems', 'Real-time decision making capabilities']
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-32 pb-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2" />
+              <Brain className="w-4 h-4 mr-2" /></Brain>
               Quantum AI Platform
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -538,13 +515,13 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
               Revolutionize your AI capabilities with our cutting-edge quantum neural network platform. 
               Experience unprecedented computational power and unlock new possibilities in machine learning.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <$2 />
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
               >
                 Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5" /></ArrowRight>
               </Link>
               <$2 />
                 to="/services/quantum-technology"
@@ -567,7 +544,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
             className="text-center mb-16"
           >
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -581,7 +558,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Quantum-Powered Features
             </h2>
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300"
@@ -593,9 +570,9 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-cyan-500 transition-all duration-300">
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover: border-cyan-500 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">
-                <Brain className="w-6 h-6 text-white" />
+                <Brain className="w-6 h-6 text-white" /></Brain>
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">Quantum Neural Processing</h3>
               <p className="text-gray-400">
@@ -605,7 +582,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
 
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-cyan-500 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
-                <Cpu className="w-6 h-6 text-white" />
+                <Cpu className="w-6 h-6 text-white" /></Cpu>
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">Hybrid Quantum-Classical</h3>
               <p className="text-gray-400">
@@ -615,7 +592,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
 
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-cyan-500 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6">
-                <Zap className="w-6 h-6 text-white" />
+                <Zap className="w-6 h-6 text-white" /></Zap>
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">Real-Time Optimization</h3>
               <p className="text-gray-400">
@@ -625,7 +602,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
 
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-cyan-500 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
-                <Shield className="w-6 h-6 text-white" />
+                <Shield className="w-6 h-6 text-white" /></Shield>
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">Quantum-Safe Security</h3>
               <p className="text-gray-400">
@@ -635,7 +612,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
 
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-cyan-500 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-6">
-                <Star className="w-6 h-6 text-white" />
+                <Star className="w-6 h-6 text-white" /></Star>
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">Advanced AI Models</h3>
               <p className="text-gray-400">
@@ -643,9 +620,9 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
               </p>
             </div>
 
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-cyan-500 transition-all duration-300">
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover: border-cyan-500 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
-                <Users className="w-6 h-6 text-white" />
+                <Users className="w-6 h-6 text-white" /></Users>
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">Enterprise Ready</h3>
               <p className="text-gray-400">
@@ -658,7 +635,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300">
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover: border-cyan-500 transition-all duration-300">
                 <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg w-fit mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
@@ -679,7 +656,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-import { Brain, Zap, Shield, TrendingUp, Users, Globe } from 'lucide-react'
+import { Brain, Zap, Shield, TrendingUp, Users, Globe  } from 'lucide-react'
 export default function QuantumNeuralNetworkPlatform() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue to-zion-purple">
@@ -687,7 +664,7 @@ export default function QuantumNeuralNetworkPlatform() {
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">
             Quantum Neural Network Platform
           </h1>
           <p className="text-xl md:text-2xl text-zion-cyan mb-8 max-w-4xl mx-auto">
@@ -708,15 +685,15 @@ export default function QuantumNeuralNetworkPlatform() {
             </Link>
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Elements */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.05),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.05),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%, rgba(0, 255, 255, 0.05), transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%, rgba(147, 51, 234, 0.05), transparent_50%)]"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center mb-6">
             <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4">
-              <Atom className="w-8 h-8 text-white" />
+              <Atom className="w-8 h-8 text-white" /></Atom>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <h1 className="text-4xl md: text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Quantum Neural Network Platform
             </h1>
           </div>
@@ -732,7 +709,7 @@ export default function QuantumNeuralNetworkPlatform() {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105"
             >
               Get Started
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-5 h-5" /></ArrowRight>
             </Link>
             <$2 />
               to="/services/quantum-technology"
@@ -749,10 +726,10 @@ export default function QuantumNeuralNetworkPlatform() {
           <div className="quantum-particle"></div>
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 border border-blue-400/50 text-blue-400 text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2" />
+              <Brain className="w-4 h-4 mr-2" /></Brain>
               Quantum AI Platform
             </div>
             
@@ -767,7 +744,7 @@ export default function QuantumNeuralNetworkPlatform() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-400 hover:to-cyan-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/30 flex items-center">
-                <Play className="w-5 h-5 mr-2" />
+                <Play className="w-5 h-5 mr-2" /></Play>
                 Watch Demo
               </button>
             </div>
@@ -776,7 +753,7 @@ export default function QuantumNeuralNetworkPlatform() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -795,7 +772,7 @@ export default function QuantumNeuralNetworkPlatform() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
       {/* Features Section */}
       <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Revolutionary Quantum Capabilities
@@ -803,7 +780,7 @@ export default function QuantumNeuralNetworkPlatform() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our platform combines cutting-edge quantum computing with advanced neural networks 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -827,23 +804,23 @@ export default function QuantumNeuralNetworkPlatform() {
   ]
   return (
     <>
-      <Helmet>
+      <Helmet ></Helmet>
         <title>Quantum Neural Network Platform - Zion Tech Group</title>
         <meta name="description" content="Revolutionary quantum neural network platform combining quantum computing with advanced AI for unprecedented processing power and accuracy. Transform your business with quantum-enhanced intelligence." />
         <meta name="keywords" content="quantum neural networks, quantum computing, AI platform, quantum AI, neural processing, quantum optimization" />
-        <link rel="canonical" href="https://ziontechgroup.com/quantum-neural-network-platform" />
+        <link rel="canonical" href="https: //ziontechgroup.com/quantum-neural-network-platform" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%, rgba(0, 255, 255, 0.1), transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%, rgba(59, 130, 246, 0.1), transparent_50%)]"></div>
           
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4">
-                <Brain className="w-8 h-8 text-white" />
+                <Brain className="w-8 h-8 text-white" /></Brain>
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -855,7 +832,7 @@ export default function QuantumNeuralNetworkPlatform() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover: border-cyan-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -864,7 +841,7 @@ export default function QuantumNeuralNetworkPlatform() {
               </div>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
               Quantum Neural
               <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Network Platform
@@ -890,7 +867,7 @@ export default function QuantumNeuralNetworkPlatform() {
 
         {/* Features Section */}
         <section className="py-20 relative">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Revolutionary Features
@@ -906,9 +883,9 @@ export default function QuantumNeuralNetworkPlatform() {
                 const Icon = feature.icon
                 return (
                   <div key={index} className="group">
-                    <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 h-full hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                    <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 h-full hover: border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                       <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <Icon className="w-8 h-8 text-cyan-400" />
+                        <Icon className="w-8 h-8 text-cyan-400" /></Icon>
                       </div>
                       <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                       <p className="text-gray-300 leading-relaxed">{feature.description}</p>
@@ -922,7 +899,7 @@ export default function QuantumNeuralNetworkPlatform() {
 
         {/* Use Cases Section */}
         <section className="py-20 relative bg-gray-900/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Transform Your Industry
@@ -938,9 +915,9 @@ export default function QuantumNeuralNetworkPlatform() {
                 const Icon = useCase.icon
                 return (
                   <div key={index} className="group">
-                    <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-600/50 rounded-2xl p-8 h-full hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                    <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-600/50 rounded-2xl p-8 h-full hover: border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
                       <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <Icon className="w-8 h-8 text-blue-400" />
+                        <Icon className="w-8 h-8 text-blue-400" /></Icon>
                       </div>
                       <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
                       <p className="text-gray-300 leading-relaxed">{useCase.description}</p>
@@ -954,7 +931,7 @@ export default function QuantumNeuralNetworkPlatform() {
 
         {/* Benefits Section */}
         <section className="py-20 relative">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Why Choose Our Platform?
@@ -971,7 +948,7 @@ export default function QuantumNeuralNetworkPlatform() {
                 <div className="space-y-4">
                   {benefits.map((benefit, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
+                      <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" /></CheckCircle>
                       <span className="text-gray-300 text-lg">{benefit}</span>
                     </div>
                   ))}
@@ -980,13 +957,13 @@ export default function QuantumNeuralNetworkPlatform() {
               
               <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8">
                 <div className="text-center">
-                  <Star className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
+                  <Star className="w-16 h-16 text-cyan-400 mx-auto mb-4" /></Star>
                   <h3 className="text-2xl font-bold text-white mb-4">Industry Leader</h3>
                   <p className="text-gray-300 mb-6">
                     Join the ranks of forward-thinking organizations already leveraging 
                     quantum neural networks for competitive advantage.
                   </p>
-                  <button className="px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-500 transition-all duration-300">
+                  <button className="px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover: from-cyan-500 hover:to-blue-500 transition-all duration-300">
                     Learn More
                   </button>
                 </div>
@@ -1003,7 +980,7 @@ export default function QuantumNeuralNetworkPlatform() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">
-                <Brain className="w-8 h-8 text-white" />
+                <Brain className="w-8 h-8 text-white" /></Brain>
               </div>
               <h3 className="text-2xl font-semibold text-white mb-4">Quantum Neural Processing</h3>
               <p className="text-zion-slate-light">
@@ -1013,7 +990,7 @@ export default function QuantumNeuralNetworkPlatform() {
 
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">
-                <Zap className="w-8 h-8 text-white" />
+                <Zap className="w-8 h-8 text-white" /></Zap>
               </div>
               <h3 className="text-2xl font-semibold text-white mb-4">Lightning Fast Training</h3>
               <p className="text-zion-slate-light">
@@ -1023,7 +1000,7 @@ export default function QuantumNeuralNetworkPlatform() {
 
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">
-                <Shield className="w-8 h-8 text-white" />
+                <Shield className="w-8 h-8 text-white" /></Shield>
               </div>
               <h3 className="text-2xl font-semibold text-white mb-4">Quantum Security</h3>
               <p className="text-zion-slate-light">
@@ -1033,7 +1010,7 @@ export default function QuantumNeuralNetworkPlatform() {
 
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">
-                <TrendingUp className="w-8 h-8 text-white" />
+                <TrendingUp className="w-8 h-8 text-white" /></TrendingUp>
               </div>
               <h3 className="text-2xl font-semibold text-white mb-4">Scalable Architecture</h3>
               <p className="text-zion-slate-light">
@@ -1043,7 +1020,7 @@ export default function QuantumNeuralNetworkPlatform() {
 
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">
-                <Users className="w-8 h-8 text-white" />
+                <Users className="w-8 h-8 text-white" /></Users>
               </div>
               <h3 className="text-2xl font-semibold text-white mb-4">Collaborative Development</h3>
               <p className="text-zion-slate-light">
@@ -1053,7 +1030,7 @@ export default function QuantumNeuralNetworkPlatform() {
 
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">
-                <Globe className="w-8 h-8 text-white" />
+                <Globe className="w-8 h-8 text-white" /></Globe>
               </div>
               <h3 className="text-2xl font-semibold text-white mb-4">Global Quantum Network</h3>
               <p className="text-zion-slate-light">
@@ -1066,7 +1043,7 @@ export default function QuantumNeuralNetworkPlatform() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="p-8 rounded-2xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">
+              <div key={index} className="p-8 rounded-2xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-blue-500/30 hover: border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="flex items-start space-x-4">
                   <div className="p-3 rounded-xl bg-blue-500/20 border border-blue-400/50">
                     <feature.icon className="w-8 h-8 text-blue-400" />
@@ -1077,7 +1054,7 @@ export default function QuantumNeuralNetworkPlatform() {
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" /></CheckCircle>
                           {benefit}
                         </li>
                       ))}
@@ -1101,7 +1078,7 @@ export default function QuantumNeuralNetworkPlatform() {
             Combine the power of quantum mechanics with advanced AI for unprecedented performance.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
+            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover: from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
               Access Platform
             </button>
             <button className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
@@ -1113,9 +1090,9 @@ export default function QuantumNeuralNetworkPlatform() {
         {/* Platform Features */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center text-white mb-12">Platform Features</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {platformFeatures.map((feature, index) => (
-              <div key={index} className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300">
+              <div key={index} className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 hover: border-cyan-400/50 transition-all duration-300">
                 <div className="text-4xl mb-4">{feature.icon}</div>
                 <h3 className="text-2xl font-bold text-cyan-400 mb-4">{feature.title}</h3>
                 <p className="text-gray-300 mb-6">{feature.description}</p>
@@ -1126,7 +1103,7 @@ export default function QuantumNeuralNetworkPlatform() {
                       {benefit}
       {/* Capabilities Section */}
       <section className="py-20 relative bg-gradient-to-br from-gray-900/50 to-black/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Comprehensive AI Platform
@@ -1136,20 +1113,20 @@ export default function QuantumNeuralNetworkPlatform() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {capabilities.map((capability, index) => (
-              <div key={index} className="p-6 rounded-xl bg-gradient-to-br from-gray-800/30 to-gray-900/30 border border-gray-700/50 hover:border-blue-500/30 transition-all duration-300">
+              <div key={index} className="p-6 rounded-xl bg-gradient-to-br from-gray-800/30 to-gray-900/30 border border-gray-700/50 hover: border-blue-500/30 transition-all duration-300">
                 <h3 className="text-xl font-bold text-blue-400 mb-4">{capability.category}</h3>
                 <ul className="space-y-3">
                   {capability.items.map((item, idx) => (
                     <li key={idx} className="flex items-start text-gray-300">
-                      <Target className="w-4 h-4 text-blue-400 mr-2 mt-1 flex-shrink-0" />
+                      <Target className="w-4 h-4 text-blue-400 mr-2 mt-1 flex-shrink-0" /></Target>
                       {item}
                     </li>
                   ))}
                 </ul>
               </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Cutting-Edge Technology
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1158,16 +1135,13 @@ export default function QuantumNeuralNetworkPlatform() {
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              "Qiskit", "TensorFlow Quantum", "PennyLane", "Cirq",
-              "PyTorch", "JAX", "NumPy", "SciPy"
-            ].map((tech, index) => (
+            {["Qiskit", "TensorFlow Quantum", "PennyLane", "Cirq", "PyTorch", "JAX", "NumPy", "SciPy"].map((tech, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/20 hover:border-purple-400/50 transition-all duration-300"
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/20 hover: border-purple-400/50 transition-all duration-300"
               >
                 <span className="text-white font-semibold text-lg">{tech}</span>
               </motion.div>
@@ -1178,7 +1152,7 @@ export default function QuantumNeuralNetworkPlatform() {
 
       {/* Use Cases Section */}
       <section className="py-20 bg-gray-900/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Revolutionary Applications
@@ -1192,7 +1166,7 @@ export default function QuantumNeuralNetworkPlatform() {
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Target className="w-4 h-4 text-white" />
+                  <Target className="w-4 h-4 text-white" /></Target>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">Drug Discovery</h3>
@@ -1204,7 +1178,7 @@ export default function QuantumNeuralNetworkPlatform() {
 
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Brain className="w-4 h-4 text-white" />
+                  <Brain className="w-4 h-4 text-white" /></Brain>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">Financial Modeling</h3>
@@ -1216,7 +1190,7 @@ export default function QuantumNeuralNetworkPlatform() {
 
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Cpu className="w-4 h-4 text-white" />
+                  <Cpu className="w-4 h-4 text-white" /></Cpu>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">Climate Prediction</h3>
@@ -1230,7 +1204,7 @@ export default function QuantumNeuralNetworkPlatform() {
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Shield className="w-4 h-4 text-white" />
+                  <Shield className="w-4 h-4 text-white" /></Shield>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">Cybersecurity</h3>
@@ -1242,7 +1216,7 @@ export default function QuantumNeuralNetworkPlatform() {
 
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Zap className="w-4 h-4 text-white" />
+                  <Zap className="w-4 h-4 text-white" /></Zap>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">Autonomous Systems</h3>
@@ -1254,7 +1228,7 @@ export default function QuantumNeuralNetworkPlatform() {
 
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Users className="w-4 h-4 text-white" />
+                  <Users className="w-4 h-4 text-white" /></Users>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">Healthcare AI</h3>
@@ -1266,7 +1240,7 @@ export default function QuantumNeuralNetworkPlatform() {
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/30 flex items-center justify-center gap-2"
               >
                 Get Started
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5" /></ArrowRight>
               </Link>
               <$2 />
                 to="/services"
@@ -1280,7 +1254,7 @@ export default function QuantumNeuralNetworkPlatform() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1305,10 +1279,10 @@ export default function QuantumNeuralNetworkPlatform() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">
-                <Brain className="w-8 h-8 text-white" />
+                <Brain className="w-8 h-8 text-white" /></Brain>
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Quantum Neural Processing</h3>
               <p className="text-zion-slate-light leading-relaxed">
@@ -1318,7 +1292,7 @@ export default function QuantumNeuralNetworkPlatform() {
 
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center mb-6">
-                <Zap className="w-8 h-8 text-white" />
+                <Zap className="w-8 h-8 text-white" /></Zap>
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Exponential Speed</h3>
               <p className="text-zion-slate-light leading-relaxed">
@@ -1328,7 +1302,7 @@ export default function QuantumNeuralNetworkPlatform() {
 
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-blue to-zion-cyan rounded-lg flex items-center justify-center mb-6">
-                <Shield className="w-8 h-8 text-white" />
+                <Shield className="w-8 h-8 text-white" /></Shield>
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Quantum Security</h3>
               <p className="text-zion-slate-light leading-relaxed">
@@ -1338,7 +1312,7 @@ export default function QuantumNeuralNetworkPlatform() {
 
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6">
-                <TrendingUp className="w-8 h-8 text-white" />
+                <TrendingUp className="w-8 h-8 text-white" /></TrendingUp>
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Scalable Architecture</h3>
               <p className="text-zion-slate-light leading-relaxed">
@@ -1348,7 +1322,7 @@ export default function QuantumNeuralNetworkPlatform() {
 
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-blue rounded-lg flex items-center justify-center mb-6">
-                <Users className="w-8 h-8 text-white" />
+                <Users className="w-8 h-8 text-white" /></Users>
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Collaborative Development</h3>
               <p className="text-zion-slate-light leading-relaxed">
@@ -1358,7 +1332,7 @@ export default function QuantumNeuralNetworkPlatform() {
 
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-blue to-zion-purple rounded-lg flex items-center justify-center mb-6">
-                <Globe className="w-8 h-8 text-white" />
+                <Globe className="w-8 h-8 text-white" /></Globe>
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Global Quantum Network</h3>
               <p className="text-zion-slate-light leading-relaxed">
@@ -1381,7 +1355,7 @@ export default function QuantumNeuralNetworkPlatform() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">
             <div className="space-y-8">
               <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20">
                 <h3 className="text-2xl font-bold text-white mb-4">Drug Discovery & Healthcare</h3>
@@ -1479,7 +1453,7 @@ export default function QuantumNeuralNetworkPlatform() {
 
       {/* Pricing Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Flexible Pricing Plans
@@ -1488,7 +1462,7 @@ export default function QuantumNeuralNetworkPlatform() {
               Choose the plan that best fits your quantum computing needs
       {/* Pricing Section */}
       <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Choose Your Quantum AI Journey
@@ -1500,7 +1474,7 @@ export default function QuantumNeuralNetworkPlatform() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              < key={index} className={`relative p-8 rounded-2xl border transition-all duration-300 hover:transform hover:scale-105 ${$2 />
+              < key={index} className={`relative p-8 rounded-2xl border transition-all duration-300 hover: transform hover:scale-105 ${$2 />
                 plan.popular 
                   ? 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border-blue-400/50 shadow-2xl shadow-blue-500/30' 
                   : 'bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-gray-700/50'
@@ -1525,7 +1499,7 @@ export default function QuantumNeuralNetworkPlatform() {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" /></CheckCircle>
                       {feature}
                     </li>
                   ))}
@@ -1546,7 +1520,7 @@ export default function QuantumNeuralNetworkPlatform() {
           <h2 className="text-4xl font-bold text-white text-center mb-16">
             Revolutionary Use Cases
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold text-zion-cyan">Drug Discovery</h3>
               <p className="text-zion-slate-light text-lg">
@@ -1633,7 +1607,7 @@ export default function QuantumNeuralNetworkPlatform() {
               </div>
             </div>
       <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Revolutionary Features</h2>
             <p className="text-xl text-gray-400">Discover what makes our platform truly groundbreaking</p>
@@ -1642,9 +1616,9 @@ export default function QuantumNeuralNetworkPlatform() {
             {features.map((feature, index) => {
               const IconComponent = feature.icon
               return (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover: border-blue-500/30 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
-                    <IconComponent className="w-6 h-6 text-white" />
+                    <IconComponent className="w-6 h-6 text-white" /></IconComponent>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
@@ -1656,7 +1630,7 @@ export default function QuantumNeuralNetworkPlatform() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1674,7 +1648,7 @@ export default function QuantumNeuralNetworkPlatform() {
               return (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-white/10">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center mb-6">
-                    <IconComponent className="w-8 h-8 text-white" />
+                    <IconComponent className="w-8 h-8 text-white" /></IconComponent>
                   </div>
                   <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
                   <p className="text-gray-300 text-lg">{useCase.description}</p>
@@ -1686,7 +1660,7 @@ export default function QuantumNeuralNetworkPlatform() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -1700,7 +1674,7 @@ export default function QuantumNeuralNetworkPlatform() {
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" /></CheckCircle>
                     <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
@@ -1744,7 +1718,7 @@ export default function QuantumNeuralNetworkPlatform() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Experience the Future?
@@ -1759,7 +1733,7 @@ export default function QuantumNeuralNetworkPlatform() {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
             >
               Schedule a Demo
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-5 h-5" /></ArrowRight>
             </Link>
             <$2 />
               to="/pricing"
@@ -1772,7 +1746,7 @@ export default function QuantumNeuralNetworkPlatform() {
       </section>
 
       {/* Resources Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1786,7 +1760,7 @@ export default function QuantumNeuralNetworkPlatform() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
-                <BookOpen className="w-6 h-6 text-white" />
+                <BookOpen className="w-6 h-6 text-white" /></BookOpen>
               </div>
             ))}
           </div>
@@ -1794,7 +1768,7 @@ export default function QuantumNeuralNetworkPlatform() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-purple-900/50">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-purple-900/50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready for the Quantum Future?
@@ -1840,15 +1814,15 @@ export default function QuantumNeuralNetworkPlatform() {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
               Schedule Consultation
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-5 h-5" /></ArrowRight>
               className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/30 flex items-center justify-center gap-2"
             >
               Schedule a Demo
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-5 h-5" /></ArrowRight>
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
             >
               Schedule a Demo
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
             </Link>
             <$2 />
               to="/services/quantum-technology"
@@ -1884,7 +1858,7 @@ export default function QuantumNeuralNetworkPlatform() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
               >
                 Schedule a Demo
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5" /></ArrowRight>
               </Link>
               <$2 />
                 to="/pricing"
@@ -1902,7 +1876,7 @@ export default function QuantumNeuralNetworkPlatform() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
               Get Started Now
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
             </button>
             <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20 rounded-lg font-semibold transition-all duration-300">
               Contact Sales
@@ -1918,7 +1892,7 @@ export default function QuantumNeuralNetworkPlatform() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to Experience the Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -1939,7 +1913,7 @@ export default function QuantumNeuralNetworkPlatform() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
               >
                 <span>Schedule a Demo</span>
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5" /></ArrowRight>
               </Link>
               <$2 />
                 to="/pricing"
@@ -1954,9 +1928,9 @@ export default function QuantumNeuralNetworkPlatform() {
     </>
         {/* CTA Section */}
         <section className="py-20 relative">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-3xl p-12">
-              <Lightbulb className="w-20 h-20 text-cyan-400 mx-auto mb-6" />
+              <Lightbulb className="w-20 h-20 text-cyan-400 mx-auto mb-6" /></Lightbulb>
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Experience the Future?
               </h2>
@@ -1967,7 +1941,7 @@ export default function QuantumNeuralNetworkPlatform() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
                   Get Started Now
-                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                  <ArrowRight className="w-5 h-5 ml-2 inline" /></ArrowRight>
                 </button>
                 <button className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 font-semibold rounded-xl transition-all duration-300">
                   Contact Sales
@@ -1975,18 +1949,18 @@ export default function QuantumNeuralNetworkPlatform() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">SDK & Tools</h3>
               <p className="text-gray-300 mb-4">Download our SDK and development tools to get started.</p>
-              <Link to="/downloads" className="text-blue-400 hover:text-blue-300 transition-colors duration-300">
+              <Link to="/downloads" className="text-blue-400 hover:text-blue-300 transition-colors duration-300"></Link>
                 Download →
               </Link>
             </div>
             
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
-                <MessageSquare className="w-6 h-6 text-white" />
+                <MessageSquare className="w-6 h-6 text-white" /></MessageSquare>
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Support</h3>
               <p className="text-gray-300 mb-4">Get help from our quantum computing experts and support team.</p>
-              <Link to="/contact" className="text-blue-400 hover:text-blue-300 transition-colors duration-300">
+              <Link to="/contact" className="text-blue-400 hover:text-blue-300 transition-colors duration-300"></Link>
                 Contact Support →
               </Link>
             </div>
@@ -1996,7 +1970,7 @@ export default function QuantumNeuralNetworkPlatform() {
     </>
   )
 }
-              className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-lg font-semibold hover: from-cyan-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
             >
               Schedule a Demo
             </Link>
@@ -2019,7 +1993,7 @@ export default function QuantumNeuralNetworkPlatform() {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105"
             >
               Schedule a Demo
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-5 h-5" /></ArrowRight>
             </Link>
             <$2 />
               to="/pricing"
@@ -2039,11 +2013,11 @@ export default function QuantumNeuralNetworkPlatform() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-400 hover:to-cyan-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/30 flex items-center">
-                <Rocket className="w-5 h-5 mr-2" />
+                <Rocket className="w-5 h-5 mr-2" /></Rocket>
                 Start Free Trial
               </button>
               <button className="px-8 py-4 border border-blue-400/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/20 transition-all duration-300 flex items-center">
-                <ArrowRight className="w-5 h-5 mr-2" />
+                <ArrowRight className="w-5 h-5 mr-2" /></ArrowRight>
                 Schedule Demo
               </button>
             </div>
@@ -2057,7 +2031,7 @@ export default function QuantumNeuralNetworkPlatform() {
 
       {/* Footer Navigation */}
       <section className="py-12 border-t border-gray-700/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <h4 className="text-lg font-semibold text-blue-400 mb-4">Quantum Technology</h4>

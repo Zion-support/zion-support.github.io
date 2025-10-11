@@ -61,8 +61,7 @@ export interface AppConfig {
     versio,
   n: '1.0.0',
     environmen,
-  t:
-//       (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development'
+  t: //       (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development'
   },
     enableLazyLoadin,
   g: true,

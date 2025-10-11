@@ -8,7 +8,7 @@ before_each (() => {
 }),
 // Jest - DOM matchers
 import '@testing - library / jest - dom',
-import { TextEncoder, TextDecoder } from 'util',
+import { TextEncoder, TextDecoder  } from 'util',
 // Polyfill TextEncoder and TextDecoder for JSDOM environment
 global.TextEncoder = TextEncoder,
 // @ts - expect - error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests
@@ -21,7 +21,7 @@ process.env.VITE_REOWN_PROJECT_ID = 'test_project_id_from_jest_setup',
 process.env.NEXT_PUBLIC_SUPABASE_URL = 'http: //localhost:54321',
 process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test_anon_key',
 // Jest - axe matchers for accessibility
-import { toHaveNoViolations } from 'jest - axe',
+import { toHaveNoViolations  } from 'jest - axe',
 expect.extend (toHaveNoViolations),
 // Mock window.match_media for Jest
 Object.define_property (window, 'match_media', {
@@ -48,7 +48,7 @@ beforeEach(() => {
 })
 // Jest-DOM matchers
 import '@testing-library/jest-dom'
-import { TextEncoder, TextDecoder } from 'util'
+import { TextEncoder, TextDecoder  } from 'util'
 // Polyfill TextEncoder and TextDecoder for JSDOM environment
 global.TextEncoder = TextEncoder
 // @ts-expect-error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests
@@ -58,10 +58,10 @@ global.TextDecoder = TextDecoder
 // will transform import.meta.env.VITE_SOME_VAR to something like process.env.VITE_SOME_VAR
 // or that import.meta itself is transformed into an object where 'env' can be populated.
 process.env.VITE_REOWN_PROJECT_ID = 'test_project_id_from_jest_setup'
-process.env.NEXT_PUBLIC_SUPABASE_URL = 'http://localhost:54321'
+process.env.NEXT_PUBLIC_SUPABASE_URL = 'http: //localhost:54321'
 process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test_anon_key'
 // Jest-axe matchers for accessibility
-import { toHaveNoViolations } from 'jest-axe'
+import { toHaveNoViolations  } from 'jest-axe'
 expect.extend(toHaveNoViolations)
 // Mock window.matchMedia for Jest
 Object.defineProperty(window, 'matchMedia', {
@@ -184,8 +184,7 @@ jest.mock ('firebase / auth', () => ({
   sendPasswordResetEmail: jest.fn (() => Promise.resolve ()),
   sign_out: jest.fn (() => Promise.resolve ()),
   // Add other Auth exports your code uses (e.g., GoogleAuthProvider, signInWithPopup, etc.)
-  // For example:
-  // GoogleAuthProvider: jest.fn (),
+  // For example: // GoogleAuthProvider: jest.fn (),
   // signInWithPopup: jest.fn (() => Promise.resolve ({ user: { uid: 'mock - uid' } }))})),
 jest.mock ('firebase / storage', () => ({
   get_storage: jest.fn (() => ({
@@ -268,7 +267,7 @@ axios.create = jest.fn (() => axios),
 jest.mock ('vitest', () => {
   const jest_fn = (...args: unknown[]) =>: any jest.fn (...(args as [])),
   return {
-    // Named export expected in `import { vi } from 'vitest'` statements
+    // Named export expected in `import { vi  } from 'vitest'` statements
     vi: {
       fn: jest_fn,
       spy_on: jest.spy_on.bind (jest),
@@ -286,7 +285,7 @@ jest.mock ('vitest', () => {
       import_actual: jest.require_actual,
       mockResolvedValue: <T = unknown>(value: T) => jest.fn ().mockResolvedValue (value),
       mockRejectedValue: <T = unknown>(value: T) => jest.fn ().mockRejectedValue (value)},
-    // Re - export common testing globals so that `import { expect, test } from 'vitest'`
+    // Re - export common testing globals so that `import { expect, test  } from 'vitest'`
     // continues to work inside the Jest environment.
     describe: global.describe,
     it: global.it,
@@ -407,8 +406,7 @@ jest.mock('firebase/auth', () => ({
   sendPasswordResetEmail: jest.fn(() => Promise.resolve()),
   signOut: jest.fn(() => Promise.resolve()),
   // Add other Auth exports your code uses (e.g., GoogleAuthProvider, signInWithPopup, etc.)
-  // For example:
-  // GoogleAuthProvider: jest.fn(),
+  // For example: // GoogleAuthProvider: jest.fn(),
   // signInWithPopup: jest.fn(() => Promise.resolve({ user: { uid: 'mock-uid' } })),
 }))
 jest.mock('firebase/storage', () => ({
@@ -485,7 +483,7 @@ axios.create = jest.fn(() => axios)
 jest.mock('vitest', () => {
   const jestFn = (...args: unknown[]) => jest.fn(...(args as []))
   return {
-    // Named export expected in `import { vi } from 'vitest'` statements
+    // Named export expected in `import { vi  } from 'vitest'` statements
     vi: {
       fn: jestFn,
       spyOn: jest.spyOn.bind(jest),
@@ -504,7 +502,7 @@ jest.mock('vitest', () => {
       mockResolvedValue: <T = unknown>(value: T) => jest.fn().mockResolvedValue(value),
       mockRejectedValue: <T = unknown>(value: T) => jest.fn().mockRejectedValue(value),
     },
-    // Re-export common testing globals so that `import { expect, test } from 'vitest'`
+    // Re-export common testing globals so that `import { expect, test  } from 'vitest'`
     // continues to work inside the Jest environment.
     describe: global.describe,
     it: global.it,

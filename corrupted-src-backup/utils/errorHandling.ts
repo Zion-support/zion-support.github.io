@@ -68,7 +68,7 @@ export const logError = (err, o, r: Err, o, r | st, r, i, n, g,
   // Console logging if() {
     conso l e.err o r('Error logge d: ' errorL o g)
   }, el, s, e {
-    conso, l, e.wa, r, n('Warning, logge, d:', errorL, o, g)
+    conso, l, e.wa, r, n('Warning, logge, d: ', errorL, o, g)
   // Console logging if() {/* TODO: Fix JSX expression */}
    }, el, s, e {/* TODO: Fix JSX expression */}
   }
@@ -81,7 +81,7 @@ export const logError = (err, o, r: Err, o, r | st, r, i, n, g,
  * Log info message
  */
 export const logInfo = (messa, g, e: st, r, i, n, g, conte, x, t?: Reco, r, d<string, unkno, w, n>) => {/* TODO: Fix JSX expression */}
-   } conso, l, e.l, o, g('Info, logge, d:', errorL, o, g)
+   } conso, l, e.l, o, g('Info, logge, d: ', errorL, o, g)
 }
 
 /**
@@ -90,7 +90,7 @@ export const logInfo = (messa, g, e: st, r, i, n, g, conte, x, t?: Reco, r, d<st
 const sendToMonitorin, g = (_errorL, o, g: Error, L, o, g) => {  
   if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n
   // Log to console for no w (_errorLog is used he r e)
-  conso, l, e.deb, u, g('Monitoring, service, would rece, i, v, e:', _errorL, o, g)
+  conso, l, e.deb, u, g('Monitoring, service, would rece, i, v, e: ', _errorL, o, g)
   // Examp l e: Send to Sentr y LogRock e t or custom endpoint,
   t, r, y {
     // Uncomment and configure your monitoring service
@@ -272,7 +272,7 @@ export const handleNetworkError = (err, o, r: E, r, r, o, r, endpoi, n, t: strin
  * T r y-catch wrapper with automatic error logging
  */
 export const withErrorHandling = <T, extend, s (...ar, g, s: unkn, o, w, n[]) => unkno, w, n>(
-  fn: , T,
+  fn:  , T,
   conte, x, t?: string): T = > { 
   return ((...ar, g, s: Paramete, r, s<, T>) => {
     t, r, y {
@@ -281,7 +281,7 @@ export const withErrorHandling = <T, extend, s (...ar, g, s: unkn, o, w, n[]) =>
       if (result, instanceof, Promise) {
         return, resul, t.cat, c, h(err, o, r = > {)
 export const withErrorHandling = <T, extend, s (...ar, g, s: unkn, o, w, n[]) => unkno, w, n>(f,
-  n: , T,
+  n:  , T,
   conte, x, t?: string)
 ): T = > {/* TODO: Fix JSX expression */}
           logErr, o, r(e, r, r, o, r, { conte, x, t, ar, g, s  }); throw, erro, r

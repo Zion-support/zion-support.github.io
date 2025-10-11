@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface EmergingTech2026ServiceV2 {
   id: string
   name: string
@@ -39,27 +39,10 @@ export interface EmergingTech2026ServiceV2 {
   rating: number
   reviews: number
 }
-export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
-  // Photonic Computing Platform
+export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [// Photonic Computing Platform
   {
-    id: 'photonic-computing-platform-2026',
-    name: 'Photonic Computing Platform 2026',
-    tagline: 'Light-speed computing with photonic processors and quantum photonics',
-    price: '$1,999',
-    period: '/month',
-    description: 'Revolutionary photonic computing platform that uses light instead of electricity for ultra-fast processing. Perfect for AI training, scientific computing, and real-time data analysis.',
-    features: [
-      'Photonic processor architecture',
-      'Light-speed computation',
-      'Quantum photonic integration',
-      'Real-time AI training',
-      'Scientific computing optimization',
-      'Energy-efficient processing',
-      'Scalable photonic networks',
-      'Custom algorithm optimization',
-      'Hardware acceleration',
-      'Research collaboration tools'
-    ],
+    id: 'photonic-computing-platform-2026', name: 'Photonic Computing Platform 2026', tagline: 'Light-speed computing with photonic processors and quantum photonics', price: '$1, 999', period: '/month', description: 'Revolutionary photonic computing platform that uses light instead of electricity for ultra-fast processing. Perfect for AI training, scientific computing, and real-time data analysis.', features: [
+      'Photonic processor architecture', 'Light-speed computation', 'Quantum photonic integration', 'Real-time AI training', 'Scientific computing optimization', 'Energy-efficient processing', 'Scalable photonic networks', 'Custom algorithm optimization', 'Hardware acceleration', 'Research collaboration tools'],
     popular: false,
     icon: '💡',
     color: 'from-yellow-500 to-orange-500',
@@ -100,18 +83,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     price: '$899',
     period: '/month',
     description: 'Advanced holographic display platform that creates immersive 3D visualizations for presentations, training, entertainment, and scientific visualization.',
-    features: [
-      '3D holographic projection',
-      'Interactive holographic interfaces',
-      'Real-time 3D rendering',
-      'Multi-user collaboration',
-      'Custom content creation',
-      'Holographic video streaming',
-      'Spatial audio integration',
-      'Gesture and voice control',
-      'Mobile device integration',
-      'API for custom applications'
-    ],
+    features: ['3D holographic projection', 'Interactive holographic interfaces', 'Real-time 3D rendering', 'Multi-user collaboration', 'Custom content creation', 'Holographic video streaming', 'Spatial audio integration', 'Gesture and voice control', 'Mobile device integration', 'API for custom applications'],
     popular: true,
     icon: '🌟',
     color: 'from-purple-500 to-pink-500',
@@ -152,18 +124,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     price: '$799',
     period: '/month',
     description: 'Advanced quantum internet security platform that protects against quantum threats and ensures secure communication in the quantum era.',
-    features: [
-      'Quantum-resistant protocols',
-      'Post-quantum cryptography',
-      'Quantum key distribution',
-      'Secure communication channels',
-      'Threat detection and response',
-      'Compliance and auditing',
-      'Multi-layer security',
-      'Real-time monitoring',
-      'API security',
-      'Enterprise integration'
-    ],
+    features: ['Quantum-resistant protocols', 'Post-quantum cryptography', 'Quantum key distribution', 'Secure communication channels', 'Threat detection and response', 'Compliance and auditing', 'Multi-layer security', 'Real-time monitoring', 'API security', 'Enterprise integration'],
     popular: true,
     icon: '🌐',
     color: 'from-blue-600 to-cyan-600',
@@ -204,18 +165,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     price: 'Custom pricing',
     period: '',
     description: 'Revolutionary platform that enables businesses to operate autonomously using AI agents for decision-making, process automation, and strategic planning.',
-    features: [
-      'Autonomous business operations',
-      'AI-powered decision making',
-      'Strategic planning automation',
-      'Process optimization',
-      'Performance monitoring',
-      'Predictive analytics',
-      'Risk management',
-      'Resource optimization',
-      'Customer service automation',
-      'Financial management'
-    ],
+    features: ['Autonomous business operations', 'AI-powered decision making', 'Strategic planning automation', 'Process optimization', 'Performance monitoring', 'Predictive analytics', 'Risk management', 'Resource optimization', 'Customer service automation', 'Financial management'],
     popular: false,
     icon: '🏢',
     color: 'from-indigo-600 to-purple-600',
@@ -256,18 +206,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     price: '$2,999',
     period: '/month',
     description: 'Advanced biotech AI platform that accelerates drug discovery, protein analysis, and genetic research using cutting-edge AI and machine learning.',
-    features: [
-      'AI-powered drug discovery',
-      'Protein structure prediction',
-      'Genetic sequence analysis',
-      'Drug interaction modeling',
-      'Clinical trial optimization',
-      'Biomarker identification',
-      'Drug repurposing',
-      'Toxicity prediction',
-      'Research collaboration tools',
-      'Regulatory compliance'
-    ],
+    features: ['AI-powered drug discovery', 'Protein structure prediction', 'Genetic sequence analysis', 'Drug interaction modeling', 'Clinical trial optimization', 'Biomarker identification', 'Drug repurposing', 'Toxicity prediction', 'Research collaboration tools', 'Regulatory compliance'],
     popular: false,
     icon: '🧬',
     color: 'from-green-600 to-teal-600',
@@ -308,18 +247,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     price: 'Custom pricing',
     period: '',
     description: 'Advanced edge computing orchestration platform that manages distributed computing resources, optimizes performance, and ensures reliability across edge networks.',
-    features: [
-      'Distributed edge management',
-      'Intelligent resource allocation',
-      'Performance optimization',
-      'Load balancing',
-      'Fault tolerance',
-      'Real-time monitoring',
-      'Automated scaling',
-      'Security management',
-      'API gateway',
-      'Edge analytics'
-    ],
+    features: ['Distributed edge management', 'Intelligent resource allocation', 'Performance optimization', 'Load balancing', 'Fault tolerance', 'Real-time monitoring', 'Automated scaling', 'Security management', 'API gateway', 'Edge analytics'],
     popular: false,
     icon: '⚡',
     color: 'from-orange-600 to-red-600',
@@ -360,18 +288,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     price: 'Custom pricing',
     period: '',
     description: 'Advanced 5G private network solutions that enable enterprises to deploy and manage their own high-performance, secure 5G networks for industrial applications.',
-    features: [
-      'Private 5G network deployment',
-      'Network management and monitoring',
-      'Security and compliance',
-      'Performance optimization',
-      'Device management',
-      'Network slicing',
-      'Quality of service management',
-      'Analytics and reporting',
-      'Integration with existing systems',
-      '24/7 support and maintenance'
-    ],
+    features: ['Private 5G network deployment', 'Network management and monitoring', 'Security and compliance', 'Performance optimization', 'Device management', 'Network slicing', 'Quality of service management', 'Analytics and reporting', 'Integration with existing systems', '24/7 support and maintenance'],
     popular: false,
     icon: '📡',
     color: 'from-blue-500 to-indigo-500',

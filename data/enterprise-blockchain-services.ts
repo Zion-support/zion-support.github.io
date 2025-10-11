@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface EnterpriseBlockchainService {
   id: string
   name: string
@@ -39,27 +39,10 @@ export interface EnterpriseBlockchainService {
   rating: number
   reviews: number
 }
-export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
-  // Enterprise Blockchain Platform
+export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [// Enterprise Blockchain Platform
   {
-    id: 'enterprise-blockchain-platform',
-    name: 'Enterprise Blockchain Platform',
-    tagline: 'Build scalable enterprise blockchain solutions with 100,000+ TPS',
-    price: '$6,999',
-    period: '/month',
-    description: 'Enterprise-grade blockchain platform that enables businesses to build scalable, secure, and compliant blockchain solutions for supply chain, finance, and identity management.',
-    features: [
-      '100,000+ transactions per second',
-      'Enterprise-grade security',
-      'Regulatory compliance tools',
-      'Smart contract development',
-      'Multi-chain interoperability',
-      'Private and consortium networks',
-      'Advanced consensus mechanisms',
-      'Real-time monitoring',
-      'API for integration',
-      '24/7 support and maintenance'
-    ],
+    id: 'enterprise-blockchain-platform', name: 'Enterprise Blockchain Platform', tagline: 'Build scalable enterprise blockchain solutions with 100, 000+ TPS', price: '$6, 999', period: '/month', description: 'Enterprise-grade blockchain platform that enables businesses to build scalable, secure, and compliant blockchain solutions for supply chain, finance, and identity management.', features: [
+      '100, 000+ transactions per second', 'Enterprise-grade security', 'Regulatory compliance tools', 'Smart contract development', 'Multi-chain interoperability', 'Private and consortium networks', 'Advanced consensus mechanisms', 'Real-time monitoring', 'API for integration', '24/7 support and maintenance'],
     popular: true,
     icon: '⛓️',
     color: 'from-blue-600 to-indigo-700',
@@ -100,18 +83,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     price: '$8,999',
     period: '/month',
     description: 'Institutional-grade decentralized finance platform that enables enterprises to participate in DeFi protocols with enhanced security, compliance, and risk management.',
-    features: [
-      'Institutional-grade security',
-      'Regulatory compliance',
-      'Risk management tools',
-      'Multi-protocol integration',
-      'Liquidity management',
-      'Yield optimization',
-      'Portfolio analytics',
-      'Automated trading strategies',
-      'Insurance and protection',
-      '24/7 institutional support'
-    ],
+    features: ['Institutional-grade security', 'Regulatory compliance', 'Risk management tools', 'Multi-protocol integration', 'Liquidity management', 'Yield optimization', 'Portfolio analytics', 'Automated trading strategies', 'Insurance and protection', '24/7 institutional support'],
     popular: true,
     icon: '💰',
     color: 'from-green-600 to-emerald-600',
@@ -152,18 +124,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     price: '$4,999',
     period: '/month',
     description: 'Enterprise-grade NFT platform that enables businesses to create, manage, and trade digital assets with advanced features for collectibles, gaming, and digital art.',
-    features: [
-      'Multi-chain NFT support',
-      'Advanced metadata management',
-      'Royalty and licensing tools',
-      'Marketplace integration',
-      'Analytics and insights',
-      'Custom smart contracts',
-      'Brand protection tools',
-      'Compliance management',
-      'API for integration',
-      '24/7 enterprise support'
-    ],
+    features: ['Multi-chain NFT support', 'Advanced metadata management', 'Royalty and licensing tools', 'Marketplace integration', 'Analytics and insights', 'Custom smart contracts', 'Brand protection tools', 'Compliance management', 'API for integration', '24/7 enterprise support'],
     popular: true,
     icon: '🎨',
     color: 'from-purple-600 to-pink-600',
@@ -204,18 +165,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     price: '$7,999',
     period: '/month',
     description: 'Comprehensive blockchain-based supply chain platform that provides end-to-end transparency, traceability, and automation for complex supply chain operations.',
-    features: [
-      'End-to-end traceability',
-      'Smart contract automation',
-      'Real-time monitoring',
-      'Quality assurance tracking',
-      'Compliance management',
-      'Supplier verification',
-      'Inventory optimization',
-      'Payment automation',
-      'Analytics dashboard',
-      'API for integration'
-    ],
+    features: ['End-to-end traceability', 'Smart contract automation', 'Real-time monitoring', 'Quality assurance tracking', 'Compliance management', 'Supplier verification', 'Inventory optimization', 'Payment automation', 'Analytics dashboard', 'API for integration'],
     popular: true,
     icon: '📦',
     color: 'from-orange-600 to-red-600',
@@ -256,18 +206,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     price: '$5,999',
     period: '/month',
     description: 'Advanced blockchain-based identity management platform that provides self-sovereign identity, zero-knowledge proofs, and privacy-preserving authentication for enterprises.',
-    features: [
-      'Self-sovereign identity',
-      'Zero-knowledge proofs',
-      'Privacy-preserving authentication',
-      'Multi-factor security',
-      'Compliance management',
-      'Identity verification',
-      'Access control',
-      'Audit trails',
-      'API for integration',
-      '24/7 security support'
-    ],
+    features: ['Self-sovereign identity', 'Zero-knowledge proofs', 'Privacy-preserving authentication', 'Multi-factor security', 'Compliance management', 'Identity verification', 'Access control', 'Audit trails', 'API for integration', '24/7 security support'],
     popular: true,
     icon: '🆔',
     color: 'from-teal-600 to-cyan-600',

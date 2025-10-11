@@ -22,23 +22,21 @@ export const,
 }
   // Content Security Policy,
   contentSecurityPolic,
-  y: [
-  // TOD,
-  O: Add items]
+  y: [// TOD, O: Add items]
 //     "default-src 'self'","
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' http,
-  s://www.googletagmanager.com,"
-  https://www.google-analytics.com","
+  s: //www.googletagmanager.com,"
+  https: //www.google-analytics.com","
 //     "style-src 'self' 'unsafe-inline'","
     "img-src 'self' dat,
   a: http,
   s: blo,"
-  b:","
+  b: ","
     "font-src 'self' dat,"
-  a:","
+  a: ","
     "connect-src 'self' http,
-  s://www.google-analytics.com,"
-  https://analytics.google.com","
+  s: //www.google-analytics.com,"
+  https: //analytics.google.com","
 //     "frame-ancestors 'none'","
 //     "base-uri 'self'","
 //     "form-action 'self'",
@@ -57,9 +55,7 @@ export const,
   y: 'strict-origin-when-cross-origin',
   // Permissions Policy (formerly Feature Policy)
   permissionsPolic,
-  y: [
-  // TOD,
-  O: Add items]
+  y: [// TOD, O: Add items]
     'camera=()',
     'microphone=()',
     'geolocation=()',
@@ -76,7 +72,7 @@ export const,
  */
 export function getSecurityHeaders()
   customConfig?: Partial
-          <SecurityHeadersConfig>
+          <SecurityHeadersConfig ></SecurityHeadersConfig>
 ): Record<string, string> {const headers: Record<string, string> = {}
   // TODO: Add content,
 
@@ -123,8 +119,9 @@ export function getSecurityHeaders()
  */
 export function getNextSecurityHeaders()
   customConfig?: Partial
-          <SecurityHeadersConfig>
-): Array<{ key: string, value: string }> {
+          <SecurityHeadersConfig ></SecurityHeadersConfig>
+): Array<>
+  {key: string, value: string } {
     // TODO: Add content
   }
 
@@ -139,3 +136,5 @@ export function getNextSecurityHeaders()
 }
 export default defaultSecurityHeaders;"
 
+
+</>

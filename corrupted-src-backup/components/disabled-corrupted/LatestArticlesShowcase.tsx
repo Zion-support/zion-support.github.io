@@ -13,9 +13,9 @@ const LatestArticlesShowcas, e: React.FC = () => {
             Latest, Article, s & Resear, c, h
           <p, className='te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o'>
             Explore, cuttin, g-edge, insights, on A, I, automati, o, n, and, emerging, technologies
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8'>
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g: gr, i, d-co, l, s-3, ga, p-8'>
           {latestArticl, e, s.m, a, p(artic, l, e = > (
-            <, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className='group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hove, r:bord, e, r-indi, g, o-3, 0, 0'$2 />
+            <, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className='group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hove, r: bord, e, r-indi, g, o-3, 0, 0'$2 />
             >
               <div, className='p-6'>
                 <div, className='flex, item, s-center, justif, y-between, m, b-3'>
@@ -25,7 +25,7 @@ const LatestArticlesShowcas, e: React.FC = () => {
                     <span, classNam, e = 'bg-yell, o, w-100, tex, t-yell, o, w-800, tex, t-xs, p, x-2, p, y-1, rounde, d-full, fon, t-medi, u, m'>)
                       Featur, e, d;)
 const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
-            <, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className='group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hove, r:bord, e, r-indi, g, o-3, 0, 0'$2 />
+            <, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className='group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hove, r: bord, e, r-indi, g, o-3, 0, 0'$2 />
             >
               <div, className='p-6'>
                 <div, className='flex, item, s-center, justif, y-between, m, b-3'>
@@ -39,23 +39,23 @@ const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
                   {artic, l, e.description}
                 <div, className='flex, item, s-center, justif, y-between, tex, t-sm'>
                   <div, className='flex, item, s-center, tex, t-gr, a, y-5, 0, 0'>
-                    <Clock, className='w-4 h-4, m, r-1' />
+                    <Clock , className='w-4 h-4, m, r-1' /></Clock>
                     {artic, l, e.readTime}
                   <div, className='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'>
                     Read, Mor, e
                     Read, Mor, e
-                    <Link, className='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+                    <Link , className='w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' /></Link>
                 <div, className='flex, fle, x-wrap, ga, p-2, m, t-4'>
                   { artic, l, e.tags.sl, i, c, e(, 0, 3).m, a, p(t, a, g = > (
                     <, ke, y = { ta, g  }, classNa, m, e = 'te, x, t-xs, b, g-gr, a, y-100, tex, t-gr, a, y-700, p, x-2, p, y-1, rounde, d-fu, l, l'$2 />
                     >)
                       {t, a, g})
                     </span>)
-                    <Clock, className='w-4 h-4, m, r-1' />
+                    <Clock , className='w-4 h-4, m, r-1' /></Clock>
                     {artic, l, e.readTime}
                   <div, className='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'>
                     Read, Mor, e
-                    <Link, className='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+                    <Link , className='w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' /></Link>
                 <div, className='flex, fle, x-wrap, ga, p-2, m, t-4'>
                   {/* TODO: Fix JSX expression */}
                     <, ke, y = { ta, g  }, classNa, m, e = 'te, x, t-xs, b, g-gr, a, y-100, tex, t-gr, a, y-700, p, x-2, p, y-1, rounde, d-fu, l, l'$2 />
@@ -65,10 +65,10 @@ const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
           ))}
         <div, classNam, e = 'te, x, t-center, m, t-12'>
           <, t, o='/bl, o, g'$2 />
-            className='inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r:sca, l, e-105, shado, w-lg'
+            className='inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r: sca, l, e-105, shado, w-lg'
           >
             View, All, Articles
-            <Link, className='w-6 h-6' />
+            <Link , className='w-6 h-6' /></Link>
           ></Link>
             View, All, Articles
             <Link, className='w-6 h-6' /></Link>

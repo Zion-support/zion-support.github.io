@@ -1,10 +1,10 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import { Helmet  } from 'react-helmet-async'
 export default function BlogPost(): React.JSX.Element {
-  return(<React.Fragment>
-      <Header />
+  return(<React .Fragment></React>
+      <Header /></Header>
       <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white">
-        <Helmet>
+        <Helmet ></Helmet>
           <title>Genai 2025 Oct 02 Cache Playbook V2 - Zion Tech Group
           <meta
             name="description"
@@ -49,7 +49,7 @@ export default function BlogPost(): React.JSX.Element {
                 <div className="flex gap-4">)
                   <,),$2 />
           <div className="mt-16 pt-8 border-t border-white border-opacity-20"></div>
-            <div className="flex flex-col sm:flex-row justify-between items-center gap-6"></div>
+            <div className="flex flex-col sm: flex-row justify-between items-center gap-6"></div>
               <div></div>
                 <h3 className="text-xl font-bold mb-2">Share this article</h3>
                 <div className="flex gap-4"></div>
@@ -61,12 +61,12 @@ export default function BlogPost(): React.JSX.Element {
                     Twitter,
                   </a>,
                   <;$2 />
-                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
+                    href={`https: //www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
 export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expression */}
-  s://twitter.com/intent/tweet?text=${encodeURIComponent('Genai 2025 Oct 02 Cache Playbook V2')}&url=${encodeURIComponent(window.location.href)}`}
+  s: //twitter.com/intent/tweet?text=${encodeURIComponent('Genai 2025 Oct 02 Cache Playbook V2')}&url=${encodeURIComponent(window.location.href)}`}
                     target="_blank""
                     rel="noopener noreferrer""
                     className="bg-white bg-opacity-20,"
@@ -76,7 +76,7 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
                   </a>
                   <a></a>
                     href={/* TODO: Fix JSX expression */}`
-  s://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}"
+  s: //www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}"
                     target="_blank""
                     rel="noopener noreferrer""
                     className="bg-white bg-opacity-20,"
@@ -88,7 +88,7 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
               </div>
               <,$2 />
                 href="/blog"
-                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors"
               <a></a>"
                 href="/blog""
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold,"

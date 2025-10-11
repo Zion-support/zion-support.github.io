@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { readdir } from 'fs/promises'
+import { readdir  } from 'fs/promises'
 // Function to fix malformed Netlify function syntax
 function fixNetlifyFunction(content) {
   // Remove malformed function signatures and fix syntax
@@ -105,7 +105,7 @@ async function main() {/* TODO: Fix JSX expression */}
 }
 `
 if (import.meta.url === `fil)`
-  e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
+  e: //${process.argv[1]}`) {/* TODO: Fix JSX expression */}
 }
 
 export { fixNetlifyFunction }`

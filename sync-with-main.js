@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { execSync } from 'child_process'
+import { execSync  } from 'child_process'
 console.log('🔄 Syncing with latest main branch...')
 try {
   // Check current status
@@ -27,7 +27,7 @@ try {
     // Check for conflicts
     const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
     if (conflictFiles.trim()) {
-      console.log('🔧 Conflict files:', conflictFiles)
+      console.log('🔧 Conflict files: ', conflictFiles)
       // Try to resolve conflicts automatically
       try {
         execSync('git add .', { stdio: 'inherit' })
@@ -35,7 +35,7 @@ try {
         console.log('✅ Conflicts resolved and committed')
       } catch (resolveError) {
     console.log('❌ Could not automatically resolve conflicts')
-        console.log('Manual intervention needed for:', conflictFiles)
+        console.log('Manual intervention needed for: ', conflictFiles)
         throw resolveError
   }
     }
@@ -46,6 +46,6 @@ try {
   execSync('git push origin main', { stdio: 'inherit' })
   console.log('🎉 Successfully synced with main branch!')
 } catch (error) {
-    console.error('❌ Error syncing with main:', error.message)
+    console.error('❌ Error syncing with main: ', error.message)
   process.exit(1)
   }

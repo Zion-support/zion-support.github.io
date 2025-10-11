@@ -28,13 +28,13 @@ declare module 'react-day-picker' {
 }
 declare module 'sonner'
 declare module 'lucide-react' {
-  import { FC, SVGProps } from 'react'
+  import { FC, SVGProps  } from 'react'
   export interface LucideProps extends SVGProps<SVGSVGElement> {
     color?: string
     size?: number | string
     strokeWidth?: number | string
   }
-  export type LucideIcon = FC<LucideProps>
+  export type LucideIcon = FC<LucideProps ></LucideProps>
   export const AlertCircle: LucideIcon
   export const AlertTriangle: LucideIcon
   export const Apple: LucideIcon
@@ -282,7 +282,7 @@ declare module 'react-hook-form' {
   export interface UseFormReturn<
     TFieldValues extends FieldValues = FieldValues,
   > {
-    control: Control<TFieldValues>
+    control: Control<TFieldValues ></TFieldValues>
     handleSubmit: any
     register: any
     formState: any
@@ -290,13 +290,13 @@ declare module 'react-hook-form' {
   }
   export function useForm<
     TFieldValues extends FieldValues = FieldValues,
-  >(options?: any): UseFormReturn<TFieldValues>
+  >(options?: any): UseFormReturn<TFieldValues ></TFieldValues>
   export function useFieldArray<
     TFieldValues extends FieldValues = FieldValues,
   >(options: any): any
   export function useForm<
     TFieldValues extends FieldValues = FieldValues,
-  >(options?: any): UseFormReturn<TFieldValues>
+  >(options?: any): UseFormReturn<TFieldValues ></TFieldValues>
   export function useFieldArray<
     TFieldValues extends FieldValues = FieldValues,
   >(options: any): any
@@ -305,7 +305,7 @@ declare module 'react-hook-form' {
     TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
   > {
     name: TName
-    control?: Control<TFieldValues>
+    control?: Control<TFieldValues ></TFieldValues>
     rules?: any
     defaultValue?: any
     render: (props: any) => ReactElement
@@ -321,7 +321,7 @@ declare module 'react-hook-form' {
   export const FormProvider: ComponentType<FormProviderProps<any>>
   export function useFormContext<
     TFieldValues extends FieldValues = FieldValues,
-  >(): UseFormReturn<TFieldValues>
+  >(): UseFormReturn<TFieldValues ></TFieldValues>
 }
 declare module 'react-i18next'
 declare module 'react-dom/client'

@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface Revolutionary2026AIAutomationService {
   id: string
   name: string
@@ -39,27 +39,10 @@ export interface Revolutionary2026AIAutomationService {
   rating: number
   reviews: number
 }
-export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomationService[] = [
-  // AI Consciousness Orchestration Platform
+export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomationService[] = [// AI Consciousness Orchestration Platform
   {
-    id: 'ai-consciousness-orchestration-platform',
-    name: 'AI Consciousness Orchestration Platform',
-    tagline: 'Orchestrate multiple AI consciousnesses for complex problem solving',
-    price: '$8,999',
-    period: '/month',
-    description: 'Revolutionary platform that orchestrates multiple AI consciousnesses to work together, enabling unprecedented problem-solving capabilities across domains.',
-    features: [
-      'Multi-consciousness orchestration',
-      'Cross-domain problem solving',
-      'Consciousness synchronization',
-      'Emotional intelligence coordination',
-      'Creative collaboration networks',
-      'Ethical decision frameworks',
-      'Consciousness evolution tracking',
-      'Inter-dimensional communication',
-      'Quantum consciousness integration',
-      'Universal knowledge synthesis'
-    ],
+    id: 'ai-consciousness-orchestration-platform', name: 'AI Consciousness Orchestration Platform', tagline: 'Orchestrate multiple AI consciousnesses for complex problem solving', price: '$8, 999', period: '/month', description: 'Revolutionary platform that orchestrates multiple AI consciousnesses to work together, enabling unprecedented problem-solving capabilities across domains.', features: [
+      'Multi-consciousness orchestration', 'Cross-domain problem solving', 'Consciousness synchronization', 'Emotional intelligence coordination', 'Creative collaboration networks', 'Ethical decision frameworks', 'Consciousness evolution tracking', 'Inter-dimensional communication', 'Quantum consciousness integration', 'Universal knowledge synthesis'],
     popular: true,
     icon: '🧠⚛️',
     color: 'from-purple-600 to-cyan-500',
@@ -100,18 +83,7 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
     price: '$4,999',
     period: '/month',
     description: 'End-to-end autonomous business ecosystem where AI handles all aspects of business operations, from strategy to execution, without human intervention.',
-    features: [
-      'Autonomous business strategy',
-      'Self-optimizing operations',
-      'AI-driven decision making',
-      'Automated market analysis',
-      'Self-evolving business models',
-      'Autonomous customer service',
-      'AI-powered innovation',
-      'Self-managing teams',
-      'Predictive business intelligence',
-      'Autonomous growth optimization'
-    ],
+    features: ['Autonomous business strategy', 'Self-optimizing operations', 'AI-driven decision making', 'Automated market analysis', 'Self-evolving business models', 'Autonomous customer service', 'AI-powered innovation', 'Self-managing teams', 'Predictive business intelligence', 'Autonomous growth optimization'],
     popular: true,
     icon: '🏢🤖',
     color: 'from-blue-600 to-green-500',
@@ -152,18 +124,7 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
     price: '$6,999',
     period: '/month',
     description: 'Revolutionary quantum AI memory system that provides infinite memory capacity, instant recall, and quantum entanglement for distributed memory networks.',
-    features: [
-      'Infinite memory capacity',
-      'Quantum memory entanglement',
-      'Instant global recall',
-      'Distributed memory networks',
-      'Quantum memory compression',
-      'AI memory optimization',
-      'Cross-dimensional storage',
-      'Memory evolution tracking',
-      'Quantum memory security',
-      'Universal memory access'
-    ],
+    features: ['Infinite memory capacity', 'Quantum memory entanglement', 'Instant global recall', 'Distributed memory networks', 'Quantum memory compression', 'AI memory optimization', 'Cross-dimensional storage', 'Memory evolution tracking', 'Quantum memory security', 'Universal memory access'],
     popular: true,
     icon: '🧠⚛️',
     color: 'from-indigo-600 to-purple-500',
@@ -204,18 +165,7 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
     price: '$12,999',
     period: '/month',
     description: 'Revolutionary platform that uses AI to manipulate time perception and optimize business processes across multiple time dimensions.',
-    features: [
-      'Time perception manipulation',
-      'Multi-dimensional time optimization',
-      'Temporal business intelligence',
-      'Time-based predictive analytics',
-      'Temporal process optimization',
-      'Time-aware decision making',
-      'Temporal risk assessment',
-      'Time-based innovation cycles',
-      'Temporal market analysis',
-      'Time manipulation security'
-    ],
+    features: ['Time perception manipulation', 'Multi-dimensional time optimization', 'Temporal business intelligence', 'Time-based predictive analytics', 'Temporal process optimization', 'Time-aware decision making', 'Temporal risk assessment', 'Time-based innovation cycles', 'Temporal market analysis', 'Time manipulation security'],
     popular: true,
     icon: '⏰⚛️',
     color: 'from-yellow-600 to-orange-500',
@@ -256,18 +206,7 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
     price: '$3,999',
     period: '/month',
     description: 'Comprehensive platform for developing neural interfaces that connect human brains directly to computers, with AI-powered development tools and testing environments.',
-    features: [
-      'AI-powered interface design',
-      'Neural signal processing',
-      'Brain-computer communication',
-      'Interface testing environments',
-      'Neural data visualization',
-      'Interface optimization tools',
-      'Safety testing protocols',
-      'Compliance frameworks',
-      'Integration APIs',
-      'Development templates'
-    ],
+    features: ['AI-powered interface design', 'Neural signal processing', 'Brain-computer communication', 'Interface testing environments', 'Neural data visualization', 'Interface optimization tools', 'Safety testing protocols', 'Compliance frameworks', 'Integration APIs', 'Development templates'],
     popular: true,
     icon: '🧠💻',
     color: 'from-green-600 to-teal-500',

@@ -4,8 +4,7 @@ import OpenAI from 'openai'
   const apiKey = process && process.env.OPENAI_API_KEY
   const fallback = () => {
     return res && res.status(200).json({
-      questions: [
-        {
+      questions: [{
   if (!apiKey) return fallback()
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
@@ -15,8 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({
       questions: [
         {
-          question: `Which topic is central to ${moduleTitle}?`,
-          options: ['Random Ops', 'Zion OS mission', 'Unrelated finance', 'Legacy ERP'],
+          question: `Which topic is central to ${moduleTitle}?`, options: ['Random Ops', 'Zion OS mission', 'Unrelated finance', 'Legacy ERP'],
           answerIndex: 1,
         },
         {
@@ -45,16 +43,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!apiKey) return fallback()
   try {
     const client = new OpenAI({ apiKey })
-    const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`
+    const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string, "options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent: \n${moduleContent}`
     const completion = await client && client.chat.completions && completions.create({
       model: 'gpt-4o-mini',
-      messages: [
-        {
-          role: 'system',
-          content: 'You are an expert course designer for founders.',
-        },
-        { role: 'user', content: prompt },
-      ],
+      messages: [{
+          role: 'system', content: 'You are an expert course designer for founders.', }, { role: 'user', content: prompt }],
       temperature: 0 && 0.2,
     })
     const text = completion && completion.choices?.[0]?.message?.content ?? ''
@@ -68,10 +61,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       temperature: 0.2})
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini',
-      messages: [
-        { role: 'system', content: 'You are an expert course designer for founders.' },
-        { role: 'user', content: prompt },
-      ],
+      messages: [{ role: 'system', content: 'You are an expert course designer for founders.' }, { role: 'user', content: prompt }],
       temperature: 0.2,
     })
     const text = completion.choices?.[0]?.message?.content ?? ''

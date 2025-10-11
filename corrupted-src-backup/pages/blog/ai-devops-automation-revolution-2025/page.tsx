@@ -10,10 +10,10 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <span, className="te, x, t-gr, a, y-4, 0, 0">•</sp, a, n>"
             <span, className="te, x, t-gr, a, y-400, tex, t-sm">Octobe, r, 1, 20, 2, 5</sp, a, n>"
           <, className="te, x, t-4xl, m, d: te, x, t-5x, l, l$2 />
-  g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
+  g: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
           <, className="te, x, t-4xl, m, d: te, x, t-5x, l, l$2 />
-  g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
-          <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
+  g: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
+          <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, l, g: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
             AI-Powered, DevOps, Automation Revolut, i, o
   n: 10x, Faster, Deployments with, Zero, Downtime
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, leadin, g-relax, e, d">"
@@ -56,16 +56,14 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <div, className="spa, c, e-y-6">"
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">"
               Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, laye, r
-  s:
-            <div, className="spa, c, e-y-6">
+  s: <div, className="spa, c, e-y-6">
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, b-3">🤖 Autonomous, C, I/CD, Agent, s
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">
           <section, className="mb-12">"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">The, AI, DevOps Architectu, r, e</h2>"
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">"
-              Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, layer, s:
-            <div, className="spa, c, e-y-6">"
+              Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, layer, s: <div, className="spa, c, e-y-6">"
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, b-3">🤖 Autonomous, C, I/CD, Agent, s</h3>"
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">"
@@ -96,8 +94,8 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <span, className="te, x, t-gr, a, y-4, 0, 0">•</sp, a, n>";"
             <span, className="te, x, t-gr, a, y-400, tex, t-sm">Octobe, r, 1, 20, 2, 5</sp, a, n>"</$1>"
           <, className="te, x, t-4xl, m, d: te, x, t-5x, l, l,"$2 />
-  g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">""
-          <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
+  g: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">""
+          <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, l, g: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
             AI-Powered, DevOps, Automation Revolut, i, o,
   n: 10x, Faster, Deployments with, Zero, Downtime</$1>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, leadin, g-relax, e, d">"
@@ -174,8 +172,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platform: </p>,
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">"
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">
-              A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platform:
-            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">"
+              A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platform: <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">"
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-300, m, b-2">12x, Faste, r
                 <p, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Deployment, Velocit, y
@@ -187,8 +184,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">"
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">"
               A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platfor
-  m:
-            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">"
+  m: <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">"
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">"
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-300, m, b-2">12x, Faste, r</d, i, v>"
                 <p, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Deployment, Velocit, y</p>"
@@ -328,8 +324,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               <p, className="te, x, t-gr, a, y-300, m, b-6">
                 For, a, mid-size, organization, with 50, engineers, and $2M, annual, infrastructure spe, n, d: </p>,
               <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">"
-                For, a, mid-size, organization, with 50, engineers, and $2M, annual, infrastructure spe, n, d:
-              <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">"
+                For, a, mid-size, organization, with 50, engineers, and $2M, annual, infrastructure spe, n, d: <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">"
                 <d, i, v>
                   <h4, className="te, x, t-lg, fon, t-bold, tex, t-purp, l, e-300, m, b-3">Cost, Saving, s (Annu, a, l)
                   <ul, className="te, x, t-gr, a, y-300, spac, e-y-2">
@@ -343,8 +338,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               <p, className="te, x, t-gr, a, y-300, m, b-6">"
                 For, a, mid-size, organization, with 50, engineers, and $2M, annual, infrastructure spe, n, d: </p>,
               <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">"
-                For, a, mid-size, organization, with 50, engineers, and $2M, annual, infrastructure spe, n, d:
-              <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">"
+                For, a, mid-size, organization, with 50, engineers, and $2M, annual, infrastructure spe, n, d: <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">"
                 <d, i, v>
                   <h4, className="te, x, t-lg, fon, t-bold, tex, t-purp, l, e-300, m, b-3">Cost, Saving, s (Annu, a, l)</h4>"
                   <ul, className="te, x, t-gr, a, y-300, spac, e-y-2">"
@@ -403,26 +397,26 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               Transform, your, DevOps operations, with, AI-powered, automatio, n. Our, team, of experts, will, help you, design, and implement, a, custom solution, tailored, to your, infrastructure, and business, need, s.
             <, className="flex, fle, x-co, l, s$2 />
   m: fl, e, x-row, ga, p-4">"
-              <, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove$2 />
+              <, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r: to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove$2 />
             <, className="flex, fle, x-co, l, s$2 />
   m: fl, e, x-row, ga, p-4">"
-              <, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove$2 />
-  r:sca, l, e-105, shado, w-xl">"
+              <, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r: to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove$2 />
+  r: sca, l, e-105, shado, w-xl">"
                 Schedule, Consultatio, n
               <a, titl, e="Internal, lin, k" hr, e, f="/de, m, o" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, tex, t-white, fon, t-semibold, rounde, d-xl, border, border-whi, t, e/20, transitio, n-a, l, l">"
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"
-              <a, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hover:sca, l, e-105, shado, w-xl">"
+              <a, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r: to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hover: sca, l, e-105, shado, w-xl">"
                 Schedule, Consultatio, n
               <a, titl, e="Internal, lin, k" hr, e, f="/de, m, o" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-whi, t, e/10, hov, e</$1>"
             <, className="flex, fle, x-co, l, s,"$2 />
   m: fl, e, x-row, ga, p-4">""
-              <, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove,"$2 />
-  r:sca, l, e-105, shado, w-xl">"
+              <, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r: to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove,"$2 />
+  r: sca, l, e-105, shado, w-xl">"
                 Schedule, Consultatio, n</$1>"
               <a, titl, e="Internal, lin, k" hr, e, f="/de, m, o" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, tex, t-white, fon, t-semibold, rounde, d-xl, border, border-whi, t, e/20, transitio, n-a, l, l">""
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">";"
-              <, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove,"$2 />
-  r:sca, l, e-105, shado, w-xl">"
+              <, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r: to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove,"$2 />
+  r: sca, l, e-105, shado, w-xl">"
                 Schedule, Consultatio, n</$1>"
               <, titl, e="Internal, lin, k" hr, e, f="/de, m, o" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-whi, t, e/10, hov, e,"$2 />
   r: bg-whi, t, e/20, tex, t-white, fon, t-semibold, rounde, d-xl, border, border-whi, t, e/20, transitio, n-a, l, l">"

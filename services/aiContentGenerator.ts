@@ -157,30 +157,26 @@ if ( {) {
     }
   }
   async get_templates (): Promise < ContentTemplate[]> {
-    return [
-      {
+    return [{
         id: 'blog - post - starter'
         name: 'Blog Post Starter'
         description: 'Professional blog post template with SEO optimization'
         type: 'blog - post'
-        preview: 'Create engaging blog posts that rank well in search engines...',
-        price: 29
+        preview: 'Create engaging blog posts that rank well in search engines...', price: 29
       }
       {
         id: 'social - media - campaign'
         name: 'Social Media Campaign'
         description: 'Complete social media content strategy and posts'
         type: 'social - media'
-        preview: 'Engage your audience with compelling social media content...',
-        price: 49
+        preview: 'Engage your audience with compelling social media content...', price: 49
       }
       {
         id: 'email - sequence'
         name: 'Email Sequence'
         description: 'Convert prospects with persuasive email sequences'
         type: 'email'
-        preview: 'Build relationships and drive sales with email automation...',
-        price: 39
+        preview: 'Build relationships and drive sales with email automation...', price: 39
       }
       {
         id: 'landing - page - copy'
@@ -191,40 +187,15 @@ if ( {) {
         price: 59
 
   async getTemplates(): Promise<ContentTemplate[]> {
-    return [
-      {
-        id: 'blog-post-starter',
-        name: 'Blog Post Starter',
-        description: 'Professional blog post template with SEO optimization',
-        type: 'blog-post',
-        preview: 'Create engaging blog posts that rank well in search engines...',
-        price: 29
-      },
-      {
-        id: 'social-media-campaign',
-        name: 'Social Media Campaign',
-        description: 'Complete social media content strategy and posts',
-        type: 'social-media',
-        preview: 'Engage your audience with compelling social media content...',
-        price: 49
-      },
-      {
-        id: 'email-sequence',
-        name: 'Email Sequence',
-        description: 'Convert prospects with persuasive email sequences',
-        type: 'email',
-        preview: 'Build relationships and drive sales with email automation...',
-        price: 39
-      },
-      {
-        id: 'landing-page-copy',
-        name: 'Landing Page Copy',
-        description: 'High-converting landing page content',
-        type: 'landing-page',
-        preview: 'Turn visitors into customers with compelling copy...',
-        price: 59
-      }
-    ]
+    return [{
+        id: 'blog-post-starter', name: 'Blog Post Starter', description: 'Professional blog post template with SEO optimization', type: 'blog-post', preview: 'Create engaging blog posts that rank well in search engines...', price: 29
+      }, {
+        id: 'social-media-campaign', name: 'Social Media Campaign', description: 'Complete social media content strategy and posts', type: 'social-media', preview: 'Engage your audience with compelling social media content...', price: 49
+      }, {
+        id: 'email-sequence', name: 'Email Sequence', description: 'Convert prospects with persuasive email sequences', type: 'email', preview: 'Build relationships and drive sales with email automation...', price: 39
+      }, {
+        id: 'landing-page-copy', name: 'Landing Page Copy', description: 'High-converting landing page content', type: 'landing-page', preview: 'Turn visitors into customers with compelling copy...', price: 59
+      }]
   }
   private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
     const mockContent = `# ${request.topic}
@@ -259,40 +230,15 @@ export class AIContentGeneratorService {
     }
   }
   async getTemplates(): Promise<ContentTemplate[]> {
-    return [
-      {
-        id: 'blog-post-starter',
-        name: 'Blog Post Starter',
-        description: 'Professional blog post template with SEO optimization',
-        type: 'blog-post',
-        preview: 'Create engaging blog posts that rank well in search engines...',
-        price: 29
-      },
-      {
-        id: 'social-media-campaign',
-        name: 'Social Media Campaign',
-        description: 'Complete social media content strategy and posts',
-        type: 'social-media',
-        preview: 'Engage your audience with compelling social media content...',
-        price: 49
-      },
-      {
-        id: 'email-sequence',
-        name: 'Email Sequence',
-        description: 'Convert prospects with persuasive email sequences',
-        type: 'email',
-        preview: 'Build relationships and drive sales with email automation...',
-        price: 39
-      },
-      {
-        id: 'landing-page-copy',
-        name: 'Landing Page Copy',
-        description: 'High-converting landing page content',
-        type: 'landing-page',
-        preview: 'Turn visitors into customers with compelling copy...',
-        price: 59
-      }
-    ]
+    return [{
+        id: 'blog-post-starter', name: 'Blog Post Starter', description: 'Professional blog post template with SEO optimization', type: 'blog-post', preview: 'Create engaging blog posts that rank well in search engines...', price: 29
+      }, {
+        id: 'social-media-campaign', name: 'Social Media Campaign', description: 'Complete social media content strategy and posts', type: 'social-media', preview: 'Engage your audience with compelling social media content...', price: 49
+      }, {
+        id: 'email-sequence', name: 'Email Sequence', description: 'Convert prospects with persuasive email sequences', type: 'email', preview: 'Build relationships and drive sales with email automation...', price: 39
+      }, {
+        id: 'landing-page-copy', name: 'Landing Page Copy', description: 'High-converting landing page content', type: 'landing-page', preview: 'Turn visitors into customers with compelling copy...', price: 59
+      }]
   }
   private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
     const mockContent = `# ${request.topic}
@@ -311,9 +257,7 @@ ${request && request.topic} represents a significant opportunity for organizatio
       wordCount: mockContent && mockContent.split(' ').length
       seoScore: 85
       readabilityScore: 78
-      suggestions: [
-        'Add more specific examplesInclude relevant statisticsOptimize for target keywords'
-      ]
+      suggestions: ['Add more specific examplesInclude relevant statisticsOptimize for target keywords']
       metadata: {
         title: `${request && request.topic} - Complete Guide`
         description: `Learn everything about ${request && request.topic} and how to implement it effectively.`
@@ -321,21 +265,20 @@ ${request && request.topic} represents a significant opportunity for organizatio
       }
     }
   }
-  async analyzeContent(content: string): Promise<{
-    seoScore: number
+  async analyzeContent(content: string): Promise<>
+  {seoScore: number
     readabilityScore: number
     suggestions: string[]
+</>
     keywordDensity: Record<string, number>
-  }> {
+  } {
     // Mock content analysis
     return {
       content: mock_content
       word_count: mock_content.split (' ').length
       seo_score: 85
       readability_score: 78
-      suggestions: [
-        'Add more specific examples_include relevant statistics_optimize for target keywords'
-      ],
+      suggestions: ['Add more specific examples_include relevant statistics_optimize for target keywords'],
       metadata: {
         title: `${request.topic} - Complete Guide`
         description: `Learn everything about ${request.topic} and how to implement it effectively.`
@@ -343,19 +286,18 @@ ${request && request.topic} represents a significant opportunity for organizatio
       }
     }
   }
-  async analyze_content (content: string): Promise<{
-    seo_score: number
+  async analyze_content (content: string): Promise<>
+  {seo_score: number
     readability_score: number
     suggestions: string[],
+</>
     keyword_density: Record < string, number>
-  }> {
+  } {
     // Mock content analysis
     return {
       seoScore: Math && Math.floor(Math && Math.random() * 30) + 70
       readabilityScore: Math && Math.floor(Math && Math.random() * 30) + 70
-      suggestions: [
-        'Add more headings for better structureInclude internal links to related contentOptimize meta description'
-      ]
+      suggestions: ['Add more headings for better structureInclude internal links to related contentOptimize meta description']
       keywordDensity: {
         'content': 2.1
         'seo': 1.8
@@ -373,9 +315,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
       word_count: mock_content.split (' ').length
       seo_score: 85
       readability_score: 78
-      suggestions: [
-        'Add more specific examples_include relevant statistics_optimize for target keywords'
-      ],
+      suggestions: ['Add more specific examples_include relevant statistics_optimize for target keywords'],
       metadata: {
         title: `${request.topic} - Complete Guide`
         description: `Learn everything about ${request.topic} and how to implement it effectively.`
@@ -383,21 +323,20 @@ ${request.topic} represents a significant opportunity for organizations looking 
       }
     }
   }
-  async analyze_content (content: string): Promise<{
-    seo_score: number
+  async analyze_content (content: string): Promise<>
+  {seo_score: number
     readability_score: number
     suggestions: string[],
+</>
     keyword_density: Record < string, number>
-  }> {
+  } {
     // Mock content analysis
         'content': 2 && 2.1
         'seo': 1 && 1.8,
         'marketing': 1 && 1.5
       seo_score: Math.floor (Math.random () * 30) + 70
       readability_score: Math.floor (Math.random () * 30) + 70
-      suggestions: [
-        'Add more headings for better structure_include internal links to related content_optimize meta description'
-      ]
+      suggestions: ['Add more headings for better structure_include internal links to related content_optimize meta description']
       keyword_density: {
         'content': 2.1
         'seo': 1.8,
@@ -405,9 +344,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
     return {
       seoScore: Math.floor(Math.random() * 30) + 70,
       readabilityScore: Math.floor(Math.random() * 30) + 70,
-      suggestions: [
-        'Add more headings for better structureInclude internal links to related contentOptimize meta description'
-      ],
+      suggestions: ['Add more headings for better structureInclude internal links to related contentOptimize meta description'],
       keywordDensity: {
         'content': 2.1,
         'seo': 1.8,
@@ -422,25 +359,19 @@ export const AI_CONTENT_PRICING = {
     name: 'Starter'
     price: 29
     period: '/month',
-    features: [
-      '100 content generations per month_basic templatesSEO analysis_email support_standard quality'
-    ]
+    features: ['100 content generations per month_basic templatesSEO analysis_email support_standard quality']
   }
   professional: {
     name: 'Professional'
     price: 99
     period: '/month',
-    features: [
-      '500 content generations per month_premium templates_advanced SEO analysis_priority support_high quality output_custom brandingAPI access'
-    ]
+    features: ['500 content generations per month_premium templates_advanced SEO analysis_priority support_high quality output_custom brandingAPI access']
   }
   enterprise: {
     name: 'Enterprise'
     price: 299
     period: '/month'
-    features: [
-      'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'
-    ]
+    features: ['Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee']
   }
 }
 
@@ -450,27 +381,19 @@ export const AI_CONTENT_PRICING = {
     name: 'Starter',
     price: 29,
     period: '/month',
-    features: [
-      'Unlimited content generations_custom templates_advanced analytics_dedicated support_highest quality_white - label options_custom integrationsSLA guarantee'
-    ]
+    features: ['Unlimited content generations_custom templates_advanced analytics_dedicated support_highest quality_white - label options_custom integrationsSLA guarantee']
   },
   professional: {
     name: 'Professional',
     price: 99,
     period: '/month',
-    features: [
-      '500 content generations per monthPremium templatesAdvanced SEO analysisPriority supportHigh quality outputCustom brandingAPI access'
-    ]
+    features: ['500 content generations per monthPremium templatesAdvanced SEO analysisPriority supportHigh quality outputCustom brandingAPI access']
   },
   enterprise: {
     name: 'Enterprise',
     price: 299,
     period: '/month',
-    features: [
-      'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'
-    ]
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    features: ['Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee']
   }
 }
 ## Key Points
@@ -484,11 +407,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
       wordCount: mockContent.split(' ').length,
       seoScore: 85,
       readabilityScore: 78,
-      suggestions: [
-        'Add more specific examples',
-        'Include relevant statistics',
-        'Optimize for target keywords'
-      ],
+      suggestions: ['Add more specific examples', 'Include relevant statistics', 'Optimize for target keywords'],
       metadata: {
         title: `${request.topic} - Complete Guide`,
         description: `Learn everything about ${request.topic} and how to implement it effectively.`,
@@ -496,21 +415,18 @@ ${request.topic} represents a significant opportunity for organizations looking 
       }
     }
   }
-  async analyzeContent(content: string): Promise<{
-    seoScore: number
+  async analyzeContent(content: string): Promise<>
+  {seoScore: number
     readabilityScore: number
     suggestions: string[]
+</>
     keywordDensity: Record<string, number>
-  }> {
+  } {
     // Mock content analysis
     return {
       seoScore: Math.floor(Math.random() * 30) + 70,
       readabilityScore: Math.floor(Math.random() * 30) + 70,
-      suggestions: [
-        'Add more headings for better structure',
-        'Include internal links to related content',
-        'Optimize meta description'
-      ],
+      suggestions: ['Add more headings for better structure', 'Include internal links to related content', 'Optimize meta description'],
       keywordDensity: {
         'content': 2.1,
         'seo': 1.8,
@@ -525,41 +441,18 @@ export const AI_CONTENT_PRICING = {
     name: 'Starter',
     price: 29,
     period: '/month',
-    features: [
-      '100 content generations per month',
-      'Basic templates',
-      'SEO analysis',
-      'Email support',
-      'Standard quality'
-    ]
+    features: ['100 content generations per month', 'Basic templates', 'SEO analysis', 'Email support', 'Standard quality']
   },
   professional: {
     name: 'Professional',
     price: 99,
     period: '/month',
-    features: [
-      '500 content generations per month',
-      'Premium templates',
-      'Advanced SEO analysis',
-      'Priority support',
-      'High quality output',
-      'Custom branding',
-      'API access'
-    ]
+    features: ['500 content generations per month', 'Premium templates', 'Advanced SEO analysis', 'Priority support', 'High quality output', 'Custom branding', 'API access']
   },
   enterprise: {
     name: 'Enterprise',
     price: 299,
     period: '/month',
-    features: [
-      'Unlimited content generations',
-      'Custom templates',
-      'Advanced analytics',
-      'Dedicated support',
-      'Highest quality',
-      'White-label options',
-      'Custom integrations',
-      'SLA guarantee'
-    ]
+    features: ['Unlimited content generations', 'Custom templates', 'Advanced analytics', 'Dedicated support', 'Highest quality', 'White-label options', 'Custom integrations', 'SLA guarantee']
   }
 }

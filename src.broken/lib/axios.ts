@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { safeStorage } from '@/utils/safeStorage'
+import { safeStorage  } from '@/utils/safeStorage'
 type FulfilledFn = (value: any) => any | Promise<any>
 type RejectedFn = (error: any) => any | Promise<any>
 class InterceptorManager {

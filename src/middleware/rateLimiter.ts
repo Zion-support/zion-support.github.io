@@ -123,7 +123,7 @@ export const rateLimiters = {
   strict: new RateLimiter({
     windowMs: 60 * 1000,
     max: 10,
-    message:   ,
+    message:  ,
 $4}),
   // Standard: 100 requests per 15 minutes
   standard: new RateLimiter({

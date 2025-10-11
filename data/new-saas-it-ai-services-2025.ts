@@ -1,26 +1,13 @@
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'
+import { EnhancedRealMicroSaasService  } from './enhanced-real-micro-saas-services'
 const contact = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
 }
-export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
-	{
-		id: 'affiliate-marketing-tracker-pro',
-		name: 'Affiliate Marketing Tracker Pro',
-		tagline: 'End-to-end affiliate attribution, fraud detection, and commission automation',
-		price: '$99',
-		period: '/month',
-		description: 'Manage affiliate programs with cross-device attribution, fraud prevention, commission rules, and automated payouts. Integrates with Shopify, WooCommerce, Stripe, and HubSpot.',
-		features: [
-			'Cross-device attribution and UTM stitching',
-			'Fraud heuristics and anomaly detection',
-			'Tiered commissions and coupon attribution',
-			'Automated payouts and tax forms',
-			'Shopify/WooCommerce checkout plugins',
-			'Webhooks, API, and GDPR controls'
-		],
+export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [{
+		id: 'affiliate-marketing-tracker-pro', name: 'Affiliate Marketing Tracker Pro', tagline: 'End-to-end affiliate attribution, fraud detection, and commission automation', price: '$99', period: '/month', description: 'Manage affiliate programs with cross-device attribution, fraud prevention, commission rules, and automated payouts. Integrates with Shopify, WooCommerce, Stripe, and HubSpot.', features: [
+			'Cross-device attribution and UTM stitching', 'Fraud heuristics and anomaly detection', 'Tiered commissions and coupon attribution', 'Automated payouts and tax forms', 'Shopify/WooCommerce checkout plugins', 'Webhooks, API, and GDPR controls'],
 		popular: true,
 		icon: '🤝',
 		color: 'from-emerald-600 to-teal-700',
@@ -55,14 +42,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		price: '$12',
 		period: '/month',
 		description: 'Simple privacy-first analytics with conversions, funnels, and call/email click tracking. No cookies, no personal data.',
-		features: [
-			'Cookie-less tracking and EU hosting',
-			'Goals, funnels, and UTM reports',
-			'Click-to-call/email events out of the box',
-			'Weekly insights digest',
-			'Embeddable public dashboards',
-			'CSV/JSON export'
-		],
+		features: ['Cookie-less tracking and EU hosting', 'Goals, funnels, and UTM reports', 'Click-to-call/email events out of the box', 'Weekly insights digest', 'Embeddable public dashboards', 'CSV/JSON export'],
 		popular: false,
 		icon: '📊',
 		color: 'from-cyan-600 to-blue-700',
@@ -97,14 +77,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		price: '$149',
 		period: '/month',
 		description: 'Helpdesk built for managed service providers: email ingestion, SLAs, runbooks, asset inventory, and client-facing reports.',
-		features: [
-			'Email-to-ticket and rules-based routing',
-			'SLA timers and breach alerts',
-			'Knowledge base and runbooks',
-			'Client portal with reports and billing summaries',
-			'RMM webhooks and remote access shortcuts',
-			'Intake forms and approvals'
-		],
+		features: ['Email-to-ticket and rules-based routing', 'SLA timers and breach alerts', 'Knowledge base and runbooks', 'Client portal with reports and billing summaries', 'RMM webhooks and remote access shortcuts', 'Intake forms and approvals'],
 		popular: true,
 		icon: '🛠️',
 		color: 'from-indigo-600 to-purple-700',
@@ -139,14 +112,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		price: '$39',
 		period: '/month',
 		description: 'Generate on-brand content with templates, tone control, plagiarism checks, and SEO scoring. Export to CMS.',
-		features: [
-			'Templates for blog, social, email',
-			'Tone and style controls',
-			'SEO keywords and outline suggestions',
-			'Plagiarism and fact checks',
-			'Brand voice and snippet library',
-			'One-click CMS export'
-		],
+		features: ['Templates for blog, social, email', 'Tone and style controls', 'SEO keywords and outline suggestions', 'Plagiarism and fact checks', 'Brand voice and snippet library', 'One-click CMS export'],
 		popular: false,
 		icon: '🧠',
 		color: 'from-pink-600 to-rose-700',
@@ -181,14 +147,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		price: '$59',
 		period: '/month',
 		description: 'Self-service returns portal, label generation, RMA workflow, and return reason analytics. Reduce churn and costs.',
-		features: [
-			'RMA flows and label generation',
-			'Return status notifications',
-			'Warehouse and carrier integrations',
-			'Exchange/store credit flows',
-			'Fraud heuristics and abuse controls',
-			'Reasons analytics and policy rules'
-		],
+		features: ['RMA flows and label generation', 'Return status notifications', 'Warehouse and carrier integrations', 'Exchange/store credit flows', 'Fraud heuristics and abuse controls', 'Reasons analytics and policy rules'],
 		popular: true,
 		icon: '📦',
 		color: 'from-amber-600 to-orange-700',
@@ -223,14 +182,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		price: '$29',
 		period: '/month',
 		description: 'Create multi-step follow-ups with time windows, intent detection, and CRM sync. Track opens, clicks, and replies.',
-		features: [
-			'Drag-and-drop sequence builder',
-			'Send windows and throttling',
-			'Intent classification and auto-stop',
-			'CRM field mapping and sync',
-			'A/B tests and analytics',
-			'Custom tracking domains'
-		],
+		features: ['Drag-and-drop sequence builder', 'Send windows and throttling', 'Intent classification and auto-stop', 'CRM field mapping and sync', 'A/B tests and analytics', 'Custom tracking domains'],
 		popular: false,
 		icon: '📧',
 		color: 'from-sky-600 to-indigo-700',
@@ -265,14 +217,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		price: '$15',
 		period: '/month',
 		description: 'Batch upload episodes, diarization, timestamps, highlights, and SEO pages. Export SRT, VTT, and DOCX.',
-		features: [
-			'Speaker diarization',
-			'Word-level timestamps',
-			'Highlight extraction',
-			'Glossaries and style rules',
-			'Podcast host integrations',
-			'Public transcript pages'
-		],
+		features: ['Speaker diarization', 'Word-level timestamps', 'Highlight extraction', 'Glossaries and style rules', 'Podcast host integrations', 'Public transcript pages'],
 		popular: false,
 		icon: '🎙️',
 		color: 'from-violet-600 to-fuchsia-700',
@@ -307,14 +252,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		price: '$9',
 		period: '/month',
 		description: 'Beautiful, fast portfolio sites with sections for case studies, pricing, and contact forms. Optimized for SEO.',
-		features: [
-			'Templates for design, dev, photo, and more',
-			'Drag-and-drop sections',
-			'Client testimonials and logos',
-			'Blog and case study layouts',
-			'Custom domains and SSL',
-			'Analytics and SEO basics'
-		],
+		features: ['Templates for design, dev, photo, and more', 'Drag-and-drop sections', 'Client testimonials and logos', 'Blog and case study layouts', 'Custom domains and SSL', 'Analytics and SEO basics'],
 		popular: false,
 		icon: '🖼️',
 		color: 'from-slate-600 to-gray-700',
@@ -349,14 +287,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		price: '$19',
 		period: '/month',
 		description: 'Lightweight CRM with contacts, tags, calendar, and a simple pipeline. Email/SMS reminders included.',
-		features: [
-			'Contacts with tags and notes',
-			'Calendar and appointment reminders',
-			'Simple pipeline with stages',
-			'Gmail/Outlook sync',
-			'SMS/email reminders',
-			'Import/export CSV'
-		],
+		features: ['Contacts with tags and notes', 'Calendar and appointment reminders', 'Simple pipeline with stages', 'Gmail/Outlook sync', 'SMS/email reminders', 'Import/export CSV'],
 		popular: false,
 		icon: '📇',
 		color: 'from-teal-600 to-emerald-700',
@@ -391,14 +322,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		price: '$59',
 		period: '/month',
 		description: 'Optimize content with live SERP data, keyword suggestions, headings, and schema hints. Integrates with CMS.',
-		features: [
-			'Keyword and intent mapping',
-			'Outline and heading suggestions',
-			'Schema and internal link hints',
-			'Competitor gap analysis',
-			'Readability and tone scores',
-			'CMS plugins'
-		],
+		features: ['Keyword and intent mapping', 'Outline and heading suggestions', 'Schema and internal link hints', 'Competitor gap analysis', 'Readability and tone scores', 'CMS plugins'],
 		popular: true,
 		icon: '🔎',
 		color: 'from-cyan-600 to-emerald-700',

@@ -15,7 +15,7 @@
   s: true })} catch (error) {/* TODO: Fix JSX expression */}
   r: 'Internal server error' })} } async function sendToExternalServices(even)
   t: AnalyticsEvent) {/* TODO: Fix JSX expression */}
-  s://www.google-analytics.com/mp/collect?measurement_id=${process.env.GA_MEASUREMENT_ID}&api_secret=${process.env.GA_API_SECRET}` {/* TODO: Fix JSX expression */}
+  s: //www.google-analytics.com/mp/collect?measurement_id=${process.env.GA_MEASUREMENT_ID}&api_secret=${process.env.GA_API_SECRET}` {/* TODO: Fix JSX expression */}
   d: 'POST'} header,
   s: {' 'Content-Type': 'application/json' }, bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})

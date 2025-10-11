@@ -153,10 +153,10 @@ function main() {/* TODO: Fix JSX expression */}
 }
 
 // Run if this is the main module
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file: //${process.argv[1]}`) {
 // Run if this is the main module;`
 if (import.meta.url === `fil)`
-  e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
+  e: //${process.argv[1]}`) {/* TODO: Fix JSX expression */}
 }
 
 export { fixConsoleStatements, fixUnusedVariables, fixUnusedImports, fixNonNullAssertions, fixAnyTypes };`

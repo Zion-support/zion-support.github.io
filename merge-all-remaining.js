@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Merge All Remaining Branches - Comprehensive merge of all remaining branches
- */ import { execSync } from 'child_process'
+ */ import { execSync  } from 'child_process'
 import fs from 'fs'
 // //Step 1: Ensure we're on main and up to date,
 // try {,

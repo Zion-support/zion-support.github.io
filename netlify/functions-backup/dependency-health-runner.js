@@ -31,7 +31,7 @@ exports.handler = async () => {const logs = []}
   }
   process.env.CANONICAL_URL =
     process.env.CANONICAL_URL || 'https: //ziontechgroup.com',
-  logStep('deps:auto-upgrade') () =>,
+  logStep('deps: auto-upgrade') () =>,
     process.env.CANONICAL_URL || 'http,
   s: //ziontechgroup.com'
   logStep('dep)

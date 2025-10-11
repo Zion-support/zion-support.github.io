@@ -1,18 +1,18 @@
-<<<<<<< HEAD
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ItServicesPage: React.FC = () => {
-  const services = [
-    {
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions for your business',
-      features: ['AWS/Azure/GCP', 'Migration Services', 'Cost Optimization'],
+  return (
+
+  const services = [{
+      title: 'Cloud Infrastructure', description: 'Scalable and secure cloud solutions for your business', features: ['AWS/Azure/GCP', 'Migration Services', 'Cost Optimization'],
       price: 'Starting at $800/month',
       icon: '☁️'
-    },
+    
+  );
+},
     {
       title: 'Network Security',
       description: 'Comprehensive network protection and monitoring',
@@ -42,7 +42,6 @@ const ItServicesPage: React.FC = () => {
       icon: '💻'
     },
     {
-<<<<<<< HEAD
       title: 'IT Consulting',
       description: 'Strategic IT planning and technology assessment',
       features: ['Technology Roadmap', 'Vendor Selection', 'Digital Transformation'],
@@ -51,32 +50,26 @@ const ItServicesPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
-    { metric: '99.9%', description: 'Uptime Guarantee' },
-    { metric: '24/7', description: 'Support Available' },
-    { metric: '15min', description: 'Average Response Time' },
-    { metric: '50+', description: 'Expert Technicians' }
-  ];
+  const benefits = [{ metric: '99.9%', description: 'Uptime Guarantee' }, { metric: '24/7', description: 'Support Available' }, { metric: '15min', description: 'Average Response Time' }, { metric: '50+', description: 'Expert Technicians' }];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
+      <Navigation /></Navigation>
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
             IT Services
           </h1>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8">
             Comprehensive IT solutions to keep your business running smoothly. 
             From cloud infrastructure to cybersecurity, we've got you covered.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="cyber-button">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <Link to="/contact" className="cyber-button"></Link>
               Get IT Assessment
             </Link>
-            <Link to="/case-studies" className="cyber-button" style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}>
+            <Link to="/case-studies" className="cyber-button" style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}></Link>
               View IT Case Studies
             </Link>
           </div>
@@ -85,7 +78,7 @@ const ItServicesPage: React.FC = () => {
         {/* Benefits Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Our IT Services?</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center cyber-card">
                 <div className="text-4xl font-bold text-indigo-400 mb-2">{benefit.metric}</div>
@@ -98,7 +91,7 @@ const ItServicesPage: React.FC = () => {
         {/* Services Grid */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">IT Services</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="cyber-card hologram-card p-6">
                 <div className="text-4xl mb-4 text-center">{service.icon}</div>
@@ -110,424 +103,15 @@ const ItServicesPage: React.FC = () => {
                       <span className="text-indigo-400 mr-2">✓</span>
                       {feature}
                     </li>
-=======
-      title: 'Data Analytics & BI',
-      description: 'Data warehouse design, ETL processes, and business intelligence dashboard development.',
-      icon: '📊',
-      price: 'Starting at $2,800/month',
-      features: ['Data warehouse design', 'ETL development', 'Dashboard creation', 'Report automation', 'Data governance'],
-      benefits: ['Make data-driven decisions', 'Improve business insights', 'Automate reporting'],
-      marketPrice: '$4,500-9,000/month',
-      category: 'Analytics',
-      technologies: ['Tableau', 'Power BI', 'Snowflake', 'Apache Airflow', 'Python']
-    },
-    {
-      title: 'API Development & Integration',
-      description: 'Custom API development, third-party integrations, and microservices architecture.',
-      icon: '🔌',
-      price: 'Starting at $2,000/month',
-      features: ['RESTful API design', 'GraphQL development', 'Third-party integrations', 'API documentation', 'Rate limiting'],
-      benefits: ['Improve system connectivity', 'Enable rapid development', 'Enhance scalability'],
-      marketPrice: '$3,500-7,500/month',
-      category: 'Integration',
-      technologies: ['Node.js', 'Python', 'GraphQL', 'Kong', 'Postman']
-    },
-    {
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile application development for iOS and Android.',
-      icon: '📱',
-      price: 'Starting at $3,500/month',
-      features: ['Native iOS/Android apps', 'Cross-platform development', 'UI/UX design', 'App store deployment', 'Maintenance'],
-      benefits: ['Reach mobile users', 'Improve user engagement', 'Increase revenue'],
-      marketPrice: '$6,000-15,000/month',
-      category: 'Mobile',
-      technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin']
-    },
-    {
-      title: 'Web Application Development',
-      description: 'Custom web applications, e-commerce solutions, and enterprise web platforms.',
-      icon: '💻',
-      price: 'Starting at $2,500/month',
-      features: ['Custom web apps', 'E-commerce solutions', 'CMS development', 'Responsive design', 'SEO optimization'],
-      benefits: ['Improve online presence', 'Increase conversions', 'Enhance user experience'],
-      marketPrice: '$4,000-10,000/month',
-      category: 'Web Development',
-      technologies: ['React', 'Vue.js', 'Node.js', 'PHP', 'WordPress']
-    },
-    {
-      title: 'IT Consulting & Strategy',
-      description: 'Technology roadmap development, digital transformation planning, and IT strategy consulting.',
-      icon: '💡',
-      price: 'Starting at $200/hour',
-      features: ['Technology assessment', 'Digital transformation', 'IT strategy planning', 'Vendor evaluation', 'ROI analysis'],
-      benefits: ['Align IT with business goals', 'Optimize technology investments', 'Reduce risks'],
-      marketPrice: '$300-500/hour',
-      category: 'Consulting',
-      technologies: ['Strategic Planning', 'Architecture Design', 'Risk Assessment', 'ROI Analysis']
-    },
-    {
-      title: 'Disaster Recovery & Backup',
-      description: 'Comprehensive backup solutions, disaster recovery planning, and business continuity services.',
-      icon: '🔄',
-      price: 'Starting at $1,800/month',
-      features: ['Backup strategy', 'Disaster recovery planning', 'Data replication', 'Recovery testing', 'Business continuity'],
-      benefits: ['Minimize downtime', 'Protect critical data', 'Ensure business continuity'],
-      marketPrice: '$3,000-6,000/month',
-      category: 'Backup & Recovery',
-      technologies: ['Veeam', 'Commvault', 'AWS Backup', 'Azure Backup', 'VMware']
-    },
-    {
-      title: 'Blockchain Infrastructure',
-      description: 'Enterprise blockchain solutions, smart contract development, and decentralized application deployment.',
-      icon: '⛓️',
-      price: 'Starting at $4,500/month',
-      features: ['Blockchain deployment', 'Smart contract development', 'DApp development', 'Node management', 'Security auditing'],
-      benefits: ['Enable decentralized solutions', 'Improve transparency', 'Reduce intermediaries'],
-      marketPrice: '$8,000-25,000/month',
-      category: 'Blockchain',
-      technologies: ['Ethereum', 'Hyperledger', 'Solidity', 'Web3', 'IPFS']
-    },
-    {
-      title: 'IoT Platform Management',
-      description: 'Comprehensive IoT infrastructure management and device connectivity solutions.',
-      icon: '🌐',
-      price: 'Starting at $3,200/month',
-      features: ['Device management', 'Data collection', 'Real-time monitoring', 'Edge computing', 'Security management'],
-      benefits: ['Enable IoT deployments', 'Improve operational efficiency', 'Reduce manual monitoring'],
-      marketPrice: '$5,500-18,000/month',
-      category: 'IoT',
-      technologies: ['AWS IoT', 'Azure IoT', 'MQTT', 'CoAP', 'Edge Computing']
-    },
-    {
-      title: 'Edge Computing Infrastructure',
-      description: 'Distributed computing infrastructure for low-latency applications and edge data processing.',
-      icon: '⚡',
-      price: 'Starting at $3,800/month',
-      features: ['Edge node deployment', 'Data processing', 'Content delivery', 'Load balancing', 'Monitoring'],
-      benefits: ['Reduce latency', 'Improve performance', 'Enable real-time applications'],
-      marketPrice: '$6,500-20,000/month',
-      category: 'Edge Computing',
-      technologies: ['Kubernetes', 'Docker', 'CDN', 'Edge Servers', '5G Networks']
-    },
-    {
-      title: 'Quantum Computing Infrastructure',
-      description: 'Quantum computing platform setup and quantum algorithm development services.',
-      icon: '⚛️',
-      price: 'Starting at $8,000/month',
-      features: ['Quantum hardware setup', 'Algorithm development', 'Quantum simulation', 'Hybrid systems', 'Research support'],
-      benefits: ['Enable quantum computing', 'Solve complex problems', 'Gain competitive advantage'],
-      marketPrice: '$15,000-50,000/month',
-      category: 'Quantum Computing',
-      technologies: ['IBM Qiskit', 'Google Cirq', 'Rigetti', 'IonQ', 'Quantum Simulators']
-    },
-    {
-      title: '5G Network Implementation',
-      description: '5G network infrastructure deployment and optimization for enterprise applications.',
-      icon: '📡',
-      price: 'Starting at $5,500/month',
-      features: ['5G network design', 'Infrastructure deployment', 'Performance optimization', 'Security implementation', 'Integration services'],
-      benefits: ['Enable high-speed connectivity', 'Support IoT applications', 'Improve mobile experience'],
-      marketPrice: '$10,000-40,000/month',
-      category: '5G Networks',
-      technologies: ['5G Core', 'RAN', 'Network Slicing', 'MEC', 'NFV']
-    },
-    {
-      title: 'Microservices Architecture',
-      description: 'Modern microservices architecture design and implementation for scalable applications.',
-      icon: '🔧',
-      price: 'Starting at $3,500/month',
-      features: ['Architecture design', 'Service decomposition', 'API gateway setup', 'Service mesh', 'Monitoring'],
-      benefits: ['Improve scalability', 'Enable rapid development', 'Reduce deployment risks'],
-      marketPrice: '$6,000-20,000/month',
-      category: 'Microservices',
-      technologies: ['Kubernetes', 'Docker', 'Istio', 'API Gateway', 'Service Mesh']
-    },
-    {
-      title: 'Serverless Computing Platform',
-      description: 'Serverless architecture implementation and management for event-driven applications.',
-      icon: '☁️',
-      price: 'Starting at $2,800/month',
-      features: ['Function deployment', 'Event handling', 'Auto-scaling', 'Cost optimization', 'Monitoring'],
-      benefits: ['Reduce infrastructure costs', 'Improve scalability', 'Simplify deployment'],
-      marketPrice: '$4,500-15,000/month',
-      category: 'Serverless',
-      technologies: ['AWS Lambda', 'Azure Functions', 'Google Cloud Functions', 'Serverless Framework']
-    },
-    {
-      title: 'Data Lake Architecture',
-      description: 'Enterprise data lake design and implementation for big data analytics and storage.',
-      icon: '🏞️',
-      price: 'Starting at $4,200/month',
-      features: ['Data lake design', 'Data ingestion', 'Storage optimization', 'Security implementation', 'Analytics setup'],
-      benefits: ['Centralize data storage', 'Enable advanced analytics', 'Improve data governance'],
-      marketPrice: '$7,000-25,000/month',
-      category: 'Data Architecture',
-      technologies: ['AWS S3', 'Azure Data Lake', 'Hadoop', 'Spark', 'Delta Lake']
-    },
-    {
-      title: 'AI Infrastructure Setup',
-      description: 'AI/ML infrastructure deployment and management for machine learning workloads.',
-      icon: '🤖',
-      price: 'Starting at $4,800/month',
-      features: ['GPU cluster setup', 'ML pipeline deployment', 'Model serving', 'Data preprocessing', 'Monitoring'],
-      benefits: ['Enable AI/ML workloads', 'Improve model performance', 'Reduce training time'],
-      marketPrice: '$8,000-30,000/month',
-      category: 'AI Infrastructure',
-      technologies: ['NVIDIA GPUs', 'Kubernetes', 'TensorFlow', 'PyTorch', 'MLflow']
-    },
-    {
-      title: 'Hybrid Cloud Management',
-      description: 'Multi-cloud and hybrid cloud infrastructure management and optimization.',
-      icon: '☁️',
-      price: 'Starting at $3,600/month',
-      features: ['Multi-cloud strategy', 'Cost optimization', 'Security management', 'Migration services', 'Monitoring'],
-      benefits: ['Optimize cloud costs', 'Improve reliability', 'Enable vendor flexibility'],
-      marketPrice: '$6,500-22,000/month',
-      category: 'Cloud Management',
-      technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'CloudFormation']
-    },
-    {
-      title: 'Zero Trust Security Architecture',
-      description: 'Zero trust security model implementation for enterprise network protection.',
-      icon: '🔒',
-      price: 'Starting at $4,000/month',
-      features: ['Identity verification', 'Network segmentation', 'Access control', 'Threat detection', 'Compliance'],
-      benefits: ['Improve security posture', 'Reduce attack surface', 'Ensure compliance'],
-      marketPrice: '$7,500-25,000/month',
-      category: 'Security Architecture',
-      technologies: ['Zero Trust', 'Identity Management', 'Network Security', 'SIEM', 'EDR']
-    },
-    {
-      title: 'High-Performance Computing (HPC)',
-      description: 'High-performance computing cluster setup and management for scientific and engineering workloads.',
-      icon: '💻',
-      price: 'Starting at $6,000/month',
-      features: ['HPC cluster design', 'Job scheduling', 'Performance optimization', 'Storage management', 'Monitoring'],
-      benefits: ['Accelerate computations', 'Enable complex simulations', 'Improve research efficiency'],
-      marketPrice: '$12,000-50,000/month',
-      category: 'HPC',
-      technologies: ['Slurm', 'OpenMPI', 'CUDA', 'InfiniBand', 'Parallel File Systems']
-    },
-    {
-      title: 'Content Delivery Network (CDN)',
-      description: 'Global CDN implementation and optimization for improved content delivery performance.',
-      icon: '🌍',
-      price: 'Starting at $1,500/month',
-      features: ['CDN setup', 'Content optimization', 'Caching strategy', 'Performance monitoring', 'Security'],
-      benefits: ['Improve load times', 'Reduce bandwidth costs', 'Enhance user experience'],
-      marketPrice: '$2,500-10,000/month',
-      category: 'CDN',
-      technologies: ['CloudFlare', 'AWS CloudFront', 'Azure CDN', 'Akamai', 'Fastly']
-    },
-    {
-      title: 'Database Performance Optimization',
-      description: 'Database performance tuning and optimization for improved application performance.',
-      icon: '🗄️',
-      price: 'Starting at $2,200/month',
-      features: ['Performance analysis', 'Query optimization', 'Index tuning', 'Capacity planning', 'Monitoring'],
-      benefits: ['Improve query performance', 'Reduce response times', 'Optimize resource usage'],
-      marketPrice: '$4,000-15,000/month',
-      category: 'Database Optimization',
-      technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch']
-    },
-    {
-      title: 'API Gateway Management',
-      description: 'Enterprise API gateway setup and management for secure and scalable API operations.',
-      icon: '🚪',
-      price: 'Starting at $2,500/month',
-      features: ['API gateway setup', 'Rate limiting', 'Authentication', 'Monitoring', 'Documentation'],
-      benefits: ['Centralize API management', 'Improve security', 'Enable API monetization'],
-      marketPrice: '$4,500-18,000/month',
-      category: 'API Management',
-      technologies: ['Kong', 'AWS API Gateway', 'Azure API Management', 'Apigee', 'Zuul']
-    },
-    {
-      title: 'Container Orchestration',
-      description: 'Kubernetes and container orchestration platform setup and management.',
-      icon: '🐳',
-      price: 'Starting at $3,200/month',
-      features: ['Kubernetes setup', 'Container management', 'Auto-scaling', 'Service mesh', 'Monitoring'],
-      benefits: ['Improve scalability', 'Simplify deployment', 'Enable microservices'],
-      marketPrice: '$5,500-20,000/month',
-      category: 'Containerization',
-      technologies: ['Kubernetes', 'Docker', 'Helm', 'Istio', 'Prometheus']
-    },
-    {
-      title: 'Real-time Data Streaming',
-      description: 'Real-time data streaming platform setup and management for live data processing.',
-      icon: '📊',
-      price: 'Starting at $2,800/month',
-      features: ['Stream processing', 'Data pipelines', 'Real-time analytics', 'Event handling', 'Monitoring'],
-      benefits: ['Enable real-time insights', 'Improve decision making', 'Support live applications'],
-      marketPrice: '$5,000-18,000/month',
-      category: 'Streaming',
-      technologies: ['Apache Kafka', 'Apache Flink', 'Apache Storm', 'AWS Kinesis', 'Azure Stream Analytics']
-    }
-  ];
-
-  const categories = [...new Set(itServices.map(service => service.category))];
-
-  return (
-    <>
-  </>
-      <Helmet>
-        <title>IT Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT services including cloud, security, DevOps, and infrastructure solutions for modern businesses." />
-        <meta name="keywords" content="IT services, cloud computing, cybersecurity, DevOps, infrastructure, technology consulting" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section */}</div>
-        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
-        </section>
-          <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-            <div className="text-center"></div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Professional IT Services</h1>
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-                Comprehensive technology solutions to power your business growth and digital transformation
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-                  Get Free Assessment
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                  View Our Portfolio
-                </button>
-              ))
-            </div>
-          </div>
-        </section>
-
-        {/* Key Benefits */}
-        <section className="py-16 bg-white">
-        </section>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-            <div className="text-center mb-12"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Our IT Services?
-              </h2>
-              <p className="text-xl text-gray-600">
-                Expert solutions delivered by certified professionals with proven track records
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              <div className="text-center"></div>
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Server className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Certified Experts</h3>
-                <p className="text-gray-600">AWS, Microsoft, Cisco, and other industry certifications</p>
-              </div>
-              <div className="text-center"></div>
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Shield className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Security</h3>
-                <p className="text-gray-600">Bank-level security with compliance and monitoring</p>
-              </div>
-              <div className="text-center"></div>
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Cloud className="w-8 h-8 text-purple-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Cloud-First Approach</h3>
-                <p className="text-gray-600">Modern, scalable solutions built for the cloud</p>
-              </div>
-              <div className="text-center"></div>
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Settings className="w-8 h-8 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">24/7 Support</h3>
-                <p className="text-gray-600">Round-the-clock monitoring and support services</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Services by Category */}
-        {categories.map(category => (
-          <section key={category} className="py-16 bg-gray-50">
-        </section>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-              <div className="text-center mb-12"></div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  {category} Services
-                </h2>
-                <p className="text-xl text-gray-600">
-                  Professional {category.toLowerCase()} solutions tailored to your business needs
-                </p>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {itServices
-                  .filter(service => service.category === category)
-                  .map((service, index) => (</div>
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"></div>
-                      <div className="text-4xl mb-4">{service.icon}</div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                      <p className="text-gray-600 mb-4">{service.description}</p>
-                      
-                      <div className="mb-4"></div>
-                        <div className="flex items-center justify-between mb-2"></div>
-                          <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
-                        </div>
-                        <div className="text-sm text-green-600 font-semibold">
-                          Save up to 40% vs market rates</div>
-                        </div>
-                      </div>
-
-                      <div className="mb-4"></div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                        <ul className="space-y-1">
-                          {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <div className="mb-4"></div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {service.technologies.map((tech, techIndex) => (</div>
-                            <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div className="mb-6"></div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
-                        <ul className="space-y-1">
-                          {service.benefits.map((benefit, benefitIndex) => (
-                            <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                              <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
-                              {benefit}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                        Get Quote
-                      </button>
-                    </div>
->>>>>>> origin/main
                   ))}
                 </ul>
                 <div className="text-center">
                   <div className="text-lg font-bold text-indigo-400 mb-3">{service.price}</div>
-                  <Link to="/contact" className="text-indigo-400 hover:text-indigo-300 font-medium">
+                  <Link to="/contact" className="text-indigo-400 hover: text-indigo-300 font-medium"></Link>
                     Learn More →
                   </Link>
                 </div>
               </div>
-<<<<<<< HEAD
             ))}
           </div>
         </section>
@@ -535,7 +119,7 @@ const ItServicesPage: React.FC = () => {
         {/* Process Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Our IT Service Process</h2>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">1</span>
@@ -575,8 +159,8 @@ const ItServicesPage: React.FC = () => {
           <p className="text-gray-300 mb-6">
             Let our expert team help you build a robust and secure IT foundation for your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="cyber-button">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <Link to="/contact" className="cyber-button"></Link>
               Get Started Today
             </Link>
             <a href="tel:+13024640950" className="cyber-button" style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}>
@@ -586,51 +170,13 @@ const ItServicesPage: React.FC = () => {
         </section>
       </main>
       
-      <Footer />
+      <Footer /></Footer>
     </div>
-=======
-            </div>
-          </section>
-        ))}
-        {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-        </section>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Transform Your IT Infrastructure?
-            </h2>
-            <p className="text-xl mb-8 text-blue-100">
-              Contact our certified IT experts for a free consultation and custom solution design
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <a 
-                href="tel:+13024640950"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
-              >
-                📞 +1 302 464 0950
-              </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                ✉️ kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div className="mt-8 text-sm text-blue-200"></div>
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-            </div>
-          </div>
-        </section>
-      </div>
-
-=======
-<<<<<<< HEAD
 import React, { useState, useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet  } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { 
-  Cloud, Shield, Settings, Database, Smartphone, Lock, BarChart, Users, 
+import { Cloud, Shield, Settings, Database, Smartphone, Lock, BarChart, Users, 
   CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Star, Zap, Cpu, 
   HardDrive, Wifi, Server, Code, Globe, Target, TrendingUp, Search, Filter,
   Building, Network, Router, Monitor, Laptop, Printer, Key, Eye, AlertTriangle,
@@ -666,36 +212,22 @@ import {
   Signal as SignalIcon, SignalZero as Signal0Icon, SignalLow as Signal1Icon,
   SignalMedium as Signal2Icon, SignalHigh as Signal3Icon, SignalFull as Signal4Icon,
   Wifi as WifiIcon2, WifiOff as WifiOffIcon2
-} from 'lucide-react';
+ } from 'lucide-react';
 
 const ITServicesPage: React.FC = () => {
+  return (
+
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
 
-  const itServices = useMemo(() => [
-    // Core IT Services
+  const itServices = useMemo(() => [// Core IT Services
     {
-      id: 'managed-it-services',
-      name: 'Managed IT Services',
-      description: 'Comprehensive 24/7 IT management and support for your business infrastructure.',
-      icon: Settings,
-      category: 'infrastructure',
-      pricing: { starting: 199, period: 'month', perUser: true },
-      features: [
-        '24/7 monitoring and support',
-        'Proactive maintenance',
-        'Security management',
-        'Backup and disaster recovery',
-        'Software updates',
-        'Help desk support'
-      ],
-      benefits: [
-        'Reduce IT costs by 40%',
-        'Minimize downtime by 90%',
-        'Improve security posture',
-        'Focus on core business'
-      ],
+      id: 'managed-it-services', name: 'Managed IT Services', description: 'Comprehensive 24/7 IT management and support for your business infrastructure.', icon: Settings, category: 'infrastructure', pricing: { starting: 199, period: 'month', perUser: true 
+  );
+}, features: [
+        '24/7 monitoring and support', 'Proactive maintenance', 'Security management', 'Backup and disaster recovery', 'Software updates', 'Help desk support'],
+      benefits: ['Reduce IT costs by 40%', 'Minimize downtime by 90%', 'Improve security posture', 'Focus on core business'],
       popular: true,
       rating: 4.9,
       users: 2500,
@@ -708,20 +240,8 @@ const ITServicesPage: React.FC = () => {
       icon: Cloud,
       category: 'cloud',
       pricing: { starting: 2999, period: 'project' },
-      features: [
-        'Assessment and planning',
-        'Data migration',
-        'Application migration',
-        'Security configuration',
-        'Performance optimization',
-        'Training and support'
-      ],
-      benefits: [
-        'Reduce infrastructure costs by 60%',
-        'Improve scalability',
-        'Enhance security',
-        'Increase flexibility'
-      ],
+      features: ['Assessment and planning', 'Data migration', 'Application migration', 'Security configuration', 'Performance optimization', 'Training and support'],
+      benefits: ['Reduce infrastructure costs by 60%', 'Improve scalability', 'Enhance security', 'Increase flexibility'],
       popular: true,
       rating: 4.8,
       users: 1200,
@@ -734,20 +254,8 @@ const ITServicesPage: React.FC = () => {
       icon: Shield,
       category: 'security',
       pricing: { starting: 149, period: 'month' },
-      features: [
-        'Firewall management',
-        'Endpoint protection',
-        'Email security',
-        'Network monitoring',
-        'Vulnerability assessment',
-        'Incident response'
-      ],
-      benefits: [
-        'Prevent 99.9% of threats',
-        'Reduce security incidents by 95%',
-        'Comply with regulations',
-        'Protect sensitive data'
-      ],
+      features: ['Firewall management', 'Endpoint protection', 'Email security', 'Network monitoring', 'Vulnerability assessment', 'Incident response'],
+      benefits: ['Prevent 99.9% of threats', 'Reduce security incidents by 95%', 'Comply with regulations', 'Protect sensitive data'],
       popular: true,
       rating: 4.9,
       users: 3200,
@@ -760,20 +268,8 @@ const ITServicesPage: React.FC = () => {
       icon: Network,
       category: 'infrastructure',
       pricing: { starting: 399, period: 'month' },
-      features: [
-        'Network design and planning',
-        'Hardware installation',
-        'Configuration and optimization',
-        'Monitoring and maintenance',
-        'Troubleshooting',
-        'Performance tuning'
-      ],
-      benefits: [
-        'Improve network performance by 80%',
-        'Reduce connectivity issues by 90%',
-        'Enhance security',
-        'Support business growth'
-      ],
+      features: ['Network design and planning', 'Hardware installation', 'Configuration and optimization', 'Monitoring and maintenance', 'Troubleshooting', 'Performance tuning'],
+      benefits: ['Improve network performance by 80%', 'Reduce connectivity issues by 90%', 'Enhance security', 'Support business growth'],
       popular: false,
       rating: 4.7,
       users: 1800,
@@ -786,20 +282,8 @@ const ITServicesPage: React.FC = () => {
       icon: Database,
       category: 'data',
       pricing: { starting: 99, period: 'month' },
-      features: [
-        'Automated daily backups',
-        'Cloud storage integration',
-        'Point-in-time recovery',
-        'Disaster recovery planning',
-        'Data encryption',
-        'Compliance reporting'
-      ],
-      benefits: [
-        'Protect against data loss',
-        'Recover data in minutes',
-        'Meet compliance requirements',
-        'Reduce downtime'
-      ],
+      features: ['Automated daily backups', 'Cloud storage integration', 'Point-in-time recovery', 'Disaster recovery planning', 'Data encryption', 'Compliance reporting'],
+      benefits: ['Protect against data loss', 'Recover data in minutes', 'Meet compliance requirements', 'Reduce downtime'],
       popular: true,
       rating: 4.8,
       users: 4100,
@@ -812,20 +296,8 @@ const ITServicesPage: React.FC = () => {
       icon: Headphones,
       category: 'support',
       pricing: { starting: 79, period: 'month', perUser: true },
-      features: [
-        '24/7 phone and email support',
-        'Remote assistance',
-        'Ticket management',
-        'Knowledge base access',
-        'Priority support levels',
-        'SLA guarantees'
-      ],
-      benefits: [
-        'Resolve issues 3x faster',
-        'Improve user satisfaction',
-        'Reduce IT workload',
-        'Increase productivity'
-      ],
+      features: ['24/7 phone and email support', 'Remote assistance', 'Ticket management', 'Knowledge base access', 'Priority support levels', 'SLA guarantees'],
+      benefits: ['Resolve issues 3x faster', 'Improve user satisfaction', 'Reduce IT workload', 'Increase productivity'],
       popular: true,
       rating: 4.6,
       users: 5600,
@@ -838,20 +310,8 @@ const ITServicesPage: React.FC = () => {
       icon: Key,
       category: 'software',
       pricing: { starting: 49, period: 'month' },
-      features: [
-        'License inventory',
-        'Compliance monitoring',
-        'Cost optimization',
-        'Renewal management',
-        'Usage tracking',
-        'Audit support'
-      ],
-      benefits: [
-        'Reduce software costs by 30%',
-        'Ensure compliance',
-        'Avoid penalties',
-        'Optimize usage'
-      ],
+      features: ['License inventory', 'Compliance monitoring', 'Cost optimization', 'Renewal management', 'Usage tracking', 'Audit support'],
+      benefits: ['Reduce software costs by 30%', 'Ensure compliance', 'Avoid penalties', 'Optimize usage'],
       popular: false,
       rating: 4.5,
       users: 2200,
@@ -864,20 +324,8 @@ const ITServicesPage: React.FC = () => {
       icon: Target,
       category: 'consulting',
       pricing: { starting: 199, period: 'hour' },
-      features: [
-        'IT strategy development',
-        'Technology assessment',
-        'Vendor evaluation',
-        'Project planning',
-        'Change management',
-        'Training programs'
-      ],
-      benefits: [
-        'Align IT with business goals',
-        'Make informed decisions',
-        'Reduce technology risks',
-        'Improve ROI'
-      ],
+      features: ['IT strategy development', 'Technology assessment', 'Vendor evaluation', 'Project planning', 'Change management', 'Training programs'],
+      benefits: ['Align IT with business goals', 'Make informed decisions', 'Reduce technology risks', 'Improve ROI'],
       popular: false,
       rating: 4.8,
       users: 800,
@@ -890,20 +338,8 @@ const ITServicesPage: React.FC = () => {
       icon: Smartphone,
       category: 'mobile',
       pricing: { starting: 29, period: 'month', perDevice: true },
-      features: [
-        'Device enrollment',
-        'Policy enforcement',
-        'App management',
-        'Security controls',
-        'Remote wipe capability',
-        'Compliance reporting'
-      ],
-      benefits: [
-        'Secure mobile devices',
-        'Enforce policies',
-        'Reduce security risks',
-        'Improve productivity'
-      ],
+      features: ['Device enrollment', 'Policy enforcement', 'App management', 'Security controls', 'Remote wipe capability', 'Compliance reporting'],
+      benefits: ['Secure mobile devices', 'Enforce policies', 'Reduce security risks', 'Improve productivity'],
       popular: true,
       rating: 4.7,
       users: 3400,
@@ -916,20 +352,8 @@ const ITServicesPage: React.FC = () => {
       icon: Phone,
       category: 'communication',
       pricing: { starting: 39, period: 'month', perUser: true },
-      features: [
-        'HD voice quality',
-        'Video conferencing',
-        'Mobile integration',
-        'Call routing',
-        'Voicemail to email',
-        'Analytics and reporting'
-      ],
-      benefits: [
-        'Reduce phone costs by 50%',
-        'Improve communication',
-        'Enhance collaboration',
-        'Scale easily'
-      ],
+      features: ['HD voice quality', 'Video conferencing', 'Mobile integration', 'Call routing', 'Voicemail to email', 'Analytics and reporting'],
+      benefits: ['Reduce phone costs by 50%', 'Improve communication', 'Enhance collaboration', 'Scale easily'],
       popular: false,
       rating: 4.6,
       users: 1900,
@@ -942,20 +366,8 @@ const ITServicesPage: React.FC = () => {
       icon: Server,
       category: 'infrastructure',
       pricing: { starting: 299, period: 'month' },
-      features: [
-        'Hardware monitoring',
-        'Software updates',
-        'Performance optimization',
-        'Security patches',
-        'Backup verification',
-        'Capacity planning'
-      ],
-      benefits: [
-        'Prevent server failures',
-        'Improve performance',
-        'Extend hardware life',
-        'Reduce downtime'
-      ],
+      features: ['Hardware monitoring', 'Software updates', 'Performance optimization', 'Security patches', 'Backup verification', 'Capacity planning'],
+      benefits: ['Prevent server failures', 'Improve performance', 'Extend hardware life', 'Reduce downtime'],
       popular: true,
       rating: 4.8,
       users: 2800,
@@ -968,20 +380,8 @@ const ITServicesPage: React.FC = () => {
       icon: FileText,
       category: 'compliance',
       pricing: { starting: 2499, period: 'audit' },
-      features: [
-        'Security assessment',
-        'Compliance evaluation',
-        'Risk analysis',
-        'Policy review',
-        'Remediation planning',
-        'Documentation'
-      ],
-      benefits: [
-        'Meet compliance requirements',
-        'Identify security gaps',
-        'Reduce audit risks',
-        'Improve security posture'
-      ],
+      features: ['Security assessment', 'Compliance evaluation', 'Risk analysis', 'Policy review', 'Remediation planning', 'Documentation'],
+      benefits: ['Meet compliance requirements', 'Identify security gaps', 'Reduce audit risks', 'Improve security posture'],
       popular: false,
       rating: 4.9,
       users: 600,
@@ -989,19 +389,7 @@ const ITServicesPage: React.FC = () => {
     }
   ], []);
 
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Globe },
-    { id: 'infrastructure', name: 'Infrastructure', icon: Server },
-    { id: 'cloud', name: 'Cloud Services', icon: Cloud },
-    { id: 'security', name: 'Security', icon: Shield },
-    { id: 'data', name: 'Data Management', icon: Database },
-    { id: 'support', name: 'Support', icon: Headphones },
-    { id: 'software', name: 'Software', icon: Code },
-    { id: 'consulting', name: 'Consulting', icon: Target },
-    { id: 'mobile', name: 'Mobile', icon: Smartphone },
-    { id: 'communication', name: 'Communication', icon: Phone },
-    { id: 'compliance', name: 'Compliance', icon: FileText }
-  ];
+  const categories = [{ id: 'all', name: 'All Services', icon: Globe }, { id: 'infrastructure', name: 'Infrastructure', icon: Server }, { id: 'cloud', name: 'Cloud Services', icon: Cloud }, { id: 'security', name: 'Security', icon: Shield }, { id: 'data', name: 'Data Management', icon: Database }, { id: 'support', name: 'Support', icon: Headphones }, { id: 'software', name: 'Software', icon: Code }, { id: 'consulting', name: 'Consulting', icon: Target }, { id: 'mobile', name: 'Mobile', icon: Smartphone }, { id: 'communication', name: 'Communication', icon: Phone }, { id: 'compliance', name: 'Compliance', icon: FileText }];
 
   const filteredServices = useMemo(() => {
     let filtered = itServices;
@@ -1030,17 +418,13 @@ const ITServicesPage: React.FC = () => {
       case 'price-high':
         filtered.sort((a, b) => b.pricing.starting - a.pricing.starting);
         break;
-      default:
-        break;
+      default: break;
     }
 
     return filtered;
   }, [searchTerm, selectedCategory, sortBy, itServices]);
-=======
-<<<<<<< HEAD
 'use client';
 import React from 'react';
->>>>>>> origin/main
 
 const ItServicesPage: React.FC = () => {
   return (
@@ -1056,76 +440,23 @@ const ItServicesPage: React.FC = () => {
         </div>
       </div>
     </div>
->>>>>>> origin/main
->>>>>>> origin/main
   );
 };
-=======
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { Server, Shield, Cloud, Code, CheckCircle, ArrowRight } from 'lucide-react'
+import { Server, Shield, Cloud, Code, CheckCircle, ArrowRight  } from 'lucide-react'
 
-<<<<<<< HEAD
 export default ItServicesPage;
-=======
-<<<<<<< HEAD
 export default ITServicesPage;
-=======
-const ITServicesPage: React.FC = () => {
-  const services = [
-    {
-      icon: Server,
-      title: 'Infrastructure Management',
-      description: 'Comprehensive IT infrastructure solutions for modern businesses.',
-      features: ['Server Management', 'Network Configuration', 'System Monitoring', 'Backup Solutions']
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Protect your business with advanced security solutions.',
-      features: ['Threat Detection', 'Data Protection', 'Compliance', 'Incident Response']
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Solutions',
-      description: 'Scalable and secure cloud infrastructure for your business.',
-      features: ['Cloud Migration', 'Hybrid Solutions', 'Cost Optimization', '24/7 Support']
-    },
-    {
-      icon: Code,
-      title: 'Custom Development',
-      description: 'Tailored software solutions built to meet your specific requirements.',
-      features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
-    }
-  ]
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              IT <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Services</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive IT solutions to keep your business running smoothly and securely.
-            </p>
-          </div>
-        </div>
-      </section>
->>>>>>> origin/main
 
       {/* Services Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/20 transition-all duration-300">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4">
                     <service.icon className="w-6 h-6 text-white" />
@@ -1136,7 +467,7 @@ const ITServicesPage: React.FC = () => {
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                       {feature}
                     </li>
                   ))}
@@ -1148,7 +479,7 @@ const ITServicesPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Need IT Support?
@@ -1157,17 +488,15 @@ const ITServicesPage: React.FC = () => {
             Our expert team is ready to help you with all your IT needs.
           </p>
           <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center mx-auto">
-            <ArrowRight className="w-5 h-5 mr-2" />
+            <ArrowRight className="w-5 h-5 mr-2" /></ArrowRight>
             Get Started
           </button>
         </div>
       </section>
 
-      <Footer />
+      <Footer /></Footer>
     </div>
   )
 }
 
 export default ITServicesPage
->>>>>>> origin/main
->>>>>>> origin/main

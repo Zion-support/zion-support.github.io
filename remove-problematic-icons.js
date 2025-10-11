@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import fs from 'fs'
-import { glob } from 'glob'
+import { glob  } from 'glob'
 async function removeProblematicIcons() {
   //Find all TypeScript/JavaScript files in src/components
   //   for (const filePath of files) {

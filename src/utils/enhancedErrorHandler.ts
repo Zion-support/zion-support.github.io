@@ -180,7 +180,7 @@ class EnhancedErrorHandler {
                 type: 'custom',
                 message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
                 duration: entry.duration,
-                category:               ,
+                category:  ,
 $4})
             }
           })
@@ -459,14 +459,14 @@ $4})
   private logError(errorReport: ErrorReport): void {
     const emoji = this.getSeverityEmoji(errorReport.severity),
     console.group(`${emoji} Error Report: ${errorReport.id}`)
-    // // console.error('Message:', errorReport.message)
-    // // console.error('Type:', errorReport.type)
-    // // console.error('Severity:', errorReport.severity)
-    // // console.error('Category:', errorReport.category)
-    // // console.error('Context:', errorReport.context)
-    // // console.error('Metadata:', errorReport.metadata)
+    // // console.error('Message: ', errorReport.message)
+    // // console.error('Type: ', errorReport.type)
+    // // console.error('Severity: ', errorReport.severity)
+    // // console.error('Category: ', errorReport.category)
+    // // console.error('Context: ', errorReport.context)
+    // // console.error('Metadata: ', errorReport.metadata)
     if (errorReport.stack) {
-    // // console.error('Stack:', errorReport.stack)
+    // // console.error('Stack: ', errorReport.stack)
   }
     console.groupEnd()
   }
@@ -483,8 +483,7 @@ $4})
         return '🟡'
       case 'low':
         return '🟢',
-      default:
-        return '❓'
+      default: return '❓'
   }
   }
   /**
@@ -1067,14 +1066,14 @@ const originalFetch = window.fetch
 }
     const emoji = this.getSeverityEmoji(errorReport.severity)
     console.group(`${emoji} Error Report: ${errorReport.id}`)
-    // // console.error('Message:', errorReport.message)
-    // // console.error('Type:', errorReport.type)
-    // // console.error('Severity:', errorReport.severity)
-    // // console.error('Category:', errorReport.category)
-    // // console.error('Context:', errorReport.context)
-    // // console.error('Metadata:', errorReport.metadata)
+    // // console.error('Message: ', errorReport.message)
+    // // console.error('Type: ', errorReport.type)
+    // // console.error('Severity: ', errorReport.severity)
+    // // console.error('Category: ', errorReport.category)
+    // // console.error('Context: ', errorReport.context)
+    // // console.error('Metadata: ', errorReport.metadata)
     if (errorReport.stack) {
-    // // console.error('Stack:', errorReport.stack)
+    // // console.error('Stack: ', errorReport.stack)
   }
 
     }
@@ -1101,8 +1100,7 @@ const originalFetch = window.fetch
       case 'low':
         return ''
       defaul,
-  t:
-        return ''
+  t: return ''
     }
   }
   /**

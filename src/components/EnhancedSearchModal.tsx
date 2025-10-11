@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Search, X, ArrowRight, Clock, TrendingUp, Star } from 'lucide-react'
+import { Search, X, ArrowRight, Clock, TrendingUp, Star  } from 'lucide-react'
 interface SearchResult {
     id: string
   title: string
@@ -14,69 +14,19 @@ interface SearchModalProps {
     isOpen: boolean,
   onClose: () => void
   }
-const mockSearchResults: SearchResult[] = [
-  {
-    id: '1',
-    title: 'AI Analytics Dashboard',
-    description: 'AI-powered business intelligence and analytics platform with real-time insights and predictive modeling.',
-    url: '/ai-analytics-dashboard',
-    category: 'Micro SAAS',
-    type: 'service',
-    popularity: 95,
-    lastModified: '2024-01-15'
-  },
-  {
-    id: '2',
-    title: 'AI Workflow Automation',
-    description: 'Visual workflow builder with AI-powered process optimization and automation capabilities.',
-    url: '/ai-workflow-automation',
-    category: 'AI Services',
-    type: 'service',
-    popularity: 88,
-    lastModified: '2024-01-10'
-  },
-  {
-    id: '3',
-    title: 'About Us',
-    description: 'Learn about Zion Tech Group, our mission, team, and commitment to AI innovation.',
-    url: '/about',
-    category: 'Company',
-    type: 'page',
-    popularity: 75,
-    lastModified: '2024-01-08'
-  },
-  {
-    id: '4',
-    title: 'AI Customer Support',
-    description: 'Intelligent customer support solutions with natural language processing and automated responses.',
-    url: '/ai-customer-support',
-    category: 'AI Services',
-    type: 'service',
-    popularity: 90,
-    lastModified: '2024-01-14'
-  },
-  {
-    id: '5',
-    title: 'API Documentation',
-    description: 'Comprehensive API documentation for integrating with our AI services and platforms.',
-    url: '/api-docs',
-    category: 'Documentation',
-    type: 'documentation',
-    popularity: 80,
-    lastModified: '2024-01-05'
-  }
-]
-const recentSearches = [
-  'AI Analytics',
-  'Workflow Automation',
-  'Healthcare AI'
-]
-const popularSearches = [
-  'AI Services',
-  'Quantum Computing',
-  'Cybersecurity',
-  'Data Analytics'
-]
+const mockSearchResults: SearchResult[] = [{
+    id: '1', title: 'AI Analytics Dashboard', description: 'AI-powered business intelligence and analytics platform with real-time insights and predictive modeling.', url: '/ai-analytics-dashboard', category: 'Micro SAAS', type: 'service', popularity: 95, lastModified: '2024-01-15'
+  }, {
+    id: '2', title: 'AI Workflow Automation', description: 'Visual workflow builder with AI-powered process optimization and automation capabilities.', url: '/ai-workflow-automation', category: 'AI Services', type: 'service', popularity: 88, lastModified: '2024-01-10'
+  }, {
+    id: '3', title: 'About Us', description: 'Learn about Zion Tech Group, our mission, team, and commitment to AI innovation.', url: '/about', category: 'Company', type: 'page', popularity: 75, lastModified: '2024-01-08'
+  }, {
+    id: '4', title: 'AI Customer Support', description: 'Intelligent customer support solutions with natural language processing and automated responses.', url: '/ai-customer-support', category: 'AI Services', type: 'service', popularity: 90, lastModified: '2024-01-14'
+  }, {
+    id: '5', title: 'API Documentation', description: 'Comprehensive API documentation for integrating with our AI services and platforms.', url: '/api-docs', category: 'Documentation', type: 'documentation', popularity: 80, lastModified: '2024-01-05'
+  }]
+const recentSearches = ['AI Analytics', 'Workflow Automation', 'Healthcare AI']
+const popularSearches = ['AI Services', 'Quantum Computing', 'Cybersecurity', 'Data Analytics']
 const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
     </SearchModalProps>const</SearchModalProps> [query, setQuery] = useState('')
   const [results, setResults] = useState<SearchResult[]>([])</SearchResult>const</SearchResult> [isSearching, setIsSearching] = useState(false)
@@ -158,8 +108,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
         return '🏢'
       case 'Documentation':
         return '📚',
-      default:
-        return '🔍'
+      default: return '🔍'
   }
   }
   const getTypeColor = (type: string) => {
@@ -172,8 +121,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
         return 'text-pink-400'
       case 'documentation':
         return 'text-green-400',
-      default:
-        return 'text-gray-400'
+      default: return 'text-gray-400'
   }
   }
   if (!isOpen) return null
@@ -188,7 +136,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
       <div className="relative w-full max-w-2xl bg-slate-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-400/20">
         {/* Header */}
         <div className="flex items-center p-4 border-b border-cyan-400/20">
-          <Search className="w-5 h-5 text-cyan-400 mr-3" />
+          <Search className="w-5 h-5 text-cyan-400 mr-3" /></Search>
           <input
             ref={inputRef}
             type="text"
@@ -199,8 +147,8 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
           />
           <$2 />
             onClick={onClose}
-            className="p-2 text-gray-400 hover:text-white transition-colors">
-            <X className="w-5 h-5" />
+            className="p-2 text-gray-400 hover: text-white transition-colors">
+            <X className="w-5 h-5" /></X>
         {/* Content */}
         <div className="max-h-96 overflow-y-auto">
           {showSuggestions && !query && (
@@ -208,27 +156,27 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
               {/* Recent Searches */}
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center">
-                  <Clock className="w-4 h-4 mr-2" />
+                  <Clock className="w-4 h-4 mr-2" /></Clock>
                   Recent Searches
                 <div className="flex flex-wrap gap-2">
                   {recentSearches.map((search, index) => (
                     <$2 />
                       key={index}
                       onClick={() => handleSuggestionClick(search)}
-                      className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors">
+                      className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover: bg-cyan-400/20 hover:text-cyan-400 transition-colors">
                       {search}
                   ))}
               {/* Popular Searches */}
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center">
-                  <TrendingUp className="w-4 h-4 mr-2" />
+                  <TrendingUp className="w-4 h-4 mr-2" /></TrendingUp>
                   Popular Searches
                 <div className="flex flex-wrap gap-2">
                   {popularSearches.map((search, index) => (
                     <$2 />
                       key={index}
                       onClick={() => handleSuggestionClick(search)}
-                      className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors">
+                      className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover: bg-cyan-400/20 hover:text-cyan-400 transition-colors">
                       {search}
                   ))}
           )}
@@ -247,7 +195,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                       className={`w-full text-left p-3 rounded-lg transition-colors ${
                         index === selectedIndex
                           ? 'bg-cyan-400/20 text-cyan-400'
-                          : 'hover:bg-slate-800/50 text-gray-300'
+                          : 'hover: bg-slate-800/50 text-gray-300'
                       }`}
                     >
                       <div className="flex items-start justify-between">
@@ -262,17 +210,17 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                             <span>{result.category}
                             {result.popularity && (
                               <div className="flex items-center space-x-1">
-                                <Star className="w-3 h-3" />
+                                <Star className="w-3 h-3" /></Star>
                                 <span>{result.popularity}%
                             )}
                             {result.lastModified && (
                               <span>Updated {result.lastModified}
                             )}
-                        <ArrowRight className="w-4 h-4 text-gray-400" />
+                        <ArrowRight className="w-4 h-4 text-gray-400" /></ArrowRight>
                   ))}
               ) : (
                 <div className="text-center py-8">
-                  <Search className="w-12 h-12 text-gray-600 mx-auto mb-4" />
+                  <Search className="w-12 h-12 text-gray-600 mx-auto mb-4" /></Search>
                   <h3 className="text-lg font-medium text-gray-300 mb-2">No results found
                   <p className="text-sm text-gray-500">
                     Try searching for something else or check your spelling

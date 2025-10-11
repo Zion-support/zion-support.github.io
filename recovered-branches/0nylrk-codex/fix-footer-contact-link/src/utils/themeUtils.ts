@@ -51,8 +51,7 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         cardBackground: '#1e2127',
       }
     case 'light':
-    default:
-      return {
+    default: return {
         primaryColor,
         backgroundColor: '#ffffff',
         textColor: '#0f172a',

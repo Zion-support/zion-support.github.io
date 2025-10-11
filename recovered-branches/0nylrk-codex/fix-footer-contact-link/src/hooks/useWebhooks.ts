@@ -1,7 +1,7 @@
-import { useState } from "react"
-import { useAuth } from "@/hooks/useAuth"
-import { supabase } from "@/integrations/supabase/client"
-import { toast } from "@/hooks/use-toast"
+import { useState  } from 'react'
+import { useAuth  } from '@/hooks/useAuth'
+import { supabase  } from '@/integrations/supabase/client'
+import { toast  } from '@/hooks/use-toast'
 export type WebhookEventType = 'new_application' | 'quote_received' | 'milestone_approved' | 'talent_hired'
 export interface Webhook {
   id: string
@@ -56,7 +56,7 @@ export function useWebhooks() {
       }
       setWebhooks(result.webhooks || [])
     } catch (err) {
-      console.error('Error fetching webhooks:', err)
+      console.error('Error fetching webhooks: ', err)
       setError(err instanceof Error ? err.message : 'An unknown error occurred')
       toast({
         variant: "destructive",
@@ -105,7 +105,7 @@ export function useWebhooks() {
       })
       return result.webhook
     } catch (err) {
-      console.error('Error creating webhook:', err)
+      console.error('Error creating webhook: ', err)
       setError(err instanceof Error ? err.message : 'An unknown error occurred')
       toast({
         variant: "destructive",
@@ -151,7 +151,7 @@ export function useWebhooks() {
       })
       return result
     } catch (err) {
-      console.error('Error toggling webhook:', err)
+      console.error('Error toggling webhook: ', err)
       setError(err instanceof Error ? err.message : 'An unknown error occurred')
       toast({
         variant: "destructive",
@@ -195,7 +195,7 @@ export function useWebhooks() {
       })
       return result
     } catch (err) {
-      console.error('Error deleting webhook:', err)
+      console.error('Error deleting webhook: ', err)
       setError(err instanceof Error ? err.message : 'An unknown error occurred')
       toast({
         variant: "destructive",
@@ -248,7 +248,7 @@ export function useWebhooks() {
       })
       return result
     } catch (err) {
-      console.error('Error testing webhook:', err)
+      console.error('Error testing webhook: ', err)
       setError(err instanceof Error ? err.message : 'An unknown error occurred')
       toast({
         variant: "destructive",

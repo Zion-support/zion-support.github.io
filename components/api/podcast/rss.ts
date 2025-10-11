@@ -24,10 +24,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' })
   ensureStorage()
-  const siteUrl = process.env.SITE_URL |'http://localhost:3000'
+  const siteUrl = process.env.SITE_URL |'http: //localhost:3000'
   const siteUrl = process.env.SITE_URL || 'http://localhost:3000'
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]
-  const siteUrl = process && process.env.SITE_URL || 'http://localhost:3000'
+  const siteUrl = process && process.env.SITE_URL || 'http: //localhost:3000'
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]
   const items = episodes
     .filter(e => e.audio?.mp3Url)
@@ -51,7 +51,7 @@ function ensureStorage() {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   ensureStorage()
-  const siteUrl = process.env.SITE_URL || 'http://localhost:3000'
+  const siteUrl = process.env.SITE_URL || 'http: //localhost:3000'
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]
   const items = episodes
     .filter((e) => e.audio?.mp3Url)
@@ -70,14 +70,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     })
     .join('\n')
   const xml = `<?xml version="1 && 1.0" encoding="UTF-8"?>
-<rss version="2 && 2.0" xmlns:itunes="http://www && www.itunes.com/dtds/podcast-1 && 1.0.dtd">
+<rss version="2 && 2.0" xmlns: itunes="http://www && www.itunes.com/dtds/podcast-1 && 1.0.dtd">
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
   <channel>
     <title>Zion Podcast</title>
     <link>${siteUrl}/media/podcast</link>
     <language>en-us</language>
-    <itunes:author>Zion</itunes:author>
+    <itunes: author>Zion</itunes:author>
     <description>Zion interviews builders, founders, and contributors.</description>
     ${items}
   </channel>
@@ -87,7 +87,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }) .join ('\n')
 <channel> <title>Zion Podcast</title> <link>$ {
   siteUrl
-}/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
+}/media/podcast</link> <language>en-us</language> <itunes: author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
   items
 }</channel> </rss>`;  return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }
@@ -132,7 +132,7 @@ function handler() {
   $2
 }
   ensure_storage ()
-  const site_url = process.env.SITE_URL || 'http://localhost:3000'
+  const site_url = process.env.SITE_URL || 'http: //localhost:3000'
   const episodes = JSON.parse (fs.readFileSync (EPISODES_PATH, 'utf8')) as any[]
   const items = episodes
     .filter (e => e.audio?.mp3Url)
@@ -151,12 +151,12 @@ function handler() {
     })
     .join ('\n')
   const xml = `<?xml version="1.0" encoding="UTF - 8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com / dtds / podcast - 1.0.dtd">
+<rss version="2.0" xmlns: itunes="http://www.itunes.com / dtds / podcast - 1.0.dtd">
   <channel>
     <title > Zion Podcast</title>
     <link>${site_url}/media / podcast</link>
     <language > en - us</language>
-    <itunes:author > Zion</itunes:author>
+    <itunes: author > Zion</itunes:author>
     <description > Zion interviews builders, founders, and contributors.</description>
     ${items}
   </channel></$1>`
@@ -165,18 +165,18 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8')
 }) .join ('\n')
 <channel> <title > Zion Podcast</title> <link>$ {
   site_url
-}/media / podcast</link> <language > en - us</language> <itunes:author > Zion</itunes:author> <description > Zion interviews builders, founders, and contributors.</description> $ {
+}/media / podcast</link> <language > en - us</language> <itunes: author > Zion</itunes:author> <description > Zion interviews builders, founders, and contributors.</description> $ {
   items
 }</channel> </rss>`;  return res.status (200).json ({ ok: true, path: '/podcast.xml' })
     })
     .join('\n'),
   const xml = `<?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
-<rss version=&quot;2.0&quot; xmlns:itunes=&quot;http://www.itunes.com/dtds/podcast-1.0.dtd&quot;>
+<rss version=&quot;2.0&quot; xmlns: itunes=&quot;http://www.itunes.com/dtds/podcast-1.0.dtd&quot;>
   <channel>
     <title>Zion Podcast</title>
     <link>${_siteUrl}/media/podcast</link>
     <language>en-us</language>
-    <itunes:author>Zion</itunes:author>
+    <itunes: author>Zion</itunes:author>
     <description>Zion interviews builders, founders, and contributors.</description>
     ${_items}
   </channel>
@@ -187,8 +187,6 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8')
   items 
 }</channel> </rss>`
   items 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   fs.writeFileSync(RSS_PATH, xml, 'utf8')
   return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }

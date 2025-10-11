@@ -17,7 +17,7 @@ export interface Branding {
   secondaryColor?: string,
   subdomain?: string
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -94,7 +94,7 @@ export interface GeneratedAsset {
   modules: DeployModules,
   requestedRoutes?: string[]
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -127,7 +127,7 @@ export interface GeneratedAsset {
   modules: DeployModules,
   requestedRoutes?: string[]
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -138,7 +138,7 @@ export interface DeployLogEntry {
   action: string
   details?: Record<string, unknown> | string
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -148,7 +148,7 @@ export interface GeneratedAsset {
   path: string
   description?: string
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -178,11 +178,9 @@ export interface DeployResult {
 export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[]
   adminKeyConfigured: boolean
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export interface DeployModules {
   marketplace: boolean,
@@ -238,7 +236,7 @@ export interface AccessControlConfig {
   allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[]
   adminKeyConfigured: boolean
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }

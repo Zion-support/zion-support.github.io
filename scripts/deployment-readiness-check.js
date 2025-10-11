@@ -10,12 +10,7 @@ const _path = require('path')
 // Colors for console output
 const colors = {
   reset: '\x1b[0m'
-  red: '\x1b[31m',
-  green: '\x1b[32m',
-  yellow: '\x1b[33m',
-  blue: '\x1b[34m',
-  cyan: '\x1b[36m',
-const colors = {/* TODO: Fix JSX expression */}
+  red: '\x1b[31m', green: '\x1b[32m', yellow: '\x1b[33m', blue: '\x1b[34m', cyan: '\x1b[36m', const colors = {/* TODO: Fix JSX expression */}
 }
 
 class DeploymentReadinessChecker {/* TODO: Fix JSX expression */}
@@ -88,27 +83,23 @@ class DeploymentReadinessChecker {/* TODO: Fix JSX expression */}
 
 // Define all checks
 function setupChecks(checker) {
-  // Check 1: Package.json exists and is valid,
-  checker.addCheck('Package.json Validation', async () => {
+  // Check 1: Package.json exists and is valid, checker.addCheck('Package.json Validation', async () => {
     try {
 //       const pkgPath = path.join(process.cwd(), 'package.json')
       const _pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'))
       if (!pkg.name || !pkg.version) {
         return {
-          success: false,
-          message: 'package.json missing required fields (name, version)'
+          success: false, message: 'package.json missing required fields (name, version)'
         }
       }
       
       return {
-        success: true,
-        message: `${pkg.name}@${pkg.version}`
+        success: true, message: `${pkg.name}@${pkg.version}`
       }
     } catch (error) {
       return {
         success: false
-        message: error.message,
-function setupChecks(checker) {/* TODO: Fix JSX expression */}
+        message: error.message, function setupChecks(checker) {/* TODO: Fix JSX expression */}
         }
       }
       
@@ -119,24 +110,18 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
       }
     }
   })
-  // Check 2: Dependencies installed,
-  checker.addCheck('Dependencies Check', async () => {
+  // Check 2: Dependencies installed, checker.addCheck('Dependencies Check', async () => {
     try {
       if (!fs.existsSync('node_modules')) {
         return {
-          success: false,
-          message: 'node_modules not found. Run: pnpm install'}
+          success: false, message: 'node_modules not found. Run: pnpm install'}
       }
       return {
-        success: true,
-        message: 'All dependencies installed'}
+        success: true, message: 'All dependencies installed'}
     } catch (error) {
       return {
         success: false
-        message: error.message,
-  // Check,
-  2: Dependencies installed,
-  checker.addCheck('Dependencies Check', async () => {/* TODO: Fix JSX expression */}
+        message: error.message, // Check, 2: Dependencies installed, checker.addCheck('Dependencies Check', async () => {/* TODO: Fix JSX expression */}
         }
       }
       return {/* TODO: Fix JSX expression */}
@@ -145,20 +130,14 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
       }
     }
   })
-  // Check 3: Linting,
-  checker.addCheck('Linting', async () => {
+  // Check 3: Linting, checker.addCheck('Linting', async () => {
     try {
       execSync('pnpm run lint', { stdio: 'pipe' })
       return {
-        success: true,
-        message: 'No linting errors'}
+        success: true, message: 'No linting errors'}
     } catch (error) {
       return {
-        success: false,
-        message: 'Linting failed. Run: pnpm run lint:fix',
-  // Check,
-  3: Linting,
-  checker.addCheck('Linting', async () => {/* TODO: Fix JSX expression */}
+        success: false, message: 'Linting failed. Run: pnpm run lint:fix', // Check, 3: Linting, checker.addCheck('Linting', async () => {/* TODO: Fix JSX expression */}
   o: 'pipe' })
       return {/* TODO: Fix JSX expression */}
       }
@@ -166,20 +145,14 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
       }
     }
   })
-  // Check 4: Type checking,
-  checker.addCheck('Type Checking', async () => {
+  // Check 4: Type checking, checker.addCheck('Type Checking', async () => {
     try {
       execSync('pnpm run type-check', { stdio: 'pipe' })
       return {
-        success: true,
-        message: 'No type errors'}
+        success: true, message: 'No type errors'}
     } catch (error) {
       return {
-        success: false,
-        message: 'Type checking failed',
-  // Check,
-  4: Type checking,
-  checker.addCheck('Type Checking', async () => {/* TODO: Fix JSX expression */}
+        success: false, message: 'Type checking failed', // Check, 4: Type checking, checker.addCheck('Type Checking', async () => {/* TODO: Fix JSX expression */}
   o: 'pipe' })
       return {/* TODO: Fix JSX expression */}
       }
@@ -187,8 +160,7 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
       }
     }
   })
-  // Check 5: Tests,
-  checker.addCheck('Test Suite', async () => {
+  // Check 5: Tests, checker.addCheck('Test Suite', async () => {
     try {
       const _result = execSync('pnpm test', { stdio: 'pipe' }).toString()
       const _match = result.match(/(\d+) passed/)
@@ -217,7 +189,7 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
   // Check 6: Build,
   checker.addCheck('Build Process', async () => {
     try {
-      execSync('pnpm run build:no-check', { stdio: 'pipe' })
+      execSync('pnpm run build: no-check', { stdio: 'pipe' })
       // Check if dist folder exists
       if (!fs.existsSync('dist')) {
         return {

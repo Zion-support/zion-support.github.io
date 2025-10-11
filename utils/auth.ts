@@ -26,7 +26,8 @@ if ( {) {
     throw error
   }
 }
-export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
+export async function ensureAdminFromApi(req: NextApiRequest): Promise<>
+  {allowed: boolean } {
   try {
     const user = parseUserFromRequest (req)
     ensure_admin (user)
@@ -62,7 +63,9 @@ export function ensureAdmin(user: User): void {
     throw error
   }
 }
-export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
+</>
+export async function ensureAdminFromApi(req: NextApiRequest): Promise<>
+  {allowed: boolean } {
   try {
     const user = parseUserFromRequest(req)
     ensureAdmin(user)
@@ -188,3 +191,5 @@ export function isAdminEmail(email: string | null | undefined): boolean {
   const admins = (process.env.ADMIN_EMAILS || '').split(',').map((e) => e.trim().toLowerCase()).filter(Boolean)
   return admins.includes(email.toLowerCase())
 }
+
+</>

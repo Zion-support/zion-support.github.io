@@ -6,9 +6,9 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";"
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-7, 0, 0"></d, i, v>"</d, i, v>)
       <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,)$2 />
-  g:px-8, p, y-8">")
+  g: px-8, p, y-8">")
       <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,),$2 />
-  g:px-8, p, y-8">"
+  g: px-8, p, y-8">"
         {/* Header, Sectio, n */}
         <moti, o, n.d, i, v
   return (
@@ -25,9 +25,9 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
         <moti, o, n.d, i, v
       </d, i, v>"
       <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
-  g:px-8, p, y-8">""
+  g: px-8, p, y-8">""
       <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
-  g:px-8, p, y-8">"
+  g: px-8, p, y-8">"
         {/* Header, Sectio, n */}
         <moti, o, n.d, i, v
   initi, a, l={{ opaci, t, y: 0, y: 20 }}
@@ -36,14 +36,14 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
           classNa, m, e="te, x, t-center, m, b-8"
         >
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, p, x-6, p, y-2, rounde, d-full, fon, t-bold, tex, t-sm, m, b-4">
-            <Sparkles, className="w-5 h-5, animat, e-pul, s, e  />
+            <Sparkles , className="w-5 h-5, animat, e-pul, s, e  /></Sparkles>
             OCTOBER, 2025, BREAKTHROUGH
-            <Sparkles, className="w-5 h-5, animat, e-pul, s, e  />
+            <Sparkles , className="w-5 h-5, animat, e-pul, s, e  /></Sparkles>
         ></moti>"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, p, x-6, p, y-2, rounde, d-full, fon, t-bold, tex, t-sm, m, b-4"></div>"
-            <Sparkles, className="w-5 h-5, animat, e-pul, s, e  />
+            <Sparkles , className="w-5 h-5, animat, e-pul, s, e  /></Sparkles>
             OCTOBER, 2025, BREAKTHROUGH;"
-            <Sparkles, className="w-5 h-5, animat, e-pul, s, e  />
+            <Sparkles , className="w-5 h-5, animat, e-pul, s, e  /></Sparkles>
           </d, i, v>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4">"
             🚀 3, Revolutionary, AI Platform, Breakthrough, s</$1>"
@@ -51,22 +51,22 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
             Priva, c, y-First, Federated, AI • Unlimited, Synthetic, Data • Enterprise, AI, Governance
           <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4, m, t-6, tex, t-yell, o, w-300, fon, t-bo, l, d">
             <div, className="flex, item, s-center, ga, p-2">
-              <TrendingUp, className="w-5 h-5  />
+              <TrendingUp , className="w-5 h-5  /></TrendingUp>
               <sp, a, n>$1.02B, Combined, Value
             <div, className="flex, item, s-center, ga, p-2">
-              <Zap, className="w-5 h-5  />
+              <Zap , className="w-5 h-5  /></Zap>
               <sp, a, n>1, 0, 0% Complian, c, e
             <div, className="flex, item, s-center, ga, p-2">
-              <Shield, className="w-5 h-5  />
+              <Shield , className="w-5 h-5  /></Shield>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, p, x-6, p, y-2, rounde, d-full, fon, t-bold, tex, t-sm, m, b-4">"
           </p>"
           <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4, m, t-6, tex, t-yell, o, w-300, fon, t-bo, l, d"></div>"
             <div, className="flex, item, s-center, ga, p-2"></div>"
-              <TrendingUp, className="w-5 h-5  />
+              <TrendingUp , className="w-5 h-5  /></TrendingUp>
               <sp, a, n>$1.02B, Combined, Value
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2"></div>"
-              <Zap, className="w-5 h-5  />
+              <Zap , className="w-5 h-5  /></Zap>
               <sp, a, n>1, 0, 0% Complian, c, e
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2"></div>"
@@ -117,20 +117,20 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
             anima, t, e={{ opaci, t, y: 1, y: 0 }}
             transiti, o, n={{ durati, o, n: 0.6, del, a, y: 0.1 }}
           >
-            <Li, n, k
+            <Li , n, k
   to="/bl, o, g/ai-20, 2, 5-o, c, t-advanc, e, d-federat, e, d-ai-enterpri, s, e-revoluti, o, n"
               classNa, m, e="block, grou, p"
-            >
-              <, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e$2 />
-  r:shad, o, w-purp, l, e-5, 0, 0/5, 0, h-fu, l, l">"
+            ></Li>
+              <, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hov, e$2 />
+  r: shad, o, w-purp, l, e-5, 0, 0/5, 0, h-fu, l, l">"
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">
                   <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, rounde, d-lg">
-              <, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e$2 />
-  r:shad, o, w-purp, l, e-5, 0, 0/5, 0, h-fu, l, l">"
+              <, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hov, e$2 />
+  r: shad, o, w-purp, l, e-5, 0, 0/5, 0, h-fu, l, l">"
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">
                   <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, rounde, d-lg">
-                    <Brain, className="w-6 h-6, tex, t-whi, t, e  />
-              <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/5, 0, h-fu, l, l">"
+                    <Brain , className="w-6 h-6, tex, t-whi, t, e  /></Brain>
+              <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hove, r: shad, o, w-purp, l, e-5, 0, 0/5, 0, h-fu, l, l">"
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">"
                   <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, rounde, d-lg">"
   initi, a, l={{ opaci, t, y: 0, y: 20 }}
@@ -141,12 +141,12 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
   to="/bl, o, g/ai-20, 2, 5-o, c, t-advanc, e, d-federat, e, d-ai-enterpri, s, e-revoluti, o, n""
               classNa, m, e="block, grou, p"
             ></Li>"
-              <, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e,"$2 />
-  r:shad, o, w-purp, l, e-5, 0, 0/5, 0, h-fu, l, l">""
+              <, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hov, e,"$2 />
+  r: shad, o, w-purp, l, e-5, 0, 0/5, 0, h-fu, l, l">""
                 <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>"
                   <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, rounde, d-lg"></div>"
                     <Brain, className="w-6 h-6, tex, t-whi, t, e  /></Brain>"
-              <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/5, 0, h-fu, l, l">";"
+              <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hove, r: shad, o, w-purp, l, e-5, 0, 0/5, 0, h-fu, l, l">";"
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">";"
                   <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, rounde, d-lg">";"
                     <Brain, className="w-6 h-6, tex, t-whi, t, e" />"</$1>"
@@ -210,20 +210,20 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
             anima, t, e={{ opaci, t, y: 1, y: 0 }}
             transiti, o, n={{ durati, o, n: 0.6, del, a, y: 0.2 }}
           >
-            <Li, n, k
+            <Li , n, k
   to="/bl, o, g/ai-20, 2, 5-o, c, t-synthet, i, c-da, t, a-generati, o, n-enterpri, s, e-breakthrou, g, h"
               classNa, m, e="block, grou, p"
-            >
-              <, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e$2 />
-  r:shad, o, w-bl, u, e-5, 0, 0/5, 0, h-fu, l, l">"
+            ></Li>
+              <, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hov, e$2 />
+  r: shad, o, w-bl, u, e-5, 0, 0/5, 0, h-fu, l, l">"
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">
                   <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-cy, a, n-500, rounde, d-lg">
-              <, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e$2 />
-  r:shad, o, w-bl, u, e-5, 0, 0/5, 0, h-fu, l, l">"
+              <, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hov, e$2 />
+  r: shad, o, w-bl, u, e-5, 0, 0/5, 0, h-fu, l, l">"
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">
                   <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-cy, a, n-500, rounde, d-lg">
-                    <Database, className="w-6 h-6, tex, t-whi, t, e  />
-              <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/5, 0, h-fu, l, l">"
+                    <Database , className="w-6 h-6, tex, t-whi, t, e  /></Database>
+              <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hove, r: shad, o, w-bl, u, e-5, 0, 0/5, 0, h-fu, l, l">"
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">"
                   <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-cy, a, n-500, rounde, d-lg">"
           >
@@ -231,12 +231,12 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
   to="/bl, o, g/ai-20, 2, 5-o, c, t-synthet, i, c-da, t, a-generati, o, n-enterpri, s, e-breakthrou, g, h""
               classNa, m, e="block, grou, p"
             ></Li>"
-              <, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e,"$2 />
-  r:shad, o, w-bl, u, e-5, 0, 0/5, 0, h-fu, l, l">""
+              <, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hov, e,"$2 />
+  r: shad, o, w-bl, u, e-5, 0, 0/5, 0, h-fu, l, l">""
                 <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>"
                   <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-cy, a, n-500, rounde, d-lg"></div>"
                     <Database, className="w-6 h-6, tex, t-whi, t, e  /></Database>"
-              <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/5, 0, h-fu, l, l">";"
+              <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hove, r: shad, o, w-bl, u, e-5, 0, 0/5, 0, h-fu, l, l">";"
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">";"
                   <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-cy, a, n-500, rounde, d-lg">";"
                     <Database, className="w-6 h-6, tex, t-whi, t, e" />"</$1>"
@@ -300,20 +300,20 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
             anima, t, e={{ opaci, t, y: 1, y: 0 }}
             transiti, o, n={{ durati, o, n: 0.6, del, a, y: 0.3 }}
           >
-            <Li, n, k
+            <Li , n, k
   to="/bl, o, g/ai-20, 2, 5-o, c, t-ai-mod, e, l-governan, c, e-complian, c, e-breakthrou, g, h"
               classNa, m, e="block, grou, p"
-            >
-              <, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e$2 />
-  r:shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l">"
+            ></Li>
+              <, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hov, e$2 />
+  r: shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l">"
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">
                   <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg">
-              <, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e$2 />
-  r:shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l">"
+              <, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hov, e$2 />
+  r: shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l">"
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">
                   <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg">
-                    <Shield, className="w-6 h-6, tex, t-whi, t, e  />
-              <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l">"
+                    <Shield , className="w-6 h-6, tex, t-whi, t, e  /></Shield>
+              <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hove, r: shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l">"
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">"
                   <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg">"
           >
@@ -321,12 +321,12 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
   to="/bl, o, g/ai-20, 2, 5-o, c, t-ai-mod, e, l-governan, c, e-complian, c, e-breakthrou, g, h""
               classNa, m, e="block, grou, p"
             ></Li>"
-              <, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e,"$2 />
-  r:shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l">""
+              <, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hov, e,"$2 />
+  r: shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l">""
                 <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>"
                   <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg"></div>"
                     <Shield, className="w-6 h-6, tex, t-whi, t, e  /></Shield>"
-              <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l">";"
+              <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hove, r: shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l">";"
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">";"
                   <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg">";"
                     <Shield, className="w-6 h-6, tex, t-whi, t, e" />"</$1>"
@@ -391,15 +391,15 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
           transiti, o, n={{ durati, o, n: 0.6, del, a, y: 0.4 }}"
           classNa, m, e="te, x, t-cent, e, r"
         >
-          <Li, n, k
+          <Li , n, k
   to="/bl, o, g"
-            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-bl, u, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-bold, tex, t-lg, shado, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, transform, hove
-        >
-          <Li, n, k;"
+            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-500, hove, r: to-bl, u, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-bold, tex, t-lg, shado, w-2xl, hove, r: shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, transform, hove
+        ></Li>
+          <Li , n, k;"
   to="/bl, o, g""
-            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-bl, u, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-bold, tex, t-lg, shado, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, transform, hove,"
-  r:sca, l, e-1, 0, 5"
-          >
+            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-500, hove, r: to-bl, u, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-bold, tex, t-lg, shado, w-2xl, hove, r: shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, transform, hove,"
+  r: sca, l, e-1, 0, 5"
+          ></Li>
             <sp, a, n>Explore, All, October 2025, Breakthrough, s</sp, a, n>"
             <Link, className="w-5 h-5  /></Link>"
             <Link, className="w-5 h-5" />"</$1>"

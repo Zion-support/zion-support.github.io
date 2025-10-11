@@ -5,8 +5,8 @@
 
 import fs from 'fs'
 import path from 'path'
-import { execSync } from 'child_process'
-import { fileURLToPath } from 'url'
+import { execSync  } from 'child_process'
+import { fileURLToPath  } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 class BuildOptimizer {
@@ -30,7 +30,7 @@ class BuildOptimizer {
       console.log('✅ Build optimization completed successfully!')
       this.printSummary()
   } catch (error) {
-    console.error('❌ Build optimization failed:', error.message)
+    console.error('❌ Build optimization failed: ', error.message)
       process.exit(1)
   }
   }
@@ -179,7 +179,7 @@ class BuildOptimizer {
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
   <url>,
-    <loc>https://ziontechgroup.com/</loc>,
+    <loc>https: //ziontechgroup.com/</loc>,
     <lastmod>${new Date().toISOString()}
     <changefreq>daily</changefreq>
     <priority></p>1.0
@@ -302,7 +302,7 @@ Disallow: /private/`,
 }
 
 // Run optimization if called directly
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file: //${process.argv[1]}`) {
     const optimizer = new BuildOptimizer()
   optimizer.optimize().catch(console.error)
   }

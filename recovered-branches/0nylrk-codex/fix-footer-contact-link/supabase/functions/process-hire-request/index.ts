@@ -1,6 +1,6 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts"
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
-import { Configuration, OpenAIApi } from "https://esm.sh/openai@3.2.1"
+import { serve  } from 'https: //deno.land/std@0.190.0/http/server.ts'
+import { createClient  } from 'https: //esm.sh/@supabase/supabase-js@2'
+import { Configuration, OpenAIApi  } from 'https: //esm.sh/openai@3.2.1'
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -55,11 +55,9 @@ serve(async (req) => {
         const openai = new OpenAIApi(configuration)
         const prompt = `
           Project Overview: "${project.overview}"
-          Please provide:
-          1. A brief summary of this project (max 100 characters)
+          Please provide: 1. A brief summary of this project (max 100 characters)
           2. Classify this project into one category (e.g., "AI Development", "Cloud Migration", "Web Design", etc.)
-          Format your response as JSON:
-          {
+          Format your response as JSON: {
             "summary": "Brief summary here",
             "projectType": "Project type here"
           }
@@ -77,37 +75,24 @@ serve(async (req) => {
           const jsonMatch = responseText.match(/\{[\s\S]*\}/)
           if (jsonMatch) {
             enhancedContent = JSON.parse(jsonMatch[0])
-            console.log("Enhanced content generated:", enhancedContent)
+            console.log("Enhanced content generated: ", enhancedContent)
           }
         } catch (jsonError) {
-          console.error("Error parsing AI response:", jsonError)
+          console.error("Error parsing AI response: ", jsonError)
           // Continue without enhanced content
         }
       } catch (aiError) {
-        console.error("Error generating enhanced content:", aiError)
+        console.error("Error generating enhanced content: ", aiError)
         // Continue without enhanced content
       }
     }
     // 2. Store the request in the database
     const { data: requestRecord, error: requestError } = await supabase
       .from('hire_requests')
-      .insert([
-        {
-          talent_id: talent.id,
-          requester_id: requester.id || null, // May be null if user is not authenticated
-          requester_name: requester.name,
-          requester_email: requester.email,
-          project_overview: project.overview,
-          project_summary: enhancedContent?.summary || null,
-          project_type: enhancedContent?.projectType || null,
-          timeline: project.timeline,
-          budget_min: project.budgetMin,
-          budget_max: project.budgetMax,
-          budget_display: budgetDisplay,
-          status: 'new',
-          expiry_date: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days from now
-        }
-      ])
+      .insert([{
+          talent_id: talent.id, requester_id: requester.id || null, // May be null if user is not authenticated
+          requester_name: requester.name, requester_email: requester.email, project_overview: project.overview, project_summary: enhancedContent?.summary || null, project_type: enhancedContent?.projectType || null, timeline: project.timeline, budget_min: project.budgetMin, budget_max: project.budgetMax, budget_display: budgetDisplay, status: 'new', expiry_date: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days from now
+        }])
       .select()
     if (requestError) {
       throw new Error(`Error storing hire request: ${requestError.message}`)
@@ -120,7 +105,7 @@ serve(async (req) => {
       .eq('user_type', 'admin')
       .limit(1)
     if (adminError) {
-      console.error("Error fetching admin users:", adminError)
+      console.error("Error fetching admin users: ", adminError)
     }
     let adminId: string | undefined = undefined
     // Create notification for admin (if any found)
@@ -141,7 +126,7 @@ serve(async (req) => {
           _related_id: adminNotificationContent.related_id
         })
       if (notificationError) {
-        console.error("Error creating admin notification:", notificationError)
+        console.error("Error creating admin notification: ", notificationError)
       }
     }
     // 4. Send email notification to talent
@@ -156,19 +141,19 @@ serve(async (req) => {
             <p>Hello ${talent.full_name},</p>
             <p>You have received a new project request from ${requester.name} (${requester.email}).</p>
             <h2>Project Details</h2>
-            <p><strong>Budget:</strong> ${budgetDisplay}</p>
-            <p><strong>Timeline:</strong> ${project.timeline}</p>
-            <p><strong>Overview:</strong></p>
+            <p><strong>Budget: </strong> ${budgetDisplay}</p>
+            <p><strong>Timeline: </strong> ${project.timeline}</p>
+            <p><strong>Overview: </strong></p>
             <p>${project.overview}</p>
-            ${enhancedContent?.summary ? `<p><strong>Summary:</strong> ${enhancedContent.summary}</p>` : ''}
-            ${enhancedContent?.projectType ? `<p><strong>Project Type:</strong> ${enhancedContent.projectType}</p>` : ''}
+            ${enhancedContent?.summary ? `<p><strong>Summary: </strong> ${enhancedContent.summary}</p>` : ''}
+            ${enhancedContent?.projectType ? `<p><strong>Project Type: </strong> ${enhancedContent.projectType}</p>` : ''}
             <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>
             <p>Best regards,<br>The Zion AI Marketplace Team</p>
           `}})
           `,
         },
       })
-      console.log("Email sending result:", emailResponse)
+      console.log("Email sending result: ", emailResponse)
     }
     return new Response(
       JSON.stringify({ 
@@ -183,7 +168,7 @@ serve(async (req) => {
       }
     )
   } catch (error) {
-    console.error("Error processing hire request:", error.message)
+    console.error("Error processing hire request: ", error.message)
     return new Response(
       JSON.stringify({ 
         success: false, 

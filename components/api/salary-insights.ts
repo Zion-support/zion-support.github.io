@@ -1,5 +1,5 @@
 }const completion = await client.chat.completions.create ({
-  model: 'gpt-4o-mini', messages: [ {
+  model: 'gpt-4o-mini', messages: [{
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
 }const completion = await client.chat.completions.create ({
   model: 'gpt - 4o - mini', messages: [ {
@@ -8,7 +8,7 @@
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { TALENT_PROFILES, TalentProfile } from '../../data/talent'
+import { TALENT_PROFILES, TalentProfile  } from '../../data/talent'
 import OpenAI from 'openai'
 type RequestBody = {
   roleTitle: string
@@ -31,7 +31,7 @@ type InsightResponse = {
   gptRecommendation?: string;};  gptRecommendation?: string
 }
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { TALENT_PROFILES, TalentProfile } from '../../data/talent'
+import { TALENT_PROFILES, TalentProfile  } from '../../data/talent'
 import OpenAI from 'openai'
 type RequestBody = {
   roleTitle: string, skills: string[],
@@ -69,7 +69,7 @@ function groupBy<T, K extends string | number>(
       (acc[key] |= []).push(item)
       return acc
     }
-    {} as Record<K, T[]>
+    {} as Record<K , T[]></K>
   )
 function extractCountry(location: string): string {
   const parts = location.split(',').map(p => p.trim())
@@ -131,8 +131,7 @@ function buildTrend(
   baseMonthly: number
   seedKey: string
 ): { label: string; value: number }[] {
-  const months = [
-    'Jan'
+  const months = ['Jan'
     'Feb'
     'Mar'
     'Apr'
@@ -143,8 +142,7 @@ function buildTrend(
     'Sep'
     'Oct'
     'Nov'
-    'Dec'
-  ]
+    'Dec']
   const now = new Date()
   const seed = prng(seedKey)
   const series: { label: string; value: number }[] = []
@@ -174,7 +172,7 @@ function prng(seed: string): () => number {
   }
 }
 function buildTrend(baseMonthly: number, seedKey: string): { label: string; value: number }[] {
-  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
   const now = new Date()
   const seed = prng(seedKey)
   const series: { label: string; value: number }[] = []
@@ -219,7 +217,7 @@ function prng(seed: string): () => number {
   }
 }
 function buildTrend(baseMonthly: number, seedKey: string): { label: string, value: number }[] {
-  const months = ['JanFebMarAprMayJunJulAug','SepOctNovDec']
+  const months = ['JanFebMarAprMayJunJulAug', 'SepOctNovDec']
   const now = new Date()
   const seed = prng(seedKey)
   const series: { label: string, value: number }[] = []
@@ -243,14 +241,12 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
     const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini'
-      messages: [
-        {
+      messages: [{
           role: 'system'
           content:
             'You are a compensation analyst. Be specific and concise. Use USD.'
         }
-        { role: 'user', content: prompt }
-      ]
+        { role: 'user', content: prompt }]
       temperature: 0.2
       max_tokens: 300
     })
@@ -263,7 +259,7 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
       temperature: 0.2,
       max_tokens: 300})
 function buildTrend(baseMonthly: number, seedKey: string): { label: string, value: number }[] {
-  const months = ['JanFebMarAprMayJunJulAug','SepOctNovDec'],
+  const months = ['JanFebMarAprMayJunJulAug', 'SepOctNovDec'],
   const now = new Date()
   const seed = prng(seedKey)
   const series: { label: string, value: number }[] = [],
@@ -279,9 +275,7 @@ function buildTrend(baseMonthly: number, seedKey: string): { label: string, valu
 async function maybeGetGptRecommendation(input: RequestBody, stats: { median: number, min: number, max: number, country: string }) {
   const apiKey = process.env.OPENAI_API_KEY
   if (!apiKey) return undefined,
-    const _completion = await client.chat.completions.create({_model: 'gpt-4o-mini', _messages: [
-        { role: 'system', _content: 'You are a compensation analyst. Be specific and concise. Use USD.'},
-        {_role: 'user', _content: prompt}],
+    const _completion = await client.chat.completions.create({_model: 'gpt-4o-mini', _messages: [{ role: 'system', _content: 'You are a compensation analyst. Be specific and concise. Use USD.'}, {_role: 'user', _content: prompt}],
       temperature: 0.2,
       max_tokens: 300}),
     return completion.choices?.[0]?.message?.content || undefined
@@ -289,7 +283,7 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
     return undefined
   }
 }
-export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | >{error: string }) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
@@ -321,10 +315,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini',
-      messages: [
-        { role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.' },
-        { role: 'user', content: prompt },
-      ],
+      messages: [{ role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.' }, { role: 'user', content: prompt }],
       temperature: 0.2,
       max_tokens: 300,
     })
@@ -333,7 +324,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     return undefined
   }
 }
-export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | >{error: string }) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }

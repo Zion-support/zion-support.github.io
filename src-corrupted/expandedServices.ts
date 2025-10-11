@@ -21,31 +21,15 @@ export interface ExpandedService {
     name: string
     id: string
     avatarUrl?: string
-import { ProductListing } from "@/types/listings"
+import { ProductListing  } from '@/types/listings'
 // Expanded Services - Real Micro SAAS and IT Solutions
-export const EXPANDED_SERVICES: ProductListing[] = [
-  // AI & Machine Learning Services
+export const EXPANDED_SERVICES: ProductListing[] = [// AI & Machine Learning Services
   {
-    id: "ai-chatbot-enterprise",
-    title: "Enterprise AI Chatbot Development",
-    description: "Custom AI-powered chatbots for customer service, sales, and support with multi-language support, sentiment analysis, and seamless CRM integration. Includes training data preparation and ongoing optimization.",
-    category: "AI Development",
-    subcategory: "Chatbots",
-    price: 8999,
-    currency: "$",
-    tags: ["Process Automation", "RPA", "Workflow", "AI", "Efficiency"],
-import { ProductListing } from "@/types/listings"
+    id: "ai-chatbot-enterprise", title: "Enterprise AI Chatbot Development", description: "Custom AI-powered chatbots for customer service, sales, and support with multi-language support, sentiment analysis, and seamless CRM integration. Includes training data preparation and ongoing optimization.", category: "AI Development", subcategory: "Chatbots", price: 8999, currency: "$", tags: ["Process Automation", "RPA", "Workflow", "AI", "Efficiency"],
+import { ProductListing  } from '@/types/listings'
 // AI & Machine Learning Services
-export const AI_SERVICES: ProductListing[] = [
-  {
-    id: "ai-automation-1",
-    title: "AI-Powered Process Automation Suite",
-    description: "Complete workflow automation solution using AI to streamline business processes, reduce manual tasks, and increase operational efficiency by up to 300%. Includes process mapping, RPA integration, and analytics dashboard.",
-    category: "AI Automation",
-    subcategory: "Process Optimization",
-    price: 2499,
-    currency: "$",
-    tags: ["Process Automation", "RPA", "Workflow Optimization", "AI Integration"],
+export const AI_SERVICES: ProductListing[] = [{
+    id: "ai-automation-1", title: "AI-Powered Process Automation Suite", description: "Complete workflow automation solution using AI to streamline business processes, reduce manual tasks, and increase operational efficiency by up to 300%. Includes process mapping, RPA integration, and analytics dashboard.", category: "AI Automation", subcategory: "Process Optimization", price: 2499, currency: "$", tags: ["Process Automation", "RPA", "Workflow Optimization", "AI Integration"],
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
@@ -129,39 +113,12 @@ export const AI_SERVICES: ProductListing[] = [
     website: string
   }
 }
-export const EXPANDED_SERVICES: ExpandedService[] = [
-  // AI & Machine Learning Services
+export const EXPANDED_SERVICES: ExpandedService[] = [// AI & Machine Learning Services
   {
-    id: "ai-chatbot-platform",
-    title: "AI Chatbot Platform",
-    description: "Enterprise-grade AI chatbot platform with natural language processing, multi-language support, and seamless integration capabilities.",
-    category: "AI Services",
-    subcategory: "Chatbots & Conversational AI",
-    price: 299,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Multi-language support (50+ languages)",
-      "Advanced NLP with GPT-4 integration",
-      "Custom training on your data",
-      "Analytics dashboard",
-      "API integration",
-      "24/7 customer support"
-    ],
-    benefits: [
-      "Reduce customer service costs by 60%",
-      "24/7 availability",
-      "Scalable customer support",
-      "Improved customer satisfaction",
-      "Data-driven insights"
-    ],
-    useCases: [
-      "Customer service automation",
-      "E-commerce support",
-      "Lead qualification",
-      "Appointment scheduling",
-      "FAQ handling"
-    ],
+    id: "ai-chatbot-platform", title: "AI Chatbot Platform", description: "Enterprise-grade AI chatbot platform with natural language processing, multi-language support, and seamless integration capabilities.", category: "AI Services", subcategory: "Chatbots & Conversational AI", price: 299, currency: "$", pricingModel: "monthly", features: [
+      "Multi-language support (50+ languages)", "Advanced NLP with GPT-4 integration", "Custom training on your data", "Analytics dashboard", "API integration", "24/7 customer support"],
+    benefits: ["Reduce customer service costs by 60%", "24/7 availability", "Scalable customer support", "Improved customer satisfaction", "Data-driven insights"],
+    useCases: ["Customer service automation", "E-commerce support", "Lead qualification", "Appointment scheduling", "FAQ handling"],
     targetAudience: ["E-commerce", "SaaS companies", "Healthcare", "Financial services", "Education"],
     tags: ["AI", "Chatbot", "NLP", "Customer Service", "Automation"],
     author: {
@@ -190,34 +147,11 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
     price: 199,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "SEO-optimized content generation",
-      "Multiple content types (blogs, social, ads)",
-      "Brand voice customization",
-      "Plagiarism detection",
-      "Content calendar management",
-      "Performance analytics"
-    ],
-    benefits: [
-      "Save 20+ hours per week on content creation",
-      "Improve SEO rankings",
-      "Consistent brand messaging",
-      "Increased engagement rates",
-      "Cost-effective content strategy"
-    ],
-    useCases: [
-      "Blog content creation",
-      "Social media marketing",
-    aiScore: 97
-  },
-  {
-    id: "threat-intelligence-platform",
-    title: "Real-Time Threat Intelligence Platform",
-    description: "Advanced threat detection and response platform using AI to analyze network traffic, detect anomalies, and automatically respond to security threats. 24/7 monitoring with instant alerting.",
-    category: "Threat Intelligence",
-    price: 5999,
-    currency: "$",
-    tags: ["Threat Detection", "Network Security", "AI Security", "Real-time Monitoring", "Incident Response"],
+    features: ["SEO-optimized content generation", "Multiple content types (blogs, social, ads)", "Brand voice customization", "Plagiarism detection", "Content calendar management", "Performance analytics"],
+    benefits: ["Save 20+ hours per week on content creation", "Improve SEO rankings", "Consistent brand messaging", "Increased engagement rates", "Cost-effective content strategy"],
+    useCases: ["Blog content creation", "Social media marketing", aiScore: 97
+  }, {
+    id: "threat-intelligence-platform", title: "Real-Time Threat Intelligence Platform", description: "Advanced threat detection and response platform using AI to analyze network traffic, detect anomalies, and automatically respond to security threats. 24/7 monitoring with instant alerting.", category: "Threat Intelligence", price: 5999, currency: "$", tags: ["Threat Detection", "Network Security", "AI Security", "Real-time Monitoring", "Incident Response"],
     author: {
       name: "ZionTech Group",
       id: "ziontech",
@@ -242,21 +176,8 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
     price: 3500,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Natural Language Processing (NLP)",
-      "Multi-language support",
-      "Integration with CRM systems",
-      "Analytics and reporting",
-      "Custom training on your data",
-      "24/7 availability"
-    ],
-    benefits: [
-      "Reduce customer service costs by 30-50%",
-      "Improve response time to under 1 second",
-      "Handle multiple conversations simultaneously",
-      "Learn and improve over time",
-      "Scalable to handle peak traffic"
-    ],
+    features: ["Natural Language Processing (NLP)", "Multi-language support", "Integration with CRM systems", "Analytics and reporting", "Custom training on your data", "24/7 availability"],
+    benefits: ["Reduce customer service costs by 30-50%", "Improve response time to under 1 second", "Handle multiple conversations simultaneously", "Learn and improve over time", "Scalable to handle peak traffic"],
     marketPrice: "$3,000 - $8,000",
     deliveryTime: "4-6 weeks",
     tags: ["AI Chatbot", "NLP", "Customer Service", "Automation"],
@@ -285,21 +206,8 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
     price: 5500,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Advanced statistical modeling",
-      "Real-time data processing",
-      "Interactive visualizations",
-      "Automated reporting",
-      "API integration capabilities",
-      "Custom algorithm development"
-    ],
-    benefits: [
-      "Identify market trends before competitors",
-      "Optimize resource allocation",
-      "Improve decision-making accuracy",
-      "Reduce operational risks",
-      "Increase revenue through better insights"
-    ],
+    features: ["Advanced statistical modeling", "Real-time data processing", "Interactive visualizations", "Automated reporting", "API integration capabilities", "Custom algorithm development"],
+    benefits: ["Identify market trends before competitors", "Optimize resource allocation", "Improve decision-making accuracy", "Reduce operational risks", "Increase revenue through better insights"],
     marketPrice: "$4,500 - $12,000",
     deliveryTime: "6-8 weeks",
     tags: ["Predictive Analytics", "Data Science", "Business Intelligence", "Machine Learning"],
@@ -328,21 +236,8 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
     price: 4200,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Image classification and recognition",
-      "Object detection and tracking",
-      "Facial recognition systems",
-      "Document processing (OCR)",
-      "Quality control automation",
-      "Real-time video analysis"
-    ],
-    benefits: [
-      "Automate visual inspection processes",
-      "Improve security and surveillance",
-      "Enhance user experience",
-      "Reduce manual review time",
-      "Increase accuracy in visual tasks"
-    ],
+    features: ["Image classification and recognition", "Object detection and tracking", "Facial recognition systems", "Document processing (OCR)", "Quality control automation", "Real-time video analysis"],
+    benefits: ["Automate visual inspection processes", "Improve security and surveillance", "Enhance user experience", "Reduce manual review time", "Increase accuracy in visual tasks"],
     marketPrice: "$3,500 - $9,000",
     deliveryTime: "5-7 weeks",
     tags: ["Computer Vision", "Image Recognition", "AI Integration", "Automation"],
@@ -460,28 +355,9 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
     price: 4200,
     currency: "$",
     pricingModel: "subscription",
-    features: [
-      "AI-powered threat detection",
-      "Real-time monitoring",
-      "Automated response actions",
-      "Threat intelligence feeds",
-      "Behavioral analysis",
-      "Incident reporting"
-    ],
-    benefits: [
-      "Detect threats 10x faster",
-      "Reduce false positives by 80%",
-      "Automated incident response",
-      "24/7 threat monitoring",
-      "Predictive threat analysis"
-    ],
-    useCases: [
-      "Network security monitoring",
-      "Endpoint protection",
-      "Cloud security",
-      "IoT device security",
-      "Compliance monitoring"
-    ],
+    features: ["AI-powered threat detection", "Real-time monitoring", "Automated response actions", "Threat intelligence feeds", "Behavioral analysis", "Incident reporting"],
+    benefits: ["Detect threats 10x faster", "Reduce false positives by 80%", "Automated incident response", "24/7 threat monitoring", "Predictive threat analysis"],
+    useCases: ["Network security monitoring", "Endpoint protection", "Cloud security", "IoT device security", "Compliance monitoring"],
     marketPrice: "$4,200 - $8,500/month",
     contactLink: "https://ziontechgroup.com/contact",
     tags: ["Threat Detection", "AI Security", "Incident Response", "Network Security"],
@@ -527,28 +403,9 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
     price: 499,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Real-time data processing",
-      "Predictive analytics",
-      "Custom dashboards",
-      "Automated reporting",
-      "Data visualization",
-      "Machine learning models"
-    ],
-    benefits: [
-      "Make data-driven decisions faster",
-      "Identify trends and opportunities",
-      "Reduce operational costs",
-      "Improve customer experience",
-      "Competitive advantage"
-    ],
-    useCases: [
-      "Sales forecasting",
-      "Customer behavior analysis",
-      "Inventory optimization",
-      "Risk assessment",
-      "Performance monitoring"
-    ],
+    features: ["Real-time data processing", "Predictive analytics", "Custom dashboards", "Automated reporting", "Data visualization", "Machine learning models"],
+    benefits: ["Make data-driven decisions faster", "Identify trends and opportunities", "Reduce operational costs", "Improve customer experience", "Competitive advantage"],
+    useCases: ["Sales forecasting", "Customer behavior analysis", "Inventory optimization", "Risk assessment", "Performance monitoring"],
     targetAudience: ["Enterprises", "Financial services", "Healthcare", "Retail", "Manufacturing"],
     tags: ["AI", "Analytics", "Business Intelligence", "Machine Learning", "Data Science"],
     author: {
@@ -598,28 +455,9 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
     price: 3200,
     currency: "$",
     pricingModel: "subscription",
-    features: [
-      "Multi-cloud cost optimization",
-      "Unified monitoring dashboard",
-      "Automated resource scaling",
-      "Cross-cloud security policies",
-      "Performance analytics",
-      "Compliance management"
-    ],
-    benefits: [
-      "Reduce cloud costs by 30%",
-      "Improve performance by 40%",
-      "Unified security management",
-      "Automated compliance",
-      "Single pane of glass"
-    ],
-    useCases: [
-      "Multi-cloud strategy",
-      "Cost optimization",
-      "Performance monitoring",
-      "Security compliance",
-      "Disaster recovery"
-    ],
+    features: ["Multi-cloud cost optimization", "Unified monitoring dashboard", "Automated resource scaling", "Cross-cloud security policies", "Performance analytics", "Compliance management"],
+    benefits: ["Reduce cloud costs by 30%", "Improve performance by 40%", "Unified security management", "Automated compliance", "Single pane of glass"],
+    useCases: ["Multi-cloud strategy", "Cost optimization", "Performance monitoring", "Security compliance", "Disaster recovery"],
     marketPrice: "$3,200 - $6,500/month",
     contactLink: "https://ziontechgroup.com/contact",
     tags: ["Multi-Cloud", "Cost Optimization", "DevOps", "Cloud Management"],
@@ -719,16 +557,8 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
   }
 ]
 // Cybersecurity Services
-export const CYBERSECURITY_SERVICES: ProductListing[] = [
-  {
-    id: "cyber-pentest-1",
-    title: "Comprehensive Penetration Testing Suite",
-    description: "Full-spectrum penetration testing including web applications, mobile apps, network infrastructure, and social engineering. Includes detailed reports, remediation guidance, and compliance documentation for SOC 2, ISO 27001, and PCI DSS.",
-    category: "Cybersecurity",
-    subcategory: "Penetration Testing",
-    price: 5999,
-    currency: "$",
-    tags: ["Penetration Testing", "Security Audit", "Compliance", "Vulnerability Assessment"],
+export const CYBERSECURITY_SERVICES: ProductListing[] = [{
+    id: "cyber-pentest-1", title: "Comprehensive Penetration Testing Suite", description: "Full-spectrum penetration testing including web applications, mobile apps, network infrastructure, and social engineering. Includes detailed reports, remediation guidance, and compliance documentation for SOC 2, ISO 27001, and PCI DSS.", category: "Cybersecurity", subcategory: "Penetration Testing", price: 5999, currency: "$", tags: ["Penetration Testing", "Security Audit", "Compliance", "Vulnerability Assessment"],
     author: {
       name: "ZionTech Group",
       id: "ziontech",
@@ -742,28 +572,9 @@ export const CYBERSECURITY_SERVICES: ProductListing[] = [
     price: 3800,
     currency: "$",
     pricingModel: "subscription",
-    features: [
-      "Real-time data processing",
-      "Predictive analytics",
-      "Interactive dashboards",
-      "Data visualization",
-      "Automated reporting",
-      "Mobile analytics"
-    ],
-    benefits: [
-      "Make decisions 5x faster",
-      "Identify trends in real-time",
-      "Predict future outcomes",
-      "Improve customer experience",
-      "Increase revenue by 25%"
-    ],
-    useCases: [
-      "Sales performance tracking",
-      "Customer behavior analysis",
-      "Financial reporting",
-      "Marketing campaign optimization",
-      "Operational efficiency"
-    ],
+    features: ["Real-time data processing", "Predictive analytics", "Interactive dashboards", "Data visualization", "Automated reporting", "Mobile analytics"],
+    benefits: ["Make decisions 5x faster", "Identify trends in real-time", "Predict future outcomes", "Improve customer experience", "Increase revenue by 25%"],
+    useCases: ["Sales performance tracking", "Customer behavior analysis", "Financial reporting", "Marketing campaign optimization", "Operational efficiency"],
     marketPrice: "$3,800 - $7,200/month",
     contactLink: "https://ziontechgroup.com/contact",
     tags: ["Business Intelligence", "Real-Time Analytics", "Predictive Analytics", "Data Visualization"],
@@ -787,28 +598,9 @@ export const CYBERSECURITY_SERVICES: ProductListing[] = [
     price: 4500,
     currency: "$",
     pricingModel: "subscription",
-    features: [
-      "Data quality management",
-      "Privacy compliance tools",
-      "Data lineage tracking",
-      "Access control management",
-      "Audit trail reporting",
-      "Regulatory compliance"
-    ],
-    benefits: [
-      "Ensure data quality and accuracy",
-      "Meet GDPR, CCPA compliance",
-      "Reduce data risks",
-      "Improve decision making",
-      "Protect customer privacy"
-    ],
-    useCases: [
-      "Data quality management",
-      "Privacy compliance",
-      "Regulatory reporting",
-      "Data security",
-      "Audit preparation"
-    ],
+    features: ["Data quality management", "Privacy compliance tools", "Data lineage tracking", "Access control management", "Audit trail reporting", "Regulatory compliance"],
+    benefits: ["Ensure data quality and accuracy", "Meet GDPR, CCPA compliance", "Reduce data risks", "Improve decision making", "Protect customer privacy"],
+    useCases: ["Data quality management", "Privacy compliance", "Regulatory reporting", "Data security", "Audit preparation"],
     marketPrice: "$4,500 - $9,000/month",
     contactLink: "https://ziontechgroup.com/contact",
     tags: ["Data Governance", "Compliance", "Privacy", "Data Quality"],
@@ -851,28 +643,9 @@ export const CYBERSECURITY_SERVICES: ProductListing[] = [
     price: 899,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "24/7 threat monitoring",
-      "Vulnerability assessment",
-      "Penetration testing",
-      "Security awareness training",
-      "Incident response",
-      "Compliance reporting"
-    ],
-    benefits: [
-      "Protect against 99.9% of threats",
-      "Meet compliance requirements",
-      "Reduce security incidents",
-      "Protect brand reputation",
-      "Lower insurance costs"
-    ],
-    useCases: [
-      "Financial services",
-      "Healthcare organizations",
-      "E-commerce platforms",
-      "Government agencies",
-      "Educational institutions"
-    ],
+    features: ["24/7 threat monitoring", "Vulnerability assessment", "Penetration testing", "Security awareness training", "Incident response", "Compliance reporting"],
+    benefits: ["Protect against 99.9% of threats", "Meet compliance requirements", "Reduce security incidents", "Protect brand reputation", "Lower insurance costs"],
+    useCases: ["Financial services", "Healthcare organizations", "E-commerce platforms", "Government agencies", "Educational institutions"],
     targetAudience: ["Enterprises", "Financial services", "Healthcare", "Government", "Education"],
     tags: ["Cybersecurity", "Threat Detection", "Compliance", "Penetration Testing", "Security"],
     author: {
@@ -901,28 +674,9 @@ export const CYBERSECURITY_SERVICES: ProductListing[] = [
     price: 599,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Automated compliance checks",
-      "Real-time monitoring",
-      "Audit trail management",
-      "Policy templates",
-      "Risk assessment",
-      "Automated reporting"
-    ],
-    benefits: [
-      "Reduce compliance costs by 50%",
-      "Eliminate manual processes",
-      "Stay audit-ready 24/7",
-      "Reduce compliance risks",
-      "Faster time to compliance"
-    ],
-    useCases: [
-      "GDPR compliance",
-      "HIPAA compliance",
-      "SOC 2 certification",
-      "PCI DSS compliance",
-      "Industry regulations"
-    ],
+    features: ["Automated compliance checks", "Real-time monitoring", "Audit trail management", "Policy templates", "Risk assessment", "Automated reporting"],
+    benefits: ["Reduce compliance costs by 50%", "Eliminate manual processes", "Stay audit-ready 24/7", "Reduce compliance risks", "Faster time to compliance"],
+    useCases: ["GDPR compliance", "HIPAA compliance", "SOC 2 certification", "PCI DSS compliance", "Industry regulations"],
     targetAudience: ["Healthcare", "Financial services", "E-commerce", "SaaS companies", "Enterprises"],
     tags: ["Compliance", "GDPR", "HIPAA", "SOC 2", "Automation"],
     author: {
@@ -999,16 +753,8 @@ export const CYBERSECURITY_SERVICES: ProductListing[] = [
   }
 ]
 // Cloud & DevOps Services
-export const CLOUD_DEVOPS_SERVICES: ProductListing[] = [
-  {
-    id: "cloud-migration-1",
-    title: "Enterprise Cloud Migration & Optimization",
-    description: "End-to-end cloud migration services including assessment, planning, execution, and optimization. Supports AWS, Azure, and Google Cloud with cost optimization strategies and performance tuning.",
-    category: "Cloud Services",
-    subcategory: "Migration",
-    price: 12999,
-    currency: "$",
-    tags: ["Cloud Migration", "AWS", "Azure", "Cost Optimization"],
+export const CLOUD_DEVOPS_SERVICES: ProductListing[] = [{
+    id: "cloud-migration-1", title: "Enterprise Cloud Migration & Optimization", description: "End-to-end cloud migration services including assessment, planning, execution, and optimization. Supports AWS, Azure, and Google Cloud with cost optimization strategies and performance tuning.", category: "Cloud Services", subcategory: "Migration", price: 12999, currency: "$", tags: ["Cloud Migration", "AWS", "Azure", "Cost Optimization"],
     author: {
       name: "ZionTech Group",
       id: "ziontech",
@@ -1069,16 +815,8 @@ export const CLOUD_DEVOPS_SERVICES: ProductListing[] = [
   }
 ]
 // Data & Analytics Services
-export const DATA_ANALYTICS_SERVICES: ProductListing[] = [
-  {
-    id: "data-engineering-1",
-    title: "Data Engineering & ETL Pipeline Development",
-    description: "Complete data engineering solution including ETL pipeline development, data warehousing, data lake architecture, and real-time streaming. Supports big data technologies like Apache Spark, Kafka, and Snowflake.",
-    category: "Data Analytics",
-    subcategory: "Data Engineering",
-    price: 7999,
-    currency: "$",
-    tags: ["Data Engineering", "ETL", "Data Warehousing", "Big Data"],
+export const DATA_ANALYTICS_SERVICES: ProductListing[] = [{
+    id: "data-engineering-1", title: "Data Engineering & ETL Pipeline Development", description: "Complete data engineering solution including ETL pipeline development, data warehousing, data lake architecture, and real-time streaming. Supports big data technologies like Apache Spark, Kafka, and Snowflake.", category: "Data Analytics", subcategory: "Data Engineering", price: 7999, currency: "$", tags: ["Data Engineering", "ETL", "Data Warehousing", "Big Data"],
     author: {
       name: "ZionTech Group",
       id: "ziontech",
@@ -1117,16 +855,8 @@ export const DATA_ANALYTICS_SERVICES: ProductListing[] = [
   }
 ]
 // Digital Transformation Services
-export const DIGITAL_TRANSFORMATION_SERVICES: ProductListing[] = [
-  {
-    id: "digital-strategy-1",
-    title: "Digital Transformation Strategy & Roadmap",
-    description: "Comprehensive digital transformation consulting including current state assessment, future state vision, technology roadmap, and implementation strategy. Covers people, process, and technology transformation.",
-    category: "Digital Transformation",
-    subcategory: "Strategy",
-    price: 15999,
-    currency: "$",
-    tags: ["Digital Transformation", "Strategy", "Technology Roadmap", "Change Management"],
+export const DIGITAL_TRANSFORMATION_SERVICES: ProductListing[] = [{
+    id: "digital-strategy-1", title: "Digital Transformation Strategy & Roadmap", description: "Comprehensive digital transformation consulting including current state assessment, future state vision, technology roadmap, and implementation strategy. Covers people, process, and technology transformation.", category: "Digital Transformation", subcategory: "Strategy", price: 15999, currency: "$", tags: ["Digital Transformation", "Strategy", "Technology Roadmap", "Change Management"],
     author: {
       name: "ZionTech Group",
       id: "ziontech",
@@ -1166,16 +896,8 @@ export const DIGITAL_TRANSFORMATION_SERVICES: ProductListing[] = [
   }
 ]
 // IoT & Edge Computing Services
-export const IOT_EDGE_SERVICES: ProductListing[] = [
-  {
-    id: "iot-platform-1",
-    title: "IoT Platform Development & Management",
-    description: "End-to-end IoT solution including device management, data collection, real-time analytics, and predictive maintenance. Supports industrial IoT, smart cities, and connected devices.",
-    category: "IoT & Edge Computing",
-    subcategory: "Platform Development",
-    price: 8999,
-    currency: "$",
-    tags: ["IoT", "Device Management", "Real-time Analytics", "Predictive Maintenance"],
+export const IOT_EDGE_SERVICES: ProductListing[] = [{
+    id: "iot-platform-1", title: "IoT Platform Development & Management", description: "End-to-end IoT solution including device management, data collection, real-time analytics, and predictive maintenance. Supports industrial IoT, smart cities, and connected devices.", category: "IoT & Edge Computing", subcategory: "Platform Development", price: 8999, currency: "$", tags: ["IoT", "Device Management", "Real-time Analytics", "Predictive Maintenance"],
     author: {
       name: "ZionTech Group",
       id: "ziontech",
@@ -1213,16 +935,8 @@ export const IOT_EDGE_SERVICES: ProductListing[] = [
   }
 ]
 // Blockchain & Web3 Services
-export const BLOCKCHAIN_WEB3_SERVICES: ProductListing[] = [
-  {
-    id: "blockchain-development-1",
-    title: "Blockchain Development & Smart Contract Auditing",
-    description: "Custom blockchain solutions, smart contract development, and comprehensive security auditing. Includes DeFi applications, NFT platforms, and enterprise blockchain integration.",
-    category: "Blockchain & Web3",
-    subcategory: "Development",
-    price: 12999,
-    currency: "$",
-    tags: ["Blockchain", "Smart Contracts", "DeFi", "NFT"],
+export const BLOCKCHAIN_WEB3_SERVICES: ProductListing[] = [{
+    id: "blockchain-development-1", title: "Blockchain Development & Smart Contract Auditing", description: "Custom blockchain solutions, smart contract development, and comprehensive security auditing. Includes DeFi applications, NFT platforms, and enterprise blockchain integration.", category: "Blockchain & Web3", subcategory: "Development", price: 12999, currency: "$", tags: ["Blockchain", "Smart Contracts", "DeFi", "NFT"],
     author: {
       name: "ZionTech Group",
       id: "ziontech",
@@ -1261,30 +975,9 @@ export const BLOCKCHAIN_WEB3_SERVICES: ProductListing[] = [
   }
 ]
 // All services combined
-export const ALL_EXPANDED_SERVICES: ProductListing[] = [
-  ...AI_SERVICES,
-  ...CYBERSECURITY_SERVICES,
-  ...CLOUD_DEVOPS_SERVICES,
-  ...DATA_ANALYTICS_SERVICES,
-  ...DIGITAL_TRANSFORMATION_SERVICES,
-  ...IOT_EDGE_SERVICES,
-  ...BLOCKCHAIN_WEB3_SERVICES
-]
+export const ALL_EXPANDED_SERVICES: ProductListing[] = [...AI_SERVICES, ...CYBERSECURITY_SERVICES, ...CLOUD_DEVOPS_SERVICES, ...DATA_ANALYTICS_SERVICES, ...DIGITAL_TRANSFORMATION_SERVICES, ...IOT_EDGE_SERVICES, ...BLOCKCHAIN_WEB3_SERVICES]
 // Service categories for filtering
-export const EXPANDED_SERVICE_CATEGORIES = [
-  { label: 'AI & Machine Learning', value: 'ai-ml' },
-  { label: 'Cybersecurity', value: 'cybersecurity' },
-  { label: 'Cloud & DevOps', value: 'cloud-devops' },
-  { label: 'Data & Analytics', value: 'data-analytics' },
-    id: 2,
-    title: "Web Development",
-    description: "Modern web applications and e-commerce solutions",
-    category: "Web",
-    price: 3000,
-    rating: 4.9,
-    reviews: 89,
-    featured: true,
-    images: ["/images/web-dev.jpg"],
+export const EXPANDED_SERVICE_CATEGORIES = [{ label: 'AI & Machine Learning', value: 'ai-ml' }, { label: 'Cybersecurity', value: 'cybersecurity' }, { label: 'Cloud & DevOps', value: 'cloud-devops' }, { label: 'Data & Analytics', value: 'data-analytics' }, id: 2, title: "Web Development", description: "Modern web applications and e-commerce solutions", category: "Web", price: 3000, rating: 4.9, reviews: 89, featured: true, images: ["/images/web-dev.jpg"],
     reviewCount: 89,
     aiScore: 88,
     availability: "Available",
@@ -1308,29 +1001,13 @@ export const EXPANDED_SERVICE_CATEGORIES = [
     tags: ["iOS", "Android", "React Native"]
   }
 ]
-export const SERVICE_CATEGORIES: Category[] = [
-  {
-    id: "ai",
-    name: "AI & Machine Learning",
-    icon: "🤖",
-    description: "Advanced AI solutions and ML models",
-    services: EXPANDED_SERVICES.filter(s => s.category === "AI")
-  },
-  {
-    id: "web",
-    name: "Web Development",
-    icon: "🌐",
-    description: "Modern web applications",
-    services: EXPANDED_SERVICES.filter(s => s.category === "Web")
-  },
-  {
-    id: "mobile",
-    name: "Mobile Development",
-    icon: "📱",
-    description: "iOS and Android apps",
-    services: EXPANDED_SERVICES.filter(s => s.category === "Mobile")
-  }
-]
+export const SERVICE_CATEGORIES: Category[] = [{
+    id: "ai", name: "AI & Machine Learning", icon: "🤖", description: "Advanced AI solutions and ML models", services: EXPANDED_SERVICES.filter(s => s.category === "AI")
+  }, {
+    id: "web", name: "Web Development", icon: "🌐", description: "Modern web applications", services: EXPANDED_SERVICES.filter(s => s.category === "Web")
+  }, {
+    id: "mobile", name: "Mobile Development", icon: "📱", description: "iOS and Android apps", services: EXPANDED_SERVICES.filter(s => s.category === "Mobile")
+  }]
 export const CONTACT_INFO = {
   email: "contact@ziontechgroup.com",
   phone: "+1 (555) 123-4567",
@@ -1338,12 +1015,8 @@ export const CONTACT_INFO = {
   mobile: "+1 (555) 123-4567",
   website: "https://ziontechgroup.com"
 }
-export const PRICING_TIERS = [
-  {
-    name: "Starter",
-    price: "$99/month",
-    description: "Perfect for small teams",
-    features: ["Basic support", "Standard features", "5 projects"]
+export const PRICING_TIERS = [{
+    name: "Starter", price: "$99/month", description: "Perfect for small teams", features: ["Basic support", "Standard features", "5 projects"]
   },
   {
     name: "Professional",
@@ -1371,21 +1044,8 @@ export const PRICING_TIERS = [
     price: 9200,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Apache Kafka integration",
-      "Real-time data processing",
-      "Scalable architecture design",
-      "Data pipeline automation",
-      "Performance monitoring",
-      "Error handling and recovery"
-    ],
-    benefits: [
-      "Process data in real-time",
-      "Handle high data volumes",
-      "Improve decision-making speed",
-      "Reduce data latency",
-      "Scalable architecture"
-    ],
+    features: ["Apache Kafka integration", "Real-time data processing", "Scalable architecture design", "Data pipeline automation", "Performance monitoring", "Error handling and recovery"],
+    benefits: ["Process data in real-time", "Handle high data volumes", "Improve decision-making speed", "Reduce data latency", "Scalable architecture"],
     marketPrice: "$7,500 - $18,000",
     deliveryTime: "10-14 weeks",
     tags: ["Data Streaming", "Real-time Analytics", "Apache Kafka", "Big Data"],
@@ -1414,21 +1074,8 @@ export const PRICING_TIERS = [
     price: 4800,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-      "Interactive data visualizations",
-      "Real-time data integration",
-      "Custom KPI tracking",
-      "Automated reporting",
-      "Mobile-responsive design",
-      "User access management"
-    ],
-    benefits: [
-      "Better data-driven decisions",
-      "Improved operational efficiency",
-      "Real-time business insights",
-      "Enhanced reporting capabilities",
-      "Increased productivity"
-    ],
+    features: ["Interactive data visualizations", "Real-time data integration", "Custom KPI tracking", "Automated reporting", "Mobile-responsive design", "User access management"],
+    benefits: ["Better data-driven decisions", "Improved operational efficiency", "Real-time business insights", "Enhanced reporting capabilities", "Increased productivity"],
     marketPrice: "$4,000 - $10,000",
     deliveryTime: "5-7 weeks",
     tags: ["Business Intelligence", "Data Visualization", "Analytics", "Reporting"],
@@ -1457,37 +1104,10 @@ export const PRICING_TIERS = [
     price: 6500,
     currency: "$",
     pricingModel: "project-based",
-    features: [
-    id: "digital-transformation",
-    title: "Digital Transformation Consulting",
-    description: "Strategic digital transformation consulting to modernize business processes, technology infrastructure, and customer experiences.",
-    category: "Consulting Services",
-    subcategory: "Digital Transformation",
-    price: 15000,
-    currency: "$",
-    pricingModel: "project-based",
-    features: [
-      "Business process analysis",
-      "Technology roadmap",
-      "Change management",
-      "Implementation support",
-      "ROI measurement",
-      "Ongoing optimization"
-    ],
-    benefits: [
-      "Increase operational efficiency by 40%",
-      "Improve customer satisfaction",
-      "Reduce operational costs",
-      "Enable innovation",
-      "Competitive advantage"
-    ],
-    useCases: [
-      "Legacy system modernization",
-      "Process automation",
-      "Customer experience transformation",
-      "Data strategy implementation",
-      "Cloud adoption"
-    ],
+    features: [id: "digital-transformation", title: "Digital Transformation Consulting", description: "Strategic digital transformation consulting to modernize business processes, technology infrastructure, and customer experiences.", category: "Consulting Services", subcategory: "Digital Transformation", price: 15000, currency: "$", pricingModel: "project-based", features: [
+      "Business process analysis", "Technology roadmap", "Change management", "Implementation support", "ROI measurement", "Ongoing optimization"],
+    benefits: ["Increase operational efficiency by 40%", "Improve customer satisfaction", "Reduce operational costs", "Enable innovation", "Competitive advantage"],
+    useCases: ["Legacy system modernization", "Process automation", "Customer experience transformation", "Data strategy implementation", "Cloud adoption"],
     targetAudience: ["Enterprises", "Manufacturing", "Healthcare", "Financial services", "Retail"],
     tags: ["Digital Transformation", "Consulting", "Strategy", "Innovation", "Business"],
     author: {
@@ -1517,28 +1137,9 @@ export const PRICING_TIERS = [
     price: 799,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Device management",
-      "Real-time data collection",
-      "Edge computing",
-      "Predictive maintenance",
-      "Security protocols",
-      "Scalable architecture"
-    ],
-    benefits: [
-      "Reduce maintenance costs by 30%",
-      "Improve operational efficiency",
-      "Real-time insights",
-      "Predictive maintenance",
-      "Scalable IoT deployment"
-    ],
-    useCases: [
-      "Smart manufacturing",
-      "Connected buildings",
-      "Fleet management",
-      "Energy monitoring",
-      "Agriculture automation"
-    ],
+    features: ["Device management", "Real-time data collection", "Edge computing", "Predictive maintenance", "Security protocols", "Scalable architecture"],
+    benefits: ["Reduce maintenance costs by 30%", "Improve operational efficiency", "Real-time insights", "Predictive maintenance", "Scalable IoT deployment"],
+    useCases: ["Smart manufacturing", "Connected buildings", "Fleet management", "Energy monitoring", "Agriculture automation"],
     targetAudience: ["Manufacturing", "Smart cities", "Energy companies", "Transportation", "Agriculture"],
     tags: ["IoT", "Device Management", "Edge Computing", "Predictive Maintenance", "Automation"],
     author: {
@@ -1564,13 +1165,7 @@ export const PRICING_TIERS = [
       "Backup and recovery enhancement",
       "Monitoring and alerting"
     ],
-    benefits: [
-      "Faster query performance",
-      "Reduced storage costs",
-      "Better scalability",
-      "Improved reliability",
-      "Enhanced user experience"
-    ],
+    benefits: ["Faster query performance", "Reduced storage costs", "Better scalability", "Improved reliability", "Enhanced user experience"],
     marketPrice: "$5,000 - $12,000",
     deliveryTime: "6-8 weeks",
     tags: ["Data Warehouse", "Performance Optimization", "Data Engineering", "Database"],
@@ -1797,20 +1392,7 @@ export const PRICING_TIERS = [
   }
 ]
 // Service categories for filtering
-export const EXPANDED_SERVICE_CATEGORIES = [
-  { label: 'AI Development', value: 'ai-development' },
-  { label: 'Cloud Services', value: 'cloud-services' },
-  { label: 'DevOps', value: 'devops' },
-  { label: 'Cybersecurity', value: 'cybersecurity' },
-  { label: 'Data Analytics', value: 'data-analytics' },
-  { label: 'Web Development', value: 'web-development' },
-  { label: 'Mobile Development', value: 'mobile-development' },
-  { label: 'Blockchain', value: 'blockchain' },
-  { label: 'IoT', value: 'iot' },
-  { label: 'Hardware', value: 'hardware' },
-  { label: 'Business Automation', value: 'business-automation' },
-  { label: 'Business Solutions', value: 'business-solutions' }
-]
+export const EXPANDED_SERVICE_CATEGORIES = [{ label: 'AI Development', value: 'ai-development' }, { label: 'Cloud Services', value: 'cloud-services' }, { label: 'DevOps', value: 'devops' }, { label: 'Cybersecurity', value: 'cybersecurity' }, { label: 'Data Analytics', value: 'data-analytics' }, { label: 'Web Development', value: 'web-development' }, { label: 'Mobile Development', value: 'mobile-development' }, { label: 'Blockchain', value: 'blockchain' }, { label: 'IoT', value: 'iot' }, { label: 'Hardware', value: 'hardware' }, { label: 'Business Automation', value: 'business-automation' }, { label: 'Business Solutions', value: 'business-solutions' }]
 export const FEATURED_SERVICES = EXPANDED_SERVICES.filter(s => s.isFeatured)
 export const NEW_SERVICES = EXPANDED_SERVICES.filter(s => s.isNew)
     id: "ai-services",
@@ -1910,12 +1492,8 @@ export const NEW_SERVICES = EXPANDED_SERVICES.filter(s => s.isNew)
     count: 2
   }
 ]
-export const PRICING_TIERS = [
-  {
-    name: "Starter",
-    price: "$1,000 - $3,000",
-    description: "Basic services for small businesses",
-    features: ["Basic functionality", "Standard support", "Documentation"]
+export const PRICING_TIERS = [{
+    name: "Starter", price: "$1, 000 - $3, 000", description: "Basic services for small businesses", features: ["Basic functionality", "Standard support", "Documentation"]
   },
   {
     name: "Professional",

@@ -30,7 +30,7 @@ exports.handler = async () => {const logs = []}
   }
   process.env.CANONICAL_URL =
     process.env.CANONICAL_URL || 'https: //ziontechgroup.com',
-  step('front:functions:inject') () =>,
+  step('front: functions:inject') () =>,
     process.env.CANONICAL_URL || 'http,
   s: //ziontechgroup.com'
   step('fron,

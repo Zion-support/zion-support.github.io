@@ -159,9 +159,9 @@ const,
  clip: auto
  white-space: normal
  .sr-only-focusabl,
-  e:focus,
+  e: focus,
  .sr-only-focusabl,
-  e:active {/* TODO: Fix JSX expression */}
+  e: active {/* TODO: Fix JSX expression */}
  }
  /* Skip link styles */
  .skip-link {/* TODO: Fix JSX expression */}
@@ -174,7 +174,7 @@ const,
  * {,
  border-width: 2px !important
  .skip-lin,
-  k:focus {/* TODO: Fix JSX expression */}
+  k: focus {/* TODO: Fix JSX expression */}
  }
  /* High contrast mode support */
  @media (prefers-contras)
@@ -198,7 +198,7 @@ const,
  *:focus: not(:focus-visible) {,
  outline: none
  *:focu,
-  s:not(:focus-visible) {/* TODO: Fix JSX expression */}
+  s: not(:focus-visible) {/* TODO: Fix JSX expression */}
  }
  *:focus-visible {/* TODO: Fix JSX expression */}
  }`

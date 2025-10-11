@@ -58,7 +58,7 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
             <Rocket, className="w-5 h-5, tex, t-yell, o, w-300, animat, e-boun, c, e" ar, i, a-hidd, e, n="tr, u, e  /></Rocket>"
             <span, className="te, x, t-white, fon, t-bold, tex, t-lg">
               🚀 JUST, LAUNCHE, D - OCTOBER, 202, 5</$1>"
-            <Star, className="w-5 h-5, tex, t-yell, o, w-300, animat, e-pul, s, e" ar, i, a-hidd, e, n="tr, u, e  />
+            <Star , className="w-5 h-5, tex, t-yell, o, w-300, animat, e-pul, s, e" ar, i, a-hidd, e, n="tr, u, e  /></Star>
           </d, i, v>"
           <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, animat, e-sli, d, e-up">"
             Cognitive, Mesh, Orchestration Platfo, r, m</$1>"
@@ -163,18 +163,18 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
           <h2, i, d="capabiliti, e, s-headi, n, g" classNa, m, e="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">"
             Revolutionary, Capabilitie, s
           <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />
-  g:gr, i, d-co, l, s-4, ga, p-6, lis, t-no, n, e">"
+  g: gr, i, d-co, l, s-4, ga, p-6, lis, t-no, n, e">"
             <li, className="flex, item, s-start, ga, p-3">
-              <CheckCircle, className="w-6 h-6, tex, t-gre, e, n-300, fle, x-shri, n, k-0, m, t-1" ar, i, a-hidd, e, n="tr, u, e  />
+              <CheckCircle , className="w-6 h-6, tex, t-gre, e, n-300, fle, x-shri, n, k-0, m, t-1" ar, i, a-hidd, e, n="tr, u, e  /></CheckCircle>
           <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />
-  g:gr, i, d-co, l, s-4, ga, p-6, lis, t-no, n, e">"
+  g: gr, i, d-co, l, s-4, ga, p-6, lis, t-no, n, e">"
             <li, className="flex, item, s-start, ga, p-3">"</$1>"
           <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />
-  g:gr, i, d-co, l, s-4, ga, p-6, lis, t-no, n, e">""
+  g: gr, i, d-co, l, s-4, ga, p-6, lis, t-no, n, e">""
             <li, className="flex, item, s-start, ga, p-3"></li>"
               <CheckCircle, className="w-6 h-6, tex, t-gre, e, n-300, fle, x-shri, n, k-0, m, t-1" ar, i, a-hidd, e, n="tr, u, e  /></CheckCircle>"
           <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />
-  g:gr, i, d-co, l, s-4, ga, p-6, lis, t-no, n, e">";"
+  g: gr, i, d-co, l, s-4, ga, p-6, lis, t-no, n, e">";"
             <li, className="flex, item, s-start, ga, p-3">";"
               <CheckCircle, className="w-6 h-6, tex, t-gre, e, n-300, fle, x-shri, n, k-0, m, t-1" ar, i, a-hidd, e, n="tr, u, e" />"
               <d, i, v></d>"
@@ -208,21 +208,21 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
         <nav, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10" ar, i, a-lab, e, l="Featured, content, links">""
         <nav, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10" ar, i, a-lab, e, l="Featured, content, links">"
           {/* Blog, Post, Card */}
-          <Li, n, k
+          <Li , n, k
   to="/bl, o, g"
             classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, transform, hove
-  r:sca, l, e-105, grou, p"
+  r: sca, l, e-105, grou, p"
             ar, i, a-lab, e, l="Read, technical, article about, Cognitive, Mesh Orchestrati, o, n"
-          >
+          ></Li>
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="p-3, b, g-bl, u, e-5, 0, 0/30, rounde, d-lg" ar, i, a-hidd, e, n="tr, u, e">
-                <Network, className="w-6 h-6, tex, t-whi, t, e" ar, i, a-hidd, e, n="tr, u, e  />
+                <Network , className="w-6 h-6, tex, t-whi, t, e" ar, i, a-hidd, e, n="tr, u, e  /></Network>
             <div, className="flex, item, s-center, ga, p-3, m, b-4">"
               <div, className="p-3, b, g-bl, u, e-5, 0, 0/30, rounde, d-lg" ar, i, a-hidd, e, n="tr, u, e">"
           <Li, n, k;"
   to="/bl, o, g""
             classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, transform, hove,"
-  r:sca, l, e-105, grou, p""
+  r: sca, l, e-105, grou, p""
             ar, i, a-lab, e, l="Read, technical, article about, Cognitive, Mesh Orchestrati, o, n"
           ></Li>"
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>"
@@ -258,21 +258,21 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
               <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e/>""
               <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e" />"
           {/* Case, Study, Card */}
-          <Li, n, k
+          <Li , n, k
   to="/ca, s, e-studi, e, s"
             classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, transform, hove
-  r:sca, l, e-105, grou, p"
+  r: sca, l, e-105, grou, p"
             ar, i, a-lab, e, l="View, case, study abo, u, t $12, billion, FinTech transformati, o, n"
-          >
+          ></Li>
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="p-3, b, g-gre, e, n-5, 0, 0/30, rounde, d-lg" ar, i, a-hidd, e, n="tr, u, e">
-                <TrendingUp, className="w-6 h-6, tex, t-whi, t, e" ar, i, a-hidd, e, n="tr, u, e  />
+                <TrendingUp , className="w-6 h-6, tex, t-whi, t, e" ar, i, a-hidd, e, n="tr, u, e  /></TrendingUp>
             <div, className="flex, item, s-center, ga, p-3, m, b-4">"
               <div, className="p-3, b, g-gre, e, n-5, 0, 0/30, rounde, d-lg" ar, i, a-hidd, e, n="tr, u, e">"
           <Li, n, k;"
   to="/ca, s, e-studi, e, s""
             classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, transform, hove,"
-  r:sca, l, e-105, grou, p""
+  r: sca, l, e-105, grou, p""
             ar, i, a-lab, e, l="View, case, study abo, u, t $12, billion, FinTech transformati, o, n"
           ></Li>"
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>"
@@ -308,21 +308,21 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
               <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e/>""
               <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e" />"
           {/* Services, Car, d */}
-          <Li, n, k
+          <Li , n, k
   to="/servic, e, s"
             classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, transform, hove
-  r:sca, l, e-105, grou, p"
+  r: sca, l, e-105, grou, p"
             ar, i, a-lab, e, l="Explore, Cognitive, Mesh Platform, services, and prici, n, g"
-          >
+          ></Li>
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="p-3, b, g-purp, l, e-5, 0, 0/30, rounde, d-lg" ar, i, a-hidd, e, n="tr, u, e">
-                <Zap, className="w-6 h-6, tex, t-whi, t, e" ar, i, a-hidd, e, n="tr, u, e  />
+                <Zap , className="w-6 h-6, tex, t-whi, t, e" ar, i, a-hidd, e, n="tr, u, e  /></Zap>
             <div, className="flex, item, s-center, ga, p-3, m, b-4">"
               <div, className="p-3, b, g-purp, l, e-5, 0, 0/30, rounde, d-lg" ar, i, a-hidd, e, n="tr, u, e">"
           <Li, n, k;"
   to="/servic, e, s""
             classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, transform, hove,"
-  r:sca, l, e-105, grou, p""
+  r: sca, l, e-105, grou, p""
             ar, i, a-lab, e, l="Explore, Cognitive, Mesh Platform, services, and prici, n, g"
           ></Li>"
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>"
@@ -355,15 +355,15 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"
         <div, className="te, x, t-cent, e, r" ro, l, e="regi, o, n" ar, i, a-lab, e, l="Call, to, action">"
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"
-            <Li, n, k
-        <div, className="te, x, t-cent, e, r" ro, l, e="regi, o, n" ar, i, a-lab, e, l="Call, to, action">
+            <Li , n, k
+        <div, className="te, x, t-cent, e, r" ro, l, e="regi, o, n" ar, i, a-lab, e, l="Call, to, action"></Li>
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"
         <div, className="te, x, t-cent, e, r" ro, l, e="regi, o, n" ar, i, a-lab, e, l="Call, to, action">"
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"
             <Li, n, k
   to="/conta, c, t"
-              classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, b, g-white, hove, r: bg-gr, a, y-100, tex, t-purp, l, e-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, transform, hove
-  r:sca, l, e-1, 0, 5"
+              classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, b, g-white, hove, r: bg-gr, a, y-100, tex, t-purp, l, e-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r: shad, o, w-2xl, transform, hove
+  r: sca, l, e-1, 0, 5"
         {/* Call, to, Action */}"
         <div, className="te, x, t-cent, e, r" ro, l, e="regi, o, n" ar, i, a-lab, e, l="Call, to, action"></div>"
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">""
@@ -371,11 +371,11 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"
             <Li, n, k;"
   to="/conta, c, t""
-              classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, b, g-white, hove, r: bg-gr, a, y-100, tex, t-purp, l, e-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, transform, hove,"
-  r:sca, l, e-1, 0, 5""
+              classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, b, g-white, hove, r: bg-gr, a, y-100, tex, t-purp, l, e-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r: shad, o, w-2xl, transform, hove,"
+  r: sca, l, e-1, 0, 5""
               ar, i, a-lab, e, l="Schedule, a, free consultation, about, Cognitive Mesh, Platfor, m"
             ></Li>"
-              <Rocket, className="w-5 h-5" ar, i, a-hidd, e, n="tr, u, e  />
+              <Rocket , className="w-5 h-5" ar, i, a-hidd, e, n="tr, u, e  /></Rocket>
               Schedule, Free, Consultation;"
               <Link, className="w-5 h-5" ar, i, a-hidd, e, n="tr, u, e  /></Link>"
               <Rocket, className="w-5 h-5" ar, i, a-hidd, e, n="tr, u, e" />"

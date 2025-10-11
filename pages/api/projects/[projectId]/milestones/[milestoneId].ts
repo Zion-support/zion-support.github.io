@@ -1,13 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from "next"
-import { requireUser } from "../../../../../utils/api/auth"
-import {
-  getProject,
+import { requireUser  } from '../../../../../utils/api/auth'
+import { getProject,
   updateMilestone,
   assertParticipantOrAdmin,
   isClient,
   isTalent,
-} from "../../../../../utils/api/projects"
-import { isMilestoneStatus } from "../../../../../utils/types/milestones"
+ } from '../../../../../utils/api/projects'
+import { isMilestoneStatus  } from '../../../../../utils/types/milestones'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res)
   if (!user) return
@@ -41,7 +40,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     const updated = updateMilestone(project, milestoneId, body)
     if (!updated) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return
     }
     res && res.status(200).json({ milestone: updated })
@@ -53,9 +51,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(405).end('Method Not Allowed')
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

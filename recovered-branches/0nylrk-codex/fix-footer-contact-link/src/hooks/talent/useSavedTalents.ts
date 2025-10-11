@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react"
-import { supabase } from "@/integrations/supabase/client"
-import { TalentProfile } from "@/types/talent"
-import { toast } from "@/hooks/use-toast"
-import { useAuthStatus } from "@/hooks/talent"
+import { useState, useEffect  } from 'react'
+import { supabase  } from '@/integrations/supabase/client'
+import { TalentProfile  } from '@/types/talent'
+import { toast  } from '@/hooks/use-toast'
+import { useAuthStatus  } from '@/hooks/talent'
 export function useSavedTalents() {
   const { isAuthenticated, userDetails } = useAuthStatus()
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([])
@@ -39,7 +39,7 @@ export function useSavedTalents() {
           }
         }
       } catch (error) {
-        console.error('Error fetching saved talents:', error)
+        console.error('Error fetching saved talents: ', error)
         toast({
           title: "Error loading favorites",
           description: "There was a problem loading your saved talents.",
@@ -97,7 +97,7 @@ export function useSavedTalents() {
         })
       }
     } catch (error) {
-      console.error('Error toggling saved talent:', error)
+      console.error('Error toggling saved talent: ', error)
       toast({
         title: "Error",
         description: "There was a problem updating your favorites. Please try again.",

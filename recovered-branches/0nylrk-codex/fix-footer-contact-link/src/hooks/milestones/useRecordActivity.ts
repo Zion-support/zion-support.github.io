@@ -1,6 +1,6 @@
-import { useAuth } from '@/hooks/useAuth'
-import { supabase } from '@/integrations/supabase/client'
-import { MilestoneActivity } from './types'
+import { useAuth  } from '@/hooks/useAuth'
+import { supabase  } from '@/integrations/supabase/client'
+import { MilestoneActivity  } from './types'
 export const useRecordActivity = () => {
   const { user } = useAuth()
   const recordMilestoneActivity = async (
@@ -25,7 +25,7 @@ export const useRecordActivity = () => {
         })
         .select(`
           *,
-          created_by_profile:profiles!user_id(display_name, avatar_url)
+          created_by_profile: profiles!user_id(display_name, avatar_url)
         `)
         .single()
       if (error) throw error

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Targeted PR Merge - Focus on the most recent and important branches
- */ import { execSync } from 'child_process'
+ */ import { execSync  } from 'child_process'
 import fs from 'fs'
 // //Step 1: Ensure we're on main and up to date,
 // try {,
@@ -12,56 +12,18 @@ import fs from 'fs'
   }
 
 //Step 2: Define specific branches to merge (most recent and important),
-const targetBranches = [,
-// //Step,
-  1: Ensure we're on main and up to date,
-// try {/* TODO: Fix JSX expression */}
+const targetBranches = [// //Step, 1: Ensure we're on main and up to date, // try {/* TODO: Fix JSX expression */}
   o: 'inherit' })
   execSync('git pull origin main', {/* TODO: Fix JSX expression */})
   o: 'inherit' })
 //   } catch (error) {/* TODO: Fix JSX expression */}
 }
 
-//Step,
-  2: Define specific branches to merge (most recent and important)
+//Step, 2: Define specific branches to merge (most recent and important)
 const targetBranches = [
-  //Recent cursor branches from today,
-  'cursor/fix-errors-and-merge-to-main-100d',
-  'cursor/fix-errors-and-merge-to-main-2f1b',
-  'cursor/fix-errors-and-merge-to-main-4800',
-  'cursor/fix-errors-and-merge-to-main-494 d',
-  'cursor/fix-errors-and-merge-to-main-5696',
-  'cursor/fix-errors-and-merge-to-main-6 ee3',
-  'cursor/fix-errors-and-merge-to-main-7318',
-  'cursor/fix-errors-and-merge-to-main-97 a6',
-  'cursor/fix-errors-and-merge-to-main-9 bdd',
-  'cursor/fix-errors-and-merge-to-main-9 caa',
-  'cursor/fix-errors-and-merge-to-main-9 f74',
-  'cursor/fix-errors-and-merge-to-main-a0 d2',
-  'cursor/fix-errors-and-merge-to-main-b8 f9',
-  'cursor/fix-errors-and-merge-to-main-cefe',
-  'cursor/fix-errors-and-merge-to-main-d0 f7',
-  'cursor/fix-errors-and-merge-to-main-dc65',
-  'cursor/fix-errors-and-merge-to-main-f4 fa',
-  'cursor/fix-errors-and-merge-to-main-fbf8',
-  'cursor/fix-errors-and-merge-to-main-fcbc',
-  'cursor/fix-errors-and-merge-to-main-3 b04',
-  'cursor/fix-errors-and-merge-to-main-b122',
-  'cursor/fix-errors-and-merge-to-main-ffaa',
-  'cursor/fix-errors-and-merge-to-main-ffab',
-  'cursor/fix-errors-and-merge-to-main-ffee',
-  'cursor/fix-errors-and-merge-to-main-dc0f',
-  //Content and feature branches
-  'add-new-2026-content',
-  'ai-2027-content-integration',
-  'ai-dashboard-improvements',
-  'ai-dashboard-improvements-merged',
-  //Important fix branches
-  'fix-typescript-errors-and-build',
-  'merge-pr-25212',
-  'resolve-pr-25168',
-  'temp-merge-branch',
-  'auto-merge-main']
+  //Recent cursor branches from today, 'cursor/fix-errors-and-merge-to-main-100d', 'cursor/fix-errors-and-merge-to-main-2f1b', 'cursor/fix-errors-and-merge-to-main-4800', 'cursor/fix-errors-and-merge-to-main-494 d', 'cursor/fix-errors-and-merge-to-main-5696', 'cursor/fix-errors-and-merge-to-main-6 ee3', 'cursor/fix-errors-and-merge-to-main-7318', 'cursor/fix-errors-and-merge-to-main-97 a6', 'cursor/fix-errors-and-merge-to-main-9 bdd', 'cursor/fix-errors-and-merge-to-main-9 caa', 'cursor/fix-errors-and-merge-to-main-9 f74', 'cursor/fix-errors-and-merge-to-main-a0 d2', 'cursor/fix-errors-and-merge-to-main-b8 f9', 'cursor/fix-errors-and-merge-to-main-cefe', 'cursor/fix-errors-and-merge-to-main-d0 f7', 'cursor/fix-errors-and-merge-to-main-dc65', 'cursor/fix-errors-and-merge-to-main-f4 fa', 'cursor/fix-errors-and-merge-to-main-fbf8', 'cursor/fix-errors-and-merge-to-main-fcbc', 'cursor/fix-errors-and-merge-to-main-3 b04', 'cursor/fix-errors-and-merge-to-main-b122', 'cursor/fix-errors-and-merge-to-main-ffaa', 'cursor/fix-errors-and-merge-to-main-ffab', 'cursor/fix-errors-and-merge-to-main-ffee', 'cursor/fix-errors-and-merge-to-main-dc0f', //Content and feature branches
+  'add-new-2026-content', 'ai-2027-content-integration', 'ai-dashboard-improvements', 'ai-dashboard-improvements-merged', //Important fix branches
+  'fix-typescript-errors-and-build', 'merge-pr-25212', 'resolve-pr-25168', 'temp-merge-branch', 'auto-merge-main']
 // //Step 3: Enhanced merge function with conflict resolution,
 function mergeBranch(branchName) {,
 //   try {,

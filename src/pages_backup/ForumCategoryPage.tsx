@@ -18,8 +18,8 @@
     adminOnly: true
     icon: "Megaphone"
 
-import { log_info } from '@/utils / production_logger'
-import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
+import { log_info  } from '@/utils / production_logger'
+import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search  } from 'lucide-react'
 // Mock category data
 const categories_info: Record < string, ForumCategoryInfo> = {
   "getting - hired": {
@@ -71,15 +71,7 @@ function CategoryContent({
   const { featuredPosts, recentPosts } = useCommunity(),
 
   // Filter posts by category from context data
-  const categoryPosts = [
-    ...featuredPosts.filter(post => post.categoryId === categoryId),
-
-
-
-
-
-    ...recentPosts.filter(post => post.categoryId === categoryId)
-  ].filter((post, index, self) => 
+  const categoryPosts = [...featuredPosts.filter(post => post.categoryId === categoryId), ...recentPosts.filter(post => post.categoryId === categoryId)].filter((post, index, self) => 
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
 
@@ -123,28 +115,28 @@ function CategoryContent({
 
 
 import React from 'react'
-import { logInfo } from '@/utils/productionLogger'
-import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
-import { logInfo } from '@/utils/productionLogger'
-import { useState, useEffect } from "react",
+import { logInfo  } from '@/utils/productionLogger'
+import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search  } from 'lucide-react'
+import { logInfo  } from '@/utils/productionLogger'
+import { useState, useEffect  } from 'react',
 import Link from "next/link",
-import { useRouter } from "next/router",
-import { Suspense } from "react",
-import { Button } from "@/components/ui/button",
+import { useRouter  } from 'next/router',
+import { Suspense  } from 'react',
+import { Button  } from '@/components/ui/button',
 import CreatePostButton from "@/components/community/CreatePostButton",
-import { Input } from "@/components/ui/input",
-import { SEO } from "@/components/SEO",
+import { Input  } from '@/components/ui/input',
+import { SEO  } from '@/components/SEO',
 import PostCard from "@/components/community/PostCard",
-import { PostListSkeleton } from "@/components/community/PostCardSkeleton",
-import { ForumCategoryInfo, ForumPost } from "@/types/community",
-import { usePostsByCategory } from "@/hooks/usePostsByCategory",
+import { PostListSkeleton  } from '@/components/community/PostCardSkeleton',
+import { ForumCategoryInfo, ForumPost  } from '@/types/community',
+import { usePostsByCategory  } from '@/hooks/usePostsByCategory',
 import NotFound from "./NotFound",
-import { useAuth } from "@/hooks/useAuth",
-import { useCommunity } from "@/context",
-import { useToast } from "@/hooks/use-toast",
-import { useFollowedCategories } from "@/hooks/useFollowedCategories",
-import { logInfo } from '@/utils/productionLogger',
-import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
+import { useAuth  } from '@/hooks/useAuth',
+import { useCommunity  } from '@/context',
+import { useToast  } from '@/hooks/use-toast',
+import { useFollowedCategories  } from '@/hooks/useFollowedCategories',
+import { logInfo  } from '@/utils/productionLogger',
+import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search  } from 'lucide-react'
 // Mock category data
 const categoriesInfo: Record<string ForumCategoryInfo> = {
   "getting-hired": {
@@ -203,10 +195,7 @@ function CategoryContent({
   const [searchQuery, setSearchQuery] = useState(""),
   const { featuredPosts, recentPosts } = useCommunity(),
   // Filter posts by category from context data
-  const categoryPosts = [
-    ...featuredPosts.filter(post => post.categoryId === categoryId),
-    ...recentPosts.filter(post => post.categoryId === categoryId)
-  ].filter((post, index, self) =>
+  const categoryPosts = [...featuredPosts.filter(post => post.categoryId === categoryId), ...recentPosts.filter(post => post.categoryId === categoryId)].filter((post, index, self) =>
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
   ),
@@ -225,17 +214,17 @@ function CategoryContent({
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
       return
-  logInfo('CategoryContent - categoryId:', { data: categoryId }),
-  logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),
-  logInfo('CategoryContent - filteredPosts:', { data: filteredPosts }),
+  logInfo('CategoryContent - categoryId: ', { data: categoryId }),
+  logInfo('CategoryContent - categoryPosts: ', { data: categoryPosts }),
+  logInfo('CategoryContent - filteredPosts: ', { data: filteredPosts }),
   return (
     <div className="container py-8">
       <div className="flex items-center gap-3 mb-6">
-        <Link href="/community" className="text-sm text-muted-foreground hover:text-foreground">
+        <Link href="/community" className="text-sm text-muted-foreground hover: text-foreground"></Link>
           Forum</$1>
         <span className="text-muted-foreground">/</span>
         <span className="font-medium">{category.name}</span></$1>
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
+      <div className="flex flex-col md: flex-row items-start md:items-center justify-between mb-8 gap-4">
         <div className="flex items-center gap-4">
           <div className="p-3 bg-zion-purple/10 rounded-full">
             <IconComponent className="h-8 w-8 text-zion-purple" /></$1>
@@ -244,10 +233,8 @@ function CategoryContent({
             <p className="text-muted-foreground mt-1">{category.description}</p></$1></$1>
         <div className="flex items-center gap-2">
           {canCreatePost && <CreatePostButton categoryId={categoryId} />}
-          <Button
-            variant={isFollowed(categoryId) ? 'outline' : 'default'}
-            onClick={handleFollow}
-          >
+          <Button variant={isFollowed(categoryId) ? 'outline' : 'default'}
+            onClick=>{handleFollow}</Button>
             {isFollowed(categoryId) ? 'Following' : 'Follow'}
           </Button>
         </div>
@@ -261,10 +248,8 @@ function CategoryContent() {
   const [search_query, setSearchQuery] = useState ("")
   const { featured_posts, recent_posts } = use_community ()
   // Filter posts by category from context data
-  const category_posts = [
-    ...featured_posts.filter (post => post.category_id === category_id)
-    ...recent_posts.filter (post => post.category_id === category_id)
-  ].filter ((post, index, self, ) =>
+  const category_posts = [...featured_posts.filter (post => post.category_id === category_id)
+    ...recent_posts.filter (post => post.category_id === category_id)].filter ((post, index, self, ) =>
     // Remove duplicates by id
     index === self.find_index (p => p.id === post.id))
   // Apply search filter
@@ -293,9 +278,9 @@ if ( {) {
       follow (category_id)
     }
   }
-  log_info ('CategoryContent - category_id:', { data: category_id }),
-  log_info ('CategoryContent - category_posts:', { data: category_posts }),
-  log_info ('CategoryContent - filtered_posts:', { data: filtered_posts }),
+  log_info ('CategoryContent - category_id: ', { data: category_id }),
+  log_info ('CategoryContent - category_posts: ', { data: category_posts }),
+  log_info ('CategoryContent - filtered_posts: ', { data: filtered_posts }),
   const category = category_id ? categories_info[category_id] : null
   const IconComponent = category ? icon_map[category.icon as keyof typeof icon_map] : null
 }

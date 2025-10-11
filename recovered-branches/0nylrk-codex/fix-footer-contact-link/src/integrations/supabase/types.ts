@@ -30,8 +30,7 @@ export type Database = {
           response?: string
           user_id?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "ai_chats_user_id_fkey"
             columns: ["user_id"]
             isOneToOne: false
@@ -69,8 +68,7 @@ export type Database = {
           session_id?: string | null
           user_id?: string | null
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "analytics_events_user_id_fkey"
             columns: ["user_id"]
             isOneToOne: false
@@ -117,8 +115,7 @@ export type Database = {
           scopes?: Database["public"]["Enums"]["api_key_scope"][]
           user_id?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "api_keys_user_id_fkey"
             columns: ["user_id"]
             isOneToOne: false
@@ -165,8 +162,7 @@ export type Database = {
           user_agent?: string | null
           user_id?: string | null
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "api_logs_api_key_id_fkey"
             columns: ["api_key_id"]
             isOneToOne: false
@@ -217,8 +213,7 @@ export type Database = {
           name?: string
           resume_id?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "certifications_resume_id_fkey"
             columns: ["resume_id"]
             isOneToOne: false
@@ -268,8 +263,7 @@ export type Database = {
           updated_at?: string
           views?: number | null
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "content_creator_id_fkey"
             columns: ["creator_id"]
             isOneToOne: false
@@ -307,8 +301,7 @@ export type Database = {
           updated_at?: string
           user_id?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "contract_templates_user_id_fkey"
             columns: ["user_id"]
             isOneToOne: false
@@ -364,8 +357,7 @@ export type Database = {
           start_date?: string
           updated_at?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "education_resume_id_fkey"
             columns: ["resume_id"]
             isOneToOne: false
@@ -472,8 +464,7 @@ export type Database = {
           user_email?: string | null
           user_id?: string | null
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "fraud_flags_reviewed_by_fkey"
             columns: ["reviewed_by"]
             isOneToOne: false
@@ -653,8 +644,7 @@ export type Database = {
           talent_id?: string
           viewed_at?: string | null
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "job_applications_job_id_fkey"
             columns: ["job_id"]
             isOneToOne: false
@@ -718,8 +708,7 @@ export type Database = {
           title?: string
           updated_at?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "jobs_client_id_fkey"
             columns: ["client_id"]
             isOneToOne: false
@@ -760,8 +749,7 @@ export type Database = {
           previous_status?: string | null
           user_id?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "milestone_activities_milestone_id_fkey"
             columns: ["milestone_id"]
             isOneToOne: false
@@ -803,8 +791,7 @@ export type Database = {
           updated_at?: string
           user_id?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "notification_preferences_user_id_fkey"
             columns: ["user_id"]
             isOneToOne: true
@@ -848,8 +835,7 @@ export type Database = {
           updated_at?: string | null
           user_id?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "notifications_user_id_fkey"
             columns: ["user_id"]
             isOneToOne: false
@@ -893,8 +879,7 @@ export type Database = {
           status?: string
           updated_at?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "partner_payouts_partner_id_fkey"
             columns: ["partner_id"]
             isOneToOne: false
@@ -953,8 +938,7 @@ export type Database = {
           user_id?: string
           website?: string | null
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "partner_profiles_user_id_fkey"
             columns: ["user_id"]
             isOneToOne: false
@@ -998,8 +982,7 @@ export type Database = {
           source?: string | null
           updated_at?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "partner_referral_links_partner_id_fkey"
             columns: ["partner_id"]
             isOneToOne: false
@@ -1049,8 +1032,7 @@ export type Database = {
           updated_at?: string
           user_id?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "portfolio_projects_user_id_fkey"
             columns: ["user_id"]
             isOneToOne: false
@@ -1118,8 +1100,7 @@ export type Database = {
           updated_at?: string
           user_type?: string | null
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "profiles_id_fkey"
             columns: ["id"]
             isOneToOne: true
@@ -1176,8 +1157,7 @@ export type Database = {
           title?: string
           updated_at?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "project_milestones_created_by_fkey"
             columns: ["created_by"]
             isOneToOne: false
@@ -1216,8 +1196,7 @@ export type Database = {
           project_id?: string
           user_id?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "project_notes_project_id_fkey"
             columns: ["project_id"]
             isOneToOne: false
@@ -1274,8 +1253,7 @@ export type Database = {
           talent_id?: string
           updated_at?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "projects_client_id_fkey"
             columns: ["client_id"]
             isOneToOne: false
@@ -1363,8 +1341,7 @@ export type Database = {
           updated_at?: string
           viewed_at?: string | null
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "quote_requests_requester_id_fkey"
             columns: ["requester_id"]
             isOneToOne: false
@@ -1403,8 +1380,7 @@ export type Database = {
           updated_at?: string
           user_id?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "referral_codes_user_id_fkey"
             columns: ["user_id"]
             isOneToOne: true
@@ -1445,8 +1421,7 @@ export type Database = {
           reward_type?: string
           user_id?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "referral_rewards_partner_id_fkey"
             columns: ["partner_id"]
             isOneToOne: false
@@ -1519,8 +1494,7 @@ export type Database = {
           reward_issued_at?: string | null
           status?: Database["public"]["Enums"]["referral_status"]
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "referrals_partner_id_fkey"
             columns: ["partner_id"]
             isOneToOne: false
@@ -1582,8 +1556,7 @@ export type Database = {
           sent_at?: string | null
           user_id?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "reminder_logs_user_id_fkey"
             columns: ["user_id"]
             isOneToOne: false
@@ -1621,8 +1594,7 @@ export type Database = {
           resume_id?: string
           years_experience?: number | null
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "resume_skills_resume_id_fkey"
             columns: ["resume_id"]
             isOneToOne: false
@@ -1660,8 +1632,7 @@ export type Database = {
           review_id?: string
           status?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "review_reports_reporter_id_fkey"
             columns: ["reporter_id"]
             isOneToOne: false
@@ -1733,8 +1704,7 @@ export type Database = {
           updated_at?: string
           would_work_again?: boolean | null
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "reviews_project_id_fkey"
             columns: ["project_id"]
             isOneToOne: false
@@ -1828,8 +1798,7 @@ export type Database = {
           updated_at?: string
           user_id?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "subscriptions_user_id_fkey"
             columns: ["user_id"]
             isOneToOne: false
@@ -1870,8 +1839,7 @@ export type Database = {
           updated_at?: string
           user_id?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "talent_resumes_user_id_fkey"
             columns: ["user_id"]
             isOneToOne: false
@@ -1900,8 +1868,7 @@ export type Database = {
           tenant_id?: string
           user_id?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "tenant_administrators_tenant_id_fkey"
             columns: ["tenant_id"]
             isOneToOne: false
@@ -2000,8 +1967,7 @@ export type Database = {
           updated_at?: string
           user_id?: string | null
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "user_onboarding_user_id_fkey"
             columns: ["user_id"]
             isOneToOne: false
@@ -2033,8 +1999,7 @@ export type Database = {
           message_scanning_enabled?: boolean | null
           updated_at?: string | null
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "user_privacy_settings_id_fkey"
             columns: ["id"]
             isOneToOne: true
@@ -2081,8 +2046,7 @@ export type Database = {
           url?: string
           user_id?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "webhook_configs_user_id_fkey"
             columns: ["user_id"]
             isOneToOne: false
@@ -2141,8 +2105,7 @@ export type Database = {
           theme_preset?: string
           updated_at?: string | null
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "whitelabel_tenants_account_manager_id_fkey"
             columns: ["account_manager_id"]
             isOneToOne: false
@@ -2195,8 +2158,7 @@ export type Database = {
           start_date?: string
           updated_at?: string
         }
-        Relationships: [
-          {
+        Relationships: [{
             foreignKeyName: "work_history_resume_id_fkey"
             columns: ["resume_id"]
             isOneToOne: false
@@ -2253,7 +2215,7 @@ export type Database = {
     }
     Functions: {
       check_users_needing_reminders: {
-        Args: Record<PropertyKey, never>
+        Args: Record<PropertyKey , never></PropertyKey>
         Returns: {
           user_id: string
           email: string
@@ -2280,7 +2242,7 @@ export type Database = {
         Returns: string
       }
       create_scheduled_reminders: {
-        Args: Record<PropertyKey, never>
+        Args: Record<PropertyKey , never></PropertyKey>
         Returns: undefined
       }
       flag_suspicious_content: {
@@ -2313,7 +2275,7 @@ export type Database = {
         Returns: string
       }
       get_current_tenant_id: {
-        Args: Record<PropertyKey, never>
+        Args: Record<PropertyKey , never></PropertyKey>
         Returns: string
       }
       get_event_distribution: {
@@ -2329,7 +2291,7 @@ export type Database = {
         Returns: string
       }
       schedule_email_reminders: {
-        Args: Record<PropertyKey, never>
+        Args: Record<PropertyKey , never></PropertyKey>
         Returns: number
       }
       trigger_resume_scoring: {
@@ -2469,22 +2431,11 @@ export type CompositeTypes<
 export const Constants = {
   public: {
     Enums: {
-      api_key_scope: [
-        "jobs:read",
-        "jobs:write",
-        "talent:read",
-        "quotes:write",
-        "webhooks:manage"],
-        "webhooks:manage",
+      api_key_scope: ["jobs:read", "jobs: write", "talent: read", "quotes: write", "webhooks: manage"],
+        "webhooks: manage",
       ],
       fraud_severity: ["safe", "suspicious", "dangerous"],
-      quote_request_status: [
-        "new",
-        "in_review",
-        "accepted",
-        "responded",
-        "closed",
-        "archived"],
+      quote_request_status: ["new", "in_review", "accepted", "responded", "closed", "archived"],
       referral_status: ["pending", "completed", "expired"]}}} as const
         "archived",
       ],

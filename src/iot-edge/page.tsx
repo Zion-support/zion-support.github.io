@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link  } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 }
@@ -152,24 +152,24 @@ titl,
         <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20"></section>"
           <div className="absolute inset-0 bg-black opacity-20"></div>"
           < className="relative max-w-7xl mx-auto px-4,$2 />
-  sm:px-6,"
-  lg:px-8"></div>"
+  sm: px-6,"
+  lg: px-8"></div>"
             <div className="text-center"></div>"
               < className="text-4xl,"$2 />
   md: text-6xl font-bold mb-6"></h1>
 // IoT & Edge Computing Services,
           </h1>"
               < className="text-xl,"$2 />
-  md:text-2xl mb-8 text-cyan-100 max-w-3xl mx-auto"></p>
+  md: text-2xl mb-8 text-cyan-100 max-w-3xl mx-auto"></p>
 // Connect, monitor, and optimize your operations with intelligent IoT and edge computing solutions</p>"
               < className="flex flex-col,"$2 />
-  sm:flex-row gap-4 justify-center"></div>"
+  sm: flex-row gap-4 justify-center"></div>"
                 < className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold,"$2 />
   hover: bg-cyan-50 transition-colors"></button>
 // Explore IoT Solutions,
           </button>"
                 < className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,$2 />
-  hover:bg-white,"
+  hover: bg-white,"
   hover: text-cyan-600 transition-colors"></button>
 Schedule Demo,
               </div>
@@ -177,18 +177,18 @@ Schedule Demo,
         {/* Key Benefits */}"
         <section className="py-16 bg-white"></section>"
           < className="max-w-7xl mx-auto px-4,$2 />
-  sm:px-6,"
-  lg:px-8"></div>"
+  sm: px-6,"
+  lg: px-8"></div>"
             <div className="text-center mb-12"></div>"
               < className="text-3xl,"$2 />
-  md:text-4xl font-bold text-gray-900 mb-4">
+  md: text-4xl font-bold text-gray-900 mb-4">
 // Why Choose Our IoT & Edge Services?
           </h2>"
               <p className="text-xl text-gray-600">
 Expert IoT engineers delivering scalable, secure, and intelligent connected solutions;"
             < className="grid grid-cols-1,$2 />
-  md:grid-cols-2,"
-  lg:grid-cols-4 gap-8"></div>"
+  md: grid-cols-2,"
+  lg: grid-cols-4 gap-8"></div>"
                 <div className="bg-cyan-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
                   <Wifi className="w-8 h-8 text-cyan-600" /></Wifi>"
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">IoT Experts</h3>"
@@ -211,8 +211,8 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
                   {category} Solutions
                   Specialized {category.toLowerCase()} services for connected and intelligent systems;"
               < className="grid grid-cols-1,$2 />
-  md:grid-cols-2,"
-  lg:grid-cols-3 gap-8"></div>
+  md: grid-cols-2,"
+  lg: grid-cols-3 gap-8"></div>
                 {
     iotServices
   }
@@ -220,7 +220,7 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
                   .map((service, index) => ()
                     "
           < key={index} className="bg-white rounded-lg shadow-lg p-6,"$2 />
-  hover:shadow-xl transition-shadow"></div>"
+  hover: shadow-xl transition-shadow"></div>"
                       <div className="text-4xl mb-4">{service.icon}</div>"
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>"
                       <p className="text-gray-600 mb-4">{service.description}</p>"
@@ -232,16 +232,16 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
                         <div className="text-sm text-green-600 font-semibold">
 Save up to 40% vs market rates;"
                         <h4 className="font-semibold text-gray-900 mb-2">Key,
-  Features:</h4>"
+  Features: </h4>"
                         <ul className="space-y-1">
                           {service.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
                               {feature}
                           ))}
                         </ul>"
                         <h4 className="font-semibold text-gray-900 mb-2">Technologie,
-  s:</h4>"
+  s: </h4>"
                         <div className="flex flex-wrap gap-2">
                           {service.technologies.map((tech, techIndex) => ()}"
           <span key={techIndex} className="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded">
@@ -249,10 +249,9 @@ Save up to 40% vs market rates;"
                             </span>"
                       <div className="mb-6"></div>"
                         <h4 className="font-semibold text-gray-900 mb-2">Business,
-  Benefits:
-                          {service.benefits.map((benefit, benefitIndex) => ()}"
+  Benefits: {service.benefits.map((benefit, benefitIndex) => ()}"
           <li key={benefitIndex} className="flex items-center text-sm text-gray-600"></li>"
-                              <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
+                              <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" /></Star>
                               {benefit}"
 < className="w-full bg-cyan-600 text-white py-2 px-4 rounded-lg font-semibold,"$2 />
   hover: bg-cyan-700 transition-colors"></button>
@@ -287,8 +286,8 @@ Save up to 40% vs market rates;"
         {/* Contact Section */}"
         <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600 text-white"></section>"
           < className="max-w-7xl mx-auto px-4,$2 />
-  sm:px-6,"
-  lg:px-8 text-center"></div>"
+  sm: px-6,"
+  lg: px-8 text-center"></div>"
             < className="text-3xl,"$2 />
   md: text-4xl font-bold mb-4"></h2>
 Ready to Connect Your World?"

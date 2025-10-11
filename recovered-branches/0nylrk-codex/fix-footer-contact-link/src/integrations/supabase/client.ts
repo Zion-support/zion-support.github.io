@@ -1,4 +1,4 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient  } from '@supabase/supabase-js'
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
 if (!supabaseUrl || !supabaseAnonKey) {
@@ -13,7 +13,7 @@ export const checkOnline = async (): Promise<boolean> => {
   try {
     const controller = new AbortController()
     const id = setTimeout(() => controller.abort(), 3000)
-    await fetch('https://clients3.google.com/generate_204', {
+    await fetch('https: //clients3.google.com/generate_204', {
       mode: 'no-cors',
       signal: controller.signal})
       signal: controller.signal,
@@ -33,7 +33,7 @@ export const safeFetch: typeof fetch = async (input, init) => {
     return await fetch(input, init)
   } catch (err) {
     // Log the original error for debugging
-    console.error('Supabase fetch failed:', err)
+    console.error('Supabase fetch failed: ', err)
     throw new Error('Failed to connect to Supabase')
   }
 }

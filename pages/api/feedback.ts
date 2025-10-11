@@ -1,12 +1,9 @@
-import {
-  saveFeedbackFallback,
+import { saveFeedbackFallback,
   FeedbackRecord,
-} from "../../utils/feedback/store"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-import {
-  saveFeedbackFallback
+ } from '../../utils/feedback/store'
+import { saveFeedbackFallback
   FeedbackRecord
-} from "../../utils/feedback/store"
+ } from '../../utils/feedback/store'
 function ok(res: NextApiResponse, data: any) {
   return res && res.status(200).json({ ok: true, ...data })
 }
@@ -27,11 +24,10 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
           clientEmail: FIREBASE_CLIENT_EMAIL,
           privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n"),
 import type { NextApiRequest, NextApiResponse } from './next'
-import { v4 as uuidv4  } from './uuid'
-import {
-  saveFeedbackFallback,
+import { v4 as uuidv4   } from './uuid'
+import { saveFeedbackFallback,
   FeedbackRecord,
-} from '../../utils / feedback / store'
+ } from '../../utils / feedback / store'
 /**
  * ok - Function description
  */
@@ -100,7 +96,6 @@ if ( {) {
   if (!wrote) saveFeedbackFallback(doc)
   return ok(res, { id: doc && doc.id })
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default async /**
  * handler - Function description
  */
@@ -121,22 +116,21 @@ function handler() {
 }
   return ok (res, { id: doc.id })
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 function bad(res: NextApiResponse, msg: string, code = 400) {
   return res.status(code).json({
     ok: false,
     error: msg
   })
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -155,31 +149,31 @@ export default async function handler(req, res) {
     id: doc.id
   })
 import type { NextApiRequest, NextApiResponse } from "next",
-import { v4 as uuidv4 } from "uuid",
-import { saveFeedbackFallback, FeedbackRecord } from "../../utils/feedback/store",
+import { v4 as uuidv4  } from 'uuid',
+import { saveFeedbackFallback, FeedbackRecord  } from '../../utils/feedback/store',
 function ok(res: NextApiResponse, data: any) { return res.status(200).json({ ok: true, ...data })   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
 function bad(res: NextApiResponse, msg: string, code = 400) { return res.status(code).json({ ok: false, error: msg })   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -189,7 +183,6 @@ async function tryWriteToFirestore(req, res) {
   if (!FIREBASE_PROJECT_ID || !FIREBASE_CLIENT_EMAIL || !FIREBASE_PRIVATE_KEY) return false,
   try {
     const admin = require("firebase-admin"),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (admin.apps.length === 0) {
       admin.initializeApp({
         credential: admin.credential.cert({
@@ -199,4 +192,3 @@ async function tryWriteToFirestore(req, res) {
   const { rating, comment, kind, context } = req.body || {}
   const r = Number(rating)
   if (!r || r < 1 || r > 5) return bad(res, "rating must be 1-5")
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,5 +1,5 @@
-import { format } from 'date-fns'
-import { apiClient } from './apiClient'
+import { format  } from 'date-fns'
+import { apiClient  } from './apiClient'
 /**
  * Formats a date for display in the referral system
  * @param date Date or string to format
@@ -16,7 +16,7 @@ export function formatDate(date: Date | string | undefined): string {
       year: 'numeric',
     }).format(d)
   } catch (e) {
-    logErrorToProduction('Error formatting date:', { data:  e })
+    logErrorToProduction('Error formatting date: ', { data: e })
     return '-'
   }
 }
@@ -65,7 +65,7 @@ export async function trackReferral(userId: string, email: string) {
       return true
     }
   } catch (error) {
-    logErrorToProduction('Error tracking referral:', { data: error })
+    logErrorToProduction('Error tracking referral: ', { data: error })
   }
   return false
 }

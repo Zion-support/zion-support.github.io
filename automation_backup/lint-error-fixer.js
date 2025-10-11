@@ -1,5 +1,5 @@
 // #!/usr/bin/en,
-  v: node; import fs from';fs''; import path from'path'', import { execSync } from'child_process''; import { fileURLToPath } from'url''; import { dirname } from'path''; import { globSync } from'glob''; const __dirname = dirname(__filename); clas,
+  v: node; import fs from';fs''; import path from'path'', import { execSync  } from 'child_process''; import { fileURLToPath  } from 'url''; import { dirname  } from 'path''; import { globSync  } from 'glob''; const __dirname = dirname(__filename); clas,
   s: LintErrorFixer {constructor() { this.logFile = path.join(__dirname 'logs')''}lint-error-fixer.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
@@ -36,11 +36,11 @@
   n: 'true'} catch (error) { this.log(`❌ ESLint errors in ${filePath}: ${/* TODO: Fix JSX expression */})`
   t: '|| error.message'}`); retur,
   n: 'false'} } async fixFile(filePath) {/* TODO: Fix JSX expression */}`
-  in: ${filePat}h}`); const fixes = [ return false} } async fixFile(filePath) {/* TODO: Fix JSX expression */}`
-  in: ${filePath}`); const fixes = [ this.fixUnusedImports(filePath) this.fixTypeScriptErrors(filePath) this.fixESLintErrors(filePath); ]; const results = await Promise.all(fixes); const successCount = results.filter(Boolean).length; this.log(`📊 Fixe,
+  in: ${filePat}h}`); const fixes = [return false} } async fixFile(filePath) {/* TODO: Fix JSX expression */}`
+  in: ${filePath}`); const fixes = [ this.fixUnusedImports(filePath) this.fixTypeScriptErrors(filePath) this.fixESLintErrors(filePath);]; const results = await Promise.all(fixes); const successCount = results.filter(Boolean).length; this.log(`📊 Fixe,
   d: ${successCount}/3 issue types)`
   in: ${filePat}h}`); retur,
-  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js,jsx,ts}tsx}'';,'components*.{js,jsx,ts}tsx}'';,'utils*.{js,jsx,ts}tsx}'';,'hooks*.{js,jsx,ts}tsx}'';''; ]; le,
+  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js, jsx, ts}tsx}'';, 'components*.{js, jsx, ts}tsx}'';, 'utils*.{js, jsx, ts}tsx}'';, 'hooks*.{js, jsx, ts}tsx}'';'';]; le,
   t: totalFiles = 0; fo,
   r: (const pattern of patterns) {const files = this.glob(pattern)} fo,
   r: (const fixed = await this.fixFile(file)} i,`
@@ -57,12 +57,12 @@
   t:  , process.exit(1))}}}}}}}}}}}}}}}}}}}}}}}}}} ; // console.log(Usag,
   e: nod)
   e: lint-error-fixer.js [file <filepath>|all]), process.exit(1))} ;' #!/usr/bin/en,
-  v: node; import fs from'fs''; import path from'path'', import { execSync } from'child_process''; import { fileURLToPath } from'url''; import { dirname } from'path''; import { globSync } from'glob''; const __dirname = dirname(__filename); clas,
+  v: node; import fs from'fs''; import path from'path'', import { execSync  } from 'child_process''; import { fileURLToPath  } from 'url''; import { dirname  } from 'path''; import { globSync  } from 'glob''; const __dirname = dirname(__filename); clas,
   s: LintErrorFixer {constructor() { this.logFile = path.join(__dirname 'logs')''}lint-error-fixer.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})`
   e: true})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
   c: fixUnusedImports(filePath) {/* TODO: Fix JSX expression */}
-  v: node; import fs from'fs''} import path from'path''} import { execSync } from'child_process''; import { fileURLToPath } from'url''; import { dirname } from'path''; import { globSync } from'glob'') const __dirname = dirname(__filename); clas,
+  v: node; import fs from'fs''} import path from'path''} import { execSync  } from 'child_process''; import { fileURLToPath  } from 'url''; import { dirname  } from 'path''; import { globSync  } from 'glob'') const __dirname = dirname(__filename); clas,
   s: LintErrorFixer {constructor() { this.logFile = path.join(__dirname 'logs')''}lint-error-fixer.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})`
   e: 'true'})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
@@ -99,11 +99,11 @@
   n: 'true'} catch (error) { this.log(`❌ ESLint errors in ${filePath}: ${/* TODO: Fix JSX expression */})`
   t: '|| error.message'}`); retur,
   n: 'false'} } async fixFile(filePath) {/* TODO: Fix JSX expression */}`
-  in: ${filePat}h}`); const fixes = [ return false} } async fixFile(filePath) {/* TODO: Fix JSX expression */}`
-  in: ${filePath}`); const fixes = [ this.fixUnusedImports(filePath) this.fixTypeScriptErrors(filePath) this.fixESLintErrors(filePath); ]; const results = await Promise.all(fixes); const successCount = results.filter(Boolean).length; this.log(`📊 Fixe,
+  in: ${filePat}h}`); const fixes = [return false} } async fixFile(filePath) {/* TODO: Fix JSX expression */}`
+  in: ${filePath}`); const fixes = [ this.fixUnusedImports(filePath) this.fixTypeScriptErrors(filePath) this.fixESLintErrors(filePath);]; const results = await Promise.all(fixes); const successCount = results.filter(Boolean).length; this.log(`📊 Fixe,
   d: ${successCount}/3 issue types)`
   in: ${filePat}h}`); retur,
-  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js,jsx,ts}tsx}'';,'components*.{js,jsx,ts}tsx}'';,'utils*.{js,jsx,ts}tsx}'';,'hooks*.{js,jsx,ts}tsx}'';''; ]; le,
+  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js, jsx, ts}tsx}'';, 'components*.{js, jsx, ts}tsx}'';, 'utils*.{js, jsx, ts}tsx}'';, 'hooks*.{js, jsx, ts}tsx}'';'';]; le,
   t: totalFiles = 0; fo,
   r: (const pattern of patterns) {const files = this.glob(pattern)} fo,
   r: (const fixed = await this.fixFile(file)} i,`
@@ -120,12 +120,12 @@
   t:  , process.exit(1))}}}}}}}}}}}}}}}}}}}}}}}}}} ; // console.log(Usag,
   e: nod)
   e: lint-error-fixer.js [file <filepath>|all]), process.exit(1))} ;' #!/usr/bin/en,
-  v: node; import fs from'fs''; import path from'path'', import { execSync } from'child_process''; import { fileURLToPath } from'url''; import { dirname } from'path''; import { globSync } from'glob''; const __dirname = dirname(__filename); clas,
+  v: node; import fs from'fs''; import path from'path'', import { execSync  } from 'child_process''; import { fileURLToPath  } from 'url''; import { dirname  } from 'path''; import { globSync  } from 'glob''; const __dirname = dirname(__filename); clas,
   s: LintErrorFixer {constructor() { this.logFile = path.join(__dirname 'logs')''}lint-error-fixer.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})`
   e: true})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
   c: fixUnusedImports(filePath) {/* TODO: Fix JSX expression */}
-  v: node; import fs from'fs''} import path from'path''} import { execSync } from'child_process''; import { fileURLToPath } from'url''; import { dirname } from'path''; import { globSync } from'glob'') const __dirname = dirname(__filename); clas,
+  v: node; import fs from'fs''} import path from'path''} import { execSync  } from 'child_process''; import { fileURLToPath  } from 'url''; import { dirname  } from 'path''; import { globSync  } from 'glob'') const __dirname = dirname(__filename); clas,
   s: LintErrorFixer {constructor() { this.logFile = path.join(__dirname 'logs')''}lint-error-fixer.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})`
   e: 'true'})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
@@ -162,11 +162,11 @@
   n: 'true'} catch (error) { this.log(`❌ ESLint errors in ${filePath}: ${/* TODO: Fix JSX expression */})`
   t: '|| error.message'}`); retur,
   n: 'false'} } async fixFile(filePath) {/* TODO: Fix JSX expression */}`
-  in: ${filePat}h}`); const fixes = [ return false} } async fixFile(filePath) {/* TODO: Fix JSX expression */}`
-  in: ${filePath}`); const fixes = [ this.fixUnusedImports(filePath) this.fixTypeScriptErrors(filePath) this.fixESLintErrors(filePath); ]; const results = await Promise.all(fixes); const successCount = results.filter(Boolean).length; this.log(`📊 Fixe,
+  in: ${filePat}h}`); const fixes = [return false} } async fixFile(filePath) {/* TODO: Fix JSX expression */}`
+  in: ${filePath}`); const fixes = [ this.fixUnusedImports(filePath) this.fixTypeScriptErrors(filePath) this.fixESLintErrors(filePath);]; const results = await Promise.all(fixes); const successCount = results.filter(Boolean).length; this.log(`📊 Fixe,
   d: ${successCount}/3 issue types)`
   in: ${filePat}h}`); retur,
-  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js,jsx,ts}tsx}'';,'components*.{js,jsx,ts}tsx}'';,'utils*.{js,jsx,ts}tsx}'';,'hooks*.{js,jsx,ts}tsx}'';''; ]; le,
+  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js, jsx, ts}tsx}'';, 'components*.{js, jsx, ts}tsx}'';, 'utils*.{js, jsx, ts}tsx}'';, 'hooks*.{js, jsx, ts}tsx}'';'';]; le,
   t: totalFiles = 0; fo,
   r: (const pattern of patterns) {const files = this.glob(pattern)} fo,
   r: (const fixed = await this.fixFile(file)} i,`
@@ -183,12 +183,12 @@
   t:  , process.exit(1))}}}}}}}}}}}}}}}}}}}}}}}}}} ; // console.log(Usag,
   e: nod)
   e: lint-error-fixer.js [file <filepath>|all]), process.exit(1))} ;' #!/usr/bin/en,
-  v: node; import fs from'fs''; import path from'path'', import { execSync } from'child_process''; import { fileURLToPath } from'url''; import { dirname } from'path''; import { globSync } from'glob''; const __dirname = dirname(__filename); clas,
+  v: node; import fs from'fs''; import path from'path'', import { execSync  } from 'child_process''; import { fileURLToPath  } from 'url''; import { dirname  } from 'path''; import { globSync  } from 'glob''; const __dirname = dirname(__filename); clas,
   s: LintErrorFixer {constructor() { this.logFile = path.join(__dirname 'logs')''}lint-error-fixer.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})`
   e: true})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
   c: fixUnusedImports(filePath) {/* TODO: Fix JSX expression */}
-  v: node; import fs from'fs''} import path from'path''} import { execSync } from'child_process''; import { fileURLToPath } from'url''; import { dirname } from'path''; import { globSync } from'glob'') const __dirname = dirname(__filename); clas,
+  v: node; import fs from'fs''} import path from'path''} import { execSync  } from 'child_process''; import { fileURLToPath  } from 'url''; import { dirname  } from 'path''; import { globSync  } from 'glob'') const __dirname = dirname(__filename); clas,
   s: LintErrorFixer {constructor() { this.logFile = path.join(__dirname 'logs')''}lint-error-fixer.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})`
   e: 'true'})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
@@ -225,11 +225,11 @@
   n: 'true'} catch (error) { this.log(`❌ ESLint errors in ${filePath}: ${/* TODO: Fix JSX expression */})`
   t: '|| error.message'}`); retur,
   n: 'false'} } async fixFile(filePath) {/* TODO: Fix JSX expression */}`
-  in: ${filePat}h}`); const fixes = [ return false} } async fixFile(filePath) {/* TODO: Fix JSX expression */}`
-  in: ${filePath}`); const fixes = [ this.fixUnusedImports(filePath) this.fixTypeScriptErrors(filePath) this.fixESLintErrors(filePath); ]; const results = await Promise.all(fixes); const successCount = results.filter(Boolean).length; this.log(`📊 Fixe,
+  in: ${filePat}h}`); const fixes = [return false} } async fixFile(filePath) {/* TODO: Fix JSX expression */}`
+  in: ${filePath}`); const fixes = [ this.fixUnusedImports(filePath) this.fixTypeScriptErrors(filePath) this.fixESLintErrors(filePath);]; const results = await Promise.all(fixes); const successCount = results.filter(Boolean).length; this.log(`📊 Fixe,
   d: ${successCount}/3 issue types)`
   in: ${filePat}h}`); retur,
-  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js,jsx,ts}tsx}'';,'components*.{js,jsx,ts}tsx}'';,'utils*.{js,jsx,ts}tsx}'';,'hooks*.{js,jsx,ts}tsx}'';''; ]; le,
+  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js, jsx, ts}tsx}'';, 'components*.{js, jsx, ts}tsx}'';, 'utils*.{js, jsx, ts}tsx}'';, 'hooks*.{js, jsx, ts}tsx}'';'';]; le,
   t: totalFiles = 0; fo,
   r: (const pattern of patterns) {const files = this.glob(pattern)} fo,
   r: (const fixed = await this.fixFile(file)} i,`
@@ -246,12 +246,12 @@
   t:  , process.exit(1))}}}}}}}}}}}}}}}}}}}}}}}}}} ; // console.log(Usag,
   e: nod)
   e: lint-error-fixer.js [file <filepath>|all]), process.exit(1))} ;' #!/usr/bin/en,
-  v: node; import fs from'fs''; import path from'path'', import { execSync } from'child_process''; import { fileURLToPath } from'url''; import { dirname } from'path''; import { globSync } from'glob''; const __dirname = dirname(__filename); clas,
+  v: node; import fs from'fs''; import path from'path'', import { execSync  } from 'child_process''; import { fileURLToPath  } from 'url''; import { dirname  } from 'path''; import { globSync  } from 'glob''; const __dirname = dirname(__filename); clas,
   s: LintErrorFixer {constructor() { this.logFile = path.join(__dirname 'logs')''}lint-error-fixer.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})`
   e: true})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
   c: fixUnusedImports(filePath) {/* TODO: Fix JSX expression */}
-  v: node; import fs from'fs''} import path from'path''} import { execSync } from'child_process''; import { fileURLToPath } from'url''; import { dirname } from'path''; import { globSync } from'glob'') const __dirname = dirname(__filename); clas,
+  v: node; import fs from'fs''} import path from'path''} import { execSync  } from 'child_process''; import { fileURLToPath  } from 'url''; import { dirname  } from 'path''; import { globSync  } from 'glob'') const __dirname = dirname(__filename); clas,
   s: LintErrorFixer {constructor() { this.logFile = path.join(__dirname 'logs')''}lint-error-fixer.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})`
   e: 'true'})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
@@ -288,11 +288,11 @@
   n: 'true'} catch (error) { this.log(`❌ ESLint errors in ${filePath}: ${/* TODO: Fix JSX expression */})`
   t: '|| error.message'}`); retur,
   n: 'false'} } async fixFile(filePath) {/* TODO: Fix JSX expression */}`
-  in: ${filePat}h}`); const fixes = [ return false} } async fixFile(filePath) {/* TODO: Fix JSX expression */}`
-  in: ${filePath}`); const fixes = [ this.fixUnusedImports(filePath) this.fixTypeScriptErrors(filePath) this.fixESLintErrors(filePath); ]; const results = await Promise.all(fixes); const successCount = results.filter(Boolean).length; this.log(`📊 Fixe,
+  in: ${filePat}h}`); const fixes = [return false} } async fixFile(filePath) {/* TODO: Fix JSX expression */}`
+  in: ${filePath}`); const fixes = [ this.fixUnusedImports(filePath) this.fixTypeScriptErrors(filePath) this.fixESLintErrors(filePath);]; const results = await Promise.all(fixes); const successCount = results.filter(Boolean).length; this.log(`📊 Fixe,
   d: ${successCount}/3 issue types)`
   in: ${filePat}h}`); retur,
-  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js,jsx,ts}tsx}'';,'components*.{js,jsx,ts}tsx}'';,'utils*.{js,jsx,ts}tsx}'';,'hooks*.{js,jsx,ts}tsx}'';''; ]; le,
+  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js, jsx, ts}tsx}'';, 'components*.{js, jsx, ts}tsx}'';, 'utils*.{js, jsx, ts}tsx}'';, 'hooks*.{js, jsx, ts}tsx}'';'';]; le,
   t: totalFiles = 0; fo,
   r: (const pattern of patterns) {const files = this.glob(pattern)} fo,
   r: (const fixed = await this.fixFile(file)} i,`
@@ -309,11 +309,11 @@
   t:  , process.exit(1))}}}}}}}}}}}}}}}}}}}}}}}}}} ; // console.log(Usag,
   e: nod)
   e: lint-error-fixer.js [file <filepath>|all]), process.exit(1))} ;' #!/usr/bin/en,
-  v: node; import fs from'fs''; import path from'path'', import { execSync } from'child_process''; import { fileURLToPath } from'url''; import { dirname } from'path''; import { globSync } from'glob''; const __dirname = dirname(__filename); clas,
+  v: node; import fs from'fs''; import path from'path'', import { execSync  } from 'child_process''; import { fileURLToPath  } from 'url''; import { dirname  } from 'path''; import { globSync  } from 'glob''; const __dirname = dirname(__filename); clas,
   s: LintErrorFixer {constructor() { this.logFile = path.join(__dirname 'logs')''}lint-error-fixer.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})`
   e: true})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
-  c: fixUnusedImports(filePath) {try { const content = fs.readFileSync(filePath #!/usr/bin/"env": node;' import fs from'fs''}' import path from'path''}' import { execSync } from'child_process'';' import { fileURLToPath } from'url'';' import { dirname } from'path'';' import { globSync } from'glob''; #!/usr/bin/"env": node;' import fs from'fs'';' import path from'path'') const __dirname = dirname(__filename); "class": LintErrorFixer {constructor() { this.logFile = path.join(__dirname) // // // // // // // // // console.log(message)} fs.appendFileSync(this.logFile} logMessage); this.ensureLogDirectory()} ensureLogDirectory() {/* TODO: Fix JSX expression */}
+  c: fixUnusedImports(filePath) {try { const content = fs.readFileSync(filePath #!/usr/bin/"env": node;' import fs from'fs''}' import path from'path''}' import { execSync  } from 'child_process'';' import { fileURLToPath  } from 'url'';' import { dirname  } from 'path'';' import { globSync  } from 'glob''; #!/usr/bin/"env": node;' import fs from'fs'';' import path from'path'') const __dirname = dirname(__filename); "class": LintErrorFixer {constructor() { this.logFile = path.join(__dirname) // // // // // // // // // console.log(message)} fs.appendFileSync(this.logFile} logMessage); this.ensureLogDirectory()} ensureLogDirectory() {/* TODO: Fix JSX expression */}
   t: logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}
   e: true })} } log(message) {/* TODO: Fix JSX expression */}
@@ -321,10 +321,10 @@
   t: logMessage = `[${timestamp}] ${message}\\n`; fs.appendFileSync(this.logFile) logMessage)} asyn,`
   c: fixUnusedImports(filePath) {try { ' '\n'); const imports = []; const otherLines = []; let inImportBlock = false; for (const i = 0 i < lines.length i++) { const line = lines[i]}' if (line.trim().startsWith('' 'import ')) { inImportBlock = true} imports.push(line)} else if (inImportBlock && line.trim() === ) { imports.push(line)} else {inImportBlock = false} otherLines.push(line)} } // Filter out unused imports (basic check);' const usedImports = imports.filter(importLine => {'' if (!importLine.trim().startsWith('import)' ')) return true; // Extract import names} const match = importLine.match(/import\\s+{([^}]+)}\\s+from/); ' const fileContent = otherLines.join('\\n)' '); return importNames.some(name => fileContent.includes(name)); return true}) const newContent = [...usedImports; ...otherLines].join(`\\n) `); fs.writeFileSync(filePath) newContent); this.log(`✅ Fixed unused imports)`
   in: ${filePath}`); return false} } async fixTypeScriptErrors(filePath) {/* TODO: Fix JSX expression */}`
-  g:; let fixedContent = content; // Fix common TypeScript issues)' fixedContent = fixedContent.replace(/const\s+(\w+)\s*:\s*any\s*=/g, 'const $1 =;' ');' fixedContent = fixedContent.replace(/function\s+(\w+)\s*\(\s*\)\s*:\s*any/g, 'function $1();' '); fixedContent = fixedContent.replace(/:\\s*any\\s*[)]/g, `$1; `)} if (fixedContent !== content) { fs.writeFileSync(filePath} fixedContent); this.log(`✅ Fixed TypeScript issues)`
+  g: ; let fixedContent = content; // Fix common TypeScript issues)' fixedContent = fixedContent.replace(/const\s+(\w+)\s*:\s*any\s*=/g, 'const $1 =;' ');' fixedContent = fixedContent.replace(/function\s+(\w+)\s*\(\s*\)\s*:\s*any/g, 'function $1();' '); fixedContent = fixedContent.replace(/:\\s*any\\s*[)]/g, `$1; `)} if (fixedContent !== content) { fs.writeFileSync(filePath} fixedContent); this.log(`✅ Fixed TypeScript issues)`
   in: ${filePath}`); return true} } catch (fixError) {` this.log(`❌ Failed to fix TypeScript issues in ${filePath}: ${fixError.message}`)} retur,`
   n: false} } async fixESLintErrors(filePath) {try {` const result = execSync(`npx eslint} return false} } async fixFile(filePath) {/* TODO: Fix JSX expression */}`
-  in: ${filePath}`); const fixes = [ this.fixUnusedImports(filePath), this.fixTypeScriptErrors(filePath), this.fixESLintErrors(filePath)]; async fixAllFiles() {/* TODO: Fix JSX expression */}
+  in: ${filePath}`); const fixes = [this.fixUnusedImports(filePath), this.fixTypeScriptErrors(filePath), this.fixESLintErrors(filePath)]; async fixAllFiles() {/* TODO: Fix JSX expression */}
   r: (const pattern of patterns) { const files = this.glob(pattern)} fo,
   r: (const fixed = await this.fixFile(file)} i,`
   f: (fixed) totalFixed++} } this.log(`📊 Fixed ${totalFixed}/${totalFiles} files`); retur,

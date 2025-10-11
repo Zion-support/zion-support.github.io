@@ -7,8 +7,7 @@
   n: string} pric,
   e: number} categor,
   y: string} interface FormData {/* TODO: Fix JSX expression */}
-  y: string]: string | number | boolean | File} interface ComponentProps {className?: string; children?: React.ReactNode} [ke,
-  y: string]: unknown} interface PerformanceMetrics {fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number} fmp?: number} const,
+  y: string]: string | number | boolean | File} interface ComponentProps {className?: string; children?: React.ReactNode} [ke, y: string]: unknown} interface PerformanceMetrics {fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number} fmp?: number} const,
   PerformanceMonitor: React.FC = () => {useEffect(() => { // Only run in browser environment}' if (typeof window === 'undefined') return} const,
   metrics: PerformanceMetrics = {} // First Contentful Paint (FCP); const fcpObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) {' if (entry.name === 'first-contentful-paint') { metrics.fcp = entry.startTime}' // console.log('FC)
   P: '} entry.startTime)} } })' fcpObserver.observe({/* TODO: Fix JSX expression */})

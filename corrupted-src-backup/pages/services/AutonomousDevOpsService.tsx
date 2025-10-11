@@ -2,8 +2,8 @@ impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t'
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
 const AutonomousDevOpsServic, e = () => { 
-  return(<React.Fragment>
-      <Helm, e, t>
+  return(<React .Fragment></React>
+      <Helm , e, t></Helm>
         <title>
           Autonomous, DevOps, Services - 80% Faster, Release, s | Zion, Tech, Group
         <meta, nam, e = 'description'
@@ -22,24 +22,24 @@ const AutonomousDevOpsServic, e = () => {
           <div, className='relative, ma, x-w-7xl, m, x-au, t, o'>
             <div, className='te, x, t-center, m, b-12'>
               <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, m, b-6'>
-                <Rocket, className='w-5 h-5, tex, t-bl, u, e-4, 0, 0' />
+                <Rocket , className='w-5 h-5, tex, t-bl, u, e-4, 0, 0' /></Rocket>
                 <span, className='te, x, t-bl, u, e-300, fon, t-semibo, l, d'>
                   New, Service, Launch - October, 202, 5
-              <p, classNam, e='te, x, t-xl, m, d:te, x, t-2xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-4xl, m, x-au, t, o'>
+              <p, classNam, e='te, x, t-xl, m, d: te, x, t-2xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-4xl, m, x-au, t, o'>
                 Se, l, f-Optimizing, C, I/CD, Pipelines, with 80% Faster, Releases, and
                 Zero, Downtim, e
                   Getted, Today
                 Se, l, f-Optimizing, C, I/CD, Pipelines, with 80% Faster, Releases, and
                 Zero, Downtim, e
                   Getted, Today
-                  <Link, classNam, e='w-5 h-5' />
+                  <Link , classNam, e='w-5 h-5' /></Link>
               <div, classNam, e='bg-gradie, n, t-to-br, fro, m-oran, g, e-6, 0, 0/20, t, o-r, e, d-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
-                <Target, classNam, e='w-1, 2, h-12, tex, t-oran, g, e-400, m, b-4' />
+                <Target , classNam, e='w-1, 2, h-12, tex, t-oran, g, e-400, m, b-4' /></Target>
                 <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-3'>Zero, Manual, Work
                 <p, classNam, e='te, x, t-gr, a, y-3, 0, 0'>
                   Eliminate, manual, configuration and, intervention, completely
                   Getted, Today
-                  <Link, className='w-5 h-5' />
+                  <Link , className='w-5 h-5' /></Link>
         {/* Key, Benef, i, t, s */}
         <section, classNam, e = 'py-20, p, x-4'>
           <div, className='m, a, x-w-7xl, m, x-au, t, o'>
@@ -51,56 +51,56 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
           <div, className='relative, ma, x-w-7xl, m, x-au, t, o'>
             <div, className='te, x, t-center, m, b-12'>
               <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, m, b-6'>
-                <Rocket, className='w-5 h-5, tex, t-bl, u, e-4, 0, 0' />
+                <Rocket , className='w-5 h-5, tex, t-bl, u, e-4, 0, 0' /></Rocket>
                 <span, className='te, x, t-bl, u, e-300, fon, t-semibo, l, d'>
                   New, Service, Launch - October, 202, 5
-              <p, classNam, e='te, x, t-xl, m, d:te, x, t-2xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-4xl, m, x-au, t, o'>
+              <p, classNam, e='te, x, t-xl, m, d: te, x, t-2xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-4xl, m, x-au, t, o'>
                 Se, l, f-Optimizing, C, I/CD, Pipelines, with 80% Faster, Releases, and
                 Zero, Downtim, e
                   Getted, Today
-                  <Link, classNam, e='w-5 h-5' />
+                  <Link , classNam, e='w-5 h-5' /></Link>
               <div, classNam, e='bg-gradie, n, t-to-br, fro, m-oran, g, e-6, 0, 0/20, t, o-r, e, d-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
-                <Target, classNam, e='w-1, 2, h-12, tex, t-oran, g, e-400, m, b-4' />
+                <Target , classNam, e='w-1, 2, h-12, tex, t-oran, g, e-400, m, b-4' /></Target>
                 <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-3'>Zero, Manual, Work
                 <p, classNam, e='te, x, t-gr, a, y-3, 0, 0'>
                   Eliminate, manual, configuration and, intervention, completely
                   Getted, Today
-                  <Link, className='w-5 h-5' />
+                  <Link , className='w-5 h-5' /></Link>
         {/* Key, Benef, i, t, s */}
         <section, classNam, e = 'py-20, p, x-4'>
           <div, className='m, a, x-w-7xl, m, x-au, t, o'>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16'>
               Transform, Your, DevOps Operatio, n, s
-            <div, className='grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8'>
+            <div, className='grid, m, d: gr, i, d-co, l, s-2, l, g: gr, i, d-co, l, s-4, ga, p-8'>
               <div, className='bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
-                <Zap, className='w-1, 2, h-12, tex, t-bl, u, e-400, m, b-4' />
+                <Zap , className='w-1, 2, h-12, tex, t-bl, u, e-400, m, b-4' /></Zap>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>80% Fast, e, r
                 <p, className='te, x, t-gr, a, y-3, 0, 0'>
-                <Zap, className='w-1, 2, h-12, tex, t-bl, u, e-400, m, b-4' />
+                <Zap , className='w-1, 2, h-12, tex, t-bl, u, e-400, m, b-4' /></Zap>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>80% Fast, e, r
                 <p, className='te, x, t-gr, a, y-3, 0, 0'>
                   Release, cycles, accelerated with, intelligent, automation and, predictive, optimization
               <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
-                <Shield, className='w-1, 2, h-12, tex, t-gre, e, n-400, m, b-4' />
+                <Shield , className='w-1, 2, h-12, tex, t-gre, e, n-400, m, b-4' /></Shield>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>99.99% Upti, m, e
                 <p, className='te, x, t-gr, a, y-3, 0, 0'>
-                <Shield, className='w-1, 2, h-12, tex, t-gre, e, n-400, m, b-4' />
+                <Shield , className='w-1, 2, h-12, tex, t-gre, e, n-400, m, b-4' /></Shield>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>99.99% Upti, m, e
                 <p, className='te, x, t-gr, a, y-3, 0, 0'>
                   Se, l, f-healing, systems, that prevent, and, resolve issues, autonomousl, y
               <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
-                <DollarSign, className='w-1, 2, h-12, tex, t-purp, l, e-400, m, b-4' />
+                <DollarSign , className='w-1, 2, h-12, tex, t-purp, l, e-400, m, b-4' /></DollarSign>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>$1, 0, M+ Savin, g, s
                 <p, className='te, x, t-gr, a, y-3, 0, 0'>
-                <DollarSign, className='w-1, 2, h-12, tex, t-purp, l, e-400, m, b-4' />
+                <DollarSign , className='w-1, 2, h-12, tex, t-purp, l, e-400, m, b-4' /></DollarSign>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>$1, 0, M+ Savin, g, s
                 <p, className='te, x, t-gr, a, y-3, 0, 0'>
                   Annual, cost, reduction through, automation, and optimizati, o, n
               <div, className='bg-gradie, n, t-to-br, fro, m-oran, g, e-6, 0, 0/20, t, o-r, e, d-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
-                <Target, className='w-1, 2, h-12, tex, t-oran, g, e-400, m, b-4' />
+                <Target , className='w-1, 2, h-12, tex, t-oran, g, e-400, m, b-4' /></Target>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>Zero, Manual, Work
                 <p, className='te, x, t-gr, a, y-3, 0, 0'>
-                <Target, className='w-1, 2, h-12, tex, t-oran, g, e-400, m, b-4' />
+                <Target , className='w-1, 2, h-12, tex, t-oran, g, e-400, m, b-4' /></Target>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>Zero, Manual, Work
                 <p, className='te, x, t-gr, a, y-3, 0, 0'>
                   Eliminate, manual, configuration and, intervention, completely
@@ -114,9 +114,9 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
               Autonomous, DevOps, Capabilities
             <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-8'>
               <div, className='bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
-                <CheckCircle, className='w-1, 0, h-10, tex, t-bl, u, e-400, m, b-4' />
+                <CheckCircle , className='w-1, 0, h-10, tex, t-bl, u, e-400, m, b-4' /></CheckCircle>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
-                <CheckCircle, className='w-1, 0, h-10, tex, t-bl, u, e-400, m, b-4' />
+                <CheckCircle , className='w-1, 0, h-10, tex, t-bl, u, e-400, m, b-4' /></CheckCircle>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
                   Se, l, f-Optimizing, Pipeline, s
                 <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'>
@@ -125,9 +125,9 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                     <sp, a, n>
                       AI-driven, build, and test, optimization, reducing pipeline, time, by 75%
               <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/30, t, o-te, a, l-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
-                <Shield, className='w-1, 0, h-10, tex, t-gre, e, n-400, m, b-4' />
+                <Shield , className='w-1, 0, h-10, tex, t-gre, e, n-400, m, b-4' /></Shield>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
-                <Shield, className='w-1, 0, h-10, tex, t-gre, e, n-400, m, b-4' />
+                <Shield , className='w-1, 0, h-10, tex, t-gre, e, n-400, m, b-4' /></Shield>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
                   Intelligent, Sel, f-Heali, n, g
                 <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'>
@@ -137,9 +137,9 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                     <sp, a, n>
                       Automatic, rollback, on anomaly, detection, with &lt; 5, second, response
               <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-pi, n, k-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
-                <Rocket, className='w-1, 0, h-10, tex, t-purp, l, e-400, m, b-4' />
+                <Rocket , className='w-1, 0, h-10, tex, t-purp, l, e-400, m, b-4' /></Rocket>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
-                <Rocket, className='w-1, 0, h-10, tex, t-purp, l, e-400, m, b-4' />
+                <Rocket , className='w-1, 0, h-10, tex, t-purp, l, e-400, m, b-4' /></Rocket>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
                   Ze, r, o-Downtime, Deploymen, t
                 <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'>
@@ -149,9 +149,9 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                     <sp, a, n>
                       Bl, u, e-green, and, canary deployment, strategies, with AI, monitorin, g
               <div, className='bg-gradie, n, t-to-br, fro, m-oran, g, e-9, 0, 0/30, t, o-r, e, d-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
-                <TrendingUp, className='w-1, 0, h-10, tex, t-oran, g, e-400, m, b-4' />
+                <TrendingUp , className='w-1, 0, h-10, tex, t-oran, g, e-400, m, b-4' /></TrendingUp>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
-                <TrendingUp, className='w-1, 0, h-10, tex, t-oran, g, e-400, m, b-4' />
+                <TrendingUp , className='w-1, 0, h-10, tex, t-oran, g, e-400, m, b-4' /></TrendingUp>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
                   Continuous, Optimizatio, n
                 <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'>
@@ -214,31 +214,31 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                     Days, 6, 1-90: Optimizati, o, n
                   <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'>
                       <li, classNam, e='flex, item, s-start, ga, p-2'>
-                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1' />
+                        <CheckCircle , classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1' /></CheckCircle>
                       <li, classNam, e='flex, item, s-start, ga, p-2'>
-                        <Zap, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1' />
+                        <Zap , classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1' /></Zap>
                     Schedule, Consultatio, n
-                    <Link, classNam, e='w-5 h-5' />
+                    <Link , classNam, e='w-5 h-5' /></Link>
         {/* CTA, Sect, i, o, n */}
         <section, classNam, e = 'py-20, p, x-4'>
           <div, classNam, e='m, a, x-w-4xl, m, x-auto, tex, t-cent, e, r'>
             <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6'>
                 Getted, Today
                 Getted, Today
-                <Link, classNam, e='w-5 h-5' />
+                <Link , classNam, e='w-5 h-5' /></Link>
                       <li, className='flex, item, s-start, ga, p-2'>
-                        <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, m, t-1' />
+                        <CheckCircle , className='w-5 h-5, tex, t-gre, e, n-400, m, t-1' /></CheckCircle>
                       <li, className='flex, item, s-start, ga, p-2'>
-                        <Zap, className='w-5 h-5, tex, t-bl, u, e-400, m, t-1' />
+                        <Zap , className='w-5 h-5, tex, t-bl, u, e-400, m, t-1' /></Zap>
                     Schedule, Consultatio, n
-                    <Link, className='w-5 h-5' />
+                    <Link , className='w-5 h-5' /></Link>
         {/* CTA, Sect, i, o, n */}
         <section, classNam, e = 'py-20, p, x-4'>
           <div, className='m, a, x-w-4xl, m, x-auto, tex, t-cent, e, r'>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6'>
                 Getted, Today
                 Getted, Today
-                <Link, className='w-5 h-5' />
+                <Link , className='w-5 h-5' /></Link>
                   <div, className='w-1, 2, h-12, b, g-gre, e, n-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'>
                     3
                   <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
@@ -246,27 +246,27 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
   0: Optimizati, o, n
                   <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'>
                       <li, classNam, e='flex, item, s-start, ga, p-2'>
-                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1' />
+                        <CheckCircle , classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1' /></CheckCircle>
                       <li, classNam, e='flex, item, s-start, ga, p-2'>
-                        <Zap, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1' />
+                        <Zap , classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1' /></Zap>
                     Schedule, Consultatio, n
-                    <Link, classNam, e='w-5 h-5' />
+                    <Link , classNam, e='w-5 h-5' /></Link>
         {/* CTA, Sect, i, o, n */}
         <section, classNam, e = 'py-20, p, x-4'>
           <div, classNam, e='m, a, x-w-4xl, m, x-auto, tex, t-cent, e, r'>
             <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6'>
                 Getted, Today
-                <Link, classNam, e='w-5 h-5' />
+                <Link , classNam, e='w-5 h-5' /></Link>
                       <li, className='flex, item, s-start, ga, p-2'>
-                        <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, m, t-1' />
+                        <CheckCircle , className='w-5 h-5, tex, t-gre, e, n-400, m, t-1' /></CheckCircle>
                       <li, className='flex, item, s-start, ga, p-2'>
-                        <Zap, className='w-5 h-5, tex, t-bl, u, e-400, m, t-1' />
+                        <Zap , className='w-5 h-5, tex, t-bl, u, e-400, m, t-1' /></Zap>
                     Schedule, Consultatio, n
-                    <Link, className='w-5 h-5' />
+                    <Link , className='w-5 h-5' /></Link>
         {/* CTA, Sect, i, o, n */}
         <section, classNam, e = 'py-20, p, x-4'>
           <div, className='m, a, x-w-4xl, m, x-auto, tex, t-cent, e, r'>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6'>
                 Getted, Today
-                <Link, className='w-5 h-5' />
+                <Link , className='w-5 h-5' /></Link>
 }</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section>

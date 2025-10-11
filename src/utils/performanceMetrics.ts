@@ -187,7 +187,7 @@ export class PerformanceMetrics {
                 value: entry.startTime,
                 unit: 'ms',
                 timestamp: new Date(),
-                category:               ,
+                category:  ,
 $4})
             }
           }
@@ -205,7 +205,7 @@ $4})
               value: lastEntry.startTime,
               unit: 'ms',
               timestamp: new Date(),
-              category:             ,
+              category:  ,
 $4})
           }
         })
@@ -299,7 +299,7 @@ const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
             value: clsValue,
             unit: 'score',
             timestamp: new Date(),
-            category:           ,
+            category:  ,
 $4})
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
@@ -485,7 +485,7 @@ $4})
       value: endTime - startTime,
       unit: 'ms',
       timestamp: new Date(),
-      category:     ,
+      category:  ,
 $4})
     return result
   }
@@ -501,7 +501,7 @@ $4})
       value: endTime - startTime,
       unit: 'ms',
       timestamp: new Date(),
-      category:     ,
+      category:  ,
 $4})
     return result
   }

@@ -1,7 +1,7 @@
 import i18n from 'i18next'
-import { initReactI18next } from 'react-i18next'
+import { initReactI18next  } from 'react-i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
-import { safeStorage } from '../utils/safeStorage'
+import { safeStorage  } from '../utils/safeStorage'
 import Cookies from 'js-cookie'
 import enTranslation from '../../public/locales/en-US/common.json'
 import esTranslation from '../../public/locales/es-ES/common.json'
@@ -37,7 +37,7 @@ i18n
     },
   })
   .catch(error => {
-    logErrorToProduction('Error initializing i18next or its detector:', { data: error })
+    logErrorToProduction('Error initializing i18next or its detector: ', { data: error })
     // This helps prevent an unhandled promise rejection if init fails.
   })
   // Add this check at the beginning of the relevant section

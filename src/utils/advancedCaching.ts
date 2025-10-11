@@ -35,7 +35,7 @@ class AdvancedCache
   private,
   accessOrder: string[] = [],
   private,
-  options: Required<CacheOptions>
+  options: Required<CacheOptions ></CacheOptions>
   private storageKey = 'advanced-cache',
   constructor(_option)
   s: CacheOptions = {}) {/* TODO: Fix JSX expression */}

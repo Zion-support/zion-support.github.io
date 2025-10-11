@@ -1,7 +1,7 @@
-import { useState } from "react"
-import { TALENT_PROFILES } from "@/data/talentData"
-import { JOB_POSTS } from "@/data/jobsData"
-import { PROJECTS } from "@/data/projectsData"
+import { useState  } from 'react'
+import { TALENT_PROFILES  } from '@/data/talentData'
+import { JOB_POSTS  } from '@/data/jobsData'
+import { PROJECTS  } from '@/data/projectsData'
 export interface SearchResult {
   id: string
   type: "talent" | "job" | "project"

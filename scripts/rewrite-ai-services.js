@@ -3,19 +3,18 @@ import fs from 'fs'
 console.log('🔧 Rewriting ai-services page to fix all syntax errors...')
 const content = `'use client'
 import React from 'react'
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Cube, Mic, DollarSign, Truck, Link, HardDrive, FileCheck } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Cube, Mic, DollarSign, Truck, Link, HardDrive, FileCheck  } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 const AIServicesPage: React.FC = () => {
-  const aiServices = [,
-    {,
-      title: 'Machine Learning Solutions',
-      description: 'Custom ML models for predictive analytics and decision-making',
-      icon: Brain
-      price: '$1,500/month',
-      features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring'],
-      color: 'text-purple-400'},
+  return (
+
+  const aiServices = [{, title: 'Machine Learning Solutions', description: 'Custom ML models for predictive analytics and decision-making', icon: Brain
+      price: '$1, 500/month', features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring'],
+      color: 'text-purple-400'
+  );
+},
     {
       title: 'Natural Language Processing',
       description: 'Advanced NLP solutions for text analysis and language understanding',
@@ -139,7 +138,7 @@ const AIServicesPage: React.FC = () => {
                     <div className={\`text-lg font-bold mb-2 neon-text \${service.color}\`}>{service.price}
                     <$2 />
                       href="/contact"
-                      className={\`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 \${service.color} border border-current hover:bg-current hover:text-slate-900\`}
+                      className={\`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover: scale-105 \${service.color} border border-current hover: bg-current hover:text-slate-900\`}
                       aria-label="Get Started"
                     >
                       Get Started
@@ -162,9 +161,9 @@ const AIServicesPage: React.FC = () => {
                   href="tel:+13024640950"
                   className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-5 h-5" /></Phone>
                   +1 302 464 0950
-        <Footer />
+        <Footer /></Footer>
       </div>,
     </>)
 }

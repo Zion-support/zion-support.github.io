@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { glob } from 'glob'
+import { glob  } from 'glob'
 // Performance optimization patterns
 const optimizations = {
     // Remove unused CSS classes
@@ -36,7 +36,7 @@ const optimizations = {
   removeExtraWhitespace: (content) => {,
     return content
       .replace(/\n\s*\n\s*\n/g, '\n\n')
-      .replace(/[ \t]+$/gm, '')
+      .replace(/[\t]+$/gm, '')
       .replace(/\n{3}/g, '\n\n')
   },
 
@@ -72,31 +72,9 @@ const optimizations = {
 }
 
 // Files to process
-const filePatterns = [
-  'app/**/*.{ts,tsx,js,jsx}',
-  'src/**/*.{ts,tsx,js,jsx}',
-  'components/**/*.{ts,tsx,js,jsx}',
-  'pages/**/*.{ts,tsx,js,jsx}',
-  'utils/**/*.{ts,tsx,js,jsx}',
-  'hooks/**/*.{ts,tsx,js,jsx}',
-  'lib/**/*.{ts,tsx,js,jsx}',
-  'dist/**/*.{html,css,js}'
-]
+const filePatterns = ['app/**/*.{ts, tsx, js, jsx}', 'src/**/*.{ts, tsx, js, jsx}', 'components/**/*.{ts, tsx, js, jsx}', 'pages/**/*.{ts, tsx, js, jsx}', 'utils/**/*.{ts, tsx, js, jsx}', 'hooks/**/*.{ts, tsx, js, jsx}', 'lib/**/*.{ts, tsx, js, jsx}', 'dist/**/*.{html, css, js}']
 // Files to exclude
-const excludePatterns = [
-  '**/node_modules/**',
-  '**/.next/**',
-  '**/build/**',
-  '**/coverage/**',
-  '**/*.test.{ts,tsx,js,jsx}',
-  '**/*.spec.{ts,tsx,js,jsx}',
-  '**/scripts/**',
-  '**/automation/**',
-  '**/backup*/**',
-  '**/disabled*/**',
-  '**/corrupted*/**',
-  '**/temp*/**'
-]
+const excludePatterns = ['**/node_modules/**', '**/.next/**', '**/build/**', '**/coverage/**', '**/*.test.{ts, tsx, js, jsx}', '**/*.spec.{ts, tsx, js, jsx}', '**/scripts/**', '**/automation/**', '**/backup*/**', '**/disabled*/**', '**/corrupted*/**', '**/temp*/**']
 let totalFiles = 0
 let processedFiles = 0
 let optimizationsApplied = 0
@@ -148,7 +126,7 @@ async function main() {
   console.log(`   - Optimizations applied: ${optimizationsApplied}`)
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file: //${process.argv[1]}`) {
     main()
   }
 

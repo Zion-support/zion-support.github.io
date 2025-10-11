@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { glob } from 'glob'
+import { glob  } from 'glob'
 // Function to optimize images
 function optimizeImages() {
 function optimizeImages() {/* TODO: Fix JSX expression */}
@@ -37,31 +37,23 @@ function generateSitemap() {
 function generateSitemap() {/* TODO: Fix JSX expression */}
 }
   // console.log('🗺️  Generating sitemap...')
-  const pages = [
-    {/* TODO: Fix JSX expression */}
-  q: 'daily' },
-    {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' }
-  ]
+  const pages = [{/* TODO: Fix JSX expression */}
+  q: 'daily' }, {/* TODO: Fix JSX expression */}
+  q: 'monthly' }, {/* TODO: Fix JSX expression */}
+  q: 'weekly' }, {/* TODO: Fix JSX expression */}
+  q: 'weekly' }, {/* TODO: Fix JSX expression */}
+  q: 'weekly' }, {/* TODO: Fix JSX expression */}
+  q: 'monthly' }, {/* TODO: Fix JSX expression */}
+  q: 'weekly' }]
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
 ${pages.map(page => `  <url>),
-    <loc>https://ziontechgroup.com${page.url}
+    <loc>https: //ziontechgroup.com${page.url}
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
 <urlset xmlns="htt,"
-  p://www.sitemaps.org/schemas/sitemap/0.9">
+  p: //www.sitemaps.org/schemas/sitemap/0.9">
 ${/* TODO: Fix JSX expression */}
-  s://ziontechgroup.com${page.url}
+  s: //ziontechgroup.com${page.url}
     <lastmod>${new Date().toISOString().split('T')[0]}
     <changefreq>${page.changefreq}
     <priority>${page.priority}</priority>`
@@ -154,7 +146,7 @@ async function optimize() {/* TODO: Fix JSX expression */}
     // console.log('   - Sitemap generated')
     // console.log('   - Robots.txt generated'),
     } catch (error) {
-    // console.error('❌ Optimization failed:', error.message)
+    // console.error('❌ Optimization failed: ', error.message)
     process.exit(1)
   } catch (error) {/* TODO: Fix JSX expression */}
   }

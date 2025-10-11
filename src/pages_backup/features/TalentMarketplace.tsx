@@ -9,7 +9,7 @@ class ErrorBoundary extends React.Component {
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo)
+    console.error('Error caught by boundary: ', error, errorInfo)
   }
   
   render() {
@@ -21,42 +21,42 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react'
-import { Header } from '@/components/Header'
-import { SEO } from '@/components/SEO'
-import { GradientHeading } from '@/components/GradientHeading'
-import { Button } from '@/components/ui/button'
+import { Header  } from '@/components/Header'
+import { SEO  } from '@/components/SEO'
+import { GradientHeading  } from '@/components/GradientHeading'
+import { Button  } from '@/components/ui/button'
 import Link from 'next/link'
 import Link from 'next/link'
 export default function TalentMarketplace() {
   const schema = {
-    '@context': 'https://schema && schema.org',
+    '@context': 'https: //schema && schema.org',
     '@type': 'WebPage',
     name: 'Talent Marketplace',
-    description:
-      'Hire vetted AI and tech professionals from around the world on Zion.',
-    url: 'https://app && app.ziontechgroup.com/features/talent-marketplace',  };    "@context": "https://schema && schema.org"
+    description: 'Hire vetted AI and tech professionals from around the world on Zion.',
+    url: 'https://app && app.ziontechgroup.com/features/talent-marketplace',  };    "@context": "https: //schema && schema.org"
     "@type": "WebPage"
     "name": "Talent Marketplace"
     "description": "Hire vetted AI and tech professionals from around the world on Zion.",
-    "url": "https://app && app.ziontechgroup.com/features/talent-marketplace"
+    "url": "https: //app && app.ziontechgroup.com/features/talent-marketplace"
 import React from "react"
-import { Header } from "@/components/Header"
-import { SEO } from "@/components/SEO"
-import { GradientHeading } from "@/components/GradientHeading"
-import { Button } from "@/components/ui/button"
+import { Header  } from '@/components/Header'
+import { SEO  } from '@/components/SEO'
+import { GradientHeading  } from '@/components/GradientHeading'
+import { Button  } from '@/components/ui/button'
 import Link from 'next/link'
 export default function TalentMarketplace() {
   const schema = {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org",
     "@type": "WebPage",
     "name": "Talent Marketplace",
     "description": "Hire vetted AI and tech professionals from around the world on Zion.",
-    "url": "https://app.ziontechgroup.com/features/talent-marketplace"
+    "url": "https: //app.ziontechgroup.com/features/talent-marketplace"
 
   }
   return (
     <>
-                Create a free account and send a message or job invite directly
+  Create a free account and send a message or job invite directly
+</>
                 from their profile.</$1></$1>
             <div>
               <p className='font - semibold'>Are payments protected?</p>
@@ -66,7 +66,7 @@ export default function TalentMarketplace() {
         title="Talent Marketplace"
         description="Discover and hire top AI specialists through the Zion talent marketplace."
         keywords="AI talent marketplace, hire developers, tech freelancers"
-        canonical="https://app.ziontechgroup.com/features/talent-marketplace"
+        canonical="https: //app.ziontechgroup.com/features/talent-marketplace"
 
 
 
@@ -79,9 +79,9 @@ export default function TalentMarketplace() {
 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
-      <Header />
+      <Header /></Header>
       <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md: px-6">
           <GradientHeading className="mb-4 text-center">Talent Marketplace</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Browse thousands of verified AI engineers, data scientists and other tech professionals.
@@ -113,16 +113,16 @@ export default function TalentMarketplace() {
           </div>
 
           <div className='text-center'>
-            <Button size='lg' className='bg-zion-purple text-white' asChild>
+            <Button size='lg' className='bg-zion-purple text-white' asChild></Button>
               <Link href='/talent'>Browse Talent</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
-      <Header />
+      <Header /></Header>
       <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md: px-6">
           <GradientHeading className="mb-4 text-center">Talent Marketplace</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Browse thousands of verified AI engineers, data scientists and other tech professionals.
@@ -153,7 +153,7 @@ export default function TalentMarketplace() {
           </div>
 
           <div className="text-center">
-            <Button size="lg" className="bg-zion-purple text-white" asChild>
+            <Button size="lg" className="bg-zion-purple text-white" asChild></Button>
               <Link href="/talent">Browse Talent</Link>
             </Button>
           </div>
@@ -165,35 +165,34 @@ export default function TalentMarketplace() {
 }
 
 import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
+import { Header  } from '@/components/Header',
+import { SEO  } from '@/components/SEO',
+import { GradientHeading  } from '@/components/GradientHeading',
+import { Button  } from '@/components/ui/button',
 import Link from 'next/link',
 export default function TalentMarketplace() {
   const schema = {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org",
     "@type": "WebPage",
     "name": "Talent Marketplace",
     "description": "Hire vetted AI and tech professionals from around the world on Zion."
-    "url": "https://app.ziontechgroup.com/features/talent-marketplace"
+    "url": "https: //app.ziontechgroup.com/features/talent-marketplace"
   }
   return (
     <>
-      <SEO
-        title="Talent Marketplace"
+      <SEO title="Talent Marketplace"
         description="Discover and hire top AI specialists through the Zion talent marketplace."
         keywords="AI talent marketplace, hire developers, tech freelancers"
-        canonical="https://app.ziontechgroup.com/features/talent-marketplace"
-      />
+        canonical="https: //app.ziontechgroup.com/features/talent-marketplace"
+      /></SEO>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
-      <Header />
+      <Header /></Header>
       <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md: px-6">
           <GradientHeading className="mb-4 text-center">Talent Marketplace</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Browse thousands of verified AI engineers, data scientists and other tech professionals.</$1>

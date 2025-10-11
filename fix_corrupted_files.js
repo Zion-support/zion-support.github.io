@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 // const __filename = fileURLToPath(import.meta.url)
 // const __dirname = path.dirname(__filename)
 //Function to fix corrupted text by removing erroneous commas
@@ -87,13 +87,13 @@ function fixCorruptedText(text) {
   fixed = fixed.replace(/impo,\s*r,\s*t/g, 'import')
   //Fix object property syntax
   fixed = fixed.replace(
-    /\{\s*'\s*id:\s*'([^']+)',\s*'\s*compone,\s*n,\s*t:\s*'([^']+)',\s*'\s*priori,\s*t,\s*y:\s*(\d+)\s*'\s*catego,\s*r,\s*y:\s*'([^']+)',\s*'\s*impressio,\s*n,\s*s:\s*(\d+)\s*clic,\s*k,\s*s:\s*(\d+)\s*acti,\s*v,\s*e:\s*(true|false)\s*\}/g,
+    /\{\s*'\s*id: \s*'([^']+)',\s*'\s*compone,\s*n,\s*t: \s*'([^']+)',\s*'\s*priori,\s*t,\s*y: \s*(\d+)\s*'\s*catego,\s*r,\s*y: \s*'([^']+)',\s*'\s*impressio,\s*n,\s*s: \s*(\d+)\s*clic,\s*k,\s*s: \s*(\d+)\s*acti,\s*v,\s*e: \s*(true|false)\s*\}/g,
     "{ id: '$1', component: '$2', priority: $3, category: '$4', impressions: $5, clicks: $6, active: $7 }"
   )
   //Fix array syntax
   fixed = fixed.replace(/\[\s*\{/g, '[{')
 function fixCorruptedText(text) {/* TODO: Fix JSX expression */}
-  d:\s*'([^']+)',\s*'\s*compone,\s*n,\s*t:\s*'([^']+)',\s*'\s*priori,\s*t,\s*y:\s*(\d+)\s*'\s*catego,\s*r,\s*y:\s*'([^']+)',\s*'\s*impressio,\s*n,\s*s:\s*(\d+)\s*clic,\s*k,\s*s:\s*(\d+)\s*acti,\s*v,\s*e:\s*(true|false)\s*\}/g,
+  d: \s*'([^']+)',\s*'\s*compone,\s*n,\s*t: \s*'([^']+)',\s*'\s*priori,\s*t,\s*y: \s*(\d+)\s*'\s*catego,\s*r,\s*y: \s*'([^']+)',\s*'\s*impressio,\s*n,\s*s: \s*(\d+)\s*clic,\s*k,\s*s: \s*(\d+)\s*acti,\s*v,\s*e: \s*(true|false)\s*\}/g,
     "{/* TODO: Fix JSX expression */}"
   e: $7 }"
   )

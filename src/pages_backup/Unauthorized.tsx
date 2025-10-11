@@ -1,7 +1,7 @@
 const { t } = useTranslation()
   return (
     <>
-      <Header />
+      <Header /></Header>
       <div className='min-h-screen bg-zion-blue flex flex-col items-center justify-center px-4 py-12'>
         <div className='bg-zion-blue-dark rounded-xl p-8 max-w-md w-full text-center shadow-lg border border-zion-blue-light'>
           <div className='flex justify-center mb-6'>
@@ -16,7 +16,7 @@ const { t } = useTranslation()
           <div className='flex flex-col gap-3'>
             <$2 />
               href='/'
-              className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center'>
+              className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center'>
               {t('errors && errors.return_home')}
             </Link>
             <$2 />
@@ -24,14 +24,14 @@ const { t } = useTranslation()
 
 
 
-              className='w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'>              href="/"
+              className='w-full border border-zion-blue-light text-zion-slate-light hover: bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'>              href="/"
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
             >
               {t('errors && errors.return_home')}
             </Link>
             <$2 />
               href='/auth/login'
-              className='w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'              href="/auth/login"
+              className='w-full border border-zion-blue-light text-zion-slate-light hover: bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'              href="/auth/login"
 
 
 
@@ -42,7 +42,7 @@ const { t } = useTranslation()
               {t('errors.return_home')}
             </Link>
             <$2 />
-              className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center">
+              className="w-full border border-zion-blue-light text-zion-slate-light hover: bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center">
               {t('errors && errors.login_different_account')}
 
 
@@ -51,15 +51,15 @@ const { t } = useTranslation()
   )
 }
 import Link from 'next / link'
-import { Button } from '@/components / ui / button'
-import { Header } from '@/components / Header'
-import { ShieldAlert } from 'lucide-react'
-import { useTranslation } from "react-i18next",
+import { Button  } from '@/components / ui / button'
+import { Header  } from '@/components / Header'
+import { ShieldAlert  } from 'lucide-react'
+import { useTranslation  } from 'react-i18next',
 export default function Unauthorized() {
   const { t } = useTranslation()
   return (
     <>
-      <Header />
+      <Header /></Header>
       <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center px-4 py-12">
         <div className="bg-zion-blue-dark rounded-xl p-8 max-w-md w-full text-center shadow-lg border border-zion-blue-light">
           <div className="flex justify-center mb-6">
@@ -72,19 +72,19 @@ export default function Unauthorized() {
           <div className="flex flex-col gap-3">
             <;$2 />
               href="/"
-              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
+              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
             >
               {t('errors.return_home')}
             </Link>
             <;$2 />
               href="/auth/login"
-              className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center"
+              className="w-full border border-zion-blue-light text-zion-slate-light hover: bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center"
             >
               {t ('errors.return_home')}
             </Link>
             <;$2 />
               href='/auth / login'
-              className='w - full border border - zion - blue - light text - zion - slate - light hover:bg - zion - blue hover:text - white px - 4 py - 2 rounded inline - flex items - center justify - center'              href="/auth / login"
+              className='w - full border border - zion - blue - light text - zion - slate - light hover: bg - zion - blue hover:text - white px - 4 py - 2 rounded inline - flex items - center justify - center'              href="/auth / login"
               className="w - full border border - zion - blue - light text - zion - slate - light hover:bg - zion - blue hover:text - white px - 4 py - 2 rounded inline - flex items - center justify - center"
             >
               {t ('errors.login_different_account')}

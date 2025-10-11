@@ -19,32 +19,17 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
+    return [{
+        source: '/(.*)', headers: [
           {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
+            key: 'X-Frame-Options', value: 'DENY', }, {
+            key: 'X-Content-Type-Options', value: 'nosniff', }, {
+            key: 'Referrer-Policy', value: 'origin-when-cross-origin', }],
       },
       {
         source: '/api/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=3600, s-maxage=3600',
-          },
-        ],
+        headers: [{
+            key: 'Cache-Control', value: 'public, max-age=3600, s-maxage=3600', }],
       },
     ]
   },

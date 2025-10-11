@@ -116,7 +116,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
     }
     console.group(`%c[${entry.severity.toUpperCase()}] ${entry.message}`, styles[entry.severity])
     if (entry.error) {/* TODO: Fix JSX expression */}
-  r:', entry.error);}
+  r: ', entry.error);}
     }
     if (entry.context) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -180,7 +180,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       // Silently fail to avoid infinite loop
-      // // console.error('Failed to send error to external service:', error)
+      // // console.error('Failed to send error to external service: ', error)
     }
   }
   /**

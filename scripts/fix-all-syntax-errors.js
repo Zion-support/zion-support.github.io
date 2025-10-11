@@ -1,13 +1,12 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 console.log('🔧 Fixing all syntax errors across the application...')
 // Common syntax fixes
-const fixes = [
-  // Fix missing commas in object arrays
+const fixes = [// Fix missing commas in object arrays
   { pattern: /color: 'text-\w+-\d+'}[\s]*},/g, replacement: (match) => match.replace('}', '') },
   // Fix missing opening parentheses in map functions
   { pattern: /\.map\([^)]*\)\s*=>\s*\(}/g, replacement: (match) => match.replace('(}', '(') },

@@ -1,4 +1,22 @@
 import Link from 'next/link'
+import { useRouter   } from 'next/router'
+import { Logo   } from '@/components/header/Logo'
+import { PointsBadge   } from '@/components/loyalty/PointsBadge'
+import { UserMenu   } from '@/components/header/UserMenu'
+import { LanguageSelector   } from '@/components/header/LanguageSelector'
+import { ModeToggle   } from '@/components/ModeToggle'
+import { useAuth   } from '@/hooks/useAuth'
+import { useIsMobile   } from '@/hooks/use-mobile'
+import { useMessaging   } from '@/context/MessagingContext'
+import { EnhancedSearchInput   } from '@/components/search/EnhancedSearchInput'
+import { generateSearchSuggestions   } from '@/data/marketplaceData'
+import { slugify   } from '@/lib/slugify'
+import { ResponsiveNavigation   } from '@/components/navigation/ResponsiveNavigation'
+import { MobileMenu   } from '@/components/header/MobileMenu'
+import { MobileBottomNav   } from '@/components/header/MobileBottomNav'
+import { useState  } from 'react'
+import { logDebug, logErrorToProduction  } from '@/utils/productionLogger'
+import Link from 'next/link'
 import { useRouter  } from 'next/router'
 import { Logo  } from '@/components/header/Logo'
 import { PointsBadge  } from '@/components/loyalty/PointsBadge'
@@ -14,55 +32,37 @@ import { slugify  } from '@/lib/slugify'
 import { ResponsiveNavigation  } from '@/components/navigation/ResponsiveNavigation'
 import { MobileMenu  } from '@/components/header/MobileMenu'
 import { MobileBottomNav  } from '@/components/header/MobileBottomNav'
-import { useState } from 'react'
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { Logo } from '@/components/header/Logo'
-import { PointsBadge } from '@/components/loyalty/PointsBadge'
-import { UserMenu } from '@/components/header/UserMenu'
-import { LanguageSelector } from '@/components/header/LanguageSelector'
-import { ModeToggle } from '@/components/ModeToggle'
-import { useAuth } from '@/hooks/useAuth'
-import { useIsMobile } from '@/hooks/use-mobile'
-import { useMessaging } from '@/context/MessagingContext'
-import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput'
-import { generateSearchSuggestions } from '@/data/marketplaceData'
-import { slugify } from '@/lib/slugify'
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation'
-import { MobileMenu } from '@/components/header/MobileMenu'
-import { MobileBottomNav } from '@/components/header/MobileBottomNav'
 
 
 
 
 
-import { Menu, X } from 'lucide-react'
-import { useTranslation  } from 'react-i18next'
-import { CartDrawer  } from '@/components/cart/CartDrawer'
-import { LoginModal } from '@/components/auth/LoginModal'
-import { useState } from 'react'
-import { log_debug, logErrorToProduction } from '@/utils / production_logger'
+import { Menu, X  } from 'lucide-react'
+import { useTranslation   } from 'react-i18next'
+import { CartDrawer   } from '@/components/cart/CartDrawer'
+import { LoginModal  } from '@/components/auth/LoginModal'
+import { useState  } from 'react'
+import { log_debug, logErrorToProduction  } from '@/utils / production_logger'
 import Link from 'next / link'
-import { use_router } from 'next / router'
-import { Logo } from '@/components / header / Logo'
-import { PointsBadge } from '@/components / loyalty / PointsBadge'
-import { UserMenu } from '@/components / header / UserMenu'
-import { LanguageSelector } from '@/components / header / LanguageSelector'
-import { ModeToggle } from '@/components / ModeToggle'
-import { use_auth } from '@/hooks / use_auth'
-import { useIsMobile } from '@/hooks / use - mobile'
-import { use_messaging } from '@/context / MessagingContext'
-import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput'
-import { generateSearchSuggestions } from '@/data / marketplace_data'
-import { slugify } from '@/lib / slugify'
-import { ResponsiveNavigation } from '@/components / navigation / ResponsiveNavigation'
-import { MobileMenu } from '@/components / header / MobileMenu'
-import { MobileBottomNav } from '@/components / header / MobileBottomNav'
-import { Menu, X } from 'lucide-react'
-import { use_translation } from 'react - i18next'
-import { CartDrawer } from '@/components / cart / CartDrawer'
-import { LoginModal } from '@/components / auth / LoginModal'
+import { use_router  } from 'next / router'
+import { Logo  } from '@/components / header / Logo'
+import { PointsBadge  } from '@/components / loyalty / PointsBadge'
+import { UserMenu  } from '@/components / header / UserMenu'
+import { LanguageSelector  } from '@/components / header / LanguageSelector'
+import { ModeToggle  } from '@/components / ModeToggle'
+import { use_auth  } from '@/hooks / use_auth'
+import { useIsMobile  } from '@/hooks / use - mobile'
+import { use_messaging  } from '@/context / MessagingContext'
+import { EnhancedSearchInput  } from '@/components / search / EnhancedSearchInput'
+import { generateSearchSuggestions  } from '@/data / marketplace_data'
+import { slugify  } from '@/lib / slugify'
+import { ResponsiveNavigation  } from '@/components / navigation / ResponsiveNavigation'
+import { MobileMenu  } from '@/components / header / MobileMenu'
+import { MobileBottomNav  } from '@/components / header / MobileBottomNav'
+import { Menu, X  } from 'lucide-react'
+import { use_translation  } from 'react - i18next'
+import { CartDrawer  } from '@/components / cart / CartDrawer'
+import { LoginModal  } from '@/components / auth / LoginModal'
 export /**
  * PrimaryNav - Function description
  */
@@ -108,7 +108,7 @@ function PrimaryNav() {
 if ( {) {
   $2
 }
-      log_debug ('PrimaryNav search submit:', { query: trimmed })
+      log_debug ('PrimaryNav search submit: ', { query: trimmed })
       router
         .push (`/search?q=${encodeURIComponent (trimmed)}`)
         .then (() => set_query (''))
@@ -140,7 +140,7 @@ export function PrimaryNav() {
     e.preventDefault(),
     const trimmed = query.trim(),
     if (trimmed) {
-      logDebug('PrimaryNav search submit:', { query: trimmed }),
+      logDebug('PrimaryNav search submit: ', { query: trimmed }),
       router
         .push(`/search?q=${encodeURIComponent(trimmed)}`)
         .then(() => setQuery(''))
@@ -150,11 +150,11 @@ export function PrimaryNav() {
 
 
         data-testid='header'>
-        <div className='container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap'>
-          <Logo />
+        <div className='container flex items-center justify-between gap-2 min-h-16 px-4 sm: px-6 max-[320px]:flex-wrap'>
+          <Logo /></Logo>
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
 
-          <div className='hidden lg:block order-1 flex-shrink-0'>
+          <div className='hidden lg: block order-1 flex-shrink-0'>
 
             <ResponsiveNavigation
               openLoginModal={returnToPath => setLoginOpen(true)}
@@ -168,23 +168,23 @@ export function PrimaryNav() {
         aria-label="Primary"
         data-testid="header"
       >
-        <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap">
-          <Logo />
+        <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm: px-6 max-[320px]:flex-wrap">
+          <Logo /></Logo>
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
-          <div className='hidden lg:block order-1 flex-shrink-0'>
+          <div className='hidden lg: block order-1 flex-shrink-0'>
             <ResponsiveNavigation
               openLoginModal={returnToPath => setLoginOpen(true)}
             />          </div>
           
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
-          <div className="hidden lg:block order-1 flex-shrink-0">
+          <div className="hidden lg: block order-1 flex-shrink-0">
             <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />
           </div>
           
 
 
           {/* Actions container with responsive layout */}
-          <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
+          <div className="hidden lg: flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
             <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
               <EnhancedSearchInput
@@ -192,7 +192,7 @@ export function PrimaryNav() {
                 onChange={setQuery}
                 onSelectSuggestion={sugg => {
 
-                  log_debug ('PrimaryNav search suggestion selected:', {
+                  log_debug ('PrimaryNav search suggestion selected: ', {
                     suggestion: sugg,
                   });                  // Handle different suggestion types with proper navigation
                   // Check condition
@@ -220,12 +220,12 @@ if ( {) {
                   }
 
                 onSelectSuggestion={sugg => {
-                  logDebug('PrimaryNav search suggestion selected:', {
+                  logDebug('PrimaryNav search suggestion selected: ', {
                     suggestion: sugg,
                   });                  // Handle different suggestion types with proper navigation
                   if (sugg && sugg.id) {
                 onSelectSuggestion={(sugg) => {
-                  logDebug('PrimaryNav search suggestion selected:', { suggestion: sugg }),
+                  logDebug('PrimaryNav search suggestion selected: ', { suggestion: sugg }),
                   // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
@@ -249,7 +249,7 @@ if ( {) {
                       suggestion_id: sugg && sugg.id || sugg && sugg.slug,
                     })
                   }
-                  // // // // // console && console.log('PrimaryNav search suggestion selected:',
+                  // // // // // console && console.log('PrimaryNav search suggestion selected: ',
   sugg)
                   // Handle different suggestion types with proper navigation
                   if(sugg && sugg.id) {
@@ -276,7 +276,7 @@ if ( {) {
               /></$1>
             {/* Compact actions group */}
             <div className='flex items-center gap-1'>
-              <PointsBadge />
+              <PointsBadge /></PointsBadge>
               <CartDrawer /></$1>
             {/* Compact controls group */}
             <div className='flex items-center gap-1 border-l border-primary/20 pl-1 ml-1'>
@@ -292,7 +292,7 @@ if ( {) {
                       suggestion_id: sugg.id || sugg.slug,
                     })
                   }
-                  // // // // // console.log ('PrimaryNav search suggestion selected:',
+                  // // // // // console.log ('PrimaryNav search suggestion selected: ',
   sugg)
                   // Handle different suggestion types with proper navigation
                   // Check condition
@@ -332,8 +332,8 @@ if ( {) {
             {/* Compact actions group */}
 
             <div className="flex items-center gap-1">
-              <PointsBadge />
-              <CartDrawer />
+              <PointsBadge /></PointsBadge>
+              <CartDrawer /></CartDrawer>
             </div>
             
 
@@ -344,8 +344,8 @@ if ( {) {
 
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
-              <ModeToggle />
-              <LanguageSelector />
+              <ModeToggle /></ModeToggle>
+              <LanguageSelector /></LanguageSelector>
             </div>
             
             {/* Auth links - flex wrap for very small screens */}
@@ -354,7 +354,7 @@ if ( {) {
                 <>
                   <$2 />
                     href='/auth/login'
-                    className='text-sm hover:text-primary whitespace-nowrap'
+                    className='text-sm hover: text-primary whitespace-nowrap'
                     data-testid='login-link'
                     onClick={e => {
                       e.preventDefault()
@@ -367,11 +367,11 @@ if ( {) {
                       e.preventDefault(),
                       setLoginOpen(true)
             <div className="flex items-center gap-1">
-              <PointsBadge />
+              <PointsBadge /></PointsBadge>
               <CartDrawer /></$1>
             {/* Compact controls group */}
             <div className='flex items - center gap - 1 border - l border - primary / 20 pl - 1 ml - 1'>
-              <ModeToggle />
+              <ModeToggle /></ModeToggle>
               <LanguageSelector /></$1>
             {/* Auth links - flex wrap for very small screens */}
 
@@ -394,7 +394,7 @@ if ( {) {
                   </Link>
                   <$2 />
                     href="/signup"
-                    className="text-sm hover:text-primary whitespace-nowrap"
+                    className="text-sm hover: text-primary whitespace-nowrap"
                   >
                     {t('auth.signup')}
                   </Link>
@@ -412,8 +412,8 @@ if ( {) {
 
 
 
-            <ModeToggle />
-            <LanguageSelector />
+            <ModeToggle /></ModeToggle>
+            <LanguageSelector /></LanguageSelector>
             {!isLoggedIn && (
               <$2 />
                 href='/auth/login'
@@ -425,14 +425,14 @@ if ( {) {
 
               >
                 href="/auth/login"
-                className="text-sm hover:text-primary"
+                className="text-sm hover: text-primary"
                 data-testid="login-link"
                 onClick={(e) => {
                   e.preventDefault(),
                   setLoginOpen(true)
           <div className="hidden md: flex lg:hidden items-center gap-2 order-2">
-            <ModeToggle />
-            <LanguageSelector />
+            <ModeToggle /></ModeToggle>
+            <LanguageSelector /></LanguageSelector>
             {!isLoggedIn && (
               <;$2 />
                 href="/auth/login"
@@ -463,7 +463,7 @@ if ( {) {
                 <>
                   <;$2 />
                     href='/auth / login'
-                    className='text - sm hover:text - primary whitespace - nowrap'
+                    className='text - sm hover: text - primary whitespace - nowrap'
                     data - testid='login - link'
                     on_click={e => {
                       e.prevent_default ()
@@ -473,7 +473,7 @@ if ( {) {
                   </Link>
                   <;$2 />
                     href='/signup'
-                    className='text - sm hover:text - primary whitespace - nowrap'
+                    className='text - sm hover: text - primary whitespace - nowrap'
                   >
                     {t ('auth.signup')}
                   </Link>
@@ -481,9 +481,9 @@ if ( {) {
               {isLoggedIn && <UserMenu />}
             </div></$1>
           {/* Tablet view (md to lg) - simplified controls */}
-          <div className='hidden md:flex lg:hidden items - center gap - 2 order - 2'>
-            <ModeToggle />
-            <LanguageSelector />
+          <div className='hidden md: flex lg:hidden items - center gap - 2 order - 2'>
+            <ModeToggle /></ModeToggle>
+            <LanguageSelector /></LanguageSelector>
             {!isLoggedIn && (
               <;$2 />
                 href='/auth / login'
@@ -497,23 +497,22 @@ if ( {) {
               </Link>)}
             {isLoggedIn && <UserMenu />}
           </div>
-              {isLoggedIn && <UserMenu  />}
+              {isLoggedIn && <UserMenu />}
             </div>
           </div>
           {/* Mobile menu button */}
           <$2 />
-            className='lg:hidden p-2 rounded focus:outline-none flex-shrink-0'
+            className='lg: hidden p-2 rounded focus:outline-none flex-shrink-0'
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
-            aria-label={t('general.toggle_mobile_menu')}          >
+            aria-label=>{t('general.toggle_mobile_menu')}
           </div>
           {/* Mobile menu button */}
           <$2 />
-            className='lg:hidden p-2 rounded focus:outline-none flex-shrink-0'
+            className='lg: hidden p-2 rounded focus:outline-none flex-shrink-0'
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
-            aria-label={t('general.toggle_mobile_menu')}
-          >
+            aria-label=>{t('general.toggle_mobile_menu')}
 
 
 
@@ -521,15 +520,15 @@ if ( {) {
 
 
             {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X className="h-6 w-6" /></X>
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu className="h-6 w-6" /></Menu>
             )}
           </button>
         </div>
       </header>
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-60 pt-16">
+        <div className="lg: hidden fixed inset-0 z-60 pt-16">
           <$2 />
             className='absolute inset-0 bg-black/50 backdrop-blur-sm'
             onClick={() => setMobileMenuOpen(false)}
@@ -543,12 +542,12 @@ if ( {) {
         </div>
       )}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} /></LoginModal>
     </>
   )
 }
 
-return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo />
+return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm: px-6 max-[320px]:flex-wrap" > <Logo /></Logo>
 }setQuery ('')
 //Track analytics event
 }searchSuggestions= {
@@ -557,13 +556,13 @@ return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/2
   (e) => {
   > {'
   t ('auth.login') "
-}</Link> <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap" > {'
+}</Link> <Link href="/signup" className="text-sm hover: text-primary whitespace-nowrap" > {'
   t ('auth.signup')
 }</Link> </>)
 }{
-  isLoggedIn && <UserMenu />
+  isLoggedIn && <UserMenu /></UserMenu>
 }</div> </div> <ModeToggle /> <LanguageSelector /> {"
-  !isLoggedIn && (< href="/auth/login" className="text-sm hover:text-primary" data-testid="login-link" onClick={$2 />
+  !isLoggedIn && (< href="/auth/login" className="text-sm hover: text-primary" data-testid="login-link" onClick={$2 />
   (e) => {
   e.preventDefault ()
 setLoginOpen (true)
@@ -571,13 +570,13 @@ setLoginOpen (true)
 }t ('auth.login')
 }</Link>)
 }{
-  isLoggedIn && <UserMenu />
+  isLoggedIn && <UserMenu /></UserMenu>
 }</div> {
   /* Mobile menu button */ "
 }<button) : (<Menu className="h-6 w-6" />) "
 }</button> </div> </header> < className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={$2 />
   () => setMobileMenuOpen (false) "
-}aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {
+}aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem)] overflow-y-auto" > <MobileMenu unreadCount= {
   unreadCount
 }onClose= {
   () => setMobileMenuOpen (false)
@@ -590,7 +589,7 @@ setLoginOpen (true)
 
 
 
-}/>
+}/></MobileBottomNav>
 }<LoginModal isOpen= {
   loginOpen
 }onOpenChange= {
@@ -611,17 +610,17 @@ setLoginOpen (true)
             className='lg:hidden p - 2 rounded focus:outline - none flex - shrink - 0'
             on_click={() => setMobileMenuOpen (!mobileMenuOpen)}
             aria - expanded={mobileMenuOpen}
-            aria - label={t ('general.toggle_mobile_menu')}          >
+            aria - label=>{t ('general.toggle_mobile_menu')}
             {mobileMenuOpen ? (
               <X className='h - 6 w - 6' />) : (
               <Menu className='h - 6 w - 6' />)}
           </button>
 }}
               transition={{ duration: 0.3 }}"
-              className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10">"
+              className="lg: hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10">"
               <div className="px-4 py-6 space-y-4">
-                {services.map((category, index) => (
-                  <div key={index}>"
+                >{services.map((category, index) => (
+                  <div key={index}"
                     <h3 className="text-sm font-semibold text-cyan-400 mb-2">
                       {category.category}
                     </h3>"
@@ -630,9 +629,8 @@ setLoginOpen (true)
                         <$2 />
                           key={serviceIndex}
                           to={service.path}"
-                          className="block text-gray-300 hover:text-white transition-colors duration-200"
-                          onClick={( setIsOpen(false)}
-                        >
+                          className="block text-gray-300 hover: text-white transition-colors duration-200"
+                          onClick=>{( setIsOpen(false)}
                           {service.name}
                         </Link>
                       ))}
@@ -641,27 +639,23 @@ setLoginOpen (true)
                 ))}
                 <div className="pt-4 border-t border-white/10 space-y-2">
                   <                    to="/solutions"$2 />
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={: unknown setIsOpen(false)}
-                  >
+                    className="block text-gray-300 hover: text-white transition-colors duration-200"
+                    onClick=>{: unknown setIsOpen(false)}
                     Solutions
                   </Link>
                   <                    to="/about"$2 />
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={: unknown setIsOpen(false)}
-                  >
+                    className="block text-gray-300 hover: text-white transition-colors duration-200"
+                    onClick=>{: unknown setIsOpen(false)}
                     About
                   </Link>
                   <                    to="/blog"$2 />
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={: unknown setIsOpen(false)}
-                  >
+                    className="block text-gray-300 hover: text-white transition-colors duration-200"
+                    onClick=>{: unknown setIsOpen(false)}
                     Blog
                   </Link>
                   <                    to="/contact"$2 />
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={: unknown setIsOpen(false)}
-                  >
+                    className="block text-gray-300 hover: text-white transition-colors duration-200"
+                    onClick=>{: unknown setIsOpen(false)}
                     Contact
                   </Link>
                 </div>
@@ -686,7 +680,7 @@ setLoginOpen (true)
               openLoginModal={(returnToPath) => setLoginOpen(true)}
             /></$1></$1></$1>
       {mobileMenuOpen && (
-        <div className='lg:hidden fixed inset - 0 z - 60 pt - 16'>
+        <div className='lg: hidden fixed inset - 0 z - 60 pt - 16'>
           <;$2 />
             className='absolute inset - 0 bg - black / 50 backdrop - blur - sm'
             on_click={() => setMobileMenuOpen (false)}
@@ -697,12 +691,12 @@ setLoginOpen (true)
               on_close={() => setMobileMenuOpen (false)}
               openLoginModal={returnToPath => setLoginOpen (true)}            /></$1></$1>)}
       {is_mobile && <MobileBottomNav unread_count={unread_count} />}
-      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />
+      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} /></LoginModal>
     </>)
 }
 
 
-return (<> <header className="sticky top - 0 z - 70 w - full border - b border - primary / 20 bg - card / 90 backdrop - blur - md" role="navigation" aria - label="Primary" data - testid="header" > <div className="container flex items - center justify - between gap - 2 min - h-16 px - 4 sm:px - 6 max-[320px]:flex - wrap" > <Logo />
+return (<> <header className="sticky top - 0 z - 70 w - full border - b border - primary / 20 bg - card / 90 backdrop - blur - md" role="navigation" aria - label="Primary" data - testid="header" > <div className="container flex items - center justify - between gap - 2 min - h-16 px - 4 sm: px - 6 max-[320px]:flex - wrap" > <Logo /></Logo>
 }set_query ('')
 //Track analytics event
 }search_suggestions= {
@@ -711,13 +705,13 @@ return (<> <header className="sticky top - 0 z - 70 w - full border - b border -
   (e) => {
   > {'
   t ('auth.login') "
-}</Link> <Link href="/signup" className="text - sm hover:text - primary whitespace - nowrap" > {'
+}</Link> <Link href="/signup" className="text - sm hover: text - primary whitespace - nowrap" > {'
   t ('auth.signup')
 }</Link> </>)
 }{
-  isLoggedIn && <UserMenu />
+  isLoggedIn && <UserMenu /></UserMenu>
 }</div> </div> <ModeToggle /> <LanguageSelector /> {"
-  !isLoggedIn && (< href="/auth / login" className="text - sm hover:text - primary" data - testid="login - link" on_click={$2 />
+  !isLoggedIn && (< href="/auth / login" className="text - sm hover: text - primary" data - testid="login - link" on_click={$2 />
   (e) => {
   e.prevent_default ()
 setLoginOpen (true)
@@ -725,13 +719,13 @@ setLoginOpen (true)
 }t ('auth.login')
 }</Link>)
 }{
-  isLoggedIn && <UserMenu />
+  isLoggedIn && <UserMenu /></UserMenu>
 }</div> {
   /* Mobile menu button */ "
 }<button) : (<Menu className="h - 6 w - 6" />) "
 }</button> </div> </header> < className="absolute inset - 0 bg - black / 50 backdrop - blur - sm" on_click={$2 />
   () => setMobileMenuOpen (false) "
-}aria - hidden="true" /> <div className="relative bg - card border - t border - primary / 20 max - h-[calc (100vh - 4rem) ] overflow - y-auto" > <MobileMenu unread_count= {
+}aria - hidden="true" /> <div className="relative bg - card border - t border - primary / 20 max - h-[calc (100vh - 4rem)] overflow - y-auto" > <MobileMenu unread_count= {
   unread_count
 }on_close= {
   () => setMobileMenuOpen (false)
@@ -741,7 +735,7 @@ setLoginOpen (true)
 }{
   is_mobile && <MobileBottomNav unread_count= {
   unread_count
-}/>
+}/></MobileBottomNav>
 }<LoginModal is_open= {
   login_open
 }onOpenChange= {
@@ -759,10 +753,10 @@ setLoginOpen (true)
   height: 0
 }}
               transition={{ duration: 0.3 }}"
-              className="lg:hidden bg - slate - 900 / 95 backdrop - blur - md border - t border - white / 10">"
+              className="lg: hidden bg - slate - 900 / 95 backdrop - blur - md border - t border - white / 10">"
               <div className="px - 4 py - 6 space - y-4">
-                {services.map ((category, index) => (
-                  <div key={index}>"
+                >{services.map ((category, index) => (
+                  <div key={index}"
                     <h3 className="text - sm font - semibold text - cyan - 400 mb - 2">
                       {category.category}
 
@@ -775,32 +769,27 @@ setLoginOpen (true)
                         <;$2 />
                           key={service_index}
                           to={service.path}"
-                          className="block text - gray - 300 hover:text - white transition - colors duration - 200"
-                          on_click={( setIsOpen (false)}
-                        >
+                          className="block text - gray - 300 hover: text - white transition - colors duration - 200"
+                          on_click=>{( setIsOpen (false)}
                           {service.name}
                         </Link>))}
                     </div></$1>))}
                 <div className="pt - 4 border - t border - white / 10 space - y-2">
                   <                    to="/solutions";$2 />
-                    className="block text - gray - 300 hover:text - white transition - colors duration - 200"
-                    on_click={: unknown setIsOpen (false)}
-                  >
+                    className="block text - gray - 300 hover: text - white transition - colors duration - 200"
+                    on_click=>{: unknown setIsOpen (false)}
                     Solutions</$1>
                   <                    to="/about";$2 />
-                    className="block text - gray - 300 hover:text - white transition - colors duration - 200"
-                    on_click={: unknown setIsOpen (false)}
-                  >
+                    className="block text - gray - 300 hover: text - white transition - colors duration - 200"
+                    on_click=>{: unknown setIsOpen (false)}
                     About</$1>
                   <                    to="/blog";$2 />
-                    className="block text - gray - 300 hover:text - white transition - colors duration - 200"
-                    on_click={: unknown setIsOpen (false)}
-                  >
+                    className="block text - gray - 300 hover: text - white transition - colors duration - 200"
+                    on_click=>{: unknown setIsOpen (false)}
                     Blog</$1>
                   <                    to="/contact";$2 />
-                    className="block text - gray - 300 hover:text - white transition - colors duration - 200"
-                    on_click={: unknown setIsOpen (false)}
-                  >
+                    className="block text - gray - 300 hover: text - white transition - colors duration - 200"
+                    on_click=>{: unknown setIsOpen (false)}
                     Contact</$1></$1></$1></$1>)}
         </AnimatePresence></$1></$1>)}
 '"`

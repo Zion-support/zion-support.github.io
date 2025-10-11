@@ -26,18 +26,18 @@ function fixRemainingSyntaxErrors(filePath) {
     // Fix specific syntax issues
     
     // 1. Fix extra semicolons in object properties
-    content = content.replace(/description:\s*'[^']*',\s*;/g, (match) => {
+    content = content.replace(/description: \s*'[^']*',\s*;/g, (match) => {
       return match.replace(/,\s*;/, ',')
     })
     // 2. Fix missing commas after object properties
-    content = content.replace(/benefits:\s*\[[^\]]*\]\s*}\s*$/gm, (match) => {
+    content = content.replace(/benefits: \s*\[[^\]]*\]\s*}\s*$/gm, (match) => {
       if (!match.includes(',')) {
         return match.replace(/}\s*$/, '},')
       }
       return match
     })
     // 3. Fix malformed object syntax
-    content = content.replace(/description:\s*'[^']*',\s*benefits:\s*\[[^\]]*\]\s*}\s*$/gm, (match) => {
+    content = content.replace(/description: \s*'[^']*',\s*benefits: \s*\[[^\]]*\]\s*}\s*$/gm, (match) => {
       return match.replace(/}\s*$/, '},')
     })
     // 4. Fix missing closing brackets for arrays
@@ -55,8 +55,10 @@ function fixRemainingSyntaxErrors(filePath) {
       return match
     })
     // 6. Fix malformed JSX return statements
-    content = content.replace(/return\s*\(\s*<>\s*$/gm, 'return (\n    <>')
+    content = content.replace(/return\s*\(\s*<>\s*$/gm, 'return (\n    <>
+  ')
     // 7. Fix missing closing tags
+</>
     content = content.replace(/<main[^>]*>[\s\S]*?<\/section>\s*$/gm, (match) => {
       if (!match.includes('</main>')) {
         return match + '\n      </main>\n    </>\n  );\n}'
@@ -105,7 +107,7 @@ tsFiles.forEach(filePath => {
     console.log(`⚠ File not found: ${filePath}`)
   }
 })
-console.log(`\nSummary:`)
+console.log(`\nSummary: `)
 console.log(`- Files processed: ${tsFiles.length}`)
 console.log(`- Files fixed: ${fixedCount}`)
 console.log(`- Errors: ${errorCount}`)

@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface NextGenInnovation2025 {
   id: string
   name: string
@@ -44,27 +44,10 @@ export interface NextGenInnovation2025 {
   rating: number
   reviews: number
 }
-export const nextGenInnovations2025: NextGenInnovation2025[] = [
-  // Next-Gen AI & Robotics
+export const nextGenInnovations2025: NextGenInnovation2025[] = [// Next-Gen AI & Robotics
   {
-    id: 'autonomous-ai-fleet-manager',
-    name: 'Autonomous AI Fleet Manager',
-    tagline: 'Manage autonomous vehicle fleets with AI intelligence',
-    price: '$18,999',
-    period: '/month',
-    description: 'Comprehensive autonomous fleet management platform that uses AI to coordinate, optimize, and manage fleets of autonomous vehicles for logistics, transportation, and delivery services.',
-    features: [
-      'AI fleet coordination',
-      'Route optimization',
-      'Real-time monitoring',
-      'Predictive maintenance',
-      'Safety protocols',
-      'Traffic analysis',
-      'Energy optimization',
-      'Compliance management',
-      'Performance analytics',
-      'Emergency response'
-    ],
+    id: 'autonomous-ai-fleet-manager', name: 'Autonomous AI Fleet Manager', tagline: 'Manage autonomous vehicle fleets with AI intelligence', price: '$18, 999', period: '/month', description: 'Comprehensive autonomous fleet management platform that uses AI to coordinate, optimize, and manage fleets of autonomous vehicles for logistics, transportation, and delivery services.', features: [
+      'AI fleet coordination', 'Route optimization', 'Real-time monitoring', 'Predictive maintenance', 'Safety protocols', 'Traffic analysis', 'Energy optimization', 'Compliance management', 'Performance analytics', 'Emergency response'],
     popular: true,
     icon: '🚗',
     color: 'from-blue-600 to-indigo-700',
@@ -104,18 +87,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     price: '$25,999',
     period: '/month',
     description: 'Revolutionary bioinformatics platform that leverages quantum computing to analyze complex biological data, accelerate drug discovery, and advance medical research.',
-    features: [
-      'Quantum DNA analysis',
-      'Protein folding simulation',
-      'Drug discovery acceleration',
-      'Genomic sequencing',
-      'Molecular modeling',
-      'Clinical trial optimization',
-      'Biomarker discovery',
-      'Disease prediction',
-      'Personalized medicine',
-      'Research collaboration'
-    ],
+    features: ['Quantum DNA analysis', 'Protein folding simulation', 'Drug discovery acceleration', 'Genomic sequencing', 'Molecular modeling', 'Clinical trial optimization', 'Biomarker discovery', 'Disease prediction', 'Personalized medicine', 'Research collaboration'],
     popular: true,
     icon: '🧬',
     color: 'from-green-600 to-teal-700',
@@ -156,18 +128,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     price: '$21,999',
     period: '/month',
     description: 'Advanced AI platform that processes data while preserving privacy using quantum encryption and federated learning techniques. Perfect for healthcare, finance, and sensitive data applications.',
-    features: [
-      'Quantum encryption',
-      'Federated learning',
-      'Privacy preservation',
-      'Secure data processing',
-      'Homomorphic encryption',
-      'Differential privacy',
-      'Secure multi-party computation',
-      'Privacy auditing',
-      'Compliance tools',
-      'Zero-knowledge proofs'
-    ],
+    features: ['Quantum encryption', 'Federated learning', 'Privacy preservation', 'Secure data processing', 'Homomorphic encryption', 'Differential privacy', 'Secure multi-party computation', 'Privacy auditing', 'Compliance tools', 'Zero-knowledge proofs'],
     popular: true,
     icon: '🔐',
     color: 'from-purple-600 to-violet-700',
@@ -208,18 +169,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     price: '$28,999',
     period: '/month',
     description: 'Advanced energy optimization platform that uses quantum computing to optimize energy grids, renewable energy systems, and industrial energy consumption for maximum efficiency and sustainability.',
-    features: [
-      'Quantum grid optimization',
-      'Renewable energy integration',
-      'Demand forecasting',
-      'Energy storage optimization',
-      'Grid stability analysis',
-      'Carbon footprint reduction',
-      'Cost optimization',
-      'Predictive maintenance',
-      'Real-time monitoring',
-      'Sustainability reporting'
-    ],
+    features: ['Quantum grid optimization', 'Renewable energy integration', 'Demand forecasting', 'Energy storage optimization', 'Grid stability analysis', 'Carbon footprint reduction', 'Cost optimization', 'Predictive maintenance', 'Real-time monitoring', 'Sustainability reporting'],
     popular: true,
     icon: '⚡',
     color: 'from-yellow-600 to-orange-700',
@@ -260,18 +210,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     price: '$32,999',
     period: '/month',
     description: 'Comprehensive industrial automation platform that combines AI, IoT, and robotics to create intelligent, self-optimizing manufacturing systems for Industry 4.0.',
-    features: [
-      'AI-powered automation',
-      'Predictive maintenance',
-      'Quality control AI',
-      'Supply chain optimization',
-      'Robotic process automation',
-      'Real-time monitoring',
-      'Performance optimization',
-      'Safety protocols',
-      'Compliance management',
-      'Analytics dashboard'
-    ],
+    features: ['AI-powered automation', 'Predictive maintenance', 'Quality control AI', 'Supply chain optimization', 'Robotic process automation', 'Real-time monitoring', 'Performance optimization', 'Safety protocols', 'Compliance management', 'Analytics dashboard'],
     popular: true,
     icon: '🏭',
     color: 'from-gray-600 to-slate-700',
@@ -312,18 +251,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     price: '$4,999',
     period: '/month',
     description: 'Revolutionary educational platform that uses AI to teach quantum computing, advanced mathematics, and cutting-edge technologies through personalized learning experiences.',
-    features: [
-      'AI-powered learning',
-      'Quantum computing courses',
-      'Personalized curriculum',
-      'Interactive simulations',
-      'Real-time feedback',
-      'Progress tracking',
-      'Collaborative learning',
-      'Expert mentorship',
-      'Certification programs',
-      'Career guidance'
-    ],
+    features: ['AI-powered learning', 'Quantum computing courses', 'Personalized curriculum', 'Interactive simulations', 'Real-time feedback', 'Progress tracking', 'Collaborative learning', 'Expert mentorship', 'Certification programs', 'Career guidance'],
     popular: true,
     icon: '🎓',
     color: 'from-indigo-600 to-blue-700',
@@ -364,18 +292,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     price: '$6,999',
     period: '/month',
     description: 'Advanced content creation platform that combines AI, quantum computing, and creative algorithms to generate high-quality video, audio, and multimedia content automatically.',
-    features: [
-      'AI video generation',
-      'Quantum creative algorithms',
-      'Audio synthesis',
-      'Content personalization',
-      'Multi-format output',
-      'Brand voice consistency',
-      'Performance analytics',
-      'Collaboration tools',
-      'Content scheduling',
-      'Distribution automation'
-    ],
+    features: ['AI video generation', 'Quantum creative algorithms', 'Audio synthesis', 'Content personalization', 'Multi-format output', 'Brand voice consistency', 'Performance analytics', 'Collaboration tools', 'Content scheduling', 'Distribution automation'],
     popular: true,
     icon: '🎬',
     color: 'from-pink-600 to-rose-700',
@@ -409,15 +326,8 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     reviews: 267
   }
 }
-export const nextGenInnovations2025: NextGenInnovation2025[] = [
-  {
-    address: string,
-  i,
-  d: string,
-  nam,
-  e: string,
-
-  id: string
+export const nextGenInnovations2025: NextGenInnovation2025[] = [{
+    address: string, i, d: string, nam, e: string, id: string
   name: string
   tagline: string
   price: string
@@ -445,25 +355,17 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     addres,
   s: string}
 export const,
-  nextGenInnovations2025: NextGenInnovation2025[] = [,
-    i,
-  d: 'next-gen-ai-suite'
-    nam,
-  e: 'Next-Gen AI Suite'
-    taglin,
-  e: 'Future-ready AI solutions'
-    pric,
-  e: '$179/month'
-    descriptio,
-  n: 'Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.'
-    feature,
-  s: [
+  nextGenInnovations2025: NextGenInnovation2025[] = [i, d: 'next-gen-ai-suite'
+    nam, e: 'Next-Gen AI Suite'
+    taglin, e: 'Future-ready AI solutions'
+    pric, e: '$179/month'
+    descriptio, n: 'Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.'
+    feature, s: [
       'Next-gen AI models'
       'Advanced capabilities'
       'Future-ready features'
       'Innovation platform'
-      'Expert support'
-    ]
+      'Expert support']
     link: '/services/next-gen-ai-suite'
     category: 'Next-Gen Innovations 2025'
     realImplementation: true,
@@ -482,13 +384,7 @@ export const,
     tagline: "Future-ready AI solutions",
     price: "$179/month",
     description: "Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.",
-    features: [,
-      "Next-gen AI models",
-      "Advanced capabilities",
-      "Future-ready features",
-      "Innovation platform",
-      "Expert support"
-    ],
+    features: ["Next-gen AI models", "Advanced capabilities", "Future-ready features", "Innovation platform", "Expert support"],
     link: "/services/next-gen-ai-suite"
     category: "Next-Gen Innovations 2025"
     realImplementation: true
@@ -530,13 +426,12 @@ export const,
     descriptio,"
   n: "Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.",
     feature,
-  s: [,"
-      "Next-gen AI models","
-      "Advanced capabilities","
-      "Future-ready features","
-      "Innovation platform","
-      "Expert support"
-    ],
+  s: ["
+      "Next-gen AI models", "
+      "Advanced capabilities", "
+      "Future-ready features", "
+      "Innovation platform", "
+      "Expert support"],
     lin,"
   k: "/services/next-gen-ai-suite",
     categor,"
@@ -588,13 +483,7 @@ i,
   k: string, categor,
   y: string, addres,
   s: string} export const,
-  nextGenInnovations2025: NextGenInnovation2025[] = [ i,
-  d: 'next-gen-ai-suite'' nam,
-  e: 'Next-Gen AI Suite'' taglin,
-  e: 'Future-ready AI solutions'' pric,
-  e: '$179/month' descriptio,
-  n:' 'Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.' feature,
-  s: [' 'Next-gen AI models'' 'Advanced capabilities'' 'Future-ready features'' 'Innovation platform'' 'Expert support' ]' lin,
+  nextGenInnovations2025: NextGenInnovation2025[] = [i, d: 'next-gen-ai-suite'' nam, e: 'Next-Gen AI Suite'' taglin, e: 'Future-ready AI solutions'' pric, e: '$179/month' descriptio, n: ' 'Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.' feature, s: [' 'Next-gen AI models'' 'Advanced capabilities'' 'Future-ready features'' 'Innovation platform'' 'Expert support']' lin,
   k: '/services/next-gen-ai-suite'' categor,
   y: 'Next-Gen Innovations 2025' realImplementatio,
   n: true,
@@ -611,7 +500,7 @@ i,
   e: "Future-ready AI solutions", pric,"
   e: "$179/month", descriptio,"
   n: "Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.", feature,"
-  s: [ "Next-gen AI models", "Advanced capabilities", "Future-ready features", "Innovation platform", "Expert support" ], lin,"
+  s: ["Next-gen AI models", "Advanced capabilities", "Future-ready features", "Innovation platform", "Expert support"], lin,"
   k: "/services/next-gen-ai-suite", categor,"
   y: "Next-Gen Innovations 2025", realImplementatio,
   n: true, contactInf,

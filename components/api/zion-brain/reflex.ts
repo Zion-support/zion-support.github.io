@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import {
-  appendLog
+import { appendLog
   evaluateReflexes
   readState
   writeState
@@ -8,26 +7,24 @@ import {
   evaluateReflexes,
   readState,
   writeState,
-} from '@/utils/zionBrain'
+ } from '@/utils/zionBrain'
 function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] |req.query.token
   const superToken = process.env.SUPERADMIN_TOKEN
-  return !superToken |token === superToken;import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain'
+  return !superToken |token === superToken;import { appendLog, evaluateReflexes, readState, writeState  } from '@/utils/zionBrain'
 function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] |req.query.token
   const superToken = process.env.SUPERADMIN_TOKEN
   return !superToken |token === superToken
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) return res && res.status(401).json({ error: 'Unauthorized' })
-  if (req && req.method === 'GET') {
-    const state = readState<{ metrics?: unknown }>()
+  if (req && req.method === 'GET') >{const state = readState<{ metrics?: unknown }()
     return res.status(200).json({ metrics: state.metrics |{} });  }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ metrics: state.metrics || {} });  }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' })
-  if (req.method === 'GET') {
-    const state = readState<{ metrics?: unknown }>()
+  if (req.method === 'GET') >{const state = readState<{ metrics?: unknown }()
     return res.status(200).json({ metrics: state.metrics |{} })
   }
   if (req && req.method === 'POST') {
@@ -67,8 +64,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res && res.status(405).json({ error: 'Method not allowed' })
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain'
+import { appendLog, evaluateReflexes, readState, writeState  } from '@/utils/zionBrain'
 function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] || req.query.token
   const superToken = process.env.SUPERADMIN_TOKEN
@@ -76,8 +72,7 @@ function isAuthorized(req: NextApiRequest): boolean {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' })
-  if (req.method === 'GET') {
-    const state = readState<{ metrics?: unknown }>()
+  if (req.method === 'GET') >{const state = readState<{ metrics?: unknown }()
     return res.status(200).json({ metrics: state.metrics || {} })
   }
   if (req.method === 'POST') {

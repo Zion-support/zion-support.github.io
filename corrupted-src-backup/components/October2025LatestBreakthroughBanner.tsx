@@ -26,7 +26,7 @@ const, October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expressio
         {/* Header, Sectio, n */}
         <div, className="text-center mb-12">
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, p, x-6, p, y-2, rounde, d-full, m, b-6">
-            <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
+            <Zap , className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  /></Zap>
             <span, className="te, x, t-white, fon, t-semibold, tex, t-sm">
         <div, className="text-center mb-12">"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, p, x-6, p, y-2, rounde, d-full, m, b-6">"
@@ -61,21 +61,21 @@ const, Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n
           {
 octoberLatestBreakthroughConte, n, t.m, a, p((conte, n, t) => {
 const, Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡" ? Databa, s, e : B, o, t;"
-return(<Li, n, k
+return(<Li , n, k
   k, e, y={conte, n, t.id
   }
-return (</div>
-<Li, n, k
+return (</div></Li>
+<Li , n, k
   k, e, y={
     conte, n, t.id
   }
                 to={`/bl, o, g/${conte, n, t.sl, u, g}`}`;`
                 classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hov, e
-  r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
-              >
+  r: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
+              ></Li>
                 <div, className="flex, item, s-start, ga, p-4, m, b-4">
                   <div, className={`bg-gradie, n, t-to-br ${conte, n, t.gradie, n, t} p-3, rounde, d-lg`}>`;`
-                    <Icon, className="w-6 h-6, tex, t-whi, t, e  />
+                    <Icon , className="w-6 h-6, tex, t-whi, t, e  /></Icon>
                   <div, className="fl, e, x-1">
                     <div, className="te, x, t-xs, tex, t-bl, u, e-300, m, b-2">{conte, n, t.catego, r, y}
                     <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"
@@ -90,11 +90,11 @@ return (</div>
 }
                 to={`/bl, o, g/${conte, n, t.sl, u, g}`}`;`"
                 classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hov, e,"
-  r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
+  r: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
               ></Li>"
                 <div, className="flex, item, s-start, ga, p-4, m, b-4"></div>`
                   <div, className={`bg-gradie, n, t-to-br ${conte, n, t.gradie, n, t} p-3, rounde, d-lg`}>`;`"
-                    <Icon, className="w-6 h-6, tex, t-whi, t, e  />
+                    <Icon , className="w-6 h-6, tex, t-whi, t, e  /></Icon>
                   </d, i, v>"
                   <div, className="fl, e, x-1"></div>"
                     <div, className="te, x, t-xs, tex, t-bl, u, e-300, m, b-2">{conte, n, t.catego, r, y}</d, i, v>"
@@ -142,7 +142,7 @@ return (</div>
                 </ul>"
                 <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-bl, u, e-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                   Read, Full, Article
-                  <Link, className="w-4 h-4  />
+                  <Link , className="w-4 h-4  /></Link>
                 <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-bl, u, e-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                   Read, Full, Article
                   Read, Full, Article;"
@@ -169,19 +169,19 @@ return (</div>
   to="/conta, c, t"
           </p>"
           <div, className="flex, fle, x-wrap, ga, p-4, justif, y-cent, e, r">"
-            <Li, n, k;"
+            <Li , n, k;"
   to="/conta, c, t""
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-bl, u, e-900, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, hove, r: bg-bl, u, e-50, transitio, n-colo, r, s"
-            >
+            ></Li>
               Schedule, Free, Consultation;"
               <Link, className="w-5 h-5  /></Link>"
               <Link, className="w-5 h-5" />"
-            <Li, n, k
+            <Li , n, k
   to="/bl, o, g"
             <Li, n, k;"
   to="/bl, o, g""
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, hove, r: bg-bl, u, e-700, transitio, n-colo, r, s"
-            >
+            ></Li>
               Explore, All, Articles
         {/* Stats, Ba, r */}
         <div, className="mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4">"

@@ -1,7 +1,6 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-import { 
-  Heart, 
+import { motion  } from 'framer-motion'
+import { Heart, 
   Activity, 
   Brain, 
   Target, 
@@ -18,9 +17,8 @@ import {
   TrendingUp,
   Stethoscope,
   Database
-import { Link } from 'react-router-dom'
-import { 
-  Heart, 
+import { Link  } from 'react-router-dom'
+import { Heart, 
   Brain, 
   Activity, 
   Zap, 
@@ -44,9 +42,8 @@ import {
   Microscope,
   FileText,
   AlertTriangle,
-import { Link } from 'react-router-dom'
-import { 
-  Heart, 
+import { Link  } from 'react-router-dom'
+import { Heart, 
   Activity, 
   Brain, 
   Shield, 
@@ -58,21 +55,20 @@ import {
   DollarSign,
   Zap,
   Target
-} from 'lucide-react'
+ } from 'lucide-react'
 export default function AIHealthcareAnalytics() {
-  const features = [
-    {
-  LineChart,
-  Building
+  const features = [{
+  LineChart, Building
 } from 'lucide-react'
 const AIHealthcareAnalytics: React.FC = () => {
+  return (
+
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Patient Analytics",
-      description: "Advanced machine learning algorithms that analyze patient data to predict outcomes and optimize treatment plans.",
-      benefits: ["Predictive modeling", "Treatment optimization", "Risk assessment"]
-    },
+      icon: Brain, title: "AI-Powered Patient Analytics", description: "Advanced machine learning algorithms that analyze patient data to predict outcomes and optimize treatment plans.", benefits: ["Predictive modeling", "Treatment optimization", "Risk assessment"]
+    
+  );
+},
     {
       icon: Activity,
       title: "Real-time Monitoring",
@@ -144,12 +140,8 @@ const AIHealthcareAnalytics: React.FC = () => {
       benefits: ["Evidence-based guidance", "Clinical pathways", "Best practice recommendations"]
     }
   ]
-  const services = [
-    {
-      title: "Patient Analytics",
-      description: "Comprehensive patient data analysis for personalized care and improved outcomes.",
-      icon: Users,
-      features: ["Individual risk assessment", "Treatment response prediction", "Personalized care plans", "Outcome tracking"]
+  const services = [{
+      title: "Patient Analytics", description: "Comprehensive patient data analysis for personalized care and improved outcomes.", icon: Users, features: ["Individual risk assessment", "Treatment response prediction", "Personalized care plans", "Outcome tracking"]
     },
     {
       title: "Clinical Analytics",
@@ -198,43 +190,17 @@ const AIHealthcareAnalytics: React.FC = () => {
       description: "AI-powered care coordination that optimizes patient care pathways and resource allocation."
     }
   ]
-  const benefits = [
-    "Improve diagnostic accuracy by 85%",
-    "Reduce treatment costs by 30-40%",
-    "Enhance patient outcomes by 60%",
-    "Streamline clinical workflows by 70%",
-    "Automate 75% of routine analytics tasks",
-    "Enable proactive healthcare interventions"
-  ]
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$599",
-      period: "/month",
-      description: "Perfect for small clinics",
-      features: [
-        "Basic AI patient analytics",
-        "Health monitoring tools",
-        "Basic reporting dashboard",
-        "Up to 1,000 patients",
-        "Email support",
-        "Standard integrations"
-      ]
+  const benefits = ["Improve diagnostic accuracy by 85%", "Reduce treatment costs by 30-40%", "Enhance patient outcomes by 60%", "Streamline clinical workflows by 70%", "Automate 75% of routine analytics tasks", "Enable proactive healthcare interventions"]
+  const pricingPlans = [{
+      name: "Starter", price: "$599", period: "/month", description: "Perfect for small clinics", features: [
+        "Basic AI patient analytics", "Health monitoring tools", "Basic reporting dashboard", "Up to 1, 000 patients", "Email support", "Standard integrations"]
     },
     {
       name: "Professional",
       price: "$1,199",
       period: "/month",
       description: "Ideal for growing practices",
-      features: [
-        "Advanced AI analytics",
-        "Predictive health insights",
-        "Population health management",
-        "Up to 10,000 patients",
-        "Priority support",
-        "Custom integrations",
-        "Advanced reporting"
-      ],
+      features: ["Advanced AI analytics", "Predictive health insights", "Population health management", "Up to 10, 000 patients", "Priority support", "Custom integrations", "Advanced reporting"],
       popular: true
     },
     {
@@ -242,15 +208,7 @@ const AIHealthcareAnalytics: React.FC = () => {
       price: "$2,499",
       period: "/month",
       description: "For large healthcare systems",
-      features: [
-        "Full AI healthcare suite",
-        "Custom AI models",
-        "Advanced analytics",
-        "Dedicated account manager",
-        "Unlimited patients",
-        "24/7 phone support",
-        "Custom development"
-      ]
+      features: ["Full AI healthcare suite", "Custom AI models", "Advanced analytics", "Dedicated account manager", "Unlimited patients", "24/7 phone support", "Custom development"]
     {
       title: "Improve Patient Outcomes",
       value: "35%",
@@ -278,62 +236,28 @@ const AIHealthcareAnalytics: React.FC = () => {
     "Increase operational efficiency by 40-60% through automation",
     "Achieve 95%+ accuracy in patient risk assessment"
   ]
-  const useCases = [
-    {
-      title: "Clinical Decision Support",
-      description: "AI-powered diagnostic assistance and treatment recommendations for healthcare providers.",
-      icon: Stethoscope
-    },
-    {
-      title: "Patient Risk Assessment",
-      description: "Predictive analytics for identifying high-risk patients and preventive interventions.",
-      icon: AlertTriangle
-    },
-    {
-      title: "Treatment Optimization",
-      description: "Personalized treatment plans based on patient data and AI analysis.",
-      icon: Pill
-    },
-    {
-      title: "Population Health",
-      description: "Comprehensive analytics for managing health outcomes across patient populations.",
-      icon: Users
-    }
-  ]
-  const healthcareProcesses = [
-    {
-      step: "01",
-      title: "Data Collection",
-      description: "Secure collection of patient data from multiple sources"
-    },
-    {
-      step: "02",
-      title: "AI Analysis",
-      description: "Advanced AI algorithms analyze health patterns and trends"
-    },
-    {
-      step: "03",
-      title: "Risk Assessment",
-      description: "Predictive modeling for patient risk identification"
-    },
-    {
-      step: "04",
-      title: "Treatment Planning",
-      description: "AI-powered treatment recommendations and optimization"
-    },
-    {
-      step: "05",
-      title: "Monitoring & Tracking",
-      description: "Continuous health monitoring and outcome tracking"
-    },
-    {
-      step: "06",
-      title: "Performance Analytics",
-      description: "Comprehensive reporting and performance insights"
-      title: "Hospitals",
-      description: "Comprehensive healthcare analytics for large medical centers and hospital systems.",
-      icon: Building,
-      features: ["Patient flow optimization", "Resource management", "Quality improvement", "Cost reduction"]
+  const useCases = [{
+      title: "Clinical Decision Support", description: "AI-powered diagnostic assistance and treatment recommendations for healthcare providers.", icon: Stethoscope
+    }, {
+      title: "Patient Risk Assessment", description: "Predictive analytics for identifying high-risk patients and preventive interventions.", icon: AlertTriangle
+    }, {
+      title: "Treatment Optimization", description: "Personalized treatment plans based on patient data and AI analysis.", icon: Pill
+    }, {
+      title: "Population Health", description: "Comprehensive analytics for managing health outcomes across patient populations.", icon: Users
+    }]
+  const healthcareProcesses = [{
+      step: "01", title: "Data Collection", description: "Secure collection of patient data from multiple sources"
+    }, {
+      step: "02", title: "AI Analysis", description: "Advanced AI algorithms analyze health patterns and trends"
+    }, {
+      step: "03", title: "Risk Assessment", description: "Predictive modeling for patient risk identification"
+    }, {
+      step: "04", title: "Treatment Planning", description: "AI-powered treatment recommendations and optimization"
+    }, {
+      step: "05", title: "Monitoring & Tracking", description: "Continuous health monitoring and outcome tracking"
+    }, {
+      step: "06", title: "Performance Analytics", description: "Comprehensive reporting and performance insights"
+      title: "Hospitals", description: "Comprehensive healthcare analytics for large medical centers and hospital systems.", icon: Building, features: ["Patient flow optimization", "Resource management", "Quality improvement", "Cost reduction"]
     },
     {
       title: "Clinics",
@@ -372,33 +296,16 @@ const AIHealthcareAnalytics: React.FC = () => {
       metrics: ["Population Health", "Care Coordination", "Quality Metrics"]
     }
   ]
-  const pricing = [
-    {
-      name: "Starter",
-      price: "$4,000",
-      period: "/month",
-      description: "Perfect for small healthcare practices starting with AI analytics",
-      features: [
-        "Up to 1,000 patients",
-        "Basic predictive analytics",
-        "Patient monitoring",
-        "Standard reporting",
-        "Email support"
-      ]
+  const pricing = [{
+      name: "Starter", price: "$4, 000", period: "/month", description: "Perfect for small healthcare practices starting with AI analytics", features: [
+        "Up to 1, 000 patients", "Basic predictive analytics", "Patient monitoring", "Standard reporting", "Email support"]
     },
     {
       name: "Professional",
       price: "$12,000",
       period: "/month",
       description: "Ideal for growing healthcare organizations with advanced analytics needs",
-      features: [
-        "Up to 10,000 patients",
-        "Advanced AI models",
-        "Real-time monitoring",
-        "Population analytics",
-        "Priority support",
-        "Custom integrations"
-      ],
+      features: ["Up to 10, 000 patients", "Advanced AI models", "Real-time monitoring", "Population analytics", "Priority support", "Custom integrations"],
       popular: true
     },
     {
@@ -406,14 +313,7 @@ const AIHealthcareAnalytics: React.FC = () => {
       price: "Custom",
       period: "",
       description: "Tailored solutions for large health systems with complex analytics requirements",
-      features: [
-        "Unlimited patients",
-        "Custom AI models",
-        "White-label solutions",
-        "Dedicated support",
-        "Advanced security",
-        "API access"
-      ]
+      features: ["Unlimited patients", "Custom AI models", "White-label solutions", "Dedicated support", "Advanced security", "API access"]
     }
   ]
   return (
@@ -423,17 +323,17 @@ const AIHealthcareAnalytics: React.FC = () => {
         <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
             <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
-              <Heart className="w-10 h-10 text-white" />
+              <Heart className="w-10 h-10 text-white" /></Heart>
             </div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
             AI Healthcare Analytics
           </h1>
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
             Transform healthcare delivery with intelligent AI that predicts outcomes, 
             optimizes care pathways, and improves patient safety and satisfaction.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <$2 />
               to="/contact"
               className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
@@ -451,11 +351,11 @@ const AIHealthcareAnalytics: React.FC = () => {
 
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 pb-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 text-red-300 text-sm font-medium mb-6">
-              <Heart className="w-4 h-4 mr-2" />
+              <Heart className="w-4 h-4 mr-2" /></Heart>
               AI-Powered Healthcare Analytics
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -469,11 +369,11 @@ const AIHealthcareAnalytics: React.FC = () => {
               optimize treatments, and enable proactive healthcare interventions.
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-32 pb-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-sm font-medium mb-6">
-              <Heart className="w-4 h-4 mr-2" />
+              <Heart className="w-4 h-4 mr-2" /></Heart>
               AI-Powered Healthcare Analytics
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -484,13 +384,13 @@ const AIHealthcareAnalytics: React.FC = () => {
               Revolutionize patient care with AI-powered healthcare analytics that predict outcomes, optimize treatments, 
               and improve population health. Make data-driven decisions that save lives and reduce costs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <$2 />
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold hover:from-red-600 hover:to-pink-600 transition-all duration-200 transform hover:scale-105"
               >
                 Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5" /></ArrowRight>
               </Link>
               <$2 />
                 to="/demo"
@@ -502,7 +402,7 @@ const AIHealthcareAnalytics: React.FC = () => {
           </div>
           
           {/* Key Metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16">
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mt-16">
             <div className="text-center">
               <div className="text-3xl font-bold text-red-400 mb-2">35%</div>
               <div className="text-gray-400">Better Outcomes</div>
@@ -524,13 +424,13 @@ const AIHealthcareAnalytics: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
       </section>
 
       {/* Healthcare Processes Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -541,11 +441,11 @@ const AIHealthcareAnalytics: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {healthcareProcesses.map((process, index) => (
               <$2 />
                 key={index}
-                className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-red-500/50 transition-all duration-300"
+                className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover: border-red-500/50 transition-all duration-300"
               >
                 <div className="w-16 h-16 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center mb-4 mx-auto">
                   <span className="text-white font-bold text-xl">{process.step}</span>
@@ -559,7 +459,7 @@ const AIHealthcareAnalytics: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -578,7 +478,7 @@ const AIHealthcareAnalytics: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-red-500/50 transition-all duration-300">
+              <div key={index} className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover: border-red-500/50 transition-all duration-300">
                 <div className="flex items-center mb-6">
                   <div className="p-3 rounded-lg bg-red-500/20 mr-4">
                     <feature.icon className="w-8 h-8 text-red-400" />
@@ -589,7 +489,7 @@ const AIHealthcareAnalytics: React.FC = () => {
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                       {benefit}
                     </li>
                   ))}
@@ -601,7 +501,7 @@ const AIHealthcareAnalytics: React.FC = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -612,9 +512,9 @@ const AIHealthcareAnalytics: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
-              <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-red-500/50 transition-all duration-300 text-center">
+              <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover: border-red-500/50 transition-all duration-300 text-center">
                 <div className="p-4 rounded-lg bg-red-500/20 inline-block mb-4">
                   <service.icon className="w-8 h-8 text-red-400" />
                 </div>
@@ -634,7 +534,7 @@ const AIHealthcareAnalytics: React.FC = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -647,7 +547,7 @@ const AIHealthcareAnalytics: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-red-500/50 transition-all duration-300 text-center">
+              <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover: border-red-500/50 transition-all duration-300 text-center">
                 <div className="p-4 rounded-lg bg-red-500/20 inline-block mb-4">
                   <useCase.icon className="w-8 h-8 text-red-400" />
                 </div>
@@ -665,13 +565,13 @@ const AIHealthcareAnalytics: React.FC = () => {
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Advanced Healthcare Analytics Features
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
               const Icon = feature.icon
               return (
-                <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
+                <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6 hover: border-zion-cyan/40 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-4">
-                    <Icon className="w-8 h-8 text-white" />
+                    <Icon className="w-8 h-8 text-white" /></Icon>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-zion-slate-light">{feature.description}</p>
@@ -687,10 +587,10 @@ const AIHealthcareAnalytics: React.FC = () => {
             <h2 className="text-3xl font-bold text-white text-center mb-8">
               Proven Healthcare Results
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" /></CheckCircle>
                   <span className="text-zion-slate-light">{benefit}</span>
                 </div>
               ))}
@@ -703,13 +603,13 @@ const AIHealthcareAnalytics: React.FC = () => {
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Healthcare Setting Applications
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6">
                 <h3 className="text-2xl font-bold text-white mb-4">{useCase.industry}</h3>
                 <p className="text-zion-slate-light mb-4">{useCase.description}</p>
                 <div className="space-y-2">
-                  <h4 className="font-semibold text-zion-cyan">Key Metrics:</h4>
+                  <h4 className="font-semibold text-zion-cyan">Key Metrics: </h4>
                   {useCase.metrics.map((metric, metricIndex) => (
                     <div key={metricIndex} className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
@@ -721,7 +621,7 @@ const AIHealthcareAnalytics: React.FC = () => {
             ))}
           </div>
         </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -734,7 +634,7 @@ const AIHealthcareAnalytics: React.FC = () => {
               < key={index} className={`relative bg-gray-800/50 rounded-xl p-8 border transition-all duration-300 ${$2 />
                 plan.popular 
                   ? 'border-red-500/50 scale-105' 
-                  : 'border-gray-700 hover:border-gray-600'
+                  : 'border-gray-700 hover: border-gray-600'
               }`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -745,7 +645,7 @@ const AIHealthcareAnalytics: React.FC = () => {
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Transparent Pricing
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               < key={index} className={`relative bg-zion-blue-dark/50 backdrop-blur-sm border rounded-2xl p-6 ${$2 />
                 plan.popular ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' : 'border-zion-cyan/20'
@@ -767,7 +667,7 @@ const AIHealthcareAnalytics: React.FC = () => {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" /></CheckCircle>
                       {feature}
                     </li>
                   ))}
@@ -777,23 +677,23 @@ const AIHealthcareAnalytics: React.FC = () => {
                   to="/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-red-500 to-pink-500 text-white hover:from-red-600 hover:to-pink-600'
+                      ? 'bg-gradient-to-r from-red-500 to-pink-500 text-white hover: from-red-600 hover:to-pink-600'
                       : 'border border-gray-600 text-white hover:border-red-500 hover:text-red-400'
                   }`}
                 >
                   Get Started
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2" /></ArrowRight>
                 </Link>
                 <$2 />
                   to="/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-red-500 to-pink-500 text-white hover:from-red-600 hover:to-pink-600'
+                      ? 'bg-gradient-to-r from-red-500 to-pink-500 text-white hover: from-red-600 hover:to-pink-600'
                       : 'border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500'
                   }`}
                 >
                   Get Started
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <ArrowRight className="ml-2 w-4 h-4" /></ArrowRight>
                 </Link>
               </div>
             ))}
@@ -810,7 +710,7 @@ const AIHealthcareAnalytics: React.FC = () => {
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" /></CheckCircle>
                       <span className="text-zion-slate-light">{feature}</span>
                     </li>
                   ))}
@@ -819,7 +719,7 @@ const AIHealthcareAnalytics: React.FC = () => {
                   to="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:from-zion-cyan-light hover:to-zion-purple-light'
+                      ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover: from-zion-cyan-light hover:to-zion-purple-light'
                       : 'bg-transparent border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'
                   }`}
                 >
@@ -840,7 +740,7 @@ const AIHealthcareAnalytics: React.FC = () => {
               Join hundreds of healthcare organizations already using our AI-powered analytics platform 
               to improve patient outcomes and operational efficiency.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <$2 />
                 to="/contact"
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
@@ -864,38 +764,20 @@ const AIHealthcareAnalytics: React.FC = () => {
     "Streamline clinical workflows",
     "Better resource allocation"
   ]
-  const solutions = [
-    {
-      title: "Patient Analytics",
-      description: "Comprehensive patient data analysis and insights"
-    },
-    {
-      title: "Clinical Analytics",
-      description: "Clinical performance metrics and quality improvement"
-    },
-    {
-      title: "Operational Analytics",
-      description: "Healthcare operations optimization and efficiency"
-    },
-    {
-      title: "Research Analytics",
-      description: "Advanced analytics for medical research and trials"
-    }
-  ]
-  const specialties = [
-    "Cardiology",
-    "Oncology",
-    "Neurology",
-    "Pediatrics",
-    "Emergency Medicine",
-    "Primary Care",
-    "Surgery",
-    "Mental Health"
-  ]
+  const solutions = [{
+      title: "Patient Analytics", description: "Comprehensive patient data analysis and insights"
+    }, {
+      title: "Clinical Analytics", description: "Clinical performance metrics and quality improvement"
+    }, {
+      title: "Operational Analytics", description: "Healthcare operations optimization and efficiency"
+    }, {
+      title: "Research Analytics", description: "Advanced analytics for medical research and trials"
+    }]
+  const specialties = ["Cardiology", "Oncology", "Neurology", "Pediatrics", "Emergency Medicine", "Primary Care", "Surgery", "Mental Health"]
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 pb-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -904,17 +786,17 @@ const AIHealthcareAnalytics: React.FC = () => {
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                <Heart className="w-10 h-10 text-white" />
+                <Heart className="w-10 h-10 text-white" /></Heart>
               </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            <h1 className="text-4xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               AI Healthcare Analytics
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Transform healthcare delivery with intelligent analytics powered by artificial intelligence. 
               Improve patient outcomes, optimize operations, and advance medical research.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
                 Start Free Trial
               </button>
@@ -927,7 +809,7 @@ const AIHealthcareAnalytics: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -936,7 +818,7 @@ const AIHealthcareAnalytics: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold mb-6">
               AI-Powered Healthcare Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -953,7 +835,7 @@ const AIHealthcareAnalytics: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300"
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-cyan-500 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
@@ -967,7 +849,7 @@ const AIHealthcareAnalytics: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -976,7 +858,7 @@ const AIHealthcareAnalytics: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold mb-6">
               Why Choose AI Healthcare Analytics?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -995,7 +877,7 @@ const AIHealthcareAnalytics: React.FC = () => {
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-cyan-500 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-cyan-500 flex-shrink-0" /></CheckCircle>
                     <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
@@ -1023,7 +905,7 @@ const AIHealthcareAnalytics: React.FC = () => {
       </section>
 
       {/* Specialties Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1032,7 +914,7 @@ const AIHealthcareAnalytics: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold mb-6">
               Medical Specialties
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1049,9 +931,9 @@ const AIHealthcareAnalytics: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300"
+                className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover: border-cyan-500 transition-all duration-300"
               >
-                <Stethoscope className="w-8 h-8 text-cyan-500 mx-auto mb-3" />
+                <Stethoscope className="w-8 h-8 text-cyan-500 mx-auto mb-3" /></Stethoscope>
                 <h3 className="font-semibold">{specialty}</h3>
               </motion.div>
             ))}
@@ -1060,7 +942,7 @@ const AIHealthcareAnalytics: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1068,7 +950,7 @@ const AIHealthcareAnalytics: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold mb-6">
               Ready to Transform Healthcare?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -1077,7 +959,7 @@ const AIHealthcareAnalytics: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2">
                 <span>Get Started Today</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5" /></ArrowRight>
               </button>
               <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">
                 Contact Sales
@@ -1087,7 +969,7 @@ const AIHealthcareAnalytics: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Ready to Transform Healthcare?
@@ -1097,7 +979,7 @@ const AIHealthcareAnalytics: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-500/10 to-pink-500/10">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-red-500/10 to-pink-500/10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Healthcare?
@@ -1112,7 +994,7 @@ const AIHealthcareAnalytics: React.FC = () => {
               className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold hover:from-red-600 hover:to-pink-600 transition-all duration-200 transform hover:scale-105"
             >
               Get Started
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-5 h-5" /></ArrowRight>
             </Link>
             <$2 />
               to="/demo"

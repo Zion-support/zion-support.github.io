@@ -1,13 +1,12 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 console.log('🔧 Ultimate syntax fix for all remaining issues...')
 // Ultimate syntax fixes
-const fixes = [
-  // Fix missing commas in object arrays
+const fixes = [// Fix missing commas in object arrays
   { pattern: /count: '[^']+'}\s*},/g, replacement: (match) => match.replace('}', '') },
   { pattern: /icon: '[^']+'}\s*},/g, replacement: (match) => match.replace('}', '') },
   { pattern: /color: 'text-\w+-\d+'\s*}\s*},/g, replacement: (match) => match.replace('}', '') },
@@ -20,7 +19,7 @@ const fixes = [
   // Fix console statements
   { pattern: /console\.(log|warn|error|info|debug)\([^)]*\),/g, replacement: '' },
   // Fix missing imports
-  { pattern: /'use client'\nimport {/g, replacement: "'use client',\nimport React, { lazy } from 'react';\nimport {" },
+  { pattern: /'use client'\nimport { /g, replacement: "'use client',\nimport React, { lazy  } from 'react';\nimport {" },
   // Fix missing semicolons in imports
   { pattern: /from 'lucide-react'\nconst/g, replacement: "from 'lucide-react',\n\nconst" },
   // Fix missing semicolons in lazy imports

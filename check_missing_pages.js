@@ -34,7 +34,7 @@ try {
   const result = execSync('find app -name "page.tsx" | sed "s|app/||" | sed "s|/page.tsx||"', { encoding: 'utf8' })
   existingPages.push(...result.trim().split('\n').filter(Boolean))
 } catch (error) {
-    console.error('Error getting existing pages:', error.message)
+    console.error('Error getting existing pages: ', error.message)
   }
 
 // Combine all links

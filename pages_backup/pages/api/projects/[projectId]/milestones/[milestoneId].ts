@@ -1,13 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from "next"
-import { requireUser } from "../../../../../utils/api/auth"
-import {
-  getProject,
+import { requireUser  } from '../../../../../utils/api/auth'
+import { getProject,
   updateMilestone,
   assertParticipantOrAdmin,
   isClient,
   isTalent,
-} from "../../../../../utils/api/projects"
-import { isMilestoneStatus } from "../../../../../utils/types/milestones"
+ } from '../../../../../utils/api/projects'
+import { isMilestoneStatus  } from '../../../../../utils/types/milestones'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res)
   if (!user) return
@@ -16,9 +15,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     milestoneId: string
   }
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { requireUser } from '../../../../../utils/api/auth'
-import { getProject, updateMilestone, assertParticipantOrAdmin, isClient, isTalent } from '../../../../../utils/api/projects'
-import { isMilestoneStatus } from '../../../../../utils/types/milestones'
+import { requireUser  } from '../../../../../utils/api/auth'
+import { getProject, updateMilestone, assertParticipantOrAdmin, isClient, isTalent  } from '../../../../../utils/api/projects'
+import { isMilestoneStatus  } from '../../../../../utils/types/milestones'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res)
   if (!user) return
@@ -81,22 +80,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.setHeader('Allow', ['PATCH'])
     res.status(405).end('Method Not Allowed')
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { requireUser } from '../../../../../utils/api/auth'
-import { getProject, updateMilestone, assertParticipantOrAdmin, isClient, isTalent } from '../../../../../utils/api/projects'
-import { isMilestoneStatus } from '../../../../../utils/types/milestones'
+import { requireUser  } from '../../../../../utils/api/auth'
+import { getProject, updateMilestone, assertParticipantOrAdmin, isClient, isTalent  } from '../../../../../utils/api/projects'
+import { isMilestoneStatus  } from '../../../../../utils/types/milestones'
 export default function handler(req, res) {
   try {
   const user = requireUser(req, res)
@@ -107,15 +106,15 @@ export default function handler(req, res) {
     res.status(404).json({ error: 'Project not found' })
     return
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -123,15 +122,15 @@ export default function handler(req, res) {
     res.status(403).json({ error: 'Forbidden' })
     return
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -142,15 +141,15 @@ export default function handler(req, res) {
       res.status(400).json({ error: 'Invalid status' })
       return
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -169,15 +168,15 @@ export default function handler(req, res) {
         res.status(403).json({ error: 'Not allowed to set this status' })
         return
         } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -186,58 +185,58 @@ export default function handler(req, res) {
       if (status === 'Submitted') {
         body.submittedByUserId = user.userId
         } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
       if (status === 'Approved') {
         body.approvedByUserId = user.userId
         } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
       if (status === 'Paid') {
         body.paidAt = new Date().toISOString()
         } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -254,9 +253,7 @@ export default function handler(req, res) {
   res.status(405).end("Method Not Allowed")
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

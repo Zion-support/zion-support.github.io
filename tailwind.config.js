@@ -1,10 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [,
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{js, ts, jsx, tsx}", "./app/**/*.{js, ts, jsx, tsx}", "./components/**/*.{js, ts, jsx, tsx}"],
   theme: {
     extend: {
       colors: {
@@ -24,19 +20,7 @@ export default {
           secondary: '#a1 a1 aa',
           muted: '#71717 a'}},
       fontFamily: {,
-        sans: [,
-          'Inter',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'Segoe UI',
-          'Roboto',
-          'Oxygen',
-          'Ubuntu',
-          'Cantarell',
-          'Fira Sans',
-          'Droid Sans',
-          'Helvetica Neue',
-          'sans-serif']},
+        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'sans-serif']},
       animation: {,
         'neon-glow': 'neon-glow 2s ease-in-out infinite alternate',
         'neon-pulse': 'neon-pulse 2s ease-in-out infinite alternate',
@@ -138,81 +122,28 @@ export default {
         '80': '80',
         '90': '90',
         '100': '100'}}},
-  plugins: [,
-    function({ addUtilities }) {
+  plugins: [function({ addUtilities }) {
       const newUtilities = {
         '.neon-text': {
-          color: 'var(--neon-cyan)',
-          animation: 'neon-glow 2 s ease-in-out infinite alternate'},
-        '.neon-border': {
-          border: '2 px solid var(--neon-cyan)',
-          boxShadow: '0 0 10 px var(--neon-cyan), inset 0 0 10 px var(--neon-cyan)',
-          animation: 'neon-pulse 2 s ease-in-out infinite alternate'},
-        '.hologram-card': {
-          background: 'linear-gradient(135 deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%)',
-          border: '1 px solid rgba(139, 92, 246, 0.3)',
-          backdropFilter: 'blur(10 px)',
-          animation: 'hologram-flicker 3 s ease-in-out infinite'},
-        '.glass-morphism': {
-          background: 'rgba(255, 255, 255, 0.1)',
-          backdropFilter: 'blur(10 px)',
-          border: '1 px solid rgba(255, 255, 255, 0.2)'},
-        '.cyber-grid': {
-          backgroundImage: `,
-            linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
-          `,
-          backgroundSize: '20 px 20 px'},
-        '.cyber-button': {
-          background: 'linear-gradient(45deg, var(--neon-cyan), var(--neon-purple))',
-          border: 'none'
+          color: 'var(--neon-cyan)', animation: 'neon-glow 2 s ease-in-out infinite alternate'}, '.neon-border': {
+          border: '2 px solid var(--neon-cyan)', boxShadow: '0 0 10 px var(--neon-cyan), inset 0 0 10 px var(--neon-cyan)', animation: 'neon-pulse 2 s ease-in-out infinite alternate'}, '.hologram-card': {
+          background: 'linear-gradient(135 deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%)', border: '1 px solid rgba(139, 92, 246, 0.3)', backdropFilter: 'blur(10 px)', animation: 'hologram-flicker 3 s ease-in-out infinite'}, '.glass-morphism': {
+          background: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(10 px)', border: '1 px solid rgba(255, 255, 255, 0.2)'}, '.cyber-grid': {
+          backgroundImage: `, linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
+          `, backgroundSize: '20 px 20 px'}, '.cyber-button': {
+          background: 'linear-gradient(45deg, var(--neon-cyan), var(--neon-purple))', border: 'none'
           color: 'white'
           padding: '12px 24px'
           borderRadius: '8px'
           fontWeight: '600'
-          textTransform: 'uppercase',
-          letterSpacing: '1 px',
-          position: 'relative',
-          overflow: 'hidden',
-          transition: 'all 0.3 s ease'},
-        '.cyber-button: hover': {,
-          transform: 'translateY(-2px)',
-          boxShadow: '0 10px 20px rgba(0, 255, 255, 0.3)'},
-        '.cyber-card': {
-          background: 'linear-gradient(135 deg, rgba(15, 15, 35, 0.9) 0%, rgba(26, 26, 46, 0.9) 100%)',
-          border: '1 px solid rgba(0, 255, 255, 0.3)',
-          borderRadius: '12 px',
-          padding: '24 px',
-          position: 'relative',
-          overflow: 'hidden',
-          transition: 'all 0.3 s ease'},
-        '.cyber-card: hover': {,
-          transform: 'translateY(-5px)',
-          borderColor: 'var(--neon-cyan)',
-          boxShadow: '0 20 px 40 px rgba(0, 255, 255, 0.2)'},
-        '.loading-skeleton': {
-          background: 'linear-gradient(90 deg, #f0 f0 f0 25%, #e0 e0 e0 50%, #f0 f0 f0 75%)',
-          backgroundSize: '200% 100%',
-          animation: 'loading 1.5 s infinite'},
-        '.sr-only': {
+          textTransform: 'uppercase', letterSpacing: '1 px', position: 'relative', overflow: 'hidden', transition: 'all 0.3 s ease'}, '.cyber-button: hover': {, transform: 'translateY(-2px)', boxShadow: '0 10px 20px rgba(0, 255, 255, 0.3)'}, '.cyber-card': {
+          background: 'linear-gradient(135 deg, rgba(15, 15, 35, 0.9) 0%, rgba(26, 26, 46, 0.9) 100%)', border: '1 px solid rgba(0, 255, 255, 0.3)', borderRadius: '12 px', padding: '24 px', position: 'relative', overflow: 'hidden', transition: 'all 0.3 s ease'}, '.cyber-card: hover': {, transform: 'translateY(-5px)', borderColor: 'var(--neon-cyan)', boxShadow: '0 20 px 40 px rgba(0, 255, 255, 0.2)'}, '.loading-skeleton': {
+          background: 'linear-gradient(90 deg, #f0 f0 f0 25%, #e0 e0 e0 50%, #f0 f0 f0 75%)', backgroundSize: '200% 100%', animation: 'loading 1.5 s infinite'}, '.sr-only': {
           position: 'absolute'
-          width: '1px',
-          height: '1px',
-          padding: '0',
-          margin: '-1 px',
-          overflow: 'hidden',
-          clip: 'rect(0, 0, 0, 0)',
-          whiteSpace: 'nowrap',
-          border: '0'},
-        '.sr-only: focus': {
+          width: '1px', height: '1px', padding: '0', margin: '-1 px', overflow: 'hidden', clip: 'rect(0, 0, 0, 0)', whiteSpace: 'nowrap', border: '0'}, '.sr-only: focus': {
           position: 'static'
           width: 'auto'
           height: 'auto'
-          padding: 'inherit',
-          margin: 'inherit',
-          overflow: 'visible',
-          clip: 'auto',
-          whiteSpace: 'normal'}}
+          padding: 'inherit', margin: 'inherit', overflow: 'visible', clip: 'auto', whiteSpace: 'normal'}}
       addUtilities(newUtilities)
-    }
-  ]}
+    }]}

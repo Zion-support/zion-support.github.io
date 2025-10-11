@@ -41,25 +41,10 @@ export interface EnterpriseITSolution2031 {
   aiCapabilities: string[]
   marketDisruption: string
 }
-export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
-  // ZERO TRUST NETWORK ARCHITECTURE
+export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [// ZERO TRUST NETWORK ARCHITECTURE
   {
-    id: 'zero-trust-network-architecture',
-    name: 'Zero Trust Network Architecture',
-    tagline: 'Never trust, always verify security framework',
-    price: '$599',
-    period: '/month',
-    description: 'Advanced zero-trust security platform that implements comprehensive security controls, continuous verification, and adaptive access management for enterprise networks.',
-    features: [
-      'Continuous identity verification',
-      'Adaptive access controls',
-      'Micro-segmentation',
-      'Behavioral analytics',
-      'Threat intelligence integration',
-      'Automated response systems',
-      'Compliance automation',
-      'Security orchestration'
-    ],
+    id: 'zero-trust-network-architecture', name: 'Zero Trust Network Architecture', tagline: 'Never trust, always verify security framework', price: '$599', period: '/month', description: 'Advanced zero-trust security platform that implements comprehensive security controls, continuous verification, and adaptive access management for enterprise networks.', features: [
+      'Continuous identity verification', 'Adaptive access controls', 'Micro-segmentation', 'Behavioral analytics', 'Threat intelligence integration', 'Automated response systems', 'Compliance automation', 'Security orchestration'],
     popular: true,
     icon: '🔒',
     color: 'from-red-600 via-orange-600 to-amber-600',
@@ -103,16 +88,7 @@ export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
     price: '$449',
     period: '/month',
     description: 'Intelligent edge computing orchestration platform that manages distributed computing resources, optimizes performance, and enables real-time data processing at the edge.',
-    features: [
-      'Distributed edge management',
-      'Intelligent load balancing',
-      'Real-time optimization',
-      'Edge AI deployment',
-      'Resource orchestration',
-      'Performance monitoring',
-      'Edge security',
-      'Automated scaling'
-    ],
+    features: ['Distributed edge management', 'Intelligent load balancing', 'Real-time optimization', 'Edge AI deployment', 'Resource orchestration', 'Performance monitoring', 'Edge security', 'Automated scaling'],
     popular: false,
     icon: '🌐',
     color: 'from-blue-600 via-cyan-600 to-teal-600',
@@ -156,16 +132,7 @@ export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
     price: '$699',
     period: '/month',
     description: 'Revolutionary AI-powered IT operations center that provides intelligent monitoring, predictive maintenance, and automated incident response for enterprise IT infrastructure.',
-    features: [
-      'AI-powered monitoring',
-      'Predictive maintenance',
-      'Automated incident response',
-      'Intelligent alerting',
-      'Performance optimization',
-      'Capacity planning',
-      'Root cause analysis',
-      'IT automation'
-    ],
+    features: ['AI-powered monitoring', 'Predictive maintenance', 'Automated incident response', 'Intelligent alerting', 'Performance optimization', 'Capacity planning', 'Root cause analysis', 'IT automation'],
     popular: true,
     icon: '🤖',
     color: 'from-purple-600 via-pink-600 to-rose-600',
@@ -209,16 +176,7 @@ export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
     price: '$899',
     period: '/month',
     description: 'Advanced AI-powered data governance platform that provides intelligent data classification, compliance automation, and privacy protection for enterprise data assets.',
-    features: [
-      'AI data classification',
-      'Compliance automation',
-      'Privacy protection',
-      'Data lineage tracking',
-      'Access control management',
-      'Audit automation',
-      'Risk assessment',
-      'Policy enforcement'
-    ],
+    features: ['AI data classification', 'Compliance automation', 'Privacy protection', 'Data lineage tracking', 'Access control management', 'Audit automation', 'Risk assessment', 'Policy enforcement'],
     popular: false,
     icon: '📊',
     color: 'from-indigo-600 via-blue-600 to-cyan-600',
@@ -262,16 +220,7 @@ export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
     price: '$1,299',
     period: '/month',
     description: 'Revolutionary autonomous infrastructure management platform that enables self-healing, self-optimizing, and self-scaling infrastructure without human intervention.',
-    features: [
-      'Self-healing systems',
-      'Autonomous optimization',
-      'Intelligent scaling',
-      'Predictive maintenance',
-      'Resource optimization',
-      'Automated deployment',
-      'Performance tuning',
-      'Capacity management'
-    ],
+    features: ['Self-healing systems', 'Autonomous optimization', 'Intelligent scaling', 'Predictive maintenance', 'Resource optimization', 'Automated deployment', 'Performance tuning', 'Capacity management'],
     popular: true,
     icon: '🏗️',
     color: 'from-green-600 via-emerald-600 to-teal-600',

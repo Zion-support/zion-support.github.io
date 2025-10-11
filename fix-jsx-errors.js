@@ -2,8 +2,8 @@
 
 import fs from 'fs'
 import path from 'path'
-import { execSync } from 'child_process'
-import { fileURLToPath } from 'url'
+import { execSync  } from 'child_process'
+import { fileURLToPath  } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to find all TypeScript/JavaScript files
@@ -32,8 +32,7 @@ function fixJSXErrors(filePath) {
     let content = fs.readFileSync(filePath, 'utf8')
     let modified = false
     // Fix JSX fragment issues
-    const jsxFixes = [
-      // Fix unclosed JSX fragments
+    const jsxFixes = [// Fix unclosed JSX fragments
       {
         pattern: /<>([^<]*?)(?=<\/>|$)/g,
         replacement: '<React.Fragment>$1</React.Fragment>'
@@ -58,13 +57,10 @@ function fixJSXErrors(filePath) {
     }
     
     // Fix specific syntax errors
-    const syntaxFixes = [
-      // Fix missing comma in object properties
+    const syntaxFixes = [// Fix missing comma in object properties
       {
-        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
-        replacement: '$1: [$2],\n    $3: ['
-      },
-      // Fix missing semicolon after const declaration
+        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g, replacement: '$1: [$2],\n    $3: ['
+      }, // Fix missing semicolon after const declaration
       {
         pattern: /const\s+(\w+)\s*=\s*\[([^\]]+)\]\s*const\s+(\w+)/g,
         replacement: 'const $1 = [$2];\n  const $3'
@@ -76,10 +72,8 @@ function fixJSXErrors(filePath) {
       },
       // Fix missing comma after array in object
       {
-        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
-        replacement: '$1: [$2],\n    $3: ['
-      }
-    ]
+        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g, replacement: '$1: [$2],\n    $3: ['
+      }]
     for (const fix of syntaxFixes) {
       const newContent = content.replace(fix.pattern, fix.replacement)
       if (newContent !== content) {
@@ -89,8 +83,7 @@ function fixJSXErrors(filePath) {
     }
     
     // Fix specific parsing errors
-    const parsingFixes = [
-      // Fix missing closing tag for main
+    const parsingFixes = [// Fix missing closing tag for main
       {
         pattern: /<main([^>]*)>([^<]*?)(?=<\/main>|$)/g,
         replacement: '<main$1>$2</main>'

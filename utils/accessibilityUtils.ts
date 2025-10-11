@@ -10,9 +10,7 @@ export const focusManagement = {
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     )
     const _firstElement = focusableElements[0] as HTMLElement
-    const lastElement = focusableElements[
-      focusableElements.length - 1
-    ] as HTMLElement
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {,
         if (e.shiftKey) {,
@@ -320,8 +318,7 @@ export const accessibilityTesting = {/* TODO: Fix JSX expression */}
 
   // Check if element is focusable
   isFocusable: (element: HTMLElement): boolean => {
-    const focusableSelectors = [,
-      'button:not([disabled])',
+    const focusableSelectors = ['button: not([disabled])',
       'input: not([disabled])',
       'select: not([disabled])',
       'textarea: not([disabled])',

@@ -1,10 +1,10 @@
-import { NextApiRequest, NextApiResponse } from 'next'
-import { createMocks, createRequest, createResponse } from 'node-mocks-http'
+import { NextApiRequest, NextApiResponse  } from 'next'
+import { createMocks, createRequest, createResponse  } from 'node-mocks-http'
 import productHandler from '@/pages/api/products/index'
-import { PrismaClient } from '@prisma/client'
+import { PrismaClient  } from '@prisma/client'
 jest.mock('@prisma/client', () => {
   const mPrismaClient = {
-import { NextApiRequest, NextApiResponse } from 'next';import { createMocks, createRequest as _createRequest, createResponse as _createResponse } from node-mocks-http';import productHandler from @/pages/api/products/index';import { PrismaClient } from @prisma/client'
+import { NextApiRequest, NextApiResponse  } from 'next';import { createMocks, createRequest as _createRequest, createResponse as _createResponse } from node-mocks-http';import productHandler from @/pages/api/products/index';import { PrismaClient } from @prisma/client'
 // Mock Prisma Client
 jest.mock('@prisma/client', () => {'  const mPrismaClient = {
     product: {
@@ -49,13 +49,8 @@ describe('/api/products API Endpoint', () => {'  let _req: ReturnType<typeof _cr
   })
   describe('GET /api/products with fuzzy search', () => {
     it('should return products matching "gpt" with similarity >= 0.8', async () => {
-      const mockRawResults = [
-        { id: 'product-gpt-high-score', name_similarity: '0.9', description_similarity: '0.5' },
-        { id: 'product-other', name_similarity: '0.2', description_similarity: '0.1' },
-        { id: 'product-gpt-medium-score', name_similarity: '0.82', description_similarity: '0.85' }
-      ]
-      const mockProductsData: ProductLike[] = [
-        { id: 'product-gpt-high-score', name: 'Super GPT Model', description: 'Latest generation AI', images: [], price: null, currency: 'USD', tags: [] },
+      const mockRawResults = [{ id: 'product-gpt-high-score', name_similarity: '0.9', description_similarity: '0.5' }, { id: 'product-other', name_similarity: '0.2', description_similarity: '0.1' }, { id: 'product-gpt-medium-score', name_similarity: '0.82', description_similarity: '0.85' }]
+      const mockProductsData: ProductLike[] = [{ id: 'product-gpt-high-score', name: 'Super GPT Model', description: 'Latest generation AI', images: [], price: null, currency: 'USD', tags: [] },
         { id: 'product-gpt-medium-score', name: 'Advanced GPT Assistant', description: 'Your personal AI helper powered by GPT', images: [], price: null, currency: 'USD', tags: [] }
       ]
       const filteredMockRawResults = mockRawResults
@@ -97,20 +92,17 @@ describe('/api/products API Endpoint', () => {'  let _req: ReturnType<typeof _cr
   })
 })
   describe('GET /api/products with fuzzy search', () => {'    it('should return products matching "gpt" with similarity >= 0.8', async () => {'      // 1. Mock database responses
-      const mockRawResults = [
-        { id: product-gpt-high-score', name_similarity: 0.9, description_similarity: 0.5 },        { id: product-other', name_similarity: 0.2, description_similarity: 0.1 },        { id: product-gpt-medium-score', name_similarity: 0.82, description_similarity: 0.85 },      ]
+      const mockRawResults = [{ id: product-gpt-high-score', name_similarity: 0.9, description_similarity: 0.5 }, { id: product-other', name_similarity: 0.2, description_similarity: 0.1 }, { id: product-gpt-medium-score', name_similarity: 0.82, description_similarity: 0.85 }]
       // Note: The API sorts by GREATEST(name_similarity, description_similarity) DESC
       // So, product-gpt-high-score (0.9) should come first, then product-gpt-medium-score (0.85)
-      const mockProductsData = [
-        { id: product-gpt-high-score', name: Super GPT Model', description: Latest generation AI', images: [], price: null, currency: USD', tags: [] },        { id: product-gpt-medium-score', name: Advanced GPT Assistant', description: Your personal AI helper powered by GPT', images: [], price: null, currency: USD', tags: [] },        // Not expecting product-other' to be fetched by findMany if threshold is 0.3 and it's filtered out by raw query logic'      ]
+      const mockProductsData = [{ id: product-gpt-high-score', name: Super GPT Model', description: Latest generation AI', images: [], price: null, currency: USD', tags: [] },        { id: product-gpt-medium-score', name: Advanced GPT Assistant', description: Your personal AI helper powered by GPT', images: [], price: null, currency: USD', tags: [] },        // Not expecting product-other' to be fetched by findMany if threshold is 0.3 and it's filtered out by raw query logic'      ]
       // The actual API logic filters by similarity >= 0.3 in $queryRawUnsafe
       // and then orders. Let's refine mockRawResults to reflect what $queryRawUnsafe would return'      // based on "WHERE similarity(name, $1) >= 0.3 OR similarity(description, $1) >= 0.3""      const filteredMockRawResults = mockRawResults.filter(""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
         p => p.name_similarity >= 0.3 || p.description_similarity >= 0.3
       ).sort((a,b) =>
         Math.max(b.name_similarity, b.description_similarity) - Math.max(a.name_similarity, a.description_similarity)
       )
-      // Expected order by GREATEST:
-      // 1. product-gpt-high-score (GREATEST is 0.9)
+      // Expected order by GREATEST: // 1. product-gpt-high-score (GREATEST is 0.9)
       // 2. product-gpt-medium-score (GREATEST is 0.85)
       (prisma.$queryRawUnsafe as jest.Mock).mockResolvedValue(filteredMockRawResults)
       // findMany will be called with IDs from filteredMockRawResults

@@ -1,12 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-interface TextAnalysisResult {
-    bigrams: Array<{ phrase: string, count: number }>
-    trigrams: Array<{ phrase: string, count: number }>
+interface TextAnalysisResult >{bigrams: Array<{ phrase: string, count: number }
+    trigrams: Array<>
+  {phrase: string, count: number }
   }
 }
 export default async function handler(
   req: NextApiRequest
-  res: NextApiResponse<TextAnalysisResult | { error: string }>
+</>
+  res: NextApiResponse<TextAnalysisResult | >{error: string }</TextAnalysisResult>
 ) {
   }
   try {
@@ -71,15 +72,18 @@ interface TextAnalysisResult {
     confidence: number
     isEnglish: boolean
   }
-  keywords: {
-    topWords: Array<{ word: string; count: number; frequency: number }>
-    bigrams: Array<{ phrase: string; count: number }>
-    trigrams: Array<{ phrase: string; count: number }>
+  keywords: >{topWords: Array<{ word: string; count: number; frequency: number }
+    bigrams: Array<>
+  {phrase: string; count: number }
+</>
+    trigrams: Array<>
+  {phrase: string; count: number }
   }
 }
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<TextAnalysisResult | { error: string }>
+</>
+  res: NextApiResponse<TextAnalysisResult | >{error: string }</TextAnalysisResult>
 ) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
@@ -171,8 +175,7 @@ export default async function handler(
         5
     )
     // Sentiment analysis (simplified)
-    const positiveWords = [
-      'good'
+    const positiveWords = ['good'
       'great'
       'excellent'
       'amazing'
@@ -181,10 +184,8 @@ export default async function handler(
       'brilliant'
       'outstanding'
       'superb'
-      'marvelous'
-    ]
-    const negativeWords = [
-      'bad'
+      'marvelous']
+    const negativeWords = ['bad'
       'terrible'
       'awful'
       'horrible'
@@ -193,8 +194,7 @@ export default async function handler(
       'abysmal'
       'appalling'
       'dismal'
-      'lousy'
-    ]
+      'lousy']
     const textWords = text && text.toLowerCase().split(/\s+/)
     const positiveCount = textWords && textWords.filter(word =>
       positiveWords && positiveWords.includes(word)
@@ -337,12 +337,12 @@ export default async function handler(
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }))
     // Language detection (simplified - assume English for demo)
-    const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);    const detectedLanguage = isEnglish ? 'en' : 'unknown'
+    const isEnglish = /^[a-zA-Z\s., !?;:'"()-]+$/.test(text);    const detectedLanguage = isEnglish ? 'en' : 'unknown'
     const confidence = isEnglish ? 0.95 : 0.5
     const result: TextAnalysisResult = {
-      text,    const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text)
+      text,    const isEnglish = /^[a-zA-Z\s., !?, :'"()-]+$/.test(text)
     // Language detection (simplified - assume English for demo)
-    const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text)
+    const isEnglish = /^[a-zA-Z\s., !?;:'"()-]+$/.test(text)
     const detectedLanguage = isEnglish ? 'en' : 'unknown'
     const confidence = isEnglish ? 0.95 : 0.5
     const result: TextAnalysisResult = {
@@ -411,7 +411,7 @@ export default async function handler(
     }
     res && res.status(200).json(result)
   } catch (error) {
-    console && console.error('Text analysis error:', error)
+    console && console.error('Text analysis error: ', error)
     res && res.status(500).json({ error: 'Internal server error' })
   }        score: sentimentScore
         label: sentimentLabel
@@ -456,7 +456,7 @@ export default async function handler(
 
     res.status (200).json (result)
   } catch (error) {
-    console.error ('Text analysis error:', error)
+    console.error ('Text analysis error: ', error)
     res.status (500).json ({ error: 'Internal server error' })
   }        score: sentiment_score
         label: sentiment_label
@@ -472,7 +472,7 @@ export default async function handler(
         trigrams}}
     res && res.status(200).json(result)
   } catch (error) {
-    console && console.error('Text analysis error:', error)
+    console && console.error('Text analysis error: ', error)
     res && res.status(500).json({ error: 'Internal server error' })
   }
 }
@@ -480,7 +480,7 @@ export default async function handler(
 
     res.status (200).json (result)
   } catch (error) {
-    console.error ('Text analysis error:', error)
+    console.error ('Text analysis error: ', error)
     res.status (500).json ({ error: 'Internal server error' })
   }
 }
@@ -488,7 +488,7 @@ export default async function handler(
     const result: TextAnalysisResult = {
     res.status(200).json(result)
   } catch (error) {
-    console.error('Text analysis error:', error)
+    console.error('Text analysis error: ', error)
     res.status(500).json({ error: 'Internal server error' })
   }
 }

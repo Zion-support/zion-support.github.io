@@ -1,4 +1,4 @@
-import { NextApiRequest } from 'next'
+import { NextApiRequest  } from 'next'
 export function getUserFromRequest(req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session
   const authHeader = req.headers.authorization
@@ -85,8 +85,7 @@ if ( {) {
   }
   return user
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import { NextApiRequest } from "next"
+import { NextApiRequest  } from 'next'
 type DemoUser = { id: string; role: "client" | "talent"; talentSlug?: string }
 export function getDemoUser(req: NextApiRequest): DemoUser {
   // Prefer headers for server-side calls; fallback to cookies-like header or defaults

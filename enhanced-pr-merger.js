@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { execSync } from 'child_process'
+import { execSync  } from 'child_process'
 import fs from 'fs'
 // //Function to safely execute git commands
 function safeGitCommand(command, description) {
@@ -33,38 +33,18 @@ function branchExists(branchName) {/* TODO: Fix JSX expression */}
 }
 
 //Current PRs to process
-const prs = [
-  {
-    number: 11935,
-    title: 'Fix web application console errors'
-    branch: 'cursor/fix-web-application-console-errors-0bf5',
-    sha: 'd4e66d09ceb2c6c48f1f522df7030a5261c4c661',
-    priority: 'high'},
-  {
-    number: 25063,
-    title: 'Build and deploy with vite and netlify'
-    branch: 'cursor/build-and-deploy-with-vite-and-netlify-8b37',
-    sha: 'd2deed6f7d4ef805058d58bdadeb11ca5a746580',
-    priority: 'medium'},
-  {
-    number: 25062,
-    title: 'Fix errors and merge to main'
-    branch: 'cursor/fix-errors-and-merge-to-main-fcbd',
-    sha: 'a5 f35 d4 a9 ddcf46941 c797 da316 bb3 a2 b7 b05 b56',
-    priority: 'high'},
-  {
-    number: 25061,
-    title: 'Fix errors and merge to main'
-    branch: 'cursor/fix-errors-and-merge-to-main-e6e1',
-    sha: '29f97d68b44ddf467a8bada29cb68cb2100d59db',
-    priority: 'high',
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
+const prs = [{
+    number: 11935, title: 'Fix web application console errors'
+    branch: 'cursor/fix-web-application-console-errors-0bf5', sha: 'd4e66d09ceb2c6c48f1f522df7030a5261c4c661', priority: 'high'}, {
+    number: 25063, title: 'Build and deploy with vite and netlify'
+    branch: 'cursor/build-and-deploy-with-vite-and-netlify-8b37', sha: 'd2deed6f7d4ef805058d58bdadeb11ca5a746580', priority: 'medium'}, {
+    number: 25062, title: 'Fix errors and merge to main'
+    branch: 'cursor/fix-errors-and-merge-to-main-fcbd', sha: 'a5 f35 d4 a9 ddcf46941 c797 da316 bb3 a2 b7 b05 b56', priority: 'high'}, {
+    number: 25061, title: 'Fix errors and merge to main'
+    branch: 'cursor/fix-errors-and-merge-to-main-e6e1', sha: '29f97d68b44ddf467a8bada29cb68cb2100d59db', priority: 'high', {/* TODO: Fix JSX expression */}
+  }, {/* TODO: Fix JSX expression */}
+  }, {/* TODO: Fix JSX expression */}
+  }, {/* TODO: Fix JSX expression */}
   }]
 //Ensure we're on main branch
 // safeGitCommand('git checkout main', 'Switch to main branch')
@@ -144,7 +124,7 @@ if (mergedCount > 0) {
   'TypeScript type checking')
 )
 const buildCheck = safeGitCommand('pnpm run,
-  build:no-check',
+  build: no-check',
   'Production build')
 )
 //Push changes if any were merged

@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 // Get all page files
 const srcDir = path.join(__dirname, 'src')
 const pageFiles = []

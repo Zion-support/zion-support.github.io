@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to fix malformed type annotations
@@ -15,21 +15,21 @@ function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
     }
   )
   // Fix specific patterns we've seen
-  content = content.replace(/\{\/\*\/\s*usedJSHeapSize:\s*number\s*\/\*\/\}/g)
+  content = content.replace(/\{\/\*\/\s*usedJSHeapSize: \s*number\s*\/\*\/\}/g)
     '{ usedJSHeapSize: number }'
   )
-  content = content.replace(/\{\/\*\/\s*value:\s*number\s*\/\*\/\}/g)
+  content = content.replace(/\{\/\*\/\s*value: \s*number\s*\/\*\/\}/g)
     '{ value: number }'
   )
   // Fix variable name issues
   content = content.replace(
   content = content.replace(/\{/* TODO: Fix JSX expression */}
-  e:\s*number\s*\/\*\/\}/g,
+  e: \s*number\s*\/\*\/\}/g,
     '{/* TODO: Fix JSX expression */}
   e: number }')
   )
   content = content.replace(/\{/* TODO: Fix JSX expression */}
-  e:\s*number\s*\/\*\/\}/g,
+  e: \s*number\s*\/\*\/\}/g,
     '{/* TODO: Fix JSX expression */}
   e: number }')
   )

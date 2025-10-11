@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 console.log('♿ Starting accessibility audit...')
@@ -8,67 +8,31 @@ console.log('♿ Starting accessibility audit...')
 const accessibilityChecklist = {
   semanticHTML: {,
     description: 'Use semantic HTML elements',
-    checks: [,
-      'Use proper heading hierarchy (h1, h2, h3, etc.)',
-      'Use semantic elements (main, nav, section, article, aside, header, footer)',
-      'Use proper form elements (label, fieldset, legend)',
-      'Use list elements (ul, ol, li) for lists'
-    ]
+    checks: ['Use proper heading hierarchy (h1, h2, h3, etc.)', 'Use semantic elements (main, nav, section, article, aside, header, footer)', 'Use proper form elements (label, fieldset, legend)', 'Use list elements (ul, ol, li) for lists']
   },
   keyboardNavigation: {,
     description: 'Ensure keyboard accessibility',
-    checks: [,
-      'All interactive elements are keyboard accessible',
-      'Focus indicators are visible',
-      'Tab order is logical',
-      'Skip links are provided',
-      'No keyboard traps'
-    ]
+    checks: ['All interactive elements are keyboard accessible', 'Focus indicators are visible', 'Tab order is logical', 'Skip links are provided', 'No keyboard traps']
   },
   colorContrast: {,
     description: 'Ensure sufficient color contrast',
-    checks: [,
-      'Text has at least 4.5:1 contrast ratio',
-      'Large text has at least 3: 1 contrast ratio',
-      'Color is not the only way to convey information',
-      'Interactive elements have sufficient contrast'
-    ]
+    checks: ['Text has at least 4.5: 1 contrast ratio', 'Large text has at least 3: 1 contrast ratio', 'Color is not the only way to convey information', 'Interactive elements have sufficient contrast']
   },
   images: {,
     description: 'Provide alternative text for images',
-    checks: [,
-      'All images have alt attributes',
-      'Decorative images have empty alt attributes',
-      'Complex images have detailed descriptions',
-      'Images of text are avoided'
-    ]
+    checks: ['All images have alt attributes', 'Decorative images have empty alt attributes', 'Complex images have detailed descriptions', 'Images of text are avoided']
   },
   forms: {,
     description: 'Make forms accessible',
-    checks: [,
-      'All form controls have labels',
-      'Error messages are associated with form controls',
-      'Required fields are clearly marked',
-      'Form validation is accessible'
-    ]
+    checks: ['All form controls have labels', 'Error messages are associated with form controls', 'Required fields are clearly marked', 'Form validation is accessible']
   },
   multimedia: {,
     description: 'Provide alternatives for multimedia',
-    checks: [,
-      'Videos have captions',
-      'Audio has transcripts',
-      'Media controls are accessible',
-      'Auto-playing media can be paused'
-    ]
+    checks: ['Videos have captions', 'Audio has transcripts', 'Media controls are accessible', 'Auto-playing media can be paused']
   },
   responsive: {,
     description: 'Ensure responsive design',
-    checks: [,
-      'Content is readable at 200% zoom',
-      'Layout works on mobile devices',
-      'Text is not cut off on small screens',
-      'Touch targets are at least 44 px'
-    ]
+    checks: ['Content is readable at 200% zoom', 'Layout works on mobile devices', 'Text is not cut off on small screens', 'Touch targets are at least 44 px']
   }
 }
 
@@ -143,26 +107,8 @@ function generateAccessibilityReport() {
   const report = {
     timestamp: new Date().toISOString()
     checklist: accessibilityChecklist,
-    recommendations: [,
-      'Add ARIA labels to interactive elements',
-      'Implement focus management for modals',
-      'Add live regions for dynamic content',
-      'Ensure all interactive elements are keyboard accessible',
-      'Test with screen readers',
-      'Validate HTML markup',
-      'Test with keyboard-only navigation',
-      'Check color contrast ratios',
-      'Test with high contrast mode',
-      'Test with zoom up to 200%'
-    ],
-    tools: [,
-      'axe-core for automated testing',
-      'WAVE for visual accessibility testing',
-      'Lighthouse for accessibility audit',
-      'Screen reader testing (NVDA, JAWS, VoiceOver)',
-      'Keyboard-only navigation testing',
-      'Color contrast analyzers'
-    ]
+    recommendations: ['Add ARIA labels to interactive elements', 'Implement focus management for modals', 'Add live regions for dynamic content', 'Ensure all interactive elements are keyboard accessible', 'Test with screen readers', 'Validate HTML markup', 'Test with keyboard-only navigation', 'Check color contrast ratios', 'Test with high contrast mode', 'Test with zoom up to 200%'],
+    tools: ['axe-core for automated testing', 'WAVE for visual accessibility testing', 'Lighthouse for accessibility audit', 'Screen reader testing (NVDA, JAWS, VoiceOver)', 'Keyboard-only navigation testing', 'Color contrast analyzers']
   }
   
   fs.writeFileSync(
@@ -273,7 +219,7 @@ function audit() {
     console.log('📋 Check accessibility-report.json for detailed results')
     console.log('🔧 Check accessibility-improvements.js for implementation guide')
   } catch (error) {
-    console.error('❌ Error during accessibility audit:', error)
+    console.error('❌ Error during accessibility audit: ', error)
     process.exit(1)
   }
 }

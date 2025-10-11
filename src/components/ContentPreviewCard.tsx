@@ -77,7 +77,7 @@ const,
   return (<div>Coming Soon</div>)
   )
           <rticle className={/* TODO: Fix JSX expression */}$2 />
-  hover:-translate-y-1 ${}
+  hover: -translate-y-1 ${}
   // TOD,
   O: Add content,
 }
@@ -139,7 +139,7 @@ const,
         {/* Date and CTA */}"
         <div className="flex items-center justify-between"></div>"
           <span className="text-sm text-gray-500">{date}
-          <Link>
+          <Link ></Link>
             href={path}"
             className="inline-flex items-center text-indigo-600,"
   hover: text-indigo-700 font-medium text-sm"

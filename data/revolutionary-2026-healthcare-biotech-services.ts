@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface Revolutionary2026HealthcareBiotechService {
   id: string
   name: string
@@ -39,27 +39,10 @@ export interface Revolutionary2026HealthcareBiotechService {
   rating: number
   reviews: number
 }
-export const revolutionary2026HealthcareBiotechServices: Revolutionary2026HealthcareBiotechService[] = [
-  // AI Drug Discovery Platform
+export const revolutionary2026HealthcareBiotechServices: Revolutionary2026HealthcareBiotechService[] = [// AI Drug Discovery Platform
   {
-    id: 'ai-drug-discovery-platform',
-    name: 'AI Drug Discovery Platform',
-    tagline: 'Accelerate drug development with AI intelligence',
-    price: '$4,999',
-    period: '/month',
-    description: 'Revolutionary AI platform that accelerates drug discovery by analyzing molecular structures, predicting drug interactions, and optimizing clinical trial designs.',
-    features: [
-      'Molecular structure analysis',
-      'Drug interaction prediction',
-      'Clinical trial optimization',
-      'Target identification',
-      'Lead compound discovery',
-      'Toxicity prediction',
-      'Drug repurposing',
-      'Personalized medicine',
-      'Regulatory compliance',
-      'Real-time collaboration'
-    ],
+    id: 'ai-drug-discovery-platform', name: 'AI Drug Discovery Platform', tagline: 'Accelerate drug development with AI intelligence', price: '$4, 999', period: '/month', description: 'Revolutionary AI platform that accelerates drug discovery by analyzing molecular structures, predicting drug interactions, and optimizing clinical trial designs.', features: [
+      'Molecular structure analysis', 'Drug interaction prediction', 'Clinical trial optimization', 'Target identification', 'Lead compound discovery', 'Toxicity prediction', 'Drug repurposing', 'Personalized medicine', 'Regulatory compliance', 'Real-time collaboration'],
     popular: true,
     icon: '💊🤖',
     color: 'from-blue-600 to-teal-500',
@@ -100,18 +83,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     price: '$2,499',
     period: '/month',
     description: 'Revolutionary autonomous AI platform that continuously learns and improves healthcare delivery, diagnosis, and treatment recommendations.',
-    features: [
-      'Self-learning diagnostics',
-      'Autonomous treatment planning',
-      'Continuous improvement',
-      'Patient outcome prediction',
-      'Risk assessment automation',
-      'Personalized care plans',
-      'Real-time monitoring',
-      'Predictive analytics',
-      'Clinical decision support',
-      'Quality assurance'
-    ],
+    features: ['Self-learning diagnostics', 'Autonomous treatment planning', 'Continuous improvement', 'Patient outcome prediction', 'Risk assessment automation', 'Personalized care plans', 'Real-time monitoring', 'Predictive analytics', 'Clinical decision support', 'Quality assurance'],
     popular: true,
     icon: '🏥🤖',
     color: 'from-green-600 to-emerald-500',
@@ -152,18 +124,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     price: '$6,999',
     period: '/month',
     description: 'Revolutionary quantum machine learning platform that combines quantum computing with AI to solve complex research problems and accelerate scientific discoveries.',
-    features: [
-      'Quantum AI algorithms',
-      'Complex problem solving',
-      'Research acceleration',
-      'Quantum simulations',
-      'AI model optimization',
-      'Cross-domain research',
-      'Collaborative research',
-      'Real-time analysis',
-      'Quantum security',
-      'Research automation'
-    ],
+    features: ['Quantum AI algorithms', 'Complex problem solving', 'Research acceleration', 'Quantum simulations', 'AI model optimization', 'Cross-domain research', 'Collaborative research', 'Real-time analysis', 'Quantum security', 'Research automation'],
     popular: true,
     icon: '⚛️🤖',
     color: 'from-purple-600 to-indigo-500',
@@ -204,18 +165,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     price: '$899',
     period: '/month',
     description: 'Advanced AI platform that revolutionizes legal research by analyzing case law, predicting outcomes, and providing comprehensive legal insights.',
-    features: [
-      'AI case law analysis',
-      'Outcome prediction',
-      'Legal document review',
-      'Precedent identification',
-      'Risk assessment',
-      'Compliance monitoring',
-      'Contract analysis',
-      'Legal research automation',
-      'Real-time updates',
-      'Collaborative research'
-    ],
+    features: ['AI case law analysis', 'Outcome prediction', 'Legal document review', 'Precedent identification', 'Risk assessment', 'Compliance monitoring', 'Contract analysis', 'Legal research automation', 'Real-time updates', 'Collaborative research'],
     popular: true,
     icon: '⚖️🤖',
     color: 'from-red-600 to-orange-500',
@@ -256,18 +206,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     price: '$3,999',
     period: '/month',
     description: 'Comprehensive AI platform for biotechnology research, including genetic analysis, protein folding, drug discovery, and personalized medicine development.',
-    features: [
-      'Genetic sequence analysis',
-      'Protein structure prediction',
-      'Drug discovery algorithms',
-      'Personalized medicine',
-      'Biomarker identification',
-      'Clinical trial optimization',
-      'Data visualization',
-      'Collaborative research',
-      'Regulatory compliance',
-      'Research automation'
-    ],
+    features: ['Genetic sequence analysis', 'Protein structure prediction', 'Drug discovery algorithms', 'Personalized medicine', 'Biomarker identification', 'Clinical trial optimization', 'Data visualization', 'Collaborative research', 'Regulatory compliance', 'Research automation'],
     popular: true,
     icon: '🧬🤖',
     color: 'from-teal-600 to-cyan-500',

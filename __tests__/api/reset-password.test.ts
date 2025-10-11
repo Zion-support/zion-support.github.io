@@ -1,7 +1,7 @@
-import { createMocks, RequestMethod } from 'node-mocks-http'
+import { createMocks, RequestMethod  } from 'node-mocks-http'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import handler from '@/pages/api/auth/reset'
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect, vi  } from 'vitest'
 interface ErrorResponse {
   message: string
 }

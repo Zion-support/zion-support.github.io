@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { execSync } from 'child_process'
+import { execSync  } from 'child_process'
 import fs from 'fs'
 console.log('🚀 Starting PR merge process...')
 try {
@@ -54,6 +54,6 @@ try {
   console.log('🎉 Successfully merged and pushed to main!')
   console.log('✅ PR merge process completed successfully!')
 } catch (error) {
-    console.error('❌ Error during merge process:', error.message)
+    console.error('❌ Error during merge process: ', error.message)
   process.exit(1)
   }

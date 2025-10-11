@@ -1,15 +1,8 @@
-import { ProductListing } from "@/types/listings"
-import { SearchSuggestion, FilterOptions } from "@/types/search"
+import { ProductListing  } from '@/types/listings'
+import { SearchSuggestion, FilterOptions  } from '@/types/search'
 // Mock marketplace listings with more realistic data
-export const MARKETPLACE_LISTINGS: ProductListing[] = [
-  {
-    id: "ai-model-1",
-    title: "GPT-4 API Integration Package",
-    description: "Complete integration solution for GPT-4 API with ready-made templates, connectors, and usage optimization tools. Includes 10 hours of expert implementation support.",
-    category: "AI Models & APIs",
-    price: 1999,
-    currency: "$",
-    tags: ["GPT-4", "API Integration", "NLP"],
+export const MARKETPLACE_LISTINGS: ProductListing[] = [{
+    id: "ai-model-1", title: "GPT-4 API Integration Package", description: "Complete integration solution for GPT-4 API with ready-made templates, connectors, and usage optimization tools. Includes 10 hours of expert implementation support.", category: "AI Models & APIs", price: 1999, currency: "$", tags: ["GPT-4", "API Integration", "NLP"],
     author: {
       name: "AI Solutions Inc.",
       id: "ai-solutions",
@@ -313,26 +306,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 ]
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
-  const suggestions = [
-    "AI models",
-    "GPT integration",
-    "Machine learning",
-    "Computer vision",
-    "Speech recognition",
-    "Data analysis",
-    "Content generation",
-    "Code assistant",
-    "Virtual assistant",
-    "Enterprise AI solutions",
-    "Robotics",
-    "AI workstation",
-    "Business intelligence",
-    "Custom model development",
-    "Server rack",
-    "GPU cluster",
-    "Edge computing",
-    "High performance storage"
-  ]
+  const suggestions = ["AI models", "GPT integration", "Machine learning", "Computer vision", "Speech recognition", "Data analysis", "Content generation", "Code assistant", "Virtual assistant", "Enterprise AI solutions", "Robotics", "AI workstation", "Business intelligence", "Custom model development", "Server rack", "GPU cluster", "Edge computing", "High performance storage"]
   // Convert strings to SearchSuggestion objects
   return suggestions.map(text => ({
     text,

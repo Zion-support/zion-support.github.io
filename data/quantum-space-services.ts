@@ -78,16 +78,12 @@ export interface QuantumSpaceService {/* TODO: Fix JSX expression */}
     address: string,
   }
 }
-export const quantumSpaceServices: QuantumSpaceService[] = [,
-    id: "quantum-computing-platform", name: "Quantum Computing Platform",
-    tagline: "Next-generation quantum computing solutions", price: "$199/month"
+export const quantumSpaceServices: QuantumSpaceService[] = [id: "quantum-computing-platform", name: "Quantum Computing Platform", tagline: "Next-generation quantum computing solutions", price: "$199/month"
     description: "Advanced quantum computing platform for complex calculations and simulations."
-    features: [,
-      "Quantum algorithms"
+    features: [, "Quantum algorithms"
       "Simulation tools"
       "API access"
-      "Documentation",
-      "Support services"],
+      "Documentation", "Support services"],
     link: "/services/quantum-computing-platform", category: "Quantum Computing",
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
@@ -127,23 +123,17 @@ export const quantumSpaceServices: QuantumSpaceService[] = [,
   s: string}
 }
 export const,
-  quantumSpaceServices: QuantumSpaceService[] = [,
-    i,"
-  d: "quantum-computing-platform", nam,"
-  e: "Quantum Computing Platform",
-    taglin,"
-  e: "Next-generation quantum computing solutions", pric,"
-  e: "$199/month",
-    descriptio,"
-  n: "Advanced quantum computing platform for complex calculations and simulations.",
-    feature,
-  s: [,"
+  quantumSpaceServices: QuantumSpaceService[] = [i, "
+  d: "quantum-computing-platform", nam, "
+  e: "Quantum Computing Platform", taglin, "
+  e: "Next-generation quantum computing solutions", pric, "
+  e: "$199/month", descriptio, "
+  n: "Advanced quantum computing platform for complex calculations and simulations.", feature, s: [, "
       "Quantum algorithms""
       "Simulation tools""
       "API access""
       "Documentation""
-      "Support services"
-    ],
+      "Support services"],
     lin,"
   k: "/services/quantum-computing-platform", categor,"
   y: "Quantum Computing",
@@ -178,13 +168,7 @@ id: "quantum-computing-platform"
     tagline: "Next-generation quantum computing solutions",
     price: "$199/month",
     description: "Advanced quantum computing platform for complex calculations and simulations.",
-    features: [,
-      "Quantum algorithms",
-      "Simulation tools",
-      "API access",
-      "Documentation",
-      "Support services"
-    ],
+    features: ["Quantum algorithms", "Simulation tools", "API access", "Documentation", "Support services"],
     link: "/services/quantum-computing-platform"
     category: "Quantum Computing"
     realImplementation: true
@@ -210,13 +194,12 @@ id: "quantum-computing-platform"
     descriptio,"
   n: "Advanced quantum computing platform for complex calculations and simulations.",
     feature,
-  s: [,"
-      "Quantum algorithms","
-      "Simulation tools","
-      "API access","
-      "Documentation","
-      "Support services"
-    ],
+  s: ["
+      "Quantum algorithms", "
+      "Simulation tools", "
+      "API access", "
+      "Documentation", "
+      "Support services"],
     lin,"
   k: "/services/quantum-computing-platform",
     categor,"
@@ -288,13 +271,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  quantumSpaceServices: QuantumSpaceService[] = [ i,"
-  d: "quantum-computing-platform", nam,"
-  e: "Quantum Computing Platform", taglin,"
-  e: "Next-generation quantum computing solutions", pric,"
-  e: "$199/month", descriptio,"
-  n: "Advanced quantum computing platform for complex calculations and simulations.", feature,"
-  s: [ "Quantum algorithms" "Simulation tools" "API access" "Documentation" "Support services" ], lin,"
+  quantumSpaceServices: QuantumSpaceService[] = [i, "
+  d: "quantum-computing-platform", nam, "
+  e: "Quantum Computing Platform", taglin, "
+  e: "Next-generation quantum computing solutions", pric, "
+  e: "$199/month", descriptio, "
+  n: "Advanced quantum computing platform for complex calculations and simulations.", feature, "
+  s: [ "Quantum algorithms" "Simulation tools" "API access" "Documentation" "Support services"], lin,"
   k: "/services/quantum-computing-platform", categor,"
   y: "Quantum Computing", realImplementatio,
   n: true, contactInf,
@@ -311,7 +294,7 @@ i,
   e: "Next-generation quantum computing solutions", pric,"
   e: "$199/month", descriptio,"
   n: "Advanced quantum computing platform for complex calculations and simulations.", feature,"
-  s: [ "Quantum algorithms", "Simulation tools", "API access", "Documentation", "Support services" ], lin,"
+  s: ["Quantum algorithms", "Simulation tools", "API access", "Documentation", "Support services"], lin,"
   k: "/services/quantum-computing-platform", categor,"
   y: "Quantum Computing", realImplementatio,
   n: true, contactInf,

@@ -11,29 +11,18 @@ class SecurityEnhancer {
       csrfProtection: true,
       contentSecurityPolicy: {,
         'default-src': ["'self'"],
-        'script-src': [,
-          "'self'",
-          "'unsafe-inline'",
-          'https: //www.googletagmanager.com'],
-        'style-src': [
-          "'self'",
-          "'unsafe-inline'",
-          'https: //fonts.googleapis.com'],
-        'img-src': ["'self'", 'data:', 'https: '],
+        'script-src': ["'self'", "'unsafe-inline'", 'https: //www.googletagmanager.com'],
+        'style-src': ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],
+        'img-src': ["'self'", 'data: ', 'https: '],
         'font-src': ["'self'", 'https: //fonts.gstatic.com'],
         'connect-src': ["'self'", 'https: //api.ziontechgroup.com'],
         'frame-src': ["'none'"],
         'object-src': ["'none'"],
         'base-uri': ["'self'"],
         'form-action': ["'self'"]},
-      trustedDomains: [,
-class SecurityEnhancer {/* TODO: Fix JSX expression */}
-      },
-      trustedDomain,
-  s: [
-        'ziontechgroup.com',
-        'api.ziontechgroup.com',
-        'cdn.ziontechgroup.com']}
+      trustedDomains: [class SecurityEnhancer {/* TODO: Fix JSX expression */}
+      }, trustedDomain, s: [
+        'ziontechgroup.com', 'api.ziontechgroup.com', 'cdn.ziontechgroup.com']}
     this.init()
   }
 
@@ -239,13 +228,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
   validateText(text) {
     // Check for XSS patterns
-    const xssPatterns = [
-      /<script/i,
-      /javascript: /i,
-      /on\w+\s*=/i,
-      /<iframe/i,
-      /<object/i,
-      /<embed/i]
+    const xssPatterns = [/<script/i, /javascript: /i, /on\w+\s*=/i, /<iframe/i, /<object/i, /<embed/i]
     return !xssPatterns.some(pattern => pattern.test(text))
   }
 
@@ -284,13 +267,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   }
 
   validateFile(file) {
-    const allowedTypes = [
-      'image/jpeg',
-      'image/png',
-      'image/gif',
-      'image/webp',
-      'application/pdf',
-      'text/plain']
+    const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp', 'application/pdf', 'text/plain']
     const maxSize = 10 * 1024 * 1024; // 10MB
     return allowedTypes.includes(file.type) && file.size <= maxSize
   }
@@ -416,18 +393,14 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   }
 
   isSuspiciousRequest(url) {
-    const suspiciousPatterns = [
-      /eval/i,
-      /script/i,
-      /javascript: /i
-      /data: text\/html/i
-    ],
+    const suspiciousPatterns = [/eval/i, /script/i, /javascript: /i
+      /data: text\/html/i],
 ,
     return suspiciousPatterns.some(pattern => pattern.test(url))
   }
 
   checkForMaliciousContent(node) {
-    const _maliciousPatterns = [/<script/i, /javascript:/i, /on\w+\s*=/i]
+    const _maliciousPatterns = [/<script/i, /javascript: /i, /on\w+\s*=/i]
 //     const content = node.innerHTML || node.textContent || ''
     if (maliciousPatterns.some(pattern => pattern.test(content))) {
       this.reportSecurityEvent('malicious_content', {)
@@ -492,9 +465,9 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
         z-index: 9999
         max-width: 300px,
       ">,
-        <strong>Security Warning:</strong> ${message}
+        <strong>Security Warning: </strong> ${message}
   showSecurityWarning(message) {/* TODO: Fix JSX expression */}
-  Warning:</strong> ${message}
+  Warning: </strong> ${message}
         < onclick="this.parentElement.parentElement.remove()" style="$2 />
           backgroun,
   d: none,

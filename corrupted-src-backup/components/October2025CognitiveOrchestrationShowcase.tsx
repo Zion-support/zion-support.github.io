@@ -31,25 +31,25 @@ Discover, how, Fortune 50, companies, are achievi, n, g $84.7 B, in, value with,
 {/* Blog, Post, Card */
 }
           <, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e$2 />
-  r:shad, o, w-cy, a, n-5, 0, 0/50">"
+  r: shad, o, w-cy, a, n-5, 0, 0/50">"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">
               <span, className="fo, n, t-bold, tex, t-sm">📖 COMPREHENSIVE, GUID, E
 <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">,"
 {/* Blog, Post, Card */
 }
           <, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e$2 />
-  r:shad, o, w-cy, a, n-5, 0, 0/50">"
+  r: shad, o, w-cy, a, n-5, 0, 0/50">"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">"
 }
           <, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e$2 />
-  r:shad, o, w-cy, a, n-5, 0, 0/50">"
+  r: shad, o, w-cy, a, n-5, 0, 0/50">"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">
               <span, className="fo, n, t-bold, tex, t-sm">📖 COMPREHENSIVE, GUID, E
 <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">,"
 {/* Blog, Post, Card */
 }
           <, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e$2 />
-  r:shad, o, w-cy, a, n-5, 0, 0/50">"
+  r: shad, o, w-cy, a, n-5, 0, 0/50">"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">"
               <span, className="fo, n, t-bold, tex, t-sm">📖 COMPREHENSIVE, GUID, E</sp, a, n>"
             <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Cognitive, Orchestration, Breakthrough</h3>"
@@ -58,7 +58,7 @@ const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TOD
 }
           <, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hove,$2 />
   r: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e,"
-  r:shad, o, w-cy, a, n-5, 0, 0/50">""
+  r: shad, o, w-cy, a, n-5, 0, 0/50">""
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4"></div>"
               <span, className="fo, n, t-bold, tex, t-sm">📖 COMPREHENSIVE, GUID, E</sp, a, n>"
 <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">,"
@@ -66,7 +66,7 @@ const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TOD
 }"
           <, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hove,$2 />
   r: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e,"
-  r:shad, o, w-cy, a, n-5, 0, 0/50">";"
+  r: shad, o, w-cy, a, n-5, 0, 0/50">";"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">";"
               <span, className="fo, n, t-bold, tex, t-sm">📖 COMPREHENSIVE, GUID, E</sp, a, n>"</$1>"
             <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Cognitive, Orchestration, Breakthrough</h3>";"
@@ -76,32 +76,32 @@ const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TOD
               <p>🚀 S, u, b-millisecond, response, times
               <p>🌐 Glob, a, l-scale, enterprise, deployment
               <p>📊 Complete, implementation, guide
-            <Li, n, k
+            <Li , n, k
   to="/bl, o, g/ai-20, 2, 5-o, c, t-01-cogniti, v, e-orchestrati, o, n-breakthrou, g, h"
               classNa, m, e="bloc, k, w-full, b, g-white, tex, t-cy, a, n-600, hove, r: bg-yell, o, w-400, hov, e
             <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-o, c, t-01-cogniti, v, e-orchestrati, o, n-breakthrou, g, h""
               classNa, m, e="bloc, k, w-full, b, g-white, tex, t-cy, a, n-600, hove, r: bg-yell, o, w-400, hov, e,"
-  r:te, x, t-black, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, tex, t-center, transitio, n-a, l, l"
-            >
+  r: te, x, t-black, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, tex, t-center, transitio, n-a, l, l"
+            ></Li>
               Read, Revolutionary, Guide →
             </Li, n, k>"
             <div, className="mt-4, tex, t-center, tex, t-sm, tex, t-whi, t, e/80">"
               18, min, read • Published, Oct, 1, 20, 2, 5
           {/* Case, Study, Card */}
           <, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-600, t, o-te, a, l-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e$2 />
-  r:shad, o, w-emera, l, d-5, 0, 0/50">"
+  r: shad, o, w-emera, l, d-5, 0, 0/50">"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">
               <span, className="fo, n, t-bold, tex, t-sm">💰 SUCCESS, STOR, Y
           <, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-600, t, o-te, a, l-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e$2 />
-  r:shad, o, w-emera, l, d-5, 0, 0/50">"
+  r: shad, o, w-emera, l, d-5, 0, 0/50">"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">"
           <, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-600, t, o-te, a, l-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e$2 />
-  r:shad, o, w-emera, l, d-5, 0, 0/50">"
+  r: shad, o, w-emera, l, d-5, 0, 0/50">"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">
               <span, className="fo, n, t-bold, tex, t-sm">💰 SUCCESS, STOR, Y
           <, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-600, t, o-te, a, l-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e$2 />
-  r:shad, o, w-emera, l, d-5, 0, 0/50">"
+  r: shad, o, w-emera, l, d-5, 0, 0/50">"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">"
               <span, className="fo, n, t-bold, tex, t-sm">💰 SUCCESS, STOR, Y</sp, a, n>"
             <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">$84.7B, Fortune, 50 Succe, s, s</h3>"
@@ -109,12 +109,12 @@ const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TOD
           {/* Case, Study, Card */}"
           <, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-600, t, o-te, a, l-600, rounde, d-2x, l, p-8, transform, hove,$2 />
   r: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e,"
-  r:shad, o, w-emera, l, d-5, 0, 0/50">""
+  r: shad, o, w-emera, l, d-5, 0, 0/50">""
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4"></div>"
               <span, className="fo, n, t-bold, tex, t-sm">💰 SUCCESS, STOR, Y</sp, a, n>"
           <, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-600, t, o-te, a, l-600, rounde, d-2x, l, p-8, transform, hove,$2 />
   r: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e,"
-  r:shad, o, w-emera, l, d-5, 0, 0/50">";"
+  r: shad, o, w-emera, l, d-5, 0, 0/50">";"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">";"
               <span, className="fo, n, t-bold, tex, t-sm">💰 SUCCESS, STOR, Y</sp, a, n>"</$1>"
             <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">$84.7B, Fortune, 50 Succe, s, s</h3>";"
@@ -124,27 +124,27 @@ const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TOD
               <p>🏭 2,847, facilities, transformed
               <p>⭐ 99.99% system, uptim, e
               <p>🎯 3.2-month, payback, period
-            <Li, n, k
+            <Li , n, k
   to="/ca, s, e-studi, e, s/cogniti, v, e-orchestrati, o, n-84-billi, o, n-succe, s, s"
               classNa, m, e="bloc, k, w-full, b, g-white, tex, t-te, a, l-600, hove, r: bg-yell, o, w-400, hov, e
             <Li, n, k;"
   to="/ca, s, e-studi, e, s/cogniti, v, e-orchestrati, o, n-84-billi, o, n-succe, s, s""
               classNa, m, e="bloc, k, w-full, b, g-white, tex, t-te, a, l-600, hove, r: bg-yell, o, w-400, hov, e,"
-  r:te, x, t-black, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, tex, t-center, transitio, n-a, l, l"
-            >
+  r: te, x, t-black, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, tex, t-center, transitio, n-a, l, l"
+            ></Li>
               Vi, e, w $84.7B, Success, Story →
             </Li, n, k>"
             <div, className="mt-4, tex, t-center, tex, t-sm, tex, t-whi, t, e/80">"
               Fortune, 50, Manufacturing • 20, 2, 5
           {/* Service, Car, d */}
           <, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e$2 />
-  r:shad, o, w-purp, l, e-5, 0, 0/50">"
+  r: shad, o, w-purp, l, e-5, 0, 0/50">"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">
           <, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e$2 />
-  r:shad, o, w-purp, l, e-5, 0, 0/50">"
+  r: shad, o, w-purp, l, e-5, 0, 0/50">"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">
               <span, className="fo, n, t-bold, tex, t-sm">🚀 PLATFORM, SERVIC, E
-          <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50">"
+          <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hove, r: shad, o, w-purp, l, e-5, 0, 0/50">"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">"
               <span, className="fo, n, t-bold, tex, t-sm">🚀 PLATFORM, SERVIC, E</sp, a, n>"
             <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Transform, Your, Enterprise</h3>"
@@ -152,11 +152,11 @@ const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TOD
           {/* Service, Car, d */}"
           <, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, transform, hove,$2 />
   r: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e,"
-  r:shad, o, w-purp, l, e-5, 0, 0/50">""
+  r: shad, o, w-purp, l, e-5, 0, 0/50">""
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4"></div>"
               <span, className="fo, n, t-bold, tex, t-sm">🚀 PLATFORM, SERVIC, E</sp, a, n>"
           <, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, transform, hove,"$2 />
-  r: sca, l, e-105, transitio, n-all, shado, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50">";"
+  r: sca, l, e-105, transitio, n-all, shado, w-2xl, hove, r: shad, o, w-purp, l, e-5, 0, 0/50">";"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">";"
               <span, className="fo, n, t-bold, tex, t-sm">🚀 PLATFORM, SERVIC, E</sp, a, n>"</$1>"
             <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Transform, Your, Enterprise</h3>";"
@@ -166,14 +166,14 @@ const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TOD
               <p>⚛️ Quant, u, m-enhanced, processin, g
               <p>🛡️ Enterpri, s, e-grade, securit, y
               <p>📞 24/7, expert, support
-            <Li, n, k
+            <Li , n, k
   to="/servic, e, s/cogniti, v, e-orchestrati, o, n-platfo, r, m-servic, e, s"
               classNa, m, e="bloc, k, w-full, b, g-white, tex, t-purp, l, e-600, hove, r: bg-yell, o, w-400, hov, e
             <Li, n, k;"
   to="/servic, e, s/cogniti, v, e-orchestrati, o, n-platfo, r, m-servic, e, s""
               classNa, m, e="bloc, k, w-full, b, g-white, tex, t-purp, l, e-600, hove, r: bg-yell, o, w-400, hov, e,"
-  r:te, x, t-black, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, tex, t-center, transitio, n-a, l, l"
-            >
+  r: te, x, t-black, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, tex, t-center, transitio, n-a, l, l"
+            ></Li>
               Getted, Today →
             </Li, n, k>"
             <div, className="mt-4, tex, t-center, tex, t-sm, tex, t-whi, t, e/80">"
@@ -201,12 +201,12 @@ const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TOD
               classNa, m, e="bg-black, tex, t-white, hove, r: bg-gr, a, y-800, fon, t-bold, p, y-4, p, x-8, rounde, d-lg, tex, t-lg, transitio, n-all, inlin, e-blo, c, k"
             >
               📞 Ca, l, l +1, 302, 464 09, 5, 0
-            <Li, n, k
+            <Li , n, k
   to="/conta, c, t"
             <Li, n, k;"
   to="/conta, c, t""
               classNa, m, e="bg-white, tex, t-black, hove, r: bg-gr, a, y-100, fon, t-bold, p, y-4, p, x-8, rounde, d-lg, tex, t-lg, transitio, n-a, l, l"
-            >
+            ></Li>
               📧 Schedule, Free, Consultation
         </d, i, v>)
       </d, i, v>)

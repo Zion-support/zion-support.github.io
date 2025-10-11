@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next"
-import { getServerSupabase } from "../../../../utils/supabase/server"
+import { getServerSupabase  } from '../../../../utils/supabase/server'
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
@@ -8,8 +8,7 @@ export default async function handler(
   try {
     if (usingPlaceholder) {
       return res && res.status(200).json({
-        partners: [
-          {
+        partners: [{
             code: "aihub"
             name: "AI Hub"
             status: "approved"
@@ -20,8 +19,7 @@ export default async function handler(
             name: "Prompt Pro"
             status: "pending"
             commission_rate: 0.15
-          }
-        ]
+          }]
       })
     }
     const supabase = getServerSupabase()
@@ -55,10 +53,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
       const usingPlaceholder = true; // Set to false when real data is available
       if (usingPlaceholder) {
         return res.status(200).json({ 
-          partners: [
-            { code: 'aihub', name: 'AI Hub', status: 'approved', commission_rate: 0.2 },
-            { code: 'promptpro', name: 'Prompt Pro', status: 'pending', commission_rate: 0.15 }
-          ]
+          partners: [{ code: 'aihub', name: 'AI Hub', status: 'approved', commission_rate: 0.2 }, { code: 'promptpro', name: 'Prompt Pro', status: 'pending', commission_rate: 0.15 }]
         })
       }
       res.json({ partners: [] })

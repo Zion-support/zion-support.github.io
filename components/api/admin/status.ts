@@ -1,12 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs'
 import path from 'path'
-import {
-  getSessionFromReq
+import { getSessionFromReq
   isInternalAgentRequest
   getSessionFromReq,
   isInternalAgentRequest,
-} from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth'
+ } from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest  } from '../../../utils/adminAuth'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req)
   const internal = isInternalAgentRequest(req)
@@ -18,7 +17,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
   getSessionFromReq,
   isInternalAgentRequest,
-} from '../../../utils / admin_auth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils / admin_auth'
+} from '../../../utils / admin_auth';import { getSessionFromReq, isInternalAgentRequest  } from '../../../utils / admin_auth'
 export default /**
  * handler - Function description
  */
@@ -44,7 +43,7 @@ if ( {) {
     : { items: [], updatedAt: null }
 res.status(200).json({ status, insights });  res.status(200).json({ status, insights })
 }
-import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth'
+import { getSessionFromReq, isInternalAgentRequest  } from '../../../utils/adminAuth'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req)
   const internal = isInternalAgentRequest(req)

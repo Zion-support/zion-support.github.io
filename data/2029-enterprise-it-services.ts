@@ -126,16 +126,12 @@ export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */}
     address: string,
   }
 }
-export const enterpriseITServices2029: EnterpriseItService2029[] = [,
-    id: "2029-enterprise-it", name: "2029 Enterprise IT Service Platform",
-    tagline: "Enterprise IT services for 2029", price: "$599/month"
+export const enterpriseITServices2029: EnterpriseItService2029[] = [id: "2029-enterprise-it", name: "2029 Enterprise IT Service Platform", tagline: "Enterprise IT services for 2029", price: "$599/month"
     description: "Advanced enterprise IT service platform designed for large organizations in 2029."
-    features: [,
-      "Enterprise IT services"
+    features: [, "Enterprise IT services"
       "Scalable solutions"
       "Advanced security"
-      "24/7 support",
-      "Custom integration"],
+      "24/7 support", "Custom integration"],
     link: "/services/2029-enterprise-it", category: "Enterprise IT Services 2029",
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
@@ -175,23 +171,17 @@ export const enterpriseITServices2029: EnterpriseItService2029[] = [,
   s: string}
 }
 export const,
-  enterpriseITServices2029: EnterpriseItService2029[] = [,
-    i,"
-  d: "2029-enterprise-it", nam,"
-  e: "2029 Enterprise IT Service Platform",
-    taglin,"
-  e: "Enterprise IT services for 2029", pric,"
-  e: "$599/month",
-    descriptio,"
-  n: "Advanced enterprise IT service platform designed for large organizations in 2029.",
-    feature,
-  s: [,"
+  enterpriseITServices2029: EnterpriseItService2029[] = [i, "
+  d: "2029-enterprise-it", nam, "
+  e: "2029 Enterprise IT Service Platform", taglin, "
+  e: "Enterprise IT services for 2029", pric, "
+  e: "$599/month", descriptio, "
+  n: "Advanced enterprise IT service platform designed for large organizations in 2029.", feature, s: [, "
       "Enterprise IT services""
       "Scalable solutions""
       "Advanced security""
       "24/7 support""
-      "Custom integration"
-    ],
+      "Custom integration"],
     lin,"
   k: "/services/2029-enterprise-it", categor,"
   y: "Enterprise IT Services 2029",
@@ -226,13 +216,7 @@ id: "2029-enterprise-it"
     tagline: "Enterprise IT services for 2029",
     price: "$599/month",
     description: "Advanced enterprise IT service platform designed for large organizations in 2029.",
-    features: [,
-      "Enterprise IT services",
-      "Scalable solutions",
-      "Advanced security",
-      "24/7 support",
-      "Custom integration"
-    ],
+    features: ["Enterprise IT services", "Scalable solutions", "Advanced security", "24/7 support", "Custom integration"],
     link: "/services/2029-enterprise-it"
     category: "Enterprise IT Services 2029"
     realImplementation: true
@@ -258,13 +242,12 @@ id: "2029-enterprise-it"
     descriptio,"
   n: "Advanced enterprise IT service platform designed for large organizations in 2029.",
     feature,
-  s: [,"
-      "Enterprise IT services","
-      "Scalable solutions","
-      "Advanced security","
-      "24/7 support","
-      "Custom integration"
-    ],
+  s: ["
+      "Enterprise IT services", "
+      "Scalable solutions", "
+      "Advanced security", "
+      "24/7 support", "
+      "Custom integration"],
     lin,"
   k: "/services/2029-enterprise-it",
     categor,"
@@ -352,13 +335,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  enterpriseITServices2029: EnterpriseItService2029[] = [ i,"
-  d: "2029-enterprise-it", nam,"
-  e: "2029 Enterprise IT Service Platform", taglin,"
-  e: "Enterprise IT services for 2029", pric,"
-  e: "$599/month", descriptio,"
-  n: "Advanced enterprise IT service platform designed for large organizations in 2029.", feature,"
-  s: [ "Enterprise IT services" "Scalable solutions" "Advanced security" "24/7 support" "Custom integration" ], lin,"
+  enterpriseITServices2029: EnterpriseItService2029[] = [i, "
+  d: "2029-enterprise-it", nam, "
+  e: "2029 Enterprise IT Service Platform", taglin, "
+  e: "Enterprise IT services for 2029", pric, "
+  e: "$599/month", descriptio, "
+  n: "Advanced enterprise IT service platform designed for large organizations in 2029.", feature, "
+  s: [ "Enterprise IT services" "Scalable solutions" "Advanced security" "24/7 support" "Custom integration"], lin,"
   k: "/services/2029-enterprise-it", categor,"
   y: "Enterprise IT Services 2029", realImplementatio,
   n: true, contactInf,
@@ -375,7 +358,7 @@ i,
   e: "Enterprise IT services for 2029", pric,"
   e: "$599/month", descriptio,"
   n: "Advanced enterprise IT service platform designed for large organizations in 2029.", feature,"
-  s: [ "Enterprise IT services", "Scalable solutions", "Advanced security", "24/7 support", "Custom integration" ], lin,"
+  s: ["Enterprise IT services", "Scalable solutions", "Advanced security", "24/7 support", "Custom integration"], lin,"
   k: "/services/2029-enterprise-it", categor,"
   y: "Enterprise IT Services 2029", realImplementatio,
   n: true, contactInf,

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { execSync } from 'child_process'
+import { execSync  } from 'child_process'
 import fs from 'fs'
 // //Function to safely execute git commands
 function safeGitCommand(command, description) {
@@ -21,11 +21,7 @@ function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
 safeGitCommand('git checkout main', 'Switch to main branch')
 safeGitCommand('git pull origin main', 'Pull latest changes from main')
 //List of PR branches to try merging
-const prBranches = [
-  'cursor/fix-web-application-console-errors-0 bf5',
-  'cursor/build-and-deploy-with-vite-and-netlify-8 b37',
-  'cursor/fix-errors-and-merge-to-main-fcbd',
-  'cursor/fix-errors-and-merge-to-main-e6 e1']
+const prBranches = ['cursor/fix-web-application-console-errors-0 bf5', 'cursor/build-and-deploy-with-vite-and-netlify-8 b37', 'cursor/fix-errors-and-merge-to-main-fcbd', 'cursor/fix-errors-and-merge-to-main-e6 e1']
 // let mergedCount = 0
 for (const branch of prBranches) {
   //   //Check if branch exists

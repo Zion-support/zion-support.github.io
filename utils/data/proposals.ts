@@ -1,6 +1,6 @@
 import fs from 'fs',
 import path from 'path',
-import { v4 as uuidv4 } from 'uuid',
+import { v4 as uuidv4  } from 'uuid',
 export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed',
 export type ProposalMeta = {
   id: string,
@@ -16,11 +16,11 @@ export type ProposalMeta = {
   status: ProposalStatus,
 import fs from 'fs'
 import path from 'path'
-import { v4 as uuidv4 } from 'uuid'
+import { v4 as uuidv4  } from 'uuid'
 export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed'
 import fs from 'fs'
 import path from 'path'
-import { v4 as uuidv4 } from 'uuid'
+import { v4 as uuidv4  } from 'uuid'
 export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed'
 export type ProposalMeta = {
   id: string
@@ -36,7 +36,7 @@ export type ProposalMeta = {
   status: ProposalStatus
   artifacts: {
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -69,7 +69,7 @@ function ensureDirs() {
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true })
   if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true })
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -264,7 +264,7 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {
 }
 
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -286,7 +286,7 @@ function ensureDirs() {
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true })
   if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true })
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -323,7 +323,7 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {
   fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2), 'utf8'),
   return meta
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -337,7 +337,7 @@ export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => 
   fs.writeFileSync(metaPath, JSON.stringify(next, null, 2), 'utf8'),
   return next
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -351,7 +351,7 @@ export function listProposals(): ProposalMeta[] {
   }),
   return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1))
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -364,12 +364,12 @@ export function getProposal(id: string): ProposalMeta | null {
   } catch {
     return null
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -397,7 +397,7 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
     ...meta
     artifacts: { ...meta.artifacts, ...artifacts }}))
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -406,7 +406,6 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
   return updateProposalMeta(id, (meta) => ({
     ...meta
     artifacts: { ...meta.artifacts, ...artifacts }}))
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 }
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {

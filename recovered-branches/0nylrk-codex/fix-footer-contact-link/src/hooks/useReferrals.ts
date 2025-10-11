@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react"
-import { toast } from "@/hooks/use-toast"
-import { useAuth } from "@/hooks/useAuth"
-import { supabase } from "@/integrations/supabase/client"
-import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals"
+import { useState, useEffect  } from 'react'
+import { toast  } from '@/hooks/use-toast'
+import { useAuth  } from '@/hooks/useAuth'
+import { supabase  } from '@/integrations/supabase/client'
+import { ReferralCode, ReferralStats, Referral, ReferralReward  } from '@/types/referrals'
 export function useReferrals() {
   const { user } = useAuth()
   const [referralCode, setReferralCode] = useState<ReferralCode | null>(null)
@@ -33,12 +33,12 @@ export function useReferrals() {
         .eq('user_id', user?.id)
         .single()
       if (error) {
-        console.error("Error fetching referral code:", error)
+        console.error("Error fetching referral code: ", error)
         return
       }
       setReferralCode(data)
     } catch (error) {
-      console.error("Error in fetchReferralCode:", error)
+      console.error("Error in fetchReferralCode: ", error)
     } finally {
       setIsLoading(false)
     }
@@ -54,7 +54,7 @@ export function useReferrals() {
       if (error) throw error
       setReferrals(data || [])
     } catch (error) {
-      console.error("Error fetching referrals:", error)
+      console.error("Error fetching referrals: ", error)
     }
   }
   const fetchRewards = async () => {
@@ -68,7 +68,7 @@ export function useReferrals() {
       if (error) throw error
       setRewards(data || [])
     } catch (error) {
-      console.error("Error fetching rewards:", error)
+      console.error("Error fetching rewards: ", error)
     }
   }
   const fetchReferralStats = async () => {
@@ -100,7 +100,7 @@ export function useReferrals() {
         totalRewards
       })
     } catch (error) {
-      console.error("Error fetching referral stats:", error)
+      console.error("Error fetching referral stats: ", error)
     }
   }
   const generateReferralCode = async () => {
@@ -179,13 +179,13 @@ export function useReferrals() {
     let shareUrl = ''
     switch (platform) {
       case 'twitter':
-        shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(link)}`
+        shareUrl = `https: //twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(link)}`
         break
       case 'facebook':
-        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(link)}`
+        shareUrl = `https: //www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(link)}`
         break
       case 'linkedin':
-        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(link)}`
+        shareUrl = `https: //www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(link)}`
         break
     }
     if (shareUrl) {

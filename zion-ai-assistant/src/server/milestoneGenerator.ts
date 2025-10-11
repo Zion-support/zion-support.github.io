@@ -1,4 +1,4 @@
-import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem } from "../shared/types.js"
+import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem  } from '../shared/types.js'
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY |process.env.OPENAI_API_TOKEN
 async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMilestoneItem[] | null> {if (!OPENAI_API_KEY) return null
   const system = `You are an expert project planner. Given a scope of work, start and end date, and project type, propose 3-7 phased milestones. Each milestone must include: title, description, suggestedDueDateIso (ISO 8601 within the provided range), estimatedEffortHours (integer). Tailor phases to the project type. Prefer week-based deadlines. Output ONLY valid JSON object with key \"milestones\": [...]`
@@ -9,13 +9,12 @@ async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMil
     projectType: input.projectType
   }
   const body = {model: "gpt-4o-mini"
-    messages: [
-      { role: "system", content: system }
+    messages: [{ role: "system", content: system }
       { role: "user", content: `INPUT:\n${JSON.stringify(user, null, 2)}\n\nReturn JSON object: {\"milestones\": [{ title, description, suggestedDueDateIso, estimatedEffortHours }]}` }
     ]
     temperature: 0.3
   } as any
-  const resp = await fetch("https://api.openai.com/v1/chat/completions", {method: "POST"
+  const resp = await fetch("https: //api.openai.com/v1/chat/completions", {method: "POST"
     headers: {
       "Content-Type": "application/json"
       Authorization: `Bearer ${OPENAI_API_KEY}`
@@ -73,7 +72,7 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
   return milestones
 }
 export async function generateMilestones(input: MilestoneSuggestionInput): Promise<MilestoneSuggestionResponse> {const ai = await callOpenAI(input)
-import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem } from "../shared/types.js",
+import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem  } from '../shared/types.js',
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPENAI_API_TOKEN,
 async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMilestoneItem[] | null> {
   if (!OPENAI_API_KEY) return null,
@@ -85,13 +84,12 @@ async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMil
     projectType: input.projectType
   }
   const body = {model: "gpt-4o-mini"
-    messages: [
-      { role: "system", content: system }
+    messages: [{ role: "system", content: system }
       { role: "user", content: `INPUT:\n${JSON.stringify(user, null, 2)}\n\nReturn JSON object: {\"milestones\": [{ title, description, suggestedDueDateIso, estimatedEffortHours }]}` }
     ]
     temperature: 0.3
   } as any
-  const resp = await fetch("https://api.openai.com/v1/chat/completions", {method: "POST"
+  const resp = await fetch("https: //api.openai.com/v1/chat/completions", {method: "POST"
     headers: {
       "Content-Type": "application/json"
       Authorization: `Bearer ${OPENAI_API_KEY}`
@@ -152,7 +150,7 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
 export async function generateMilestones(input: MilestoneSuggestionInput): Promise<MilestoneSuggestionResponse> {
   const ai = await callOpenAI(input)
   const milestones = ai && ai.length ? ai : createHeuristicPlan(input)
-import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem  } from '../shared / types.js';,
+import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem   } from '../shared / types.js';,
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPENAI_API_TOKEN,
 async function callOpenAI (input: MilestoneSuggestionInput): Promise < SuggestedMilestoneItem[] | null> {
   // Check condition
@@ -160,7 +158,7 @@ if (return null, ) {
   $2
 }
   const system = `You are an expert project planner. Given a scope of work, start and end date, and project type, propose 3 - 7 phased milestones. Each milestone must include: title, description, suggestedDueDateIso (ISO 8601 within the provided range), estimatedEffortHours (integer). Tailor phases to the project type. Prefer week - based deadlines. Output ONLY valid JSON object with key "milestones": [...]`,
-import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem } from "../shared/types.js"
+import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem  } from '../shared/types.js'
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPENAI_API_TOKEN
 async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMilestoneItem[] | null> {
   if (!OPENAI_API_KEY) return null
@@ -173,13 +171,11 @@ async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMil
   },
   const body = {
     model: "gpt - 4o - mini",
-    messages: [
-      { role: "system", content: system },
-      { role: "user", content: `INPUT:\n${JSON.stringify (user, null, 2)}\n\n_return JSON object: {"milestones": [{ title, description, suggestedDueDateIso, estimatedEffortHours }]}` }
+    messages: [{ role: "system", content: system }, { role: "user", content: `INPUT:\n${JSON.stringify (user, null, 2)}\n\n_return JSON object: {"milestones": [{ title, description, suggestedDueDateIso, estimatedEffortHours }]}` }
     ],
     temperature: 0.3
   } as any,
-  const resp = await fetch ("https://api.openai.com / v1 / chat / completions", {
+  const resp = await fetch ("https: //api.openai.com / v1 / chat / completions", {
     method: "POST",
     headers: {
       "Content - Type": "application / json",
@@ -216,13 +212,11 @@ if (return null, ) {
   }
   const body = {
     model: "gpt-4o-mini",
-    messages: [
-      { role: "system", content: system },
-      { role: "user", content: `INPUT:\n${JSON.stringify(user, null, 2)}\n\nReturn JSON object: {\"milestones\": [{ title, description, suggestedDueDateIso, estimatedEffortHours }]}` }
+    messages: [{ role: "system", content: system }, { role: "user", content: `INPUT:\n${JSON.stringify(user, null, 2)}\n\nReturn JSON object: {\"milestones\": [{ title, description, suggestedDueDateIso, estimatedEffortHours }]}` }
     ],
     temperature: 0.3
   } as any
-  const resp = await fetch("https://api.openai.com/v1/chat/completions", {
+  const resp = await fetch("https: //api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

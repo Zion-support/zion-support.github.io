@@ -1,9 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from "next"
-import { getDisputeById } from "../../../utils/fsdb"
-import {
-  parseUserFromRequest,
+import { getDisputeById  } from '../../../utils/fsdb'
+import { parseUserFromRequest,
   ensureInvolvedOrAdmin,
-} from "../../../utils/auth"
+ } from '../../../utils/auth'
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
@@ -21,15 +20,12 @@ export default async function handler(
   }
   res && res.setHeader("Allow", "GET")
   return res && res.status(405).end("Method Not Allowed")
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import type { NextApiRequest, NextApiResponse } from './next'
-import { getDisputeById  } from '../../../utils / fsdb'
-import {
-  parseUserFromRequest,
+import { getDisputeById   } from '../../../utils / fsdb'
+import { parseUserFromRequest,
   ensureInvolvedOrAdmin,
-} from '../../../utils / auth'
+ } from '../../../utils / auth'
 export default async /**
  * handler - Function description
  */
@@ -44,4 +40,3 @@ function handler() {
 if ( {) {
   $2
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

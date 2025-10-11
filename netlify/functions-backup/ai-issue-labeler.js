@@ -14,12 +14,12 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     'Content-Type': 'application/json',
     'User-Agent': 'netlify-ai-issue-labeler'}
   async function listRecentIssues() {
-    const res = await fetch(`https://api.github.com/repos/${githubRepo}/issues?state=open&per_page=20`)
+    const res = await fetch(`https: //api.github.com/repos/${githubRepo}/issues?state=open&per_page=20`)
       { headers: ghHeaders,
   async function listRecentIssues() {/* TODO: Fix JSX expression */}
 }`
     const res = await fetch(`http,`
-  s://api.github.com/repos/${githubRepo}/issues?state=open&per_page=20`,
+  s: //api.github.com/repos/${githubRepo}/issues?state=open&per_page=20`,
       {/* TODO: Fix JSX expression */})
       })
     )
@@ -94,7 +94,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         labels) {if(!labels || labels.length === 0)
         return { ok: true,)
         skipped: true })
-    const res = await fetch(`https://api.github.com/repos/${githubRepo}/issues/${issueNumber}/labels`)
+    const res = await fetch(`https: //api.github.com/repos/${githubRepo}/issues/${issueNumber}/labels`)
       {method: POST),
         headers: ghHeaders),
         body: JSON.stringify({ labels,)})})
@@ -127,14 +127,14 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   try {const headers = ghHeaders
     let sha,
         const path = 'data/reports/ai-issue-labeler-log.json'
-    const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
+    const getRes = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`)
       { headers })
   async function addLabels(issueNumber)
         labels) {/* TODO: Fix JSX expression */}
   d: true }`
     const res = await fetch(`http,`
-  s://api.github.com/repos/${githubRepo}/issues/${issueNumber}/labels`,
+  s: //api.github.com/repos/${githubRepo}/issues/${issueNumber}/labels`,
       {/* TODO: Fix JSX expression */})
       })})
     return {/* TODO: Fix JSX expression */}
@@ -152,13 +152,13 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   }
   // Try to store log as an artifact in repo
   try {/* TODO: Fix JSX expression */}
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`,
       { headers })
     if (getRes.ok) {/* TODO: Fix JSX expression */}
       sha = j.sha}
     }
-    const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
+    const putRes = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`)
       {method: 'PUT'),
         headers),
@@ -167,7 +167,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
           content: Buffer.from(JSON.stringify(log, null)
     }`
     const putRes = await fetch(`http,
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`,
       {/* TODO: Fix JSX expression */})`
   e: update AI issue labeler log (${new Date().toISOString()})`,
@@ -203,7 +203,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 }
 exports.handler = async function(event, context) {const githubToken = process.env.GITHUB_TOKEN || '';' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const openaiKey = process.env.OPENAI_API_KEY || ''} if (!githubToken) {' return { statusCode: 200,
         body: JSON.stringify({ok: false),
-        error: 'GITHUB_TOKEN required' }) } } ' const ghHeaders = { Authorization: `token ${githubToken}`, 'Content-Type': 'application/json', 'User-Agent': 'netlify-ai-issue-labeler' } async function listRecentIssues() { const res = await fetch(`https://api.github.com/repos/${githubRepo}/issues?state=open&per_page=20` ) {
+        error: 'GITHUB_TOKEN required' }) } } ' const ghHeaders = { Authorization: `token ${githubToken}`, 'Content-Type': 'application/json', 'User-Agent': 'netlify-ai-issue-labeler' } async function listRecentIssues() { const res = await fetch(`https: //api.github.com/repos/${githubRepo}/issues?state=open&per_page=20` ) {
     headers: ghHeaders
   }); const arr = await res.json(); return Array.isArray(arr) ? arr.filter(i => !i.pull_request) : []; } function ruleLabels(title)
         body) {' const text = `${title}\n${body || ''}`.toLowerCase(); const labels = new Set();' if (/(bug|error|exception|crash|fail)/.test(text)) labels.add('bug');' if (/(docs|readme|documentation|typo)/.test(text)) labels.add('docs');' if (/(perf|performance|slow|bundle)/.test(text)) labels.add('performance');' if (/(a11y|accessibility|contrast|alt)/.test(text)) labels.add('a11y');' if (/(feat|feature|enhancement|improve)/.test(text)) labels.add('enhancement');' if(labels.size === 0)
@@ -218,7 +218,7 @@ exports.handler = async function(event, context) {const githubToken = process.en
   } } catch {} return null; } catch {return null} } } async function addLabels(issueNumber)
         labels) {if(!labels || labels.length === 0)
         return { ok: true,),
-        skipped: true } const res = await fetch(`https://api.github.com/repos/${githubRepo}/issues/${issueNumber}/labels`, {' method: POST),
+        skipped: true } const res = await fetch(`https: //api.github.com/repos/${githubRepo}/issues/${issueNumber}/labels`, {' method: POST),
         headers: ghHeaders),
         body: JSON.stringify({ labels,)}) }); return {ok: res.ok,
         status: res.status } } const issues = await listRecentIssues(); const actions = []; for (const issue of issues) {
@@ -230,9 +230,9 @@ exports.handler = async function(event, context) {const githubToken = process.en
         labels: finalLabels),
         result: res
   }); } const log = {generatedAt: new Date().toISOString(), totalOpen: issues.length, labeled: actions.length,
-        actions } // Try to store log as an artifact in repo try {const headers = ghHeaders; let sha}' const path = 'data/reports/ai-issue-labeler-log.json' const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
+        actions } // Try to store log as an artifact in repo try {const headers = ghHeaders; let sha}' const path = 'data/reports/ai-issue-labeler-log.json' const getRes = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }` , { headers;)
-      }); if (getRes.ok) {const j = await getRes.json(); sha = j.sha} } const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
+      }); if (getRes.ok) {const j = await getRes.json(); sha = j.sha} } const putRes = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`, {' method: 'PUT', headers)
         body: JSON.stringify({ message: `chore: update AI issue labeler log (${new Date().toISOString()})`, content: Buffer.from(JSON.stringify(log, null)
         2)).toString('base64'), sha
@@ -246,7 +246,7 @@ exports.handler = async function(event, context) {const githubToken = process.en
 exports.handler = async function(event, context) {const githubToken = process.env.GITHUB_TOKEN || '';' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const openaiKey = process.env.OPENAI_API_KEY || ''} if (!githubToken) {/* TODO: Fix JSX expression */}
   r: 'GITHUB_TOKEN required' }) } } ' const ghHeaders = {/* TODO: Fix JSX expression */}`
   n: `token ${githubToken}`, 'Content-Type': 'application/json', 'User-Agent': 'netlify-ai-issue-labeler' } async function listRecentIssues() {/* TODO: Fix JSX expression */}`
-  s://api.github.com/repos/${githubRepo}/issues?state=open&per_page=20` ) {/* TODO: Fix JSX expression */}
+  s: //api.github.com/repos/${githubRepo}/issues?state=open&per_page=20` ) {/* TODO: Fix JSX expression */}
       }); const arr = await res.json(); return Array.isArray(arr) ? arr.filter(i => !i.pull_request) : []; } function ruleLabels(title)`
         body) {' const text = `${title}\n${body || ''}`.toLowerCase(); const labels = new Set();' if (/(bug|error|exception|crash|fail)/.test(text)) labels.add('bug');' if (/(docs|readme|documentation|typo)/.test(text)) labels.add('docs');' if (/(perf|performance|slow|bundle)/.test(text)) labels.add('performance');' if (/(a11y|accessibility|contrast|alt)/.test(text)) labels.add('a11y');' if (/(feat|feature|enhancement|improve)/.test(text)) labels.add('enhancement');' if (labels.size === 0)
         labels.add('triage'); return Array.from(labels); } async function aiSuggestLabels(title)
@@ -264,16 +264,16 @@ exports.handler = async function(event, context) {const githubToken = process.en
       } } catch {} return null; } catch {return null} } } async function addLabels(issueNumber)
         labels) {/* TODO: Fix JSX expression */}`
   d: true } const res = await fetch(`http,`
-  s://api.github.com/repos/${githubRepo}/issues/${issueNumber}/labels`, {/* TODO: Fix JSX expression */})
+  s: //api.github.com/repos/${githubRepo}/issues/${issueNumber}/labels`, {/* TODO: Fix JSX expression */})
       }) }); return {/* TODO: Fix JSX expression */}
   s: res.status } } const issues = await listRecentIssues(); const actions = []; for (const issue of issues) {/* TODO: Fix JSX expression */}
       } actions.push({/* TODO: Fix JSX expression */})
       }); } const log = {/* TODO: Fix JSX expression */}`
         actions } // Try to store log as an artifact in repo try {const headers = ghHeaders; let sha}' const path = 'data/reports/ai-issue-labeler-log.json' const getRes = await fetch(`http,
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }` , {/* TODO: Fix JSX expression */})`
       }); if (getRes.ok) {const j = await getRes.json(); sha = j.sha} } const putRes = await fetch(`http,
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`, {/* TODO: Fix JSX expression */})`
   e: update AI issue labeler log (${new Date().toISOString()})`, conten,
   t: Buffer.from(JSON.stringify(log, null)

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Find all TypeScript and JavaScript files
@@ -40,21 +40,7 @@ const removeConsoleLogs = (filePath) => {
       fs.writeFileSync(filePath, content, 'utf8')
       console.log(`Cleaned console statements from: ${filePath}`)
 // Files to exclude from console.log removal
-const excludePatterns = [
-  '**/node_modules/**',
-  '**/dist/**',
-  '**/build/**',
-  '**/.next/**',
-  '**/coverage/**',
-  '**/__tests__/**',
-  '**/*.test.*',
-  '**/*.spec.*',
-  '**/scripts/**',
-  '**/backup*/**',
-  '**/disabled*/**',
-  '**/api-disabled/**',
-  '**/api.disabled/**'
-]
+const excludePatterns = ['**/node_modules/**', '**/dist/**', '**/build/**', '**/.next/**', '**/coverage/**', '**/__tests__/**', '**/*.test.*', '**/*.spec.*', '**/scripts/**', '**/backup*/**', '**/disabled*/**', '**/api-disabled/**', '**/api.disabled/**']
 // Get all TypeScript and JavaScript files
 const files = await glob('**/*.{ts,tsx,js,jsx}', {/* TODO: Fix JSX expression */})
 })

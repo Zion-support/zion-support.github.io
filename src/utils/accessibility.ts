@@ -69,7 +69,7 @@ class AccessibilityService {
           type: 'missing-alt',
           element: img['src'] || 'unknown',
           message: 'Image missing alt attribute',
-          wcag:         ,
+          wcag:  ,
 $4})
       } else if (img.alt === '') {
         warnings.push({
@@ -91,7 +91,7 @@ $4})
           type: 'missing-label',
           element: input.tagName.toLowerCase(),
           message: 'Form element missing label',
-          wcag:         ,
+          wcag:  ,
 $4})
       }
     })
@@ -104,7 +104,7 @@ $4})
           type: 'heading-hierarchy',
           element: heading.tagName.toLowerCase(),
           message: `Heading level skipped from h${prevLevel} to h${level}`,
-          suggestion:         ,
+          suggestion:  ,
 $4})
       }
       prevLevel = level
@@ -116,7 +116,7 @@ $4})
         type: 'missing-skip-link',
         element: 'body',
         message: 'No skip navigation link found',
-        suggestion:       ,
+        suggestion:  ,
 $4})
     }
     // Check for language attribute
@@ -126,7 +126,7 @@ $4})
         type: 'missing-lang',
         element: 'html',
         message: 'Missing lang attribute on html element',
-        wcag:       ,
+        wcag:  ,
 $4})
     }
     // Check for sufficient link text
@@ -138,14 +138,14 @@ $4})
           type: 'empty-link',
           element: link.href || 'unknown',
           message: 'Link has no accessible text',
-          wcag:         ,
+          wcag:  ,
 $4})
       } else if (['click here', 'read more', 'more'].includes(text.toLowerCase())) {
         warnings.push({
           type: 'generic-link-text',
           element: text,
           message: 'Link text is not descriptive',
-          suggestion:         ,
+          suggestion:  ,
 $4})
       }
     })
@@ -157,7 +157,7 @@ $4})
           type: 'small-touch-target',
           element: element.tagName.toLowerCase(),
           message: `Touch target too small: ${Math.round(rect.width)}x${Math.round(rect.height)}px`,
-          suggestion:         ,
+          suggestion:  ,
 $4})
       }
     })
@@ -597,7 +597,7 @@ const html = document.documentElement
   // Trap focus within a modal
   public trapFocus(element: HTMLElement): () => void {
     const focusableElements = element.querySelectorAll(
-      'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      'a[href], button: not([disabled]), textarea: not([disabled]), input: not([disabled]), select: not([disabled]), [tabindex]:not([tabindex="-1"])'
     )
     const firstElement = focusableElements[0] as HTMLElement
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
@@ -614,10 +614,10 @@ const html = document.documentElement
 }
     const focusableElements = element.querySelectorAll()
       'a[href], butto,
-  n:not([disabled]), textare,
-  a:not([disabled]), inpu,
-  t:not([disabled]), selec,"
-  t:not([disabled]), [tabindex]:not([tabindex="-1"])'
+  n: not([disabled]), textare,
+  a: not([disabled]), inpu,
+  t: not([disabled]), selec,"
+  t: not([disabled]), [tabindex]:not([tabindex="-1"])'
     )
     const firstElement = focusableElements[0] as HTMLElement
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement

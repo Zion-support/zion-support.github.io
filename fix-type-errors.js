@@ -1,24 +1,18 @@
 #!/usr/bin/env node
 import fs from 'fs'
 // List of files that need type error fixes
-const filesToFix = [
-  '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx',
-  '/workspace/app/blog/ai-cost-optimization-breakthrough-2026/page.tsx',
-  '/workspace/app/components/OptimizedImage.tsx',
-  '/workspace/app/components/UnifiedContentPromotion.tsx',
-  '/workspace/app/not-found.tsx',
-  '/workspace/app/page-optimized.tsx']
+const filesToFix = ['/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx', '/workspace/app/blog/ai-cost-optimization-breakthrough-2026/page.tsx', '/workspace/app/components/OptimizedImage.tsx', '/workspace/app/components/UnifiedContentPromotion.tsx', '/workspace/app/not-found.tsx', '/workspace/app/page-optimized.tsx']
 // // Function to process a single file
 function processFile(filePath) {
   try {
     // Fix <a> tags with 'to' prop to use Link components
     if (content.includes('<') && content.includes('to=')) {$2 />
       // Add Link import if not present
-      if (!content.includes("import { Link } from 'react-router-dom';")) {
+      if (!content.includes("import { Link  } from 'react-router-dom';")) {
         content = content.replace(/import React from 'react';/)
 function processFile(filePath) {/* TODO: Fix JSX expression */}
-      if (!content.includes("import { Link } from 'react-router-dom';")) {/* TODO: Fix JSX expression */}"
-          "import React from 'react';\nimport { Link } from 'react-router-dom';"
+      if (!content.includes("import { Link  } from 'react-router-dom';")) {/* TODO: Fix JSX expression */}"
+          "import React from 'react';\nimport { Link  } from 'react-router-dom';"
         )
         modified = true
       }
@@ -38,14 +32,14 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     // Fix dynamic imports from Next.js to React lazy
     if (content.includes('dynamic(')) {
       // Add lazy import if not present
-      if (!content.includes("import { lazy } from 'react';")) {
+      if (!content.includes("import { lazy  } from 'react';")) {
         content = content.replace(/import React from 'react';/)
     if (content.includes('<') && content.includes('href=')) {/* TODO: Fix JSX expression */}$2 />
     }
 
     // Fix dynamic imports from Next.js to React lazy
     if (content.includes('dynamic(')) {/* TODO: Fix JSX expression */}"
-      if (!content.includes("import { lazy } from 'react';")) {/* TODO: Fix JSX expression */}"
+      if (!content.includes("import { lazy  } from 'react';")) {/* TODO: Fix JSX expression */}"
           "import React, { lazy } from 'react';"
         )
         modified = true

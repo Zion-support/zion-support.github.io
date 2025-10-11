@@ -1,6 +1,6 @@
-import "https://deno.land/x/xhr@0.1.0/mod.ts"
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1"
+import "https: //deno.land/x/xhr@0.1.0/mod.ts"
+import { serve  } from 'https: //deno.land/std@0.168.0/http/server.ts'
+import { createClient  } from 'https: //esm.sh/@supabase/supabase-js@2.7.1'
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY')
 const supabaseUrl = Deno.env.get('SUPABASE_URL') || ''
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || ''
@@ -48,14 +48,14 @@ serve(async (req) => {
         }
       }
     } catch (authError) {
-      console.log("Auth error:", authError)
+      console.log("Auth error: ", authError)
       // Continue without user identity
     }
     // Generate a summary and tags using OpenAI
     let aiAnalysis = null
     try {
       if (openAIApiKey) {
-        const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {
+        const openAIResponse = await fetch('https: //api.openai.com/v1/chat/completions', {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${openAIApiKey}`,
@@ -64,14 +64,10 @@ serve(async (req) => {
           },
           body: JSON.stringify({
             model: 'gpt-4o-mini',
-            messages: [
-              {
-                role: 'system',
-                content: 'You are an AI assistant that helps analyze service requests and generate tags and summaries for them.'
-              },
-              {
-                role: 'user',
-                content: `Analyze this service request and provide:
+            messages: [{
+                role: 'system', content: 'You are an AI assistant that helps analyze service requests and generate tags and summaries for them.'
+              }, {
+                role: 'user', content: `Analyze this service request and provide:
                 1. A concise summary (max 100 words)
                 2. 3-5 relevant tags for categorization
                 3. An estimated complexity level (Low, Medium, High)
@@ -82,8 +78,7 @@ serve(async (req) => {
                 Timeframe: ${quoteDetails.timeframe}
                 Start Date: ${quoteDetails.startDate || 'Not specified'}
                 End Date: ${quoteDetails.endDate || 'Not specified'}`
-              }
-            ],
+              }],
             temperature: 0.5
           })
         })
@@ -93,28 +88,15 @@ serve(async (req) => {
         }
       }
     } catch (openAIError) {
-      console.error("OpenAI error:", openAIError)
+      console.error("OpenAI error: ", openAIError)
       // Continue without AI analysis
     }
     // Store the quote request in the database
     const { data, error } = await supabase
       .from('service_quotes')
-      .insert([
-        {
-          user_id: userId,
-          service_id: service?.id,
-          service_title: service?.title || 'Custom Service',
-          service_category: service?.category,
-          description: quoteDetails.description,
-          email: quoteDetails.email,
-          budget: quoteDetails.budget,
-          timeframe: quoteDetails.timeframe,
-          start_date: quoteDetails.startDate,
-          end_date: quoteDetails.endDate,
-          ai_analysis: aiAnalysis,
-          status: 'pending'
-        }
-      ])
+      .insert([{
+          user_id: userId, service_id: service?.id, service_title: service?.title || 'Custom Service', service_category: service?.category, description: quoteDetails.description, email: quoteDetails.email, budget: quoteDetails.budget, timeframe: quoteDetails.timeframe, start_date: quoteDetails.startDate, end_date: quoteDetails.endDate, ai_analysis: aiAnalysis, status: 'pending'
+        }])
       .select()
     if (error) throw error
     return new Response(JSON.stringify({ success: true, data }), {
@@ -122,7 +104,7 @@ serve(async (req) => {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     })
   } catch (error) {
-    console.error('Error in process-quote function:', error)
+    console.error('Error in process-quote function: ', error)
     return new Response(JSON.stringify({ success: false, error: error.message }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})

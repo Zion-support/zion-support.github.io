@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface Innovative2026MicroSaasServiceV4 {
   id: string
   name: string
@@ -39,27 +39,10 @@ export interface Innovative2026MicroSaasServiceV4 {
   rating: number
   reviews: number
 }
-export const innovative2026MicroSaasServicesV4: Innovative2026MicroSaasServiceV4[] = [
-  // AI-Powered Content Repurposing Engine
+export const innovative2026MicroSaasServicesV4: Innovative2026MicroSaasServiceV4[] = [// AI-Powered Content Repurposing Engine
   {
-    id: 'ai-content-repurposing-engine',
-    name: 'AI Content Repurposing Engine',
-    tagline: 'Transform one piece of content into 50+ formats automatically',
-    price: '$297',
-    period: '/month',
-    description: 'Intelligent content repurposing platform that automatically transforms blog posts, videos, and articles into multiple formats including social media posts, infographics, podcasts, and more.',
-    features: [
-      'Multi-format content generation',
-      'AI-powered content optimization',
-      'Social media scheduling',
-      'SEO optimization for each format',
-      'Brand voice consistency',
-      'Performance analytics',
-      'Content calendar management',
-      'Multi-platform publishing',
-      'A/B testing capabilities',
-      'ROI tracking'
-    ],
+    id: 'ai-content-repurposing-engine', name: 'AI Content Repurposing Engine', tagline: 'Transform one piece of content into 50+ formats automatically', price: '$297', period: '/month', description: 'Intelligent content repurposing platform that automatically transforms blog posts, videos, and articles into multiple formats including social media posts, infographics, podcasts, and more.', features: [
+      'Multi-format content generation', 'AI-powered content optimization', 'Social media scheduling', 'SEO optimization for each format', 'Brand voice consistency', 'Performance analytics', 'Content calendar management', 'Multi-platform publishing', 'A/B testing capabilities', 'ROI tracking'],
     popular: true,
     icon: '🔄',
     color: 'from-blue-600 to-cyan-600',
@@ -100,18 +83,7 @@ export const innovative2026MicroSaasServicesV4: Innovative2026MicroSaasServiceV4
     price: '$499',
     period: '/month',
     description: 'Revolutionary customer journey mapping platform that uses quantum computing algorithms to analyze customer behavior patterns, predict future actions, and optimize conversion paths.',
-    features: [
-      'Quantum behavior analysis',
-      'Predictive customer modeling',
-      'Real-time journey tracking',
-      'Conversion optimization',
-      'A/B testing automation',
-      'Customer segmentation',
-      'ROI attribution',
-      'Cross-channel analytics',
-      'Personalization engine',
-      'AI-powered insights'
-    ],
+    features: ['Quantum behavior analysis', 'Predictive customer modeling', 'Real-time journey tracking', 'Conversion optimization', 'A/B testing automation', 'Customer segmentation', 'ROI attribution', 'Cross-channel analytics', 'Personalization engine', 'AI-powered insights'],
     popular: false,
     icon: '🧭',
     color: 'from-purple-600 to-indigo-600',
@@ -152,18 +124,7 @@ export const innovative2026MicroSaasServicesV4: Innovative2026MicroSaasServiceV4
     price: '$199',
     period: '/month',
     description: 'Fully autonomous email marketing platform that uses AI to write compelling emails, determine optimal send times, segment audiences, and continuously optimize performance without human intervention.',
-    features: [
-      'AI email writing',
-      'Automatic send time optimization',
-      'Intelligent audience segmentation',
-      'Performance self-optimization',
-      'A/B testing automation',
-      'Subject line optimization',
-      'Content personalization',
-      'Spam score optimization',
-      'Deliverability monitoring',
-      'ROI tracking'
-    ],
+    features: ['AI email writing', 'Automatic send time optimization', 'Intelligent audience segmentation', 'Performance self-optimization', 'A/B testing automation', 'Subject line optimization', 'Content personalization', 'Spam score optimization', 'Deliverability monitoring', 'ROI tracking'],
     popular: true,
     icon: '📧',
     color: 'from-green-600 to-emerald-600',
@@ -204,18 +165,7 @@ export const innovative2026MicroSaasServicesV4: Innovative2026MicroSaasServiceV4
     price: '$399',
     period: '/month',
     description: 'Next-generation customer loyalty platform built on blockchain technology, offering transparent reward systems, cross-business partnerships, and secure digital asset management.',
-    features: [
-      'Blockchain-based rewards',
-      'Cross-business partnerships',
-      'Smart contract automation',
-      'Digital asset management',
-      'Customer data privacy',
-      'Real-time analytics',
-      'Mobile wallet integration',
-      'API for developers',
-      'Multi-currency support',
-      'Fraud prevention'
-    ],
+    features: ['Blockchain-based rewards', 'Cross-business partnerships', 'Smart contract automation', 'Digital asset management', 'Customer data privacy', 'Real-time analytics', 'Mobile wallet integration', 'API for developers', 'Multi-currency support', 'Fraud prevention'],
     popular: false,
     icon: '🔗',
     color: 'from-orange-600 to-red-600',
@@ -256,18 +206,7 @@ export const innovative2026MicroSaasServicesV4: Innovative2026MicroSaasServiceV4
     price: '$149',
     period: '/month',
     description: 'Intelligent video SEO platform that automatically analyzes video content, generates optimized titles, descriptions, tags, and transcripts to improve search engine visibility and rankings.',
-    features: [
-      'Automatic video analysis',
-      'SEO title generation',
-      'Description optimization',
-      'Tag suggestions',
-      'Transcript generation',
-      'Thumbnail optimization',
-      'Performance tracking',
-      'Competitor analysis',
-      'Keyword research',
-      'Ranking monitoring'
-    ],
+    features: ['Automatic video analysis', 'SEO title generation', 'Description optimization', 'Tag suggestions', 'Transcript generation', 'Thumbnail optimization', 'Performance tracking', 'Competitor analysis', 'Keyword research', 'Ranking monitoring'],
     popular: true,
     icon: '🎥',
     color: 'from-pink-600 to-rose-600',
@@ -308,18 +247,7 @@ export const innovative2026MicroSaasServicesV4: Innovative2026MicroSaasServiceV4
     price: '$799',
     period: '/month',
     description: 'Advanced supply chain analytics platform that uses quantum computing to solve complex optimization problems, predict disruptions, and optimize inventory management in real-time.',
-    features: [
-      'Quantum optimization algorithms',
-      'Real-time disruption prediction',
-      'Inventory optimization',
-      'Route optimization',
-      'Demand forecasting',
-      'Risk assessment',
-      'Cost optimization',
-      'Performance analytics',
-      'API integration',
-      'Custom dashboards'
-    ],
+    features: ['Quantum optimization algorithms', 'Real-time disruption prediction', 'Inventory optimization', 'Route optimization', 'Demand forecasting', 'Risk assessment', 'Cost optimization', 'Performance analytics', 'API integration', 'Custom dashboards'],
     popular: false,
     icon: '📦',
     color: 'from-indigo-600 to-blue-600',
@@ -360,18 +288,7 @@ export const innovative2026MicroSaasServicesV4: Innovative2026MicroSaasServiceV4
     price: '$299',
     period: '/month',
     description: 'Fully autonomous social media management platform that creates content, schedules posts, engages with followers, and optimizes performance across all platforms automatically.',
-    features: [
-      'AI content creation',
-      'Automatic posting',
-      'Community engagement',
-      'Performance optimization',
-      'Trend analysis',
-      'Hashtag optimization',
-      'Cross-platform management',
-      'Analytics dashboard',
-      'Brand voice consistency',
-      'Crisis management'
-    ],
+    features: ['AI content creation', 'Automatic posting', 'Community engagement', 'Performance optimization', 'Trend analysis', 'Hashtag optimization', 'Cross-platform management', 'Analytics dashboard', 'Brand voice consistency', 'Crisis management'],
     popular: true,
     icon: '📱',
     color: 'from-teal-600 to-cyan-600',
@@ -412,18 +329,7 @@ export const innovative2026MicroSaasServicesV4: Innovative2026MicroSaasServiceV4
     price: '$599',
     period: '/month',
     description: 'Comprehensive platform for businesses to establish presence in the metaverse, create virtual experiences, monetize digital assets, and engage with customers in immersive environments.',
-    features: [
-      '3D virtual store creation',
-      'Digital asset marketplace',
-      'Virtual event hosting',
-      'Customer engagement tools',
-      'Analytics dashboard',
-      'Payment processing',
-      'NFT integration',
-      'VR/AR support',
-      'Multi-platform deployment',
-      'Custom branding'
-    ],
+    features: ['3D virtual store creation', 'Digital asset marketplace', 'Virtual event hosting', 'Customer engagement tools', 'Analytics dashboard', 'Payment processing', 'NFT integration', 'VR/AR support', 'Multi-platform deployment', 'Custom branding'],
     popular: false,
     icon: '🌐',
     color: 'from-violet-600 to-purple-600',
@@ -464,18 +370,7 @@ export const innovative2026MicroSaasServicesV4: Innovative2026MicroSaasServiceV4
     price: '$199',
     period: '/month',
     description: 'Intelligent legal document generation platform that creates contracts, agreements, and legal forms with AI-powered accuracy, compliance checking, and customization options.',
-    features: [
-      'AI document generation',
-      'Compliance checking',
-      'Customizable templates',
-      'Legal clause library',
-      'Risk assessment',
-      'Document versioning',
-      'Electronic signatures',
-      'Legal research tools',
-      'Multi-jurisdiction support',
-      'Expert consultation'
-    ],
+    features: ['AI document generation', 'Compliance checking', 'Customizable templates', 'Legal clause library', 'Risk assessment', 'Document versioning', 'Electronic signatures', 'Legal research tools', 'Multi-jurisdiction support', 'Expert consultation'],
     popular: true,
     icon: '⚖️',
     color: 'from-amber-600 to-yellow-600',

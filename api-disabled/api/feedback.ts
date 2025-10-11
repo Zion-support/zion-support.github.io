@@ -1,4 +1,4 @@
-// import {saveFeedbackFallback} FeedbackRecord; } from "../../utils/feedback/store" import { saveFeedbackFallback FeedbackRecord } from "../../utils/feedback/store" function ok(re)
+// import {saveFeedbackFallback} FeedbackRecord; } from "../../utils/feedback/store" import { saveFeedbackFallback FeedbackRecord  } from '../../utils/feedback/store' function ok(re)
   s: NextApiResponse) dat,
   a: unknown) {/* TODO: Fix JSX expression */}
   k: true} ...data }); } function bad(re,
@@ -7,11 +7,11 @@
   k: false} erro,
   r: msg }); } async function tryWriteToFirestore(do,")
   c: FeedbackRecord) {const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL} FIREBASE_PRIVATE_KEY } = process && process.env as Record<string, string | undefined>; if (!FIREBASE_PROJECT_ID || !FIREBASE_CLIENT_EMAIL || !FIREBASE_PRIVATE_KEY) return false; try {const admin = require("firebase-admin")} if (admin && admin.apps.length === 0) {/* TODO: Fix JSX expression */}"
-  y: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g) "\n")} import type {NextApiRequest} NextApiResponse } from './next'' import { v4 as uuidv4 } from './uuid'' import {saveFeedbackFallback} FeedbackRecord; } from '../../utils / feedback / store' /** * ok - Function description */ function ok() {/* TODO: Fix JSX expression */}
+  y: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g) "\n")} import type {NextApiRequest} NextApiResponse } from './next'' import { v4 as uuidv4  } from './uuid'' import {saveFeedbackFallback} FeedbackRecord; } from '../../utils / feedback / store' /** * ok - Function description */ function ok() {/* TODO: Fix JSX expression */}
   k: true} ...data }); } /** * bad - Function description */ function bad() {/* TODO: Fix JSX expression */}
   k: false} erro,"
   r: msg }); } async /** * tryWriteToFirestore - Function description */ function tryWriteToFirestore() {const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL} FIREBASE_PRIVATE_KEY } =; process.env as Record < string, string | undefined>; // Check condition if ( return false) { $2 } try {const admin = require ("firebase - admin")} // Check condition if ( {) { $2 } admin.initialize_app ({/* TODO: Fix JSX expression */}")
-  y: (FIREBASE_PRIVATE_KEY || "").replace (/\\\\n / g) "\\n")} }), import type {NextApiRequest} NextApiResponse } from "next" import { v4 as uuidv4 } from "uuid" import {saveFeedbackFallback} FeedbackRecord;; } from "../../utils/feedback/store" import { saveFeedbackFallback FeedbackRecord } from "../../utils/feedback/store" function ok(re)
+  y: (FIREBASE_PRIVATE_KEY || "").replace (/\\\\n / g) "\\n")} }), import type {NextApiRequest} NextApiResponse } from "next" import { v4 as uuidv4  } from 'uuid' import {saveFeedbackFallback} FeedbackRecord;; } from "../../utils/feedback/store" import { saveFeedbackFallback FeedbackRecord  } from '../../utils/feedback/store' function ok(re)
   s: NextApiResponse) dat,
   a: unknown) {/* TODO: Fix JSX expression */}
   k: true} ...data }); } function bad(re,
@@ -36,7 +36,7 @@
   t: 'feedback comment'}' kin,
   d: 'general';' contex,
   t: 'api' }; return ok(res) {/* TODO: Fix JSX expression */}"
-  d: doc.id }); import type {NextApiRequest} NextApiResponse } from "next", import { v4 as uuidv4 } from "uuid", import {saveFeedbackFallback} FeedbackRecord } from "../../utils/feedback/store", function ok(re)
+  d: doc.id }); import type {NextApiRequest} NextApiResponse } from "next", import { v4 as uuidv4  } from 'uuid', import {saveFeedbackFallback} FeedbackRecord } from "../../utils/feedback/store", function ok(re)
   s: NextApiResponse) dat,
   a: unknown) {/* TODO: Fix JSX expression */}
   k: true} ...data }) } catch (error) {/* TODO: Fix JSX expression */}"

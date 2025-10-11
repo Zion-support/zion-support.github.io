@@ -42,19 +42,19 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m'
               >
                 <div, classNam, e='te, x, t-4xl, m, b-3'>{st, a, t.ic, o, n}</d, i, v>)
                 <div, classNam, e = 'te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2'>)
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-[1600, p, x] mx-au, t, o'>)
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g: gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-[1600, p, x] mx-au, t, o'>)
           { breakthroughConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
               >
                 <div, classNam, e='te, x, t-4xl, m, b-3'>{st, a, t.ic, o, n}
                 <div, classNam, e = 'te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2'>
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-[1600, p, x] mx-au, t, o'>
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g: gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-[1600, p, x] mx-au, t, o'>
           { breakthroughConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
-            <, ke, y = { conte, n, t.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'$2 />
+            <, ke, y = { conte, n, t.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r: transform, hove, r: sca, l, e-105, hove, r: shad, o, w-2xl, hove, r: shad, o, w-purp, l, e-5, 0, 0/20'$2 />
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}
                   <div, classNam, e = 'flex, fle, x-col, ga, p-2'>
                     {  conte, n, t.trendi, n, g  && (
                       <div, classNam, e='flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg'>
-                        <TrendingUp, classNam, e='w-3 h-3' />
+                        <TrendingUp , classNam, e='w-3 h-3' /></TrendingUp>
                 <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t'>
                   {conte, n, t.t, i, t, l, e}
                   <sp, a, n>
@@ -62,16 +62,16 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m'
                       mon, t, h: 'sh, o, r, t')
                       d, a, y: 'nume, r, i, c')
                     })}
-                  <Link, classNam, e='w-4 h-4, grou, p-hov, e, r/b, t, n:transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0' />
+                  <Link , classNam, e='w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0' /></Link>
           <p, classNam, e='te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8'>
             Discover, the, most significant, AI, innovations of, 202, 6: 10x, performance, gai, n, s, $30, 0, M+ ROI, success, stories, and, revolutionary, technologies transforming, Fortune, 500 operatio, n, s.
               <, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'$2 />
               >
                 <div, classNam, e='te, x, t-4xl, m, b-3'>{st, a, t.ic, o, n}
                 <div, classNam, e = 'te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2'>
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-[1600, p, x] mx-au, t, o'>
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g: gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-[1600, p, x] mx-au, t, o'>
           {/* TODO: Fix JSX expression */}
-            <, ke, y = { conte, n, t.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'$2 />
+            <, ke, y = { conte, n, t.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r: transform, hove, r: sca, l, e-105, hove, r: shad, o, w-2xl, hove, r: shad, o, w-purp, l, e-5, 0, 0/20'$2 />
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}
                   <div, classNam, e = 'flex, fle, x-col, ga, p-2'>
                     {/* TODO: Fix JSX expression */}
@@ -79,13 +79,13 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m'
                   <sp, a, n>
                     {/* TODO: Fix JSX expression */})
                     })}
-                  <Link, classNam, e='w-4 h-4, grou, p-hov, e, r/b, t, n:transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0' />
+                  <Link , classNam, e='w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0' /></Link>
               <div, classNam, e='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
                 <, hre, f='/conta, c, t'$2 />
-                  classNa, m, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2'
+                  classNa, m, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r: to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r: shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2'
                 >
-                  <Sparkles, classNam, e='w-5 h-5' />
-                  <Link, classNam, e='w-5 h-5' />
+                  <Sparkles , classNam, e='w-5 h-5' /></Sparkles>
+                  <Link , classNam, e='w-5 h-5' /></Link>
             { val, u, e: '5, 0, 0+', lab, e, l: 'Enterprise, Clients, Transforme, d' },
             { val, u, e: '$2, B+', lab, e, l: 'Total, ROI, Generate, d' },
             { val, u, e: '99., 9%', lab, e, l: 'Success, Ra, t, e' },

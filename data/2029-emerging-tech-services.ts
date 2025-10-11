@@ -78,16 +78,12 @@ export interface EmergingTechService2029 {/* TODO: Fix JSX expression */}
     address: string,
   }
 }
-export const emergingTechServices2029: EmergingTechService2029[] = [,
-    id: "2029-emerging-tech-service", name: "2029 Emerging Tech Service Platform",
-    tagline: "Emerging tech services for 2029", price: "$399/month"
+export const emergingTechServices2029: EmergingTechService2029[] = [id: "2029-emerging-tech-service", name: "2029 Emerging Tech Service Platform", tagline: "Emerging tech services for 2029", price: "$399/month"
     description: "Advanced platform showcasing emerging technology services and innovations for 2029."
-    features: [,
-      "Emerging tech services"
+    features: [, "Emerging tech services"
       "Innovation platform"
       "Future capabilities"
-      "Advanced features",
-      "Expert insights"],
+      "Advanced features", "Expert insights"],
     link: "/services/2029-emerging-tech-service", category: "Emerging Tech Services 2029",
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
@@ -127,23 +123,17 @@ export const emergingTechServices2029: EmergingTechService2029[] = [,
   s: string}
 }
 export const,
-  emergingTechServices2029: EmergingTechService2029[] = [,
-    i,"
-  d: "2029-emerging-tech-service", nam,"
-  e: "2029 Emerging Tech Service Platform",
-    taglin,"
-  e: "Emerging tech services for 2029", pric,"
-  e: "$399/month",
-    descriptio,"
-  n: "Advanced platform showcasing emerging technology services and innovations for 2029.",
-    feature,
-  s: [,"
+  emergingTechServices2029: EmergingTechService2029[] = [i, "
+  d: "2029-emerging-tech-service", nam, "
+  e: "2029 Emerging Tech Service Platform", taglin, "
+  e: "Emerging tech services for 2029", pric, "
+  e: "$399/month", descriptio, "
+  n: "Advanced platform showcasing emerging technology services and innovations for 2029.", feature, s: [, "
       "Emerging tech services""
       "Innovation platform""
       "Future capabilities""
       "Advanced features""
-      "Expert insights"
-    ],
+      "Expert insights"],
     lin,"
   k: "/services/2029-emerging-tech-service", categor,"
   y: "Emerging Tech Services 2029",
@@ -178,13 +168,7 @@ id: "2029-emerging-tech-service"
     tagline: "Emerging tech services for 2029",
     price: "$399/month",
     description: "Advanced platform showcasing emerging technology services and innovations for 2029.",
-    features: [,
-      "Emerging tech services",
-      "Innovation platform",
-      "Future capabilities",
-      "Advanced features",
-      "Expert insights"
-    ],
+    features: ["Emerging tech services", "Innovation platform", "Future capabilities", "Advanced features", "Expert insights"],
     link: "/services/2029-emerging-tech-service"
     category: "Emerging Tech Services 2029"
     realImplementation: true
@@ -210,13 +194,12 @@ id: "2029-emerging-tech-service"
     descriptio,"
   n: "Advanced platform showcasing emerging technology services and innovations for 2029.",
     feature,
-  s: [,"
-      "Emerging tech services","
-      "Innovation platform","
-      "Future capabilities","
-      "Advanced features","
-      "Expert insights"
-    ],
+  s: ["
+      "Emerging tech services", "
+      "Innovation platform", "
+      "Future capabilities", "
+      "Advanced features", "
+      "Expert insights"],
     lin,"
   k: "/services/2029-emerging-tech-service",
     categor,"
@@ -288,13 +271,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  emergingTechServices2029: EmergingTechService2029[] = [ i,"
-  d: "2029-emerging-tech-service", nam,"
-  e: "2029 Emerging Tech Service Platform", taglin,"
-  e: "Emerging tech services for 2029", pric,"
-  e: "$399/month", descriptio,"
-  n: "Advanced platform showcasing emerging technology services and innovations for 2029.", feature,"
-  s: [ "Emerging tech services" "Innovation platform" "Future capabilities" "Advanced features" "Expert insights" ], lin,"
+  emergingTechServices2029: EmergingTechService2029[] = [i, "
+  d: "2029-emerging-tech-service", nam, "
+  e: "2029 Emerging Tech Service Platform", taglin, "
+  e: "Emerging tech services for 2029", pric, "
+  e: "$399/month", descriptio, "
+  n: "Advanced platform showcasing emerging technology services and innovations for 2029.", feature, "
+  s: [ "Emerging tech services" "Innovation platform" "Future capabilities" "Advanced features" "Expert insights"], lin,"
   k: "/services/2029-emerging-tech-service", categor,"
   y: "Emerging Tech Services 2029", realImplementatio,
   n: true, contactInf,
@@ -311,7 +294,7 @@ i,
   e: "Emerging tech services for 2029", pric,"
   e: "$399/month", descriptio,"
   n: "Advanced platform showcasing emerging technology services and innovations for 2029.", feature,"
-  s: [ "Emerging tech services", "Innovation platform", "Future capabilities", "Advanced features", "Expert insights" ], lin,"
+  s: ["Emerging tech services", "Innovation platform", "Future capabilities", "Advanced features", "Expert insights"], lin,"
   k: "/services/2029-emerging-tech-service", categor,"
   y: "Emerging Tech Services 2029", realImplementatio,
   n: true, contactInf,

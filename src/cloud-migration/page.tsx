@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Server, Database, Users, Clock, Phone } from 'lucide-react'
+import { Helmet  } from 'react-helmet-async'
+import { Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Server, Database, Users, Clock, Phone  } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const,
@@ -55,15 +55,7 @@ const,
   s: ['Vendor independence', 'Disaster recovery', 'Cost optimization', 'Flexibility']
     }
   ]
-  const migrationSteps = [
-      titl,
-  e: 'Assessment & Planning',
-      descriptio,
-  n: 'Comprehensive analysis of current infrastructure and migration strategy',
-      ico,
-  n: CheckCircle,
-      feature,
-  s: ['Infrastructure audit', 'Cost analysis', 'Migration timeline']
+  const migrationSteps = [titl, e: 'Assessment & Planning', descriptio, n: 'Comprehensive analysis of current infrastructure and migration strategy', ico, n: CheckCircle, feature, s: ['Infrastructure audit', 'Cost analysis', 'Migration timeline']
       ste,
   p: '2',
       titl,
@@ -104,24 +96,8 @@ const,
   n: TrendingUp,
       duratio,
   n: 'Ongoing'
-  const pricingPlans = [
-      nam,
-  e: 'Small Business',
-      pric,
-  e: '$2,500',
-      perio,
-  d: 'one-time',
-      descriptio,
-  n: 'Perfect for small businesses with basic cloud needs',
-      feature,
-  s: [
-        'Up to 10 servers',
-        'Basic migration planning',
-        'Standard security setup',
-        'Email support',
-        '30-day warranty',
-        'Documentation'
-      ],
+  const pricingPlans = [nam, e: 'Small Business', pric, e: '$2, 500', perio, d: 'one-time', descriptio, n: 'Perfect for small businesses with basic cloud needs', feature, s: [
+        'Up to 10 servers', 'Basic migration planning', 'Standard security setup', 'Email support', '30-day warranty', 'Documentation'],
       popula,
   r: false,
   name: 'Professional',
@@ -188,7 +164,7 @@ const,
           <div className="text-center max-w-4xl mx-auto"></div>"
             <div className="flex items-center justify-center mb-6"></div>"
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mr-4"></div>"
-                <Cloud className="w-8 h-8 text-white" />
+                <Cloud className="w-8 h-8 text-white" /></Cloud>
               </div>"
               <h1 className="text-5xl font-bold text-white neon-text">
                 Cloud Migration</$1>"
@@ -202,7 +178,7 @@ const,
                 href="/contact""
                 className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg font-semibold">
                 Start Migration;"
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
               </Link>"
                 href="/demo""
                 className="cyber-button-outline inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
@@ -217,10 +193,10 @@ const,
               from planning to optimization.
           "
           < className="grid grid-cols-1,"$2 />
-  md:grid-cols-3 gap-8">
+  md: grid-cols-3 gap-8">
             {/* TODO: Fix JSX expression */}"
               < key={index} className="cyber-card p-8 text-center group,"$2 />
-  hover:scale-105 transition-transform duration-300"></div>"
+  hover: scale-105 transition-transform duration-300"></div>"
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6"></div>"
                   <feature.icon className="w-8 h-8 text-white" /></feature>"
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>"
@@ -228,14 +204,14 @@ const,
                 <ul className="space-y-2">
                   {/* TODO: Fix JSX expression */}"
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400"></li>"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
       <Navigation /></Navigation>"
       <main className="pt-24 pb-16 px-4"></main>"
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}"
           <section className="text-center mb-16"></section>"
             < className="text-4xl,$2 />
-  sm:text-5xl,"
+  sm: text-5xl,"
   md: text-6xl font-bold text-white mb-6"></h1>
               Cloud Migration Services;"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
@@ -246,7 +222,7 @@ const,
                 Get Started,
               </a>"
                 className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold,
-  hover:bg-blue-600,"
+  hover: bg-blue-600,"
   hover: text-white transition-all duration-300 inline-flex items-center"
                 View Demo
           </section>
@@ -256,10 +232,10 @@ const,
               Our Migration Services,
             </h2>"
             < className="grid grid-cols-1,$2 />
-  md:grid-cols-2,"
-  lg:grid-cols-3 gap-8"></div>"
+  md: grid-cols-2,"
+  lg: grid-cols-3 gap-8"></div>"
                 < key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6,"$2 />
-  hover:bg-white/20 transition-all duration-300"></div>"
+  hover: bg-white/20 transition-all duration-300"></div>"
                   <div className="flex items-center mb-4"></div>"
                     <feature.icon className="w-8 h-8 text-blue-400 mr-3" /></feature>"
                     <h3 className="text-xl font-semibold text-white">{feature.title}</h3>"
@@ -272,12 +248,12 @@ const,
                   </ul>"
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
                     <li key={idx} className="flex items-center text-sm text-gray-400"></li>"
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" /></CheckCircle>
           {/* Migration Process */}
               Our Migration Process;"
             < className="grid grid-cols-1,$2 />
-  md:grid-cols-2,"
-  lg:grid-cols-4 gap-8">
+  md: grid-cols-2,"
+  lg: grid-cols-4 gap-8">
               {/* TODO: Fix JSX expression */}"
                 <div key={index} className="text-center"></div>"
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
@@ -291,7 +267,7 @@ const,
             <p className="text-xl text-gray-300 mb-8">
               Let our experts help you migrate to the cloud safely and efficiently;"
               < key={index} className="cyber-card p-8 group,"$2 />
-  hover:scale-105 transition-transform duration-300"></div>"
+  hover: scale-105 transition-transform duration-300"></div>"
                   <step.icon className="w-8 h-8 text-blue-400 mr-3" /></step>"
                   <h3 className="text-xl font-bold text-white">{step.title}</h3>"
                 <p className="text-gray-300 mb-6">{step.description}

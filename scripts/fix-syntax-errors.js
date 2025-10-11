@@ -1,28 +1,10 @@
 #!/usr/bin/env node
 import fs from 'fs'
-import { glob } from 'glob'
+import { glob  } from 'glob'
 // Files to process
-const filePatterns = [
-  'app/**/*.{ts,tsx}',
-  'src/**/*.{ts,tsx}',
-  'components/**/*.{ts,tsx}'
-]
+const filePatterns = ['app/**/*.{ts, tsx}', 'src/**/*.{ts, tsx}', 'components/**/*.{ts, tsx}']
 // Files to exclude
-const excludePatterns = [
-  '**/node_modules/**',
-  '**/dist/**',
-  '**/.next/**',
-  '**/build/**',
-  '**/coverage/**',
-  '**/*.test.{ts,tsx}',
-  '**/*.spec.{ts,tsx}',
-  '**/scripts/**',
-  '**/automation/**',
-  '**/backup*/**',
-  '**/disabled*/**',
-  '**/corrupted*/**',
-  '**/temp*/**'
-]
+const excludePatterns = ['**/node_modules/**', '**/dist/**', '**/.next/**', '**/build/**', '**/coverage/**', '**/*.test.{ts, tsx}', '**/*.spec.{ts, tsx}', '**/scripts/**', '**/automation/**', '**/backup*/**', '**/disabled*/**', '**/corrupted*/**', '**/temp*/**']
 let totalFiles = 0
 let processedFiles = 0
 let fixedFiles = 0
@@ -134,10 +116,10 @@ async function main() {
   console.log(`   - Files fixed: ${fixedFiles}`)
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file: //${process.argv[1]}`) {
     main()
   }
 
 export { processFile, fixSyntaxErrors }
-// #!/usr/bin/env node import fs from 'fs'' import path from 'path'' import { glob } from 'glob' ' // Find all TypeScript/JavaScript files' const files = await glob('src/**/*.{ts,tsx,js}jsx}') {/* TODO: Fix JSX expression */}
+// #!/usr/bin/env node import fs from 'fs'' import path from 'path'' import { glob  } from 'glob' ' // Find all TypeScript/JavaScript files' const files = await glob('src/**/*.{ts,tsx,js}jsx}') {/* TODO: Fix JSX expression */}
   d: '/workspace' }); let totalFixed = 0; let totalErrors = 0; for (const file of files) {/* TODO: Fix JSX expression */}

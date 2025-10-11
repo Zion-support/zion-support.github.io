@@ -2,8 +2,8 @@
 
 import fs from 'fs'
 import path from 'path'
-import { execSync } from 'child_process'
-import { fileURLToPath } from 'url'
+import { execSync  } from 'child_process'
+import { fileURLToPath  } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to find all TypeScript/JavaScript files
@@ -38,8 +38,7 @@ function fixMergeConflicts(filePath) {
     }
     
     // Fix common syntax issues
-    const fixes = [
-      // Fix missing closing tags in JSX
+    const fixes = [// Fix missing closing tags in JSX
       {
         pattern: /<meta\s+[^>]*name="[^"]*"[^>]*>/g,
         replacement: (match) => {
@@ -96,11 +95,10 @@ function fixParsingErrors(filePath) {
     let content = fs.readFileSync(filePath, 'utf8')
     let modified = false
     // Fix common parsing errors
-    const fixes = [
-      // Fix missing commas in object literals
+    const fixes = [// Fix missing commas in object literals
       {
         pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:/g,
-        replacement: '$1: [$2],\n    $3:'
+        replacement: '$1: [$2],\n    $3: '
       },
       // Fix missing closing brackets
       {

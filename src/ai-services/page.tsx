@@ -1,48 +1,44 @@
 import React from 'react'
-import { Brain, Zap, Shield, BarChart } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react'
-import { Helmet } from 'react-helmet-async'
+import { Brain, Zap, Shield, BarChart  } from 'lucide-react'
+import { Link  } from 'react-router-dom'
+import { Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone } from 'lucide-react'
+import { Helmet  } from 'react-helmet-async'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const AIServicesPage: React.FC = () => {
-  const services = [
-    {
-      title: 'AI Strategy & Consulting',
-      description: 'Comprehensive AI strategy development and implementation consulting',
-      icon: Brain,
-      features: ['AI Readiness Assessment', 'Strategic Planning', 'Implementation Roadmap', 'ROI Analysis'],
-      price:     ,
-$4},
+  return (
+
+  const services = [{
+      title: 'AI Strategy & Consulting', description: 'Comprehensive AI strategy development and implementation consulting', icon: Brain, features: ['AI Readiness Assessment', 'Strategic Planning', 'Implementation Roadmap', 'ROI Analysis'],
+      price:  ,
+$4
+  );
+},
       title: 'Machine Learning Solutions',
       description: 'Custom machine learning models and algorithms for your business needs',
       icon: Zap,
       features: ['Custom Model Development', 'Data Preprocessing', 'Model Training', 'Performance Optimization'],
-      price:       ,
+      price:  ,
 titletitle: 'AI Security & Compliance',
       description: 'Enterprise-grade AI security and compliance solutions',
       icon: Shield,
       features: ['AI Security Audit', 'Compliance Framework', 'Risk Assessment', 'Security Monitoring'],
-      price:       ,
+      price:  ,
 titletitle: 'AI Analytics & Insights',
       description: 'Advanced analytics and business intelligence powered by AI',
       icon: BarChart,
       features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'Automated Reporting'],
-      price:     ,
+      price:  ,
 $4}
   ]
-  const benefits = [
-    '300% Average ROI Increase',
-    '95% Process Automation',
-    '50% Cost Reduction',
-    '99.9% Uptime Guarantee'
+  const benefits = ['300% Average ROI Increase', '95% Process Automation', '50% Cost Reduction', '99.9% Uptime Guarantee'
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <Helmet ></Helmet>
         <title>AI Services | Zion Tech Group
         <meta name="description" content="Advanced AI services solutions by Zion Tech Group." />
-      <Navigation />
+      <Navigation /></Navigation>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-5xl font-bold text-white mb-6">AI Services
@@ -56,37 +52,23 @@ $4}
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
               Learn More
   
-      <Footer />
-  ),
-}
+      <Footer /></Footer>
+  ), }
 export default $1
 'use client'
 import React, { useState, useEffect } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { 
-  Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star, 
-  Phone, Mail, MapPin, Clock, Users, Award, Target, BarChart,
-  Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare
-} from 'lucide-react'
+import { Helmet  } from 'react-helmet-async'
+import { Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star, Phone, Mail, MapPin, Clock, Users, Award, Target, BarChart, Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare
+ } from 'lucide-react'
 export default function AIServicesPage() {
     const [activeTab, setActiveTab] = useState('overview')
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
     setIsVisible(true)
   }, [])
-  const aiServices = [
-    {
-      id: 'ai-automation',
-      title: 'AI Process Automation',
-      description: 'Intelligent automation solutions that reduce manual work by 80% and increase efficiency by 300%',
-      features: [
-        'Workflow automation with 99.9% accuracy',
-        'Natural language processing integration',
-        'Real-time decision making',
-        'Custom automation workflows',
-        'API integration capabilities',
-        'Performance monitoring & analytics'
-      ],
+  const aiServices = [{
+      id: 'ai-automation', title: 'AI Process Automation', description: 'Intelligent automation solutions that reduce manual work by 80% and increase efficiency by 300%', features: [
+        'Workflow automation with 99.9% accuracy', 'Natural language processing integration', 'Real-time decision making', 'Custom automation workflows', 'API integration capabilities', 'Performance monitoring & analytics'],
       pricing: {
         starter: { price: '$2,500', period: '/month', features: ['Up to 10 workflows', 'Basic analytics', 'Email support'] },
         professional: { price: '$7,500', period: '/month', features: ['Unlimited workflows', 'Advanced analytics', 'Priority support', 'Custom integrations'] },
@@ -100,14 +82,7 @@ export default function AIServicesPage() {
       id: 'ai-analytics',
       title: 'AI-Powered Business Intelligence',
       description: 'Advanced analytics platform that provides actionable insights and predictive analytics for data-driven decisions',
-      features: [
-        'Real-time data processing',
-        'Predictive analytics & forecasting',
-        'Custom dashboard creation',
-        'Machine learning models',
-        'Data visualization tools',
-        'Automated reporting'
-      ],
+      features: ['Real-time data processing', 'Predictive analytics & forecasting', 'Custom dashboard creation', 'Machine learning models', 'Data visualization tools', 'Automated reporting'],
       pricing: {
         starter: { price: '$3,000', period: '/month', features: ['Up to 5 data sources', 'Basic dashboards', 'Standard reports'] },
         professional: { price: '$8,500', period: '/month', features: ['Unlimited data sources', 'Advanced dashboards', 'Custom models', 'API access'] },
@@ -121,17 +96,10 @@ export default function AIServicesPage() {
       id: 'ai-customer-support',
       title: 'AI Customer Support Platform',
       description: '24/7 intelligent customer support with multilingual capabilities and 95% resolution rate',
-      features: [
-        'Natural language understanding',
-        'Multi-channel support (chat, email, phone)',
-        'Sentiment analysis',
-        'Knowledge base integration',
-        'Human handoff capabilities',
-        'Performance analytics'
-      ],
+      features: ['Natural language understanding', 'Multi-channel support (chat, email, phone)', 'Sentiment analysis', 'Knowledge base integration', 'Human handoff capabilities', 'Performance analytics'],
       pricing: {
-        starter: { price: '$1,500', period: '/month', features: ['Up to 1,000 conversations', 'Basic AI responses', 'Email support'] },
-        professional: { price: '$4,500', period: '/month', features: ['Up to 10,000 conversations', 'Advanced AI', 'Multi-channel support', 'Analytics dashboard'] },
+        starter: { price: '$1,500', period: '/month', features: ['Up to 1, 000 conversations', 'Basic AI responses', 'Email support'] },
+        professional: { price: '$4,500', period: '/month', features: ['Up to 10, 000 conversations', 'Advanced AI', 'Multi-channel support', 'Analytics dashboard'] },
         enterprise: { price: '$12,000', period: '/month', features: ['Unlimited conversations', 'Custom AI training', 'Dedicated support', 'SLA guarantee'] }
       },
       icon: MessageSquare,
@@ -142,17 +110,10 @@ export default function AIServicesPage() {
       id: 'ai-content-generation',
       title: 'AI Content Generation Suite',
       description: 'Complete content creation platform with AI writing, image generation, and video production capabilities',
-      features: [
-        'AI writing for all content types',
-        'Image generation & editing',
-        'Video creation & editing',
-        'SEO optimization',
-        'Brand voice consistency',
-        'Content scheduling & publishing'
-      ],
+      features: ['AI writing for all content types', 'Image generation & editing', 'Video creation & editing', 'SEO optimization', 'Brand voice consistency', 'Content scheduling & publishing'],
       pricing: {
         starter: { price: '$2,000', period: '/month', features: ['Up to 100 pieces/month', 'Basic AI writing', 'Stock images'] },
-        professional: { price: '$6,000', period: '/month', features: ['Up to 1,000 pieces/month', 'Advanced AI', 'Custom images', 'Video generation'] },
+        professional: { price: '$6,000', period: '/month', features: ['Up to 1, 000 pieces/month', 'Advanced AI', 'Custom images', 'Video generation'] },
         enterprise: { price: '$15,000', period: '/month', features: ['Unlimited content', 'Custom AI models', 'Dedicated team', 'White-label solution'] }
       },
       icon: Code,
@@ -163,14 +124,7 @@ export default function AIServicesPage() {
       id: 'ai-cybersecurity',
       title: 'AI Cybersecurity Solutions',
       description: 'Advanced threat detection and prevention system with 99.8% accuracy in identifying security threats',
-      features: [
-        'Real-time threat detection',
-        'Behavioral analysis',
-        'Automated incident response',
-        'Vulnerability assessment',
-        'Compliance monitoring',
-        'Security analytics dashboard'
-      ],
+      features: ['Real-time threat detection', 'Behavioral analysis', 'Automated incident response', 'Vulnerability assessment', 'Compliance monitoring', 'Security analytics dashboard'],
       pricing: {
         starter: { price: '$4,000', period: '/month', features: ['Basic threat detection', 'Email security', 'Standard monitoring'] },
         professional: { price: '$10,000', period: '/month', features: ['Advanced threat detection', 'Network security', 'Compliance tools', '24/7 monitoring'] },
@@ -184,14 +138,7 @@ export default function AIServicesPage() {
       id: 'ai-ml-platform',
       title: 'AI/ML Development Platform',
       description: 'Complete machine learning platform for building, training, and deploying custom AI models',
-      features: [
-        'No-code ML model builder',
-        'Pre-trained model library',
-        'Custom model training',
-        'Model deployment & scaling',
-        'A/B testing framework',
-        'Performance monitoring'
-      ],
+      features: ['No-code ML model builder', 'Pre-trained model library', 'Custom model training', 'Model deployment & scaling', 'A/B testing framework', 'Performance monitoring'],
       pricing: {
         starter: { price: '$3,500', period: '/month', features: ['Basic ML tools', 'Pre-trained models', 'Community support'] },
         professional: { price: '$9,000', period: '/month', features: ['Advanced ML tools', 'Custom training', 'Priority support', 'API access'] },
@@ -202,28 +149,23 @@ export default function AIServicesPage() {
       popular: false
     }
   ]
-  const stats = [
-    { icon: Users, value: '500+', label: 'AI Models Deployed', color: 'text-cyan-400' },
-    { icon: TrendingUp, value: '300%', label: 'Average ROI', color: 'text-green-400' },
-    { icon: Clock, value: '24/7', label: 'AI Monitoring', color: 'text-blue-400' },
-    { icon: Award, value: '99.9%', label: 'Uptime Guarantee', color: 'text-purple-400' }
-  ]
+  const stats = [{ icon: Users, value: '500+', label: 'AI Models Deployed', color: 'text-cyan-400' }, { icon: TrendingUp, value: '300%', label: 'Average ROI', color: 'text-green-400' }, { icon: Clock, value: '24/7', label: 'AI Monitoring', color: 'text-blue-400' }, { icon: Award, value: '99.9%', label: 'Uptime Guarantee', color: 'text-purple-400' }]
   return (
-    <React.Fragment>
-      <Helmet>
+    <React .Fragment></React>
+      <Helmet ></Helmet>
         <title>AI Services - Zion Tech Group | Advanced AI Solutions & Pricing
         <meta name="description" content="Comprehensive AI services including automation, analytics, customer support, content generation, cybersecurity, and ML platforms. Get 300% ROI with our AI solutions." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI automation, AI analytics, AI customer support, AI content generation, AI cybersecurity, ML platform" />
-        <meta property="og:title" content="AI Services - Zion Tech Group" />
+        <meta property="og: title" content="AI Services - Zion Tech Group" />
         <meta property="og:description" content="Transform your business with our comprehensive AI services. Achieve 300% ROI with intelligent automation, analytics, and AI-powered solutions." />
-        <meta property="og:type" content="website" />
+        <meta property="og: type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-services" />
       <div className="min-h-screen bg-slate-900 cyber-grid">
         {/* Hero Section */}
-        <section className="relative py-20 lg:py-32 overflow-hidden">
+        <section className="relative py-20 lg: py-32 overflow-hidden">
           <div className="container mx-auto px-4">
             <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h1 className="text-5xl lg:text-7xl font-bold mb-6">
+              <h1 className="text-5xl lg: text-7xl font-bold mb-6">
                 <span className="holographic-text cyber-text">AI Services
               <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Transform your business with cutting-edge AI solutions. Achieve 300% ROI, 70% cost reduction, 
@@ -233,13 +175,13 @@ export default function AIServicesPage() {
                 <$2 />
                   href="tel:+13024640950"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg">
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className="w-5 h-5 mr-2" /></Phone>
                   (302) 464-0950
   
                 <$2 />
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg">
-                  <Mail className="w-5 h-5 mr-2" />
+                  <Mail className="w-5 h-5 mr-2" /></Mail>
                   Get Quote,
   
               </div>
@@ -249,7 +191,7 @@ export default function AIServicesPage() {
         {/* Stats Section */}
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 lg: grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className={`w-16 h-16 mx-auto mb-4 ${stat.color} bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center`}>
@@ -261,7 +203,7 @@ export default function AIServicesPage() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl lg: text-5xl font-bold text-white mb-6">
                 <span className="neon-text">Our AI Services
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive AI solutions designed to transform your business operations and drive unprecedented growth.
@@ -277,16 +219,14 @@ export default function AIServicesPage() {
                   <h3 className="text-2xl font-bold text-white mb-4">{service.title}
                   <p className="text-gray-300 mb-6">{service.description}
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features:
-                    <ul className="space-y-2">
+                    <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features: <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" /></CheckCircle>
                           {feature}
                       ))}
                   <div className="border-t border-gray-700 pt-6">
-                    <h4 className="text-lg font-semibold text-cyan-400 mb-4">Pricing:
-                    <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-cyan-400 mb-4">Pricing: <div className="space-y-3">
                       {Object.entries(service.pricing).map(([tier, details]) => (
                         <div key={tier} className="flex justify-between items-center p-3 bg-slate-800/50 rounded-lg">
                           <div>
@@ -320,13 +260,13 @@ export default function AIServicesPage() {
               <$2 />
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg">
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2" /></Phone>
                 Call (302) 464-0950
   
               <$2 />
                 href="mailto:kleber@ziontechgroup.com"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg">
-                <Mail className="w-5 h-5 mr-2" />
+                <Mail className="w-5 h-5 mr-2" /></Mail>
                 Email Us
   
             </div>

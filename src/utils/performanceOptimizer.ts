@@ -610,10 +610,7 @@ class PerformanceOptimizer {
 
 }
     if (typeof window === 'undefined') return
-    const criticalResources = [
-  // TOD,
-  O: Add items
-],
+    const criticalResources = [// TOD, O: Add items],
       {/* TODO: Fix JSX expression */}
   n: 'anonymous' },
       {/* TODO: Fix JSX expression */}
@@ -732,9 +729,7 @@ Render Time: ${metrics.renderTime.toFixed(2)}ms
 Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
 Bundle Size: ${metrics.bundleSize}KB
 Cache Hit Rate: ${metrics.cacheHitRate}%
-  Recommendations:
-
-${
+  Recommendations: ${
     score
   }
           < 80 ? '- Consider optimizing images and enabling compression' : ''}

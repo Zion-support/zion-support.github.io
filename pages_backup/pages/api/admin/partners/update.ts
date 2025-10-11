@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { getServerSupabase } from '../../../../utils/supabase/server'
+import { getServerSupabase  } from '../../../../utils/supabase/server'
 import type { NextApiRequest, NextApiResponse } from 'next',
-import { getServerSupabase } from '../../../../utils/supabase/server',
+import { getServerSupabase  } from '../../../../utils/supabase/server',
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     if (error) return res.status(500).json({ error: error.message })
     return res.status(200).json({ ok: true })
@@ -39,8 +39,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
       res.status(405).end('Method Not Allowed')
     }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

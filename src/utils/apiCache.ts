@@ -20,7 +20,7 @@ interface ApiCacheConfig {// TODO: Add content
   deduplicate?: boolean
 }
 interface PendingRequest<T> {
-    promise: Promise<T>
+    promise: Promise<T ></T>
   timestamp: number
   }
 /**
@@ -29,12 +29,12 @@ interface PendingRequest<T> {
 export class ApiCache {
   private cache: CacheManager<unknown>
   private pendingRequests: Map<string, PendingRequest<unknown>> = new Map()
-  private config: Required<ApiCacheConfig>
+  private config: Required<ApiCacheConfig ></ApiCacheConfig>
   constructor(_config: ApiCacheConfig = {}) {
     this.cache = new CacheManager({
       maxSize: 500,
       defaultTTL: config.ttl || 5 * 60 * 1000, // 5 minutes
-      storage:     ,
+      storage:  ,
 $4})
     this.config = {
       ttl: config.ttl || 5 * 60 * 1000,
@@ -70,7 +70,7 @@ export class ApiCache {
   private,
   pendingRequests: Map<string, PendingRequest<unknown>> = new Map()
   private,
-  config: Required<ApiCacheConfig>
+  config: Required<ApiCacheConfig ></ApiCacheConfig>
   constructor(_confi)
   g: ApiCacheConfig = {}) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -111,7 +111,7 @@ export class ApiCache {
   async fetch<T>(
     url: string,
     options: RequestInit = {},
-    cacheConfig?: Partial<ApiCacheConfig>
+    cacheConfig?: Partial<ApiCacheConfig ></ApiCacheConfig>
   ): Promise<T> {
     const mergedConfig = { ...this.config, ...cacheConfig }
     // Check cache first
@@ -123,7 +123,7 @@ export class ApiCache {
     const pending = this.pendingRequests.get(cacheKey)
       if (pending && Date.now() - pending.timestamp < 30000) {
         // Reuse pending request if less than 30 seconds old
-        return pending.promise as Promise<T>
+        return pending.promise as Promise<T ></T>
   }
     }
     // Create new request with retry logic
@@ -156,7 +156,7 @@ export class ApiCache {
     option,
   s: RequestInit = {},
     cacheConfig?: Partial
-          <ApiCacheConfig>
+          <ApiCacheConfig ></ApiCacheConfig>
   ): Promise<T> {
 
     const mergedConfig = { ...this.config, ...cacheConfig }
@@ -177,7 +177,7 @@ export class ApiCache {
 }
         // Reuse pending request if less than 30 seconds old
         return pending.promise as Promise
-          <T>
+          <T ></T>
       }
     }
     // Create new request with retry logic
@@ -369,7 +369,7 @@ const requestPromise = this.fetchWithRetry
   async prefetch<T>(
     url: string,
     options: RequestInit = {},
-    cacheConfig?: Partial<ApiCacheConfig>
+    cacheConfig?: Partial<ApiCacheConfig ></ApiCacheConfig>
   ): Promise<void> {
     try {
       await this.fetch<T>(url, options, cacheConfig)
@@ -424,7 +424,7 @@ const requestPromise = this.fetchWithRetry
     option,
   s: RequestInit = {},
     cacheConfig?: Partial
-          <ApiCacheConfig>
+          <ApiCacheConfig ></ApiCacheConfig>
   ): Promise<void> {
     // TODO: Add content
   }
@@ -503,7 +503,7 @@ export const defaultApiCache = new ApiCache({
 export async function cachedFetch<T>(
   url: string,
   options?: RequestInit,
-  cacheConfig?: Partial<ApiCacheConfig>
+  cacheConfig?: Partial<ApiCacheConfig ></ApiCacheConfig>
 ): Promise<T> {
     return defaultApiCache.fetch<T>(url, options, cacheConfig)
   }
@@ -575,7 +575,7 @@ export async function cachedFetch
   l: string,
   options?: RequestInit,
   cacheConfig?: Partial
-          <ApiCacheConfig>
+          <ApiCacheConfig ></ApiCacheConfig>
 ): Promise<T> {
     // TODO: Add content
   }
@@ -598,9 +598,7 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
   O: Add content,}
 }
 
-  get: 
-
-          <T>(path: string, options?: RequestInit) =>
+  get: <T>(path: string, options?: RequestInit) =>
       cache.fetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options, method: 'GET' }),
     post: <T>(path: string, body: unknown, options?: RequestInit) =>
       cache.fetch<T>(`${baseUrl}${path}`, {
@@ -627,9 +625,7 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
   y: JSON.stringify(body)
       }),
     pu,
-  t: 
-
-          <T>(path: string, body: unknown, options?: RequestInit) =>
+  t: <T>(path: string, body: unknown, options?: RequestInit) =>
       cache.fetch<T>(`${baseUrl}${path}`, {
     // TODO: Add content
   }
@@ -654,9 +650,7 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
   y: JSON.stringify(body)
       }),
     delet,
-  e: 
-
-          <T>(pat)
+  e: <T>(pat)
   h: string, options?: RequestInit) =>`
       cache.fetch<T>(`${baseUrl}${path}`, {/* TODO: Fix JSX expression */})
   d: 'DELETE' }),

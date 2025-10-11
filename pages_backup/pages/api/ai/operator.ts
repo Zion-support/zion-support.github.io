@@ -13,7 +13,7 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 // In-memory simple rate limiter (per IP)
 const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000; // 5 minutes
 const RATE_LIMIT_MAX_REQUESTS = 15
-const ipToRequests: Record<string, { timestamps: number[] }> = {}
+const ipToRequests: Record<string, >{timestamps: number[] } = {}
 function isRateLimited(ip: string): boolean {
   const now = Date.now()
   const bucket = ipToRequests[ip] || { timestamps: [] }
@@ -29,7 +29,6 @@ function isRateLimited(ip: string): boolean {
   return limited
   ipToRequests[ip] = bucket
   return limited
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -39,7 +38,7 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 // In-memory simple rate limiter (per IP)
 const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000, // 5 minutes
 const RATE_LIMIT_MAX_REQUESTS = 15
-const ipToRequests: Record<string, { timestamps: number[] }> = {}
+const ipToRequests: Record<string, >{timestamps: number[] } = {}
 function isRateLimited(ip: string): boolean {
   const now = Date.now()
   const bucket = ipToRequests[ip] |{ timestamps: [] }
@@ -71,10 +70,8 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o-mini'
       temperature: typeof temperature === 'number' ? temperature : 0.7
-      messages: [
-        { role: 'system', content: sys }
-        { role: 'user', content: prompt }
-      ]
+      messages: [{ role: 'system', content: sys }
+        { role: 'user', content: prompt }]
 })
     const text = completion.choices?.[0]?.message?.content ?? ''
     return res.status(200).json({ text })
@@ -118,14 +115,10 @@ export default async function handler(req, res) {
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
       temperature: typeof temperature === 'number' ? temperature : 0.7,
-      messages: [
-        { role: 'system', content: sys },
-        { role: 'user', content: prompt }
-      ]
+      messages: [{ role: 'system', content: sys }, { role: 'user', content: prompt }]
     })
     const text = completion.choices?.[0]?.message?.content ?? ''
     return res.status(200).json({ text })
 }
 }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

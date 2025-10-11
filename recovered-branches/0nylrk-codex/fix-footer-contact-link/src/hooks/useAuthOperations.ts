@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react"
-import { supabase } from "@/integrations/supabase/client"
+import { useState, useEffect  } from 'react'
+import { supabase  } from '@/integrations/supabase/client'
 import type { UserProfile } from "@/types/auth"
-import { toast } from "@/hooks/use-toast"
-import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils"
-import { cleanupAuthState } from "@/utils/authUtils"
+import { toast  } from '@/hooks/use-toast'
+import { trackReferral, checkUrlForReferralCode  } from '@/utils/referralUtils'
+import { cleanupAuthState  } from '@/utils/authUtils'
 export function useAuthOperations(
   setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>,
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>
@@ -114,7 +114,7 @@ export function useAuthOperations(
         })
       }
     } catch (error) {
-      console.error("Logout failed:", error)
+      console.error("Logout failed: ", error)
       toast({
         variant: "destructive",
         title: "Logout failed",
@@ -200,7 +200,7 @@ export function useAuthOperations(
       })
       return { error: null }
     } catch (error) {
-      console.error("Profile update failed:", error)
+      console.error("Profile update failed: ", error)
       toast({
         variant: "destructive",
         title: "Profile update failed",

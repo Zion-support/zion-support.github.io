@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
-import { ensureAdminFromApi } from '../../../../utils/auth',
+import { ensureAdminFromApi  } from '../../../../utils/auth',
 type EventRow = {
   name: string,
   page?: string,
@@ -15,10 +15,9 @@ type EventRow = {
 import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs'
 import path from 'path'
-import { ensureAdminFromApi } from '../../../../utils/auth'
+import { ensureAdminFromApi  } from '../../../../utils/auth'
     }
     return rows
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch {
     return []
   }
@@ -121,8 +120,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const events = parseLines(start as string, end as string)
     res.json({ events })
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

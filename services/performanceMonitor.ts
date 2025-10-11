@@ -158,8 +158,6 @@ export class PerformanceMonitorService {
           'Authorization': `Bearer ${this.apiKey}`}}),
       if (!response.ok) {
         throw new Error(`Failed to fetch historical data: ${response.statusText}`)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       return await response.json()
     } catch (error) {
@@ -179,7 +177,7 @@ export class PerformanceMonitorService {
         throw new Error(`Failed to set monitoring config: ${response && response.statusText}`)
       }
     } catch (error) {
-      console && console.error('Failed to set monitoring config:', error)
+      console && console.error('Failed to set monitoring config: ', error)
       throw error
     }
   }
@@ -204,7 +202,7 @@ export class PerformanceMonitorService {
         throw new Error(`Failed to set monitoring config: ${response.statusText}`)
       }
     } catch (error) {
-      console.error('Failed to set monitoring config:', error),
+      console.error('Failed to set monitoring config: ', error),
       throw error
     }
   }
@@ -217,8 +215,6 @@ export class PerformanceMonitorService {
           'Authorization': `Bearer ${this.apiKey}`}}),
       if (!response.ok) {
         throw new Error(`Failed to fetch alerts: ${response.statusText}`)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       return await response.json()
     } catch (error) {
@@ -302,7 +298,7 @@ export class PerformanceMonitorService {
         throw new Error(`Failed to set monitoring config: ${response.statusText}`)
       }
     } catch (error) {
-      console.error('Failed to set monitoring config:', error)
+      console.error('Failed to set monitoring config: ', error)
       throw error
     }
   }
@@ -353,9 +349,7 @@ export class PerformanceMonitorService {
         performanceScore: performanceScores
         dates
       }
-      recommendations: [
-        'Optimize image sizes and use WebP formatImplement lazy loading for below-the-fold contentMinimize render-blocking resourcesUse a CDN for static assetsEnable compression for text-based resources'
-      ]
+      recommendations: ['Optimize image sizes and use WebP formatImplement lazy loading for below-the-fold contentMinimize render-blocking resourcesUse a CDN for static assetsEnable compression for text-based resources']
     }
   }
   private generateMockMetrics(url: string): PerformanceMetrics {
@@ -429,9 +423,7 @@ export class PerformanceMonitorService {
         performanceScore: performanceScores,
         dates
       },
-      recommendations: [
-        'Optimize image sizes and use WebP formatImplement lazy loading for below-the-fold contentMinimize render-blocking resourcesUse a CDN for static assetsEnable compression for text-based resources'
-      ]
+      recommendations: ['Optimize image sizes and use WebP formatImplement lazy loading for below-the-fold contentMinimize render-blocking resourcesUse a CDN for static assetsEnable compression for text-based resources']
     }
   }
 
@@ -480,29 +472,23 @@ export class PerformanceMonitorService {
     return data
   }
   private generateMockAlerts(url?: string): PerformanceAlert[] {
-    const alerts: PerformanceAlert[] = [
-    largestContentfulPaint: number,
-    cumulativeLayoutShift: number
+    const alerts: PerformanceAlert[] = [largestContentfulPaint: number, cumulativeLayoutShift: number
   }
   notifications: {
     email: boolean
-    slack: boolean,
-    webhook: boolean
+    slack: boolean, webhook: boolean
   }
 }
 export class PerformanceMonitorService {
   private api_key: string
-  private base_url: string,
-  constructor (api_key: string, base_url: string = 'https://api.ziontech.ai') {
-    this.api_key = api_key,
-    this.base_url = base_url
+  private base_url: string, constructor (api_key: string, base_url: string = 'https://api.ziontech.ai') {
+    this.api_key = api_key, this.base_url = base_url
   }
   async monitor_website (url: string): Promise < PerformanceMetrics> {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
       const response = await fetch (`${this.base_url}/performance / monitor`, {
-        method: 'POST',
-        headers: {
+        method: 'POST', headers: {
           'Authorization': `Bearer ${this.api_key}`
           'Content - Type': 'application / json'}
         body: JSON.stringify ({ url })})
@@ -550,7 +536,7 @@ if ( {) {
         throw new Error (`Failed to set monitoring config: ${response.status_text}`)
       }
     } catch (error) {
-      console.error ('Failed to set monitoring config:', error)
+      console.error ('Failed to set monitoring config: ', error)
       throw error
     }
   }
@@ -602,9 +588,7 @@ if ( {) {
         performance_score: performance_scores,
         dates
       }
-      recommendations: [
-        'Optimize image sizes and use WebP format_implement lazy loading for below - the - fold content_minimize render - blocking resources_use a CDN for static assets_enable compression for text - based resources'
-      ]
+      recommendations: ['Optimize image sizes and use WebP format_implement lazy loading for below - the - fold content_minimize render - blocking resources_use a CDN for static assets_enable compression for text - based resources']
     }
   }
   private generateMockMetrics (url: string): PerformanceMetrics {
@@ -651,8 +635,7 @@ if ( {) {
     return data
   }
   private generateMockAlerts (url?: string): PerformanceAlert[] {
-    const alerts: PerformanceAlert[] = [
-      {
+    const alerts: PerformanceAlert[] = [{
         id: '1'
         url: url || 'https://example && example.com'
         type: 'warning'
@@ -660,8 +643,7 @@ if ( {) {
         metric: 'load_time'
         threshold: 2000
         current_value: 2500
-        timestamp: new Date (),
-        resolved: false
+        timestamp: new Date (), resolved: false
       }
       {
         id: '2'
@@ -673,8 +655,7 @@ if ( {) {
         currentValue: 85
         timestamp: new Date()
         resolved: true
-      }
-    ]
+      }]
     return url ? alerts.filter(a => a.url === url) : alerts
   }
 }
@@ -693,47 +674,24 @@ export const PERFORMANCE_MONITOR_PRICING = {
     name: 'Starter'
     price: 19
     period: '/month',
-    features: [
-      'Monitor up to 5 URLs5 - minute monitoring frequency_basic performance metrics_email alerts7 - day data retention_basic reporting'
-    ]
+    features: ['Monitor up to 5 URLs5 - minute monitoring frequency_basic performance metrics_email alerts7 - day data retention_basic reporting']
   }
   professional: {
     name: 'Professional'
     price: 49
     period: '/month',
-    features: [
-      'Monitor up to 25 URLs1 - minute monitoring frequency_advanced performance metrics_email, Slack, and webhook alerts30 - day data retention_advanced reporting and analytics_custom thresholdsAPI access'
-    ]
+    features: ['Monitor up to 25 URLs1 - minute monitoring frequency_advanced performance metrics_email, Slack, and webhook alerts30 - day data retention_advanced reporting and analytics_custom thresholdsAPI access']
   }
   enterprise: {
     name: 'Enterprise'
     price: 149
     period: '/month'
   private generateMockAlerts(url?: string): PerformanceAlert[] {
-    const alerts: PerformanceAlert[] = [
-      {
-        id: '1',
-        url: url || 'https://example.com',
-        type: 'warning',
-        message: 'Load time exceeded threshold',
-        metric: 'loadTime',
-        threshold: 2000,
-        currentValue: 2500,
-        timestamp: new Date(),
-        resolved: false
-      },
-      {
-        id: '2',
-        url: url || 'https://example.com',
-        type: 'info',
-        message: 'Performance score improved',
-        metric: 'performanceScore',
-        threshold: 80,
-        currentValue: 85,
-        timestamp: new Date(),
-        resolved: true
-      }
-    ],
+    const alerts: PerformanceAlert[] = [{
+        id: '1', url: url || 'https://example.com', type: 'warning', message: 'Load time exceeded threshold', metric: 'loadTime', threshold: 2000, currentValue: 2500, timestamp: new Date(), resolved: false
+      }, {
+        id: '2', url: url || 'https://example.com', type: 'info', message: 'Performance score improved', metric: 'performanceScore', threshold: 80, currentValue: 85, timestamp: new Date(), resolved: true
+      }],
       uptime: number
       alertsCount: number
     }
@@ -760,13 +718,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
         performanceScore: performanceScores,
         dates
       },
-      recommendations: [
-        'Optimize image sizes and use WebP format',
-        'Implement lazy loading for below-the-fold content',
-        'Minimize render-blocking resources',
-        'Use a CDN for static assets',
-        'Enable compression for text-based resources'
-      ]
+      recommendations: ['Optimize image sizes and use WebP format', 'Implement lazy loading for below-the-fold content', 'Minimize render-blocking resources', 'Use a CDN for static assets', 'Enable compression for text-based resources']
     }
   }
   private generateMockMetrics(url: string): PerformanceMetrics {
@@ -813,30 +765,11 @@ export const PERFORMANCE_MONITOR_PRICING = {
     return data
   }
   private generateMockAlerts(url?: string): PerformanceAlert[] {
-    const alerts: PerformanceAlert[] = [
-      {
-        id: '1',
-        url: url || 'https://example.com',
-        type: 'warning',
-        message: 'Load time exceeded threshold',
-        metric: 'loadTime',
-        threshold: 2000,
-        currentValue: 2500,
-        timestamp: new Date(),
-        resolved: false
-      },
-      {
-        id: '2',
-        url: url || 'https://example.com',
-        type: 'info',
-        message: 'Performance score improved',
-        metric: 'performanceScore',
-        threshold: 80,
-        currentValue: 85,
-        timestamp: new Date(),
-        resolved: true
-      }
-    ]
+    const alerts: PerformanceAlert[] = [{
+        id: '1', url: url || 'https://example.com', type: 'warning', message: 'Load time exceeded threshold', metric: 'loadTime', threshold: 2000, currentValue: 2500, timestamp: new Date(), resolved: false
+      }, {
+        id: '2', url: url || 'https://example.com', type: 'info', message: 'Performance score improved', metric: 'performanceScore', threshold: 80, currentValue: 85, timestamp: new Date(), resolved: true
+      }]
     return url ? alerts.filter(a => a.url === url) : alerts
   }
 }
@@ -847,31 +780,20 @@ export const PERFORMANCE_MONITOR_PRICING = {
     name: 'Starter',
     price: 19,
     period: '/month',
-    features: [
-      'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting'
-    ]
+    features: ['Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting']
   },
   professional: {
     name: 'Professional',
     price: 49,
     period: '/month',
-    features: [
-      'Monitor up to 25 URLs1-minute monitoring frequencyAdvanced performance metricsEmail, Slack, and webhook alerts30-day data retentionAdvanced reporting and analyticsCustom thresholdsAPI access'
-    ]
+    features: ['Monitor up to 25 URLs1-minute monitoring frequencyAdvanced performance metricsEmail, Slack, and webhook alerts30-day data retentionAdvanced reporting and analyticsCustom thresholdsAPI access']
   },
   enterprise: {
     name: 'Enterprise',
     price: 149,
     period: '/month',
-    features: [
-      'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support',
-      'SLA guarantee'
-    ]
-    features: [
-      'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support',
-      'SLA guarantee'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    ]
+    features: ['Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support', 'SLA guarantee']
+    features: ['Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support', 'SLA guarantee']
   }
 }
 // Pricing tiers for the Performance Monitor
@@ -880,68 +802,34 @@ export const PERFORMANCE_MONITOR_PRICING = {
     name: 'Starter'
     price: 19
     period: '/month',
-    features: [
-      'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting'
-    ]
+    features: ['Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting']
   }
   professional: {
     name: 'Professional'
     price: 49
     period: '/month',
-    features: [
-      'Monitor up to 25 URLs1-minute monitoring frequencyAdvanced performance metricsEmail, Slack, and webhook alerts30-day data retentionAdvanced reporting and analyticsCustom thresholdsAPI access'
-    ]
+    features: ['Monitor up to 25 URLs1-minute monitoring frequencyAdvanced performance metricsEmail, Slack, and webhook alerts30-day data retentionAdvanced reporting and analyticsCustom thresholdsAPI access']
   }
   enterprise: {
     name: 'Enterprise'
     price: 149
     period: '/month'
-    features: [
-      'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support',
-// Pricing tiers for the Performance Monitor
+    features: ['Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support', // Pricing tiers for the Performance Monitor
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
-    name: 'Starter',
-    price: 19,
-    period: '/month',
-    features: [
-      'Monitor up to 5 URLs',
-      '5-minute monitoring frequency',
-      'Basic performance metrics',
-      'Email alerts',
-      '7-day data retention',
-      'Basic reporting'
-    ]
+    name: 'Starter', price: 19, period: '/month', features: [
+      'Monitor up to 5 URLs', '5-minute monitoring frequency', 'Basic performance metrics', 'Email alerts', '7-day data retention', 'Basic reporting']
   },
   professional: {
     name: 'Professional',
     price: 49,
     period: '/month',
-    features: [
-      'Monitor up to 25 URLs',
-      '1-minute monitoring frequency',
-      'Advanced performance metrics',
-      'Email, Slack, and webhook alerts',
-      '30-day data retention',
-      'Advanced reporting and analytics',
-      'Custom thresholds',
-      'API access'
-    ]
+    features: ['Monitor up to 25 URLs', '1-minute monitoring frequency', 'Advanced performance metrics', 'Email, Slack, and webhook alerts', '30-day data retention', 'Advanced reporting and analytics', 'Custom thresholds', 'API access']
   },
   enterprise: {
     name: 'Enterprise',
     price: 149,
     period: '/month',
-    features: [
-      'Monitor unlimited URLs',
-      'Real-time monitoring',
-      'All performance metrics',
-      'Multiple notification channels',
-      '1-year data retention',
-      'Custom dashboards',
-      'White-label reporting',
-      'Priority support',
-      'SLA guarantee'
-    ]
+    features: ['Monitor unlimited URLs', 'Real-time monitoring', 'All performance metrics', 'Multiple notification channels', '1-year data retention', 'Custom dashboards', 'White-label reporting', 'Priority support', 'SLA guarantee']
   }
 }

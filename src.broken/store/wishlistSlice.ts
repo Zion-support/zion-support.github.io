@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction, createAsyncThunk  } from '@reduxjs/toolkit'
 export interface WishlistItem {
   id: string
   type: string
@@ -33,7 +33,8 @@ const wishlistSlice = createSlice({
       )
       if (!exists) state.items.push(action.payload)
     },
-    removeFromWishlist(state, action: PayloadAction<{ id: string }>) {
+    removeFromWishlist(state, action: PayloadAction<>
+  {id: string }) {
       state.items = state.items.filter((item) => item.id !== action.payload.id)
     }},
     },
@@ -47,3 +48,4 @@ const wishlistSlice = createSlice({
 })
 export const { addToWishlist, removeFromWishlist } = wishlistSlice.actions
 export default wishlistSlice.reducer
+</>

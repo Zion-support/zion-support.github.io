@@ -1,13 +1,7 @@
 const [activeTab, setActiveTab] = useState<string>("documentation"),
   
   // Define the tabs
-  const tabs: TabDefinition[] = [
-
-    { id: 'documentation', label: 'Documentation', icon: BookOpen },
-    { id: 'api-keys', label: 'API Keys', icon: Key },
-    { id: 'webhooks', label: 'Webhooks', icon: Webhook },
-    { id: 'logs', label: 'Logs', icon: List },
-  ]
+  const tabs: TabDefinition[] = [{ id: 'documentation', label: 'Documentation', icon: BookOpen }, { id: 'api-keys', label: 'API Keys', icon: Key }, { id: 'webhooks', label: 'Webhooks', icon: Webhook }, { id: 'logs', label: 'Logs', icon: List }]
 
 
 
@@ -19,12 +13,10 @@ const [activeTab, setActiveTab] = useState<string>("documentation"),
 
   return (
 
-    <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
+    <div className="w-full max-w-7xl mx-auto p-4 md: p-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-white flex items-center">
-          <Terminal className="mr-3" size={32} />
-
-
+          <Terminal className="mr-3" size={32} /></Terminal>
           Developer Portal
         </h1>
         <p className="text-zinc-400 mt-2">
@@ -33,15 +25,15 @@ const [activeTab, setActiveTab] = useState<string>("documentation"),
       </div>
 
 
-import { useState } from "react"
-import { useAuth } from "@/hooks/useAuth"
-import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from 'lucide-react'
+import { useState  } from 'react'
+import { useAuth  } from '@/hooks/useAuth'
+import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook  } from 'lucide-react'
 
-import { ProtectedRoute } from "@/components/ProtectedRoute"
-import { ApiKeysManager } from "@/components/developers/ApiKeysManager"
-import { WebhooksManager } from "@/components/developers/WebhooksManager"
-import { ApiDocumentation } from "@/components/developers/ApiDocumentation"
-import { ApiLogs } from "@/components/developers/ApiLogs"
+import { ProtectedRoute  } from '@/components/ProtectedRoute'
+import { ApiKeysManager  } from '@/components/developers/ApiKeysManager'
+import { WebhooksManager  } from '@/components/developers/WebhooksManager'
+import { ApiDocumentation  } from '@/components/developers/ApiDocumentation'
+import { ApiLogs  } from '@/components/developers/ApiLogs'
 interface TabDefinition {
   id: string,
   label: string,
@@ -53,18 +45,16 @@ export function DeveloperPortal() {
   const [activeTab, setActiveTab] = useState<string>("documentation"),
   
   // Define the tabs
-  const tabs: TabDefinition[] = [
-    { id: 'documentation', label: 'Documentation', icon: BookOpen }
+  const tabs: TabDefinition[] = [{ id: 'documentation', label: 'Documentation', icon: BookOpen }
     { id: 'api-keys', label: 'API Keys', icon: Key }
     { id: 'webhooks', label: 'Webhooks', icon: Webhook }
-    { id: 'logs', label: 'Logs', icon: List }
-  ]
+    { id: 'logs', label: 'Logs', icon: List }]
   return (
 
-    <div className='w-full max-w-7xl mx-auto p-4 md:p-8'>
+    <div className='w-full max-w-7xl mx-auto p-4 md: p-8'>
       <div className='mb-8'>
         <h1 className='text-3xl font-bold text-white flex items-center'>
-          <Terminal className='mr-3' size={32} />
+          <Terminal className='mr-3' size={32} /></Terminal>
     { id: "documentation", label: "Documentation", icon: BookOpen },
     { id: "api-keys", label: "API Keys", icon: Key },
     { id: "webhooks", label: "Webhooks", icon: Webhook },
@@ -79,10 +69,10 @@ export function DeveloperPortal() {
 
 
   return (
-    <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
+    <div className="w-full max-w-7xl mx-auto p-4 md: p-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-white flex items-center">
-          <Terminal className="mr-3" size={32} />
+          <Terminal className="mr-3" size={32} /></Terminal>
           Developer Portal
         </h1>
         <p className="text-zinc-400 mt-2">
@@ -93,11 +83,10 @@ export function DeveloperPortal() {
 
                   activeTab === tab.id
                     ? "text-white border-zion-purple"
-                    : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
+                    : "text-zinc-500 border-transparent hover: text-zinc-400 hover:border-zinc-700"
                 }`}
-                onClick = {(,) => setActiveTab(tab.id),}
-              >
-                <Icon size={16} className='mr-2' />
+                onClick = >{(,) => setActiveTab(tab.id),}
+                <Icon size={16} className='mr-2' /></Icon>
                 {tab.label}
               </button>
             )
@@ -113,9 +102,8 @@ export function DeveloperPortal() {
       </div>
     </div>
   )
-                onClick={() => setActiveTab(tab.id)}
-              >
-                <Icon size={16} className="mr-2" />
+                onClick=>{() => setActiveTab(tab.id)}
+                <Icon size={16} className="mr-2" /></Icon>
                 {tab.label}
               </button>
             )
@@ -136,23 +124,22 @@ export function DeveloperPortal() {
                 className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
                   activeTab === tab.id
                     ? "text-white border-zion-purple"
-                    : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
-import { useState } from 'react'
-import { use_auth } from '@/hooks / use_auth'
-import {
-  BookOpen,
+                    : "text-zinc-500 border-transparent hover: text-zinc-400 hover:border-zinc-700"
+import { useState  } from 'react'
+import { use_auth  } from '@/hooks / use_auth'
+import { BookOpen,
   Code,
   Key,
   List,
   LucideIcon,
   Terminal,
   Webhook,
-} from 'lucide-react'
-import { ProtectedRoute } from '@/components / ProtectedRoute'
-import { ApiKeysManager } from '@/components / developers / ApiKeysManager'
-import { WebhooksManager } from '@/components / developers / WebhooksManager'
-import { ApiDocumentation } from '@/components / developers / ApiDocumentation'
-import { ApiLogs } from '@/components / developers / ApiLogs'
+ } from 'lucide-react'
+import { ProtectedRoute  } from '@/components / ProtectedRoute'
+import { ApiKeysManager  } from '@/components / developers / ApiKeysManager'
+import { WebhooksManager  } from '@/components / developers / WebhooksManager'
+import { ApiDocumentation  } from '@/components / developers / ApiDocumentation'
+import { ApiLogs  } from '@/components / developers / ApiLogs'
 interface TabDefinition {
   id: string
   label: string
@@ -164,17 +151,12 @@ function DeveloperPortal() {
   const { user } = use_auth ()
   const [active_tab, setActiveTab] = useState < string>('documentation')
   // Define the tabs
-  const tabs: TabDefinition[] = [
-    { id: 'documentation', label: 'Documentation', icon: BookOpen },
-    { id: 'api - keys', label: 'API Keys', icon: Key },
-    { id: 'webhooks', label: 'Webhooks', icon: Webhook },
-    { id: 'logs', label: 'Logs', icon: List },
-  ]
+  const tabs: TabDefinition[] = [{ id: 'documentation', label: 'Documentation', icon: BookOpen }, { id: 'api - keys', label: 'API Keys', icon: Key }, { id: 'webhooks', label: 'Webhooks', icon: Webhook }, { id: 'logs', label: 'Logs', icon: List }]
   return (
-    <div className='w - full max - w-7xl mx - auto p - 4 md:p - 8'>
+    <div className='w - full max - w-7xl mx - auto p - 4 md: p - 8'>
       <div className='mb - 8'>
         <h1 className='text - 3xl font - bold text - white flex items - center'>
-          <Terminal className='mr - 3' size={32} />
+          <Terminal className='mr - 3' size={32} /></Terminal>
           Developer Portal</$1>
         <p className='text - zinc - 400 mt - 2'>
           Access the Zion API, manage your API keys, and set up webhooks.</$1></$1>
@@ -186,32 +168,30 @@ function DeveloperPortal() {
                 on_click={() => setActiveTab (tab.id)}                className={`inline - flex items - center px - 4 py - 3 border - b-2 text - sm font - medium ${
                   active_tab === tab.id
                     ? "text - white border - zion - purple"
-                    : "text - zinc - 500 border - transparent hover:text - zinc - 400 hover:border - zinc - 700"
+                    : "text - zinc - 500 border - transparent hover: text - zinc - 400 hover:border - zinc - 700"
                 }`}
-                on_click = {(, ) => setActiveTab (tab.id), }
-              >
-                <Icon size={16} className='mr - 2' />
+                on_click = >{(, ) => setActiveTab (tab.id), }
+                <Icon size={16} className='mr - 2' /></Icon>
                 {tab.label}
               </button>)
           })}
 
 
-import { useState } from 'react'
-import { useAuth } from '@/hooks/useAuth'
-import {
-  BookOpen,
+import { useState  } from 'react'
+import { useAuth  } from '@/hooks/useAuth'
+import { BookOpen,
   Code,
   Key,
   List,
   LucideIcon,
   Terminal,
   Webhook,
-} from 'lucide-react'
-import { ProtectedRoute } from '@/components/ProtectedRoute'
-import { ApiKeysManager } from '@/components/developers/ApiKeysManager'
-import { WebhooksManager } from '@/components/developers/WebhooksManager'
-import { ApiDocumentation } from '@/components/developers/ApiDocumentation'
-import { ApiLogs } from '@/components/developers/ApiLogs'
+ } from 'lucide-react'
+import { ProtectedRoute  } from '@/components/ProtectedRoute'
+import { ApiKeysManager  } from '@/components/developers/ApiKeysManager'
+import { WebhooksManager  } from '@/components/developers/WebhooksManager'
+import { ApiDocumentation  } from '@/components/developers/ApiDocumentation'
+import { ApiLogs  } from '@/components/developers/ApiLogs'
 interface TabDefinition {
   id: string
   label: string
@@ -220,17 +200,12 @@ export function DeveloperPortal() {
   const { user } = useAuth()
   const [activeTab, setActiveTab] = useState<string>('documentation')
   // Define the tabs
-  const tabs: TabDefinition[] = [
-    { id: 'documentation', label: 'Documentation', icon: BookOpen },
-    { id: 'api-keys', label: 'API Keys', icon: Key },
-    { id: 'webhooks', label: 'Webhooks', icon: Webhook },
-    { id: 'logs', label: 'Logs', icon: List },
-  ]
+  const tabs: TabDefinition[] = [{ id: 'documentation', label: 'Documentation', icon: BookOpen }, { id: 'api-keys', label: 'API Keys', icon: Key }, { id: 'webhooks', label: 'Webhooks', icon: Webhook }, { id: 'logs', label: 'Logs', icon: List }]
   return (
-    <div className='w-full max-w-7xl mx-auto p-4 md:p-8'>
+    <div className='w-full max-w-7xl mx-auto p-4 md: p-8'>
       <div className='mb-8'>
         <h1 className='text-3xl font-bold text-white flex items-center'>
-          <Terminal className='mr-3' size={32} />
+          <Terminal className='mr-3' size={32} /></Terminal>
           Developer Portal</$1>
         <p className='text-zinc-400 mt-2'>
           Access the Zion API, manage your API keys, and set up webhooks.</$1></$1>
@@ -242,12 +217,10 @@ export function DeveloperPortal() {
                 onClick={() => setActiveTab(tab && tab.id)}                className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
                   activeTab === tab && tab.id
                     ? "text-white border-zion-purple"
-                    : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
+                    : "text-zinc-500 border-transparent hover: text-zinc-400 hover:border-zinc-700"
                 }`}
-                onClick = {(,) => setActiveTab(tab && tab.id),}
-
-              >
-                <Icon size={16} className='mr-2' />
+                onClick = >{(,) => setActiveTab(tab && tab.id),}
+                <Icon size={16} className='mr-2' /></Icon>
                 {tab && tab.label}
               </button>
             )
@@ -266,19 +239,16 @@ export function DeveloperPortal() {
         {active_tab === 'webhooks' && <WebhooksManager />}
         {active_tab === 'logs' && <ApiLogs />}
       </div></$1>)
-                on_click={() => setActiveTab (tab.id)}
-              >
-                <Icon size={16} className="mr - 2" />
+                on_click=>{() => setActiveTab (tab.id)}
+                <Icon size={16} className="mr - 2" /></Icon>
                 {tab.label}
               </button>)
           })}
 
       </div></$1>
   )
-                onClick={() => setActiveTab(tab && tab.id)}
-
-              >
-                <Icon size={16} className='mr-2' />
+                onClick=>{() => setActiveTab(tab && tab.id)}
+                <Icon size={16} className='mr-2' /></Icon>
                 {tab && tab.label}
               </button>
             )
@@ -294,7 +264,6 @@ export function DeveloperPortal() {
 
 
       <div>
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -324,8 +293,8 @@ export function DeveloperPortal() {
 
 export default function ProtectedDeveloperPortal() {
   return (
-    <ProtectedRoute>
-      <DeveloperPortal />
+    <ProtectedRoute ></ProtectedRoute>
+      <DeveloperPortal /></DeveloperPortal>
     </ProtectedRoute>
 
 

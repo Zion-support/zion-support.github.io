@@ -1,5 +1,5 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts"
-import { Configuration, OpenAIApi } from "npm:openai@4.28.0"
+import { serve  } from 'https: //deno.land/std@0.190.0/http/server.ts'
+import { Configuration, OpenAIApi  } from 'npm: openai@4.28.0'
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -27,12 +27,10 @@ serve(async (req) => {
       apiKey: Deno.env.get('OPENAI_API_KEY'),
     })
     const openai = new OpenAIApi(configuration)
-    const prompt = `Create a professional and detailed service description for the following service:
-Title: ${title}
+    const prompt = `Create a professional and detailed service description for the following service: Title: ${title}
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
-The description should:
-1. Be approximately 200-300 words
+The description should: 1. Be approximately 200-300 words
 2. Highlight the key benefits and unique selling points
 3. Use professional language suitable for a marketplace listing
 4. Speak directly to the target audience
@@ -51,7 +49,7 @@ The description should:
       }
     )
   } catch (error) {
-    console.error("Error in generate-service-description:", error)
+    console.error("Error in generate-service-description: ", error)
     return new Response(
       JSON.stringify({ 
         error: "Failed to generate service description",

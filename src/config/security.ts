@@ -17,29 +17,17 @@ export const _securityHeaders = {
   c: ["'self'"],
 // scriptSr,
   c: ["
-// "'self'","
-// "'unsafe-inline'","
-// "'unsafe-eval'",
-// 'http,
-  s://www.googletagmanager.com',
-// 'http,
-  s://www.google-analytics.com',
-// ],
+// "'self'", "
+// "'unsafe-inline'", "
+// "'unsafe-eval'", // 'http, s: //www.googletagmanager.com', // 'http, s: //www.google-analytics.com', //],
 // styleSr,"
-  c: ["'self'", "'unsafe-inline'", 'http,
-  s://fonts.googleapis.com'],
+  c: ["'self'", "'unsafe-inline'", 'http, s: //fonts.googleapis.com'],
 // fontSr,"
-  c: ["'self'", 'http,
-  s://fonts.gstatic.com'],
+  c: ["'self'", 'http, s: //fonts.gstatic.com'],
 // imgSr,"
-  c: ["'self'", 'dat,
-  a:', 'http,
-  s:', 'blo,
-  b:'],
+  c: ["'self'", 'dat, a: ', 'http, s: ', 'blo, b: '],
 // connectSr,"
-  c: ["'self'", 'http,
-  s://www.google-analytics.com', 'http,
-  s://analytics.google.com'],
+  c: ["'self'", 'http, s: //www.google-analytics.com', 'http, s: //analytics.google.com'],
 // frameSr,"
   c: ["'self'"],
 // objectSr,"
@@ -73,7 +61,7 @@ export const corsConfig = {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 
-  origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'],
+  origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http: //localhost:3000'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
@@ -117,13 +105,12 @@ export function sanitizeInput(inpu)
   O: Add content,}
 }
   return input
-//     .replace(/[
-
-          )
+//     .replace(/[)
           <>]/g, '') // Remove
+</>
           < and >
 
-    .replace(/javascript:/gi, '') // Remove javascript: protocol,
+    .replace(/javascript: /gi, '') // Remove javascript: protocol,
 
     .replace(/on\w+\s*=/gi, '') // Remove event handlers
     .trim()

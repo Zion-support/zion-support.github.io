@@ -78,16 +78,12 @@ export interface Innovative2026AiServiceV3 {/* TODO: Fix JSX expression */}
     address: string,
   }
 }
-export const innovative2026 AIServicesV3: Innovative2026 AiServiceV3[] = [,
-    id: "2026-innovative-ai-v3", name: "2026 Innovative AI Platform V3",
-    tagline: "Third generation innovative AI", price: "$349/month"
+export const innovative2026 AIServicesV3: Innovative2026 AiServiceV3[] = [id: "2026-innovative-ai-v3", name: "2026 Innovative AI Platform V3", tagline: "Third generation innovative AI", price: "$349/month"
     description: "Third generation of the 2026 innovative AI platform with enhanced capabilities and features."
-    features: [,
-      "Third generation AI"
+    features: [, "Third generation AI"
       "Enhanced capabilities"
       "Advanced features"
-      "Improved performance",
-      "Better integration"],
+      "Improved performance", "Better integration"],
     link: "/services/2026-innovative-ai-v3", category: "Innovative 2026 AI V3",
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
@@ -127,23 +123,17 @@ export const innovative2026 AIServicesV3: Innovative2026 AiServiceV3[] = [,
   s: string}
 }
 export const,
-  innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [,
-    i,"
-  d: "2026-innovative-ai-v3", nam,"
-  e: "2026 Innovative AI Platform V3",
-    taglin,"
-  e: "Third generation innovative AI", pric,"
-  e: "$349/month",
-    descriptio,"
-  n: "Third generation of the 2026 innovative AI platform with enhanced capabilities and features.",
-    feature,
-  s: [,"
+  innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [i, "
+  d: "2026-innovative-ai-v3", nam, "
+  e: "2026 Innovative AI Platform V3", taglin, "
+  e: "Third generation innovative AI", pric, "
+  e: "$349/month", descriptio, "
+  n: "Third generation of the 2026 innovative AI platform with enhanced capabilities and features.", feature, s: [, "
       "Third generation AI""
       "Enhanced capabilities""
       "Advanced features""
       "Improved performance""
-      "Better integration"
-    ],
+      "Better integration"],
     lin,"
   k: "/services/2026-innovative-ai-v3", categor,"
   y: "Innovative 2026 AI V3",
@@ -178,13 +168,7 @@ id: "2026-innovative-ai-v3"
     tagline: "Third generation innovative AI",
     price: "$349/month",
     description: "Third generation of the 2026 innovative AI platform with enhanced capabilities and features.",
-    features: [,
-      "Third generation AI",
-      "Enhanced capabilities",
-      "Advanced features",
-      "Improved performance",
-      "Better integration"
-    ],
+    features: ["Third generation AI", "Enhanced capabilities", "Advanced features", "Improved performance", "Better integration"],
     link: "/services/2026-innovative-ai-v3"
     category: "Innovative 2026 AI V3"
     realImplementation: true
@@ -210,13 +194,12 @@ id: "2026-innovative-ai-v3"
     descriptio,"
   n: "Third generation of the 2026 innovative AI platform with enhanced capabilities and features.",
     feature,
-  s: [,"
-      "Third generation AI","
-      "Enhanced capabilities","
-      "Advanced features","
-      "Improved performance","
-      "Better integration"
-    ],
+  s: ["
+      "Third generation AI", "
+      "Enhanced capabilities", "
+      "Advanced features", "
+      "Improved performance", "
+      "Better integration"],
     lin,"
   k: "/services/2026-innovative-ai-v3",
     categor,"
@@ -288,13 +271,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [ i,"
-  d: "2026-innovative-ai-v3", nam,"
-  e: "2026 Innovative AI Platform V3", taglin,"
-  e: "Third generation innovative AI", pric,"
-  e: "$349/month", descriptio,"
-  n: "Third generation of the 2026 innovative AI platform with enhanced capabilities and features.", feature,"
-  s: [ "Third generation AI" "Enhanced capabilities" "Advanced features" "Improved performance" "Better integration" ], lin,"
+  innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [i, "
+  d: "2026-innovative-ai-v3", nam, "
+  e: "2026 Innovative AI Platform V3", taglin, "
+  e: "Third generation innovative AI", pric, "
+  e: "$349/month", descriptio, "
+  n: "Third generation of the 2026 innovative AI platform with enhanced capabilities and features.", feature, "
+  s: [ "Third generation AI" "Enhanced capabilities" "Advanced features" "Improved performance" "Better integration"], lin,"
   k: "/services/2026-innovative-ai-v3", categor,"
   y: "Innovative 2026 AI V3", realImplementatio,
   n: true, contactInf,
@@ -311,7 +294,7 @@ i,
   e: "Third generation innovative AI", pric,"
   e: "$349/month", descriptio,"
   n: "Third generation of the 2026 innovative AI platform with enhanced capabilities and features.", feature,"
-  s: [ "Third generation AI", "Enhanced capabilities", "Advanced features", "Improved performance", "Better integration" ], lin,"
+  s: ["Third generation AI", "Enhanced capabilities", "Advanced features", "Improved performance", "Better integration"], lin,"
   k: "/services/2026-innovative-ai-v3", categor,"
   y: "Innovative 2026 AI V3", realImplementatio,
   n: true, contactInf,

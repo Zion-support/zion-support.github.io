@@ -1,17 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs'
 // List of files that still have metadata issues
-const filesToFix = [
-  '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx',
-  '/workspace/app/blog/ai-cost-optimization-breakthrough-2026/page.tsx',
-  '/workspace/app/guides/ai-2026-implementation-roadmap/page.tsx',
-  '/workspace/app/guides/ai-2027-implementation-roadmap/page.tsx',
-  '/workspace/app/offline/page.tsx',
-  '/workspace/app/page-minimal.tsx',
-  '/workspace/app/page-optimized.tsx',
-  '/workspace/app/privacy/page.tsx',
-  '/workspace/app/team/page.tsx',
-  '/workspace/app/terms/page.tsx']
+const filesToFix = ['/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx', '/workspace/app/blog/ai-cost-optimization-breakthrough-2026/page.tsx', '/workspace/app/guides/ai-2026-implementation-roadmap/page.tsx', '/workspace/app/guides/ai-2027-implementation-roadmap/page.tsx', '/workspace/app/offline/page.tsx', '/workspace/app/page-minimal.tsx', '/workspace/app/page-optimized.tsx', '/workspace/app/privacy/page.tsx', '/workspace/app/team/page.tsx', '/workspace/app/terms/page.tsx']
 // // Function to process a single file
 function processFile(filePath) {
   try {
@@ -85,14 +75,14 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (metadata.title || metadata.description) {
       //       const helmetMatch = content.match(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/)
       if (helmetMatch) {
-        const newHelmet = `<Helmet>
+        const newHelmet = `<Helmet ></Helmet>
     if (metadata.title || metadata.description) {/* TODO: Fix JSX expression */}
         <title>${metadata.title || 'Zion Tech Group'}
         <meta name="description" content="${metadata.description || 'Advanced AI and IT Solutions'}" />
         ${/* TODO: Fix JSX expression */}"`
-  g:type" content="${metadata.type}" />` : ''}
+  g: type" content="${metadata.type}" />` : ''}
         ${/* TODO: Fix JSX expression */}"`
-  g:url" content="${metadata.url}" />` : ''}`
+  g: url" content="${metadata.url}" />` : ''}`
       </Helmet>`
         content = content.replace(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/, newHelmet)
         modified = true

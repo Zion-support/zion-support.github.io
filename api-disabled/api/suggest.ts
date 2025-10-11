@@ -1,15 +1,5 @@
 
-const SAMPLE_QUERIES = [
-  'React developers under $50/hr',
-  'Part-time DevOps jobs in LATAM',
-  'AI/ML engineers for startup',
-  'Blockchain developers remote',
-  'UI/UX designers available now',
-  'Full-stack developers with Next.js',
-  'Data scientists with Python',
-  'Mobile app developers iOS/Android',
-  'Cloud architects AWS/Azure',
-  'DevOps engineers with Kubernetes']
+const SAMPLE_QUERIES = ['React developers under $50/hr', 'Part-time DevOps jobs in LATAM', 'AI/ML engineers for startup', 'Blockchain developers remote', 'UI/UX designers available now', 'Full-stack developers with Next.js', 'Data scientists with Python', 'Mobile app developers iOS/Android', 'Cloud architects AWS/Azure', 'DevOps engineers with Kubernetes']
 export default function handler(req: NextApiRequest, res: NextApiResponse) {,
   if (req.method !== 'GET') {,
     res.setHeader('Allow', 'GET')

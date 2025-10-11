@@ -1,21 +1,12 @@
-import { defineConfig } from 'vite'
+import { defineConfig  } from 'vite'
 import react from '@vitejs/plugin-react'
-import { visualizer } from 'rollup-plugin-visualizer'
+import { visualizer  } from 'rollup-plugin-visualizer'
 export default defineConfig({
-  plugins: [
-    react({
+  plugins: [react({
       // Enable React Fast Refresh
-      fastRefresh: true,
-      // Optimize JSX runtime
-      jsxRuntime: 'automatic',
-    }),
-    visualizer({
-      filename: 'dist/stats.html',
-      open: true,
-      gzipSize: true,
-      brotliSize: true,
-    }),
-  ],
+      fastRefresh: true, // Optimize JSX runtime
+      jsxRuntime: 'automatic', }), visualizer({
+      filename: 'dist/stats.html', open: true, gzipSize: true, brotliSize: true, })],
   root: '.',
   build: {
     outDir: 'dist',
@@ -80,15 +71,7 @@ export default defineConfig({
     open: true,
   },
   optimizeDeps: {
-    include: [
-      'react',
-      'react-dom', 
-      'react-router-dom', 
-      'framer-motion', 
-      'lucide-react',
-      'react-helmet-async',
-      'web-vitals'
-    ],
+    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion', 'lucide-react', 'react-helmet-async', 'web-vitals'],
     // Exclude problematic dependencies
     exclude: ['@vite/client', '@vite/env'],
   },

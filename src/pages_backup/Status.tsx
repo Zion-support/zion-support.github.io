@@ -12,33 +12,16 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
     this.state = { hasError: false }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-const FALLBACK_SERVICES: ServiceStatus[] = [
-  {
-    name: "Marketplace API",
-    status: "operational",
-    description: "Product listings and search functionality",
-    lastChecked: new Date().toISOString()
-  },
-  {
-    name: "Authentication Service", 
-    status: "operational",
-    description: "User login and registration",
-    lastChecked: new Date().toISOString()
-  },
-  {
-    name: "Payment Processing",
-    status: "operational", 
-    description: "Checkout and payment handling",
-    lastChecked: new Date().toISOString()
-  },
-  {
-    name: "Talent Directory",
-    status: "operational",
-    description: "AI talent profiles and matching",
-    lastChecked: new Date().toISOString()
+const FALLBACK_SERVICES: ServiceStatus[] = [{
+    name: "Marketplace API", status: "operational", description: "Product listings and search functionality", lastChecked: new Date().toISOString()
+  }, {
+    name: "Authentication Service", status: "operational", description: "User login and registration", lastChecked: new Date().toISOString()
+  }, {
+    name: "Payment Processing", status: "operational", description: "Checkout and payment handling", lastChecked: new Date().toISOString()
+  }, {
+    name: "Talent Directory", status: "operational", description: "AI talent profiles and matching", lastChecked: new Date().toISOString()
 
   }
   
@@ -47,7 +30,7 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo)
+    console.error('Error caught by boundary: ', error, errorInfo)
   }
   
   render() {
@@ -62,32 +45,15 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
   )
 }
 
-const FALLBACK_SERVICES: ServiceStatus[] = [
-  {
-    name: "Marketplace API",
-    status: "operational",
-    description: "Product listings and search functionality",
-    lastChecked: new Date().toISOString()
-  },
-  {
-    name: "Authentication Service", 
-    status: "operational",
-    description: "User login and registration",
-    lastChecked: new Date().toISOString()
-  },
-  {
-    name: "Payment Processing",
-    status: "operational", 
-    description: "Checkout and payment handling",
-    lastChecked: new Date().toISOString()
-  },
-  {
-    name: "Talent Directory",
-    status: "operational",
-    description: "AI talent profiles and matching",
-    lastChecked: new Date().toISOString()
-  }
-],
+const FALLBACK_SERVICES: ServiceStatus[] = [{
+    name: "Marketplace API", status: "operational", description: "Product listings and search functionality", lastChecked: new Date().toISOString()
+  }, {
+    name: "Authentication Service", status: "operational", description: "User login and registration", lastChecked: new Date().toISOString()
+  }, {
+    name: "Payment Processing", status: "operational", description: "Checkout and payment handling", lastChecked: new Date().toISOString()
+  }, {
+    name: "Talent Directory", status: "operational", description: "AI talent profiles and matching", lastChecked: new Date().toISOString()
+  }],
 
 export default function Status() {
   const [externalStatusLoaded, setExternalStatusLoaded] = useState(false),
@@ -100,13 +66,13 @@ export default function Status() {
     const timeout = setTimeout(() => {
       if (!externalStatusLoaded) {
         setShowFallback(true)
-import { SEO } from "@/components/SEO",
-import { useState, useEffect } from "react",
-import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
-import { Button } from "@/components/ui/button",
+import { SEO  } from '@/components/SEO',
+import { useState, useEffect  } from 'react',
+import { AlertCircle, CheckCircle, Clock, ExternalLink  } from 'lucide-react'
+import { Button  } from '@/components/ui/button',
 import Link from "next/link",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { logWarn } from '@/utils/productionLogger',
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card',
+import { logWarn  } from '@/utils/productionLogger',
 interface ServiceStatus {
   name: string,
   status: 'operational' | 'degraded' | 'outage' | 'maintenance',
@@ -114,32 +80,15 @@ interface ServiceStatus {
   lastChecked: string
 }
 
-const FALLBACK_SERVICES: ServiceStatus[] = [
-  {
-    name: "Marketplace API",
-    status: "operational",
-    description: "Product listings and search functionality",
-    lastChecked: new Date().toISOString()
-  },
-  {
-    name: "Authentication Service",
-    status: "operational",
-    description: "User login and registration",
-    lastChecked: new Date().toISOString()
-  },
-  {
-    name: "Payment Processing",
-    status: "operational",
-    description: "Checkout and payment handling",
-    lastChecked: new Date().toISOString()
-  },
-  {
-    name: "Talent Directory",
-    status: "operational",
-    description: "AI talent profiles and matching",
-    lastChecked: new Date().toISOString()
-  }
-],
+const FALLBACK_SERVICES: ServiceStatus[] = [{
+    name: "Marketplace API", status: "operational", description: "Product listings and search functionality", lastChecked: new Date().toISOString()
+  }, {
+    name: "Authentication Service", status: "operational", description: "User login and registration", lastChecked: new Date().toISOString()
+  }, {
+    name: "Payment Processing", status: "operational", description: "Checkout and payment handling", lastChecked: new Date().toISOString()
+  }, {
+    name: "Talent Directory", status: "operational", description: "AI talent profiles and matching", lastChecked: new Date().toISOString()
+  }],
 export default function Status() {
   const [externalStatusLoaded, setExternalStatusLoaded] = useState(false),
   const [showFallback, setShowFallback] = useState(false),
@@ -180,8 +129,7 @@ export default function Status() {
         return <AlertCircle className="h-5 w-5 text-red-500" />,
       case 'maintenance':
         return <Clock className="h-5 w-5 text-blue-500" />,
-      default:
-        return <AlertCircle className="h-5 w-5 text-gray-500" />
+      default: return <AlertCircle className="h-5 w-5 text-gray-500" /></AlertCircle>
     fetchUptime()
   }, []),
   const getStatusIcon = (status: ServiceStatus['status']) => {
@@ -194,9 +142,8 @@ export default function Status() {
         return <AlertCircle className="h-5 w-5 text-red-500" />,
       case 'maintenance':
         return <Clock className="h-5 w-5 text-blue-500" />,
-      default:
-        return <AlertCircle className="h-5 w-5 text-gray-500" />}
-import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)
+      default: return <AlertCircle className="h-5 w-5 text-gray-500" />}
+import React, { useState, useEffect } from 'react'; import { motion   } from 'framer-motion'; import { SEO  } from '../components/SEO'; import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink  } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)
 }
 
   const formatUptime = (seconds: number) => {
@@ -212,11 +159,10 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
 
   return (
     <>
-      <SEO
-        title="API Status"
+      <SEO title="API Status"
         description="View real-time service availability and uptime statistics."
-        canonical="https://app.ziontechgroup.com/status"
-      />
+        canonical="https: //app.ziontechgroup.com/status"
+      /></SEO>
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
@@ -231,17 +177,17 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
 
           {!showFallback && (
             <div className="mb-8">
-              <Card className="bg-zion-blue-dark border-zion-blue-light">
-                <CardHeader>
-                  <CardTitle className="text-white flex items-center gap-2">
-                    <ExternalLink className="h-5 w-5" />
+              <Card className="bg-zion-blue-dark border-zion-blue-light"></Card>
+                <CardHeader ></CardHeader>
+                  <CardTitle className="text-white flex items-center gap-2"></CardTitle>
+                    <ExternalLink className="h-5 w-5" /></ExternalLink>
                     Live Status Dashboard
                   </CardTitle>
-                  <CardDescription>
+                  <CardDescription ></CardDescription>
                     Loading detailed status information...
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent ></CardContent>
                   <iframe
                     src={statusUrl}
                     title="Zion Status Page"
@@ -254,7 +200,7 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
                     <Button
                       variant="outline"
                       onClick={() => setShowFallback(true)}
-                      className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
+                      className="text-zion-cyan border-zion-cyan hover: bg-zion-cyan/10"
                     >
                       View Simplified Status
                     </Button>
@@ -267,14 +213,14 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
           {showFallback && (
             <>
               <div className="mb-8">
-                <Card className="bg-zion-blue-dark border-zion-blue-light">
-                  <CardHeader>
+                <Card className="bg-zion-blue-dark border-zion-blue-light"></Card>
+                  <CardHeader ></CardHeader>
                     <CardTitle className="text-white">Service Status Overview</CardTitle>
-                    <CardDescription>
+                    <CardDescription ></CardDescription>
                       Current status of core platform services
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="space-y-4">
+                  <CardContent className="space-y-4"></CardContent>
                     {FALLBACK_SERVICES.map((service) => (
                       <div key={service.name} className="flex items-center justify-between p-4 bg-zion-blue rounded-lg">
                         <div className="flex items-center gap-3">
@@ -298,20 +244,18 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
 
               <div className="text-center">
                 <p className="text-zion-slate-light mb-4">
-                  For detailed incident history and real-time updates:
-                </p>
-                <Button
-                  variant="outline"
+                  For detailed incident history and real-time updates: </p>
+                <Button variant="outline"
                   asChild
                   className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
-                >
+                ></Button>
                   <$2 />
                     href={statusUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
                   >
-                    <ExternalLink className="h-4 w-4" />
+                    <ExternalLink className="h-4 w-4" /></ExternalLink>
                     Visit Full Status Page
                   </Link>
                 </Button>
@@ -320,27 +264,25 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
           )}
 
           <div className="mt-12 text-center">
-            <Card className="bg-zion-blue-dark border-zion-blue-light">
-              <CardHeader>
+            <Card className="bg-zion-blue-dark border-zion-blue-light"></Card>
+              <CardHeader ></CardHeader>
                 <CardTitle className="text-white">Need Help?</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4"></CardContent>
                 <p className="text-zion-slate-light">
                   If you're experiencing issues not reflected here, please contact our support team.
                 </p>
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                  <Button
-                    variant="outline"
+                  <Button variant="outline"
                     asChild
                     className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
-                  >
+                  ></Button>
                     <Link href="/contact">Contact Support</Link>
                   </Button>
-                  <Button
-                    variant="outline"
+                  <Button variant="outline"
                     asChild
                     className="text-zion-purple border-zion-purple hover:bg-zion-purple/10"
-                  >
+                  ></Button>
                     <a href="https://twitter.com/ZionTechGroup" target="_blank" rel="noopener noreferrer">
                       @ZionTechGroup
                     </Link>
@@ -355,18 +297,17 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
   )
 }
 
-import { log_warn } from '@/utils / production_logger'
+import { log_warn  } from '@/utils / production_logger'
 interface ServiceStatus {
   name: string,
   status: 'operational' | 'degraded' | 'outage' | 'maintenance',
   description: string,
   last_checked: string
 }
-        return <CheckCircle className="h - 5 w - 5 text - green - 500" />
-        return <Clock className="h - 5 w - 5 text - blue - 500" />
-      default:
-        return <AlertCircle className="h - 5 w - 5 text - gray - 500" />}
-import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components / SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default /**
+        return <CheckCircle className="h - 5 w - 5 text - green - 500" /></CheckCircle>
+        return <Clock className="h - 5 w - 5 text - blue - 500" /></Clock>
+      default: return <AlertCircle className="h - 5 w - 5 text - gray - 500" />}
+import React, { useState, useEffect } from 'react'; import { motion   } from 'framer-motion'; import { SEO  } from '../components / SEO'; import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink  } from 'lucide-react'; export default /**
  * Status - Function description
  */
 function Status() { const [last_updated, setLastUpdated] = useState (new Date ()); const [is_refreshing, setIsRefreshing] = useState (false)

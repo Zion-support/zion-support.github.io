@@ -1,34 +1,10 @@
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 // Common unused imports that appear frequently
-const commonUnusedImports = [
-  'ArrowRight', 'Star', 'TrendingUp', 'Cpu', 'Database', 'BarChart', 
-  'Code', 'Cloud', 'Users', 'Globe', 'Lock', 'Award', 'Mail', 'MapPin',
-  'Image', 'Zap', 'Shield', 'CheckCircle', 'Phone', 'Calendar', 'Target',
-  'Brain', 'Navigation', 'Footer', 'SEOOptimizer'
-]
+const commonUnusedImports = ['ArrowRight', 'Star', 'TrendingUp', 'Cpu', 'Database', 'BarChart', 'Code', 'Cloud', 'Users', 'Globe', 'Lock', 'Award', 'Mail', 'MapPin', 'Image', 'Zap', 'Shield', 'CheckCircle', 'Phone', 'Calendar', 'Target', 'Brain', 'Navigation', 'Footer', 'SEOOptimizer']
 // Files to process
-const filesToProcess = [
-  'src/ai-ab-testing/page.tsx',
-  'src/ai-analytics-dashboard/page.tsx',
-  'src/ai-analytics/page.tsx',
-  'src/ai-automation/page.tsx',
-  'src/ai-computer-vision/page.tsx',
-  'src/ai-content-generation/page.tsx',
-  'src/ai-content-studio/page.tsx',
-  'src/ai-crm/page.tsx',
-  'src/ai-customer-insights/page.tsx',
-  'src/ai-customer-support-bot/page.tsx',
-  'src/ai-customer-support/page.tsx',
-  'src/ai-cybersecurity/page.tsx',
-  'src/ai-data-analytics/page.tsx',
-  'src/ai-data-visualization/page.tsx',
-  'src/ai-design-assistant/page.tsx',
-  'src/ai-document-processing/page.tsx',
-  'src/ai-document-processor/page.tsx',
-  'src/ai-ecommerce-optimizer/page.tsx',
-  'src/ai-ecommerce-solutions/page.tsx'
+const filesToProcess = ['src/ai-ab-testing/page.tsx', 'src/ai-analytics-dashboard/page.tsx', 'src/ai-analytics/page.tsx', 'src/ai-automation/page.tsx', 'src/ai-computer-vision/page.tsx', 'src/ai-content-generation/page.tsx', 'src/ai-content-studio/page.tsx', 'src/ai-crm/page.tsx', 'src/ai-customer-insights/page.tsx', 'src/ai-customer-support-bot/page.tsx', 'src/ai-customer-support/page.tsx', 'src/ai-cybersecurity/page.tsx', 'src/ai-data-analytics/page.tsx', 'src/ai-data-visualization/page.tsx', 'src/ai-design-assistant/page.tsx', 'src/ai-document-processing/page.tsx', 'src/ai-document-processor/page.tsx', 'src/ai-ecommerce-optimizer/page.tsx', 'src/ai-ecommerce-solutions/page.tsx'
 
 function cleanUnusedImports(filePath) {
   try {
@@ -64,9 +40,7 @@ function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
       if (importRegex.test(content) && !content.includes(`<${comp}`) && !content.includes(`${comp}.`)) {
         content = content.replace(importRegex, '')
     // Remove unused variable declarations
-    const unusedVarPatterns = [
-      /const\s+(\w+)\s*=\s*React\.FC.*?;\s*/g,
-      /const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*/g
+    const unusedVarPatterns = [/const\s+(\w+)\s*=\s*React\.FC.*?;\s*/g, /const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*/g
     unusedVarPatterns.forEach(pattern => {)
       content = content.replace(pattern, (match, varName) => {
         if (!content.includes(varName) || content.indexOf(varName) === content.lastIndexOf(varName)) {
@@ -83,7 +57,7 @@ filesToProcess.forEach(file => {)
   if (fs.existsSync(fullPath)) {
     cleanUnusedImports(fullPath)
 console.log('Unused imports cleanup completed!')
-import { execSync } from 'child_process'
+import { execSync  } from 'child_process'
 // Function to remove unused imports from a single file
 function removeUnusedImportsFromFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8')
@@ -138,7 +112,7 @@ function removeUnusedImportsFromFile(filePath) {
     console.error(`Error processing ${filePath}:`, error.message)
 // Process all files
 filesToProcess.forEach(file => {/* TODO: Fix JSX expression */}
-import { execSync } from 'child_process'
+import { execSync  } from 'child_process'
 // Function to remove unused imports from a single file;)
 function removeUnusedImportsFromFile(filePath) {/* TODO: Fix JSX expression */}
         } else {/* TODO: Fix JSX expression */}

@@ -1,5 +1,5 @@
-import { serve } from 'https://deno.land/std@0.208.0/http/server.ts'
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.7'
+import { serve  } from 'https: //deno.land/std@0.208.0/http/server.ts'
+import { createClient  } from 'https: //esm.sh/@supabase/supabase-js@2.39.7'
 interface TenantInfo {
   id: string
   brand_name: string
@@ -55,7 +55,7 @@ serve(async (req) => {
         .eq('is_active', true)
         .single()
       if (error) {
-        console.error('Database error:', error)
+        console.error('Database error: ', error)
         throw new Error(`Database error: ${error.message}`)
       }
       tenantInfo = data as TenantInfo
@@ -99,7 +99,7 @@ serve(async (req) => {
       },
     )
   } catch (error) {
-    console.error('Tenant detector error:', error)
+    console.error('Tenant detector error: ', error)
     return new Response(
       JSON.stringify({ 
         error: error.message || 'Internal server error',

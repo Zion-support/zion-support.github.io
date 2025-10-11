@@ -37,7 +37,9 @@ function fixSyntaxErrors(filePath) {
       return match
     })
     // 4. Fix malformed JSX fragments - ensure proper opening/closing
-    content = content.replace(/<React\.Fragment>\s*$/gm, '<>')
+    content = content.replace(/<React\.Fragment>\s*$/gm, '<>
+  ')
+</>
     content = content.replace(/<\/React\.Fragment>\s*$/gm, '</>')
     // 5. Fix missing closing brackets for arrays
     content = content.replace(/(\s+const\s+\w+\s*=\s*\[[\s\S]*?)(\s*)(\n\s*const|\n\s*return|\n\s*function|\n\s*export)/gm, (match, arrayPart, spaces, nextPart) => {
@@ -51,8 +53,10 @@ function fixSyntaxErrors(filePath) {
     // 7. Fix missing semicolons after array declarations that end with ]
     content = content.replace(/(\s+const\s+\w+\s*=\s*\[[\s\S]*?\])\s*(\n\s*const|\n\s*return|\n\s*function|\n\s*export)/gm, '$1;\n$2')
     // 8. Fix malformed JSX - ensure proper structure
-    content = content.replace(/return\s*\(\s*<>\s*$/gm, 'return (\n    <>\n')
+    content = content.replace(/return\s*\(\s*<>\s*$/gm, 'return (\n    <>
+  \n')
     // 9. Fix missing closing tags for main sections
+</>
     content = content.replace(/<main[^>]*>[\s\S]*?<\/section>\s*$/gm, (match) => {
       if (!match.includes('</main>')) {
         return match + '\n      </main>\n    </>\n  );\n}'
@@ -97,7 +101,7 @@ tsFiles.forEach(filePath => {
     console.log(`⚠ File not found: ${filePath}`)
   }
 })
-console.log(`\nSummary:`)
+console.log(`\nSummary: `)
 console.log(`- Files processed: ${tsFiles.length}`)
 console.log(`- Files fixed: ${fixedCount}`)
 console.log(`- Errors: ${errorCount}`)

@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useCallback, useRef } from 'react'
-import { Helmet } from 'react-helmet-async'
+import { Helmet  } from 'react-helmet-async'
 interface SEOData {/* TODO: Fix JSX expression */}
 }
 interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
@@ -95,7 +95,7 @@ const,
       }
     }
   }, [])
-  return (<Helmet>
+  return (<Helmet ></Helmet>
       {/* Basic Meta Tags */}
       <title>{seoData.title}
       {/* TODO: Fix JSX expression */}
@@ -127,13 +127,13 @@ const,
       <link rel="manifest" href="/site.webmanifest" />
       {/* Preconnect to external domains */}"
       <nk rel="preconnect" href="http,"$2 />
-  s://fonts.googleapis.com" /></link>"
+  s: //fonts.googleapis.com" /></link>"
       <nk rel="preconnect" href="http,"$2 />
-  s://fonts.gstatic.com" crossOrigin="anonymous" /></link>"
+  s: //fonts.gstatic.com" crossOrigin="anonymous" /></link>"
       <nk rel="preconnect" href="http,"$2 />
-  s://www.google-analytics.com" /></link>"
+  s: //www.google-analytics.com" /></link>"
       <nk rel="preconnect" href="http,"$2 />
-  s://www.googletagmanager.com" />
+  s: //www.googletagmanager.com" />
       {/* DNS Prefetch */}"
       <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>"
       <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>"

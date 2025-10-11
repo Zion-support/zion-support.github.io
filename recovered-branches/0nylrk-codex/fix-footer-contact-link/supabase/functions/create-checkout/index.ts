@@ -1,6 +1,6 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts"
+import { serve  } from 'https: //deno.land/std@0.190.0/http/server.ts'
 import Stripe from "https://esm.sh/stripe@14.21.0"
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0"
+import { createClient  } from 'https: //esm.sh/@supabase/supabase-js@2.45.0'
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -63,18 +63,13 @@ serve(async (req) => {
     const session = await stripe.checkout.sessions.create({
       customer: customerId,
       customer_email: customerId ? undefined : user.email,
-      line_items: [
-        {
+      line_items: [{
           price_data: {
-            currency: currency,
-            product_data: { 
-              name: productName,
-              description: productDescription
-            },
-            unit_amount: amount * 100, // Convert to cents
+            currency: currency, product_data: { 
+              name: productName, description: productDescription
+            }, unit_amount: amount * 100, // Convert to cents
             ...(productType === "subscription" ? { recurring: { interval: "month" } } : {})
-          },
-          quantity: 1}],
+          }, quantity: 1}],
           quantity: 1,
         },
       ],
@@ -109,7 +104,7 @@ serve(async (req) => {
       status: 200,
     })
   } catch (error) {
-    console.error("Checkout error:", error.message)
+    console.error("Checkout error: ", error.message)
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})

@@ -178,8 +178,7 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
   O: Add content,}
 }
 
-  domContentLoaded:
-//             navigation.domContentLoadedEventEnd -
+  domContentLoaded: //             navigation.domContentLoadedEventEnd -
 //             navigation.domContentLoadedEventStart,
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
           domInteractive: navigation.domInteractive - navigation.fetchStart,

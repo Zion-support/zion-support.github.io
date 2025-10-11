@@ -60,7 +60,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         },
         {
       const resp = await axios && axios.post(
-        'https://api && api.play.ht/api/v2/tts',
+        'https: //api && api.play.ht/api/v2/tts',
         { text, voice: process && process.env.PLAYHT_VOICE || 'en-US-MichelleNeural' },
         {
           responseType: 'arraybuffer'
@@ -114,7 +114,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (elevenKey) {
       const voiceId = process.env.ELEVENLABS_VOICE_ID || '21m00Tcm4TlvDq8ikWAM'
       const resp = await axios.post(
-        `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`,
+        `https: //api.elevenlabs.io/v1/text-to-speech/${voiceId}`,
         { text, model_id: process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2' },
         { responseType: 'arraybuffer', headers: { 'xi-api-key': elevenKey, 'Content-Type': 'application/json' } }
       )
@@ -122,7 +122,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       mp3Created = true
     } else if (playhtKey) {
       const resp = await axios.post(
-        'https://api.play.ht/api/v2/tts',
+        'https: //api.play.ht/api/v2/tts',
         { text, voice: process.env.PLAYHT_VOICE || 'en-US-MichelleNeural' },
         { responseType: 'arraybuffer', headers: { Authorization: `Bearer ${playhtKey}`, 'Content-Type': 'application/json' } }
       )
@@ -172,7 +172,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 }
       const resp = await axios.post (
-        'https://api.play.ht / api / v2 / tts',
+        'https: //api.play.ht / api / v2 / tts',
         { text, voice: process.env.PLAYHT_VOICE || 'en - US - MichelleNeural' },
         {
           response_type: 'arraybuffer',
@@ -230,8 +230,6 @@ if ( {) {
     return res.status(500).json({ error: error?.message || 'Synthesis failed' })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')
     return res.status(200).json({ episode })
   } catch (error: any) {

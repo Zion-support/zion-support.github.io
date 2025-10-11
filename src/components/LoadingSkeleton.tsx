@@ -30,15 +30,17 @@ const,
   )
 }
           "
-          <div className="bg-white rounded-lg shadow-lg p-6"><Skeleton height="24px" width="75%" className="mb-4" /><Skeleton height="16px" width="100%" className="mb-2" /><Skeleton height="16px" width="90%" className="mb-4" /><Skeleton height="40px" width="120px" rounded />
+          <div className="bg-white rounded-lg shadow-lg p-6"><Skeleton height="24px" width="75%" className="mb-4" /><Skeleton height="16px" width="100%" className="mb-2" /><Skeleton height="16px" width="90%" className="mb-4" /><Skeleton height="40px" width="120px" rounded /></Skeleton>
 )
 export const,
-  TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => ()
+  TextSkeleton: React.FC<>
+  {lines?: number } = ({ lines = 3 }) => ()
   "
+</>
           <div className="space-y-2">
     {/* TODO: Fix JSX expression */}
   h: lines }).map((_, index) => ()
-          <Skeleton>
+          <Skeleton ></Skeleton>
         key={index}"
         height="16px"
         width={index === lines - 1 ? '75%' : '100%'}
@@ -46,11 +48,13 @@ export const,
     ))}
 )
 export const,
-  ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({/* TODO: Fix JSX expression */}
+  ImageSkeleton: React.FC<>
+  {aspectRatio?: string } = ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   aspectRatio = '16/9')
 }) => ("
+</>
           < className="bg-gray-200 rounded-lg animate-pulse"$2 />
     style={{ aspectRatio }}"
     role="status""
@@ -58,8 +62,10 @@ export const,
   ><span className="sr-only">Loading image...</span></div>)
 )
 export const,
-  ListSkeleton: React.FC<{ items?: number }> = ({ items = 5 }) => ()
+  ListSkeleton: React.FC<>
+  {items?: number } = ({ items = 5 }) => ()
   "
+</>
           <div className="space-y-3">
     {/* TODO: Fix JSX expression */}
   h: items }).map((_, index) => ("
@@ -67,18 +73,20 @@ export const,
     ))}
 )
 export const,
-  TableSkeleton: React.FC<{ rows?: number, columns?: number }> = ({/* TODO: Fix JSX expression */}
+  TableSkeleton: React.FC<>
+  {rows?: number, columns?: number } = ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   rows = 5,
   columns = 4;)
 }) => ("
+</>
           <div className="overflow-hidden">< className="grid gap-4 mb-4" style={/* TODO: Fix JSX expression */})$2 />
   s: `repeat(${columns}, 1fr)` }}>
       {/* TODO: Fix JSX expression */}
   h: columns }).map((_, index) => ()
         "
-          <Skeleton key={index} height="20px" />
+          <Skeleton key={index} height="20px" /></Skeleton>
       ))}
     {/* TODO: Fix JSX expression */}
   h: rows }).map((_, rowIndex) => (<div></div>"
@@ -89,7 +97,7 @@ export const,
         {/* TODO: Fix JSX expression */}
   h: columns }).map((_, colIndex) => ()
           "
-          <Skeleton key={colIndex} height="16px" />
+          <Skeleton key={colIndex} height="16px" /></Skeleton>
         ))}
     ))}
 )

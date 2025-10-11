@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface EmergingTech2028Service {
 export interface EmergingTechService2028 {
   id: string
@@ -64,41 +64,10 @@ export interface EmergingTechService2028 {/* TODO: Fix JSX expression */}
 }
     address: string,
   }
-export const emergingTech2028Services: EmergingTechService2028[] = [
-    address: string,
-  }
-export const emergingTech2028Services: EmergingTechService2028[] = [
-    id: '2028 - emerging - tech - service',
-    name: '2028 Emerging Tech Service Platform',
-    tagline: 'Emerging tech services for 2028',
-    price: '$299 / month',
-    description: unknown,
-    addres,
-  s: string}
-export const,
-  emergingTech2028Services: EmergingTechService2028[] = [,
-    addres,
-  s: string}
-export const,
-  emergingTech2028Services: EmergingTechService2028[] = [,
-    i,
-  d: '2028 - emerging - tech - service',
-    nam,
-  e: '2028 Emerging Tech Service Platform',
-    taglin,
-  e: 'Emerging tech services for 2028',
-    pric,
-  e: '$299 / month',
-    descriptio,
-  n: unknown,
-      'Advanced platform showcasing emerging technology services and innovations for 2028.',
-    feature,
-  s: [,
-      'Emerging tech services',
-      'Innovation platform',
-      'Future capabilities',
-      'Advanced features',
-      'Expert insights'],
+export const emergingTech2028Services: EmergingTechService2028[] = [address: string, }
+export const emergingTech2028Services: EmergingTechService2028[] = [id: '2028 - emerging - tech - service', name: '2028 Emerging Tech Service Platform', tagline: 'Emerging tech services for 2028', price: '$299 / month', description: unknown, addres, s: string}
+export const, emergingTech2028Services: EmergingTechService2028[] = [addres, s: string}
+export const, emergingTech2028Services: EmergingTechService2028[] = [i, d: '2028 - emerging - tech - service', nam, e: '2028 Emerging Tech Service Platform', taglin, e: 'Emerging tech services for 2028', pric, e: '$299 / month', descriptio, n: unknown, 'Advanced platform showcasing emerging technology services and innovations for 2028.', feature, s: [, 'Emerging tech services', 'Innovation platform', 'Future capabilities', 'Advanced features', 'Expert insights'],
     link: '/services / 2028 - emerging - tech - service'
     category: 'Emerging Tech Services 2028'
     real_implementation: true
@@ -112,13 +81,7 @@ export const,
     tagline: "Emerging tech services for 2028",
     price: "$299/month",
     description: "Advanced platform showcasing emerging technology services and innovations for 2028.",
-    features: [,
-      "Emerging tech services",
-      "Innovation platform",
-      "Future capabilities",
-      "Advanced features",
-      "Expert insights"
-    ],
+    features: ["Emerging tech services", "Innovation platform", "Future capabilities", "Advanced features", "Expert insights"],
     link: "/services/2028-emerging-tech-service"
     category: "Emerging Tech Services 2028"
     realImplementation: true
@@ -140,16 +103,12 @@ export const,
     address: string,
   }
 }
-export const emergingTech2028 Services: EmergingTechService2028[] = [,
-    id: "2028-emerging-tech-service", name: "2028 Emerging Tech Service Platform",
-    tagline: "Emerging tech services for 2028", price: "$299/month"
+export const emergingTech2028 Services: EmergingTechService2028[] = [id: "2028-emerging-tech-service", name: "2028 Emerging Tech Service Platform", tagline: "Emerging tech services for 2028", price: "$299/month"
     description: "Advanced platform showcasing emerging technology services and innovations for 2028."
-    features: [,
-      "Emerging tech services"
+    features: [, "Emerging tech services"
       "Innovation platform"
       "Future capabilities"
-      "Advanced features",
-      "Expert insights"],
+      "Advanced features", "Expert insights"],
     link: "/services/2028-emerging-tech-service", category: "Emerging Tech Services 2028",
     realImplementation: true
     contactInfo: unknown,
@@ -185,13 +144,12 @@ export const emergingTech2028 Services: EmergingTechService2028[] = [,
     descriptio,"
   n: "Advanced platform showcasing emerging technology services and innovations for 2028.",
     feature,
-  s: [,"
-      "Emerging tech services","
-      "Innovation platform","
-      "Future capabilities","
-      "Advanced features","
-      "Expert insights"
-    ],
+  s: ["
+      "Emerging tech services", "
+      "Innovation platform", "
+      "Future capabilities", "
+      "Advanced features", "
+      "Expert insights"],
     lin,"
   k: "/services/2028-emerging-tech-service",
     categor,"
@@ -235,23 +193,17 @@ export const emergingTech2028 Services: EmergingTechService2028[] = [,
   s: string}
 }
 export const,
-  emergingTech2028Services: EmergingTechService2028[] = [,
-    i,"
-  d: "2028-emerging-tech-service", nam,"
-  e: "2028 Emerging Tech Service Platform",
-    taglin,"
-  e: "Emerging tech services for 2028", pric,"
-  e: "$299/month",
-    descriptio,"
-  n: "Advanced platform showcasing emerging technology services and innovations for 2028.",
-    feature,
-  s: [,"
+  emergingTech2028Services: EmergingTechService2028[] = [i, "
+  d: "2028-emerging-tech-service", nam, "
+  e: "2028 Emerging Tech Service Platform", taglin, "
+  e: "Emerging tech services for 2028", pric, "
+  e: "$299/month", descriptio, "
+  n: "Advanced platform showcasing emerging technology services and innovations for 2028.", feature, s: [, "
       "Emerging tech services""
       "Innovation platform""
       "Future capabilities""
       "Advanced features""
-      "Expert insights"
-    ],
+      "Expert insights"],
     lin,"
   k: "/services/2028-emerging-tech-service", categor,"
   y: "Emerging Tech Services 2028",
@@ -279,13 +231,7 @@ id: "2028-emerging-tech-service"
     tagline: "Emerging tech services for 2028",
     price: "$299/month",
     description: "Advanced platform showcasing emerging technology services and innovations for 2028.",
-    features: [,
-      "Emerging tech services",
-      "Innovation platform",
-      "Future capabilities",
-      "Advanced features",
-      "Expert insights"
-    ],
+    features: ["Emerging tech services", "Innovation platform", "Future capabilities", "Advanced features", "Expert insights"],
     link: "/services/2028-emerging-tech-service"
     category: "Emerging Tech Services 2028"
     realImplementation: true
@@ -311,13 +257,12 @@ id: "2028-emerging-tech-service"
     descriptio,"
   n: "Advanced platform showcasing emerging technology services and innovations for 2028.",
     feature,
-  s: [,"
-      "Emerging tech services","
-      "Innovation platform","
-      "Future capabilities","
-      "Advanced features","
-      "Expert insights"
-    ],
+  s: ["
+      "Emerging tech services", "
+      "Innovation platform", "
+      "Future capabilities", "
+      "Advanced features", "
+      "Expert insights"],
     lin,"
   k: "/services/2028-emerging-tech-service",
     categor,"
@@ -356,15 +301,7 @@ export interface EmergingTechService2028 export interface EmergingTechService202
   l: string} addres,
   s: string} } } addres,
   s: string} export const,
-  emergingTech2028Services: EmergingTechService2028[] = [ addres,
-  s: string} export const,
-  emergingTech2028Services: EmergingTechService2028[] = [, i,
-  d: '2028 - emerging - tech - service',' nam,
-  e: '2028 Emerging Tech Service Platform',' taglin,
-  e: 'Emerging tech services for 2028',' pric,
-  e: '$299 / month', descriptio,
-  n:  ,' 'Advanced platform showcasing emerging technology services and innovations for 2028.', feature,
-  s: [,' 'Emerging tech services',' 'Innovation platform',' 'Future capabilities',' 'Advanced features',' 'Expert insights'],' lin,
+  emergingTech2028Services: EmergingTechService2028[] = [addres, s: string} export const, emergingTech2028Services: EmergingTechService2028[] = [i, d: '2028 - emerging - tech - service', ' nam, e: '2028 Emerging Tech Service Platform', ' taglin, e: 'Emerging tech services for 2028', ' pric, e: '$299 / month', descriptio, n:, ' 'Advanced platform showcasing emerging technology services and innovations for 2028.', feature, s: [, ' 'Emerging tech services', ' 'Innovation platform', ' 'Future capabilities', ' 'Advanced features', ' 'Expert insights'],' lin,
   k: '/services / 2028 - emerging - tech - service',' categor,
   y: 'Emerging Tech Services 2028', real_implementatio,
   n: true, contact_inf,
@@ -379,7 +316,7 @@ export interface EmergingTechService2028 export interface EmergingTechService202
   e: "Emerging tech services for 2028", pric,"
   e: "$299/month", descriptio,"
   n: "Advanced platform showcasing emerging technology services and innovations for 2028.", feature,"
-  s: [ "Emerging tech services", "Innovation platform", "Future capabilities", "Advanced features", "Expert insights" ], lin,"
+  s: ["Emerging tech services", "Innovation platform", "Future capabilities", "Advanced features", "Expert insights"], lin,"
   k: "/services/2028-emerging-tech-service", categor,"
   y: "Emerging Tech Services 2028", realImplementatio,
   n: true, contactInf,
@@ -401,13 +338,13 @@ export interface EmergingTechService2028 export interface EmergingTechService202
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  emergingTech2028Services: EmergingTechService2028[] = [ i,"
-  d: "2028-emerging-tech-service", nam,"
-  e: "2028 Emerging Tech Service Platform", taglin,"
-  e: "Emerging tech services for 2028", pric,"
-  e: "$299/month", descriptio,"
-  n: "Advanced platform showcasing emerging technology services and innovations for 2028.", feature,"
-  s: [ "Emerging tech services" "Innovation platform" "Future capabilities" "Advanced features" "Expert insights" ], lin,"
+  emergingTech2028Services: EmergingTechService2028[] = [i, "
+  d: "2028-emerging-tech-service", nam, "
+  e: "2028 Emerging Tech Service Platform", taglin, "
+  e: "Emerging tech services for 2028", pric, "
+  e: "$299/month", descriptio, "
+  n: "Advanced platform showcasing emerging technology services and innovations for 2028.", feature, "
+  s: [ "Emerging tech services" "Innovation platform" "Future capabilities" "Advanced features" "Expert insights"], lin,"
   k: "/services/2028-emerging-tech-service", categor,"
   y: "Emerging Tech Services 2028", realImplementatio,
   n: true, contactInf,
@@ -423,7 +360,7 @@ export interface EmergingTechService2028 export interface EmergingTechService202
   e: "Emerging tech services for 2028", pric,"
   e: "$299/month", descriptio,"
   n: "Advanced platform showcasing emerging technology services and innovations for 2028.", feature,"
-  s: [ "Emerging tech services", "Innovation platform", "Future capabilities", "Advanced features", "Expert insights" ], lin,"
+  s: ["Emerging tech services", "Innovation platform", "Future capabilities", "Advanced features", "Expert insights"], lin,"
   k: "/services/2028-emerging-tech-service", categor,"
   y: "Emerging Tech Services 2028", realImplementatio,
   n: true, contactInf,

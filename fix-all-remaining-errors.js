@@ -2,26 +2,25 @@
 
 import fs from 'fs'
 import path from 'path'
-import { execSync } from 'child_process'
+import { execSync  } from 'child_process'
 // Function to fix common syntax patterns
 function fixCommonSyntaxErrors(content) {
   let modified = false
   // Fix malformed imports
-  const importFixes = [
-    // Fix malformed import statements with missing commas
+  const importFixes = [// Fix malformed import statements with missing commas
     {
       pattern: /import\s+{([^}]*),\s*([^}]*),\s*([^}]*)\s+from\s+'([^']*)';\s*}/g,
-      replacement: "import { $1, $2, $3 } from '$4';"
+      replacement: "import { $1, $2, $3  } from '$4';"
     },
     // Fix malformed import statements with missing commas
     {
       pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*)';\s*}/g,
-      replacement: "import { $1, $2 } from '$3';"
+      replacement: "import { $1, $2  } from '$3';"
     },
     // Fix malformed import statements
     {
       pattern: /import\s+{([^}]*)\s+from\s+'([^']*)';\s*}/g,
-      replacement: "import { $1 } from '$2';"
+      replacement: "import { $1  } from '$2';"
     }
   ]
   for (const fix of importFixes) {
@@ -33,16 +32,13 @@ function fixCommonSyntaxErrors(content) {
   }
   
   // Fix malformed function declarations
-  const functionFixes = [
-    // Fix malformed function with missing return
+  const functionFixes = [// Fix malformed function with missing return
     {
-      pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[\s*}\s*const\s+(\w+)\s*=\s*\[\s*}/g,
-      replacement: 'const $1: React.FC = () => {\n  const $2 = [];\n  const $3 = [];\n  return ('
+      pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[\s*}\s*const\s+(\w+)\s*=\s*\[\s*}/g, replacement: 'const $1: React.FC = () => {\n  const $2 = [];\n  const $3 = [];\n  return ('
     },
     // Fix malformed function with missing return
     {
-      pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[\s*}/g,
-      replacement: 'const $1: React.FC = () => {\n  const $2 = [];\n  return ('
+      pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[\s*}/g, replacement: 'const $1: React.FC = () => {\n  const $2 = [];\n  return ('
     },
     // Fix malformed function with missing return
     {
@@ -59,21 +55,17 @@ function fixCommonSyntaxErrors(content) {
   }
   
   // Fix malformed object literals
-  const objectFixes = [
-    // Fix malformed object with missing commas
+  const objectFixes = [// Fix malformed object with missing commas
     {
-      pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-      replacement: '$1: $2,\n    $3:'
-    },
-    // Fix malformed array with missing commas
+      pattern: /(\w+):\s*(\w+), ?\s*}\s*(\w+):/g, replacement: '$1: $2, \n    $3: '
+    }, // Fix malformed array with missing commas
     {
-      pattern: /(\w+):\s*\[\s*}\s*(\w+):/g,
-      replacement: '$1: [],\n    $2:'
+      pattern: /(\w+):\s*\[\s*}\s*(\w+):/g, replacement: '$1: [],\n    $2: '
     },
     // Fix malformed object with missing commas
     {
       pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-      replacement: '$1: $2,\n    $3:'
+      replacement: '$1: $2,\n    $3: '
     }
   ]
   for (const fix of objectFixes) {
@@ -85,8 +77,7 @@ function fixCommonSyntaxErrors(content) {
   }
   
   // Fix malformed JSX
-  const jsxFixes = [
-    // Fix malformed JSX attributes
+  const jsxFixes = [// Fix malformed JSX attributes
     {
       pattern: /(\w+)="([^"]*)"\s*(\w+)/g,
       replacement: '$1="$2" $3'
@@ -111,18 +102,13 @@ function fixCommonSyntaxErrors(content) {
   }
   
   // Fix malformed comments
-  const commentFixes = [
-    // Fix malformed comments
+  const commentFixes = [// Fix malformed comments
     {
-      pattern: /\/\/\s*(\w+);/g,
-      replacement: '// $1'
-    },
-    // Fix malformed comments
+      pattern: /\/\/\s*(\w+);/g, replacement: '// $1'
+    }, // Fix malformed comments
     {
-      pattern: /\/\/\s*(\w+);/g,
-      replacement: '// $1'
-    }
-  ]
+      pattern: /\/\/\s*(\w+);/g, replacement: '// $1'
+    }]
   for (const fix of commentFixes) {
     const newContent = content.replace(fix.pattern, fix.replacement)
     if (newContent !== content) {
@@ -162,7 +148,7 @@ function findFilesWithSyntaxErrors() {
     const result = execSync('npm run lint 2>&1 | grep -B1 "error.*Parsing error" | grep "^/workspace" | sort -u 2>/dev/null || true', { encoding: 'utf8' })
     return result.trim().split('\n').filter(file => file.length > 0)
   } catch (error) {
-    console.error('Error finding files with syntax errors:', error.message)
+    console.error('Error finding files with syntax errors: ', error.message)
     return []
   }
 }

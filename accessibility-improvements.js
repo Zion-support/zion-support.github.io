@@ -1,7 +1,6 @@
 // Accessibility improvements to implement
 // 1. Add ARIA labels to interactive elements
-// Example JSX:
-// <button aria-label="Close dialog">×
+// Example JSX: // <button aria-label="Close dialog">×
 // <input aria-describedby="email-help" type="email" />
 // <div id="email-help">Enter your email address
 // 2. Implement focus management
@@ -28,13 +27,11 @@ const trapFocus = (element) => {
   })
 }
 // 3. Add live regions for dynamic content
-// Example JSX:
-// <div aria-live="polite" aria-atomic="true" className="sr-only">
+// Example JSX: // <div aria-live="polite" aria-atomic="true" className="sr-only">
 //   {announcement}
 //
 // 4. Ensure proper heading hierarchy
-// Example JSX:
-// <h1>Main Page Title
+// Example JSX: // <h1>Main Page Title
 // <h2>Section Title
 // <h3>Subsection Title
 // 5. Add skip links
@@ -47,7 +44,6 @@ const trapFocus = (element) => {
 // <main>
 //   <nav aria-label="Main navigation">
 //     <ul>
-<<<<<<< HEAD
 //       <li><a href="/">Home</a></li>
 //     </ul>
 //   </nav>
@@ -115,44 +111,3 @@ export const runAccessibilityImprovements = () => {
   improveKeyboardNavigation();
   addAltText();
 };
-=======
-//       <li><a href="/">Home</a>
-//
-//
-//   <section>
-//     <h2>Section Title
-//     <article>
-//       <h3>Article Title
-//
-//
-//
-// 7. Form accessibility
-// Example JSX:
-// <form>
-//   <fieldset>
-//     <legend>Contact Information
-//     <label htmlFor="email">Email:
-//     <input id="email" type="email" required />
-//     <label htmlFor="phone">Phone:
-//     <input id="phone" type="tel" />
-//
-//
-// 8. Color contrast and visual indicators
-// Example CSS:
-// .focus-visible:focus {
-//   outline: 2px solid #0066cc
-//   outline-offset: 2px
-// }
-
-// 9. Keyboard navigation
-// Example JSX:
-// <div role="button" tabIndex={0} onKeyDown={handleKeyDown}>
-//   Clickable div
-//
-// 10. Screen reader announcements
-// Example JSX:
-// <div aria-live="assertive" aria-atomic="true">
-//   {errorMessage}
-//
-export { trapFocus }</div></div></div></div></button></a></a></h1></h2></h2></h3></h3></ul></li></main></section></article></nav>
->>>>>>> origin/main

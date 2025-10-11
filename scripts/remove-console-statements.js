@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { glob } from 'glob'
+import { glob  } from 'glob'
 // Patterns to match console statements
-const consolePatterns = [
-  /console\.log\([^)]*\);?/g,
+const consolePatterns = [/console\.log\([^)]*\);?/g,
   /console\.warn\([^)]*\);?/g,
   /console\.error\([^)]*\);?/g,
   /console\.info\([^)]*\);?/g,
@@ -19,31 +18,9 @@ const consolePatterns = [
   /console\.clear\([^)]*\);?/g
 ]
 // Files to process
-const filePatterns = [
-  'app/**/*.{ts,tsx,js,jsx}',
-  'src/**/*.{ts,tsx,js,jsx}',
-  'components/**/*.{ts,tsx,js,jsx}',
-  'pages/**/*.{ts,tsx,js,jsx}',
-  'utils/**/*.{ts,tsx,js,jsx}',
-  'hooks/**/*.{ts,tsx,js,jsx}',
-  'lib/**/*.{ts,tsx,js,jsx}'
-]
+const filePatterns = ['app/**/*.{ts, tsx, js, jsx}', 'src/**/*.{ts, tsx, js, jsx}', 'components/**/*.{ts, tsx, js, jsx}', 'pages/**/*.{ts, tsx, js, jsx}', 'utils/**/*.{ts, tsx, js, jsx}', 'hooks/**/*.{ts, tsx, js, jsx}', 'lib/**/*.{ts, tsx, js, jsx}']
 // Files to exclude
-const excludePatterns = [
-  '**/node_modules/**',
-  '**/dist/**',
-  '**/.next/**',
-  '**/build/**',
-  '**/coverage/**',
-  '**/*.test.{ts,tsx,js,jsx}',
-  '**/*.spec.{ts,tsx,js,jsx}',
-  '**/scripts/**',
-  '**/automation/**',
-  '**/backup*/**',
-  '**/disabled*/**',
-  '**/corrupted*/**',
-  '**/temp*/**'
-]
+const excludePatterns = ['**/node_modules/**', '**/dist/**', '**/.next/**', '**/build/**', '**/coverage/**', '**/*.test.{ts, tsx, js, jsx}', '**/*.spec.{ts, tsx, js, jsx}', '**/scripts/**', '**/automation/**', '**/backup*/**', '**/disabled*/**', '**/corrupted*/**', '**/temp*/**']
 let totalFiles = 0
 let processedFiles = 0
 let removedStatements = 0
@@ -75,14 +52,7 @@ async function main() {/* TODO: Fix JSX expression */}
 }
   // console.log('🧹 Removing console statements from production code...\n')
   // Get all TypeScript and JavaScript files in the app directory
-  const patterns = [
-    'app/**/*.{ts,tsx,js,jsx}',
-    '!app/**/*.test.{ts,tsx,js,jsx}',
-    '!app/**/*.spec.{ts,tsx,js,jsx}',
-    '!**/node_modules/**',
-    '!**/.next/**',
-    '!**/dist/**'
-  ]
+  const patterns = ['app/**/*.{ts, tsx, js, jsx}', '!app/**/*.test.{ts, tsx, js, jsx}', '!app/**/*.spec.{ts, tsx, js, jsx}', '!**/node_modules/**', '!**/.next/**', '!**/dist/**']
   let totalFiles = 0
   let modifiedFiles = 0
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
@@ -125,7 +95,7 @@ async function main() {
   console.log(`   - Console statements removed: ${removedStatements}`)
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file: //${process.argv[1]}`) {
     main()
   }
 

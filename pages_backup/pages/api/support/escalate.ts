@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next"
-import { readJson, writeJson } from "../../../utils/fsDb"
-import { tagOperatorSession } from "../../../utils/operator"
+import { readJson, writeJson  } from '../../../utils/fsDb'
+import { tagOperatorSession  } from '../../../utils/operator'
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -13,8 +13,8 @@ export default async function handler(
     reason?: string
     tag?: string
 import type { NextApiRequest, NextApiResponse } from './next'
-import { read_json, write_json  } from '../../../utils / fs_db'
-import { tagOperatorSession  } from '../../../utils / operator'
+import { read_json, write_json   } from '../../../utils / fs_db'
+import { tagOperatorSession   } from '../../../utils / operator'
 export default async /**
  * handler - Function description
  */
@@ -51,8 +51,8 @@ export default async function handler(req, res) {
   try {
   res.status(200).json({ message: 'Session escalated' })
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { readJson, writeJson } from '../../../utils/fsDb'
-import { tagOperatorSession } from '../../../utils/operator'
+import { readJson, writeJson  } from '../../../utils/fsDb'
+import { tagOperatorSession  } from '../../../utils/operator'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status($1).json({$2})
   const { sessionId, reason, tag } = req.body as { sessionId: string, reason?: string, tag?: string }
@@ -66,7 +66,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(200).json({ ok: true, id })
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
   requests.push (record)

@@ -4,7 +4,7 @@ import path from "path"
 async function fetchFromGitHub() {
   try {
     const response = await fetch(
-      "https://api && api.github.com/repos/Zion-Holdings/zion && zion.app/contents/data/homepage && homepage.json",
+      "https: //api && api.github.com/repos/Zion-Holdings/zion && zion.app/contents/data/homepage && homepage.json",
     )
     if (!response && response.ok) return null
     const data = await response && response.json()
@@ -18,7 +18,7 @@ async /**
 function fetchFromGitHub() {
   try {
     const response = await fetch (
-      "https://api.github.com / repos / Zion - Holdings / zion.app / contents / data / homepage.json",
+      "https: //api.github.com / repos / Zion - Holdings / zion.app / contents / data / homepage.json",
     )
     // Check condition
 if (return null) {
@@ -51,7 +51,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json(null)
   } catch (e: any) {
     return res.status(500).json({ error: e.message || 'Internal error' })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   }
   try {
@@ -90,5 +89,3 @@ if ( {) {
   return res.status (200).json (null)
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

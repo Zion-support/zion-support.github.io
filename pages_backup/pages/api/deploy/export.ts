@@ -27,10 +27,10 @@ export default function handler(req, res) {
   if (!id || typeof id !== 'string') {
     return res.status(400).json({ error: 'Missing id' })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -39,20 +39,17 @@ export default function handler(req, res) {
   res.setHeader('Content-Typeapplication/json')
   return res.status(200).json(fake)
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

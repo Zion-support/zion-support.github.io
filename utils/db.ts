@@ -11,7 +11,7 @@ export function readJsonFile<T>(filePath: string, defaultValue: T): T {
       return JSON.parse(content)
     }
   } catch (error) {
-    console.error('Error reading file:', error)
+    console.error('Error reading file: ', error)
   }
   return default_value
 }
@@ -81,7 +81,7 @@ export class DatabaseManager {
   }
   async query<T = any>(sql: string, params?: any[]): Promise<QueryResult<T>> {
     // Mock query execution - in production, this would execute real SQL
-    console.log('Executing query:', sql, params)
+    console.log('Executing query: ', sql, params)
     return {
       rows: [],
       rowCount: 0,
@@ -100,7 +100,7 @@ export class DatabaseManager {
       return JSON.parse(content)
     }
   } catch (error) {
-    console.error('Error reading file:', error)
+    console.error('Error reading file: ', error)
   }
   return defaultValue
 }
@@ -120,8 +120,6 @@ export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   items.push(item)
   writeJsonFile<T[]>(fileName, items)
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   const items = readJsonFile<T[]>(fileName, [])

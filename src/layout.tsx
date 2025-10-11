@@ -1,6 +1,6 @@
 import Analytics from './components/Analytics'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link  } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import Analytics from './components/Analytics'
@@ -9,7 +9,7 @@ export default function RootLayout({
     children: React.ReactNode
   }) {
   const structuredData = {
-    '@context': 'https://schema.org',
+    '@context': 'https: //schema.org',
     '@type': 'TechCompany',
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
@@ -18,41 +18,18 @@ export default function RootLayout({
     foundingDate: '2020',
     numberOfEmployees: '50-100',
     industry: 'Technology',
-    services: [
-      'AI Solutions',
-      'Quantum Computing',
-      'Autonomous Systems',
-      'Digital Transformation',
-      'Cloud Services',
-      'Automation',
-      'Business Intelligence'
-    ],
+    services: ['AI Solutions', 'Quantum Computing', 'Autonomous Systems', 'Digital Transformation', 'Cloud Services', 'Automation', 'Business Intelligence'],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
       contactType: 'Customer Service',
       areaServed: 'US',
       availableLanguage: 'en'},
-    sameAs: [
-      'https://twitter.com/ziontechgroup',
-      'https://linkedin.com/company/ziontechgroup',
-    address: {
-    '@type': 'PostalAddress',
-      streetAddress: '364 E Main St STE 1008',
-      addressLocality: 'Middletown',
-      addressRegion: 'DE',
-      postalCode: '19709',
-      addressCountry: 'US',
-    offers: [
+    sameAs: ['https://twitter.com/ziontechgroup', 'https: //linkedin.com/company/ziontechgroup', address: {
+    '@type': 'PostalAddress', streetAddress: '364 E Main St STE 1008', addressLocality: 'Middletown', addressRegion: 'DE', postalCode: '19709', addressCountry: 'US', offers: [
       {
   const address = {
-    '@type': 'PostalAddress',
-    streetAddress: '364 E Main St STE 1008',
-    addressLocality: 'Middletown',
-    addressRegion: 'DE',
-    postalCode: '19709',
-    addressCountry: 'US',
-    offers: [
+    '@type': 'PostalAddress', streetAddress: '364 E Main St STE 1008', addressLocality: 'Middletown', addressRegion: 'DE', postalCode: '19709', addressCountry: 'US', offers: [
   // TODO: Add items]
       {// TODO: Add content
   }
@@ -64,7 +41,7 @@ export default function RootLayout({
         priceCurrency: 'USD',
         priceSpecification: {
           '@type': 'PriceSpecification',
-          billingIncrement:         ,
+          billingIncrement:  ,
 $4}
         category: 'Digital Transformation',
         description: 'Process automation, legacy system modernization, and workflow optimization',
@@ -74,21 +51,13 @@ $4}
       geoMidpoint: {
         '@type': 'GeoCoordinates',
         latitude: '39.8283',
-        longitude:       ,
+        longitude:  ,
 geoRadiusgeoRadius: '1000000'
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'AI Technology Services',
-      itemListElement: [
-          itemOffered: {
-            '@type': 'Service',
-            name: 'AI Enterprise Transformation',
-            description:             ,
-name$5: 'Digital Automation',
-            description:             ,
-name$5: 'Cloud Infrastructure',
-            description:       ,
-$4]
+      itemListElement: [itemOffered: {
+            '@type': 'Service', name: 'AI Enterprise Transformation', description:, name$5: 'Digital Automation', description:, name$5: 'Cloud Infrastructure', description:, $4]
   }
   return (
     <html lang='en'>
@@ -125,32 +94,32 @@ $4]
         <meta name='application-name' content='Zion Tech Group' />
         <meta name='msapplication-TileColor' content='#4f46e5' />
         <meta name='msapplication-config' content='/browserconfig.xml' />
-        <link rel='canonical' href='https://ziontechgroup.com' />
+        <link rel='canonical' href='https: //ziontechgroup.com' />
         <link rel='alternate' hrefLang='en' href='https://ziontechgroup.com' />
         {/* Resource hints for better performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https: //fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
+        <meta property="og: type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
         <meta property="og:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <meta property="og: image" content="https://ziontechgroup.com/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="Zion Tech Group" />
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter: card" content="summary_large_image" />
         <meta name="twitter:url" content="https://ziontechgroup.com" />
         <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
         <meta name="twitter:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <meta name="twitter: image" content="https://ziontechgroup.com/og-image.jpg" />
         <meta name="twitter:site" content="@ziontechgroup" />
         <meta name="twitter:creator" content="@ziontechgroup" />
         {/* Enhanced Twitter Card tags */}
-        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter: card' content='summary_large_image' />
         <meta name='twitter:title' content='Zion Tech Group - AI & Technology Solutions' />
         <meta name='twitter:description' content='Transform your business with cutting-edge AI solutions and digital transformation services.' />
         <meta name='twitter:image' content='https://ziontechgroup.com/og-image.jpg' />
@@ -161,9 +130,9 @@ $4]
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       <body className='antialiased'>
-        <ErrorBoundary>
-          <PerformanceMonitor />
-          <Analytics />
+        <ErrorBoundary ></ErrorBoundary>
+          <PerformanceMonitor /></PerformanceMonitor>
+          <Analytics /></Analytics>
           {children}
         </ErrorBoundary>
       </body>

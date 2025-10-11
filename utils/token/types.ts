@@ -38,7 +38,7 @@ export interface TokenTransaction {
   metadata?: Record<string, any>,
   createdAt: string, // ISO timestamp
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -47,7 +47,7 @@ export interface Wallet {
   userId: string
   balance: number, // current token balance
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -60,7 +60,7 @@ export interface TokenConfig {
   earnRules: Record<string, number>, // action -> tokens
   burnRules: Record<string, number>, // feature -> tokens
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -70,11 +70,10 @@ export interface WalletSummary {
   transactions: TokenTransaction[]
   config: TokenConfig
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 }
 export type TokenSymbol = "ZION$"

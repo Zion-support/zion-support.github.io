@@ -62,10 +62,10 @@ export function trapFocus(element: HTMLElement): () => void {
   const focusableElements = element.querySelectorAll
           <HTMLElement>()
     'a[href], butto,
-  n:not([disabled]), textare,
-  a:not([disabled]), inpu,
-  t:not([disabled]), selec,
-  t:not([disabled]), [tabindex]:not([tabindex="-1"])'
+  n: not([disabled]), textare,
+  a: not([disabled]), inpu,
+  t: not([disabled]), selec,
+  t: not([disabled]), [tabindex]:not([tabindex="-1"])'
   )
   const firstFocusable = focusableElements[0]
   const lastFocusable = focusableElements[focusableElements.length - 1]

@@ -78,16 +78,12 @@ export interface Revolutionary2027Service {/* TODO: Fix JSX expression */}
     address: string,
   }
 }
-export const revolutionary2027 Services: Revolutionary2027 Service[] = [,
-    id: "2027-revolutionary-service", name: "2027 Revolutionary Service Platform",
-    tagline: "Revolutionary services for 2027", price: "$299/month"
+export const revolutionary2027 Services: Revolutionary2027 Service[] = [id: "2027-revolutionary-service", name: "2027 Revolutionary Service Platform", tagline: "Revolutionary services for 2027", price: "$299/month"
     description: "Revolutionary service platform that transforms how businesses operate in 2027."
-    features: [,
-      "Revolutionary services"
+    features: [, "Revolutionary services"
       "Transformative capabilities"
       "Advanced technology"
-      "Innovation platform",
-      "Future-ready solutions"],
+      "Innovation platform", "Future-ready solutions"],
     link: "/services/2027-revolutionary-service", category: "Revolutionary 2027 Services",
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
@@ -127,23 +123,17 @@ export const revolutionary2027 Services: Revolutionary2027 Service[] = [,
   s: string}
 }
 export const,
-  revolutionary2027Services: Revolutionary2027Service[] = [,
-    i,"
-  d: "2027-revolutionary-service", nam,"
-  e: "2027 Revolutionary Service Platform",
-    taglin,"
-  e: "Revolutionary services for 2027", pric,"
-  e: "$299/month",
-    descriptio,"
-  n: "Revolutionary service platform that transforms how businesses operate in 2027.",
-    feature,
-  s: [,"
+  revolutionary2027Services: Revolutionary2027Service[] = [i, "
+  d: "2027-revolutionary-service", nam, "
+  e: "2027 Revolutionary Service Platform", taglin, "
+  e: "Revolutionary services for 2027", pric, "
+  e: "$299/month", descriptio, "
+  n: "Revolutionary service platform that transforms how businesses operate in 2027.", feature, s: [, "
       "Revolutionary services""
       "Transformative capabilities""
       "Advanced technology""
       "Innovation platform""
-      "Future-ready solutions"
-    ],
+      "Future-ready solutions"],
     lin,"
   k: "/services/2027-revolutionary-service", categor,"
   y: "Revolutionary 2027 Services",
@@ -178,13 +168,7 @@ id: "2027-revolutionary-service"
     tagline: "Revolutionary services for 2027",
     price: "$299/month",
     description: "Revolutionary service platform that transforms how businesses operate in 2027.",
-    features: [,
-      "Revolutionary services",
-      "Transformative capabilities",
-      "Advanced technology",
-      "Innovation platform",
-      "Future-ready solutions"
-    ],
+    features: ["Revolutionary services", "Transformative capabilities", "Advanced technology", "Innovation platform", "Future-ready solutions"],
     link: "/services/2027-revolutionary-service"
     category: "Revolutionary 2027 Services"
     realImplementation: true
@@ -210,13 +194,12 @@ id: "2027-revolutionary-service"
     descriptio,"
   n: "Revolutionary service platform that transforms how businesses operate in 2027.",
     feature,
-  s: [,"
-      "Revolutionary services","
-      "Transformative capabilities","
-      "Advanced technology","
-      "Innovation platform","
-      "Future-ready solutions"
-    ],
+  s: ["
+      "Revolutionary services", "
+      "Transformative capabilities", "
+      "Advanced technology", "
+      "Innovation platform", "
+      "Future-ready solutions"],
     lin,"
   k: "/services/2027-revolutionary-service",
     categor,"
@@ -288,13 +271,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  revolutionary2027Services: Revolutionary2027Service[] = [ i,"
-  d: "2027-revolutionary-service", nam,"
-  e: "2027 Revolutionary Service Platform", taglin,"
-  e: "Revolutionary services for 2027", pric,"
-  e: "$299/month", descriptio,"
-  n: "Revolutionary service platform that transforms how businesses operate in 2027.", feature,"
-  s: [ "Revolutionary services" "Transformative capabilities" "Advanced technology" "Innovation platform" "Future-ready solutions" ], lin,"
+  revolutionary2027Services: Revolutionary2027Service[] = [i, "
+  d: "2027-revolutionary-service", nam, "
+  e: "2027 Revolutionary Service Platform", taglin, "
+  e: "Revolutionary services for 2027", pric, "
+  e: "$299/month", descriptio, "
+  n: "Revolutionary service platform that transforms how businesses operate in 2027.", feature, "
+  s: [ "Revolutionary services" "Transformative capabilities" "Advanced technology" "Innovation platform" "Future-ready solutions"], lin,"
   k: "/services/2027-revolutionary-service", categor,"
   y: "Revolutionary 2027 Services", realImplementatio,
   n: true, contactInf,
@@ -311,7 +294,7 @@ i,
   e: "Revolutionary services for 2027", pric,"
   e: "$299/month", descriptio,"
   n: "Revolutionary service platform that transforms how businesses operate in 2027.", feature,"
-  s: [ "Revolutionary services", "Transformative capabilities", "Advanced technology", "Innovation platform", "Future-ready solutions" ], lin,"
+  s: ["Revolutionary services", "Transformative capabilities", "Advanced technology", "Innovation platform", "Future-ready solutions"], lin,"
   k: "/services/2027-revolutionary-service", categor,"
   y: "Revolutionary 2027 Services", realImplementatio,
   n: true, contactInf,

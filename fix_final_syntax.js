@@ -26,14 +26,14 @@ function fixFinalSyntaxErrors(filePath) {
     // Fix specific syntax issues
     
     // 1. Fix missing commas in object arrays
-    content = content.replace(/benefits:\s*\[[^\]]*\]\s*}\s*$/gm, (match) => {
+    content = content.replace(/benefits: \s*\[[^\]]*\]\s*}\s*$/gm, (match) => {
       if (!match.includes(',')) {
         return match.replace(/}\s*$/, '},')
       }
       return match
     })
     // 2. Fix missing commas after object properties
-    content = content.replace(/description:\s*'[^']*',\s*benefits:\s*\[[^\]]*\]\s*}\s*$/gm, (match) => {
+    content = content.replace(/description: \s*'[^']*',\s*benefits: \s*\[[^\]]*\]\s*}\s*$/gm, (match) => {
       return match.replace(/}\s*$/, '},')
     })
     // 3. Fix missing semicolons after const declarations
@@ -51,8 +51,10 @@ function fixFinalSyntaxErrors(filePath) {
       return match
     })
     // 5. Fix malformed JSX return statements
-    content = content.replace(/return\s*\(\s*<>\s*$/gm, 'return (\n    <>')
+    content = content.replace(/return\s*\(\s*<>\s*$/gm, 'return (\n    <>
+  ')
     // 6. Fix missing closing tags
+</>
     content = content.replace(/<main[^>]*>[\s\S]*?<\/section>\s*$/gm, (match) => {
       if (!match.includes('</main>')) {
         return match + '\n      </main>\n    </>\n  );\n}'
@@ -79,7 +81,7 @@ function fixFinalSyntaxErrors(filePath) {
       return match
     })
     // 11. Fix missing commas in object properties
-    content = content.replace(/description:\s*'[^']*',\s*benefits:\s*\[[^\]]*\]\s*}\s*$/gm, (match) => {
+    content = content.replace(/description: \s*'[^']*',\s*benefits: \s*\[[^\]]*\]\s*}\s*$/gm, (match) => {
       return match.replace(/}\s*$/, '},')
     })
     // 12. Fix missing semicolons after array declarations
@@ -119,7 +121,7 @@ tsFiles.forEach(filePath => {
     console.log(`⚠ File not found: ${filePath}`)
   }
 })
-console.log(`\nSummary:`)
+console.log(`\nSummary: `)
 console.log(`- Files processed: ${tsFiles.length}`)
 console.log(`- Files fixed: ${fixedCount}`)
 console.log(`- Errors: ${errorCount}`)

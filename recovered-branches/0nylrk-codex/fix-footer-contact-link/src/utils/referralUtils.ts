@@ -1,4 +1,4 @@
-import { format } from 'date-fns'
+import { format  } from 'date-fns'
 /**
  * Formats a date for display in the referral system
  * @param date Date or string to format
@@ -12,7 +12,7 @@ export function formatDate(date: Date | string | undefined): string {
     }
     return format(date, 'MMM d, yyyy')
   } catch (e) {
-    console.error('Error formatting date:', e)
+    console.error('Error formatting date: ', e)
     return '-'
   }
 }
@@ -59,6 +59,6 @@ export async function trackReferral(userId: string, email: string) {
       localStorage.removeItem('referral_code')
     }
   } catch (error) {
-    console.error('Error tracking referral:', error)
+    console.error('Error tracking referral: ', error)
   }
 }

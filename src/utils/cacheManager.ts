@@ -283,7 +283,7 @@ export class CacheManager {
   O: Add content,}
 }
           entry = JSON.parse(item) as CacheEntry
-          <T>
+          <T ></T>
         }
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -306,7 +306,7 @@ export class CacheManager {
   O: Add content,}
 }
           entry = JSON.parse(item) as CacheEntry
-          <T>
+          <T ></T>
         }
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}

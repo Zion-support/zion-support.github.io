@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
-import { supabase } from '@/integrations/supabase/client'
+import { useState, useEffect  } from 'react'
+import { supabase  } from '@/integrations/supabase/client'
 export interface WhitelabelTenant {
   id: string
   brand_name: string
@@ -53,7 +53,7 @@ export function useWhitelabelTenant(externalSubdomain?: string) {
           }
         )
         if (functionError) {
-          console.error('Edge Function error:', functionError)
+          console.error('Edge Function error: ', functionError)
           setError('Failed to load tenant configuration. Please try again later.')
           setTenant(null)
           return
@@ -114,7 +114,7 @@ export function useTenantAdminStatus(tenantId?: string) {
           .single()
         setIsAdmin(!!data && !error)
       } catch (err) {
-        console.error('Error checking tenant admin status:', err)
+        console.error('Error checking tenant admin status: ', err)
         setIsAdmin(false)
       } finally {
         setIsLoading(false)

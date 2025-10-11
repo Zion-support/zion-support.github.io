@@ -3,8 +3,7 @@ import fs from 'fs'
 function fixJSXErrors(filePath) {
   try {
     //Fix malformed JSX elements like: className="..." <span> -> className="..." /> <span>
-    const patterns = [
-      {
+    const patterns = [{
         //Fix CheckCircleIcon and similar patterns
         pattern: /(<CheckCircleIcon[^>]*>)\s*</g,$2 />
         replacement: '$1 />\n                  <'},$2 />

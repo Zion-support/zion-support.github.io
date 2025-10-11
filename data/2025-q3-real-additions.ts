@@ -24,22 +24,9 @@ export interface RealAdditionService2025Q3 {
 	rating?: number
 	reviews?: number
 }
-export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
-	{
-		id: 'ai-email-copilot',
-		name: 'AI Email Responder Copilot',
-		tagline: 'Auto-draft, classify, and reply to inbound emails with policy guardrails',
-		description: 'Reduce response times with an AI copilot that prioritizes, drafts, and routes emails across shared inboxes. Includes approval flows, tone controls, and CRM sync.',
-		price: '$79',
-		period: '/month',
-		category: 'AI Assistants',
-		features: [
-			'Priority inbox and intent detection',
-			'Policy-aware auto-drafting with approvals',
-			'CRM sync and follow-up reminders',
-			'Tone and brand voice controls',
-			'Analytics and SLA tracking'
-		],
+export const realAdditions2025Q3: RealAdditionService2025Q3[] = [{
+		id: 'ai-email-copilot', name: 'AI Email Responder Copilot', tagline: 'Auto-draft, classify, and reply to inbound emails with policy guardrails', description: 'Reduce response times with an AI copilot that prioritizes, drafts, and routes emails across shared inboxes. Includes approval flows, tone controls, and CRM sync.', price: '$79', period: '/month', category: 'AI Assistants', features: [
+			'Priority inbox and intent detection', 'Policy-aware auto-drafting with approvals', 'CRM sync and follow-up reminders', 'Tone and brand voice controls', 'Analytics and SLA tracking'],
 		popular: true,
 		link: 'https://ziontechgroup.com/ai-email-copilot',
 		trialDays: 14,
@@ -65,13 +52,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$39',
 		period: '/month',
 		category: 'Sales & Marketing',
-		features: [
-			'Link generation and UTM tagging',
-			'Fraud and self-referral checks',
-			'Conversion webhooks and API',
-			'Payout ledger and exports',
-			'GDPR/CCPA friendly tracking'
-		],
+		features: ['Link generation and UTM tagging', 'Fraud and self-referral checks', 'Conversion webhooks and API', 'Payout ledger and exports', 'GDPR/CCPA friendly tracking'],
 		popular: false,
 		link: 'https://ziontechgroup.com/affiliate-tracking-lite',
 		trialDays: 14,
@@ -97,13 +78,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$49',
 		period: '/month',
 		category: 'Analytics & Business Intelligence',
-		features: [
-			'Prebuilt KPI templates',
-			'AI explanations for spikes and dips',
-			'Weekly email digests',
-			'Goal tracking and alerts',
-			'CSV and API export'
-		],
+		features: ['Prebuilt KPI templates', 'AI explanations for spikes and dips', 'Weekly email digests', 'Goal tracking and alerts', 'CSV and API export'],
 		popular: true,
 		link: 'https://ziontechgroup.com/smb-analytics-starter',
 		trialDays: 14,
@@ -129,13 +104,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$99',
 		period: '/month',
 		category: 'IT Operations',
-		features: [
-			'Email-to-ticket with SLA timers',
-			'Asset discovery (agentless + agent)',
-			'Knowledge base and macros',
-			'AI reply suggestions',
-			'Reports and CSAT'
-		],
+		features: ['Email-to-ticket with SLA timers', 'Asset discovery (agentless + agent)', 'Knowledge base and macros', 'AI reply suggestions', 'Reports and CSAT'],
 		popular: true,
 		link: 'https://ziontechgroup.com/it-helpdesk-suite',
 		trialDays: 14,
@@ -161,13 +130,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$29',
 		period: '/month',
 		category: 'Productivity',
-		features: [
-			'Auto-join major meeting apps',
-			'Topic segmentation and speakers',
-			'Action items with owners',
-			'Email and Slack summaries',
-			'Templates (standups, reviews)'
-		],
+		features: ['Auto-join major meeting apps', 'Topic segmentation and speakers', 'Action items with owners', 'Email and Slack summaries', 'Templates (standups, reviews)'],
 		popular: false,
 		link: 'https://ziontechgroup.com/meeting-minutes-ai',
 		trialDays: 7,
@@ -193,13 +156,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$149',
 		period: '/month',
 		category: 'Data & Analytics',
-		features: [
-			'Freshness and volume checks',
-			'Anomaly detection on KPIs',
-			'Schema drift alerts',
-			'Ownership and runbooks',
-			'Insights and RCA templates'
-		],
+		features: ['Freshness and volume checks', 'Anomaly detection on KPIs', 'Schema drift alerts', 'Ownership and runbooks', 'Insights and RCA templates'],
 		popular: true,
 		link: 'https://ziontechgroup.com/data-quality-guard',
 		trialDays: 14,
@@ -225,13 +182,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$59',
 		period: '/month',
 		category: 'Growth & Optimization',
-		features: [
-			'On-brand AI text and images',
-			'Visual editor and rollback',
-			'Holdout and sample sizing',
-			'Consent-aware analytics',
-			'Insights and next-step recs'
-		],
+		features: ['On-brand AI text and images', 'Visual editor and rollback', 'Holdout and sample sizing', 'Consent-aware analytics', 'Insights and next-step recs'],
 		popular: false,
 		link: 'https://ziontechgroup.com/landing-page-ai-tester',
 		trialDays: 14,
@@ -257,13 +208,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$69',
 		period: '/month',
 		category: 'Content & Compliance',
-		features: [
-			'Brand policy linting for text and images',
-			'Inline suggestions and fixes',
-			'Asset library and approvals',
-			'Org-wide policies and roles',
-			'Weekly compliance score'
-		],
+		features: ['Brand policy linting for text and images', 'Inline suggestions and fixes', 'Asset library and approvals', 'Org-wide policies and roles', 'Weekly compliance score'],
 		popular: false,
 		link: 'https://ziontechgroup.com/ai-brand-copilot',
 		trialDays: 14,
@@ -289,13 +234,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$39',
 		period: '/month',
 		category: 'Security & Compliance',
-		features: [
-			'SBOM generation and diff',
-			'PR scanner for risky changes',
-			'Weekly security digest',
-			'Auto-created fix tickets',
-			'Policy exceptions workflow'
-		],
+		features: ['SBOM generation and diff', 'PR scanner for risky changes', 'Weekly security digest', 'Auto-created fix tickets', 'Policy exceptions workflow'],
 		popular: false,
 		link: 'https://ziontechgroup.com/security-changelog-bot',
 		trialDays: 7,
@@ -321,13 +260,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$129',
 		period: '/month',
 		category: 'Compliance Automation',
-		features: [
-			'Questionnaire templates (SOC2/ISO/NIST)',
-			'Evidence upload and mapping',
-			'Automated reminders and tasks',
-			'Risk scoring and approvals',
-			'Executive summary reports'
-		],
+		features: ['Questionnaire templates (SOC2/ISO/NIST)', 'Evidence upload and mapping', 'Automated reminders and tasks', 'Risk scoring and approvals', 'Executive summary reports'],
 		popular: true,
 		link: 'https://ziontechgroup.com/vendor-risk-lite',
 		trialDays: 14,
@@ -353,13 +286,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$79',
 		period: '/month',
 		category: 'Reliability & SRE',
-		features: [
-			'Channel orchestration (Slack/PagerDuty)',
-			'Templates per severity',
-			'Timeline auto-build from events',
-			'Customer-ready summaries',
-			'Follow-up tracker'
-		],
+		features: ['Channel orchestration (Slack/PagerDuty)', 'Templates per severity', 'Timeline auto-build from events', 'Customer-ready summaries', 'Follow-up tracker'],
 		popular: false,
 		link: 'https://ziontechgroup.com/incident-comms-assistant',
 		trialDays: 14,
@@ -385,13 +312,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$49',
 		period: '/month',
 		category: 'Privacy & Legal',
-		features: [
-			'Cookie and tracker inventory',
-			'Regional banners and consent logs',
-			'Policy generator with diffs',
-			'Weekly audits and alerts',
-			'Exportable evidence packs'
-		],
+		features: ['Cookie and tracker inventory', 'Regional banners and consent logs', 'Policy generator with diffs', 'Weekly audits and alerts', 'Exportable evidence packs'],
 		popular: false,
 		link: 'https://ziontechgroup.com/policy-privacy-scanner',
 		trialDays: 14,
@@ -417,13 +338,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$39',
 		period: '/month',
 		category: 'Professional Services',
-		features: [
-			'On-brand templates and styles',
-			'Library of scopes and clauses',
-			'Auto pricing table suggestions',
-			'E-sign and PDF export',
-			'Collaboration and approvals'
-		],
+		features: ['On-brand templates and styles', 'Library of scopes and clauses', 'Auto pricing table suggestions', 'E-sign and PDF export', 'Collaboration and approvals'],
 		popular: true,
 		link: 'https://ziontechgroup.com/ai-proposal-writer',
 		trialDays: 7,

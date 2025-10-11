@@ -1,14 +1,10 @@
 'use client'
 import React from 'react'
-import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react'
+import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle  } from 'lucide-react'
 export default function PrivacyPage() {
   const lastUpdated = 'January 1, 2024'
-  const dataTypes = [
-    {
-      category: 'Personal Information',
-      icon: User,
-      description: 'Name, email address, phone number, company information',
-      examples: ['Contact forms', 'Newsletter signups', 'Account creation']
+  const dataTypes = [{
+      category: 'Personal Information', icon: User, description: 'Name, email address, phone number, company information', examples: ['Contact forms', 'Newsletter signups', 'Account creation']
     },
     {
       category: 'Usage Data',
@@ -29,46 +25,20 @@ export default function PrivacyPage() {
       examples: ['Contact forms', 'Support requests', 'Email correspondence']
     }
   ]
-  const rights = [
-    {
-      title: 'Right to Access',
-      description: 'Request a copy of your personal data',
-      icon: Eye
-    },
-    {
-      title: 'Right to Rectification',
-      description: 'Correct inaccurate or incomplete data',
-      icon: FileText
-    },
-    {
-      title: 'Right to Erasure',
-      description: 'Request deletion of your personal data',
-      icon: Database
-    },
-    {
-      title: 'Right to Portability',
-      description: 'Receive your data in a structured format',
-      icon: ArrowRight
-    },
-    {
-      title: 'Right to Object',
-      description: 'Object to processing of your data',
-      icon: AlertTriangle
-    },
-    {
-      title: 'Right to Restrict',
-      description: 'Limit how we process your data',
-      icon: Lock
-    }
-  ]
-  const securityMeasures = [
-    'SSL/TLS encryption for data transmission',
-    'Regular security audits and penetration testing',
-    'Access controls and authentication systems',
-    'Data backup and disaster recovery procedures',
-    'Employee training on data protection',
-    'Incident response and breach notification procedures'
-  ]
+  const rights = [{
+      title: 'Right to Access', description: 'Request a copy of your personal data', icon: Eye
+    }, {
+      title: 'Right to Rectification', description: 'Correct inaccurate or incomplete data', icon: FileText
+    }, {
+      title: 'Right to Erasure', description: 'Request deletion of your personal data', icon: Database
+    }, {
+      title: 'Right to Portability', description: 'Receive your data in a structured format', icon: ArrowRight
+    }, {
+      title: 'Right to Object', description: 'Object to processing of your data', icon: AlertTriangle
+    }, {
+      title: 'Right to Restrict', description: 'Limit how we process your data', icon: Lock
+    }]
+  const securityMeasures = ['SSL/TLS encryption for data transmission', 'Regular security audits and penetration testing', 'Access controls and authentication systems', 'Data backup and disaster recovery procedures', 'Employee training on data protection', 'Incident response and breach notification procedures']
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -79,17 +49,17 @@ export default function PrivacyPage() {
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
               Privacy Policy,
   
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl lg: text-2xl text-gray-300 mb-8 leading-relaxed">
               Your privacy is important to us. Learn how we collect, use, and protect your personal information.
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
-                <Shield className="w-5 h-5 text-cyan-400" />
+                <Shield className="w-5 h-5 text-cyan-400" /></Shield>
                 <span className="text-white font-medium">GDPR Compliant
               <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
-                <Lock className="w-5 h-5 text-purple-400" />
+                <Lock className="w-5 h-5 text-purple-400" /></Lock>
                 <span className="text-white font-medium">Secure Data
               <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
-                <CheckCircle className="w-5 h-5 text-green-400" />
+                <CheckCircle className="w-5 h-5 text-green-400" /></CheckCircle>
                 <span className="text-white font-medium">Transparent
       {/* Last Updated */}
       <section className="py-8">
@@ -97,7 +67,7 @@ export default function PrivacyPage() {
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 rounded-lg p-6 text-center">
               <p className="text-gray-300">
-                <strong>Last Updated:</strong> {lastUpdated}
+                <strong>Last Updated: </strong> {lastUpdated}
               <p className="text-sm text-gray-400 mt-2">
                 This privacy policy may be updated from time to time. We will notify you of any changes.
       {/* Introduction */}
@@ -118,7 +88,7 @@ export default function PrivacyPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Information We Collect
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
               {dataTypes.map((type, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                   <div className="flex items-center space-x-3 mb-4">
@@ -126,11 +96,10 @@ export default function PrivacyPage() {
                     <h3 className="text-xl font-bold text-white">{type.category}
                   <p className="text-gray-300 mb-4">{type.description}
                   <div className="space-y-2">
-                    <h4 className="text-sm font-semibold text-cyan-400">Examples:
-                    <ul className="space-y-1">
+                    <h4 className="text-sm font-semibold text-cyan-400">Examples: <ul className="space-y-1">
                       {type.examples.map((example, exampleIndex) => (
                         <li key={exampleIndex} className="text-sm text-gray-400 flex items-center">
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
                           {example}
                       ))}
               ))}
@@ -167,10 +136,10 @@ export default function PrivacyPage() {
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Data Security
             <p className="text-gray-300 mb-8 text-center">
               We implement appropriate technical and organizational measures to protect your personal information.
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
               {securityMeasures.map((measure, index) => (
                 <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" /></CheckCircle>
                   <span className="text-gray-300">{measure}
               ))}
       {/* Your Rights */}
@@ -178,7 +147,7 @@ export default function PrivacyPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Your Rights
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {rights.map((right, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
                   <right.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -192,20 +161,20 @@ export default function PrivacyPage() {
             <h2 className="text-3xl font-bold text-white mb-6">Questions About Your Privacy?
             <p className="text-xl text-gray-300 mb-8">
               If you have any questions about this Privacy Policy or our data practices, please contact us.
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center space-x-3">
-                <Mail className="w-5 h-5 text-cyan-400" />
+                <Mail className="w-5 h-5 text-cyan-400" /></Mail>
                 <span className="text-white">kleber@ziontechgroup.com
               <div className="flex items-center justify-center space-x-3">
-                <Phone className="w-5 h-5 text-cyan-400" />
+                <Phone className="w-5 h-5 text-cyan-400" /></Phone>
                 <span className="text-white">+1 (302) 464-0950
               <div className="flex items-center justify-center space-x-3">
-                <Globe className="w-5 h-5 text-cyan-400" />
+                <Globe className="w-5 h-5 text-cyan-400" /></Globe>
                 <span className="text-white">Middletown, DE
             <$2 />
               href="/contact"
               className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover: bg-cyan-600 transition-colors inline-flex items-center">
-              <Mail className="w-5 h-5 mr-2" />
+              <Mail className="w-5 h-5 mr-2" /></Mail>
               Contact Us
   
           </div>

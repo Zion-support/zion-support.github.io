@@ -1,16 +1,20 @@
 'use client'
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link  } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 'use client'
 import React, { useState } from 'react'
 const LoginPage: React.FC = () => {
+  return (
+
   const [formData, setFormData] = useState({
     email: '',
     password: '',
     rememberMe: false
-  })
+  
+  );
+})
   const [showPassword, setShowPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -29,29 +33,16 @@ const LoginPage: React.FC = () => {
     // Redirect to dashboard or home page
     window.location.href = '/'
   }
-  const features = [
-    {
-      icon: Shield,
-      title: 'Secure Access',
-      description:     ,
-$4},
-    {
-      icon: CheckCircle,
-      title: '24/7 Support',
-      description:     ,
-$4},
-    {
-      icon: Phone,
-      title: 'Mobile Ready',
-      description:     ,
-$4}
-  ]
+  const features = [{
+      icon: Shield, title: 'Secure Access', description:, $4}, {
+      icon: CheckCircle, title: '24/7 Support', description:, $4}, {
+      icon: Phone, title: 'Mobile Ready', description:, $4}]
   return (
-    <React.Fragment>
-      <Navigation />
+    <React .Fragment></React>
+      <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
             {/* Left Side - Login Form */}
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
               <div className="text-center mb-8">
@@ -61,7 +52,7 @@ $4}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Email Address
-                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Mail>
                     <input
                       type="email"
                       name="email"
@@ -110,10 +101,7 @@ $4}
     // Redirect to dashboard or home page
     window.location.href = '/'
   }
-  const features = [
-  // TOD,
-  O: Add items
-],
+  const features = [// TOD, O: Add items],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -147,12 +135,12 @@ $4}
   ]
   return (<div>Coming Soon</div>)
   )
-          <React.Fragment>
-      <Navigation />
+          <React .Fragment></React>
+      <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12"></div>"
         <div className="max-w-6xl mx-auto px-4"></div>"
           < className="grid grid-cols-1,"$2 />
-  lg:grid-cols-2 gap-12 items-center">
+  lg: grid-cols-2 gap-12 items-center">
             {/* Left Side - Login Form */}"
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50"></div>"
               <div className="text-center mb-8"></div>"
@@ -166,7 +154,7 @@ $4}
                   <label className="block text-sm font-medium text-gray-300 mb-2">
 // Email Address
                   <div className="relative">
-                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Mail>
                     <input
 type="email" name="email"
                       value={formData.email}
@@ -179,20 +167,20 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                     Password,
   
                   <div className="relative">
-                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Lock>
                     <input
                       type={showPassword ? 'text' : 'password'}
                       name="password"
                       value={formData.password}
                       onChange={handleInputChange}
                       required
-                      className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                      className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Enter your password"
                     />
                     <$2 />
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors">
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-white transition-colors">
                       {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                 <div className="flex items-center justify-between">
                   <label className="flex items-center">
@@ -201,7 +189,7 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                       name="rememberMe"
                       checked={formData.rememberMe}
                       onChange={handleInputChange}
-                      className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2"
+                      className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus: ring-cyan-400 focus:ring-2"
                     />
                     <span className="ml-2 text-sm text-gray-300">Remember me
                   <$2 />
@@ -211,7 +199,7 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                 <$2 />
                   type="submit"
                   disabled={isLoading}
-                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
+                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover: scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
                   {isLoading ? (
                     <div className="flex items-center justify-center">
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">
@@ -266,17 +254,17 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-2">{feature.title}
 // Password
-                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Lock>
                     <input
 type={showPassword ? 'text' : 'password'}
                       name="password" value={formData.password}
                       onChange={handleInputChange}
 // required
-className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your password"
+className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your password"
 //                     />
           <$2 />
 type="button" onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-white transition-colors"
 // >
                       {showPassword ?}"
           <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
@@ -287,8 +275,8 @@ type="checkbox" name="rememberMe"
                       checked={formData.rememberMe}
                       onChange={handleInputChange}"
                       className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded,
-  focus:ring-cyan-400,"
-  focus:ring-2"
+  focus: ring-cyan-400,"
+  focus: ring-2"
 // />
           "
           <span className="ml-2 text-sm text-gray-300">Remember me
@@ -298,7 +286,7 @@ type="checkbox" name="rememberMe"
 //                     Forgot password?
                 <$2 />
 type="submit" disabled={isLoading}
-                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover: scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
 // >
                   {isLoading ? ()}"
           <div className="flex items-center justify-center"></div>"
@@ -370,7 +358,7 @@ type="submit" disabled={isLoading}
                   href="/signup"
                   className="inline-flex items-center text-cyan-400 hover: text-cyan-300 font-medium transition-colors">
                   Create your account
-                  <ArrowRight className="w-4 h-4 ml-1" />
+                  <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
               </div>"
               <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6"></div>"
                 <h3 className="text-lg font-semibold text-white mb-3">
@@ -383,8 +371,8 @@ type="submit" disabled={isLoading}
                   href="/signup" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
 // >
 //                   Create your account;"
-          <ArrowRight className="w-4 h-4 ml-1" />
-      <Footer />
+          <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
+      <Footer /></Footer>
     </React.Fragment>
     </div>
   ),

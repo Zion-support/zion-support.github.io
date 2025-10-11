@@ -25,7 +25,7 @@ function fixMainPage() {
     console.log('✅ Fixed main page.tsx file')
     return true
   } catch (error) {
-    console.error('Error fixing main page:', error.message)
+    console.error('Error fixing main page: ', error.message)
     return false
   }
 }

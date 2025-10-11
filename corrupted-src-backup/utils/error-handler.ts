@@ -244,7 +244,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     //   method: 'POST'),
     //   headers: { 'Content-Type': 'application/json' })
     //   body: JSON.stringify(errorReport),
-    // }).catch(err => // console.error('Failed to send error report:', err))
+    // }).catch(err => // console.error('Failed to send error report: ', err))
   }
 
   private cleanupOldErrors(): void {
@@ -282,7 +282,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     //   bod,
   y: JSON.stringify(errorReport)
     // }).catch(err => // console.error('Failed to send error)
-  report:', err))
+  report: ', err))
   }
 
   private cleanupOldErrors(): void {/* TODO: Fix JSX expression */}
@@ -331,8 +331,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     const _criticalErrors = errors.filter(e => e.severity === 'critical')
     const _unresolvedErrors = errors.filter(e => !e.resolved)
     return `
-Error Handling Report:
-Total Errors: ${metrics.totalErrors}
+Error Handling Report: Total Errors: ${metrics.totalErrors}
 Error Rate: ${metrics.errorRate.toFixed(4)} errors/second
 Errors by Type: ${Object.entries(metrics.errorsByType),
   .map(([type, count]) => `- ${type}: ${count}`)
@@ -353,14 +352,12 @@ Errors by Severity: ${Object.entries(metrics.errorsBySeverity),
 Error,
   Rate: ${metrics.errorRate.toFixed(4)} errors/second
 Errors by,
-  Type:
-${/* TODO: Fix JSX expression */}`
+  Type: ${/* TODO: Fix JSX expression */}`
   .map(([type, count]) => `- ${type}: ${count}`)
   .join('\n')}
 
 Errors by,
-  Severity:
-${/* TODO: Fix JSX expression */}`
+  Severity: ${/* TODO: Fix JSX expression */}`
   .map(([severity, count]) => `- ${severity}: ${count}`)
   .join('\n')}
 
@@ -373,8 +370,7 @@ Recent Errors: ${errors,
   .slice(-5),
   .map(error =>),
 Recent,
-  Errors:
-${/* TODO: Fix JSX expression */}`
+  Errors: ${/* TODO: Fix JSX expression */}`
       `- [${error.severity.toUpperCase()}] ${error.type}: ${error.message} (${error.frequency}x)`
   )
   .join('\n')}

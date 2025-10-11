@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { readFileSync, writeFileSync } from 'fs'
+import { readFileSync, writeFileSync  } from 'fs'
 console.log('🔧 Resolving merge conflicts in app/page.tsx...')
 try {
     // Read the file
@@ -41,6 +41,6 @@ try {
   writeFileSync('/workspace/app/page.tsx', cleanedContent)
   console.log('✅ Duplicate imports cleaned up!')
 } catch (error) {
-    console.error('❌ Error resolving conflicts:', error.message)
+    console.error('❌ Error resolving conflicts: ', error.message)
   process.exit(1)
   }

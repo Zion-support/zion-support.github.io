@@ -19,22 +19,7 @@ export interface BlogPost {/* TODO: Fix JSX expression */}
 /**
  * October 2025 Breakthrough Content
  */
-export const october2025Breakthroughs: BlogPost[] = [,
-  {,
-    slug: 'ai-2025-oct-01-neural-architecture-evolution-breakthrough',
-    title: 'Neural Architecture Evolution 2025',
-    description:,
-      'Self-designing AI models achieving 10,000x faster development, 97% accuracy improvement, and $25M annual savings through autonomous model evolution.',
-    category: 'AI Innovation',
-    date: '2025-10-01',
-    readTime: '25 min',
-    tags: [,
-      'neural architecture search',
-      'AutoML',
-      'model optimization',
-      'AI evolution',
-      'machine learning',
-      'enterprise AI'],
+export const october2025Breakthroughs: BlogPost[] = [{, slug: 'ai-2025-oct-01-neural-architecture-evolution-breakthrough', title: 'Neural Architecture Evolution 2025', description:, 'Self-designing AI models achieving 10, 000x faster development, 97% accuracy improvement, and $25M annual savings through autonomous model evolution.', category: 'AI Innovation', date: '2025-10-01', readTime: '25 min', tags: [, 'neural architecture search', 'AutoML', 'model optimization', 'AI evolution', 'machine learning', 'enterprise AI'],
     featured: true,
     valueProposition: '$25M annual savings'},
   {
@@ -45,13 +30,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
     category: 'Quantum Computing',
     date: '2025-10-01',
     readTime: '22 min',
-    tags: [,
-      'quantum optimization',
-      'quantum computing',
-      'enterprise optimization',
-      'quantum algorithms',
-      'supply chain',
-      'portfolio optimization'],
+    tags: ['quantum optimization', 'quantum computing', 'enterprise optimization', 'quantum algorithms', 'supply chain', 'portfolio optimization'],
     featured: true,
     valueProposition: '$42M annual value creation'},
   {
@@ -62,13 +41,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
     category: 'Enterprise Automation',
     date: '2025-10-01',
     readTime: '28 min',
-    tags: [,
-      'intelligent automation',
-      'process automation',
-      'RPA',
-      'AI orchestration',
-      'workflow automation',
-      'digital transformation'],
+    tags: ['intelligent automation', 'process automation', 'RPA', 'AI orchestration', 'workflow automation', 'digital transformation'],
     featured: true,
     valueProposition: '$67M annual savings'},
   {
@@ -115,20 +88,13 @@ export const october2025Breakthroughs: BlogPost[] = [,
     featured: true,
     valueProposition: 'Instant reversibility, resilient releases',
 export const,
-  october2025Breakthroughs: BlogPost[] = [
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
+  october2025Breakthroughs: BlogPost[] = [{/* TODO: Fix JSX expression */}
+  }, {/* TODO: Fix JSX expression */}
+  }, {/* TODO: Fix JSX expression */}
+  }, {/* TODO: Fix JSX expression */}
+  }, {/* TODO: Fix JSX expression */}
+  }, {/* TODO: Fix JSX expression */}
+  }, {/* TODO: Fix JSX expression */}
   }]
 /**
  * All blog posts combined

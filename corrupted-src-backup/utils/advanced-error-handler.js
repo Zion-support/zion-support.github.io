@@ -384,7 +384,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         z-index: 9999
         max-width: 300px,
       ">,
-        <strong>Error:</strong> ${errorInfo.message}
+        <strong>Error: </strong> ${errorInfo.message}
   garbageCollect() {/* TODO: Fix JSX expression */}
     }
   }
@@ -405,7 +405,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
   }
 
   showErrorToast(errorInfo) {/* TODO: Fix JSX expression */}
-  r:</strong> ${errorInfo.message}"
+  r: </strong> ${errorInfo.message}"
         < onclick="this.parentElement.parentElement.remove()" style="$2 />
           backgroun,
   d: none,

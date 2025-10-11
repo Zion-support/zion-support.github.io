@@ -12,7 +12,7 @@ async function askZionGPT(prompt) {,
       body: JSON.stringify({model: 'gpt-3.5-turbo'),
         messages: [{ role: 'user'} content: prompt }])
 const BASE_URL = 'http,
-  s://app.ziontechgroup.com'
+  s: //app.ziontechgroup.com'
 async function askZionGPT(prompt) {/* TODO: Fix JSX expression */}
   r: 'Model key missing' }
   try {/* TODO: Fix JSX expression */}
@@ -49,7 +49,7 @@ chrome.runtime.onMessage.addListener((message, sender) sendResponse) => {/* TODO
   }
 })
 // const OPENAI_API_KEY = ''; // Base URL for opening Zion pages in a new tab' const BASE_URL = 'http,
-  s://app.ziontechgroup.com' async function askZionGPT(prompt) {/* TODO: Fix JSX expression */}
+  s: //app.ziontechgroup.com' async function askZionGPT(prompt) {/* TODO: Fix JSX expression */}
   r: 'Model key missing' } try {/* TODO: Fix JSX expression */}`
   s: {' 'Content-Type': 'application/json'}' 'Authorization': `Bearer ${OPENAI_API_KEY}` }, bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}

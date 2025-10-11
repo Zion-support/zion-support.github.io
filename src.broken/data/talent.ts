@@ -1,24 +1,12 @@
 import type { TalentProfile } from '@/utils/types/talent'
-export const TALENT_PROFILES: TalentProfile[] = [
-  {
-    slug: 'ava-chen',
-    name: 'Ava Chen',
-    title: 'Senior LLM Engineer',
-    category: 'AI/ML',
-    location: 'Toronto, CA',
-    timezone: 'America/Toronto',
-    region: 'North America',
-    skills: ['LLM Ops', 'RAG', 'OpenAI', 'LangChain', 'Vector DBs', 'TypeScript'],
-    summary:
-      'Senior LLM Engineer specializing in end-to-end GenAI systems with retrieval, evaluation, and safety guardrails. Proven track record shipping reliable AI products at scale.',
-    bio:
-      'Architects robust LLM applications with retrieval, evaluation, and safety guardrails. Ex-FAANG applied scientist.',
+export const TALENT_PROFILES: TalentProfile[] = [{
+    slug: 'ava-chen', name: 'Ava Chen', title: 'Senior LLM Engineer', category: 'AI/ML', location: 'Toronto, CA', timezone: 'America/Toronto', region: 'North America', skills: ['LLM Ops', 'RAG', 'OpenAI', 'LangChain', 'Vector DBs', 'TypeScript'],
+    summary: 'Senior LLM Engineer specializing in end-to-end GenAI systems with retrieval, evaluation, and safety guardrails. Proven track record shipping reliable AI products at scale.',
+    bio: 'Architects robust LLM applications with retrieval, evaluation, and safety guardrails. Ex-FAANG applied scientist.',
     hourlyRateUsd: 140,
     availability: 'Open',
     profileImageUrl: 'https://i.pravatar.cc/300?img=1',
-    portfolio: [
-      { title: 'RAG Platform Template', url: 'https://example.com/rag' },
-      { title: 'LLM Evaluation Toolkit', url: 'https://example.com/eval' }],
+    portfolio: [{ title: 'RAG Platform Template', url: 'https://example.com/rag' }, { title: 'LLM Evaluation Toolkit', url: 'https://example.com/eval' }],
     verified: true,
     rating: 4.9,
     reviewsCount: 28,
@@ -39,14 +27,12 @@ export const TALENT_PROFILES: TalentProfile[] = [
     timezone: 'Europe/Lisbon',
     region: 'Europe',
     skills: ['AWS', 'Kubernetes', 'Terraform', 'Serverless', 'Networking'],
-    summary:
-      'Cloud architect focused on scalable multi-account AWS platforms, platform engineering, and secure-by-default patterns for modern teams.',
+    summary: 'Cloud architect focused on scalable multi-account AWS platforms, platform engineering, and secure-by-default patterns for modern teams.',
     bio: 'Designs scalable, secure multi-account AWS platforms and platform engineering toolchains.',
     hourlyRateUsd: 120,
     availability: 'Part-time',
     profileImageUrl: 'https://i.pravatar.cc/300?img=2',
-    portfolio: [
-      { title: 'Multi-Account AWS Landing Zone', url: 'https://example.com/aws' }],
+    portfolio: [{ title: 'Multi-Account AWS Landing Zone', url: 'https://example.com/aws' }],
     verified: true,
     rating: 4.8,
     reviewsCount: 19,
@@ -67,8 +53,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     timezone: 'America/Chicago',
     region: 'North America',
     skills: ['Python', 'PyTorch', 'NLP', 'Evaluation', 'Prompting', 'Dashboards'],
-    summary:
-      'Data scientist delivering measurable outcomes with rigorous evaluation, fast iteration, and pragmatic product sense.',
+    summary: 'Data scientist delivering measurable outcomes with rigorous evaluation, fast iteration, and pragmatic product sense.',
     bio: 'Builds data products end-to-end with strong model evaluation and product sense.',
     hourlyRateUsd: 110,
     availability: 'Open',
@@ -89,8 +74,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     timezone: 'Asia/Tokyo',
     region: 'Asia',
     skills: ['Next.js', 'TypeScript', 'Rust', 'PostgreSQL', 'OpenAI', 'Vercel'],
-    summary:
-      'Full‑stack developer building sleek, performant AI web apps with modern DX, observability, and delightful UX.',
+    summary: 'Full‑stack developer building sleek, performant AI web apps with modern DX, observability, and delightful UX.',
     bio: 'Delivers sleek, performant AI web apps with modern DX and observability.',
     hourlyRateUsd: 95,
     availability: 'Booked',
@@ -111,8 +95,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     timezone: 'Europe/Berlin',
     region: 'Europe',
     skills: ['Threat Modeling', 'AppSec', 'SAST/DAST', 'Zero Trust', 'IAM'],
-    summary:
-      'Security engineer who hardens platforms with developer‑friendly security programs, practical controls, and measurable impact.',
+    summary: 'Security engineer who hardens platforms with developer‑friendly security programs, practical controls, and measurable impact.',
     bio: 'Hardens platforms with practical, developer‑friendly security programs.',
     hourlyRateUsd: 130,
     availability: 'Open',

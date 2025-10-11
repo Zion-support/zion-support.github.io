@@ -4,8 +4,8 @@ export default async function handler(
 ) {
   const { id } = req && req.query
 import type { NextApiRequest, NextApiResponse } from "next"
-import { getDisputeById, upsertDispute } from "../../../../utils/fsdb"
-import { parseUserFromRequest, ensureAdmin } from "../../../../utils/auth"
+import { getDisputeById, upsertDispute  } from '../../../../utils/fsdb'
+import { parseUserFromRequest, ensureAdmin  } from '../../../../utils/auth'
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
@@ -33,22 +33,22 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST'])
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { getDisputeById, upsertDispute } from '../../../../utils/fsdb'
-import { parseUserFromRequest, ensureAdmin } from '../../../../utils/auth'
+import { getDisputeById, upsertDispute  } from '../../../../utils/fsdb'
+import { parseUserFromRequest, ensureAdmin  } from '../../../../utils/auth'
 export default async function handler(req, res) {
   try {
   const { id } = req.query
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -59,15 +59,15 @@ export default async function handler(req, res) {
     if (status && !['ResolvedUnder ReviewOpen'].includes(status)) {
       return res.status(400).json({ error: 'Invalid status' })
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -79,15 +79,14 @@ export default async function handler(req, res) {
     await upsertDispute(dispute)
     return res.status(200).json({ dispute })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary
     dispute.updatedAt = now
     await upsertDispute(dispute)
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary
     dispute.updatedAt = now
     await upsertDispute(dispute)

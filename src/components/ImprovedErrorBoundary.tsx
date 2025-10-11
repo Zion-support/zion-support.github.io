@@ -117,7 +117,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 }
     // Log error to console for debugging
     console.error('Error caught by,
-  ImprovedErrorBoundary:', {/* TODO: Fix JSX expression */}
+  ImprovedErrorBoundary: ', {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   messag,
@@ -215,14 +215,14 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   }
       // Default error UI
       return (
-        <div className="error-boundary-container" style={styles.container}>
-          <div style={styles.content}>
-            <div style={styles.icon}>⚠️
-            <h1 style={styles.title}>Oops! Something went wrong
-            <p style={styles.message}>
+        <div className="error-boundary-container" style=>{styles.container}
+          <div style=>{styles.content}
+            <div style=>{styles.icon}⚠️
+            <h1 style=>{styles.title}Oops! Something went wrong
+            <p style=>{styles.message}
               We're sorry for the inconvenience. The application encountered an unexpected error.
-            {process.env['NODE_ENV'] === 'development' && this.state.error && (
-              <details style={styles.details}>
+            >{process.env['NODE_ENV'] === 'development' && this.state.error && (
+              <details style={styles.details}
   resetErrorBoundary = (): void => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -262,38 +262,35 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       // Default error UI
       return (<div>Coming Soon</div>)
   )
-          <div className="error-boundary-container" style={styles.container}>
-          <div style={styles.content}>
-            <div style={styles.icon}>
-            <h1 style={styles.title}>Oops! Something went wrong
-            <p style={styles.message}>
+          <div className="error-boundary-container" style=>{styles.container}
+          <div style=>{styles.content}
+            <div style=>{styles.icon}
+            <h1 style=>{styles.title}Oops! Something went wrong
+            <p style=>{styles.message}
               We're sorry for the inconvenience. The application encountered an unexpected error.
             {process.env['NODE_ENV'] === 'development' && this.state.error && ()}
-          <details style={styles.details}>
-                <summary style={styles.summary}>Error Details (Development Only)
-                <div style={styles.errorDetails}>
-                  <p style={styles.errorMessage}>
+          <details style=>{styles.details}
+                <summary style=>{styles.summary}Error Details (Development Only)
+                <div style=>{styles.errorDetails}
+                  <p style=>{styles.errorMessage}
                     <strong>Erro,
-  r:</strong> {this.state.error.message}
-                  {this.state.error.stack && (
-                    <pre style={styles.stack}>
+  r: </strong> >{this.state.error.message}{this.state.error.stack && (
+                    <pre style={styles.stack}
                       {this.state.error.stack}
                   )}
-                  {this.state.errorInfo?.componentStack && (
-                    <pre style={styles.stack}>
-                      <strong>Component Stack:
-                  {this.state.error.stack && ()}
-          <pre style={styles.stack}>
+                  >{this.state.errorInfo?.componentStack && (
+                    <pre style={styles.stack}
+                      <strong>Component Stack: {this.state.error.stack && ()}
+          <pre style=>{styles.stack}
                       {this.state.error.stack}
                   )}
                   {this.state.errorInfo?.componentStack && ()}
-          <pre style={styles.stack}>
+          <pre style=>{styles.stack}
                       <strong>Component,
-  Stack:
-                      {this.state.errorInfo.componentStack}
+  Stack: {this.state.errorInfo.componentStack}
                   )}
             )}
-            <div style={styles.actions}>
+            <div style=>{styles.actions}
               <button>
                 onClick={this.resetErrorBoundary}
                 style={styles.button}"
@@ -314,11 +311,11 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                 aria-label="Go to Homepage"
               >
                 Go Home
-            {this.state.errorCount > 1 && (
-              <p style={styles.errorCount}>
+            >{this.state.errorCount > 1 && (
+              <p style={styles.errorCount}
                 This error has occurred {this.state.errorCount} times
             {this.state.errorCount > 1 && ()}
-          <p style={styles.errorCount}>
+          <p style=>{styles.errorCount}
                 This error has occurred {this.state.errorCount} times
             )}
       )
@@ -347,19 +344,19 @@ const styles = {
   },
   icon: {
     fontSize: '48px',
-    marginBottom:   ,
+    marginBottom:  ,
 $4},
   title: {
     fontSize: '24px',
     fontWeight: 'bold',
     color: '#333',
-    marginBottom:   ,
+    marginBottom:  ,
 $4},
   message: {
     fontSize: '16px',
     color: '#666',
     marginBottom: '32px',
-    lineHeight:   ,
+    lineHeight:  ,
 $4},
   details: {
     textAlign: 'left' as const,
@@ -367,7 +364,7 @@ $4},
     backgroundColor: '#f9f9f9',
     padding: '16px',
     borderRadius: '4px',
-    border:   ,
+    border:  ,
 $4},
   summary: {
     cursor: 'pointer',
@@ -380,7 +377,7 @@ $4},
 $4},
   errorMessage: {
     marginBottom: '12px',
-    color:   ,
+    color:  ,
 $4},
   stack: {
     backgroundColor: '#f5f5f5',
@@ -407,7 +404,7 @@ $4},
     border: 'none',
     borderRadius: '4px',
     cursor: 'pointer',
-    transition:   ,
+    transition:  ,
 $4},
   secondaryButton: {
     backgroundColor:   ,
@@ -415,7 +412,7 @@ $4},
   errorCount: {
     marginTop: '24px',
     fontSize: '14px',
-    color:   ,
+    color:  ,
 $4}
 }
       )

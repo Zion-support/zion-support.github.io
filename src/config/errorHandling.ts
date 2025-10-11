@@ -64,31 +64,28 @@ export const _errorHandlingConfig: ErrorConfig = {
   sendToServer: process.env['NODE_ENV'] === 'production',
   sampleRate: 1.0,
   maxStackTraceLength: 1000,
-  ignoreErrors: [
-    /ResizeObserver loop/i,
-    /Non-Error promise rejection captured/i,
-    /Loading chunk \d+ failed/i],
+  ignoreErrors: [/ResizeObserver loop/i, /Non-Error promise rejection captured/i, /Loading chunk \d+ failed/i],
   severityThreshold: ErrorSeverity.LOW
 }
 export const _errorMessages = {
   network: {
     offline: 'You are currently offline. Please check your internet connection.',
     timeout: 'Request timed out. Please try again.',
-    serverError:   ,
+    serverError:  ,
 $4},
   validation: {
     required: 'This field is required.',
     invalid: 'Please enter a valid value.',
-    format:   ,
+    format:  ,
 $4},
   authentication: {
     failed: 'Authentication failed. Please try logging in again.',
     expired: 'Your session has expired. Please log in again.',
-    unauthorized:   ,
+    unauthorized:  ,
 $4},
   generic: {
     unknown: 'An unexpected error occurred. Please try again.',
-    retry:   ,
+    retry:  ,
 $4}
 }
 export class AppError extends Error {

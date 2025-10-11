@@ -28,7 +28,7 @@ export interface LogEntry {
 }
 import fs from 'fs'
 import path from 'path'
-import { randomUUID } from 'uuid'
+import { randomUUID  } from 'uuid'
 const dataDir = path.resolve(process.cwd(), 'data', 'zion-brain')
 const logsPath = path.join(dataDir, 'logs.json')
 const statePath = path.join(dataDir, 'state.json')
@@ -41,10 +41,8 @@ function ensureDataFiles(): void {
     // In serverless environments, filesystem may be read-only; ignore errors gracefully
   }
 }
-export function detectIntent(text: string): RouterResult {
-  const lower = (text || '').toLowerCase()
-  const rules: Array<{ chain: ZionChain; keywords: string[] }> = [
-    { chain: 'resumeBuilder', keywords: ['resume', 'cv', 'curriculum', 'job'] },
+export function detectIntent(text: string): RouterResult >{const lower = (text || '').toLowerCase()
+  const rules: Array<{ chain: ZionChain; keywords: string[] } = [{ chain: 'resumeBuilder', keywords: ['resume', 'cv', 'curriculum', 'job'] },
     { chain: 'daoExplainer', keywords: ['dao', 'governance token', 'proposal', 'treasury'] },
     { chain: 'tokenomicsSimulator', keywords: ['tokenomics', 'supply', 'emission', 'vesting', 'circulating'] },
     { chain: 'governanceSummarizer', keywords: ['governance', 'vote', 'snapshot', 'summary', 'forum'] },
@@ -59,7 +57,8 @@ export function detectIntent(text: string): RouterResult {
   // Fallback simple heuristic
   return { intent: 'nationAssistant', confidence: 0.5, notes: 'Default fallback' }
 }
-export async function routeToChain(intent: ZionChain, payload: Record<string, unknown>): Promise<{ routed: boolean; message: string }> {
+export async function routeToChain(intent: ZionChain, payload: Record<string, unknown>): Promise<>
+  {routed: boolean; message: string } {
   // Placeholder for real chain invocations
   return { routed: true, message: `Routed to ${intent}` }
 }
@@ -74,12 +73,14 @@ export function evaluateReflexes(metrics: ReflexMetrics): ReflexTrigger[] {
   if ((metrics.disputeFlagsLastHour ?? 0) > baselineDisputes * 2) {
     triggers.push({ action: 'escalateSupport', reason: 'Spike in dispute flags', severity: 'high' })
   }
+</>
   if ((metrics.zionVelocity ?? baselineVelocity) < baselineVelocity * 0.6) {
     triggers.push({ action: 'notifyAdmin', reason: 'Drop in ZION$ velocity', severity: 'high' })
   }
   return triggers
 }
-export async function optimizePrompt(original: string, userIntent?: string): Promise<{ optimized: string; suggestions: string[] }> {
+export async function optimizePrompt(original: string, userIntent?: string): Promise<>
+  {optimized: string; suggestions: string[] } {
   const apiKey = process.env.OPENAI_API_KEY
   const targetInstruction = 'Review this prompt and rewrite it to be 30% faster and more specific to user intent.'
   // Heuristic fast path if no API key
@@ -87,10 +88,7 @@ export async function optimizePrompt(original: string, userIntent?: string): Pro
     const tightened = heuristicTighten(original, userIntent)
     return {
       optimized: tightened,
-      suggestions: [
-        'Removed vague qualifiers and redundant phrases',
-        'Added explicit constraints and output format',
-        userIntent ? `Anchored to intent: ${userIntent}` : 'Added a brief intent anchor']}
+      suggestions: ['Removed vague qualifiers and redundant phrases', 'Added explicit constraints and output format', userIntent ? `Anchored to intent: ${userIntent}` : 'Added a brief intent anchor']}
         userIntent ? `Anchored to intent: ${userIntent}` : 'Added a brief intent anchor',
       ],
     }
@@ -99,12 +97,10 @@ export async function optimizePrompt(original: string, userIntent?: string): Pro
     const { OpenAI } = await import('openai')
     const openai = new OpenAI({ apiKey })
     const system = 'You optimize prompts for speed and specificity. Prefer precise constraints, avoid open-ended wording. Reduce token count while improving clarity. Return only the rewritten prompt.'
-    const user = `${targetInstruction}\n\nUser intent: ${userIntent || 'unknown'}\n\nPrompt to optimize:\n${original}`
+    const user = `${targetInstruction}\n\nUser intent: ${userIntent || 'unknown'}\n\nPrompt to optimize: \n${original}`
     const resp = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
-      messages: [
-        { role: 'system', content: system },
-        { role: 'user', content: user }],
+      messages: [{ role: 'system', content: system }, { role: 'user', content: user }],
       temperature: 0.2,
       max_tokens: 400})
         { role: 'user', content: user },
@@ -141,6 +137,7 @@ export function readLogs(): { entries: LogEntry[] } {
     return { entries: [] }
   }
 }
+</>
 export function appendLog(entry: Omit<LogEntry, 'id' | 'timestamp'>): void {
   ensureDataFiles()
   try {

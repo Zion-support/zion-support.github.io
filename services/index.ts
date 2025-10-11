@@ -24,13 +24,7 @@ export const SERVICES_METADATA = {
     description: 'Create short, trackable URLs with analytics',
     icon: '🔗',
     category: 'UTILITIES',
-    features: [
-      'Custom short codes',
-      'Click tracking',
-      'Analytics dashboard',
-      'Expiration dates',
-      'QR code generation'
-    ],
+    features: ['Custom short codes', 'Click tracking', 'Analytics dashboard', 'Expiration dates', 'QR code generation'],
     pricing: 'Free',
     apiEndpoint: '/api/url-shortener'
   },
@@ -39,13 +33,7 @@ export const SERVICES_METADATA = {
     description: 'Generate secure passwords with strength analysis',
     icon: '🔐',
     category: 'UTILITIES',
-    features: [
-      'Multiple generation modes',
-      'Strength analysis',
-      'Custom character sets',
-      'Password history',
-      'Security recommendations'
-    ],
+    features: ['Multiple generation modes', 'Strength analysis', 'Custom character sets', 'Password history', 'Security recommendations'],
     pricing: 'Free',
     apiEndpoint: '/api/password-generator'
   },
@@ -54,13 +42,7 @@ export const SERVICES_METADATA = {
     description: 'Create QR codes for various purposes',
     icon: '📱',
     category: 'UTILITIES',
-    features: [
-      'Multiple QR code types',
-      'Custom styling',
-      'Logo integration',
-      'Error correction',
-      'Template library'
-    ],
+    features: ['Multiple QR code types', 'Custom styling', 'Logo integration', 'Error correction', 'Template library'],
     pricing: 'Free',
     apiEndpoint: '/api/qr-code-generator'
   },
@@ -69,13 +51,7 @@ export const SERVICES_METADATA = {
     description: 'Convert files between different formats',
     icon: '🔄',
     category: 'MEDIA',
-    features: [
-      'Multiple file formats',
-      'Batch conversion',
-      'Quality settings',
-      'Metadata preservation',
-      'Cloud processing'
-    ],
+    features: ['Multiple file formats', 'Batch conversion', 'Quality settings', 'Metadata preservation', 'Cloud processing'],
     pricing: 'Free (Basic) / $9.99/month (Pro)',
     apiEndpoint: '/api/file-converter'
   },
@@ -84,13 +60,7 @@ export const SERVICES_METADATA = {
     description: 'Analyze text for insights and optimization',
     icon: '📊',
     category: 'ANALYSIS',
-    features: [
-      'Readability metrics',
-      'Sentiment analysis',
-      'Keyword extraction',
-      'Entity recognition',
-      'Language detection'
-    ],
+    features: ['Readability metrics', 'Sentiment analysis', 'Keyword extraction', 'Entity recognition', 'Language detection'],
     pricing: 'Free (Basic) / $19.99/month (Pro)',
     apiEndpoint: '/api/text-analysis'
   }

@@ -19,7 +19,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     })
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      // console.error('Error caught by boundary:', error, errorInfo)
+      // console.error('Error caught by boundary: ', error, errorInfo)
     }
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -97,13 +97,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
               <button></button>)
                 onClick={() => window.location.reload()}"
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
-  hover:bg-indigo-700 transition-colors"
+  hover: bg-indigo-700 transition-colors"
               >
                 Refresh Page
               <button>
                 onClick={() => window.history.back()}"
                 className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold,"
-  hover:bg-gray-300 transition-colors"
+  hover: bg-gray-300 transition-colors"
               >
                 Go Back
             {process.env.NODE_ENV === 'development' && this.state.error && (

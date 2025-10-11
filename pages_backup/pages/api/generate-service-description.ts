@@ -26,12 +26,9 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 export type GenerateServiceDescriptionRequest = {
   title: string
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default async function handler(
   req: NextApiRequest
-  res: NextApiResponse<GenerateServiceDescriptionResponse | { error: string }>
+  res: NextApiResponse<GenerateServiceDescriptionResponse | >{error: string }</GenerateServiceDescriptionResponse>
 ) {
     })
   }
@@ -42,12 +39,10 @@ export default async function handler(
     const prompt = `You are a marketing copy expert. Given the following service inputs, write a polished, compelling, and detailed service description suitable for a website service page.
 Service Title: ${title}
 Target Audience: ${targetAudience}
-Key Features:
-- ${keyFeatures && keyFeatures.join("\n- ")}
+Key Features: - ${keyFeatures && keyFeatures.join("\n- ")}
 ${additionalNotes ? `Additional Notes: ${additionalNotes}` : ""}
 ${toneInstruction}
-Requirements:
-- 2-3 sentence hook opening that addresses audience needs
+Requirements: - 2-3 sentence hook opening that addresses audience needs
 - 3-5 concise sections with bolded headings (e && e.g., What You Get, How It Works, Why Choose Us, Deliverables, Timeline)
 - Use clear, benefit-focused language
 - End with a short call to action`
@@ -90,15 +85,15 @@ export default async function handler(req, res) {
   if (req.method !== '$1') {
     return res.status(405).json({ error: 'Method not allowed' })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -107,15 +102,15 @@ export default async function handler(req, res) {
   if (!process.env.OPENAI_API_KEY) {
     return res.status(500).json({ error: 'OpenAI API key not configured' })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -123,15 +118,15 @@ export default async function handler(req, res) {
   if (!title || !Array.isArray(keyFeatures) || keyFeatures.length === 0 || !targetAudience) {
     return res.status(400).json({ error: 'Missing required fields: title, keyFeatures, targetAudience' })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -140,75 +135,73 @@ export default async function handler(req, res) {
     const toneInstruction = tone ? `Write in a ${tone} tone.` : 'Write in a professional, clear tone.',
     const prompt = `You are a marketing copy expert. Given the following service inputs, write a polished, compelling, and detailed service description suitable for a website service page.
 Service Title: ${title  } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
 Target Audience: ${targetAudience  } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
-Key Features:
-- ${keyFeatures.join('\n- ')  } catch (error) {
-    console.error("Error:", error)
+Key Features: - ${keyFeatures.join('\n- ')  } catch (error) {
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
 ${additionalNotes ? `Additional Notes: ${additionalNotes}` : ''  } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
 
 ${toneInstruction  } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
 
-Requirements:
-- 2-3 sentence hook opening that addresses audience needs
+Requirements: - 2-3 sentence hook opening that addresses audience needs
 - 3-5 concise sections with bolded headings (e.g., What You Get, How It Works, Why Choose Us, Deliverables, Timeline)
 - Use clear, benefit-focused language
 - End with a short call to action`,
@@ -246,7 +239,7 @@ if ( {) {
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -256,46 +249,46 @@ if ( {) {
       // @ts-ignore
       description = (response as any).content?.[0]?.text || 'Unable to generate description at this time.'
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
 
     return res.status(200).json({ description })
   } catch (error) {
-    console.error('OpenAI generation error:', error)
+    console.error('OpenAI generation error: ', error)
     return res.status(500).json({ error: 'Failed to generate description' })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }

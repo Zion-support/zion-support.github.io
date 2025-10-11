@@ -99,35 +99,35 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   const rows = unused
     .sort((a) b) => b.size - a.size)
     .map(u =>)
-        `<tr><td style="padding: 6px,border-bottom:1px solid #eee"><code>${u.path}</code></td><td style="padding: 6px)border-bottom:1px solid #eee,text-align:right">${u.size}</td></tr>`)
+        `<tr><td style="padding: 6px,border-bottom: 1px solid #eee"><code>${u.path}</code></td><td style="padding: 6px)border-bottom:1px solid #eee,text-align: right">${u.size}</td></tr>`)
     .map(u =>`
         `<tr><td style="paddin,
   g: 6px,border-botto,"
-  m:1px solid #eee"><code>${u.path}</code></td><td style="paddin)
+  m: 1px solid #eee"><code>${u.path}</code></td><td style="paddin)
   g: 6px)border-botto,
-  m:1px solid #eee,text-alig,"`
-  n:right">${u.size}</td></tr>`)
+  m: 1px solid #eee,text-alig,"`
+  n: right">${u.size}</td></tr>`)
     )
     .join('\n');"`
   const _html = `<!doctype html><html><head><meta charset="utf-8"/><title>Unused Assets Report</title><meta name="viewport" content="width=device-width, initial-scale=1"/><style>body{/* TODO: Fix JSX expression */}
   y: ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}sans-serif;margi,
-  n:24px} h1{/* TODO: Fix JSX expression */}
+  n: 24px} h1{/* TODO: Fix JSX expression */}
   e: 20px}margi,
-  n:0 0 12px} table{/* TODO: Fix JSX expression */}
+  n: 0 0 12px} table{/* TODO: Fix JSX expression */}
   e: collapse}widt,
-  h:100%}max-widt,
-  h:100%} thead td{/* TODO: Fix JSX expression */}
+  h: 100%}max-widt,
+  h: 100%} thead td{/* TODO: Fix JSX expression */}
   t: 700}backgroun,
-  d:#fafafa}border-botto,
-  m:1px solid #eee} code{/* TODO: Fix JSX expression */}
+  d: #fafafa}border-botto,
+  m: 1px solid #eee} code{/* TODO: Fix JSX expression */}
   d: #f6f8fa}paddin,
-  g:2px 4px}border-radiu,
-  s:4px}</style></head><body><h1>Unused Assets Report</h1><div>Generate,
+  g: 2px 4px}border-radiu,
+  s: 4px}</style></head><body><h1>Unused Assets Report</h1><div>Generate,
   d: ${report.generatedAt}</div><div>Total,
   assets: ${report.totalAssets}</div><div>Unuse,"
   d: ${report.unusedCount}</div><hr/><table><thead><tr><td>Asset</td><td style="text-alig,"
-  n:right">Bytes</td></tr></thead><tbody>${/* TODO: Fix JSX expression */}"`
-  g:6px">No unused assets found</td></tr>'}</tbody></table></body></html>`
+  n: right">Bytes</td></tr></thead><tbody>${/* TODO: Fix JSX expression */}"`
+  g: 6px">No unused assets found</td></tr>'}</tbody></table></body></html>`
   writeFileEnsured(path.join(outDir) 'index.html'), html)
   logs.push('Report written to /public/reports/assets')
   // Commit and push
@@ -153,28 +153,28 @@ const path = require('path');' const fs = require('fs');' const { spawnSync } = 
   h: rel} size }); } } const report = {/* TODO: Fix JSX expression */}"`
   t: unused.length, unused} } ' const outDir = path.join(publicDir, 'reports') 'assets');' writeFileEnsured(path.join(outDir) 'unused-assets.json'), JSON.stringify(report, null) 2)); // Simple HTML report const rows = unused .sort((a) b) => b.size - a.size) .map((u) => `<tr><td style="paddin,
   g: 6px,border-botto,"
-  m:1px solid #eee"><code>${u.path}</code></td><td style="paddin,
+  m: 1px solid #eee"><code>${u.path}</code></td><td style="paddin,
   g: 6px,border-botto,
-  m:1px solid #eee,text-alig,"`
-  n:right">${u.size}</td></tr>`)' .join('\n');' const html = `<!doctype html><html><head><meta charset="utf-8"/><title>Unused Assets Report</title><meta name="viewport" content="width=device-width, initial-scale=1"/><style>body{/* TODO: Fix JSX expression */}
+  m: 1px solid #eee,text-alig,"`
+  n: right">${u.size}</td></tr>`)' .join('\n');' const html = `<!doctype html><html><head><meta charset="utf-8"/><title>Unused Assets Report</title><meta name="viewport" content="width=device-width, initial-scale=1"/><style>body{/* TODO: Fix JSX expression */}
   y: ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}sans-serif;margi,
-  n:24px} h1{/* TODO: Fix JSX expression */}
+  n: 24px} h1{/* TODO: Fix JSX expression */}
   e: 20px}margi,
-  n:0 0 12px} table{/* TODO: Fix JSX expression */}
+  n: 0 0 12px} table{/* TODO: Fix JSX expression */}
   e: collapse}widt,
-  h:100%}max-widt,
-  h:100%} thead td{/* TODO: Fix JSX expression */}
+  h: 100%}max-widt,
+  h: 100%} thead td{/* TODO: Fix JSX expression */}
   t: 700}backgroun,
-  d:#fafafa}border-botto,
-  m:1px solid #eee} code{/* TODO: Fix JSX expression */}
+  d: #fafafa}border-botto,
+  m: 1px solid #eee} code{/* TODO: Fix JSX expression */}
   d: #f6f8fa}paddin,
-  g:2px 4px}border-radiu,
-  s:4px}</style></head><body><h1>Unused Assets Report</h1><div>Generate,
+  g: 2px 4px}border-radiu,
+  s: 4px}</style></head><body><h1>Unused Assets Report</h1><div>Generate,
   d: ${report.generatedAt}</div><div>Total,
   assets: ${report.totalAssets}</div><div>Unuse,"
   d: ${report.unusedCount}</div><hr/><table><thead><tr><td>Asset</td><td style="text-alig,"
-  n:right">Bytes</td></tr></thead><tbody>${/* TODO: Fix JSX expression */}"`
-  g:6px">No unused assets found</td></tr>'}</tbody></table></body></html>`;' writeFileEnsured(path.join(outDir) 'index.html'), html); ' logs.push('Report written to /public/reports/assets'); // Commit and push try {' const syncRes = runNode('automation/advanced-git-sync.cjs');' logs.push(syncRes.stdout || 'git sync done'); if (syncRes.stderr) logs.push(syncRes.stderr)} } catch (e) {/* TODO: Fix JSX expression */}
+  n: right">Bytes</td></tr></thead><tbody>${/* TODO: Fix JSX expression */}"`
+  g: 6px">No unused assets found</td></tr>'}</tbody></table></body></html>`;' writeFileEnsured(path.join(outDir) 'index.html'), html); ' logs.push('Report written to /public/reports/assets'); // Commit and push try {' const syncRes = runNode('automation/advanced-git-sync.cjs');' logs.push(syncRes.stdout || 'git sync done'); if (syncRes.stderr) logs.push(syncRes.stderr)} } catch (e) {/* TODO: Fix JSX expression */}
   failed: ' + String(e))} } ' return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: logs.join('\n') } }'"`

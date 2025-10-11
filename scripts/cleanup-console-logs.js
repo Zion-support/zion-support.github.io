@@ -1,5 +1,5 @@
 import fs from 'fs'
-import { glob } from 'glob'
+import { glob  } from 'glob'
 // Function to remove console.log statements from a file
 function removeConsoleLogs(filePath) {
   try {
@@ -26,10 +26,7 @@ function removeConsoleLogs(filePath) {/* TODO: Fix JSX expression */}
 async function processFiles() {
 async function processFiles() {/* TODO: Fix JSX expression */}
 }
-  const patterns = [
-    'src/**/*.{ts,tsx,js,jsx}',
-    'app/**/*.{ts,tsx,js,jsx}'
-  ]
+  const patterns = ['src/**/*.{ts, tsx, js, jsx}', 'app/**/*.{ts, tsx, js, jsx}']
   let _totalFiles = 0
   let _modifiedFiles = 0
   for (const pattern of patterns) {
@@ -39,8 +36,7 @@ async function processFiles() {/* TODO: Fix JSX expression */}
         '**/dist/**')
         '**/build/**')
         '**/*.test.*')
-        '**/*.spec.*'
-      ]
+        '**/*.spec.*']
     })
     files.forEach(file => {
     )

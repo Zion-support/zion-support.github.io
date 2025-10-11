@@ -7,32 +7,19 @@ interface NewContentPromoBannerProp, s {/* TODO: Fix JSX expression */}
  }
 const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  } const featuredConten, t = [
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-    }
-  ]; if (isDismiss, e, d) return, nul, l
+  } const featuredConten, t = [{/* TODO: Fix JSX expression */}
+    }, {/* TODO: Fix JSX expression */}
+    }, {/* TODO: Fix JSX expression */}
+    }, {/* TODO: Fix JSX expression */}
+    }, {/* TODO: Fix JSX expression */}
+    }, {/* TODO: Fix JSX expression */}
+    }, {/* TODO: Fix JSX expression */}
+    }, {/* TODO: Fix JSX expression */}
+    }, {/* TODO: Fix JSX expression */}
+    }, {/* TODO: Fix JSX expression */}
+    }, {/* TODO: Fix JSX expression */}
+    }, {/* TODO: Fix JSX expression */}
+    }]; if (isDismiss, e, d) return, nul, l
   return(<div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>
       {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-10">
@@ -49,9 +36,9 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
         <div, className="flex, item, s-center, justif, y-betwe, e, n">
           <div, className="fl, e, x-1">
             <div, className="flex, item, s-center, ga, p-3, m, b-3">
-              <Sparkles, className="w-6 h-6, animat, e-pul, s, e" />
+              <Sparkles , className="w-6 h-6, animat, e-pul, s, e" /></Sparkles>
               <span, className="te, x, t-lg, fon, t-bo, l, d">🚀 NEW, CONTENT, ALERT
-              <Star, className="w-5 h-5, animat, e-sp, i, n" />
+              <Star , className="w-5 h-5, animat, e-sp, i, n" /></Star>
             <h3, className="te, x, t-xl, fon, t-bold, m, b-2">
               Just, Publishe, d: New, Guides, for 20, 2, 6;)
             </h3>)
@@ -61,11 +48,11 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
             {/* Featured, content, grid */}
             <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-3, m, b-4">
               { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > {
-                const Ico, n = it, e, m.ic, o, n; return(<, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p"$2 />
+                const Ico, n = it, e, m.ic, o, n; return(<, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, grou, p"$2 />
                 const Ico, n = it, e, m.ic, o, n; return (
-                  <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p">
+                  <Link , ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, grou, p"></Link>
                     <div, className="flex, item, s-center, ga, p-2, m, b-2">
-                      <Icon, className="w-4 h-4, tex, t-whi, t, e/80" />
+                      <Icon , className="w-4 h-4, tex, t-whi, t, e/80" /></Icon>
   return (<div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>
       {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-10"></div>"
@@ -79,7 +66,7 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
             <div, className="flex, item, s-center, ga, p-3, m, b-3"></div>"
               <Sparkles, className="w-6 h-6, animat, e-pul, s, e" /></Sparkles>"
               <span, className="te, x, t-lg, fon, t-bo, l, d">🚀 NEW, CONTENT, ALERT</sp, a, n>"
-              <Star, className="w-5 h-5, animat, e-sp, i, n" />
+              <Star , className="w-5 h-5, animat, e-sp, i, n" /></Star>
             </div>"
             <h3, className="te, x, t-xl, fon, t-bold, m, b-2">
               Just, Publishe, d: New, Guides, for 20, 2, 6</$1>"
@@ -89,7 +76,7 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
             {/* Featured, content, grid */}"
             <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-3, m, b-4">
               {/* TODO: Fix JSX expression */}"
-                  <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p"></Link>"
+                  <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, grou, p"></Link>"
                     <div, className="flex, item, s-center, ga, p-2, m, b-2"></div>"
                       <Icon, className="w-4 h-4, tex, t-whi, t, e/80" /></Icon>"
                       <span, className="te, x, t-xs, fon, t-medium, tex, t-whi, t, e/80">{it, e, m.cate, g, o, r, y}
@@ -108,17 +95,17 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
             {/* Action, button, s */}
             <div, classNam, e = "flex, fle, x-wrap, ga, p-3">
               <, t, o="/bl, o, g"$2 />
-                className="bg-white, tex, t-purp, l, e-600, hove, r: bg-whi, t, e/90, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2">
-                <BookOpen, className="w-4 h-4" />
+                className="bg-white, tex, t-purp, l, e-600, hove, r: bg-whi, t, e/90, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2">
+                <BookOpen , className="w-4 h-4" /></BookOpen>
                 Read, All, Articles
-                <Link, className="w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
+                <Link , className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" /></Link>
               <, t, o="/ca, s, e-studi, e, s"$2 />
-                className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2">
-                <TrendingUp, className="w-4 h-4" />
+                className="border, borde, r-whi, t, e/30, tex, t-white, hove, r: bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2">
+                <TrendingUp , className="w-4 h-4" /></TrendingUp>
                 View, Case, Studies
               <, t, o="/servic, e, s"$2 />
-                className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2">
-                <Shield, className="w-4 h-4" />
+                className="border, borde, r-whi, t, e/30, tex, t-white, hove, r: bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2">
+                <Shield , className="w-4 h-4" /></Shield>
                 Explore, Service, s
             {/* S, t, a, t, s */}
             <div, classNam, e = "flex, item, s-center, ga, p-6, m, t-4, tex, t-sm, tex, t-whi, t, e/80">
@@ -130,18 +117,18 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
             {/* Action, button, s */}"
             <div, classNam, e = "flex, fle, x-wrap, ga, p-3"></div>"
               <, t, o="/bl, o, g""$2 />
-                className="bg-white, tex, t-purp, l, e-600, hove, r: bg-whi, t, e/90, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"></Link>"
-                <BookOpen, className="w-4 h-4" />
+                className="bg-white, tex, t-purp, l, e-600, hove, r: bg-whi, t, e/90, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"></Link>"
+                <BookOpen , className="w-4 h-4" /></BookOpen>
                 Read, All, Articles;"
-                <Link, className="w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
+                <Link , className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" /></Link>
               </Li, n, k>"
               <, t, o="/ca, s, e-studi, e, s""$2 />
-                className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"></Link>"
-                <TrendingUp, className="w-4 h-4" />
+                className="border, borde, r-whi, t, e/30, tex, t-white, hove, r: bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"></Link>"
+                <TrendingUp , className="w-4 h-4" /></TrendingUp>
                 View, Case, Studies</$1>"
               <, t, o="/servic, e, s""$2 />
-                className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"></Link>"
-                <Shield, className="w-4 h-4" />
+                className="border, borde, r-whi, t, e/30, tex, t-white, hove, r: bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"></Link>"
+                <Shield , className="w-4 h-4" /></Shield>
                 Explore, Service, s
             {/* S, t, a, t, s */}"
             <div, classNam, e = "flex, item, s-center, ga, p-6, m, t-4, tex, t-sm, tex, t-whi, t, e/80"></div>"

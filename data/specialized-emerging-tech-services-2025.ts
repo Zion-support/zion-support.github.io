@@ -48,24 +48,7 @@ const contact =
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'}
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'}
   ];    description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.'
-    features: [,
-      'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications',
-      'Advanced pattern recognitionCustom neuromorphic algorithms',
-      benefits: [,
-  i,
-  d: string,
-  nam,
-  e: string,
-  taglin,
-  e: string,
-  pric,
-  e: string,
-  perio,
-  d: string,
-  descriptio,
-  n: string,
-  feature,
-  s: string[],
+    features: ['Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications', 'Advanced pattern recognitionCustom neuromorphic algorithms', benefits: [, i, d: string, nam, e: string, taglin, e: string, pric, e: string, perio, d: string, descriptio, n: string, feature, s: string[],
   popula,
   r: boolean,
   ico,
@@ -146,35 +129,18 @@ const contact =
   ];    descriptio,
   n: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.'
     feature,
-  s: [,
-      'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications'
+  s: ['Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications'
       'Advanced pattern recognitionCustom neuromorphic algorithms'
-      benefit,
-  s: [,
-        'Energy efficiency',
-        'Cognitive capabilities',
-        'Real - time learning',
-        'Brain - inspired processing'],
+      benefit, s: [, 'Energy efficiency', 'Cognitive capabilities', 'Real - time learning', 'Brain - inspired processing'],
       capabilitie,
-  s: [,
-        'Neural architectures',
-        'Cognitive computing',
-        'Hardware integration',
-        'Custom algorithms'],
+  s: ['Neural architectures', 'Cognitive computing', 'Hardware integration', 'Custom algorithms'],
       market_advantage: unknown,
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'}];    description: 'Advanced neuromorphic computing platform that mimics the human brain's neural structure, enabling energy - efficient AI processing and cognitive computing applications.'
-    features: [,
-      'Brain - inspired neural architectures_energy - efficient AI processing_spiking neural networks_cognitive computing capabilities_real - time learning and adaptation_neuromorphic hardware integration_brain - computer interface support_cognitive robotics applications',
-      'Advanced pattern recognition_custom neuromorphic algorithms',
-      market_advantag,
-  e: unknown,
-        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'}];    descriptio,
+    features: ['Brain - inspired neural architectures_energy - efficient AI processing_spiking neural networks_cognitive computing capabilities_real - time learning and adaptation_neuromorphic hardware integration_brain - computer interface support_cognitive robotics applications', 'Advanced pattern recognition_custom neuromorphic algorithms', market_advantag, e: unknown, 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'}];    descriptio,
   n: 'Advanced neuromorphic computing platform that mimics the human brain's neural structure, enabling energy - efficient AI processing and cognitive computing applications.'
     feature,
-  s: [,
-      'Brain - inspired neural architectures_energy - efficient AI processing_spiking neural networks_cognitive computing capabilities_real - time learning and adaptation_neuromorphic hardware integration_brain - computer interface support_cognitive robotics applications'
-      'Advanced pattern recognition_custom neuromorphic algorithms'
-    ],
+  s: ['Brain - inspired neural architectures_energy - efficient AI processing_spiking neural networks_cognitive computing capabilities_real - time learning and adaptation_neuromorphic hardware integration_brain - computer interface support_cognitive robotics applications'
+      'Advanced pattern recognition_custom neuromorphic algorithms'],
     popula,
   r: true, ico,
   n: ''}
@@ -206,7 +172,7 @@ popular: true, icon: '',
   r: 'text - pink - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / neuromorphic - computing - platform', market_positio,
+  s: //ziontechgroup.com / neuromorphic - computing - platform', market_positio,
   n: 'Advanced neuromorphic platform competing with Intel Loihi ($1000 / month) and IBM TrueNorth ($800 / month)',
     target_audienc,
   e: 'AI research labs, Robotics companies, Cognitive computing firms, Research institutions',
@@ -316,22 +282,18 @@ const contact = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
   websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
 }
 export const,
-  specializedEmergingTechServices: SpecializedEmergingTechService[] = [
-  // AR/VR & Metaverse Services
+  specializedEmergingTechServices: SpecializedEmergingTechService[] = [// AR/VR & Metaverse Services
   {
     id: 'ar-vr-metaverse-platform'
     name: 'AR/VR Metaverse Platform'
     tagline: 'Revolutionary AR/VR platform for immersive experiences and metaverse development'
     price: '$399'
-    period: '/month',
-    description: 'Advanced AR/VR platform that enables businesses to create immersive experiences, develop metaverse applications, and engage customers in virtual environments.'
-    features: [,
-      'AR/VR content creation and managementMetaverse development tools and SDKs3 D modeling and animation capabilitiesMulti-platform deployment (VR headsets, mobile AR) web)Real-time collaboration in virtual spacesAI-powered content generationAnalytics and user behavior trackingIntegration with major VR/AR hardware'
-      'Custom avatar and environment creationE-commerce integration for virtual stores'
-    ]
+    period: '/month', description: 'Advanced AR/VR platform that enables businesses to create immersive experiences, develop metaverse applications, and engage customers in virtual environments.'
+    features: [, 'AR/VR content creation and managementMetaverse development tools and SDKs3 D modeling and animation capabilitiesMulti-platform deployment (VR headsets, mobile AR) web)Real-time collaboration in virtual spacesAI-powered content generationAnalytics and user behavior trackingIntegration with major VR/AR hardware'
+      'Custom avatar and environment creationE-commerce integration for virtual stores']
     popular: true
     icon: ''
     color: 'from-purple-600 to-pink-600'
@@ -369,10 +331,8 @@ export const,
     price: '$699'
     period: '/month',
     description: 'Revolutionary platform that optimizes 5G/6G networks using AI, provides real-time monitoring, and ensures optimal performance for next-generation connectivity.'
-    features: [
-      'AI-powered network optimization algorithmsReal-time 5G/6G performance monitoringNetwork slicing and resource allocationQuality of Service (QoS) managementPredictive maintenance and fault detectionMulti-vendor network managementSecurity and threat detectionEnergy efficiency optimization'
-      'Network capacity planningIntegration with major telecom equipment'
-    ]
+    features: ['AI-powered network optimization algorithmsReal-time 5G/6G performance monitoringNetwork slicing and resource allocationQuality of Service (QoS) managementPredictive maintenance and fault detectionMulti-vendor network managementSecurity and threat detectionEnergy efficiency optimization'
+      'Network capacity planningIntegration with major telecom equipment']
     popular: true
     icon: ''
     color: 'from-blue-600 to-cyan-600'
@@ -410,10 +370,8 @@ export const,
     price: '$899'
     period: '/month',
     description: 'Advanced AI platform that accelerates drug discovery, provides genetic analysis, and enables breakthrough research in biotechnology and life sciences.'
-    features: [
-      'AI-powered drug discovery and designGenetic sequence analysis and interpretationProtein structure prediction and modelingClinical trial optimizationBiomarker discovery and validationDrug repurposing algorithmsReal-time research collaboration toolsIntegration with major lab equipment'
-      'Regulatory compliance monitoringPatent analysis and intellectual property management'
-    ]
+    features: ['AI-powered drug discovery and designGenetic sequence analysis and interpretationProtein structure prediction and modelingClinical trial optimizationBiomarker discovery and validationDrug repurposing algorithmsReal-time research collaboration toolsIntegration with major lab equipment'
+      'Regulatory compliance monitoringPatent analysis and intellectual property management']
     popular: true
     icon: ''
     color: 'from-green-600 to-emerald-600'
@@ -451,10 +409,8 @@ export const,
     price: '$549'
     period: '/month',
     description: 'Revolutionary platform that optimizes renewable energy systems, manages smart grids, and maximizes energy efficiency using advanced AI algorithms.'
-    features: [
-      'AI-powered energy production optimizationSmart grid management and monitoringPredictive maintenance for energy systemsEnergy storage optimizationWeather-based energy forecastingDemand response managementCarbon footprint tracking and reductionIntegration with renewable energy systems'
-      'Real-time energy analyticsMulti-energy source management'
-    ]
+    features: ['AI-powered energy production optimizationSmart grid management and monitoringPredictive maintenance for energy systemsEnergy storage optimizationWeather-based energy forecastingDemand response managementCarbon footprint tracking and reductionIntegration with renewable energy systems'
+      'Real-time energy analyticsMulti-energy source management']
     popular: true
     icon: ''
     color: 'from-yellow-600 to-orange-600'
@@ -492,10 +448,8 @@ export const,
     price: '$299'
     period: '/month',
     description: 'Advanced edge computing platform that brings AI capabilities to the edge, enabling real-time processing, low-latency applications, and intelligent IoT devices.'
-    features: [
-      'Edge AI model deployment and managementReal-time data processing and analyticsLow-latency inference capabilitiesEdge device orchestrationDistributed AI trainingEdge security and privacyMulti-cloud edge managementIoT device integration'
-      'Real-time monitoring and alertsCustom edge AI applications'
-    ]
+    features: ['Edge AI model deployment and managementReal-time data processing and analyticsLow-latency inference capabilitiesEdge device orchestrationDistributed AI trainingEdge security and privacyMulti-cloud edge managementIoT device integration'
+      'Real-time monitoring and alertsCustom edge AI applications']
     popular: true
     icon: ''
     color: 'from-indigo-600 to-purple-600'
@@ -533,10 +487,8 @@ export const,
     price: '$1,199'
     period: '/month',
     description: 'Advanced quantum internet platform that enables ultra-secure communication, quantum networking, and quantum key distribution for next-generation internet infrastructure.'
-    features: [
-      'Quantum key distribution (QKD)Quantum internet protocolsUltra-secure communication channelsQuantum network managementQuantum repeater technologyQuantum memory systemsMulti-node quantum networksQuantum internet security'
-      'Integration with classical networksQuantum internet applications'
-    ]
+    features: ['Quantum key distribution (QKD)Quantum internet protocolsUltra-secure communication channelsQuantum network managementQuantum repeater technologyQuantum memory systemsMulti-node quantum networksQuantum internet security'
+      'Integration with classical networksQuantum internet applications']
     popular: true
     icon: ''
     color: 'from-violet-600 to-purple-600'
@@ -574,10 +526,8 @@ export const,
     price: '$799'
     period: '/month',
     description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.'
-    features: [
-      'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications'
-      'Advanced pattern recognitionCustom neuromorphic algorithms'
-    ]
+    features: ['Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications'
+      'Advanced pattern recognitionCustom neuromorphic algorithms']
     popular: true
     icon: ''
     color: 'from-pink-600 to-rose-600'
@@ -857,12 +807,11 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', ' 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' }' 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'}' ]; descriptio,
   n: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.' feature,
-  s: [' 'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications'' 'Advanced pattern recognitionCustom neuromorphic algorithms' benefit,
-  s: [,' 'Energy efficiency',' 'Cognitive capabilities',' 'Real - time learning',' 'Brain - inspired processing'], capabilitie,
-  s: [,' 'Neural architectures',' 'Cognitive computing',' 'Hardware integration',' 'Custom algorithms'], market_advantag,
+  s: [' 'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications'' 'Advanced pattern recognitionCustom neuromorphic algorithms' benefit, s: [, ' 'Energy efficiency', ' 'Cognitive capabilities', ' 'Real - time learning', ' 'Brain - inspired processing'], capabilitie,
+  s: [' 'Neural architectures', ' 'Cognitive computing', ' 'Hardware integration', ' 'Custom algorithms'], market_advantag,
   e:  ,' 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'},' ]; descriptio,
   n: 'Advanced neuromorphic computing platform that mimics the human brain's neural structure, enabling energy - efficient AI processing and cognitive computing applications.' feature,
-  s: [,' 'Brain - inspired neural architectures_energy - efficient AI processing_spiking neural networks_cognitive computing capabilities_real - time learning and adaptation_neuromorphic hardware integration_brain - computer interface support_cognitive robotics applications'' 'Advanced pattern recognition_custom neuromorphic algorithms' ], ' popula,
+  s: [' 'Brain - inspired neural architectures_energy - efficient AI processing_spiking neural networks_cognitive computing capabilities_real - time learning and adaptation_neuromorphic hardware integration_brain - computer interface support_cognitive robotics applications'' 'Advanced pattern recognition_custom neuromorphic algorithms'], ' popula,
   r: true, ico,
   n: '🧠'} ]; } ];' popula,
   r: true, ico,
@@ -870,7 +819,7 @@ i,
   r: 'from - pink - 600 to - rose - 600', text_colo,
   r: 'text - pink - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / neuromorphic - computing - platform', market_positio,
+  s: //ziontechgroup.com / neuromorphic - computing - platform', market_positio,
   n: 'Advanced neuromorphic platform competing with Intel Loihi ($1000 / month) and IBM TrueNorth ($800 / month)',' target_audienc,
   e: 'AI research labs, Robotics companies, Cognitive computing firms, Research institutions',' trial_day,
   s: 30, setup_tim,
@@ -894,7 +843,7 @@ i,
   s: 34' benefit,
   s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilitie,
   s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']' marketAdvantag,
-  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' } ]; ' import { ServiceVariant } from '../types/service-variants'; export interface SpecializedEmergingTechService {/* TODO: Fix JSX expression */}
+  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' } ]; ' import { ServiceVariant  } from '../types/service-variants'; export interface SpecializedEmergingTechService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
@@ -922,7 +871,7 @@ i,
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-  s://ziontechgroup.com' } export const,
+  s: //ziontechgroup.com' } export const,
   specializedEmergingTechServices: SpecializedEmergingTechService[] = [; // AR/VR & Metaverse Services, {/* TODO: Fix JSX expression */}
   s: ['Immersive customer experiencesIncreased engagementCost-effective developmentMulti-platform reach']}' capabilitie,
   s: ['Content creationMetaverse developmentAnalyticsHardware integration']}' marketAdvantag,

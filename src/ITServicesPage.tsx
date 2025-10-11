@@ -1,30 +1,21 @@
 import React, { useState } from 'react'
-import { Search, Filter, Server, Cloud, Shield, Database, Network, Zap, Users, TrendingUp, BarChart3, MessageSquare, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Star, Clock, DollarSign, Globe, Bot, Cpu, Settings, Monitor, HardDrive, Wifi, Lock } from 'lucide-react'
+import { Search, Filter, Server, Cloud, Shield, Database, Network, Zap, Users, TrendingUp, BarChart3, MessageSquare, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Star, Clock, DollarSign, Globe, Bot, Cpu, Settings, Monitor, HardDrive, Wifi, Lock  } from 'lucide-react'
 const ITServicesPage: React.FC = () => {
+  return (
+
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedPricing, setSelectedPricing] = useState<string>('all')
   // IT Services data
-  const itServices = [
-    {
-      id: 1,
-      name: "Cloud Infrastructure Manager",
-      category: "Cloud Services",
-      subcategory: "Infrastructure Management",
-      pricing: "Freemium",
-      description: "Enterprise-grade cloud infrastructure management platform with automated scaling, cost optimization, and security monitoring across multiple cloud providers.",
-      price: 150,
-      pricingModel: "monthly",
-      userLimit: "Up to 20 users",
-      features: ["Multi-cloud management", "Automated scaling", "Cost optimization", "Security monitoring", "Backup solutions", "Disaster recovery"],
+  const itServices = [{
+      id: 1, name: "Cloud Infrastructure Manager", category: "Cloud Services", subcategory: "Infrastructure Management", pricing: "Freemium", description: "Enterprise-grade cloud infrastructure management platform with automated scaling, cost optimization, and security monitoring across multiple cloud providers.", price: 150, pricingModel: "monthly", userLimit: "Up to 20 users", features: ["Multi-cloud management", "Automated scaling", "Cost optimization", "Security monitoring", "Backup solutions", "Disaster recovery"],
       benefits: ["Reduce cloud costs by 40%", "Improve uptime to 99.9%", "Automated infrastructure management", "Enhanced security"],
       targetAudience: ["Enterprise companies", "Mid-size businesses", "Startups", "IT departments"],
       tags: ["Cloud Infrastructure", "Multi-cloud", "Automation", "Cost Optimization", "Security"],
       marketPrice: "$150/month (Industry average: $280/month)",
       roi: "300% ROI within 6 months",
       implementationTime: "2-3 weeks",
-import { 
-  Server, Cloud, Shield, Database, Wifi, Lock, Brain, Zap, Rocket, Globe, 
+import { Server, Cloud, Shield, Database, Wifi, Lock, Brain, Zap, Rocket, Globe, 
   Building, Users, BarChart3, Palette, Code, Monitor, Smartphone, Tablet, 
   Printer, Scanner, Microphone, Headphones, Gamepad2, Watch, Thermometer, 
   Lightbulb, Battery, Leaf, Target, TrendingUp, ArrowRight, CheckCircle, 
@@ -32,77 +23,34 @@ import {
   Cpu, Network, HardDrive, Router, Firewall, Backup, Recovery, Analytics,
   Automation, Integration, Migration, Optimization, Maintenance, Support,
   X
+ 
+  );
 } from 'lucide-react'
 const ITServicesPage: React.FC = () => {
+  return (
+
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedService, setSelectedService] = useState<any>(null)
-  const serviceCategories = [
+  const serviceCategories = [{
+      id: 'infrastructure', name: 'Infrastructure & Cloud', icon: <Server className="w-6 h-6" />, description: 'Scalable cloud solutions and infrastructure management', color: 'from-blue-500 to-cyan-500'
+    
+  );
+}, {
+      id: 'security', name: 'Cybersecurity', icon: <Shield className="w-6 h-6" />, description: 'Advanced security and compliance solutions', color: 'from-red-500 to-pink-500'
+    }, {
+      id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-6 h-6" />, description: 'Intelligent automation and data insights', color: 'from-purple-500 to-indigo-500'
+    }, {
+      id: 'devops', name: 'DevOps & Automation', icon: <Zap className="w-6 h-6" />, description: 'Streamlined development and deployment', color: 'from-green-500 to-emerald-500'
+    }, {
+      id: 'data', name: 'Data & Analytics', icon: <Database className="w-6 h-6" />, description: 'Data management and business intelligence', color: 'from-yellow-500 to-orange-500'
+    }, {
+      id: 'digital', name: 'Digital Transformation', icon: <Globe className="w-6 h-6" />, description: 'Modernize your business operations', color: 'from-indigo-500 to-purple-500'
+    }]
+  const itServices = [// Infrastructure & Cloud Services
     {
-      id: 'infrastructure',
-      name: 'Infrastructure & Cloud',
-      icon: <Server className="w-6 h-6" />,
-      description: 'Scalable cloud solutions and infrastructure management',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      id: 'security',
-      name: 'Cybersecurity',
-      icon: <Shield className="w-6 h-6" />,
-      description: 'Advanced security and compliance solutions',
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      id: 'ai-ml',
-      name: 'AI & Machine Learning',
-      icon: <Brain className="w-6 h-6" />,
-      description: 'Intelligent automation and data insights',
-      color: 'from-purple-500 to-indigo-500'
-    },
-    {
-      id: 'devops',
-      name: 'DevOps & Automation',
-      icon: <Zap className="w-6 h-6" />,
-      description: 'Streamlined development and deployment',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      id: 'data',
-      name: 'Data & Analytics',
-      icon: <Database className="w-6 h-6" />,
-      description: 'Data management and business intelligence',
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      id: 'digital',
-      name: 'Digital Transformation',
-      icon: <Globe className="w-6 h-6" />,
-      description: 'Modernize your business operations',
-      color: 'from-indigo-500 to-purple-500'
-    }
-  ]
-  const itServices = [
-    // Infrastructure & Cloud Services
-    {
-      id: 1,
-      name: "Cloud Migration & Strategy",
-      category: "infrastructure",
-      description: "Comprehensive cloud migration planning and execution for enterprise applications",
-      features: [
-        "Cloud readiness assessment",
-        "Migration strategy development",
-        "Application modernization",
-        "Cost optimization",
-        "Performance monitoring",
-        "Disaster recovery planning"
-      ],
-      benefits: [
-        "Reduced infrastructure costs",
-        "Improved scalability",
-        "Enhanced performance",
-        "Better security",
-        "24/7 availability",
-        "Faster deployment"
-      ],
+      id: 1, name: "Cloud Migration & Strategy", category: "infrastructure", description: "Comprehensive cloud migration planning and execution for enterprise applications", features: [
+        "Cloud readiness assessment", "Migration strategy development", "Application modernization", "Cost optimization", "Performance monitoring", "Disaster recovery planning"],
+      benefits: ["Reduced infrastructure costs", "Improved scalability", "Enhanced performance", "Better security", "24/7 availability", "Faster deployment"],
       pricing: "Custom",
       duration: "8-16 weeks",
       expertise: "Senior Cloud Architects",
@@ -133,22 +81,8 @@ const ITServicesPage: React.FC = () => {
       name: "Managed IT Services",
       category: "infrastructure",
       description: "Complete IT infrastructure management and monitoring for businesses",
-      features: [
-        "24/7 network monitoring",
-        "Proactive maintenance",
-        "Help desk support",
-        "Security management",
-        "Backup and recovery",
-        "Performance optimization"
-      ],
-      benefits: [
-        "Reduced IT overhead",
-        "Improved uptime",
-        "Better security",
-        "Cost predictability",
-        "Expert support",
-        "Scalable solutions"
-      ],
+      features: ["24/7 network monitoring", "Proactive maintenance", "Help desk support", "Security management", "Backup and recovery", "Performance optimization"],
+      benefits: ["Reduced IT overhead", "Improved uptime", "Better security", "Cost predictability", "Expert support", "Scalable solutions"],
       pricing: "From $2,500/month",
       duration: "Ongoing",
       expertise: "IT Operations Specialists",
@@ -179,22 +113,8 @@ const ITServicesPage: React.FC = () => {
       name: "Network Infrastructure Design",
       category: "infrastructure",
       description: "Enterprise-grade network architecture and implementation",
-      features: [
-        "Network assessment",
-        "Architecture design",
-        "Implementation",
-        "Security integration",
-        "Performance testing",
-        "Documentation"
-      ],
-      benefits: [
-        "Improved performance",
-        "Enhanced security",
-        "Better scalability",
-        "Reduced downtime",
-        "Future-proof design",
-        "Compliance ready"
-      ],
+      features: ["Network assessment", "Architecture design", "Implementation", "Security integration", "Performance testing", "Documentation"],
+      benefits: ["Improved performance", "Enhanced security", "Better scalability", "Reduced downtime", "Future-proof design", "Compliance ready"],
       pricing: "From $15,000",
       duration: "4-8 weeks",
       expertise: "Network Engineers",
@@ -229,22 +149,8 @@ const ITServicesPage: React.FC = () => {
       name: "Cybersecurity Assessment",
       category: "security",
       description: "Comprehensive security evaluation and vulnerability assessment",
-      features: [
-        "Security audit",
-        "Penetration testing",
-        "Vulnerability scanning",
-        "Risk assessment",
-        "Compliance review",
-        "Security roadmap"
-      ],
-      benefits: [
-        "Identify vulnerabilities",
-        "Improve security posture",
-        "Meet compliance requirements",
-        "Reduce risk exposure",
-        "Build customer trust",
-        "Protect brand reputation"
-      ],
+      features: ["Security audit", "Penetration testing", "Vulnerability scanning", "Risk assessment", "Compliance review", "Security roadmap"],
+      benefits: ["Identify vulnerabilities", "Improve security posture", "Meet compliance requirements", "Reduce risk exposure", "Build customer trust", "Protect brand reputation"],
       pricing: "From $8,000",
       duration: "2-4 weeks",
       expertise: "Security Analysts",
@@ -275,22 +181,8 @@ const ITServicesPage: React.FC = () => {
       name: "Security Operations Center (SOC)",
       category: "security",
       description: "24/7 security monitoring and incident response services",
-      features: [
-        "Real-time monitoring",
-        "Threat detection",
-        "Incident response",
-        "Security analytics",
-        "Compliance reporting",
-        "Threat intelligence"
-      ],
-      benefits: [
-        "24/7 protection",
-        "Faster response times",
-        "Reduced incident impact",
-        "Compliance assurance",
-        "Expert security team",
-        "Proactive defense"
-      ],
+      features: ["Real-time monitoring", "Threat detection", "Incident response", "Security analytics", "Compliance reporting", "Threat intelligence"],
+      benefits: ["24/7 protection", "Faster response times", "Reduced incident impact", "Compliance assurance", "Expert security team", "Proactive defense"],
       pricing: "From $5,000/month",
       duration: "Ongoing",
       expertise: "Security Engineers",
@@ -325,22 +217,8 @@ const ITServicesPage: React.FC = () => {
       name: "AI Strategy & Implementation",
       category: "ai-ml",
       description: "Strategic AI planning and implementation for business transformation",
-      features: [
-        "AI readiness assessment",
-        "Strategy development",
-        "Use case identification",
-        "Technology selection",
-        "Implementation planning",
-        "ROI analysis"
-      ],
-      benefits: [
-        "Competitive advantage",
-        "Process automation",
-        "Better decision making",
-        "Cost reduction",
-        "Improved efficiency",
-        "Innovation leadership"
-      ],
+      features: ["AI readiness assessment", "Strategy development", "Use case identification", "Technology selection", "Implementation planning", "ROI analysis"],
+      benefits: ["Competitive advantage", "Process automation", "Better decision making", "Cost reduction", "Improved efficiency", "Innovation leadership"],
       pricing: "From $25,000",
       duration: "12-24 weeks",
       expertise: "AI Specialists",
@@ -371,22 +249,8 @@ const ITServicesPage: React.FC = () => {
       name: "Machine Learning Models",
       category: "ai-ml",
       description: "Custom ML model development and deployment",
-      features: [
-        "Data preparation",
-        "Model development",
-        "Training & validation",
-        "Deployment",
-        "Monitoring",
-        "Maintenance"
-      ],
-      benefits: [
-        "Predictive insights",
-        "Automated processes",
-        "Data-driven decisions",
-        "Scalable solutions",
-        "Continuous improvement",
-        "Competitive edge"
-      ],
+      features: ["Data preparation", "Model development", "Training & validation", "Deployment", "Monitoring", "Maintenance"],
+      benefits: ["Predictive insights", "Automated processes", "Data-driven decisions", "Scalable solutions", "Continuous improvement", "Competitive edge"],
       pricing: "From $15,000",
       duration: "8-16 weeks",
       expertise: "ML Engineers",
@@ -404,22 +268,8 @@ const ITServicesPage: React.FC = () => {
       name: "CI/CD Pipeline Setup",
       category: "devops",
       description: "Automated development and deployment pipelines",
-      features: [
-        "Pipeline design",
-        "Automation setup",
-        "Testing integration",
-        "Deployment automation",
-        "Monitoring setup",
-        "Documentation"
-      ],
-      benefits: [
-        "Faster deployments",
-        "Reduced errors",
-        "Better quality",
-        "Team productivity",
-        "Faster feedback",
-        "Scalable processes"
-      ],
+      features: ["Pipeline design", "Automation setup", "Testing integration", "Deployment automation", "Monitoring setup", "Documentation"],
+      benefits: ["Faster deployments", "Reduced errors", "Better quality", "Team productivity", "Faster feedback", "Scalable processes"],
       pricing: "From $12,000",
       duration: "4-8 weeks",
       expertise: "DevOps Engineers",
@@ -451,22 +301,8 @@ const ITServicesPage: React.FC = () => {
       name: "Infrastructure as Code",
       category: "devops",
       description: "Automated infrastructure provisioning and management",
-      features: [
-        "Infrastructure design",
-        "Code development",
-        "Testing & validation",
-        "Deployment automation",
-        "Monitoring setup",
-        "Documentation"
-      ],
-      benefits: [
-        "Consistent deployments",
-        "Faster provisioning",
-        "Better scalability",
-        "Reduced errors",
-        "Version control",
-        "Disaster recovery"
-      ],
+      features: ["Infrastructure design", "Code development", "Testing & validation", "Deployment automation", "Monitoring setup", "Documentation"],
+      benefits: ["Consistent deployments", "Faster provisioning", "Better scalability", "Reduced errors", "Version control", "Disaster recovery"],
       pricing: "From $18,000",
       duration: "6-12 weeks",
       expertise: "DevOps Engineers",
@@ -484,22 +320,8 @@ const ITServicesPage: React.FC = () => {
       name: "Data Architecture & Strategy",
       category: "data",
       description: "Comprehensive data strategy and architecture design",
-      features: [
-        "Data assessment",
-        "Architecture design",
-        "Strategy development",
-        "Technology selection",
-        "Implementation planning",
-        "Governance setup"
-      ],
-      benefits: [
-        "Better data quality",
-        "Improved insights",
-        "Regulatory compliance",
-        "Cost optimization",
-        "Scalable solutions",
-        "Data-driven decisions"
-      ],
+      features: ["Data assessment", "Architecture design", "Strategy development", "Technology selection", "Implementation planning", "Governance setup"],
+      benefits: ["Better data quality", "Improved insights", "Regulatory compliance", "Cost optimization", "Scalable solutions", "Data-driven decisions"],
       pricing: "From $20,000",
       duration: "8-16 weeks",
       expertise: "Data Architects",
@@ -515,22 +337,8 @@ const ITServicesPage: React.FC = () => {
       name: "Business Intelligence & Analytics",
       category: "data",
       description: "Data visualization and business intelligence solutions",
-      features: [
-        "Data modeling",
-        "Dashboard development",
-        "Report automation",
-        "Analytics setup",
-        "User training",
-        "Maintenance"
-      ],
-      benefits: [
-        "Better insights",
-        "Faster decisions",
-        "Automated reporting",
-        "Data democratization",
-        "Performance tracking",
-        "Strategic planning"
-      ],
+      features: ["Data modeling", "Dashboard development", "Report automation", "Analytics setup", "User training", "Maintenance"],
+      benefits: ["Better insights", "Faster decisions", "Automated reporting", "Data democratization", "Performance tracking", "Strategic planning"],
       pricing: "From $15,000",
       duration: "6-12 weeks",
       expertise: "BI Developers",
@@ -548,22 +356,8 @@ const ITServicesPage: React.FC = () => {
       name: "Digital Transformation Consulting",
       category: "digital",
       description: "Strategic guidance for digital business transformation",
-      features: [
-        "Current state assessment",
-        "Transformation roadmap",
-        "Technology strategy",
-        "Change management",
-        "Implementation support",
-        "Success measurement"
-      ],
-      benefits: [
-        "Modern operations",
-        "Competitive advantage",
-        "Improved efficiency",
-        "Better customer experience",
-        "Cost reduction",
-        "Future readiness"
-      ],
+      features: ["Current state assessment", "Transformation roadmap", "Technology strategy", "Change management", "Implementation support", "Success measurement"],
+      benefits: ["Modern operations", "Competitive advantage", "Improved efficiency", "Better customer experience", "Cost reduction", "Future readiness"],
       pricing: "From $35,000",
       duration: "16-32 weeks",
       expertise: "Digital Transformation Consultants",
@@ -593,21 +387,20 @@ const ITServicesPage: React.FC = () => {
         return `$${price * 12}/year`
       case 'one-time':
         return `$${price.toLocaleString()}`
-      default:
-        return `$${price}`
+      default: return `$${price}`
     }
   }
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'Cloud Services': return <Cloud className="w-6 h-6" />
-      case 'Security': return <Shield className="w-6 h-6" />
-      case 'Networking': return <Network className="w-6 h-6" />
-      case 'Data Management': return <Database className="w-6 h-6" />
-      case 'DevOps': return <Zap className="w-6 h-6" />
-      case 'Asset Management': return <HardDrive className="w-6 h-6" />
-      case 'Support Services': return <MessageSquare className="w-6 h-6" />
-      case 'Database': return <Database className="w-6 h-6" />
-      default: return <Server className="w-6 h-6" />
+      case 'Cloud Services': return <Cloud className="w-6 h-6" /></Cloud>
+      case 'Security': return <Shield className="w-6 h-6" /></Shield>
+      case 'Networking': return <Network className="w-6 h-6" /></Network>
+      case 'Data Management': return <Database className="w-6 h-6" /></Database>
+      case 'DevOps': return <Zap className="w-6 h-6" /></Zap>
+      case 'Asset Management': return <HardDrive className="w-6 h-6" /></HardDrive>
+      case 'Support Services': return <MessageSquare className="w-6 h-6" /></MessageSquare>
+      case 'Database': return <Database className="w-6 h-6" /></Database>
+      default: return <Server className="w-6 h-6" /></Server>
     }
   }
   const getPricingColor = (pricing: string) => {
@@ -623,7 +416,7 @@ const ITServicesPage: React.FC = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent mb-4">
+          <h1 className="text-4xl md: text-6xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent mb-4">
             IT Services
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -632,16 +425,15 @@ const ITServicesPage: React.FC = () => {
 export default ITServicesPage
 import React from 'react'
 import React from 'react'
-import { Header } from '@/components/Header'
-import { Footer } from '@/components/Footer'
-import { SEO } from '@/components/SEO'
+import { Header  } from '@/components/Header'
+import { Footer  } from '@/components/Footer'
+import { SEO  } from '@/components/SEO'
 import React from 'react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import { Link } from 'react-router-dom'
-import { 
-  Cloud, 
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card'
+import { Button  } from '@/components/ui/button'
+import { Badge  } from '@/components/ui/badge'
+import { Link  } from 'react-router-dom'
+import { Cloud, 
   Shield, 
   Server, 
   Database, 
@@ -662,15 +454,10 @@ import {
   CheckCircle,
   AlertTriangle,
   TrendingUp
-} from 'lucide-react'
-import { SEO } from '@/components/SEO'
-const IT_SERVICES = [
-  {
-    id: 'cloud-services',
-    title: 'Cloud Infrastructure & Migration',
-    description: 'Comprehensive cloud solutions including migration, optimization, and management',
-    icon: <Cloud className="h-8 w-8 text-blue-500" />,
-    features: ['AWS/Azure/GCP Migration', 'Cloud Architecture Design', 'Cost Optimization', '24/7 Monitoring'],
+ } from 'lucide-react'
+import { SEO  } from '@/components/SEO'
+const IT_SERVICES = [{
+    id: 'cloud-services', title: 'Cloud Infrastructure & Migration', description: 'Comprehensive cloud solutions including migration, optimization, and management', icon: <Cloud className="h-8 w-8 text-blue-500" />, features: ['AWS/Azure/GCP Migration', 'Cloud Architecture Design', 'Cost Optimization', '24/7 Monitoring'],
     pricing: { starting: '$3,000', average: '$12,000', enterprise: '$40,000+' },
     category: 'Infrastructure',
     badge: 'Popular',
@@ -810,63 +597,37 @@ const IT_SERVICES = [
     benefits: ['Regulatory Compliance', 'Risk Mitigation', 'Customer Trust', 'Business Continuity']
   }
 ]
-const IT_SERVICE_CATEGORIES = [
-  { name: 'Infrastructure', count: 3, color: 'bg-blue-500' },
-  { name: 'Security', count: 2, color: 'bg-red-500' },
-  { name: 'Data', count: 1, color: 'bg-purple-500' },
-  { name: 'Management', count: 2, color: 'bg-cyan-500' },
-  { name: 'Development', count: 1, color: 'bg-orange-500' },
-  { name: 'Recovery', count: 1, color: 'bg-yellow-500' },
-  { name: 'Consulting', count: 1, color: 'bg-gray-500' },
-  { name: 'Monitoring', count: 1, color: 'bg-teal-500' },
-  { name: 'Compliance', count: 1, color: 'bg-emerald-500' }
-]
-const SERVICE_BENEFITS = [
-  {
-    icon: <Zap className="h-12 w-12 text-zion-cyan" />,
-    title: 'Increased Efficiency',
-    description: 'Streamline operations and improve productivity with optimized IT solutions'
-  },
-  {
-    icon: <Shield className="h-12 w-12 text-zion-purple" />,
-    title: 'Enhanced Security',
-    description: 'Protect your business with enterprise-grade security and compliance solutions'
-  },
-  {
-    icon: <TrendingUp className="h-12 w-12 text-zion-cyan" />,
-    title: 'Cost Optimization',
-    description: 'Reduce IT costs while improving performance and reliability'
-  },
-  {
-    icon: <Users className="h-12 w-12 text-zion-purple" />,
-    title: 'Expert Support',
-    description: 'Access to certified IT professionals and 24/7 technical support'
-  }
-]
+const IT_SERVICE_CATEGORIES = [{ name: 'Infrastructure', count: 3, color: 'bg-blue-500' }, { name: 'Security', count: 2, color: 'bg-red-500' }, { name: 'Data', count: 1, color: 'bg-purple-500' }, { name: 'Management', count: 2, color: 'bg-cyan-500' }, { name: 'Development', count: 1, color: 'bg-orange-500' }, { name: 'Recovery', count: 1, color: 'bg-yellow-500' }, { name: 'Consulting', count: 1, color: 'bg-gray-500' }, { name: 'Monitoring', count: 1, color: 'bg-teal-500' }, { name: 'Compliance', count: 1, color: 'bg-emerald-500' }]
+const SERVICE_BENEFITS = [{
+    icon: <Zap className="h-12 w-12 text-zion-cyan" />, title: 'Increased Efficiency', description: 'Streamline operations and improve productivity with optimized IT solutions'
+  }, {
+    icon: <Shield className="h-12 w-12 text-zion-purple" />, title: 'Enhanced Security', description: 'Protect your business with enterprise-grade security and compliance solutions'
+  }, {
+    icon: <TrendingUp className="h-12 w-12 text-zion-cyan" />, title: 'Cost Optimization', description: 'Reduce IT costs while improving performance and reliability'
+  }, {
+    icon: <Users className="h-12 w-12 text-zion-purple" />, title: 'Expert Support', description: 'Access to certified IT professionals and 24/7 technical support'
+  }]
 export default function ITServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-purple-dark">
-      <SEO 
-        title="IT Services & Solutions - Zion Tech Group" 
+      <SEO title="IT Services & Solutions - Zion Tech Group" 
         description="Comprehensive IT services including cloud solutions, cybersecurity, infrastructure, managed services, and more. Expert IT solutions for businesses."
         keywords="IT services, cloud computing, cybersecurity, network infrastructure, managed IT services, software development, disaster recovery"
-        canonical="https://ziontechgroup.com/it-services"
-      />
-
+        canonical="https: //ziontechgroup.com/it-services"
+      /></SEO>
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
             IT Services & Solutions
           </h1>
 import React from 'react'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { 
-  Server, 
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card'
+import { Button  } from '@/components/ui/button'
+import { Badge  } from '@/components/ui/badge'
+import { Server, 
   Shield, 
   Cloud, 
   Database, 
@@ -888,24 +649,11 @@ import {
   Star,
   TrendingUp,
 
-} from "lucide-react"
+ } from 'lucide-react'
 export default function ITServicesPage() {
-  const itServices = [
-    {
-      id: "cloud-migration",
-      title: "Cloud Migration & Strategy",
-      description: "Complete cloud migration services with strategy planning, implementation, and optimization for AWS, Azure, and Google Cloud.",
-      icon: <Cloud className="h-8 w-8 text-blue-500" />,
-      price: 8500,
-      currency: "$",
-      features: [
-        "Cloud Strategy Planning",
-        "Multi-cloud Architecture",
-        "Data Migration",
-        "Security Implementation",
-        "Performance Optimization",
-        "24/7 Support"
-      ],
+  const itServices = [{
+      id: "cloud-migration", title: "Cloud Migration & Strategy", description: "Complete cloud migration services with strategy planning, implementation, and optimization for AWS, Azure, and Google Cloud.", icon: <Cloud className="h-8 w-8 text-blue-500" />, price: 8500, currency: "$", features: [
+        "Cloud Strategy Planning", "Multi-cloud Architecture", "Data Migration", "Security Implementation", "Performance Optimization", "24/7 Support"],
       category: "Cloud Services",
       badge: "Popular",
       link: "https://ziontechgroup.com/cloud-migration",
@@ -922,14 +670,7 @@ export default function ITServicesPage() {
       icon: <Shield className="h-8 w-8 text-red-500" />,
       price: 6500,
       currency: "$",
-      features: [
-        "Security Audit",
-        "Penetration Testing",
-        "Vulnerability Assessment",
-        "Security Policy Development",
-        "Incident Response Planning",
-        "Compliance Reporting"
-      ],
+      features: ["Security Audit", "Penetration Testing", "Vulnerability Assessment", "Security Policy Development", "Incident Response Planning", "Compliance Reporting"],
       category: "Security",
       badge: "Critical",
       link: "https://ziontechgroup.com/cybersecurity",
@@ -946,14 +687,7 @@ export default function ITServicesPage() {
       icon: <Network className="h-8 w-8 text-green-500" />,
       price: 7200,
       currency: "$",
-      features: [
-        "Network Design",
-        "Hardware Installation",
-        "Configuration & Testing",
-        "Performance Optimization",
-        "Monitoring Setup",
-        "Documentation"
-      ],
+      features: ["Network Design", "Hardware Installation", "Configuration & Testing", "Performance Optimization", "Monitoring Setup", "Documentation"],
       category: "Infrastructure",
       badge: "Essential",
       link: "https://ziontechgroup.com/network-infrastructure",
@@ -970,14 +704,7 @@ export default function ITServicesPage() {
       icon: <Database className="h-8 w-8 text-purple-500" />,
       price: 4200,
       currency: "$",
-      features: [
-        "Backup Strategy",
-        "Automated Backups",
-        "Disaster Recovery Plan",
-        "Testing & Validation",
-        "Cloud Storage",
-        "Recovery Procedures"
-      ],
+      features: ["Backup Strategy", "Automated Backups", "Disaster Recovery Plan", "Testing & Validation", "Cloud Storage", "Recovery Procedures"],
       category: "Data Protection",
       badge: "Essential",
       link: "https://ziontechgroup.com/data-backup",
@@ -994,14 +721,7 @@ export default function ITServicesPage() {
       icon: <BarChart3 className="h-8 w-8 text-orange-500" />,
       price: 3500,
       currency: "$",
-      features: [
-        "Technology Assessment",
-        "Digital Transformation",
-        "IT Roadmap Planning",
-        "Vendor Selection",
-        "Cost Optimization",
-        "Change Management"
-      ],
+      features: ["Technology Assessment", "Digital Transformation", "IT Roadmap Planning", "Vendor Selection", "Cost Optimization", "Change Management"],
       category: "Consulting",
       badge: "Strategic",
       link: "https://ziontechgroup.com/it-consulting",
@@ -1018,14 +738,7 @@ export default function ITServicesPage() {
       icon: <Monitor className="h-8 w-8 text-cyan-500" />,
       price: 2800,
       currency: "$",
-      features: [
-        "24/7 Monitoring",
-        "Proactive Maintenance",
-        "Help Desk Support",
-        "Security Updates",
-        "Performance Optimization",
-        "Monthly Reporting"
-      ],
+      features: ["24/7 Monitoring", "Proactive Maintenance", "Help Desk Support", "Security Updates", "Performance Optimization", "Monthly Reporting"],
       category: "Managed Services",
       badge: "Ongoing",
       link: "https://ziontechgroup.com/managed-it",
@@ -1042,14 +755,7 @@ export default function ITServicesPage() {
       icon: <Code className="h-8 w-8 text-indigo-500" />,
       price: 15000,
       currency: "$",
-      features: [
-        "Requirements Analysis",
-        "Custom Development",
-        "Testing & QA",
-        "Deployment",
-        "Training & Support",
-        "Maintenance"
-      ],
+      features: ["Requirements Analysis", "Custom Development", "Testing & QA", "Deployment", "Training & Support", "Maintenance"],
       category: "Development",
       badge: "Custom",
       link: "https://ziontechgroup.com/software-development",
@@ -1066,14 +772,7 @@ export default function ITServicesPage() {
       icon: <Smartphone className="h-8 w-8 text-pink-500" />,
       price: 12000,
       currency: "$",
-      features: [
-        "Platform Strategy",
-        "UI/UX Design",
-        "Native Development",
-        "Testing & QA",
-        "App Store Deployment",
-        "Maintenance & Updates"
-      ],
+      features: ["Platform Strategy", "UI/UX Design", "Native Development", "Testing & QA", "App Store Deployment", "Maintenance & Updates"],
       category: "Mobile",
       badge: "Popular",
       link: "https://ziontechgroup.com/mobile-development",
@@ -1090,14 +789,7 @@ export default function ITServicesPage() {
       icon: <Globe className="h-8 w-8 text-teal-500" />,
       price: 8000,
       currency: "$",
-      features: [
-        "Responsive Design",
-        "E-commerce Integration",
-        "SEO Optimization",
-        "Performance Optimization",
-        "Security Implementation",
-        "Analytics Setup"
-      ],
+      features: ["Responsive Design", "E-commerce Integration", "SEO Optimization", "Performance Optimization", "Security Implementation", "Analytics Setup"],
       category: "Web",
       badge: "Essential",
       link: "https://ziontechgroup.com/web-development",
@@ -1114,14 +806,7 @@ export default function ITServicesPage() {
       icon: <BarChart3 className="h-8 w-8 text-emerald-500" />,
       price: 6800,
       currency: "$",
-      features: [
-        "Data Integration",
-        "Dashboard Development",
-        "Report Automation",
-        "Predictive Analytics",
-        "Data Visualization",
-        "User Training"
-      ],
+      features: ["Data Integration", "Dashboard Development", "Report Automation", "Predictive Analytics", "Data Visualization", "User Training"],
       category: "Analytics",
       badge: "Insightful",
       link: "https://ziontechgroup.com/data-analytics",
@@ -1138,14 +823,7 @@ export default function ITServicesPage() {
       icon: <Settings className="h-8 w-8 text-yellow-500" />,
       price: 1800,
       currency: "$",
-      features: [
-        "Remote Support",
-        "On-site Support",
-        "Issue Resolution",
-        "System Maintenance",
-        "User Training",
-        "Documentation"
-      ],
+      features: ["Remote Support", "On-site Support", "Issue Resolution", "System Maintenance", "User Training", "Documentation"],
       category: "Support",
       badge: "Essential",
       link: "https://ziontechgroup.com/it-support",
@@ -1162,14 +840,7 @@ export default function ITServicesPage() {
       icon: <Phone className="h-8 w-8 text-blue-500" />,
       price: 5500,
       currency: "$",
-      features: [
-        "VoIP Implementation",
-        "Video Conferencing",
-        "Collaboration Tools",
-        "Mobile Integration",
-        "Call Analytics",
-        "Training & Support"
-      ],
+      features: ["VoIP Implementation", "Video Conferencing", "Collaboration Tools", "Mobile Integration", "Call Analytics", "Training & Support"],
       category: "Communications",
       badge: "Modern",
       link: "https://ziontechgroup.com/voip-communications",
@@ -1180,21 +851,7 @@ export default function ITServicesPage() {
       reviewCount: 134
     }
   ]
-  const categories = [
-    "All Services",
-    "Cloud Services",
-    "Security",
-    "Infrastructure",
-    "Data Protection",
-    "Consulting",
-    "Managed Services",
-    "Development",
-    "Mobile",
-    "Web",
-    "Analytics",
-    "Support",
-    "Communications"
-  ]
+  const categories = ["All Services", "Cloud Services", "Security", "Infrastructure", "Data Protection", "Consulting", "Managed Services", "Development", "Mobile", "Web", "Analytics", "Support", "Communications"]
   const [selectedCategory, setSelectedCategory] = React.useState("All Services")
   const [filteredServices, setFilteredServices] = React.useState(itServices)
   React.useEffect(() => {
@@ -1210,7 +867,7 @@ export default function ITServicesPage() {
       <div className="relative overflow-hidden bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 opacity-20"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
+          <h1 className="text-5xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
             IT Services
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
@@ -1218,22 +875,22 @@ export default function ITServicesPage() {
             From cloud migration to custom development, we've got you covered.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">
-              <Server className="h-5 w-5 mr-2" />
+            <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-3"></Button>
+              <Server className="h-5 w-5 mr-2" /></Server>
               Explore IT Solutions
             </Button>
-            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
-              <Settings className="h-5 w-5 mr-2" />
+            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3"></Button>
+              <Settings className="h-5 w-5 mr-2" /></Settings>
               Get IT Consultation
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto mb-8">
             Comprehensive IT services to modernize your infrastructure, enhance security, 
             and drive business growth through technology innovation.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
+            <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple"></Button>
               <Link to="/request-quote">Get IT Quote</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+            <Button asChild size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"></Button>
               <Link to="/contact">Schedule Consultation</Link>
             </Button>
           </div>
@@ -1245,15 +902,15 @@ export default function ITServicesPage() {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-wrap items-center justify-center gap-8 text-center">
             <div className="flex items-center gap-3">
-              <Phone className="h-5 w-5 text-zion-cyan" />
+              <Phone className="h-5 w-5 text-zion-cyan" /></Phone>
               <span className="text-white">+1 302 464 0950</span>
             </div>
             <div className="flex items-center gap-3">
-              <Mail className="h-5 w-5 text-zion-cyan" />
+              <Mail className="h-5 w-5 text-zion-cyan" /></Mail>
               <span className="text-white">kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center gap-3">
-              <MapPin className="h-5 w-5 text-zion-cyan" />
+              <MapPin className="h-5 w-5 text-zion-cyan" /></MapPin>
               <span className="text-white">364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
@@ -1272,7 +929,7 @@ export default function ITServicesPage() {
                 className={`${
                   selectedCategory === category
                     ? "bg-zion-purple text-white"
-                    : "border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+                    : "border-zion-cyan text-zion-cyan hover: bg-zion-cyan/10"
                 }`}
               >
                 {category}
@@ -1281,7 +938,7 @@ export default function ITServicesPage() {
       <div className="py-16 bg-zion-slate/50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our IT Services?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {SERVICE_BENEFITS.map((benefit, index) => (
               <div key={index} className="text-center">
                 <div className="mb-4">{benefit.icon}</div>
@@ -1297,7 +954,7 @@ export default function ITServicesPage() {
       <div className="py-16 bg-zion-slate">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">IT Service Categories</h2>
-          <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-9 gap-4">
+          <div className="grid grid-cols-3 md: grid-cols-6 lg:grid-cols-9 gap-4">
             {IT_SERVICE_CATEGORIES.map((category) => (
               <div key={category.name} className="text-center">
                 <div className={`w-16 h-16 ${category.color} rounded-full mx-auto mb-3 flex items-center justify-center`}>
@@ -1320,14 +977,14 @@ export default function ITServicesPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {IT_SERVICES.map((service) => (
-              <Card key={service.id} className="bg-zion-blue-dark/50 border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20">
-                <CardHeader className="pb-4">
+              <Card key={service.id} className="bg-zion-blue-dark/50 border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20"></Card>
+                <CardHeader className="pb-4"></CardHeader>
                   <div className="flex justify-between items-start mb-3">
                     {service.icon}
                     {service.badge && (
-                      <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
+                      <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30"></Badge>
                         {service.badge}
                       </Badge>
                     )}
@@ -1336,9 +993,9 @@ export default function ITServicesPage() {
                   <CardDescription className="text-zion-cyan/80">{service.description}</CardDescription>
                 </CardHeader>
                 
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-4"></CardContent>
                   <div>
-                    <h4 className="text-white font-semibold mb-2">Key Features:</h4>
+                    <h4 className="text-white font-semibold mb-2">Key Features: </h4>
                     <ul className="space-y-1">
                       {service.features.map((feature, index) => (
                         <li key={index} className="text-sm text-zion-cyan/70 flex items-center">
@@ -1350,7 +1007,7 @@ export default function ITServicesPage() {
                   </div>
                   
                   <div>
-                    <h4 className="text-white font-semibold mb-2">Business Benefits:</h4>
+                    <h4 className="text-white font-semibold mb-2">Business Benefits: </h4>
                     <ul className="space-y-1">
                       {service.benefits.map((benefit, index) => (
                         <li key={index} className="text-sm text-zion-cyan/70 flex items-center">
@@ -1362,7 +1019,7 @@ export default function ITServicesPage() {
                   </div>
                   
                   <div>
-                    <h4 className="text-white font-semibold mb-2">Pricing:</h4>
+                    <h4 className="text-white font-semibold mb-2">Pricing: </h4>
                     <div className="text-sm text-zion-cyan/70 space-y-1">
                       <p>Starting: {service.pricing.starting}</p>
                       <p>Average: {service.pricing.average}</p>
@@ -1371,8 +1028,8 @@ export default function ITServicesPage() {
                   </div>
                   
                   <div className="pt-4">
-                    <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
-                      <Link to={service.link}>Learn More</Link>
+                    <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple"></Button>
+                      <Link to=>{service.link}Learn More</Link>
                     </Button>
                   </div>
                 </CardContent>
@@ -1392,7 +1049,7 @@ export default function ITServicesPage() {
               </div>
 
               <div className="mb-4">
-                <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                <h4 className="text-sm font-semibold text-white mb-2">Key Features: </h4>
                 <div className="flex flex-wrap gap-2">
                   {service.features.slice(0, 3).map((feature, index) => (
                     <span key={index} className="px-2 py-1 text-xs bg-blue-500/20 text-blue-300 rounded">
@@ -1403,7 +1060,7 @@ export default function ITServicesPage() {
               </div>
 
               <div className="mb-4">
-                <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
+                <h4 className="text-sm font-semibold text-white mb-2">Benefits: </h4>
                 <div className="flex flex-wrap gap-2">
                   {service.benefits.slice(0, 2).map((benefit, index) => (
                     <span key={index} className="px-2 py-1 text-xs bg-green-500/20 text-green-300 rounded">
@@ -1414,7 +1071,7 @@ export default function ITServicesPage() {
               </div>
 
               <div className="mb-4">
-                <h4 className="text-sm font-semibold text-white mb-2">Perfect For:</h4>
+                <h4 className="text-sm font-semibold text-white mb-2">Perfect For: </h4>
                 <div className="flex flex-wrap gap-2">
                   {service.targetAudience.slice(0, 2).map((audience, index) => (
                     <span key={index} className="px-2 py-1 text-xs bg-purple-500/20 text-purple-300 rounded">
@@ -1429,7 +1086,7 @@ export default function ITServicesPage() {
                   <span>Start your free trial today</span>
                   <$2 />
                     href={service.contactInfo.website}
-                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                    className="text-blue-400 hover: text-blue-300 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -1448,19 +1105,19 @@ export default function ITServicesPage() {
             <p className="text-gray-300 mb-6">
               Our IT solutions are designed to scale with your business and provide enterprise-grade reliability
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-6 text-center">
               <div>
-                <Phone className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                <Phone className="w-8 h-8 text-blue-400 mx-auto mb-2" /></Phone>
                 <p className="text-white font-semibold">Phone</p>
                 <p className="text-gray-300">+1 302 464 0950</p>
               </div>
               <div>
-                <Mail className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                <Mail className="w-8 h-8 text-blue-400 mx-auto mb-2" /></Mail>
                 <p className="text-white font-semibold">Email</p>
                 <p className="text-gray-300">kleber@ziontechgroup.com</p>
               </div>
               <div>
-                <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-2" /></MapPin>
                 <p className="text-white font-semibold">Address</p>
                 <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
@@ -1477,10 +1134,10 @@ export default function ITServicesPage() {
             Our IT experts are ready to help you modernize your technology stack and drive business growth.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-zion-slate">
+            <Button asChild size="lg" className="bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-zion-slate"></Button>
               <Link to="/request-quote">Request Free Assessment</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10"></Button>
               <Link to="/contact">Contact Our Team</Link>
             </Button>
           </div>
@@ -1511,14 +1168,8 @@ export default function ITServicesPage() {
   DollarSign
 } from 'lucide-react'
 export default function ITServicesPage() {
-  const itServices = [
-    {
-      id: 'cloud-migration',
-      title: 'Cloud Migration & Strategy',
-      description: 'Seamless migration to cloud platforms with optimization and cost management',
-      category: 'Cloud',
-      price: 'From $8,000',
-      features: ['Migration Planning', 'Cost Optimization', 'Performance Tuning', 'Security Implementation'],
+  const itServices = [{
+      id: 'cloud-migration', title: 'Cloud Migration & Strategy', description: 'Seamless migration to cloud platforms with optimization and cost management', category: 'Cloud', price: 'From $8, 000', features: ['Migration Planning', 'Cost Optimization', 'Performance Tuning', 'Security Implementation'],
       icon: <Cloud className="h-8 w-8 text-zion-blue" />,
       badge: 'Popular',
       rating: 4.9,
@@ -1672,24 +1323,15 @@ export default function ITServicesPage() {
       link: '/services/it-automation'
     }
   ]
-  const categories = [
-    { name: 'All Services', count: itServices.length, active: true },
-    { name: 'Cloud', count: itServices.filter(s => s.category === 'Cloud').length },
-    { name: 'Security', count: itServices.filter(s => s.category === 'Security').length },
-    { name: 'Development', count: itServices.filter(s => s.category === 'Development').length },
-    { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
-    { name: 'Management', count: itServices.filter(s => s.category === 'Management').length }
-  ]
+  const categories = [{ name: 'All Services', count: itServices.length, active: true }, { name: 'Cloud', count: itServices.filter(s => s.category === 'Cloud').length }, { name: 'Security', count: itServices.filter(s => s.category === 'Security').length }, { name: 'Development', count: itServices.filter(s => s.category === 'Development').length }, { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length }, { name: 'Management', count: itServices.filter(s => s.category === 'Management').length }]
   return (
     <>
-      <SEO 
-        title="IT Services - Zion Tech Group" 
+      <SEO title="IT Services - Zion Tech Group" 
         description="Comprehensive IT services including cloud migration, cybersecurity, DevOps, and infrastructure solutions. Expert IT consulting and managed services."
         keywords="IT services, cloud migration, cybersecurity, DevOps, managed IT services, IT consulting"
-        canonical="https://ziontechgroup.com/it-services"
-      />
-      <Header />
-      
+        canonical="https: //ziontechgroup.com/it-services"
+      /></SEO>
+      <Header /></Header>
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-cyan py-20 overflow-hidden">
@@ -1703,18 +1345,18 @@ export default function ITServicesPage() {
           
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 tracking-tight">
                 IT Services & Solutions
               </h1>
               <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
                 Transform your business technology infrastructure with our comprehensive IT services. 
                 From cloud migration to cybersecurity, we deliver enterprise-grade solutions that drive growth.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan/80 text-zion-slate-dark">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan/80 text-zion-slate-dark"></Button>
                   <Link to="/request-quote">Get Free Assessment</Link>
                 </Button>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
+                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10"></Button>
                   <Link to="/contact">Contact Our Team</Link>
                 </Button>
               </div>
@@ -1726,7 +1368,7 @@ export default function ITServicesPage() {
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
                 Enterprise IT Solutions
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -1738,38 +1380,36 @@ export default function ITServicesPage() {
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-3 mb-12">
               {categories.map((category, index) => (
-                <Button
-                  key={index}
+                <Button key={index}
                   variant={category.active ? "default" : "outline"}
-                  className={category.active ? "bg-zion-cyan text-zion-slate-dark" : "border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10"}
-                >
+                  className=>{category.active ? "bg-zion-cyan text-zion-slate-dark" : "border-zion-cyan/30 text-zion-cyan hover: bg-zion-cyan/10"}</Button>
                   {category.name} ({category.count})
                 </Button>
               ))}
             </div>
 
             {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {itServices.map((service) => (
-                <Card key={service.id} className="group hover:shadow-2xl transition-all duration-300 border-zion-cyan/20 hover:border-zion-cyan/50 bg-card/50 backdrop-blur-sm">
-                  <CardHeader className="pb-4">
+                <Card key={service.id} className="group hover: shadow-2xl transition-all duration-300 border-zion-cyan/20 hover:border-zion-cyan/50 bg-card/50 backdrop-blur-sm"></Card>
+                  <CardHeader className="pb-4"></CardHeader>
                     <div className="flex justify-between items-start mb-3">
                       {service.icon}
                       {service.badge && (
-                        <Badge variant="secondary" className="bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30">
+                        <Badge variant="secondary" className="bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30"></Badge>
                           {service.badge}
                         </Badge>
                       )}
                     </div>
-                    <CardTitle className="text-xl group-hover:text-zion-cyan transition-colors">
+                    <CardTitle className="text-xl group-hover: text-zion-cyan transition-colors"></CardTitle>
                       {service.title}
                     </CardTitle>
-                    <CardDescription className="text-muted-foreground">
+                    <CardDescription className="text-muted-foreground"></CardDescription>
                       {service.description}
                     </CardDescription>
                   </CardHeader>
                   
-                  <CardContent className="pb-4">
+                  <CardContent className="pb-4"></CardContent>
                     <div className="mb-4">
                       <span className="text-2xl font-bold text-zion-cyan">{service.price}</span>
                     </div>
@@ -1777,7 +1417,7 @@ export default function ITServicesPage() {
                     <div className="space-y-2 mb-4">
                       {service.features.slice(0, 3).map((feature, index) => (
                         <div key={index} className="flex items-center text-sm">
-                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
                           <span className="text-muted-foreground">{feature}</span>
                         </div>
                       ))}
@@ -1785,32 +1425,32 @@ export default function ITServicesPage() {
                     
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-1">
-                        <Star className="h-4 w-4 text-yellow-500 fill-current" />
+                        <Star className="h-4 w-4 text-yellow-500 fill-current" /></Star>
                         <span className="text-sm text-muted-foreground">{service.rating}</span>
                         <span className="text-sm text-muted-foreground">({service.reviewCount})</span>
                       </div>
-                      <Badge variant="outline" className="text-xs">
+                      <Badge variant="outline" className="text-xs"></Badge>
                         {service.category}
                       </Badge>
                     </div>
 
                     <div className="flex items-center justify-between text-sm text-muted-foreground">
                       <div className="flex items-center gap-1">
-                        <Clock className="h-4 w-4" />
+                        <Clock className="h-4 w-4" /></Clock>
                         <span>{service.deliveryTime}</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <DollarSign className="h-4 w-4" />
+                        <DollarSign className="h-4 w-4" /></DollarSign>
                         <span>Fixed Price</span>
                       </div>
                     </div>
                   </CardContent>
                   
-                  <CardContent className="pt-0">
-                    <Button asChild className="w-full group-hover:bg-zion-cyan group-hover:text-zion-slate-dark transition-all duration-300">
-                      <Link to={service.link}>
+                  <CardContent className="pt-0"></CardContent>
+                    <Button asChild className="w-full group-hover: bg-zion-cyan group-hover:text-zion-slate-dark transition-all duration-300"></Button>
+                      <Link to=>{service.link}</Link>
                         Learn More
-                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="ml-2 h-4 w-4 group-hover: translate-x-1 transition-transform" /></ArrowRight>
                       </Link>
                     </Button>
                   </CardContent>
@@ -1823,7 +1463,7 @@ export default function ITServicesPage() {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-cyan-dark">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Transform Your IT Infrastructure?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
@@ -1831,10 +1471,10 @@ export default function ITServicesPage() {
               Get a free assessment and discover how modern IT can transform your operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan/80 text-zion-slate-dark">
+              <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan/80 text-zion-slate-dark"></Button>
                 <Link to="/request-quote">Start Your IT Transformation</Link>
               </Button>
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
+              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10"></Button>
                 <Link to="/contact">Schedule a Call</Link>
               </Button>
             </div>
@@ -1842,7 +1482,7 @@ export default function ITServicesPage() {
         </section>
       </main>
       
-      <Footer />
+      <Footer /></Footer>
     </>
   )
 }

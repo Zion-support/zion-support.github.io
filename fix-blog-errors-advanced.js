@@ -1,13 +1,11 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { glob } from 'glob'
+import { glob  } from 'glob'
 //Advanced fixes for blog files
-const fixes = [
-  //Fix malformed metadata objects - missing commas and braces
+const fixes = [//Fix malformed metadata objects - missing commas and braces
   {
-    pattern:
-      /export const metadata = \{\s*title:\s*'([^']+)',\s*description:\s*'([^']+)',\s*keywords:\s*'([^']+)',\s*\};\s*;\s*\}/g,
+    pattern: /export const metadata = \{\s*title:\s*'([^']+)',\s*description: \s*'([^']+)',\s*keywords: \s*'([^']+)',\s*\};\s*;\s*\}/g,
     replacement: `export const metadata = {,
   title: '$1',
   description: '$2',
@@ -45,7 +43,7 @@ const fixes = [
     pattern: /<article[^>]*>\s*\{\/\* content \*\/\}/g,
     replacement: '<article>{/* content */}</article>',
   {/* TODO: Fix JSX expression */}
-  s:\s*'([^']+)',\s*\};\s*;\s*\}/g,
+  s: \s*'([^']+)',\s*\};\s*;\s*\}/g,
     replacemen,
   t: `export const metadata = {/* TODO: Fix JSX expression */}`
 };`},

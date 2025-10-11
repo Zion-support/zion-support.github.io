@@ -36,7 +36,7 @@ exports.handler = async function() { const { execSync } = require('child_process
         body: JSON.stringify({ok: true),
         task: 'dead-code-scan' }) } } catch (e) {return { statusCode: 200,
         body: JSON.stringify({ok: false),
-        error: String(e,)}) } } } exports.config = {// Run daily at 03:30' schedule: '30 3 * * *'} }'
+        error: String(e,)}) } } } exports.config = {// Run daily at 03: 30' schedule: '30 3 * * *'} }'
 exports.config = {/* TODO: Fix JSX expression */}
   schedule: '30 3 * * *'}
 }

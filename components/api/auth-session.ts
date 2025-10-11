@@ -13,7 +13,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     expires: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
   }
   res.status(200).json({ message: 'OK', session })
-import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth'
+import { getSessionFromReq, isInternalAgentRequest  } from '../../../utils/adminAuth'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req)
   const internal = isInternalAgentRequest(req)

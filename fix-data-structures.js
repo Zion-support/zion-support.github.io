@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import fs from 'fs'
-import { execSync } from 'child_process'
+import { execSync  } from 'child_process'
 // Fix data structure syntax errors
 function fixDataStructures(filePath) {
   if (!fs.existsSync(filePath)) {
@@ -13,14 +13,14 @@ function fixDataStructures(filePath) {
   // Fix malformed object literals - pattern: {} followed by properties
   const objectPattern = /\{\}\s*(\w+):/g
   if (objectPattern.test(content)) {
-    content = content.replace(objectPattern, '{\n      $1:')
+    content = content.replace(objectPattern, '{\n      $1: ')
     modified = true
   }
 
   // Fix missing opening braces in arrays
   const arrayPattern = /\[\s*\{\}\s*(\w+):/g
   if (arrayPattern.test(content)) {
-    content = content.replace(arrayPattern, '[\n    {\n      $1:')
+    content = content.replace(arrayPattern, '[\n    {\n      $1: ')
     modified = true
   }
 
@@ -35,7 +35,7 @@ function fixDataStructures(filePath) {
   // Fix missing commas in object properties
   const missingCommaPattern = /(\w+):\s*([^}]+)\s*\n\s*(\w+):/g
   if (missingCommaPattern.test(content)) {
-    content = content.replace(missingCommaPattern, '$1: $2,\n      $3:')
+    content = content.replace(missingCommaPattern, '$1: $2,\n      $3: ')
     modified = true
   }
 

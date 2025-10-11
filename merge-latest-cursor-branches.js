@@ -1,21 +1,10 @@
 #!/usr/bin/env node
 /**
  * Merge Latest Cursor Branches - Process the newest cursor branches
- */ import { execSync } from 'child_process'
+ */ import { execSync  } from 'child_process'
 import fs from 'fs'
 //Latest cursor branches to merge
-const latestCursorBranches = [
-  'cursor/fix-errors-and-merge-to-main-19 db',
-  'cursor/fix-errors-and-merge-to-main-40 d9',
-  'cursor/fix-errors-and-merge-to-main-5 fb2',
-  'cursor/fix-errors-and-merge-to-main-8510',
-  'cursor/fix-errors-and-merge-to-main-9658',
-  'cursor/fix-errors-and-merge-to-main-afb8',
-  'cursor/fix-errors-and-merge-to-main-afbc',
-  'cursor/fix-errors-and-merge-to-main-b319',
-  'cursor/fix-errors-and-merge-to-main-bb50',
-  'cursor/fix-errors-and-merge-to-main-cf0 f',
-  'cursor/fix-errors-and-merge-to-main-e15 f']
+const latestCursorBranches = ['cursor/fix-errors-and-merge-to-main-19 db', 'cursor/fix-errors-and-merge-to-main-40 d9', 'cursor/fix-errors-and-merge-to-main-5 fb2', 'cursor/fix-errors-and-merge-to-main-8510', 'cursor/fix-errors-and-merge-to-main-9658', 'cursor/fix-errors-and-merge-to-main-afb8', 'cursor/fix-errors-and-merge-to-main-afbc', 'cursor/fix-errors-and-merge-to-main-b319', 'cursor/fix-errors-and-merge-to-main-bb50', 'cursor/fix-errors-and-merge-to-main-cf0 f', 'cursor/fix-errors-and-merge-to-main-e15 f']
 //Function to safely execute git commands
 function safeGitCommand(command, description) {
   try {

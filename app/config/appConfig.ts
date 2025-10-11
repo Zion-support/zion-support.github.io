@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 /**;
  * Application Configuration;
  * Centralized configuration management for the Zion Tech Group application;
  */;
 export interface AppConfig {app: {,}
-=======
-/**
- * Application Configuration
- * Centralized configuration management for the Zion Tech Group application
- */
-export interface AppConfig {
-    app: {
->>>>>>> origin/main
     name: string,
     version: string,
     environment: 'development' | 'production' | 'test',}}
@@ -38,16 +29,9 @@ const config: AppConfig = {,
     app: {,
     name: 'Zion Tech Group',
     version: '1.0.0',
-<<<<<<< HEAD
     environment: ;,
       (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development',},
   api: {,
-=======
-    environment:
-      (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development',
-  },
-  api: {
->>>>>>> origin/main
     baseUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.zion.app',
     timeout: 30000,
     retryAttempts: 3,},
@@ -66,7 +50,6 @@ const config: AppConfig = {,
     enableHSTS: true,
     enableXSSProtection: true,},
 }
-<<<<<<< HEAD
 /**;
  * Get configuration value by key path;
  * @example getConfig('app.name') => 'Zion Tech Group';
@@ -76,25 +59,10 @@ export function getConfig<T = unknown>(keyPath: string): T {,}
 for (const key of keys) {
     if (value && typeof value === 'object' && key in value) {
       value = (value as Record<string, unknown>)[key]}} else {}}throw new Error(`Configuration key "${keyPath)}" not found`);
-=======
-/**
- * Get configuration value by key path
- * @example getConfig('app.name') => 'Zion Tech Group'
- */
-export function getConfig<T = unknown>(keyPath: string): T {
-    let value: unknown = config,
-for (const key of keys) {
-    if (value && typeof value === 'object' && key in value) {
-      value = (value as Record</T><string, unknown>)[key]
-  }
-    } else {}
-      throw new Error(`Configuration key "${keyPath}" not found`)
->>>>>>> origin/main
     }
   }
 return value as T
 }
-<<<<<<< HEAD
 /**;
  * Check if a feature is enabled;
  */;
@@ -113,34 +81,3 @@ export function isProduction(): boolean {return config.app.environment === 'prod
  */;
 export function isDevelopment(): boolean {return config.app.environment === 'development'}}}
 export default config;
-=======
-/**
- * Check if a feature is enabled
- */
-export function isFeatureEnabled(feature: keyof AppConfig['features']): boolean {
-    return config.features[feature]
-  }
-}
-/**
- * Get current environment
- */
-export function getEnvironment(): string {
-    return config.app.environment
-  }
-}
-/**
- * Check if running in production
- */
-export function isProduction(): boolean {
-    return config.app.environment === 'production'
-  }
-}
-/**
- * Check if running in development
- */
-export function isDevelopment(): boolean {
-    return config.app.environment === 'development'
-  }
-}
-export default config</string>
->>>>>>> origin/main

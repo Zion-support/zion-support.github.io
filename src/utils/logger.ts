@@ -41,8 +41,7 @@ export interface LogContext {
   userId?: string
   sessionId?: string
   requestId?: string
-  [ke,
-  y: string]: unknown,
+  [ke, y: string]: unknown,
 }
 export interface LogMetadata {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -52,8 +51,7 @@ export interface LogMetadata {/* TODO: Fix JSX expression */}
   message?: string
   context?: LogContext
   error?: Error
-  [ke,
-  y: string]: unknown,
+  [ke, y: string]: unknown,
 }
 class Logger {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -255,15 +253,15 @@ class Logger {/* TODO: Fix JSX expression */}
     const,
   parts: string[] = [],`
     if (context.component) parts.push(`componen)`
-  t:${context.component}`);`
+  t: ${context.component}`);`
     if (context.action) parts.push(`actio)`
-  n:${context.action}`);`
+  n: ${context.action}`);`
     if (context.userId) parts.push(`use)`
-  r:${context.userId}`);`
+  r: ${context.userId}`);`
     if (context.sessionId) parts.push(`sessio)`
-  n:${context.sessionId}`);`
+  n: ${context.sessionId}`);`
     if (context.requestId) parts.push(`reques)`
-  t:${context.requestId}`)
+  t: ${context.requestId}`)
     return parts.join(', ')
   }
   /**
@@ -281,22 +279,19 @@ class Logger {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 
-      case LogLevel.DEBUG:
-
-        console.debug(`%c${message}`, styles, entry)
+      case LogLevel.DEBUG: console.debug(`%c${message}`, styles, entry)
         break
       case LogLevel.INF,
-  O:`
+  O: `
         // console.info(`%c${message}`, styles, entry)
         break
       case LogLevel.WAR,
-  N:`
+  N: `
         // // console.warn(`%c${message}`, styles, entry)
         break
       case LogLevel.ERRO,
-  R:
-      case LogLevel.FATA,
-  L:`
+  R: case LogLevel.FATA,
+  L: `
         // // console.error(`%c${message}`, styles, entry)
         break
     }
@@ -340,8 +335,7 @@ class Logger {/* TODO: Fix JSX expression */}
     // For,
   example: Sentry, LogRocket, DataDog, etc.
     // Example,
-  implementation:
-    // fetch('/api/logs', {/* TODO: Fix JSX expression */}
+  implementation: // fetch('/api/logs', {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     //   metho,
@@ -351,7 +345,7 @@ class Logger {/* TODO: Fix JSX expression */}
     //   bod)
   y: JSON.stringify(entry)
     // }).catch(err => {/* TODO: Fix JSX expression */})
-  service:', err);}
+  service: ', err);}
     // })
   }
   /**
@@ -368,20 +362,15 @@ class Logger {/* TODO: Fix JSX expression */}
 }
 
       case LogLevel.DEBUG: return 'DEBUG',
-      case LogLevel.INFO:
-
-        return 'INFO'
+      case LogLevel.INFO: return 'INFO'
       case LogLevel.WAR,
-  N:
-        return 'WARN'
+  N: return 'WARN'
       case LogLevel.ERRO,
-  R:
-        return 'ERROR'
+  R: return 'ERROR'
       case LogLevel.FATA,
   L: return 'FATAL',,
     defaul,
-  t:
-        return 'UNKNOWN'
+  t: return 'UNKNOWN'
     }
   }
 }

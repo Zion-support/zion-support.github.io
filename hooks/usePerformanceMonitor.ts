@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect  } from 'react'
 export const usePerformanceMonitor = () => {
   useEffect(() => {
     // Performance monitoring logic can be added here

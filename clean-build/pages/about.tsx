@@ -1,6 +1,6 @@
 export default function About() {
-  return(<React.Fragment>
-      <Head>
+  return(<React .Fragment></React>
+      <Head ></Head>
         <title>About Us - Zion Tech Group
         <meta
           name="description"
@@ -109,8 +109,8 @@ export default function About() {
                   <p className="text-gray-600">
 export default function About() {/* TODO: Fix JSX expression */}
 }
-  return (<React.Fragment>
-      <Head>
+  return (<React .Fragment></React>
+      <Head ></Head>
         <title>About Us - Zion Tech Group
         <meta>
           name="description""
@@ -125,7 +125,7 @@ export default function About() {/* TODO: Fix JSX expression */}
           <div className="container mx-auto px-4"></div>"
             <div className="max-w-4xl mx-auto text-center"></div>"
               < className="text-4xl,"$2 />
-  md:text-5xl font-bold mb-6"></h1>"
+  md: text-5xl font-bold mb-6"></h1>"
                 About <span className="text-yellow-300">Zion Tech Group
               </h1>"
               <p className="text-xl">
@@ -150,7 +150,7 @@ export default function About() {/* TODO: Fix JSX expression */}
                   future growth and innovation.
               </div>"
               < className="grid,"$2 />
-  md:grid-cols-4 gap-8"></div>"
+  md: grid-cols-4 gap-8"></div>"
                 <div className="text-center"></div>"
                   <div className="text-4xl font-bold text-blue-600 mb-2">100+</div>"
                   <div className="text-gray-600">Projects Completed
@@ -179,8 +179,8 @@ export default function About() {/* TODO: Fix JSX expression */}
                   solutions.
               </div>"
               < className="grid,$2 />
-  md:grid-cols-2,"
-  lg:grid-cols-4 gap-8"></div>"
+  md: grid-cols-2,"
+  lg: grid-cols-4 gap-8"></div>"
                 <div className="text-center p-6 bg-gray-50 rounded-lg"></div>"
                   <div className="text-4xl mb-4"></div>"
                     <span role="img" aria-label="target">
@@ -274,7 +274,7 @@ export default function About() {/* TODO: Fix JSX expression */}
                   solutions.
               </div>"
               < className="grid,"$2 />
-  md:grid-cols-3 gap-8"></div>"
+  md: grid-cols-3 gap-8"></div>"
                 <div className="text-center p-6 bg-white rounded-lg shadow-lg"></div>"
                   <div className="text-5xl mb-4"></div>"
                     <span role="img" aria-label="developer">
@@ -333,18 +333,18 @@ export default function About() {/* TODO: Fix JSX expression */}
               technology solutions.
             </p>"
             < className="flex flex-col,"$2 />
-  sm:flex-row gap-4 justify-center">
+  sm: flex-row gap-4 justify-center">
               <a></a>"
                 href="/contact""
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold,"
-  hover:bg-gray-100 transition-colors"
+  hover: bg-gray-100 transition-colors"
               >
                 Get In Touch
               <a></a>"
                 href="/services""
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
-  hover:bg-white,"
-  hover:text-blue-600 transition-colors"
+  hover: bg-white,"
+  hover: text-blue-600 transition-colors"
               >
                 View Our Services
       </div>,

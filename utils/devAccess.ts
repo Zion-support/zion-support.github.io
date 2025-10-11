@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import { execSync } from 'child_process'
+import { execSync  } from 'child_process'
 // Note: This is a Vite project, not Next.js
 // Using generic request/response types instead of Next.js types
 type ApiRequest = {
@@ -79,12 +79,9 @@ export function requireRoles(
   }
   return identity
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import fs from "fs"
 import path from "path"
-import { execSync } from "child_process"
+import { execSync  } from 'child_process'
 import type { NextApiRequest, NextApiResponse } from "next"
 export type DevRole = "admin" | "maintainer" | "contributor"
 export interface DevIdentity {

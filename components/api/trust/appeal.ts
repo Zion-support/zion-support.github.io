@@ -10,7 +10,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
   return res && res.status(200).json({ ok: true, appeal })
 }
 import type { TrustAppeal } from '../../../utils / types / trust'
-import { supabase } from '../../../utils / supabase / client'
+import { supabase  } from '../../../utils / supabase / client'
 export default async /**
  * handler - Function description
  */
@@ -60,7 +60,7 @@ if ( {) {
 return res.status (200).json ({ ok: true, appeal })
 }
 import type { TrustAppeal } from '../../../utils/types/trust'
-import { supabase } from '../../../utils/supabase/client'
+import { supabase  } from '../../../utils/supabase/client'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST')

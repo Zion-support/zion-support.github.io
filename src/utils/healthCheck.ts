@@ -4,8 +4,8 @@
  * Monitors application health and provides diagnostic information
  */
 import React from 'react'
-import { logger } from './logger'
-import { performanceMonitor } from './performanceMonitor'
+import { logger  } from './logger'
+import { performanceMonitor  } from './performanceMonitor'
 
 // Core Web Vitals thresholds
 const coreWebVitals = {
@@ -338,7 +338,7 @@ const hasFailures = checks.some((c) => c.status === 'fail')
       return {
         name: 'memory',
         status: 'pass',
-        message:       ,
+        message:  ,
 $4}
     }
     try {
@@ -367,7 +367,7 @@ $4}
       return {
         name: 'memory',
         status: 'warn',
-        message:       ,
+        message:  ,
 $4}
     }
   }
@@ -430,7 +430,7 @@ $4}
       return {
         name: 'performance',
         status: 'warn',
-        message:       ,
+        message:  ,
 $4}
     }
   }
@@ -594,13 +594,7 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
   }
 
 }
-    const requiredAPIs = [
-      'fetch',
-      'localStorage',
-      'sessionStorage',
-      'console',
-      'navigator'
-    ]
+    const requiredAPIs = ['fetch', 'localStorage', 'sessionStorage', 'console', 'navigator']
     const missingAPIs: string[] = []
     requiredAPIs.forEach((api) => {
       if (typeof window !== 'undefined' && !(api in window)) {
@@ -638,7 +632,7 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
     return {
       name: 'browser-apis',
       status: 'pass',
-      message:     ,
+      message:  ,
 $4}
   }
   /**
@@ -656,7 +650,7 @@ $4}
         return {
           name: 'storage',
           status: 'fail',
-          message:         ,
+          message:  ,
 $4}
       }
       // Check available space (approximate)
@@ -668,19 +662,19 @@ $4}
         return {
           name: 'storage',
           status: 'warn',
-          message:         ,
+          message:  ,
 $4}
       }
       return {
         name: 'storage',
         status: 'pass',
-        message:       ,
+        message:  ,
 $4}
     } catch {
       return {
         name: 'storage',
         status: 'fail',
-        message:       ,
+        message:  ,
 $4}
     }
   }

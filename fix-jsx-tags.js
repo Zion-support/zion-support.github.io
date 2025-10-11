@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to fix JSX tags that were incorrectly prefixed with underscores
@@ -14,7 +14,7 @@ function fixJSXTags(content) {/* TODO: Fix JSX expression */}
   // Fix JSX closing tags
   content = content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>/g, (match, tagName) => {
   content = content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>/g, (match, tagName) => {/* TODO: Fix JSX expression */}`
-    return `</${tagName.substring(1)}>`; // Remove the underscore
+    return `</$>{tagName.substring(1)}`; // Remove the underscore
   })
   // Fix self-closing JSX tags
   content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>/g, (match, tagName) => {

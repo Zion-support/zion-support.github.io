@@ -78,16 +78,12 @@ export interface Revolutionary2026ItService {/* TODO: Fix JSX expression */}
     address: string,
   }
 }
-export const revolutionary2026 ITServices: Revolutionary2026 ItService[] = [,
-    id: "2026-revolutionary-it", name: "2026 Revolutionary IT Platform",
-    tagline: "Revolutionary IT for 2026", price: "$199/month"
+export const revolutionary2026 ITServices: Revolutionary2026 ItService[] = [id: "2026-revolutionary-it", name: "2026 Revolutionary IT Platform", tagline: "Revolutionary IT for 2026", price: "$199/month"
     description: "Revolutionary IT platform that transforms how businesses manage technology in 2026."
-    features: [,
-      "Revolutionary IT"
+    features: [, "Revolutionary IT"
       "Transformative technology"
       "Advanced capabilities"
-      "Innovation platform",
-      "Future-ready solutions"],
+      "Innovation platform", "Future-ready solutions"],
     link: "/services/2026-revolutionary-it", category: "Revolutionary 2026 IT",
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
@@ -127,23 +123,17 @@ export const revolutionary2026 ITServices: Revolutionary2026 ItService[] = [,
   s: string}
 }
 export const,
-  revolutionary2026ITServices: Revolutionary2026ItService[] = [,
-    i,"
-  d: "2026-revolutionary-it", nam,"
-  e: "2026 Revolutionary IT Platform",
-    taglin,"
-  e: "Revolutionary IT for 2026", pric,"
-  e: "$199/month",
-    descriptio,"
-  n: "Revolutionary IT platform that transforms how businesses manage technology in 2026.",
-    feature,
-  s: [,"
+  revolutionary2026ITServices: Revolutionary2026ItService[] = [i, "
+  d: "2026-revolutionary-it", nam, "
+  e: "2026 Revolutionary IT Platform", taglin, "
+  e: "Revolutionary IT for 2026", pric, "
+  e: "$199/month", descriptio, "
+  n: "Revolutionary IT platform that transforms how businesses manage technology in 2026.", feature, s: [, "
       "Revolutionary IT""
       "Transformative technology""
       "Advanced capabilities""
       "Innovation platform""
-      "Future-ready solutions"
-    ],
+      "Future-ready solutions"],
     lin,"
   k: "/services/2026-revolutionary-it", categor,"
   y: "Revolutionary 2026 IT",
@@ -178,13 +168,7 @@ id: "2026-revolutionary-it"
     tagline: "Revolutionary IT for 2026",
     price: "$199/month",
     description: "Revolutionary IT platform that transforms how businesses manage technology in 2026.",
-    features: [,
-      "Revolutionary IT",
-      "Transformative technology",
-      "Advanced capabilities",
-      "Innovation platform",
-      "Future-ready solutions"
-    ],
+    features: ["Revolutionary IT", "Transformative technology", "Advanced capabilities", "Innovation platform", "Future-ready solutions"],
     link: "/services/2026-revolutionary-it"
     category: "Revolutionary 2026 IT"
     realImplementation: true
@@ -210,13 +194,12 @@ id: "2026-revolutionary-it"
     descriptio,"
   n: "Revolutionary IT platform that transforms how businesses manage technology in 2026.",
     feature,
-  s: [,"
-      "Revolutionary IT","
-      "Transformative technology","
-      "Advanced capabilities","
-      "Innovation platform","
-      "Future-ready solutions"
-    ],
+  s: ["
+      "Revolutionary IT", "
+      "Transformative technology", "
+      "Advanced capabilities", "
+      "Innovation platform", "
+      "Future-ready solutions"],
     lin,"
   k: "/services/2026-revolutionary-it",
     categor,"
@@ -288,13 +271,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  revolutionary2026ITServices: Revolutionary2026ItService[] = [ i,"
-  d: "2026-revolutionary-it", nam,"
-  e: "2026 Revolutionary IT Platform", taglin,"
-  e: "Revolutionary IT for 2026", pric,"
-  e: "$199/month", descriptio,"
-  n: "Revolutionary IT platform that transforms how businesses manage technology in 2026.", feature,"
-  s: [ "Revolutionary IT" "Transformative technology" "Advanced capabilities" "Innovation platform" "Future-ready solutions" ], lin,"
+  revolutionary2026ITServices: Revolutionary2026ItService[] = [i, "
+  d: "2026-revolutionary-it", nam, "
+  e: "2026 Revolutionary IT Platform", taglin, "
+  e: "Revolutionary IT for 2026", pric, "
+  e: "$199/month", descriptio, "
+  n: "Revolutionary IT platform that transforms how businesses manage technology in 2026.", feature, "
+  s: [ "Revolutionary IT" "Transformative technology" "Advanced capabilities" "Innovation platform" "Future-ready solutions"], lin,"
   k: "/services/2026-revolutionary-it", categor,"
   y: "Revolutionary 2026 IT", realImplementatio,
   n: true, contactInf,
@@ -311,7 +294,7 @@ i,
   e: "Revolutionary IT for 2026", pric,"
   e: "$199/month", descriptio,"
   n: "Revolutionary IT platform that transforms how businesses manage technology in 2026.", feature,"
-  s: [ "Revolutionary IT", "Transformative technology", "Advanced capabilities", "Innovation platform", "Future-ready solutions" ], lin,"
+  s: ["Revolutionary IT", "Transformative technology", "Advanced capabilities", "Innovation platform", "Future-ready solutions"], lin,"
   k: "/services/2026-revolutionary-it", categor,"
   y: "Revolutionary 2026 IT", realImplementatio,
   n: true, contactInf,

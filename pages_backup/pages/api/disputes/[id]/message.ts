@@ -1,9 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from "next"
-import { getDisputeById, upsertDispute } from "../../../../utils/fsdb"
-import {
-  parseUserFromRequest,
+import { getDisputeById, upsertDispute  } from '../../../../utils/fsdb'
+import { parseUserFromRequest,
   ensureInvolvedOrAdmin,
-} from "../../../../utils/auth"
+ } from '../../../../utils/auth'
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
@@ -28,8 +27,7 @@ export default async function handler(
     dispute && dispute.messages.push({
       id: `${Date && Date.now()}`,
       authorUserId: user && user.id,
-      authorRole:
-        user && user.role === "admin"
+      authorRole: user && user.role === "admin"
           ? "admin"
           : user && user.id === dispute && dispute.clientUserId
             ? "client"
@@ -48,8 +46,8 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST'])
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { getDisputeById, upsertDispute } from '../../../../utils/fsdb'
-import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth'
+import { getDisputeById, upsertDispute  } from '../../../../utils/fsdb'
+import { parseUserFromRequest, ensureInvolvedOrAdmin  } from '../../../../utils/auth'
 export default async function handler(req, res) {
   try {
   const { id } = req.query
@@ -58,15 +56,15 @@ export default async function handler(req, res) {
     } catch (error) {
       return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -80,10 +78,10 @@ export default async function handler(req, res) {
     await upsertDispute(dispute)
     return res.status(201).json({ dispute })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
   res.setHeader("Allow", "POST")
@@ -91,7 +89,7 @@ export default async function handler(req, res) {
 }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -99,16 +97,15 @@ export default async function handler(req, res) {
   res.setHeader('Allow', 'POST')
   return res.status(405).end('Method Not Allowed')
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

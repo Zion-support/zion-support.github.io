@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next"
-import { ensureAdminFromApi } from "../../../../utils/auth"
+import { ensureAdminFromApi  } from '../../../../utils/auth'
 export default async function handler(
   const { allowed } = await ensureAdminFromApi(req)
   if (!allowed) return res.status(403).json({ error: 'Forbidden' })
@@ -35,9 +35,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
       res.status(405).end('Method Not Allowed')
     }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }

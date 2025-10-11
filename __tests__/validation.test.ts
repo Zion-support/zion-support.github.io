@@ -1,6 +1,5 @@
-import { describe, it, expect, beforeEach } from '@jest/globals'
-import {
-  isValidUrl,
+import { describe, it, expect, beforeEach  } from '@jest/globals'
+import { isValidUrl,
   validateURL,
   validateLength,
   isValidPassword,
@@ -12,7 +11,7 @@ import {
   validateRequired,
   validateComposite,
   asyncValidator
-} from '../src/utils/validators'
+ } from '../src/utils/validators'
 describe('validation', () => {
   beforeEach(() => {
     // Setup before each test
@@ -27,7 +26,7 @@ describe('validation', () => {
   test('rejects invalid URLs', () => {
     expect(isValidUrl('')).toBe(false)
     expect(isValidUrl('not a url')).toBe(false)
-    expect(isValidUrl('ftp://example.com')).toBe(false)
+    expect(isValidUrl('ftp: //example.com')).toBe(false)
   })
   test('rejects invalid URL formats', () => {
     expect(validateURL('').isValid).toBe(false)
@@ -111,7 +110,7 @@ describe('JSON Validation', () => {
     expect(validateJSON('{}').isValid).toBe(true)
     expect(validateJSON('[]').isValid).toBe(true)
     expect(validateJSON('{"key":"value"}').isValid).toBe(true)
-    expect(validateJSON('[1,2,3]').isValid).toBe(true)
+    expect(validateJSON('[1, 2, 3]').isValid).toBe(true)
   })
   test('rejects invalid JSON strings', () => {
     expect(validateJSON('').isValid).toBe(false)
@@ -121,17 +120,11 @@ describe('JSON Validation', () => {
 })
 describe('Composite Validation', () => {
   test('combines multiple validators successfully', () => {
-    const validators = [
-      (val: unknown) => validateRequired(val, 'Test'),
-      (val: unknown) => validateLength(val as string, 5, 20, 'Test'),
-    ]
+    const validators = [(val: unknown) => validateRequired(val, 'Test'), (val: unknown) => validateLength(val as string, 5, 20, 'Test')]
     expect(validateComposite('hello world', validators).isValid).toBe(true)
   })
   test('fails on first invalid validator', () => {
-    const validators = [
-      (val: unknown) => validateRequired(val, 'Test'),
-      (val: unknown) => validateLength(val as string, 10, 20, 'Test'),
-    ]
+    const validators = [(val: unknown) => validateRequired(val, 'Test'), (val: unknown) => validateLength(val as string, 10, 20, 'Test')]
     const result = validateComposite('short', validators)
     expect(result.isValid).toBe(false)
     expect(result.error).toContain('at least 10')

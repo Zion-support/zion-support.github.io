@@ -78,16 +78,12 @@ export interface NewOperationalService2025 {/* TODO: Fix JSX expression */}
     address: string,
   }
 }
-export const newOperationalServices2025: NewOperationalService2025[] = [,
-    id: "smart-operations-center", name: "Smart Operations Center",
-    tagline: "AI-powered operations management", price: "$119/month"
+export const newOperationalServices2025: NewOperationalService2025[] = [id: "smart-operations-center", name: "Smart Operations Center", tagline: "AI-powered operations management", price: "$119/month"
     description: "Intelligent operations center that uses AI to optimize business processes and workflows."
-    features: [,
-      "AI process optimization"
+    features: [, "AI process optimization"
       "Real-time monitoring"
       "Predictive analytics"
-      "Automated workflows",
-      "Performance insights"],
+      "Automated workflows", "Performance insights"],
     link: "/services/smart-operations-center", category: "New Operational Services 2025",
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
@@ -127,23 +123,17 @@ export const newOperationalServices2025: NewOperationalService2025[] = [,
   s: string}
 }
 export const,
-  newOperationalServices2025: NewOperationalService2025[] = [,
-    i,"
-  d: "smart-operations-center", nam,"
-  e: "Smart Operations Center",
-    taglin,"
-  e: "AI-powered operations management", pric,"
-  e: "$119/month",
-    descriptio,"
-  n: "Intelligent operations center that uses AI to optimize business processes and workflows.",
-    feature,
-  s: [,"
+  newOperationalServices2025: NewOperationalService2025[] = [i, "
+  d: "smart-operations-center", nam, "
+  e: "Smart Operations Center", taglin, "
+  e: "AI-powered operations management", pric, "
+  e: "$119/month", descriptio, "
+  n: "Intelligent operations center that uses AI to optimize business processes and workflows.", feature, s: [, "
       "AI process optimization""
       "Real-time monitoring""
       "Predictive analytics""
       "Automated workflows""
-      "Performance insights"
-    ],
+      "Performance insights"],
     lin,"
   k: "/services/smart-operations-center", categor,"
   y: "New Operational Services 2025",
@@ -178,13 +168,7 @@ id: "smart-operations-center"
     tagline: "AI-powered operations management",
     price: "$119/month",
     description: "Intelligent operations center that uses AI to optimize business processes and workflows.",
-    features: [,
-      "AI process optimization",
-      "Real-time monitoring",
-      "Predictive analytics",
-      "Automated workflows",
-      "Performance insights"
-    ],
+    features: ["AI process optimization", "Real-time monitoring", "Predictive analytics", "Automated workflows", "Performance insights"],
     link: "/services/smart-operations-center"
     category: "New Operational Services 2025"
     realImplementation: true
@@ -210,13 +194,12 @@ id: "smart-operations-center"
     descriptio,"
   n: "Intelligent operations center that uses AI to optimize business processes and workflows.",
     feature,
-  s: [,"
-      "AI process optimization","
-      "Real-time monitoring","
-      "Predictive analytics","
-      "Automated workflows","
-      "Performance insights"
-    ],
+  s: ["
+      "AI process optimization", "
+      "Real-time monitoring", "
+      "Predictive analytics", "
+      "Automated workflows", "
+      "Performance insights"],
     lin,"
   k: "/services/smart-operations-center",
     categor,"
@@ -288,13 +271,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  newOperationalServices2025: NewOperationalService2025[] = [ i,"
-  d: "smart-operations-center", nam,"
-  e: "Smart Operations Center", taglin,"
-  e: "AI-powered operations management", pric,"
-  e: "$119/month", descriptio,"
-  n: "Intelligent operations center that uses AI to optimize business processes and workflows.", feature,"
-  s: [ "AI process optimization" "Real-time monitoring" "Predictive analytics" "Automated workflows" "Performance insights" ], lin,"
+  newOperationalServices2025: NewOperationalService2025[] = [i, "
+  d: "smart-operations-center", nam, "
+  e: "Smart Operations Center", taglin, "
+  e: "AI-powered operations management", pric, "
+  e: "$119/month", descriptio, "
+  n: "Intelligent operations center that uses AI to optimize business processes and workflows.", feature, "
+  s: [ "AI process optimization" "Real-time monitoring" "Predictive analytics" "Automated workflows" "Performance insights"], lin,"
   k: "/services/smart-operations-center", categor,"
   y: "New Operational Services 2025", realImplementatio,
   n: true, contactInf,
@@ -311,7 +294,7 @@ i,
   e: "AI-powered operations management", pric,"
   e: "$119/month", descriptio,"
   n: "Intelligent operations center that uses AI to optimize business processes and workflows.", feature,"
-  s: [ "AI process optimization", "Real-time monitoring", "Predictive analytics", "Automated workflows", "Performance insights" ], lin,"
+  s: ["AI process optimization", "Real-time monitoring", "Predictive analytics", "Automated workflows", "Performance insights"], lin,"
   k: "/services/smart-operations-center", categor,"
   y: "New Operational Services 2025", realImplementatio,
   n: true, contactInf,

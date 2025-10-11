@@ -53,17 +53,17 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
           AI-Powered, Supply, Chain Intelligen, c, e
         {/* Key, Metrics, Grid */}
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10, ma, x-w-6xl, m, x-au, t, o">"
-          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e$2 />
-  r:shad, o, w-xl">"
+          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hov, e$2 />
+  r: shad, o, w-xl">"
             <div, className="flex, item, s-center, ga, p-3, m, b-2">
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10, ma, x-w-6xl, m, x-au, t, o">"
-          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e$2 />
-  r:shad, o, w-xl">"
+          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hov, e$2 />
+  r: shad, o, w-xl">"
             <div, className="flex, item, s-center, ga, p-3, m, b-2">
-              <CurrencyDollarIcon, className="w-8 h-8, tex, t-yell, o, w-3, 0, 0  />
+              <CurrencyDollarIcon , className="w-8 h-8, tex, t-yell, o, w-3, 0, 0  /></CurrencyDollarIcon>
               <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-yell, o, w-3, 0, 0">$4.2B
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10, ma, x-w-6xl, m, x-au, t, o">"
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-xl">"
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r: shad, o, w-xl">"
             <div, className="flex, item, s-center, ga, p-3, m, b-2">"
               <CurrencyDollarIcon, className="w-8 h-8, tex, t-yell, o, w-3, 0, 0" />"
         {/* Main, Headlin, e */}"
@@ -80,90 +80,90 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
           AI-Powered, Supply, Chain Intelligen, c, e
         {/* Key, Metrics, Grid */}"
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10, ma, x-w-6xl, m, x-au, t, o">""
-          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e,"$2 />
-  r:shad, o, w-xl">""
+          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hov, e,"$2 />
+  r: shad, o, w-xl">""
             <div, className="flex, item, s-center, ga, p-3, m, b-2"></div>"
               <CurrencyDollarIcon, className="w-8 h-8, tex, t-yell, o, w-3, 0, 0  /></CurrencyDollarIcon>"
               <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-yell, o, w-3, 0, 0">$4.2B</d, i, v>"
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10, ma, x-w-6xl, m, x-au, t, o">";"
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-xl">";"
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r: shad, o, w-xl">";"
             <div, className="flex, item, s-center, ga, p-3, m, b-2">";"
               <CurrencyDollarIcon, className="w-8 h-8, tex, t-yell, o, w-3, 0, 0" />";"
               <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-yell, o, w-3, 0, 0">$4.2B</d, i, v>"</$1>"
             <div, className="te, x, t-emera, l, d-100, tex, t-sm, fon, t-medi, u, m">Annual, Value, Creation</d, i, v>"
-          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-te, a, l-4, 0, 0/30, hove, r: bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e$2 />
-  r:shad, o, w-xl">"
+          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-te, a, l-4, 0, 0/30, hove, r: bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hov, e$2 />
+  r: shad, o, w-xl">"
             <div, className="flex, item, s-center, ga, p-3, m, b-2">
-              <ChartBarIcon, className="w-8 h-8, tex, t-gre, e, n-3, 0, 0  />
+              <ChartBarIcon , className="w-8 h-8, tex, t-gre, e, n-3, 0, 0  /></ChartBarIcon>
               <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-gre, e, n-3, 0, 0">2,8, 4, 7%
-          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-te, a, l-4, 0, 0/30, hove, r: bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e$2 />
-  r:shad, o, w-xl">"
+          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-te, a, l-4, 0, 0/30, hove, r: bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hov, e$2 />
+  r: shad, o, w-xl">"
             <div, className="flex, item, s-center, ga, p-3, m, b-2">"
-          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-te, a, l-4, 0, 0/30, hove, r: bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e$2 />
-  r:shad, o, w-xl">"
+          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-te, a, l-4, 0, 0/30, hove, r: bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hov, e$2 />
+  r: shad, o, w-xl">"
             <div, className="flex, item, s-center, ga, p-3, m, b-2">
-              <ChartBarIcon, className="w-8 h-8, tex, t-gre, e, n-3, 0, 0  />
+              <ChartBarIcon , className="w-8 h-8, tex, t-gre, e, n-3, 0, 0  /></ChartBarIcon>
               <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-gre, e, n-3, 0, 0">2,8, 4, 7%
-          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-te, a, l-4, 0, 0/30, hove, r: bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e$2 />
-  r:shad, o, w-xl">"
+          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-te, a, l-4, 0, 0/30, hove, r: bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hov, e$2 />
+  r: shad, o, w-xl">"
             <div, className="flex, item, s-center, ga, p-3, m, b-2">"
               <ChartBarIcon, className="w-8 h-8, tex, t-gre, e, n-3, 0, 0" />"</$1>"
-          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-te, a, l-4, 0, 0/30, hove, r: bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e,"$2 />
-  r:shad, o, w-xl">""
+          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-te, a, l-4, 0, 0/30, hove, r: bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hov, e,"$2 />
+  r: shad, o, w-xl">""
             <div, className="flex, item, s-center, ga, p-3, m, b-2"></div>"
               <ChartBarIcon, className="w-8 h-8, tex, t-gre, e, n-3, 0, 0  /></ChartBarIcon>"
               <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-gre, e, n-3, 0, 0">2,8, 4, 7%</d, i, v>"
-          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-te, a, l-4, 0, 0/30, hove, r: bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e,"$2 />
-  r:shad, o, w-xl">";"
+          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-te, a, l-4, 0, 0/30, hove, r: bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hov, e,"$2 />
+  r: shad, o, w-xl">";"
             <div, className="flex, item, s-center, ga, p-3, m, b-2">";"
               <ChartBarIcon, className="w-8 h-8, tex, t-gre, e, n-3, 0, 0" />";"
               <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-gre, e, n-3, 0, 0">2,8, 4, 7%</d, i, v>"</$1>"
             <div, className="te, x, t-te, a, l-100, tex, t-sm, fon, t-medi, u, m">ROI, in, 18 Mont, h, s</d, i, v>"
-          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e$2 />
-  r:shad, o, w-xl">"
+          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hov, e$2 />
+  r: shad, o, w-xl">"
             <div, className="flex, item, s-center, ga, p-3, m, b-2">
-          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e$2 />
-  r:shad, o, w-xl">"
+          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hov, e$2 />
+  r: shad, o, w-xl">"
             <div, className="flex, item, s-center, ga, p-3, m, b-2">
-              <CheckCircleIcon, className="w-8 h-8, tex, t-cy, a, n-3, 0, 0  />
+              <CheckCircleIcon , className="w-8 h-8, tex, t-cy, a, n-3, 0, 0  /></CheckCircleIcon>
               <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-cy, a, n-3, 0, 0">98.7%
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-xl">"
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r: shad, o, w-xl">"
             <div, className="flex, item, s-center, ga, p-3, m, b-2">"
               <CheckCircleIcon, className="w-8 h-8, tex, t-cy, a, n-3, 0, 0" />"</$1>"
-          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e,"$2 />
-  r:shad, o, w-xl">""
+          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hov, e,"$2 />
+  r: shad, o, w-xl">""
             <div, className="flex, item, s-center, ga, p-3, m, b-2"></div>"
               <CheckCircleIcon, className="w-8 h-8, tex, t-cy, a, n-3, 0, 0  /></CheckCircleIcon>"
               <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-cy, a, n-3, 0, 0">98.7%</d, i, v>"
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-xl">";"
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r: shad, o, w-xl">";"
             <div, className="flex, item, s-center, ga, p-3, m, b-2">";"
               <CheckCircleIcon, className="w-8 h-8, tex, t-cy, a, n-3, 0, 0" />";"
               <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-cy, a, n-3, 0, 0">98.7%</d, i, v>"</$1>"
             <div, className="te, x, t-cy, a, n-100, tex, t-sm, fon, t-medi, u, m">On-Time, Delivery, Rate</d, i, v>"
-          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e$2 />
-  r:shad, o, w-xl">"
+          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hov, e$2 />
+  r: shad, o, w-xl">"
             <div, className="flex, item, s-center, ga, p-3, m, b-2">
-              <TruckIcon, className="w-8 h-8, tex, t-emera, l, d-3, 0, 0  />
+              <TruckIcon , className="w-8 h-8, tex, t-emera, l, d-3, 0, 0  /></TruckIcon>
               <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-emera, l, d-3, 0, 0">87%
-          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e$2 />
-  r:shad, o, w-xl">"
+          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hov, e$2 />
+  r: shad, o, w-xl">"
             <div, className="flex, item, s-center, ga, p-3, m, b-2">"
-          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e$2 />
-  r:shad, o, w-xl">"
+          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hov, e$2 />
+  r: shad, o, w-xl">"
             <div, className="flex, item, s-center, ga, p-3, m, b-2">
-              <TruckIcon, className="w-8 h-8, tex, t-emera, l, d-3, 0, 0  />
+              <TruckIcon , className="w-8 h-8, tex, t-emera, l, d-3, 0, 0  /></TruckIcon>
               <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-emera, l, d-3, 0, 0">87%
-          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e$2 />
-  r:shad, o, w-xl">"
+          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hov, e$2 />
+  r: shad, o, w-xl">"
             <div, className="flex, item, s-center, ga, p-3, m, b-2">"
               <TruckIcon, className="w-8 h-8, tex, t-emera, l, d-3, 0, 0" />"</$1>"
-          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e,"$2 />
-  r:shad, o, w-xl">""
+          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hov, e,"$2 />
+  r: shad, o, w-xl">""
             <div, className="flex, item, s-center, ga, p-3, m, b-2"></div>"
               <TruckIcon, className="w-8 h-8, tex, t-emera, l, d-3, 0, 0  /></TruckIcon>"
               <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-emera, l, d-3, 0, 0">87%</d, i, v>"
-          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e,"$2 />
-  r:shad, o, w-xl">";"
+          <, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hov, e,"$2 />
+  r: shad, o, w-xl">";"
             <div, className="flex, item, s-center, ga, p-3, m, b-2">";"
               <TruckIcon, className="w-8 h-8, tex, t-emera, l, d-3, 0, 0" />";"
               <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-emera, l, d-3, 0, 0">87%</d, i, v>"</$1>"
@@ -171,19 +171,19 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
         {/* Revolutionary, Capabilitie, s */}
         <div, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, b-10, borde, r-2, borde, r-emera, l, d-4, 0, 0/30">
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-center, flex, items-center, justif, y-center, ga, p-3">
-            <SparklesIcon, className="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e  />
+            <SparklesIcon , className="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e  /></SparklesIcon>
             Revolutionary, A, I-Powered, Capabilitie, s
-            <SparklesIcon, className="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e  />
+            <SparklesIcon , className="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e  /></SparklesIcon>
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">"
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-a, l, l">"
               <div, className="flex, item, s-center, ga, p-3, m, b-3">
-                <ChartBarIcon, className="w-6 h-6, tex, t-emera, l, d-4, 0, 0  />
+                <ChartBarIcon , className="w-6 h-6, tex, t-emera, l, d-4, 0, 0  /></ChartBarIcon>
         {/* Revolutionary, Capabilitie, s */}"
         <div, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, b-10, borde, r-2, borde, r-emera, l, d-4, 0, 0/30"></div>"
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-center, flex, items-center, justif, y-center, ga, p-3"></h3>"
-            <SparklesIcon, className="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e  />
+            <SparklesIcon , className="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e  /></SparklesIcon>
             Revolutionary, A, I-Powered, Capabilitie, s;"
-            <SparklesIcon, className="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e  />
+            <SparklesIcon , className="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e  /></SparklesIcon>
           </h3>"
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">""
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-a, l, l">""
@@ -193,14 +193,14 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
               </d, i, v>"
               <ul, className="spa, c, e-y-2, tex, t-emera, l, d-1, 0, 0"></ul>"
                 <li, className="flex, item, s-start, ga, p-2"></li>"
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
+                  <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  /></CheckCircleIcon>
                   <sp, a, n><stro, n, g>94% Forecast, Accurac, y</stro, n, g> acros, s, 2.7M, SKU, s
                 </li>"
                 <li, className="flex, item, s-start, ga, p-2"></li>"
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
+                  <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  /></CheckCircleIcon>
                   <sp, a, n><stro, n, g>23-Day, Disruption, Warning</stro, n, g> for, proactive, response
                 <li, className="flex, item, s-start, ga, p-2">
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
+                  <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  /></CheckCircleIcon>
         <div, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, b-10, borde, r-2, borde, r-emera, l, d-4, 0, 0/30">"
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-center, flex, items-center, justif, y-center, ga, p-3">"
                 </li>"
@@ -238,7 +238,7 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
             <, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-cy, a, n-4, 0, 0/20, hov, e$2 />
   r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-a, l, l">"
               <div, className="flex, item, s-center, ga, p-3, m, b-3">
-                <ClockIcon, className="w-6 h-6, tex, t-cy, a, n-4, 0, 0  />
+                <ClockIcon , className="w-6 h-6, tex, t-cy, a, n-4, 0, 0  /></ClockIcon>
             </d, i, v>"
             <, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-cy, a, n-4, 0, 0/20, hov, e,"$2 />
   r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-a, l, l">""
@@ -248,14 +248,14 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
               </d, i, v>"
               <ul, className="spa, c, e-y-2, tex, t-cy, a, n-1, 0, 0"></ul>"
                 <li, className="flex, item, s-start, ga, p-2"></li>"
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
+                  <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  /></CheckCircleIcon>
                   <sp, a, n><stro, n, g>2.4M, Daily, Decisions</stro, n, g> fully, automate, d
                 </li>"
                 <li, className="flex, item, s-start, ga, p-2"></li>"
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
+                  <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  /></CheckCircleIcon>
                   <sp, a, n><stro, n, g>89% Warehouse, Automatio, n</stro, n, g> with, 1, 2,4, 0, 0+ robo, t, s
                 <li, className="flex, item, s-start, ga, p-2">
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
+                  <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  /></CheckCircleIcon>
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-cy, a, n-4, 0, 0/20, hove, r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-a, l, l">"
               <div, className="flex, item, s-center, ga, p-3, m, b-3">"
                 <ClockIcon, className="w-6 h-6, tex, t-cy, a, n-4, 0, 0" />"</$1>"
@@ -279,7 +279,7 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
                   <sp, a, n><stro, n, g>Se, l, f-Optimizing, Route, s</stro, n, g> reducing, costs, 87%
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-te, a, l-4, 0, 0/20, hove, r: bord, e, r-te, a, l-4, 0, 0/50, transitio, n-a, l, l">"
               <div, className="flex, item, s-center, ga, p-3, m, b-3">
-                <GlobeAltIcon, className="w-6 h-6, tex, t-te, a, l-4, 0, 0  />
+                <GlobeAltIcon , className="w-6 h-6, tex, t-te, a, l-4, 0, 0  /></GlobeAltIcon>
             </d, i, v>"
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-te, a, l-4, 0, 0/20, hove, r: bord, e, r-te, a, l-4, 0, 0/50, transitio, n-a, l, l">""
               <div, className="flex, item, s-center, ga, p-3, m, b-3"></div>"
@@ -288,14 +288,14 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
               </d, i, v>"
               <ul, className="spa, c, e-y-2, tex, t-te, a, l-1, 0, 0"></ul>"
                 <li, className="flex, item, s-start, ga, p-2"></li>"
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
+                  <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  /></CheckCircleIcon>
                   <sp, a, n><stro, n, g>1, 0, 0% E, n, d-to-End, Visibilit, y</stro, n, g> across, supply, chain
                 </li>"
                 <li, className="flex, item, s-start, ga, p-2"></li>"
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
+                  <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  /></CheckCircleIcon>
                   <sp, a, n><stro, n, g>47,000, IoT, Devices</stro, n, g> for, rea, l-time, monitorin, g
                 <li, className="flex, item, s-start, ga, p-2">
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
+                  <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  /></CheckCircleIcon>
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-te, a, l-4, 0, 0/20, hove, r: bord, e, r-te, a, l-4, 0, 0/50, transitio, n-a, l, l">"
               <div, className="flex, item, s-center, ga, p-3, m, b-3">"
                 <GlobeAltIcon, className="w-6 h-6, tex, t-te, a, l-4, 0, 0" />"</$1>"
@@ -321,7 +321,7 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
         <div, className="bg-gradie, n, t-to-br, fro, m-yell, o, w-9, 0, 0/40, t, o-oran, g, e-9, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, b-10, borde, r-2, borde, r-yell, o, w-4, 0, 0/50">
           <div, className="flex, item, s-center, ga, p-3, m, b-4">
             <div, className="bg-yell, o, w-5, 0, 0/20, rounde, d-ful, l, p-3">
-              <TruckIcon, className="w-8 h-8, tex, t-yell, o, w-3, 0, 0  />
+              <TruckIcon , className="w-8 h-8, tex, t-yell, o, w-3, 0, 0  /></TruckIcon>
         <div, className="bg-gradie, n, t-to-br, fro, m-yell, o, w-9, 0, 0/40, t, o-oran, g, e-9, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, b-10, borde, r-2, borde, r-yell, o, w-4, 0, 0/50">"
           <div, className="flex, item, s-center, ga, p-3, m, b-4">"
             <div, className="bg-yell, o, w-5, 0, 0/20, rounde, d-ful, l, p-3">"
@@ -369,15 +369,15 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
               <h4, className="te, x, t-xl, fon, t-bold, tex, t-gre, e, n-200, m, b-3">The, Result, s</h4>"
               <ul, className="spa, c, e-y-2, tex, t-gre, e, n-1, 0, 0"></ul>"
                 <li, className="flex, item, s-start, ga, p-2"></li>"
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
+                  <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  /></CheckCircleIcon>
                   <sp, a, n><stro, n, g>$4.2B, Annual, Value Creati, o, n</stro, n, g>
                 </li>"
                 <li, className="flex, item, s-start, ga, p-2"></li>"
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
+                  <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  /></CheckCircleIcon>
                   <sp, a, n><stro, n, g>98.7% On-Time, Deliver, y</stro, n, g> (industry, leade, r)
                 </li>"
                 <li, className="flex, item, s-start, ga, p-2"></li>"
-                  <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
+                  <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  /></CheckCircleIcon>
                   <sp, a, n><stro, n, g>2% Waste, Rat, e</stro, n, g> (89% reducti, o, n)
                 </li>"
                 <li, className="flex, item, s-start, ga, p-2"></li>"
@@ -405,16 +405,16 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
                 <span, className="fo, n, t-bold, tex, t-2xl, tex, t-yell, o, w-3, 0, 0">2,8, 4, 7% R, O, I</sp, a, n> achieved, in, just 18, months, with <span, className="fo, n, t-bo, l, d">3.2-month, payback, period</sp, a, n>"
               <Li, n, k
   to="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-fortu, n, e-1, 0, 0-reta, i, l-supp, l, y-cha, i, n-transformati, o, n-4-2b"
-                classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-yell, o, w-500, hove, r: bg-yell, o, w-400, tex, t-yell, o, w-950, p, x-6, p, y-3, rounde, d-lg, fon, t-bold, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-xl, hov, e</$1>"
+                classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-yell, o, w-500, hove, r: bg-yell, o, w-400, tex, t-yell, o, w-950, p, x-6, p, y-3, rounde, d-lg, fon, t-bold, transitio, n-all, duratio, n-300, shado, w-lg, hove, r: shad, o, w-xl, hov, e</$1>"
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-yell, o, w-4, 0, 0/30">";"
             <div, className="flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4">";"
               <div, className="te, x, t-yell, o, w-1, 0, 0">";"
                 <span, className="fo, n, t-bold, tex, t-2xl, tex, t-yell, o, w-3, 0, 0">2,8, 4, 7% R, O, I</sp, a, n> achieved, in, just 18, months, with <span, className="fo, n, t-bo, l, d">3.2-month, payback, period</sp, a, n>"
-              <Li, n, k;"
+              <Li , n, k;"
   to="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-fortu, n, e-1, 0, 0-reta, i, l-supp, l, y-cha, i, n-transformati, o, n-4-2b""
-                classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-yell, o, w-500, hove, r: bg-yell, o, w-400, tex, t-yell, o, w-950, p, x-6, p, y-3, rounde, d-lg, fon, t-bold, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-xl, hov, e,"
-  r:sca, l, e-1, 0, 5"
-              >
+                classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-yell, o, w-500, hove, r: bg-yell, o, w-400, tex, t-yell, o, w-950, p, x-6, p, y-3, rounde, d-lg, fon, t-bold, transitio, n-all, duratio, n-300, shado, w-lg, hove, r: shad, o, w-xl, hov, e,"
+  r: sca, l, e-1, 0, 5"
+              ></Li>
                 Read, Full, Case Stu, d, y;"
                 <LinkIcon, className="w-5 h-5  /></LinkIcon>"
                 <LinkIcon, className="w-5 h-5" />"
@@ -433,21 +433,19 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
               { indust, r, y: 'Fo, o, d & Bevera, g, e', val, u, e: '$67, 0, M', r, o, i: '1,6, 0, 0%' }
             ].m, a, p((it, e, m, ind, e, x) => (
               <, ke, y={ind, e, x} classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, hov, e$2 />
-  r:sca, l, e-1, 0, 5">"
+  r: sca, l, e-1, 0, 5">"
             ].m, a, p((it, e, m, ind, e, x) => (
               <, ke, y={ind, e, x} classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, hov, e$2 />
-  r:sca, l, e-1, 0, 5">"
+  r: sca, l, e-1, 0, 5">"
                 <div, className="te, x, t-emera, l, d-300, fon, t-bold, tex, t-lg, m, b-1">{it, e, m.indust, r, y}
                 <div, className="te, x, t-white, fon, t-extrabold, tex, t-xl, m, b-1">{it, e, m.val, u, e}
                 <div, className="te, x, t-emera, l, d-200, tex, t-sm">R, O, I: {it, e, m.r, o, i}
         <div, className="mb-10">"
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">Proven, Across, Industries</h3>"
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4">"
-            {[
-              { indus, t, r
-            ].m, a, p((it, e, m, ind, e, x) => ("
+            {[{ indus, t, r].m, a, p((it, e, m, ind, e, x) => ("
               <, ke, y={ind, e, x} classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, hov, e,"$2 />
-  r:sca, l, e-1, 0, 5">""
+  r: sca, l, e-1, 0, 5">""
                 <div, className="te, x, t-emera, l, d-300, fon, t-bold, tex, t-lg, m, b-1">{it, e, m.indust, r, y}</d, i, v>"
                 <div, className="te, x, t-white, fon, t-extrabold, tex, t-xl, m, b-1">{it, e, m.val, u, e}</d, i, v>"
                 <div, className="te, x, t-emera, l, d-200, tex, t-sm">R, O, I: {it, e, m.r, o, i}</d, i, v>"
@@ -462,16 +460,16 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
               { indust, r, y: 'Fo, o, d & Bevera, g, e', val, u, e: '$67, 0, M', r, o, i: '1,6, 0, 0%' }'
             ].m, a, p((it, e, m, ind, e, x) => (
               <, ke, y={ind, e, x} classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, hov, e$2 />
-  r:sca, l, e-1, 0, 5">"
+  r: sca, l, e-1, 0, 5">"
             ].m, a, p((it, e, m, ind, e, x) => (
               <, ke, y={ind, e, x} classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, hov, e$2 />
-  r:sca, l, e-1, 0, 5">"
+  r: sca, l, e-1, 0, 5">"
                 <div, className="te, x, t-emera, l, d-300, fon, t-bold, tex, t-lg, m, b-1">{it, e, m.indust, r, y}</d, i, v>"
                 <div, className="te, x, t-white, fon, t-extrabold, tex, t-xl, m, b-1">{it, e, m.val, u, e}</d, i, v>"
               { indust, r, y: 'Fo, o, d & Bevera, g, e', val, u, e: '$67, 0, M', r, o, i: '1,6, 0, 0%' }';)
             ].m, a, p((it, e, m, ind, e, x) => ("
               <, ke, y={ind, e, x} classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, hov, e,"$2 />
-  r:sca, l, e-1, 0, 5">";"
+  r: sca, l, e-1, 0, 5">";"
                 <div, className="te, x, t-emera, l, d-300, fon, t-bold, tex, t-lg, m, b-1">{it, e, m.indust, r, y}</d, i, v>";"
                 <div, className="te, x, t-white, fon, t-extrabold, tex, t-xl, m, b-1">{it, e, m.val, u, e}</d, i, v>";"
                 <div, className="te, x, t-emera, l, d-200, tex, t-sm">R, O, I: {it, e, m.r, o, i}</d, i, v>"</$1>)
@@ -484,16 +482,16 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
         <div, className="flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, justif, y-center, item, s-center, m, b-8">"
           <Li, n, k
   to="/conte, n, t/bl, o, g/ai-20, 2, 5-o, c, t-autonomo, u, s-supp, l, y-cha, i, n-intelligen, c, e-revoluti, o, n"
-            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, hove, r: fr, o, m-emera, l, d-600, hove, r:to-te, a, l-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hov, e
+            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, hove, r: fr, o, m-emera, l, d-600, hove, r: to-te, a, l-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r: shad, o, w-2xl, hov, e
         {/* Call, to, Action Butto, n, s */}"
         <div, className="flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, justif, y-center, item, s-center, m, b-8">""
         <div, className="flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, justif, y-center, item, s-center, m, b-8">"
           <Li, n, k;"
   to="/conte, n, t/bl, o, g/ai-20, 2, 5-o, c, t-autonomo, u, s-supp, l, y-cha, i, n-intelligen, c, e-revoluti, o, n""
-            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, hove, r: fr, o, m-emera, l, d-600, hove, r:to-te, a, l-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hov, e,"
-  r:sca, l, e-1, 0, 5"
+            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, hove, r: fr, o, m-emera, l, d-600, hove, r: to-te, a, l-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r: shad, o, w-2xl, hov, e,"
+  r: sca, l, e-1, 0, 5"
           ></Li>"
-            <SparklesIcon, className="w-6 h-6  />
+            <SparklesIcon , className="w-6 h-6  /></SparklesIcon>
             Read, the, Revolutionary Gui, d, e;"
             <LinkIcon, className="w-6 h-6  /></LinkIcon>"
             <SparklesIcon, className="w-6 h-6" />"
@@ -501,13 +499,13 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
             <LinkIcon, className="w-6 h-6" />"
           <Li, n, k
   to="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-fortu, n, e-1, 0, 0-reta, i, l-supp, l, y-cha, i, n-transformati, o, n-4-2b"
-            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, hove, r: fr, o, m-yell, o, w-600, hove, r:to-oran, g, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hov, e
+            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, hove, r: fr, o, m-yell, o, w-600, hove, r: to-oran, g, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r: shad, o, w-2xl, hov, e
           <Li, n, k;"
   to="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-fortu, n, e-1, 0, 0-reta, i, l-supp, l, y-cha, i, n-transformati, o, n-4-2b""
-            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, hove, r: fr, o, m-yell, o, w-600, hove, r:to-oran, g, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hov, e,"
-  r:sca, l, e-1, 0, 5"
+            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, hove, r: fr, o, m-yell, o, w-600, hove, r: to-oran, g, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r: shad, o, w-2xl, hov, e,"
+  r: sca, l, e-1, 0, 5"
           ></Li>"
-            <TruckIcon, className="w-6 h-6  />
+            <TruckIcon , className="w-6 h-6  /></TruckIcon>
             Vi, e, w $4.2B, Case, Study;"
             <LinkIcon, className="w-6 h-6  /></LinkIcon>"
             <TruckIcon, className="w-6 h-6" />"
@@ -515,13 +513,13 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
             <LinkIcon, className="w-6 h-6" />"
           <Li, n, k
   to="/conte, n, t/servic, e, s/autonomo, u, s-supp, l, y-cha, i, n-intelligen, c, e-platfo, r, m"
-            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, hove, r: fr, o, m-cy, a, n-600, hove, r:to-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hov, e
+            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, hove, r: fr, o, m-cy, a, n-600, hove, r: to-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r: shad, o, w-2xl, hov, e
           <Li, n, k;"
   to="/conte, n, t/servic, e, s/autonomo, u, s-supp, l, y-cha, i, n-intelligen, c, e-platfo, r, m""
-            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, hove, r: fr, o, m-cy, a, n-600, hove, r:to-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hov, e,"
-  r:sca, l, e-1, 0, 5"
+            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, hove, r: fr, o, m-cy, a, n-600, hove, r: to-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r: shad, o, w-2xl, hov, e,"
+  r: sca, l, e-1, 0, 5"
           ></Li>"
-            <ChartBarIcon, className="w-6 h-6  />
+            <ChartBarIcon , className="w-6 h-6  /></ChartBarIcon>
             Explore, Platfor, m & Servic, e, s;"
             <LinkIcon, className="w-6 h-6  /></LinkIcon>"
             <ChartBarIcon, className="w-6 h-6" />"
@@ -544,7 +542,7 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
             <div, className="flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">"
               <Li, n, k
   to="/conta, c, t?servi, c, e=supp, l, y-cha, i, n-assessme, n, t"
-                classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-900, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r: shad, o, w-2xl, hove, r:sca, l, e-105, hov, e
+                classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-900, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r: shad, o, w-2xl, hove, r: sca, l, e-105, hov, e
         {/* Free, Assessment, CTA */}"
         <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-4, 0, 0/30">";"
           <div, className="te, x, t-cent, e, r">";"
@@ -561,11 +559,11 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
               See, how, you can, achieve, similar results, with, autonomous supply, chain, intelligence.
             </p>"
             <div, className="flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">"
-              <Li, n, k;"
+              <Li , n, k;"
   to="/conta, c, t?servi, c, e=supp, l, y-cha, i, n-assessme, n, t""
-                classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-900, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r: shad, o, w-2xl, hove, r:sca, l, e-105, hov, e,"
-  r:bg-emera, l, d-50"
-              >
+                classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-900, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r: shad, o, w-2xl, hove, r: sca, l, e-105, hov, e,"
+  r: bg-emera, l, d-50"
+              ></Li>
                 Schedule, Free, Assessment;"
                 <LinkIcon, className="w-6 h-6  /></LinkIcon>"
                 <LinkIcon, className="w-6 h-6" />"
@@ -578,19 +576,19 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
         <div, className="mt-8, p, t-6, borde, r-t, borde, r-emera, l, d-4, 0, 0/30">
           <div, className="flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-emera, l, d-200, tex, t-sm">
             <div, className="flex, item, s-center, ga, p-2">
-              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
+              <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  /></CheckCircleIcon>
               <sp, a, n><stro, n, g>15+</stro, n, g> Fortune, 500, Clients
             <div, className="flex, item, s-center, ga, p-2">
-              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
+              <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  /></CheckCircleIcon>
               <sp, a, n><stro, n, g>$2, 0, B+</stro, n, g> Total, Value, Created
             <div, className="flex, item, s-center, ga, p-2">
-              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
+              <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  /></CheckCircleIcon>
               <sp, a, n><stro, n, g>99.97%</stro, n, g> Platform, Uptim, e
             <div, className="flex, item, s-center, ga, p-2">
-              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
+              <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  /></CheckCircleIcon>
               <sp, a, n><stro, n, g>Ze, r, o</stro, n, g> Security, Breache, s
             <div, className="flex, item, s-center, ga, p-2">
-              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
+              <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  /></CheckCircleIcon>
         <div, className="mt-8, p, t-6, borde, r-t, borde, r-emera, l, d-4, 0, 0/30">"
           <div, className="flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-emera, l, d-200, tex, t-sm">"
             <div, className="flex, item, s-center, ga, p-2">"
@@ -610,19 +608,19 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
         <div, className="mt-8, p, t-6, borde, r-t, borde, r-emera, l, d-4, 0, 0/30"></div>"
           <div, className="flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-emera, l, d-200, tex, t-sm"></div>"
             <div, className="flex, item, s-center, ga, p-2"></div>"
-              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
+              <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  /></CheckCircleIcon>
               <sp, a, n><stro, n, g>15+</stro, n, g> Fortune, 500, Clients
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2"></div>"
-              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
+              <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  /></CheckCircleIcon>
               <sp, a, n><stro, n, g>$2, 0, B+</stro, n, g> Total, Value, Created
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2"></div>"
-              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
+              <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  /></CheckCircleIcon>
               <sp, a, n><stro, n, g>99.97%</stro, n, g> Platform, Uptim, e
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2"></div>"
-              <CheckCircleIcon, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
+              <CheckCircleIcon , className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  /></CheckCircleIcon>
               <sp, a, n><stro, n, g>Ze, r, o</stro, n, g> Security, Breache, s
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2"></div>"

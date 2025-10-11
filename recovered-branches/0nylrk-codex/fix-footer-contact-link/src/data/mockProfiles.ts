@@ -1,4 +1,4 @@
-import { ProfileData } from "@/types/profile"
+import { ProfileData  } from '@/types/profile'
 export const MOCK_PROFILES: Record<string, ProfileData> = {
   "service-provider-1": {
     id: "service-provider-1",
@@ -13,22 +13,11 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
     aiScore: 95,
     profileType: "service" as "service" | "talent",
     hourlyRate: 200,
-    skills: [
-      { name: "AI Integration", level: 5, endorsements: 87 },
-      { name: "Machine Learning", level: 5, endorsements: 76 },
-      { name: "Cloud Infrastructure", level: 4, endorsements: 62 },
-      { name: "Enterprise Solutions", level: 5, endorsements: 93 },
-      { name: "Data Engineering", level: 4, endorsements: 54 },
-      { name: "API Development", level: 4, endorsements: 48 }],
+    skills: [{ name: "AI Integration", level: 5, endorsements: 87 }, { name: "Machine Learning", level: 5, endorsements: 76 }, { name: "Cloud Infrastructure", level: 4, endorsements: 62 }, { name: "Enterprise Solutions", level: 5, endorsements: 93 }, { name: "Data Engineering", level: 4, endorsements: 54 }, { name: "API Development", level: 4, endorsements: 48 }],
       { name: "API Development", level: 4, endorsements: 48 },
     ],
-    projects: [
-      {
-        id: "p1",
-        title: "Healthcare AI Platform",
-        description: "Built an AI-powered system for medical diagnostics, reducing diagnosis time by 60%.",
-        imageUrl: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=500&h=300",
-        tags: ["Healthcare", "AI", "Machine Learning"],
+    projects: [{
+        id: "p1", title: "Healthcare AI Platform", description: "Built an AI-powered system for medical diagnostics, reducing diagnosis time by 60%.", imageUrl: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=500&h=300", tags: ["Healthcare", "AI", "Machine Learning"],
         date: "Oct 2023"
       },
       {
@@ -48,35 +37,16 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         date: "Jan 2023"
       }
     ],
-    experience: [
-      {
-        id: "e1",
-        role: "Enterprise AI Solutions Provider",
-        company: "TechSolutions Inc.",
-        description: "Leading a team of 25 engineers developing cutting-edge AI solutions for Fortune 500 companies, specializing in custom ML models and enterprise integration.",
-        startDate: "Jan 2018",
-        current: true
-      },
-      {
-        id: "e2",
-        role: "AI Research Partner",
-        company: "Stanford AI Lab",
-        description: "Collaborated with academic researchers to bring theoretical AI advances to practical business applications.",
-        startDate: "Mar 2016",
-        endDate: "Dec 2017"
-      }
-    ],
+    experience: [{
+        id: "e1", role: "Enterprise AI Solutions Provider", company: "TechSolutions Inc.", description: "Leading a team of 25 engineers developing cutting-edge AI solutions for Fortune 500 companies, specializing in custom ML models and enterprise integration.", startDate: "Jan 2018", current: true
+      }, {
+        id: "e2", role: "AI Research Partner", company: "Stanford AI Lab", description: "Collaborated with academic researchers to bring theoretical AI advances to practical business applications.", startDate: "Mar 2016", endDate: "Dec 2017"
+      }],
     availability: {
       status: "limited",
       nextAvailable: "Jun 15, 2024",
       message: "Currently booked for the next 3 weeks. Available for new projects starting mid-June.",
-      availableHours: [
-        { day: "Monday", hours: "9:00 AM - 5:00 PM" },
-        { day: "Tuesday", hours: "9:00 AM - 5:00 PM" },
-        { day: "Wednesday", hours: "9:00 AM - 5:00 PM" },
-        { day: "Thursday", hours: "9:00 AM - 5:00 PM" },
-        { day: "Friday", hours: "9:00 AM - 3:00 PM" }
-      ]
+      availableHours: [{ day: "Monday", hours: "9:00 AM - 5:00 PM" }, { day: "Tuesday", hours: "9:00 AM - 5:00 PM" }, { day: "Wednesday", hours: "9:00 AM - 5:00 PM" }, { day: "Thursday", hours: "9:00 AM - 5:00 PM" }, { day: "Friday", hours: "9:00 AM - 3:00 PM" }]
     }
   },
   "talent-1": {
@@ -92,22 +62,11 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
     aiScore: 97,
     profileType: "talent" as "service" | "talent",
     hourlyRate: 150,
-    skills: [
-      { name: "Machine Learning", level: 5, endorsements: 38 },
-      { name: "TensorFlow", level: 5, endorsements: 32 },
-      { name: "Python", level: 5, endorsements: 45 },
-      { name: "Computer Vision", level: 4, endorsements: 27 },
-      { name: "NLP", level: 4, endorsements: 21 },
-      { name: "Data Science", level: 5, endorsements: 39 }],
+    skills: [{ name: "Machine Learning", level: 5, endorsements: 38 }, { name: "TensorFlow", level: 5, endorsements: 32 }, { name: "Python", level: 5, endorsements: 45 }, { name: "Computer Vision", level: 4, endorsements: 27 }, { name: "NLP", level: 4, endorsements: 21 }, { name: "Data Science", level: 5, endorsements: 39 }],
       { name: "Data Science", level: 5, endorsements: 39 },
     ],
-    projects: [
-      {
-        id: "p1",
-        title: "Facial Recognition System",
-        description: "Built a state-of-the-art facial recognition system using deep learning.",
-        imageUrl: "https://images.unsplash.com/photo-1526378800651-c32d170fe6f8?auto=format&fit=crop&w=500&h=300",
-        tags: ["Computer Vision", "Deep Learning", "Python"],
+    projects: [{
+        id: "p1", title: "Facial Recognition System", description: "Built a state-of-the-art facial recognition system using deep learning.", imageUrl: "https://images.unsplash.com/photo-1526378800651-c32d170fe6f8?auto=format&fit=crop&w=500&h=300", tags: ["Computer Vision", "Deep Learning", "Python"],
         date: "Sep 2023"
       },
       {
@@ -127,42 +86,17 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         date: "Dec 2022"
       }
     ],
-    experience: [
-      {
-        id: "e1",
-        role: "Senior AI Engineer",
-        company: "Innovate AI",
-        description: "Leading computer vision projects and mentoring junior engineers in deep learning techniques.",
-        startDate: "Mar 2021",
-        current: true
-      },
-      {
-        id: "e2",
-        role: "Machine Learning Engineer",
-        company: "TechGiant Inc.",
-        description: "Developed and deployed ML models for product recommendation systems.",
-        startDate: "Jun 2018",
-        endDate: "Feb 2021"
-      },
-      {
-        id: "e3",
-        role: "Data Scientist",
-        company: "DataCorp",
-        description: "Analyzed large datasets to extract business insights and develop predictive models.",
-        startDate: "Aug 2016",
-        endDate: "May 2018"
-      }
-    ],
+    experience: [{
+        id: "e1", role: "Senior AI Engineer", company: "Innovate AI", description: "Leading computer vision projects and mentoring junior engineers in deep learning techniques.", startDate: "Mar 2021", current: true
+      }, {
+        id: "e2", role: "Machine Learning Engineer", company: "TechGiant Inc.", description: "Developed and deployed ML models for product recommendation systems.", startDate: "Jun 2018", endDate: "Feb 2021"
+      }, {
+        id: "e3", role: "Data Scientist", company: "DataCorp", description: "Analyzed large datasets to extract business insights and develop predictive models.", startDate: "Aug 2016", endDate: "May 2018"
+      }],
     availability: {
       status: "available",
       message: "Open to new projects starting immediately. Prefer projects with 3+ month engagement.",
-      availableHours: [
-        { day: "Monday", hours: "10:00 AM - 6:00 PM" },
-        { day: "Tuesday", hours: "10:00 AM - 6:00 PM" },
-        { day: "Wednesday", hours: "10:00 AM - 6:00 PM" },
-        { day: "Thursday", hours: "10:00 AM - 6:00 PM" },
-        { day: "Friday", hours: "10:00 AM - 2:00 PM" }
-      ]
+      availableHours: [{ day: "Monday", hours: "10:00 AM - 6:00 PM" }, { day: "Tuesday", hours: "10:00 AM - 6:00 PM" }, { day: "Wednesday", hours: "10:00 AM - 6:00 PM" }, { day: "Thursday", hours: "10:00 AM - 6:00 PM" }, { day: "Friday", hours: "10:00 AM - 2:00 PM" }]
     }
   }
 }

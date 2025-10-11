@@ -1,19 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Users, Award, Brain, Shield, Linkedin, Mail, Github, Twitter } from 'lucide-react'
+import { Link  } from 'react-router-dom'
+import { Users, Award, Brain, Shield, Linkedin, Mail, Github, Twitter  } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const TeamPage: React.FC = () => {
-  const teamMembers = [
-    {
-      name: 'Kleber Santos',
-      role: 'CEO & Founder',
-      bio: 'AI and technology visionary with 15+ years of experience in enterprise solutions',
-      image: '/api/placeholder/300/300',
-      linkedin: 'https://linkedin.com/in/kleber-santos',
-      email: 'kleber@ziontechgroup.com',
-      expertise: ['AI Strategy', 'Leadership', 'Innovation']
-    },
+  return (
+
+  const teamMembers = [{
+      name: 'Kleber Santos', role: 'CEO & Founder', bio: 'AI and technology visionary with 15+ years of experience in enterprise solutions', image: '/api/placeholder/300/300', linkedin: 'https://linkedin.com/in/kleber-santos', email: 'kleber@ziontechgroup.com', expertise: ['AI Strategy', 'Leadership', 'Innovation']
+    
+  );
+},
     {
       name: 'Dr. Sarah Chen',
       role: 'Chief AI Officer',
@@ -60,47 +57,29 @@ const TeamPage: React.FC = () => {
       expertise: ['Cybersecurity', 'Risk Assessment', 'Compliance']
     }
   ]
-  const stats = [
-    { icon: Users, label: 'Team Members', value: '50+' },
-    { icon: Award, label: 'Awards Won', value: '25+' },
-    { icon: Brain, label: 'Years Experience', value: '15+' },
-    { icon: Shield, label: 'Client Satisfaction', value: '99%' }
-  ]
-  const values = [
-    {
-      title: 'Innovation',
-      description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
-      icon: Brain
-    },
-    {
-      title: 'Excellence',
-      description: 'We strive for the highest quality in everything we do, from code to customer service.',
-      icon: Award
-    },
-    {
-      title: 'Collaboration',
-      description: 'We believe in the power of teamwork and diverse perspectives to solve complex problems.',
-      icon: Users
-    },
-    {
-      title: 'Security',
-      description: 'We prioritize the security and privacy of our clients\' data and systems.',
-      icon: Shield
-    }
-  ]
+  const stats = [{ icon: Users, label: 'Team Members', value: '50+' }, { icon: Award, label: 'Awards Won', value: '25+' }, { icon: Brain, label: 'Years Experience', value: '15+' }, { icon: Shield, label: 'Client Satisfaction', value: '99%' }]
+  const values = [{
+      title: 'Innovation', description: 'We constantly push the boundaries of what\'s possible with AI and technology.', icon: Brain
+    }, {
+      title: 'Excellence', description: 'We strive for the highest quality in everything we do, from code to customer service.', icon: Award
+    }, {
+      title: 'Collaboration', description: 'We believe in the power of teamwork and diverse perspectives to solve complex problems.', icon: Users
+    }, {
+      title: 'Security', description: 'We prioritize the security and privacy of our clients\' data and systems.', icon: Shield
+    }]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+      <Navigation /></Navigation>
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
             Meet Our <span className="text-cyan-400">Team
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             The brilliant minds behind our innovative AI and IT solutions. We're passionate about technology and dedicated to your success.
       {/* Stats Section */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
@@ -120,12 +99,12 @@ const TeamPage: React.FC = () => {
               Experienced professionals leading the future of AI and IT solutions,
   
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover: shadow-xl transition-shadow">
                 <div className="h-64 bg-gradient-to-br from-cyan-100 to-blue-100 flex items-center justify-center">
                   <div className="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center">
-                    <Users className="w-16 h-16 text-gray-600" />
+                    <Users className="w-16 h-16 text-gray-600" /></Users>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}
                   <p className="text-cyan-600 font-semibold mb-3">{member.role}
@@ -142,12 +121,12 @@ const TeamPage: React.FC = () => {
                       href={member.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-cyan-600 transition-colors">
-                      <Linkedin className="w-5 h-5" />
+                      className="text-gray-400 hover: text-cyan-600 transition-colors">
+                      <Linkedin className="w-5 h-5" /></Linkedin>
                     <$2 />
                       href={`mailto:${member.email}`}
-                      className="text-gray-400 hover:text-cyan-600 transition-colors">
-                      <Mail className="w-5 h-5" />
+                      className="text-gray-400 hover: text-cyan-600 transition-colors">
+                      <Mail className="w-5 h-5" /></Mail>
             ))}
       {/* Values Section */}
       <section className="py-20 bg-white">
@@ -160,7 +139,7 @@ const TeamPage: React.FC = () => {
               The principles that guide our team and our work,
   
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -189,7 +168,7 @@ const TeamPage: React.FC = () => {
           </div>
         </div>
       </section>
-      <Footer />
+      <Footer /></Footer>
     </div>
   ),
 }

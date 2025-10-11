@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface UltimateFuturisticITService {
   id: string
   name: string
@@ -39,27 +39,10 @@ export interface UltimateFuturisticITService {
   rating: number
   reviews: number
 }
-export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
-  // Zero-Trust Quantum Security Platform
+export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [// Zero-Trust Quantum Security Platform
   {
-    id: 'zero-trust-quantum-security-platform',
-    name: 'Zero-Trust Quantum Security Platform',
-    tagline: 'Unbreakable security with quantum encryption and zero-trust architecture',
-    price: '$1,899',
-    period: '/month',
-    description: 'Revolutionary security platform that combines zero-trust architecture with quantum encryption to provide the most secure IT infrastructure possible.',
-    features: [
-      'Quantum encryption at all levels',
-      'Zero-trust network architecture',
-      'Quantum key distribution',
-      'Advanced threat detection',
-      'Behavioral analytics',
-      'Real-time security monitoring',
-      'Automated incident response',
-      'Compliance automation',
-      'Quantum-resistant algorithms',
-      'Multi-factor quantum authentication'
-    ],
+    id: 'zero-trust-quantum-security-platform', name: 'Zero-Trust Quantum Security Platform', tagline: 'Unbreakable security with quantum encryption and zero-trust architecture', price: '$1, 899', period: '/month', description: 'Revolutionary security platform that combines zero-trust architecture with quantum encryption to provide the most secure IT infrastructure possible.', features: [
+      'Quantum encryption at all levels', 'Zero-trust network architecture', 'Quantum key distribution', 'Advanced threat detection', 'Behavioral analytics', 'Real-time security monitoring', 'Automated incident response', 'Compliance automation', 'Quantum-resistant algorithms', 'Multi-factor quantum authentication'],
     popular: true,
     icon: '🛡️',
     color: 'from-red-600 to-pink-600',
@@ -100,18 +83,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     price: '$1,299',
     period: '/month',
     description: 'Next-generation DevOps platform that autonomously manages infrastructure, deployments, monitoring, and optimization without human intervention.',
-    features: [
-      'Fully autonomous deployments',
-      'AI-powered infrastructure management',
-      'Self-healing systems',
-      'Automatic scaling and optimization',
-      'Predictive maintenance',
-      'Zero-downtime deployments',
-      'Intelligent monitoring',
-      'Automated testing and QA',
-      'Performance optimization',
-      'Cost optimization algorithms'
-    ],
+    features: ['Fully autonomous deployments', 'AI-powered infrastructure management', 'Self-healing systems', 'Automatic scaling and optimization', 'Predictive maintenance', 'Zero-downtime deployments', 'Intelligent monitoring', 'Automated testing and QA', 'Performance optimization', 'Cost optimization algorithms'],
     popular: true,
     icon: '⚡',
     color: 'from-blue-600 to-cyan-600',
@@ -152,18 +124,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     price: '$2,199',
     period: '/month',
     description: 'Revolutionary cloud infrastructure platform that leverages quantum computing to provide unprecedented performance, security, and scalability.',
-    features: [
-      'Quantum-enhanced processing',
-      'Quantum-secured storage',
-      'Quantum networking',
-      'Quantum machine learning',
-      'Quantum optimization algorithms',
-      'Quantum-resistant encryption',
-      'Quantum key distribution',
-      'Quantum error correction',
-      'Quantum simulation capabilities',
-      'Quantum research tools'
-    ],
+    features: ['Quantum-enhanced processing', 'Quantum-secured storage', 'Quantum networking', 'Quantum machine learning', 'Quantum optimization algorithms', 'Quantum-resistant encryption', 'Quantum key distribution', 'Quantum error correction', 'Quantum simulation capabilities', 'Quantum research tools'],
     popular: true,
     icon: '☁️',
     color: 'from-indigo-600 to-purple-600',
@@ -204,18 +165,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     price: '$599',
     period: '/month',
     description: 'Advanced IT asset management platform that uses AI to automatically discover, track, optimize, and manage all IT assets across the organization.',
-    features: [
-      'AI-powered asset discovery',
-      'Automatic asset classification',
-      'Predictive maintenance scheduling',
-      'Cost optimization algorithms',
-      'License compliance automation',
-      'Asset lifecycle management',
-      'Real-time asset monitoring',
-      'Automated reporting',
-      'Integration with ITSM tools',
-      'Mobile asset tracking'
-    ],
+    features: ['AI-powered asset discovery', 'Automatic asset classification', 'Predictive maintenance scheduling', 'Cost optimization algorithms', 'License compliance automation', 'Asset lifecycle management', 'Real-time asset monitoring', 'Automated reporting', 'Integration with ITSM tools', 'Mobile asset tracking'],
     popular: true,
     icon: '💻',
     color: 'from-green-600 to-emerald-600',
@@ -256,18 +206,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     price: '$999',
     period: '/month',
     description: 'Revolutionary network management platform that autonomously monitors, optimizes, and maintains network infrastructure without human intervention.',
-    features: [
-      'Fully autonomous network monitoring',
-      'Self-optimizing network performance',
-      'Automatic traffic routing',
-      'Predictive network maintenance',
-      'Self-healing network infrastructure',
-      'Intelligent bandwidth allocation',
-      'Automatic security updates',
-      'Performance optimization',
-      'Cost optimization',
-      'Real-time analytics'
-    ],
+    features: ['Fully autonomous network monitoring', 'Self-optimizing network performance', 'Automatic traffic routing', 'Predictive network maintenance', 'Self-healing network infrastructure', 'Intelligent bandwidth allocation', 'Automatic security updates', 'Performance optimization', 'Cost optimization', 'Real-time analytics'],
     popular: true,
     icon: '🌐',
     color: 'from-teal-600 to-cyan-600',
@@ -308,18 +247,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     price: '$3,999',
     period: '/month',
     description: 'Next-generation data center platform that combines traditional data center services with quantum encryption for ultimate security and performance.',
-    features: [
-      'Quantum encryption at rest',
-      'Quantum-secured data transmission',
-      'Quantum-resistant storage',
-      'Zero-trust data access',
-      'Quantum key distribution',
-      'Advanced threat protection',
-      'Automated compliance',
-      'High-performance computing',
-      'Quantum simulation capabilities',
-      'Research-grade infrastructure'
-    ],
+    features: ['Quantum encryption at rest', 'Quantum-secured data transmission', 'Quantum-resistant storage', 'Zero-trust data access', 'Quantum key distribution', 'Advanced threat protection', 'Automated compliance', 'High-performance computing', 'Quantum simulation capabilities', 'Research-grade infrastructure'],
     popular: true,
     icon: '🏢',
     color: 'from-slate-600 to-gray-600',
@@ -360,18 +288,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     price: '$799',
     period: '/month',
     description: 'Advanced IT service desk platform that uses AI to automatically resolve common issues, route complex problems, and provide intelligent support.',
-    features: [
-      'AI-powered ticket resolution',
-      'Automatic issue classification',
-      'Intelligent routing algorithms',
-      'Predictive problem prevention',
-      'Self-service knowledge base',
-      'Automated workflow management',
-      'Real-time performance analytics',
-      'Multi-channel support',
-      'Integration with ITSM tools',
-      'Mobile support capabilities'
-    ],
+    features: ['AI-powered ticket resolution', 'Automatic issue classification', 'Intelligent routing algorithms', 'Predictive problem prevention', 'Self-service knowledge base', 'Automated workflow management', 'Real-time performance analytics', 'Multi-channel support', 'Integration with ITSM tools', 'Mobile support capabilities'],
     popular: true,
     icon: '🎧',
     color: 'from-purple-600 to-pink-600',
@@ -412,18 +329,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     price: '$1,199',
     period: '/month',
     description: 'Next-generation backup and recovery platform that uses quantum encryption to provide the most secure data protection possible.',
-    features: [
-      'Quantum-encrypted backups',
-      'Zero-knowledge encryption',
-      'Quantum-resistant algorithms',
-      'Instant recovery capabilities',
-      'Cross-platform compatibility',
-      'Automated backup scheduling',
-      'Real-time backup monitoring',
-      'Disaster recovery planning',
-      'Compliance automation',
-      'Performance optimization'
-    ],
+    features: ['Quantum-encrypted backups', 'Zero-knowledge encryption', 'Quantum-resistant algorithms', 'Instant recovery capabilities', 'Cross-platform compatibility', 'Automated backup scheduling', 'Real-time backup monitoring', 'Disaster recovery planning', 'Compliance automation', 'Performance optimization'],
     popular: true,
     icon: '💾',
     color: 'from-amber-600 to-yellow-600',
@@ -464,18 +370,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     price: '$1,499',
     period: '/month',
     description: 'Revolutionary compliance platform that autonomously monitors, manages, and maintains IT compliance across all regulatory frameworks.',
-    features: [
-      'Autonomous compliance monitoring',
-      'Real-time compliance tracking',
-      'Automated audit preparation',
-      'Regulatory update management',
-      'Compliance risk assessment',
-      'Automated reporting',
-      'Policy management automation',
-      'Training tracking',
-      'Incident management',
-      'Compliance analytics'
-    ],
+    features: ['Autonomous compliance monitoring', 'Real-time compliance tracking', 'Automated audit preparation', 'Regulatory update management', 'Compliance risk assessment', 'Automated reporting', 'Policy management automation', 'Training tracking', 'Incident management', 'Compliance analytics'],
     popular: true,
     icon: '📋',
     color: 'from-violet-600 to-purple-600',

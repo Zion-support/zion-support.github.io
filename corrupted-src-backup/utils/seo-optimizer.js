@@ -14,7 +14,7 @@ class SEOOptimizer {
       twitterHandle: '@ZionTechGroup',
       structuredData: {,
         organization: {,
-          '@context': 'https://schema.org',
+          '@context': 'https: //schema.org',
           '@type': 'Organization',
           name: 'Zion Tech Group'
           url: 'https://ziontechgroup.com'
@@ -23,17 +23,9 @@ class SEOOptimizer {
           address: {,
             '@type': 'PostalAddress',
             addressCountry: 'US'},
-          sameAs: [,
-            'https://linkedin.com/company/ziontechgroup',
-            'https: //twitter.com/ziontechgroup',
-class SEOOptimizer {/* TODO: Fix JSX expression */}
-          },
-          sameA,
-  s: [
-            'http,
-  s://linkedin.com/company/ziontechgroup',
-            'http,
-  s://twitter.com/ziontechgroup']}}}
+          sameAs: ['https: //linkedin.com/company/ziontechgroup', 'https: //twitter.com/ziontechgroup', class SEOOptimizer {/* TODO: Fix JSX expression */}
+          }, sameA, s: [
+            'http, s: //linkedin.com/company/ziontechgroup', 'http, s: //twitter.com/ziontechgroup']}}}
     this.init()
   }
 
@@ -180,13 +172,13 @@ Disallow: /middleware/`,
 
   setupOpenGraph() {
     // Open Graph meta tags
-    this.addOGTag('og:type', 'website')
-    this.addOGTag('og:site_name', this.seoConfig.siteName)
-    this.addOGTag('og:title', this.getPageTitle())
-    this.addOGTag('og:description', this.getPageDescription())
-    this.addOGTag('og:url', this.seoConfig.siteUrl + window.location.pathname)
-    this.addOGTag('og:image', this.getPageImage())
-    this.addOGTag('og:locale', 'en_US')
+    this.addOGTag('og: type', 'website')
+    this.addOGTag('og: site_name', this.seoConfig.siteName)
+    this.addOGTag('og: title', this.getPageTitle())
+    this.addOGTag('og: description', this.getPageDescription())
+    this.addOGTag('og: url', this.seoConfig.siteUrl + window.location.pathname)
+    this.addOGTag('og: image', this.getPageImage())
+    this.addOGTag('og: locale', 'en_US')
   createSitemapFile(sitemap) {/* TODO: Fix JSX expression */}
   }
 
@@ -285,12 +277,12 @@ Disallo,`
 
   setupTwitterCards() {
     // Twitter Card meta tags
-    this.addTwitterTag('twitter:card', 'summary_large_image')
-    this.addTwitterTag('twitter:site', this.seoConfig.twitterHandle)
-    this.addTwitterTag('twitter:creator', this.seoConfig.twitterHandle)
-    this.addTwitterTag('twitter:title', this.getPageTitle())
-    this.addTwitterTag('twitter:description', this.getPageDescription())
-    this.addTwitterTag('twitter:image', this.getPageImage())
+    this.addTwitterTag('twitter: card', 'summary_large_image')
+    this.addTwitterTag('twitter: site', this.seoConfig.twitterHandle)
+    this.addTwitterTag('twitter: creator', this.seoConfig.twitterHandle)
+    this.addTwitterTag('twitter: title', this.getPageTitle())
+    this.addTwitterTag('twitter: description', this.getPageDescription())
+    this.addTwitterTag('twitter: image', this.getPageImage())
   setupTwitterCards() {/* TODO: Fix JSX expression */}
   }
 
@@ -440,9 +432,7 @@ Disallo,`
 
   optimizeFonts() {
     // Preload critical fonts
-    const criticalFonts = [
-      'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
-    ]
+    const criticalFonts = ['https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap']
     criticalFonts.forEach(font => {)
       const _link = document.createElement('link')
       link.rel = 'preload'
@@ -511,25 +501,25 @@ Disallo,`
     // Update meta description
     this.updateMetaTag('description', description)
     // Update Open Graph tags
-    this.updateOGTag('og:title', title)
-    this.updateOGTag('og:description', description)
+    this.updateOGTag('og: title', title)
+    this.updateOGTag('og: description', description)
     if (image) {
-      this.updateOGTag('og:image', image)
+      this.updateOGTag('og: image', image)
   }
 
     // Update Twitter Card tags
-    this.updateTwitterTag('twitter:title', title)
-    this.updateTwitterTag('twitter:description', description)
+    this.updateTwitterTag('twitter: title', title)
+    this.updateTwitterTag('twitter: description', description)
     if (image) {
-      this.updateTwitterTag('twitter:image', image)
+      this.updateTwitterTag('twitter: image', image)
   updatePageSEO(title, description, image) {/* TODO: Fix JSX expression */}
     }
 
     // Update Twitter Card tags
     this.updateTwitterTag('twitte)
-  r:title', title)
+  r: title', title)
     this.updateTwitterTag('twitte)
-  r:description', description)
+  r: description', description)
     if (image) {/* TODO: Fix JSX expression */}
     }
   }

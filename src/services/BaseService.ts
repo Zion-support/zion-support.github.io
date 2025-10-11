@@ -117,7 +117,7 @@ constructor(baseUrl: string, options: ServiceOptions = {}) {
    * Make a GET request
    */
   protected async get<T>(endpoint: string, useCache = true): Promise<T> {
-    const cacheKey = `GET:${endpoint}`
+    const cacheKey = `GET: ${endpoint}`
     if (useCache) {
     const cached = this.getFromCache<T>(cacheKey)
       if (cached) return cached
@@ -250,7 +250,7 @@ constructor(baseUrl: string, options: ServiceOptions = {}) {
     // TODO: Add content
   }
 }
-    const cacheKey = `GET:${endpoint}`
+    const cacheKey = `GET: ${endpoint}`
     if (useCache) {
     // TODO: Add content
   }

@@ -9,7 +9,7 @@ class ErrorBoundary extends React.Component {
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo)
+    console.error('Error caught by boundary: ', error, errorInfo)
   }
   
   render() {
@@ -22,77 +22,72 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react'
   const pageKey = `search-${routeKey}-${router && router.asPath}`
-import { useRouter } from 'next/router'
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady'
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput"
-import { generateSearchSuggestions } from "@/data/marketplaceData"
-import { SearchSuggestion } from "@/types/search"
-import {logErrorToProduction} from '@/utils/productionLogger'
+import { useRouter  } from 'next/router'
+import { useRouterReady, useRouteChange  } from '@/hooks/useRouterReady'
+import { EnhancedSearchInput  } from '@/components/search/EnhancedSearchInput'
+import { generateSearchSuggestions  } from '@/data/marketplaceData'
+import { SearchSuggestion  } from '@/types/search'
+import { logErrorToProduction } from '@/utils/productionLogger'
 import {
   Tabs
   TabsContent
   TabsList
   const pageKey = `search-${routeKey}-${router.asPath}`
-import { useRouter } from 'next/router'
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady'
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput"
-import { generateSearchSuggestions } from "@/data/marketplaceData"
-import { SearchSuggestion } from "@/types/search"
-import {logErrorToProduction} from '@/utils/productionLogger'
-import {
-  Tabs
+import { useRouter  } from 'next/router'
+import { useRouterReady, useRouteChange  } from '@/hooks/useRouterReady'
+import { EnhancedSearchInput  } from '@/components/search/EnhancedSearchInput'
+import { generateSearchSuggestions  } from '@/data/marketplaceData'
+import { SearchSuggestion  } from '@/types/search'
+import { logErrorToProduction } from '@/utils/productionLogger'
+import { Tabs
   TabsContent
   TabsList
-  TabsTrigger} from "@/components/ui/tabs"
+  TabsTrigger } from '@/components/ui/tabs'
 
-import { useEffect, useState } from "react",
-import { useRouter } from 'next/router',
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
-import { generateSearchSuggestions } from "@/data/marketplaceData",
-import { SearchSuggestion } from "@/types/search",
-import {logErrorToProduction} from '@/utils/productionLogger',
-import {
-  Tabs,
+import { useEffect, useState  } from 'react',
+import { useRouter  } from 'next/router',
+import { useRouterReady, useRouteChange  } from '@/hooks/useRouterReady',
+import { EnhancedSearchInput  } from '@/components/search/EnhancedSearchInput',
+import { generateSearchSuggestions  } from '@/data/marketplaceData',
+import { SearchSuggestion  } from '@/types/search',
+import { logErrorToProduction } from '@/utils/productionLogger',
+import { Tabs,
   TabsContent,
   TabsList,
-  TabsTrigger} from "@/components/ui/tabs",
+  TabsTrigger } from '@/components/ui/tabs',
 
 
-import { Loader2 } from 'lucide-react'
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
+import { Loader2  } from 'lucide-react'
 
 
 
 
-import { Loader2 } from 'lucide-react'
+
+
+import { Loader2  } from 'lucide-react'
   const pageKey = `search-${routeKey}-${router.asPath}`
-import { useRouter } from 'next/router'
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady'
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput"
-import { generateSearchSuggestions } from "@/data/marketplaceData"
-import { SearchSuggestion } from "@/types/search"
-import {logErrorToProduction} from '@/utils/productionLogger'
-import {
-  Tabs
+import { useRouter  } from 'next/router'
+import { useRouterReady, useRouteChange  } from '@/hooks/useRouterReady'
+import { EnhancedSearchInput  } from '@/components/search/EnhancedSearchInput'
+import { generateSearchSuggestions  } from '@/data/marketplaceData'
+import { SearchSuggestion  } from '@/types/search'
+import { logErrorToProduction } from '@/utils/productionLogger'
+import { Tabs
   TabsContent
   TabsList
-  TabsTrigger} from "@/components/ui/tabs"
-import { useEffect, useState } from "react",
-import { useRouter } from 'next/router',
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
-import { generateSearchSuggestions } from "@/data/marketplaceData",
-import { SearchSuggestion } from "@/types/search",
-import {logErrorToProduction} from '@/utils/productionLogger',
-import {
-  Tabs,
+  TabsTrigger } from '@/components/ui/tabs'
+import { useEffect, useState  } from 'react',
+import { useRouter  } from 'next/router',
+import { useRouterReady, useRouteChange  } from '@/hooks/useRouterReady',
+import { EnhancedSearchInput  } from '@/components/search/EnhancedSearchInput',
+import { generateSearchSuggestions  } from '@/data/marketplaceData',
+import { SearchSuggestion  } from '@/types/search',
+import { logErrorToProduction } from '@/utils/productionLogger',
+import { Tabs,
   TabsContent,
   TabsList,
-  TabsTrigger} from "@/components/ui/tabs",
-import { Loader2 } from 'lucide-react'
+  TabsTrigger } from '@/components/ui/tabs',
+import { Loader2  } from 'lucide-react'
 
 interface SearchResult {
 
@@ -123,7 +118,7 @@ function highlight(text: string, term: string) {
 
 
   return (
-    <div key={pageKey}>
+    <div key=>{pageKey}
       <main className="container mx-auto px-4 py-8">
         <form onSubmit={handleSubmit} className="mb-6">
           <EnhancedSearchInput
@@ -149,7 +144,7 @@ function highlight(text: string, term: string) {
         </form>
         {loading && (
           <div className="flex justify-center py-8">
-            <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
+            <Loader2 className="h-8 w-8 animate-spin text-zion-purple" /></Loader2>
           </div>
 
             onSelectSuggestion={(suggestion) => {
@@ -165,7 +160,7 @@ function highlight(text: string, term: string) {
         )}
         {!loading && marketplaceResults && marketplaceResults.length === 0 && blogResults && blogResults.length > 0 && (
           <div>
-            <p className="text-zion-slate-light mb-2">No marketplace results found. Related blog posts:</p>
+            <p className="text-zion-slate-light mb-2">No marketplace results found. Related blog posts: </p>
             <div className="space-y-4">
               {blogResults && blogResults.map(r => (
                 <div key={`blog-${r && r.id}`} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">
@@ -179,17 +174,17 @@ function highlight(text: string, term: string) {
         )}
 
         {!loading && marketplaceResults && marketplaceResults.length > 0 && (
-          <Tabs defaultValue="products" className="space-y-4">
-            <TabsList className="mb-4">
-              <TabsTrigger value="products">
+          <Tabs defaultValue="products" className="space-y-4"></Tabs>
+            <TabsList className="mb-4"></TabsList>
+              <TabsTrigger value="products"></TabsTrigger>
                 Products ({productResults && productResults.length})</$1>
-              <TabsTrigger value="talent">
+              <TabsTrigger value="talent"></TabsTrigger>
                 Talent ({talentResults && talentResults.length})</$1>
-              <TabsTrigger value="docs">
+              <TabsTrigger value="docs"></TabsTrigger>
                 Docs ({docResults && docResults.length})</$1>
-              <TabsTrigger value="blog">
+              <TabsTrigger value="blog"></TabsTrigger>
                 Blog ({blogResults && blogResults.length})</$1></$1>
-            <TabsContent value="products" className="space-y-4">
+            <TabsContent value="products" className="space-y-4"></TabsContent>
               {results
                 .filter((r,) => r && r.type === "product" || r && r.type === "service")
                 .map((r,) => (
@@ -207,7 +202,7 @@ function highlight(text: string, term: string) {
                     </p></$1>
                 ))}
             </TabsContent>
-            <TabsContent value="talent" className="space-y-4">
+            <TabsContent value="talent" className="space-y-4"></TabsContent>
               {results
                 .filter((r) => r.type === "talent")
                 .map((r) => (
@@ -222,7 +217,7 @@ function highlight(text: string, term: string) {
                     </p></$1>
                 ))}
             </TabsContent>
-            <TabsContent value="docs" className="space-y-4">
+            <TabsContent value="docs" className="space-y-4"></TabsContent>
               {results
                 .filter((r) => r.type === "doc")
                 .map((r) => (
@@ -237,7 +232,7 @@ function highlight(text: string, term: string) {
                     </p></$1>
                 ))}
             </TabsContent>
-            <TabsContent value="blog" className="space-y-4">
+            <TabsContent value="blog" className="space-y-4"></TabsContent>
               {results
                 .filter((r) => r.type === "blog")
                 .map((r) => (
@@ -280,7 +275,7 @@ if (data && data.results && Array.isArray (data.results) ) {
   // Add key prop to force re - render when route changes
   const page_key = `search-${route_key}-${router.as_path}`
   return (
-    <div key={page_key}>
+    <div key=>{page_key}
       <main className="container mx - auto px - 4 py - 8">
         <form on_submit={handle_submit} className="mb - 6">
           <EnhancedSearchInput
@@ -298,7 +293,7 @@ if (data && data.results && Array.isArray (data.results) ) {
             <Loader2 className="h - 8 w - 8 animate - spin text - zion - purple" /></$1>)}
         {!loading && marketplace_results.length === 0 && blog_results.length > 0 && (
           <div>
-            <p className="text - zion - slate - light mb - 2">No marketplace results found. Related blog posts:</p>
+            <p className="text - zion - slate - light mb - 2">No marketplace results found. Related blog posts: </p>
             <div className="space - y-4">
               {blog_results.map (r => (
                 <div key={`blog-${r.id}`} className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4">
@@ -308,17 +303,17 @@ if (data && data.results && Array.isArray (data.results) ) {
         {!loading && marketplace_results.length === 0 && blog_results.length === 0 && query && (
           <p className="text - zion - slate - light">No results found for "{query}".</p>)}
         {!loading && marketplace_results.length > 0 && (
-          <Tabs default_value="products" className="space - y-4">
-            <TabsList className="mb - 4">
-              <TabsTrigger value="products">
+          <Tabs default_value="products" className="space - y-4"></Tabs>
+            <TabsList className="mb - 4"></TabsList>
+              <TabsTrigger value="products"></TabsTrigger>
                 Products ({product_results.length})</$1>
-              <TabsTrigger value="talent">
+              <TabsTrigger value="talent"></TabsTrigger>
                 Talent ({talent_results.length})</$1>
-              <TabsTrigger value="docs">
+              <TabsTrigger value="docs"></TabsTrigger>
                 Docs ({doc_results.length})</$1>
-              <TabsTrigger value="blog">
+              <TabsTrigger value="blog"></TabsTrigger>
                 Blog ({blog_results.length})</$1></$1>
-            <TabsContent value="products" className="space - y-4">
+            <TabsContent value="products" className="space - y-4"></TabsContent>
               {results
                 .filter ((r, ) => r.type === "product" || r.type === "service")
                 .map ((r, ) => (
@@ -333,7 +328,7 @@ if (data && data.results && Array.isArray (data.results) ) {
                       {highlight (r.description, query)}
                     </p></$1>))}
             </TabsContent>
-            <TabsContent value="talent" className="space - y-4">
+            <TabsContent value="talent" className="space - y-4"></TabsContent>
               {results
                 .filter ((r, ) => r.type === "talent")
                 .map ((r, ) => (
@@ -348,7 +343,7 @@ if (data && data.results && Array.isArray (data.results) ) {
                       {highlight (r.description, query)}
                     </p></$1>))}
             </TabsContent>
-            <TabsContent value="docs" className="space - y-4">
+            <TabsContent value="docs" className="space - y-4"></TabsContent>
               {results
                 .filter ((r, ) => r.type === "doc")
                 .map ((r, ) => (
@@ -363,7 +358,7 @@ if (data && data.results && Array.isArray (data.results) ) {
                       {highlight (r.description, query)}
                     </p></$1>))}
             </TabsContent>
-            <TabsContent value="blog" className="space - y-4">
+            <TabsContent value="blog" className="space - y-4"></TabsContent>
               {results
                 .filter ((r, ) => r.type === "blog")
                 .map ((r, ) => (
@@ -409,12 +404,12 @@ if () {) {
   set_results (data.results)
 }else {
   set_results ([]);'
-logErrorToProduction ('Search API response structure is not as expected:', {
+logErrorToProduction ('Search API response structure is not as expected: ', {
 
   data: data
 })
 }catch (error) {'
-  logErrorToProduction ('Search failed:', {
+  logErrorToProduction ('Search failed: ', {
   data: error
 })
 set_results ([])
@@ -430,7 +425,7 @@ router.push (`/search?q=$ {
 }
 //Add key prop to force re - render when route changes </div>)
 }{
-  !loading && marketplace_results.length === 0 && blog_results.length > 0 && (<div> <p className="text - zion - slate - light mb - 2" >No marketplace results found. Related blog posts:</p> <div className="space - y-4" > {
+  !loading && marketplace_results.length === 0 && blog_results.length > 0 && (<div> <p className="text - zion - slate - light mb - 2" >No marketplace results found. Related blog posts: </p> <div className="space - y-4" > {
   blog_results.map (r => (</div>) )
 }</div> </div>)
 }</p> </div>) )
@@ -458,7 +453,7 @@ router.push (`/search?q=$ {
                 <select
                   value={sort_by}
                   on_change={ (e) => setSortBy (e.target.value as any) }
-                  className="w - full px - 3 py - 2 border border - gray - 300 rounded - lg focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - blue -500">
+                  className="w - full px - 3 py - 2 border border - gray - 300 rounded - lg focus: outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - blue -500">
                   <option value="relevance">Relevance</option>
                   <option value="date">Date</option>
                   <option value="popularity">Popularity</option></$1></$1>
@@ -467,7 +462,7 @@ router.push (`/search?q=$ {
                 {filter_options.map (filter => (<     key={filter.id}$2 />
                     on_click={ () => toggle_filter (filter.id) }
                     className={`w - full flex items - center justify - between p - 3 rounded - lg transition - colors ${selected_filters.has (filter.id) ? 'bg - blue - 50 border border - blue - 200'
-                        : 'hover:bg - gray - 50'
+                        : 'hover: bg - gray - 50'
 }`}
                   >
                     <div  className="flex items - center space - x - 3">
@@ -487,7 +482,7 @@ router.push (`/search?q=$ {
             <p className="text-slate -300">
               {searchQuery ? `Found ${filteredResults.length} results for "${searchQuery}"` : `Showing ${filteredResults.length} items`}
             </p>
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="grid md: grid-cols-2 gap-8 mb-12">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
                 <ul className="text-gray-600 space-y-2">
@@ -507,10 +502,10 @@ router.push (`/search?q=$ {
                 </ul>
               </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"></Link>
                 View Pricing
               </Link>
-              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors"></Link>
                 Contact Us
               </Link>
             </div>
@@ -524,7 +519,7 @@ router.push (`/search?q=$ {
             <p className="text - slate -300">
               {search_query ? `Found ${filtered_results.length} results for "${search_query}"` : `Showing ${filtered_results.length} items`}
             </p>
-            <div className="grid md:grid - cols - 2 gap - 8 mb - 12">
+            <div className="grid md: grid - cols - 2 gap - 8 mb - 12">
               <div className="bg - white p - 6 rounded - lg shadow - md">
                 <h2 className="text - 2xl font - semibold mb - 4">Our Services</h2>
                 <ul className="text - gray - 600 space - y-2">
@@ -540,9 +535,9 @@ router.push (`/search?q=$ {
                   <li>• Scalable Solutions</li>
                   <li>• Competitive Pricing</li></$1></$1>
             <div className="flex flex - col sm:flex - row gap - 4 justify - center">
-              <Link href="/pricing/" className="bg - blue - 600 text - white px - 6 py - 3 rounded - lg hover:bg - blue - 700 transition - colors">
+              <Link href="/pricing/" className="bg - blue - 600 text - white px - 6 py - 3 rounded - lg hover:bg - blue - 700 transition - colors"></Link>
                 View Pricing</$1>
-              <Link href="/contact/" className="bg - gray - 600 text - white px - 6 py - 3 rounded - lg hover:bg - gray - 700 transition - colors">
+              <Link href="/contact/" className="bg - gray - 600 text - white px - 6 py - 3 rounded - lg hover:bg - gray - 700 transition - colors"></Link>
                 Contact Us</$1></$1>
     </>)
 }

@@ -9,7 +9,7 @@ class ErrorBoundary extends React.Component {
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo)
+    console.error('Error caught by boundary: ', error, errorInfo)
   }
   
   render() {
@@ -21,37 +21,36 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react'
-import { Header } from '@/components/Header'
-import { SEO } from '@/components/SEO'
-import { GradientHeading } from '@/components/GradientHeading'
-import { Button } from '@/components/ui/button'
+import { Header  } from '@/components/Header'
+import { SEO  } from '@/components/SEO'
+import { GradientHeading  } from '@/components/GradientHeading'
+import { Button  } from '@/components/ui/button'
 import Link from 'next/link'
 import Link from 'next/link'
 export default function Internationalization() {
   const schema = {
-    '@context': 'https://schema && schema.org',
+    '@context': 'https: //schema && schema.org',
     '@type': 'WebPage',
     name: 'Internationalization',
-    description:
-      'Use Zion in multiple languages and attract clients worldwide with localized listings.',
-    url: 'https://app && app.ziontechgroup.com/features/internationalization',  };    "@context": "https://schema && schema.org"
+    description: 'Use Zion in multiple languages and attract clients worldwide with localized listings.',
+    url: 'https://app && app.ziontechgroup.com/features/internationalization',  };    "@context": "https: //schema && schema.org"
     "@type": "WebPage"
     "name": "Internationalization"
     "description": "Use Zion in multiple languages and attract clients worldwide with localized listings.",
-    "url": "https://app && app.ziontechgroup.com/features/internationalization"
+    "url": "https: //app && app.ziontechgroup.com/features/internationalization"
 import React from "react"
-import { Header } from "@/components/Header"
-import { SEO } from "@/components/SEO"
-import { GradientHeading } from "@/components/GradientHeading"
-import { Button } from "@/components/ui/button"
+import { Header  } from '@/components/Header'
+import { SEO  } from '@/components/SEO'
+import { GradientHeading  } from '@/components/GradientHeading'
+import { Button  } from '@/components/ui/button'
 import Link from 'next/link'
 export default function Internationalization() {
   const schema = {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org",
     "@type": "WebPage",
     "name": "Internationalization",
     "description": "Use Zion in multiple languages and attract clients worldwide with localized listings.",
-    "url": "https://app.ziontechgroup.com/features/internationalization"
+    "url": "https: //app.ziontechgroup.com/features/internationalization"
 
   }
   return (
@@ -74,7 +73,7 @@ export default function Internationalization() {
         title="Internationalization"
         description="Reach a global audience with multi-language support across the Zion platform."
         keywords="i18n, multi-language marketplace, localized listings"
-        canonical="https://app.ziontechgroup.com/features/internationalization"
+        canonical="https: //app.ziontechgroup.com/features/internationalization"
 
 
 
@@ -87,7 +86,7 @@ export default function Internationalization() {
 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
-      <Header />
+      <Header /></Header>
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md: px-6">
           <GradientHeading className="mb-4 text-center">Internationalization</GradientHeading>
@@ -121,14 +120,14 @@ export default function Internationalization() {
           </div>
 
           <div className='text-center'>
-            <Button size='lg' className='bg-zion-purple text-white' asChild>
+            <Button size='lg' className='bg-zion-purple text-white' asChild></Button>
               <Link href='/'>Explore Zion</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
-      <Header />
+      <Header /></Header>
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md: px-6">
           <GradientHeading className="mb-4 text-center">Internationalization</GradientHeading>
@@ -161,7 +160,7 @@ export default function Internationalization() {
           </div>
 
           <div className="text-center">
-            <Button size="lg" className="bg-zion-purple text-white" asChild>
+            <Button size="lg" className="bg-zion-purple text-white" asChild></Button>
               <Link href="/">Explore Zion</Link>
             </Button>
           </div>
@@ -173,33 +172,32 @@ export default function Internationalization() {
 }
 
 import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
+import { Header  } from '@/components/Header',
+import { SEO  } from '@/components/SEO',
+import { GradientHeading  } from '@/components/GradientHeading',
+import { Button  } from '@/components/ui/button',
 import Link from 'next/link',
 export default function Internationalization() {
   const schema = {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org",
     "@type": "WebPage",
     "name": "Internationalization",
     "description": "Use Zion in multiple languages and attract clients worldwide with localized listings."
-    "url": "https://app.ziontechgroup.com/features/internationalization"
+    "url": "https: //app.ziontechgroup.com/features/internationalization"
   }
   return (
     <>
-      <SEO
-        title="Internationalization"
+      <SEO title="Internationalization"
         description="Reach a global audience with multi-language support across the Zion platform."
         keywords="i18n, multi-language marketplace, localized listings"
-        canonical="https://app.ziontechgroup.com/features/internationalization"
-      />
+        canonical="https: //app.ziontechgroup.com/features/internationalization"
+      /></SEO>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
-      <Header />
+      <Header /></Header>
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md: px-6">
           <GradientHeading className="mb-4 text-center">Internationalization</GradientHeading>

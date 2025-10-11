@@ -25,19 +25,13 @@ import type { NextApiRequest, NextApiResponse } from 'next'
       referralsR && referralsR.status === 'fulfilled' && referralsR && referralsR.value.data
         ? (referralsR && referralsR.value.data as any[])
         : []
-import { createServerClient } from '../../../utils/supabase/server'
+import { createServerClient  } from '../../../utils/supabase/server'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const supabase = createServerClient()
     // Replace with your actual tables/queries
     // Fallback to mock if querying fails
-    const result = await Promise.allSettled([
-      supabase.from('users').select('id, role, country'),
-      supabase.from('jobs').select('id, status, category'),
-      supabase.from('quotes').select('id, status'),
-      supabase.from('projects').select('id, status'),
-      supabase.from('referrals').select('id, converted, source'),
-    ])
+    const result = await Promise.allSettled([supabase.from('users').select('id, role, country'), supabase.from('jobs').select('id, status, category'), supabase.from('quotes').select('id, status'), supabase.from('projects').select('id, status'), supabase.from('referrals').select('id, converted, source')])
     const [usersR, jobsR, quotesR, projectsR, referralsR] = result
     const users = usersR.status === 'fulfilled' && usersR.value.data ? usersR.value.data as any[] : []
     const jobs = jobsR.status === 'fulfilled' && jobsR.value.data ? jobsR.value.data as any[] : []
@@ -45,61 +39,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const projects = projectsR.status === 'fulfilled' && projectsR.value.data ? projectsR.value.data as any[] : []
     const referrals = referralsR.status === 'fulfilled' && referralsR.value.data ? referralsR.value.data as any[] : []
     const mockIfEmpty = (arr: any[], mock: any[]) => (arr.length ? arr : mock)
-    const usersData = mockIfEmpty(users, [
-      { id: 1, role: 'client', country: 'US' },
-      { id: 2, role: 'talent', country: 'IN' },
-      { id: 3, role: 'talent', country: 'US' },
-      { id: 4, role: 'client', country: 'GB' },
-    ])
-    const jobsData = mockIfEmpty(jobs, [
-      { id: 11, status: 'posted', category: 'AI/ML' },
-      { id: 12, status: 'filled', category: 'Design' },
-      { id: 13, status: 'filled', category: 'AI/ML' },
-    ])
-    const quotesData = mockIfEmpty(quotes, [
-      { id: 21, status: 'sent' },
-      { id: 22, status: 'accepted' },
-      { id: 23, status: 'sent' },
-    ])
-    const projectsData = mockIfEmpty(projects, [
-      { id: 31, status: 'active' },
-      { id: 32, status: 'completed' },
-      { id: 33, status: 'active' },
-    ])
-    const referralsData = mockIfEmpty(referrals, [
-      { id: 41, converted: true, source: 'linkedin' },
-      { id: 42, converted: false, source: 'twitter' },
-      { id: 43, converted: true, source: 'partner' },
-    ]);      { id: 41, converted: true, source: 'linkedin' }
+    const usersData = mockIfEmpty(users, [{ id: 1, role: 'client', country: 'US' }, { id: 2, role: 'talent', country: 'IN' }, { id: 3, role: 'talent', country: 'US' }, { id: 4, role: 'client', country: 'GB' }])
+    const jobsData = mockIfEmpty(jobs, [{ id: 11, status: 'posted', category: 'AI/ML' }, { id: 12, status: 'filled', category: 'Design' }, { id: 13, status: 'filled', category: 'AI/ML' }])
+    const quotesData = mockIfEmpty(quotes, [{ id: 21, status: 'sent' }, { id: 22, status: 'accepted' }, { id: 23, status: 'sent' }])
+    const projectsData = mockIfEmpty(projects, [{ id: 31, status: 'active' }, { id: 32, status: 'completed' }, { id: 33, status: 'active' }])
+    const referralsData = mockIfEmpty(referrals, [{ id: 41, converted: true, source: 'linkedin' }, { id: 42, converted: false, source: 'twitter' }, { id: 43, converted: true, source: 'partner' }]);      { id: 41, converted: true, source: 'linkedin' }
       { id: 42, converted: false, source: 'twitter' }
     const mockIfEmpty = (arr: any[], mock: any[]) => (arr.length ? arr : mock)
     const mockIfEmpty = (arr: any[], mock: any[]) => (arr && arr.length ? arr : mock),
-    const usersData = mockIfEmpty(users, [
-      { id: 1, role: 'client', country: 'US' }
+    const usersData = mockIfEmpty(users, [{ id: 1, role: 'client', country: 'US' }
       { id: 2, role: 'talent', country: 'IN' }
       { id: 3, role: 'talent', country: 'US' }
-      { id: 4, role: 'client', country: 'GB' }
-    ])
-    const jobsData = mockIfEmpty(jobs, [
-      { id: 11, status: 'posted', category: 'AI/ML' }
+      { id: 4, role: 'client', country: 'GB' }])
+    const jobsData = mockIfEmpty(jobs, [{ id: 11, status: 'posted', category: 'AI/ML' }
       { id: 12, status: 'filled', category: 'Design' }
-      { id: 13, status: 'filled', category: 'AI/ML' }
-    ])
-    const quotesData = mockIfEmpty(quotes, [
-      { id: 21, status: 'sent' }
+      { id: 13, status: 'filled', category: 'AI/ML' }])
+    const quotesData = mockIfEmpty(quotes, [{ id: 21, status: 'sent' }
       { id: 22, status: 'accepted' }
-      { id: 23, status: 'sent' }
-    ])
-    const projectsData = mockIfEmpty(projects, [
-      { id: 31, status: 'active' }
+      { id: 23, status: 'sent' }])
+    const projectsData = mockIfEmpty(projects, [{ id: 31, status: 'active' }
       { id: 32, status: 'completed' }
-      { id: 33, status: 'active' }
-    ])
-    const referralsData = mockIfEmpty(referrals, [
-      { id: 41, converted: true, source: 'linkedin' }
+      { id: 33, status: 'active' }])
+    const referralsData = mockIfEmpty(referrals, [{ id: 41, converted: true, source: 'linkedin' }
       { id: 42, converted: false, source: 'twitter' }
-      { id: 43, converted: true, source: 'partner' }
-    ]);      { id: 41, converted: true, source: 'linkedin' }
+      { id: 43, converted: true, source: 'partner' }]);      { id: 41, converted: true, source: 'linkedin' }
       { id: 42, converted: false, source: 'twitter' }
       { id: 43, converted: true, source: 'partner' }])
     ])
@@ -141,16 +104,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         quotes_accepted: 1,
         active_projects: 2,
       },
-      top_categories: [
-        { label: 'AI / ML', value: 2 },
-        { label: 'Design', value: 1 },
-      ],
+      top_categories: [{ label: 'AI / ML', value: 2 }, { label: 'Design', value: 1 }],
       referral_conversions: 2,
-      geo: [
-        { label: 'US', value: 2 },
-        { label: 'IN', value: 1 },
-        { label: 'GB', value: 1 },
-      ],
+      geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }],
     })
   }}
     const geoCounts: Record<string, number> = {}

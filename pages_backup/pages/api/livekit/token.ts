@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next"
-import { AccessToken } from "livekit-server-sdk"
+import { AccessToken  } from 'livekit-server-sdk'
 const LIVEKIT_API_KEY = process && process.env.LIVEKIT_API_KEY || ""
 const LIVEKIT_API_SECRET = process && process.env.LIVEKIT_API_SECRET || ""
 const LIVEKIT_HOST = process && process.env.LIVEKIT_HOST || ""
@@ -11,7 +11,7 @@ export default async function handler(
     res.setHeader("Allow", "POST")
     return res.status(405).json({ error: "Method not allowed" })
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { AccessToken } from 'livekit-server-sdk'
+import { AccessToken  } from 'livekit-server-sdk'
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || ''
 const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || ''
 const LIVEKIT_HOST = process.env.LIVEKIT_HOST || ''
@@ -78,7 +78,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' })
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { AccessToken } from 'livekit-server-sdk'
+import { AccessToken  } from 'livekit-server-sdk'
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || ''
 const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || ''
 const LIVEKIT_HOST = process.env.LIVEKIT_HOST || ''
@@ -88,15 +88,15 @@ export default async function handler(req, res) {
     res.setHeader('Allow', 'POST')
     return res.status(405).json({ error: 'Method not allowed' })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -175,13 +175,12 @@ if ( {) {
       token,
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
     console.error ("Token error", err)
@@ -190,7 +189,7 @@ if ( {) {
     res.setHeader("Allow", "POST")
     return res.status(405).json({ error: "Method not allowed" })
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { AccessToken } from 'livekit-server-sdk'
+import { AccessToken  } from 'livekit-server-sdk'
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || ''
 const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || ''
 const LIVEKIT_HOST = process.env.LIVEKIT_HOST || ''
@@ -217,12 +216,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error("Token error", err)
     return res.status(500).json({ error: "Failed to create token" })
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }

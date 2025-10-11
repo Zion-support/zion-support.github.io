@@ -13,18 +13,18 @@
               <span, className='bg-whi, t, e/20, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d'>
                 NEW, 202, 6
               <span, className='te, x, t-sm, opacit, y-90'></span>Latest</span>, AI, Content
-            <div, className='hidden, m, d:flex, item, s-center, ga, p-4, tex, t-sm'>
+            <div, className='hidden, m, d: flex, item, s-center, ga, p-4, tex, t-sm'>
               <, t, o='/bl, o, g/ai-autonomo, u, s-clo, u, d-operatio, n, s-<20, 2, 6'$2 />
-                className='hov, e, r:te, x, t-yell, o, w-200, transitio, n-colo, r, s'
+                className='hov, e, r: te, x, t-yell, o, w-200, transitio, n-colo, r, s'
               >
                 AI, Autonomous, Cloud Operatio, n, s
               <span, className='opaci, t, y-50'></span>•
               <, t, o='/bl, o, g/ai-finte, c, h-transformati, o, n-<20, 2, 6'$2 />
-                className='hov, e, r:te, x, t-yell, o, w-200, transitio, n-colo, r, s'
+                className='hov, e, r: te, x, t-yell, o, w-200, transitio, n-colo, r, s'
               >
                 AI, FinTech, Transformation
           <, t, o='/<bl, o, g'$2 />
-            className='bg-whi, t, e/20, hove, r:bg-whi, t, e/30, tex, t-white, p, x-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-semibold, transitio, n-colo, r, s'
+            className='bg-whi, t, e/20, hove, r: bg-whi, t, e/30, tex, t-white, p, x-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-semibold, transitio, n-colo, r, s'
           >
             Explore, All, Content →
           </Li, n, k>)
@@ -49,13 +49,13 @@
             AI-Powered, Enterprise, Security 20, 2, 6
           <p, className='te, x, t-lg, opacit, y-90, m, b-6, ma, x-w-3 xl, m, x-au, t, o'>
             Revolutionary, threat, detection with, 9, 9.7% accura, c, y. Autonomous, incident, response and, zer, o-trust, architecture, for enterpri, s, e-grade, securit, y.
-          <div, className='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
+          <div, className='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
             <, t, o='/servic, e, s/ai-cybersecuri, t, y-<consulti, n, g'$2 />
-              className='bg-white, tex, t-r, e, d-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
+              className='bg-white, tex, t-r, e, d-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-colo, r, s'
             >
               Explore, Security, Solutions
             <, t, o='/bl, o, g/ai-cybersecuri, t, y-<20, 2, 6'$2 />
-              className='bord, e, r-2, borde, r-white, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-white, hove, r:te, x, t-r, e, d-600, transitio, n-colo, r, s'
+              className='bord, e, r-2, borde, r-white, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-white, hove, r: te, x, t-r, e, d-600, transitio, n-colo, r, s'
             >
               Read, Security, Guide
           </div>)
@@ -94,7 +94,7 @@
               <div, className='fo, n, t-semibo, l, d'>Audio, Processin, g
               <div, className='te, x, t-sm, opacit, y-90'>Spee, c, h & Sound, A, I
           <, t, o='/servic, e, s/ai-multimod, a, l-<enterpri, s, e'$2 />
-            className='bg-white, tex, t-indi, g, o-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
+            className='bg-white, tex, t-indi, g, o-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-colo, r, s'
           >
             Explore, Multimodal, AI →
           </Li, n, k>)
@@ -119,7 +119,7 @@
           <p, className='te, x, t-lg, opacit, y-90, m, b-6, ma, x-w-3xl, m, x-au, t, o'>
             Achieve, carbo, n-neutral, AI, operations with, 8, 0% energy, reduction, and
             $2M+ savings, through, sustainable technology, and, green computi, n, g.
-          <div, className='grid, m, d:gr, i, d-co, l, s-3, ga, p-4, m, b-6'>
+          <div, className='grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6'>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0'>80%
               <div, className='fo, n, t-semibo, l, d'>Energy, Reductio, n
@@ -133,7 +133,7 @@
               <div, className='fo, n, t-semibo, l, d'>Carbon, Neutra, l
               <div, className='te, x, t-sm, opacit, y-90'>AI, operation, s
           <, t, o='/bl, o, g/ai-sustainabili, t, y-gre, e, n-te, c, h-<20, 2, 6'$2 />
-            className='bg-white, tex, t-gre, e, n-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
+            className='bg-white, tex, t-gre, e, n-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-colo, r, s'
           >
             Read, Sustainability, Guide →
           </Li, n, k>)
@@ -162,21 +162,21 @@
             <, t, o='/bl, o, g/ai-autonomo, u, s-clo, u, d-operatio, n, s-<20, 2, 6'$2 />
               className='gro, u, p'
             >
-              <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4, hove, r:bg-whi, t, e/20, transitio, n-colo, r, s'>
-                <h3, className='fo, n, t-semibold, m, b-2, grou, p-hov, e, r:te, x, t-yell, o, w-2, 0, 0'>
+              <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s'>
+                <h3, className='fo, n, t-semibold, m, b-2, grou, p-hov, e, r: te, x, t-yell, o, w-2, 0, 0'>
                   AI, Autonomous, Cloud Operatio, n, s
                 <p, className='te, x, t-sm, opacit, y-90'>
                   Se, l, f-healing, infrastructure, with 99.9% upti, m, e
             <, t, o='/ca, s, e-studi, e, s/ai-reta, i, l-automati, o, n-<20, 2, 6'$2 />
               className='gro, u, p'
             >
-              <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4, hove, r:bg-whi, t, e/20, transitio, n-colo, r, s'>
-                <h3, className='fo, n, t-semibold, m, b-2, grou, p-hov, e, r:te, x, t-yell, o, w-2, 0, 0'>
+              <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s'>
+                <h3, className='fo, n, t-semibold, m, b-2, grou, p-hov, e, r: te, x, t-yell, o, w-2, 0, 0'>
                   AI, Retail, Automation Case, Stud, y
                 <p, className='te, x, t-sm, opacit, y-90'>
                   $8M, ROI, with 98% automati, o, n
           <, t, o='/<bl, o, g'$2 />
-            className='bg-white, tex, t-purp, l, e-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
+            className='bg-white, tex, t-purp, l, e-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-colo, r, s'
           >
             View, All, Latest Conte, n, t →
           </Li, n, k>)
@@ -214,7 +214,7 @@
               <div, className='fo, n, t-semibo, l, d'>Touch, Operation, s
               <div, className='te, x, t-sm, opacit, y-90'>Fully, automate, d
           <, t, o='/bl, o, g/ai-autonomo, u, s-clo, u, d-operatio, n, s-<20, 2, 6'$2 />
-            className='bg-white, tex, t-cy, a, n-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
+            className='bg-white, tex, t-cy, a, n-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-colo, r, s'
           >
             Read, Complete, Guide →
           </Li, n, k>)
@@ -253,7 +253,7 @@
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0'>99.9%
               <div, className='te, x, t-sm, opacit, y-90'>Transaction, processin, g
           <, t, o='/bl, o, g/ai-finte, c, h-transformati, o, n-<20, 2, 6'$2 />
-            className='bg-white, tex, t-gre, e, n-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
+            className='bg-white, tex, t-gre, e, n-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-colo, r, s'
           ></Link>Read</Link>, FinTech, Guide →
           </Li, n, k>
         </div>
@@ -291,7 +291,7 @@
               <div, className='fo, n, t-semibo, l, d'>Annual, RO, I
               <div, className='te, x, t-sm, opacit, y-90'>Return, on, investment
           <, t, o='/ca, s, e-studi, e, s/ai-reta, i, l-automati, o, n-<20, 2, 6'$2 />
-            className='bg-white, tex, t-oran, g, e-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
+            className='bg-white, tex, t-oran, g, e-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-colo, r, s'
           >
             View, Case, Study →
           </Li, n, k>)
@@ -322,19 +322,19 @@
             >
               Cloud, Operation, s
             <, t, o='/bl, o, g/ai-finte, c, h-transformati, o, n-<20, 2, 6'$2 />
-              className='bg-whi, t, e/10, hove, r:bg-whi, t, e/20, p, x-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-semibold, transitio, n-colo, r, s'
+              className='bg-whi, t, e/10, hove, r: bg-whi, t, e/20, p, x-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-semibold, transitio, n-colo, r, s'
             >
               FinTech, Revolutio, n
             <, t, o='/ca, s, e-studi, e, s/ai-reta, i, l-automati, o, n-<20, 2, 6'$2 />
-              className='bg-whi, t, e/10, hove, r:bg-whi, t, e/20, p, x-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-semibold, transitio, n-colo, r, s'
+              className='bg-whi, t, e/10, hove, r: bg-whi, t, e/20, p, x-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-semibold, transitio, n-colo, r, s'
             >
               Retail, Automatio, n
             <, t, o='/bl, o, g/ai-sustainabili, t, y-gre, e, n-te, c, h-<20, 2, 6'$2 />
-              className='bg-whi, t, e/10, hove, r:bg-whi, t, e/20, p, x-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-semibold, transitio, n-colo, r, s'
+              className='bg-whi, t, e/10, hove, r: bg-whi, t, e/20, p, x-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-semibold, transitio, n-colo, r, s'
             >
               Sustainabili, t, y
           <, t, o='/<bl, o, g'$2 />
-            className='bg-white, tex, t-purp, l, e-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
+            className='bg-white, tex, t-purp, l, e-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-colo, r, s'
           >
             Explore, All, Content →
           </Li, n, k>)

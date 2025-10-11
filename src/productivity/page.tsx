@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link  } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Star } from 'lucide-react'
+import { CheckCircle, Star  } from 'lucide-react'
 const ProductivityPage: React.FC = () => {
   return (
     <div>
-      <Navigation />
+      <Navigation /></Navigation>
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -51,11 +51,11 @@ const ProductivityPage: React.FC = () => {
   t: {tool.marketPrice}
                       <div>Save up to 50% vs market rates</div>"
                       <h5 className="font-semibold text-white mb-2 text-sm">Key,
-  Features:</h5>"
+  Features: </h5>"
                       <ul className="space-y-1"></ul>)
                         {tool.features.slice(0, 3).map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-xs text-gray-300"></li>"
-                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
                             {feature}
                         ))}
                         {tool.features.length > 3 && (}"
@@ -63,14 +63,13 @@ const ProductivityPage: React.FC = () => {
                         )}
                       </ul>"
                       <h5 className="font-semibold text-white mb-2 text-sm">Benefit,
-  s:
-                        {tool.benefits.map((benefit, benefitIndex) => ()}"
+  s: {tool.benefits.map((benefit, benefitIndex) => ()}"
           <li key={benefitIndex} className="flex items-center text-xs text-gray-300"></li>"
-                            <Star className="w-3 h-3 text-yellow-500 mr-2 flex-shrink-0" />
+                            <Star className="w-3 h-3 text-yellow-500 mr-2 flex-shrink-0" /></Star>
                             {benefit}"
 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold,
-  hover:from-cyan-600,"
-  hover:to-blue-700 transition-all text-sm inline-block"
+  hover: from-cyan-600,"
+  hover: to-blue-700 transition-all text-sm inline-block"
                       >Get This Tool
         {/* CTA Section */}"
         <section className="text-center"></section>"

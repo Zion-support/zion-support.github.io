@@ -39,15 +39,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return `${d.getMonth() + 1}/${d.getDate()}`
   const now = new Date(),
   const labels = Array.from({ length: 14 }, (_, i) => {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const d = new Date(now)
     d && d.setDate(d && d.getDate() - (13 - i))
     return `${d && d.getMonth() + 1}/${d && d.getDate()}`
     return `${d.getMonth() + 1}/${d.getDate()}`
   })
-  const marketplace = [
-    {
+  const marketplace = [{
       key: 'jobs_24h'
       label: 'Jobs posted (24h)'
       value: rand(15, 60)
@@ -81,10 +78,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       label: 'Job fill rate %'
       value: rand(45, 92)
       trend: generateSeries(14, 70)
-    }
-  ]
-  const dao = [
-    {
+    }]
+  const dao = [{
       key: 'proposals_created'
       label: 'Proposals created'
       value: rand(3, 20)
@@ -97,10 +92,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       trend: generateSeries(14, 38)
     }
     { key: 'delegate_heat', label: 'Delegate activity', value: rand(100, 600) }
-    { key: 'region_quorum', label: 'Regions above quorum', value: rand(2, 7) }
-  ]
-  const token = [
-    {
+    { key: 'region_quorum', label: 'Regions above quorum', value: rand(2, 7) }]
+  const token = [{
       key: 'circulating_supply'
       label: 'Circulating supply (ZION$)'
       value: rand(1_000_000, 2_500_000)
@@ -124,10 +117,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       value: rand(1_000_000, 7_000_000)
       trend: generateSeries(14, 3_500_000)
     }
-    { key: 'top_earners', label: 'Top earners (count)', value: rand(5, 25) }
-  ]
-  const multiverse = [
-    {
+    { key: 'top_earners', label: 'Top earners (count)', value: rand(5, 25) }]
+  const multiverse = [{
       key: 'active_instances'
       label: 'Total active sub-instances'
       value: rand(8, 32)
@@ -148,8 +139,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       label: 'Cross-instance token movement'
       value: rand(1_000, 12_000)
       trend: generateSeries(14, 6_000)
-    }
-  ]
+    }]
   const response: any = {
       marketplace: marketplace.map((m) => m.trend || generateSeries(14, m.value))
       dao: dao.map((m) => m.trend || generateSeries(14, m.value))
@@ -161,33 +151,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     d.setDate(d.getDate() - (13 - i))
     return `${d.getMonth() + 1}/${d.getDate()}`
   })
-  const marketplace = [
-    { key: 'jobs_24h', label: 'Jobs posted (24h)', value: rand(15, 60), trend: generateSeries(14, 40) },
-    { key: 'jobs_7d', label: 'Jobs posted (7d)', value: rand(120, 360), trend: generateSeries(14, 260) },
-    { key: 'jobs_total', label: 'Jobs posted (total)', value: rand(5000, 15000) },
-    { key: 'talent_onboarded', label: 'Talent onboarded', value: rand(50, 200), trend: generateSeries(14, 120) },
-    { key: 'proposal_conversions', label: 'Proposal conversions', value: rand(30, 120), trend: generateSeries(14, 80) },
-    { key: 'job_fill_rate', label: 'Job fill rate %', value: rand(45, 92), trend: generateSeries(14, 70) },
-  ]
-  const dao = [
-    { key: 'proposals_created', label: 'Proposals created', value: rand(3, 20), trend: generateSeries(14, 12) },
-    { key: 'voter_participation', label: 'Voter participation %', value: rand(10, 65), trend: generateSeries(14, 38) },
-    { key: 'delegate_heat', label: 'Delegate activity', value: rand(100, 600) },
-    { key: 'region_quorum', label: 'Regions above quorum', value: rand(2, 7) },
-  ]
-  const token = [
-    { key: 'circulating_supply', label: 'Circulating supply (ZION$)', value: rand(1_000_000, 2_500_000), trend: generateSeries(14, 1_700_000) },
-    { key: 'active_wallets', label: 'Active wallets', value: rand(4_000, 12_000), trend: generateSeries(14, 8_000) },
-    { key: 'tx_volume_daily', label: 'Transaction volume (daily)', value: rand(100_000, 700_000), trend: generateSeries(14, 300_000) },
-    { key: 'treasury_health', label: 'Treasury health (USD)', value: rand(1_000_000, 7_000_000), trend: generateSeries(14, 3_500_000) },
-    { key: 'top_earners', label: 'Top earners (count)', value: rand(5, 25) },
-  ]
-  const multiverse = [
-    { key: 'active_instances', label: 'Total active sub-instances', value: rand(8, 32), trend: generateSeries(14, 20) },
-    { key: 'map_overlay', label: 'Map overlay intensity', value: rand(100, 900) },
-    { key: 'top5_growth', label: 'Top 5 by user growth', value: rand(500, 2500) },
-    { key: 'cross_token', label: 'Cross-instance token movement', value: rand(1_000, 12_000), trend: generateSeries(14, 6_000) },
-  ]
+  const marketplace = [{ key: 'jobs_24h', label: 'Jobs posted (24h)', value: rand(15, 60), trend: generateSeries(14, 40) }, { key: 'jobs_7d', label: 'Jobs posted (7d)', value: rand(120, 360), trend: generateSeries(14, 260) }, { key: 'jobs_total', label: 'Jobs posted (total)', value: rand(5000, 15000) }, { key: 'talent_onboarded', label: 'Talent onboarded', value: rand(50, 200), trend: generateSeries(14, 120) }, { key: 'proposal_conversions', label: 'Proposal conversions', value: rand(30, 120), trend: generateSeries(14, 80) }, { key: 'job_fill_rate', label: 'Job fill rate %', value: rand(45, 92), trend: generateSeries(14, 70) }]
+  const dao = [{ key: 'proposals_created', label: 'Proposals created', value: rand(3, 20), trend: generateSeries(14, 12) }, { key: 'voter_participation', label: 'Voter participation %', value: rand(10, 65), trend: generateSeries(14, 38) }, { key: 'delegate_heat', label: 'Delegate activity', value: rand(100, 600) }, { key: 'region_quorum', label: 'Regions above quorum', value: rand(2, 7) }]
+  const token = [{ key: 'circulating_supply', label: 'Circulating supply (ZION$)', value: rand(1_000_000, 2_500_000), trend: generateSeries(14, 1_700_000) }, { key: 'active_wallets', label: 'Active wallets', value: rand(4_000, 12_000), trend: generateSeries(14, 8_000) }, { key: 'tx_volume_daily', label: 'Transaction volume (daily)', value: rand(100_000, 700_000), trend: generateSeries(14, 300_000) }, { key: 'treasury_health', label: 'Treasury health (USD)', value: rand(1_000_000, 7_000_000), trend: generateSeries(14, 3_500_000) }, { key: 'top_earners', label: 'Top earners (count)', value: rand(5, 25) }]
+  const multiverse = [{ key: 'active_instances', label: 'Total active sub-instances', value: rand(8, 32), trend: generateSeries(14, 20) }, { key: 'map_overlay', label: 'Map overlay intensity', value: rand(100, 900) }, { key: 'top5_growth', label: 'Top 5 by user growth', value: rand(500, 2500) }, { key: 'cross_token', label: 'Cross-instance token movement', value: rand(1_000, 12_000), trend: generateSeries(14, 6_000) }]
   const response: any = {
     marketplace,
     dao,
@@ -262,110 +229,26 @@ function handler() {
     const d = new Date (now)
     d.set_date (d.get_date () - (13 - i))
     return `${d.get_month () + 1}/${d.get_date ()}`
-  const marketplace = [
-    {
-      key: 'jobs_24h',
-      label: 'Jobs posted (24h)',
-      value: rand (15, 60),
-      trend: generate_series (14, 40),
-    },
-    {
-      key: 'jobs_7d',
-      label: 'Jobs posted (7d)',
-      value: rand (120, 360),
-      trend: generate_series (14, 260),
-    },
-    {
-      key: 'jobs_total',
-      label: 'Jobs posted (total)',
-      value: rand (5000, 15000),
-    },
-    {
-      key: 'talent_onboarded',
-      label: 'Talent onboarded',
-      value: rand (50, 200),
-      trend: generate_series (14, 120),
-    },
-    {
-      key: 'proposal_conversions',
-      label: 'Proposal conversions',
-      value: rand (30, 120),
-      trend: generate_series (14, 80),
-    },
-    {
-      key: 'job_fill_rate',
-      label: 'Job fill rate %',
-      value: rand (45, 92),
-      trend: generate_series (14, 70),
-    },
-  ]
-  const dao = [
-    {
-      key: 'proposals_created',
-      label: 'Proposals created',
-      value: rand (3, 20),
-      trend: generate_series (14, 12),
-    },
-    {
-      key: 'voter_participation',
-      label: 'Voter participation %',
-      value: rand (10, 65),
-      trend: generate_series (14, 38),
-    },
-    { key: 'delegate_heat', label: 'Delegate activity', value: rand (100, 600) },
-    { key: 'region_quorum', label: 'Regions above quorum', value: rand (2, 7) },
-  ]
-  const token = [
-    {
-      key: 'circulating_supply',
-      label: 'Circulating supply (ZION$)',
-      value: rand (1_000_000, 2_500_000),
-      trend: generate_series (14, 1_700_000),
-    },
-    {
-      key: 'active_wallets',
-      label: 'Active wallets',
-      value: rand (4_000, 12_000),
-      trend: generate_series (14, 8_000),
-    },
-    {
-      key: 'tx_volume_daily',
-      label: 'Transaction volume (daily)',
-      value: rand (100_000, 700_000),
-      trend: generate_series (14, 300_000),
-    },
-    {
-      key: 'treasury_health',
-      label: 'Treasury health (USD)',
-      value: rand (1_000_000, 7_000_000),
-      trend: generate_series (14, 3_500_000),
-    },
-    { key: 'top_earners', label: 'Top earners (count)', value: rand (5, 25) },
-  ]
-  const multiverse = [
-    {
-      key: 'active_instances',
-      label: 'Total active sub - instances',
-      value: rand (8, 32),
-      trend: generate_series (14, 20),
-    },
-    {
-      key: 'map_overlay',
-      label: 'Map overlay intensity',
-      value: rand (100, 900),
-    },
-    {
-      key: 'top5_growth',
-      label: 'Top 5 by user growth',
-      value: rand (500, 2500),
-    },
-    {
-      key: 'cross_token',
-      label: 'Cross - instance token movement',
-      value: rand (1_000, 12_000),
-      trend: generate_series (14, 6_000),
-    },
-  ]
+  const marketplace = [{
+      key: 'jobs_24h', label: 'Jobs posted (24h)', value: rand (15, 60), trend: generate_series (14, 40), }, {
+      key: 'jobs_7d', label: 'Jobs posted (7d)', value: rand (120, 360), trend: generate_series (14, 260), }, {
+      key: 'jobs_total', label: 'Jobs posted (total)', value: rand (5000, 15000), }, {
+      key: 'talent_onboarded', label: 'Talent onboarded', value: rand (50, 200), trend: generate_series (14, 120), }, {
+      key: 'proposal_conversions', label: 'Proposal conversions', value: rand (30, 120), trend: generate_series (14, 80), }, {
+      key: 'job_fill_rate', label: 'Job fill rate %', value: rand (45, 92), trend: generate_series (14, 70), }]
+  const dao = [{
+      key: 'proposals_created', label: 'Proposals created', value: rand (3, 20), trend: generate_series (14, 12), }, {
+      key: 'voter_participation', label: 'Voter participation %', value: rand (10, 65), trend: generate_series (14, 38), }, { key: 'delegate_heat', label: 'Delegate activity', value: rand (100, 600) }, { key: 'region_quorum', label: 'Regions above quorum', value: rand (2, 7) }]
+  const token = [{
+      key: 'circulating_supply', label: 'Circulating supply (ZION$)', value: rand (1_000_000, 2_500_000), trend: generate_series (14, 1_700_000), }, {
+      key: 'active_wallets', label: 'Active wallets', value: rand (4_000, 12_000), trend: generate_series (14, 8_000), }, {
+      key: 'tx_volume_daily', label: 'Transaction volume (daily)', value: rand (100_000, 700_000), trend: generate_series (14, 300_000), }, {
+      key: 'treasury_health', label: 'Treasury health (USD)', value: rand (1_000_000, 7_000_000), trend: generate_series (14, 3_500_000), }, { key: 'top_earners', label: 'Top earners (count)', value: rand (5, 25) }]
+  const multiverse = [{
+      key: 'active_instances', label: 'Total active sub - instances', value: rand (8, 32), trend: generate_series (14, 20), }, {
+      key: 'map_overlay', label: 'Map overlay intensity', value: rand (100, 900), }, {
+      key: 'top5_growth', label: 'Top 5 by user growth', value: rand (500, 2500), }, {
+      key: 'cross_token', label: 'Cross - instance token movement', value: rand (1_000, 12_000), trend: generate_series (14, 6_000), }]
   const response: any = {
     marketplace,
     dao,

@@ -513,16 +513,16 @@ import React from 'react'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import SEOOptimizer from '../../components/SEOOptimizer'
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation as NavIcon, PieChart, TrendingDown, Activity } from 'lucide-react'
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation as NavIcon, PieChart, TrendingDown, Activity  } from 'lucide-react'
 const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page: React.FC = () => {,
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
-      <SEOOptimizer;),
+      <SEOOptimizer ;),
         title="${config.title} - Zion Tech Group"
         description="${config.description}"
         keywords={${JSON.stringify(config.keywords)}}
-        canonicalUrl="https://ziontechgroup.com/${pageName}"
-      />
-      <Navigation />
+        canonicalUrl="https: //ziontechgroup.com/${pageName}"
+      /></SEOOptimizer>
+      <Navigation /></Navigation>
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -544,7 +544,7 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
                 href="tel:+13024640950"
                 className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5" /></Phone>
                 +1 302 464 0950,
               </a>
             </div>
@@ -562,7 +562,7 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             ${config.features.map(feature => `)
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">),
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />),
@@ -578,7 +578,7 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
               Proven results and measurable impact for your business
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
             ${config.benefits.map(benefit => `)
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">)
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover: border-purple-400/60 transition-all duration-300">)
               <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />),
               <h3 className="text-xl font-semibold text-white mb-2">${benefit}
               <p className="text-gray-300">Measurable improvement in your business metrics
@@ -618,7 +618,7 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
               Contact our experts to discuss your specific needs
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4 xl mx-auto">
             <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20">
-              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" /></Phone>
               <h3 className="text-xl font-bold text-white mb-2">Call Us
               <p className="text-gray-300 mb-4">Speak directly with our experts
               <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">

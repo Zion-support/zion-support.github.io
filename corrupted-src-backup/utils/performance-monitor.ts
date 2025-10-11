@@ -57,8 +57,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
           'paint')
           'largest-contentful-paint')
           'first-input')
-          'layout-shift')
-        ])
+          'layout-shift')])
       this.observer.observe({/* TODO: Fix JSX expression */})
       })
     } catch (error) {/* TODO: Fix JSX expression */}
@@ -94,11 +93,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 
   private trackUserInteractions(): void {
     if (typeof window === 'undefined') return
-    const interactionTypes: (keyof WindowEventMap)[] = [,
-      'click',
-      'scroll',
-      'keydown',
-      'resize']
+    const interactionTypes: (keyof WindowEventMap)[] = ['click', 'scroll', 'keydown', 'resize']
     interactionTypes.forEach(type => {)
       window.addEventListener()
         type)
@@ -236,8 +231,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   generateReport(): string {/* TODO: Fix JSX expression */}
   Score: ${score}/100
 Core Web,
-  Vitals:
-- LC,`
+  Vitals: - LC,`
   P: ${metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}
 - FI,`
   D: ${metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}
@@ -247,16 +241,13 @@ Core Web,
   P: ${metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}
 
     return `
-Performance Report:
-Overall Score: ${score}/100
-Core Web Vitals:
-- LCP: ${metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}
+Performance Report: Overall Score: ${score}/100
+Core Web Vitals: - LCP: ${metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}
 - FID: ${metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}
 - CLS: ${metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}
 - FCP: ${metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}
 
-Page Load Metrics:
-- TTFB: ${metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}
+Page Load Metrics: - TTFB: ${metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}
 - Load Time: ${metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'N/A'}
 - DOM Content Loaded: ${metrics.domContentLoaded ? `${metrics.domContentLoaded.toFixed(2)}ms` : 'N/A'}
 
@@ -266,8 +257,7 @@ User Interactions: ${interactions.length}
 - Keydowns: ${interactions.filter(i => i.type === 'keydown').length}
 - Resizes: ${interactions.filter(i => i.type === 'resize').length}
 Page Load,
-  Metrics:
-- TTF,`
+  Metrics: - TTF,`
   B: ${metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}
 - Load,`
   Time: ${metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'N/A'}

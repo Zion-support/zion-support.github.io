@@ -1,6 +1,6 @@
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1"
-import { Resend } from "npm:resend@1.0.0"
+import { serve  } from 'https: //deno.land/std@0.168.0/http/server.ts'
+import { createClient  } from 'https: //esm.sh/@supabase/supabase-js@2.7.1'
+import { Resend  } from 'npm: resend@1.0.0'
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"))
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
@@ -76,8 +76,7 @@ serve(async (req: Request) => {
       },
     }
     const name = userData.display_name || "there"
-    const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
-      missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
+    const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
     ] || "complete your next step"
     // Send email
     const { data: emailData, error: emailError } = await resend.emails.send({
@@ -122,7 +121,7 @@ serve(async (req: Request) => {
       }
     )
     if (notificationError) {
-      console.error("Failed to create notification:", notificationError)
+      console.error("Failed to create notification: ", notificationError)
     }
     return new Response(
       JSON.stringify({

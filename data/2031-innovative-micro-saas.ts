@@ -41,25 +41,10 @@ export interface InnovativeMicroSaas2031 {
   aiCapabilities: string[]
   marketDisruption: string
 }
-export const innovativeMicroSaas2031: InnovativeMicroSaas2031[] = [
-  // AI BUSINESS INTELLIGENCE SUITE
+export const innovativeMicroSaas2031: InnovativeMicroSaas2031[] = [// AI BUSINESS INTELLIGENCE SUITE
   {
-    id: 'ai-business-intelligence-suite',
-    name: 'AI Business Intelligence Suite',
-    tagline: 'Intelligent business insights and analytics',
-    price: '$299',
-    period: '/month',
-    description: 'Advanced AI-powered business intelligence platform that provides intelligent analytics, predictive insights, and automated reporting for business decision-making.',
-    features: [
-      'AI-powered analytics',
-      'Predictive insights',
-      'Automated reporting',
-      'Intelligent dashboards',
-      'Data visualization',
-      'Business forecasting',
-      'Performance tracking',
-      'Competitive analysis'
-    ],
+    id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite', tagline: 'Intelligent business insights and analytics', price: '$299', period: '/month', description: 'Advanced AI-powered business intelligence platform that provides intelligent analytics, predictive insights, and automated reporting for business decision-making.', features: [
+      'AI-powered analytics', 'Predictive insights', 'Automated reporting', 'Intelligent dashboards', 'Data visualization', 'Business forecasting', 'Performance tracking', 'Competitive analysis'],
     popular: true,
     icon: '📈',
     color: 'from-blue-600 via-indigo-600 to-purple-600',
@@ -103,16 +88,7 @@ export const innovativeMicroSaas2031: InnovativeMicroSaas2031[] = [
     price: '$599',
     period: '/month',
     description: 'Revolutionary quantum-secure communication platform that provides unbreakable encryption using quantum key distribution and post-quantum cryptography.',
-    features: [
-      'Quantum key distribution',
-      'Post-quantum cryptography',
-      'Unbreakable encryption',
-      'Secure messaging',
-      'Quantum authentication',
-      'Encrypted file sharing',
-      'Secure video calls',
-      'Quantum-resistant algorithms'
-    ],
+    features: ['Quantum key distribution', 'Post-quantum cryptography', 'Unbreakable encryption', 'Secure messaging', 'Quantum authentication', 'Encrypted file sharing', 'Secure video calls', 'Quantum-resistant algorithms'],
     popular: true,
     icon: '🔐',
     color: 'from-emerald-600 via-teal-600 to-cyan-600',
@@ -156,16 +132,7 @@ export const innovativeMicroSaas2031: InnovativeMicroSaas2031[] = [
     price: '$199',
     period: '/month',
     description: 'Intelligent AI-powered customer success platform that automates customer onboarding, success tracking, and retention strategies for SaaS companies.',
-    features: [
-      'Automated onboarding',
-      'Success tracking',
-      'Retention automation',
-      'Customer health scoring',
-      'Proactive support',
-      'Success metrics',
-      'Automated outreach',
-      'Customer journey optimization'
-    ],
+    features: ['Automated onboarding', 'Success tracking', 'Retention automation', 'Customer health scoring', 'Proactive support', 'Success metrics', 'Automated outreach', 'Customer journey optimization'],
     popular: false,
     icon: '🎯',
     color: 'from-purple-600 via-pink-600 to-rose-600',
@@ -209,16 +176,7 @@ export const innovativeMicroSaas2031: InnovativeMicroSaas2031[] = [
     price: '$399',
     period: '/month',
     description: 'Advanced blockchain-powered supply chain transparency platform that provides end-to-end traceability, authenticity verification, and compliance automation.',
-    features: [
-      'End-to-end traceability',
-      'Authenticity verification',
-      'Compliance automation',
-      'Smart contracts',
-      'Real-time tracking',
-      'Quality assurance',
-      'Sustainability tracking',
-      'Audit automation'
-    ],
+    features: ['End-to-end traceability', 'Authenticity verification', 'Compliance automation', 'Smart contracts', 'Real-time tracking', 'Quality assurance', 'Sustainability tracking', 'Audit automation'],
     popular: false,
     icon: '⛓️',
     color: 'from-orange-600 via-amber-600 to-yellow-600',
@@ -262,16 +220,7 @@ export const innovativeMicroSaas2031: InnovativeMicroSaas2031[] = [
     price: '$12,999',
     period: '/month',
     description: 'Revolutionary AI platform that completely automates business operations including decision-making, resource allocation, and strategic planning without human intervention.',
-    features: [
-      'Autonomous decision-making',
-      'Strategic planning AI',
-      'Resource optimization',
-      'Performance management',
-      'Risk assessment',
-      'Market analysis',
-      'Competitive intelligence',
-      'Business automation'
-    ],
+    features: ['Autonomous decision-making', 'Strategic planning AI', 'Resource optimization', 'Performance management', 'Risk assessment', 'Market analysis', 'Competitive intelligence', 'Business automation'],
     popular: true,
     icon: '🤖',
     color: 'from-indigo-600 via-purple-600 to-pink-600',

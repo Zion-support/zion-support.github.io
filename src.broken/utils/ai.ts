@@ -11,8 +11,7 @@ export async function generateText(prompt: string, system?: string): Promise<str
   }
   const resp = await client.chat.completions.create({
     model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
-    messages: [
-      ...(system ? [{ role: 'system' as const, content: system }] : []),
+    messages: [...(system ? [{ role: 'system' as const, content: system }] : []),
       { role: 'user', content: prompt }],
     temperature: 0.4})
       { role: 'user', content: prompt },

@@ -1,11 +1,10 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Link } from "react-router-dom"
-import { 
-  Bot, 
+import { motion  } from 'framer-motion'
+import { Button  } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card'
+import { Badge  } from '@/components/ui/badge'
+import { Link  } from 'react-router-dom'
+import { Bot, 
   Shield, 
   TrendingUp, 
   Code, 
@@ -16,30 +15,30 @@ import {
   Star,
   Users,
   Globe
-} from "lucide-react"
-import { getFeaturedServices } from "@/data/microSaasServices"
+ } from 'lucide-react'
+import { getFeaturedServices  } from '@/data/microSaasServices'
 export function MicroSaasShowcase() {
   const featuredServices = getFeaturedServices().slice(0, 6)
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case "AI Services":
-        return <Bot className="w-8 h-8" />
+        return <Bot className="w-8 h-8" /></Bot>
       case "IT Services":
-        return <Shield className="w-8 h-8" />
+        return <Shield className="w-8 h-8" /></Shield>
       case "Micro SAAS":
-        return <TrendingUp className="w-8 h-8" />
+        return <TrendingUp className="w-8 h-8" /></TrendingUp>
       case "Development":
-        return <Code className="w-8 h-8" />
+        return <Code className="w-8 h-8" /></Code>
       case "Analytics":
-        return <Database className="w-8 h-8" />
+        return <Database className="w-8 h-8" /></Database>
       case "Security":
-        return <Shield className="w-8 h-8" />
+        return <Shield className="w-8 h-8" /></Shield>
       case "Cloud":
-        return <Cloud className="w-8 h-8" />
+        return <Cloud className="w-8 h-8" /></Cloud>
       case "Automation":
-        return <Zap className="w-8 h-8" />
+        return <Zap className="w-8 h-8" /></Zap>
       default:
-        return <TrendingUp className="w-8 h-8" />
+        return <TrendingUp className="w-8 h-8" /></TrendingUp>
     }
   }
   const getCategoryColor = (category: string) => {
@@ -81,7 +80,7 @@ export function MicroSaasShowcase() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
             Featured Micro SAAS & AI Services
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
@@ -91,24 +90,24 @@ export function MicroSaasShowcase() {
           
           {/* Contact Info */}
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 max-w-2xl mx-auto border border-white/20">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-center">
               <div className="flex flex-col items-center">
                 <div className="w-10 h-10 bg-zion-cyan/20 rounded-full flex items-center justify-center mb-2">
-                  <Globe className="w-5 h-5 text-zion-cyan" />
+                  <Globe className="w-5 h-5 text-zion-cyan" /></Globe>
                 </div>
                 <span className="text-zion-slate-light text-sm">Website</span>
                 <span className="text-white font-semibold">ziontechgroup.com</span>
               </div>
               <div className="flex flex-col items-center">
                 <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center mb-2">
-                  <Users className="w-5 h-5 text-zion-purple" />
+                  <Users className="w-5 h-5 text-zion-purple" /></Users>
                 </div>
                 <span className="text-zion-slate-light text-sm">Phone</span>
                 <span className="text-white font-semibold">+1 302 464 0950</span>
               </div>
               <div className="flex flex-col items-center">
                 <div className="w-10 h-10 bg-zion-cyan/20 rounded-full flex items-center justify-center mb-2">
-                  <Star className="w-5 h-5 text-zion-cyan" />
+                  <Star className="w-5 h-5 text-zion-cyan" /></Star>
                 </div>
                 <span className="text-zion-slate-light text-sm">Email</span>
                 <span className="text-white font-semibold">kleber@ziontechgroup.com</span>
@@ -118,7 +117,7 @@ export function MicroSaasShowcase() {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {featuredServices.map((service, index) => (
             <motion.div
               key={service.id}
@@ -126,8 +125,8 @@ export function MicroSaasShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className="h-full bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 group cursor-pointer">
-                <CardHeader className="pb-4">
+              <Card className="h-full bg-white/10 backdrop-blur-md border-white/20 hover: bg-white/15 transition-all duration-300 hover:scale-105 group cursor-pointer"></Card>
+                <CardHeader className="pb-4"></CardHeader>
                   <div className="flex items-center justify-between mb-4">
                     <div className={`p-3 rounded-xl bg-gradient-to-br ${getCategoryColor(service.category)}`}>
                       {getCategoryIcon(service.category)}
@@ -144,33 +143,32 @@ export function MicroSaasShowcase() {
                     {service.rating} ({service.reviewCount} reviews)
                   </span>
                 </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {featuredServices.map((service, index) => (
-            <Card 
-              key={service.id} 
-              className="group hover:shadow-2xl transition-all duration-500 border-zion-purple/20 hover:border-zion-purple/40 overflow-hidden bg-gradient-to-br from-card to-card/50 backdrop-blur-sm"
+            <Card key={service.id} 
+              className="group hover: shadow-2xl transition-all duration-500 border-zion-purple/20 hover:border-zion-purple/40 overflow-hidden bg-gradient-to-br from-card to-card/50 backdrop-blur-sm"
               style={{
                 animationDelay: `${index * 100}ms`,
                 animation: 'fadeInUp 0.6s ease-out forwards'
               }}
-            >
+            ></Card>
               <div className="relative">
                 <img 
                   src={service.image} 
                   alt={service.title}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-48 object-cover group-hover: scale-105 transition-transform duration-500"
                 />
                 <div className="absolute top-3 left-3">
                   {categoryIcons[service.category as keyof typeof categoryIcons]}
                 </div>
                 <div className="absolute top-3 right-3 flex items-center gap-1 bg-black/70 text-white px-2 py-1 rounded-md">
-                  <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
+                  <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" /></Star>
                   <span className="text-xs font-medium">{service.rating}</span>
                 </div>
               </div>
 
-              <CardHeader className="pb-3">
-                <CardTitle className="text-lg group-hover:text-zion-cyan transition-colors line-clamp-2">
+              <CardHeader className="pb-3"></CardHeader>
+                <CardTitle className="text-lg group-hover: text-zion-cyan transition-colors line-clamp-2"></CardTitle>
                   {service.title}
                 </CardTitle>
                 <p className="text-sm text-muted-foreground line-clamp-2">
@@ -179,24 +177,24 @@ export function MicroSaasShowcase() {
                 
                 <div className="flex flex-wrap gap-1 mt-3">
                   {service.tags.slice(0, 2).map((tag, tagIndex) => (
-                    <Badge key={tagIndex} variant="secondary" className="text-xs bg-zion-purple/10 text-zion-purple hover:bg-zion-purple/20">
+                    <Badge key={tagIndex} variant="secondary" className="text-xs bg-zion-purple/10 text-zion-purple hover: bg-zion-purple/20"></Badge>
                       {tag}
                     </Badge>
                   ))}
                 </div>
               </CardHeader>
 
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4"></CardContent>
                 {/* Key Benefits */}
                 <div>
                   <h4 className="font-semibold text-sm mb-2 flex items-center gap-2 text-zion-cyan">
-                    <TrendingUp className="h-4 w-4" />
+                    <TrendingUp className="h-4 w-4" /></TrendingUp>
                     Key Benefits
                   </h4>
                   <ul className="space-y-1">
                     {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-xs text-muted-foreground flex items-start gap-2">
-                        <CheckCircle className="h-3 w-3 text-zion-cyan mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="h-3 w-3 text-zion-cyan mt-0.5 flex-shrink-0" /></CheckCircle>
                         <span>{benefit}</span>
                       </li>
                     ))}
@@ -225,10 +223,10 @@ export function MicroSaasShowcase() {
               </CardContent>
 
               <div className="px-6 pb-6">
-                <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple group">
-                  <Link to={`/micro-saas-services#${service.id}`}>
+                <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple group"></Button>
+                  <Link to={`/micro-saas-services#${service.id}`}></Link>
                     <span>Learn More</span>
-                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover: translate-x-1 transition-transform" /></ArrowRight>
                   </Link>
                 </Button>
 
@@ -238,7 +236,7 @@ export function MicroSaasShowcase() {
                   <div className="space-y-1">
                     {service.benefits.slice(0, 2).map((benefit, index) => (
                       <div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">
-                        <CheckCircle className="w-4 h-4 text-zion-cyan" />
+                        <CheckCircle className="w-4 h-4 text-zion-cyan" /></CheckCircle>
                         {benefit}
                       </div>
                     ))}
@@ -252,7 +250,7 @@ export function MicroSaasShowcase() {
 
         {/* CTA Section */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-zion-purple-dark/50 via-zion-purple/50 to-zion-cyan/50 rounded-2xl p-8 md:p-12 border border-zion-purple/30">
+          <div className="bg-gradient-to-r from-zion-purple-dark/50 via-zion-purple/50 to-zion-cyan/50 rounded-2xl p-8 md: p-12 border border-zion-purple/30">
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h3>
@@ -261,15 +259,15 @@ export function MicroSaasShowcase() {
               improve efficiency, and stay ahead of the competition.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" className="bg-zion-cyan hover:bg-zion-cyan-light text-black font-semibold px-8 py-3">
-                <Link to="/micro-saas-services">
-                  <TrendingUp className="h-5 w-5 mr-2" />
+              <Button asChild size="lg" className="bg-zion-cyan hover: bg-zion-cyan-light text-black font-semibold px-8 py-3"></Button>
+                <Link to="/micro-saas-services"></Link>
+                  <TrendingUp className="h-5 w-5 mr-2" /></TrendingUp>
                   Explore All Services
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple font-semibold px-8 py-3">
-                <Link to="/contact">
-                  <Users className="h-5 w-5 mr-2" />
+              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple font-semibold px-8 py-3"></Button>
+                <Link to="/contact"></Link>
+                  <Users className="h-5 w-5 mr-2" /></Users>
                   Get Consultation
                 </Link>
               </Button>
@@ -277,7 +275,7 @@ export function MicroSaasShowcase() {
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-3xl p-8 border border-zion-purple/30">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            <h3 className="text-2xl md: text-3xl font-bold text-white mb-4">
               Ready to Get Started?
             </h3>
             <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
@@ -285,13 +283,13 @@ export function MicroSaasShowcase() {
               improve efficiency, and stay ahead of the competition.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/micro-saas-services">
-                <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+              <Link to="/micro-saas-services"></Link>
+                <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"></Button>
                   View All Services
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+              <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"></Button>
                 Contact Sales
               </Button>
             </div>
@@ -301,7 +299,7 @@ export function MicroSaasShowcase() {
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20 p-8 rounded-2xl border border-zion-blue/30 max-w-4xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+            <h3 className="text-2xl md: text-3xl font-bold mb-4">
               Ready to Accelerate Your Business?
             </h3>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
@@ -310,15 +308,15 @@ export function MicroSaasShowcase() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light">
-                <Link to="/micro-saas-services">
+              <Button asChild size="lg" className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light"></Button>
+                <Link to="/micro-saas-services"></Link>
                   <span>Explore All Services</span>
-                  <ArrowRight className="h-4 w-4 ml-2" />
+                  <ArrowRight className="h-4 w-4 ml-2" /></ArrowRight>
                 </Link>
               </Button>
               
-              <Button variant="outline" size="lg" className="border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white">
-                <Link to="/request-quote">
+              <Button variant="outline" size="lg" className="border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white"></Button>
+                <Link to="/request-quote"></Link>
                   <span>Get Free Quote</span>
                 </Link>
               </Button>
@@ -326,15 +324,15 @@ export function MicroSaasShowcase() {
 
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-zion-cyan" />
+                <CheckCircle className="h-4 w-4 text-zion-cyan" /></CheckCircle>
                 <span>Free Consultation</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-zion-cyan" />
+                <CheckCircle className="h-4 w-4 text-zion-cyan" /></CheckCircle>
                 <span>24/7 Support</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-zion-cyan" />
+                <CheckCircle className="h-4 w-4 text-zion-cyan" /></CheckCircle>
                 <span>Enterprise Security</span>
               </div>
             </div>
@@ -354,7 +352,7 @@ export function MicroSaasShowcase() {
           }
         }
       `}</style>
-                    <Badge className="bg-zion-cyan text-zion-blue-dark">
+                    <Badge className="bg-zion-cyan text-zion-blue-dark"></Badge>
                       {service.pricingModel === 'monthly' ? 'Monthly' : 
                        service.pricingModel === 'yearly' ? 'Yearly' :
                        service.pricingModel === 'one-time' ? 'One-time' :
@@ -362,16 +360,16 @@ export function MicroSaasShowcase() {
                     </Badge>
                   </div>
                   
-                  <CardTitle className="text-xl text-white group-hover:text-zion-cyan transition-colors">
+                  <CardTitle className="text-xl text-white group-hover: text-zion-cyan transition-colors"></CardTitle>
                     {service.title}
                   </CardTitle>
                   
-                  <CardDescription className="text-zion-slate-light">
+                  <CardDescription className="text-zion-slate-light"></CardDescription>
                     {service.description}
                   </CardDescription>
                 </CardHeader>
                 
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-4"></CardContent>
                   {/* Price and Rating */}
                   <div className="flex items-center justify-between">
                     <div className="text-2xl font-bold text-white">
@@ -383,22 +381,22 @@ export function MicroSaasShowcase() {
                       </span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" /></Star>
                       <span className="text-white">{service.rating}</span>
                     </div>
                   </div>
                   
                   {/* AI Score */}
                   <div className="flex items-center justify-between">
-                    <span className="text-zion-slate-light">AI Score:</span>
-                    <Badge className="bg-zion-purple text-white">
+                    <span className="text-zion-slate-light">AI Score: </span>
+                    <Badge className="bg-zion-purple text-white"></Badge>
                       {service.aiScore}/100
                     </Badge>
                   </div>
                   
                   {/* Key Benefits */}
                   <div>
-                    <h4 className="text-white font-semibold mb-2">Key Benefits:</h4>
+                    <h4 className="text-white font-semibold mb-2">Key Benefits: </h4>
                     <ul className="space-y-1">
                       {service.benefits.slice(0, 2).map((benefit, idx) => (
                         <li key={idx} className="text-sm text-zion-slate-light flex items-center gap-2">
@@ -411,7 +409,7 @@ export function MicroSaasShowcase() {
                   
                   {/* Market Price */}
                   <div className="bg-zion-blue-dark/50 rounded-lg p-3">
-                    <p className="text-sm text-zion-slate-light mb-1">Market Price:</p>
+                    <p className="text-sm text-zion-slate-light mb-1">Market Price: </p>
                     <p className="text-white text-sm">{service.marketPrice}</p>
                   </div>
                 </CardContent>
@@ -428,7 +426,7 @@ export function MicroSaasShowcase() {
           className="text-center"
         >
           <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 backdrop-blur-md rounded-2xl p-8 border border-white/20">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            <h3 className="text-2xl md: text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
             <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
@@ -437,22 +435,20 @@ export function MicroSaasShowcase() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
+              <Button size="lg" 
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
                 asChild
-              >
-                <Link to="/micro-saas-services">
+              ></Button>
+                <Link to="/micro-saas-services"></Link>
                   View All Services
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="ml-2 h-4 w-4" /></ArrowRight>
                 </Link>
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
                 className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark"
-                onClick={() => window.open(`mailto:kleber@ziontechgroup.com?subject=Business Consultation Request`)}
-              >
+                onClick=>{() => window.open(`mailto:kleber@ziontechgroup.com?subject=Business Consultation Request`)}
                 Get Free Consultation
               </Button>
             </div>

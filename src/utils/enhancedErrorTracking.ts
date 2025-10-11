@@ -44,13 +44,13 @@ class EnhancedErrorTracker {
       window.addEventListener('error', event => {
         this.trackError(event.error, {
           component: 'Global',
-          action:         ,
+          action:  ,
 $4})
       })
       window.addEventListener('unhandledrejection', event => {
         this.trackError(new Error(event.reason), {
           component: 'Global',
-          action:         ,
+          action:  ,
 $4})
       })
     }
@@ -75,7 +75,7 @@ $4})
   }
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-    // // console.error('Tracked Error:', trackedError)
+    // // console.error('Tracked Error: ', trackedError)
   }
     // Send to analytics if available
     this.sendToAnalytics(trackedError)
@@ -237,7 +237,7 @@ class EnhancedErrorTracker {
     }
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
-  Error:', trackedError);}
+  Error: ', trackedError);}
     }
     // Send to analytics if available
     this.sendToAnalytics(trackedError)

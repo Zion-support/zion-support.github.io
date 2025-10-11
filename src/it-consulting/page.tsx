@@ -1,19 +1,19 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react'
+import { Helmet  } from 'react-helmet-async'
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, Star, Settings, Calendar, CheckSquare, FileText  } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const ITConsultingPage: React.FC = () => {
-  const consultingServices = [
-    {
-      title: 'Digital Transformation',
-      description: 'Comprehensive digital transformation strategies to modernize your business operations.',
-      icon: Brain,
-      features: ['Technology Assessment', 'Digital Strategy Planning', 'Process Optimization', 'Change Management'],
+  return (
+
+  const consultingServices = [{
+      title: 'Digital Transformation', description: 'Comprehensive digital transformation strategies to modernize your business operations.', icon: Brain, features: ['Technology Assessment', 'Digital Strategy Planning', 'Process Optimization', 'Change Management'],
       benefits: ['Increased Efficiency', 'Cost Reduction', 'Better Customer Experience', 'Competitive Advantage'],
       price: 'Starting at $5,000/month'
-    },
+    
+  );
+},
     {
       title: 'Cloud Migration',
       description: 'Seamless migration to cloud platforms with minimal downtime and maximum security.',
@@ -23,8 +23,8 @@ const ITConsultingPage: React.FC = () => {
       price: 'Starting at $3,500/month'
     }
   ]
-  return (<React.Fragment>
-      <Helmet>
+  return (<React .Fragment></React>
+      <Helmet ></Helmet>
         <title>IT Consulting Services - Zion Tech Group
         <meta name="description" content="Expert IT consulting services to transform your business. Strategic planning, digital transformation, cloud migration, and cybersecurity solutions." /></meta>"
         <meta name="keywords" content="IT consulting, digital transformation, cloud migration, cybersecurity, technology strategy" />
@@ -41,9 +41,9 @@ const ITConsultingPage: React.FC = () => {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
                 Transform your business with expert IT consulting. We provide strategic guidance, 
                 digital transformation, and technology solutions that drive growth and efficiency.
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
+            <div className="grid md: grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
               {consultingServices.map((service, index) => (
-                <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover: shadow-xl transition-shadow">
                   <div className="flex items-center mb-6">
                     <div className="p-3 bg-blue-100 rounded-xl mr-4">
                       <service.icon className="w-8 h-8 text-blue-600" />
@@ -51,26 +51,23 @@ const ITConsultingPage: React.FC = () => {
                       <h3 className="text-2xl font-bold text-gray-900">{service.title}
                       <p className="text-gray-600">{service.description}
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">Key Features:
-                    <ul className="space-y-2">
+                    <h4 className="font-semibold text-gray-900 mb-3">Key Features: <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-gray-600">
-                          <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                          <CheckCircle className="w-5 h-5 text-green-500 mr-2" /></CheckCircle>
                           {feature}
                         </li>)
                       ))}
-                    <h4 className="font-semibold text-gray-900 mb-3">Benefits:
-                    <ul className="space-y-2">
+                    <h4 className="font-semibold text-gray-900 mb-3">Benefits: <ul className="space-y-2">
                       {service.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-gray-600">
-                          <ArrowRight className="w-5 h-5 text-blue-500 mr-2" />
+                          <ArrowRight className="w-5 h-5 text-blue-500 mr-2" /></ArrowRight>
                           {benefit}
                       ))}
-                    <h4 className="font-semibold text-gray-900 mb-3">Benefits:
-                    <ul className="space-y-2">
+                    <h4 className="font-semibold text-gray-900 mb-3">Benefits: <ul className="space-y-2">
                       {service.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center">
-                          <ArrowRight className="w-5 h-5 text-blue-500 mr-2" />
+                          <ArrowRight className="w-5 h-5 text-blue-500 mr-2" /></ArrowRight>
                           {benefit}
                       ))}
                     <div className="text-center">
@@ -90,18 +87,18 @@ const ITConsultingPage: React.FC = () => {
                 Contact our experts for a free consultation and discover how we can help your business.
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">
-                  <Phone className="w-5 h-5 inline mr-2" />
+                  <Phone className="w-5 h-5 inline mr-2" /></Phone>
                   Call Us
   
                 <button className="bg-gray-600 text-white py-3 px-8 rounded-lg hover:bg-gray-700 transition-colors">
-                  <Mail className="w-5 h-5 inline mr-2" />
+                  <Mail className="w-5 h-5 inline mr-2" /></Mail>
                   Email Us
   
               </div>
             </div>
           </section>
         </main>
-        <Footer />
+        <Footer /></Footer>
       </div>
     </React.Fragment>
   ),

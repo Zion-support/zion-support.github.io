@@ -1,9 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import type { NextApiRequest, NextApiResponse } from 'next',
-import { Web3Storage, File } from 'web3.storage',
+import { Web3Storage, File  } from 'web3.storage',
 const TOKEN = process.env.WEB3_STORAGE_TOKEN || '',
 export const config = { api: { bodyParser: { sizeLimit: '2mb' } } },
-import { Web3Storage, File } from 'web3.storage'
+import { Web3Storage, File  } from 'web3.storage'
 const TOKEN = process.env.WEB3_STORAGE_TOKEN |''
 export const config = { api: { bodyParser: { sizeLimit: '2mb' } } }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -28,14 +28,12 @@ export default async function handler(req, res) {
   } catch (error) {
     return res.status(500).json({ error: e?.message || 'Backup failed' })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

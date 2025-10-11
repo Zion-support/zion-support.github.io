@@ -1,17 +1,7 @@
 import React from 'react'
 const SuccessStoriesShowcas, e: React.FC = () => { ,
-  const storie, s = [
-    {
-      company: "TechCorp, Internatio, n, a, l",
-      industry: "Technol, o, g, y",
-      ic, o, n: '🚀',
-      ic, o, n: <TrendingUp, classNam, e = "w-8 , h-, 8" / > ,</TrendingUp>resu</TrendingUp>, l, t: "3, 0, 0% Revenue, Grow, t, h",
-      description: "Implemented, multimodal, AI achieving, unprecedented, customer engagement, and, conversion ra, t, e, s.",",
-      metri, c, s: [,
-        "98% prediction, accura, c, y",
-        "60% cost, reductio, n",
-        "2 M, users, impacted"
-      ],",
+  const storie, s = [{
+      company: "TechCorp, Internatio, n, a, l", industry: "Technol, o, g, y", ic, o, n: '🚀', ic, o, n: <TrendingUp, classNam, e = "w-8, h-, 8" / >, </TrendingUp>resu</TrendingUp>, l, t: "3, 0, 0% Revenue, Grow, t, h", description: "Implemented, multimodal, AI achieving, unprecedented, customer engagement, and, conversion ra, t, e, s.", ", metri, c, s: [, "98% prediction, accura, c, y", "60% cost, reductio, n", "2 M, users, impacted"],",
       col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0"
      },
     { ",
@@ -20,11 +10,7 @@ const SuccessStoriesShowcas, e: React.FC = () => { ,
       ic, o, n: '🚀',
       ic, o, n: <Target, classNam, e = "w-8 , h-, 8" / > ,</Target>resu</Target>, l, t: "85% Downtime, Reducti, o, n",
       description: "AI, predictive, maintenance transformed, operatio, n, s, eliminating, unplanned, downtime and, reducing, costs.",",
-      metri, c, s: [,
-        "$2M, annual, saving, s",
-        "40% lower, maintenance, costs",
-        "99.9% uptime, achieve, d"
-      ],",
+      metri, c, s: ["$2M, annual, saving, s", "40% lower, maintenance, costs", "99.9% uptime, achieve, d"],",
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-50, 0"
      },
     { ",
@@ -33,11 +19,7 @@ const SuccessStoriesShowcas, e: React.FC = () => { ,
       ic, o, n: '🚀',
       ic, o, n: <Users, classNam, e = "w-8 , h-, 8" / > ,</Users>resu</Users>, l, t: "99.95% Fraud, Detecti, o, n",
       description: "AI, fraud, prevention system, achieved, industry-leading, accuracy, while reducing, false, positives b, y, 9, 5%.",",
-      metri, c, s: [,
-        "$5M, fraud, prevente, d",
-        "S, u, b-100ms, detectio, n",
-        "95% fewer, false, positives"
-      ],",
+      metri, c, s: ["$5M, fraud, prevente, d", "S, u, b-100ms, detectio, n", "95% fewer, false, positives"],",
       col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0"
      }
   ]; return(<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50">
@@ -110,20 +92,20 @@ const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
                 <, t, o = "/ca, s, e-studi, e, s""$2 />
                   className="te, x, t-indi, g, o-600, fon, t-semibold, hove, r: te, x, t-indi, g, o-800, flex, items-center, ga, p-2">
                   Read, Full, Story
-                  <Link, className="w-4 h-4" />
+                  <Link , className="w-4 h-4" /></Link>
                 >
                   Read, Full, Story;"
-                  <Link, className="w-4 h-4" />
+                  <Link , className="w-4 h-4" /></Link>
           ))}
         <div, classNam, e = "te, x, t-cent, e, r">
           <, t, o="/ca, s, e-studi, e, s"$2 />
-            className="inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r:sca, l, e-105, shado, w-lg">
+            className="inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r: sca, l, e-105, shado, w-lg">
             View, All, Success Stori, e, s
-            <Link, className="w-6 h-6" />
+            <Link , className="w-6 h-6" /></Link>
         </div>"
         <div, classNam, e = "te, x, t-cent, e, r"></div>"
           <, t, o="/ca, s, e-studi, e, s""$2 />
-            className="inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r:sca, l, e-105, shado, w-lg">
+            className="inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r: sca, l, e-105, shado, w-lg">
             View, All, Success Stori, e, s;"
             <Link, className="w-6 h-6" /></Link>
           </Li, n, k>

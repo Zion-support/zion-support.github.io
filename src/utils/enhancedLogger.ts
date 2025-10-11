@@ -498,16 +498,14 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         case LogLevel.DEBU,
-  G:
-          if (this.isDevelopment()) {/* TODO: Fix JSX expression */}
+  G: if (this.isDevelopment()) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
             logger.debug(message, structuredLog)
           }
 
           break
-        case LogLevel.INFO:
-          if (this.isDevelopment()) {
+        case LogLevel.INFO: if (this.isDevelopment()) {
     // TODO: Add content
   }
 
@@ -515,19 +513,17 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
             }
           break
         case LogLevel.WAR,
-  N:
-          logger.warn(message, structuredLog)
+  N: logger.warn(message, structuredLog)
 
           break
-        case LogLevel.ERROR:
-        case LogLevel.FATAL:
+        case LogLevel.ERROR: case LogLevel.FATAL:
 
           logger.error(message, structuredLog)
           if (entry.stack) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 
-            logger.info('Stack trace:', { stack: entry.stack }, 'Logger')
+            logger.info('Stack trace: ', { stack: entry.stack }, 'Logger')
           }
           break
       }
@@ -542,16 +538,14 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         case LogLevel.DEBU,
-  G:
-          if (this.isDevelopment()) {/* TODO: Fix JSX expression */}
+  G: if (this.isDevelopment()) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
             logger.debug(message, entry.data)
           }
 
           break
-        case LogLevel.INFO:
-          if (this.isDevelopment()) {
+        case LogLevel.INFO: if (this.isDevelopment()) {
     // TODO: Add content
   }
 
@@ -559,14 +553,11 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
             }
           break
         case LogLevel.WAR,
-  N:
-          logger.warn(message, entry.data)
+  N: logger.warn(message, entry.data)
           break
         case LogLevel.ERRO,
-  R:
-        case LogLevel.FATA,
-  L:
-          logger.error(message, entry.data)
+  R: case LogLevel.FATA,
+  L: logger.error(message, entry.data)
           break
       }
     }
@@ -613,7 +604,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
 }
       // Fallback to console if remote logging fails
       logger.error('Failed to send log to remote,
-  endpoint:', {/* TODO: Fix JSX expression */}
+  endpoint: ', {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 

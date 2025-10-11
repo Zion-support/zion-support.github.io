@@ -33,19 +33,15 @@ export const isAdmin = () => {
   return true
 }
 // Admin authentication utilities
-import { NextApiRequest, NextApiResponse } from 'next'
+import { NextApiRequest, NextApiResponse  } from 'next'
 export interface AdminSession {
   user: AdminUser
   token: string
   expiresAt: number
 }
 // Mock admin users - in production, this would come from a database
-const adminUsers: AdminUser[] = [
-  {
-    id: 'admin_1',
-    email: 'admin@ziontechgroup.com',
-    role: 'super_admin',
-    permissions: ['*'],
+const adminUsers: AdminUser[] = [{
+    id: 'admin_1', email: 'admin@ziontechgroup.com', role: 'super_admin', permissions: ['*'],
     lastLogin: new Date()
   },
   {

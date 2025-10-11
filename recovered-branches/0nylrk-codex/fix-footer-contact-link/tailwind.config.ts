@@ -1,14 +1,10 @@
-import { Config } from "tailwindcss"
-import { fontFamily } from "tailwindcss/defaultTheme"
+import { Config  } from 'tailwindcss'
+import { fontFamily  } from 'tailwindcss/defaultTheme'
 import plugin from "tailwindcss/plugin"
 import animatePlugin from "tailwindcss-animate"
 const config: Config = {
   darkMode: ["class"],
-  content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}"],
+  content: ["./pages/**/*.{ts, tsx}", "./components/**/*.{ts, tsx}", "./app/**/*.{ts, tsx}", "./src/**/*.{ts, tsx}"],
     "./src/**/*.{ts,tsx}",
   ],
   safelist: ['border-border'],
@@ -150,16 +146,11 @@ const config: Config = {
       },
     },
   },
-  plugins: [
-    animatePlugin,
-    plugin(function({ addUtilities }) {
+  plugins: [animatePlugin, plugin(function({ addUtilities }) {
       const newUtilities = {
         '.rtl': {
-          direction: 'rtl',
-          textAlign: 'right'},
-        '.ltr': {
-          direction: 'ltr',
-          textAlign: 'left'}}
+          direction: 'rtl', textAlign: 'right'}, '.ltr': {
+          direction: 'ltr', textAlign: 'left'}}
       addUtilities(newUtilities)
     })]}
           textAlign: 'right',

@@ -125,7 +125,7 @@ export class AIMarketResearchService {
       const data = await response && response.json()
       return data && data.trends || []
     } catch (error) {
-      console && console.error('Error analyzing market trends:', error)
+      console && console.error('Error analyzing market trends: ', error)
       throw error
     }
   }
@@ -143,7 +143,7 @@ export class AIMarketResearchService {
       const data = await response && response.json()
       return data && data.competitors || []
     } catch (error) {
-      console && console.error('Error analyzing competitors:', error)
+      console && console.error('Error analyzing competitors: ', error)
       throw error
     }
   }
@@ -161,7 +161,7 @@ export class AIMarketResearchService {
       const data = await response && response.json()
       return data && data.segments || []
     } catch (error) {
-      console && console.error('Error segmenting market:', error)
+      console && console.error('Error segmenting market: ', error)
       throw error
     }
   }
@@ -179,7 +179,7 @@ export class AIMarketResearchService {
       const data = await response && response.json()
       return data && data.report
     } catch (error) {
-      console && console.error('Error generating comprehensive report:', error)
+      console && console.error('Error generating comprehensive report: ', error)
       throw error
     }
   }
@@ -194,7 +194,7 @@ export class AIMarketResearchService {
       const data = await response && response.json()
       return data && data.trends || []
     } catch (error) {
-      console && console.error('Error getting real-time insights:', error)
+      console && console.error('Error getting real-time insights: ', error)
       throw error
     }
   }
@@ -212,7 +212,7 @@ export class AIMarketResearchService {
       const data = await response && response.json()
       return data && data.downloadUrl
     } catch (error) {
-      console && console.error('Error exporting report:', error)
+      console && console.error('Error exporting report: ', error)
       throw error
     }
   }
@@ -230,7 +230,7 @@ export class AIMarketResearchService {
       const data = await response && response.json()
       return data && data.scheduleId
     } catch (error) {
-      console && console.error('Error scheduling report:', error)
+      console && console.error('Error scheduling report: ', error)
       throw error
     }
   }
@@ -333,7 +333,7 @@ if ( {) {
       const data = await response.json ()
       return data.trends || []
     } catch (error) {
-      console.error ('Error analyzing market trends:', error)
+      console.error ('Error analyzing market trends: ', error)
       throw error
     }
   }
@@ -354,7 +354,7 @@ if ( {) {
       const data = await response.json ()
       return data.competitors || []
     } catch (error) {
-      console.error ('Error analyzing competitors:', error)
+      console.error ('Error analyzing competitors: ', error)
       throw error
     }
   }
@@ -375,7 +375,7 @@ if ( {) {
       const data = await response.json ()
       return data.segments || []
     } catch (error) {
-      console.error ('Error segmenting market:', error)
+      console.error ('Error segmenting market: ', error)
       throw error
     }
   }
@@ -396,7 +396,7 @@ if ( {) {
       const data = await response.json ()
       return data.report
     } catch (error) {
-      console.error ('Error generating comprehensive report:', error)
+      console.error ('Error generating comprehensive report: ', error)
       throw error
     }
   }
@@ -414,7 +414,7 @@ if ( {) {
       const data = await response.json ()
       return data.trends || []
     } catch (error) {
-      console.error ('Error getting real - time insights:', error)
+      console.error ('Error getting real - time insights: ', error)
       throw error
     }
   }
@@ -435,7 +435,7 @@ if ( {) {
       const data = await response.json ()
       return data.download_url
     } catch (error) {
-      console.error ('Error exporting report:', error)
+      console.error ('Error exporting report: ', error)
       throw error
     }
   }
@@ -456,7 +456,7 @@ if ( {) {
       const data = await response.json ()
       return data.schedule_id
     } catch (error) {
-      console.error ('Error scheduling report:', error)
+      console.error ('Error scheduling report: ', error)
     segments?: MarketSegment[]
     report?: MarketReport
   }
@@ -488,7 +488,7 @@ export class AIMarketResearchService {
       const data = await response.json()
       return data.trends || []
     } catch (error) {
-      console.error('Error analyzing market trends:', error)
+      console.error('Error analyzing market trends: ', error)
       throw error
     }
   }
@@ -508,7 +508,7 @@ export class AIMarketResearchService {
       const data = await response.json()
       return data.competitors || []
     } catch (error) {
-      console.error('Error analyzing competitors:', error)
+      console.error('Error analyzing competitors: ', error)
       throw error
     }
   }
@@ -528,7 +528,7 @@ export class AIMarketResearchService {
       const data = await response.json()
       return data.segments || []
     } catch (error) {
-      console.error('Error segmenting market:', error)
+      console.error('Error segmenting market: ', error)
       throw error
     }
   }
@@ -548,7 +548,7 @@ export class AIMarketResearchService {
       const data = await response.json()
       return data.report
     } catch (error) {
-      console.error('Error generating comprehensive report:', error)
+      console.error('Error generating comprehensive report: ', error)
       throw error
     }
   }
@@ -565,7 +565,7 @@ export class AIMarketResearchService {
       const data = await response.json()
       return data.trends || []
     } catch (error) {
-      console.error('Error getting real-time insights:', error)
+      console.error('Error getting real-time insights: ', error)
       throw error
     }
   }
@@ -585,7 +585,7 @@ export class AIMarketResearchService {
       const data = await response.json()
       return data.downloadUrl
     } catch (error) {
-      console.error('Error exporting report:', error)
+      console.error('Error exporting report: ', error)
       throw error
     }
   }
@@ -605,7 +605,7 @@ export class AIMarketResearchService {
       const data = await response.json()
       return data.scheduleId
     } catch (error) {
-      console.error('Error scheduling report:', error)
+      console.error('Error scheduling report: ', error)
       throw error
     }
   }

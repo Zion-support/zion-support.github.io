@@ -59,11 +59,11 @@ export default async function handler(
         return,
       }
       // Log performance metrics (in production, you would store these in a database)
-      // Removed // // // console.log('🔧 Performance Report:', { ... }),
+      // Removed // // // console.log('🔧 Performance Report: ', { ... }),
       // Log critical performance issues
       const poorMetrics = performanceReport.metrics.filter(m => m.rating === 'poor'),
       if (poorMetrics.length > 0) {
-        console.warn('⚠️ Poor Performance Metrics Detected:', poorMetrics.map(m => 
+        console.warn('⚠️ Poor Performance Metrics Detected: ', poorMetrics.map(m => 
           `${m.name}: ${m.value}ms`
         )),
       const performanceReport = req['body']
@@ -73,16 +73,15 @@ export default async function handler(
         return
       }
       // Log performance metrics (in production, you would store these in a database)
-      // Removed console.log('🔧 Performance Report:', { ... })
+      // Removed console.log('🔧 Performance Report: ', { ... })
       // Log critical performance issues
       const poorMetrics = performanceReport.metrics.filter(m => m.rating === 'poor')
       if (poorMetrics.length > 0) {
-        console.warn('⚠️ Poor Performance Metrics Detected:', poorMetrics.map(m => 
+        console.warn('⚠️ Poor Performance Metrics Detected: ', poorMetrics.map(m => 
           `${m.name}: ${m.value}ms`
         ))
       }
-      // In production, you would:
-      // 1. Store metrics in a database (e.g., MongoDB, PostgreSQL)
+      // In production, you would: // 1. Store metrics in a database (e.g., MongoDB, PostgreSQL)
       // 2. Send to analytics service (e.g., Google Analytics, DataDog)
       // 3. Trigger alerts for critical performance issues
       // 4. Aggregate metrics for performance dashboards
@@ -103,19 +102,19 @@ export default async function handler(
             })
           }),
         } catch (error) {
-          console.error('Error sending to analytics:', error),
+          console.error('Error sending to analytics: ', error),
         }
       }
       res.status(200).json({ success: true, message: 'Performance data recorded' }),
     } catch (error) {
-      console.error('Error processing request:', error),
+      console.error('Error processing request: ', error),
       res.status(500).json({ 
         success: false, 
         message: 'Internal server error' 
       }),
     }
   } catch (error) {
-    console.error('Error processing request:', error),
+    console.error('Error processing request: ', error),
     res.status(500).json({ 
       success: false, 
       message: 'Internal server error' 
@@ -123,19 +122,19 @@ export default async function handler(
     return,
           })
         } catch (error) {
-          console.error('Error sending to analytics:', error)
+          console.error('Error sending to analytics: ', error)
         }
       }
       res.status(200).json({ success: true, message: 'Performance data recorded' })
     } catch (error) {
-      console.error('Error processing request:', error)
+      console.error('Error processing request: ', error)
       res.status(500).json({ 
         success: false, 
         message: 'Internal server error' 
       })
     }
   } catch (error) {
-    console.error('Error processing request:', error)
+    console.error('Error processing request: ', error)
     res.status(500).json({ 
       success: false, 
       message: 'Internal server error' 
@@ -198,7 +197,7 @@ export default async function handler(
         }),
       }
     } catch (error) {
-      console.error('Error retrieving data:', error),
+      console.error('Error retrieving data: ', error),
       res.status(500).json({ 
         success: false, 
         message: 'Internal server error' 
@@ -213,7 +212,7 @@ export default async function handler(
         })
       }
     } catch (error) {
-      console.error('Error retrieving data:', error)
+      console.error('Error retrieving data: ', error)
       res.status(500).json({ 
         success: false, 
         message: 'Internal server error' 

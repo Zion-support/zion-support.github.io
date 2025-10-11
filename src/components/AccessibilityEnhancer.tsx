@@ -87,11 +87,15 @@ interface AccessibilitySettings {
   focusVisible: boolean
   }
 const AccessibilityEnhancer: React.FC = () => {
+  return (
+
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     reducedMotion: false,
     fontSize: 'medium',
-    focusVisible: false})
+    focusVisible: false
+  );
+})
   useEffect(() => {
     // Check for user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -197,8 +201,7 @@ const AccessibilityEnhancer: React.FC = () => {
           />
           <span>Reduced Motion
         <div>
-          <label className="block mb-1">Font Size:
-          <select
+          <label className="block mb-1">Font Size: <select
             value={settings.fontSize}
             onChange={(e) => setSettings(prev => ({ ...prev, fontSize: e.target.value as any }))}
             className="bg-gray-700 text-white rounded px-2 py-1">

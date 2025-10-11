@@ -3,7 +3,7 @@
 
 import fs from 'fs'
 import path from 'path'
-import { execSync } from 'child_process'
+import { execSync  } from 'child_process'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Get all files with errors
@@ -36,7 +36,7 @@ const createComingSoonPage = (filePath) => {
       word.charAt(0).toUpperCase() + word.slice(1)
     ).join(' ')
     return `import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link  } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const ${title}Page: React.FC = () => {
@@ -67,10 +67,7 @@ function fixSyntaxErrors(filePath) {
     let content = fs.readFileSync(filePath, 'utf8')
     let modified = false
     // Check for common syntax error patterns
-    const errorPatterns = [
-      /\/\/ TODO: Add content\s*}/,
-      /\/\/ TODO: Add parameters,\s*\)/,
-      /\/\/ TODO: Add items,\s*]/,
+    const errorPatterns = [/\/\/ TODO: Add content\s*}/, /\/\/ TODO: Add parameters, \s*\)/, /\/\/ TODO: Add items, \s*]/,
       /{\s*\/\/ TODO: Add content\s*}/,
       /{\s*\/\/ TODO: Add parameters,\s*\)/,
       /{\s*\/\/ TODO: Add items,\s*]/,
@@ -102,29 +99,25 @@ const fixAllFiles = () => {
           console.error(`Error fixing ${filePath}:`, error.message)
         }
     // Fix common syntax patterns
-    const fixes = [
-      // Fix malformed object properties with missing commas
+    const fixes = [// Fix malformed object properties with missing commas
       {
-        pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-        replacement: '$1: $2,
-    $3:'
-      },
-      // Fix malformed metadata objects
+        pattern: /(\w+):\s*(\w+), ?\s*}\s*(\w+):/g, replacement: '$1: $2, $3: '
+      }, // Fix malformed metadata objects
       {
         pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
         replacement: 'export const metadata = {
   $1: \'$2\',
-  $3:'
+  $3: '
       },
       {
         pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*"([^"]*)",?\s*}\s*(\w+):/g,
         replacement: 'export const metadata = {
   $1: "$2",
-  $3:'
+  $3: '
       },
       // Fix malformed function parameters
       {
-        pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
+        pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO: \s*Add\s+content;\s*}\s*;\s*(\w+):/g,
         replacement: 'export default function $1({
   $2:'
       },
@@ -132,18 +125,18 @@ const fixAllFiles = () => {
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
         replacement: '$1: $2,
-    $3:'
+    $3: '
       },
       // Fix missing semicolons in exports
       {
         pattern: /export\s+const\s+(\w+)\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
         replacement: 'export const $1 = {
   $2: \'$3\',
-  $4:'
+  $4: '
       },
       // Fix malformed function declarations
       {
-        pattern: /function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
+        pattern: /function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO: \s*Add\s+content;\s*}\s*;\s*(\w+):/g,
         replacement: 'function $1({
   $2:'
       },
@@ -151,7 +144,7 @@ const fixAllFiles = () => {
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
         replacement: '$1: $2,
-    $3:'
+    $3: '
       },
       // Fix malformed JSX attributes
       {
@@ -162,7 +155,7 @@ const fixAllFiles = () => {
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
         replacement: '$1: $2,
-    $3:'
+    $3: '
       }
     ]
     for (const fix of fixes) {
@@ -174,23 +167,19 @@ const fixAllFiles = () => {
     }
     
     // Additional specific fixes
-    const specificFixes = [
-      // Fix the specific pattern in about/page.tsx
+    const specificFixes = [// Fix the specific pattern in about/page.tsx
       {
-        pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-        replacement: '$1: $2,
-    $3:'
-      },
-      // Fix malformed metadata
+        pattern: /(\w+):\s*(\w+), ?\s*}\s*(\w+):/g, replacement: '$1: $2, $3: '
+      }, // Fix malformed metadata
       {
         pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
         replacement: 'export const metadata = {
   $1: \'$2\',
-  $3:'
+  $3: '
       },
       // Fix malformed function parameters
       {
-        pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
+        pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO: \s*Add\s+content;\s*}\s*;\s*(\w+):/g,
         replacement: 'export default function $1({
   $2:'
       }
@@ -223,7 +212,7 @@ function findFilesWithSyntaxErrors() {
     return result.trim().split('
 ').filter(file => file.length > 0)
   } catch (error) {
-    console.error('Error finding files with syntax errors:', error.message)
+    console.error('Error finding files with syntax errors: ', error.message)
     return []
   }
 }

@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next"
-import { createClient } from "@supabase/supabase-js"
+import { createClient  } from '@supabase/supabase-js'
 const url = process && process.env.NEXT_PUBLIC_SUPABASE_URL || ""
 const key = process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ""
 export default async function handler(
@@ -27,7 +27,7 @@ export default async function handler(
     console.error(e)
     return res.status(500).json({ ok: false, error: "Failed to send invite" })
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { createClient } from '@supabase/supabase-js'
+import { createClient  } from '@supabase/supabase-js'
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL
 const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
   }
@@ -45,20 +45,20 @@ const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }

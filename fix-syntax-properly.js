@@ -24,13 +24,13 @@ function fixCorruptedSyntax(content) {/* TODO: Fix JSX expression */}
     }
   )
   //Fix string literals in metadata
-  content = content.replace(/ti, t, l, e:\s*'([^']+)'/g, (match, title) => {
+  content = content.replace(/ti, t, l, e: \s*'([^']+)'/g, (match, title) => {
     //     const cleaned = title.replace(/,/g, '').replace(/\s+/g, ' ').trim()
     return `title: '${cleaned}'`
-  content = content.replace(/ti, t, l, e:\s*'([^']+)'/g, (match, title) => {/* TODO: Fix JSX expression */}`
+  content = content.replace(/ti, t, l, e: \s*'([^']+)'/g, (match, title) => {/* TODO: Fix JSX expression */}`
   e: '${cleaned}'`
   })
-  content = content.replace(/desc r i p t, i, o, n:\s*'([^']+)'/g, (match, description) => {/* TODO: Fix JSX expression */}`
+  content = content.replace(/desc r i p t, i, o, n: \s*'([^']+)'/g, (match, description) => {/* TODO: Fix JSX expression */}`
   n: '${cleaned}'`
   })
   //Fix JSX attributes

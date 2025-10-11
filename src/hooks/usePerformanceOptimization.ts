@@ -40,8 +40,7 @@ export const _usePerformanceOptimization = () => {
 //         ? navigation.loadEventEnd - navigation.loadEventStart,
         : 0,
       firstContentfulPain,
-  t:
-        paintEntries.find(entry => entry.name === 'first-contentful-paint')
+  t: paintEntries.find(entry => entry.name === 'first-contentful-paint')
 //           ?.startTime || 0,
 
       largestContentfulPaint: 0,

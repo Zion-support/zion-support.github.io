@@ -1,4 +1,4 @@
-import { ReactNode } from "react"
+import { ReactNode  } from 'react'
 export interface HelpArticle {
   id: string
   title: string
@@ -7,7 +7,7 @@ export interface HelpArticle {
   tags: string[]
 }
 export interface HelpCategory {
-import {ReactNode} from "react"
+import { ReactNode } from 'react'
 export interface HelpArticle {
   id: string
   title: string
@@ -37,14 +37,14 @@ export interface SupportTicket {
   created_at: string
   updated_at: string
 }
-import { ReactNode } from "react",
+import { ReactNode  } from 'react',
 export interface HelpArticle {
   id: string,
   title: string,
   content: string,
   lastUpdated: string,
   tags: string[]
-import { ReactNode } from "react",
+import { ReactNode  } from 'react',
 export interface HelpArticle {
   id: string,
   title: string,
@@ -86,4 +86,3 @@ export interface SupportTicket {
   updatedAt: string
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

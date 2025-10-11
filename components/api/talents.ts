@@ -1,12 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs - extra'
 import path from 'path'
-import {
-  authenticateRequest,
+import { authenticateRequest,
   enforceRateLimit,
   recordRequest,
-} from '../../utils/api/partnerAuth'
-import { v4 as uuidv4 } from 'uuid'
+ } from '../../utils/api/partnerAuth'
+import { v4 as uuidv4  } from 'uuid'
 const TALENTS_FILE = path.join(
   process.cwd()
   'data'
@@ -25,8 +24,8 @@ createdAt: now,
 import type { NextApiRequest, NextApiResponse } from "next"
 import fs from "fs-extra"
 import path from "path"
-import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth"
-import { v4 as uuidv4 } from "uuid"
+import { authenticateRequest, enforceRateLimit, recordRequest  } from '../../utils/api/partnerAuth'
+import { v4 as uuidv4  } from 'uuid'
 const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json")
 const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json")
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

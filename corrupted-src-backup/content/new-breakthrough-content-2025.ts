@@ -2,8 +2,7 @@ export interface BreakthroughContent {/* TODO: Fix JSX expression */}
   }
 }
 
-export const newBreakthroughContent2025: BreakthroughContent[] = [
-  {
+export const newBreakthroughContent2025: BreakthroughContent[] = [{
     id: 'ai-platform-optimization-2025'
     title: 'AI Platform Optimization 2025: Maximizing ROI with Intelligent Scorecards'
     description: 'Revolutionary AI platform optimization delivering unprecedented ROI through intelligent scorecards and performance monitoring.'
@@ -15,12 +14,8 @@ Transform your AI platform with intelligent scorecards and performance monitorin
 - Intelligent performance scorecards
 - Real-time optimization recommendations
 - Comprehensive ROI tracking
-- Automated performance tuning,
-    `
-    author: 'Zion Tech Group',
-    publishedAt: '2025-10-03',
-    category: 'AI Strategy',
-    tags: ['Platform', 'ROI', 'Scorecards', 'Optimization'],
+- Automated performance tuning, `
+    author: 'Zion Tech Group', publishedAt: '2025-10-03', category: 'AI Strategy', tags: ['Platform', 'ROI', 'Scorecards', 'Optimization'],
     featured: true,
     readTime: '12 min read'
     image: '/images/ai-platform-optimization-2025.jpg'
@@ -58,8 +53,6 @@ Protect your AI systems with next-generation quantum security frameworks.
       accuracy: 'Zero breaches',
       roi: '500%',
 export const,
-  newBreakthroughContent2025: BreakthroughContent[] = [
-  {/* TODO: Fix JSX expression */}
-    }},
-  {/* TODO: Fix JSX expression */}
+  newBreakthroughContent2025: BreakthroughContent[] = [{/* TODO: Fix JSX expression */}
+    }}, {/* TODO: Fix JSX expression */}
     }}]

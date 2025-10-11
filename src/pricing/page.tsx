@@ -1,33 +1,20 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { CheckCircle, X, Zap, Brain, Cloud, ArrowRight, Star, Users, Shield, Clock } from 'lucide-react'
+import { Link  } from 'react-router-dom'
+import { CheckCircle, X, Zap, Brain, Cloud, ArrowRight, Star, Users, Shield, Clock  } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const PricingPage: React.FC = () => {
-  const plans = [
-    {
-      name: 'Starter',
-      description: 'Perfect for small businesses getting started with AI',
-      price: '$2,500',
-      period: '/month',
-      icon: Zap,
-      color: 'blue',
-      features: [
-        'AI Strategy Consultation',
-        'Basic Machine Learning Models',
-        'Monthly Analytics Reports',
-        'Email Support',
-        'Up to 5 Users',
-        'Basic Integration Support'
-      ],
-      limitations: [
-        'Limited Custom Models',
-        'Standard Support Hours',
-        'Basic Analytics'
-      ],
+  return (
+
+  const plans = [{
+      name: 'Starter', description: 'Perfect for small businesses getting started with AI', price: '$2, 500', period: '/month', icon: Zap, color: 'blue', features: [
+        'AI Strategy Consultation', 'Basic Machine Learning Models', 'Monthly Analytics Reports', 'Email Support', 'Up to 5 Users', 'Basic Integration Support'],
+      limitations: ['Limited Custom Models', 'Standard Support Hours', 'Basic Analytics'],
       cta: 'Get Started',
       popular: false
-    },
+    
+  );
+},
     {
       name: 'Professional',
       description: 'Ideal for growing companies with advanced AI needs',
@@ -35,17 +22,7 @@ const PricingPage: React.FC = () => {
       period: '/month',
       icon: Brain,
       color: 'cyan',
-      features: [
-        'Everything in Starter',
-        'Custom AI Model Development',
-        'Advanced Analytics & Insights',
-        'Priority Support (24/7)',
-        'Up to 25 Users',
-        'API Access',
-        'Custom Integrations',
-        'Monthly Strategy Reviews',
-        'Performance Optimization'
-      ],
+      features: ['Everything in Starter', 'Custom AI Model Development', 'Advanced Analytics & Insights', 'Priority Support (24/7)', 'Up to 25 Users', 'API Access', 'Custom Integrations', 'Monthly Strategy Reviews', 'Performance Optimization'],
       limitations: [],
       cta: 'Start Free Trial',
       popular: true
@@ -57,75 +34,34 @@ const PricingPage: React.FC = () => {
       period: '',
       icon: Cloud,
       color: 'purple',
-      features: [
-        'Everything in Professional',
-        'Dedicated AI Team',
-        'Custom AI Architecture',
-        'White-label Solutions',
-        'Unlimited Users',
-        'Advanced Security Features',
-        'Compliance Support',
-        'Quarterly Business Reviews',
-        'Custom Training Programs',
-        'SLA Guarantees'
-      ],
+      features: ['Everything in Professional', 'Dedicated AI Team', 'Custom AI Architecture', 'White-label Solutions', 'Unlimited Users', 'Advanced Security Features', 'Compliance Support', 'Quarterly Business Reviews', 'Custom Training Programs', 'SLA Guarantees'],
       limitations: [],
       cta: 'Contact Sales',
       popular: false
     }
   ]
-  const addOns = [
-    {
-      name: 'Additional AI Models',
-      description: 'Extra custom AI models beyond your plan limits',
-      price: '$500',
-      period: '/model/month'
-    },
-    {
-      name: 'Priority Support',
-      description: '24/7 priority support with dedicated account manager',
-      price: '$1,000',
-      period: '/month'
-    },
-    {
-      name: 'Custom Integrations',
-      description: 'Bespoke integrations with your existing systems',
-      price: '$2,000',
-      period: '/integration'
-    },
-    {
-      name: 'Training & Workshops',
-      description: 'On-site or virtual training for your team',
-      price: '$5,000',
-      period: '/day'
-    }
-  ]
-  const faqs = [
-    {
-      question: 'Can I change my plan at any time?',
-      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the beginning of your next billing cycle.'
-    },
-    {
-      question: 'Is there a free trial available?',
-      answer: 'Yes, we offer a 14-day free trial for our Professional plan. No credit card required to start.'
-    },
-    {
-      question: 'What happens if I exceed my plan limits?',
-      answer: 'We\'ll notify you when you\'re approaching your limits and help you upgrade or purchase additional capacity.'
-    },
-    {
-      question: 'Do you offer custom pricing for large organizations?',
-      answer: 'Yes, we offer custom pricing and enterprise solutions for organizations with specific needs. Contact our sales team for more information.'
-    },
-    {
-      question: 'What support is included?',
-      answer: 'All plans include email support. Professional and Enterprise plans include priority support with faster response times.'
-    },
-    {
-      question: 'Can I cancel anytime?',
-      answer: 'Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees.'
-    }
-  ]
+  const addOns = [{
+      name: 'Additional AI Models', description: 'Extra custom AI models beyond your plan limits', price: '$500', period: '/model/month'
+    }, {
+      name: 'Priority Support', description: '24/7 priority support with dedicated account manager', price: '$1, 000', period: '/month'
+    }, {
+      name: 'Custom Integrations', description: 'Bespoke integrations with your existing systems', price: '$2, 000', period: '/integration'
+    }, {
+      name: 'Training & Workshops', description: 'On-site or virtual training for your team', price: '$5, 000', period: '/day'
+    }]
+  const faqs = [{
+      question: 'Can I change my plan at any time?', answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the beginning of your next billing cycle.'
+    }, {
+      question: 'Is there a free trial available?', answer: 'Yes, we offer a 14-day free trial for our Professional plan. No credit card required to start.'
+    }, {
+      question: 'What happens if I exceed my plan limits?', answer: 'We\'ll notify you when you\'re approaching your limits and help you upgrade or purchase additional capacity.'
+    }, {
+      question: 'Do you offer custom pricing for large organizations?', answer: 'Yes, we offer custom pricing and enterprise solutions for organizations with specific needs. Contact our sales team for more information.'
+    }, {
+      question: 'What support is included?', answer: 'All plans include email support. Professional and Enterprise plans include priority support with faster response times.'
+    }, {
+      question: 'Can I cancel anytime?', answer: 'Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees.'
+    }]
   const getColorClasses = (color: string) => {
     switch (color) {
       case 'blue':
@@ -152,8 +88,7 @@ const PricingPage: React.FC = () => {
           light: 'bg-purple-50',
           textLight: 'text-purple-600'
         }
-      default:
-        return {
+      default: return {
           bg: 'bg-gray-500',
           text: 'text-gray-500',
           border: 'border-gray-500',
@@ -164,17 +99,17 @@ const PricingPage: React.FC = () => {
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+      <Navigation /></Navigation>
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
             Simple <span className="text-cyan-400">Pricing
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Choose the perfect plan for your business. All plans include our core AI and IT solutions with transparent pricing.
       {/* Pricing Plans */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {plans.map((plan, index) => {
               const colors = getColorClasses(plan.color)
@@ -198,20 +133,18 @@ const PricingPage: React.FC = () => {
                         <span className="text-4xl font-bold text-gray-900">{plan.price}
                         <span className="text-gray-600 ml-1">{plan.period}
                     <div className="mb-8">
-                      <h4 className="font-semibold text-gray-900 mb-4">What's included:
-                      <ul className="space-y-3">
+                      <h4 className="font-semibold text-gray-900 mb-4">What's included: <ul className="space-y-3">
                         {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-start">
-                            <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                            <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /></CheckCircle>
                             <span className="text-gray-600">{feature}
                         ))}
                     {plan.limitations.length > 0 && (
                       <div className="mb-8">
-                        <h4 className="font-semibold text-gray-900 mb-4">Limitations:
-                        <ul className="space-y-3">
+                        <h4 className="font-semibold text-gray-900 mb-4">Limitations: <ul className="space-y-3">
                           {plan.limitations.map((limitation, limitationIndex) => (
                             <li key={limitationIndex} className="flex items-start">
-                              <X className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                              <X className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" /></X>
                               <span className="text-gray-600">{limitation}
                           ))}
                     )}
@@ -219,8 +152,8 @@ const PricingPage: React.FC = () => {
                       to="/contact"
                       className={`w-full ${
                         plan.popular
-                          ? `${colors.bg} hover:opacity-90 text-white`
-                          : `${colors.border} ${colors.text} hover:${colors.bg} hover:text-white`
+                          ? `${colors.bg} hover: opacity-90 text-white`
+                          : `${colors.border} ${colors.text} hover: ${colors.bg} hover: text-white`
                       } border-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-center block`}
                     >
                       {plan.cta}
@@ -237,9 +170,9 @@ const PricingPage: React.FC = () => {
               Enhance your plan with additional services and features,
   
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {addOns.map((addOn, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover: shadow-xl transition-shadow">
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{addOn.name}
                 <p className="text-gray-600 mb-4 text-sm">{addOn.description}
                 <div className="flex items-baseline justify-between">
@@ -284,7 +217,7 @@ const PricingPage: React.FC = () => {
           </div>
         </div>
       </section>
-      <Footer />
+      <Footer /></Footer>
     </div>
   ),
 }

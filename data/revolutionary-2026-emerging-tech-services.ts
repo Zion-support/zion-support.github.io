@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface Revolutionary2026EmergingTechService {
   id: string
   name: string
@@ -39,27 +39,10 @@ export interface Revolutionary2026EmergingTechService {
   rating: number
   reviews: number
 }
-export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTechService[] = [
-  // Holographic Metaverse Development Platform
+export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTechService[] = [// Holographic Metaverse Development Platform
   {
-    id: 'holographic-metaverse-development-platform',
-    name: 'Holographic Metaverse Development Platform',
-    tagline: 'Build immersive 3D holographic metaverse experiences',
-    price: '$2,999',
-    period: '/month',
-    description: 'Revolutionary platform for creating immersive 3D holographic metaverse experiences with AI-powered content generation and real-time collaboration.',
-    features: [
-      '3D holographic rendering',
-      'AI content generation',
-      'Real-time collaboration',
-      'Multi-user environments',
-      'Holographic avatars',
-      'Spatial audio systems',
-      'Gesture recognition',
-      'Eye tracking integration',
-      'Haptic feedback',
-      'Cross-platform compatibility'
-    ],
+    id: 'holographic-metaverse-development-platform', name: 'Holographic Metaverse Development Platform', tagline: 'Build immersive 3D holographic metaverse experiences', price: '$2, 999', period: '/month', description: 'Revolutionary platform for creating immersive 3D holographic metaverse experiences with AI-powered content generation and real-time collaboration.', features: [
+      '3D holographic rendering', 'AI content generation', 'Real-time collaboration', 'Multi-user environments', 'Holographic avatars', 'Spatial audio systems', 'Gesture recognition', 'Eye tracking integration', 'Haptic feedback', 'Cross-platform compatibility'],
     popular: true,
     icon: '🌐✨',
     color: 'from-purple-600 to-pink-500',
@@ -100,18 +83,7 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     price: '$5,999',
     period: '/month',
     description: 'Advanced AI platform for tracking space debris, predicting collisions, and managing space traffic to ensure satellite safety and orbital sustainability.',
-    features: [
-      'Real-time debris tracking',
-      'Collision prediction algorithms',
-      'Space traffic management',
-      'Satellite safety monitoring',
-      'Orbital optimization',
-      'Debris removal planning',
-      'Risk assessment tools',
-      'Regulatory compliance',
-      'International coordination',
-      'Emergency response systems'
-    ],
+    features: ['Real-time debris tracking', 'Collision prediction algorithms', 'Space traffic management', 'Satellite safety monitoring', 'Orbital optimization', 'Debris removal planning', 'Risk assessment tools', 'Regulatory compliance', 'International coordination', 'Emergency response systems'],
     popular: true,
     icon: '🛰️🤖',
     color: 'from-blue-600 to-cyan-500',
@@ -152,18 +124,7 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     price: '$1,999',
     period: '/month',
     description: 'Revolutionary AI platform that predicts climate changes with unprecedented accuracy using advanced machine learning and global data analysis.',
-    features: [
-      'Climate pattern recognition',
-      'Long-term predictions',
-      'Regional forecasting',
-      'Extreme weather alerts',
-      'Climate impact assessment',
-      'Policy recommendation engine',
-      'Data visualization tools',
-      'Historical analysis',
-      'Real-time monitoring',
-      'Global coverage'
-    ],
+    features: ['Climate pattern recognition', 'Long-term predictions', 'Regional forecasting', 'Extreme weather alerts', 'Climate impact assessment', 'Policy recommendation engine', 'Data visualization tools', 'Historical analysis', 'Real-time monitoring', 'Global coverage'],
     popular: true,
     icon: '🌍🤖',
     color: 'from-green-600 to-emerald-500',
@@ -204,18 +165,7 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     price: '$3,499',
     period: '/month',
     description: 'Revolutionary AI platform that enables autonomous manufacturing with self-optimizing processes, predictive maintenance, and intelligent quality control.',
-    features: [
-      'Self-optimizing production',
-      'Predictive maintenance',
-      'Intelligent quality control',
-      'Supply chain optimization',
-      'Energy efficiency management',
-      'Real-time monitoring',
-      'Automated decision making',
-      'Performance analytics',
-      'Customization engine',
-      'Sustainability tracking'
-    ],
+    features: ['Self-optimizing production', 'Predictive maintenance', 'Intelligent quality control', 'Supply chain optimization', 'Energy efficiency management', 'Real-time monitoring', 'Automated decision making', 'Performance analytics', 'Customization engine', 'Sustainability tracking'],
     popular: true,
     icon: '🏭🤖',
     color: 'from-orange-600 to-red-500',
@@ -256,18 +206,7 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     price: '$15,999',
     period: '/month',
     description: 'Revolutionary platform for building quantum internet infrastructure with quantum entanglement, quantum cryptography, and quantum networking capabilities.',
-    features: [
-      'Quantum entanglement networks',
-      'Quantum cryptography',
-      'Quantum repeaters',
-      'Quantum routers',
-      'Quantum memory systems',
-      'Quantum error correction',
-      'Quantum network security',
-      'Quantum teleportation',
-      'Quantum internet protocols',
-      'Quantum network management'
-    ],
+    features: ['Quantum entanglement networks', 'Quantum cryptography', 'Quantum repeaters', 'Quantum routers', 'Quantum memory systems', 'Quantum error correction', 'Quantum network security', 'Quantum teleportation', 'Quantum internet protocols', 'Quantum network management'],
     popular: true,
     icon: '🌐⚛️',
     color: 'from-indigo-600 to-purple-500',

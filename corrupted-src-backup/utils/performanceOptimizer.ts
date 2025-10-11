@@ -90,14 +90,8 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   // Add critical resource hints method
   addCriticalResourceHints(): void {
     if (typeof document === 'undefined') return
-    const hints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      {
-        rel: 'preconnect',
-        href: 'https://fonts.gstatic.com',
-        crossOrigin: 'anonymous'}]
+    const hints = [{ rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' }, { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' }, { rel: 'preconnect', href: 'https://fonts.googleapis.com' }, {
+        rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous'}]
     hints.forEach(hint => {
     )
       const _link = document.createElement('link')
@@ -111,11 +105,11 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
 
   // Add critical resource hints method
   addCriticalResourceHints(): void {/* TODO: Fix JSX expression */}
-  s://fonts.googleapis.com' },
+  s: //fonts.googleapis.com' },
       {/* TODO: Fix JSX expression */}
-  s://fonts.gstatic.com' },
+  s: //fonts.gstatic.com' },
       {/* TODO: Fix JSX expression */}
-  s://fonts.googleapis.com' },
+  s: //fonts.googleapis.com' },
       {/* TODO: Fix JSX expression */}
       }]
     hints.forEach(hint => {/* TODO: Fix JSX expression */}

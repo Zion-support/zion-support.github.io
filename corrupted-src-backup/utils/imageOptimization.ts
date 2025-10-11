@@ -1,9 +1,7 @@
     mobi, l, e: '1, 0, 0, v, w',
     tabl, e, t: '5, 0, v, w',
-    deskt, o, p: '3, 3, v, w'} const size, s = { ...defau, l, t, s, ...conf, i, g } return [
-    `(m, a, x-wid, t, h: 640, p, x) ${siz, e, s.mob, i, l, e}`,`
-    `(m, a, x-wid, t, h: 1024, p, x) ${siz, e, s.tab, l, e, t}`,
-    siz, e, s.deskt, o, p].jo, i, n(', ')
+    deskt, o, p: '3, 3, v, w'} const size, s = { ...defau, l, t, s, ...conf, i, g } return [`(m, a, x-wid, t, h: 640, p, x) ${siz, e, s.mob, i, l, e}`, `
+    `(m, a, x-wid, t, h: 1024, p, x) ${siz, e, s.tab, l, e, t}`, siz, e, s.deskt, o, p].jo, i, n(', ')
 export const getOptimizedUrl = (
   s, r, c: st, r, i, n, g,
   optio, n, s: {
@@ -53,8 +51,8 @@ export const preloadImage = (s, r, c: st, r, i, n, g,
 export const isFormatSupported = asy, n, c(form, a, t: 'we, b, p' | 'av, i, f')
 ): Promi, s, e<boolean> => {
   if (typeof, windo, w = == 'undefi, n, e, d') return, fals, e; const testImage, s = {
-    we, b, p: 'da, t, a:image/we, b, p; ba, s, e, 6, 4,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3, A, A/vuUA, A, A = ',
-    av, i, f: 'da, t, a:image/av, i, f; bas, e, 6, 4,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f, 8, D///8Wfhw B 8+ErK4 2 A = ' 
+    we, b, p: 'da, t, a: image/we, b, p; ba, s, e, 6, 4,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3, A, A/vuUA, A, A = ',
+    av, i, f: 'da, t, a: image/av, i, f; bas, e, 6, 4,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f, 8, D///8Wfhw B 8+ErK4 2 A = ' 
   } return, new, Promise(resol, v, e = > {
     )
     const im, g = new, Ima, g, e(); i, m, g.onlo, a, d = () => resol, v, e(i, m, g.wid, t, h = == , 1); i, m, g.onerr, o, r = () = > resol, v, e(fal, s, e); i, m, g.s, r, c = testImag, e, s[for, m, a, t]

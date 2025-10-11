@@ -101,25 +101,25 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   // Simple HTML view
   const htmlRows = extracted
     .map(s =>)
-        `<tr><td style="padding: 6px,border-bottom:1px solid #eee">${s.replace(/&/g) '&amp}').replace(/</g} '&lt)')}</td></tr>`,
+        `<tr><td style="padding: 6px,border-bottom: 1px solid #eee">${s.replace(/&/g) '&amp}').replace(/</g} '&lt)')}</td></tr>`,
     .map(s =>"
         `<tr><td style="paddin,
   g: 6px,border-botto,")`
-  m:1px solid #eee">${s.replace(/&/g) '&amp}').replace(/</g} '&lt)')}</td></tr>`)
+  m: 1px solid #eee">${s.replace(/&/g) '&amp}').replace(/</g} '&lt)')}</td></tr>`)
     .join('\n');"`
   const _html = `<!doctype html><html><head><meta charset="utf-8"/><title>i18n Extractor</title><meta name="viewport" content="width=device-width, initial-scale=1"/><style>body{/* TODO: Fix JSX expression */}
   y: ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}sans-serif;margi,
-  n:24px} h1{/* TODO: Fix JSX expression */}
+  n: 24px} h1{/* TODO: Fix JSX expression */}
   e: 20px}margi,
-  n:0 0 12px} table{/* TODO: Fix JSX expression */}
+  n: 0 0 12px} table{/* TODO: Fix JSX expression */}
   e: collapse}widt,
-  h:100%} thead td{/* TODO: Fix JSX expression */}
+  h: 100%} thead td{/* TODO: Fix JSX expression */}
   t: 700}backgroun,
-  d:#fafafa}border-botto,
-  m:1px solid #eee}</style></head><body><h1>i18n Extractor</h1><div>Generate,
+  d: #fafafa}border-botto,
+  m: 1px solid #eee}</style></head><body><h1>i18n Extractor</h1><div>Generate,
   d: ${new Date().toISOString()}</div><div>String,
   s: ${extracted.length}</div><hr/><table><thead><tr><td>String</td></tr></thead><tbody>${/* TODO: Fix JSX expression */}"`
-  g:6px">No strings found</td></tr>'}</tbody></table></body></html>`
+  g: 6px">No strings found</td></tr>'}</tbody></table></body></html>`
   writeFileEnsured(path.join(repoRoot, 'public', 'reports', 'i18n') 'index.html'),
     html)
   // Commit and push
@@ -145,19 +145,19 @@ const path = require('path');' const fs = require('fs');' const { spawnSync } = 
   t: extracted.length} string,")`
   s: extracted }, null, 2)); // Simple HTML view' const htmlRows = extracted.map((s) => `<tr><td style="paddin,
   g: 6px,border-botto,"`
-  m:1px solid #eee">${s.replace(/&/g)'&amp}').replace(/</g}'&lt)')}</td></tr>`).join('\n');' const html = `<!doctype html><html><head><meta charset="utf-8"/><title>i18n Extractor</title><meta name="viewport" content="width=device-width, initial-scale=1"/><style>body{/* TODO: Fix JSX expression */}
+  m: 1px solid #eee">${s.replace(/&/g)'&amp}').replace(/</g}'&lt)')}</td></tr>`).join('\n');' const html = `<!doctype html><html><head><meta charset="utf-8"/><title>i18n Extractor</title><meta name="viewport" content="width=device-width, initial-scale=1"/><style>body{/* TODO: Fix JSX expression */}
   y: ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}sans-serif;margi,
-  n:24px} h1{/* TODO: Fix JSX expression */}
+  n: 24px} h1{/* TODO: Fix JSX expression */}
   e: 20px}margi,
-  n:0 0 12px} table{/* TODO: Fix JSX expression */}
+  n: 0 0 12px} table{/* TODO: Fix JSX expression */}
   e: collapse}widt,
-  h:100%} thead td{/* TODO: Fix JSX expression */}
+  h: 100%} thead td{/* TODO: Fix JSX expression */}
   t: 700}backgroun,
-  d:#fafafa}border-botto,
-  m:1px solid #eee}</style></head><body><h1>i18n Extractor</h1><div>Generate,
+  d: #fafafa}border-botto,
+  m: 1px solid #eee}</style></head><body><h1>i18n Extractor</h1><div>Generate,
   d: ${new Date().toISOString()}</div><div>String,
   s: ${extracted.length}</div><hr/><table><thead><tr><td>String</td></tr></thead><tbody>${/* TODO: Fix JSX expression */}"`
-  g:6px">No strings found</td></tr>'}</tbody></table></body></html>`;' writeFileEnsured(path.join(repoRoot, 'public', 'reports', 'i18n') 'index.html'), html); // Commit and push try {' const syncRes = runNode('automation/advanced-git-sync.cjs');' logs.push(syncRes.stdout || 'git sync done'); if (syncRes.stderr) logs.push(syncRes.stderr)} } catch (e) {/* TODO: Fix JSX expression */}
+  g: 6px">No strings found</td></tr>'}</tbody></table></body></html>`;' writeFileEnsured(path.join(repoRoot, 'public', 'reports', 'i18n') 'index.html'), html); // Commit and push try {' const syncRes = runNode('automation/advanced-git-sync.cjs');' logs.push(syncRes.stdout || 'git sync done'); if (syncRes.stderr) logs.push(syncRes.stderr)} } catch (e) {/* TODO: Fix JSX expression */}
   failed: ' + String(e))} } ' return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: logs.join('\n') } }'"`

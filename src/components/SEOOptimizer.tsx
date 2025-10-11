@@ -71,12 +71,7 @@ const,
       },
       'address': {/* TODO: Fix JSX expression */}
       },
-      'sameAs': [
-        'http,
-  s://twitter.com/ziontechgroup',
-        'http,
-  s://linkedin.com/company/ziontechgroup'
-      ]
+      'sameAs': ['http, s: //twitter.com/ziontechgroup', 'http, s: //linkedin.com/company/ziontechgroup']
     }
     const script = document.createElement('script')
     script.type = 'application/ld+json'
@@ -107,7 +102,7 @@ const,
     }
   }, [mergedSEOData, page])
   return (
-    <Helmet>
+    <Helmet ></Helmet>
       {/* Basic Meta Tags */}
       <title>{mergedSEOData.title}
       <meta name="description" content={mergedSEOData.description} />
@@ -121,22 +116,22 @@ const,
       {/* Canonical URL */}
       <link rel="canonical" href={mergedSEOData.canonical} />
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content={mergedSEOData.ogType} />
-      <meta property="og:url" content={mergedSEOData.canonical} />
-      <meta property="og:title" content={mergedSEOData.title} />
-      <meta property="og:description" content={mergedSEOData.description} />
-      <meta property="og:image" content={mergedSEOData.ogImage} />
-      <meta property="og:image:width" content="1200" />
+      <meta property="og: type" content={mergedSEOData.ogType} />
+      <meta property="og: url" content={mergedSEOData.canonical} />
+      <meta property="og: title" content={mergedSEOData.title} />
+      <meta property="og: description" content={mergedSEOData.description} />
+      <meta property="og: image" content={mergedSEOData.ogImage} />
+      <meta property="og: image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       {/* Twitter */}
-      <meta property="twitter:card" content={mergedSEOData.twitterCard} />
-      <meta property="twitter:url" content={mergedSEOData.canonical} />
-      <meta property="twitter:title" content={mergedSEOData.title} />
-      <meta property="twitter:description" content={mergedSEOData.description} />
-      <meta property="twitter:image" content={mergedSEOData.ogImage} />
-      <meta property="twitter:creator" content="@ziontechgroup" />
+      <meta property="twitter: card" content={mergedSEOData.twitterCard} />
+      <meta property="twitter: url" content={mergedSEOData.canonical} />
+      <meta property="twitter: title" content={mergedSEOData.title} />
+      <meta property="twitter: description" content={mergedSEOData.description} />
+      <meta property="twitter: image" content={mergedSEOData.ogImage} />
+      <meta property="twitter: creator" content="@ziontechgroup" />
       <meta property="twitter:site" content="@ziontechgroup" />
       {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#0f172a" />
@@ -150,7 +145,7 @@ const,
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       <link rel="manifest" href="/manifest.json" />
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https: //fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.googletagmanager.com" />
       {/* DNS Prefetch for performance */}
@@ -163,7 +158,7 @@ const,
       {/* Additional structured data for services */}
       <script type="application/ld+json">
         {JSON.stringify({
-          '@context': 'https://schema.org',
+          '@context': 'https: //schema.org',
           '@type': 'Service',
           name: 'AI and IT Solutions',
           provider: {
@@ -176,32 +171,19 @@ const,
           hasOfferCatalog: {
             '@type': 'OfferCatalog',
             name: 'AI and IT Services',
-            itemListElement: [
-              {
-                '@type': 'Offer',
-                itemOffered: {
-                  '@type': 'Service',
-                  name: 'AI Solutions',
-                  description: 'Advanced artificial intelligence solutions'
+            itemListElement: [{
+                '@type': 'Offer', itemOffered: {
+                  '@type': 'Service', name: 'AI Solutions', description: 'Advanced artificial intelligence solutions'
                 }
-              },
-              {
-                '@type': 'Offer',
-                itemOffered: {
-                  '@type': 'Service',
-                  name: 'Cybersecurity',
-                  description: 'Comprehensive cybersecurity solutions'
+              }, {
+                '@type': 'Offer', itemOffered: {
+                  '@type': 'Service', name: 'Cybersecurity', description: 'Comprehensive cybersecurity solutions'
                 }
-              },
-              {
-                '@type': 'Offer',
-                itemOffered: {
-                  '@type': 'Service',
-                  name: 'Cloud Infrastructure',
-                  description: 'Scalable cloud infrastructure solutions'
+              }, {
+                '@type': 'Offer', itemOffered: {
+                  '@type': 'Service', name: 'Cloud Infrastructure', description: 'Scalable cloud infrastructure solutions'
                 }
-              }
-            ]
+              }]
           }
         })}
       </script>

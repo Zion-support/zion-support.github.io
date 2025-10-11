@@ -88,7 +88,7 @@ export function memoize
       return cache.get(key)!
     }
     const result = func(...args) as ReturnType
-          <T>
+          <T ></T>
     cache.set(key, result)
     return result
   }) as T
@@ -127,8 +127,9 @@ export async function measureTime
 
   name: string,
   func: () => T | Promise
-          <T>
-): Promise<{ result: T, duration: number }> {
+          <T ></T>
+): Promise<>
+  {result: T, duration: number } {
     // TODO: Add content
   }
 
@@ -143,6 +144,7 @@ export async function measureTime
  * Batch async operations
  */
 export async function batchAsync
+</>
           <T, R>()
   item,
   s: T[],
@@ -352,7 +354,8 @@ export function setupLazyImages()
  */
 
 export function preloadResources(resources: Array
-          <{ url: string, as: string }>): void {
+          <>
+  {url: string, as: string }): void {
     // TODO: Add content
   }
 
@@ -382,7 +385,7 @@ export function supportsCodeSplitting(): boolean {
   O: Add content,}
 }
     new Function('return import("dat,")
-  a:text/javascript,")')
+  a: text/javascript,")')
     return true
   } catch {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -522,3 +525,5 @@ export default {/* TODO: Fix JSX expression */}
 //   FPSMonitor
 }
 
+
+</>

@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { getServerSupabase } from '../../../../utils/supabase/server'
+import { getServerSupabase  } from '../../../../utils/supabase/server'
 import type { NextApiRequest, NextApiResponse } from 'next',
-import { getServerSupabase } from '../../../../utils/supabase/server',
+import { getServerSupabase  } from '../../../../utils/supabase/server',
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     const supabase = getServerSupabase()
@@ -23,17 +23,14 @@ import type { NextApiRequest, NextApiResponse } from 'next'
       const code = (req.query.code as string)?.toLowerCase()
       if (!code) return res.status(400).json({ error: 'Code required' })
       // Mock fraud flags data
-      const flags = [
-        { type: 'suspicious_ip', severity: 'low', note: 'Multiple visits from same IP' }
-      ]
+      const flags = [{ type: 'suspicious_ip', severity: 'low', note: 'Multiple visits from same IP' }]
       res.json({ flags })
     } else {
       res.setHeader('Allow', 'GET')
       res.status(405).end('Method Not Allowed')
     }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

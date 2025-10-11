@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from "next"
-import { readJsonFile, writeJsonFile } from "../../../utils/db"
+import { readJsonFile, writeJsonFile  } from '../../../utils/db'
 import type { Job } from "../../../utils/types"
-import { rateLimit } from "../../../utils/rateLimit"
-import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth"
+import { rateLimit  } from '../../../utils/rateLimit'
+import { getRequestUserEmail, isAdminEmail  } from '../../../utils/auth'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return
@@ -38,23 +38,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.setHeader('Allow', ['GET', 'PATCH'])
     res.status(405).end('Method Not Allowed')
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { readJsonFile, writeJsonFile } from '../../../utils/db'
+import { readJsonFile, writeJsonFile  } from '../../../utils/db'
 import type { Job } from '../../../utils/types'
-import { rateLimit } from '../../../utils/rateLimit'
-import { getRequestUserEmail, isAdminEmail } from '../../../utils/auth'
+import { rateLimit  } from '../../../utils/rateLimit'
+import { getRequestUserEmail, isAdminEmail  } from '../../../utils/auth'
 const FILE = 'jobs.json'
 export default function handler(req, res) {
   try {
@@ -66,15 +66,15 @@ export default function handler(req, res) {
     res.status(404).json({ error: 'Job not found' })
     return
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -83,15 +83,15 @@ export default function handler(req, res) {
     res.status(200).json({ job: jobs[idx] })
     return
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -164,15 +164,15 @@ if (job.status = status as Job["status"]) {
     res.status(200).json({ job })
     return
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -180,15 +180,15 @@ if (job.status = status as Job["status"]) {
   res.setHeader('AllowGET, PATCH')
   res.status(405).end('Method Not Allowed')
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }

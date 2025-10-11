@@ -9,8 +9,7 @@
 }
 // Default static categories with translation keys
 
-const getDefaultCategories = (t: any,) => [
-const getDefaultCategories = (t: any) => [
+const getDefaultCategories = (t: any,) => [const getDefaultCategories = (t: any) => [
   {
     id: "services"
     name: t('categories.services')
@@ -19,13 +18,7 @@ const getDefaultCategories = (t: any) => [
     link: "/services"
     color: "from-purple-500 to-indigo-600", // Keep color for styling
   }
-  },
-
-
-
-
-
-  {
+  }, {
     id: "talents"
     name: t('categories.talents')
     description: t('categories.talents_desc')
@@ -57,47 +50,23 @@ const getDefaultCategories = (t: any) => [
 // Helper to get icon component from name
 const getIcon = (iconName?: string,) => {
   switch (iconName) {
-    case "Briefcase": return <Briefcase className="w-10 h-10" />
-    case "Users": return <Users className="w-10 h-10" />
-    case "HardDrive": return <HardDrive className="w-10 h-10" />
-    case "Lightbulb": return <Lightbulb className="w-10 h-10" />
+    case "Briefcase": return <Briefcase className="w-10 h-10" /></Briefcase>
+    case "Users": return <Users className="w-10 h-10" /></Users>
+    case "HardDrive": return <HardDrive className="w-10 h-10" /></HardDrive>
+    case "Lightbulb": return <Lightbulb className="w-10 h-10" /></Lightbulb>
     default: return <HelpCircle className="w-10 h-10" />, // Default icon
   }
 }
-const getSpecialServices = (t: any,) => [
-  {
-    title: "Micro SAAS",
-    description: "Cloud - based software solutions for modern businesses",
-    icon: "☁️",
-    link: "/micro - saas",
-    color: "from - cyan - 500 to - blue - 600", ,
-},
-  {
-    title: "IT Services",
-    description: "Infrastructure, security, and technical consulting",
-    icon: "⚡",
-    link: "/all - services",
-    color: "from - amber - 500 to - orange - 600", ,
-},
-  {
-    title: "Digital Transformation",
-    description: "Business modernization and digital strategy",
-    icon: "📈",
-    link: "/all - services",
-    color: "from - emerald - 500 to - green - 600", ,
-},
-]
+const getSpecialServices = (t: any,) => [{
+    title: "Micro SAAS", description: "Cloud - based software solutions for modern businesses", icon: "☁️", link: "/micro - saas", color: "from - cyan - 500 to - blue - 600", }, {
+    title: "IT Services", description: "Infrastructure, security, and technical consulting", icon: "⚡", link: "/all - services", color: "from - amber - 500 to - orange - 600", }, {
+    title: "Digital Transformation", description: "Business modernization and digital strategy", icon: "📈", link: "/all - services", color: "from - emerald - 500 to - green - 600", }]
 const special_services = [{
-    title: "IT Onsite Services",
-    link: "/it - onsite - services"
-},
-  {
-    title: "Comprehensive Services",
-    link: "/comprehensive - services"
-},
-  {
-    title: "Services Comparison",
-    link: "/services - comparison"
+    title: "IT Onsite Services", link: "/it - onsite - services"
+}, {
+    title: "Comprehensive Services", link: "/comprehensive - services"
+}, {
+    title: "Services Comparison", link: "/services - comparison"
 }
 export function CategoriesSection({
   showTitle = true
@@ -107,31 +76,17 @@ export function CategoriesSection({
 }: CategoriesSectionProps) {
   const { t } = useTranslation()
   const defaultCategories = getDefaultCategories(t)
-    case "Briefcase": return <Briefcase className="w-10 h-10" />,
-    case "Users": return <Users className="w-10 h-10" />,
-    case "HardDrive": return <HardDrive className="w-10 h-10" />,
-    case "Lightbulb": return <Lightbulb className="w-10 h-10" />,
-    default: return <HelpCircle className="w-10 h-10" />, // Default icon
+    case "Briefcase": return <Briefcase className="w-10 h-10" />, case "Users": return <Users className="w-10 h-10" />, case "HardDrive": return <HardDrive className="w-10 h-10" />, case "Lightbulb": return <Lightbulb className="w-10 h-10" />, default: return <HelpCircle className="w-10 h-10" />, // Default icon
   }
-},
-
-const getSpecialServices = (t: any) => [
+}, const getSpecialServices = (t: any) => [
   {
-    title: t('categories.it_onsite_services'),
-    link: "/it-onsite-services"
-import { GradientHeading } from "./GradientHeading",
-import Link from "next/link",
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
-import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
-import { cn } from "@/lib/utils",
-import { useTranslation } from "react-i18next",
-// This is the type definition copied from Categories.tsx for consistency.
+    title: t('categories.it_onsite_services'), link: "/it-onsite-services"
+import { GradientHeading  } from './GradientHeading', import Link from "next/link", import { Briefcase, HardDrive, Lightbulb, Users  } from 'lucide-react'
+import { HelpCircle  } from 'lucide-react', // Added HelpCircle for default icon
+import { cn  } from '@/lib/utils', import { useTranslation  } from 'react-i18next', // This is the type definition copied from Categories.tsx for consistency.
 // Ideally, this would be in a shared types file.
 interface CategoryType {
-  id: string,
-  name: string,
-  description?: string,
-  iconName?: string, // Example field if categories have icons
+  id: string, name: string, description?: string, iconName?: string, // Example field if categories have icons
   itemCount?: number, // Example field for number of items in a category
   // Add a 'link' property if your API provides it, or construct it.
   link?: string
@@ -140,34 +95,12 @@ interface CategoryType {
 // Default static categories with translation keys
 const getDefaultCategories = (t: any) => [
   {
-    id: "services",
-    name: t('categories.services'),
-    description: t('categories.services_desc'),
-    iconName: "Briefcase", // Corresponds to lucide icon name
-    link: "/services",
-    color: "from-purple-500 to-indigo-600", // Keep color for styling
-  },
-  {
-    id: "talents",
-    name: t('categories.talents'),
-    description: t('categories.talents_desc'),
-    iconName: "Users",
-    link: "/talent",
-    color: "from-cyan-500 to-blue-600"},
-  {
-    id: "equipment",
-    name: t('categories.equipment'),
-    description: t('categories.equipment_desc'),
-    iconName: "HardDrive",
-    link: "/equipment",
-    color: "from-amber-500 to-orange-600"},
-  {
-    id: "innovation",
-    name: t('categories.innovation'),
-    description: t('categories.innovation_desc'),
-    iconName: "Lightbulb",
-    link: "/innovation",
-    color: "from-emerald-500 to-green-600"}],
+    id: "services", name: t('categories.services'), description: t('categories.services_desc'), iconName: "Briefcase", // Corresponds to lucide icon name
+    link: "/services", color: "from-purple-500 to-indigo-600", // Keep color for styling
+  }, {
+    id: "talents", name: t('categories.talents'), description: t('categories.talents_desc'), iconName: "Users", link: "/talent", color: "from-cyan-500 to-blue-600"}, {
+    id: "equipment", name: t('categories.equipment'), description: t('categories.equipment_desc'), iconName: "HardDrive", link: "/equipment", color: "from-amber-500 to-orange-600"}, {
+    id: "innovation", name: t('categories.innovation'), description: t('categories.innovation_desc'), iconName: "Lightbulb", link: "/innovation", color: "from-emerald-500 to-green-600"}],
 // Helper to get icon component from name
 const getIcon = (iconName?: string) => {
   switch (iconName) {
@@ -178,12 +111,9 @@ const getIcon = (iconName?: string) => {
     default: return <HelpCircle className="w-10 h-10" />, // Default icon
   }
 },
-const getSpecialServices = (t: any) => [
-  {
-    title: t('categories.it_onsite_services'),
-    link: "/it-onsite-services"
-  }
-],
+const getSpecialServices = (t: any) => [{
+    title: t('categories.it_onsite_services'), link: "/it-onsite-services"
+  }],
 interface CategoriesSectionProps {
   showTitle?: boolean,
   className?: string,
@@ -221,10 +151,9 @@ export function CategoriesSection({
         title: cat.name,
         icon: getIcon(cat.iconName)})),
 
-  // If fetchedCategories is an empty array, and we want to show nothing:
-  if (fetchedCategories && fetchedCategories.length === 0) {
+  // If fetchedCategories is an empty array, and we want to show nothing: if (fetchedCategories && fetchedCategories.length === 0) {
     return (
-      <section className={cn("py-20 bg-zion-blue text-center", className)} style={style}>
+      <section className={cn("py-20 bg-zion-blue text-center", className)} style=>{style}
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-semibold text-white mb-4">{t('home.no_categories_title')}</h2>
           <p className="text-zion-slate-light text-lg mb-2">
@@ -240,12 +169,9 @@ export function CategoriesSection({
 
   }
 }
-const getSpecialServices = (t: any,) => [
-  {
-    title: t('categories && categories.it_onsite_services'),
-    link: "/it-onsite-services"
-  }
-]
+const getSpecialServices = (t: any,) => [{
+    title: t('categories && categories.it_onsite_services'), link: "/it-onsite-services"
+  }]
 interface CategoriesSectionProps {
   showTitle?: boolean
   className?: string
@@ -274,10 +200,9 @@ export function CategoriesSection(): any ({
         ...cat
         title: cat && cat.name,
         icon: getIcon(cat && cat.iconName)})),
-  // If fetchedCategories is an empty array, and we want to show nothing:
-  if (fetchedCategories && fetchedCategories.length === 0) {
+  // If fetchedCategories is an empty array, and we want to show nothing: if (fetchedCategories && fetchedCategories.length === 0) {
     return (
-      <section className={cn("py-20 bg-zion-blue text-center", className)} style={style}>
+      <section className={cn("py-20 bg-zion-blue text-center", className)} style=>{style}
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-semibold text-white mb-4">{t('home && home.no_categories_title')}</h2>
           <p className="text-zion-slate-light text-lg mb-2">
@@ -290,7 +215,6 @@ export function CategoriesSection(): any ({
           </p></$1></$1>
     )
   }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -302,7 +226,7 @@ export function CategoriesSection(): any ({
   }
 
   return (
-    <section className={cn("py-20 bg-zion-blue", className)} style={style}>
+    <section className={cn("py-20 bg-zion-blue", className)} style=>{style}
       <div className="container mx-auto px-4">
         {showTitle && (
           <div className="text-center mb-16">
@@ -311,13 +235,13 @@ export function CategoriesSection(): any ({
               {t('home && home.categories_subtitle')}
             </p></$1>
         )}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-4 gap-6">
           {displayCategories.map((category,) => (
             <$2 />
               key = {category.id,}
               href = {category.link |'#',}
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-4 gap-6">
 
           {displayCategories.map((category) => (
           {displayCategories.map((category,) => (
@@ -326,10 +250,10 @@ export function CategoriesSection(): any ({
               key = {category.id,}
               href = {category.link |'#',}
 
-              className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+              className="group block rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
             >
               <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
-                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300`}>
                   <div className="text-white">
                     {category.icon}
                   </div>
@@ -350,7 +274,7 @@ export function CategoriesSection(): any ({
                 key = {service.title,}
                 href = {service.link,}
 
-                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
+                className="px-6 py-3 bg-zion-blue-light hover: bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
               >
                 {service.title}
               </Link>            ))}
@@ -360,7 +284,7 @@ export function CategoriesSection(): any ({
               <$2 />
                 key={service.title}
                 href={service.link}
-                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
+                className="px-6 py-3 bg-zion-blue-light hover: bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
               >
                 {service.title}
               </Link>            ))}
@@ -375,7 +299,7 @@ export function CategoriesSection(): any ({
   )
   switch (iconName) {
 }
-const getSpecialServices = (t: any) => [ {
+const getSpecialServices = (t: any) => [{
   title: t ('categories.it onsite services')
 link: "/it-onsite-services"
 }]
@@ -410,8 +334,8 @@ icon: getIcon (cat.iconName), //Get icon component link: cat.link |`/category/$ 
 title: cat.name
 icon: getIcon (cat.iconName)
 }) )
-//If fetchedCategories is an empty array, and we want to show nothing: if (fetchedCategories && fetchedCategories.length === 0) {
-}> <div className="container mx-auto px-4" > <h2 className="text-3xl font-semibold text-white mb-4" > {'
+//If fetchedCategories is an empty array, and we want to show nothing: if (fetchedCategories && fetchedCategories.length === 0) >{
+} <div className="container mx-auto px-4" > <h2 className="text-3xl font-semibold text-white mb-4" > {'
   t ('home.no categories title') "
 }</h2> <p className="text-zion-slate-light text-lg mb-2" > {'
   t ('home.no categories desc') "
@@ -422,19 +346,19 @@ icon: getIcon (cat.iconName)
 }</div> > {
   service.title
 }</Link>) ) "
-}</div> </div> <div className="mt-12 flex justify-center" > <Link href="/categories/all" className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors" > {'
+}</div> </div> <div className="mt-12 flex justify-center" > <Link href="/categories/all" className="text-zion-cyan border-b border-zion-cyan hover: border-zion-cyan-dark transition-colors" > {'
   t ('home.view all categories')
 }</Link> </div> </div> </section>)
 }'"}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-4 gap-6">
           {displayCategories && displayCategories.map((category,) => (
             <$2 />
               key = {category && category.id,}
               href = {category && category.link || '#',}
-              className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan">
+              className="group block rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan">
               <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
-                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category && category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category && category.color} flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300`}>
                   <div className="text-white">
                     {category && category.icon}
                   </div></$1>
@@ -450,14 +374,14 @@ icon: getIcon (cat.iconName)
               <$2 />
                 key = {service && service.title,}
                 href = {service && service.link,}
-                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300">
+                className="px-6 py-3 bg-zion-blue-light hover: bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300">
                 {service && service.title}
               </Link>            ))}
           </div></$1>
         <div className="mt-12 flex justify-center">
           <$2 />
             href="/categories/all"
-            className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors">
+            className="text-zion-cyan border-b border-zion-cyan hover: border-zion-cyan-dark transition-colors">
             {t('home && home.view_all_categories')}
           </Link></$1></$1></$1>
   )
@@ -481,14 +405,13 @@ function CategoriesSection() {
         ...cat
         title: cat.name,
         icon: get_icon (cat.icon_name)})),
-  // If fetched_categories is an empty array, and we want to show nothing:
-  // Check condition
+  // If fetched_categories is an empty array, and we want to show nothing: // Check condition
 if ( {) {
   $2
 
 }
     return (
-      <section className={cn ("py - 20 bg - zion - blue text - center", class_name)} style={style}>
+      <section className={cn ("py - 20 bg - zion - blue text - center", class_name)} style=>{style}
         <div className="container mx - auto px - 4">
           <h2 className="text - 3xl font - semibold text - white mb - 4">{t ('home.no_categories_title')}</h2>
           <p className="text - zion - slate - light text - lg mb - 2">
@@ -499,7 +422,7 @@ if ( {) {
           </p></$1></$1>)
   }
   return (
-    <section className={cn ("py - 20 bg - zion - blue", class_name)} style={style}>
+    <section className={cn ("py - 20 bg - zion - blue", class_name)} style=>{style}
       <div className="container mx - auto px - 4">
         {show_title && (
           <div className="text - center mb - 16">
@@ -507,15 +430,15 @@ if ( {) {
             <p className="text - zion - slate - light text - lg mt - 4 max - w-2xl mx - auto">
               {t ('home.categories_subtitle')}
             </p></$1>)}
-        <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 6">
+        <div className="grid grid - cols - 1 sm: grid - cols - 2 lg:grid - cols - 4 gap - 6">
           {display_categories.map ((category, ) => (
             <;$2 />
               key = {category.id, }
               href = {category.link || '#', }
-              className="group block rounded - lg focus:outline - none focus:ring - 2 focus:ring - zion - cyan"
+              className="group block rounded - lg focus: outline - none focus:ring - 2 focus:ring - zion - cyan"
             >
               <div className="rounded - lg overflow - hidden h - full border border - zion - blue - light bg - zion - blue - dark p - 6 transition - all duration - 300 group - hover:border - zion - purple / 50 group - focus:border - zion - purple / 50 hover:translate - y-[-5px] group - hover:shadow - lg">
-                <div className={`rounded - full w - 16 h - 16 bg - gradient - to - br ${category.color} flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform duration - 300`}>
+                <div className={`rounded - full w - 16 h - 16 bg - gradient - to - br ${category.color} flex items - center justify - center mb - 6 group - hover: scale - 110 transition - transform duration - 300`}>
                   <div className="text - white">
                     {category.icon}
                   </div></$1>
@@ -530,7 +453,7 @@ if ( {) {
               <;$2 />
                 key = {service.title, }
                 href = {service.link, }
-                className="px - 6 py - 3 bg - zion - blue - light hover:bg - zion - blue - dark border border - zion - purple / 20 hover:border - zion - purple / 50 rounded - full text - zion - cyan transition - all duration - 300"
+                className="px - 6 py - 3 bg - zion - blue - light hover: bg - zion - blue - dark border border - zion - purple / 20 hover:border - zion - purple / 50 rounded - full text - zion - cyan transition - all duration - 300"
               >
                 {service.title}
               </Link>            ))}
@@ -538,13 +461,13 @@ if ( {) {
         <div className="mt - 12 flex justify - center">
           <;$2 />
             href="/categories / all"
-            className="text - zion - cyan border - b border - zion - cyan hover:border - zion - cyan - dark transition - colors"
+            className="text - zion - cyan border - b border - zion - cyan hover: border - zion - cyan - dark transition - colors"
           >
             {t ('home.view_all_categories')}
           </Link></$1></$1></$1>)
   switch (icon_name) {
 }
-const getSpecialServices = (t: any) =>: any [ {
+const getSpecialServices = (t: any) =>: any [{
   title: t ('categories.it onsite services')
 link: "/it - onsite - services"
 }]
@@ -587,7 +510,7 @@ if ( {) {
 }</div> > {
   service.title
 }</Link>) ) "
-}</div> </div> <div className="mt - 12 flex justify - center" > <Link href="/categories / all" className="text - zion - cyan border - b border - zion - cyan hover:border - zion - cyan - dark transition - colors" > {'
+}</div> </div> <div className="mt - 12 flex justify - center" > <Link href="/categories / all" className="text - zion - cyan border - b border - zion - cyan hover: border - zion - cyan - dark transition - colors" > {'
   t ('home.view all categories')
 }</Link> </div> </div> </section>)
 }'"}

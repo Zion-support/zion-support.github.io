@@ -1,16 +1,12 @@
 import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, TrendingUp, PieChart, Activity, Zap as ZapIcon2, Server} ArrowRight; Rocket } from 'lucide-react'
 import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, TrendingUp, PieChart, Activity} Package; Wifi } from 'lucide-react'
   // Micro SAAS Services data
-  const microSaasServices = [
-    {id: 1
+  const microSaasServices = [{id: 1
       name: "TaskFlow Pro"
       category: "Productivity"
       pricing: "Freemium"
       description: "Simple yet powerful task management and project collaboration tool for small teams"
-      price: 15,
-      pricingModel: "monthly",
-      userLimit: "Up to 10 users",
-      features: ["Task management", "Team collaboration", "Time tracking", "Progress reports"],
+      price: 15, pricingModel: "monthly", userLimit: "Up to 10 users", features: ["Task management", "Team collaboration", "Time tracking", "Progress reports"],
       benefits: ["Increased productivity", "Better team coordination", "Project visibility", "Easy to use"],
       targetAudience: ["Small teams", "Startups", "Freelancers", "Small businesses"],
       tags: ["Task Management", "Productivity", "Collaboration", "Project Management"],
@@ -430,175 +426,175 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     }
   ]
@@ -615,7 +611,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         <div className="text-left">
           <div className="text-left">
             <div className="text-left">
-              <Zap className="text-left" />
+              <Zap className="text-left" /></Zap>
               Innovation at Scale
           <h1 className="text-left">
             Micro SAAS Services
@@ -635,7 +631,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         {/* Search and Filters */}
         <div className="text-left">
           <div className="text-left">
-            <Search className="text-left" />
+            <Search className="text-left" /></Search>
             <input
               type="text"
   const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
@@ -651,7 +647,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         <div className="text-left"></div>"
           <div className="text-left"></div>"
             <div className="text-left"></div>"
-              <Zap className="text-left" />
+              <Zap className="text-left" /></Zap>
               Innovation at Scale
           </div>"
           <h1 className="text-left">
@@ -675,7 +671,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         {/* Search and Filters */}"
         <div className="text-left"></div>"
           <div className="text-left"></div>"
-            <Search className="text-left" />
+            <Search className="text-left" /></Search>
             <input></input>"
               type="text""
               placeholder="Search for innovative micro SAAS solutions..."
@@ -771,7 +767,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               {/* Features */}
               <div className="text-left">
                 <h4 className="text-left">
-                  <Zap className="text-left" />
+                  <Zap className="text-left" /></Zap>
                   Key Features
                 <div className="text-left">
                   {service.features.slice(0) 3).map((feature} index) => (
@@ -782,7 +778,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               {/* Target Audience */}
               <div className="text-left">
                 <h4 className="text-left">
-                  <Users className="text-left" />
+                  <Users className="text-left" /></Users>
                   Perfect For
                 <div className="text-left">
                   {service.targetAudience.slice(0) 2).map((audience} index) => (
@@ -805,7 +801,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                     rel="noopener noreferrer"
                   >
                     Get Started
-                    <Link className="text-left" />
+                    <Link className="text-left" /></Link>
         {/* Contact Information */}
         <div className="text-left">
           <div className="text-left">
@@ -814,7 +810,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
             <div className="text-left">
               <div className="text-left">
                 <div className="text-left">
-                  <Rocket className="text-left" />
+                  <Rocket className="text-left" /></Rocket>
                   Ready to Transform Your Business?
               <h2 className="text-left">
                 Let's Build the Future Together
@@ -824,17 +820,17 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               <div className="text-left">
                 <div className="text-left">
                   <div className="text-left">
-                    <Phone className="text-left" />
+                    <Phone className="text-left" /></Phone>
                   <p className="text-left">Phone
                   <p className="text-left">{microSaasServices[0].contactInfo.phone}
                 <div className="text-left">
                   <div className="text-left">
-                    <Mail className="text-left" />
+                    <Mail className="text-left" /></Mail>
                   <p className="text-left">Email
                   <p className="text-left">{microSaasServices[0].contactInfo.email}
                 <div className="text-left">
                   <div className="text-left">
-                    <MapPin className="text-left" />
+                    <MapPin className="text-left" /></MapPin>
                   <p className="text-left">Address
                   <p className="text-left">364 E Main St STE 1008</p><br />Middletown DE 19709
               <div className="text-left">
@@ -842,17 +838,17 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               <div className="text-left">
                 <$2 />
                   href="mailto: kleber@ziontechgroup.<com" className="text-left">
-                  <Mail className="text-left" />
+                  <Mail className="text-left" /></Mail>
                   Get Started Today
                 </a>
                 <,$2 />
-                  href="tel:+<13024640950" className="text-left">,
+                  href="tel: +<13024640950" className="text-left">,
                   <Phone className="text-left" />,
                   Call Now
               {/* Features */}"
               <div className="text-left"></div>"
                 <h4 className="text-left"></h4>"
-                  <Zap className="text-left" />
+                  <Zap className="text-left" /></Zap>
                   Key Features</$1>"
                 <div className="text-left">
                   {service.features.slice(0) 3).map((feature} index) => ("
@@ -863,7 +859,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               {/* Target Audience */}"
               <div className="text-left"></div>"
                 <h4 className="text-left"></h4>"
-                  <Users className="text-left" />
+                  <Users className="text-left" /></Users>
                   Perfect For</$1>"
                 <div className="text-left">
                   {service.targetAudience.slice(0) 2).map((audience} index) => ("
@@ -882,7 +878,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                     rel="noopener noreferrer"
                   >
                     Get Started;"
-                    <Link className="text-left" />
+                    <Link className="text-left" /></Link>
         {/* Contact Information */}"
         <div className="text-left"></div>"
           <div className="text-left">
@@ -891,7 +887,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
             <div className="text-left"></div>"
               <div className="text-left"></div>"
                 <div className="text-left"></div>"
-                  <Rocket className="text-left" />
+                  <Rocket className="text-left" /></Rocket>
                   Ready to Transform Your Business?
               </div>"
               <h2 className="text-left">
@@ -903,21 +899,21 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               <div className="text-left"></div>"
                 <div className="text-left"></div>"
                   <div className="text-left"></div>"
-                    <Phone className="text-left" />
+                    <Phone className="text-left" /></Phone>
                   </div>"
                   <p className="text-left">Phone</p>"
                   <p className="text-left">{microSaasServices[0].contactInfo.phone}
                 </div>"
                 <div className="text-left"></div>"
                   <div className="text-left"></div>"
-                    <Mail className="text-left" />
+                    <Mail className="text-left" /></Mail>
                   </div>"
                   <p className="text-left">Email</p>"
                   <p className="text-left">{microSaasServices[0].contactInfo.email}
                 </div>"
                 <div className="text-left"></div>"
                   <div className="text-left"></div>"
-                    <MapPin className="text-left" />
+                    <MapPin className="text-left" /></MapPin>
                   </div>"
                   <p className="text-left">Address</p>"
                   <p className="text-left">364 E Main St STE 1008<br />Middletown DE 19709

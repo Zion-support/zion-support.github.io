@@ -29,7 +29,7 @@ export default function handler(req, res) {
   } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error reading existing rates:', error)
+      console.error('Error reading existing rates: ', error)
     }
     existing = []
   }
@@ -60,7 +60,7 @@ export default function handler(req, res) {
   } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error saving shipping rate:', error)
+      console.error('Error saving shipping rate: ', error)
     }
     res.statusCode = 500
     res.setHeader('Content-Type', 'application/json')

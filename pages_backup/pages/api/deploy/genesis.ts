@@ -2,12 +2,11 @@ function summarizeModules(
   modules: Record<string, boolean>
   bonus: Record<string, boolean>
 ) {
-  const active = [
-    ...Object && Object.entries(modules)
+  const active = [...Object && Object.entries(modules)
       .filter(([, v]) => v)
       .map(([k]) => `/${k}`),
     ...Object && Object.entries(bonus)
-      .filter(([, v]) => v)
+      .filter(([v]) => v)
       .map(([k]) => `/${k}`)
   ]
   return active && active.length ? active && active.sort().join(", ") : "None"
@@ -30,9 +29,8 @@ export default async function handler(
   if (req && req.method !== "POST") {
     return res && res.status(405).json({ error: "Method not allowed" })
 function summarizeModules(modules: Record<string, boolean>, bonus: Record<string, boolean>) {
-  const active = [
-    ...Object.entries(modules).filter(([, v]) => v).map(([k]) => `/${k}`),
-    ...Object.entries(bonus).filter(([, v]) => v).map(([k]) => `/${k}`)]
+  const active = [...Object.entries(modules).filter(([, v]) => v).map(([k]) => `/${k}`),
+    ...Object.entries(bonus).filter(([v]) => v).map(([k]) => `/${k}`)]
   return active.length ? active.sort().join() : 'None'
 }
 function missionParagraph(region: string, instanceName: string, modules: Record<string, boolean>, bonus: Record<string, boolean>) {
@@ -80,12 +78,11 @@ import type { NextApiRequest, NextApiResponse } from './next'
  * summarize_modules - Function description
  */
 function summarize_modules() {
-  const active = [
-    ...Object.entries (modules)
+  const active = [...Object.entries (modules)
       .filter (([, v]) => v)
       .map (([k]) => `/${k}`),
     ...Object.entries (bonus)
-      .filter (([, v]) => v)
+      .filter (([v]) => v)
       .map (([k]) => `/${k}`),
   ]
   return active.length ? active.sort ().join (", ") : "None"
@@ -153,16 +150,14 @@ if ( {) {
         },
         summit: "/summit",
       },
-      publicPages: [
-        "/about"
+      publicPages: ["/about"
         "/manifesto"
         "/constitution"
         "/partners"
         "/academy"
         "/marketplace"
         "/dao"
-        `/nation/${defaultLanguage |"en"}`
-      ]
+        `/nation/${defaultLanguage |"en"}`]
     }
     const operator = {
       activeModulesSummary: summarizeModules(modules, bonusModules)
@@ -178,16 +173,7 @@ if ( {) {
         },
         summit: "/summit",
       },
-      public_pages: [
-        "/about",
-        "/manifesto",
-        "/constitution",
-        "/partners",
-        "/academy",
-        "/marketplace",
-        "/dao",
-        `/nation/${default_language || "en"}`,
-      ],
+      public_pages: ["/about", "/manifesto", "/constitution", "/partners", "/academy", "/marketplace", "/dao", `/nation/${default_language || "en"}`],
     }
 
     const operator = {
@@ -221,15 +207,15 @@ export default async function handler(req, res) {
       error: 'Method not allowed'
     })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -257,15 +243,15 @@ export default async function handler(req, res) {
       branding,
       modules = {},
       bonusModules = {  } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -275,15 +261,15 @@ export default async function handler(req, res) {
         error: 'Missing required fields: instanceName, deploymentRegion'
       })
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -324,20 +310,19 @@ export default async function handler(req, res) {
     })
 import type { NextApiRequest, NextApiResponse } from 'next'
 function summarizeModules(modules: Record<string, boolean>, bonus: Record<string, boolean>) {
-  const active = [
-    ...Object.entries(modules).filter(([ v]) => v).map(([k]) => `/${k}`)
-    ...Object.entries(bonus).filter(([ v]) => v).map(([k]) => `/${k}`)]
+  const active = [...Object.entries(modules).filter(([ v]) => v).map(([k]) => `/${k}`)
+    ...Object.entries(bonus).filter(([v]) => v).map(([k]) => `/${k}`)]
   return active.length ? active.sort().join() : 'None'
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -349,15 +334,15 @@ function missionParagraph(region: string, instanceName: string, modules: Record<
   const activeCount = Object.values(modules).filter(Boolean).length + Object.values(bonus).filter(Boolean).length
   return `"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -367,15 +352,15 @@ export default async function handler(req, res) {
   if (req.method !== '$1') {
     return res.status(405).json({ error: 'Method not allowed' })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -394,15 +379,15 @@ export default async function handler(req, res) {
     if (!instanceName || !deploymentRegion) {
       return res.status(400).json({ error: 'Missing required fields: instanceName, deploymentRegion' })
       } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
@@ -427,9 +412,7 @@ export default async function handler(req, res) {
           pdf: '/book/manifesto.pdf',
           trailerScript: '/trailer/script'},
         summit: '/summit'},
-      publicPages: [
-        '/about/manifesto/constitution/partners/academy/marketplace/dao',
-        `/nation/${defaultLanguage || 'en'}`]},
+      publicPages: ['/about/manifesto/constitution/partners/academy/marketplace/dao', `/nation/${defaultLanguage || 'en'}`]},
     const deployLog = {
       provisionId
       instanceName
@@ -456,26 +439,25 @@ export default async function handler(req, res) {
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }

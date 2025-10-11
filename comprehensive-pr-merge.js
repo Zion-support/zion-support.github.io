@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Comprehensive PR Merge - Handles all remaining branches and PRs
- */ import { execSync } from 'child_process'
+ */ import { execSync  } from 'child_process'
 import fs from 'fs'
 // //Step 1: Ensure we're on main and up to date,
 // try {,
@@ -14,7 +14,7 @@ import fs from 'fs'
 //Step 2: Get all branches that might need merging,
 // //Get recent branches (last 7 days),
 const recentBranches = execSync()
-  'git for-each-ref --sort=-committerdate refs/remotes/origin --format="%(committerdate:short) %(refname:short)"',
+  'git for-each-ref --sort=-committerdate refs/remotes/origin --format="%(committerdate: short) %(refname:short)"',
   { encoding: 'utf8' }
 // //Step,
   1: Ensure we're on main and up to date,
@@ -29,8 +29,8 @@ const recentBranches = execSync()
   2: Get all branches that might need merging,
 // //Get recent branches (last 7 days)
 const recentBranches = execSync('git for-each-ref --sort=-committerdate refs/remotes/origin --format="%(committerdat)
-  e:short) %(refnam,")
-  e:short)"',
+  e: short) %(refnam,")
+  e: short)"',
   {/* TODO: Fix JSX expression */}
   g: 'utf8' }
 )

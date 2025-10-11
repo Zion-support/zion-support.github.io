@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface InnovativeBusinessSolution {
   id: string
   name: string
@@ -39,27 +39,10 @@ export interface InnovativeBusinessSolution {
   rating: number
   reviews: number
 }
-export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution[] = [
-  // AI-Powered Marketing Automation Platform
+export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution[] = [// AI-Powered Marketing Automation Platform
   {
-    id: 'ai-marketing-automation-platform',
-    name: 'AI Marketing Automation Platform',
-    tagline: 'Intelligent marketing automation with predictive analytics',
-    price: '$299',
-    period: '/month',
-    description: 'Advanced AI platform that automates marketing campaigns, predicts customer behavior, and optimizes marketing ROI through intelligent automation.',
-    features: [
-      'AI-powered campaign automation',
-      'Predictive customer segmentation',
-      'Dynamic content personalization',
-      'Multi-channel marketing orchestration',
-      'Real-time performance analytics',
-      'A/B testing automation',
-      'Lead scoring and nurturing',
-      'Email marketing automation',
-      'Social media management',
-      'ROI tracking and optimization'
-    ],
+    id: 'ai-marketing-automation-platform', name: 'AI Marketing Automation Platform', tagline: 'Intelligent marketing automation with predictive analytics', price: '$299', period: '/month', description: 'Advanced AI platform that automates marketing campaigns, predicts customer behavior, and optimizes marketing ROI through intelligent automation.', features: [
+      'AI-powered campaign automation', 'Predictive customer segmentation', 'Dynamic content personalization', 'Multi-channel marketing orchestration', 'Real-time performance analytics', 'A/B testing automation', 'Lead scoring and nurturing', 'Email marketing automation', 'Social media management', 'ROI tracking and optimization'],
     popular: true,
     icon: '📈',
     color: 'from-green-600 to-emerald-600',
@@ -100,18 +83,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     price: '$199',
     period: '/month',
     description: 'Advanced AI platform that provides sales intelligence, automates prospecting, and optimizes sales processes through data-driven insights.',
-    features: [
-      'AI-powered lead scoring',
-      'Predictive sales analytics',
-      'Automated prospecting',
-      'Sales performance tracking',
-      'Customer behavior analysis',
-      'Pipeline optimization',
-      'Real-time sales alerts',
-      'Integration with CRM systems',
-      'Custom sales workflows',
-      'Advanced reporting dashboard'
-    ],
+    features: ['AI-powered lead scoring', 'Predictive sales analytics', 'Automated prospecting', 'Sales performance tracking', 'Customer behavior analysis', 'Pipeline optimization', 'Real-time sales alerts', 'Integration with CRM systems', 'Custom sales workflows', 'Advanced reporting dashboard'],
     popular: true,
     icon: '💰',
     color: 'from-yellow-600 to-orange-600',
@@ -152,18 +124,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     price: '$249',
     period: '/month',
     description: 'Advanced AI platform that automates HR processes, provides people analytics, and optimizes talent management through intelligent automation.',
-    features: [
-      'AI-powered recruitment automation',
-      'Candidate screening and matching',
-      'Employee performance analytics',
-      'Automated onboarding workflows',
-      'Talent retention insights',
-      'HR process automation',
-      'Compliance monitoring',
-      'Employee engagement tracking',
-      'Custom HR workflows',
-      'Advanced analytics dashboard'
-    ],
+    features: ['AI-powered recruitment automation', 'Candidate screening and matching', 'Employee performance analytics', 'Automated onboarding workflows', 'Talent retention insights', 'HR process automation', 'Compliance monitoring', 'Employee engagement tracking', 'Custom HR workflows', 'Advanced analytics dashboard'],
     popular: true,
     icon: '👥',
     color: 'from-blue-600 to-indigo-600',
@@ -204,18 +165,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     price: '$399',
     period: '/month',
     description: 'Advanced AI platform that provides financial analytics, automates financial processes, and delivers predictive insights for better financial decision-making.',
-    features: [
-      'AI-powered financial forecasting',
-      'Real-time financial monitoring',
-      'Automated expense management',
-      'Cash flow optimization',
-      'Risk assessment and management',
-      'Financial reporting automation',
-      'Budget planning and tracking',
-      'Investment analysis',
-      'Compliance monitoring',
-      'Advanced financial dashboard'
-    ],
+    features: ['AI-powered financial forecasting', 'Real-time financial monitoring', 'Automated expense management', 'Cash flow optimization', 'Risk assessment and management', 'Financial reporting automation', 'Budget planning and tracking', 'Investment analysis', 'Compliance monitoring', 'Advanced financial dashboard'],
     popular: true,
     icon: '💼',
     color: 'from-emerald-600 to-teal-600',
@@ -256,18 +206,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     price: '$499',
     period: '/month',
     description: 'Advanced AI platform that optimizes supply chain operations, predicts demand, and automates inventory management through intelligent analytics.',
-    features: [
-      'AI-powered demand forecasting',
-      'Inventory optimization',
-      'Supplier performance analytics',
-      'Logistics optimization',
-      'Real-time supply chain monitoring',
-      'Risk assessment and mitigation',
-      'Cost optimization',
-      'Automated procurement',
-      'Custom supply chain workflows',
-      'Advanced analytics dashboard'
-    ],
+    features: ['AI-powered demand forecasting', 'Inventory optimization', 'Supplier performance analytics', 'Logistics optimization', 'Real-time supply chain monitoring', 'Risk assessment and mitigation', 'Cost optimization', 'Automated procurement', 'Custom supply chain workflows', 'Advanced analytics dashboard'],
     popular: true,
     icon: '🚚',
     color: 'from-purple-600 to-pink-600',

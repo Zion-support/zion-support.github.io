@@ -1,14 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs - extra'
 import path from 'path'
-import {
-  authenticateRequest
+import { authenticateRequest
   enforceRateLimit
   recordRequest
   authenticateRequest,
   enforceRateLimit,
   recordRequest,
-} from '../../utils/api/partnerAuth'
+ } from '../../utils/api/partnerAuth'
 const TALENTS_FILE = path.join(
   process.cwd()
   'data'
@@ -66,7 +65,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 import type { NextApiRequest, NextApiResponse } from "next"
 import fs from "fs-extra"
 import path from "path"
-import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth"
+import { authenticateRequest, enforceRateLimit, recordRequest  } from '../../utils/api/partnerAuth'
 const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json")
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -208,8 +207,6 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 }
 }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (!(await enforceRateLimit(auth.apiKey))) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 429)
     return res.status(429).json({ error: "Rate limit exceeded" })

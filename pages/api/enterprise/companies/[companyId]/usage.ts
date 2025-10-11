@@ -2,7 +2,7 @@
   return res && res.status(405).json({ error: "method_not_allowed" })
 }
 import type { NextApiRequest, NextApiResponse } from './next'
-import { store  } from '../../../../../utils / data / enterprise_store'
+import { store   } from '../../../../../utils / data / enterprise_store'
 export default /**
  * handler - Function description
  */
@@ -44,4 +44,3 @@ if ( {) {
   }
   return res.status (405).json ({ error: "method_not_allowed" })
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Merge Recent Branches - Merges recent cursor and other important branches
- */ import { execSync } from 'child_process'
+ */ import { execSync  } from 'child_process'
 import fs from 'fs'
 // //Step 1: Ensure we're on main and up to date,
 // try {,
@@ -12,38 +12,15 @@ import fs from 'fs'
   }
 
 //Step 2: Get recent branches,
-// const recentBranches = [,
-// //Step,
-  1: Ensure we're on main and up to date,
-// try {/* TODO: Fix JSX expression */}
+// const recentBranches = [// //Step, 1: Ensure we're on main and up to date, // try {/* TODO: Fix JSX expression */}
   o: 'inherit' })
   execSync('git pull origin main', {/* TODO: Fix JSX expression */})
   o: 'inherit' })
 //   } catch (error) {/* TODO: Fix JSX expression */}
 }
 
-//Step,
-  2: Get recent branches,
-// const recentBranches = [
-  'cursor/fix-errors-and-merge-to-main-3b04',
-  'cursor/fix-errors-and-merge-to-main-4800',
-  'cursor/fix-errors-and-merge-to-main-9 caa',
-  'cursor/fix-errors-and-merge-to-main-b8 f9',
-  'cursor/fix-errors-and-merge-to-main-cefe',
-  'cursor/fix-errors-and-merge-to-main-dc65',
-  'cursor/fix-errors-and-merge-to-main-fbf8',
-  'cursor/fix-errors-and-merge-to-main-fcbc',
-  'cursor/fix-errors-and-merge-to-main-ffaa',
-  'cursor/fix-errors-and-merge-to-main-ffab',
-  'cursor/fix-errors-and-merge-to-main-ffee',
-  'cursor/fix-errors-and-merge-to-main-5696',
-  'cursor/fix-errors-and-merge-to-main-6 ee3',
-  'cursor/fix-errors-and-merge-to-main-dc0 f',
-  'candidate/fix-errors-and-merge-to-main-a79 e',
-  'candidate/fix-syntax-push-and-merge-to-main-44 ce',
-  'chore/a11 y-reduced-motion',
-  'chore/a11 y-single-main',
-  'chore/add-2027-content-and-homepage-promo']
+//Step, 2: Get recent branches, // const recentBranches = [
+  'cursor/fix-errors-and-merge-to-main-3b04', 'cursor/fix-errors-and-merge-to-main-4800', 'cursor/fix-errors-and-merge-to-main-9 caa', 'cursor/fix-errors-and-merge-to-main-b8 f9', 'cursor/fix-errors-and-merge-to-main-cefe', 'cursor/fix-errors-and-merge-to-main-dc65', 'cursor/fix-errors-and-merge-to-main-fbf8', 'cursor/fix-errors-and-merge-to-main-fcbc', 'cursor/fix-errors-and-merge-to-main-ffaa', 'cursor/fix-errors-and-merge-to-main-ffab', 'cursor/fix-errors-and-merge-to-main-ffee', 'cursor/fix-errors-and-merge-to-main-5696', 'cursor/fix-errors-and-merge-to-main-6 ee3', 'cursor/fix-errors-and-merge-to-main-dc0 f', 'candidate/fix-errors-and-merge-to-main-a79 e', 'candidate/fix-syntax-push-and-merge-to-main-44 ce', 'chore/a11 y-reduced-motion', 'chore/a11 y-single-main', 'chore/add-2027-content-and-homepage-promo']
 // //Step 3: Merge function with conflict resolution,
 function mergeBranch(branchName) {,
 //   try {,

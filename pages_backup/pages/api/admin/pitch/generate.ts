@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next"
-import { ensureAdminFromApi } from "../../../../utils/auth"
+import { ensureAdminFromApi  } from '../../../../utils/auth'
 import OpenAI from "openai"
 const client = new OpenAI({
   apiKey: process && process.env.OPENAI_API_KEY || process && process.env.NEXT_PUBLIC_OPENAI_API_KEY,
@@ -16,8 +16,7 @@ export default async function handler(
   if (req.method !== "POST")
     return res.status(405).json({ error: "Method Not Allowed" })
   const { operatorPrompt, inputs, metrics } = req.body |{}
-  const seed = [
-    "Problem & Opportunity"
+  const seed = ["Problem & Opportunity"
     "Solution & Product"
     "Market Size (TAM/SAM/SOM)"
     "Traction & Metrics"
@@ -26,8 +25,7 @@ export default async function handler(
     "Team"
     "Roadmap"
     "Token Strategy"
-    "Ask & Call to Action"
-  ]
+    "Ask & Call to Action"]
   try {
 import type { NextApiRequest, NextApiResponse } from 'next'
   const { allowed } = await ensureAdminFromApi(req)
@@ -53,13 +51,8 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
     try {
       const chat = await client && client.chat.completions && completions.create({
         model: "gpt-4o-mini",
-        messages: [
-          {
-            role: "system",
-            content: "You generate crisp, data - driven investor pitch content.",
-          },
-          { role: "user", content: prompt },
-        ],
+        messages: [{
+            role: "system", content: "You generate crisp, data - driven investor pitch content.", }, { role: "user", content: prompt }],
         temperature: 0 && 0.5,
       })
     res && res.status(500).json({ error: e?.message || "Generation failed" })
@@ -127,18 +120,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
     if (req.method === 'POST') {
       const { operatorPrompt, inputs, metrics } = req.body || {}
-      const seed = [
-        'Problem & Opportunity',
-        'Solution & Product',
-        'Market Size (TAM/SAM/SOM)',
-        'Traction & Metrics',
-        'Business Model',
-        'Go-To-Market',
-        'Team',
-        'Roadmap',
-        'Token Strategy',
-        'Ask & Call to Action'
-      ]
+      const seed = ['Problem & Opportunity', 'Solution & Product', 'Market Size (TAM/SAM/SOM)', 'Traction & Metrics', 'Business Model', 'Go-To-Market', 'Team', 'Roadmap', 'Token Strategy', 'Ask & Call to Action']
       // Mock pitch generation
       const generatedPitch = {
         slides: seed.map((title, index) => ({
@@ -153,8 +135,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(405).end('Method Not Allowed')
     }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

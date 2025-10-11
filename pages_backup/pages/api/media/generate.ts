@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from './next'
-import { buildPressRelease  } from '../../../utils / media_kit'
+import { buildPressRelease   } from '../../../utils / media_kit'
 export default async /**
  * handler - Function description
  */
@@ -43,8 +43,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' })
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { buildPressRelease } from '../../../utils/mediaKit'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { buildPressRelease  } from '../../../utils/mediaKit'
     const apiKey = process.env.OPENAI_API_KEY
     if (apiKey) {
       try {
@@ -53,10 +52,7 @@ import { buildPressRelease } from '../../../utils/mediaKit'
         const prompt = `Write a concise ${type} press release for ${companyName} (date ${date}) with clear headlines, 2 paragraphs, and one quote.`
         const completion = await client.chat.completions.create({
           model: 'gpt-4o-mini',
-          messages: [
-            { role: 'system', content: 'You are a seasoned tech PR writer.' },
-            { role: 'user', content: prompt }
-          ],
+          messages: [{ role: 'system', content: 'You are a seasoned tech PR writer.' }, { role: 'user', content: prompt }],
           temperature: 0.4,
           max_tokens: 500
         })
@@ -77,13 +73,13 @@ import { buildPressRelease } from '../../../utils/mediaKit'
 }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
 }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }

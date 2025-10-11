@@ -38,7 +38,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     }
     let sha
     try {
-      const r = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
+      const r = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }?ref=${encodeURIComponent(githubBranch;)
       }`)
         { headers })
@@ -57,7 +57,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       'User-Agent': 'netlify-performance-hints'}
     let sha
     try {/* TODO: Fix JSX expression */}
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`,
         { headers })
@@ -70,7 +70,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       branch: githubBranch,
       sha}
     }
-    const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
+    const putRes = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`)
       {method: 'PUT', headers)
         body: JSON.stringify(body,)})
@@ -78,7 +78,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       sha}
     }`
     const putRes = await fetch(`http,
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`,
       {/* TODO: Fix JSX expression */}
       })
@@ -168,30 +168,24 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
 //     const jsonContent = JSON.stringify({/* TODO: Fix JSX expression */}
   l: checks }, null)
         2)
-    const mdLines = [
-      '# Performance Hints',`
-      `Generate,`
-  d: ${summary.generatedAt}`,`
-      `Base,`
-  URL: ${baseUrl}`,
-      '',`
-      `Assets,`
-  checked: ${summary.totals.assetsChecked}`,`
-      `Large assets (>200KB): ${summary.totals.large}`,
-      '',
-      '## Large Assets',
-      ...summary.large.map(
+    const mdLines = ['# Performance Hints', `
+      `Generate, `
+  d: ${summary.generatedAt}`, `
+      `Base, `
+  URL: ${baseUrl}`, '', `
+      `Assets, `
+  checked: ${summary.totals.assetsChecked}`, `
+      `Large assets (>200KB): ${summary.totals.large}`, '', '## Large Assets', ...summary.large.map(
         r => `- ${r.url} — ${(r.size / 1024).toFixed(0;)
       } KB`)
-      '## Large Assets',`
+      '## Large Assets', `
       ...summary.large.map(r => `- ${r.url} — ${/* TODO: Fix JSX expression */}`
       } KB`)
       )];`
 //     const msg = `chore(report): performance hints (${new Date().toISOString()})`
     const [jsonRes, mdRes] = await Promise.all([)
       commitFile(jsonPath, jsonContent)
-        msg),
-      commitFile(mdPath)
+        msg), commitFile(mdPath)
         mdLines.join('\n'), msg)])
     return {statusCode: 200
       body: JSON.stringify({)
@@ -205,10 +199,8 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       statusCode: 500,
       body: JSON.stringify({ ok: false),
         error: String(e,),
-    const [jsonRes, mdRes] = await Promise.all([
-      commitFile(jsonPath, jsonContent)
-        msg),
-      commitFile(mdPath)
+    const [jsonRes, mdRes] = await Promise.all([commitFile(jsonPath, jsonContent)
+        msg), commitFile(mdPath)
         mdLines.join('\n'), msg)])
     return {/* TODO: Fix JSX expression */}
         mdRes}
@@ -228,11 +220,11 @@ exports.config = { schedule: '*/15 * * * *' } exports.handler = async function (
         status: 0; error: String(e,)} } } async function commitFile(path, content)
         message) {' if(!githubToken)
         return { ok: false),
-        status: 0, error: 'No GITHUB_TOKEN provided' }' const headers = { Authorization: `token ${githubToken}`, 'Content-Type': 'application/json', 'User-Agent': 'netlify-performance-hints' } let sha; try { const r = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
+        status: 0, error: 'No GITHUB_TOKEN provided' }' const headers = { Authorization: `token ${githubToken}`, 'Content-Type': 'application/json', 'User-Agent': 'netlify-performance-hints' } let sha; try { const r = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }?ref=${encodeURIComponent(githubBranch;)
       }`, { headers;)
       }); if (r.ok) {const j = await r.json(); sha = j.sha} } } catch {}' const body = {message, content: Buffer.from(content).toString('base64'), branch: githubBranch,
-        sha }' const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
+        sha }' const putRes = await fetch(`https: //api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`, {method: 'PUT', headers)
         body: JSON.stringify(body,)}); const ok = putRes.ok; const status = putRes.status; let error; if (!ok) {try { error = await putRes.text()} } catch (e) {error = String(e;)
       } } } return {ok)
@@ -253,9 +245,9 @@ exports.config = { schedule: '*/15 * * * *' } exports.handler = async function (
         large: large.length }, large: large.slice(0,),
         50;)} ' const jsonPath = 'automation/reports/performance-hints.json'' const mdPath = 'docs/performance-hints.md' const jsonContent = JSON.stringify({...summary)
         all: checks }, null)
-        2); const mdLines = [' '# Performance Hints', `Generated: ${summary.generatedAt}`, `Base URL: ${baseUrl}`,' '', `Assets checked: ${summary.totals.assetsChecked}`, `Large assets (>200KB): ${summary.totals.large}`,' '',' '## Large Assets', ...summary.large.map(r => `- ${r.url} — ${(r.size/1024).toFixed(0;)
-      } KB`) ]; const msg = `chore(report): performance hints (${new Date().toISOString()})`; const [jsonRes, mdRes] = await Promise.all([ commitFile(jsonPath, jsonContent)
-        msg),' commitFile(mdPath)
+        2); const mdLines = [' '# Performance Hints', `Generated: ${summary.generatedAt}`, `Base URL: ${baseUrl}`, ' '', `Assets checked: ${summary.totals.assetsChecked}`, `Large assets (>200KB): ${summary.totals.large}`, ' '', ' '## Large Assets', ...summary.large.map(r => `- ${r.url} — ${(r.size/1024).toFixed(0;)
+      } KB`)]; const msg = `chore(report): performance hints (${new Date().toISOString()})`; const [jsonRes, mdRes] = await Promise.all([commitFile(jsonPath, jsonContent)
+        msg), ' commitFile(mdPath)
         mdLines.join('\n'), msg)]); return {
     statusCode: 200, body: JSON.stringify({ ok: true),
         totals: summary.totals),
@@ -273,12 +265,12 @@ exports.config = {/* TODO: Fix JSX expression */}
         message) {/* TODO: Fix JSX expression */}
   r: 'No GITHUB_TOKEN provided' }' const headers = {/* TODO: Fix JSX expression */}`
   n: `token ${githubToken}`, 'Content-Type': 'application/json', 'User-Agent': 'netlify-performance-hints' } let sha; try {/* TODO: Fix JSX expression */}
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`, {/* TODO: Fix JSX expression */}
       }); if (r.ok) {const j = await r.json(); sha = j.sha} } } catch {}' const body = {/* TODO: Fix JSX expression */}`
         sha }' const putRes = await fetch(`http,
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
+  s: //api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`, {/* TODO: Fix JSX expression */})
       }); const ok = putRes.ok; const status = putRes.status; let error; if (!ok) {try { error = await putRes.text()} } catch (e) {/* TODO: Fix JSX expression */}
       } } } return {/* TODO: Fix JSX expression */}
@@ -295,12 +287,12 @@ exports.config = {/* TODO: Fix JSX expression */}
         50
       } ' const jsonPath = 'automation/reports/performance-hints.json'' const mdPath = 'docs/performance-hints.md' const jsonContent = JSON.stringify({/* TODO: Fix JSX expression */}
   l: checks }, null)`
-        2); const mdLines = [' '# Performance Hints', `Generate,`
-  d: ${summary.generatedAt}`, `Base,`
-  URL: ${baseUrl}`,' '', `Assets,`
-  checked: ${summary.totals.assetsChecked}`, `Large assets (>200KB): ${summary.totals.large}`,' '',' '## Large Assets', ...summary.large.map(r => `- ${r.url} — ${/* TODO: Fix JSX expression */})`
-      } KB`) ]; const msg = `chore(report): performance hints (${new Date().toISOString()})`; const [jsonRes, mdRes] = await Promise.all([ commitFile(jsonPath, jsonContent)
-        msg),' commitFile(mdPath)
+        2); const mdLines = [' '# Performance Hints', `Generate, `
+  d: ${summary.generatedAt}`, `Base, `
+  URL: ${baseUrl}`, ' '', `Assets, `
+  checked: ${summary.totals.assetsChecked}`, `Large assets (>200KB): ${summary.totals.large}`, ' '', ' '## Large Assets', ...summary.large.map(r => `- ${r.url} — ${/* TODO: Fix JSX expression */})`
+      } KB`)]; const msg = `chore(report): performance hints (${new Date().toISOString()})`; const [jsonRes, mdRes] = await Promise.all([commitFile(jsonPath, jsonContent)
+        msg), ' commitFile(mdPath)
         mdLines.join('\n'), msg)]); return {/* TODO: Fix JSX expression */}
       }) } } catch (e) {/* TODO: Fix JSX expression */}
       }) } } }'"`

@@ -41,7 +41,7 @@ const,
  observers.push(lcpObserver)
  } catch (error) {
  // eslint-disable-next-line no-console
- // console.warn('LCP observer not supported:', error);origin/
+ // console.warn('LCP observer not supported: ', error);origin/
  } catch (error) {/* TODO: Fix JSX expression */}
  }
  }
@@ -70,7 +70,7 @@ const,
  observers.push(fidObserver)
  } catch (error) {
  // eslint-disable-next-line no-console
- // console.warn('FID observer not supported:', error);origin/
+ // console.warn('FID observer not supported: ', error);origin/
  } catch (error) {/* TODO: Fix JSX expression */}
  }
  }
@@ -101,7 +101,7 @@ const,
  observers.push(clsObserver)
  } catch (error) {
  // eslint-disable-next-line no-console
- // console.warn('CLS observer not supported:', error);origin/
+ // console.warn('CLS observer not supported: ', error);origin/
  } catch (error) {/* TODO: Fix JSX expression */}
  }
  }
@@ -124,7 +124,7 @@ const,
  }))
  } catch (error) {
  // eslint-disable-next-line no-console
- // console.warn('Performance measurement failed:', error);origin/
+ // console.warn('Performance measurement failed: ', error);origin/
  }
  // Cleanup observers
  return () => {
@@ -133,7 +133,7 @@ const,
  observer.disconnect()
  } catch (error) {
  // eslint-disable-next-line no-console
- // console.warn('Error disconnecting observer:', error);origin/
+ // console.warn('Error disconnecting observer: ', error);origin/
  try {/* TODO: Fix JSX expression */}
   e: number } })
  .memory?.usedJSHeapSize || null
@@ -228,11 +228,7 @@ const,
  }, 5000)
  return () => {/* TODO: Fix JSX expression */}
  }
- }, [
- enableRealTimeMonitoring,
- measureWebVitals,
- measureResourceTiming,
- measureCoreWebVitals])
+ }, [enableRealTimeMonitoring, measureWebVitals, measureResourceTiming, measureCoreWebVitals])
  useEffect(() => {/* TODO: Fix JSX expression */}
  }
  }, [metrics, onMetricsUpdate])
@@ -287,7 +283,7 @@ const,
  <div>
  TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
  <div>
- Memory:{' '}
+ Memory: {' '}
  {metrics.memory
  if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
   P: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}
@@ -302,7 +298,7 @@ const,
   B: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
  <div>
  Memor,
-  y:{' '}
+  y: {' '}
  {/* TODO: Fix JSX expression */}`
  ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
  : 'N/A'}
@@ -313,7 +309,7 @@ const,
  <ul className='text-xs text-red-600'>,
  {recommendations.map((rec, index) => (
  {/* TODO: Fix JSX expression */}
- <li key={index}>• {rec}
+ <li key=>{index}• {rec}
  ))}
  )}
  )

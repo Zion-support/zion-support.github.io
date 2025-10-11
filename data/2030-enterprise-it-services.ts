@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface EnterpriseITService2030 {
   id: string
   name: string
@@ -39,27 +39,10 @@ export interface EnterpriseITService2030 {
   rating: number
   reviews: number
 }
-export const enterpriseITServices2030: EnterpriseITService2030[] = [
-  // Autonomous DevOps Platform 2030
+export const enterpriseITServices2030: EnterpriseITService2030[] = [// Autonomous DevOps Platform 2030
   {
-    id: 'autonomous-devops-platform-2030',
-    name: 'Autonomous DevOps Platform 2030',
-    tagline: 'Fully autonomous DevOps operations',
-    price: '$8,999',
-    period: '/month',
-    description: 'Revolutionary 2030 platform for fully autonomous DevOps operations, enabling self-optimizing, self-healing, and self-improving development and operations.',
-    features: [
-      'Autonomous CI/CD',
-      'Self-optimizing deployments',
-      'Self-healing infrastructure',
-      'Autonomous monitoring',
-      'Self-improving processes',
-      'Autonomous security',
-      'Self-optimizing performance',
-      'Autonomous scaling',
-      'Self-healing systems',
-      'Autonomous innovation'
-    ],
+    id: 'autonomous-devops-platform-2030', name: 'Autonomous DevOps Platform 2030', tagline: 'Fully autonomous DevOps operations', price: '$8, 999', period: '/month', description: 'Revolutionary 2030 platform for fully autonomous DevOps operations, enabling self-optimizing, self-healing, and self-improving development and operations.', features: [
+      'Autonomous CI/CD', 'Self-optimizing deployments', 'Self-healing infrastructure', 'Autonomous monitoring', 'Self-improving processes', 'Autonomous security', 'Self-optimizing performance', 'Autonomous scaling', 'Self-healing systems', 'Autonomous innovation'],
     popular: true,
     icon: '🚀',
     color: 'from-blue-600 via-cyan-600 to-teal-600',
@@ -100,18 +83,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     price: '$6,999',
     period: '/month',
     description: 'Revolutionary 2030 platform for zero trust network architecture, providing comprehensive security with continuous verification and authentication.',
-    features: [
-      'Continuous verification',
-      'Identity-based access',
-      'Micro-segmentation',
-      'Real-time monitoring',
-      'Advanced threat detection',
-      'Automated response',
-      'Zero trust APIs',
-      'Security automation',
-      'Threat intelligence',
-      'Advanced security protocols'
-    ],
+    features: ['Continuous verification', 'Identity-based access', 'Micro-segmentation', 'Real-time monitoring', 'Advanced threat detection', 'Automated response', 'Zero trust APIs', 'Security automation', 'Threat intelligence', 'Advanced security protocols'],
     popular: true,
     icon: '🔒',
     color: 'from-indigo-600 via-blue-600 to-cyan-600',
@@ -152,18 +124,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     price: '$5,999',
     period: '/month',
     description: 'Revolutionary 2030 platform for edge computing orchestration, enabling intelligent distributed computing and real-time processing at the edge.',
-    features: [
-      'Edge intelligence',
-      'Distributed computing',
-      'Real-time processing',
-      'Edge optimization',
-      'Edge security',
-      'Edge monitoring',
-      'Edge automation',
-      'Edge scaling',
-      'Edge networking',
-      'Advanced edge computing'
-    ],
+    features: ['Edge intelligence', 'Distributed computing', 'Real-time processing', 'Edge optimization', 'Edge security', 'Edge monitoring', 'Edge automation', 'Edge scaling', 'Edge networking', 'Advanced edge computing'],
     popular: true,
     icon: '🌐',
     color: 'from-teal-600 via-emerald-600 to-green-600',
@@ -204,18 +165,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     price: '$7,999',
     period: '/month',
     description: 'Revolutionary 2030 platform for AI-powered IT operations, enabling intelligent monitoring, automation, and optimization of IT infrastructure.',
-    features: [
-      'AI-powered monitoring',
-      'Intelligent automation',
-      'Predictive maintenance',
-      'AI-driven insights',
-      'Autonomous operations',
-      'Intelligent optimization',
-      'AI operations APIs',
-      'Real-time intelligence',
-      'Autonomous decision making',
-      'Advanced IT intelligence'
-    ],
+    features: ['AI-powered monitoring', 'Intelligent automation', 'Predictive maintenance', 'AI-driven insights', 'Autonomous operations', 'Intelligent optimization', 'AI operations APIs', 'Real-time intelligence', 'Autonomous decision making', 'Advanced IT intelligence'],
     popular: true,
     icon: '🤖',
     color: 'from-purple-600 via-pink-600 to-rose-600',
@@ -256,18 +206,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     price: '$12,999',
     period: '/month',
     description: 'Revolutionary 2030 platform for quantum-secure infrastructure, providing quantum-proof security for critical infrastructure and systems.',
-    features: [
-      'Quantum-proof security',
-      'Quantum encryption',
-      'Quantum key distribution',
-      'Quantum infrastructure',
-      'Quantum security APIs',
-      'Real-time quantum security',
-      'Quantum security validation',
-      'Quantum infrastructure networks',
-      'Quantum security protocols',
-      'Advanced quantum security'
-    ],
+    features: ['Quantum-proof security', 'Quantum encryption', 'Quantum key distribution', 'Quantum infrastructure', 'Quantum security APIs', 'Real-time quantum security', 'Quantum security validation', 'Quantum infrastructure networks', 'Quantum security protocols', 'Advanced quantum security'],
     popular: true,
     icon: '⚛️',
     color: 'from-indigo-600 via-blue-600 to-cyan-600',

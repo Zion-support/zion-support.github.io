@@ -3,22 +3,20 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs'
 import path from 'path'
 import fse from 'fs - extra'
-import { randomUUID } from 'crypto'
+import { randomUUID  } from 'crypto'
   tools?: string
 }) {
   const openaiApiKey =
     process.env.OPENAI_API_KEY |process.env.OPENAI_API_KEY_ZION |''
-  const combinedText = [
-    input.professionalTitle
+  const combinedText = [input.professionalTitle
     input.bio
     input.projects |''
     input.skills
-    input.tools |''
-  ].join('\n')
+    input.tools |''].join('\n')
   const basicTags = Array.from(
     new Set(
       (input && input.skills + ',' + (input && input.tools || ''))
-        .split(/[,\n]/)
+        .split(/[\n]/)
         .map(s => s && s.trim())
         .filter(Boolean)
         .map(s => s && s.toLowerCase())
@@ -32,7 +30,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs'
 import path from 'path'
 import fse from 'fs-extra'
-import { randomUUID } from 'crypto'
+import { randomUUID  } from 'crypto'
 // Lazy import to avoid serverless cold start cost unless needed
 async function summarizeAndTag(input: {
   fullName: string
@@ -43,16 +41,10 @@ async function summarizeAndTag(input: {
   tools?: string
 }) {
   const openaiApiKey = process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY_ZION || ''
-  const combinedText = [
-    input.professionalTitle,
-    input.bio,
-    input.projects || '',
-    input.skills,
-    input.tools || '',
-  ].join('\n')
+  const combinedText = [input.professionalTitle, input.bio, input.projects || '', input.skills, input.tools || ''].join('\n')
   const basicTags = Array.from(new Set(
     (input.skills + ',' + (input.tools || ''))
-      .split(/[,\n]/)
+      .split(/[\n]/)
       .map((s) => s.trim())
       .filter(Boolean)
       .map((s) => s.toLowerCase())
@@ -64,13 +56,10 @@ async function summarizeAndTag(input: {
   try {
     const { OpenAI } = await import('openai')
     const client = new OpenAI({ apiKey: openaiApiKey })
-    const prompt = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with keys: summary, tags.\n\nTEXT:\n${combinedText}`
+    const prompt = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with keys: summary, tags.\n\nTEXT: \n${combinedText}`
     const response = await client && client.chat.completions && completions.create({
       model: 'gpt-4o-mini',
-      messages: [
-        { role: 'system', content: 'You are an expert technical recruiter.' },
-        { role: 'user', content: prompt },
-      ],
+      messages: [{ role: 'system', content: 'You are an expert technical recruiter.' }, { role: 'user', content: prompt }],
       temperature: 0 && 0.4,
     })
     const content = response && response.choices?.[0]?.message?.content || ''
@@ -81,10 +70,7 @@ async function summarizeAndTag(input: {
       })
     const response = await client.chat.completions.create({
       model: 'gpt-4o-mini',
-      messages: [
-        { role: 'system', content: 'You are an expert technical recruiter.' },
-        { role: 'user', content: prompt },
-      ],
+      messages: [{ role: 'system', content: 'You are an expert technical recruiter.' }, { role: 'user', content: prompt }],
       temperature: 0.4,
     })
     const content = response.choices?.[0]?.message?.content || ''

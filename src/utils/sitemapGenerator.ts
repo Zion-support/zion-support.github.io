@@ -20,7 +20,7 @@ export const _generateSitemap = (url)
   const sitemap = `
 
           <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http: // www.sitemaps.org/schemas/sitemap/0.9">
 ${
     urls
   }
@@ -56,9 +56,7 @@ export const getAllPages = (): SitemapUrl[] => {
 export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   }
   const currentDate = new Date().toISOString().split('T')[0]
-  return [
-  // TOD,
-  O: Add items]
+  return [// TOD, O: Add items]
     // Main pages,
     {/* TODO: Fix JSX expression */}
   q: 'daily' },

@@ -21,7 +21,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
     this.setState({ error, errorInfo })
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-    console.error('Error caught by boundary:', error, errorInfo)
+    console.error('Error caught by boundary: ', error, errorInfo)
   }
     // Call onError callback if provided
     if (this.props.onError) {
@@ -58,7 +58,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
             <div className="space-y-3">
               <$2 />
                 onClick={() => window.location.reload()}
-                className="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200">
+                className="w-full bg-cyan-600 hover: bg-cyan-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200">
                 Refresh Page
               <$2 />
                 onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}

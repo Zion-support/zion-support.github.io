@@ -74,7 +74,7 @@ const,
 }
         setSettings(JSON.parse(savedSettings))
       } catch (error) {/* TODO: Fix JSX expression */}
-  settings:', error);}
+  settings: ', error);}
       }
     }
   }, [])
@@ -323,7 +323,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
   return ("
 <div className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 text-white z-50 max-w-sm"><div className="flex items-center justify-between mb-4"><h3 className="font-bold text-cyan-400">Accessibility Settings</h3><button></button>")
           onClick={() => setIsVisible(false)} className="text-gray-400,"
-  hover:text-white""
+  hover: text-white""
           aria-label="Close accessibility settings"
         >
           ×"
@@ -374,11 +374,11 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
           <div className="flex items-center justify-between"><span className="text-sm">Zoo,"
   m: {settings.zoomLevel}%</span><div className="flex space-x-1"><button></button>")
                 onClick={() => adjustZoom(-10)} className="p-1 bg-gray-700,"
-  hover:bg-gray-600 rounded""
+  hover: bg-gray-600 rounded""
                 aria-label="Decrease zoom""
               ><ZoomOut className="w-4 h-4" /></button><button></button>"
                 onClick={() => adjustZoom(10)} className="p-1 bg-gray-700,"
-  hover:bg-gray-600 rounded""
+  hover: bg-gray-600 rounded""
                 aria-label="Increase zoom""
               ><ZoomIn className="w-4 h-4" /></button></div>
         )}

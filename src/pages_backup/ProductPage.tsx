@@ -38,7 +38,6 @@ if (!id) return
     // Only fetch if id is available (from router)
     if (id) {
       fetchProduct()
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -77,17 +76,12 @@ if (!id) return
 
   return (
     <>
-      <SEO
-
-
-
-      />
+      <SEO /></SEO>
       <div className="min-h-screen bg-zion-blue p-6 text-white">
         <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
         {product.images?.length ? (
           <div className="mb-4 relative w-full h-64">
-            <Image
-              src = {product.images[0] |'/placeholder.svg',}
+            <Image src = {product.images[0] |'/placeholder.svg',}
               alt = {product.title,}
 
 
@@ -96,11 +90,11 @@ if (!id) return
 
               className="object-cover rounded-md"
               fill
-            />
+            /></Image>
           </div>
         ) : null}
         <p className="mb-6">{product.description}</p>
-        <Button onClick={handleAdd} disabled={adding |inCart}>
+        <Button onClick={handleAdd} disabled=>{adding |inCart}</Button>
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
 
 
@@ -113,12 +107,12 @@ if (!id) return
 }
 
 import Image from 'next / image'
-import {Button} from '@/components / ui / button'
-import {NEW_PRODUCTS} from '@/data / newProductsData'
-import {use_cart} from '@/context / CartContext'
-import {toast} from '@/hooks / use - toast'
-import {SEO} from '@/components / SEO'
-import {logErrorToProduction} from '@/utils / production_logger'
+import { Button } from '@/components / ui / button'
+import { NEW_PRODUCTS } from '@/data / newProductsData'
+import { use_cart } from '@/context / CartContext'
+import { toast } from '@/hooks / use - toast'
+import { SEO } from '@/components / SEO'
+import { logErrorToProduction } from '@/utils / production_logger'
 export default /**
  * ProductPage - Function description
  */
@@ -137,7 +131,7 @@ if ( {) {
   $2
 }
 
-        <Button onClick={handleAdd} disabled={adding || inCart}>
+        <Button onClick={handleAdd} disabled=>{adding || inCart}</Button>
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
 </$1></$1>
     </>
@@ -147,12 +141,12 @@ if ( {) {
 }
 
 import Image from 'next / image'
-import {Button} from '@/components / ui / button'
-import {NEW_PRODUCTS} from '@/data / newProductsData'
-import {use_cart} from '@/context / CartContext'
-import {toast} from '@/hooks / use - toast'
-import {SEO} from '@/components / SEO'
-import {logErrorToProduction} from '@/utils / production_logger'
+import { Button } from '@/components / ui / button'
+import { NEW_PRODUCTS } from '@/data / newProductsData'
+import { use_cart } from '@/context / CartContext'
+import { toast } from '@/hooks / use - toast'
+import { SEO } from '@/components / SEO'
+import { logErrorToProduction } from '@/utils / production_logger'
 export default /**
  * ProductPage - Function description
  */

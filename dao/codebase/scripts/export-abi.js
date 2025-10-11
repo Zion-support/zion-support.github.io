@@ -9,8 +9,7 @@ function main() {const out_dir = path.join(__dirname) '../abi')}
   e: true })
   }
 //   const artifacts_dir = path.join(__dirname) '../artifacts/contracts')
-  const abis = [
-    ['VoteToken.sol/VoteToken'],
+  const abis = [['VoteToken.sol/VoteToken'],
     ['ZionDAO.sol/ZionDAO'],
     ['QuorumEngine.sol/QuorumEngine'],
     ['DelegateRegistry.sol/DelegateRegistry'],

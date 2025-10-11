@@ -191,7 +191,7 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>()
   O: Add content,}
 }
   const result = {} as Pick
-          <T>
+          <T ></T>
   keys.forEach(key => {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
@@ -224,7 +224,7 @@ export function omit
     delete result[key];)
   })
   return result as Omit
-          <T>
+          <T ></T>
 }
 /**
  * Group array items by a key

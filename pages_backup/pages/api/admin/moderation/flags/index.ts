@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
-import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth',
-import { createFlag, readAllFlags } from '../../../../../utils/moderationDb',
+import { ensureAdmin, parseUserFromRequest  } from '../../../../../utils/auth',
+import { createFlag, readAllFlags  } from '../../../../../utils/moderationDb',
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = parseUserFromRequest(req),
   try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) }
@@ -12,8 +12,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } catch (e: any) {
       return res.status(400).json({ error: e.message || 'Invalid payload' })
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth'
-import { createFlag, readAllFlags } from '../../../../../utils/moderationDb'
+import { ensureAdmin, parseUserFromRequest  } from '../../../../../utils/auth'
+import { createFlag, readAllFlags  } from '../../../../../utils/moderationDb'
   }
   if (req.method === 'POST') {
     const init = req.body || {}
@@ -51,11 +51,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       res.status(405).end('Method Not Allowed')
     }
   } catch (error) {
-    console.error("Error:", error)
+    console.error("Error: ", error)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
   res.setHeader('Allow', 'GET,POST')
   return res.status(405).end('Method Not Allowed')
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

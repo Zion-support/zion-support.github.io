@@ -1,37 +1,19 @@
 import React from 'react'
-import { Heart, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react'
+import { Heart, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles  } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 const AIFitnessCoachPage: React.FC = () => {
-  const features = [
-    'Personalized Plans',
-    'Progress Tracking',
-    'Nutrition Analysis',
-    'Workout Videos',
-    'Health Monitoring',
-    'Goal Setting',
-    'Real-time Feedback',
-    'Exercise Library',
-    'Meal Planning',
-    'Wearable Integration'
-  ]
-  const benefits = [
-    'Better results',
-    '24/7 guidance',
-    'Personalized approach',
-    'Health insights',
-    'Motivation support',
-    'Cost-effective'
-  ]
-  const pricingPlans = [
-    {
-      name: 'Basic',
-      price: '$99',
-      period: '/month',
-      features: ['Basic plans', 'Progress tracking', 'Email support', 'Mobile app'],
+  return (
+
+  const features = ['Personalized Plans', 'Progress Tracking', 'Nutrition Analysis', 'Workout Videos', 'Health Monitoring', 'Goal Setting', 'Real-time Feedback', 'Exercise Library', 'Meal Planning', 'Wearable Integration']
+  const benefits = ['Better results', '24/7 guidance', 'Personalized approach', 'Health insights', 'Motivation support', 'Cost-effective']
+  const pricingPlans = [{
+      name: 'Basic', price: '$99', period: '/month', features: ['Basic plans', 'Progress tracking', 'Email support', 'Mobile app'],
       popular: false
-    },
+    
+  );
+},
     {
       name: 'Premium',
       price: '$149',
@@ -48,22 +30,21 @@ const AIFitnessCoachPage: React.FC = () => {
     }
   ]
   return (
-    <React.Fragment>
-      <SEOOptimizer
-        title="AI Fitness Coach - Personalized Fitness & Nutrition Plans | Zion Tech Group"
+    <React .Fragment></React>
+      <SEOOptimizer title="AI Fitness Coach - Personalized Fitness & Nutrition Plans | Zion Tech Group"
         description="Get personalized fitness and nutrition plans powered by AI analysis. Track progress, get 24/7 guidance, and achieve your health goals starting at $99/month."
         keywords={['AI fitness coach', 'personalized fitness', 'nutrition plans', 'health tracking', 'AI health', 'fitness automation']}
-        canonicalUrl="https://ziontechgroup.com/ai-fitness-coach"
-      />
+        canonicalUrl="https: //ziontechgroup.com/ai-fitness-coach"
+      /></SEOOptimizer>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
+        <Navigation /></Navigation>
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center justify-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4">
-                  <Heart className="w-8 h-8 text-white" />
+                  <Heart className="w-8 h-8 text-white" /></Heart>
                 </div>
                 <h1 className="text-4xl md: text-5xl font-bold text-white neon-text">
                   AI Fitness Coach
@@ -80,7 +61,7 @@ const AIFitnessCoachPage: React.FC = () => {
                 <$2 />
                   href="#demo"
                   className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                  <Play className="w-5 h-5" />
+                  <Play className="w-5 h-5" /></Play>
                   Watch Demo,
   
               </div>
@@ -89,28 +70,28 @@ const AIFitnessCoachPage: React.FC = () => {
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">AI Fitness Features
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
               {features.map((feature, index) => (
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card p-6 hover: scale-105 transition-all duration-300">
                   <div className="flex items-center mb-4">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" /></CheckCircle>
                     <h3 className="text-lg font-semibold text-white">{feature}
               ))}
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Why Choose AI Fitness Coach?
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Zap className="w-8 h-8 text-white" />
+                    <Zap className="w-8 h-8 text-white" /></Zap>
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit}
               ))}
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Simple, Transparent Pricing
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {plan.popular && (
@@ -125,7 +106,7 @@ const AIFitnessCoachPage: React.FC = () => {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" /></CheckCircle>
                         {feature}
                     ))}
                   <$2 />
@@ -133,7 +114,7 @@ const AIFitnessCoachPage: React.FC = () => {
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'cyber-button'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                        : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900'
                     }`}
                   >
                     Get Started
@@ -161,7 +142,7 @@ const AIFitnessCoachPage: React.FC = () => {
             </div>
           </section>
         </main>
-        <Footer />
+        <Footer /></Footer>
       </div>
     </React.Fragment>
   ),

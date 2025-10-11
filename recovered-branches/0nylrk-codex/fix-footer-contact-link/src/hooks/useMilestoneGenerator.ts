@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import { supabase } from '@/integrations/supabase/client'
-import { toast } from 'sonner'
+import { useState  } from 'react'
+import { supabase  } from '@/integrations/supabase/client'
+import { toast  } from 'sonner'
 export interface MilestoneInput {
   scope: string
   startDate: string
@@ -33,7 +33,7 @@ export function useMilestoneGenerator() {
       setGeneratedMilestones(milestonesWithFlag)
       return milestonesWithFlag
     } catch (error) {
-      console.error('Error generating milestones:', error)
+      console.error('Error generating milestones: ', error)
       toast.error('Failed to generate milestones')
       return []
     } finally {

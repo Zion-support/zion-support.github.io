@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface RevolutionaryITInfrastructure2026 {
   id: string
   name: string
@@ -45,26 +45,9 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 }
-export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure2026[] = [
-  {
-    id: 'quantum-resistant-cybersecurity-suite',
-    name: 'Quantum-Resistant Cybersecurity Suite',
-    tagline: 'Future-proof security for the quantum computing era',
-    price: '$2,999',
-    period: '/month',
-    description: 'Advanced cybersecurity suite that implements post-quantum cryptography algorithms to protect against future quantum computing threats while maintaining current security standards.',
-    features: [
-      'Post-quantum cryptography algorithms',
-      'Quantum-resistant key exchange',
-      'Hybrid encryption systems',
-      'Real-time threat detection',
-      'Zero-trust architecture',
-      'Advanced endpoint protection',
-      'Quantum-safe certificate management',
-      'Compliance reporting (SOC2, ISO27001)',
-      '24/7 security monitoring',
-      'Incident response automation'
-    ],
+export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure2026[] = [{
+    id: 'quantum-resistant-cybersecurity-suite', name: 'Quantum-Resistant Cybersecurity Suite', tagline: 'Future-proof security for the quantum computing era', price: '$2, 999', period: '/month', description: 'Advanced cybersecurity suite that implements post-quantum cryptography algorithms to protect against future quantum computing threats while maintaining current security standards.', features: [
+      'Post-quantum cryptography algorithms', 'Quantum-resistant key exchange', 'Hybrid encryption systems', 'Real-time threat detection', 'Zero-trust architecture', 'Advanced endpoint protection', 'Quantum-safe certificate management', 'Compliance reporting (SOC2, ISO27001)', '24/7 security monitoring', 'Incident response automation'],
     popular: true,
     icon: '🔐⚛️',
     color: 'from-red-600 to-orange-700',
@@ -99,18 +82,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     price: '$1,799',
     period: '/month',
     description: 'Comprehensive edge computing platform that manages, monitors, and optimizes distributed edge infrastructure for IoT, 5G, and edge applications.',
-    features: [
-      'Multi-edge location management',
-      'Intelligent workload distribution',
-      'Edge-to-cloud synchronization',
-      'Real-time performance monitoring',
-      'Automated scaling and optimization',
-      'Edge security and compliance',
-      'Multi-cloud edge integration',
-      'Edge application deployment',
-      'Edge analytics and insights',
-      'Disaster recovery automation'
-    ],
+    features: ['Multi-edge location management', 'Intelligent workload distribution', 'Edge-to-cloud synchronization', 'Real-time performance monitoring', 'Automated scaling and optimization', 'Edge security and compliance', 'Multi-cloud edge integration', 'Edge application deployment', 'Edge analytics and insights', 'Disaster recovery automation'],
     popular: true,
     icon: '🌐⚡',
     color: 'from-blue-600 to-cyan-700',
@@ -145,18 +117,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     price: '$899',
     period: '/month',
     description: 'Advanced DevOps automation platform that uses AI to optimize CI/CD pipelines, infrastructure management, and deployment processes.',
-    features: [
-      'AI-powered pipeline optimization',
-      'Intelligent test automation',
-      'Predictive deployment analysis',
-      'Infrastructure drift detection',
-      'Automated rollback decisions',
-      'Performance anomaly detection',
-      'Security vulnerability scanning',
-      'Cost optimization recommendations',
-      'Multi-environment management',
-      'Comprehensive analytics dashboard'
-    ],
+    features: ['AI-powered pipeline optimization', 'Intelligent test automation', 'Predictive deployment analysis', 'Infrastructure drift detection', 'Automated rollback decisions', 'Performance anomaly detection', 'Security vulnerability scanning', 'Cost optimization recommendations', 'Multi-environment management', 'Comprehensive analytics dashboard'],
     popular: false,
     icon: '🤖🔄',
     color: 'from-green-600 to-emerald-700',
@@ -191,18 +152,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     price: '$1,499',
     period: '/month',
     description: 'Comprehensive blockchain platform that provides enterprise-grade infrastructure, smart contract management, and blockchain analytics for business applications.',
-    features: [
-      'Multi-blockchain support (Ethereum, Polygon, Solana)',
-      'Smart contract development and deployment',
-      'Blockchain node management',
-      'Real-time transaction monitoring',
-      'Smart contract auditing tools',
-      'Blockchain analytics dashboard',
-      'API for blockchain integration',
-      'Multi-signature wallet management',
-      'Compliance and regulatory tools',
-      'Enterprise security features'
-    ],
+    features: ['Multi-blockchain support (Ethereum, Polygon, Solana)', 'Smart contract development and deployment', 'Blockchain node management', 'Real-time transaction monitoring', 'Smart contract auditing tools', 'Blockchain analytics dashboard', 'API for blockchain integration', 'Multi-signature wallet management', 'Compliance and regulatory tools', 'Enterprise security features'],
     popular: false,
     icon: '⛓️🔗',
     color: 'from-purple-600 to-indigo-700',
@@ -237,18 +187,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     price: '$3,999',
     period: '/month',
     description: 'Revolutionary platform that seamlessly integrates quantum computing resources with classical cloud infrastructure for hybrid computing applications.',
-    features: [
-      'Quantum-classical hybrid workflows',
-      'Multiple quantum provider integration',
-      'Quantum algorithm optimization',
-      'Hybrid computing orchestration',
-      'Quantum resource scheduling',
-      'Classical-quantum data synchronization',
-      'Quantum error correction',
-      'Hybrid application development',
-      'Performance benchmarking tools',
-      'Cost optimization analytics'
-    ],
+    features: ['Quantum-classical hybrid workflows', 'Multiple quantum provider integration', 'Quantum algorithm optimization', 'Hybrid computing orchestration', 'Quantum resource scheduling', 'Classical-quantum data synchronization', 'Quantum error correction', 'Hybrid application development', 'Performance benchmarking tools', 'Cost optimization analytics'],
     popular: true,
     icon: '☁️⚛️',
     color: 'from-cyan-600 to-blue-700',

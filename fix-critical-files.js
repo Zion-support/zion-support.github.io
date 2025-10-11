@@ -4,13 +4,9 @@ import fs from 'fs'
 import path from 'path'
 // Function to fix specific critical files
 function fixCriticalFiles() {
-  const criticalFiles = [
-    {
-      path: '/workspace/src/metadata.ts',
-      content: `export const metadata = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-  keywords: ['AI', 'IT Solutions', 'Digital Transformation', 'Enterprise'],
+  const criticalFiles = [{
+      path: '/workspace/src/metadata.ts', content: `export const metadata = {
+  title: 'Zion Tech Group - Advanced AI and IT Solutions', description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.', keywords: ['AI', 'IT Solutions', 'Digital Transformation', 'Enterprise'],
   openGraph: {
     title: 'Zion Tech Group - Advanced AI and IT Solutions',
     description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
@@ -47,11 +43,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Analytics />
+        <Analytics /></Analytics>
       <body>
-        <Navigation />
+        <Navigation /></Navigation>
         <main>{children}
-        <Footer />
+        <Footer /></Footer>
   )
 }`
     }
@@ -68,18 +64,7 @@ export default function RootLayout({
 
 // Function to clean up other problematic files
 function cleanProblematicFiles() {
-  const problematicFiles = [
-    '/workspace/src/page-minimal-metadata.ts',
-    '/workspace/src/page-minimal.tsx',
-    '/workspace/src/page-optimized.tsx',
-    '/workspace/src/setupTests.tsx',
-    '/workspace/src/sitemap-utils.ts',
-    '/workspace/src/sitemap.ts',
-    '/workspace/src/sitemap.tsx',
-    '/workspace/src/services/BaseService.ts',
-    '/workspace/src/middleware/rateLimiter.ts',
-    '/workspace/src/middleware/requestMiddleware.ts'
-  ]
+  const problematicFiles = ['/workspace/src/page-minimal-metadata.ts', '/workspace/src/page-minimal.tsx', '/workspace/src/page-optimized.tsx', '/workspace/src/setupTests.tsx', '/workspace/src/sitemap-utils.ts', '/workspace/src/sitemap.ts', '/workspace/src/sitemap.tsx', '/workspace/src/services/BaseService.ts', '/workspace/src/middleware/rateLimiter.ts', '/workspace/src/middleware/requestMiddleware.ts']
   for (const filePath of problematicFiles) {
     try {
       if (fs.existsSync(filePath)) {

@@ -1,8 +1,8 @@
-import { useState } from "react"
-import { supabase } from "@/integrations/supabase/client"
-import { useAuth } from "@/hooks/useAuth"
-import { Review, ReviewReport } from "@/types/reviews"
-import { toast } from "@/hooks/use-toast"
+import { useState  } from 'react'
+import { supabase  } from '@/integrations/supabase/client'
+import { useAuth  } from '@/hooks/useAuth'
+import { Review, ReviewReport  } from '@/types/reviews'
+import { toast  } from '@/hooks/use-toast'
 export function useReviews(projectId?: string) {
   const { user } = useAuth()
   const [isLoading, setIsLoading] = useState(false)
@@ -18,7 +18,7 @@ export function useReviews(projectId?: string) {
         .from("reviews")
         .select(`
           *,
-          reviewer_profile:profiles!reviewer_id(display_name, avatar_url)
+          reviewer_profile: profiles!reviewer_id(display_name, avatar_url)
         `)
         .eq("project_id", projectId)
         .eq("is_visible", true)
@@ -58,7 +58,7 @@ export function useReviews(projectId?: string) {
         .from("reviews")
         .select(`
           *,
-          reviewer_profile:profiles!reviewer_id(display_name, avatar_url)
+          reviewer_profile: profiles!reviewer_id(display_name, avatar_url)
         `)
         .eq("reviewee_id", userId)
         .eq("is_visible", true)

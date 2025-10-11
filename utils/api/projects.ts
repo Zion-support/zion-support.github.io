@@ -1,22 +1,20 @@
 import fs from 'fs'
 import path from 'path'
-import { NextApiRequest, NextApiResponse } from 'next'
-import {
-  Project,
+import { NextApiRequest, NextApiResponse  } from 'next'
+import { Project,
   Milestone,
   MilestoneStatus,
   Project
   Milestone
   MilestoneStatus
   isMilestoneStatus
-} from '../types/milestones'
-import { CurrentUser } from './auth'
+ } from '../types/milestones'
+import { CurrentUser  } from './auth'
 export interface Milestone {
   isMilestoneStatus,
 } from '../types/milestones'
-import { CurrentUser } from './auth'
-export interface Milestone {
-  id: string
+import { CurrentUser  } from './auth'
+export interface Milestone >{id: string
   title: string
   summary: string
   clientId: string
@@ -29,28 +27,29 @@ export interface Milestone {
     amount: number
     dueDate?: string
     status: 'PENDING' | 'IN_PROGRESS' | 'COMPLETED' | 'OVERDUE'
-  }>
-  documents: Array<{
-    id: string
+  }
+  documents: Array<>
+  {id: string
     name: string
     url: string
     uploadedAtIso: string
-  }>
-  notes: Array<{
-    id: string
+  }
+</>
+  notes: Array<>
+  {id: string
     content: string
     authorId: string
     createdAtIso: string
-  }>
+  }
   createdAt: string
   updatedAt: string
 }
   isMilestoneStatus
 } from '../types / milestones'
-import { CurrentUser } from './auth'
+import { CurrentUser  } from './auth'
 export interface Milestone {
 } from '../types/milestones'
-import { CurrentUser } from './auth'
+import { CurrentUser  } from './auth'
 export interface Milestone {
   id: string
   title: string
@@ -70,6 +69,7 @@ export function getProjectById(id: string): Project | null {
 export function getAllProjects(): Project[] {
   return projects
 }
+</>
 export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {
   const newProject: Project = {
     ...project
@@ -208,9 +208,9 @@ if (return false) {
 }
 import fs from 'fs'
 import path from 'path'
-import { NextApiRequest, NextApiResponse } from 'next'
-import { Project, Milestone, MilestoneStatus, isMilestoneStatus } from '../types/milestones'
-import { CurrentUser } from './auth'
+import { NextApiRequest, NextApiResponse  } from 'next'
+import { Project, Milestone, MilestoneStatus, isMilestoneStatus  } from '../types/milestones'
+import { CurrentUser  } from './auth'
 const DATA_FILE = path.join(process.cwd(), 'data', 'projects.json')
 type DbShape = { projects: Project[] }
 function readDb(): DbShape {
@@ -277,7 +277,7 @@ export function addMilestone(
 export function updateMilestone(
   project: Project,
   milestoneId: string,
-  update: Partial<Milestone>
+  update: Partial<Milestone ></Milestone>
 ): Milestone | null {
   const idx = project.milestones.findIndex((m) => m.id === milestoneId)
   if (idx === -1) return null

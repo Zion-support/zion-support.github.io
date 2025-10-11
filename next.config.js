@@ -100,69 +100,33 @@ const nextConfig = {
   },
 
   async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: [
+    return [{
+        source: '/:path*', headers: [
           {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1, mode=block',
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()',
-          },
-          {
-            key: 'Strict-Transport-Security',
-            value: 'max-age=63072000; includeSubDomains, preload',
-          },
-          {
-            key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self',",
-          },
-        ],
+            key: 'X-Frame-Options', value: 'DENY', }, {
+            key: 'X-Content-Type-Options', value: 'nosniff', }, {
+            key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin', }, {
+            key: 'X-XSS-Protection', value: '1, mode=block', }, {
+            key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()', }, {
+            key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains, preload', }, {
+            key: 'Content-Security-Policy', value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self', ", }],
       },
       {
         source: '/_next/static/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
+        headers: [{
+            key: 'Cache-Control', value: 'public, max-age=31536000, immutable', }],
       },
       {
         source: '/images/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=86400, s-maxage=604800, stale-while-revalidate',
-          },
-        ],
+        headers: [{
+            key: 'Cache-Control', value: 'public, max-age=86400, s-maxage=604800, stale-while-revalidate', }],
       },
     ]
   },
 
   async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      },
-    ]
+    return [{
+        source: '/home', destination: '/', permanent: true, }]
   },
 
   experimental: {

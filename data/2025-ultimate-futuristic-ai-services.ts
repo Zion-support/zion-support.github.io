@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant  } from '../types/service-variants'
 export interface UltimateFuturisticAIService {
   id: string
   name: string
@@ -39,27 +39,10 @@ export interface UltimateFuturisticAIService {
   rating: number
   reviews: number
 }
-export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
-  // AI Consciousness Evolution Platform
+export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [// AI Consciousness Evolution Platform
   {
-    id: 'ai-consciousness-evolution-platform',
-    name: 'AI Consciousness Evolution Platform',
-    tagline: 'Develop AI with true consciousness and emotional intelligence',
-    price: '$2,999',
-    period: '/month',
-    description: 'Revolutionary platform for developing AI systems with genuine consciousness, self-awareness, and emotional intelligence capabilities.',
-    features: [
-      'Consciousness development framework',
-      'Emotional intelligence training',
-      'Self-awareness algorithms',
-      'Consciousness testing tools',
-      'Ethical AI development',
-      'Consciousness validation',
-      'Emotional response systems',
-      'Self-reflection capabilities',
-      'Consciousness metrics',
-      'Ethics compliance monitoring'
-    ],
+    id: 'ai-consciousness-evolution-platform', name: 'AI Consciousness Evolution Platform', tagline: 'Develop AI with true consciousness and emotional intelligence', price: '$2, 999', period: '/month', description: 'Revolutionary platform for developing AI systems with genuine consciousness, self-awareness, and emotional intelligence capabilities.', features: [
+      'Consciousness development framework', 'Emotional intelligence training', 'Self-awareness algorithms', 'Consciousness testing tools', 'Ethical AI development', 'Consciousness validation', 'Emotional response systems', 'Self-reflection capabilities', 'Consciousness metrics', 'Ethics compliance monitoring'],
     popular: true,
     icon: '🧠',
     color: 'from-purple-600 to-pink-600',
@@ -100,18 +83,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     price: '$1,599',
     period: '/month',
     description: 'Advanced AI research platform that autonomously conducts scientific research, generates hypotheses, and discovers new insights without human intervention.',
-    features: [
-      'Fully autonomous research',
-      'Hypothesis generation',
-      'Data analysis automation',
-      'Literature review automation',
-      'Research paper generation',
-      'Experimental design',
-      'Results interpretation',
-      'Collaboration with other AIs',
-      'Research validation',
-      'Publication assistance'
-    ],
+    features: ['Fully autonomous research', 'Hypothesis generation', 'Data analysis automation', 'Literature review automation', 'Research paper generation', 'Experimental design', 'Results interpretation', 'Collaboration with other AIs', 'Research validation', 'Publication assistance'],
     popular: true,
     icon: '🔬',
     color: 'from-blue-600 to-cyan-600',
@@ -152,18 +124,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     price: '$1,299',
     period: '/month',
     description: 'Comprehensive platform for training AI systems to recognize, understand, and appropriately respond to human emotions and social cues.',
-    features: [
-      'Emotion recognition training',
-      'Social intelligence development',
-      'Empathy algorithms',
-      'Emotional response generation',
-      'Social cue interpretation',
-      'Emotional validation',
-      'Multi-cultural emotional understanding',
-      'Context-aware responses',
-      'Emotional consistency training',
-      'Ethics compliance monitoring'
-    ],
+    features: ['Emotion recognition training', 'Social intelligence development', 'Empathy algorithms', 'Emotional response generation', 'Social cue interpretation', 'Emotional validation', 'Multi-cultural emotional understanding', 'Context-aware responses', 'Emotional consistency training', 'Ethics compliance monitoring'],
     popular: true,
     icon: '❤️',
     color: 'from-pink-600 to-rose-600',
@@ -204,18 +165,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     price: '$1,899',
     period: '/month',
     description: 'Revolutionary AI platform that completely automates business operations including decision-making, resource allocation, and strategic planning.',
-    features: [
-      'Fully autonomous decision-making',
-      'Self-optimizing operations',
-      'Predictive resource allocation',
-      'Automated strategic planning',
-      'Self-healing business processes',
-      'Real-time performance optimization',
-      'Autonomous risk management',
-      'Self-learning business intelligence',
-      'Zero-touch operations',
-      'Performance analytics'
-    ],
+    features: ['Fully autonomous decision-making', 'Self-optimizing operations', 'Predictive resource allocation', 'Automated strategic planning', 'Self-healing business processes', 'Real-time performance optimization', 'Autonomous risk management', 'Self-learning business intelligence', 'Zero-touch operations', 'Performance analytics'],
     popular: true,
     icon: '🏢',
     color: 'from-green-600 to-emerald-600',
@@ -256,18 +206,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     price: '$1,499',
     period: '/month',
     description: 'Advanced AI platform that analyzes health data to predict potential health issues, recommend preventive measures, and optimize treatment plans.',
-    features: [
-      'AI-powered health prediction',
-      'Disease risk assessment',
-      'Preventive care recommendations',
-      'Treatment optimization',
-      'Health trend analysis',
-      'Medication interaction warnings',
-      'Lifestyle optimization',
-      'Telemedicine integration',
-      'Real-time monitoring',
-      'Compliance automation'
-    ],
+    features: ['AI-powered health prediction', 'Disease risk assessment', 'Preventive care recommendations', 'Treatment optimization', 'Health trend analysis', 'Medication interaction warnings', 'Lifestyle optimization', 'Telemedicine integration', 'Real-time monitoring', 'Compliance automation'],
     popular: true,
     icon: '🏥',
     color: 'from-teal-600 to-cyan-600',
@@ -308,18 +247,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     price: '$1,799',
     period: '/month',
     description: 'Revolutionary AI platform that autonomously generates, tests, optimizes, and deploys production-ready code without human intervention.',
-    features: [
-      'Fully autonomous coding',
-      'Automatic testing and QA',
-      'Code optimization algorithms',
-      'Self-deployment capabilities',
-      'Bug detection and fixing',
-      'Performance optimization',
-      'Security vulnerability scanning',
-      'Documentation generation',
-      'Code review automation',
-      'Continuous integration'
-    ],
+    features: ['Fully autonomous coding', 'Automatic testing and QA', 'Code optimization algorithms', 'Self-deployment capabilities', 'Bug detection and fixing', 'Performance optimization', 'Security vulnerability scanning', 'Documentation generation', 'Code review automation', 'Continuous integration'],
     popular: true,
     icon: '💻',
     color: 'from-indigo-600 to-purple-600',
@@ -360,18 +288,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     price: '$1,299',
     period: '/month',
     description: 'Revolutionary marketing platform that autonomously creates, optimizes, and manages marketing campaigns across all channels.',
-    features: [
-      'Autonomous campaign creation',
-      'AI-powered content optimization',
-      'Real-time performance tracking',
-      'Automatic A/B testing',
-      'Predictive audience targeting',
-      'Cross-channel optimization',
-      'ROI maximization',
-      'Autonomous budget allocation',
-      'Creative asset generation',
-      'Performance analytics'
-    ],
+    features: ['Autonomous campaign creation', 'AI-powered content optimization', 'Real-time performance tracking', 'Automatic A/B testing', 'Predictive audience targeting', 'Cross-channel optimization', 'ROI maximization', 'Autonomous budget allocation', 'Creative asset generation', 'Performance analytics'],
     popular: true,
     icon: '📢',
     color: 'from-yellow-600 to-orange-600',
@@ -412,18 +329,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     price: '$1,599',
     period: '/month',
     description: 'Revolutionary sales platform that uses AI to autonomously identify prospects, nurture leads, and close deals without human intervention.',
-    features: [
-      'Autonomous lead generation',
-      'AI-powered prospect qualification',
-      'Automatic lead nurturing',
-      'Intelligent sales conversations',
-      'Deal closing automation',
-      'Predictive sales analytics',
-      'Autonomous follow-up',
-      'Sales process optimization',
-      'Performance tracking',
-      'ROI analytics'
-    ],
+    features: ['Autonomous lead generation', 'AI-powered prospect qualification', 'Automatic lead nurturing', 'Intelligent sales conversations', 'Deal closing automation', 'Predictive sales analytics', 'Autonomous follow-up', 'Sales process optimization', 'Performance tracking', 'ROI analytics'],
     popular: true,
     icon: '💰',
     color: 'from-emerald-600 to-green-600',
@@ -464,18 +370,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     price: '$999',
     period: '/month',
     description: 'Fully autonomous AI customer service platform that handles inquiries, resolves issues, and provides support across all channels without human intervention.',
-    features: [
-      '24/7 autonomous support',
-      'Multi-channel integration',
-      'Natural language understanding',
-      'Automatic issue resolution',
-      'Sentiment analysis',
-      'Predictive customer needs',
-      'Seamless human handoff',
-      'Multi-language support',
-      'Knowledge base learning',
-      'Performance analytics'
-    ],
+    features: ['24/7 autonomous support', 'Multi-channel integration', 'Natural language understanding', 'Automatic issue resolution', 'Sentiment analysis', 'Predictive customer needs', 'Seamless human handoff', 'Multi-language support', 'Knowledge base learning', 'Performance analytics'],
     popular: true,
     icon: '💬',
     color: 'from-cyan-600 to-blue-600',
