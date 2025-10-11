@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -168,6 +169,9 @@ return(<>)
 =======
 >>>>>>> main
             </button>
+=======
+'use client'</button>
+>>>>>>> origin/main
           </div>
 
           {/* Navigation */}

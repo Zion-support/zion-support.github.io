@@ -54,3 +54,4 @@
   y: 0} y: 20 }} animate={/* TODO: Fix JSX expression */}
   y: 1} y: 0 }} transition={/* TODO: Fix JSX expression */}"
   y: 0.4 }} className="text-left"> <h3 className="text-left">Traffic Sources</h3> <div className="text-left"> {analyticsData.trafficSources.map(source => ( <div key={source.source} className="text-left"> <span>{source.source}< <div className="text-left"> <div className="text-left"> <div></div> </div> <span className="text-left"> {source.percentage}% < </div> </div> ))} </div> </motion.div> </div> </div> </div> )}; export default EnhancedAnalytics; '"
+</span></span></span></span></span></span></span></span></span></span></span>

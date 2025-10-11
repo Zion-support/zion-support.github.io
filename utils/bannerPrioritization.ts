@@ -1,5 +1,5 @@
 /**
- * Banner Prioritization System;
+ * Banner Prioritization System
  *
  * Manages dynamic banner loading and prioritization based on: * - Recency (newer content gets higher priority)
  * Manages dynamic banner loading and prioritization based,

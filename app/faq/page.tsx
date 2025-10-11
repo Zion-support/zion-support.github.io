@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, {useState}from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -32,6 +33,20 @@ const FAQPage: React.FC = () => {,
 =======
         : [...prev, index];
     );
+=======
+'use client'
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ChevronDown, ChevronUp } from 'lucide-react'
+const FAQPage: React.FC = () => {
+  const [openItems, setOpenItems] = useState<number[]>([])
+  const toggleItem = (index: number) => {
+    setOpenItems()
+      prev.includes(index) 
+        ? prev.filter(item => item !== index)
+        : [...prev, index]
+    )
+>>>>>>> origin/main
   }
   const faqs = [
     {
@@ -66,16 +81,22 @@ const FAQPage: React.FC = () => {,
       question: "What industries do you serve?",
       answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
     }
-  ];];];
+  ]
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
 >>>>>>> origin/main
         <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
+=======
+    </number><React.Fragment>
+      </React><Helmet>
+        </Helmet><title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
+>>>>>>> origin/main
         <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
         <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" />
-      </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,</h1>
@@ -92,24 +113,48 @@ const FAQPage: React.FC = () => {,
                   <button;
                     onClick={() =>toggleItem(index)</button>}className="w-full px-6 py-4 text-left flex items-center justify-between hover: bg-slate-700/30 transition-colors">,
                     <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
+=======
+        </div><section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Frequently Asked </h1><span className="text-cyan-400">Questions</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Find answers to common questions about our AI and IT services, pricing, and implementation.
+        <section className="py-16 px-4">
+          </section>< className="$2 />
+            </div><div className="space-y-4">
+              {faqs.map((faq, index) => (
+                </div><div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-cyan-500/20">
+                  </div><$2 />
+                    onClick={() => toggleItem(index)}
+                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors">
+                    </button><h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
+>>>>>>> origin/main
                     {openItems.includes(index) ? (
                       <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                     ) : (
                       <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+<<<<<<< HEAD
                     )} </button>
                   {openItems.includes(index) && (
                     <div className="px-6 pb-4">
                       <p className="text-gray-300 leading-relaxed">{faq.answer</p>}</p>
+=======
+                    )}
+                  {openItems.includes(index) && (
+                    <div className="px-6 pb-4">
+                      </div><p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+>>>>>>> origin/main
                     </div>
+                      <p className="text-gray-300 leading-relaxed">{faq.answer}
                   )}
-                </div>
               ))}
             </div>
           </div>
         </section>
       </div>
     </>
-  );
-};
-
-export default FAQPage;
+  )
+}
+export default FAQPage</$1></p>

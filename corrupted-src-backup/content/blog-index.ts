@@ -1,14 +1,14 @@
 /**
- * Blog Content Index;
- * Centralized index of all blog posts for easy discovery and navigation;
+ * Blog Content Index
+ * Centralized index of all blog posts for easy discovery and navigation
  */
 
 export interface BlogPost {
-  slug: string;
-  title: string;
-  description: string;
-  category: string;
-  date: string;
+  slug: string
+  title: string
+  description: string
+  category: string
+  date: string
   readTime: string
   tags: string[]
   featured?: boolean,,
@@ -17,7 +17,7 @@ export interface BlogPost {/* TODO: Fix JSX expression */}
 }
 
 /**
- * October 2025 Breakthrough Content;
+ * October 2025 Breakthrough Content
  */
 export const october2025Breakthroughs: BlogPost[] = [,
   {,
@@ -129,10 +129,9 @@ export const,
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
-  }];
-
+  }]
 /**
- * All blog posts combined;
+ * All blog posts combined
  */
 export const,
   allBlogPosts: BlogPost[] = [...october2025Breakthroughs]
@@ -140,7 +139,7 @@ export const,
  * Helper functions,
  */,
 export function getFeaturedPosts(): BlogPost[] {,
-  return allBlogPosts.filter(post => post.featured);
+  return allBlogPosts.filter(post => post.featured)
  */
 export function getFeaturedPosts(): BlogPost[] {/* TODO: Fix JSX expression */}
 }
@@ -153,15 +152,15 @@ export function getAllTags(): string[] {/* TODO: Fix JSX expression */}
 
 export function getTotalValueProposition(): string {
   const totalValue = allBlogPosts.reduce((sum, post) => {
-    const _value = post.valueProposition.match(/\$(\d+)M/);
-:corrupted-src-backup/content/blog-index.ts;
+    const _value = post.valueProposition.match(/\$(\d+)M/)
+:corrupted-src-backup/content/blog-index.ts
 export function getTotalValueProposition(): string {/* TODO: Fix JSX expression */}
-  }, 0);
-  return `$${totalValue}M+ total value proposition`;
+  }, 0)
+  return `$${totalValue}M+ total value proposition`
 }
 
 export const blogStats = {
-  totalPosts: allBlogPosts.length;
+  totalPosts: allBlogPosts.length
   featuredPosts: getFeaturedPosts().length
   categories: getAllCategories().length
   tags: getAllTags().length,

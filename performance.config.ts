@@ -1,10 +1,10 @@
 /**
- * Performance Configuration;
- * Comprehensive performance monitoring and optimization settings;
+ * Performance Configuration
+ * Comprehensive performance monitoring and optimization settings
  */
 
 export const performanceConfig = {
-    // Core Web Vitals thresholds;
+    // Core Web Vitals thresholds
   webVitals: {,
     lcp: {,
       good: 2500,
@@ -36,12 +36,12 @@ export const performanceConfig = {
       needsImprovement: 500
   }},
 
-  // Resource loading priorities;
+  // Resource loading priorities
   resourceHints: {,
     preconnect: ['https://fonts.googleapis.com', 'https: //fonts.gstatic.com'],
     dnsPrefetch: ['https://www.google-analytics.com', 'https: //www.googletagmanager.com']},
 
-  // Lazy loading configuration;
+  // Lazy loading configuration
   lazyLoading: {
     ,
     imagePlaceholder: 'blur',
@@ -50,16 +50,16 @@ export const performanceConfig = {
     enableNativeLazyLoading: true
   },
 
-  // Caching strategies;
+  // Caching strategies
   caching: {
     ,
     staticAssets: {,
-      maxAge: 31536000, // 1 year;
+      maxAge: 31536000, // 1 year
       immutable: true
   },
     api: {
     ,
-      maxAge: 300, // 5 minutes;
+      maxAge: 300, // 5 minutes
       staleWhileRevalidate: 600, // 10 minutes
   },
     images: {
@@ -67,19 +67,19 @@ export const performanceConfig = {
       maxAge: 604800, // 1 week
   }},
 
-  // Bundle optimization;
+  // Bundle optimization
   bundling: {
     ,
-    maxChunkSize: 244000, // ~240KB;
-    minChunkSize: 20000, // ~20KB;
+    maxChunkSize: 244000, // ~240KB
+    minChunkSize: 20000, // ~20KB
     splitChunks: true,
     treeshaking: true
   },
 
-  // Monitoring;
+  // Monitoring
   monitoring: {,
-    sampleRate: 0.1, // 10% of requests;
-    reportInterval: 30000, // 30 seconds;
+    sampleRate: 0.1, // 10% of requests
+    reportInterval: 30000, // 30 seconds
     enableLongTaskDetection: true
     enableMemoryMonitoring: true,
 export const performanceConfig = {/* TODO: Fix JSX expression */}
@@ -126,4 +126,4 @@ export const performanceConfig = {/* TODO: Fix JSX expression */}
   monitoring: {/* TODO: Fix JSX expression */}
   }}
 
-export default performanceConfig;
+export default performanceConfig

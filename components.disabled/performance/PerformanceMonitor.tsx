@@ -224,6 +224,3 @@
   s: {"}; "Content-Type": "application/json"},bod,
   y: JSON.stringify({) ur} l: 'window.location.href)timestam,"
   p: Date.now()}metrics})}).catch(_console.error)} ; return null export default PerformanceMonitor" fcpObserver.disconnect();} lcpObserver.disconnect();} fidObserver.disconnect();} clsObserver.disconnect();} fmpObserver.disconnect()"; window.removeEventListener("beforeunload")sendMetrics);} },[]);} " return null; "'"
-  </T>
-  </T>
-  </T>

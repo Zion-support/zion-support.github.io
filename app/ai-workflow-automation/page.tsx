@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -352,22 +353,20 @@ const AIWorkflowAutomation: React.FC = () => {,
                 </button>
 
 >>>>>>> origin/main
+=======
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+>>>>>>> origin/main
               </div>
             </div>
           </div>
         </section>
+      </div>
+      <Footer>
+    </>
+  ),
+}
+export default AiWorkflowAutomationPage;
 
-      </main>
-    </>
-  );
-}
-      </main>
-    </>
-  );
-}
-      </main>
-    </>
-  );
-}
-
-export default undefined;

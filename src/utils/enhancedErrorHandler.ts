@@ -1,13 +1,13 @@
-'use client';
+'use client'
 /**
  * Enhanced Error Handling System
  * Provides comprehensive error tracking, reporting, and recovery mechanisms
  */
 interface ErrorContext {
-    userId?: string;
-  sessionId?: string;
-  url: string;
-  userAgent: string;
+    userId?: string
+  sessionId?: string
+  url: string
+  userAgent: string
   timestamp: string
   component?: string
   action?: string,
@@ -15,19 +15,19 @@ interface ErrorContext {
   state?: Record<string, unknown>
   }
 interface ErrorReport {
-    id: string;
-  type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom';
-  message: string;
-  stack?: string;
-  context: ErrorContext;
-  severity: 'low' | 'medium' | 'high' | 'critical';
+    id: string
+  type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom'
+  message: string
+  stack?: string
+  context: ErrorContext
+  severity: 'low' | 'medium' | 'high' | 'critical'
   category:
     | 'syntax'
     | 'runtime'
     | 'network'
     | 'security'
     | 'performance'
-    | 'unknown';
+    | 'unknown'
   tags: string[]
   metadata: Record<string>
   resolved: boolean
@@ -35,12 +35,12 @@ interface ErrorReport {
   resolvedBy?: string
   }
 interface ErrorHandlerConfig {
-    enableConsoleLogging: boolean;
-  enableRemoteReporting: boolean;
-  enableErrorRecovery: boolean;
-  enableErrorCategorization: boolean;
-  enableErrorAggregation: boolean;
-  enablePerformanceImpact: boolean;
+    enableConsoleLogging: boolean
+  enableRemoteReporting: boolean
+  enableErrorRecovery: boolean
+  enableErrorCategorization: boolean
+  enableErrorAggregation: boolean
+  enablePerformanceImpact: boolean
   maxErrorsPerMinute: number
   errorRetentionDays: number
   remoteEndpoint?: string,
@@ -49,8 +49,8 @@ interface ErrorHandlerConfig {
 class EnhancedErrorHandler {
   private config: ErrorHandlerConfig
   private errors: ErrorReport[] = [],
-  private errorCounts: Map<string, number> = new Map();
-  private errorCategories: Map<string, number> = new Map();
+  private errorCounts: Map<string, number> = new Map()
+  private errorCategories: Map<string, number> = new Map()
   private _lastErrorTime: number = 0
   private errorRateLimit: number = 0
   private isInitialized: boolean = false,
@@ -66,21 +66,21 @@ class EnhancedErrorHandler {
       errorRetentionDays: 30,
       ...config
     }
-    this.initialize();
+    this.initialize()
   }
   /**
    * Initialize the error handler
    */
   private initialize(): void {
-    if (this.isInitialized) return;
-    this.setupGlobalErrorHandlers();
-    this.setupUnhandledRejectionHandler();
-    this.setupResourceErrorHandler();
-    this.setupNetworkErrorHandler();
-    this.setupPerformanceErrorHandler();
-    this.setupErrorRecovery();
-    this.setupErrorCleanup();
-    this.isInitialized = true;
+    if (this.isInitialized) return
+    this.setupGlobalErrorHandlers()
+    this.setupUnhandledRejectionHandler()
+    this.setupResourceErrorHandler()
+    this.setupNetworkErrorHandler()
+    this.setupPerformanceErrorHandler()
+    this.setupErrorRecovery()
+    this.setupErrorCleanup()
+    this.isInitialized = true
     if (process.env['NODE_ENV'] === 'development') {}
   }
   /**
@@ -96,8 +96,8 @@ class EnhancedErrorHandler {
         lineno: event.lineno,
         colno: event.colno,
         error: event.error
-      });
-    });
+      })
+    })
   }
   /**
    * Setup unhandled promise rejection handler
@@ -109,8 +109,8 @@ class EnhancedErrorHandler {
         message: event.reason?.message || String(event.reason),
         stack: event.reason?.stack,
         reason: event.reason
-      });
-    });
+      })
+    })
   }
   /**
    * Setup resource error handler
@@ -120,7 +120,7 @@ class EnhancedErrorHandler {
       'error',
       event => {
         if (event.target !== window) {
-            src?: string;
+            src?: string
             href?: string
   }
           this.handleError({
@@ -128,18 +128,18 @@ class EnhancedErrorHandler {
             message: `Failed to load resource: ${target?.src || target?.href}`,
             element: event.target?.constructor.name,
             src: target?.src || target?.href
-          });
+          })
         }
       },
       true
-    );
+    )
   }
   /**
    * Setup network error handler
    */
   private setupNetworkErrorHandler(): void {
     // Monitor fetch requests
-    const originalFetch = window.fetch;
+    const originalFetch = window.fetch
     window.fetch = async (...args: Parameters<typeof fetch>) => {
       try {
         const response = await originalFetch(...args),
@@ -150,17 +150,17 @@ class EnhancedErrorHandler {
             url: args[0] as string,
             status: response.status,
             statusText: response.statusText
-          });
+          })
         }
-        return response;
+        return response
       } catch (error) {
         this.handleError({
           type: 'network',
           message: `Network request failed: ${error}`,
           url: args[0] as string,
           error: error instanceof Error ? error : new Error(String(error))
-        });
-        throw error;
+        })
+        throw error
       }
     }
   }
@@ -168,7 +168,7 @@ class EnhancedErrorHandler {
    * Setup performance error handler
    */
   private setupPerformanceErrorHandler(): void {
-    if (!this.config.enablePerformanceImpact) return;
+    if (!this.config.enablePerformanceImpact) return
     // Monitor long tasks that might indicate performance issues
     if ('PerformanceObserver' in window) {
       try {
@@ -181,11 +181,11 @@ class EnhancedErrorHandler {
                 message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
                 duration: entry.duration,
                 category:               ,
-$4});
+$4})
             }
-          });
-        });
-        observer.observe({ type: 'longtask', buffered: true });
+          })
+        })
+        observer.observe({ type: 'longtask', buffered: true })
       } catch (error) {}
     }
   }
@@ -193,7 +193,7 @@ $4});
    * Setup error recovery mechanisms
    */
   private setupErrorRecovery(): void {
-    if (!this.config.enableErrorRecovery) return;
+    if (!this.config.enableErrorRecovery) return
     // Auto-recovery for common errors
     setInterval(() => {
       this.attemptErrorRecovery()
@@ -215,17 +215,17 @@ $4});
    * Handle error with comprehensive processing
    */
   private handleError(errorData: {
-    // type: ErrorReport['type'];
-// message: string;
-// stack?: string;
-// filename?: string;
-// lineno?: number;
-// colno?: number;
-// error?: Error;
-// reason?: unknown;
-// element?: string;
-// src?: string;
-// url?: string;
+    // type: ErrorReport['type']
+// message: string
+// stack?: string
+// filename?: string
+// lineno?: number
+// colno?: number
+// error?: Error
+// reason?: unknown
+// element?: string
+// src?: string
+// url?: string
 // status?: number
 // statusText?: string
 // duration?: number,
@@ -235,33 +235,33 @@ $4});
     if (!this.checkRateLimit()) {
       return
   }
-    const errorReport = this.createErrorReport(errorData);
-    this.processError(errorReport);
+    const errorReport = this.createErrorReport(errorData)
+    this.processError(errorReport)
   }
   /**
    * Create comprehensive error report
    */
   private createErrorReport(errorData: {
-    // type: ErrorReport['type'];
-// message: string;
-// stack?: string;
-// filename?: string;
-// lineno?: number;
-// colno?: number;
-// error?: Error;
-// reason?: unknown;
-// element?: string;
-// src?: string;
-// url?: string;
+    // type: ErrorReport['type']
+// message: string
+// stack?: string
+// filename?: string
+// lineno?: number
+// colno?: number
+// error?: Error
+// reason?: unknown
+// element?: string
+// src?: string
+// url?: string
 // status?: number
 // statusText?: string
 // duration?: number,
 // category?: string
   }): ErrorReport {
-    const context = this.getErrorContext();
-    const severity = this.determineSeverity(errorData);
-    const category = this.categorizeError(errorData);
-    const tags = this.generateTags(errorData);
+    const context = this.getErrorContext()
+    const severity = this.determineSeverity(errorData)
+    const category = this.categorizeError(errorData)
+    const tags = this.generateTags(errorData)
     return {
       id: this.generateErrorId(),
       type: errorData.type,
@@ -350,7 +350,7 @@ $4});
     if (errorData.type === 'promise') {
     return 'medium'
   }
-    return 'low';
+    return 'low'
   }
   /**
    * Categorize error
@@ -377,7 +377,7 @@ $4});
     if (errorData.type === 'promise') {
     return 'runtime'
   }
-    return 'unknown';
+    return 'unknown'
   }
   /**
    * Generate error tags
@@ -400,23 +400,23 @@ $4});
     if (errorData.duration && errorData.duration > 1000) {
     tags.push('slow')
   }
-    return tags;
+    return tags
   }
   /**
    * Generate unique error ID
    */
   private generateErrorId(): string {
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   }
   /**
    * Get session ID
    */
   private getSessionId(): string {
     if (!sessionId) {
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      sessionStorage.setItem('error_session_id', sessionId);
+      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      sessionStorage.setItem('error_session_id', sessionId)
     }
-    return sessionId;
+    return sessionId
   }
   /**
    * Get user ID
@@ -428,47 +428,47 @@ $4});
    * Check rate limiting
    */
   private checkRateLimit(): boolean {
-    const now = Date.now();
-    const timeDiff = now - this.lastErrorTime;
+    const now = Date.now()
+    const timeDiff = now - this.lastErrorTime
     if (timeDiff < 60000) {
       // Within 1 minute
-      this.errorRateLimit++;
+      this.errorRateLimit++
       if (this.errorRateLimit > this.config.maxErrorsPerMinute) {
         return false
   }
     } else {
     this.errorRateLimit = 1
   }
-    this.lastErrorTime = now;
-    return true;
+    this.lastErrorTime = now
+    return true
   }
   /**
    * Update error counters
    */
   private updateErrorCounts(errorReport: ErrorReport): void {
-    const key = `${errorReport.type}_${errorReport.category}`;
-    this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1);
+    const key = `${errorReport.type}_${errorReport.category}`
+    this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1)
     this.errorCategories.set(
       errorReport.category,
       (this.errorCategories.get(errorReport.category) || 0) + 1
-    );
+    )
   }
   /**
    * Log error to console
    */
   private logError(errorReport: ErrorReport): void {
     const emoji = this.getSeverityEmoji(errorReport.severity),
-    console.group(`${emoji} Error Report: ${errorReport.id}`);
-    // // console.error('Message:', errorReport.message);
-    // // console.error('Type:', errorReport.type);
-    // // console.error('Severity:', errorReport.severity);
-    // // console.error('Category:', errorReport.category);
-    // // console.error('Context:', errorReport.context);
-    // // console.error('Metadata:', errorReport.metadata);
+    console.group(`${emoji} Error Report: ${errorReport.id}`)
+    // // console.error('Message:', errorReport.message)
+    // // console.error('Type:', errorReport.type)
+    // // console.error('Severity:', errorReport.severity)
+    // // console.error('Category:', errorReport.category)
+    // // console.error('Context:', errorReport.context)
+    // // console.error('Metadata:', errorReport.metadata)
     if (errorReport.stack) {
     // // console.error('Stack:', errorReport.stack)
   }
-    console.groupEnd();
+    console.groupEnd()
   }
   /**
    * Get severity emoji
@@ -476,7 +476,7 @@ $4});
   private getSeverityEmoji(severity: ErrorReport['severity']): string {
     switch (severity) {
       case 'critical':
-        return '🚨';
+        return '🚨'
       case 'high':
         return '🔴'
       case 'medium':
@@ -500,7 +500,7 @@ $4});
           Authorization: `Bearer ${this.config.apiKey}`
         },
         body: JSON.stringify(errorReport)
-      });
+      })
     } catch (error) {}
   }
   /**
@@ -526,11 +526,11 @@ $4});
       error =>
         !error.resolved &&
         Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5 minutes
-    );
+    )
     if (recentErrors.length > 5) {
       if (process.env['NODE_ENV'] === 'development') {}
       // Implement recovery strategies here
-      this.clearErrorState();
+      this.clearErrorState()
     }
   }
   /**
@@ -538,20 +538,20 @@ $4});
    */
   private clearErrorState(): void {
     // Reset error counters
-    this.errorCounts.clear();
-    this.errorCategories.clear();
-    this.errorRateLimit = 0;
+    this.errorCounts.clear()
+    this.errorCategories.clear()
+    this.errorRateLimit = 0
     if (process.env['NODE_ENV'] === 'development') {}
   }
   /**
    * Clean up old errors
    */
   private cleanupOldErrors(): void {
-    const cutoffDate = new Date();
-    cutoffDate.setDate(cutoffDate.getDate() - this.config.errorRetentionDays);
+    const cutoffDate = new Date()
+    cutoffDate.setDate(cutoffDate.getDate() - this.config.errorRetentionDays)
     this.errors = this.errors.filter(
       error => new Date(error.context.timestamp) > cutoffDate
-    );
+    )
     if (process.env['NODE_ENV'] === 'development') {}
   }
   /**
@@ -568,12 +568,12 @@ $4});
     const errorsByCategory: Record<string, number> = {}
     const errorsBySeverity: Record<string, number> = {}
     this.errors.forEach(error => {
-    errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;
+    errorsByType[error.type] = (errorsByType[error.type] || 0) + 1
       errorsByCategory[error.category] =
-        (errorsByCategory[error.category] || 0) + 1;
+        (errorsByCategory[error.category] || 0) + 1
       errorsBySeverity[error.severity] =
         (errorsBySeverity[error.severity] || 0) + 1
-  });
+  })
     const recentErrors = this.errors
       .filter(error => !error.resolved)
       .sort(
@@ -581,7 +581,7 @@ $4});
           new Date(b.context.timestamp).getTime() -
           new Date(a.context.timestamp).getTime()
       )
-      .slice(0, 10);
+      .slice(0, 10)
     return {
       totalErrors: this.errors.length,
       errorsByType,
@@ -603,7 +603,7 @@ $4});
       },
       null,
       2
-    );
+    )
   }
   /**
    * Manually report error
@@ -613,13 +613,13 @@ $4});
       type: 'custom',
       message,
       ...context
-    });
-    this.processError(errorReport);
-    return errorReport.id;
+    })
+    this.processError(errorReport)
+    return errorReport.id
   }
 }
 // Export singleton instance
-export const errorHandler = new EnhancedErrorHandler();
+export const errorHandler = new EnhancedErrorHandler()
 // Export class for custom instances
 export {
   EnhancedErrorHandler,
@@ -630,8 +630,8 @@ export {
 
 'use client'
 /**
- * Enhanced Error Handling System;
- * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ * Enhanced Error Handling System
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms
  */
 
 interface ErrorContext {
@@ -639,14 +639,14 @@ interface ErrorContext {
   }
 
 }
-  userId?: string;
-  sessionId?: string;
+  userId?: string
+  sessionId?: string
   ur,
   l: string,,
     userAgen,
   t: string,,
     timestam,
-  p: string;
+  p: string
   component?: string
   action?: string
   props?: Record,
@@ -657,7 +657,7 @@ interface ErrorReport {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 
-  id: string;
+  id: string
     type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom'
     message: string
   stack?: string,,
@@ -708,9 +708,9 @@ class EnhancedErrorHandler {
   errors: ErrorReport[] = [],
   private,
   errorCounts: Map,
-          <string, number> = new Map();
+          <string, number> = new Map()
   private,
-  errorCategories: Map<string, number> = new Map();
+  errorCategories: Map<string, number> = new Map()
   private,
   _lastErrorTime: number = 0,
   private,
@@ -734,12 +734,12 @@ class EnhancedErrorHandler {
       maxErrorsPerMinute: 10,
       errorRetentionDays: 30,
 
-//       ...config;
+//       ...config
     }
-    this.initialize();
+    this.initialize()
   }
   /**
-   * Initialize the error handler;
+   * Initialize the error handler
    */
 
   private initialize(): void {
@@ -747,22 +747,22 @@ class EnhancedErrorHandler {
   }
 
 }
-    if (this.isInitialized) return;
-    this.setupGlobalErrorHandlers();
-    this.setupUnhandledRejectionHandler();
-    this.setupResourceErrorHandler();
-    this.setupNetworkErrorHandler();
-    this.setupPerformanceErrorHandler();
-    this.setupErrorRecovery();
-    this.setupErrorCleanup();
-    this.isInitialized = true;
+    if (this.isInitialized) return
+    this.setupGlobalErrorHandlers()
+    this.setupUnhandledRejectionHandler()
+    this.setupResourceErrorHandler()
+    this.setupNetworkErrorHandler()
+    this.setupPerformanceErrorHandler()
+    this.setupErrorRecovery()
+    this.setupErrorCleanup()
+    this.isInitialized = true
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       }
   }
   /**
-   * Setup global error handlers;
+   * Setup global error handlers
    */
 
   private setupGlobalErrorHandlers(): void {
@@ -785,11 +785,11 @@ class EnhancedErrorHandler {
         colno: event.colno,
         error: event.error,
 
-      });
-    });
+      })
+    })
   }
   /**
-   * Setup unhandled promise rejection handler;
+   * Setup unhandled promise rejection handler
    */
 
   private setupUnhandledRejectionHandler(): void {
@@ -811,11 +811,11 @@ class EnhancedErrorHandler {
   k: event.reason?.stack,
         reaso,
   n: event.reason,
-      });
-    });
+      })
+    })
   }
   /**
-   * Setup resource error handler;
+   * Setup resource error handler
    */
 
   private setupResourceErrorHandler(): void {
@@ -831,7 +831,7 @@ class EnhancedErrorHandler {
         if (event.target !== window) {
     src?: string
   }
-            href?: string;
+            href?: string
           }
           this.handleError({/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -845,13 +845,13 @@ class EnhancedErrorHandler {
   t: event.target?.constructor.name,
             sr,
   c: target?.src || target?.href,)
-          });
+          })
         }
       },
 //       true)
   }
   /**
-   * Setup network error handler;
+   * Setup network error handler
    */
 
   private setupNetworkErrorHandler(): void {
@@ -859,8 +859,8 @@ class EnhancedErrorHandler {
   }
 
 }
-    // Monitor fetch requests;
-const originalFetch = window.fetch;
+    // Monitor fetch requests
+const originalFetch = window.fetch
     window.fetch = async (...arg,
   s: Parameters,)
           <typeof fetch>) => {/* TODO: Fix JSX expression */}
@@ -869,7 +869,7 @@ const originalFetch = window.fetch;
       try {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        const response = await originalFetch(...args);
+        const response = await originalFetch(...args)
         if (!response.ok) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -883,9 +883,9 @@ const originalFetch = window.fetch;
             status: response.status,
             statusText: response.statusText,
 
-          });
+          })
         }
-        return response;
+        return response
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -900,12 +900,12 @@ const originalFetch = window.fetch;
 
         }
   )
-        throw error;
+        throw error
       }
     }
   }
   /**
-   * Setup performance error handler;
+   * Setup performance error handler
    */
 
   private setupPerformanceErrorHandler(): void {
@@ -913,8 +913,8 @@ const originalFetch = window.fetch;
   }
 
 }
-    if (!this.config.enablePerformanceImpact) return;
-    // Monitor long tasks that might indicate performance issues;
+    if (!this.config.enablePerformanceImpact) return
+    // Monitor long tasks that might indicate performance issues
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -930,7 +930,7 @@ const originalFetch = window.fetch;
             if (entry.duration > 100) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-              // Tasks longer than 100ms;
+              // Tasks longer than 100ms
               this.handleError({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -943,10 +943,10 @@ const originalFetch = window.fetch;
               }
   )
             }
-          });
-        });
+          })
+        })
         observer.observe({/* TODO: Fix JSX expression */})
-  d: true });
+  d: true })
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -954,7 +954,7 @@ const originalFetch = window.fetch;
     }
   }
   /**
-   * Setup error recovery mechanisms;
+   * Setup error recovery mechanisms
    */
 
   private setupErrorRecovery(): void {
@@ -962,16 +962,16 @@ const originalFetch = window.fetch;
   }
 
 }
-    if (!this.config.enableErrorRecovery) return;
-    // Auto-recovery for common errors;
+    if (!this.config.enableErrorRecovery) return
+    // Auto-recovery for common errors
     setInterval(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.attemptErrorRecovery();
-    }, 30000); // Check every 30 seconds;
+      this.attemptErrorRecovery()
+    }, 30000); // Check every 30 seconds
   }
   /**
-   * Setup error cleanup;
+   * Setup error cleanup
    */
 
   private setupErrorCleanup(): void {
@@ -979,30 +979,30 @@ const originalFetch = window.fetch;
   }
 
 }
-    // Clean up old errors;
+    // Clean up old errors
 //     setInterval()
       () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        this.cleanupOldErrors();
+        this.cleanupOldErrors()
       },
-//       24 * 60 * 60 * 1000); // Daily cleanup;
+//       24 * 60 * 60 * 1000); // Daily cleanup
   }
   /**
-   * Handle error with comprehensive processing;
+   * Handle error with comprehensive processing
    */
 
   private handleError(errorData: {if (!sessionId) {}
   // TODO: Add content,
 }
 
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      sessionStorage.setItem('error_session_id', sessionId);
+      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      sessionStorage.setItem('error_session_id', sessionId)
     }
-    return sessionId;
+    return sessionId
   }
   /**
-   * Get user ID;
+   * Get user ID
    */
 
   private getUserId(): string | undefined {
@@ -1010,10 +1010,10 @@ const originalFetch = window.fetch;
   }
 
 }
-    return localStorage.getItem('user_id') || undefined;
+    return localStorage.getItem('user_id') || undefined
   }
   /**
-   * Check rate limiting;
+   * Check rate limiting
    */
 
   private checkRateLimit(): boolean {
@@ -1021,29 +1021,29 @@ const originalFetch = window.fetch;
   }
 
 }
-    const now = Date.now();
-    const timeDiff = now - this.lastErrorTime;
+    const now = Date.now()
+    const timeDiff = now - this.lastErrorTime
     if (timeDiff;)
           < 60000) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      // Within 1 minute;
-      this.errorRateLimit++;
+      // Within 1 minute
+      this.errorRateLimit++
       if (this.errorRateLimit > this.config.maxErrorsPerMinute) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        return false;
+        return false
       }
     } else {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.errorRateLimit = 1;
+      this.errorRateLimit = 1
     }
-    this.lastErrorTime = now;
-    return true;
+    this.lastErrorTime = now
+    return true
   }
   /**
-   * Update error counters;
+   * Update error counters
    */
 
   private updateErrorCounts(errorReport: ErrorReport): void {
@@ -1051,28 +1051,28 @@ const originalFetch = window.fetch;
   }
 }
 
-    const key = `${errorReport.type}_${errorReport.category}`;
-    this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1);
+    const key = `${errorReport.type}_${errorReport.category}`
+    this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1)
 //     this.errorCategories.set()
 //       errorReport.category,
 //       (this.errorCategories.get(errorReport.category) || 0) + 1)
   }
   /**
-   * Log error to console;
+   * Log error to console
    */
 
   private logError(errorReport: ErrorReport): void {
     // TODO: Add content
   }
 }
-    const emoji = this.getSeverityEmoji(errorReport.severity);
-    console.group(`${emoji} Error Report: ${errorReport.id}`);
-    // // console.error('Message:', errorReport.message);
-    // // console.error('Type:', errorReport.type);
-    // // console.error('Severity:', errorReport.severity);
-    // // console.error('Category:', errorReport.category);
-    // // console.error('Context:', errorReport.context);
-    // // console.error('Metadata:', errorReport.metadata);
+    const emoji = this.getSeverityEmoji(errorReport.severity)
+    console.group(`${emoji} Error Report: ${errorReport.id}`)
+    // // console.error('Message:', errorReport.message)
+    // // console.error('Type:', errorReport.type)
+    // // console.error('Severity:', errorReport.severity)
+    // // console.error('Category:', errorReport.category)
+    // // console.error('Context:', errorReport.context)
+    // // console.error('Metadata:', errorReport.metadata)
     if (errorReport.stack) {
     // // console.error('Stack:', errorReport.stack)
   }
@@ -1081,7 +1081,7 @@ const originalFetch = window.fetch;
     console.groupEnd()
   }
   /**
-   * Get severity emoji;
+   * Get severity emoji
    */
 
   private getSeverityEmoji(severity: ErrorReport['severity']): string {
@@ -1106,7 +1106,7 @@ const originalFetch = window.fetch;
     }
   }
   /**
-   * Report to remote service;
+   * Report to remote service
    */
 
   private async reportToRemote(errorReport: ErrorReport): Promise,
@@ -1115,7 +1115,7 @@ const originalFetch = window.fetch;
   }
 
 }
-    if (!this.config.remoteEndpoint) return;
+    if (!this.config.remoteEndpoint) return
     try {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -1135,14 +1135,14 @@ const originalFetch = window.fetch;
 
         body: JSON.stringify(errorReport)
 
-      });
+      })
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       }
   }
   /**
-   * Aggregate error data;
+   * Aggregate error data
    */
 
   private aggregateError(errorReport: ErrorReport): void {
@@ -1150,10 +1150,10 @@ const originalFetch = window.fetch;
   }
 
 }
-    // This could be expanded to include more sophisticated aggregation;
+    // This could be expanded to include more sophisticated aggregation
     }
   /**
-   * Assess performance impact;
+   * Assess performance impact
    */
 
   private assessPerformanceImpact(errorReport: ErrorReport): void {
@@ -1170,7 +1170,7 @@ const originalFetch = window.fetch;
       }
   }
   /**
-   * Attempt error recovery;
+   * Attempt error recovery
    */
 
   private attemptErrorRecovery(): void {
@@ -1183,7 +1183,7 @@ const originalFetch = window.fetch;
 //         !error.resolved &&
 //         Date.now() - new Date(error.context.timestamp).getTime() 
 
-          < 300000 // Last 5 minutes);
+          < 300000 // Last 5 minutes)
     if (recentErrors.length > 5) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -1191,12 +1191,12 @@ const originalFetch = window.fetch;
   O: Add content,}
 }
         }
-      // Implement recovery strategies here;
-      this.clearErrorState();
+      // Implement recovery strategies here
+      this.clearErrorState()
     }
   }
   /**
-   * Clear error state;
+   * Clear error state
    */
 
   private clearErrorState(): void {
@@ -1204,17 +1204,17 @@ const originalFetch = window.fetch;
   }
 
 }
-    // Reset error counters;
-    this.errorCounts.clear();
-    this.errorCategories.clear();
-    this.errorRateLimit = 0;
+    // Reset error counters
+    this.errorCounts.clear()
+    this.errorCategories.clear()
+    this.errorRateLimit = 0
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       }
   }
   /**
-   * Clean up old errors;
+   * Clean up old errors
    */
 
   private cleanupOldErrors(): void {
@@ -1222,17 +1222,17 @@ const originalFetch = window.fetch;
   }
 
 }
-    const cutoffDate = new Date();
-    cutoffDate.setDate(cutoffDate.getDate() - this.config.errorRetentionDays);
+    const cutoffDate = new Date()
+    cutoffDate.setDate(cutoffDate.getDate() - this.config.errorRetentionDays)
     this.errors = this.errors.filter()
-      error => new Date(error.context.timestamp) > cutoffDate);
+      error => new Date(error.context.timestamp) > cutoffDate)
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       }
   }
   /**
-   * Get error statistics;
+   * Get error statistics
    */
 
   public getErrorStatistics(): {
@@ -1264,20 +1264,20 @@ const originalFetch = window.fetch;
     this.errors.forEach(error => {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
-      errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;
+      errorsByType[error.type] = (errorsByType[error.type] || 0) + 1
       errorsByCategory[error.category] =
-        (errorsByCategory[error.category] || 0) + 1;
+        (errorsByCategory[error.category] || 0) + 1
       errorsBySeverity[error.severity] =
-        (errorsBySeverity[error.severity] || 0) + 1;
-    });
-    const recentErrors = this.errors;
+        (errorsBySeverity[error.severity] || 0) + 1
+    })
+    const recentErrors = this.errors
       .filter(error => !error.resolved)
 //       .sort()
         (a, b) =>
 //           new Date(b.context.timestamp).getTime() -
 //           new Date(a.context.timestamp).getTime()
 //       )
-      .slice(0, 10);
+      .slice(0, 10)
     return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -1287,11 +1287,11 @@ const originalFetch = window.fetch;
 //       errorsByType,
 //       errorsByCategory,
 //       errorsBySeverity,
-//       recentErrors;
+//       recentErrors
     }
   }
   /**
-   * Export error data;
+   * Export error data
    */
 
   public exportErrorData(): string {
@@ -1314,10 +1314,10 @@ const originalFetch = window.fetch;
 //       2)
   }
   /**
-   * Manually report error;
+   * Manually report error
    */
 
-  public reportError(message: string, context?: Partial;
+  public reportError(message: string, context?: Partial
           <ErrorContext>): string {
     // TODO: Add content
   }
@@ -1331,20 +1331,20 @@ const originalFetch = window.fetch;
   e: 'custom',
 //       message,
 //       ...context;)
-    });
-    this.processError(errorReport);
-    return errorReport.id;
+    })
+    this.processError(errorReport)
+    return errorReport.id
   }
 }
-// Export singleton instance;
-export const errorHandler = new EnhancedErrorHandler();
-// Export class for custom instances;
+// Export singleton instance
+export const errorHandler = new EnhancedErrorHandler()
+// Export class for custom instances
 export {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 //   EnhancedErrorHandler,
   type ErrorReport,
   type ErrorContext,
-  type ErrorHandlerConfig;
+  type ErrorHandlerConfig
 }
 

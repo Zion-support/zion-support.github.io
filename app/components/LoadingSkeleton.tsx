@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 
@@ -123,4 +124,10 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({
 export default Skeleton;
 =======
 ;
+>>>>>>> origin/main
+=======
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 >>>>>>> origin/main

@@ -1,13 +1,13 @@
 
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
+  link: string
+  category: string
+  realImplementation: boolean
   contactInfo: unknown
     mobile: string
     email: string,
@@ -67,7 +67,7 @@ export interface Innovative2026MicroSaas {/* TODO: Fix JSX expression */}
 }
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -92,18 +92,18 @@ export const innovative2026 MicroSaasServices: Innovative2026 MicroSaas[] = [,
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
   i,
   d: string, nam,
   e: string,
@@ -154,7 +154,7 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
@@ -162,15 +162,18 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
 id: "2026-micro-saas"
+    id: "2026-micro-saas",
+]
+    id: "2026-micro-saas"
     name: "2026 Micro SAAS Platform",
     tagline: "Next-generation micro SAAS solutions",
     price: "$89/month",
@@ -244,7 +247,7 @@ id: "2026-micro-saas"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
 i,
   d: string, nam,
   e: string, taglin,

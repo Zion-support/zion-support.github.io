@@ -1,24 +1,24 @@
 export type Zion2026AIMarketplaceService =
-  id: string;
-  name: string;
-  description: string;
+  id: string
+  name: string
+  description: string
   category: 'AI Marketplace' | 'AI Integration' | 'AI Automation' | 'AI Analytics' | 'AI Development'
-  price: unknown;
-    monthly: number;
+  price: unknown
+    monthly: number
     yearly: number
     enterprise: number
     currency: string,
   }
-  features: string[];
-  benefits: string[];
-  roi: string;
-  marketSize: string;
-  targetAudience: string[];
-  useCases: string[];
-  integration: string[];
-  support: string[];
-  contactInfo: unknown;
-    phone: string;
+  features: string[]
+  benefits: string[]
+  roi: string
+  marketSize: string
+  targetAudience: string[]
+  useCases: string[]
+  integration: string[]
+  support: string[]
+  contactInfo: unknown
+    phone: string
     email: string
     website: string
     address: string,
@@ -29,7 +29,7 @@ export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [
     name: 'Zion AI Service Marketplace Platform',
     description: 'A comprehensive AI service marketplace that connects businesses with AI service providers, featuring automated matching, quality assurance, and seamless integration.',
     category: 'AI Marketplace'
-    price: unknown;
+    price: unknown
       monthly: 299
       yearly: 2999
       enterprise: 9999,
@@ -167,7 +167,7 @@ export const,
     name: 'AI Service Integration Hub',
     description: 'A centralized platform for integrating multiple AI services into existing business workflows, providing seamless connectivity and unified management.',
     category: 'AI Integration'
-    price: unknown;
+    price: unknown
       monthly: 199
       yearly: 1999
       enterprise: 7999,
@@ -271,7 +271,7 @@ export const,
     name: 'AI Service Quality Assurance Platform',
     description: 'An automated platform for testing, validating, and ensuring the quality of AI services through comprehensive testing frameworks and continuous monitoring.',
     category: 'AI Automation'
-    price: unknown;
+    price: unknown
       monthly: 149
       yearly: 1499
       enterprise: 5999,
@@ -375,7 +375,7 @@ export const,
     name: 'AI Service Analytics Dashboard',
     description: 'A comprehensive analytics platform that provides insights into AI service performance, usage patterns, and business impact across the organization.',
     category: 'AI Analytics'
-    price: unknown;
+    price: unknown
       monthly: 99
       yearly: 999
       enterprise: 3999,
@@ -479,7 +479,7 @@ export const,
     name: 'AI Service Development Studio',
     description: 'A comprehensive development environment for creating, testing, and deploying custom AI services with pre-built templates and automated deployment pipelines.',
     category: 'AI Development'
-    price: unknown;
+    price: unknown
       monthly: 399
       yearly: 3999
       enterprise: 14999,
@@ -591,7 +591,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-];
+]
 export type Zion2026AIMarketplaceService = i,
   d: string, nam,
   e: string, descriptio,

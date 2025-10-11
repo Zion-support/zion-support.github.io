@@ -1,8 +1,8 @@
 
 'use client'
 /**
- * Performance Reporter;
- * Comprehensive performance monitoring and reporting;
+ * Performance Reporter
+ * Comprehensive performance monitoring and reporting
  */
 
 export interface PerformanceMetric {
@@ -52,21 +52,21 @@ class PerformanceReporter {
     if (typeof window === 'undefined') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-//       return;
+//       return
     }
     this.isEnabled = config?.enabled ?? process.env['NODE_ENV'] === 'production'
     if (!this.isEnabled) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-//       return;
+//       return
     }
-    // Monitor Core Web Vitals;
+    // Monitor Core Web Vitals
 //     this.monitorWebVitals()
-    // Monitor navigation timing;
+    // Monitor navigation timing
 //     this.monitorNavigationTiming()
-    // Monitor resource timing;
+    // Monitor resource timing
 //     this.monitorResourceTiming()
-    // Setup periodic reporting;
+    // Setup periodic reporting
     if (config?.reportInterval) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -76,7 +76,7 @@ class PerformanceReporter {
 //         this.report()
       }, config.reportInterval)
     }
-    // Report on page unload;
+    // Report on page unload
     window.addEventListener('beforeunload', () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -85,7 +85,7 @@ class PerformanceReporter {
   )
   }
   /**
-   * Monitor Core Web Vitals using PerformanceObserver;
+   * Monitor Core Web Vitals using PerformanceObserver
    */
 
   private monitorWebVitals(): void {
@@ -96,7 +96,7 @@ class PerformanceReporter {
     if (typeof PerformanceObserver === 'undefined') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-//       return;
+//       return
     }
     try {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -105,13 +105,13 @@ class PerformanceReporter {
       const lcpObserver = new PerformanceObserver((entryList) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        const entries = entryList.getEntries();
+        const entries = entryList.getEntries()
         const lastEntry = entries[entries.length - 1]
         if (lastEntry && 'renderTime' in lastEntry) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
           const value = (lastEntry as PerformanceEntry & { renderTime?: number; loadTime?: number }).renderTime ||
-                       (lastEntry as PerformanceEntry & { renderTime?: number; loadTime?: number }).loadTime || 0;
+                       (lastEntry as PerformanceEntry & { renderTime?: number; loadTime?: number }).loadTime || 0
           this.addMetric('LCP', value, this.getRating('lcp', value))
         }
       }
@@ -133,8 +133,8 @@ class PerformanceReporter {
           if ('processingStart' in entry && 'startTime' in entry) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-            const value = (entry as PerformanceEventTiming).processingStart - (entry as PerformanceEventTiming).startTime;
-            this.addMetric('FID', value, this.getRating('fid', value));
+            const value = (entry as PerformanceEventTiming).processingStart - (entry as PerformanceEventTiming).startTime
+            this.addMetric('FID', value, this.getRating('fid', value))
           }
         }
   )
@@ -144,7 +144,7 @@ class PerformanceReporter {
   d: true })
   )
       // Cumulative Layout Shift (CLS)
-      let clsValue = 0;
+      let clsValue = 0
 const clsObserver = new PerformanceObserver((entryList) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -154,7 +154,7 @@ const clsObserver = new PerformanceObserver((entryList) => {/* TODO: Fix JSX exp
           if (!(entry as any).hadRecentInput) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-            clsValue += (entry as any).value;
+            clsValue += (entry as any).value
           }
         }
   )
@@ -191,7 +191,7 @@ const clsObserver = new PerformanceObserver((entryList) => {/* TODO: Fix JSX exp
     }
   }
   /**
-   * Monitor navigation timing;
+   * Monitor navigation timing
    */
 
   private monitorNavigationTiming(): void {
@@ -202,7 +202,7 @@ const clsObserver = new PerformanceObserver((entryList) => {/* TODO: Fix JSX exp
     if (typeof window === 'undefined' || !window.performance) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-//       return;
+//       return
     }
     window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -210,18 +210,18 @@ const clsObserver = new PerformanceObserver((entryList) => {/* TODO: Fix JSX exp
       setTimeout(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
         if (navigation) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
           // Time to First Byte (TTFB)
-          const ttfb = navigation.responseStart - navigation.requestStart;
+          const ttfb = navigation.responseStart - navigation.requestStart
 //           this.addMetric('TTFB', ttfb, this.getRating('ttfb', ttfb))
-          // DOM Content Loaded;
-const dcl = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+          // DOM Content Loaded
+const dcl = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
 //           this.addMetric('DCL', dcl, this.getRating('dcl', dcl))
-          // Load Complete;
-const loadComplete = navigation.loadEventEnd - navigation.loadEventStart;
+          // Load Complete
+const loadComplete = navigation.loadEventEnd - navigation.loadEventStart
 //           this.addMetric('Load', loadComplete, this.getRating('load', loadComplete))
         }
       }, 0)
@@ -229,7 +229,7 @@ const loadComplete = navigation.loadEventEnd - navigation.loadEventStart;
   )
   }
   /**
-   * Monitor resource timing;
+   * Monitor resource timing
    */
 
   private monitorResourceTiming(): void {
@@ -240,7 +240,7 @@ const loadComplete = navigation.loadEventEnd - navigation.loadEventStart;
     if (typeof window === 'undefined' || !window.performance) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-//       return;
+//       return
     }
     window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -249,8 +249,8 @@ const loadComplete = navigation.loadEventEnd - navigation.loadEventStart;
   O: Add content,}
 }
         const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[]
-        // Find slowest resources;
-const slowResources = resources;
+        // Find slowest resources
+const slowResources = resources
           .filter((resource) => resource.duration > 1000)
           .sort((a, b) => b.duration - a.duration)
 //           .slice(0, 10)
@@ -266,14 +266,14 @@ const slowResources = resources;
   n: resource.duration,
             typ,
   e: resource.initiatorType,)
-          });
+          })
         })
       }, 0)
     }
   )
   }
   /**
-   * Add a performance metric;
+   * Add a performance metric
    */
 
   private addMetric(name: string, value: number, rating: 'good' | 'needs-improvement' | 'poor'): void {
@@ -292,17 +292,17 @@ const slowResources = resources;
   p: Date.now()
     }
 //     this.metrics.push(metric)
-    // Log poor performing metrics;
+    // Log poor performing metrics
     if (rating === 'poor') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       logger.warn(`Poor ${name} performance`, { value, rating })
     }
-    // Send to analytics;
+    // Send to analytics
 //     this.sendToAnalytics(metric)
   }
   /**
-   * Get performance rating based on thresholds;
+   * Get performance rating based on thresholds
    */
 
   private getRating(metric: string, value: number): 'good' | 'needs-improvement' | 'poor' {
@@ -348,7 +348,7 @@ const slowResources = resources;
     return 'poor'
   }
   /**
-   * Send metric to analytics;
+   * Send metric to analytics
    */
 
   private sendToAnalytics(metric: PerformanceMetric): void {
@@ -359,9 +359,9 @@ const slowResources = resources;
     if (typeof window === 'undefined') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-//       return;
+//       return
     }
-    // Google Analytics;
+    // Google Analytics
     if (typeof gtag === 'function') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -380,7 +380,7 @@ const slowResources = resources;
     }
   }
   /**
-   * Generate performance report;
+   * Generate performance report
    */
 
   private generateReport(): PerformanceReport | null {
@@ -391,9 +391,9 @@ const slowResources = resources;
     if (typeof window === 'undefined' || !window.performance) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      return null;
+      return null
     }
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
 const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[]
 
     return {
@@ -414,7 +414,7 @@ const resources = performance.getEntriesByType('resource') as PerformanceResourc
     }
   }
   /**
-   * Report performance data;
+   * Report performance data
    */
 
   report(): void {
@@ -425,13 +425,13 @@ const resources = performance.getEntriesByType('resource') as PerformanceResourc
     if (!this.isEnabled) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-//       return;
+//       return
     }
     const report = this.generateReport()
     if (!report) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-//       return;
+//       return
     }
     logger.info('Performance Report', {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -453,11 +453,11 @@ const resources = performance.getEntriesByType('resource') as PerformanceResourc
       }
 
     })
-    // Send to remote endpoint if configured;
+    // Send to remote endpoint if configured
     // this.sendToEndpoint(report)
   }
   /**
-   * Cleanup and stop reporting;
+   * Cleanup and stop reporting
    */
 
   destroy(): void {
@@ -473,9 +473,9 @@ const resources = performance.getEntriesByType('resource') as PerformanceResourc
     this.metrics = []
   }
 }
-// Export singleton instance;
+// Export singleton instance
 export const performanceReporter = new PerformanceReporter()
-// Auto-initialize in browser;
+// Auto-initialize in browser
 if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

@@ -1,9 +1,9 @@
-import Analytics from './components/Analytics';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import Analytics from './components/Analytics';
+import Analytics from './components/Analytics'
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import Analytics from './components/Analytics'
 export default function RootLayout({
   children}: {
     children: React.ReactNode
@@ -160,7 +160,6 @@ $4]
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
-      </head>
       <body className='antialiased'>
         <ErrorBoundary>
           <PerformanceMonitor />
@@ -169,8 +168,8 @@ $4]
         </ErrorBoundary>
       </body>
     </html>
-  );
-export default RootLayout;
+  )
+export default RootLayout
         priceSpecification: {
     // TODO: Add content
   }
@@ -188,3 +187,4 @@ export default RootLayout;
 export default SrcPage,
 }
   </script>
+</li></li></li></li></li></li></li></li></li></li></li>

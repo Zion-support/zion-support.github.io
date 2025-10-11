@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('internal-link-graph-runner function triggered')}
-    // Internal link graph simulation;
+    // Internal link graph simulation
     const result = {
       statusCode: 200,
       headers: {,
@@ -23,7 +23,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   d: new Date().toISOString()}
         }})}
-    return result;
+    return result
 //   } catch (error) {
     // console.error('Error in internal-link-graph-runner: ') error
   }
@@ -44,7 +44,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   n: 'internal-link-graph-runner'})
-      });
+      })
     }
   }
 }

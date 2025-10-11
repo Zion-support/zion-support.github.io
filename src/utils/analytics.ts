@@ -8,7 +8,7 @@ export const trackPageView = (pagePath: string, pageTitle?: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', 'GA_MEASUREMENT_ID', {
       page_path: pagePath,
-      page_title: pageTitle});
+      page_title: pageTitle})
   }
 }
 
@@ -17,17 +17,16 @@ export const initAnalytics = (measurementId: string) => {
     // Load Google Analytics script
     const script = document.createElement('script')
     script.async = true,
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
-    document.head.appendChild(script);
-
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`
+    document.head.appendChild(script)
     // Initialize gtag
-    window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer || []
     function gtag(...args: any[]) {
     window.dataLayer.push(args)
   }
-    window.gtag = gtag;
-    gtag('js', new Date());
-    gtag('config', measurementId);
+    window.gtag = gtag
+    gtag('js', new Date())
+    gtag('config', measurementId)
   }
 }
 

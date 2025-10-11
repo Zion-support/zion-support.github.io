@@ -427,6 +427,30 @@ button:focus-visible {
   border-color: rgba(102, 126, 234, 0.3);
 }
 
+<<<<<<< HEAD
+=======
+/* Futuristic backgrounds */
+.bg-cyber-grid {
+  background-image: 
+    linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-dots {
+  background-image: radial-gradient(circle, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Responsive futuristic elements */
+@media (max-width: 768px) {
+  .neon-text {
+    animation: none;
+    text-shadow: 0 0 5px currentColor;
+  }
+}
+
+>>>>>>> origin/main
 /* Advanced Futuristic Effects */
 .cyber-nav {
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);

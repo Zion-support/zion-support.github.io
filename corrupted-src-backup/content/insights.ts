@@ -1,6 +1,6 @@
 export interface Insight {
-    id: string;
-  title: string;
+    id: string
+  title: string
   summary: string
   category: string
   date: string; // ISO date string,
@@ -45,4 +45,4 @@ export const,
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
-  }];
+  }]

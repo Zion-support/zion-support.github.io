@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import {MetadataRoute}}from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {return [;}
+=======
+import { MetadataRoute } from 'next'
+export default function sitemap(): MetadataRoute.Sitemap {
+    return [
+>>>>>>> origin/main
     {
       url: 'https://ziontechgroup.com',
       lastModified: new Date(),

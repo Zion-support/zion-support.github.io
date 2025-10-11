@@ -57,15 +57,15 @@ export const realMicroSaasServices2024 = [{/* TODO: Fix JSX expression */}
   e: 'Custom'
     }
   }
-];
+]
 export const realMicroSaasCategories2024 = [
   'Platform Development',
   'Analytics & Insights',
   'User Management',
   'Revenue Optimization'
-];
+]
 export const realMicroSaasStats2024 =
-  totalServices: 2;
+  totalServices: 2
   categories: 4
   averageRating: 4.7
   activeUsers: 1200,

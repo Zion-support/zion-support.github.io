@@ -1,6 +1,6 @@
-'use client';
-import React, { memo } from 'react';
-import { LucideIcon, ArrowRight } from 'lucide-react';
+'use client'
+import React, { memo } from 'react'
+import { LucideIcon, ArrowRight } from 'lucide-react'
 interface ServiceCardProps {/* TODO: Fix JSX expression */}
 }
 const,
@@ -18,11 +18,10 @@ const,
       {/* TODO: Fix JSX expression */}
       )}
       "
-      <div className="text-4xl,
+      < className="text-4xl,$2 />
   sm:text-5xl mb-4,"
   sm:mb-6 text-center cyber-scan-line" aria-hidden="true"></div>"
         {typeof Icon === 'string' ? Icon : <Icon className="w-12 h-12 mx-auto" />}
-      </div>
       <h3></h3>`
         id={`${title.toLowerCase().replace(/\s+/g, '-')}-title`}"
         className="text-xl,
@@ -30,58 +29,47 @@ const,
   sm:mb-4 text-center neon-text"
       >
         {title}
-      </h3>
       "
-      <p className="text-gray-300 mb-4,
+      < className="text-gray-300 mb-4,$2 />
   sm:mb-6 text-center leading-relaxed text-sm,"
-  sm:text-base"></p>
+  sm:text-base">
         {description}
-      </p>
       "
       <div className="mb-4"></div>"
         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,
   Features:</h4>"
-        <ul className="text-sm text-gray-300 space-y-1"></ul>
+        <ul className="text-sm text-gray-300 space-y-1">
           {/* TODO: Fix JSX expression */}"
             <li key={idx} className="flex items-center"></li>"
-              <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2 flex-shrink-0" /></div>
+              <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2 flex-shrink-0" />
               {feature}
-            </li>
           ))}
           {/* TODO: Fix JSX expression */}
-              +{features.length - 3} more features;
-            </li>
+              +{features.length - 3} more features
           )}
-        </ul>
-      </div>
       "
       <div className="mb-4"></div>"
         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Technologie,
   s:</h4>"
-        <div className="flex flex-wrap gap-1"></div>
+        <div className="flex flex-wrap gap-1">
           {/* TODO: Fix JSX expression */}
               key={idx} `
               className={`px-2 py-1 ${bgColorClasses[color as keyof typeof bgColorClasses]} text-cyan-300 text-xs rounded`}
             >
               {tech}
-            </span>
           ))}
           {/* TODO: Fix JSX expression */}
               +{technologies.length - 4}
-            </span>
           )}
-        </div>
-      </div>
       "
       <div className="text-center mb-4"></div>"
-        <div className="text-lg,"
-  sm:text-2xl font-bold text-cyan-400 mb-2 neon-text" aria-label="Starting price"></div>
+        < className="text-lg,"$2 />
+  sm:text-2xl font-bold text-cyan-400 mb-2 neon-text" aria-label="Starting price">
           {price}
         </div>"
         <div className="text-xs text-gray-400">Categor,
-  y: {category}</div>
-      </div>
-      <a></a>
+  y: {category}
+      <a>
         href={href}`
         className={`${colorClasses[color as keyof typeof colorClasses]} font-medium text-sm,
   sm:text-base transition-all duration-300,
@@ -94,11 +82,8 @@ const,
         aria-label={`Learn more about ${title}`}
       >
         Learn More;"
-        <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
-      </a>
-    </article>
-  );
-});
-ServiceCard.displayName = 'ServiceCard';
-export default ServiceCard;"`
-  </ServiceCardProps>
+        <ArrowRight className="w-4 h-4 ml-1" />
+  )
+})
+ServiceCard.displayName = 'ServiceCard'
+export default ServiceCard;"`</div></a></a></ul></article>

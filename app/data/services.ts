@@ -14,9 +14,9 @@ import {
   Cloud, Building, Database, Lock, Code, Smartphone, Settings as SettingsIcon,
   Target, Zap, BarChart as BarChartIcon, Users, Globe, Cpu, Lock as LockIcon
   }
-} from 'lucide-react';
-export const microSAASServices = [;
-  // Productivity & Management Tools;
+} from 'lucide-react'
+export const microSAASServices = [
+  // Productivity & Management Tools
   {
     title: 'AI Project Manager Pro',
     description: 'Intelligent project planning with AI-powered resource optimization, timeline prediction, and risk assessment. Trusted by 10,000+ teams worldwide.',
@@ -206,7 +206,7 @@ export const microSAASServices = [;
     users: '50,000+',
   }
     freeTrial: '14 days'},
-  // Content & Marketing Tools;
+  // Content & Marketing Tools
   {
     title: 'AI Content Writer Pro',
     description: 'Advanced AI content creation with SEO optimization, brand voice consistency, and multi-language support. Generate 10 x more content.',
@@ -398,7 +398,7 @@ export const aiServices = [
     users: '18,000+',
   }
     freeTrial: '7 days'}
-];];];
+]
 export const aiServices = [
   {
     title: 'Machine Learning Solutions',
@@ -567,7 +567,11 @@ export const aiServices = [
     users: '600+',
   }
     freeTrial: '30 days'}
+<<<<<<< HEAD
 ];];];
+>>>>>>> origin/main
+=======
+]
 >>>>>>> origin/main
 export const itServices = [
   {title: 'Cloud Migration Services',
@@ -696,7 +700,7 @@ export const specializedServices = [
     users: '200+',
   }
     freeTrial: '30 days'}
-];];];
+]
 export const specializedServices = [
   {
     title: 'Quantum Computing Solutions',
@@ -782,7 +786,7 @@ export interface Service {id: string,}
     users: '400+',
   }
     freeTrial: '30 days'}
-];];];
+]
 export interface Service {
     id: string,
 >>>>>>> origin/main
@@ -800,7 +804,7 @@ export interface Service {
   useCases: string[],
   icon: string,
   popular: boolean,
-  new?: boolean;
+  new?: boolean
   path: string,
   contact: {,
     phone: string,
@@ -823,11 +827,15 @@ export const services: Service[] = [,
       'Risk prediction and mitigation',
       'Real-time progress tracking',
       'Team collaboration tools',
+<<<<<<< HEAD
       'Integration with 50+ tools';
 <<<<<<< HEAD
     ],;
     pricing: {,
 =======
+=======
+      'Integration with 50+ tools'
+>>>>>>> origin/main
     ],
     pricing: {
 >>>>>>> origin/main
@@ -838,13 +846,13 @@ export const services: Service[] = [,
       '40% faster project delivery',
       '25% reduction in project costs',
       '95% accuracy in deadline prediction',
-      'Real-time risk assessment';
+      'Real-time risk assessment'
     ],
     useCases: [,
       'Software development projects',
       'Marketing campaign management',
       'Construction project oversight',
-      'Event planning and execution';
+      'Event planning and execution'
     ],
     icon: '📊',
     popular: true,
@@ -869,11 +877,15 @@ export const services: Service[] = [,
       'Integration with CRM systems',
       'Sentiment analysis',
       'Escalation to human agents',
+<<<<<<< HEAD
       'Analytics and reporting';
 <<<<<<< HEAD
     ],;
     pricing: {,
 =======
+=======
+      'Analytics and reporting'
+>>>>>>> origin/main
     ],
     pricing: {
 >>>>>>> origin/main
@@ -884,13 +896,13 @@ export const services: Service[] = [,
       '80% reduction in response time',
       '24/7 availability',
       '90% customer satisfaction rate',
-      '60% cost reduction vs human agents';
+      '60% cost reduction vs human agents'
     ],
     useCases: [,
       'E-commerce customer support',
       'SaaS product support',
       'Healthcare patient inquiries',
-      'Financial services support';
+      'Financial services support'
     ],
     icon: '🤖',
     popular: true,
@@ -914,11 +926,15 @@ export const services: Service[] = [,
       'Brand voice consistency',
       'Plagiarism detection',
       'Content scheduling',
+<<<<<<< HEAD
       'Performance analytics';
 <<<<<<< HEAD
     ],;
     pricing: {,
 =======
+=======
+      'Performance analytics'
+>>>>>>> origin/main
     ],
     pricing: {
 >>>>>>> origin/main
@@ -929,13 +945,13 @@ export const services: Service[] = [,
       '10x faster content creation',
       'Consistent brand messaging',
       'SEO-optimized content',
-      'Multi-language support';
+      'Multi-language support'
     ],
     useCases: [,
       'Blog content creation',
       'Social media marketing',
       'Email marketing campaigns',
-      'Product descriptions';
+      'Product descriptions'
     ],
     icon: '✍️',
     popular: true,
@@ -959,11 +975,15 @@ export const services: Service[] = [,
       'Automated report generation',
       'Custom dashboard creation',
       'Data visualization',
+<<<<<<< HEAD
       'Machine learning models';
 <<<<<<< HEAD
     ],;
     pricing: {,
 =======
+=======
+      'Machine learning models'
+>>>>>>> origin/main
     ],
     pricing: {
 >>>>>>> origin/main
@@ -974,13 +994,13 @@ export const services: Service[] = [,
       '50% faster insights generation',
       'Predictive accuracy up to 95%',
       'Automated reporting saves 20 hours/week',
-      'Real-time decision making';
+      'Real-time decision making'
     ],
     useCases: [,
       'Business intelligence',
       'Sales forecasting',
       'Customer behavior analysis',
-      'Financial risk assessment';
+      'Financial risk assessment'
     ],
     icon: '📈',
     popular: true,
@@ -1004,11 +1024,15 @@ export const services: Service[] = [,
       'Automated incident response',
       'Vulnerability assessment',
       'Compliance monitoring',
+<<<<<<< HEAD
       'Security training';
 <<<<<<< HEAD
     ],;
     pricing: {,
 =======
+=======
+      'Security training'
+>>>>>>> origin/main
     ],
     pricing: {
 >>>>>>> origin/main
@@ -1019,13 +1043,13 @@ export const services: Service[] = [,
       '99.9% threat detection accuracy',
       '50% faster incident response',
       'Automated compliance reporting',
-      '24/7 security monitoring';
+      '24/7 security monitoring'
     ],
     useCases: [,
       'Enterprise security',
       'Financial services',
       'Healthcare data protection',
-      'Government agencies';
+      'Government agencies'
     ],
     icon: '🔒',
     popular: true,
@@ -1037,9 +1061,18 @@ export const services: Service[] = [,
     marketPrice: {,
     min: 500,
       max: 2000,
+<<<<<<< HEAD
       currency: 'USD',}},
   // Micro SAAS Services;
   {id: 'ai-social-media-manager',
+=======
+      currency: 'USD'
+  }
+    },
+  // Micro SAAS Services
+  {
+    id: 'ai-social-media-manager',
+>>>>>>> origin/main
     name: 'AI Social Media Manager',
     category: 'micro-saas',
     subcategory: 'Social Media',
@@ -1050,11 +1083,15 @@ export const services: Service[] = [,
       'Optimal timing analysis',
       'Engagement tracking',
       'Hashtag optimization',
+<<<<<<< HEAD
       'Competitor analysis';
 <<<<<<< HEAD
     ],;
     pricing: {,
 =======
+=======
+      'Competitor analysis'
+>>>>>>> origin/main
     ],
     pricing: {
 >>>>>>> origin/main
@@ -1065,13 +1102,13 @@ export const services: Service[] = [,
       '3x more engagement',
       'Save 15 hours/week',
       'Consistent posting schedule',
-      'Data-driven content strategy';
+      'Data-driven content strategy'
     ],
     useCases: [,
       'Small business marketing',
       'Personal branding',
       'E-commerce promotion',
-      'Content creators';
+      'Content creators'
     ],
     icon: '📱',
     popular: true,
@@ -1095,11 +1132,15 @@ export const services: Service[] = [,
       'Send time optimization',
       'A/B testing automation',
       'Email template library',
+<<<<<<< HEAD
       'Performance analytics';
 <<<<<<< HEAD
     ],;
     pricing: {,
 =======
+=======
+      'Performance analytics'
+>>>>>>> origin/main
     ],
     pricing: {
 >>>>>>> origin/main
@@ -1110,13 +1151,13 @@ export const services: Service[] = [,
       '40% higher open rates',
       '60% increase in click-through rates',
       'Automated campaign optimization',
-      'Personalized customer journeys';
+      'Personalized customer journeys'
     ],
     useCases: [,
       'E-commerce marketing',
       'Newsletter campaigns',
       'Lead nurturing',
-      'Customer retention';
+      'Customer retention'
     ],
     icon: '📧',
     popular: true,
@@ -1140,11 +1181,15 @@ export const services: Service[] = [,
       'Competitor analysis',
       'Ranking tracking',
       'Technical SEO audit',
+<<<<<<< HEAD
       'Link building recommendations';
 <<<<<<< HEAD
     ],;
     pricing: {,
 =======
+=======
+      'Link building recommendations'
+>>>>>>> origin/main
     ],
     pricing: {
 >>>>>>> origin/main
@@ -1155,13 +1200,13 @@ export const services: Service[] = [,
       '50% faster SEO results',
       'Comprehensive keyword analysis',
       'Automated optimization suggestions',
-      'Competitive advantage insights';
+      'Competitive advantage insights'
     ],
     useCases: [,
       'Website optimization',
       'Blog content SEO',
       'E-commerce SEO',
-      'Local business SEO';
+      'Local business SEO'
     ],
     icon: '🎯',
     popular: true,
@@ -1185,11 +1230,15 @@ export const services: Service[] = [,
       'Payment tracking',
       'Recurring billing',
       'Multi-currency support',
+<<<<<<< HEAD
       'Tax calculation';
 <<<<<<< HEAD
     ],;
     pricing: {,
 =======
+=======
+      'Tax calculation'
+>>>>>>> origin/main
     ],
     pricing: {
 >>>>>>> origin/main
@@ -1200,13 +1249,13 @@ export const services: Service[] = [,
       '90% time savings on invoicing',
       'Reduced billing errors',
       'Faster payment processing',
-      'Professional invoice templates';
+      'Professional invoice templates'
     ],
     useCases: [,
       'Freelancer billing',
       'Small business invoicing',
       'Service-based businesses',
-      'Contractor payments';
+      'Contractor payments'
     ],
     icon: '💰',
     popular: false,
@@ -1230,11 +1279,15 @@ export const services: Service[] = [,
       'Project time allocation',
       'Team collaboration',
       'Detailed reporting',
+<<<<<<< HEAD
       'Integration with 100+ tools';
 <<<<<<< HEAD
     ],;
     pricing: {,
 =======
+=======
+      'Integration with 100+ tools'
+>>>>>>> origin/main
     ],
     pricing: {
 >>>>>>> origin/main
@@ -1245,13 +1298,13 @@ export const services: Service[] = [,
       'Accurate time tracking',
       'Productivity optimization',
       'Project profitability analysis',
-      'Team performance insights';
+      'Team performance insights'
     ],
     useCases: [,
       'Freelancer time tracking',
       'Team productivity monitoring',
       'Project billing',
-      'Remote work management';
+      'Remote work management'
     ],
     icon: '⏰',
     popular: false,
@@ -1263,9 +1316,18 @@ export const services: Service[] = [,
     marketPrice: {,
     min: 20,
       max: 80,
+<<<<<<< HEAD
       currency: 'USD',}},
   // IT Services;
   {id: 'cloud-infrastructure',
+=======
+      currency: 'USD'
+  }
+    },
+  // IT Services
+  {
+    id: 'cloud-infrastructure',
+>>>>>>> origin/main
     name: 'Cloud Infrastructure Solutions',
     category: 'it',
     subcategory: 'Cloud Computing',
@@ -1276,11 +1338,15 @@ export const services: Service[] = [,
       'Disaster recovery',
       'Security compliance',
       'Performance monitoring',
+<<<<<<< HEAD
       'Cost optimization';
 <<<<<<< HEAD
     ],;
     pricing: {,
 =======
+=======
+      'Cost optimization'
+>>>>>>> origin/main
     ],
     pricing: {
 >>>>>>> origin/main
@@ -1291,13 +1357,13 @@ export const services: Service[] = [,
       '99.9% uptime guarantee',
       '50% cost reduction vs on-premise',
       'Instant scalability',
-      'Enhanced security';
+      'Enhanced security'
     ],
     useCases: [,
       'Enterprise applications',
       'E-commerce platforms',
       'Data analytics',
-      'Web applications';
+      'Web applications'
     ],
     icon: '☁️',
     popular: true,
@@ -1321,11 +1387,15 @@ export const services: Service[] = [,
       'Email security',
       'Web application firewall',
       'Compliance reporting',
+<<<<<<< HEAD
       'Incident response';
 <<<<<<< HEAD
     ],;
     pricing: {,
 =======
+=======
+      'Incident response'
+>>>>>>> origin/main
     ],
     pricing: {
 >>>>>>> origin/main
@@ -1336,13 +1406,13 @@ export const services: Service[] = [,
       '360-degree security coverage',
       'Compliance with industry standards',
       '24/7 security monitoring',
-      'Rapid threat response';
+      'Rapid threat response'
     ],
     useCases: [,
       'Enterprise security',
       'Healthcare compliance',
       'Financial services',
-      'Government agencies';
+      'Government agencies'
     ],
     icon: '🛡️',
     popular: true,
@@ -1366,11 +1436,15 @@ export const services: Service[] = [,
       'Container orchestration',
       'Monitoring and alerting',
       'Security scanning',
+<<<<<<< HEAD
       'Performance optimization';
 <<<<<<< HEAD
     ],;
     pricing: {,
 =======
+=======
+      'Performance optimization'
+>>>>>>> origin/main
     ],
     pricing: {
 >>>>>>> origin/main
@@ -1381,13 +1455,13 @@ export const services: Service[] = [,
       '10x faster deployments',
       'Reduced deployment errors',
       'Automated testing',
-      'Improved team productivity';
+      'Improved team productivity'
     ],
     useCases: [,
       'Software development',
       'Microservices deployment',
       'Cloud migration',
-      'Application modernization';
+      'Application modernization'
     ],
     icon: '🔄',
     popular: true,
@@ -1411,11 +1485,15 @@ export const services: Service[] = [,
       'Performance monitoring',
       'Security hardening',
       'Migration services',
+<<<<<<< HEAD
       '24/7 support';
 <<<<<<< HEAD
     ],;
     pricing: {,
 =======
+=======
+      '24/7 support'
+>>>>>>> origin/main
     ],
     pricing: {
 >>>>>>> origin/main
@@ -1426,13 +1504,13 @@ export const services: Service[] = [,
       'Improved database performance',
       'Data security and compliance',
       'Reduced downtime',
-      'Expert database administration';
+      'Expert database administration'
     ],
     useCases: [,
       'Enterprise databases',
       'E-commerce platforms',
       'Data analytics',
-      'Application databases';
+      'Application databases'
     ],
     icon: '🗄️',
     popular: false,
@@ -1444,9 +1522,18 @@ export const services: Service[] = [,
     marketPrice: {,
     min: 300,
       max: 1200,
+<<<<<<< HEAD
       currency: 'USD',}},
   // Emerging Technologies;
   {id: 'quantum-computing',
+=======
+      currency: 'USD'
+  }
+    },
+  // Emerging Technologies
+  {
+    id: 'quantum-computing',
+>>>>>>> origin/main
     name: 'Quantum Computing Solutions',
     category: 'emerging-tech',
     subcategory: 'Quantum',
@@ -1457,11 +1544,15 @@ export const services: Service[] = [,
       'Cryptography solutions',
       'Simulation capabilities',
       'Research collaboration',
+<<<<<<< HEAD
       'Custom quantum applications';
 <<<<<<< HEAD
     ],;
     pricing: {,
 =======
+=======
+      'Custom quantum applications'
+>>>>>>> origin/main
     ],
     pricing: {
 >>>>>>> origin/main
@@ -1473,13 +1564,13 @@ export const services: Service[] = [,
       'Exponential computational power',
       'Revolutionary problem solving',
       'Future-proof technology',
-      'Competitive advantage';
+      'Competitive advantage'
     ],
     useCases: [,
       'Drug discovery',
       'Financial modeling',
       'Cryptography',
-      'Optimization problems';
+      'Optimization problems'
     ],
     icon: '⚛️',
     popular: false,
@@ -1504,11 +1595,15 @@ export const services: Service[] = [,
       'NFT marketplace development',
       'Blockchain integration',
       'Token development',
+<<<<<<< HEAD
       'Security auditing';
 <<<<<<< HEAD
     ],;
     pricing: {,
 =======
+=======
+      'Security auditing'
+>>>>>>> origin/main
     ],
     pricing: {
 >>>>>>> origin/main
@@ -1520,13 +1615,13 @@ export const services: Service[] = [,
       'Decentralized solutions',
       'Enhanced security',
       'Transparency and trust',
-      'Future of digital assets';
+      'Future of digital assets'
     ],
     useCases: [,
       'DeFi applications',
       'NFT marketplaces',
       'Supply chain tracking',
-      'Digital identity';
+      'Digital identity'
     ],
     icon: '⛓️',
     popular: false,
@@ -1551,11 +1646,15 @@ export const services: Service[] = [,
       'Real-time data processing',
       'Predictive maintenance',
       'Device security',
+<<<<<<< HEAD
       'Analytics dashboard';
 <<<<<<< HEAD
     ],;
     pricing: {,
 =======
+=======
+      'Analytics dashboard'
+>>>>>>> origin/main
     ],
     pricing: {
 >>>>>>> origin/main
@@ -1566,13 +1665,13 @@ export const services: Service[] = [,
       'Real-time data processing',
       'Reduced latency',
       'Cost-effective data management',
-      'Scalable IoT solutions';
+      'Scalable IoT solutions'
     ],
     useCases: [,
       'Smart manufacturing',
       'Smart cities',
       'Healthcare monitoring',
-      'Agriculture automation';
+      'Agriculture automation'
     ],
     icon: '🌐',
     popular: false,
@@ -1586,7 +1685,7 @@ export const services: Service[] = [,
       max: 2500,
       currency: 'USD',}}
   }
-  ];
+  ]
 export const serviceCategories = [
   {id: 'ai',
     name: 'AI Services',
@@ -1619,11 +1718,17 @@ export const contactInfo = {phone: '+1 (302) 464-0950',
     bgColor: 'bg-pink-500/10'
   }
   }
-];];];
+]
 export const contactInfo = {
     phone: '+1 (302) 464-0950',
 >>>>>>> origin/main
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   website: 'https://ziontechgroup.com',
+<<<<<<< HEAD
   hours: 'Mon-Fri: 9AM-6PM EST',}}
+=======
+  hours: 'Mon-Fri: 9AM-6PM EST'
+  }
+}
+>>>>>>> origin/main
