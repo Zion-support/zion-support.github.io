@@ -70,9 +70,12 @@ const AboutPage: React.FC = () => {
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               About <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Zion Tech Group</span>
+            </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We are a team of passionate technologists dedicated to transforming businesses through innovative AI and technology solutions.
             </p>
+          </div>
+        </section>
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="container mx-auto">
@@ -92,14 +95,13 @@ const AboutPage: React.FC = () => {
                       <IconComponent className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-2xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <div key={index} className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <Icon className="w-8 h-8 text-white" />
-                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                     <p className="text-gray-300">{feature.description}</p>
+                  </div>
                 );
               })}
-              })}</div></section>
+            </div>
+          </div>
+        </section>
         {/* Values Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="container mx-auto">
@@ -108,8 +110,6 @@ const AboutPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 The principles that guide everything we do
               </p>
-            </div>
-            </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {values.map((value, index) => {
                 const IconComponent = value.icon;
@@ -121,17 +121,13 @@ const AboutPage: React.FC = () => {
                       </div>
                       <h3 className="text-xl font-semibold text-white">{value.title}</h3>
                     </div>
-                  <div key={index} className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <Icon className="w-8 h-8 text-white" />
-                    <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
                     <p className="text-gray-300">{value.description}</p>
+                  </div>
                 );
               })}
             </div>
           </div>
         </section>
-              })}</div></section>
         {/* Team Section */}
         <section className="py-20 px-4">
           <div className="container mx-auto">
@@ -163,7 +159,11 @@ const AboutPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
                   <p className="text-purple-400 font-medium mb-3">{member.role}</p>
                   <p className="text-gray-300">{member.description}</p>
+                </div>
               ))}
+            </div>
+          </div>
+        </section>
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="container mx-auto text-center">
@@ -184,71 +184,9 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
       </main>
-                </div>
-              ))}</div></section>
-        {/* CTA Section */}
-        <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-          <div className="container mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Work With Us?
-            </h2>
-            <p className="text-xl text-gray-100 mb-8 max-w-3xl mx-auto">
-              Let's discuss how we can help transform your business with cutting-edge AI and technology solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Contact Us
-              </button>
-              </button></div></section>
-      </main>
       <Footer />
+    </div>
   );
 };
+
 export default AboutPage;
-</Footer>
-</ArrowRight>
-</button>
-</div>
-</div>
-</section>
-</p>
-</p>
-</h3>
-</div>
-</div>
-</h2>
-</div>
-</div>
-</section>
-</p>
-</h3>
-</Icon>
-</div>
-</div>
-</div>
-</h2>
-</div>
-</div>
-</section>
-</p>
-</h3>
-</Icon>
-</div>
-</div>
-</div>
-</h2>
-</div>
-</div>
-</section>
-</span>
-</h1>
-</div>
-</section>
-</main>
-</Navigation>
-</title>
-</Helmet>
-</div>

@@ -103,6 +103,7 @@ const AccessibilityPage: React.FC = () => {
         <title>Accessibility - Zion Tech Group</title>
         <meta name="description" content="Learn about our commitment to web accessibility and inclusive design practices." />
         <meta name="keywords" content="accessibility, inclusive design, WCAG compliance, ADA compliance, web accessibility" />
+      </Helmet>
       <Navigation />
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -110,15 +111,18 @@ const AccessibilityPage: React.FC = () => {
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Accessibility</span> First
+            </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               We believe technology should be accessible to everyone. Our commitment to inclusive design ensures that our solutions work for all users.
             </p>
+          </div>
+        </section>
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-Accessibility Features
+                Accessibility Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our accessibility solutions cover all aspects of digital inclusion, ensuring your products work for everyone.
@@ -139,11 +143,14 @@ Accessibility Features
                       <li key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {benefit}
+                      </li>
                     ))}
-              ))}
                   </ul>
                 </div>
-              ))}</div></section>
+              ))}
+            </div>
+          </div>
+        </section>
         {/* Services Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -170,11 +177,14 @@ Accessibility Features
                       <li key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {benefit}
+                      </li>
                     ))}
-              ))}
                   </ul>
                 </div>
-              ))}</div></section>
+              ))}
+            </div>
+          </div>
+        </section>
         {/* Standards Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -193,12 +203,14 @@ Accessibility Features
                   <h3 className="text-lg font-semibold text-white">
                     {standard}
                   </h3>
-))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
         {/* Benefits Section */}
-<section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
-                  </h3></div></section>
-        {/* Benefits Section */}
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Why Accessibility Matters
@@ -216,70 +228,36 @@ Accessibility Features
                   </h3>
                   <p className="text-gray-300">
                     {benefit.description}
-</p>
+                  </p>
+                </div>
               ))}
+            </div>
+          </div>
+        </section>
         {/* CTA Section */}
-<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
           <div className="max-w-4xl mx-auto text-center">
-              ))}</div></section>
-        {/* CTA Section */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Make Your Products Accessible?
             </h2>
             <p className="text-xl text-gray-100 mb-8">
-Let's work together to create inclusive digital experiences that work for everyone.
+              Let's work together to create inclusive digital experiences that work for everyone.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 Start Your Accessibility Journey
                 <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 Schedule Consultation
               </button>
-              </button></div></section>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
+    </div>
   );
 };
+
 export default AccessibilityPage;
-</Footer>
-</ArrowRight>
-</button>
-</div>
-</div>
-</section>
-</benefit>
-</div>
-</div>
-</div>
-</section>
-</Shield>
-</div>
-</div>
-</div>
-</section>
-</CheckCircle>
-</li>
-</ul>
-</service>
-</div>
-</div>
-</div>
-</section>
-</CheckCircle>
-</li>
-</ul>
-</feature>
-</div>
-</div>
-</div>
-</section>
-</span>
-</h1>
-</div>
-</section>
-</main>
-</Navigation>
-</title>
-</Helmet>
-</div>
