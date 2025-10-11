@@ -8,10 +8,8 @@ import ServicesPage from './app/services/page'
 import ContactPage from './app/contact/page'
 import AIServicesPage from './app/ai-services/page'
 import FiveGImplementationPage from './app/5g-implementation/page'
-import AIServicesPage from './app/ai-services/page'
 import ITServicesPage from './app/it-services/page'
 import MicroSAASServicesPage from './app/micro-saas-services/page'
-import ContactPage from './app/contact/page'
 
 function App() {
   return (

@@ -1,28 +1,15 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import { Menu, X, ChevronDown } from 'lucide-react'
-export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-=======
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
   
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
 
-<<<<<<< HEAD
-  const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
-  }
-
-=======
   const toggleServices = () => {
     setIsServicesOpen(!isServicesOpen)
   }
@@ -36,8 +23,6 @@ export default function Navigation() {
     { name: 'Custom Development', path: '/custom-development', icon: <Code className="w-4 h-4" /> },
     { name: 'Mobile Solutions', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> }
   ]
-
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
   return (
     <nav className="bg-white/10 backdrop-blur-lg fixed w-full top-0 z-50 border-b border-white/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,76 +45,6 @@ export default function Navigation() {
                 About
               </Link>
               
-<<<<<<< HEAD
-              {/* AI Services Dropdown */}
-              <div className="relative">
-                <button
-                  onClick={() => toggleDropdown('ai')}
-                  className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
-                >
-                  AI Services
-                  <ChevronDown className="w-4 h-4 ml-1" />
-                </button>
-                {activeDropdown === 'ai' && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-white/95 backdrop-blur-lg rounded-lg shadow-lg border border-white/20 py-2 z-50">
-                    <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">All AI Services</Link>
-                    <Link to="/ai-content-generator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Content Generator</Link>
-                    <Link to="/ai-chatbot-builder" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Chatbot Builder</Link>
-                    <Link to="/ai-analytics-dashboard" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Analytics Dashboard</Link>
-                    <Link to="/ai-email-assistant" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Email Assistant</Link>
-                    <Link to="/ai-voice-assistant" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Voice Assistant</Link>
-                    <Link to="/ai-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Automation</Link>
-                  </div>
-                )}
-              </div>
-
-              {/* IT Services Dropdown */}
-              <div className="relative">
-                <button
-                  onClick={() => toggleDropdown('it')}
-                  className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
-                >
-                  IT Services
-                  <ChevronDown className="w-4 h-4 ml-1" />
-                </button>
-                {activeDropdown === 'it' && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-white/95 backdrop-blur-lg rounded-lg shadow-lg border border-white/20 py-2 z-50">
-                    <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">All IT Services</Link>
-                    <Link to="/cloud-migration" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">Cloud Migration</Link>
-                    <Link to="/cybersecurity-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">Cybersecurity</Link>
-                    <Link to="/devops-cicd" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">DevOps & CI/CD</Link>
-                    <Link to="/data-analytics" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">Data Analytics</Link>
-                    <Link to="/mobile-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">Mobile Development</Link>
-                    <Link to="/blockchain" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">Blockchain Solutions</Link>
-                  </div>
-                )}
-              </div>
-
-              {/* Micro SAAS Dropdown */}
-              <div className="relative">
-                <button
-                  onClick={() => toggleDropdown('saas')}
-                  className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
-                >
-                  Micro SAAS
-                  <ChevronDown className="w-4 h-4 ml-1" />
-                </button>
-                {activeDropdown === 'saas' && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-white/95 backdrop-blur-lg rounded-lg shadow-lg border border-white/20 py-2 z-50">
-                    <Link to="/micro-saas-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">All Micro SAAS</Link>
-                    <Link to="/ai-task-manager" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Task Manager</Link>
-                    <Link to="/ai-expense-tracker" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Expense Tracker</Link>
-                    <Link to="/ai-password-manager" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Password Manager</Link>
-                    <Link to="/ai-invoice-generator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Invoice Generator</Link>
-                    <Link to="/ai-health-tracker" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Health Tracker</Link>
-                    <Link to="/ai-smart-calendar" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Smart Calendar</Link>
-                  </div>
-                )}
-              </div>
-
-              <Link to="/5g-implementation" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                5G Solutions
-=======
               {/* Services Dropdown */}
               <div className="relative">
                 <button
@@ -159,7 +74,6 @@ export default function Navigation() {
               
               <Link to="/ai-services" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 AI Services
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
               </Link>
               <Link to="/contact" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Contact
@@ -188,47 +102,6 @@ export default function Navigation() {
               About
             </Link>
             
-<<<<<<< HEAD
-            {/* AI Services Mobile */}
-            <div className="px-3 py-2">
-              <div className="text-white font-medium mb-2">AI Services</div>
-              <div className="ml-4 space-y-1">
-                <Link to="/ai-services" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">All AI Services</Link>
-                <Link to="/ai-content-generator" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">AI Content Generator</Link>
-                <Link to="/ai-chatbot-builder" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">AI Chatbot Builder</Link>
-                <Link to="/ai-analytics-dashboard" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">AI Analytics Dashboard</Link>
-                <Link to="/ai-email-assistant" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">AI Email Assistant</Link>
-              </div>
-            </div>
-
-            {/* IT Services Mobile */}
-            <div className="px-3 py-2">
-              <div className="text-white font-medium mb-2">IT Services</div>
-              <div className="ml-4 space-y-1">
-                <Link to="/it-services" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">All IT Services</Link>
-                <Link to="/cloud-migration" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">Cloud Migration</Link>
-                <Link to="/cybersecurity-solutions" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">Cybersecurity</Link>
-                <Link to="/devops-cicd" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">DevOps & CI/CD</Link>
-                <Link to="/data-analytics" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">Data Analytics</Link>
-              </div>
-            </div>
-
-            {/* Micro SAAS Mobile */}
-            <div className="px-3 py-2">
-              <div className="text-white font-medium mb-2">Micro SAAS</div>
-              <div className="ml-4 space-y-1">
-                <Link to="/micro-saas-services" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">All Micro SAAS</Link>
-                <Link to="/ai-task-manager" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">AI Task Manager</Link>
-                <Link to="/ai-expense-tracker" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">AI Expense Tracker</Link>
-                <Link to="/ai-password-manager" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">AI Password Manager</Link>
-              </div>
-            </div>
-
-            <Link to="/5g-implementation" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
-              5G Solutions
-            </Link>
-            <Link to="/contact" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
-=======
             {/* Mobile Services Section */}
             <div className="px-3 py-2">
               <div className="text-white font-medium text-base mb-2">Services</div>
@@ -251,7 +124,6 @@ export default function Navigation() {
               AI Services
             </Link>
             <Link to="/contact" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
               Contact
             </Link>
           </div>
