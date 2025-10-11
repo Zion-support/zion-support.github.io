@@ -2,39 +2,6 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
-<<<<<<< HEAD
-const ITServicesPage: React.FC = () => 
-    {} id: 1,
-    };,
-title: 'Cloud Infrastructure',;,
-description: 'Scalable and secure cloud solutions for your business needs.',;,
-icon: Cloud,,
-    }
-    
-price: 'From $1,000/month'} ,
-    
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ]
-const categories = [
-    {id: 'all', name: 'All Services'} ,
-    {id: 'cloud', name: 'Cloud Services'} ,
-    {id: 'development', name: 'Web Development'} ,
-    {id: 'security', name: 'Cybersecurity'} ,
-    {id: 'database', name: 'Database'} ,
-    {id: 'devops', name: 'DevOps'} ]
-const filteredServices = services.filter(service =>;
-selectedCategory === 'all' || service.category === selectedCategory
-  )
-return (
-    <>
-      <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
-        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
-      </Helmet>
-      <Navigation />
-=======
 export default function PagePage() {
   const features = [
     {
@@ -53,7 +20,6 @@ export default function PagePage() {
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-dc8d
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -105,8 +71,4 @@ export default function PagePage() {
       </main>
     </div>
   );
-<<<<<<< HEAD
-};
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-dc8d

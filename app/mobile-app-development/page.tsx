@@ -2,35 +2,6 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
-<<<<<<< HEAD
-const MobileAppDevelopmentPage: React.FC = () => 
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']} ,
-    
-      benefits: ['Interactive charts', 'Custom reports', 'Data export', 'Visual storytelling']} ,
-    
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
-  const benefits = [
-    'Increase efficiency by up to 80%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Real-time processing and analysis',
-    'Seamless integration with existing systems'
-  ]
-  return (
-    <>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-
-            </div>
-
-      <Footer />
-    </>
-=======
 export default function PagePage() {
   const features = [
     {
@@ -61,7 +32,6 @@ export default function PagePage() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Professional page services to help your business succeed and grow.
             </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-dc8d
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
@@ -101,10 +71,4 @@ export default function PagePage() {
       </main>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default MobileAppDevelopmentPage;
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-dc8d

@@ -23,22 +23,8 @@ export default function Navigation() {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-<<<<<<< HEAD
-              <Link href="/about" className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                About
-              </Link>
-              <Link href="/services" className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Services
-              </Link>
-              <Link href="/contact" className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Contact
-              </Link>
-              <Link href="/demo" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                Demo
-=======
               <Link href="/" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Home
               </Link>
@@ -53,15 +39,10 @@ export default function Navigation() {
               </Link>
               <Link href="/ai-services" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 AI Services
->>>>>>> cursor/fix-errors-and-merge-to-main-dc8d
               </Link>
             </div>
           </div>
 
-<<<<<<< HEAD
-          {/* Mobile menu button */}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-dc8d
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
@@ -71,29 +52,8 @@ export default function Navigation() {
             </button>
           </div>
         </div>
-
-<<<<<<< HEAD
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-              <Link href="/about" className="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
-                About
-              </Link>
-              <Link href="/services" className="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
-                Services
-              </Link>
-              <Link href="/contact" className="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
-                Contact
-              </Link>
-              <Link href="/demo" className="bg-blue-600 text-white block px-3 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                Demo
-              </Link>
-            </div>
-          </div>
-        )}
       </div>
-=======
+
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/10 backdrop-blur-lg border-t border-white/20">
@@ -115,7 +75,6 @@ export default function Navigation() {
           </div>
         </div>
       )}
->>>>>>> cursor/fix-errors-and-merge-to-main-dc8d
     </nav>
   );
 }

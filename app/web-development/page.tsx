@@ -50,15 +50,6 @@ export default function PagePage() {
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-
-      <Footer />
-    </>
-        </section>
-      <Footer /></>)
-    </Footer>
-  </Navigation>
-=======
           
           <div className="text-center">
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
@@ -81,4 +72,3 @@ export default function PagePage() {
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-dc8d

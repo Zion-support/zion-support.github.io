@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-</div>
-=======
 'use client';
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-dc8d
 
 export default function PagePage() {
   const features = [
@@ -75,23 +71,4 @@ export default function PagePage() {
       </main>
     </div>
   );
-<<<<<<< HEAD
-};
-
-              <p className="text-xl text-gray-300 mb-8">
-                This page is under development. Please check back soon for updates.
-
-              <button className="cyber-button">
-                Learn More
-                <ArrowRight className="w-5 h-5 ml-2">
-      <Footer /></Footer>
-    </>
-  )
 }
-export default PagePage
-    </ArrowRight>
-</p>
-</button>
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-dc8d

@@ -33,19 +33,6 @@ export default function PagePage() {
               Professional page services to help your business succeed and grow.
             </p>
           </div>
-<<<<<<< HEAD
-
-      <Footer />
-    </>
-        </section>
-
-        {/* Content Section */}
-
-                Coming Soon
-
-              <p>
-                This page is under development. Please check back soon for updates.
-=======
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {features.map((feature, index) => (
@@ -69,7 +56,6 @@ export default function PagePage() {
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Contact us today to learn more about our page services.
->>>>>>> cursor/fix-errors-and-merge-to-main-dc8d
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -85,10 +71,4 @@ export default function PagePage() {
       </main>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default PagePage;
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-dc8d

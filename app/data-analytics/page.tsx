@@ -67,17 +67,8 @@ export default function PagePage() {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-
-      <Footer />
-    </>
-        </section>
-      <Footer /></>)
-    </div>
-=======
         </div>
       </main>
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-dc8d

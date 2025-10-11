@@ -1,20 +1,6 @@
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart} from 'lucide-react'
-const PagePage: React.FC = () => 
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ];
-=======
 'use client';
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-dc8d
 
 export default function PagePage() {
   const features = [
@@ -47,45 +33,6 @@ export default function PagePage() {
               Professional page services to help your business succeed and grow.
             </p>
           </div>
-<<<<<<< HEAD
-
-      <Footer />
-    </>
-        </section>
-
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Discover the powerful features that make our solutions stand out.
-              </p>
-
-            <div className=">
-    ,>
-    d: grid-cols-2 l, g:grid-cols-3 gap-8">
-              
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-4">
-                    <feature.icon className="h-8 w-8 text-blue-600 mr-3">
-                    <h3 className="text-xl font-semibold text-gray-900">
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                  <ul className="space-y-2">
-                    
-                      <li key={idx} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2">
-                        {benefit}
-
-                  </ul>;
-              ))}
-            </div>
-
-      <Footer />
-    </>
-=======
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {features.map((feature, index) => (
@@ -102,7 +49,6 @@ export default function PagePage() {
                 </ul>
               </div>
             ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-dc8d
           </div>
           
           <div className="text-center">
@@ -125,14 +71,4 @@ export default function PagePage() {
       </main>
     </div>
   );
-<<<<<<< HEAD
-export default PagePage
-</Footer>
-
-</div></div></div>
-</h3>
-</p>
-</li>
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-dc8d

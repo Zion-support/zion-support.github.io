@@ -33,19 +33,6 @@ export default function PagePage() {
               Professional page services to help your business succeed and grow.
             </p>
           </div>
-<<<<<<< HEAD
-
-      <Footer />
-    </>
-        </section>
-
-      <Footer />
-    </>
-  )
-}
-    </Helmet>
-</main>
-=======
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {features.map((feature, index) => (
@@ -85,4 +72,3 @@ export default function PagePage() {
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-dc8d

@@ -5,11 +5,6 @@ import Footer from './components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
-<<<<<<< HEAD
-export default function RootLayout(
-}: 
-})
-=======
 export default function RootLayout({
   children,
 }: {
@@ -34,4 +29,3 @@ export default function RootLayout({
     </html>
   )
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-dc8d
