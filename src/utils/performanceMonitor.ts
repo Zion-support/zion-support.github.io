@@ -26,10 +26,10 @@ export class PerformanceMonitor {
   }
 
   init(): void {
-    if (this.isInitialized || typeof window === 'undefined') return
-    this.isInitialized = true
-    this.setupWebVitals()
-    this.setupCustomMetrics()
+    if (this.isInitialized || typeof window === 'undefined') return;
+    this.isInitialized = true;
+    this.setupWebVitals();
+    this.setupCustomMetrics();
   }
 
   private setupWebVitals(): void {
@@ -42,9 +42,9 @@ export class PerformanceMonitor {
           this.metrics.fcp = fcpEntry.startTime
           this.reportMetric('FCP', this.metrics.fcp)
         }
-      })
-      observer.observe({ entryTypes: ['paint'] })
-      this.observers.push(observer)
+      });
+      observer.observe({ entryTypes: ['paint'] });
+      this.observers.push(observer);
     } catch (error) {
       console.warn('Failed to observe FCP:', error)
     }
@@ -62,7 +62,7 @@ export class PerformanceMonitor {
       observer.observe({ entryTypes: ['largest-contentful-paint'] })
       this.observers.push(observer)
     } catch (error) {
-      console.warn('Failed to observe LCP:', error)
+      console.warn('Failed to observe LCP:', error);
     }
   }
 
@@ -70,7 +70,7 @@ export class PerformanceMonitor {
     // First Input Delay
     try {
       const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
+        const entries = list.getEntries();
         entries.forEach((entry) => {
           const fidEntry = entry as PerformanceEventTiming
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime
@@ -80,7 +80,7 @@ export class PerformanceMonitor {
       observer.observe({ entryTypes: ['first-input'] })
       this.observers.push(observer)
     } catch (error) {
-      console.warn('Failed to observe FID:', error)
+      console.warn('Failed to observe FID:', error);
     }
 
     // Cumulative Layout Shift
@@ -103,7 +103,7 @@ export class PerformanceMonitor {
       clsObserver.observe({ entryTypes: ['layout-shift'] })
       this.observers.push(clsObserver)
     } catch (error) {
-      console.warn('Failed to observe CLS:', error)
+      console.warn('Failed to observe CLS:', error);
     }
   }
 

@@ -44,6 +44,34 @@ const HomePage: React.FC = () => {
     }
   ]
 
+  const stats = [
+    { value: '500+', label: 'Projects Completed', icon: <CheckCircle className="w-8 h-8 text-cyan-400" /> },
+    { value: '99.9%', label: 'Uptime Guarantee', icon: <Clock className="w-8 h-8 text-green-400" /> },
+    { value: '24/7', label: 'Support Available', icon: <Phone className="w-8 h-8 text-blue-400" /> },
+    { value: '50+', label: 'Expert Team Members', icon: <Users className="w-8 h-8 text-purple-400" /> }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO, TechCorp',
+      content: 'Zion Tech Group transformed our entire infrastructure. Their AI solutions increased our efficiency by 300%.',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      role: 'CEO, DataFlow Inc',
+      content: 'Outstanding service and expertise. They delivered our cloud migration project ahead of schedule.',
+      rating: 5
+    },
+    {
+      name: 'Emily Rodriguez',
+      role: 'VP Engineering, InnovateLab',
+      content: 'The cybersecurity solutions they implemented have given us complete peace of mind.',
+      rating: 5
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />

@@ -3,16 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import { ChevronRight, Home } from 'lucide-react'
 
-interface BreadcrumbItem {
-  label: string
-  href?: string
-}
-
-interface BreadcrumbProps {
-  items?: BreadcrumbItem[]
-}
-
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ items = [] }) => {
+  const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
     ...items
