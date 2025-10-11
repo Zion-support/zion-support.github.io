@@ -100,10 +100,11 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <script type="application/ld+json">
           {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
-interface SEOHeadProps {
     </Helmet>
   );
 };
+
+interface SEOHeadProps {
   title?: string
   description?: string
   keywords?: string
