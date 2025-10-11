@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect } from 'react'
+import  { useEffect } from 'react'
 
 interface AnalyticsProps {
   enableGoogleAnalytics?: boolean
@@ -30,6 +30,11 @@ const Analytics: React.FC<AnalyticsProps> = ({
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking])
 
   const initializeGoogleAnalytics = () => {
+  return (
+    <div>
+
+    <div>
+  
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'GA_MEASUREMENT_ID', {
         page_title: document.title,
@@ -38,7 +43,12 @@ const Analytics: React.FC<AnalyticsProps> = ({
     }
   }
 
-  const initializePerformanceMonitoring = () => {
+const initializePerformanceMonitoring = () => {
+  return (
+    <div>
+
+    <div>
+  
     if (typeof window !== 'undefined' && 'performance' in window) {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
@@ -51,7 +61,12 @@ const Analytics: React.FC<AnalyticsProps> = ({
     }
   }
 
-  const initializeErrorTracking = () => {
+const initializeErrorTracking = () => {
+  return (
+    <div>
+
+    <div>
+  
     if (typeof window !== 'undefined') {
       window.addEventListener('error', (event) => {
         console.error('Global error:', event.error)
@@ -65,10 +80,20 @@ const Analytics: React.FC<AnalyticsProps> = ({
     }
   }
 
-  const initializeUserBehaviorTracking = () => {
+const initializeUserBehaviorTracking = () => {
+  return (
+    <div>
+
+    <div>
+  
     if (typeof window !== 'undefined') {
       // Track page views
       const trackPageView = () => {
+  return (
+    <div>
+
+    <div>
+  
         if (window.gtag) {
           window.gtag('event', 'page_view', {
             page_title: document.title,
@@ -92,6 +117,11 @@ const Analytics: React.FC<AnalyticsProps> = ({
       // Track scroll depth
       let maxScroll = 0
       const trackScroll = () => {
+  return (
+    <div>
+
+    <div>
+  
         const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
         if (scrollPercent > maxScroll) {
           maxScroll = scrollPercent

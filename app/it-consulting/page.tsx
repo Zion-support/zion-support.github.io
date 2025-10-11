@@ -1,11 +1,10 @@
 'use client'
 import React from 'react'
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import {Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight,
-  Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock,
-  TrendingUp, Star, Settings, Calendar, CheckSquare, FileText,
-  Mail, Phone, DollarSign, Clock, Award, CheckCircle,
+import  {  useEffect } from 'react'
+
+import {  
+  Sparkles, Cpu, Target, Lock,
+  TrendingUp, Calendar, CheckSquare, FileText, Award,
   Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart,
   CreditCard, Building, Factory, Car, Plane, Ship, Train,
   Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench,
@@ -13,8 +12,7 @@ import {Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight,
   Compass, PieChart, TrendingDown, Activity, Zap as Lightning,
   Target as Crosshair, Shield as Security, Users as People,
   Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow,
-  Phone as PhoneIcon, Mail as MailIcon, MapPin as Location,
-  Eye, Search, MessageSquare, PieChart as Chart,
+  Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Search, PieChart as Chart,
   Download, Upload, RefreshCw, Play, Pause, Stop,
   Volume2, VolumeX, Mic, MicOff, Headphones,
   Wifi, WifiOff, Battery, BatteryCharging,
@@ -115,7 +113,7 @@ const ITConsultingPage: React.FC = () => {
       name: 'Cloud Migration & Optimization',
       description: 'Seamless migration to cloud platforms with optimization for cost and performance',
       category: 'cloud',
-      icon: Cloud,
+      icon: 
       price: 'Starting at $3,000',
       features: [
         'Cloud readiness assessment',
@@ -147,7 +145,7 @@ const ITConsultingPage: React.FC = () => {
       name: 'Cybersecurity Solutions',
       description: 'Comprehensive security assessment, implementation, and ongoing protection',
       category: 'security',
-      icon: Shield,
+      icon: 
       price: 'Starting at $2,500',
       features: [
         'Security risk assessment',
@@ -211,7 +209,7 @@ const ITConsultingPage: React.FC = () => {
       name: 'Database Management & Optimization',
       description: 'Database design, implementation, optimization, and ongoing management',
       category: 'database',
-      icon: Database,
+      icon: 
       price: 'Starting at $1,500',
       features: [
         'Database design and architecture',
@@ -275,7 +273,7 @@ const ITConsultingPage: React.FC = () => {
       name: 'Custom Software Development',
       description: 'Tailored software solutions built to meet specific business requirements',
       category: 'development',
-      icon: Code,
+      icon: 
       price: 'Starting at $5,000',
       features: [
         'Requirements analysis',
@@ -450,7 +448,7 @@ const ITConsultingPage: React.FC = () => {
       name: 'Cloud Migration & Optimization',
       description: 'Seamless migration to cloud platforms with optimization for cost and performance',
       category: 'cloud',
-      icon: Cloud,
+      icon: 
       price: 'Starting at $3,000',
       features: [
         'Cloud readiness assessment',
@@ -481,7 +479,7 @@ const ITConsultingPage: React.FC = () => {
       name: 'Cybersecurity Solutions',
       description: 'Comprehensive security assessment, implementation, and ongoing protection',
       category: 'security',
-      icon: Shield,
+      icon: 
       price: 'Starting at $2,500',
       features: [
         'Security risk assessment',
@@ -543,7 +541,7 @@ const ITConsultingPage: React.FC = () => {
       name: 'Database Management & Optimization',
       description: 'Database design, implementation, optimization, and ongoing management',
       category: 'database',
-      icon: Database,
+      icon: 
       price: 'Starting at $1,500',
       features: [
         'Database design and architecture',
@@ -605,7 +603,7 @@ const ITConsultingPage: React.FC = () => {
       name: 'Custom Software Development',
       description: 'Tailored software solutions built to meet specific business requirements',
       category: 'development',
-      icon: Code,
+      icon: 
       price: 'Starting at $5,000',
       features: [
         'Requirements analysis',
@@ -743,31 +741,38 @@ const ITConsultingPage: React.FC = () => {
     return matchesCategory && matchesSearch}
   })
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div>
+
+    <div>
+  
       {/* Hero Section */}</div>
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid">
+      <section>
+  
+  <div>
+  
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div>
         <div className="relative z-10 max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1>
             Professional <span className="holographic-text">IT Services</span>
           </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto neon-glow">
+          <p>
+  
             Comprehensive IT solutions designed to optimize your technology infrastructure, 
             enhance security, and drive business growth. Expert consulting and implementation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>
-            <a
-              href="tel:+13024640950"
-              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
-              <Phone className="w-5 h-5 inline mr-2" />
+            <a>
+  
+              <Phone>
+  
               Call (302) 464-0950
-  </
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
-              <Mail className="w-5 h-5 inline mr-2" />
+  </div>
+            <a>
+  
+              <Mail>
+  
               Get IT Consultation
-  </
+  </div>
           </div>
         </div>
       </section>
@@ -780,21 +785,22 @@ const ITConsultingPage: React.FC = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1>
             Professional <span className="holographic-text">IT Services</span>
           </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto neon-glow">
+          <p>
+  
             Comprehensive IT solutions designed to optimize your technology infrastructure,
             enhance security, and drive business growth. Expert consulting and implementation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>
-            <a
-              href="tel:+13024640950"
-              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
-              <Phone className="w-5 h-5 inline mr-2" />
+            <a>
+  
+              <Phone>
+  
               Call (302) 464-0950
             </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
-              <Mail className="w-5 h-5 inline mr-2" />
+            <a>
+  
+              <Mail>
+  
               Get IT Consultation
             </a>
           </div>
@@ -807,7 +813,8 @@ const ITConsultingPage: React.FC = () => {
             {/* Search */}</div>
             <div className="flex-1"></div>
               <div className="relative"></div>
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search>
+  
                 <input
                   type="text"
                   placeholder="Search IT services..."
@@ -828,10 +835,12 @@ const ITConsultingPage: React.FC = () => {
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
                 {categories.map((category) => (
-                  <option key={category.id} value={category.id}>
+                  <option>
+  
                 className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
                 {categories.map((category) => (}
-                  <option key={category.id} value={category.id}>
+                  <option>
+  
                     {category.name}
                   </option>))}
               </select>
@@ -857,14 +866,19 @@ const ITConsultingPage: React.FC = () => {
         </div>
       </section>
       {/* Services Grid */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section>
+  
+  <div>
+  
         <div className="max-w-7xl mx-auto"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div>
+  
             {filteredServices.map((service) => (</div>
               <div key={service.id} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse"></div>
                 <div className="flex items-start justify-between mb-4"></div>
                   <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors"></div>
-                    <service.icon className="w-12 h-12" />
+                    <service>
+  
                   </div>
                   <div className="text-right"></div>
                     <div className="text-2xl font-bold text-white">{service.price}</div>
@@ -876,10 +890,13 @@ const ITConsultingPage: React.FC = () => {
                 <div className="space-y-3 mb-6"></div>
                   <div></div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
+                    <ul>
+  
                       {service.features.slice(0, 4).map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        <li>
+  
+                          <CheckCircle>
+  
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -887,10 +904,13 @@ const ITConsultingPage: React.FC = () => {
                   </div>
                   <div></div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
-                    <ul className="space-y-1">
+                    <ul>
+  
                       {service.benefits.slice(0, 2).map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
-                          <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <li>
+  
+                          <TrendingUp>
+  
                           <span>{benefit}</span>
                         </li>
                       ))}
@@ -917,19 +937,16 @@ const ITConsultingPage: React.FC = () => {
                   </div>
                 )}
                 <div className="space-y-3"></div>
-                  <a
-                    href={service.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                  <a>
+  
                     Get Free Consultation
-  </
-                  <a
-                    href="tel:+13024640950"
-                    className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-semibold text-center hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                    <Phone className="w-4 h-4 inline mr-2" />
+  </div>
+                  <a>
+  
+                    <Phone>
+  
                     Call for Quote
-  </
+  </div>
                 </div>
               </div>
             ))}
@@ -937,33 +954,39 @@ const ITConsultingPage: React.FC = () => {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">
+      <section>
+  
+  <div>
+  
         <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
+          <h2>
+  
             Ready to Optimize Your IT Infrastructure?
           </h2>
-          <p className="text-xl text-cyan-400 mb-8 neon-glow">
+          <p>
+  
             Our certified IT professionals deliver reliable, secure, and scalable solutions. 
             All services include free consultations and ongoing support.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <a
-              href="tel:+13024640950"
-              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
-              <Phone className="w-5 h-5" />
+            <a>
+  
+              <Phone>
+  
               Call (302) 464-0950
-  </
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
-              <Mail className="w-5 h-5" />
+  </div>
+            <a>
+  
+              <Mail>
+  
               Get Custom IT Strategy
-  </
+  </div>
           </div>
         </div>
       </section>
     </div>
   )}
+
 export default ITConsultingPage
   </a>
   </a>
@@ -982,7 +1005,8 @@ export default ITConsultingPage
               <div key={service.id} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse"></div>
                 <div className="flex items-start justify-between mb-4"></div>
                   <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors"></div>
-                    <service.icon className="w-12 h-12" />
+                    <service>
+  
                   </div>
                   <div className="text-right"></div>
                     <div className="text-2xl font-bold text-white">{service.price}</div>
@@ -994,20 +1018,26 @@ export default ITConsultingPage
                 <div className="space-y-3 mb-6"></div>
                   <div></div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
+                    <ul>
+  
                       {service.features.slice(0, 4).map((feature, idx) => (}
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        <li>
+  
+                          <CheckCircle>
+  
                           <span>{feature}</span>
                         </li>))}
                     </ul>
                   </div>
                   <div></div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
-                    <ul className="space-y-1">
+                    <ul>
+  
                       {service.benefits.slice(0, 2).map((benefit, idx) => (}
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
-                          <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <li>
+  
+                          <TrendingUp>
+  
                           <span>{benefit}</span>
                         </li>))}
                     </ul>
@@ -1032,17 +1062,14 @@ export default ITConsultingPage
                   </div>)}
 
                 <div className="space-y-3"></div>
-                  <a
-                    href={service.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                  <a>
+  
                     Get Free Consultation
                   </a>
-                  <a
-                    href="tel:+13024640950"
-                    className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-semibold text-center hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                    <Phone className="w-4 h-4 inline mr-2" />
+                  <a>
+  
+                    <Phone>
+  
                     Call for Quote
                   </a>
                 </div>
@@ -1053,24 +1080,26 @@ export default ITConsultingPage
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
+          <h2>
+  
             Ready to Optimize Your IT Infrastructure?
           </h2>
-          <p className="text-xl text-cyan-400 mb-8 neon-glow">
+          <p>
+  
             Our certified IT professionals deliver reliable, secure, and scalable solutions.
             All services include free consultations and ongoing support.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <a
-              href="tel:+13024640950"
-              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
-              <Phone className="w-5 h-5" />
+            <a>
+  
+              <Phone>
+  
               Call (302) 464-0950
             </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
-              <Mail className="w-5 h-5" />
+            <a>
+  
+              <Mail>
+  
               Get Custom IT Strategy
             </a>
           </div>

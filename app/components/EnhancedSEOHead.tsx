@@ -1,7 +1,5 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { useLocation } from 'react-router-dom'
 
 interface SEOHeadProps {
   title?: string
@@ -48,21 +46,37 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   }
 
   return (
+    <div>
+
     <Helmet>
+  
       <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={currentUrl} />
-      <meta property="og:type" content={type} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <link rel="canonical" href={currentUrl} />
-      <script type="application/ld+json">
+      <meta>
+  
+      <meta>
+  
+      <meta>
+  
+      <meta>
+  
+      <meta>
+  
+      <meta>
+  
+      <meta>
+  
+      <meta>
+  
+      <meta>
+  
+      <meta>
+  
+      <meta>
+  
+      <link>
+  
+      <script>
+  
         {JSON.stringify(structuredData)}
       </script>
     </Helmet>

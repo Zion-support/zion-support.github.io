@@ -1,13 +1,19 @@
 'use client'
 import React from 'react'
 'use client'
-import React, { useEffect } from 'react'
+import  { useEffect } from 'react'
 interface SecurityEnhancerProps {
   children: React.ReactNode}
+
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
   useEffect(() => {
     // Security enhancement logic
     const enhanceSecurity = () => {
+  return (
+    <div>
+
+    <div>
+  
       // Add security headers
       const securityHeaders = {
         'X-Content-Type-Options': 'nosniff',
@@ -26,6 +32,8 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {use
         'X-Frame-Options': 'DENY',
         'X-XSS-Protection': '1; mode=block',) => {
   return (
+    <div>
+
     $3
   )}
         'Referrer-Policy': 'strict-origin-when-cross-origin'}
@@ -44,6 +52,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {use
       })}
     enhanceSecurity()}, [])
   return <React.Fragment>{children}</React.Fragment>}
+
 export default SecurityEnhancer
   </SecurityEnhancerProps>
 

@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import React, { memo, useMemo } from 'react'
+import  { memo, useMemo } from 'react'
 interface OptimizedLoadingSpinnerProps {interface OptimizedLoadingSpinnerProps {size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars'
   text?: string
@@ -8,6 +8,7 @@ interface OptimizedLoadingSpinnerProps {interface OptimizedLoadingSpinnerProps {
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
   fullScreen?: boolean}
 }
+
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
   ({
     size = 'md',
@@ -50,7 +51,10 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
     const renderSpinner = useMemo(() => {switch (variant) {
         case 'dots':
           return (
-            <div className='flex space-x-1' role='status' aria-label='Loading'>
+    <div>
+
+            <div>
+  
               {[0, 1, 2].map(i => (</div>
                 <div
 
@@ -88,6 +92,8 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({s
                 /></div>))}</div>)
         case 'pulse':
           return (
+    <div>
+
             <div
 
         case 'pulse':
@@ -99,10 +105,8 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({s
         case 'skeleton':
           return (</div>
             <div className='space-y-2' role='status' aria-label='Loading'></div>
-              <div
-
-        case 'skeleton':
-          return (</div>
+              <div>
+  
             <div className='space-y-2' role='status' aria-label='Loading'></div>
               <div
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
@@ -117,7 +121,10 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({s
               /></div>)
         case 'bars':
           return (
-            <div className='flex space-x-1' role='status' aria-label='Loading'>
+    <div>
+
+            <div>
+  
               {[0, 1, 2, 3].map(i => (</div>
                 <div
 
@@ -134,6 +141,8 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({s
         case 'spinner':
         default:
           return (
+    <div>
+
             <div
 
         case 'spinner':
@@ -147,14 +156,15 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({s
     const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`}, [fullScreen, className])
     return (</div>
       <div className={containerClasses}></div>
-        <div className='text-center'>
-
+        <div>
+  
     const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`}, [fullScreen, className]);return (</div>
       <div className={containerClasses}></div>
         <div className='text-center'></div>
           {renderSpinner}
           {text && (</div>}
-            <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>
+            <p>
+  
               {text}
             </p>)}
         </div>)}

@@ -211,6 +211,11 @@ export class AdvancedAnalytics {
 
     let maxScrollDepth = 0;
     const trackScrollDepth = () => {
+  return (
+    <div>
+
+    <div>
+  
       const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
       if (scrollDepth > maxScrollDepth) {
         maxScrollDepth = scrollDepth;

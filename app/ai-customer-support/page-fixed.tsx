@@ -1,20 +1,19 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, BarChart, Target, TrendingUp } from 'lucide-react'
 
 const PageFixedPage: React.FC = () => {
   const features = [
     {
-      icon: BarChart,
+      icon: 
       title: 'AI-Powered Analysis',
       description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      icon: BarChart,
+      icon: 
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
@@ -34,29 +33,47 @@ const PageFixedPage: React.FC = () => {
   ]
 
   return (
-    <React.Fragment>
+    <div>
+
+    <React>
+  
       <Helmet>
+  
         <title>Page Fixed - Zion Tech Group</title>
-        <meta name="description" content="Advanced page solutions powered by AI technology." />
+        <meta>
+  
       </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation>
+  
+      <div>
+  
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        <section>
+  
+  <div>
+  
+          <div>
+  
+          <div>
+  
+          <div>
+  
+            <h1>
+  
               Page Fixed
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p>
+  
               Advanced page solutions powered by AI technology.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            <div>
+  
+              <button>
+  
                 Get Started
               </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              <button>
+  
                 Learn More
               </button>
             </div>
@@ -64,27 +81,40 @@ const PageFixedPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section>
+  
+  <div>
+  
+          <div>
+  
+            <div>
+  
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p>
+  
                 Discover the powerful features that make our solution stand out.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+  
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    <feature.icon className="h-8 w-8 text-purple-400 mr-3" />
+                <div>
+  
+                  <div>
+  
+                    <feature>
+  
                     <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                   </div>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
+                  <ul>
+  
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                      <li>
+  
+                        <CheckCircle>
+  
                         {benefit}
                       </li>
                     ))}
@@ -96,20 +126,28 @@ const PageFixedPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+        <section>
+  
+  <div>
+  
+          <div>
+  
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p>
+  
               Join thousands of satisfied customers who trust our solutions.
             </p>
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center mx-auto">
+            <button>
+  
               Get Started Now
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight>
+  
             </button>
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer>
+  
     </React.Fragment>
   )
 }

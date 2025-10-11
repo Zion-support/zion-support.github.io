@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud } from 'lucide-react'
+
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 
@@ -40,36 +39,47 @@ export default function HomePage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div>
+
+    <div>
+  
       <Helmet>
+  
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
+        <meta>
+  
       </Helmet>
       
-      <Navigation />
-      
+      <Navigation>
+  
       <main>
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+  
+        <section>
+  
+  <div>
+  
+          <div>
+  
+            <div>
+  
+              <h1>
+  
                 Advanced <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">AI & IT Solutions</span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p>
+  
                 Transform your business with cutting-edge artificial intelligence, cloud computing, and digital transformation services.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
-                >
+              <div>
+  
+                <a>
+  
                   Get Started
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight>
+  
                 </a>
-                <a
-                  href="/services"
-                  className="border border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
-                >
+                <a>
+  
                   Our Services
                 </a>
               </div>
@@ -77,18 +87,27 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section>
+  
+  <div>
+  
+          <div>
+  
+            <div>
+  
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p>
+  
                 We deliver innovative technology solutions that drive growth and efficiency for businesses worldwide.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div>
+  
               {features.map((feature, index) => (
-                <div key={index} className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-4">
+                <div>
+  
+                  <div>
+  
                     {feature.icon}
                     <h3 className="text-xl font-semibold text-gray-900 ml-3">{feature.title}</h3>
                   </div>
@@ -100,7 +119,8 @@ export default function HomePage() {
         </section>
       </main>
       
-      <Footer />
+      <Footer>
+  
     </div>
   )
 }

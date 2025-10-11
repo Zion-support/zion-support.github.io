@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 'use client'
-import React, { useState, useCallback } from 'react'
+import { Helmet } from 'react-helmet-async'
 interface ImageProps {src: string,
     alt: string}
 interface ImageProps {}
@@ -36,7 +36,9 @@ interface ImageProps {}
   onLoad?: () => void
   onError?: () => void}
 }
+
 export const Image: React.FC<ImageProps>= ({}
+
 export const Image: React.FC<ImageProps> = ({}
   src,
 export const Image: React.FC<ImageProps> = ({,
@@ -56,7 +58,8 @@ export const Image: React.FC<ImageProps> = ({,
   onError,}
   ...props}
 }) => {}
-  const [, setIsLoaded] = useState(false)
+
+const [, setIsLoaded] = useState(false)
   const [hasError, setHasError] = useState(false)
   const handleLoad = useCallback(() => {}
     setIsLoaded(true)
@@ -70,7 +73,8 @@ export const Image: React.FC<ImageProps> = ({,
     ...(fill && {position: 'absolute'
       top: 0,
       left: 0,}
-  const imageStyle: React.CSSProperties = {}
+
+const imageStyle: React.CSSProperties = {}
     ...style,
     ...(fill && {}
       position: 'absolute',
@@ -87,9 +91,10 @@ export const Image: React.FC<ImageProps> = ({,
   if (hasError) {}
     return(<div}
 'use client'
-import React, { useState, useCallback } from 'react'
+import { Helmet } from 'react-helmet-async'
 interface ImageProps {/* TODO: Fix JSX expression */}
 }
+
 export const,
   Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */})}) => {/* TODO: Fix JSX expression */}
   }, [onLoad])
@@ -128,8 +133,10 @@ export default Image</img>
       onError={handleError})
       {...props})
     />))}
+
 export default Image
     />))}
+
 export default Image
 "`
   </ImageProps>

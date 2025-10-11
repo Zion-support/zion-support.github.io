@@ -1,8 +1,7 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Globe, Users, Clock, DollarSign, Star, Target, TrendingUp, Lightbulb } from 'lucide-react';
+import {    Target, TrendingUp, Lightbulb } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
+import { Link } from 'react-helmet-async';
 const DigitalTransformationPage: React.FC = () => {
   const transformationServices = [
     {
@@ -96,44 +95,57 @@ const DigitalTransformationPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div>
+
+    <div>
+  
       <Helmet>
+  
         <title>Digital Transformation - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive digital transformation services to modernize your business. Process automation, digital workforce, customer experience, and innovation solutions." />
-        <meta name="keywords" content="digital transformation, process automation, digital workforce, customer experience, data strategy, innovation labs" />
+        <meta>
+  
+        <meta>
+  
       </Helmet>
       
       {/* Hero Section */}
-      <section className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <section>
+  
+  <div>
+  
+        <div>
+  
+          <div>
+  
+            <h1>
+  
               Digital Transformation
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p>
+  
               Transform your business for the digital age with our comprehensive digital transformation services and solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
+            <div>
+  
+              <Link>
+  
                 Start Your Transformation
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight>
+  
               </Link>
-              <Link 
-                to="/about" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-              >
+              <Link>
+  
                 Learn More
               </Link>
             </div>
           </div>
 
           {/* Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+          <div>
+  
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div>
+  
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
               </div>
@@ -143,19 +155,28 @@ const DigitalTransformationPage: React.FC = () => {
       </section>
 
       {/* Transformation Process */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section>
+  
+  <div>
+  
+        <div>
+  
+          <div>
+  
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Transformation Process</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p>
+  
               A proven methodology to ensure successful digital transformation
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+          <div>
+  
             {transformationPhases.map((phase, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:bg-white/15 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div>
+  
+                <div>
+  
                   <span className="text-white font-bold text-xl">{phase.phase}</span>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{phase.title}</h3>
@@ -168,54 +189,71 @@ const DigitalTransformationPage: React.FC = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section>
+  
+  <div>
+  
+        <div>
+  
+          <div>
+  
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Transformation Services</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p>
+  
               Comprehensive solutions to modernize every aspect of your business
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          <div>
+  
             {transformationServices.map((service, index) => (
-              <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 relative ${service.popular ? 'ring-2 ring-purple-500' : ''}`}>
+              <div>
+  
                 {service.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
-                      <Star className="w-4 h-4 mr-1" />
+                  <div>
+  
+                    <span>
+  
+                      <Star>
+  
                       Popular
                     </span>
                   </div>
                 )}
                 <div className="mb-4">{service.icon}</div>
-                <div className="mb-2">
-                  <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm font-medium">
+                <div>
+  
+                  <span>
+  
                     {service.category}
                   </span>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                <div className="mb-6">
+                <div>
+  
                   <div className="text-2xl font-bold text-white mb-2">{service.pricing}</div>
-                  <div className="text-gray-400 text-sm">
+                  <div>
+  
                     {service.pricing.includes('month') ? 'per month' : 'one-time setup'}
                   </div>
                 </div>
-                <ul className="space-y-2 mb-8">
+                <ul>
+  
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                    <li>
+  
+                      <CheckCircle>
+  
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <Link 
-                  to="/contact"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-                >
+                <Link>
+  
                   Get Started
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight>
+  
                 </Link>
               </div>
             ))}
@@ -224,43 +262,62 @@ const DigitalTransformationPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section>
+  
+  <div>
+  
+        <div>
+  
+          <div>
+  
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Digital Transformation?</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p>
+  
               We deliver transformation that drives real business value and competitive advantage
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <Lightbulb className="w-12 h-12 text-blue-500 mb-4" />
+          <div>
+  
+            <div>
+  
+              <Lightbulb>
+  
               <h3 className="text-xl font-semibold text-white mb-4">Innovation Focus</h3>
               <p className="text-gray-300">Cutting-edge solutions that keep you ahead of the competition and market trends.</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <TrendingUp className="w-12 h-12 text-green-500 mb-4" />
+            <div>
+  
+              <TrendingUp>
+  
               <h3 className="text-xl font-semibold text-white mb-4">Proven Results</h3>
               <p className="text-gray-300">Track record of delivering measurable business outcomes and ROI improvements.</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <Users className="w-12 h-12 text-purple-500 mb-4" />
+            <div>
+  
+              <Users>
+  
               <h3 className="text-xl font-semibold text-white mb-4">Change Management</h3>
               <p className="text-gray-300">Comprehensive support to ensure smooth adoption and user engagement.</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <Shield className="w-12 h-12 text-red-500 mb-4" />
+            <div>
+  
+              <Shield>
+  
               <h3 className="text-xl font-semibold text-white mb-4">Security First</h3>
               <p className="text-gray-300">Built-in security and compliance measures throughout the transformation process.</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <Clock className="w-12 h-12 text-orange-500 mb-4" />
+            <div>
+  
+              <Clock>
+  
               <h3 className="text-xl font-semibold text-white mb-4">Agile Approach</h3>
               <p className="text-gray-300">Flexible methodology that adapts to your business needs and timeline.</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <DollarSign className="w-12 h-12 text-yellow-500 mb-4" />
+            <div>
+  
+              <DollarSign>
+  
               <h3 className="text-xl font-semibold text-white mb-4">Cost Effective</h3>
               <p className="text-gray-300">Transparent pricing with clear ROI expectations and value delivery.</p>
             </div>
@@ -269,25 +326,29 @@ const DigitalTransformationPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+      <section>
+  
+  <div>
+  
+        <div>
+  
+          <div>
+  
+            <div>
+  
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              <p>
+  
                 Get a free digital readiness assessment and discover your transformation opportunities.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/contact" 
-                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
+              <div>
+  
+                <Link>
+  
                   Get Free Assessment
                 </Link>
-                <Link 
-                  to="/about" 
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-                >
+                <Link>
+  
                   Learn About Us
                 </Link>
               </div>

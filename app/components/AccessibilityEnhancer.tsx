@@ -1,7 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
-
+import { useEffect } from 'react-helmet-async';
 interface AccessibilityEnhancerProps {
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
@@ -128,7 +127,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
       };
 
-      const handleChange = (e: MediaQueryListEvent) => updateHighContrast(e);
+const handleChange = (e: MediaQueryListEvent) => updateHighContrast(e);
       prefersHighContrast.addEventListener('change', handleChange);
       updateHighContrast(prefersHighContrast);
 

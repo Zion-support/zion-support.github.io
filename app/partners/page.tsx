@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ExternalLink, Award, Handshake, TrendingUp } from 'lucide-react';
+import {  ExternalLink, Award, Handshake, TrendingUp } from 'lucide-react';
 
 interface Partner {
   name: string;
@@ -113,7 +113,7 @@ const PartnersPage: React.FC = () => {
     {
       name: 'Certified Partners',
       description: 'Authorized implementation and support',
-      icon: CheckCircle,
+      icon: 
       color: 'text-green-400',
       bgColor: 'bg-green-400/10',
       borderColor: 'border-green-400/30'
@@ -125,34 +125,50 @@ const PartnersPage: React.FC = () => {
   };
 
   return (
+    <div>
+
     <>
       <Helmet>
+  
         <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
-        <meta name="description" content="Explore our strategic partnerships with leading technology companies. We work with Microsoft, AWS, Google Cloud, and more to deliver cutting-edge solutions." />
-        <meta name="keywords" content="technology partners, strategic partnerships, Microsoft, AWS, Google Cloud, IBM, enterprise solutions" />
+        <meta>
+  
+        <meta>
+  
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div>
+  
         {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <section>
+  
+  <div>
+  
+          <div>
+  
+            <h1>
+  
               Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Partnerships</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+            <p>
+  
               We partner with industry leaders to deliver cutting-edge AI and IT solutions. Our strategic alliances ensure you get the best technology available.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <div className="text-center">
+            <div>
+  
+              <div>
+  
                 <div className="text-3xl font-bold text-white mb-2">50+</div>
                 <div className="text-gray-400">Technology Partners</div>
               </div>
-              <div className="text-center">
+              <div>
+  
                 <div className="text-3xl font-bold text-white mb-2">15+</div>
                 <div className="text-gray-400">Years of Partnership</div>
               </div>
-              <div className="text-center">
+              <div>
+  
                 <div className="text-3xl font-bold text-white mb-2">100%</div>
                 <div className="text-gray-400">Certified Solutions</div>
               </div>
@@ -161,20 +177,30 @@ const PartnersPage: React.FC = () => {
         </section>
 
         {/* Partnership Tiers */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section>
+  
+  <div>
+  
+          <div>
+  
+            <div>
+  
               <h2 className="text-3xl font-bold text-white mb-6">Partnership Tiers</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p>
+  
                 Our partnerships are structured to provide maximum value and support for our clients.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+  
               {partnershipTiers.map((tier, index) => (
-                <div key={index} className={`${tier.bgColor} backdrop-blur-lg rounded-2xl p-8 border ${tier.borderColor} text-center`}>
-                  <div className={`w-16 h-16 ${tier.bgColor} rounded-full mx-auto mb-6 flex items-center justify-center`}>
-                    <tier.icon className={`w-8 h-8 ${tier.color}`} />
+                <div>
+  
+                  <div>
+  
+                    <tier>
+  
                   </div>
                   <h3 className={`text-2xl font-bold ${tier.color} mb-4`}>{tier.name}</h3>
                   <p className="text-gray-300">{tier.description}</p>
@@ -185,40 +211,51 @@ const PartnersPage: React.FC = () => {
         </section>
 
         {/* Partners Grid */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section>
+  
+  <div>
+  
+          <div>
+  
+            <div>
+  
               <h2 className="text-3xl font-bold text-white mb-6">Our Technology Partners</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p>
+  
                 We work with the world's leading technology companies to deliver comprehensive solutions.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+  
               {partners.map((partner, index) => {
                 const tierInfo = getTierInfo(partner.tier);
                 return (
-                  <div key={index} className={`${tierInfo.bgColor} backdrop-blur-lg rounded-2xl p-6 border ${tierInfo.borderColor} hover:border-purple-400 transition-all duration-300 group`}>
-                    <div className="text-center">
-                      <div className="w-20 h-20 bg-white/10 rounded-lg mx-auto mb-4 flex items-center justify-center">
+    <div>
+
+                  <div>
+  
+                    <div>
+  
+                      <div>
+  
                         <div className="text-2xl font-bold text-white">{partner.name.charAt(0)}</div>
                       </div>
-                      <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                      <h3>
+  
                         {partner.name}
                       </h3>
                       <p className="text-sm text-gray-300 mb-3">{partner.description}</p>
-                      <div className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${tierInfo.color} ${tierInfo.bgColor}`}>
+                      <div>
+  
                         {partner.category}
                       </div>
                       {partner.website && (
-                        <a
-                          href={partner.website}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-purple-400 hover:text-purple-300 transition-colors mt-3 text-sm"
-                        >
+                        <a>
+  
                           Visit Website
-                          <ExternalLink className="w-3 h-3" />
+                          <ExternalLink>
+  
                         </a>
                       )}
                     </div>
@@ -230,20 +267,30 @@ const PartnersPage: React.FC = () => {
         </section>
 
         {/* Partnership Benefits */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section>
+  
+  <div>
+  
+          <div>
+  
+            <div>
+  
               <h2 className="text-3xl font-bold text-white mb-6">Partnership Benefits</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p>
+  
                 Our strategic partnerships provide significant advantages for your business.
               </p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div>
+  
+              <div>
+  
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
+                  <div>
+  
+                    <CheckCircle>
+  
                     <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
@@ -253,20 +300,31 @@ const PartnersPage: React.FC = () => {
         </section>
 
         {/* Become a Partner CTA */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
+        <section>
+  
+  <div>
+  
+          <div>
+  
+            <div>
+  
               <h2 className="text-3xl font-bold text-white mb-6">Become a Partner</h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p>
+  
                 Interested in partnering with us? We're always looking for innovative companies to join our ecosystem.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-                  <Handshake className="w-5 h-5" />
+              <div>
+  
+                <button>
+  
+                  <Handshake>
+  
                   Partner With Us
                 </button>
-                <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <TrendingUp className="w-5 h-5" />
+                <button>
+  
+                  <TrendingUp>
+  
                   View Partnership Program
                 </button>
               </div>

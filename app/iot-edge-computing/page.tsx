@@ -1,25 +1,24 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+
   const features = [
     {
-      icon: Brain,
+      icon: 
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
     {
-      icon: Zap,
+      icon: 
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
     {
-      icon: Shield,
+      icon: 
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
     },
     {
-      icon: Globe,
+      icon: 
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
@@ -35,21 +34,30 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Proven track record of success'
   ]
   return (
+    <div>
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
+  
         <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
+        <meta>
+  
+        <meta>
+  
       </Helmet>
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section>
+  
+  <div>
+  
           </div>
         </div>
       </section>
       {/* Features Section */}
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+  
               </div>
             ))}
           </div>
@@ -57,19 +65,19 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
       </section>
 
   const features = [
-    {icon: Brain,
+    {icon: 
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'}
     },
-    {icon: Zap,
+    {icon: 
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'}
     },
-    {icon: Shield,
+    {icon: 
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'}
     },
-    {icon: Globe,
+    {icon: 
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'}
     }
@@ -84,9 +92,12 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Proven track record of success'
   ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
+  
         <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
+        <meta>
+  
+        <meta>
+  
       </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>

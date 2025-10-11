@@ -1,11 +1,10 @@
 'use client'
-import React, { useEffect, useState, useCallback } from 'react'
+import  { useEffect } from 'react'
 interface AccessibilitySettings {
   highContrast: boolean
   reducedMotion: boolean
   fontSize: 'normal' | 'large' | 'extra-large'
   focusVisible: boolean}
-
 
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -18,18 +17,30 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   useEffect(() => {
     // Add ARIA landmarks
     const addLandmarks = () => {
+  return (
+    <div>
+
+    <div>
+  
       const main = document.querySelector('main')
       if (main && !main.getAttribute('role')) {
         main.setAttribute('role', 'main')}
-      const nav = document.querySelector('nav')
+
+const nav = document.querySelector('nav')
       if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation')}
-      const footer = document.querySelector('footer')
+
+const footer = document.querySelector('footer')
       if (footer && !footer.getAttribute('role')) {
         footer.setAttribute('role', 'contentinfo')}
     }
     // Add skip links
     const addSkipLinks = () => {
+  return (
+    <div>
+
+    <div>
+  
       const skipLink = document.createElement('a')
       skipLink.href = '#main-content'
       skipLink.textContent = 'Skip to main content'
@@ -37,6 +48,11 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       document.body.insertBefore(skipLink, document.body.firstChild)}
     // Enhance focus management
     const enhanceFocusManagement = () => {
+  return (
+    <div>
+
+    <div>
+  
       // Add focus indicators
       const style = document.createElement('style')
       style.textContent = `
@@ -66,6 +82,11 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       document.head.appendChild(style)}
     // Add keyboard navigation support
     const addKeyboardNavigation = () => {
+  return (
+    <div>
+
+    <div>
+  
       const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content with Tab
         if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
@@ -112,7 +133,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     const handleMotionChange = (e: MediaQueryListEvent) => {
       setSettings(prev => ({ ...prev, reducedMotion: e.matches }))
       applyAccessibilitySettings({ ...settings, reducedMotion: e.matches })}
-    const handleContrastChange = (e: MediaQueryListEvent) => {
+
+const handleContrastChange = (e: MediaQueryListEvent) => {
       setSettings(prev => ({ ...prev, highContrast: e.matches }))
       applyAccessibilitySettings({ ...settings, highContrast: e.matches })}
     motionQuery.addEventListener('change', handleMotionChange)
@@ -147,7 +169,13 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       root.classList.add('focus-visible')} else {
       root.classList.remove('focus-visible')}
   }
-  const setupKeyboardNavigation = () => {
+
+const setupKeyboardNavigation = () => {
+  return (
+    <div>
+
+    <div>
+  
     // Skip to main content functionality
     const skipLink = document.querySelector('.skip-link')
     if (skipLink) {
@@ -181,7 +209,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
         }
       }
       modal.addEventListener('keydown', handleKeyDown)})}
-  const setupFocusManagement = useCallback(() => {
+
+const setupFocusManagement = useCallback(() => {
     // Add focus indicators
     const style = document.createElement('style')
     style.textContent = `
@@ -210,17 +239,20 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       trackEvent('focus_event', {
         category: 'accessibility',
         label: (e.target as HTMLElement).tagName
-      })});
-  }, []);
+      })
+    });
+  }, [trackEvent]);
 
-  const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
+  const updateSettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {
     const updatedSettings = { ...settings, ...newSettings }
     setSettings(updatedSettings)
     applyAccessibilitySettings(updatedSettings)
     trackEvent('accessibility_setting_changed', {
       category: 'accessibility',
       label: Object.keys(newSettings)[0]
-    })}
+    })
+  }, [settings, trackEvent]);
+
   // Provide accessibility context
   useEffect(() => {
     const context = {

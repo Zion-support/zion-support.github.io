@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -13,39 +12,59 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Proven track record of success'
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div>
+
+    <div>
+  
       <Helmet>
+  
         <title>FuturisticServiceCard | Zion Tech Group</title>
-        <meta name="description" content="Professional FuturisticServiceCard services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="FuturisticServiceCard, AI solutions, IT services, Zion Tech Group, futuristicservicecard" />
+        <meta>
+  
+        <meta>
+  
       </Helmet>
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+      <section>
+  
+  <div>
+  
+        <div>
+  
+          <div>
+  
+            <h1>
+  
+              <span>
+  
                 FuturisticServiceCard
-  </
-              <br />
+  </div>
+              <br>
+  
               <span className="text-white">Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p>
+  
               Transform your business with our advanced futuristicservicecard solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+            <div>
+  
+              <button>
+  
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight>
+  
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+              <button>
+  
                 Learn More
-  </
+  </div>
             </div>
           </div>
         </div>
   )}
+
 export default FuturisticServiceCardPage
   </button>
   </span>
@@ -63,31 +82,41 @@ export default FuturisticServiceCardPage
     'Proven track record of success'
   ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
+  
         <title>FuturisticServiceCard | Zion Tech Group</title>
-        <meta name="description" content="Professional FuturisticServiceCard services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="FuturisticServiceCard, AI solutions, IT services, Zion Tech Group, futuristicservicecard" />
+        <meta>
+  
+        <meta>
+  
       </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+            <h1>
+  
+              <span>
+  
                 FuturisticServiceCard
               </span>
-              <br />
+              <br>
+  
               <span className="text-white">Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p>
+  
               Transform your business with our advanced futuristicservicecard solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+              <button>
+  
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight>
+  
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+              <button>
+  
                 Learn More
               </button>
             </div>

@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import  {  useEffect } from 'react'
 
 interface AnimatedCounterProps {
   end: number
@@ -47,7 +47,10 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   }, [end, duration])
 
   return (
-    <span className={className}>
+    <div>
+
+    <span>
+  
       {prefix}{count.toLocaleString()}{suffix}
     </span>
   )

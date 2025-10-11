@@ -1,26 +1,25 @@
 'use client'
 import React from 'react'
-import { Brain, Zap, Shield, BarChart, ArrowRight, CheckCircle } from 'lucide-react'
 
 const EnhancedPerformanceOptimizer: React.FC = () => {
   const features = [
     {
-      icon: Brain,
+      icon: 
       title: 'AI-Powered Optimization',
       description: 'Advanced AI algorithms that continuously analyze and optimize your application performance in real-time.'
     },
     {
-      icon: Zap,
+      icon: 
       title: 'Lightning Fast',
       description: 'Dramatically improve loading times and response rates with our cutting-edge optimization techniques.'
     },
     {
-      icon: Shield,
+      icon: 
       title: 'Secure & Reliable',
       description: 'Enterprise-grade security with 99.9% uptime guarantee and comprehensive monitoring.'
     },
     {
-      icon: BarChart,
+      icon: 
       title: 'Analytics & Insights',
       description: 'Detailed performance metrics and actionable insights to drive continuous improvement.'
     }
@@ -36,23 +35,36 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div>
+
+    <div>
+  
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <section>
+  
+  <div>
+  
+        <div>
+  
+          <h1>
+  
             <span className="neon-text">Enhanced Performance Optimizer</span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          <p>
+  
             Transform your application's performance with our advanced AI-powered optimization solutions. 
             Experience lightning-fast speeds and superior user experience.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
+          <div>
+  
+            <button>
+  
               Get Started
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight>
+  
             </button>
-            <button className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
+            <button>
+  
               Learn More
             </button>
           </div>
@@ -60,19 +72,29 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
+      <section>
+  
+  <div>
+  
+        <div>
+  
+          <h2>
+  
             Powerful Features
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+  
             {features.map((feature, index) => (
-              <div key={index} className="cyber-card p-6 text-center group hover:scale-105 transition-transform">
-                <feature.icon className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">
+              <div>
+  
+                <feature>
+  
+                <h3>
+  
                   {feature.title}
                 </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <p>
+  
                   {feature.description}
                 </p>
               </div>
@@ -82,54 +104,77 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section>
+  
+  <div>
+  
+        <div>
+  
+          <div>
+  
+            <h2>
+  
               Key Benefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p>
+  
               Experience the power of our enhanced performance optimizer solutions for your business.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="cyber-card p-8">
+          <div>
+  
+            <div>
+  
               <h3 className="text-2xl font-bold text-white mb-6">Performance Improvements</h3>
-              <ul className="space-y-4">
+              <ul>
+  
                 {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-center text-gray-300">
-                    <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0" />
+                  <li>
+  
+                    <CheckCircle>
+  
                     {benefit}
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="cyber-card p-8">
+            <div>
+  
               <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us?</h3>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+              <div>
+  
+                <div>
+  
+                  <div>
+  
                     <span className="text-white font-bold text-sm">1</span>
                   </div>
                   <div>
+  
                     <h4 className="text-lg font-semibold text-white mb-2">Expert Team</h4>
                     <p className="text-gray-300 text-sm">Our experienced developers and performance engineers work tirelessly to optimize your applications.</p>
                   </div>
                 </div>
-                <div className="flex items-start">
-                  <div className="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <div>
+  
+                  <div>
+  
                     <span className="text-white font-bold text-sm">2</span>
                   </div>
                   <div>
+  
                     <h4 className="text-lg font-semibold text-white mb-2">Proven Results</h4>
                     <p className="text-gray-300 text-sm">We've helped hundreds of businesses achieve significant performance improvements and cost savings.</p>
                   </div>
                 </div>
-                <div className="flex items-start">
-                  <div className="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <div>
+  
+                  <div>
+  
                     <span className="text-white font-bold text-sm">3</span>
                   </div>
                   <div>
+  
                     <h4 className="text-lg font-semibold text-white mb-2">24/7 Support</h4>
                     <p className="text-gray-300 text-sm">Round-the-clock monitoring and support to ensure your applications run smoothly at all times.</p>
                   </div>
@@ -141,20 +186,30 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="cyber-card hologram-card p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section>
+  
+  <div>
+  
+        <div>
+  
+          <div>
+  
+            <h2>
+  
               Ready to Optimize Your Performance?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p>
+  
               Contact our experts to discuss your performance optimization needs and get a customized solution.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="cyber-button px-8 py-4 text-lg font-semibold">
+            <div>
+  
+              <button>
+  
                 Get Free Consultation
               </button>
-              <button className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
+              <button>
+  
                 View Pricing
               </button>
             </div>

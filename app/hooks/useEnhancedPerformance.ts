@@ -1,5 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
-
+import { useEffect } from 'react-helmet-async';
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -8,6 +7,11 @@ interface PerformanceMetrics {
 }
 
 export const useEnhancedPerformance = () => {
+  return (
+    <div>
+
+    <div>
+  
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,

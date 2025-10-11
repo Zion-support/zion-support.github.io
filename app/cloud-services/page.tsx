@@ -1,8 +1,7 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Cloud, Server, Shield, Database, Globe, Zap, Users, Clock, DollarSign, Star } from 'lucide-react';
+import { Server } from 'react-helmet-async';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
+import { Link } from 'react-helmet-async';
 const CloudServicesPage: React.FC = () => {
   const cloudServices = [
     {
@@ -76,44 +75,57 @@ const CloudServicesPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div>
+
+    <div>
+  
       <Helmet>
+  
         <title>Cloud Services - Zion Tech Group</title>
-        <meta name="description" content="Professional cloud services including migration, infrastructure setup, security, and optimization. Expert solutions for AWS, Azure, GCP, and more." />
-        <meta name="keywords" content="cloud services, cloud migration, AWS, Azure, GCP, cloud infrastructure, cloud security, cloud optimization" />
+        <meta>
+  
+        <meta>
+  
       </Helmet>
       
       {/* Hero Section */}
-      <section className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <section>
+  
+  <div>
+  
+        <div>
+  
+          <div>
+  
+            <h1>
+  
               Cloud Services & Solutions
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p>
+  
               Transform your business with our comprehensive cloud services. From migration to optimization, we've got you covered.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
+            <div>
+  
+              <Link>
+  
                 Get Free Cloud Assessment
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight>
+  
               </Link>
-              <Link 
-                to="/about" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-              >
+              <Link>
+  
                 Learn More
               </Link>
             </div>
           </div>
 
           {/* Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+          <div>
+  
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div>
+  
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
               </div>
@@ -123,19 +135,28 @@ const CloudServicesPage: React.FC = () => {
       </section>
 
       {/* Cloud Providers */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section>
+  
+  <div>
+  
+        <div>
+  
+          <div>
+  
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Cloud Providers We Support</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p>
+  
               We work with all major cloud platforms to give you the best solution
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+          <div>
+  
             {cloudProviders.map((provider, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:bg-white/15 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div>
+  
+                <div>
+  
                   <span className="text-white font-bold text-xl">{provider.logo}</span>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{provider.name}</h3>
@@ -147,54 +168,71 @@ const CloudServicesPage: React.FC = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section>
+  
+  <div>
+  
+        <div>
+  
+          <div>
+  
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Cloud Services</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p>
+  
               End-to-end cloud solutions for modern businesses
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          <div>
+  
             {cloudServices.map((service, index) => (
-              <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 relative ${service.popular ? 'ring-2 ring-purple-500' : ''}`}>
+              <div>
+  
                 {service.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
-                      <Star className="w-4 h-4 mr-1" />
+                  <div>
+  
+                    <span>
+  
+                      <Star>
+  
                       Popular
                     </span>
                   </div>
                 )}
                 <div className="mb-4">{service.icon}</div>
-                <div className="mb-2">
-                  <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm font-medium">
+                <div>
+  
+                  <span>
+  
                     {service.category}
                   </span>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                <div className="mb-6">
+                <div>
+  
                   <div className="text-2xl font-bold text-white mb-2">{service.pricing}</div>
-                  <div className="text-gray-400 text-sm">
+                  <div>
+  
                     {service.pricing.includes('month') ? 'per month' : 'one-time setup'}
                   </div>
                 </div>
-                <ul className="space-y-2 mb-8">
+                <ul>
+  
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                    <li>
+  
+                      <CheckCircle>
+  
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <Link 
-                  to="/contact"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-                >
+                <Link>
+  
                   Get Quote
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight>
+  
                 </Link>
               </div>
             ))}
@@ -203,43 +241,62 @@ const CloudServicesPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section>
+  
+  <div>
+  
+        <div>
+  
+          <div>
+  
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Cloud Services?</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p>
+  
               We deliver cloud solutions that drive real business value
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <Cloud className="w-12 h-12 text-blue-500 mb-4" />
+          <div>
+  
+            <div>
+  
+              <Cloud>
+  
               <h3 className="text-xl font-semibold text-white mb-4">Scalable Solutions</h3>
               <p className="text-gray-300">Cloud infrastructure that grows with your business needs and adapts to changing demands.</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <Shield className="w-12 h-12 text-green-500 mb-4" />
+            <div>
+  
+              <Shield>
+  
               <h3 className="text-xl font-semibold text-white mb-4">Enterprise Security</h3>
               <p className="text-gray-300">Bank-level security measures to protect your data and ensure compliance with industry standards.</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <DollarSign className="w-12 h-12 text-purple-500 mb-4" />
+            <div>
+  
+              <DollarSign>
+  
               <h3 className="text-xl font-semibold text-white mb-4">Cost Optimization</h3>
               <p className="text-gray-300">Reduce your IT costs by up to 40% with our optimized cloud solutions and resource management.</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <Clock className="w-12 h-12 text-orange-500 mb-4" />
+            <div>
+  
+              <Clock>
+  
               <h3 className="text-xl font-semibold text-white mb-4">24/7 Monitoring</h3>
               <p className="text-gray-300">Round-the-clock monitoring and support to ensure maximum uptime and performance.</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <Users className="w-12 h-12 text-red-500 mb-4" />
+            <div>
+  
+              <Users>
+  
               <h3 className="text-xl font-semibold text-white mb-4">Expert Team</h3>
               <p className="text-gray-300">Certified cloud architects and engineers with years of experience in enterprise solutions.</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <Zap className="w-12 h-12 text-yellow-500 mb-4" />
+            <div>
+  
+              <Zap>
+  
               <h3 className="text-xl font-semibold text-white mb-4">Fast Implementation</h3>
               <p className="text-gray-300">Quick deployment and migration with minimal downtime to get you up and running fast.</p>
             </div>
@@ -248,25 +305,29 @@ const CloudServicesPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+      <section>
+  
+  <div>
+  
+        <div>
+  
+          <div>
+  
+            <div>
+  
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Move to the Cloud?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              <p>
+  
                 Get a free cloud assessment and discover how we can optimize your infrastructure.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/contact" 
-                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
+              <div>
+  
+                <Link>
+  
                   Get Free Assessment
                 </Link>
-                <Link 
-                  to="/about" 
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-                >
+                <Link>
+  
                   Learn About Us
                 </Link>
               </div>

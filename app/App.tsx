@@ -1,5 +1,5 @@
 'use client';
-import React, { Suspense, lazy } from 'react';
+import  { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -61,23 +61,29 @@ const ConsultationPage = lazy(() => import('./consultation/page'));
 
 // Loading component
 const AppLoadingSpinner = () => (
-  <LoadingSpinner 
-    size="xl" 
-    text="Loading Zion Tech Group..." 
-    fullScreen 
-  />
+  <LoadingSpinner>
+    <div>Loading...</div>
+  </LoadingSpinner>
 );
 
 const App: React.FC = () => {
   return (
-    <ErrorBoundary>
+    <div>
+      <ErrorBoundary>
+  
       <HelmetProvider>
+  
         <BrowserRouter>
-          <div className="App">
-            <PerformanceMonitor />
-            <AccessibilityEnhancer />
+  
+          <div>
+  
+            <PerformanceMonitor>
+  
+            <AccessibilityEnhancer>
+  
             <Suspense fallback={<AppLoadingSpinner />}>
               <Routes>
+  
                 {/* Main Pages */}
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />

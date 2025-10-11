@@ -1,8 +1,6 @@
 'use client';
 
-import React, { useEffect, useState, useCallback } from 'react';
-
-
+import { useEffect } from 'react-helmet-async';
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -34,7 +32,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (typeof window === 'undefined' || !('performance' in window)) return () => {};
     if (typeof PerformanceObserver === 'undefined') return () => {};
 
-    const observers: PerformanceObserver[] = [];
+const observers: PerformanceObserver[] = [];
 
     // Measure First Contentful Paint (FCP)
     const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
@@ -210,7 +208,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   useEffect(() => {
     if (!enableRealTimeMonitoring) return () => {};
 
-    const cleanup = measureWebVitals();
+const cleanup = measureWebVitals();
     measureResourceTiming();
     measureCoreWebVitals();
 
@@ -277,17 +275,23 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   if (process.env['NODE_ENV'] === 'development') {
     return (
-      <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
+    <div>
+
+      <div>
+  
         <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
-        <div className='text-xs space-y-1'>
+        <div>
+  
           <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
           <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
           <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
           <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
           <div>
+  
             TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
           </div>
           <div>
+  
             Memory:{' '}
             {metrics.memory
               ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
@@ -295,11 +299,14 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           </div>
         </div>
         {_recommendations.length > 0 && (
-          <div className='mt-2'>
-            <h4 className='font-semibold text-xs text-red-600'>
+          <div>
+  
+            <h4>
+  
               Recommendations:
             </h4>
-            <ul className='text-xs text-red-600'>
+            <ul>
+  
               {_recommendations.map((rec, index) => (
                 <li key={index}>• {rec}</li>
               ))}

@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'}
+
+import { Helmet } from 'react-helmet-async'}
   ]
   const benefits = [
     'Advanced AI technology integration',
@@ -14,28 +14,41 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Proven track record of success'
   ]
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+      <section>
+  
+  <div>
+  
+        <div>
+  
+          <div>
+  
+            <h1>
+  
+              <span>
+  
                 LazyImage
-  </
-              <br />
+  </div>
+              <br>
+  
               <span className="text-white">Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p>
+  
               Transform your business with our advanced lazyimage solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+            <div>
+  
+              <button>
+  
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight>
+  
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+              <button>
+  
                 Learn More
-  </
+  </div>
             </div>
           </div>
         </div>
@@ -43,20 +56,30 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
         </div>
       </section>
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section>
+  
+  <div>
+  
+        <div>
+  
+          <div>
+  
+            <h2>
+  
               Key Benefits
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+  </div>
+            <p>
+  
               Experience the power of our lazyimage solutions for your business.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+  
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+              <div>
+  
+                <CheckCircle>
+  
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
@@ -64,30 +87,43 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section>
+  
+  <div>
+  
+        <div>
+  
+          <div>
+  
+            <h2>
+  
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-purple-100 mb-8">
+            <p>
+  
               Contact our experts to discuss your lazyimage needs and get a customized solution.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
+            <div>
+  
+              <button>
+  
+                <Phone>
+  
                 Call Now
-  </
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
+  </div>
+              <button>
+  
+                <Mail>
+  
                 Email Us
-  </
+  </div>
             </div>
           </div>
         </div>
       </section>
     </div>
   )}
+
 export default LazyImagePage
   </button>
   </button>
@@ -108,23 +144,30 @@ export default LazyImagePage
       <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+            <h1>
+  
+              <span>
+  
                 LazyImage
               </span>
-              <br />
+              <br>
+  
               <span className="text-white">Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p>
+  
               Transform your business with our advanced lazyimage solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+              <button>
+  
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight>
+  
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+              <button>
+  
                 Learn More
               </button>
             </div>
@@ -137,17 +180,20 @@ export default LazyImagePage
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2>
+  
               Key Benefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p>
+  
               Experience the power of our lazyimage solutions for your business.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
             {benefits.map((benefit, index) => (}
               <div key={index} className="flex items-start space-x-3"></div>
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <CheckCircle>
+  
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>))}
           </div>
@@ -157,19 +203,25 @@ export default LazyImagePage
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2>
+  
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-purple-100 mb-8">
+            <p>
+  
               Contact our experts to discuss your lazyimage needs and get a customized solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
+              <button>
+  
+                <Phone>
+  
                 Call Now
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
+              <button>
+  
+                <Mail>
+  
                 Email Us
               </button>
             </div>
