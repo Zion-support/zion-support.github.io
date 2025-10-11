@@ -1,6 +1,6 @@
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart, Zap } from 'lucide-react'
@@ -237,5 +237,5 @@ const CareersPage: React.FC = () => {
     </>
   )
 }
-
+;
 export default CareersPage

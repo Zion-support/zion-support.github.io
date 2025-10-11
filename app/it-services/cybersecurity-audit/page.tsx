@@ -35,8 +35,8 @@
             {benefits.map((benefit, index) => (
               </div>
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -96,4 +96,4 @@ export default PagePage
                 Email Us
   )
 }
-export default PagePage</div></div></div></div></div></div></div></div></div></div></div></div></button></button></p></p></p></p></p></h2></h2></h2></h3></section></section></section>
+export default PagePage</div></div></div></div></div></div></div></div></div></div></div></div></button></button></p></p></p></p></p></h2></h2></h2></h3></section></section></section>;

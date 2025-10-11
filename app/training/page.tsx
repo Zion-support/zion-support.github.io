@@ -17,8 +17,8 @@
 }
 export default PagePage
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
   ]
   return (
@@ -41,4 +41,4 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
   )
 }
 export default PagePage
-</div></p></p></p></h2></h2></h3>
+</div></p></p></p></h2></h2></h3>;

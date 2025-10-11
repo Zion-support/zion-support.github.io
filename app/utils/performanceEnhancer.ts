@@ -21,7 +21,7 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(,
 export const throttle = </T><T extends (...args: unknown[]) => unknown>(,
   func: T,
   limit: number,
-  private observers: PerformanceObserver[] = [],
+  private observers: PerformanceObserver[] = [],;
   private metrics: Map<string, number> = new Map();
   private observers: PerformanceObserver[] = [],
   static getInstance(): PerformanceMonitor {}}if (!PerformanceMonitor.instance) {}PerformanceMonitor.instance = new PerformanceMonitor();
@@ -40,7 +40,7 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout
   return (...args: Parameters<T>) => {,
-  func: T,
+  func: T,;
   wait: number;}
 ): ((...args: Parameters<T>) => void) => {}
   let timeout: NodeJS.Timeout

@@ -52,4 +52,4 @@ export default function NotFound() {
         <div className="mt-6 text-sm text-gray-400">
           If you believe this is an error, please contact our support team.
   )
-}</div></div></div></div></div></div></span></p></h1>
+}</div></div></div></div></div></div></span></p></h1>;

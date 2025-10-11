@@ -12,7 +12,7 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  MapPin
+  MapPin;
 } from 'lucide-react';
 
 const Navigation: React.FC = () => {

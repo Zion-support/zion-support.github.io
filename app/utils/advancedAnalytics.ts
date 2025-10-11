@@ -15,14 +15,14 @@ const benefits = [
   ]
   const benefits = [
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const AdvancedAnalyticsPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Solutions',
+      title: 'AI-Powered Solutions',;
       description: 'Advanced AI technology to transform your business operations and improve efficiency';}
     },
     {

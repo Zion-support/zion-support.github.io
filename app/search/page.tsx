@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet  } from 'react-helmet-async';
 import { Search, Filter, ArrowRight, Brain, Cloud, Code, Zap } from 'lucide-react';
 
 const SearchPage: React.FC = () => {

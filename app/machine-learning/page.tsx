@@ -31,7 +31,7 @@ const benefits = [
         </div>
       </section>
     </div>
-  ),
+  ),;
 };]
 export default PagePage
             <p className="text-xl text-purple-100 mb-8">

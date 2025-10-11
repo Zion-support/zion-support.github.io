@@ -1,5 +1,5 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Brain, Factory, Stethoscope, Building, CheckCircle, BarChart } from 'lucide-react'
@@ -162,5 +162,5 @@ const AiAutonomousSystemsPage: React.FC = () => {
     </>
   )
 }
-
+;
 export default AiAutonomousSystemsPage

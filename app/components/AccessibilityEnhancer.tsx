@@ -97,7 +97,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     <div className="accessibility-enhanced">
       {children}
       <style jsx>{`
-        .sr-only {
+        .sr-only {;
           position: absolute;
           width: 1px;
           height: 1px;

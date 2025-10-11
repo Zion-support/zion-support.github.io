@@ -96,4 +96,4 @@ export const FooterSkeleton: React.FC = () => {
       </div>
     </footer>
   )
-}
+};

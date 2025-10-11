@@ -1,6 +1,6 @@
 'use client'
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
+import React, { useState } from 'react';
+import { Helmet  } from 'react-helmet-async';
 import { Cloud, Code, Shield, Database, Users, ArrowRight, CheckCircle } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -170,5 +170,5 @@ const ItServicesPage: React.FC = () => {
     </>
   )
 }
-
+;
 export default ItServicesPage

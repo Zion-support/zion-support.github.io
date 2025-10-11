@@ -1,7 +1,7 @@
 const NextPage: React.FC = () => {
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const Next.dPage: React.FC = () => {
   const features = [
@@ -36,7 +36,7 @@ const Next.dPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
-  openGraph?: {
+  openGraph?: {;
     title?: string;
     description?: string;
     url?: string;

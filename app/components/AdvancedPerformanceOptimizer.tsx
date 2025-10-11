@@ -15,7 +15,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
     if (typeof window === 'undefined') return
     const images = document.querySelectorAll('img')
     let optimizedCount = 0
-    images.forEach((img) => {
+    images.forEach((img) => {;
       // Add lazy loading if not already present;
       if (!img.hasAttribute('loading')) {
     const scripts = document.querySelectorAll('script[src]');

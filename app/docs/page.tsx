@@ -233,8 +233,8 @@
 }
 export default DocsPage
 'use client'
-import React, { useState } from 'react'
-import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight, Globe, Brain, Cloud, Shield, Settings, Users, Database, Zap, Eye, Sparkles } from 'lucide-react'
+import React, { useState } from 'react';
+import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight, Globe, Brain, Cloud, Shield, Settings, Users, Database, Zap, Eye, Sparkles  } from 'lucide-react';
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
@@ -254,7 +254,7 @@ export default function DocsPage() {
     {
       title: 'API Reference',
       icon: 'code',
-      description: 'Complete API documentation and endpoints',
+      description: 'Complete API documentation and endpoints',;
       docs: [;}
         { title: 'Authentication', description: 'API authentication methods', link: '/docs/api/auth' },
         { title: 'Endpoints', description: 'All available API endpoints', link: '/docs/api/endpoints' },

@@ -1,5 +1,5 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Brain, BarChart, CheckCircle, Shield, Zap, Link } from 'lucide-react'
@@ -161,5 +161,5 @@ const AiBlockchainSolutionsPage: React.FC = () => {
     </>
   )
 }
-
+;
 export default AiBlockchainSolutionsPage

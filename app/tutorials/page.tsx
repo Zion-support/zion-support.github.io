@@ -1,6 +1,6 @@
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 import { BookOpen, Play, ArrowRight, Clock, Users, Star } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -181,5 +181,5 @@ const TutorialsPage: React.FC = () => {
     </>
   )
 }
-
+;
 export default TutorialsPage

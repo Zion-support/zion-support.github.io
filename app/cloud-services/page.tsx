@@ -109,8 +109,8 @@
           </div>
 
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react'
 const CloudServicesPage: React.FC = () => {
 const features = [
@@ -201,4 +201,4 @@ const features = [
                 <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">Schedule Consultation
   )
 }
-export default CloudServicesPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></button></button></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h3></h3></ul></li></section></section></section>
+export default CloudServicesPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></button></button></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h3></h3></ul></li></section></section></section>;

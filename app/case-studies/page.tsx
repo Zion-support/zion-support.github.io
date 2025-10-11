@@ -1,5 +1,5 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, TrendingUp, Users, Zap } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -145,5 +145,5 @@ const CaseStudiesPage: React.FC = () => {
     </>
   )
 }
-
+;
 export default CaseStudiesPage

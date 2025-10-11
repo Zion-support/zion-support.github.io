@@ -1,6 +1,6 @@
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 import { Calendar, User, ArrowRight, Search, Filter, Clock, Tag } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -209,7 +209,7 @@ const BlogPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
+    </>;
   );
 };
 

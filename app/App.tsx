@@ -1,21 +1,21 @@
 'use client'
-import React, { Suspense } from 'react'
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import React, { Suspense } from 'react';
+import { HashRouter as Router, Routes, Route  } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async'
 import './app/styles/futuristic.css'
 import './app/styles/futuristic-enhanced.css'
 import Navigation from './app/components/Navigation'
 import Footer from './app/components/Footer'
-import HomePage from './app/page'
-import { PageLoader } from './app/components/LoadingStates'
+import HomePage from './app/page';
+import { PageLoader  } from './app/components/LoadingStates';
 import ErrorBoundary from './app/components/ErrorBoundary'
 import SEOHead from './app/components/EnhancedSEOHead'
 import SkipLink from './app/components/SkipLink'
 import Breadcrumb from './app/components/Breadcrumb'
 import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer'
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer'
-import EnhancedAccessibility from './app/components/EnhancedAccessibility'
-import { usePerformanceMonitor } from './hooks/usePerformanceMonitor'
+import EnhancedAccessibility from './app/components/EnhancedAccessibility';
+import { usePerformanceMonitor  } from './hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './app/components/EnhancedAnalytics'
 import PerformanceMonitor from './app/components/PerformanceMonitor'
 import ServiceWorker from './app/components/ServiceWorker'
@@ -163,5 +163,5 @@ const App: React.FC = () => {
   )
 }
 
-App.displayName = 'App'
+App.displayName = 'App';
 export default App

@@ -97,7 +97,7 @@ const renderSpinner = useMemo(() => {
                   className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
                   style={{ animationDelay: `${i * 0.1}s` }}
           return (
-    <React.Fragment>
+    <React.Fragment>;
       <;$2 />
               className={`${baseClasses} rounded-full animate-pulse`}
               role='status'

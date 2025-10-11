@@ -82,7 +82,7 @@ const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ childre
           )}
         </div>
       )}
-    </div>
+    </div>;
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = src;

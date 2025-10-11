@@ -7,7 +7,7 @@ export const usePerformanceMonitor = () => {
   useEffect(() => {
     if (typeof window === 'undefined') return
     // Monitor Core Web Vitals
-    const monitorWebVitals = () => {
+    const monitorWebVitals = () => {;
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {
           const loadTime = navigation.loadEventEnd - navigation.loadEventStart;

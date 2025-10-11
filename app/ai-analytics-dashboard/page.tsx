@@ -1,5 +1,5 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 import { Brain, BarChart, Zap, Shield } from 'lucide-react'
 
 const AiAnalyticsDashboardPage = () => {
@@ -99,5 +99,5 @@ const AiAnalyticsDashboardPage = () => {
     </>
   )
 }
-
+;
 export default AiAnalyticsDashboardPage

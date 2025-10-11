@@ -64,4 +64,4 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ()
     </React.Fragment>
   )
 }
-export default AnimatedCounter
+export default AnimatedCounter;

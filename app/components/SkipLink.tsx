@@ -11,4 +11,4 @@ const SkipLink: React.FC = () => {
   )
 }
 
-export default SkipLink
+export default SkipLink;

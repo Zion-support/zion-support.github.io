@@ -1,6 +1,6 @@
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, ArrowRight, Phone, Mail } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -52,7 +52,7 @@ const PricingPage: React.FC = () => {
         'On-premise deployment'
       ],
       popular: false
-    }
+    };
   ];
 
   const addOns = [
