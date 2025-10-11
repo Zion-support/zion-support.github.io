@@ -11,7 +11,11 @@ const AiAnalyticsPage: React.FC = () => {
 =======
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 
+=======
+import { CheckCircle } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -51,9 +55,13 @@ const AiAnalyticsPage: React.FC = () => {
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               AI Analytics
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
+=======
+              AI Analytics
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Professional AI analytics services to help your business succeed and grow.
@@ -106,5 +114,9 @@ export default AiAnalyticsPage
   );
 };
 
+<<<<<<< HEAD
 export default AiAnalyticsPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
+=======
+export default AiAnalyticsPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b

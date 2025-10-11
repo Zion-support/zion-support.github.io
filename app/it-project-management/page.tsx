@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { CheckCircle } from 'lucide-react'
@@ -10,10 +11,16 @@ import Footer from '../components/Footer'
 'use client';
 import React from 'react';
 
+=======
+'use client';
+import React from 'react';
+import { CheckCircle } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
 const ItProjectManagementPage: React.FC = () => {
     {
@@ -39,6 +46,28 @@ const ItProjectManagementPage: React.FC = () => {
   return (
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
+=======
+const ItProjectManagementPage: React.FC = () => {
+  const projectFeatures = [
+    {
+      title: 'Agile Methodology',
+      description: 'Implement agile project management practices for better results.',
+      benefits: ['Sprint planning', 'Daily standups', 'Retrospectives', 'Continuous delivery']
+    },
+    {
+      title: 'Risk Management',
+      description: 'Identify and mitigate project risks effectively.',
+      benefits: ['Risk assessment', 'Mitigation strategies', 'Contingency planning', 'Monitoring']
+    },
+    {
+      title: 'Team Collaboration',
+      description: 'Foster effective collaboration and communication within teams.',
+      benefits: ['Team coordination', 'Communication tools', 'Documentation', 'Knowledge sharing']
+    }
+  ];
+
+  return (
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>IT Project Management - Zion Tech Group</title>

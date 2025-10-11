@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 'use client';
+<<<<<<< HEAD
 import React from 'react';
 import { CheckCircle, Eye, Ear, Hand, Brain, Shield, Target, BarChart, Zap, ArrowRight } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+<<<<<<< HEAD
 export default PagePage;
 =======
 'use client'
@@ -94,26 +98,30 @@ const AccessibilityPage: React.FC = () => {
       description: 'Demonstrate your commitment to inclusion and social responsibility.'
     }
   ]
+=======
+const PagePage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Accessibility - Zion Tech Group</title>
-        <meta name="description" content="Learn about our commitment to web accessibility and inclusive design practices." />
-        <meta name="keywords" content="accessibility, inclusive design, WCAG compliance, ADA compliance, web accessibility" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional services and solutions." />
+        <meta name="keywords" content="services, solutions, technology" />
       </Helmet>
+      
       <Navigation />
-
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
-          <div className="container mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Accessibility</span> First
+      
+      <main className="pt-20 px-4 py-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              We believe technology should be accessible to everyone. Our commitment to inclusive design ensures that our solutions work for all users.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional services to help your business succeed and grow.
             </p>
           </div>
+<<<<<<< HEAD
         </section>
 
         {/* Features Section */}
@@ -337,11 +345,18 @@ const AccessibilityPage: React.FC = () => {
             </div>
           </div>
         </section>
+=======
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
       </main>
-
+      
       <Footer />
     </div>
   )
 }
 
+<<<<<<< HEAD
 export default AccessibilityPage
+=======
+export default PagePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b

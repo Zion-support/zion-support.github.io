@@ -83,6 +83,11 @@ const PagePage: React.FC = () => {
       
       <Footer />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+'use client';
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
 
 export default function PagePage() {
   return (

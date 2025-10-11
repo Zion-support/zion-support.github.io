@@ -9,7 +9,11 @@ import Footer from '../components/Footer'
 =======
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 
+=======
+import { CheckCircle } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -34,11 +38,14 @@ const EnterpriseSolutionsPage: React.FC = () => {
   ]
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <>
 
   return (
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Enterprise Solutions - Zion Tech Group</title>

@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const AI3DGenerationPage: React.FC = () => {
@@ -9,12 +10,26 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const PagePage: React.FC = () => {
+=======
+import { CheckCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const Ai3DGenerationPage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
   const features = [
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
     {
+<<<<<<< HEAD
       title: 'Page',
       description: 'Professional page services and solutions.',
       benefits: ['High Quality', 'Expert Team', '24/7 Support', 'Custom Solutions']
+=======
+      title: 'AI 3D Generation',
+      description: 'Advanced AI-powered 3D content generation for modern businesses.',
+      benefits: ['Automated 3D Modeling', 'Real-time Rendering', 'Custom Textures', 'Animation Support']
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
     },
     {
       title: 'Advanced Technology',
@@ -22,6 +37,7 @@ const PagePage: React.FC = () => {
       benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       icon: Eye,
       title: 'Advanced Rendering',
@@ -102,14 +118,25 @@ const PagePage: React.FC = () => {
       description: 'Track record of successful projects and satisfied clients.',
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
+=======
+      title: 'Proven Results',
+      description: 'Track record of successful projects and satisfied clients.',
+      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
     }
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
+<<<<<<< HEAD
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services and solutions." />
         <meta name="keywords" content="page, services, solutions, technology" />
+=======
+        <title>AI 3D Generation - Zion Tech Group</title>
+        <meta name="description" content="Professional AI 3D generation services and solutions." />
+        <meta name="keywords" content="ai 3d generation, services, solutions, technology" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
       </Helmet>
       
       <Navigation />
@@ -118,10 +145,17 @@ const PagePage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+<<<<<<< HEAD
               Page
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Professional page services to help your business succeed and grow.
+=======
+              AI 3D Generation
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional AI 3D generation services to help your business succeed and grow.
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
             </p>
           </div>
           
@@ -146,7 +180,11 @@ const PagePage: React.FC = () => {
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+<<<<<<< HEAD
                 Contact us today to learn more about our page services.
+=======
+                Contact us today to learn more about our AI 3D generation services.
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -155,6 +193,7 @@ const PagePage: React.FC = () => {
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
                   Learn More
                 </button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function Ai3DGenerationPage() {
@@ -177,6 +216,8 @@ export default function Ai3DGenerationPage() {
 }
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
               </div>
             </div>
           </div>
@@ -189,7 +230,11 @@ export default function Ai3DGenerationPage() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default AI3DGenerationPage
 =======
 export default PagePage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
+=======
+export default Ai3DGenerationPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { CheckCircle } from 'lucide-react'
@@ -10,19 +11,33 @@ import Footer from '../components/Footer'
 'use client';
 import React from 'react';
 
+=======
+'use client';
+import React from 'react';
+import { CheckCircle } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
 const MobileAppDevelopmentPage: React.FC = () => {
     {
       title: 'Cross-Platform Development',
       description: 'Build mobile apps that work seamlessly across iOS and Android.',
+=======
+const MobileAppDevelopmentPage: React.FC = () => {
+  const mobileFeatures = [
+    {
+      title: 'Cross-Platform Development',
+      description: 'Build apps that work seamlessly across iOS and Android platforms.',
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
       benefits: ['React Native', 'Flutter', 'Xamarin', 'Progressive Web Apps']
     },
     {
       title: 'Native Performance',
+<<<<<<< HEAD
       description: 'Optimize apps for maximum performance and user experience.',
       benefits: ['Native modules', 'Performance optimization', 'Memory management', 'Battery efficiency']
     },
@@ -39,6 +54,19 @@ const MobileAppDevelopmentPage: React.FC = () => {
   return (
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
+=======
+      description: 'Deliver native-like performance and user experience.',
+      benefits: ['Optimized rendering', 'Smooth animations', 'Fast loading', 'Responsive design']
+    },
+    {
+      title: 'App Store Optimization',
+      description: 'Optimize your app for better visibility and downloads.',
+      benefits: ['ASO strategies', 'Keyword optimization', 'App store listings', 'User acquisition']
+    }
+  ];
+
+  return (
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Mobile App Development - Zion Tech Group</title>

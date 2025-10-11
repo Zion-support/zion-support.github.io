@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { CheckCircle } from 'lucide-react'
@@ -59,6 +60,40 @@ const PagePage: React.FC = () => {
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services and solutions." />
         <meta name="keywords" content="page, services, solutions, technology" />
+=======
+'use client';
+import React from 'react';
+import { CheckCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const AiAccountingAssistantPage: React.FC = () => {
+  const features = [
+    {
+      title: 'AI Accounting Assistant',
+      description: 'Advanced AI-powered accounting solutions for modern businesses.',
+      benefits: ['Automated Bookkeeping', 'Financial Analysis', 'Tax Preparation', 'Expense Tracking']
+    },
+    {
+      title: 'Advanced Technology',
+      description: 'Cutting-edge tools and technologies to deliver superior results.',
+      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
+    },
+    {
+      title: 'Proven Results',
+      description: 'Track record of successful projects and satisfied clients.',
+      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AI Accounting Assistant - Zion Tech Group</title>
+        <meta name="description" content="Professional AI accounting assistant services and solutions." />
+        <meta name="keywords" content="ai accounting assistant, services, solutions, technology" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
       </Helmet>
       
       <Navigation />
@@ -67,10 +102,17 @@ const PagePage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+<<<<<<< HEAD
               Page
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Professional page services to help your business succeed and grow.
+=======
+              AI Accounting Assistant
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional AI accounting assistant services to help your business succeed and grow.
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
             </p>
           </div>
           
@@ -95,7 +137,11 @@ const PagePage: React.FC = () => {
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+<<<<<<< HEAD
                 Contact us today to learn more about our page services.
+=======
+                Contact us today to learn more about our AI accounting assistant services.
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -116,7 +162,11 @@ const PagePage: React.FC = () => {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default AiAccountingAssistantPage
 =======
 export default PagePage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
+=======
+export default AiAccountingAssistantPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b

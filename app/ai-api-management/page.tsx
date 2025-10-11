@@ -9,18 +9,31 @@ export default function AiApiManagementPage() {
 =======
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+=======
+import { CheckCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
 const AiApiManagementPage: React.FC = () => {
   const features = [
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
     {
       title: 'AI API Management',
+<<<<<<< HEAD
       description: 'Advanced API management and insights powered by artificial intelligence.',
       benefits: ['Real-time Monitoring', 'Predictive Analytics', 'Custom APIs', 'Data Integration']
+=======
+      description: 'Professional AI API management services delivered by experienced professionals.',
+      benefits: ['Quality Assurance', 'Fast Delivery', '24/7 Support', 'Custom Solutions']
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
     },
     {
       title: 'Advanced Technology',
@@ -37,7 +50,10 @@ const AiApiManagementPage: React.FC = () => {
 =======
   ];
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -53,9 +69,13 @@ const AiApiManagementPage: React.FC = () => {
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               AI API Management
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
+=======
+              AI API Management
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Professional AI API management services to help your business succeed and grow.
@@ -104,7 +124,11 @@ const AiApiManagementPage: React.FC = () => {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default AiApiManagementPage
 =======
 export default AiApiManagementPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
+=======
+export default AiApiManagementPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b

@@ -3,6 +3,7 @@ import './globals.css'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
@@ -28,6 +29,10 @@ const LayoutPage: React.FC = () => {
   )
 }
 =======
+=======
+
+const inter = Inter({ subsets: ['latin'] })
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
 export default function RootLayout({
@@ -45,8 +50,12 @@ export default function RootLayout({
     </html>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 export default LayoutPage
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b

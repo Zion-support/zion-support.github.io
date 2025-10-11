@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { CheckCircle } from 'lucide-react'
@@ -10,19 +11,33 @@ import Footer from '../components/Footer'
 'use client';
 import React from 'react';
 
+=======
+'use client';
+import React from 'react';
+import { CheckCircle } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
 const ItInfrastructureDesignPage: React.FC = () => {
     {
       title: 'Scalable Architecture',
       description: 'Design and implement scalable IT infrastructure solutions.',
+=======
+const ItInfrastructureDesignPage: React.FC = () => {
+  const infrastructureFeatures = [
+    {
+      title: 'Scalable Architecture',
+      description: 'Design robust and scalable IT infrastructure solutions.',
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
       benefits: ['Cloud integration', 'Load balancing', 'Auto-scaling', 'High availability']
     },
     {
       title: 'Security First',
+<<<<<<< HEAD
       description: 'Comprehensive security measures for your IT infrastructure.',
       benefits: ['Network security', 'Data encryption', 'Access control', 'Compliance']
     },
@@ -39,6 +54,19 @@ const ItInfrastructureDesignPage: React.FC = () => {
   return (
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
+=======
+      description: 'Implement comprehensive security measures and best practices.',
+      benefits: ['Data encryption', 'Access control', 'Threat monitoring', 'Compliance']
+    },
+    {
+      title: 'Performance Optimization',
+      description: 'Optimize infrastructure for maximum performance and efficiency.',
+      benefits: ['Resource optimization', 'Caching strategies', 'CDN integration', 'Monitoring']
+    }
+  ];
+
+  return (
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>IT Infrastructure Design - Zion Tech Group</title>

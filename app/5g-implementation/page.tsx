@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import {Helmet} from 'react-helmet-async';
 import { Wifi, BarChart, Brain, Target, Zap, Shield, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -52,6 +53,16 @@ const FiveGImplementationPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-6202
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const FiveGImplementationPage: React.FC = () => {
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -69,7 +80,11 @@ const FiveGImplementationPage: React.FC = () => {
               5G Implementation
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+<<<<<<< HEAD
               Professional 5G implementation services to help your business succeed and grow.
+=======
+              Professional 5G implementation services delivered by experienced professionals.
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
             </p>
           </div>
           
@@ -90,6 +105,7 @@ const FiveGImplementationPage: React.FC = () => {
                   ))}
                 </ul>
               </div>
+<<<<<<< HEAD
             ))}
           </div>
           
@@ -98,6 +114,10 @@ const FiveGImplementationPage: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Contact us today to learn more about our 5G implementation services.
+=======
+              <p className="text-gray-300 mb-4">
+                Professional 5G implementation services delivered by experienced professionals.
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">

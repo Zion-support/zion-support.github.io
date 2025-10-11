@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { CheckCircle } from 'lucide-react'
@@ -10,20 +11,35 @@ import Footer from '../components/Footer'
 'use client';
 import React from 'react';
 
+=======
+'use client';
+import React from 'react';
+import { CheckCircle } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
 const SystemAdministrationPage: React.FC = () => {
     {
       title: 'Server Management',
       description: 'Comprehensive server administration and maintenance services.',
       benefits: ['Server monitoring', 'Performance tuning', 'Security updates', 'Backup management']
+=======
+const SystemAdministrationPage: React.FC = () => {
+  const adminFeatures = [
+    {
+      title: 'Server Management',
+      description: 'Comprehensive server administration and maintenance services.',
+      benefits: ['Server monitoring', 'Performance tuning', 'Backup management', 'Security updates']
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
     },
     {
       title: 'Network Administration',
       description: 'Manage and optimize your network infrastructure.',
+<<<<<<< HEAD
       benefits: ['Network monitoring', 'Firewall management', 'VPN setup', 'Traffic optimization']
     },
     {
@@ -39,6 +55,18 @@ const SystemAdministrationPage: React.FC = () => {
   return (
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
+=======
+      benefits: ['Network monitoring', 'Traffic analysis', 'Security configuration', 'Troubleshooting']
+    },
+    {
+      title: 'User Support',
+      description: 'Provide technical support and user assistance.',
+      benefits: ['Help desk support', 'User training', 'Documentation', 'Issue resolution']
+    }
+  ];
+
+  return (
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>System Administration - Zion Tech Group</title>
@@ -60,7 +88,11 @@ const SystemAdministrationPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+<<<<<<< HEAD
             {systemFeatures.map((feature, index) => (
+=======
+            {adminFeatures.map((feature, index) => (
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>

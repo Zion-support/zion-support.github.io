@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 'use client'
 import Link from 'next/link'
 import { Github, Linkedin, Twitter } from 'lucide-react'
+=======
+'use client';
+import Link from 'next/link';
+import { Github, Linkedin, Twitter } from 'lucide-react';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
 export default function Footer() {
   //   { name: 'AI Solutions', href: '/services/ai' },
   //   { name: 'Cloud Architecture', href: '/services/cloud' },

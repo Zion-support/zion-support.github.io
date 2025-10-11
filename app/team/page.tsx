@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { CheckCircle } from 'lucide-react'
@@ -29,6 +30,11 @@ import Footer from '../components/Footer'
 'use client';
 import React from 'react';
 
+=======
+'use client';
+import React from 'react';
+import { CheckCircle } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -37,8 +43,13 @@ const PagePage: React.FC = () => {
   const features = [
     {
       title: 'Page',
+<<<<<<< HEAD
       description: 'Professional page services and solutions.',
       benefits: ['High Quality', 'Expert Team', '24/7 Support', 'Custom Solutions']
+=======
+      description: 'Professional page services for modern businesses.',
+      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
     },
     {
       title: 'Advanced Technology',
@@ -51,7 +62,10 @@ const PagePage: React.FC = () => {
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
     }
   ];
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -116,7 +130,11 @@ const PagePage: React.FC = () => {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default TeamPage
 =======
 export default PagePage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
+=======
+export default PagePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b

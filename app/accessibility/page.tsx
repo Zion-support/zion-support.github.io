@@ -2,10 +2,14 @@
 'use client';
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { CheckCircle, Eye, Ear, Hand, Brain, Shield, Target, BarChart, Zap, ArrowRight } from 'lucide-react';
 =======
 import { CheckCircle, Eye, Ear, Hand, Brain } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
+=======
+import { CheckCircle, Eye, Ear, Hand, Brain, Shield, Zap } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -48,12 +52,18 @@ export default function PagePage() {
     {
       icon: <Hand className="w-8 h-8" />,
       title: 'Motor Accessibility',
+<<<<<<< HEAD
       description: 'Keyboard navigation, voice control, and alternative input methods for users with motor disabilities.',
       benefits: ['Keyboard navigation', 'Voice control', 'Alternative inputs', 'Gesture recognition']
+=======
+      description: 'Keyboard navigation, voice control, and adaptive input methods for users with motor impairments.',
+      benefits: ['Keyboard navigation', 'Voice control', 'Switch control', 'Adaptive input']
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
     },
     {
       icon: <Brain className="w-8 h-8" />,
       title: 'Cognitive Accessibility',
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: 'Clear language, consistent navigation, and simplified interfaces for cognitive accessibility.',
       benefits: ['Clear language', 'Consistent design', 'Error prevention', 'Progress indicators']
@@ -100,14 +110,35 @@ export default function PagePage() {
       description: 'Clear navigation, simplified interfaces, and cognitive load reduction for better usability.',
       benefits: ['Clear navigation', 'Simplified interfaces', 'Cognitive load reduction', 'Memory aids']
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
+=======
+      description: 'Clear language, consistent navigation, and cognitive load reduction for better comprehension.',
+      benefits: ['Clear language', 'Consistent navigation', 'Cognitive load reduction', 'Memory aids']
+    },
+    {
+      icon: Shield,
+      title: 'Security & Privacy',
+      description: 'Secure accessibility features that protect user data while providing inclusive experiences.',
+      benefits: ['Data protection', 'Privacy controls', 'Secure authentication', 'Accessible security']
+    },
+    {
+      icon: Zap,
+      title: 'Performance Optimization',
+      description: 'Fast loading times and efficient accessibility features that don\'t compromise performance.',
+      benefits: ['Fast loading', 'Efficient features', 'Optimized performance', 'Smooth interactions']
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
     }
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Accessibility - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Professional accessibility services and solutions." />
         <meta name="keywords" content="accessibility, services, solutions, technology" />
+=======
+        <meta name="description" content="Professional accessibility services and solutions for inclusive digital experiences." />
+        <meta name="keywords" content="accessibility, inclusive design, digital accessibility, WCAG compliance" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
       </Helmet>
       
       <Navigation />
@@ -116,6 +147,7 @@ export default function PagePage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+<<<<<<< HEAD
               Accessibility
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -126,6 +158,18 @@ export default function PagePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+=======
+              Accessibility Solutions
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Creating inclusive digital experiences that work for everyone, regardless of ability.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
                 <div className="flex items-center mb-4">
                   <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
@@ -145,9 +189,15 @@ export default function PagePage() {
           
           <div className="text-center">
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+<<<<<<< HEAD
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Contact us today to learn more about our accessibility services.
+=======
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Make Your Digital Experience Accessible?</h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Contact us today to learn more about our accessibility services and how we can help make your digital products inclusive for everyone.
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -157,6 +207,7 @@ export default function PagePage() {
                   Learn More
                 </button>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <p className="text-gray-300 mb-4">
                 Track record of successful projects and satisfied clients.
@@ -321,6 +372,11 @@ export default function PagePage() {
           </div>
         </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
+=======
+            </div>
+          </div>
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
       </main>
 
       <Footer />
@@ -333,5 +389,9 @@ export default AccessibilityPage
   );
 };
 
+<<<<<<< HEAD
 export default AccessibilityPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
+=======
+export default AccessibilityPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-710b
