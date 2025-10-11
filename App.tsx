@@ -53,7 +53,12 @@ const App: React.FC = () => {
   return (
     <EnhancedErrorBoundary>
       <HelmetProvider>
-        <SEOHead />
+        <SEOHead 
+          title="Zion Tech Group - AI & IT Solutions"
+          description="Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
+          keywords={['AI solutions', 'IT services', 'quantum computing', 'digital transformation', 'enterprise software', 'automation', 'machine learning']}
+          canonicalUrl="https://ziontechgroup.com"
+        />
         <SkipLink />
         <ServiceWorker />
         <Router>
@@ -61,7 +66,12 @@ const App: React.FC = () => {
             <AnalyticsProvider>
               <PerformanceOptimizer>
                 <EnhancedAccessibility>
-                  <AccessibilityEnhancer>
+                  <AccessibilityEnhancer
+                    enableKeyboardNavigation={true}
+                    enableScreenReaderSupport={true}
+                    enableHighContrast={false}
+                    enableFocusManagement={true}
+                  >
                     <PerformanceMonitor />
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
                       <FuturisticBackground />

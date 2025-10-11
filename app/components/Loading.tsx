@@ -3,25 +3,34 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const LoadingPage: React.FC = () => {
+<<<<<<< HEAD
     const features = const features = const features = [
     {
+=======
+    const features = [
+    
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
   },
     {
-    icon: Zap,
+      icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
   },
     {
-    icon: Shield,
+      icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
   },
     {
-    icon: Globe,
+      icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
+      description: 'Worldwide deployment and support for international businesses',}}
+  ]
+=======
       description: 'Worldwide deployment and support for international businesses'
   };
     };

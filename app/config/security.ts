@@ -2,10 +2,15 @@
  * Security Configuration;
  * Defines security headers and policies for the application;
  */;
+<<<<<<< HEAD
+export const securityHeaders = {// Content Security Policy;
+  contentSecurityPolicy: {,
+    directives: {,
+=======
 export const securityHeaders = {;
     // Content Security Policy;
-  contentSecurityPolicy: {
-    directives: {
+  contentSecurityPolicy: ,
+      directives:  ,
       defaultSrc: ["'self'"],
       scriptSrc: [,
         "'self'",
@@ -20,12 +25,25 @@ export const securityHeaders = {;
       connectSrc: ["'self'", 'https://www.google-analytics.com', 'https: //analytics.google.com'],
       frameSrc: ["'self'"],
       objectSrc: ["'none'"],
+<<<<<<< HEAD
+      upgradeInsecureRequests: true,},
+  },;
+=======
       upgradeInsecureRequests: true,
   },
   },
+>>>>>>> origin/main
   // Security Headers;
-  headers: {
+  headers: {,
     'X-DNS-Prefetch-Control': 'on',
+<<<<<<< HEAD
+    'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',;
+    'X-XSS-Protection': '1; mode=block',;
+    'X-Frame-Options': 'SAMEORIGIN',;
+    'X-Content-Type-Options': 'nosniff',;
+    'Referrer-Policy': 'strict-origin-when-cross-origin',;
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()',},
+=======
     'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
     'X-XSS-Protection': '1; mode=block',
     'X-Frame-Options': 'SAMEORIGIN',
@@ -33,16 +51,19 @@ export const securityHeaders = {;
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
   },
+>>>>>>> origin/main
 }
 /**;
  * Rate limiting configuration;
  */;
+<<<<<<< HEAD
+export const rateLimitConfig = {windowMs: 15 * 60 * 1000, // 15 minutes;
+=======
 export const rateLimitConfig = {;
     windowMs: 15 * 60 * 1000, // 15 minutes;
+>>>>>>> origin/main
   max: 100, // Limit each IP to 100 requests per windowMs;
-  message: 'Too many requests from this IP, please try again later.',
-  }
-}
+  message: 'Too many requests from this IP, please try again later.',}}
 /**;
  * CORS configuration;
  */;
@@ -50,10 +71,17 @@ export const corsConfig = const corsConfig = const corsConfig = {
     origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http: //localhost:3000'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
+>>>>>>> origin/main
   credentials: true,
+<<<<<<< HEAD
   maxAge: 86400, // 24 hours
   };
 };
+=======
+  maxAge: 86400, // 24, hours;
+  }
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 /**;
  * Session configuration;
  */;
@@ -61,12 +89,17 @@ export const sessionConfig = const sessionConfig = const sessionConfig = {
     secret: process.env.SESSION_SECRET || 'your-secret-key-change-in-production',
   resave: false,
   saveUninitialized: false,
+<<<<<<< HEAD
   cookie: {
     secure: process.env['NODE_ENV'] === 'production',;
     httpOnly: true,;
+=======
+  cookie:  ,
+      secure: process.env['NODE_ENV'] === 'production',
+    httpOnly: true,
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     maxAge: 24 * 60 * 60 * 1000, // 24 hours;
-    sameSite: 'strict' as const,
-  },
+    sameSite: 'strict' as const,},
 }
 /**;
  * Input validation patterns;
@@ -75,50 +108,56 @@ export const validationPatterns = const validationPatterns = const validationPat
   email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
   phone: /^\+?[1-9]\d{1,14}$/,
   url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
+>>>>>>> origin/main
   alphanumeric: /^[a-zA-Z0-9]+$/,
   noSpecialChars: /^[a-zA-Z0-9\s]+$/,;
 };
 /**;
  * Sanitize user input;
  */;
-export function sanitizeInput(input: string): string {
+export function sanitizeInput(input: string): string {,}
     return input,
     .replace(/[<>]/g, '') // Remove < and >;
     .replace(/javascript:/gi, '') // Remove javascript: protocol,
     .replace(/on\w+\s*=/gi, '') // Remove event handlers;
-    .trim()
-  }
-}
+    .trim()}}
 /**;
  * Validate email address;
  */;
-export function validateEmail(email: string): boolean {
-    return validationPatterns.email.test(email)
-  }
-}
+export function validateEmail(email: string): boolean {,}
+    return validationPatterns.email.test(email)}}
 /**;
  * Validate URL;
  */;
-export function validateUrl(url: string): boolean {
-    return validationPatterns.url.test(url)
-  }
-}
+export function validateUrl(url: string): boolean {,}
+    return validationPatterns.url.test(url)}}
 /**;
  * Generate secure token;
  */;
 export function generateSecureToken(length: number = 32): string {
-    if (typeof window !== 'undefined' && window.crypto) {
+    if (typeof window !== 'undefined' && window.crypto) 
     window.crypto.getRandomValues(array)
   }
   } else {
     // Fallback for non-browser environments;
-    for (let i = 0; i < length; i++) {
+    for (let i = 0; i < length; i++) 
       array[i] = Math.floor(Math.random() * 256)
   }
     }
   }
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
 }
+<<<<<<< HEAD
+export default {securityHeaders,;}
+  rateLimitConfig,;
+  corsConfig,;
+  sessionConfig,;
+  validationPatterns,;
+  sanitizeInput,;
+  validateEmail,;
+  validateUrl,;
+  generateSecureToken,}}
+=======
 export default {
     securityHeaders,
   rateLimitConfig,
@@ -131,3 +170,4 @@ export default {
   generateSecureToken,
   }
 }
+>>>>>>> origin/main

@@ -1,7 +1,11 @@
 'use client';
 export const useRouter = (;) => {
     return ()
+<<<<<<< HEAD
   )
+=======
+    $3)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
   const push = const push = const push = useCallback((url: string) => {
     ,;
@@ -27,8 +31,7 @@ export const useRouter = () => {};
   const refresh = const refresh = useCallback(() => {};
     window.location.reload();}
   }, []);
-  return {}
-    push,
+  return {}}push,
 
     replace,
 
@@ -66,4 +69,4 @@ export const usePathname = const usePathname = const usePathname = () => {/* TOD
 };
 export const useSearchParams = () => {/* TODO: Fix JSX expression */};
 
-export default { useRouter, usePathname, useSearchParams }
+export default {useRouter, usePathname, useSearchParams}}

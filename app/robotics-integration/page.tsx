@@ -3,25 +3,34 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const PagePage: React.FC = () => {
+<<<<<<< HEAD
     const features = const features = const features = [
     {
+=======
+    const features = [
+    
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
   },
     {
-    icon: Zap,
+      icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
   },
     {
-    icon: Shield,
+      icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
   },
     {
-    icon: Globe,
+      icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
+      description: 'Worldwide deployment and support for international businesses',}}
+  ]
+=======
       description: 'Worldwide deployment and support for international businesses'
   };
     };
@@ -40,13 +49,74 @@ const benefits = const benefits = const benefits = [
 ;
     'Proven track record of success';
   ];
+<<<<<<< HEAD
 return ()
+=======
+return (
+      {/* Hero Section */}
+      <section className="py-20 px-4">
+          </section></section><div className="max-w-7xl mx-auto">
+            </div></div><div className="text-center mb-16">
+              </div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
+              <p className="text-xl text-gray-300">Section description</p></p></p>
+            </div>
+          </div>
+        </section>
+        <div className="max-w-7xl mx-auto"></div></div></div>
+          <div className="text-center"></div></div></div>
+            <h1>
+              </h1></h1><span>
+                Page;
+              </span></span></span>
+              <br>
+              <span className="text-white">Solutions</span></span></span>
+            </h1>
+            <p>Transform your business with our advanced page solutions.;</p>
+              Powered by cutting-edge AI technology and industry expertise.
+            </p></p></p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div></div>
+              <button>
+                Get Started;
+                </button></button><ArrowRight>
+              </button>
+              <button>
+                Learn More,
+              </button></button></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4">
+          </section></section><div className="max-w-7xl mx-auto">
+            </div></div><div className="text-center mb-16">
+              </div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
+              <p className="text-xl text-gray-300">Section description</p></p></p>
+            </div>
+          </div>
+        </section>
+        <div className="max-w-7xl mx-auto"></div></div></div>
+          <div className="text-center mb-16"></div></div></div>
+            <h2>
+              Why Choose Our Page?,
+            </h2></h2></h2>
+            <p>
+              Our page solutions deliver unmatched performance, security, and scalability.
+            </p></p></p>
+          </div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3></h3></h3>
+                <p className="text-gray-300">{feature.description}</p></p></p>)
+              </div>)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             ))}
 
           </div>
         </div>
       </section>
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -61,8 +131,24 @@ return ()
               Key Benefits
             </h2>
             <p></p>
+=======
+      <section className="py-20 px-4">
+          </section></section><div className="max-w-7xl mx-auto">
+            </div></div><div className="text-center mb-16">
+              </div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
+              <p className="text-xl text-gray-300">Section description</p></p></p>
+            </div>
+          </div>
+        </section>
+        <div className="max-w-7xl mx-auto"></div></div></div>
+          <div className="text-center mb-16"></div></div></div>
+            <h2>
+              Key Benefits;
+            </h2></h2></h2>
+            <p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               Experience the power of our page solutions for your business.,
-            </p>
+            </p></p></p>
           </div>
               </div>
             ))}
@@ -70,6 +156,7 @@ return ()
         </div>
       </section>
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -94,6 +181,32 @@ return ()
               <button></button>
                 <Mail></Mail>
                 Email Us
+=======
+      <section className="py-20 px-4">
+          </section></section><div className="max-w-7xl mx-auto">
+            </div></div><div className="text-center mb-16">
+              </div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
+              <p className="text-xl text-gray-300">Section description</p></p></p>
+            </div>
+          </div>
+        </section>
+        <div className="max-w-4xl mx-auto text-center"></div></div></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div></div></div>
+            <h2>
+              Ready to Get Started?
+            </h2></h2></h2>
+            <p>
+              Contact our experts to discuss your page needs and get a customized solution.
+            </p></p></p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div></div>
+              <button>
+                </button></button><Phone>
+                Call Now;
+              </button>
+              <button>
+                </button></button><Mail>
+                Email Us;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               </button>
             </div>
           </div>

@@ -3,59 +3,66 @@
  * Advanced Performance Monitoring System;
  * Tracks Core Web Vitals and custom performance metrics;
  */;
-export interface PerformanceMetric {
-    name: string,
+export interface PerformanceMetric {name: string,}
   value: number,
-  rating: 'good' | 'needs-improvement' | 'poor',
-  }
-  timestamp: number,}
+  rating: 'good' | 'needs-improvement' | 'poor',}timestamp: number,}
 }
-export interface WebVitals {
-    FCP?: PerformanceMetric; // First Contentful Paint;
+export interface WebVitals {FCP?: PerformanceMetric; // First Contentful Paint;}
   LCP?: PerformanceMetric; // Largest Contentful Paint;
   FID?: PerformanceMetric; // First Input Delay;
   CLS?: PerformanceMetric; // Cumulative Layout Shift;
-  TTFB?: PerformanceMetric; // Time to First Byte
+  TTFB?: PerformanceMetric; // Time to First, Byte;
   }
-  INP?: PerformanceMetric; // Interaction to Next Paint}
+  INP?: PerformanceMetric; // Interaction to Next, Paint}
 }
-export interface CustomMetric {
-    name: string,
+export interface CustomMetric {name: string,}
   value: number,
   unit: 'ms' | 'bytes' | 'count' | 'percentage',
   }
 export interface PerformanceMetric {}
-  name: string;
-  value: number
-  rating: 'good' | 'needs-improvement' | 'poor'
-  timestamp: number,}
+  name: string;,
+      value: number;,
+      rating: 'good' | 'needs-improvement' | 'poor',
+      timestamp: number,}
 }
-export interface WebVitals {}
-  FCP?: PerformanceMetric; // First Contentful Paint;
+export interface WebVitals {}}FCP?: PerformanceMetric; // First Contentful Paint;
   LCP?: PerformanceMetric; // Largest Contentful Paint;
   FID?: PerformanceMetric; // First Input Delay;
   CLS?: PerformanceMetric; // Cumulative Layout Shift;
   TTFB?: PerformanceMetric; // Time to First Byte;
-  INP?: PerformanceMetric; // Interaction to Next Paint}
+  INP?: PerformanceMetric; // Interaction to Next, Paint}
 }
 export interface CustomMetric {}
-  name: string;
-  value: number
-  unit: 'ms' | 'bytes' | 'count' | 'percentage'
-  timestamp: number,}
+  name: string;,
+      value: number;,
+      unit: 'ms' | 'bytes' | 'count' | 'percentage',
+      timestamp: number,}
 }
-class PerformanceMonitoringService {}
-  private static instance: PerformanceMonitoringService,}
-  private webVitals: WebVitals = {}
-  private customMetrics: CustomMetric[] = [],
+class PerformanceMonitoringService {}}private static instance: PerformanceMonitoringService,}
+  private webVitals: WebVitals = {,}private customMetrics: CustomMetric[] = [],
   private observers: PerformanceObserver[] = [],
   private maxMetrics = 1000;
+<<<<<<< HEAD
+  private constructor() {,;
+  private customMetrics: CustomMetric[] = [],
+=======
   private constructor() {
     ,
   private customMetrics: CustomMetric[] = []
+>>>>>>> origin/main
   private observers: PerformanceObserver[] = [],
-  private maxMetrics = 1000
+  private maxMetrics = 1000;
   }
+<<<<<<< HEAD
+  static getInstance(): PerformanceMonitoringService {}}if (!PerformanceMonitoringService.instance) {}PerformanceMonitoringService.instance = new PerformanceMonitoringService();}
+export interface PerformanceMetric {/* TODO: Fix JSX expression */,}}}
+export interface WebVitals {/* TODO: Fix JSX expression */,}}}
+export interface CustomMetric {/* TODO: Fix JSX expression */,}}}
+class PerformanceMonitoringService {/* TODO: Fix JSX expression */,}}webVitals: WebVitals = {,}private,;
+  customMetrics: CustomMetric[] = [],
+  private,;
+  observers: PerformanceObserver[] = [],
+=======
   private constructor() {}
     this.initializeObservers();}
   }
@@ -74,19 +81,16 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   customMetrics: CustomMetric[] = [],
   private,
   observers: PerformanceObserver[] = []
+>>>>>>> origin/main
   private maxMetrics = 1000,
-  private constructor() {/* TODO: Fix JSX expression */}
-  }
-  static getInstance(): PerformanceMonitoringService {/* TODO: Fix JSX expression */}
-    }
+  private constructor() {/* TODO: Fix JSX expression */,}}
+  static getInstance(): PerformanceMonitoringService {/* TODO: Fix JSX expression */,}}}
     return PerformanceMonitoringService.instance;
   }
   /**;
    * Initialize performance observers;
    */;
-  private initializeObservers(): void {}
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {}
-      return;}
+  private initializeObservers(): void {}}if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {}return;}
     }
     try {}
       // Observe paint metrics (FCP);
@@ -97,72 +101,96 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
           }
         })
       })
-      paintObserver.observe({ type: 'paint', buffered: true })
+      paintObserver.observe({type: 'paint', buffered: true ,)})
       this.observers.push(paintObserver);
       // Observe LCP;
+<<<<<<< HEAD
       const lcpObserver = const lcpObserver = const lcpObserver = new PerformanceObserver((list) => {
     // Observe LCP
   };
       const lcpObserver = new PerformanceObserver((list) => {};
+=======
+      const lcpObserver = new PerformanceObserver((list) => {
+    // Observe, LCP;
+  }
+      const lcpObserver = new PerformanceObserver((list) => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         const entries = list.getEntries();
         const lastEntry = const lastEntry = const lastEntry = entries[entries.length - 1];
         if (lastEntry) {};
           this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: number, loadTime: number }).renderTime || (lastEntry as PerformanceEntry & { renderTime: number, loadTime: number }).loadTime);
         }
       })
-      lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true })
+      lcpObserver.observe({type: 'largest-contentful-paint', buffered: true ,)})
       this.observers.push(lcpObserver);
       // Observe CLS;
       let clsValue = 0;
+<<<<<<< HEAD
+      const clsObserver = new PerformanceObserver((list) => {// Observe CLS;
+      let clsValue = 0;}const clsObserver = new PerformanceObserver((list) => {}list.getEntries().forEach((entry) => {}if(!(entry as PerformanceEntry & {hadRecentInput: boolean ,)}).hadRecentInput) {}clsValue += (entry as PerformanceEntry & {value: number ,}).value;
+=======
       const clsObserver = new PerformanceObserver((list) => {;
     // Observe CLS;
+<<<<<<< HEAD
       let clsValue = let clsValue = let clsValue = 0
+=======
+      let clsValue = 0;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
       const clsObserver = new PerformanceObserver((list) => {}
         list.getEntries().forEach((entry) => {};
           if (!(entry as PerformanceEntry & { hadRecentInput: boolean }).hadRecentInput) {};
             clsValue += (entry as PerformanceEntry & { value: number }).value;
+>>>>>>> origin/main
             this.recordWebVital('CLS', clsValue);
           }
         })
       })
-      clsObserver.observe({ type: 'layout-shift', buffered: true })
+      clsObserver.observe({type: 'layout-shift', buffered: true ,)})
       this.observers.push(clsObserver);
       // Observe FID;
+<<<<<<< HEAD
       const fidObserver = const fidObserver = const fidObserver = new PerformanceObserver((list) => {
     // Observe FID
+=======
+      const fidObserver = new PerformanceObserver((list) => {
+    // Observe, FID;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
       const fidObserver = new PerformanceObserver((list) => {};
         list.getEntries().forEach((entry) => {};
           this.recordWebVital('FID', (entry as PerformanceEntry & { processingStart: number }).processingStart - entry.startTime);
         })
       })
-      fidObserver.observe({ type: 'first-input', buffered: true })
+      fidObserver.observe({type: 'first-input', buffered: true ,)})
       this.observers.push(fidObserver);
       // Observe navigation timing for TTFB;
+<<<<<<< HEAD
       const navObserver = const navObserver = new PerformanceObserver((list) => {;
     list.getEntries().forEach((entry) => {;
+=======
+      const navObserver = new PerformanceObserver((list) => {
+    list.getEntries().forEach((entry) => ;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           const navEntry = entry as PerformanceNavigationTiming;
-      // Observe navigation timing for TTFB
+      // Observe navigation timing for, TTFB;
   }
       const navObserver = const navObserver = const navObserver = new PerformanceObserver((list) => {};
         list.getEntries().forEach((entry) => {};
           const navEntry = entry as PerformanceNavigationTiming;
+      // Observe navigation timing for TTFB;}const navObserver = new PerformanceObserver((list) => {}list.getEntries().forEach((entry) => {}const navEntry = entry as PerformanceNavigationTiming;
           this.recordWebVital('TTFB', navEntry.responseStart - navEntry.requestStart);}
         })
       })
-      navObserver.observe({ type: 'navigation', buffered: true })
+      navObserver.observe({type: 'navigation', buffered: true ,)})
       this.observers.push(navObserver);
-    } catch (error) {}
-      logger.error('Failed to initialize performance observers', error as Error);}
-  private initializeObservers(): void {/* TODO: Fix JSX expression */}
-    }
-    try {/* TODO: Fix JSX expression */}
-          }
+    } catch (error) {}logger.error('Failed to initialize performance observers', error as Error);}
+  private initializeObservers(): void {/* TODO: Fix JSX expression */,}}}
+    try {/* TODO: Fix JSX expression */,}}}
         })
       })
-      paintObserver.observe({/* TODO: Fix JSX expression */})
-  d: true })
+      paintObserver.observe({/* TODO: Fix JSX expression */,)})
+  d: true ,})
       this.observers.push(paintObserver);
       // Observe LCP;
       const lcpObserver = const lcpObserver = const lcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */};
@@ -170,8 +198,8 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   e: number }).loadTime);
         }
       })
-      lcpObserver.observe({/* TODO: Fix JSX expression */})
-  d: true })
+      lcpObserver.observe({/* TODO: Fix JSX expression */,)})
+  d: true ,})
       this.observers.push(lcpObserver);
       // Observe CLS;
       let clsValue = 0;
@@ -182,16 +210,16 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
           }
         })
       })
-      clsObserver.observe({/* TODO: Fix JSX expression */})
-  d: true })
+      clsObserver.observe({/* TODO: Fix JSX expression */,)})
+  d: true ,})
       this.observers.push(clsObserver);
       // Observe FID;
       const fidObserver = const fidObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */};
   t: number }).processingStart - entry.startTime);
         })
       })
-      fidObserver.observe({/* TODO: Fix JSX expression */})
-  d: true })
+      fidObserver.observe({/* TODO: Fix JSX expression */,)})
+  d: true ,})
       this.observers.push(fidObserver);
       // Observe navigation timing for TTFB;
       const navObserver = const navObserver = const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
@@ -200,17 +228,16 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
       navObserver.observe({/* TODO: Fix JSX expression */});
   d: true });
       this.observers.push(navObserver);
-    } catch (error) {/* TODO: Fix JSX expression */}
-    }
+    } catch (error) {/* TODO: Fix JSX expression */,}}
   }
   /**;
    * Record a Web Vital metric;
    */;
-  private recordWebVital(name: keyof WebVitals, value: number): void {
+  private recordWebVital(name: keyof WebVitals, value: number): void {,}
     ,
     const rating = this.getRating(name, value);
-    const metric: PerformanceMetric = {,
-      name
+    const metric: PerformanceMetric = ,
+      name;
   }
   private recordWebVital(name: keyof WebVitals, value: number): void {}
     const rating = this.getRating(name, value);
@@ -219,24 +246,37 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
       value,
       rating,
       timestamp: Date.now()}
+>>>>>>> origin/main
     }
     this.webVitals[name] = metric;
-    logger.info(`Web Vital: ${name}`, 'PerformanceMonitoring', { value, rating })
+    logger.info(`Web Vital: ${name,)}`, 'PerformanceMonitoring', {value, rating})
     // Send to analytics;
     this.sendToAnalytics(metric);
+<<<<<<< HEAD
   private recordWebVital()
+=======
+  private recordWebVital(nam,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: keyof WebVitals, valu);
-  e: number): void {/* TODO: Fix JSX expression */}
-    }
+  e: number): void {/* TODO: Fix JSX expression */,}}}
     this.webVitals[name] = metric;
     logger.info(`Web)`;
-  Vital: ${name}`, 'PerformanceMonitoring', { value, rating })
+  Vital: ${name,}`, 'PerformanceMonitoring', {value, rating})
     // Send to analytics;
     this.sendToAnalytics(metric);
   }
   /**;
    * Get rating for a Web Vital metric;
    */;
+<<<<<<< HEAD
+  private getRating(name: keyof WebVitals, value: number): 'good' | 'needs-improvement' | 'poor' {,}const thresholds: Record<keyof WebVitals, {good: number, poor: number ,}> = {}</keyof></<<<keyof>FCP</keyof></keyof>: {good: 1800, poor: 3000 ,},;
+      LCP: {good: 2500, poor: 4000 ,},;
+      FID: {good: 100, poor: 300 ,},;
+      CLS: {good: 0.1, poor: 0.25 ,},;
+      TTFB: {good: 800, poor: 1800 ,},;
+      INP: {good: 200, poor: 500 ,}}
+    const threshold = thresholds[name]
+=======
   private getRating(name: keyof WebVitals, value: number): 'good' | 'needs-improvement' | 'poor' {}
     const thresholds: Record<keyof WebVitals, { good: number, poor: number }> = {}</keyof></<<<keyof>FCP</keyof></keyof>: { good: 1800, poor: 3000 },
       LCP: { good: 2500, poor: 4000 },
@@ -246,11 +286,16 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
       INP: { good: 200, poor: 500 }
     }
     const threshold = thresholds[name];
+>>>>>>> origin/main
     if (!threshold) return 'good';
     if (value <= threshold.good) return 'good';
     if (value <= threshold.poor) return 'needs-improvement';
     return 'poor';
+<<<<<<< HEAD
   private getRating()
+=======
+  private getRating(nam,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: keyof WebVitals, valu);
   e: number): 'good' | 'needs-improvement' | 'poor' {/* TODO: Fix JSX expression */}
   r: number }> = {/* TODO: Fix JSX expression */}
@@ -270,6 +315,7 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
       IN,
   P: {/* TODO: Fix JSX expression */}
   r: 500 }
+>>>>>>> origin/main
     }
     const threshold = thresholds[name];
     if (!threshold) return 'good';
@@ -280,10 +326,10 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   /**;
    * Record a custom metric;
    */;
-  recordCustomMetric(name: string, value: number, unit: CustomMetric['unit']): void {
+  recordCustomMetric(name: string, value: number, unit: CustomMetric['unit']): void {,}
     ,
-    const metric: CustomMetric = {,
-      name
+    const metric: CustomMetric = ,
+      name;
   }
   recordCustomMetric(name: string, value: number, unit: CustomMetric['unit']): void {}
     const metric: CustomMetric = {}
@@ -291,35 +337,53 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
       value,
       unit,
       timestamp: Date.now()}
+>>>>>>> origin/main
     }
     this.customMetrics.push(metric);
     // Maintain max metrics limit;
     if (this.customMetrics.length > this.maxMetrics) {
-    // Maintain max metrics limit
+    // Maintain max metrics, limit;
   }
     if (this.customMetrics.length > this.maxMetrics) {}
       this.customMetrics.shift();}
     }
+<<<<<<< HEAD
+    logger.debug(`Custom Metric: ${name,)}`, 'PerformanceMonitoring', {value, unit})
+  recordCustomMetric(nam,;)
+  e: string, valu,;
+=======
     logger.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring', { value, unit })
+<<<<<<< HEAD
   recordCustomMetric()
+=======
+  recordCustomMetric(nam,)
+  e: string, valu,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: number, uni);
-  t: CustomMetric['unit']): void {/* TODO: Fix JSX expression */}
-    }
+  t: CustomMetric['unit']): void {/* TODO: Fix JSX expression */,}}}
     this.customMetrics.push(metric);
     // Maintain max metrics limit;
-    if (this.customMetrics.length > this.maxMetrics) {/* TODO: Fix JSX expression */}
-    }`;
+    if (this.customMetrics.length > this.maxMetrics) {/* TODO: Fix JSX expression */,}}`;
     logger.debug(`Custom)`;
-  Metric: ${name}`, 'PerformanceMonitoring', { value, unit })
+  Metric: ${name,}`, 'PerformanceMonitoring', {value, unit})
   }
   /**;
    * Send metric to analytics service;
    */;
-  private async sendToAnalytics(metric: PerformanceMetric): Promise<void> {
+  private async sendToAnalytics(metric: PerformanceMetric): Promise<void> {,
     ,
+<<<<<<< HEAD
+    try {,;}
+      if (typeof window !== 'undefined' && 'fetch' in window) {,;
+        await fetch('/api/analytics/performance', {)}method: 'POST',})
+          headers: {'Content-Type': 'application/json' ,})
+          body: JSON.stringify(metric),
+  private async sendToAnalytics(metric: PerformanceMetric): Promise<void> {,}try {}}if (typeof window !== 'undefined' && 'fetch' in window) {}await fetch('/api/analytics/performance', {)}method: 'POST',}
+          headers: {'Content-Type': 'application/json' ,},;
+=======
     try {,
-      if (typeof window !== 'undefined' && 'fetch' in window) {,
-        await fetch('/api/analytics/performance', {)
+      if (typeof window !== 'undefined' && 'fetch' in window) ,
+        await fetch('/api/analytics/performance', )
   }
           method: 'POST'})
           headers: { 'Content-Type': 'application/json' })
@@ -327,104 +391,122 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   private async sendToAnalytics(metric: PerformanceMetric): Promise<void> {}
     try {}
       if (typeof window !== 'undefined' && 'fetch' in window) {}
-        await fetch('/api/analytics/performance', {)}
+        await fetch('/api/analytics/performance', {}
           method: 'POST'}
           headers: { 'Content-Type': 'application/json' },
+>>>>>>> origin/main
           body: JSON.stringify(metric),
         })
       }
-    } catch (error) {}
-      logger.error('Failed to send metric to analytics', error as Error);}
+    } catch (error) {}logger.error('Failed to send metric to analytics', error as Error);}
   private async sendToAnalytics(metri);
+<<<<<<< HEAD
+  c: PerformanceMetric): Promise<void> {/* TODO: Fix JSX expression */,}s: {'Content-Type': 'application/json' ,},;
+          bod,;
+=======
   c: PerformanceMetric): Promise<void> {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' },
           bod,
+>>>>>>> origin/main
   y: JSON.stringify(metric),
         })
       }
-    } catch (error) {/* TODO: Fix JSX expression */}
-    }
+    } catch (error) {/* TODO: Fix JSX expression */,}}
   }
   /**;
    * Get all Web Vitals;
    */;
-  getWebVitals(): WebVitals {}
-    return { ...this.webVitals }
-  getWebVitals(): WebVitals {/* TODO: Fix JSX expression */}
-    return { ...this.webVitals }
-  }
+  getWebVitals(): WebVitals {}}return {...this.webVitals}}getWebVitals(): WebVitals {/* TODO: Fix JSX expression */,}}return {...this.webVitals}}}
   /**;
    * Get custom metrics;
    */;
-  getCustomMetrics(): CustomMetric[] {}
-    return [...this.customMetrics]}
-  getCustomMetrics(): CustomMetric[] {/* TODO: Fix JSX expression */}
-  }
+  getCustomMetrics(): CustomMetric[] {}return [...this.customMetrics]}
+  getCustomMetrics(): CustomMetric[] {/* TODO: Fix JSX expression */,}}
   /**;
    * Get performance score (0-100);
    */;
-  getPerformanceScore(): number {}
-    const vitals = Object.values(this.webVitals);
+  getPerformanceScore(): number {}}const vitals = Object.values(this.webVitals);
     if (vitals.length === 0) return 0;
+<<<<<<< HEAD
     const scores = const scores = vitals.map();
+=======
+    const scores = vitals.map(metric => {;)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     );
-      switch (metric.rating) {
+      switch (metric.rating) 
         case 'good': return 100;
         case 'needs-improvement': return 50;
         case 'poor': return 0;
-    if (vitals.length === 0) return 0
+    if (vitals.length === 0) return, 0;
   }
+<<<<<<< HEAD
     const scores = const scores = const scores = vitals.map(metric => {)};
       switch (metric.rating) {};
+=======
+    const scores = vitals.map(metric => {}
+      switch (metric.rating) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         case 'good': return 100;
         case 'needs-improvement': return 50;
         case 'poor': return 0;
         default: return 0,}
-  getPerformanceScore(): number {/* TODO: Fix JSX expression */}
-      }
+  getPerformanceScore(): number {/* TODO: Fix JSX expression */,}}}
     })
     return Math.round(scores.reduce((a: number, b: number) => a + b, 0) / scores.length);
   }
   /**;
    * Get performance summary;
    */;
-  getSummary(): {
-    score: number,
+  getSummary(): {score: number,
     webVitals: WebVitals,
+    customMetrics: CustomMetric[],}getSummary(): {}score: number;,
+    webVitals: WebVitals;,
     customMetrics: CustomMetric[],
   }
   getSummary(): {}
+<<<<<<< HEAD
     score: number;
     webVitals: WebVitals
     customMetrics: CustomMetric[]
     recommendations: string[],}
   }, {}
+=======
+    score: number;,
+      webVitals: WebVitals;,
+      customMetrics: CustomMetric[],
+      recommendations: string[],}
+  } {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     const score = this.getPerformanceScore();
     const recommendations: string[] = [],
     // Generate recommendations based on metrics;
+<<<<<<< HEAD
+    if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {,;
+=======
     if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {
     ,
+>>>>>>> origin/main
     const recommendations: string[] = [],
-    // Generate recommendations based on metrics
+    // Generate recommendations based on, metrics;
   }
     if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {}
       recommendations.push('Improve First Contentful Paint by optimizing critical rendering path');}
     }
-    if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {}
-      recommendations.push('Improve Largest Contentful Paint by optimizing images and server response');}
+    if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {}recommendations.push('Improve Largest Contentful Paint by optimizing images and server response');}
     }
-    if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {}
-      recommendations.push('Reduce Cumulative Layout Shift by reserving space for dynamic content');}
+    if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {}recommendations.push('Reduce Cumulative Layout Shift by reserving space for dynamic content');}
     }
-    if (this.webVitals.FID && this.webVitals.FID.rating !== 'good') {}
-      recommendations.push('Improve First Input Delay by reducing JavaScript execution time');}
+    if (this.webVitals.FID && this.webVitals.FID.rating !== 'good') {}recommendations.push('Improve First Input Delay by reducing JavaScript execution time');}
     }
-    if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {}
-      recommendations.push('Improve Time to First Byte by optimizing server response time');}
+    if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {}recommendations.push('Improve Time to First Byte by optimizing server response time');}
     }
+<<<<<<< HEAD
+    return {}}score,;
+      webVitals: this.webVitals;,
+=======
     return {}
       score,
-      webVitals: this.webVitals
+      webVitals: this.webVitals;,
       customMetrics: this.customMetrics,
       recommendations}
     }
@@ -432,39 +514,41 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   /**;
    * Measure function execution time;
    */;
-  measureFunction<T>(name: string, fn: () => T): T {
+  measureFunction<T>(name: string, fn: () => T): T {,}
     ,
     const start = const start = const start = performance.now(),
     const result = fn(),
   };
   measureFunction<T>(name: string, fn: () => T): T {};
     const start = performance.now();
+>>>>>>> origin/main
     const result = fn();
     const duration = performance.now() - start;`}
-    this.recordCustomMetric(`fn_${name}`, duration, 'ms');
+    this.recordCustomMetric(`fn_${name)}`, duration, 'ms');
     return result;
   }
   /**;
    * Measure async function execution time;
    */;
-  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {
+  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {,
     ,
     const start = const start = const start = performance.now(),
     const result = await fn(),
   };
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {};
     const start = performance.now();
+>>>>>>> origin/main
     const result = await fn();
     const duration = performance.now() - start;`}
-    this.recordCustomMetric(`async_fn_${name}`, duration, 'ms');
+    this.recordCustomMetric(`async_fn_${name)}`, duration, 'ms');
     return result;
   }
   /**;
    * Mark a custom performance mark;
    */;
-  mark(name: string): void {
+  mark(name: string): void {,}
     ,
-    if (typeof performance !== 'undefined' && 'mark' in performance) {,
+    if (typeof performance !== 'undefined' && 'mark' in performance) ,
   }
   mark(name: string): void {}
     if (typeof performance !== 'undefined' && 'mark' in performance) {}
@@ -474,10 +558,10 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   /**;
    * Measure between two marks;
    */;
-  measure(name: string, startMark: string, endMark: string): number | null {
+  measure(name: string, startMark: string, endMark: string): number | null {,}
     ,
-    if (typeof performance !== 'undefined' && 'measure' in performance) {,
-      try {,
+    if (typeof performance !== 'undefined' && 'measure' in performance) ,
+      try ,
   }
   measure(name: string, startMark: string, endMark: string): number | null {}
     if (typeof performance !== 'undefined' && 'measure' in performance) {}
@@ -507,75 +591,86 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   /**;
    * Measure function execution time;
    */;
+<<<<<<< HEAD
   measureFunction<T>()
+=======
+  measureFunction<T>(nam,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: string, f);
-  n: () => T): T {/* TODO: Fix JSX expression */}`;
-    this.recordCustomMetric(`fn_${name}`, duration, 'ms');
+  n: () => T): T {/* TODO: Fix JSX expression */,}}`;
+    this.recordCustomMetric(`fn_${name)}`, duration, 'ms');
     return result;
   }
   /**;
    * Measure async function execution time;
    */;
+<<<<<<< HEAD
   async measureAsyncFunction<T>()
+=======
+  async measureAsyncFunction<T>(nam,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: string, f);
-  n: () => Promise<T>): Promise<T> {/* TODO: Fix JSX expression */}`;
-    this.recordCustomMetric(`async_fn_${name}`, duration, 'ms');
+  n: () => Promise<T>): Promise<T> {/* TODO: Fix JSX expression */,}`;
+    this.recordCustomMetric(`async_fn_${name)}`, duration, 'ms');
     return result;
   }
   /**;
    * Mark a custom performance mark;
    */;
   mark(nam);
-  e: string): void {/* TODO: Fix JSX expression */}
-    }
+  e: string): void {/* TODO: Fix JSX expression */,}}}
   }
   /**;
    * Measure between two marks;
    */;
+<<<<<<< HEAD
   measure()
+=======
+  measure(nam,)
+  e: string, startMar,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   k: string, endMar);
-  k: string): number | null {/* TODO: Fix JSX expression */}
-        }
-      } catch (error) {/* TODO: Fix JSX expression */}
-      }
+  k: string): number | null {/* TODO: Fix JSX expression */,}}}
+      } catch (error) {/* TODO: Fix JSX expression */,}}
     }
     return null;
   }
   /**;
    * Clear all metrics;
    */;
-  clearMetrics(): void {}
-    this.webVitals = {}
-    this.customMetrics = []
-  clearMetrics(): void {/* TODO: Fix JSX expression */}
-    this.webVitals = {}
-    this.customMetrics = []
+  clearMetrics(): void {}}this.webVitals = {}this.customMetrics = []
+  clearMetrics(): void {/* TODO: Fix JSX expression */,}}this.webVitals = {}this.customMetrics = []
   }
   /**;
    * Disconnect all observers;
    */;
-  disconnect(): void {}
-    this.observers.forEach(observer => observer.disconnect());
+  disconnect(): void {}}this.observers.forEach(observer => observer.disconnect());
     this.observers = []}
-  disconnect(): void {/* TODO: Fix JSX expression */}
-  }
+  disconnect(): void {/* TODO: Fix JSX expression */,}}}
 }
 export const performanceMonitoring = PerformanceMonitoringService.getInstance();
 export default PerformanceMonitoringService;
 // Export convenience enums and functions;
+<<<<<<< HEAD
+export enum MetricUnit {export default PerformanceMonitoringService;}
+// Export convenience enums and functions;}export enum MetricUnit {}}Milliseconds = 'ms',;
+  Bytes = 'bytes',;
+  Count = 'count',;
+=======
 export enum MetricUnit {
     export default PerformanceMonitoringService;
-// Export convenience enums and functions
+// Export convenience enums and, functions;
   }
 export enum MetricUnit {}
   Milliseconds = 'ms',
   Bytes = 'bytes',
   Count = 'count',
+>>>>>>> origin/main
   Percentage = 'percentage'}
 }
 // Simple metrics structure for testing;
 interface MetricData {
-    // Simple metrics structure for testing
+    // Simple metrics structure for, testing;
   }
 interface MetricData {}
   values: number[],
@@ -587,28 +682,45 @@ interface MetricData {}
   rating?: 'good' | 'needs-improvement' | 'poor';}
 }
 const simpleMetrics = new Map<string, MetricData>();
+<<<<<<< HEAD
 export const recordMetric = const recordMetric = const recordMetric = useCallback((...args) => {
     // Record in our simple metrics store for testing
   };
 export const recordMetric = useCallback((...args) => {};
+=======
+export const recordMetric = useCallback((...args) => {
+    // Record in our simple metrics store for, testing;
+  }
+export const recordMetric = useCallback((...args) => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   // Record in our simple metrics store for testing;
   const existing = simpleMetrics.get(name);
-  if (existing) {}
-    existing.values.push(value);
+  if (existing) {}existing.values.push(value);
     existing.count++;
     existing.average = existing.values.reduce((a, b) => a + b, 0) / existing.count;
     existing.min = Math.min(existing.min, value);
     existing.max = Math.max(existing.max, value);}
   } else {
+<<<<<<< HEAD
     simpleMetrics.set()
       count: 1;)
       average: value;)
+=======
+    simpleMetrics.set(name, )
+      values: [value]),
+      count: 1;),
+      average: value;),
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       min: value;),
       max: value),
   }
       unit)} else {}
-    simpleMetrics.set(name, {)}
+    simpleMetrics.set(name, {}
       values: [value],
+      count: 1;),
+      average: value;),
+      min: value;),
+      max: value),}unit)} else {}}simpleMetrics.set(name, {)}values: [value],
       count: 1,
       average: value,
       min: value,
@@ -620,6 +732,16 @@ export const recordMetric = useCallback((...args) => {};
   // Also record in the main performance monitoring service;
   performanceMonitoring.recordCustomMetric(name, value, unit);
 }
+<<<<<<< HEAD
+function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {,}const thresholds: Record<string, {good: number, poor: number ,}> = {}</strin>
+    'FCP': {good: 1800, poor: 3000 ,},;
+    'LCP': {good: 2500, poor: 4000 ,},;
+    'FID': {good: 100, poor: 300 ,},;
+    'CLS': {good: 0.1, poor: 0.25 ,},;
+    'TTFB': {good: 800, poor: 1800 ,},;
+    'INP': {good: 200, poor: 500 ,}}
+  const threshold = thresholds[name]
+=======
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {}
   const thresholds: Record<string, { good: number, poor: number }> = {}</strin>
     'FCP': { good: 1800, poor: 3000 },
@@ -630,6 +752,7 @@ function getRating(name: string, value: number): 'good' | 'needs-improvement' | 
     'INP': { good: 200, poor: 500 }
   }
   const threshold = thresholds[name];
+>>>>>>> origin/main
   if (!threshold) return 'good';
   if (value <= threshold.good) return 'good';
   if (value <= threshold.poor) return 'needs-improvement';
@@ -649,18 +772,28 @@ export const measureFunction = const measureFunction = const measureFunction = <
   const start = performance.now(),;
   const result = fn(),;
   const duration = performance.now() - start;
-  recordMetric(name, duration, MetricUnit.Milliseconds)
-  }
-  return result;}
+  recordMetric(name, duration, MetricUnit.Milliseconds)}return result;}
 }
 export const measureAsyncFunction = const measureAsyncFunction = const measureAsyncFunction = async <T>(name: string, fn: () => Promise<T>): Promise<T> => {
     ,
+<<<<<<< HEAD
+  const start = performance.now(),;
+  const result = await fn(),;
+  const duration = performance.now() - start;}export const measureFunction = <T>(name: string, fn: () => T): T => {,}const start = performance.now();
+=======
   const start = performance.now(),
   const result = await fn(),
+<<<<<<< HEAD
   const duration = performance.now() - start
   };
 export const measureFunction = <T>(name: string, fn: () => T): T => {};
+=======
+  const duration = performance.now() - start;
+  }
+export const measureFunction = <T>(name: string, fn: () => T): T => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   const start = performance.now();
+>>>>>>> origin/main
   const result = fn();
   const duration = performance.now() - start;
   recordMetric(name, duration, MetricUnit.Milliseconds);
@@ -680,16 +813,25 @@ export const getPerformanceScore = const getPerformanceScore = (): number => {};
     .map(name => metrics[name]);
     .filter(Boolean);
   if (webVitals.length === 0) return 0;
+<<<<<<< HEAD
   const scores = const scores = webVitals.map();
+=======
+  const scores = webVitals.map(metric => {;)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     );
-    switch (metric.rating) {
+    switch (metric.rating) 
       case 'good': return 100;
       case 'needs-improvement': return 50;
       case 'poor': return 0;
-  if (webVitals.length === 0) return 0
+  if (webVitals.length === 0) return, 0;
   }
+<<<<<<< HEAD
   const scores = const scores = const scores = webVitals.map(metric => {)};
     switch (metric.rating) {};
+=======
+  const scores = webVitals.map(metric => {}
+    switch (metric.rating) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       case 'good': return 100;
       case 'needs-improvement': return 50;
       case 'poor': return 0;
@@ -702,43 +844,46 @@ export const getPerformanceScore = const getPerformanceScore = (): number => {};
 export const getRecommendations = const getRecommendations = (): string[] => {};
   const metrics = getMetrics();
   const recommendations: string[] = [],
+<<<<<<< HEAD
+  if (metrics.FCP && metrics.FCP.rating !== 'good') {,;
+  const recommendations: string[] = [],}if (metrics.FCP && metrics.FCP.rating !== 'good') {}recommendations.push('Improve FCP by optimizing critical CSS and reducing render-blocking resources');}
+=======
   if (metrics.FCP && metrics.FCP.rating !== 'good') {
     ,
   const recommendations: string[] = []
+>>>>>>> origin/main
   }
-  if (metrics.FCP && metrics.FCP.rating !== 'good') {}
-    recommendations.push('Improve FCP by optimizing critical CSS and reducing render-blocking resources');}
+  if (metrics.LCP && metrics.LCP.rating !== 'good') {}recommendations.push('Improve LCP by optimizing largest images and server response time');}
   }
-  if (metrics.LCP && metrics.LCP.rating !== 'good') {}
-    recommendations.push('Improve LCP by optimizing largest images and server response time');}
+  if (metrics.FID && metrics.FID.rating !== 'good') {}recommendations.push('Improve FID by reducing JavaScript execution time');}
   }
-  if (metrics.FID && metrics.FID.rating !== 'good') {}
-    recommendations.push('Improve FID by reducing JavaScript execution time');}
+  if (metrics.CLS && metrics.CLS.rating !== 'good') {}recommendations.push('Improve CLS by reserving space for dynamic content and avoiding layout shifts');}
   }
-  if (metrics.CLS && metrics.CLS.rating !== 'good') {}
-    recommendations.push('Improve CLS by reserving space for dynamic content and avoiding layout shifts');}
-  }
-  if (metrics.TTFB && metrics.TTFB.rating !== 'good') {}
-    recommendations.push('Improve TTFB by optimizing server response time and using CDN');}
+  if (metrics.TTFB && metrics.TTFB.rating !== 'good') {}recommendations.push('Improve TTFB by optimizing server response time and using CDN');}
   }
   return recommendations;
 }
-export enum MetricUnit {/* TODO: Fix JSX expression */}
-}
+export enum MetricUnit {/* TODO: Fix JSX expression */,}}}
 // Simple metrics structure for testing;
-interface MetricData {/* TODO: Fix JSX expression */}
-}
+interface MetricData {/* TODO: Fix JSX expression */,}}}
 const simpleMetrics = new Map<string, MetricData>();
+<<<<<<< HEAD
 export const recordMetric = const recordMetric = const recordMetric = ();
+=======
+export const recordMetric = (nam,)
+  e: string, valu,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: number, uni);
-  t: MetricUnit = MetricUnit.Milliseconds) => {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
-    })
+  t: MetricUnit = MetricUnit.Milliseconds) => {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}})
   }
   // Also record in the main performance monitoring service;
   performanceMonitoring.recordCustomMetric(name, value, unit);
 }
+<<<<<<< HEAD
 function getRating()
+=======
+function getRating(nam,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: string, valu);
   e: number): 'good' | 'needs-improvement' | 'poor' {/* TODO: Fix JSX expression */}
   r: number }> = {/* TODO: Fix JSX expression */}
@@ -753,6 +898,7 @@ function getRating()
   r: 1800 },
     'INP': {/* TODO: Fix JSX expression */}
   r: 500 }
+>>>>>>> origin/main
   }
   const threshold = thresholds[name];
   if (!threshold) return 'good';
@@ -769,11 +915,19 @@ export const getMetrics = const getMetrics = const getMetrics = (): Record<strin
 }
 export const clearMetrics = const clearMetrics = const clearMetrics = () => {/* TODO: Fix JSX expression */}
 }
+<<<<<<< HEAD
 export const measureFunction = <T>();
   e: string, f);
   n: () => T): T => {/* TODO: Fix JSX expression */}
 }
 export const measureAsyncFunction = const measureAsyncFunction = const measureAsyncFunction = async <T>();
+=======
+export const measureFunction = <T>(nam,)
+  e: string, f);
+  n: () => T): T => {/* TODO: Fix JSX expression */}
+}
+export const measureAsyncFunction = async <T>(nam,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: string, f);
   n: () => Promise<T>): Promise<T> => {/* TODO: Fix JSX expression */}
 }
