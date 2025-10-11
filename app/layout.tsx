@@ -1,17 +1,7 @@
-<<<<<<< HEAD
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-=======
-'use client'
-import React from 'react'
-import {Helmet} from 'react-helmet-async'
-import {ArrowRight} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
->>>>>>> cursor/fix-errors-and-merge-to-main-14e6
-
 const LayoutPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -41,7 +31,6 @@ const LayoutPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default function RootLayout({
   children,
 }: {
@@ -66,6 +55,3 @@ export default function RootLayout({
     </html>
   )
 }
-=======
-export default LayoutPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-14e6
