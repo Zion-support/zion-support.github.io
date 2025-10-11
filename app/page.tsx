@@ -113,7 +113,7 @@ const HomePage: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup.com" />
       </Helmet>
 
-      <div className="min-h-screen">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-advanced neural-network-bg matrix-rain quantum-bg particle-system">
         <Navigation />
         <main className="pt-20">
           {/* Hero Section */}
@@ -121,7 +121,7 @@ const HomePage: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
               <div className="text-center">
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                  Welcome to <span className="text-cyan-400 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Zion Tech Group</span>
+                  Welcome to <span className="neon-text-advanced cyber-glitch" data-text="Zion Tech Group">Zion Tech Group</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                   Leading provider of AI and IT solutions for modern businesses.
@@ -131,13 +131,13 @@ const HomePage: React.FC = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <Link
                     to="/contact"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-lg"
+                    className="quantum-button px-8 py-4 rounded-lg text-lg hover-quantum"
                   >
                     Get Started Today
                   </Link>
                   <Link
                     to="/services"
-                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 text-lg"
+                    className="holographic-card-advanced border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 text-lg hover-neon"
                   >
                     Explore Our Services
                   </Link>
@@ -173,7 +173,7 @@ const HomePage: React.FC = () => {
                   <Link
                     key={index}
                     to={feature.link}
-                    className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105"
+                    className="group holographic-card-advanced rounded-2xl p-8 hover-quantum"
                   >
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                       <feature.icon className="w-8 h-8 text-white" />
@@ -252,7 +252,7 @@ const HomePage: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {testimonials.map((testimonial, index) => (
-                  <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+                  <div key={index} className="holographic-card-advanced rounded-2xl p-8 hover-quantum">
                     <div className="flex items-center mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
@@ -274,7 +274,7 @@ const HomePage: React.FC = () => {
           {/* CTA Section */}
           <section className="py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur-lg rounded-3xl p-12 text-center border border-cyan-500/20">
+              <div className="holographic-card-advanced rounded-3xl p-12 text-center hover-quantum">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   Ready to Transform Your Business?
                 </h2>
@@ -285,13 +285,13 @@ const HomePage: React.FC = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
                     to="/contact"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-lg"
+                    className="quantum-button px-8 py-4 rounded-lg text-lg hover-quantum"
                   >
                     Get Free Consultation
                   </Link>
                   <a
                     href="tel:+13024640950"
-                    className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-lg"
+                    className="holographic-card-advanced border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-lg hover-neon"
                   >
                     Call: (302) 464-0950
                   </a>

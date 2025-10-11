@@ -268,7 +268,6 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $79/month',
       marketPrice: '$150-400/month',
       benefits: ['Data protection', 'Business continuity', 'Cost-effective storage', 'Easy recovery']
-<<<<<<< HEAD
     },
     {
       icon: FileText,
@@ -801,21 +800,13 @@ const ServicesPage: React.FC = () => {
       benefits: ['Complete process automation', 'Reduced manual work', 'Improved efficiency', 'Cost savings']
     }
   ];
-=======
-    }
-  ];
-
->>>>>>> origin/main
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'ai', name: 'AI Services', count: services.filter(s => s.category === 'ai').length },
     { id: 'it', name: 'IT Services', count: services.filter(s => s.category === 'it').length },
     { id: 'saas', name: 'Micro SaaS', count: services.filter(s => s.category === 'saas').length }
   ];
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/main
   const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
@@ -826,25 +817,18 @@ const ServicesPage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Our Services - Zion Tech Group | AI, IT & Micro SaaS Solutions</title>
         <meta name="description" content="Comprehensive AI, IT, and Micro SaaS services to transform your business. Expert solutions with proven results and competitive pricing." />
         <meta name="keywords" content="AI services, IT services, micro SaaS, business solutions, technology consulting" />
-=======
-        <title>Our Services - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Comprehensive AI and IT services including chatbots, analytics, cloud migration, cybersecurity, and custom software development." />
-        <meta name="keywords" content="AI services, IT services, cloud migration, cybersecurity, software development, micro saas" />
         <meta property="og:title" content="Our Services - Zion Tech Group" />
         <meta property="og:description" content="Comprehensive AI and IT solutions for your business" />
         <meta property="og:type" content="website" />
->>>>>>> origin/main
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         <main className="container mx-auto px-4 py-16 pt-24">
-<<<<<<< HEAD
           {/* Header Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1108,7 +1092,6 @@ const ServicesPage: React.FC = () => {
               </div>
             </div>
           </section>
->>>>>>> origin/main
         </main>
         
         <Footer />
