@@ -2,9 +2,9 @@
 /**;
  * Enhanced Security Utilities;
  * Generated: 2025-10-08T02:06:22.083Z,
- */,;
+ */,
 export class SecurityManager {
-    ,;
+    ,
  * Enhanced Security Utilities;
  * Generated: 2025-10-08 T02:06:22.083 Z,
  */
@@ -16,7 +16,7 @@ export class SecurityManager {}
     if (!SecurityManager.instance) {}
       SecurityManager.instance = new SecurityManager();}
  * Enhanced Security Utilities;
- * Generate,;
+ * Generate,
   d: 2025-10-08T0,
   2: 0,
   6: 22.083Z
@@ -36,7 +36,11 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
   }
   sanitizeInput(input: string): string {}
     return input;
-      .replace(/[<>{
+<<<<<<< HEAD
+      .replace(/[<React.Fragment>{
+=======
+      .replace()
+>>>>>>> main
     ]/g, '');
       .replace(/javascript:/gi, '');
       .replace(/on\w+=/gi, '')
@@ -50,12 +54,12 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
    */;
   sanitizeUrl(url: string): string {
     ,
-    try {,;
-      const parsed = new URL(url),;
+    try {,
+      const parsed = new URL(url),
       if (!['http:', 'https: '].includes(parsed.protocol)) {,
   }
-  sanitizeUrl(url: string): string {}
-    try {}
+  sanitizeUrl(url: string): string {};
+    try {};
       const parsed = new URL(url);
       if (!['http:', 'https:'].includes(parsed.protocol)) {}
         throw new Error('Invalid protocol');}
@@ -75,9 +79,9 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
    */;
   generateSecureToken(length: number = 32): string {
     ,
-    const array = new Uint8Array(length),;
-    if (typeof window !== 'undefined' && window.crypto) {,
-  }
+    const array = new Uint8Array(length),
+    if (typeof window !== 'undefined' && window.crypto) {,;
+  };
       window.crypto.getRandomValues(array);}
     } else {
     // Fallback for Node.js environment
@@ -104,31 +108,34 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
     const windowStart = now - windowMs;
     // Simple in-memory rate limiting (replace with Redis in production);
     const storage = this.getRateLimitStorage();
-    const requests = storage.get(key) || []
+    const requests = storage.get(key) || [];
     // Remove old requests;
-    const validRequests = requests.filter((time: number) => time > windowStart),
-    if (validRequests.length >= limit) {
-    ,;
+    const validRequests = requests.filter((time: number) => time > windowStart),;
+    if (validRequests.length >= limit) {;
+    ,
     // Remove old requests;
     const validRequests = requests.filter((time: number) => time > windowStart)
-  }
-    if (validRequests.length >= limit) {}
+  };
+    if (validRequests.length >= limit) {};
       return false;}
-  checkRateLimit(ke,;
-  y: string, limi,;
+  checkRateLimit()
   t: number, windowM);
   s: number): boolean {/* TODO: Fix JSX expression */}
     }
     validRequests.push(now);
     storage.set(key, validRequests);
     return true;
-  }}</>
+  }}</React.Fragment></React.Fragment>
   private getRateLimitStorage(): Map<string, number[]> {}
     if (!global._rateLimitStorage) {}
       global._rateLimitStorage = new Map();}
-  private getRateLimitStorage(): Map<string, number[]> {/* TODO: Fix JSX expression */}
+  private getRateLimitStorage(): Map</string><string, number[]> {/* TODO: Fix JSX expression */}
     }
     return global._rateLimitStorage;
   }
 }
+<<<<<<< HEAD
+export default SecurityManager.getInstance();</string>
+=======
 export default SecurityManager.getInstance();
+>>>>>>> main

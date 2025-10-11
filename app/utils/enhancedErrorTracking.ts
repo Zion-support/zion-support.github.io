@@ -23,7 +23,7 @@ export interface ErrorContext {}
   action?: string;
   userId?: string;
   sessionId?: string;
-  metadata?: Record<string>}</strin>
+  metadata?: Record</string><string>}</strin>
 }
 export interface TrackedError {}
   message: string;
@@ -38,8 +38,8 @@ class EnhancedErrorTracker {}
   private maxErrors = 100,
   private sessionId: string,
   constructor() {
-    ,;
-    this.sessionId = this.generateSessionId(),;
+    ,
+    this.sessionId = this.generateSessionId(),
   private maxErrors = 100;
   private sessionId: string
   }
@@ -91,7 +91,7 @@ class EnhancedErrorTracker {}
       message: error.message,
       stack: error.stack,
       context: {}
-        ...context,;
+        ...context,
         sessionId: this.sessionId},
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent
@@ -122,19 +122,29 @@ class EnhancedErrorTracker {}
       ).gtag;
     ) {}
   private sendToAnalytics(error: TrackedError): void {}
+<<<<<<< HEAD
     if (;
       typeof window !== 'undefined' &&;
       (;
         window as {}
-          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
+          gtag?: (command: string, action: string, parameters: Record</string><string, unknown>) => void;}
         }
       ).gtag;
     ) {}
       (;
         window as unknown as {}
-          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}
+          gtag: (command: string, action: string, parameters: Record</string><string, unknown>) => void;}
+=======
+    if ()
+          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
         }
-      ).gtag('event', 'exception', {
+      ).gtag;
+    ) {}
+      ()
+          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}
+>>>>>>> main
+        }
+      ).gtag()
     );
         description: error.message),
   }
@@ -156,14 +166,22 @@ class EnhancedErrorTracker {}
   }
   public getErrorStats(): {}
     total: number
-    byComponent: Record<string>
+<<<<<<< HEAD
+    byComponent: Record</string><string>
     recent: TrackedError[],}
   } {}
-    const byComponent: Record<string, number> = {}
+    const byComponent: Record</string><string, number> = {}
     this.errors.forEach(error => {
+=======
+    byComponent: Record<string></string>
+    recent: TrackedError[],}
+  }, {}
+    const byComponent: Record<string, number> = {}
+    this.errors.forEach()
+>>>>>>> main
     );
-      const component = error.context.component || 'Unknown')
-  }
+      const component = error.context.component || 'Unknown');
+  };
       byComponent[component] = (byComponent[component] || 0) + 1;}
     })
     return {
@@ -175,7 +193,7 @@ class EnhancedErrorTracker {}
     })
     return {}
       total: this.errors.length,
-      byComponent,;
+      byComponent,
       recent: this.errors.slice(-10)}
     }
   }
@@ -200,14 +218,14 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
       })
     }
   }
-  public trackError(erro,;
+  public trackError()
   r: Error, contex);
   t: ErrorContext = {}): void {/* TODO: Fix JSX expression */},
-      timestam,;
+      timestam,
   p: new Date().toISOString(),
-      userAgen,;
+      userAgen,
   t: navigator.userAgent,
-      ur,;
+      ur,
   l: window.location.href,
     }
     this.errors.push(trackedError);
@@ -235,8 +253,13 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
   public clearErrors(): void {/* TODO: Fix JSX expression */}
   }
   public getErrorStats(): {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   } {/* TODO: Fix JSX expression */}
+  byComponent: Record</string><string, number> = {}
+=======
+  }, {/* TODO: Fix JSX expression */}
   byComponent: Record<string, number> = {}
+>>>>>>> main
     this.errors.forEach(error => {/* TODO: Fix JSX expression */})
     })
     return {/* TODO: Fix JSX expression */}
@@ -246,4 +269,8 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
 // Export singleton instance;
 export const errorTracker = new EnhancedErrorTracker();
 export default errorTracker;
+<<<<<<< HEAD
+`;</string>
+=======
 `;
+>>>>>>> main

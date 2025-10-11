@@ -21,7 +21,7 @@ export interface AnalyticsEvent {}
   action: string
   label?: string
   value?: number,
-  metadata?: Record<string>}</strin>
+  metadata?: Record</string><string>}</strin>
 }
 export interface UserProperties {}
   userId?: string;
@@ -38,8 +38,8 @@ class EnhancedAnalytics {}
   private flushInterval = 30000; // 30 seconds;
   private offlineQueue: AnalyticsEvent[] = [],
   constructor() {
-    ,;
-    this.sessionId = this.generateSessionId(),;
+    ,
+    this.sessionId = this.generateSessionId(),
     this.setupOfflineHandling(),
   }
   constructor() {}
@@ -75,12 +75,12 @@ class EnhancedAnalytics {}
     if (this.isInitialized) return;
     this.isInitialized = true;
     this.userProperties = {}
-      ...this.userProperties,;
+      ...this.userProperties,
       sessionId: this.sessionId,
       ...config}
     }
     // Track initialization;
-    this.trackEvent({
+    this.trackEvent()
     );
       category: 'System'),
       action: 'Analytics Initialized'),
@@ -98,7 +98,7 @@ class EnhancedAnalytics {}
   }
   public setUserProperties(properties: UserProperties): void {
     ,
-    this.userProperties = {,;
+    this.userProperties = {,
       ...this.userProperties
   }
       ...properties}
@@ -113,15 +113,15 @@ class EnhancedAnalytics {}
   }
   public setUserProperties(properties: UserProperties): void {}
     this.userProperties = {}
-      ...this.userProperties,;
+      ...this.userProperties,
       ...properties}
     }
   }
   public trackEvent(event: AnalyticsEvent): void {}
     const enrichedEvent: AnalyticsEvent = {}
-      ...event,;
+      ...event,
       metadata: {}
-        ...event.metadata,;
+        ...event.metadata,
         sessionId: this.sessionId,
         timestamp: new Date().toISOString(),
         url: typeof window !== 'undefined' ? window.location.href : ''}
@@ -153,19 +153,29 @@ class EnhancedAnalytics {}
     }
   }
   private sendToGtag(event: AnalyticsEvent): void {}
+<<<<<<< HEAD
     if (;
       typeof window !== 'undefined' &&;
       (;
         window as {}
-          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
+          gtag?: (command: string, action: string, parameters: Record</string><string, unknown>) => void;}
         }
       ).gtag;
     ) {}
       (;
         window as unknown as {}
-          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}
+          gtag: (command: string, action: string, parameters: Record</string><string, unknown>) => void;}
+=======
+    if ()
+          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
         }
-      ).gtag('event', event.action, {
+      ).gtag;
+    ) {}
+      ()
+          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}
+>>>>>>> main
+        }
+      ).gtag()
     );
         event_category: event.category;),
         event_label: event.label),
@@ -200,12 +210,12 @@ export interface UserProperties {/* TODO: Fix JSX expression */}
 }
 class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   userProperties: UserProperties = {}
-  private,;
+  private,
   sessionId: string,
   private isInitialized = false;
   private batchSize = 10;
   private flushInterval = 30000; // 30 seconds;
-  private,;
+  private,
   offlineQueue: AnalyticsEvent[] = [],
   constructor() {/* TODO: Fix JSX expression */}
   }
@@ -225,7 +235,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   public initialize(config?: { userId?: string; userType?: string }): void {/* TODO: Fix JSX expression */}
     }
     // Track initialization;
-    this.trackEvent({/* TODO: Fix JSX expression */}
+    this.trackEvent()
       })
     })
   }
@@ -263,13 +273,13 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   public trackUserInteraction(action: string, label?: string, value?: number): void {
     this.trackEvent({);
       category: 'User Interaction'),
-      action),;
+      action),
       label),
   }
       value}
     })
   }
-  public trackError(error: Error, context?: Record<string, unknown>): void {
+  public trackError(error: Error, context?: Record</string><string, unknown>): void {
     this.trackEvent({);
       category: 'Error'),
       action: 'Error Occurred'),
@@ -280,12 +290,12 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   public trackUserInteraction(action: string, label?: string, value?: number): void {}
     this.trackEvent({)}
       category: 'User Interaction',
-      action,;
-      label,;
+      action,
+      label,
       value}
     })
   }
-  public trackError(error: Error, context?: Record<string, unknown>): void {}
+  public trackError(error: Error, context?: Record</string><string, unknown>): void {}
     this.trackEvent({)}
       category: 'Error',
       action: 'Error Occurred',
@@ -298,7 +308,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     })
   }
   public trackError(erro);
-  r: Error, context?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
+  r: Error, context?: Record</string><string, unknown>): void {/* TODO: Fix JSX expression */}
       }
     })
   }
@@ -316,7 +326,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       value: Math.round(value),
       metadata: {}
         rating}
-  public trackPerformance(metri,;
+  public trackPerformance()
   c: string, valu);
   e: number, rating?: string): void {/* TODO: Fix JSX expression */}
       }
@@ -332,7 +342,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     this.trackEvent({)}
       category: 'Conversion',
       action: conversionType,
-      value,;
+      value,
       metadata: {`}
         conversionId: `conv-${Date.now()}
   public trackConversion(conversionTyp);
@@ -342,10 +352,17 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     })
   }
   public trackCustomEvent(category: string;)
+<<<<<<< HEAD
     action: string,),;
     label?: string),;
     value?: number),;
-    metadata?: Record<string>
+    metadata?: Record</string><string>
+=======
+    action: string,),
+    label?: string),
+    value?: number),
+    metadata?: Record<string></string>
+>>>>>>> main
   ): void {
     this.trackEvent({);
       category);
@@ -363,16 +380,22 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   public trackCustomEvent();
     category: string,
     action: string,
+<<<<<<< HEAD
     label?: string,;
     value?: number,;
-    metadata?: Record<string, unknown>
+    metadata?: Record</string><string, unknown>
+=======
+    label?: string,
+    value?: number,
+    metadata?: Record<string, unknown></string>
+>>>>>>> main
   }
   ): void {}
     this.trackEvent({)}
-      category,;
-      action,;
-      label,;
-      value,;
+      category,
+      action,
+      label,
+      value,
       metadata}
     })
   }
@@ -417,7 +440,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     sessionId: string,
   }
     userProperties: UserProperties,}
-  } {
+  }, {
     return {
       queueSize: this.queue.length
       offlineQueueSize: this.offlineQueue.length,
@@ -428,7 +451,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     offlineQueueSize: number,
     sessionId: string,
     userProperties: UserProperties,}
-  } {}
+  }, {}
     return {}
       queueSize: this.queue.length,
       offlineQueueSize: this.offlineQueue.length,
@@ -440,13 +463,18 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 // Export singleton instance;
 export const analytics = new EnhancedAnalytics();
 export default analytics;
+<<<<<<< HEAD
   public trackCustomEvent(categor,;
   y: string,
     actio,;
   n: string,
     label?: string,;
     value?: number,;
+    metadata?: Record</string><string, unknown></string>);
+=======
+  public trackCustomEvent()
     metadata?: Record<string, unknown></string>);
+>>>>>>> main
   ): void {/* TODO: Fix JSX expression */}
     })
   }
@@ -468,7 +496,7 @@ export default analytics;
     return { ...this.userProperties }
   }
   public getAnalyticsSummary(): {/* TODO: Fix JSX expression */}
-  } {/* TODO: Fix JSX expression */}
+  }, {/* TODO: Fix JSX expression */}
     }
   }
 }

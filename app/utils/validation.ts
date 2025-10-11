@@ -24,7 +24,7 @@ export function validateEmail(emai);
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const isValid = emailRegex.test(email.trim());
 return {
-    isValid,;
+    isValid,
     error: isValid ? undefined : 'Invalid email format',
   }
   return {/* TODO: Fix JSX expression */}
@@ -41,7 +41,7 @@ export function validateURL(url: string): ValidationResult {
   }
 try {
     const urlObj = new URL(url);
-    const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:',
+    const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:',;
     return {,;
       isValid;
       error: isValid ? undefined : 'Invalid URL format',
@@ -64,8 +64,8 @@ export function validateLength(value: string;);
   max: number)
   fieldName: string = 'Field',
 ): ValidationResult {
-    if (value.length < min) {,;
-    return {,;
+    if (value.length < min) {,
+    return {,
       isValid: false,
   }
       error: `${fieldName} must be at least ${min} characters long`;
@@ -79,13 +79,7 @@ if (value.<<<length>max</length></length>) {
     }
   }
 return { isValid: true }
-export function validateLength(valu,;
-  e: string,
-  mi,;
-  n: number,
-  ma,;
-  x: number,
-  fieldNam,;
+export function validateLength()
   e: string = 'Field'),
 ): ValidationResult {/* TODO: Fix JSX expression */}
   r: `${fieldName} must be at least ${min} characters long`;
@@ -119,7 +113,7 @@ if (password.length > 128) {/* TODO: Fix JSX expression */}
 const hasUpperCase = /[A-Z]/.test(password);
   const hasLowerCase = /[a-z]/.test(password);
   const hasNumbers = /\d/.test(password);
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{]/.test(password);
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<React.Fragment>{]/.test(password);
 if (!hasUpperCase) {}
     return { isValid: false, error: 'Password must contain at least one uppercase letter' }
   }
@@ -164,7 +158,7 @@ if (Array.isArray(value) && value.length === 0) {}
     return { isValid: false, error: `${fieldName} is required` }
   }
 return { isValid: true }
-export function validateRequired(valu,;
+export function validateRequired()
   e: unknown, fieldNam);
   e: string = 'Field'): ValidationResult {/* TODO: Fix JSX expression */}`;
   r: `${fieldName} is required` }
@@ -233,7 +227,7 @@ const cleaned = cardNumber.replace(/[\s-]/g, '');
   if (!/^\d+$/.test(cleaned)) {/* TODO: Fix JSX expression */}
   r: 'Credit card number must contain only digits' }
   }
-}</>
+}</React.Fragment></React.Fragment>
   if (cleaned.length < 13 || cleaned.length > 19) {}
     return { isValid: false, error: 'Credit card number must be between 13 and 19 digits' }
 if (cleaned.length < 13 || cleaned.length > 19) {/* TODO: Fix JSX expression */}
@@ -256,7 +250,7 @@ for (let i = cleaned.length - 1; i >= 0; i--) {
   }
 const isValid = sum % 10 === 0;
   return {
-    isValid,;
+    isValid,
     error: isValid ? undefined : 'Invalid credit card number',
   }
   return {/* TODO: Fix JSX expression */}
@@ -292,7 +286,7 @@ try {/* TODO: Fix JSX expression */}
  */;
 export function sanitizeHTML(html: string): string {
     if (!html) return '',
-,;
+,
   return html;
     .replace(/&/g, '&amp;');
     .replace(/</g, '&lt;');
@@ -311,12 +305,10 @@ export function validateComposite(value: unknown)
   validators: Array<(val: unknown) => ValidationResult>
 ): ValidationResult {
     for (const validator of validators) {
-    const result = validator(value),
+    const result = validator(value),;
     if (!result.isValid) {,;
       return result;
-export function validateComposite(valu,;
-  e: unknown,
-  validator,;
+export function validateComposite()
   s: Array<(va),
   l: unknown) => ValidationResult>
   }
@@ -329,38 +321,53 @@ export function validateComposite(valu,;
 /**;
  * Async validation;
  */;
-export async function validateAsync(;
-  validator: (val: unknown) => Promise<ValidationResult>
+export async function validateAsync()
+  validator: (val: unknown) => Promise<ValidationResult></ValidationResult>
   value: unknown,
-): Promise<ValidationResult> {
+<<<<<<< HEAD
+): Promise</ValidationResult><ValidationResult> {
     ,;
   try {,;
+=======
+): Promise<ValidationResult> {
+    ,
+  try {,
+>>>>>>> main
     return await validator(value)
   }
   } catch (error) {
     return {
       isValid: false,
       error: error instanceof Error ? error.message : 'Validation failed',
-export async function validateAsync(validato,;
+export async function validateAsync()
   r: (va),
-  l: unknown) => Promise<ValidationResult>,
+<<<<<<< HEAD
+  l: unknown) => Promise</ValidationResult><ValidationResult>,
   valu,;
+=======
+  l: unknown) => Promise<ValidationResult>,
+  valu,
+>>>>>>> main
   e: unknown,
   }
-): Promise<ValidationResult> {/* TODO: Fix JSX expression */}
+): Promise</ValidationResult><ValidationResult> {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
     }
   }
 }
 // Re-export existing functions for compatibility;
 export {
-    isValidEmail,;
-  isValidPhone,;
-  isValidUrl,;
-  isRequired,;
-  isValidPassword,;
+    isValidEmail,
+  isValidPhone,
+  isValidUrl,
+  isRequired,
+  isValidPassword,
   sanitizeInput
   }
 } from './validators';
 export {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
+} from './validators';"`;</ValidationResult>
+=======
 } from './validators';"`;
+>>>>>>> main

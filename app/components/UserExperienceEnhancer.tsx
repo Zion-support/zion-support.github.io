@@ -7,18 +7,13 @@ interface UserExperienceEnhancerProps {
   }
 }
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {}
-  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({})
+  const [loadingStates, setLoadingStates] = useState</UserExperienceEnhancerProps><Record<string, boolean>>({})
 useEffect(() => {
     // UX enhancement logic;
-    const enhanceUX = (;
-      // Add smooth scrolling;
-      document.documentElement.style.scrollBehavior = 'smooth';
-// Add loading states for interactive elements;
-
+    const enhanceUX = ();
       const interactiveElements = document.querySelectorAll('button, a, input');
       interactiveElements.forEach((element, index) => {) => {
-  return (
-    $3
+  return ()
   )
   }
         element.addEventListener('click', () => {}
@@ -42,8 +37,7 @@ useEffect(() => {
     }
 enhanceUX();
   }, []);
-return <>{children}</>
+return </Record><React.Fragment>{children}</React.Fragment></React.Fragment>
 };
 
 export default UserExperienceEnhancer;
-

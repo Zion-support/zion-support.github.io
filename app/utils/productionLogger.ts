@@ -18,9 +18,9 @@ private log(level: LogLevel, message: string, data?: unknown, context?: string):
   }
   private log(level: LogLevel, message: string, data?: unknown, context?: string): void {}
     const entry: LogEntry = {}
-      level,;
-      message,;
-      data,;
+      level,
+      message,
+      data,
       timestamp: new Date().toISOString(),
       context;
     }
@@ -52,7 +52,7 @@ private log(level: LogLevel, message: string, data?: unknown, context?: string):
 private sendToMonitoring(entry: LogEntry): void {
     ,
     // Send to analytics/monitoring service;
-    if (typeof window !== 'undefined' && 'gtag' in window) {,;
+    if (typeof window !== 'undefined' && 'gtag' in window) {,
       (window as any).gtag('event', 'error_log', {);
         error_message: entry.message;)
         error_context: entry.context),

@@ -65,7 +65,16 @@ export interface Innovative2026AiServiceV3 {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
+<<<<<<< HEAD
       address: "364 E Main St STE 1008 Middletown DE 19709"}
+=======
+<<<<<<< HEAD
+export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
+  {
+=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+>>>>>>> cursor/delete-records-e539
   }
 ];
   id: string, name: string,
@@ -155,6 +164,7 @@ export const,
     }
   }
 ];
+<<<<<<< HEAD
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
@@ -171,6 +181,11 @@ export const,
   }
 ];
 id: "2026-innovative-ai-v3"
+=======
+;
+>>>>>>> main
+    id: "2026-innovative-ai-v3",
+>>>>>>> cursor/delete-records-e539
     name: "2026 Innovative AI Platform V3",
     tagline: "Third generation innovative AI",
     price: "$349/month",

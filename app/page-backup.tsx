@@ -11,12 +11,16 @@ import StructuredData from './components/StructuredData';
 import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
 // Loading skeleton component
+<<<<<<< HEAD
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
+    </div><div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
+=======
+const ServiceCardSkeleton: React.FC = memo(() => ()
+>>>>>>> main
 ))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
 
@@ -32,12 +36,10 @@ const HomePage: React.FC = () => {
   }, []);
 
   // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
+  const handlePhoneClick = useCallback(() => {;
+    if (typeof window !== 'undefined' && 'gtag' in window) {;
       const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
-      gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'main_phone_number'
+      gtag()
       })
     }
   }, []);
@@ -45,68 +47,79 @@ const HomePage: React.FC = () => {
   const features = [
     {
       icon: Brain,
+<<<<<<< HEAD
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+=======
+      title: 'AI-Powered Solutions',;
+      description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',;
+>>>>>>> main
+      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
     },
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions that grow with your business needs.',
-      benefits: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery']
+      benefits: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery'],
     },
     {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets and data.',
-      benefits: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response']
+      benefits: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response'],
     },
     {
       icon: Code,
       title: 'Custom Development',
       description: 'Tailored software solutions designed specifically for your business requirements.',
-      benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
+      benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration'],
     },
     {
       icon: BarChart,
       title: 'Data Analytics',
       description: 'Transform your data into actionable insights with advanced analytics tools.',
-      benefits: ['Business Intelligence', 'Real-time Dashboards', 'Data Visualization', 'Reporting']
+      benefits: ['Business Intelligence', 'Real-time Dashboards', 'Data Visualization', 'Reporting'],
     },
     {
       icon: Users,
       title: 'Consulting Services',
       description: 'Expert guidance to help you navigate digital transformation and technology adoption.',
-      benefits: ['Strategy Planning', 'Technology Assessment', 'Implementation Support', 'Training']
+      benefits: ['Strategy Planning', 'Technology Assessment', 'Implementation Support', 'Training'],
     },
   ];
   const services = [
     {
       icon: Brain,
       title: 'AI Services',
+<<<<<<< HEAD
       description: 'Comprehensive AI solutions including machine learning, natural language processing, and computer vision.',
       href: '/ai-services',
-      features: ['Machine Learning', 'NLP', 'Computer Vision', 'Predictive Analytics']
+=======
+      description: 'Comprehensive AI solutions including machine learning, natural language processing, and computer vision.',;
+      href: '/ai-services',;
+>>>>>>> main
+      features: ['Machine Learning', 'NLP', 'Computer Vision', 'Predictive Analytics'],
     },
     {
       icon: Cloud,
       title: 'IT Services',
       description: 'Complete IT infrastructure and cloud solutions to modernize your business operations.',
       href: '/it-services',
-      features: ['Cloud Migration', 'Infrastructure Management', 'DevOps', 'Monitoring']
+      features: ['Cloud Migration', 'Infrastructure Management', 'DevOps', 'Monitoring'],
     },
     {
       icon: Cpu,
       title: 'Micro SaaS',
       description: 'Specialized software-as-a-service solutions designed for specific business needs.',
       href: '/micro-saas',
-      features: ['Custom SaaS', 'API Integration', 'Scalable Solutions', 'Maintenance']
+      features: ['Custom SaaS', 'API Integration', 'Scalable Solutions', 'Maintenance'],
     }
+<<<<<<< HEAD
   ]
 
   return (
-    <React.Fragment>
-      <SEOOptimizer
+    </string><React.Fragment>
+      </React><SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
@@ -153,15 +166,15 @@ const HomePage: React.FC = () => {
         enableCodeSplitting={true}
 
       >
-        <AccessibilityEnhancer
+        </PerformanceOptimizer><AccessibilityEnhancer
           enableKeyboardNavigation={true}
           enableScreenReaderSupport={true}
           enableHighContrast={true}
           enableFocusManagement={true}
         >
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
+          </AccessibilityEnhancer><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
             {/* Navigation */}
-            <Navigation />
+            </div><Navigation />
             
             {/* Skip to main content for accessibility */}
             <a
@@ -172,17 +185,17 @@ const HomePage: React.FC = () => {
 
             {/* Hero Section */}
             <section id="main-content" className="relative pt-20 pb-16 overflow-hidden">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              </section><div className="
 
-                <div className="text-center">
-                  <div className="mb-8">
-                    <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
-                      <Sparkles className="w-4 h-4 mr-2" />
+                </div><div className="text-center">
+                  </div><div className="mb-8">
+                    </div><div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
+                      </div><Sparkles className="w-4 h-4 mr-2" />
                       Trusted by 500+ Companies Worldwide
                     </div>
                   </div>
                   <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                    <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent neon-text">
+                    </h1><span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent neon-text">
                       Advanced AI & IT Solutions
                     </span>
                     <br />
@@ -195,11 +208,11 @@ const HomePage: React.FC = () => {
                     and autonomous systems. We deliver enterprise-grade solutions that drive innovation and growth.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                    <a
+                    </div><a
                       href="/contact"
                       className="cyber-button text-lg px-8 py-4 inline-flex items-center space-x-2 group"
                       aria-label="Get started with our services">
-                      <span>Get Started</span>
+                      </a><span>Get Started</span>
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </a>
                     <a
@@ -207,32 +220,57 @@ const HomePage: React.FC = () => {
                       onClick={handlePhoneClick}
                       className="cyber-button-secondary text-lg px-8 py-4 inline-flex items-center space-x-2 group"
                       aria-label="Call us at (302) 464-0950">
-                      <Phone className="w-5 h-5" />
+                      </a><Phone className="w-5 h-5" />
+=======
+  ];
+  return ()
+                      aria-label="Call us at (302) 464-0950"></a>
+                      <Phone className="w-5 h-5" / /></Phone>
+>>>>>>> main
                       <span>(302) 464-0950</span>
                     </a>
                   </div>
                   
                   {/* Stats Section */}
+<<<<<<< HEAD
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                    <div className="text-center">
-                      <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">500+</div>
+                    </div><div className="text-center">
+                      </div><div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">500+</div>
                       <div className="text-sm text-gray-300">Projects Delivered</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
+                      </div><div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
                       <div className="text-sm text-gray-300">Uptime Guarantee</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">24/7</div>
+                      </div><div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">24/7</div>
                       <div className="text-sm text-gray-300">Support Available</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">5★</div>
-                      <div className="text-sm text-gray-300">Client Rating</div>
+                      </div><div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">5★</div>
+=======
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto" /></div>
+                    <div className="text-center" /></div>
+                      <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">500+</div>
+                      <div className="text-sm text-gray-300">Projects Delivered</div>
                     </div>
-                  </div>
-                </div>
-              </div>
+                    <div className="text-center" /></div>
+                      <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
+                      <div className="text-sm text-gray-300">Uptime Guarantee</div>
+                    </div>
+                    <div className="text-center" /></div>
+                      <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">24/7</div>
+                      <div className="text-sm text-gray-300">Support Available</div>
+                    </div>
+                    <div className="text-center" /></div>
+                      <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">5★</div>
+>>>>>>> main
+                      <div className="text-sm text-gray-300">Client Rating</div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
 
 const HomePage: React.FC = memo(() => {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -245,51 +283,57 @@ const HomePage: React.FC = memo(() => {
   const features = [
     {
       icon: Brain,
+<<<<<<< HEAD
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+=======
+      title: 'AI-Powered Solutions',;
+      description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',;
+>>>>>>> main
+      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
     },
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions that grow with your business needs.',
-      benefits: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery']
+      benefits: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery'],
     },
     {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets and data.',
-      benefits: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response']
+      benefits: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response'],
     },
     {
       icon: Code,
       title: 'Custom Development',
       description: 'Tailored software solutions designed specifically for your business requirements.',
-      benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
+      benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration'],
     },
     {
       icon: BarChart,
       title: 'Data Analytics',
       description: 'Transform your data into actionable insights with advanced analytics tools.',
-      benefits: ['Business Intelligence', 'Real-time Dashboards', 'Data Visualization', 'Reporting']
+      benefits: ['Business Intelligence', 'Real-time Dashboards', 'Data Visualization', 'Reporting'],
     },
     {
       icon: Users,
       title: 'IT Consulting',
       description: 'Expert guidance to help you make the right technology decisions.',
-      benefits: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training']
+      benefits: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training'],
     },
   ];
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '99.9%', label: 'Uptime Guarantee' },
+<<<<<<< HEAD
     { number: '24/7', label: 'Support Available' },
     { number: '50+', label: 'Expert Team Members' }
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <StructuredData type="Organization" />
+      </div><StructuredData type="Organization" />
       <StructuredData type="WebSite" />
       <StructuredData type="WebPage" />
       <StructuredData type="Service" />
@@ -301,50 +345,79 @@ const HomePage: React.FC = memo(() => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden" aria-labelledby="hero-heading">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" aria-hidden="true" />
+        </main></main><section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden" aria-labelledby="hero-heading">
+          </section></section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" aria-hidden="true" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} aria-hidden="true" />
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 id="hero-heading" className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            </div><h1 id="hero-heading" className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+=======
+    { number: '24/7', label: 'Support Available' },;
+    { number: '50+', label: 'Expert Team Members' };
+  ];
+  return ()
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" aria-hidden="true" / /></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} aria-hidden="true" / /></div>
+          <div className="relative max-w-7xl mx-auto text-center" /></div>
+            <h1 id="hero-heading" className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight" /></h1>
+>>>>>>> main
               Transform Your Business with
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> AI & IT Solutions</span>
+              </h1><span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> AI & IT Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed" /></p>
               We help businesses leverage cutting-edge technology to drive growth, 
               improve efficiency, and stay ahead of the competition.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
             </section>
 
+<<<<<<< HEAD
             {/* Services Section */}
             <section className="py-20 bg-slate-800/50 backdrop-blur-sm">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              </section><div className="
+                </div><div className="text-center mb-16">
+                  </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+=======
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}, {/* Services Section */}
+            <section className="py-20 bg-slate-800/50 backdrop-blur-sm" /></section>
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" /></div>
+                <div className="text-center mb-16" /></div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" /></h2>
+>>>>>>> main
                     Our Core Services
                   </h2>
-                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
                     Comprehensive technology solutions designed to accelerate your digital transformation
                   </p>
                 </div>
+<<<<<<< HEAD
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {services.map((service, index) => (
-                    <div
+                    </div><div
                       key={service.title}
                       className="cyber-card group hover:scale-105 transition-all duration-300"
                       style={{ animationDelay: `${index * 100}ms` }}
                     >
-                      <div className="p-8">
-                        <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                          <service.icon className="w-8 h-8 text-white" />
+                      </div><div className="p-8">
+                        </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                          </div><service.icon className="w-8 h-8 text-white" />
                         </div>
                         <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                         <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                         <div className="space-y-2 mb-6">
                           {service.features.map((feature, featureIndex) => (
-                            <div key={featureIndex} className="flex items-center space-x-2">
-                              <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                            </div><div key={featureIndex} className="flex items-center space-x-2">
+                              </div><CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                               <span className="text-sm text-gray-300">{feature}</span>
                             </div>
                           ))}
@@ -353,8 +426,19 @@ const HomePage: React.FC = memo(() => {
                           href={service.href}
                           className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform"
                         >
-                          <span>Learn More</span>
+                          </a><span>Learn More</span>
                           <ArrowRight className="w-4 h-4" />
+=======
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
+                  {services.map((service, index) => ()
+                          {service.features.map((feature, featureIndex) => ()
+                          ))}
+                        </div>
+                        <a href={service.href}
+                          className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform" /></a>
+                          <span>Learn More</span>
+                          <ArrowRight className="w-4 h-4" / /></ArrowRight>
+>>>>>>> main
                         </a>
                       </div>
                     </div>
@@ -365,35 +449,48 @@ const HomePage: React.FC = memo(() => {
             </section>
 
             {/* Features Section */}
+<<<<<<< HEAD
             <section className="py-20">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              </section><div className="
+                </div><div className="text-center mb-16">
+                  </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+=======
+            <section className="py-20" /></section>
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" /></div>
+                <div className="text-center mb-16" /></div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" /></h2>
+>>>>>>> main
                     Why Choose Zion Tech Group?
                   </h2>
-                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
                     We combine cutting-edge technology with deep industry expertise to deliver exceptional results
                   </p>
                 </div>
+<<<<<<< HEAD
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {features.map((feature, index) => (
-                    <div
+                    </div><div
                       key={feature.title}
                       className="cyber-card group hover:scale-105 transition-all duration-300"
                       style={{ animationDelay: `${index * 100}ms` }}
                     >
-                      <div className="p-8">
-                        <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                          <feature.icon className="w-8 h-8 text-white" />
+                      </div><div className="p-8">
+                        </div><div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                          </div><feature.icon className="w-8 h-8 text-white" />
                         </div>
                         <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                         <p className="text-gray-300 mb-6 leading-relaxed">{feature.description}</p>
                         <div className="space-y-2">
                           {feature.benefits.map((benefit, benefitIndex) => (
-                            <div key={benefitIndex} className="flex items-center space-x-2">
-                              <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />
+                            </div><div key={benefitIndex} className="flex items-center space-x-2">
+                              </div><CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />
                               <span className="text-sm text-gray-300">{benefit}</span>
                             </div>
+=======
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
+                  {features.map((feature, index) => ()
+                          {feature.benefits.map((benefit, benefitIndex) => ()
+>>>>>>> main
                           ))}
                         </div>
                       </div>
@@ -404,107 +501,182 @@ const HomePage: React.FC = memo(() => {
             </section>
 
             {/* Testimonials Section */}
+<<<<<<< HEAD
             <section className="py-20 bg-slate-900/50">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              </section><div className="
+                </div><div className="text-center mb-16">
+                  </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+=======
+            <section className="py-20 bg-slate-900/50" /></section>
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" /></div>
+                <div className="text-center mb-16" /></div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" /></h2>
+>>>>>>> main
                     What Our Clients Say
                   </h2>
-                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
                     Don't just take our word for it. Here's what industry leaders say about our solutions.
                   </p>
                 </div>
+<<<<<<< HEAD
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  <div className="cyber-card">
-                    <div className="flex items-center mb-4">
-                      <div className="flex text-yellow-400">
+                  </div><div className="cyber-card">
+                    </div><div className="flex items-center mb-4">
+                      </div><div className="flex text-yellow-400">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 fill-current" />
+                          </div><Star key={i} className="w-5 h-5 fill-current" />
+=======
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
+                  <div className="cyber-card" /></div>
+                    <div className="flex items-center mb-4" /></div>
+                      <div className="flex text-yellow-400" /></div>
+                        {[...Array(5)].map((_, i) => ()
+>>>>>>> main
                         ))}
                       </div>
                     </div>
-                    <p className="text-gray-300 mb-4">
+                    <p className="text-gray-300 mb-4" /></p>
                       "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions increased our efficiency by 300%."
                     </p>
+<<<<<<< HEAD
                     <div className="flex items-center">
-                      <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                      </div><div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
                         JS
                       </div>
                       <div>
+                        </div><div className="text-white font-semibold">John Smith</div>
+=======
+                    <div className="flex items-center" /></div>
+                      <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3" /></div>
+                        JS
+                      </div>
+                      <div></div>
                         <div className="text-white font-semibold">John Smith</div>
+>>>>>>> main
                         <div className="text-sm text-gray-400">CEO, TechCorp</div>
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <div className="cyber-card">
-                    <div className="flex items-center mb-4">
-                      <div className="flex text-yellow-400">
+                    </div><div className="flex items-center mb-4">
+                      </div><div className="flex text-yellow-400">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 fill-current" />
+                          </div><Star key={i} className="w-5 h-5 fill-current" />
+=======
+                  <div className="cyber-card" /></div>
+                    <div className="flex items-center mb-4" /></div>
+                      <div className="flex text-yellow-400" /></div>
+                        {[...Array(5)].map((_, i) => ()
+>>>>>>> main
                         ))}
                       </div>
                     </div>
-                    <p className="text-gray-300 mb-4">
+                    <p className="text-gray-300 mb-4" /></p>
                       "Outstanding service and cutting-edge technology. They delivered our project ahead of schedule."
                     </p>
+<<<<<<< HEAD
                     <div className="flex items-center">
-                      <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                      </div><div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
                         MJ
                       </div>
                       <div>
+                        </div><div className="text-white font-semibold">Maria Johnson</div>
+=======
+                    <div className="flex items-center" /></div>
+                      <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-3" /></div>
+                        MJ
+                      </div>
+                      <div></div>
                         <div className="text-white font-semibold">Maria Johnson</div>
+>>>>>>> main
                         <div className="text-sm text-gray-400">CTO, InnovateLabs</div>
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <div className="cyber-card">
-                    <div className="flex items-center mb-4">
-                      <div className="flex text-yellow-400">
+                    </div><div className="flex items-center mb-4">
+                      </div><div className="flex text-yellow-400">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 fill-current" />
+                          </div><Star key={i} className="w-5 h-5 fill-current" />
+=======
+                  <div className="cyber-card" /></div>
+                    <div className="flex items-center mb-4" /></div>
+                      <div className="flex text-yellow-400" /></div>
+                        {[...Array(5)].map((_, i) => ()
+>>>>>>> main
                         ))}
                       </div>
                     </div>
-                    <p className="text-gray-300 mb-4">
+                    <p className="text-gray-300 mb-4" /></p>
                       "The best IT partner we've ever worked with. Their expertise in AI and cloud solutions is unmatched."
                     </p>
+<<<<<<< HEAD
                     <div className="flex items-center">
-                      <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                      </div><div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
                         DW
                       </div>
                       <div>
-                        <div className="text-white font-semibold">David Wilson</div>
-                        <div className="text-sm text-gray-400">VP Engineering, DataFlow</div>
+                        </div><div className="text-white font-semibold">David Wilson</div>
+=======
+                    <div className="flex items-center" /></div>
+                      <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold mr-3" /></div>
+                        DW
                       </div>
-                    </div>
-                  </div>
-                </div>
+                      <div></div>
+                        <div className="text-white font-semibold">David Wilson</div>
+>>>>>>> main
+                        <div className="text-sm text-gray-400">VP Engineering, DataFlow</div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
               </div>
             </section>
 
             {/* CTA Section */}
+<<<<<<< HEAD
             <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              </section><div className="
+                </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+=======
+            <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600" /></section>
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" /></div>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" /></h2>
+>>>>>>> main
                   Ready to Transform Your Business?
                 </h2>
-                <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
+                <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto" /></p>
                   Let's discuss how our AI and IT solutions can drive your digital transformation and accelerate growth.
                 </p>
+<<<<<<< HEAD
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <a
+                  </div><a
                     href="/contact"
                     className="bg-white text-cyan-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center space-x-2 group"
                   >
-                    <span>Start Your Project</span>
+                    </a><span>Start Your Project</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+=======
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" /></div>
+                  <a href="/contact"
+                    className="bg-white text-cyan-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center space-x-2 group" /></a>
+                    <span>Start Your Project</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" / /></ArrowRight>
+>>>>>>> main
                   </a>
-                  <a
-                    href="tel:+13024640950"
+                  <a href="tel:+13024640950"
                     onClick={handlePhoneClick}
+<<<<<<< HEAD
                     className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center space-x-2"
                   >
-                    <Phone className="w-5 h-5" />
+                    </a><Phone className="w-5 h-5" />
+=======
+                    className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center space-x-2" /></a>
+                    <Phone className="w-5 h-5" / /></Phone>
+>>>>>>> main
                     <span>(302) 464-0950</span>
                   </a>
                 </div>
@@ -512,17 +684,16 @@ const HomePage: React.FC = memo(() => {
             </section>
 
             {/* Footer */}
-            <Footer />
+            <Footer /></Footer>
           </div>
 
         </AccessibilityEnhancer>
       </PerformanceOptimizer>
 
-    </React.Fragment>
+    </>
   );
 }
 
 HomePage.displayName = 'HomePage';
 
 export default HomePage;
-

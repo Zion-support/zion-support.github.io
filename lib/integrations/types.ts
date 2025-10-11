@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+export type IntegrationCategory = 'crm' | 'ats';
+export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
+export type IntegrationProviderId =;
+  | 'salesforce';
+  | 'hubspot';
+  | 'zoho';
+  | 'pipedrive';
+  | 'greenhouse';
+  | 'lever';
+export type IntegrationCategory = 'crm' | 'ats';
+export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
+export type IntegrationCategory = 'crm' | 'ats';
+=======
+>>>>>>> main
 export type IntegrationProviderId =
   | 'salesforce'
   | 'hubspot'
@@ -5,6 +20,52 @@ export type IntegrationProviderId =
   | 'pipedrive'
   | 'greenhouse'
   | 'lever'
+<<<<<<< HEAD
+  | 'workable';
+  | 'bamboohr';
+  | 'workable';
+  | 'bamboohr';
+export interface IntegrationProviderMeta {
+  id: IntegrationProviderId, name: string
+  id: IntegrationProviderId, name: string,;
+  category: IntegrationCategory, description?: string,  oauthScopes?: string[];
+  icon?: string
+;
+export interface IntegrationProviderMeta {
+  id: IntegrationProviderId, name: string,;
+  category: IntegrationCategory, description?: string,  oauthScopes?: string[];
+  icon?: string
+}
+export interface SyncRules {
+  // CRM rules;
+  autoCreateContacts?: boolean;
+  pushNotesMode?: 'auto' | 'manual';
+  // ATS rules;
+  autoSyncApplicants?: boolean;
+  autoUploadResumes?: boolean;
+export interface ProviderConnection {
+export interface ProviderConnection {;
+  providerId: IntegrationProviderId;
+  status: SyncStatus;  accessToken?: string;  refreshToken?: string;
+  | 'workable'
+  | 'bamboohr';
+export interface IntegrationProviderMeta {
+  id: IntegrationProviderId;
+  name: string;
+  category: IntegrationCategory;
+  description?: string;
+  oauthScopes?: string[];
+  icon?: string;
+}
+export type SyncStatus = 'connected' | 'warning' | 'disconnected';
+export interface SyncRules {
+  // CRM rules
+  autoCreateContacts?: boolean;
+  pushNotesMode?: 'auto' | 'manual';
+  // ATS rules
+  autoSyncApplicants?: boolean;
+  autoUploadResumes?: boolean;
+=======
   | 'workable'
   | 'bamboohr';
 
@@ -57,13 +118,16 @@ export interface ProviderConnection {
   expiresAt?: number,
   config?: Record<string></string>
 }
+<<<<<<< HEAD
   category: 'crm' | 'ats' | 'hr';
   description: string;
   logoUrl?: string
   websiteUrl?: string
   apiDocsUrl?: string,
+=======
+>>>>>>> main
+>>>>>>> cursor/delete-records-e539
 }
-
 export interface ProviderConnection {
   id: string;
   providerId: IntegrationProviderId;
@@ -73,9 +137,70 @@ export interface ProviderConnection {
   refreshToken?: string;
   expiresAt?: number;
   lastSyncAt?: number;
+<<<<<<< HEAD
+export interface SyncLogEntry {
+  lastError?: string | null;
+export interface SyncLogEntry {;
+  id: string;
+  timestamp: number;
+  provider_id: IntegrationProviderId;
+  level: 'info' | 'warn' | 'error';
+  action: string;
+  details?: Record<string, any>;
+export interface ManualOverride {
+  job_id: string;
+  disableCrmSync?: boolean;
+  disableAtsSync?: boolean;
+export interface ZapierEvent {
+export interface ManualOverride {;
+  jobId: string;
+  disableCrmSync?: boolean;
+  disableAtsSync?: boolean;
+export interface ZapierEvent {;
+  id: string;
+  type: 'zion && zion.job.posted' | 'zion && zion.talent.matched';
+  timestamp: number;
+  payload: Record < string, any>;
+;
+export interface IntegrationsState {
+export interface ManualOverride {;
+  jobId: string;
+  disableCrmSync?: boolean;
+  disableAtsSync?: boolean;
+export interface ZapierEvent {;
+  lastError?: string | null;
+}
+export interface SyncLogEntry {
+=======
   createdAt: number;
   updatedAt: number;
+<<<<<<< HEAD
   config?: Record<string>
+=======
+}
+  expiresAt?: number;
+}
+
+export interface ProviderConnection {
+>>>>>>> main
+  id: string;
+  providerId: IntegrationProviderId;
+  name: string;
+  status: SyncStatus;
+}
+
+  status: SyncStatus;
+  lastSync?: number;
+}
+
+  status: SyncStatus;
+  lastSync?: number;
+  createdAt: number;
+  updatedAt: number;
+  status: SyncStatus;
+  lastSync?: number;
+  config?: Record<string, any>;
+>>>>>>> cursor/delete-records-e539
   expiresAt?: number;
   status: SyncStatus;
   lastSync?: number;
@@ -120,6 +245,8 @@ export interface SyncLogEntry {
 
   details?: Record<string></string>
 }
+<<<<<<< HEAD
+=======
 
   details?: Record<string></string>
 }
@@ -148,13 +275,36 @@ export interface SyncLogEntry {
   details?: Record<string></string>
 }
 
+>>>>>>> main
 export interface ManualOverride {
+<<<<<<< HEAD
     jobId: string
   disableCrmSync?: boolean,
   disableAtsSync?: boolean
   }
+=======
+  jobId: string;
+  disableCrmSync?: boolean;
+  disableAtsSync?: boolean;
+}
+<<<<<<< HEAD
+=======
 
+
+
+
+
+
+
+
+
+
+
+>>>>>>> cursor/delete-records-e539
+
+>>>>>>> main
 export interface ZapierEvent {
+<<<<<<< HEAD
     id: string
   type: 'zion.job.posted' | 'zion.talent.matched'
   timestamp: number,
@@ -165,6 +315,21 @@ export interface IntegrationProviderMeta {,
   }
 
 export interface ManualOverride {/* TODO: Fix JSX expression */}
+=======
+  id: string;
+  type: 'zion.job.posted' | 'zion.talent.matched';
+  timestamp: number;
+<<<<<<< HEAD
+  payload: Record<string, any>;
+export interface IntegrationsState {
+export interface IntegrationsState {;
+=======
+export interface IntegrationProviderMeta {
+  status: 'success' | 'error' | 'warning';
+  message: string;
+  details?: Record<string, unknown>;
+  timestamp: Date;
+>>>>>>> cursor/delete-records-e539
 }
 
 export interface IntegrationOverride {
@@ -196,12 +361,63 @@ export interface IntegrationsState {
   }
 
 export interface IntegrationsState {
+<<<<<<< HEAD
     connections: ProviderConnection[]
   logs: SyncLogEntry[]
   overrides: ManualOverride[],
   events: ZapierEvent[]
   }
   payload: Record<string></string>
+=======
+>>>>>>> main
+  connections: ProviderConnection[];
+  logs: SyncLogEntry[];
+  overrides: ManualOverride[];
+  events: ZapierEvent[];
+  lastError?: string | null;
+}
+}
+}
+}
+}
+  payload: Record<string, any>;
+}
+<<<<<<< HEAD
+export interface ManualOverride {
+  jobId: string, disableCrmSync?: boolean,
+  disableAtsSync?: boolean
+}
+export interface ZapierEvent {
+  id: string, type: 'zion.job.posted' | 'zion.talent.matched',
+  timestamp: number,
+  payload: Record<string, any>
+}
+export interface IntegrationsState {
+  connections: ProviderConnection[], logs: SyncLogEntry[],
+  overrides: ManualOverride[],
+  events: ZapierEvent[]
+}
+}
+=======
+
+export interface IntegrationProviderMeta {
+  id: IntegrationProviderId;
+  name: string;
+  category: 'crm' | 'ats';
+  description: string;
+  payload: Record<string, any>;
+>>>>>>> main
+}
+export interface IntegrationsState {
+  connections: ProviderConnection[];
+  logs: SyncLogEntry[];
+  overrides: ManualOverride[];
+  events: ZapierEvent[];
+}
+<<<<<<< HEAD
+=======
+  payload: Record<string, any>;
+>>>>>>> cursor/delete-records-e539
 }
 
 export interface ProviderConnection {
@@ -241,3 +457,4 @@ export interface IntegrationsState {
   overrides: IntegrationOverride[]
   events: IntegrationEvent[],
 }
+>>>>>>> main

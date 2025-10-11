@@ -28,12 +28,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           image.src = image.dataset.src;
           image.removeAttribute('data-src');
         }
-      })
-    }
+      });
+    };
 
     // Run optimization after component mount
     const timer = setTimeout(optimizeImages, 100);
-    return () => clearTimeout(timer);
+    return (
+    <React.Fragment>
+      ) => clearTimeout(timer);
   }, [enableImageOptimization]);
 
   // Lazy loading
@@ -47,9 +49,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             const target = entry.target as HTMLElement;
             target.classList.add('loaded');
           }
-        })
+        });
       },
-      { threshold: 0.1 } )
+      { threshold: 0.1 }
+    );
 
     const lazyElements = document.querySelectorAll('[data-lazy]');
     lazyElements.forEach((el) => observer.observe(el));
@@ -77,7 +80,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       criticalFont.type = 'font/woff2';
       criticalFont.crossOrigin = 'anonymous';
       document.head.appendChild(criticalFont);
-    }
+    };
 
     preloadCriticalResources();
   }, [enablePreloading]);
@@ -96,9 +99,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             // Preload the route
             import(/* webpackChunkName: "route" */ `../app${href}/page.tsx`);
           }
-        })
-      })
-    }
+        });
+      });
+    };
 
     const timer = setTimeout(optimizeCodeSplitting, 1000);
     return () => clearTimeout(timer);
@@ -116,26 +119,26 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
           firstPaint: paint.find(p => p.name === 'first-paint')?.startTime || 0,
           firstContentfulPaint: paint.find(p => p.name === 'first-contentful-paint')?.startTime || 0
-        }
+        };
 
         // Send metrics to analytics
         if (typeof window !== 'undefined' && 'gtag' in window) {
-          const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+          const gtag = (window as { gtag: (command: string, action: string, parameters: Record</PerformanceOptimizerProps><string, unknown>
+    </React.Fragment>
+  ) => void }).gtag;
           gtag('event', 'performance_metrics', {
-            event_category: 'performance',
-            event_label: 'page_load',
             value: Math.round(metrics.domContentLoaded)
-          })
+          });
         }
       }
-    }
+    };
 
     // Measure performance after page load
     window.addEventListener('load', measurePerformance);
     return () => window.removeEventListener('load', measurePerformance);
   }, []);
 
-  return <>{children}</>;
+  return </string><React.Fragment>{children}</React.Fragment></React.Fragment>;
 };
 
 export default PerformanceOptimizer;

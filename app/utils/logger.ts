@@ -4,10 +4,10 @@
  * Provides structured logging with multiple levels and context;
  */;
 export enum LogLevel {
-    DEBUG = 0,;
-  INFO = 1,;
-  WARN = 2,;
-  ERROR = 3,;
+    DEBUG = 0,
+  INFO = 1,
+  WARN = 2,
+  ERROR = 3,
   FATAL = 4
   }
 }
@@ -25,7 +25,7 @@ class Logger {
     level: LogLevel,
     message: string,
     context?: LogContext;
-    metadata?: Record<string>
+    metadata?: Record<string></string>
     timestamp: number,
   }
   }> = []
@@ -38,7 +38,7 @@ getLogLevel(): LogLevel {
     return this.logLevel
   }
   }
-debug(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
+debug(message: string, context?: LogContext, metadata?: Record</string><string, unknown>): void {
     </string></<<<string>this</string></string>.log(LogLevel.DEBUG, message, context, metadata)
   }
   }
@@ -50,14 +50,19 @@ warn(message: string, context?: LogContext, metadata?: Record<string, unknown>):
     </string></<<<string>this</string></string>.log(LogLevel.WARN, message, context, metadata)
   }
   }
-error(message: string,),;
+error(message: string,),
     errorOrContextOrMetadata?: Error | string | Record<string, unknown>);
+<<<<<<< HEAD
+    contextOrMetadata?: string | Record</string><string, unknown>);
+    metadata?: Record</string><string>
+=======
     contextOrMetadata?: string | Record<string, unknown>);
-    metadata?: Record<string>
+    metadata?: Record<string></string>
+>>>>>>> main
   ): void {
     let error: Error | undefined
     let context: LogContext | undefined,
-    let meta: Record<string, unknown> | undefined;
+    let meta: Record</string><string, unknown> | undefined;
     // Handle different parameter combinations;
     if (errorOrContextOrMetadata instanceof Error) {
       error = errorOrContextOrMetadata
@@ -69,7 +74,11 @@ error(message: string,),;
       meta = typeof contextOrMetadata === 'object' ? contextOrMetadata : undefined;
     } else if (typeof errorOrContextOrMetadata === 'object') {
     context = errorOrContextOrMetadata;
-      meta = contextOrMetadata as Record<string>
+<<<<<<< HEAD
+      meta = contextOrMetadata as Record</string><string>
+=======
+      meta = contextOrMetadata as Record<string></string>
+>>>>>>> main
  * Enhanced Logger Utility;
  * Provides structured logging with different levels and contexts;
  */
@@ -97,50 +106,55 @@ class Logger {/* TODO: Fix JSX expression */}
    * Log a debug message;
    */;
   debug(messag);
-  e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
+  e: string, context?: LogContext, metadata?: Record</string><string, unknown>): void {/* TODO: Fix JSX expression */}
   }
   /**;
    * Log an info message;
    */;
   info(messag);
-  e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
+  e: string, context?: LogContext, metadata?: Record</string><string, unknown>): void {/* TODO: Fix JSX expression */}
   }
   /**;
    * Log a warning message;
    */;
   warn(messag);
-  e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
+  e: string, context?: LogContext, metadata?: Record</string><string, unknown>): void {/* TODO: Fix JSX expression */}
   }
   /**;
    * Log an error message;
    */;
+<<<<<<< HEAD
   error(messag,;
   e: string,
-    errorOrContextOrMetadata?: Error | string | Record<string, unknown>,;
-    contextOrMetadata?: string | Record<string, unknown>,;
+    errorOrContextOrMetadata?: Error | string | Record</string><string, unknown>,;
+    contextOrMetadata?: string | Record</string><string, unknown>,;
+    metadata?: Record</string><string, unknown></string>);
+=======
+  error()
     metadata?: Record<string, unknown></string>);
+>>>>>>> main
   ): void {/* TODO: Fix JSX expression */}
     } else if (typeof errorOrContextOrMetadata === 'string') {/* TODO: Fix JSX expression */}
   t: errorOrContextOrMetadata }
-      meta = contextOrMetadata as Record<string>
+      meta = contextOrMetadata as Record<string></string>
     } else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */}
     }
 this.log(LogLevel.ERROR, message, context, { ...meta, error: error?.stack })
   }
-fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
+fatal(message: string, context?: LogContext, metadata?: Record</string><string, unknown>): void {
     </string></<<<string>this</string></string>.log(LogLevel.FATAL, message, context, metadata)
   }
   }
-private log(level: LogLevel,),;
+private log(level: LogLevel,),
     message: string),
-    context?: LogContext),;
-    metadata?: Record<string>
+    context?: LogContext),
+    metadata?: Record<string></string>
   ): void {
     if (level < this.logLevel) return;
-    const logEntry = {
-      level,;
-      message,;
-      context,;
+    const logEntry = {;
+      level,
+      message,
+      context,
       metadata,
   }
       timestamp: Date.now()}
@@ -151,7 +165,7 @@ this.logs.push(logEntry);
   }
     }
 // Console output;
-    const levelName = LogLevel[level]
+    const levelName = LogLevel[level];
     const timestamp = new Date().toISOString();
     const contextStr = context ? ` [${JSON.stringify(context)}]` : '';
     const metaStr = metadata ? ` ${JSON.stringify(metadata)}` : '';
@@ -161,7 +175,7 @@ this.logs.push(logEntry);
       case LogLevel.INFO: break,
       case LogLevel.WARN: break,
       case LogLevel.ERROR: break,
-      case LogLevel.FATAL:,;
+      case LogLevel.FATAL:,
         break
   }
     }
@@ -170,7 +184,7 @@ getLogs(level?: LogLevel): Array<{
     level: LogLevel,
     message: string,
     context?: LogContext;
-    metadata?: Record<string>
+    metadata?: Record<string></string>
     timestamp: number,
   }
   }> {
@@ -181,20 +195,25 @@ getLogs(level?: LogLevel): Array<{
    */;
   fatal(messag)
   }
-  e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
+  e: string, context?: LogContext, metadata?: Record</string><string, unknown>): void {/* TODO: Fix JSX expression */}
   }
   /**;
    * Core logging method;
    */;
+<<<<<<< HEAD
   private log(leve,;
   l: LogLevel,
     messag,;
   e: string,
     context?: LogContext,;
+    metadata?: Record</string><string, unknown></string>);
+=======
+  private log()
     metadata?: Record<string, unknown></string>);
+>>>>>>> main
   ): void {/* TODO: Fix JSX expression */}
     }
-    const,;
+    const,
   logEntry: LogMetadata = {/* TODO: Fix JSX expression */}
     }
     // Format the log entry;
@@ -234,8 +253,7 @@ getLogs(level?: LogLevel): Array<{
   /**;
    * Output to console with appropriate styling;
    */;
-  private outputToConsole(leve,;
-  l: LogLevel, messag,;
+  private outputToConsole()
   e: string, entr);
   y: LogMetadata): void {/* TODO: Fix JSX expression */}
     }
@@ -261,7 +279,7 @@ getLogs(level?: LogLevel): Array<{
   }
     //   headers: {// 'Content-Type': 'application/json'})
     //   body: JSON.stringify(entry),
-    // }).catch(err => {
+    // }).catch()
     )
   }
     //   // })
@@ -275,8 +293,8 @@ exportLogs(): string {
 export const logger = new Logger();
   private sendToLoggingService(entr);
   y: LogMetadata): void {/* TODO: Fix JSX expression */}
-  s: {// 'Content-Type': 'application/json'},;
-    //   bod,;
+  s: {// 'Content-Type': 'application/json'},
+    //   bod,
   y: JSON.stringify(entry),
     // }).catch(err => {/* TODO: Fix JSX expression */})
     //   // })

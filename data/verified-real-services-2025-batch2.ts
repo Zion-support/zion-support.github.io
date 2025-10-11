@@ -12,7 +12,16 @@ export interface VerifiedRealService2025Batch2 {id: string;
     mobile: string,
     email: string}
     address: string}
+<<<<<<< HEAD
   }
+=======
+  };
+<<<<<<< HEAD
+}
+export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
+  {
+=======
+>>>>>>> cursor/delete-records-e539
     address: string,
   }
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
@@ -61,8 +70,17 @@ export const,
     contact_info: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
+<<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: "+1 302 464 0950"
     id: "ai-quality-assurance"
+=======
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },
+];      mobile: "+1 302 464 0950"
+>>>>>>> main
+    id: "ai-quality-assurance",
+>>>>>>> cursor/delete-records-e539
     name: "AI Quality Assurance Platform",
     tagline: "Automated testing and quality control",
     price: "$79/month",

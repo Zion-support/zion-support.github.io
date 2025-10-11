@@ -84,4 +84,8 @@ export interface AnalyticsEvent {
   value?: number
   }
 }
+<<<<<<< HEAD
+export {}</T>
+=======
 export {}
+>>>>>>> main

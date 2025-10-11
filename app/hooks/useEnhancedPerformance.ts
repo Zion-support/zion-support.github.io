@@ -14,9 +14,9 @@ export interface UseEnhancedPerformanceOptions {
 }
 export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
     const {
-    component = 'Unknown',;
-    trackErrors = true,;
-    trackPerformance = true,;
+    component = 'Unknown',
+    trackErrors = true,
+    trackPerformance = true,
     trackAnalytics = true,
   }
   } = _options;const _renderCountRef = useRef<number>(0);
@@ -28,16 +28,15 @@ useEffect(() => {
       analytics.trackCustomEvent('Component', 'Mounted', component)
   }
     }
-return () => {
+return (
+    <React.Fragment>
+      ) => {
     // Track component unmount duration;
       if (trackPerformance) {
         const _duration = performance.now() - mountTimeRef.current;
         if (duration > 5000) {
           // Long-lived component;
-          analytics.trackCustomEvent(
-            'Performance',;
-            'Long Component Lifetime',;
-            component,;
+          analytics.trackCustomEvent()
             Math.round(duration);
           )
   }
@@ -55,59 +54,64 @@ return () => {
     renderCountRef.current++;
 if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected;
-      analytics.trackCustomEvent(
-        'Performance',;
-        'High Render Count',;
-        component,;
-        renderCountRef.current;
+      analytics.trackCustomEvent()
       )
   }
     }
   })
+<<<<<<< HEAD
 const trackError = useCallback(;
+    (error: Error, context?: Record</number><string, unknown>
+    </React.Fragment>
+  ) => {
+=======
+const trackError = useCallback()
     (error: Error, context?: Record<string, unknown>) => {
+>>>>>>> main
     if (trackErrors) {
-        errorTracker.trackError(error, {
-          component,;
-          ...context,
-  }
+        errorTracker.trackError()
         })
       },
-    [component, trackErrors]
+    [component, trackErrors];
   );
+<<<<<<< HEAD
 const trackUserAction = useCallback(;
+    (action: string, metadata?: Record</string><string, unknown>) => {
+=======
+const trackUserAction = useCallback()
     (action: string, metadata?: Record<string, unknown>) => {
+>>>>>>> main
     if (trackAnalytics) {
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata)
   }
       },
-    [component, trackAnalytics]
+    [component, trackAnalytics];
   );
-const measureOperation = useCallback(;
-    (operationName: string) => {}
+const measureOperation = useCallback()
+    (operationName: string) => {};
       const _markName = `${component}-${operationName}`;
       const _startTime = performance.now();
 return {
     end: () => {
           const _duration = performance.now() - startTime,
 if (trackPerformance) {
-            analytics.trackPerformance(
-  }
-              `${component}-${operationName}`,;
-              duration,;
-              duration > 1000 ? 'slow' : 'fast';
+            analytics.trackPerformance();
             );
           }
 return duration;
-        },;
+        },
       },
     [component, trackPerformance]
   );
 return {
-    trackError,;
-    trackUserAction,;
+    trackError,
+    trackUserAction,
     measureOperation,
   }
   }
 }
+<<<<<<< HEAD
+export default useEnhancedPerformance;</string>
+=======
 export default useEnhancedPerformance;
+>>>>>>> main

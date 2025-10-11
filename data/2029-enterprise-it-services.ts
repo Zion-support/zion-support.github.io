@@ -113,7 +113,16 @@ export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
+<<<<<<< HEAD
       address: "364 E Main St STE 1008 Middletown DE 19709"}
+=======
+<<<<<<< HEAD
+export const enterpriseITServices2029: EnterpriseItService2029[] = [
+  {
+=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+>>>>>>> cursor/delete-records-e539
   }
 ];
   id: string, name: string,
@@ -203,6 +212,7 @@ export const,
     }
   }
 ];
+<<<<<<< HEAD
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
@@ -219,6 +229,11 @@ export const,
   }
 ];
 id: "2029-enterprise-it"
+=======
+;
+>>>>>>> main
+    id: "2029-enterprise-it",
+>>>>>>> cursor/delete-records-e539
     name: "2029 Enterprise IT Service Platform",
     tagline: "Enterprise IT services for 2029",
     price: "$599/month",

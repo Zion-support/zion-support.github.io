@@ -17,29 +17,17 @@ import {
   }
 } from 'lucide-react'
 const ContactPage: React.FC = () => {
-    const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-phone: '',
-    service: '',
-    budget: '',
-    timeline: '',
-    message: ''
-  }
+    const [formData, setFormData] = useState()
   })
 const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
-
+const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {};
+;
     const { name, value } = e.target;
-    setFormData(prev => ({
-    ...prev,
-      [name]: value
-  }
+    setFormData()
     }));
   }, []);
-const handleSubmit = async (e: React.FormEvent) => {
+const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
     setIsSubmitting(true)
     setSubmitStatus('idle')
@@ -48,16 +36,7 @@ try {
 
       await new Promise(resolve => setTimeout(resolve, 1000));
       setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        budget: '',
-        timeline: '',
-        message: ''
-  }
+      setFormData()
       })
     } catch (error) {
     setSubmitStatus('error')
@@ -78,11 +57,19 @@ const services = [
 
     'DevOps',
 
+<<<<<<< HEAD
     'Consulting',
 
     'Other'
-  ]
+  ];
+  const contactInfo = [
+=======
+    'Consulting',;
+;
+    'Other';
+  ];
 const contactInfo = [
+>>>>>>> main
     {
     icon: Phone,
       title: 'Phone',
@@ -106,13 +93,14 @@ const contactInfo = [
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
       description: 'Eastern Time'
+<<<<<<< HEAD
   }
     }
   ]
 return (
     <>
       <Helmet>
-        <title>Contact Us - Zion Tech Group | Get in Touch</title>
+        </Helmet><title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
@@ -122,7 +110,7 @@ return (
           <div className="text-center mb-16"></div>
             <h1>
               Get in;
-              <span>
+              </h1><span>
                 {' '}Touch
               </span>
             </h1>
@@ -140,7 +128,7 @@ return (
     submitStatus === 'success' && (;
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3"></div>
                   <CheckCircle>
-                  <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
+                  </CheckCircle><span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
                 </div>
   }
               )}
@@ -152,72 +140,118 @@ return (
   }
               )}
 <form>
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
+                </form><div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
                   <div />
                     <label>
                       Full Name *
                     </label>
                     <div className="relative"></div>
                       <User>
-                      <input />
+                      </User><input />
+=======
+  };
+    };
+  ];
+return ()
+              )},
+    {
+    submitStatus === 'error' && ()
+              )}
+<form></form>
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-6" / /></div>
+                  <div / /></div>
+                    <label></label>
+                      Full Name *
+                    </label>
+                    <div className="relative" / /></div>
+                      <User></User>
+                      <input / /></input>
+>>>>>>> main
                   </div>
-                  <div />
-                    <label>
+                  <div / /></div>
+                    <label></label>
                       Email Address *
                     </label>
+<<<<<<< HEAD
                     <div className="relative"></div>
                       <Mail>
-                      <input />
+                      </Mail><input />
+=======
+                    <div className="relative" / /></div>
+                      <Mail></Mail>
+                      <input / /></input>
+>>>>>>> main
                   </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-                  <div />
-                    <label>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6" / /></div>
+                  <div / /></div>
+                    <label></label>
                       Company
                     </label>
+<<<<<<< HEAD
                     <div className="relative"></div>
                       <Building>
-                      <input />
+                      </Building><input />
+=======
+                    <div className="relative" / /></div>
+                      <Building></Building>
+                      <input / /></input>
+>>>>>>> main
                   </div>
-                  <div />
-                    <label>
+                  <div / /></div>
+                    <label></label>
                       Phone Number
                     </label>
+<<<<<<< HEAD
                     <div className="relative"></div>
                       <Phone>
-                      <input />
+                      </Phone><input />
+=======
+                    <div className="relative" / /></div>
+                      <Phone></Phone>
+                      <input / /></input>
+>>>>>>> main
                   </div>
                 </div>
-                <div />
-                  <label>
+                <div / /></div>
+                  <label></label>
                     Service Interest,
                   </label>
+<<<<<<< HEAD
                   <div className="relative"></div>
                     <Globe>
-                    <select>
+                    </Globe><select>
+                      </select><option value="">Select a service</option>
+=======
+                  <div className="relative" / /></div>
+                    <Globe></Globe>
+                    <select></select>
                       <option value="">Select a service</option>
+>>>>>>> main
                       {
-    services.map((service) => (
-  }
-                        <option>
-
-                          {service}
-                        </option>
+    services.map((service) => ()
                       ))}
 
                     </select>
                   </div>
                 </div>
-                <div />
-                  <label>
+                <div / /></div>
+                  <label></label>
                     Message *
                   </label>
+<<<<<<< HEAD
                   <div className="relative"></div>
                     <MessageCircle>
-                    <textarea />
+                    </MessageCircle><textarea />
+=======
+                  <div className="relative" / /></div>
+                    <MessageCircle></MessageCircle>
+                    <textarea / /></textarea>
+>>>>>>> main
                 </div>
-                <button>
+                <button></button>
                   {
+<<<<<<< HEAD
     isSubmitting ? (;
                     <>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
@@ -226,70 +260,73 @@ return (
                   ) : (;
                     <>
                       <Send>
-                      <span>Send Message</span>
+                      </Send><span>Send Message</span>
                     </>
   }
+=======
+    isSubmitting ? ()
+                  ) : ()
+>>>>>>> main
                   )}
                 </button>
               </form>
             </div>
             {/* Contact Information */}
-            <div className="space-y-8"></div>
-              <div />
+            <div className="space-y-8" / /></div>
+              <div / /></div>
                 <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
-                <p>
+                <p></p>
                   We're here to help! Reach out to us through any of these channels;
                   and we'll get back to you as soon as possible.
                 </p>
               </div>
               {/* Contact Information */}
-              <div className="space-y-8"></div>
-                <div />
+              <div className="space-y-8" / /></div>
+                <div / /></div>
                   <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
-                  <p>
+                  <p></p>
                     We're here to help you transform your business with cutting-edge AI and technology solutions.
                   </p>
                 </div>
-                <div className="space-y-6"></div>
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <Phone />
-                    <div />
-<h3>
-
+                <div className="space-y-6" / /></div>
+                  <div className="flex items-center" / /></div>
+                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4" / /></div>
+                      <Phone / /></Phone>
+                    <div / /></div>
+<h3></h3>
                         {info.title}
                       </h3>
-                      <p>
+                      <p></p>
                         {info.details}
                       </p>
-                      <p>
+                      <p></p>
                         {info.description}
 
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <Mail />
-                    <div />
+                  <div className="flex items-center" / /></div>
+                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4" / /></div>
+                      <Mail / /></Mail>
+                    <div / /></div>
                       <h3 className="text-lg font-semibold text-white">Email</h3>
                       <p className="text-gray-300">info@ziontechgroup.com</p>
                     </div>
                   </div>
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <MapPin />
-                    <div />
+                  <div className="flex items-center" / /></div>
+                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4" / /></div>
+                      <MapPin / /></MapPin>
+                    <div / /></div>
                       <h3 className="text-lg font-semibold text-white">Address</h3>
-                      <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p>
+                      <p className="text-gray-300">123 Tech Street</p><br />San Francisco, CA 94105</p>
                     </div>
                   </div>
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <Clock />
-                    <div />
+                  <div className="flex items-center" / /></div>
+                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4" / /></div>
+                      <Clock / /></Clock>
+                    <div / /></div>
                       <h3 className="text-lg font-semibold text-white">Business Hours</h3>
-                      <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
+                      <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM</p><br />Sat: 10:00 AM - 4:00 PM</p>
                     </div>
                   </div>
                 </div>
@@ -303,4 +340,3 @@ return (
 };
 
 export default ContactPage;
-

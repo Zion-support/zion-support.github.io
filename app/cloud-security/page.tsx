@@ -4,29 +4,21 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Lock, Eye, ShieldCheck } from 'lucide-react';
 const CloudSecurityPage: React.FC = () => {
   const features = [
-    {
-    }
+    {;
+    };
   ];
   const benefits = [
+<<<<<<< HEAD
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Cloud Security | Zion Tech Group</title>
+      </div><Helmet>
+        </Helmet><title>Cloud Security | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Security services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<<<<<<< HEAD
-<meta name="keywords" content="cloud security, security services, IT services, Zion Tech Group, cybersecurity" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Cloud Security
-  </
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
+
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud security solutions. 
             Powered by cutting-edge AI technology and industry expertise.
@@ -34,9 +26,9 @@ const CloudSecurityPage: React.FC = () => {
       </section>
       {/* Features Section */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        </section><div className="
+          </div><div className="text-center mb-12">
+            </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Cloud Security?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -45,8 +37,8 @@ const CloudSecurityPage: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
+              </div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                </div><feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
@@ -54,62 +46,107 @@ const CloudSecurityPage: React.FC = () => {
           </div>
         </div>
       <section className="py-16 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
+        </section><div className="
+          </div><div className="text-center mb-12">
+            </div><h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
+=======
+    'Easy integration with existing systems',;
+    'Cost-effective pricing plans',;
+    'Proven track record of success';
+  ];
+  return() {features.map((feature, index) => ()
+            ))}
+          </div>
+        </div>
+      <section className="py-16 px-4 bg-white/5" /></section>
+        <div className="max-w-7xl mx-auto" /></div>
+          <div className="text-center mb-12" /></div>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4" /></h2>
+>>>>>>> main
               Key Benefits,
   </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
               Experience the power of our cloud security solutions for your business.
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-3">
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+              </div><div key={index} className="flex items-center space-x-3">
+                </div><CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6" /></div>
+            {benefits.map((benefit, index) => ()
+>>>>>>> main
             ))}
           </div>
         </div>
       </section>
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
+        </section><div className="
+          </div><h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
+=======
+      <section className="py-16 px-4" /></section>
+        <div className="max-w-4xl mx-auto text-center" /></div>
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4" /></h2>
+>>>>>>> main
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
+          <p className="text-xl text-purple-100 mb-8" /></p>
             Contact our experts to discuss your cloud security needs and get a customized solution.
           </p>
+<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-              <Phone className="mr-2 h-5 w-5" />
+            </div><button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+              </button><Phone className="mr-2 h-5 w-5" />
               Call Now
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-              <Mail className="mr-2 h-5 w-5" />
-<<<<<<< HEAD
-              Email Us
-  </
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
+              </button><Mail className="mr-2 h-5 w-5" />
+
           </div>
         </div>
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+          </div><h2 className="text-3xl font-bold text-white mb-6">
+=======
+          <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
+            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center" /></button>
+              <Phone className="mr-2 h-5 w-5" / /></Phone>
+              Call Now
+  </
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center" /></button>
+              <Mail className="mr-2 h-5 w-5" / /></Mail>
+          </div>
+        </div>
+        <div className="text-center" /></div>
+          <h2 className="text-3xl font-bold text-white mb-6" /></h2>
+>>>>>>> main
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
+          <p className="text-xl text-purple-100 mb-8" /></p>
             Contact our experts to discuss your cloud security needs and get a customized solution.
           </p>
+<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-              <Phone className="mr-2 h-5 w-5" />
+            </div><button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+              </button><Phone className="mr-2 h-5 w-5" />
               Call Now
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-              <Mail className="mr-2 h-5 w-5" />
+              </button><Mail className="mr-2 h-5 w-5" />
+=======
+          <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
+            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center" /></button>
+              <Phone className="mr-2 h-5 w-5" / /></Phone>
+              Call Now
+  </
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center" /></button>
+              <Mail className="mr-2 h-5 w-5" / /></Mail>
+>>>>>>> main
               Email Us
   </
           </div>

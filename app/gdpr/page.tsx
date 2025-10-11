@@ -14,28 +14,35 @@ const benefits = [
 
     'Easy integration with existing systems',
 
-    'Cost-effective pricing plans',
-
-    'Proven track record of success'
-  ]
+    'Cost-effective pricing plans',;
+;
+    'Proven track record of success';
+  ];
 </div>
         </div>
       </section>
       {/* Features Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2>
+        <div className="max-w-7xl mx-auto" / /></div>
+          <div className="text-center mb-16" / /></div>
+            <h2></h2>
               Why Choose Our Page?,
             </h2>
-            <p>
+            <p></p>
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
@@ -47,6 +54,5 @@ const benefits = [
           </div>
         </div>
       </section>
-};
-
+};];
 export default PagePage;

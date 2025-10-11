@@ -11,22 +11,9 @@ interface SEOHeadProps {
   structuredData?: object
   }
 }
-const SEOHead: React.FC<SEOHeadProps> = ({
-    title = 'Zion Tech Group - Advanced AI & IT Solutions',
-  description = 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',
-  keywords = 'AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation',
-  canonical,
-
-  ogImage = '/og-image.jpg',
-
-  ogType = 'website',
-
-  twitterCard = 'summary_large_image',
-
-  structuredData
-  }
+const SEOHead: React.FC<SEOHeadProps> = ()
 }) => {}
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
 const defaultStructuredData = {
     "@context": "https: //schema.org",
@@ -47,17 +34,18 @@ const defaultStructuredData = {
     "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-  },
+      "email": "kleber@ziontechgroup.com";
+  },;
     "sameAs": [;
       "https: //www.linkedin.com/company/zion-tech-group",
       "https: //twitter.com/ziontechgroup"
     ],
   }
+<<<<<<< HEAD
 return (
-    <Helmet>
+    </SEOHeadProps><Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      </Helmet><title>{fullTitle}</title>
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
@@ -87,10 +75,12 @@ return (
       {/* Structured Data */}
       <script>
         {JSON.stringify(structuredData || defaultStructuredData)}
+=======
+return() {JSON.stringify(structuredData || defaultStructuredData)}
+>>>>>>> main
       </script>
     </Helmet>
   );
 };
 
 export default SEOHead;
-

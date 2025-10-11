@@ -50,10 +50,17 @@ const PenetrationTestingPage: React.FC = () => {
     icon: Zap,
       title: 'Expert Security Analysis',
       description: 'Professional security experts conduct thorough testing using industry-standard methodologies.'
+<<<<<<< HEAD
   }
     }
-  ]
+  ];
+  const benefits = [
+=======
+  };
+    };
+  ];
 const benefits = [
+>>>>>>> main
     'Identify security vulnerabilities before attackers do',
     'Comply with industry regulations and standards',
     'Improve your security posture and defenses',
@@ -63,6 +70,7 @@ const benefits = [
 
     'Validate security controls effectiveness',
 
+<<<<<<< HEAD
     'Expert analysis and reporting',
 
     'Ongoing security improvement guidance'
@@ -70,16 +78,16 @@ const benefits = [
 return (
     <>
       <Helmet>
-        <title>Penetration Testing Services - Zion Tech Group | Security Assessment</title>
+        </Helmet><title>Penetration Testing Services - Zion Tech Group | Security Assessment</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -95,11 +103,18 @@ return (
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>
-                  <Shield>
+                  </button><Shield>
                   Schedule Assessment
                 </button>
                 <button>
-                  <Phone>
+                  </button><Phone>
+=======
+    'Expert analysis and reporting',;
+;
+    'Ongoing security improvement guidance';
+  ];
+return ()
+>>>>>>> main
                   Call (302) 464-0950,
                 </button>
               </div>
@@ -107,87 +122,117 @@ return (
           </div>
         </section>
         {/* Features Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+        <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2>
+          <div className="max-w-7xl mx-auto" / /></div>
+            <div className="text-center mb-16" / /></div>
+              <h2></h2>
                 Our Penetration Testing Approach
               </h2>
-              <p>
+              <p></p>
                 We use industry-standard methodologies and cutting-edge tools to thoroughly assess your security posture.,
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
-                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
-                    <feature />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
+              {features.map((feature, index) => ()
               ))}
             </div>
           </div>
         </section>
         {/* Benefits Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+        <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2>
+          <div className="max-w-7xl mx-auto" / /></div>
+            <div className="text-center mb-16" / /></div>
+              <h2></h2>
                 Key Benefits
               </h2>
-              <p>
+              <p></p>
                 Strengthen your security defenses with our comprehensive penetration testing services.,
               </p>
             </div>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3"></div>
                   <CheckCircle>
-                  <p className="text-gray-300 text-lg">{benefit}</p>
+                  </CheckCircle><p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6" / /></div>
+              {benefits.map((benefit, index) => ()
+>>>>>>> main
               ))}
             </div>
           </div>
         </section>
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+        <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
-              <h2>
+          <div className="max-w-4xl mx-auto text-center" / /></div>
+            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" / /></div>
+              <h2></h2>
                 Ready to Test Your Security?
               </h2>
-              <p>
+              <p></p>
                 Contact our security experts to schedule a comprehensive penetration test for your systems.
               </p>
+<<<<<<< HEAD
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button>
-                  <Phone>
+                  </button><Phone>
                   Call (302) 464-0950
                 </button>
                 <button>
-                  <Mail>
+                  </button><Mail>
+=======
+              <div className="flex flex-col sm:flex-row gap-4 justify-center" / /></div>
+                <button></button>
+                  <Phone></Phone>
+                  Call (302) 464-0950
+                </button>
+                <button></button>
+                  <Mail></Mail>
+>>>>>>> main
                   Email Us
                 </button>
               </div>
@@ -200,4 +245,3 @@ return (
 };
 
 export default PenetrationTestingPage;
-

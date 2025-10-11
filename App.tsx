@@ -30,6 +30,32 @@ const PricingPage = React.lazy(() => import('./app/pricing/page'));
 const BlogPage = React.lazy(() => import('./app/blog/page'));
 const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
 const CareersPage = React.lazy(() => import('./app/careers/page'));
+const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
+const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
+const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
+const TutorialsPage = React.lazy(() => import('./app/tutorials/page'));
+const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
+const DemoPage = React.lazy(() => import('./app/demo/page'));
+const SupportPage = React.lazy(() => import('./app/support/page'));
+const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
+const TermsPage = React.lazy(() => import('./app/terms/page'));
+const CookiesPage = React.lazy(() => import('./app/cookies/page'));
+const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
+
+// AI Service Pages
+const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'));
+const AiAutomationPage = React.lazy(() => import('./app/ai-automation/page'));
+const AiChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'));
+const AiCybersecurityPage = React.lazy(() => import('./app/ai-cybersecurity/page'));
+
+// IT Service Pages
+const CloudInfrastructurePage = React.lazy(() => import('./app/cloud-infrastructure/page'));
+const CybersecuritySolutionsPage = React.lazy(() => import('./app/cybersecurity-solutions/page'));
+const WebDevelopmentPage = React.lazy(() => import('./app/web-development/page'));
+const MobileDevelopmentPage = React.lazy(() => import('./app/mobile-development/page'));
+
+// Company Pages
+const TeamPage = React.lazy(() => import('./app/team/page'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -67,6 +93,32 @@ const App: React.FC = () => {
                             <Route path="/blog" element={<BlogPage />} />
                             <Route path="/case-studies" element={<CaseStudiesPage />} />
                             <Route path="/careers" element={<CareersPage />} />
+                            <Route path="/ai-services" element={<AiServicesPage />} />
+                            <Route path="/it-services" element={<ItServicesPage />} />
+                            <Route path="/micro-saas" element={<MicroSaasPage />} />
+                            <Route path="/tutorials" element={<TutorialsPage />} />
+                            <Route path="/consultation" element={<ConsultationPage />} />
+                            <Route path="/demo" element={<DemoPage />} />
+                            <Route path="/support" element={<SupportPage />} />
+                            <Route path="/privacy" element={<PrivacyPage />} />
+                            <Route path="/terms" element={<TermsPage />} />
+                            <Route path="/cookies" element={<CookiesPage />} />
+                            <Route path="/sitemap" element={<SitemapPage />} />
+                            
+                            {/* AI Service Pages */}
+                            <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
+                            <Route path="/ai-automation" element={<AiAutomationPage />} />
+                            <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
+                            <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
+                            
+                            {/* IT Service Pages */}
+                            <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                            <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
+                            <Route path="/web-development" element={<WebDevelopmentPage />} />
+                            <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                            
+                            {/* Company Pages */}
+                            <Route path="/team" element={<TeamPage />} />
                           </Routes>
                         </Suspense>
                       </main>

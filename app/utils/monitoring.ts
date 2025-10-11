@@ -49,15 +49,15 @@ class MonitoringService {}
       try {
         // Largest Contentful Paint;
         const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-  }
+          const entries = list.getEntries();
+  };
           const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0;
           this.reportMetric('lcp', this.metrics.lcp);
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
         // First Input Delay;
-        const fidObserver = new PerformanceObserver((list) => {
+        const fidObserver = new PerformanceObserver((list) => {;
     const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             this.metrics.fid = (entry as any).processingStart - entry.startTime,
@@ -68,7 +68,7 @@ class MonitoringService {}
         fidObserver.observe({ entryTypes: ['first-input'] })
         // Cumulative Layout Shift;
         let clsValue = 0;
-        const clsObserver = new PerformanceObserver(list => {
+        const clsObserver = new PerformanceObserver();
     const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
@@ -81,10 +81,9 @@ class MonitoringService {}
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
         // First Contentful Paint;
-        const fcpObserver = new PerformanceObserver(list => {
+        const fcpObserver = new PerformanceObserver();
     const entries = list.getEntries();
-          entries.forEach(entry => {
-            this.metrics.fcp = entry.startTime;
+          entries.forEach()
             this.reportMetric('fcp', entry.startTime)
   }
           })
@@ -110,10 +109,10 @@ class MonitoringService {}
       }
     }
   }
-  private monitorResourceTiming(): void {
-    if ('PerformanceObserver' in window) {
-      try {
-        const resourceObserver = new PerformanceObserver((list) => {
+  private monitorResourceTiming(): void {;
+    if ('PerformanceObserver' in window) {;
+      try {;
+        const resourceObserver = new PerformanceObserver((list) => {;
           const entries = list.getEntries();
     // Keep HEAD version
   }
@@ -128,9 +127,7 @@ class MonitoringService {}
   private setupErrorHandling(): void {
     // Global error handler;
     window.addEventListener('error', (event) => {
-      this.logError({
-        message: event.message,
-        stack: event.error?.stack,
+      this.logError()
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href
@@ -139,8 +136,7 @@ class MonitoringService {}
     })
     // Unhandled promise rejection handler;
     window.addEventListener('unhandledrejection', (event) => {
-      this.logError({}
-        message: `Unhandled Promise Rejection: ${event.reason}`,;
+      this.logError()
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href,
@@ -153,13 +149,13 @@ class MonitoringService {}
       return
   }
     }
-    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
-    if (thresholds) {
+    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals];
+    if (thresholds) {;
     const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor';
     // Keep HEAD version;
     // Send to analytics (if configured);
     if (typeof (window as any).gtag === 'function') {
-      (window as any).gtag('event', name, {
+      (window as any).gtag()
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals'
   }

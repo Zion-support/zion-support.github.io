@@ -4,18 +4,12 @@ interface PerformanceOptimizerProps {
     children: React.ReactNode,
   enableOptimizations?: boolean
   }
-const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children,
-  enableOptimizations = true
+const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
 }) => {
   const [isOptimized, setIsOptimized] = useState(false);
-  const [optimizationMetrics, setOptimizationMetrics] = useState({
-    imagesOptimized: 0,
-    scriptsOptimized: 0,
-    cssOptimized: 0,
-    totalSavings: 0
+  const [optimizationMetrics, setOptimizationMetrics] = useState()
   })
-  const optimizeImages = useCallback(() => {
+  const optimizeImages = useCallback(() => {;
     if (typeof window === 'undefined') return;
     const images = document.querySelectorAll('img');
     let optimizedCount = 0;
@@ -33,7 +27,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     })
     return optimizedCount;
   }, []);
-  const optimizeScripts = useCallback(() => {
+  const optimizeScripts = useCallback(() => {;
     if (typeof window === 'undefined') return;
     const scripts = document.querySelectorAll('script[src]');
     let optimizedCount = 0;
@@ -46,7 +40,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     })
     return optimizedCount;
   }, []);
-  const optimizeCSS = useCallback(() => {
+  const optimizeCSS = useCallback(() => {;
     if (typeof window === 'undefined') return;
     const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
     let optimizedCount = 0;
@@ -60,16 +54,12 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     })
     return optimizedCount;
   }, []);
-  const runOptimizations = useCallback(() => {
+  const runOptimizations = useCallback(() => {;
     if (!enableOptimizations) return;
     const imagesOptimized = optimizeImages();
     const scriptsOptimized = optimizeScripts();
     const cssOptimized = optimizeCSS();
-    setOptimizationMetrics({
-      imagesOptimized,
-      scriptsOptimized,
-      cssOptimized,
-      totalSavings: imagesOptimized + scriptsOptimized + cssOptimized
+    setOptimizationMetrics()
     })
     setIsOptimized(true);
   }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS]);
@@ -81,7 +71,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   // Add performance monitoring
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver((list) => {;
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'navigation') {
@@ -95,22 +85,31 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
     return () => observer.disconnect();
   }, []);
+<<<<<<< HEAD
   return (
-    <div className="performance-optimized" data-optimized={isOptimized}>
+    </PerformanceOptimizerProps><div className="performance-optimized" data-optimized={isOptimized}>
       {children}
       {process.env.NODE_ENV === 'development' && (
-        <div className="optimization-debug" style={{
+        </div><div className="optimization-debug" style={{
           position: 'fixed',
           bottom: '10px',
           right: '10px',
+=======
+  return ()
+>>>>>>> main
           background: 'rgba(0,0,0,0.8)',
           color: 'white',
           padding: '10px',
           borderRadius: '5px',
           fontSize: '12px',
           zIndex: 1000
+<<<<<<< HEAD
         }}>
+          </div><div>Images: {optimizationMetrics.imagesOptimized}</div>
+=======
+        }}></div>
           <div>Images: {optimizationMetrics.imagesOptimized}</div>
+>>>>>>> main
           <div>Scripts: {optimizationMetrics.scriptsOptimized}</div>
           <div>CSS: {optimizationMetrics.cssOptimized}</div>
           <div>Total: {optimizationMetrics.totalSavings}</div>
