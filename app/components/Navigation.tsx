@@ -34,6 +34,15 @@ export default function Navigation() {
               <Link to="/about" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 About
               </Link>
+              <Link to="/pricing" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Pricing
+              </Link>
+              <Link to="/careers" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Careers
+              </Link>
+              <Link to="/blog" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Blog
+              </Link>
               
               {/* AI Services Dropdown */}
               <div className="relative">
@@ -129,6 +138,15 @@ export default function Navigation() {
             </Link>
             <Link to="/about" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
               About
+            </Link>
+            <Link to="/pricing" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
+              Pricing
+            </Link>
+            <Link to="/careers" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
+              Careers
+            </Link>
+            <Link to="/blog" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
+              Blog
             </Link>
             
             {/* AI Services Mobile */}
