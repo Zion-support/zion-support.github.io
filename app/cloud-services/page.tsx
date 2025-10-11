@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Cloud, Server, Shield, Zap } from 'lucide-react';
+=======
+import { ArrowRight, Cloud, Shield, Zap, Globe, CheckCircle } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-529a
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -7,6 +11,7 @@ import Footer from '../components/Footer';
 const CloudServicesPage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
 icon: Cloud,
 =======
 icon: Cloud,
@@ -87,10 +92,35 @@ description: 'Comprehensive AWS solutions including EC2, S3, Lambda, and more',
       description: 'Advanced performance optimization and monitoring.',
       benefits: ['Load Balancing', 'Caching', 'CDN Integration', 'Real-time Monitoring'],
       icon: <Zap className="w-8 h-8 text-orange-400" />
+=======
+      title: 'Cloud Migration',
+      description: 'Seamless migration of your applications and data to the cloud.',
+      benefits: ['Zero downtime', 'Cost optimization', 'Scalability', 'Security'],
+      icon: <Cloud className="w-8 h-8 text-blue-400" />
+    },
+    {
+      title: 'Cloud Security',
+      description: 'Comprehensive security solutions for your cloud infrastructure.',
+      benefits: ['Data encryption', 'Access control', 'Threat detection', 'Compliance'],
+      icon: <Shield className="w-8 h-8 text-green-400" />
+    },
+    {
+      title: 'Auto Scaling',
+      description: 'Automatic scaling based on demand and traffic patterns.',
+      benefits: ['Cost efficiency', 'Performance optimization', 'Load balancing', 'Monitoring'],
+      icon: <Zap className="w-8 h-8 text-yellow-400" />
+    },
+    {
+      title: 'Global CDN',
+      description: 'Worldwide content delivery network for optimal performance.',
+      benefits: ['Low latency', 'High availability', 'Global reach', 'Edge computing'],
+      icon: <Globe className="w-8 h-8 text-purple-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-529a
     }
   ];
 
   return (
+<<<<<<< HEAD
 <>
       <Helmet>
         <title>Cloud Services | Zion Tech Group</title>
@@ -107,6 +137,15 @@ description: 'Comprehensive AWS solutions including EC2, S3, Lambda, and more',
       </Helmet>
       
 
+=======
+    <>
+      <Helmet>
+        <title>Cloud Services | Zion Tech Group</title>
+        <meta name="description" content="Professional cloud services including migration, security, and optimization solutions." />
+        <meta name="keywords" content="cloud services, cloud migration, cloud security, cloud optimization" />
+      </Helmet>
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-529a
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <Navigation />
 
@@ -122,6 +161,7 @@ description: 'Comprehensive AWS solutions including EC2, S3, Lambda, and more',
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+<<<<<<< HEAD
               Professional cloud services and solutions by Zion Tech Group. Advanced cloud infrastructure and migration services.
 
 =======
@@ -143,8 +183,22 @@ description: 'Comprehensive AWS solutions including EC2, S3, Lambda, and more',
               Professional cloud services and infrastructure solutions for modern businesses. 
               Scale your operations with our reliable cloud platform.
             </p>
+=======
+              Professional cloud services including migration, security, and optimization solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
+                Get Started Today
+                <ArrowRight className="inline-block ml-2 w-5 h-5" />
+              </button>
+              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-529a
           </div>
 
+<<<<<<< HEAD
 <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Move to the Cloud?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
@@ -153,6 +207,49 @@ description: 'Comprehensive AWS solutions including EC2, S3, Lambda, and more',
 =======
 Contact us today to learn more about our cloud services and migration solutions.
 
+=======
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Cloud Solutions
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive cloud services designed for modern businesses.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Contact us today to learn more about our cloud services.
+>>>>>>> cursor/fix-errors-and-merge-to-main-529a
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -161,6 +258,7 @@ Contact us today to learn more about our cloud services and migration solutions.
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
                   Learn More
                 </button>
+<<<<<<< HEAD
 =======
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {features.map((feature, index) => (
@@ -191,10 +289,17 @@ Contact us today to learn more about our cloud services and migration solutions.
             </button>
           </div>
 </section>
+=======
+              </div>
+            </div>
+          </div>
+        </section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-529a
 
         <Footer />
       </div>
     </>
+<<<<<<< HEAD
 </section>
         
         <Footer />
@@ -207,6 +312,8 @@ Contact us today to learn more about our cloud services and migration solutions.
       </main>
       <Footer />
     </>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-529a
   );
 };
 

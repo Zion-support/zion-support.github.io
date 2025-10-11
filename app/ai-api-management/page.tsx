@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 =======
@@ -6,11 +7,17 @@ import { CheckCircle, ArrowRight, Shield, Zap, Globe, BarChart3 } from 'lucide-r
 
 =======
 import { CheckCircle, ArrowRight, Shield, Zap, Globe, BarChart3 } from 'lucide-react';
+=======
+import { CheckCircle, ArrowRight, Shield, Zap, Globe, BarChart3 } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-529a
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-529a
 const AIApiManagementPage: React.FC = () => {
   const features = [
     {
@@ -36,6 +43,7 @@ const AIApiManagementPage: React.FC = () => {
       description: 'Comprehensive analytics and performance insights.',
       benefits: ['Real-time Metrics', 'Usage Analytics', 'Performance Reports', 'Cost Optimization'],
       icon: <BarChart3 className="w-8 h-8 text-orange-400" />
+<<<<<<< HEAD
 const AIAPIManagementPage: React.FC = () => {
   const features = [
     {
@@ -69,6 +77,8 @@ const AIAPIManagementPage: React.FC = () => {
       benefits: ['Usage Optimization', 'Cost Analytics', 'Budget Controls', 'Resource Scaling']
 
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-529a
     }
   ];
 
@@ -91,7 +101,15 @@ const AIAPIManagementPage: React.FC = () => {
             </p>
           </div>
 
+<<<<<<< HEAD
 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+=======
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+>>>>>>> cursor/fix-errors-and-merge-to-main-529a
                 Powerful API Management Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -136,6 +154,7 @@ const AIAPIManagementPage: React.FC = () => {
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
                   Learn More
                 </button>
+<<<<<<< HEAD
 <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Comprehensive AI API Solutions
               </h2>
@@ -208,10 +227,20 @@ const AIAPIManagementPage: React.FC = () => {
         </div>
       </main>
       <Footer />
+=======
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <Footer />
+      </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-529a
     </>
   );
 };
 
+<<<<<<< HEAD
 export default AIApiManagementPage;
 export default AIAPIManagementPage;
 
@@ -219,3 +248,6 @@ export default AIAPIManagementPage;
 export default AIApiManagementPage;
 
 =======
+=======
+export default AIApiManagementPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-529a

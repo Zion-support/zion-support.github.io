@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 =======
 
+=======
+// Type definitions for Next.js
+>>>>>>> cursor/fix-errors-and-merge-to-main-529a
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
@@ -12,6 +16,10 @@ declare global {
     }
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-529a
 declare module 'next' {
   interface NextRequest {
     user?: {
