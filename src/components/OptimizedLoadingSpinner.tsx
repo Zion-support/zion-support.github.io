@@ -52,12 +52,11 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
     );
 
     const fullScreenClasses = useMemo(
-      () => 'fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-90',
-      []
+      () => fullScreen ? 'fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-90' : '',
+      [fullScreen]
     );
 
     const renderSpinner = useMemo(() => {
-      const _baseClasses = `${sizeClasses[size]} ${colorClasses[color]}`;
       switch (variant) {
         case 'dots':
           return (
@@ -120,12 +119,10 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
             />
           );
       }
-    }, [size, variant, color, sizeClasses, colorClasses]);
+    }, [size, variant, color, sizeClasses, colorClasses, baseClasses]);
     const containerClasses = useMemo(() => {
-      const _baseClasses = 'flex items-center justify-center';
-      const _fullScreenClasses = fullScreen ? 'min-h-screen' : '';
       return `${baseClasses} ${fullScreenClasses} ${className}`;
-    }, [fullScreen, className]);
+    }, [baseClasses, fullScreenClasses, className]);
     return (
       <div className={containerClasses}>
         <div className='text-center'>
