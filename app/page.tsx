@@ -1,13 +1,12 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Globe } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Code, Smartphone, Brain, Cpu } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const HomePage: React.FC = () => {
   const features = [
     {
-      icon: <Zap className="w-8 h-8 text-blue-500" />,
-<<<<<<< HEAD
+      icon: <Brain className="w-8 h-8 text-blue-500" />,
       title: 'AI-Powered Solutions',
       description: 'Transform your business with our comprehensive AI services including content generation, chatbots, analytics, and automation.',
       benefits: ['AI Content Generator - $29/month', 'AI Chatbot Builder - $49/month', 'AI Analytics Dashboard - $79/month', 'AI Automation Suite - $99/month'],
@@ -18,23 +17,10 @@ const HomePage: React.FC = () => {
       title: 'IT Services & Solutions',
       description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
       benefits: ['Cloud Migration - Starting at $2,500', 'Cybersecurity - $1,500/month', 'Mobile Development - Starting at $5,000', 'Data Analytics - $2,000/month'],
-=======
-      title: 'Micro SAAS Services',
-      description: 'Powerful AI-driven micro software solutions designed to streamline your business operations and boost productivity.',
-      benefits: ['AI Content Writer Pro', 'Analytics Dashboard', 'Email Assistant', 'Lead Generation'],
-      link: '/micro-saas-services'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-green-500" />,
-      title: 'IT Services',
-      description: 'Comprehensive IT solutions including infrastructure management, cybersecurity, and 24/7 support.',
-      benefits: ['Infrastructure Management', 'Cybersecurity Solutions', 'Cloud Migration', 'Database Administration'],
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
       link: '/it-services'
     },
     {
-      icon: <Globe className="w-8 h-8 text-purple-500" />,
-<<<<<<< HEAD
+      icon: <Cpu className="w-8 h-8 text-purple-500" />,
       title: 'Micro SAAS Applications',
       description: 'Powerful, affordable micro applications designed to solve specific business problems with AI intelligence.',
       benefits: ['AI Task Manager - $19/month', 'AI Expense Tracker - $15/month', 'AI Password Manager - $12/month', 'AI Invoice Generator - $25/month'],
@@ -46,33 +32,20 @@ const HomePage: React.FC = () => {
       description: 'Next-generation connectivity solutions to power your digital transformation with ultra-fast speeds and low latency.',
       benefits: ['Ultra-Fast Speeds - 10+ Gbps', 'Low Latency - 1ms', 'IoT Integration - 1M+ devices/km²', 'Edge Computing Solutions'],
       link: '/5g-implementation'
-=======
+    },
+    {
+      icon: <Cloud className="w-8 h-8 text-cyan-500" />,
       title: 'Cloud Services',
       description: 'Professional cloud services including migration, infrastructure setup, security, and optimization.',
-      benefits: ['Cloud Migration', 'Infrastructure Setup', 'Security Solutions', 'Cost Optimization'],
+      benefits: ['Cloud Migration - $1,200/month', 'Infrastructure Setup - $3,000', 'Security Solutions - $800/month', 'Cost Optimization - $500/month'],
       link: '/cloud-services'
     },
     {
-      icon: <Zap className="w-8 h-8 text-orange-500" />,
-      title: 'Digital Transformation',
-      description: 'Transform your business for the digital age with comprehensive digital transformation services.',
-      benefits: ['Process Automation', 'Digital Workforce', 'Customer Experience', 'Data Strategy'],
-      link: '/digital-transformation'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: '5G Implementation',
-      description: 'Next-generation connectivity solutions to power your digital transformation.',
-      benefits: ['Ultra-Fast Speeds', 'Low Latency', 'IoT Integration', 'Edge Computing'],
-      link: '/5g-implementation'
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-yellow-500" />,
-      title: 'AI Solutions',
-      description: 'Advanced AI-powered solutions to automate processes and gain competitive advantages.',
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      link: '/ai-services'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
+      icon: <Database className="w-8 h-8 text-red-500" />,
+      title: 'Data Analytics',
+      description: 'Advanced data analytics and business intelligence solutions to drive informed decision-making.',
+      benefits: ['Real-time Analytics - $1,500/month', 'Predictive Modeling - $2,200/month', 'Data Visualization - $800/month', 'Custom Dashboards - $1,000/month'],
+      link: '/data-analytics'
     }
   ];
 
@@ -94,19 +67,11 @@ const HomePage: React.FC = () => {
       {/* Hero Section */}
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-          <div className="text-center mb-12 sm:mb-16">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-              Advanced AI & IT Solutions
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
-=======
           <div className="text-center mb-16">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Advanced AI & IT Solutions
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8 px-4">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
               Transform your business with cutting-edge artificial intelligence, 5G implementation, and enterprise-grade IT solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -127,17 +92,10 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* Stats Section */}
-<<<<<<< HEAD
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16 lg:mb-20">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">{stat.number}</div>
-=======
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 mb-20">
             {stats.map((stat, index) => (
               <div key={index} className="text-center px-2">
                 <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
                 <div className="text-gray-300 text-xs sm:text-sm">{stat.label}</div>
               </div>
             ))}
@@ -148,23 +106,14 @@ const HomePage: React.FC = () => {
       {/* Features Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Our Core Services</h2>
-=======
           <div className="text-center mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Our Core Services</h2>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
             <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
               Comprehensive technology solutions designed to accelerate your digital transformation
             </p>
           </div>
           
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
-=======
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-20">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
             {features.map((feature, index) => (
               <Link key={index} to={feature.link} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
                 <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
@@ -178,22 +127,11 @@ const HomePage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
-                <Link 
-                  to={feature.link}
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold transition-colors"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </div>
-=======
                 <div className="mt-6 flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
             ))}
           </div>
         </div>
@@ -203,15 +141,9 @@ const HomePage: React.FC = () => {
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-<<<<<<< HEAD
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
-              <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-=======
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Ready to Transform Your Business?</h2>
               <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto px-4">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
                 Let's discuss how our AI and IT solutions can drive your success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
