@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, ArrowRight } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
-  const openPositions = const openPositions = const openPositions = [
+  const openPositions = [
     {
       title: 'Senior AI Engineer',
       department: 'AI Solutions',
@@ -31,10 +31,10 @@ const CareersPage: React.FC = () => {
       type: 'Full-time',
       experience: '3+ years',
       description: 'Extract insights from complex datasets to drive business decisions.',
-        requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistical analysis skills'];
+        requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistical analysis skills']
       };
     ];
-  const benefits = const benefits = const benefits = [
+  const benefits = [
     'Competitive salary and equity',
     'Comprehensive health insurance',
     'Flexible work arrangements',

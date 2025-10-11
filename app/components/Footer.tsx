@@ -12,7 +12,7 @@ const Footer: React.FC = memo(() => {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
@@ -144,13 +144,48 @@ const Footer: React.FC = memo(() => {
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-cyan-400 transition-colors">
-                  Contact
+                <Link to="/blog" className="hover:text-cyan-400 transition-colors">
+                  Blog
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="hover:text-cyan-400 transition-colors">
-                  Blog
+                <Link to="/case-studies" className="hover:text-cyan-400 transition-colors">
+                  Case Studies
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Support Links */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <Settings className="w-5 h-5 text-cyan-400 mr-2" />
+              Support
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/contact" className="hover:text-cyan-400 transition-colors">
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/support" className="hover:text-cyan-400 transition-colors">
+                  Support Center
+                </Link>
+              </li>
+              <li>
+                <Link to="/faq" className="hover:text-cyan-400 transition-colors">
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link to="/tutorials" className="hover:text-cyan-400 transition-colors">
+                  Tutorials
+                </Link>
+              </li>
+              <li>
+                <Link to="/docs" className="hover:text-cyan-400 transition-colors">
+                  Documentation
                 </Link>
               </li>
             </ul>

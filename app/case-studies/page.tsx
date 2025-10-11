@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink, Building, Users, TrendingUp } from 'lucide-react';
 
 const CaseStudiesPage: React.FC = () => {
-  const caseStudies = const caseStudies = const caseStudies = [
+  const caseStudies = [
     {
       title: 'AI-Powered Customer Service for E-commerce',
       client: 'ShopTech Solutions',

@@ -41,6 +41,11 @@ const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
 const TermsPage = React.lazy(() => import('./app/terms/page'));
 const CookiesPage = React.lazy(() => import('./app/cookies/page'));
 const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
+const TeamPage = React.lazy(() => import('./app/team/page'));
+const CloudInfrastructurePage = React.lazy(() => import('./app/cloud-infrastructure/page'));
+const CybersecuritySolutionsPage = React.lazy(() => import('./app/cybersecurity-solutions/page'));
+const WebDevelopmentPage = React.lazy(() => import('./app/web-development/page'));
+const MobileDevelopmentPage = React.lazy(() => import('./app/mobile-development/page'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -89,6 +94,11 @@ const App: React.FC = () => {
                             <Route path="/terms" element={<TermsPage />} />
                             <Route path="/cookies" element={<CookiesPage />} />
                             <Route path="/sitemap" element={<SitemapPage />} />
+                            <Route path="/team" element={<TeamPage />} />
+                            <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                            <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
+                            <Route path="/web-development" element={<WebDevelopmentPage />} />
+                            <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
                           </Routes>
                         </Suspense>
                       </main>
