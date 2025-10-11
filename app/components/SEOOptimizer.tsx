@@ -1,254 +1,178 @@
-<<<<<<< HEAD
-'use client';
-
-import React, { useEffect } from 'react';
-import Head from 'next/head';
+'use client'
+import React, { useEffect } from 'react'
 
 interface SEOOptimizerProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  structuredData?: Record<string, unknown>;
+  title?: string
+  description?: string
+  keywords?: string
+  canonicalUrl?: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  structuredData?: object
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
-  canonicalUrl = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  title = 'Zion Tech Group - AI & IT Solutions',
+  description = 'Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.',
+  keywords = 'AI solutions, IT services, artificial intelligence, cloud computing, cybersecurity, data analytics, digital transformation',
+  canonicalUrl,
+  ogImage = '/images/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
   structuredData
 }) => {
   useEffect(() => {
     // Update document title
-    if (typeof document !== 'undefined') {
-      document.title = title;
+    if (title) {
+      document.title = title
     }
 
     // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
+    const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
-      metaDescription.setAttribute('content', description);
+      metaDescription.setAttribute('content', description)
     } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = description;
-      document.head.appendChild(meta);
+      const meta = document.createElement('meta')
+      meta.name = 'description'
+      meta.content = description
+      document.head.appendChild(meta)
     }
 
     // Update meta keywords
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    const metaKeywords = document.querySelector('meta[name="keywords"]')
     if (metaKeywords) {
-      metaKeywords.setAttribute('content', keywords.join(', '));
+      metaKeywords.setAttribute('content', keywords)
     } else {
-      const meta = document.createElement('meta');
-      meta.name = 'keywords';
-      meta.content = keywords.join(', ');
-      document.head.appendChild(meta);
+      const meta = document.createElement('meta')
+      meta.name = 'keywords'
+      meta.content = keywords
+      document.head.appendChild(meta)
     }
 
     // Update canonical URL
-    const canonicalLink = document.querySelector('link[rel="canonical"]');
-    if (canonicalLink) {
-      canonicalLink.setAttribute('href', canonicalUrl);
-    } else {
-      const link = document.createElement('link');
-      link.rel = 'canonical';
-      link.href = canonicalUrl;
-      document.head.appendChild(link);
+    if (canonicalUrl) {
+      let canonical = document.querySelector('link[rel="canonical"]')
+      if (canonical) {
+        canonical.setAttribute('href', canonicalUrl)
+      } else {
+        canonical = document.createElement('link')
+        canonical.rel = 'canonical'
+        canonical.href = canonicalUrl
+        document.head.appendChild(canonical)
+      }
     }
 
     // Update Open Graph tags
-    const ogTitle = document.querySelector('meta[property="og:title"]');
+    const ogTitle = document.querySelector('meta[property="og:title"]')
     if (ogTitle) {
-      ogTitle.setAttribute('content', title);
+      ogTitle.setAttribute('content', title)
     } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:title');
-      meta.content = title;
-      document.head.appendChild(meta);
+      const meta = document.createElement('meta')
+      meta.setAttribute('property', 'og:title')
+      meta.content = title
+      document.head.appendChild(meta)
     }
 
-    const ogDescription = document.querySelector('meta[property="og:description"]');
+    const ogDescription = document.querySelector('meta[property="og:description"]')
     if (ogDescription) {
-      ogDescription.setAttribute('content', description);
+      ogDescription.setAttribute('content', description)
     } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:description');
-      meta.content = description;
-      document.head.appendChild(meta);
+      const meta = document.createElement('meta')
+      meta.setAttribute('property', 'og:description')
+      meta.content = description
+      document.head.appendChild(meta)
     }
 
-    const ogImage = document.querySelector('meta[property="og:image"]');
-    if (ogImage) {
-      ogImage.setAttribute('content', ogImage);
+    const ogImageMeta = document.querySelector('meta[property="og:image"]')
+    if (ogImageMeta) {
+      ogImageMeta.setAttribute('content', ogImage)
     } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:image');
-      meta.content = ogImage;
-      document.head.appendChild(meta);
+      const meta = document.createElement('meta')
+      meta.setAttribute('property', 'og:image')
+      meta.content = ogImage
+      document.head.appendChild(meta)
     }
 
-    const ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl) {
-      ogUrl.setAttribute('content', canonicalUrl);
+    const ogTypeMeta = document.querySelector('meta[property="og:type"]')
+    if (ogTypeMeta) {
+      ogTypeMeta.setAttribute('content', ogType)
     } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:url');
-      meta.content = canonicalUrl;
-      document.head.appendChild(meta);
+      const meta = document.createElement('meta')
+      meta.setAttribute('property', 'og:type')
+      meta.content = ogType
+      document.head.appendChild(meta)
     }
 
     // Update Twitter Card tags
-    const twitterCard = document.querySelector('meta[name="twitter:card"]');
-    if (twitterCard) {
-      twitterCard.setAttribute('content', 'summary_large_image');
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'twitter:card';
-      meta.content = 'summary_large_image';
-      document.head.appendChild(meta);
-    }
-
-    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]')
     if (twitterTitle) {
-      twitterTitle.setAttribute('content', title);
+      twitterTitle.setAttribute('content', title)
     } else {
-      const meta = document.createElement('meta');
-      meta.name = 'twitter:title';
-      meta.content = title;
-      document.head.appendChild(meta);
+      const meta = document.createElement('meta')
+      meta.name = 'twitter:title'
+      meta.content = title
+      document.head.appendChild(meta)
     }
 
-    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+    const twitterDescription = document.querySelector('meta[name="twitter:description"]')
     if (twitterDescription) {
-      twitterDescription.setAttribute('content', description);
+      twitterDescription.setAttribute('content', description)
     } else {
-      const meta = document.createElement('meta');
-      meta.name = 'twitter:description';
-      meta.content = description;
-      document.head.appendChild(meta);
+      const meta = document.createElement('meta')
+      meta.name = 'twitter:description'
+      meta.content = description
+      document.head.appendChild(meta)
     }
 
-    const twitterImage = document.querySelector('meta[name="twitter:image"]');
+    const twitterImage = document.querySelector('meta[name="twitter:image"]')
     if (twitterImage) {
-      twitterImage.setAttribute('content', ogImage);
+      twitterImage.setAttribute('content', ogImage)
     } else {
-      const meta = document.createElement('meta');
-      meta.name = 'twitter:image';
-      meta.content = ogImage;
-      document.head.appendChild(meta);
+      const meta = document.createElement('meta')
+      meta.name = 'twitter:image'
+      meta.content = ogImage
+      document.head.appendChild(meta)
+    }
+
+    const twitterCardMeta = document.querySelector('meta[name="twitter:card"]')
+    if (twitterCardMeta) {
+      twitterCardMeta.setAttribute('content', twitterCard)
+    } else {
+      const meta = document.createElement('meta')
+      meta.name = 'twitter:card'
+      meta.content = twitterCard
+      document.head.appendChild(meta)
     }
 
     // Add structured data
     if (structuredData) {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.textContent = JSON.stringify(structuredData);
-      document.head.appendChild(script);
+      const script = document.createElement('script')
+      script.type = 'application/ld+json'
+      script.textContent = JSON.stringify(structuredData)
+      document.head.appendChild(script)
     }
 
     // Add viewport meta tag if not present
-    const viewport = document.querySelector('meta[name="viewport"]');
+    const viewport = document.querySelector('meta[name="viewport"]')
     if (!viewport) {
-      const meta = document.createElement('meta');
-      meta.name = 'viewport';
-      meta.content = 'width=device-width, initial-scale=1.0';
-      document.head.appendChild(meta);
+      const meta = document.createElement('meta')
+      meta.name = 'viewport'
+      meta.content = 'width=device-width, initial-scale=1.0'
+      document.head.appendChild(meta)
     }
 
     // Add charset if not present
-    const charset = document.querySelector('meta[charset]');
+    const charset = document.querySelector('meta[charset]')
     if (!charset) {
-      const meta = document.createElement('meta');
-      meta.setAttribute('charset', 'UTF-8');
-      document.head.insertBefore(meta, document.head.firstChild);
+      const meta = document.createElement('meta')
+      meta.setAttribute('charset', 'utf-8')
+      document.head.insertBefore(meta, document.head.firstChild)
     }
 
-    // Add language attribute to html tag
-    if (document.documentElement && !document.documentElement.getAttribute('lang')) {
-      document.documentElement.setAttribute('lang', 'en');
-    }
+  }, [title, description, keywords, canonicalUrl, ogImage, ogType, twitterCard, structuredData])
 
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
-
-  return (
-    <Head>
-      <title>{title}</title>
-=======
-'use client'
-interface SEOOptimizerProps {
-  title: string
-  description: string
-  keywords?: string[]
-  canonicalUrl?: string
-  structuredData?: object
+  return null
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ()
-}) => {
-  const keywordsString = keywords.join(', ')
-  return (
-    </SEOOptimizerProps><Helmet>
-      </Helmet><title>{title}</title>
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <link rel="canonical" href={canonicalUrl} />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      
-      {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-<<<<<<< HEAD
-=======
-    </Helmet>
-  )
-}
 export default SEOOptimizer
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
-      <meta name="twitter:image" content={ogImage} />
-      
-      {/* Additional SEO meta tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-<<<<<<< HEAD
-      <meta name="theme-color" content="#1e40af" />
-      
-      {/* Structured Data */}
-      {structuredData && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData)
-          }}
-        />
-      )}
-    </Head>
-  );
-};
-
-export default SEOOptimizer;
-=======
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
-      {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-      )}
-  )
-}
-export default SEOOptimizer
-</li>
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
