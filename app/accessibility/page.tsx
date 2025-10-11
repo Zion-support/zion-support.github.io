@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Eye, MousePointer, Volume2, Shield, Users, Globe, CheckCircle } from 'lucide-react';
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Eye, MousePointer, Volume2, Shield, Users, Globe, CheckCircle } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-aca8
 
 const AccessibilityPage: React.FC = () => {
   const features = [
@@ -15,11 +9,7 @@ const AccessibilityPage: React.FC = () => {
       icon: Eye,
       title: 'Visual Accessibility',
       description: 'Comprehensive visual accessibility features including high contrast modes, text scaling, and screen reader compatibility.',
-<<<<<<< HEAD
-      benefits: ['High contrast mode', 'Text scaling', 'Screen reader support', 'Color blind friendly'],
-=======
       benefits: ['High contrast mode', 'Text scaling', 'Screen reader support', 'Color blind friendly']
->>>>>>> cursor/fix-errors-and-merge-to-main-aca8
     },
     {
       icon: MousePointer,
@@ -49,56 +39,32 @@ const AccessibilityPage: React.FC = () => {
       icon: Globe,
       title: 'Global Standards',
       description: 'Compliance with international accessibility standards including WCAG 2.1 AA and Section 508.',
-<<<<<<< HEAD
-      benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards'],
-    },
-  ];
-=======
       benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards']
     }
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-aca8
 
   const standards = [
     {
       name: 'WCAG 2.1 AA',
       description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
-<<<<<<< HEAD
-      status: 'Fully Compliant',
-=======
       status: 'Fully Compliant'
->>>>>>> cursor/fix-errors-and-merge-to-main-aca8
     },
     {
       name: 'Section 508',
       description: 'US federal accessibility standards for electronic and information technology',
-<<<<<<< HEAD
-      status: 'Fully Compliant',
-=======
       status: 'Fully Compliant'
->>>>>>> cursor/fix-errors-and-merge-to-main-aca8
     },
     {
       name: 'ADA',
       description: 'Americans with Disabilities Act compliance for digital accessibility',
-<<<<<<< HEAD
-      status: 'Fully Compliant',
-=======
       status: 'Fully Compliant'
->>>>>>> cursor/fix-errors-and-merge-to-main-aca8
     },
     {
       name: 'EN 301 549',
       description: 'European accessibility standard for ICT products and services',
-<<<<<<< HEAD
-      status: 'Fully Compliant',
-    },
-  ];
-=======
       status: 'Fully Compliant'
     }
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-aca8
 
   return (
     <>
@@ -113,19 +79,6 @@ const AccessibilityPage: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
-<<<<<<< HEAD
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Accessibility <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities and comply with international standards.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-                Get Accessibility Audit
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-=======
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Accessibility
               <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -141,7 +94,6 @@ const AccessibilityPage: React.FC = () => {
                 Get Accessibility Audit
               </button>
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
->>>>>>> cursor/fix-errors-and-merge-to-main-aca8
                 Learn More
               </button>
             </div>
@@ -150,11 +102,7 @@ const AccessibilityPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-20 px-4">
-<<<<<<< HEAD
-          <div className="container mx-auto">
-=======
           <div className="max-w-7xl mx-auto">
->>>>>>> cursor/fix-errors-and-merge-to-main-aca8
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
                 Comprehensive Accessibility Features
@@ -190,7 +138,7 @@ const AccessibilityPage: React.FC = () => {
 
         {/* Standards Compliance Section */}
         <section className="py-20 px-4">
-          <div className="container mx-auto">
+          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
                 Standards Compliance
@@ -199,16 +147,6 @@ const AccessibilityPage: React.FC = () => {
                 We ensure full compliance with international accessibility standards and regulations.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {standards.map((standard, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/10 transition-all duration-300">
-                  <h3 className="text-xl font-bold text-white mb-2">{standard.name}</h3>
-                  <p className="text-gray-300 text-sm mb-4">{standard.description}</p>
-                  <span className="inline-block bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium">
-                    {standard.status}
-                  </span>
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {standards.map((standard, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
@@ -219,7 +157,6 @@ const AccessibilityPage: React.FC = () => {
                     </span>
                   </div>
                   <p className="text-gray-300">{standard.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-aca8
                 </div>
               ))}
             </div>
@@ -228,21 +165,6 @@ const AccessibilityPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4">
-<<<<<<< HEAD
-          <div className="container mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Make Your App Accessible?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Contact us today to get a comprehensive accessibility audit and implementation plan for your application.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-                Get Started
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Schedule Consultation
-=======
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Make Your Application Accessible?
@@ -256,21 +178,13 @@ const AccessibilityPage: React.FC = () => {
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 Contact Us
->>>>>>> cursor/fix-errors-and-merge-to-main-aca8
               </button>
             </div>
           </div>
         </section>
       </div>
     </>
-<<<<<<< HEAD
-  );
-};
-
-export default AccessibilityPage;
-=======
   )
 }
 
 export default AccessibilityPage
->>>>>>> cursor/fix-errors-and-merge-to-main-aca8
