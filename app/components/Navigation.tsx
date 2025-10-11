@@ -92,29 +92,75 @@ const Navigation: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium relative group">
               Home
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium relative group">
               About
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Services
-            </Link>
-            <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium flex items-center space-x-1">
+                <span>Services</span>
+                <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-64 bg-slate-900/95 backdrop-blur-lg rounded-xl border border-cyan-500/20 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <div className="p-4 space-y-2">
+                  <Link to="/ai-services" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                    <Brain className="w-5 h-5 text-cyan-400" />
+                    <div>
+                      <div className="text-white font-medium">AI Services</div>
+                      <div className="text-gray-400 text-sm">Artificial Intelligence Solutions</div>
+                    </div>
+                  </Link>
+                  <Link to="/it-services" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                    <Cloud className="w-5 h-5 text-cyan-400" />
+                    <div>
+                      <div className="text-white font-medium">IT Services</div>
+                      <div className="text-gray-400 text-sm">Technology Infrastructure</div>
+                    </div>
+                  </Link>
+                  <Link to="/micro-saas" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                    <BarChart3 className="w-5 h-5 text-cyan-400" />
+                    <div>
+                      <div className="text-white font-medium">Micro SAAS</div>
+                      <div className="text-gray-400 text-sm">Business Software Solutions</div>
+                    </div>
+                  </Link>
+                  <div className="border-t border-gray-700 my-2"></div>
+                  <Link to="/services" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                    <Settings className="w-5 h-5 text-cyan-400" />
+                    <div>
+                      <div className="text-white font-medium">All Services</div>
+                      <div className="text-gray-400 text-sm">Complete Overview</div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium relative group">
               Pricing
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium relative group">
               Case Studies
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium relative group">
               Blog
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link to="/tutorials" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/tutorials" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium relative group">
               Tutorials
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium relative group">
               Contact
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </div>
 
@@ -157,9 +203,24 @@ const Navigation: React.FC = () => {
               <Link to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 About
               </Link>
-              <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Services
-              </Link>
+              
+              {/* Mobile Services Section */}
+              <div className="space-y-2">
+                <div className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">Services</div>
+                <Link to="/ai-services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium ml-4" onClick={closeAllMenus}>
+                  AI Services
+                </Link>
+                <Link to="/it-services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium ml-4" onClick={closeAllMenus}>
+                  IT Services
+                </Link>
+                <Link to="/micro-saas" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium ml-4" onClick={closeAllMenus}>
+                  Micro SAAS
+                </Link>
+                <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium ml-4" onClick={closeAllMenus}>
+                  All Services
+                </Link>
+              </div>
+              
               <Link to="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Pricing
               </Link>

@@ -307,6 +307,236 @@ const AiServicesPage: React.FC = () => {
       category: 'Finance',
       popular: true,
       icon: TrendingUp
+    },
+    {
+      id: 'ai-3d-generation',
+      name: 'AI 3D Generation',
+      description: 'Advanced 3D model generation and rendering using AI for gaming, architecture, and product design',
+      price: '$1,499/month',
+      marketPrice: '$3000-10000/month',
+      features: [
+        '3D model generation from text',
+        'Automated texturing',
+        'Lighting optimization',
+        'Animation generation',
+        'VR/AR integration'
+      ],
+      benefits: [
+        'Faster 3D content creation',
+        'Reduced design costs',
+        'Enhanced creativity',
+        'Scalable production'
+      ],
+      category: 'Creative AI',
+      popular: false,
+      icon: Box
+    },
+    {
+      id: 'ai-accounting-assistant',
+      name: 'AI Accounting Assistant',
+      description: 'Intelligent accounting automation with AI-powered bookkeeping, tax preparation, and financial reporting',
+      price: '$299/month',
+      marketPrice: '$600-2000/month',
+      features: [
+        'Automated bookkeeping',
+        'Tax preparation',
+        'Financial reporting',
+        'Expense categorization',
+        'Audit support'
+      ],
+      benefits: [
+        'Reduce accounting errors',
+        'Save time on bookkeeping',
+        'Ensure compliance',
+        'Better financial insights'
+      ],
+      category: 'Finance',
+      popular: true,
+      icon: Calculator
+    },
+    {
+      id: 'ai-agricultural-intelligence',
+      name: 'AI Agricultural Intelligence',
+      description: 'Smart farming solutions with AI-powered crop monitoring, yield prediction, and resource optimization',
+      price: '$799/month',
+      marketPrice: '$1500-5000/month',
+      features: [
+        'Crop health monitoring',
+        'Yield prediction',
+        'Weather analysis',
+        'Resource optimization',
+        'Pest detection'
+      ],
+      benefits: [
+        'Increase crop yields',
+        'Reduce resource waste',
+        'Predict weather impact',
+        'Sustainable farming'
+      ],
+      category: 'Agriculture',
+      popular: false,
+      icon: Heart
+    },
+    {
+      id: 'ai-blockchain-analytics',
+      name: 'AI Blockchain Analytics',
+      description: 'Advanced blockchain data analysis and cryptocurrency market intelligence using machine learning',
+      price: '$1,299/month',
+      marketPrice: '$2500-8000/month',
+      features: [
+        'Blockchain transaction analysis',
+        'Cryptocurrency price prediction',
+        'DeFi protocol monitoring',
+        'Smart contract auditing',
+        'Market sentiment analysis'
+      ],
+      benefits: [
+        'Better investment decisions',
+        'Risk assessment',
+        'Market insights',
+        'Compliance monitoring'
+      ],
+      category: 'Blockchain',
+      popular: false,
+      icon: Shield
+    },
+    {
+      id: 'ai-climate-prediction',
+      name: 'AI Climate Prediction Engine',
+      description: 'Advanced climate modeling and weather prediction using AI for environmental monitoring and planning',
+      price: '$1,999/month',
+      marketPrice: '$4000-15000/month',
+      features: [
+        'Climate change modeling',
+        'Weather prediction',
+        'Environmental monitoring',
+        'Disaster risk assessment',
+        'Carbon footprint analysis'
+      ],
+      benefits: [
+        'Better climate planning',
+        'Disaster preparedness',
+        'Environmental compliance',
+        'Sustainability insights'
+      ],
+      category: 'Environmental',
+      popular: false,
+      icon: Globe
+    },
+    {
+      id: 'ai-drug-discovery',
+      name: 'AI Drug Discovery Pro',
+      description: 'Pharmaceutical research acceleration using AI for drug discovery, molecular design, and clinical trials',
+      price: '$4,999/month',
+      marketPrice: '$10000-50000/month',
+      features: [
+        'Molecular design',
+        'Drug interaction prediction',
+        'Clinical trial optimization',
+        'Side effect analysis',
+        'Patent research'
+      ],
+      benefits: [
+        'Faster drug development',
+        'Reduced research costs',
+        'Better success rates',
+        'Improved patient outcomes'
+      ],
+      category: 'Healthcare',
+      popular: false,
+      icon: Heart
+    },
+    {
+      id: 'ai-energy-grid-management',
+      name: 'AI Energy Grid Management',
+      description: 'Smart grid optimization and energy management using AI for utilities and renewable energy integration',
+      price: '$2,499/month',
+      marketPrice: '$5000-20000/month',
+      features: [
+        'Grid optimization',
+        'Demand forecasting',
+        'Renewable integration',
+        'Outage prediction',
+        'Energy trading'
+      ],
+      benefits: [
+        'Improved grid efficiency',
+        'Reduced energy costs',
+        'Better reliability',
+        'Renewable integration'
+      ],
+      category: 'Energy',
+      popular: false,
+      icon: Zap
+    },
+    {
+      id: 'ai-financial-crime-detection',
+      name: 'AI Financial Crime Detection',
+      description: 'Advanced anti-money laundering and financial crime detection using machine learning algorithms',
+      price: '$1,799/month',
+      marketPrice: '$3500-12000/month',
+      features: [
+        'Money laundering detection',
+        'Transaction monitoring',
+        'Risk scoring',
+        'Compliance reporting',
+        'Pattern recognition'
+      ],
+      benefits: [
+        'Enhanced security',
+        'Regulatory compliance',
+        'Reduced false positives',
+        'Better risk management'
+      ],
+      category: 'Security',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'ai-fashion-design',
+      name: 'AI Fashion Design Studio',
+      description: 'AI-powered fashion design and trend prediction for clothing, accessories, and textile industries',
+      price: '$699/month',
+      marketPrice: '$1500-5000/month',
+      features: [
+        'Trend prediction',
+        'Design generation',
+        'Color matching',
+        'Size optimization',
+        'Sustainability analysis'
+      ],
+      benefits: [
+        'Faster design cycles',
+        'Trend accuracy',
+        'Reduced waste',
+        'Market insights'
+      ],
+      category: 'Creative AI',
+      popular: false,
+      icon: Palette
+    },
+    {
+      id: 'ai-5g-implementation',
+      name: 'AI 5G Implementation',
+      description: '5G network optimization and management using AI for telecommunications and IoT applications',
+      price: '$2,999/month',
+      marketPrice: '$6000-25000/month',
+      features: [
+        'Network optimization',
+        'Traffic management',
+        'IoT device management',
+        'Performance monitoring',
+        'Edge computing'
+      ],
+      benefits: [
+        'Better network performance',
+        'Reduced latency',
+        'Improved coverage',
+        'Cost optimization'
+      ],
+      category: 'Telecommunications',
+      popular: false,
+      icon: Wifi
     }
   ];
 
@@ -323,7 +553,13 @@ const AiServicesPage: React.FC = () => {
     { id: 'Marketing', name: 'Marketing', count: services.filter(s => s.category === 'Marketing').length },
     { id: 'Supply Chain', name: 'Supply Chain', count: services.filter(s => s.category === 'Supply Chain').length },
     { id: 'Healthcare', name: 'Healthcare', count: services.filter(s => s.category === 'Healthcare').length },
-    { id: 'Finance', name: 'Finance', count: services.filter(s => s.category === 'Finance').length }
+    { id: 'Finance', name: 'Finance', count: services.filter(s => s.category === 'Finance').length },
+    { id: 'Creative AI', name: 'Creative AI', count: services.filter(s => s.category === 'Creative AI').length },
+    { id: 'Agriculture', name: 'Agriculture', count: services.filter(s => s.category === 'Agriculture').length },
+    { id: 'Blockchain', name: 'Blockchain', count: services.filter(s => s.category === 'Blockchain').length },
+    { id: 'Environmental', name: 'Environmental', count: services.filter(s => s.category === 'Environmental').length },
+    { id: 'Energy', name: 'Energy', count: services.filter(s => s.category === 'Energy').length },
+    { id: 'Telecommunications', name: 'Telecommunications', count: services.filter(s => s.category === 'Telecommunications').length }
   ];
 
   const filteredServices = services.filter(service => {

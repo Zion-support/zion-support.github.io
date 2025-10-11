@@ -17,15 +17,26 @@ const Footer: React.FC = memo(() => {
     { name: 'Status', url: '/status' }
   ];
 
-  const resourcesLinks = [
+  const servicesLinks = [
+    { name: 'AI Services', url: '/ai-services' },
+    { name: 'IT Services', url: '/it-services' },
+    { name: 'Micro SAAS', url: '/micro-saas' },
+    { name: 'All Services', url: '/services' },
     { name: 'Pricing', url: '/pricing' },
-    { name: 'FAQ', url: '/faq' },
+    { name: 'Consultation', url: '/consultation' },
+    { name: 'Demo', url: '/demo' },
+    { name: 'Custom Solutions', url: '/custom-solutions' }
+  ];
+
+  const resourcesLinks = [
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api-docs' },
     { name: 'Tutorials', url: '/tutorials' },
+    { name: 'FAQ', url: '/faq' },
     { name: 'Community', url: '/community' },
-    { name: 'Demo', url: '/demo' },
-    { name: 'Compliance', url: '/compliance' }
+    { name: 'Blog', url: '/blog' },
+    { name: 'Newsletter', url: '/newsletter' },
+    { name: 'Webinars', url: '/webinars' }
   ];
 
   const enterpriseLinks = [
@@ -33,8 +44,19 @@ const Footer: React.FC = memo(() => {
     { name: 'Digital Transformation', url: '/digital-transformation' },
     { name: 'Business Intelligence', url: '/business-intelligence' },
     { name: 'Edge Computing', url: '/edge-computing' },
-    { name: 'Consultation', url: '/consultation' },
-    { name: 'Custom Development', url: '/custom-software' }
+    { name: 'Cloud Migration', url: '/cloud-migration' },
+    { name: 'Cybersecurity', url: '/cybersecurity' },
+    { name: 'Compliance', url: '/compliance' },
+    { name: 'White Label', url: '/white-label' }
+  ];
+
+  const legalLinks = [
+    { name: 'Privacy Policy', url: '/privacy' },
+    { name: 'Terms of Service', url: '/terms' },
+    { name: 'Cookie Policy', url: '/cookies' },
+    { name: 'GDPR Compliance', url: '/gdpr' },
+    { name: 'Security', url: '/security' },
+    { name: 'Sitemap', url: '/sitemap' }
   ];
 
   return (
@@ -44,7 +66,7 @@ const Footer: React.FC = memo(() => {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center space-x-3 group">
@@ -96,7 +118,23 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link
                     to={link.url}
-                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors hover:translate-x-1 transform duration-300"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Services</h3>
+            <ul className="space-y-2">
+              {servicesLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    to={link.url}
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors hover:translate-x-1 transform duration-300"
                   >
                     {link.name}
                   </Link>
@@ -112,7 +150,7 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link
                     to={link.url}
-                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors hover:translate-x-1 transform duration-300"
                   >
                     {link.name}
                   </Link>
@@ -128,7 +166,23 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link
                     to={link.url}
-                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors hover:translate-x-1 transform duration-300"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Legal</h3>
+            <ul className="space-y-2">
+              {legalLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    to={link.url}
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors hover:translate-x-1 transform duration-300"
                   >
                     {link.name}
                   </Link>
