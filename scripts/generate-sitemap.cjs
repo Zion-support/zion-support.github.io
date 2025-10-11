@@ -1,48 +1,35 @@
 const fs = require('fs');
 const path = require('path');
 
-const pages = [
-  '/',
-  '/about',
-  '/services',
-  '/contact',
-  '/blog',
-  '/case-studies',
-  '/tutorials',
-  '/support',
-  '/careers',
-  '/pricing',
-  '/demo',
-  '/consultation',
-  '/privacy',
-  '/terms',
-  '/cookies',
-  '/sitemap',
-  '/ai-services',
-  '/it-services',
-  '/micro-saas',
-  '/team',
-  '/cybersecurity',
-  '/data-analytics',
-  '/web-development',
-  '/mobile-development',
-  '/cloud-infrastructure',
-  '/cybersecurity-solutions',
-  '/ai-analytics',
-  '/ai-chatbot-builder',
-  '/ai-automation',
-  '/ai-cybersecurity'
-];
-
+// Simple sitemap generator
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
-    <loc>https://ziontechgroup.com${page}</loc>
+  <url>
+    <loc>https://ziontechgroup.com/</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/about</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>`).join('\n')}
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/5g-implementation</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>`;
 
-fs.writeFileSync(path.join(__dirname, '../dist/sitemap.xml'), sitemap);
+// Ensure dist directory exists
+const distDir = path.join(__dirname, '..', 'dist');
+if (!fs.existsSync(distDir)) {
+  fs.mkdirSync(distDir, { recursive: true });
+}
+
+// Write sitemap
+fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemap);
 console.log('Sitemap generated successfully');

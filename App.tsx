@@ -1,27 +1,24 @@
-'use client'
-import React, {Suspense} from 'react'
-import {HashRouter as Router, Routes, Route} from 'react-router-dom'
-import {HelmetProvider} from 'react-helmet-async'
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navigation from './app/components/Navigation'
 import Footer from './app/components/Footer'
 import HomePage from './app/page'
+import AboutPage from './app/about/page'
+import FiveGImplementationPage from './app/5g-implementation/page'
 
-const App: React.FC = () => {
+function App() {
   return (
-    <>
-<HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <Suspense fallback={<div className="flex items-center justify-center min-h-screen"><div className="text-white">Loading...</div></div>}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="*" element={<HomePage />} />
-            </Routes>
-          </Suspense>
-        </div>
-      </Router>
-    </HelmetProvider>
-    </>
+    <Router>
+      <div className="min-h-screen bg-gray-50">
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   )
 }
 

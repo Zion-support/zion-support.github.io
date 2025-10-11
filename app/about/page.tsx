@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
-import {Target, Users, Award, ArrowRight, CheckCircle, Zap, Shield, Brain, Lightbulb, Globe} from 'lucide-react';
+import {Target, Users, Award, Shield, Lightbulb, Globe} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -23,10 +23,7 @@ const AboutPage: React.FC = () => {
       description: 'We maintain the highest standards of quality and innovation in everything we do.'
     }
   ];
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
   const values = [
     {
       icon: Lightbulb,
@@ -44,10 +41,7 @@ const AboutPage: React.FC = () => {
       description: 'We focus on creating solutions that make a meaningful difference in the world and drive positive change.'
     }
   ];
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
   const team = [
     {
       name: 'Dr. Sarah Chen',
@@ -65,21 +59,14 @@ const AboutPage: React.FC = () => {
       description: 'Leading expert in natural language processing and computer vision technologies.'
     }
   ];
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission, values, and team of experts in AI and IT solutions." />
-<<<<<<< HEAD
-        <meta name="keywords" content="about us, team, mission, values, AI experts, IT solutions" />      </Helmet>
-=======
         <meta name="keywords" content="about us, team, mission, values, AI experts, IT solutions" />
       </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
       <Navigation />
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -99,24 +86,20 @@ const AboutPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="container mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">What Drives Us</h2>
+              <h2 className="text-4xl font-bold text-white mb-4">Our Approach</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our core principles guide everything we do
+                We combine cutting-edge technology with deep industry expertise to deliver exceptional results
               </p>
             </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => {
-                const Icon = feature.icon;
+                const IconComponent = feature.icon;
                 return (
-                  <div key={index} className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <Icon className="w-8 h-8 text-white" />
+                  <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <IconComponent className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <h3 className="text-2xl font-semibold text-white mb-4">{feature.title}</h3>
                     <p className="text-gray-300">{feature.description}</p>
                   </div>
                 );
@@ -129,72 +112,48 @@ const AboutPage: React.FC = () => {
         <section className="py-20 px-4 bg-white/5">
           <div className="container mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Values</h2>
+              <h2 className="text-4xl font-bold text-white mb-4">Our Values</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                The principles that guide our work and relationships
+                The principles that guide everything we do
               </p>
             </div>
-<<<<<<< HEAD
-=======
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
               {values.map((value, index) => {
-                const Icon = value.icon;
+                const IconComponent = value.icon;
                 return (
-                  <div key={index} className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <Icon className="w-8 h-8 text-white" />
+                  <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4">
+                        <IconComponent className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white">{value.title}</h3>
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
                     <p className="text-gray-300">{value.description}</p>
                   </div>
                 );
               })}
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-
-        {/* Mission Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Mission</h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              We focus on creating solutions that make a positive difference in the world and our clients' businesses.
-            </p>
-          </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
         </section>
 
         {/* Team Section */}
         <section className="py-20 px-4">
           <div className="container mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Meet Our Team</h2>
+              <h2 className="text-4xl font-bold text-white mb-4">Meet Our Team</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                The experts behind our innovative solutions
+                The brilliant minds behind our innovative solutions
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">              {team.map((member, index) => (
-=======
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {team.map((member, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-2xl">
-                      {member.name.split(' ').map(n => n[0]).join('')}
-                    </span>
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
+                  <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+                    <span className="text-white font-bold text-2xl">{member.name.split(' ').map(n => n[0]).join('')}</span>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
-<<<<<<< HEAD
-                  <p className="text-purple-400 font-medium mb-3">{member.role}</p>                  <p className="text-gray-300">{member.description}</p>
-=======
-                  <p className="text-purple-400 font-medium mb-3">{member.role}</p>
+                  <p className="text-purple-400 mb-4">{member.role}</p>
                   <p className="text-gray-300">{member.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
                 </div>
               ))}
             </div>
@@ -202,34 +161,29 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
+        <section className="py-20 px-4">
           <div className="container mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Work With Us?
-            </h2>
-            <p className="text-xl text-gray-100 mb-8 max-w-3xl mx-auto">
-              Let's discuss how we can help transform your business with cutting-edge AI and technology solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Contact Us
-              </button>
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Work With Us?</h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Let's discuss how we can help transform your business with cutting-edge technology solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Get Started
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                  Contact Us
+                </button>
+              </div>
             </div>
-<<<<<<< HEAD
-          </div>
-=======
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );
 };
 
 export default AboutPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
