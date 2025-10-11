@@ -4,8 +4,27 @@
  * Tools to improve search engine optimization;
  */;
 // Generate meta tags;
+<<<<<<< HEAD
 export const generateMetaTags = const generateMetaTags = const generateMetaTags = ()
 }) => {};
+=======
+export const generateMetaTags = (data: {
+    // Generate meta, tags;
+  }
+export const generateMetaTags = (data: {}
+// title: string,
+// description: string,
+// keywords?: string;
+// canonical?: string;
+// ogTitle?: string;
+// ogDescription?: string;
+// ogImage?: string;
+// twitterCard?: string;
+// twitterTitle?: string;
+// twitterDescription?: string;)
+// twitterImage?: string;)
+}) => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   const tags = [;
     { name: 'title', content: data.title },
     { name: 'description', content: data.description },
@@ -33,8 +52,13 @@ export const generateMetaTags = const generateMetaTags = const generateMetaTags 
     {}
       name: 'twitter:image',
       content: data.twitterImage || data.ogImage || '/og-image.webp',
+<<<<<<< HEAD
 // Generate meta tags;];
 export const generateMetaTags = const generateMetaTags = const generateMetaTags = ()
+=======
+// Generate meta tags;];];
+export const generateMetaTags = (dat,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   a: {/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   t: data.title },
@@ -69,22 +93,27 @@ export const generateMetaTags = const generateMetaTags = const generateMetaTags 
 }
 // SEO Config interface;
 interface SEOConfig {
-    title: string,
+      title: string,
   description: string,
-// SEO Config interface
+// SEO Config, interface;
   }
 interface SEOConfig {}
-  title: string
-  description: string
-  keywords: string[],
+  title: string;,
+      description: string;,
+      keywords: string[],
   canonicalUrl: string,
   ogImage: string,
   ogType: string,
   twitterCard: string,
   twitterSite: string,
   twitterCreator: string,
+<<<<<<< HEAD
   structuredData: Record<string></string>
   robots: string,
+=======
+  structuredData: Record<string>,
+      robots: string,
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   language: string,
   locale: string,
   siteName: string,
@@ -95,11 +124,19 @@ interface SEOConfig {}
   tags?: string[]}
 }
 // Default SEO config;
+<<<<<<< HEAD
 const defaultSEOConfig: SEOConfig = {
     title: 'Zion Holdings',
     description: 'Leading provider of AI-powered business solutions',
     keywords: [],
 // Default SEO config
+=======
+const defaultSEOConfig: SEOConfig = {,
+      title: 'Zion Holdings',
+      description: 'Leading provider of AI-powered business solutions',
+      keywords: [],
+// Default SEO, config;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
 const defaultSEOConfig: SEOConfig = {}
   title: 'Zion Holdings',
@@ -120,15 +157,19 @@ const defaultSEOConfig: SEOConfig = {}
 // Generate structured data;
 export const generateStructuredData = (;) => {
     return ()
+<<<<<<< HEAD
   )
+=======
+    $3)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
   const baseStructure = const baseStructure = const baseStructure = {}
     '@context': 'https: //schema.org'}) => {}
   const baseStructure = {}
     '@context': 'https: //schema.org',
     '@type': data.type,
-    name: data.name
-    description: data.description,
+    name: data.name;,
+      description: data.description,
     url: data.url || '',
     logo: data.logo || '',
     sameAs: data.sameAs || []}
@@ -138,10 +179,10 @@ export const generateStructuredData = (;) => {
 // SEO Enhancer class;
 export class SEOEnhancer {
     private static instance: SEOEnhancer,
-// SEO Enhancer class
+// SEO Enhancer, class;
   }
 export class SEOEnhancer {}
-  private static instance: SEOEnhancer
+  private static instance: SEOEnhancer;
   private config: SEOConfig,}
   constructor(config: Partial<SEOConfig> = {}) {}</SEOConfig></<<<SEOConfig>this</SEOConfig></SEOConfig>.config = { ...defaultSEOConfig, ...config }
   }
@@ -154,7 +195,7 @@ export class SEOEnhancer {}
   // Update page title;
   updateTitle(title: string) {
     ,
-    if (typeof document !== 'undefined') {,
+    if (typeof document !== 'undefined') ,
   }
       document.title = title;}
     }
@@ -173,11 +214,16 @@ export class SEOEnhancer {}
   }
   // Update canonical URL;
   updateCanonicalUrl(url: string) {
+<<<<<<< HEAD
     let canonical = let canonical = let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement,
     if (!canonical) {,
+=======
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement,
+    if (!canonical) ,
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       canonical = document.createElement('link'),
       canonical.rel = 'canonical',
-  // Update page title
+  // Update page, title;
   }
   updateTitle(title: string) {};
     if (typeof document !== 'undefined') {};
@@ -206,7 +252,7 @@ export class SEOEnhancer {}
   updateOpenGraph(config: Partial<SEOConfig>) {
     ,
 ,
-  // Update Open Graph tags
+  // Update Open Graph, tags;
   }
   updateOpenGraph(config: Partial<SEOConfig>) {}
     if (config.publishedTime) {}
@@ -228,7 +274,7 @@ export class SEOEnhancer {}
   // Update Twitter Card tags;
   updateTwitterCard(config: Partial<SEOConfig>) {
     ,
-  // Update Twitter Card tags
+  // Update Twitter Card, tags;
   }
   updateTwitterCard(config: Partial<SEOConfig>) {}
     const twitterTags = const twitterTags = const twitterTags = [},
@@ -244,7 +290,7 @@ export class SEOEnhancer {}
   }
   // Update structured data;
   updateStructuredData(data: Record<string, unknown>) {
-    // Update structured data
+    // Update structured, data;
   }
   updateStructuredData(data: Record<string, unknown>) {}];
     const script = document.createElement('script');
@@ -273,7 +319,11 @@ const,
   r: 'Zion Holdings',
 }
 // Generate structured data;
+<<<<<<< HEAD
 export const generateStructuredData = const generateStructuredData = const generateStructuredData = ()
+=======
+export const generateStructuredData = (dat,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   a: {/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   }
@@ -370,7 +420,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   // Update language;
   updateLanguage(language: string) {
     ,
-    if (typeof document !== 'undefined') {,
+    if (typeof document !== 'undefined') ,
   }
       document.documentElement.lang = language;}
     }
@@ -384,15 +434,15 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   // Helper method to update meta tags;
   private updateMetaTag(nameOrProperty: string, content: string) {
     ,
-    if (typeof document === 'undefined') return
+    if (typeof document === 'undefined') return;
   }
     let meta = let meta = document.querySelector(});
       `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]);
     ) as HTMLMetaElement;
     if (!meta) {
     meta = document.createElement('meta');
-      if (nameOrProperty.startsWith('og: ') || nameOrProperty.startsWith('twitter:')) {,
-  // Update robots meta tag
+      if (nameOrProperty.startsWith('og: ') || nameOrProperty.startsWith('twitter:')) ,
+  // Update robots meta, tag;
   }
   updateRobots(robots: string) {}
     this.updateMetaTag('robots', robots);}
@@ -433,7 +483,11 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   r: string) {/* TODO: Fix JSX expression */}
   }
   // Helper method to update meta tags;
+<<<<<<< HEAD
   private updateMetaTag()
+=======
+  private updateMetaTag(nameOrPropert,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   y: string, conten);
   t: string) {/* TODO: Fix JSX expression */}
       `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]`;
@@ -450,8 +504,14 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   ) {
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
+<<<<<<< HEAD
 ${pages;
   .map()
+=======
+$pages;
+  .map(,)
+  // Generate sitemap;)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   generateSitemap()
   }
     pages: Array<{ url: string; lastmod: string; changefreq: string, priority: string }>;
@@ -464,7 +524,7 @@ ${pages}
     <loc>${page.url}</loc>
     <lastmod>${page.lastmod}</lastmod>
     <changefreq>${page.changefreq}</changefreq>);
-    <priority>${page.priority}</priority>);
+    <priority>${page.priority}</p></p></priority>);
   </url>);
   .join('\n')}
 </urlset>`;
@@ -473,6 +533,7 @@ ${pages}
   // Generate robots.txt;
   generateRobotsTxt(disallowPaths: string[] = []) {
     ,
+<<<<<<< HEAD
     const robots = const robots = const robots = `User-agent: *,
   // Generate robots.txt
   }
@@ -480,12 +541,21 @@ ${pages}
     const robots = `User-agent: *,
 Allow: /`};
 ${disallowPaths.map(path => `Disallow: ${path}`).join('\n')};
+=======
+    const robots = `User-agent: *,
+  // Generate robots.txt;
+  }
+  generateRobotsTxt(disallowPaths: string[] = []) {}
+    const robots = `User-agent: *,
+Allow: /`}
+${disallowPaths.map(path => `Disallow: $path}`).join('\n')}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 Sitemap: ${this.config.canonicalUrl}/sitemap.xml`;
     return robots;
   }
   // Initialize SEO;
   initialize(config?: Partial<SEOConfig>) {
-    // Initialize SEO
+    // Initialize, SEO;
   }
   initialize(config?: Partial<SEOConfig>) {}
     if (typeof document === 'undefined') return;}
@@ -507,7 +577,7 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`;
   getCurrentSEO() {}
     if (typeof document === 'undefined') return {}
     return {
-    title: document.title,
+      title: document.title,
       description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
   }
     return {}
@@ -522,25 +592,29 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`;
 // Generate structured data with type-specific properties;
 export const generateAdvancedStructuredData = (;) => {
     return ()
+<<<<<<< HEAD
   )
+=======
+    $3)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
   const baseStructure = const baseStructure = const baseStructure = {}
     '@context': 'https: //schema.org'}) => {}
   const baseStructure = {}
     '@context': 'https: //schema.org',
     '@type': data.type,
-    name: data.name
-    description: data.description,
+    name: data.name;,
+      description: data.description,
     url: data.url || '',
     logo: data.logo || '',
     sameAs: data.sameAs || []};
   };
   // Add type-specific properties;
   if (data.type === 'Organization') {
-    return {
+    return 
       ...baseStructure,
-      address: {,
-  // Add type-specific properties
+      address: ,
+  // Add type-specific, properties;
   }
   if (data.type === 'Organization') {}
     return {}
@@ -556,16 +630,25 @@ export const generateAdvancedStructuredData = (;) => {
         telephone: '+1-555-0123',
         contactType: 'customer service'}
   // Generate sitemap;
+<<<<<<< HEAD
   generateSitemap()
+=======
+  generateSitemap(page,)
+  s: Array<{/* TODO: Fix JSX expression */})
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   y: string }>);
   ) {/* TODO: Fix JSX expression */}
     <loc>${page.url}</loc>
     <lastmod>${page.lastmod}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>`;
+    <priority>${page.priority}</p></p></priority>`;
   </url>`;
   );
+<<<<<<< HEAD
   .join()
+=======
+  .join(';)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 ')}`;
 </urlset>`;
     return sitemap;
@@ -573,7 +656,11 @@ export const generateAdvancedStructuredData = (;) => {
   // Generate robots.txt;
   generateRobotsTxt(disallowPath);
   s: string[] = []) {/* TODO: Fix JSX expression */}`;
+<<<<<<< HEAD
   w: ${path}`).join()
+=======
+  w: ${path}`).join(';)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 ')}
 Sitema,`;
   p: ${this.config.canonicalUrl}/sitemap.xml`;
@@ -602,7 +689,11 @@ Sitema,`;
   }
 }
 // Generate structured data with type-specific properties;
+<<<<<<< HEAD
 export const generateAdvancedStructuredData = const generateAdvancedStructuredData = const generateAdvancedStructuredData = ()
+=======
+export const generateAdvancedStructuredData = (dat,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   a: {/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */};
   };
@@ -619,7 +710,7 @@ export const generateAdvancedStructuredData = const generateAdvancedStructuredDa
       potentialAction: {
     ,
         '@type': 'SearchAction',
-        target: {,
+        target: ,
   }
       potentialAction: {}
         '@type': 'SearchAction',
@@ -645,7 +736,7 @@ export const generateAdvancedStructuredData = const generateAdvancedStructuredDa
     ,
         '@type': 'Organization',
         name: 'Zion Holdings',
-        logo: {,
+        logo: ,
   }
       author: {}
         '@type': 'Organization',
@@ -665,19 +756,19 @@ export const generateAdvancedStructuredData = const generateAdvancedStructuredDa
 // Generate sitemap data;
 export const generateSitemapData = useCallback((...args) => {;
     return {
-    urlset: {
+    urlset: 
       '@xmlns': 'http://www.sitemaps.org/schemas/sitemap/0.9',
-      url: pages.map(page => ({),
+      url: pages.map(page => (),
         loc: page.url,),
         lastmod: page.lastModified),
         changefreq: page.changeFrequency),
-// Generate sitemap data
+// Generate sitemap, data;
   }
 export const generateSitemapData = const generateSitemapData = const generateSitemapData = useCallback((...args) => {}
   return {}
     urlset: {}
       '@xmlns': 'http: //www.sitemaps.org/schemas/sitemap/0.9',
-      url: pages.map(page => ({)}
+      url: pages.map(page => ({}
         loc: page.url,
         lastmod: page.lastModified,
         changefreq: page.changeFrequency,;
@@ -708,7 +799,12 @@ export const validateSEOData = (data: {// title: string; description: string, ur
   return baseStructure;
 }
 // Generate sitemap data;
+<<<<<<< HEAD
 export const generateSitemapData = const generateSitemapData = const generateSitemapData = ();
+=======
+export const generateSitemapData = (page,)
+  s: Array<{/* TODO: Fix JSX expression */})
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }>);
 ) => {/* TODO: Fix JSX expression */}
       }));
@@ -716,10 +812,17 @@ export const generateSitemapData = const generateSitemapData = const generateSit
   }
 }
 // Generate robots.txt content;
+<<<<<<< HEAD
 export const generateRobotsTxt = const generateRobotsTxt = const generateRobotsTxt = ();
   l: string, disallowPath);
   s: string[] = []) => {/* TODO: Fix JSX expression */}`;
   w: ${path}`).join()
+=======
+export const generateRobotsTxt = (sitemapUr,)
+  l: string, disallowPath);
+  s: string[] = []) => {/* TODO: Fix JSX expression */}`;
+  w: ${path}`).join(';)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 ');`;
   return `User-agen,
   t: *,
@@ -728,12 +831,23 @@ Sitema,`;
   p: ${sitemapUrl}`;
 }
 // SEO validation;
+<<<<<<< HEAD
 export const validateSEOData = const validateSEOData = ()
   if (data.title.length < 30) {
     ,) => {
   return ()
   )
   };
+=======
+export const validateSEOData = (;
+  const issues: string[] = [])
+  // Check title length,,)
+  if (data.title.length < 30) {
+    ,) => 
+  return ()
+    $3)
+  }
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 // SEO validation;}
 export const validateSEOData = (data: {// title: string; description: string, url: string}) => {}
   const issues: string[] = []
@@ -745,7 +859,7 @@ export const validateSEOData = (data: {// title: string; description: string, ur
   }
   // Check description length;
   if (data.description.length < 120) {
-    // Check description length
+    // Check description, length;
   }
   if (data.description.length < 120) {}
     issues.push('Description is too short (recommended: 120-160 characters)'),}
@@ -754,7 +868,7 @@ export const validateSEOData = (data: {// title: string; description: string, ur
   }
   // Check URL format;
   if (!data.url.startsWith('http')) {
-    // Check URL format
+    // Check URL, format;
   }
   if (!data.url.startsWith('http')) {}
     issues.push('URL should start with http: // or https://'),}
@@ -762,16 +876,29 @@ export const validateSEOData = (data: {// title: string; description: string, ur
   return issues;
 }
 // Generate breadcrumb data;
+<<<<<<< HEAD
 export const generateBreadcrumbData = const generateBreadcrumbData = const generateBreadcrumbData = useCallback((...args) => {
     return {
+=======
+export const generateBreadcrumbData = useCallback((...args) => {
+    return;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     '@context': 'https: //schema.org',
-// Generate breadcrumb data
+// Generate breadcrumb, data;
   }
 export const generateBreadcrumbData = useCallback((...args) => {}
   return {}
     '@context': 'https: //schema.org',
     '@type': 'BreadcrumbList',
+<<<<<<< HEAD
     itemListElement: breadcrumbs.map((crumb, index) => ();
+=======
+    itemListElement: breadcrumbs.map((crumb, index) => ({}
+      '@type': 'ListItem',
+      position: index + 1;,
+      name: crumb.name,)
+      item: crumb.url})
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     }));
   }
 }
@@ -779,18 +906,22 @@ export const generateBreadcrumbData = useCallback((...args) => {}
 export const initializeSEOEnhancements = useCallback((...args) => {;
     if (typeof document === 'undefined') return;
   // Add structured data for organization;
-  const organizationData = generateStructuredData({);
-    type: 'Organization')
-    name: 'Zion Holdings')
-    description: 'Leading provider of AI-powered business solutions'),
+  const organizationData = generateStructuredData();
+    type: 'Organization'),
+      name: 'Zion Holdings'),
+      description: 'Leading provider of AI-powered business solutions'),
     url: 'https://zion.app'),
     logo: 'https://zion.app/logo.webp'),
-// Initialize SEO enhancements
+// Initialize SEO, enhancements;
   }
 export const initializeSEOEnhancements = const initializeSEOEnhancements = useCallback((...args) => {};
   if (typeof document === 'undefined') return;
   // Add structured data for organization;
+<<<<<<< HEAD
   const organizationData = const organizationData = const organizationData = generateStructuredData({)}
+=======
+  const organizationData = generateStructuredData({}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     type: 'Organization',
     name: 'Zion Holdings',
     description: 'Leading provider of AI-powered business solutions',
@@ -820,7 +951,12 @@ export const initializeSEOEnhancements = const initializeSEOEnhancements = useCa
   return issues;
 }
 // Generate breadcrumb data;
+<<<<<<< HEAD
 export const generateBreadcrumbData = const generateBreadcrumbData = const generateBreadcrumbData = ();
+=======
+export const generateBreadcrumbData = (breadcrumb,)
+  s: Array<{/* TODO: Fix JSX expression */})
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }>);
 ) => {/* TODO: Fix JSX expression */}
     }));

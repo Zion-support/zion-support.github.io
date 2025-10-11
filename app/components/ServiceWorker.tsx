@@ -11,7 +11,7 @@ const ServiceWorker: React.FC = () => {
         })
         .catch((error) => {
           console.log('Service Worker registration failed:', error);
-        })
+        });
     }
   }, []);
 

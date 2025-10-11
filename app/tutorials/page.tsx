@@ -1,7 +1,9 @@
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Play, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, Clock, Star, ArrowRight, CheckCircle, ExternalLink, Download } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { BookOpen, Brain, Cloud, Shield, Code, Play, Clock, Users } from 'lucide-react';
 
 const TutorialsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -10,18 +12,25 @@ const TutorialsPage: React.FC = () => {
     { id: 'all', name: 'All Tutorials', icon: BookOpen },
     { id: 'ai', name: 'AI Services', icon: Brain },
     { id: 'it', name: 'IT Services', icon: Cloud },
+<<<<<<< HEAD
     { id: 'saas', name: 'Micro SaaS', icon: Zap },
     { id: 'security', name: 'Security', icon: Shield },;
     { id: 'integration', name: 'Integration', icon: Code };
   ];
   const tutorials = const tutorials = const tutorials = [
+=======
+    { id: 'security', name: 'Cybersecurity', icon: Shield },
+    { id: 'development', name: 'Development', icon: Code }
+  ];
+
+  const tutorials = [
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     {
       id: 1,
-      title: 'Getting Started with AI Chat API',
-      description: 'Learn how to integrate our AI chat API into your application with step-by-step examples.',
+      title: 'Getting Started with AI Chatbots',
       category: 'ai',
-      difficulty: 'Beginner',
       duration: '15 min',
+<<<<<<< HEAD
       rating: 4.8,
       students: 1250,
       thumbnail: '/api/placeholder/400/250',
@@ -37,129 +46,70 @@ const TutorialsPage: React.FC = () => {
           'Implement advanced features';
         ];
       }
+=======
+      difficulty: 'Beginner',
+      description: 'Learn how to build and deploy your first AI chatbot using our platform.',
+      thumbnail: '/api/placeholder/400/225'
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     },
     {
       id: 2,
-      title: 'Building a Secure Cloud Infrastructure',
-      description: 'Complete guide to setting up secure cloud infrastructure using our IT services.',
+      title: 'Cloud Migration Best Practices',
       category: 'it',
+      duration: '30 min',
       difficulty: 'Intermediate',
-      duration: '45 min',
-      rating: 4.9,
-      students: 890,
-      thumbnail: '/api/placeholder/400/250',
-      tags: ['Cloud', 'Security', 'Infrastructure', 'DevOps'],
-      content: {
-        overview: 'Learn how to build and secure cloud infrastructure using best practices.',
-        prerequisites: ['AWS/Azure knowledge', 'Docker basics', 'Security concepts'],
-        steps: [
-          'Plan your infrastructure architecture',
-          'Set up cloud resources',
-          'Configure security groups and firewalls',
-          'Implement monitoring and logging',
-          'Deploy and test your infrastructure'
-        ]
-      }
+      description: 'A comprehensive guide to migrating your applications to the cloud.',
+      thumbnail: '/api/placeholder/400/225'
     },
     {
       id: 3,
-      title: 'Creating Your First Micro SaaS Application',
-      description: 'Build a complete micro SaaS application from scratch using our platform.',
-      category: 'saas',
-      difficulty: 'Advanced',
-      duration: '2 hours',
-      rating: 4.7,
-      students: 650,
-      thumbnail: '/api/placeholder/400/250',
-      tags: ['SaaS', 'Full-stack', 'Database', 'Authentication'],
-      content: {
-        overview: 'Complete tutorial on building a micro SaaS application with user management and billing.',
-        prerequisites: ['React/Node.js knowledge', 'Database concepts', 'Payment integration'],
-        steps: [
-          'Set up the project structure',
-          'Implement user authentication',
-          'Create the main application features',
-          'Add payment processing',
-          'Deploy and monitor your application'
-        ]
-      }
+      title: 'Cybersecurity Fundamentals',
+      category: 'security',
+      duration: '45 min',
+      difficulty: 'Beginner',
+      description: 'Essential cybersecurity concepts and best practices for businesses.',
+      thumbnail: '/api/placeholder/400/225'
     },
     {
       id: 4,
-      title: 'AI-Powered Data Analytics Dashboard',
-      description: 'Build an intelligent analytics dashboard using our AI data analytics services.',
-      category: 'ai',
+      title: 'Building REST APIs with Node.js',
+      category: 'development',
+      duration: '60 min',
       difficulty: 'Intermediate',
-      duration: '30 min',
-      rating: 4.6,
-      students: 980,
-      thumbnail: '/api/placeholder/400/250',
-      tags: ['Analytics', 'Dashboard', 'AI', 'Visualization'],
-      content: {
-        overview: 'Create a powerful analytics dashboard with AI-powered insights and visualizations.',
-        prerequisites: ['JavaScript/React', 'Chart.js knowledge', 'API integration'],
-        steps: [
-          'Set up the dashboard framework',
-          'Connect to our analytics API',
-          'Create interactive charts and graphs',
-          'Implement AI-powered insights',
-          'Add real-time data updates'
-        ]
-      }
+      description: 'Step-by-step guide to creating robust REST APIs using Node.js.',
+      thumbnail: '/api/placeholder/400/225'
     },
     {
       id: 5,
-      title: 'Cybersecurity Best Practices',
-      description: 'Learn essential cybersecurity practices to protect your applications and data.',
-      category: 'security',
-      difficulty: 'Beginner',
+      title: 'AI Data Analytics Dashboard',
+      category: 'ai',
       duration: '25 min',
-      rating: 4.9,
-      students: 2100,
-      thumbnail: '/api/placeholder/400/250',
-      tags: ['Security', 'Best Practices', 'Compliance', 'Protection'],
-      content: {
-        overview: 'Essential cybersecurity practices every developer should know.',
-        prerequisites: ['Basic security concepts', 'Application development experience'],
-        steps: [
-          'Understand common security threats',
-          'Implement secure authentication',
-          'Use encryption properly',
-          'Set up monitoring and logging',
-          'Follow compliance guidelines'
-        ]
-      }
+      difficulty: 'Advanced',
+      description: 'Create interactive dashboards with AI-powered analytics.',
+      thumbnail: '/api/placeholder/400/225'
     },
     {
       id: 6,
-      title: 'API Integration Patterns',
-      description: 'Master different patterns for integrating with external APIs and services.',
-      category: 'integration',
-      difficulty: 'Intermediate',
-      duration: '35 min',
-      rating: 4.5,
-      students: 750,
-      thumbnail: '/api/placeholder/400/250',
-      tags: ['API', 'Integration', 'Patterns', 'Architecture'],
-      content: {
-        overview: 'Learn various patterns and best practices for API integration.',
-        prerequisites: ['API knowledge', 'Design patterns', 'Error handling'],
-        steps: [
-          'Understand different integration patterns',
-          'Implement retry and circuit breaker patterns',
-          'Handle rate limiting and throttling',
-          'Manage API versioning',
-          'Monitor and debug integrations'
-        ]
-      }
+      title: 'DevOps CI/CD Pipeline Setup',
+      category: 'it',
+      duration: '40 min',
+      difficulty: 'Advanced',
+      description: 'Set up automated deployment pipelines for your applications.',
+      thumbnail: '/api/placeholder/400/225'
     }
   ];
+<<<<<<< HEAD
   const filteredTutorials = const filteredTutorials = selectedCategory === 'all' ;
     ? tutorials ;
     : tutorials.filter(tutorial => tutorial.category === selectedCategory);
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 
-  const featuredTutorials = tutorials.filter(tutorial => tutorial.rating >= 4.8).slice(0, 3);
+  const filteredTutorials = selectedCategory === 'all' 
+    ? tutorials 
+    : tutorials.filter(tutorial => tutorial.category === selectedCategory);
 
+<<<<<<< HEAD
   return() {featuredTutorials.map((tutorial) => ()
                       {tutorial.tags.slice(0, 3).map((tag, index) => ()
                       ))}
@@ -180,20 +130,70 @@ const TutorialsPage: React.FC = () => {
             <h2 className="text-2xl font-bold text-white mb-6 text-center">Browse by Category</h2>
             <div className="flex flex-wrap justify-center gap-4" /></div>
               {categories.map((category) => ()
+=======
+  return (
+    <>
+      <Helmet>
+        <title>Tutorials | Zion Tech Group - Learning Resources</title>
+        <meta name="description" content="Learn from our comprehensive tutorials on AI, cloud computing, cybersecurity, and development. Step-by-step guides for all skill levels." />
+        <meta name="keywords" content="tutorials, learning, AI tutorials, cloud computing, cybersecurity, development, programming, guides" />
+      </Helmet>
+
+      <Navigation />
+      
+      <main className="min-h-screen">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Tutorials & Learning
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Master new skills with our comprehensive tutorials on AI, cloud computing, cybersecurity, and development.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Categories Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Browse by Category
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Choose from our curated collection of tutorials organized by topic and skill level.
+              </p>
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  className={`flex items-center px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                     selectedCategory === category.id
-                      ? 'bg-cyan-500 text-white'
-                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
+<<<<<<< HEAD
                   <category.icon className="w-5 h-5" /></category>
                   <span>{category.name}</span>
+=======
+                  <category.icon className="w-5 h-5 mr-2" />
+                  {category.name}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 </button>
               ))}
             </div>
-          </section>
+          </div>
+        </section>
 
+<<<<<<< HEAD
           {/* All Tutorials */}
           <section id="all-tutorials" className="mb-16" /></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center">All Tutorials</h2>
@@ -207,12 +207,49 @@ const TutorialsPage: React.FC = () => {
                       Start Tutorial
                       <ArrowRight className="w-4 h-4 ml-2" / /></ArrowRight>
                     </a>
+=======
+        {/* Tutorials Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredTutorials.map((tutorial) => (
+                <div key={tutorial.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                  <div className="aspect-video bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center">
+                    <Play className="w-16 h-16 text-white" />
+                  </div>
+                  
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-sm font-medium">
+                        {tutorial.difficulty}
+                      </span>
+                      <div className="flex items-center text-gray-500 text-sm">
+                        <Clock className="w-4 h-4 mr-1" />
+                        {tutorial.duration}
+                      </div>
+                    </div>
+                    
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                      {tutorial.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-4">
+                      {tutorial.description}
+                    </p>
+                    
+                    <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                      <Play className="w-4 h-4 mr-2" />
+                      Start Tutorial
+                    </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                   </div>
                 </div>
               ))}
             </div>
-          </section>
+          </div>
+        </section>
 
+<<<<<<< HEAD
           {/* Learning Paths */}
           <section className="mb-16" /></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Learning Paths</h2>
@@ -296,10 +333,29 @@ const TutorialsPage: React.FC = () => {
                 <a href="#" className="text-purple-400 hover:text-purple-300 font-semibold" /></a>
                   Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" / /></ArrowRight>
                 </a>
+=======
+        {/* Stats Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
+                <div className="text-gray-600">Tutorials Available</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">10K+</div>
+                <div className="text-gray-600">Students Learning</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">4.9</div>
+                <div className="text-gray-600">Average Rating</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
+<<<<<<< HEAD
           {/* Resources */}
           <section className="mb-16" /></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Additional Resources</h2>
@@ -371,6 +427,25 @@ const TutorialsPage: React.FC = () => {
           </section>
         </div>
       </div>
+=======
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-cyan-500 to-purple-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Ready to Start Learning?
+            </h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Join thousands of learners who are already mastering new skills with our tutorials.
+            </p>
+            <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
+              Browse All Tutorials
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     </>
   );
 };

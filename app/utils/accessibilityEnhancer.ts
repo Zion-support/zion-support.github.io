@@ -1,45 +1,64 @@
 /**
- * Accessibility Enhancer Utility
- * Provides comprehensive accessibility improvements for web applications
+ * Accessibility Enhancer Utility;
+ * Provides comprehensive accessibility improvements for web applications;
  */
 
   private handleEscapeKey(event: KeyboardEvent): void {
+<<<<<<< HEAD
     // Close any open modals or dropdowns
     const modals = document.querySelectorAll('[role="dialog"], [aria-hidden="false"]');
     modals.forEach()
+=======
+    // Close any open modals or dropdowns;
+    const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
+    modals.forEach(modal => )
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
       closeButton?.click();
     })
     
+<<<<<<< HEAD
     // Close any open menus
     const menus = document.querySelectorAll('[role="menu"], [aria-expanded="true"]');
     menus.forEach()
       const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;
+=======
+    // Close any open menus;
+    const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
+    menus.forEach(menu => {)
+      const trigger = document.querySelector(`[aria-controls="$menu.id}"]`) as HTMLElement;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       trigger?.click();
     })
   }
 
   /**
-   * Handle arrow key navigation
+   * Handle arrow key navigation;
    */
   private handleArrowKeys(event: KeyboardEvent): void {
     const activeElement = document.activeElement as HTMLElement;
     
     // Handle arrow keys for radio groups, menus, etc.
     if (activeElement.getAttribute('role') === 'menuitem' || 
-        activeElement.getAttribute('type') === 'radio') {
+        activeElement.getAttribute('type') === 'radio') 
       this.handleMenuNavigation(event);
     }
   }
 
   /**
-   * Handle menu navigation with arrow keys
+   * Handle menu navigation with arrow keys;
    */
   private handleMenuNavigation(event: KeyboardEvent): void {
     const activeElement = document.activeElement as HTMLElement;
+<<<<<<< HEAD
     const menuItems = const menuItems = const menuItems = Array.from()
       activeElement.closest('[role="menu"]')?.querySelectorAll('[role="menuitem"]') || [];
     ) as HTMLElement[];
+=======
+    const menuItems = Array.from()
+      activeElement.closest('[role="menu"]')?.querySelectorAll('[role="menuitem"]') || []
+    ) as HTMLElement[]
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     ;
     const currentIndex = menuItems.indexOf(activeElement);
     
@@ -47,7 +66,7 @@
     
     let nextIndex = currentIndex;
     
-    switch (event.key) {
+    switch (event.key) 
       case 'ArrowDown':
         nextIndex = (currentIndex + 1) % menuItems.length;
         break;
@@ -67,10 +86,10 @@
   }
 
   /**
-   * Setup skip links
+   * Setup skip links;
    */
   private setupSkipLinks(): void {
-    // Create skip to main content link
+    // Create skip to main content link;
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
@@ -81,31 +100,31 @@
   }
 
   /**
-   * Setup landmarks
+   * Setup landmarks;
    */
   private setupLandmarks(): void {
-    // Ensure main content has proper landmark
+    // Ensure main content has proper landmark;
     const mainContent = document.querySelector('main') || document.querySelector('#main-content');
-    if (mainContent) {
+    if (mainContent) 
       mainContent.setAttribute('role', 'main');
       mainContent.id = 'main-content';
     }
     
-    // Setup navigation landmarks
+    // Setup navigation landmarks;
     const navs = document.querySelectorAll('nav');
     navs.forEach((nav, index) => {
-      if (!nav.getAttribute('aria-label') && !nav.getAttribute('aria-labelledby')) {
-        nav.setAttribute('aria-label', `Navigation ${index + 1}`);
+      if (!nav.getAttribute('aria-label') && !nav.getAttribute('aria-labelledby')
+        nav.setAttribute('aria-label', `Navigation $index + 1}`);
       }
     })
     
-    // Setup banner landmark
+    // Setup banner landmark;
     const header = document.querySelector('header');
     if (header) {
       header.setAttribute('role', 'banner');
     }
     
-    // Setup contentinfo landmark
+    // Setup contentinfo landmark;
     const footer = document.querySelector('footer');
     if (footer) {
       footer.setAttribute('role', 'contentinfo');
@@ -113,41 +132,55 @@
   }
 
   /**
-   * Setup ARIA labels
+   * Setup ARIA labels;
    */
   private setupAriaLabels(): void {
-    // Add ARIA labels to buttons without text
+    // Add ARIA labels to buttons without text;
     const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+<<<<<<< HEAD
     iconButtons.forEach()
+=======
+    iconButtons.forEach(button => )
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       const icon = button.querySelector('svg');
-      if (icon) {
+      if (icon) 
         const iconName = icon.getAttribute('data-icon') || 'button';
         button.setAttribute('aria-label', iconName);
       }
     })
     
-    // Add ARIA labels to form inputs
+    // Add ARIA labels to form inputs;
     const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
+<<<<<<< HEAD
     inputs.forEach()
       const label = document.querySelector(`label[for="${input.id}"]`);
+=======
+    inputs.forEach(input => {)
+      const label = document.querySelector(`label[for="$input.id}"]`);
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       if (label) {
-        input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
+        input.setAttribute('aria-labelledby', label.id || `label-$input.id}`);
         if (!label.id) {
-          label.id = `label-${input.id}`;
+          label.id = `label-$input.id}`;
         }
       }
     })
   }
 
   /**
-   * Setup color contrast improvements
+   * Setup color contrast improvements;
    */
   private setupColorContrast(): void {
-    // Add high contrast mode support
+    // Add high contrast mode support;
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');
     
+<<<<<<< HEAD
     const handleContrastChange = const handleContrastChange = (e: MediaQueryListEvent) => {;
       if (e.matches) {;
+=======
+    const handleContrastChange = (e: MediaQueryListEvent) => 
+      if (e.matches) ;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         document.body.classList.add('high-contrast');
       } else {
         document.body.classList.remove('high-contrast');
@@ -159,10 +192,10 @@
   }
 
   /**
-   * Setup screen reader support
+   * Setup screen reader support;
    */
   private setupScreenReaderSupport(): void {
-    // Add live region for announcements
+    // Add live region for announcements;
     const liveRegion = document.createElement('div');
     liveRegion.setAttribute('aria-live', 'polite');
     liveRegion.setAttribute('aria-atomic', 'true');
@@ -170,27 +203,27 @@
     liveRegion.id = 'live-region';
     document.body.appendChild(liveRegion);
     
-    // Announce page changes
+    // Announce page changes;
     this.announcePageChange();
   }
 
   /**
-   * Announce page changes to screen readers
+   * Announce page changes to screen readers;
    */
   private announcePageChange(): void {
     const title = document.title;
     const liveRegion = document.getElementById('live-region');
-    if (liveRegion) {
-      liveRegion.textContent = `Page loaded: ${title}`;
+    if (liveRegion) 
+      liveRegion.textContent = `Page loaded: $title}`;
     }
   }
 
   /**
-   * Announce messages to screen readers
+   * Announce messages to screen readers;
    */
   public announce(message: string): void {
     const liveRegion = document.getElementById('live-region');
-    if (liveRegion) {
+    if (liveRegion) 
       liveRegion.textContent = message;
     }
   }
@@ -203,28 +236,28 @@
   }
 
   /**
-   * Get current focusable elements
+   * Get current focusable elements;
    */
   public getFocusableElements(): HTMLElement[] {
     return [...this.focusableElements]
   }
 
   /**
-   * Focus first focusable element
+   * Focus first focusable element;
    */
   public focusFirst(): void {
     this.focusableElements[0]?.focus();
   }
 
   /**
-   * Focus last focusable element
+   * Focus last focusable element;
    */
   public focusLast(): void {
     this.focusableElements[this.focusableElements.length - 1]?.focus();
   }
 
   /**
-   * Cleanup and destroy
+   * Cleanup and destroy;
    */
   public destroy(): void {
     this.isInitialized = false;
@@ -233,7 +266,7 @@
     this.landmarks = []
   }
 
-// Export utility functions
+// Export utility functions;
 export const announceToScreenReader = (message: string) => {;
   accessibilityEnhancer.announce(message);
 }

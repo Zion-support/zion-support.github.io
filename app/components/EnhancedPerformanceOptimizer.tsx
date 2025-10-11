@@ -1,31 +1,35 @@
 'use client';
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect } from 'react';
 
 interface PerformanceOptimizerProps {
-  children: React.ReactNode;
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
   enableCodeSplitting?: boolean;
 }
 
+<<<<<<< HEAD
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
+=======
+const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  enableImageOptimization = true,
+  enableLazyLoading = true,
+  enablePreloading = true,
+  enableCodeSplitting = true
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 }) => {
-  // Image optimization
   useEffect(() => {
-    if (!enableImageOptimization) return;
-
-    const optimizeImages = () => {;
-      const images = document.querySelectorAll('img[data-src]');
-      images.forEach((img) => {
-        const image = img as HTMLImageElement;
-        if (image.dataset.src) {
-          image.src = image.dataset.src;
-          image.removeAttribute('data-src');
+    // Image optimization
+    if (enableImageOptimization) {
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        if (!img.loading) {
+          img.loading = 'lazy';
         }
-      })
+      });
     }
 
+<<<<<<< HEAD
     // Run optimization after component mount
     const timer = setTimeout(optimizeImages, 100);
     return () => clearTimeout(timer);
@@ -41,11 +45,24 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
           if (entry.isIntersecting) {;
             const target = entry.target as HTMLElement;
             target.classList.add('loaded');
+=======
+    // Lazy loading
+    if (enableLazyLoading) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+              observer.unobserve(img);
+            }
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           }
-        })
-      },
-      { threshold: 0.1 } )
+        });
+      });
 
+<<<<<<< HEAD
     const lazyElements = document.querySelectorAll('[data-lazy]');
     lazyElements.forEach((el) => observer.observe(el));
 
@@ -121,14 +138,29 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
           })
         }
       }
+=======
+      const lazyImages = document.querySelectorAll('img[data-src]');
+      lazyImages.forEach(img => observer.observe(img));
     }
 
-    // Measure performance after page load
-    window.addEventListener('load', measurePerformance);
-    return () => window.removeEventListener('load', measurePerformance);
-  }, []);
+    // Preloading
+    if (enablePreloading) {
+      const preloadLinks = document.querySelectorAll('link[rel="preload"]');
+      preloadLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && !document.querySelector(`link[href="${href}"]`)) {
+          const newLink = document.createElement('link');
+          newLink.rel = 'preload';
+          newLink.href = href;
+          newLink.as = link.getAttribute('as') || 'script';
+          document.head.appendChild(newLink);
+        }
+      });
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+    }
+  }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
 
-  return <>{children}</>;
+  return null;
 };
 
-export default PerformanceOptimizer;
+export default EnhancedPerformanceOptimizer;

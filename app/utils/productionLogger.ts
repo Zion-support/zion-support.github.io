@@ -13,8 +13,8 @@ class ProductionLogger {}
   private isDevelopment = process.env.NODE_ENV === 'development';
   private isProduction = process.env.NODE_ENV === 'production';
 private log(level: LogLevel, message: string, data?: unknown, context?: string): void {
-    const entry: LogEntry = {,
-      level
+    const entry: LogEntry = ,
+      level;
   }
   private log(level: LogLevel, message: string, data?: unknown, context?: string): void {}
     const entry: LogEntry = {}
@@ -26,8 +26,8 @@ private log(level: LogLevel, message: string, data?: unknown, context?: string):
     }
 // Only log in development;
     if (this.isDevelopment) {
-    switch (level) {
-    // Only log in development
+    switch (level) 
+    // Only log in, development;
   }
     if (this.isDevelopment) {}
       switch (level) {}
@@ -43,7 +43,7 @@ private log(level: LogLevel, message: string, data?: unknown, context?: string):
     }
 // In production, send critical errors to monitoring service;
     if (this.isProduction && level === 'error') {
-    // In production, send critical errors to monitoring service
+    // In production, send critical errors to monitoring, service;
   }
     if (this.isProduction && level === 'error') {}
       this.sendToMonitoring(entry);
@@ -52,10 +52,10 @@ private log(level: LogLevel, message: string, data?: unknown, context?: string):
 private sendToMonitoring(entry: LogEntry): void {
     ,
     // Send to analytics/monitoring service;
-    if (typeof window !== 'undefined' && 'gtag' in window) {,
-      (window as any).gtag('event', 'error_log', {);
-        error_message: entry.message;)
-        error_context: entry.context),
+    if (typeof window !== 'undefined' && 'gtag' in window) ,
+      (window as any).gtag('event', 'error_log', );
+        error_message: entry.message;),
+      error_context: entry.context),
         error_timestamp: entry.timestamp),
         event_category: 'Error',
 ,
@@ -63,7 +63,7 @@ private sendToMonitoring(entry: LogEntry): void {
   private sendToMonitoring(entry: LogEntry): void {}
     // Send to analytics/monitoring service;
     if (typeof window !== 'undefined' && 'gtag' in window) {}
-      (window as any).gtag('event', 'error_log', {)}
+      (window as any).gtag('event', 'error_log', {}
         error_message: entry.message,
         error_context: entry.context,
         error_timestamp: entry.timestamp,
