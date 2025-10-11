@@ -268,7 +268,6 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $79/month',
       marketPrice: '$150-400/month',
       benefits: ['Data protection', 'Business continuity', 'Cost-effective storage', 'Easy recovery']
-<<<<<<< HEAD
     },
     {
       icon: FileText,
@@ -801,21 +800,14 @@ const ServicesPage: React.FC = () => {
       benefits: ['Complete process automation', 'Reduced manual work', 'Improved efficiency', 'Cost savings']
     }
   ];
-=======
-    }
-  ];
 
->>>>>>> origin/main
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'ai', name: 'AI Services', count: services.filter(s => s.category === 'ai').length },
     { id: 'it', name: 'IT Services', count: services.filter(s => s.category === 'it').length },
     { id: 'saas', name: 'Micro SaaS', count: services.filter(s => s.category === 'saas').length }
   ];
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/main
   const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
@@ -826,143 +818,18 @@ const ServicesPage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-        <title>Our Services - Zion Tech Group | AI, IT & Micro SaaS Solutions</title>
-        <meta name="description" content="Comprehensive AI, IT, and Micro SaaS services to transform your business. Expert solutions with proven results and competitive pricing." />
-        <meta name="keywords" content="AI services, IT services, micro SaaS, business solutions, technology consulting" />
-=======
         <title>Our Services - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Comprehensive AI and IT services including chatbots, analytics, cloud migration, cybersecurity, and custom software development." />
         <meta name="keywords" content="AI services, IT services, cloud migration, cybersecurity, software development, micro saas" />
         <meta property="og:title" content="Our Services - Zion Tech Group" />
         <meta property="og:description" content="Comprehensive AI and IT solutions for your business" />
         <meta property="og:type" content="website" />
->>>>>>> origin/main
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         <main className="container mx-auto px-4 py-16 pt-24">
-<<<<<<< HEAD
-          {/* Header Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Services
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Comprehensive AI, IT, and Micro SaaS solutions designed to transform your business operations and drive growth.
-            </p>
-          </div>
-
-          {/* Search and Filter Section */}
-          <div className="mb-12">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <div className="flex-1 relative">
-                <input
-                  type="text"
-                  placeholder="Search services..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              </div>
-              <div className="flex items-center space-x-2">
-                <Filter className="text-gray-400 w-5 h-5" />
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                >
-                  {categories.map((category) => (
-                    <option key={category.id} value={category.id}>
-                      {category.name} ({category.count})
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-          </div>
-
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {filteredServices.map((service, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                </div>
-                
-                <p className="text-gray-300 mb-4 leading-relaxed">
-                  {service.description}
-                </p>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-                  <ul className="space-y-1">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {service.benefits && (
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
-                    <ul className="space-y-1">
-                      {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                          <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                
-                <div className="flex items-center justify-between">
-                  <a href="/contact"
-                    className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </a>
-                  <a href="/contact"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300">
-                    Get Quote
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA Section */}
-          <div className="mt-16 text-center">
-            <div className="bg-slate-800/50 rounded-lg p-8">
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Ready to Get Started?
-              </h2>
-              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                Contact our experts for a free consultation and discover how our services can transform your business.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
-                  Get Free Consultation
-                </a>
-                <a href="tel:+13024640950"
-                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
-                  Call: (302) 464-0950
-                </a>
-              </div>
-            </div>
-          </div>
-=======
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -1108,7 +975,6 @@ const ServicesPage: React.FC = () => {
               </div>
             </div>
           </section>
->>>>>>> origin/main
         </main>
         
         <Footer />
