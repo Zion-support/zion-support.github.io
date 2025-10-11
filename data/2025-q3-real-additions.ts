@@ -1,33 +1,29 @@
 export interface RealAdditionService2025Q3 {
-	id: string;
-	name: string;
-	tagline: string;
-	description: string;
-	price: string;
-	period: string;
-	category: string;
-	features: string[];
-	popular?: boolean;
-	link: string;
-	trialDays?: number;
-	setupTime?: string;
-	realService: boolean;
-	technology?: string[];
-	integrations?: string[];
-	useCases?: string[];
-	roi?: string;
-	competitors?: string[];
-	marketSize?: string;
-	growthRate?: string;
-	launchDate?: string;
-	customers?: number;
-	rating?: number;
-	reviews?: number;
+	id: string
+	name: string
+	tagline: string
+	description: string
+	price: string
+	period: string
+	category: string
+	features: string[]
+	popular?: boolean
+	link: string
+	trialDays?: number
+	setupTime?: string
+	realService: boolean
+	technology?: string[]
+	integrations?: string[]
+	useCases?: string[]
+	roi?: string
+	competitors?: string[]
+	marketSize?: string
+	growthRate?: string
+	launchDate?: string
+	customers?: number
+	rating?: number
+	reviews?: number
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 	{
 		id: 'ai-email-copilot',
@@ -445,4 +441,4 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		rating: 4.7,
 		reviews: 120
 	}
-];
+]

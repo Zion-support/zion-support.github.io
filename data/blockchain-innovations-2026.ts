@@ -1,52 +1,44 @@
-import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
+import { ServiceVariant } from '../types/service-variants'
 export interface BlockchainInnovation2026 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: ServiceVariant
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string
+    email: string
+    address: string
+    website: string
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const blockchainInnovations2026: BlockchainInnovation2026[] = [
   // Blockchain Infrastructure Platform 2026
   {
@@ -100,10 +92,6 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     rating: 4.8,
     reviews: 420
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // DeFi Yield Optimization Platform
   {
     id: 'defi-yield-optimization-platform',
@@ -156,10 +144,6 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     rating: 4.9,
     reviews: 1800
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // NFT Marketplace & Creation Platform
   {
     id: 'nft-marketplace-creation-platform',
@@ -212,10 +196,6 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     rating: 4.8,
     reviews: 950
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Web3 Identity & Authentication Platform
   {
     id: 'web3-identity-authentication-platform',
@@ -268,10 +248,6 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     rating: 4.7,
     reviews: 320
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Blockchain Supply Chain Platform
   {
     id: 'blockchain-supply-chain-platform',
@@ -324,4 +300,4 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     rating: 4.8,
     reviews: 210
   }
-];
+]

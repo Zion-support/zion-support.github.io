@@ -1,44 +1,40 @@
-import React from 'react';
-import Head from 'next/head';
-
-interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'service';
-  structuredData?: object;
+import React from 'react'
+'use client'
+interface SEOHeadProps {/* TODO: Fix JSX expression */}
+  O: Add content,}
 }
-
-export default function SEOHead({
-  title = 'Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions',
-  description = 'Transform your business with cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000+ companies worldwide.',
-  keywords = 'AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology',
-  image = '/images/zion-tech-group-og.jpg',
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
+  type?: string
+  structuredData?: object
+  canonical?: string
+  noindex?: boolean
+  nofollow?: boolean
+}
+const SEOHead: React.FC,
+          <SEOHeadProps> = ({
+    // TODO: Add content
+  }
+}
+const SEOHead: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
+  keywords = 'AI solutions, quantum computing, autonomous systems, digital transformation, cloud services, cybersecurity, business intelligence, machine learning, automation',
+  image = '/og-image.svg',
   url = 'https://ziontechgroup.com',
   type = 'website',
-  structuredData
-}: SEOHeadProps) {
-  return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
-    </Head>
-  );
+//   structuredData,
+//   canonical,
+  noindex = false,
+  nofollow = false}) => {
+    const canonicalUrl = canonical || url
+  }
+  const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`
+  return null
 }
+export default SEOHead;`
+  </SEOProps>
+  </SEOHeadProps>

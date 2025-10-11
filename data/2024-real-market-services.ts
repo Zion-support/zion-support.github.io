@@ -1,52 +1,41 @@
-import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
-export interface RealMarketService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+  name: string
+  tagline: string
+  price: string,
+  period: string,
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: ServiceVariant
+  contactInfo: unknown
+    mobile: string
+    email: string
+    address: string}
+    website: string}
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number,
+}
 export const realMarketServices: RealMarketService[] = [
   // AI-Powered Business Intelligence
   {
@@ -79,20 +68,19 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '2 hours',
     category: 'AI & Analytics',
     realService: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS'],
-    integrations: ['Salesforce, HubSpot, Google Analytics, Shopify, QuickBooks, Zapier'],
-    useCases: ['Sales performance analysis, Marketing ROI tracking, Customer behavior insights, Operational efficiency, Financial forecasting, Competitive analysis'],
-    roi: 'Average customer sees 400% ROI within 6 months through improved decision-making and operational efficiency.',
-    competitors: ['Tableau, Power BI, Looker, Qlik, Sisense'],
-    marketSize: '$29.48B market',
-    growthRate: '15.7% annual growth',
-    variant: 'ai-futuristic',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
+    technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"]
+    integrations: ["Salesforce", "HubSpot", "Google Analytics", "Shopify", "QuickBooks", "Zapier"]
+    useCases: ["Sales performance analysis", "Marketing ROI tracking", "Customer behavior insights", "Operational efficiency", "Financial forecasting", "Competitive analysis"]
+    roi: "Average customer sees 400% ROI within 6 months through improved decision-making and operational efficiency."
+    competitors: ["Tableau", "Power BI", "Looker", "Qlik", "Sisense"]
+    marketSize: "$29.48B market"
+    growthRate: "15.7% annual growth"
+    variant: "ai-futuristic"
+    contactInfo: mobile: "+1 302 464 0950"
+      email: "kleber@ziontechgroup.com"
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+      website: "https://ziontechgroup.com"
+    }
     realImplementation: true,
     implementationDetails: 'Production-ready SaaS platform with real-time data processing, machine learning models, and comprehensive analytics dashboard. Includes data connectors for major business tools.',
     launchDate: '2024-03-01',
@@ -100,10 +88,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.7,
     reviews: 950
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Customer Success Automation Platform
   {
     id: 'customer-success-automation',
@@ -156,10 +140,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.8,
     reviews: 680
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // API Security & Monitoring Suite
   {
     id: 'api-security-monitoring-suite',
@@ -212,10 +192,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.6,
     reviews: 520
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // E-commerce Automation Platform
   {
     id: 'ecommerce-automation-platform',
@@ -268,10 +244,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.7,
     reviews: 1100
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // HR Automation Suite
   {
     id: 'hr-automation-suite',
@@ -324,10 +296,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.8,
     reviews: 890
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Financial Analytics Platform
   {
     id: 'financial-analytics-platform',
@@ -380,10 +348,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.7,
     reviews: 780
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Project Management AI Platform
   {
     id: 'project-management-ai-platform',
@@ -436,10 +400,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.8,
     reviews: 1050
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Marketing Automation Suite
   {
     id: 'marketing-automation-suite',
@@ -492,10 +452,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.7,
     reviews: 1250
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Legal Document Automation
   {
     id: 'legal-document-automation',
@@ -548,4 +504,5 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.8,
     reviews: 480
   }
-];
+]
+import { ServiceVariant } from "../types/service-variants" export interface RealMarketService id: string; name: string; tagline: string; price: string, period: string, description: string; features: string[]; popular: boolean; icon: string; color: string; textColor: string; link: string; marketPosition: string; targetAudience: string; trialDays: number; setupTime: string; category: string; realService: boolean; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; variant: ServiceVariant; contactInfo: mobile: string; email: string; address: string, website: string }; realImplementation: boolean; implementationDetails: string; launchDate: string; customers: number; rating: number; reviews: number, } export const realMarketServices: RealMarketService[] = [ id: "ai-business-intelligence-pro" name: "AI Business Intelligence Pro" tagline: "Transform data into actionable insights with AI" price: "$299" period: "/month" description: "Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable recommendations for growth and optimization." features: [ "Real-time data analytics dashboard" "AI-powered trend prediction" "Custom KPI tracking and alerts" "Automated report generation" "Multi-source data integration" "Predictive analytics modeling" "Executive summary automation" "Mobile-responsive interface" "White-label reporting" "API access for custom integrations" ] popular: true icon: "📊" color: "from-blue-500 to-indigo-600" textColor: "text-blue-400" link: "https://ziontechgroup.com/ai-business-intelligence" marketPosition: "Competitive with Tableau ($70/user/month), Power BI ($9.99/user/month), and Looker ($30/user/month). Our advantage: AI automation, predictive analytics, and lower cost per user." targetAudience: "Business analysts, Data scientists, Executives, Marketing teams, Sales teams, Operations managers" trialDays: 14 setupTime: "2 hours" category: "AI & Analytics" realService: true technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"] integrations: ["Salesforce", "HubSpot", "Google Analytics", "Shopify", "QuickBooks", "Zapier"] useCases: ["Sales performance analysis", "Marketing ROI tracking", "Customer behavior insights", "Operational efficiency", "Financial forecasting", "Competitive analysis"] roi: "Average customer sees 400% ROI within 6 months through improved decision-making and operational efficiency." competitors: ["Tableau", "Power BI", "Looker", "Qlik", "Sisense"] marketSize: "$29.48B market" growthRate: "15.7% annual growth" variant: "ai-futuristic" contactInfo: mobile: "+1 302 464 0950" email: "kleber@ziontechgroup.com" address: "364 E Main St STE 1008 Middletown DE 19709" website: "https://ziontechgroup.com" } realImplementation: true implementationDetails: "Production-ready SaaS platform with real-time data processing, machine learning models, and comprehensive analytics dashboard. Includes data connectors for major business tools." launchDate: "2024-03-01" customers: 1800 rating: 4.7 reviews: 950 } ]

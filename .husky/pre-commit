@@ -1,5 +1,0 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-# Keep hook lightweight and non-blocking for CI stability
-npx --yes lint-staged || true

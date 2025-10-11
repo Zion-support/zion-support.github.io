@@ -1,5 +1,4 @@
-
-import { LucideIcon } from "lucide-react";
+import { LucideIcon } from "lucide-react"
 import {
   BadgeCheck, // publishing a listing
   Award,      // top contributor
@@ -7,25 +6,22 @@ import {
   Trophy,     // featured creator
   BadgePlus,  // first action
   BadgeDollarSign // monetization
-} from "lucide-react";
-
+} from "lucide-react"
 export type BadgeKey =
   | "first_listing"
   | "top_contributor"
   | "profile_complete"
   | "featured_creator"
   | "first_action"
-  | "monetized";
-
+  | "monetized"
 export interface BadgeMeta {
-  key: BadgeKey;
-  name: string;
-  description: string;
-  icon: LucideIcon;
-  color: string;
-  bg: string;
+  key: BadgeKey
+  name: string
+  description: string
+  icon: LucideIcon
+  color: string
+  bg: string
 }
-
 export const badgeList: BadgeMeta[] = [
   {
     key: "first_listing",
@@ -74,13 +70,8 @@ export const badgeList: BadgeMeta[] = [
     icon: BadgeDollarSign,
     color: "#22C55E", // Soft Green
     bg: "#F2FCE2",    // Soft Green
-<<<<<<< HEAD
-  }];
-=======
+  }]
   },
-];
->>>>>>> origin/auto/autonomy-17186719616
-
+]
 export const getBadgeMeta = (key: BadgeKey) =>
-  badgeList.find((b) => b.key === key);
-
+  badgeList.find((b) => b.key === key)

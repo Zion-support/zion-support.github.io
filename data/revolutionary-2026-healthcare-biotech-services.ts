@@ -1,52 +1,44 @@
-import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
+import { ServiceVariant } from '../types/service-variants'
 export interface Revolutionary2026HealthcareBiotechService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: ServiceVariant
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string
+    email: string
+    address: string
+    website: string
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const revolutionary2026HealthcareBiotechServices: Revolutionary2026HealthcareBiotechService[] = [
   // AI Drug Discovery Platform
   {
@@ -100,10 +92,6 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     rating: 4.8,
     reviews: 89
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Autonomous Healthcare AI Platform
   {
     id: 'autonomous-healthcare-ai-platform',
@@ -156,10 +144,6 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     rating: 4.7,
     reviews: 167
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum Machine Learning Platform
   {
     id: 'quantum-machine-learning-platform',
@@ -212,10 +196,6 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     rating: 4.9,
     reviews: 56
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI Legal Research Platform
   {
     id: 'ai-legal-research-platform',
@@ -268,10 +248,6 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     rating: 4.6,
     reviews: 234
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Biotech AI Research Platform
   {
     id: 'biotech-ai-research-platform',
@@ -324,4 +300,4 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     rating: 4.8,
     reviews: 123
   }
-];
+]

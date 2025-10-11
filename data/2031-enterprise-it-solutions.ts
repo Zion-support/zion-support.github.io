@@ -1,50 +1,46 @@
 export interface EnterpriseITSolution2031 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string[]
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging';
-  patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
-  aiCapabilities: string[];
-  marketDisruption: string;
+    mobile: string
+    email: string
+    address: string
+    website: string
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
+  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging'
+  patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source'
+  aiCapabilities: string[]
+  marketDisruption: string
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
   // ZERO TRUST NETWORK ARCHITECTURE
   {
@@ -99,10 +95,6 @@ export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
     aiCapabilities: ['Behavioral Analytics', 'Threat Intelligence', 'Adaptive Security', 'Automated Response', 'Security AI'],
     marketDisruption: 'Advances enterprise security by implementing comprehensive zero-trust principles, enabling adaptive and intelligent security controls.'
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // EDGE COMPUTING ORCHESTRATION
   {
     id: 'edge-computing-orchestration',
@@ -156,10 +148,6 @@ export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
     aiCapabilities: ['Edge AI', 'Intelligent Orchestration', 'Load Balancing', 'Performance Optimization', 'Resource Management'],
     marketDisruption: 'Advances edge computing by enabling intelligent orchestration, optimizing distributed computing resources and performance.'
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI-POWERED IT OPERATIONS CENTER
   {
     id: 'ai-powered-it-operations-center',
@@ -213,10 +201,6 @@ export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
     aiCapabilities: ['AI Monitoring', 'Predictive Analytics', 'Automated Response', 'Intelligent Alerting', 'IT Automation'],
     marketDisruption: 'Revolutionizes IT operations by introducing AI-powered intelligence, enabling predictive maintenance and automated incident response.'
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // INTELLIGENT DATA GOVERNANCE
   {
     id: 'intelligent-data-governance',
@@ -270,10 +254,6 @@ export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
     aiCapabilities: ['AI Classification', 'Compliance Automation', 'Privacy Protection', 'Data Lineage', 'Access Control'],
     marketDisruption: 'Advances data governance by introducing AI-powered intelligence, enabling automated compliance and intelligent data management.'
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AUTONOMOUS INFRASTRUCTURE MANAGEMENT
   {
     id: 'autonomous-infrastructure-management',
@@ -327,4 +307,4 @@ export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
     aiCapabilities: ['Autonomous Systems', 'Self-Healing', 'Intelligent Optimization', 'Predictive Maintenance', 'Resource Management'],
     marketDisruption: 'Revolutionizes infrastructure management by enabling truly autonomous systems, eliminating manual operations and optimizing performance automatically.'
   }
-];
+]

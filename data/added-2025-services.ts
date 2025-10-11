@@ -1,21 +1,17 @@
 export interface AddedService {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  price: string | number;
-  period?: string;
-  category: string;
-  features: string[];
-  icon?: string;
-  link?: string;
-  rating?: number;
-  customerCount?: number;
+  id: string
+  name: string
+  tagline: string
+  description: string
+  price: string | number
+  period?: string
+  category: string
+  features: string[]
+  icon?: string
+  link?: string
+  rating?: number
+  customerCount?: number
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const added2025Services: AddedService[] = [
   {
     id: 'ai-assistant-pro',
@@ -171,8 +167,4 @@ export const added2025Services: AddedService[] = [
     rating: 4.6,
     customerCount: 640
   }
-];
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
+]

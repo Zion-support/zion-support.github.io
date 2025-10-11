@@ -1,8 +1,12 @@
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
+// Email validation utility
 function isValidEmail(email) {
-  if (!email) return false;
-  return EMAIL_REGEX.test(String(email).trim());
+  if (!email || typeof email !== 'string') {
+    return false;
+  }
+  
+  // Basic email validation regex
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email.trim());
 }
 
-module.exports = { EMAIL_REGEX, isValidEmail };
+module.exports = { isValidEmail };

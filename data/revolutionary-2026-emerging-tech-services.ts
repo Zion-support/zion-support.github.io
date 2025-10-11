@@ -1,52 +1,44 @@
-import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
+import { ServiceVariant } from '../types/service-variants'
 export interface Revolutionary2026EmergingTechService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: ServiceVariant
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string
+    email: string
+    address: string
+    website: string
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTechService[] = [
   // Holographic Metaverse Development Platform
   {
@@ -100,10 +92,6 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     rating: 4.8,
     reviews: 234
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Space Debris Management AI Platform
   {
     id: 'space-debris-management-ai-platform',
@@ -156,10 +144,6 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     rating: 4.9,
     reviews: 67
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI Climate Prediction Platform
   {
     id: 'ai-climate-prediction-platform',
@@ -212,10 +196,6 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     rating: 4.7,
     reviews: 345
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Autonomous Manufacturing AI Platform
   {
     id: 'autonomous-manufacturing-ai-platform',
@@ -268,10 +248,6 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     rating: 4.8,
     reviews: 123
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum Internet Infrastructure Platform
   {
     id: 'quantum-internet-infrastructure-platform',
@@ -324,4 +300,4 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     rating: 4.9,
     reviews: 34
   }
-];
+]

@@ -1,10 +1,9 @@
 
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Leaf, Server, Cloud } from "lucide-react";
-import { Link } from "react-router-dom";
-
+import { SEO } from "@/components/SEO"
+import { GradientHeading } from "@/components/GradientHeading"
+import { Button } from "@/components/ui/button"
+import { Leaf, Server, Cloud } from "lucide-react"
+import { Link } from "react-router-dom"
 export default function GreenIT() {
   return (
     <>
@@ -248,13 +247,11 @@ export default function GreenIT() {
                   <div className="mt-4 text-white font-semibold">
                     — Sarah Johnson, CTO at TechCorp
                   </div>
-=======
-import { motion } from 'framer-motion';
-import { Leaf, Zap, Globe, Sun, Wind, Droplets, Recycle, TreePine } from 'lucide-react';
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from '@/components/SEO';
-
+import { motion } from 'framer-motion'
+import { Leaf, Zap, Globe, Sun, Wind, Droplets, Recycle, TreePine } from 'lucide-react'
+import { Header } from "@/components/Header"
+import { Footer } from "@/components/Footer"
+import { SEO } from '@/components/SEO'
 const GreenIT = () => {
   const greenSolutions = [
     {
@@ -301,8 +298,7 @@ const GreenIT = () => {
         'Sustainable business processes'
       ]
     }
-  ];
-
+  ]
   const environmentalBenefits = [
     {
       benefit: 'Reduced Carbon Footprint',
@@ -328,8 +324,7 @@ const GreenIT = () => {
       icon: '✅',
       impact: 'Achieve green IT certifications and compliance'
     }
-  ];
-
+  ]
   const greenPractices = [
     {
       category: 'Hardware Management',
@@ -367,8 +362,7 @@ const GreenIT = () => {
         'Sustainable procurement policies'
       ]
     }
-  ];
-
+  ]
   const caseStudies = [
     {
       company: 'TechCorp Solutions',
@@ -406,8 +400,7 @@ const GreenIT = () => {
         'Enhanced sustainability credentials'
       ]
     }
-  ];
-
+  ]
   const greenCertifications = [
     {
       name: 'ISO 14001',
@@ -428,11 +421,10 @@ const GreenIT = () => {
       name: 'Carbon Trust',
       description: 'Carbon Reduction Certification',
       icon: '🌱'
-=======
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { Link } from "react-router-dom"
 import { 
   Leaf, 
   Zap, 
@@ -446,8 +438,7 @@ import {
   Server,
   Monitor,
   Smartphone
-} from "lucide-react";
-
+} from "lucide-react"
 export default function GreenIT() {
   const greenSolutions = [
     {
@@ -492,8 +483,7 @@ export default function GreenIT() {
       benefits: ["Resource conservation", "Waste reduction", "Sustainable supply chain"],
       features: ["Equipment leasing", "Take-back programs", "Material recovery"]
     }
-  ];
-
+  ]
   const renewableEnergy = [
     {
       icon: <Sun className="w-12 h-12 text-yellow-400" />,
@@ -516,8 +506,7 @@ export default function GreenIT() {
       capacity: "1MWh+",
       savings: "30% peak demand"
     }
-  ];
-
+  ]
   const certifications = [
     {
       name: "ISO 14001",
@@ -539,8 +528,7 @@ export default function GreenIT() {
       description: "Environmental Standard Certification",
       icon: <CheckCircle className="w-6 h-6 text-green-400" />
     }
-  ];
-
+  ]
   const impactMetrics = [
     {
       metric: "45%",
@@ -562,8 +550,7 @@ export default function GreenIT() {
       label: "Cost Savings",
       description: "Average annual savings for enterprise clients"
     }
-  ];
-
+  ]
   return (
     
       <SEO 
@@ -571,8 +558,6 @@ export default function GreenIT() {
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance." 
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
-=======
-=======
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -771,13 +756,13 @@ export default function GreenIT() {
                   lower costs, and improve your technology infrastructure's sustainability.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
+                  <$2 />
                     href="/contact"
                     className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-medium transition-colors duration-200 text-lg"
                   >
                     Start Green IT Journey
                   </a>
-                  <a
+                  <$2 />
                     href="/request-quote"
                     className="border border-green-500/50 hover:bg-green-500/20 text-white px-8 py-4 rounded-lg font-medium transition-colors duration-200 text-lg"
                   >
@@ -809,5 +794,5 @@ export default function GreenIT() {
         </div>
       </main>
     
-  );
-}
+  )
+}</div></div></div></div></div></p></p></p></p></p></p></p></p></p></main>

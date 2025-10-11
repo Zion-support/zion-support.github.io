@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-
-
-
 export async /**
  * fetch_milestones - Function description
  */
@@ -14,20 +9,14 @@ function fetch_milestones() {
   $2
 }
 
-
-
-;
-export async function createMilestone(projectId: string, payload: any) {;
-  const res = await fetch(`/api/projects/${projectId}/milestones`, {;
-    method: 'POST',;
-    headers: { 'Content-Type': 'application/json' },;
-    credentials: 'include',;
-    body: JSON.stringify(payload)}),;
-  if (!res.ok) throw new Error(await res.text()),;
-  return res.json();
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+export async function createMilestone(projectId: string, payload: any) {
+  const res = await fetch(`/api/projects/${projectId}/milestones`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    credentials: 'include',
+    body: JSON.stringify(payload)}),
+  if (!res.ok) throw new Error(await res.text()),
+  return res.json()
 }
 export async /**
  * create_milestone - Function description
@@ -41,7 +30,7 @@ function create_milestone() {
   if (throw new Error (await res.text ()), ) {
   $2
 }
-  return res.json ();
+  return res.json ()
 }
 export async /**
  * updateMilestoneStatus - Function description
@@ -55,113 +44,11 @@ function updateMilestoneStatus() {
   if (throw new Error (await res.text ())) {
   $2
 }
-  return res.json ();
+  return res.json ()
 }
-
-
-
-export async function fetchMilestones(projectId: string) {;
-  const res = await fetch(`/api/projects/${projectId}/milestones`, {;
-    headers: { 'Content-Type': 'application/json' },;
-
-
-
-}
-;
-export async function createMilestone(projectId: string, payload: any) {;
-  const res = await fetch(`/api/projects/${projectId}/milestones`, {;
-    method: 'POST',;
-    headers: { 'Content-Type': 'application/json' },;
-    credentials: 'include',;
-    body: JSON.stringify(payload)}),;
-  if (!res.ok) throw new Error(await res.text()),;
-  return res.json();
-
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-
-
-
-}
-export async function updateMilestoneStatus() {
-  const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {method: 'PATCH';
-    headers: { 'Content-Type': 'application/json' }
-    credentials: 'include';
-    body: JSON.stringify(body)});
-  if (!res.ok) throw new Error(await res.text());
-  return res.json();
-export async function fetchMilestones(projectId: string) {;
-  const res = await fetch(`/api/projects/${projectId}/milestones`, {;
-    headers: { 'Content-Type': 'application/json' },;
-    credentials: 'include'}),;
-  if (!res.ok) throw new Error('Failed to load milestones'),;
-  return res.json();
-    credentials: 'include'});
-  if (!res.ok) throw new Error('Failed to load milestones');
-  return res.json();
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export async function createMilestone(projectId: string, payload: any) {;
-  const res = await fetch(`/api/projects/${projectId}/milestones`, {;
-    method: 'POST',;
-    headers: { 'Content-Type': 'application/json' },;
-    credentials: 'include',;
-    body: JSON.stringify(payload)}),;
-  if (!res.ok) throw new Error(await res.text()),;
-  return res.json();
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-
-
-
-
-
-
-}
-;
-export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {;
-  const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {;
-    method: 'PATCH',;
-    headers: { 'Content-Type': 'application/json' },;
-    credentials: 'include',;
-    body: JSON.stringify(body)}),;
-  if (!res.ok) throw new Error(await res.text());
-  return res.json();
-
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
-=======
 export async function fetchMilestones(projectId: string) {
   const res = await fetch(`/api/projects/${projectId}/milestones`, {
     headers: { 'Content-Type': 'application/json' },
-    credentials: 'include',
-  });
-  if (!res.ok) throw new Error('Failed to load milestones');
-  return res.json();
 }
 
 export async function createMilestone(projectId: string, payload: any) {
@@ -169,10 +56,48 @@ export async function createMilestone(projectId: string, payload: any) {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     credentials: 'include',
-    body: JSON.stringify(payload),
-  });
-  if (!res.ok) throw new Error(await res.text());
-  return res.json();
+    body: JSON.stringify(payload)}),
+  if (!res.ok) throw new Error(await res.text()),
+  return res.json()
+  } catch (error) {
+    console.error("Error:", error)
+    return res.status(500).json({ error: "Internal server error" })
+  }
+}
+export async function updateMilestoneStatus() {
+  const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {method: 'PATCH'
+    headers: { 'Content-Type': 'application/json' }
+    credentials: 'include'
+    body: JSON.stringify(body)})
+  if (!res.ok) throw new Error(await res.text())
+  return res.json()
+export async function fetchMilestones(projectId: string) {
+  const res = await fetch(`/api/projects/${projectId}/milestones`, {
+    headers: { 'Content-Type': 'application/json' },
+    credentials: 'include'}),
+  if (!res.ok) throw new Error('Failed to load milestones'),
+  return res.json()
+    credentials: 'include'})
+  if (!res.ok) throw new Error('Failed to load milestones')
+  return res.json()
+  } catch (error) {
+    console.error("Error:", error)
+    return res.status(500).json({ error: "Internal server error" })
+  }
+}
+
+export async function createMilestone(projectId: string, payload: any) {
+  const res = await fetch(`/api/projects/${projectId}/milestones`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    credentials: 'include',
+    body: JSON.stringify(payload)}),
+  if (!res.ok) throw new Error(await res.text()),
+  return res.json()
+  } catch (error) {
+    console.error("Error:", error)
+    return res.status(500).json({ error: "Internal server error" })
+  }
 }
 
 export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {
@@ -180,9 +105,36 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
     method: 'PATCH',
     headers: { 'Content-Type': 'application/json' },
     credentials: 'include',
-    body: JSON.stringify(body),
-  });
-  if (!res.ok) throw new Error(await res.text());
-  return res.json();
+    body: JSON.stringify(body)}),
+  if (!res.ok) throw new Error(await res.text())
+  return res.json()
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> origin/auto/autonomy-17186719616
+export async function fetchMilestones(projectId: string) {
+  const res = await fetch(`/api/projects/${projectId}/milestones`, {
+    headers: { 'Content-Type': 'application/json' },
+    credentials: 'include',
+  })
+  if (!res.ok) throw new Error('Failed to load milestones')
+  return res.json()
+}
+export async function createMilestone(projectId: string, payload: any) {
+  const res = await fetch(`/api/projects/${projectId}/milestones`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    credentials: 'include',
+    body: JSON.stringify(payload),
+  })
+  if (!res.ok) throw new Error(await res.text())
+  return res.json()
+}
+export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {
+  const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json' },
+    credentials: 'include',
+    body: JSON.stringify(body),
+  })
+  if (!res.ok) throw new Error(await res.text())
+  return res.json()
+}

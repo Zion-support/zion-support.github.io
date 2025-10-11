@@ -9,9 +9,8 @@
   Mail,
   MapPin,
   ExternalLink
-} from 'lucide-react';
-import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
-
+} from 'lucide-react'
+import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices'
 const categoryIcons = {
   "AI & Machine Learning": <Brain className="h-8 w-8 text-zion-cyan" />,
   "Cloud & DevOps": <Cloud className="h-8 w-8 text-zion-cyan" />,
@@ -21,8 +20,7 @@ const categoryIcons = {
   "Digital Transformation": <TrendingUp className="h-8 w-8 text-zion-cyan" />,
   "Blockchain & Web3": <Code className="h-8 w-8 text-zion-cyan" />,
   "IoT & Edge Computing": <Server className="h-8 w-8 text-zion-cyan" />
-};
-
+}
 // Get featured services from each category
 const getFeaturedServices = () => {
   const categories = [
@@ -30,17 +28,14 @@ const getFeaturedServices = () => {
     "Cloud & DevOps", 
     "Cybersecurity",
     "Data & Analytics"
-  ];
-  
+  ]
   return categories.map(category => {
-    const services = COMPREHENSIVE_SERVICES.filter(s => s.category === category);
+    const services = COMPREHENSIVE_SERVICES.filter(s => s.category === category)
     return services[0]; // Get first service from each category
-  }).filter(Boolean);
-};
-
+  }).filter(Boolean)
+}
 export function ServicesShowcase() {
-  const featuredServices = getFeaturedServices();
-
+  const featuredServices = getFeaturedServices()
   return (
     <section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -166,7 +161,6 @@ export function ServicesShowcase() {
           <div className="mt-6 text-zion-slate-light">
             <p>Visit us: 364 E Main St STE 1008, Middletown DE 19709</p>
             <p className="mt-2">Website: <a href="https://ziontechgroup.com" className="text-zion-cyan hover:underline">https://ziontechgroup.com</a></p>
-=======
 
         {/* CTA Section */}
         <div className="text-center">
@@ -196,5 +190,5 @@ export function ServicesShowcase() {
         </div>
       </div>
     </section>
-  );
-}
+  )
+}</div></div>

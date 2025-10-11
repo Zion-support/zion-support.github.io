@@ -1,6 +1,5 @@
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-
+import { SEO } from "@/components/SEO"
+import { GradientHeading } from "@/components/GradientHeading"
 const Terms: React.FC = () => {
   return (
     
@@ -8,9 +7,6 @@ const Terms: React.FC = () => {
         title="Terms of Service"
         description="The terms and conditions for using the Zion platform."
         canonical="https://ziontechgroup.com/terms"
-=======
-=======
-=======
       />
       
       <div className="min-h-screen bg-gray-50 py-12">
@@ -233,7 +229,6 @@ const Terms: React.FC = () => {
         </div>
       </div>
     
-  );
-};
-
-export default Terms;
+  )
+}
+export default Terms

@@ -1,246 +1,188 @@
-<<<<<<< HEAD
-
-export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
-export interface Branding {logoUrl?: string;
-  primaryColor?: string;
-  secondaryColor?: string;
-  subdomain?: string;
+export type GovernanceMode = "Admin" | "DAO" | "Hybrid"
+export interface Branding {logoUrl?: string
+  primaryColor?: string
+  secondaryColor?: string
+  subdomain?: string
 }
-export interface DeployModules {marketplace: boolean;
-
-export interface Branding {;
-=======
-export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
-
+export interface DeployModules {marketplace: boolean
 export interface Branding {
->>>>>>> origin/auto/autonomy-17186719616
-  logoUrl?: string;
-  primaryColor?: string;
-  secondaryColor?: string;
-  subdomain?: string;
-<<<<<<< HEAD
-
-  logoUrl?: string,;
-  primaryColor?: string,;
-  secondaryColor?: string,;
-  subdomain?: string;
+export type GovernanceMode = "Admin" | "DAO" | "Hybrid"
+export interface Branding {
+  logoUrl?: string
+  primaryColor?: string
+  secondaryColor?: string
+  subdomain?: string
+  logoUrl?: string,
+  primaryColor?: string,
+  secondaryColor?: string,
+  subdomain?: string
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:", error)
+    return res.status(500).json({ error: "Internal server error" })
   }
-
-}
-;
-export interface DeployModules {;
-  marketplace: boolean;
-
-
-=======
 }
 
 export interface DeployModules {
-  marketplace: boolean;
->>>>>>> origin/auto/autonomy-17186719616
-  gpt: boolean;
-  academy: boolean;
-  token: boolean;
-  dao: boolean;
-  nationBuilder: boolean;
-  launchKit: boolean;
-  bookBuilder: boolean;
-  roadmapWhitepaper: boolean;
-  apiDocsWiki: boolean;
-  zionBrain: boolean;
-<<<<<<< HEAD
-  // Bonus;
-
-=======
+  marketplace: boolean
+}
+export interface DeployModules {
+  marketplace: boolean
+  gpt: boolean
+  academy: boolean
+  token: boolean
+  dao: boolean
+  nationBuilder: boolean
+  launchKit: boolean
+  bookBuilder: boolean
+  roadmapWhitepaper: boolean
+  apiDocsWiki: boolean
+  zionBrain: boolean
   // Bonus
->>>>>>> origin/auto/autonomy-17186719616
-  globalMap?: boolean;
-  franchiseOnboarding?: boolean;
-  referralAmbassadors?: boolean;
-  grantPortal?: boolean;
-  trailer?: boolean;
-  bookStore?: boolean;
+  // Bonus
+  globalMap?: boolean
+  franchiseOnboarding?: boolean
+  referralAmbassadors?: boolean
+  grantPortal?: boolean
+  trailer?: boolean
+  bookStore?: boolean
 }
-<<<<<<< HEAD
-export interface DeployInput {instanceName: string;
-  defaultLanguage: string;
-  deploymentRegion: string;
-  tokenActivation: boolean;
-  governanceMode: GovernanceMode;
-  branding: Branding;
-  modules: DeployModules;
-  requestedRoutes?: string[];
+export interface DeployInput {instanceName: string
+  defaultLanguage: string
+  deploymentRegion: string
+  tokenActivation: boolean
+  governanceMode: GovernanceMode
+  branding: Branding
+  modules: DeployModules
+  requestedRoutes?: string[]
 }
-export interface DeployLogEntry {timestamp: string;
-  level: "info" | "warn" | "error";
-  action: string;
-  details?: Record<string unknown> | string;
+export interface DeployLogEntry {timestamp: string
+  level: "info" | "warn" | "error"
+  action: string
+  details?: Record<string unknown> | string
 }
-export interface GeneratedAsset {kind: "file" | "page" | "config" | "job" | "event";
-  path: string;
-  description?: string;
+export interface GeneratedAsset {kind: "file" | "page" | "config" | "job" | "event"
+  path: string
+  description?: string
 }
-export interface DeployResult {success: boolean;
-
-  globalMap?: boolean,;
-  franchiseOnboarding?: boolean,;
-  referralAmbassadors?: boolean,;
-  grantPortal?: boolean,;
-  trailer?: boolean,;
-  bookStore?: boolean;
+export interface DeployResult {success: boolean
+  globalMap?: boolean,
+  franchiseOnboarding?: boolean,
+  referralAmbassadors?: boolean,
+  grantPortal?: boolean,
+  trailer?: boolean,
+  bookStore?: boolean
 }
-export interface DeployInput {instanceName: string;
-  defaultLanguage: string;
-  deploymentRegion: string;
-  tokenActivation: boolean;
+export interface DeployInput {instanceName: string
+  defaultLanguage: string
+  deploymentRegion: string
+  tokenActivation: boolean
 }
-;
-export interface DeployLogEntry {;
-  timestamp: string;
-  level: "info" | "warn" | "error";
-  action: string;
-  details?: Record<string unknown> | string;
-}
-;
-export interface GeneratedAsset {;
-  kind: "file" | "page" | "config" | "job" | "event";
-  path: string;
-  description?: string;
-  governanceMode: GovernanceMode,;
-  branding: Branding,;
-  modules: DeployModules,;
-  requestedRoutes?: string[];
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-
-}
-;
-export interface DeployInput {;
-=======
-
-export interface DeployInput {
->>>>>>> origin/auto/autonomy-17186719616
-  instanceName: string;
-  defaultLanguage: string;
-  deploymentRegion: string;
-  tokenActivation: boolean;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
-  governanceMode: GovernanceMode;
-  branding: Branding;
-  modules: DeployModules;
-  requestedRoutes?: string[];
-}
-<<<<<<< HEAD
-;
-export interface DeployLogEntry {;
-  timestamp: string;
-  level: "info" | "warn" | "error";
-  action: string;
-  details?: Record<string unknown> | string;
-}
-;
-export interface GeneratedAsset {;
-  kind: "file" | "page" | "config" | "job" | "event";
-  path: string;
-  description?: string;
-
-  governanceMode: GovernanceMode,;
-  branding: Branding,;
-  modules: DeployModules,;
-  requestedRoutes?: string[];
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export interface DeployLogEntry {
-  timestamp: string;
-  level: "info" | "warn" | "error",;
-  action: string;
-  details?: Record<string, unknown> | string;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export interface GeneratedAsset {;
-  kind: "file" | "page" | "config" | "job" | "event",;
-  path: string;
-  description?: string;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-
-}
-;
-export interface DeployResult {;
-  success: boolean;
-
-
-=======
 
 export interface DeployLogEntry {
-  timestamp: string;
-  level: "info" | "warn" | "error";
-  action: string;
-  details?: Record<string, unknown> | string;
+  timestamp: string
+  level: "info" | "warn" | "error"
+  action: string
+  details?: Record<string unknown> | string
 }
 
 export interface GeneratedAsset {
-  kind: "file" | "page" | "config" | "job" | "event";
-  path: string;
-  description?: string;
+  kind: "file" | "page" | "config" | "job" | "event"
+  path: string
+  description?: string
+  governanceMode: GovernanceMode,
+  branding: Branding,
+  modules: DeployModules,
+  requestedRoutes?: string[]
+  } catch (error) {
+    console.error("Error:", error)
+    return res.status(500).json({ error: "Internal server error" })
+  }
+}
+
+export interface DeployInput {
+export interface DeployInput {
+  instanceName: string
+  defaultLanguage: string
+  deploymentRegion: string
+  tokenActivation: boolean
+  governanceMode: GovernanceMode
+  branding: Branding
+  modules: DeployModules
+  requestedRoutes?: string[]
+}
+
+export interface DeployLogEntry {
+  timestamp: string
+  level: "info" | "warn" | "error"
+  action: string
+  details?: Record<string unknown> | string
+}
+
+export interface GeneratedAsset {
+  kind: "file" | "page" | "config" | "job" | "event"
+  path: string
+  description?: string
+  governanceMode: GovernanceMode,
+  branding: Branding,
+  modules: DeployModules,
+  requestedRoutes?: string[]
+  } catch (error) {
+    console.error("Error:", error)
+    return res.status(500).json({ error: "Internal server error" })
+  }
+}
+
+export interface DeployLogEntry {
+  timestamp: string
+  level: "info" | "warn" | "error",
+  action: string
+  details?: Record<string, unknown> | string
+  } catch (error) {
+    console.error("Error:", error)
+    return res.status(500).json({ error: "Internal server error" })
+  }
+}
+
+export interface GeneratedAsset {
+  kind: "file" | "page" | "config" | "job" | "event",
+  path: string
+  description?: string
+  } catch (error) {
+    console.error("Error:", error)
+    return res.status(500).json({ error: "Internal server error" })
+  }
 }
 
 export interface DeployResult {
-  success: boolean;
->>>>>>> origin/auto/autonomy-17186719616
-  instanceSlug: string;
-  configPath: string;
-  assets: GeneratedAsset[];
-  logs: DeployLogEntry[];
-  summary: string;
-  version: string;
-<<<<<<< HEAD
-
+  success: boolean
+export interface DeployLogEntry {
+  timestamp: string
+  level: "info" | "warn" | "error"
+  action: string
+  details?: Record<string, unknown> | string
 }
-export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
-  adminKeyConfigured: boolean;
-
+export interface GeneratedAsset {
+  kind: "file" | "page" | "config" | "job" | "event"
+  path: string
+  description?: string
+}
+export interface DeployResult {
+  success: boolean
+  instanceSlug: string
+  configPath: string
+  assets: GeneratedAsset[]
+  logs: DeployLogEntry[]
+  summary: string
+  version: string
+}
+export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[]
+  adminKeyConfigured: boolean
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:", error)
+    return res.status(500).json({ error: "Internal server error" })
   }
-
-
-
-
-
-
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
 }
 export interface DeployModules {
   marketplace: boolean,
@@ -254,13 +196,13 @@ export interface DeployModules {
   roadmap_whitepaper: boolean,
   apiDocsWiki: boolean,
   zion_brain: boolean,
-  // Bonus;
+  // Bonus
   global_map?: boolean,
   franchise_onboarding?: boolean,
   referral_ambassadors?: boolean,
   grant_portal?: boolean,
   trailer?: boolean,
-  book_store?: boolean;
+  book_store?: boolean
 }
 export interface DeployInput {
   instance_name: string,
@@ -270,18 +212,18 @@ export interface DeployInput {
   governance_mode: GovernanceMode,
   branding: Branding,
   modules: DeployModules,
-  requested_routes?: string[];
+  requested_routes?: string[]
 }
 export interface DeployLogEntry {
   timestamp: string,
   level: "info" | "warn" | "error",
   action: string,
-  details?: Record < string unknown> | string;
+  details?: Record < string unknown> | string
 }
 export interface GeneratedAsset {
   kind: "file" | "page" | "config" | "job" | "event",
   path: string,
-  description?: string;
+  description?: string
 }
 export interface DeployResult {
   success: boolean,
@@ -290,29 +232,18 @@ export interface DeployResult {
   assets: GeneratedAsset[],
   logs: DeployLogEntry[],
   summary: string,
-  version: string;
+  version: string
 }
 export interface AccessControlConfig {
-  allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[];
-  adminKeyConfigured: boolean;
-
-
-
-
+  allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[]
+  adminKeyConfigured: boolean
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:", error)
+    return res.status(500).json({ error: "Internal server error" })
   }
-
-
 }
-
-
-=======
 }
-
 export interface AccessControlConfig {
-  allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
-  adminKeyConfigured: boolean;
+  allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[]
+  adminKeyConfigured: boolean
 }
->>>>>>> origin/auto/autonomy-17186719616

@@ -1,46 +1,43 @@
 export interface ComprehensiveService {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-=======
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: 'one-time' | 'monthly' | 'hourly' | 'project-based';
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  marketPrice: string;
-  contactLink: string;
-=======
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: 'one-time' | 'subscription' | 'usage-based' | 'project-based';
-  features: string[];
-  benefits: string[];
-  marketPrice: string;
-  deliveryTime: string;
-  tags: string[];
+  id: string
+  title: string
+  description: string
+  category: string
+  subcategory: string
+  price: number
+  currency: string
+  pricingModel: 'one-time' | 'monthly' | 'hourly' | 'project-based'
+  features: string[]
+  benefits: string[]
+  useCases: string[]
+  marketPrice: string
+  contactLink: string
+  subcategory: string
+  price: number
+  currency: string
+  pricingModel: 'one-time' | 'subscription' | 'usage-based' | 'project-based'
+  features: string[]
+  benefits: string[]
+  marketPrice: string
+  deliveryTime: string
+  tags: string[]
   author: {
-    name: string;
-    id: string;
-    avatarUrl?: string;
-    verified: boolean;
-  };
-  images: string[];
-  rating: number;
-  reviewCount: number;
-  aiScore: number;
-  featured: boolean;
+    name: string
+    id: string
+    avatarUrl?: string
+    verified: boolean
+  }
+  images: string[]
+  rating: number
+  reviewCount: number
+  aiScore: number
+  featured: boolean
   contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
+    phone: string
+    email: string
+    website: string
+  }
 }
-
 export const comprehensiveServices: ComprehensiveService[] = [
   // AI & Machine Learning Services
   {
@@ -50,7 +47,6 @@ export const comprehensiveServices: ComprehensiveService[] = [
     category: "AI Services",
     subcategory: "Chatbot Development",
     price: 2500,
-=======
 export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
   // AI & Machine Learning Services
   {
@@ -401,7 +397,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   // NEW INNOVATIVE MICSAAS SERVICES
   {
     id: "ai-content-generator-pro",
@@ -451,7 +446,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   {
     id: "smart-inventory-manager",
     title: "Smart Inventory Manager",
@@ -500,7 +494,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   {
     id: "quantum-cybersecurity-suite",
     title: "Quantum Cybersecurity Suite",
@@ -549,7 +542,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   {
     id: "autonomous-devops-platform",
     title: "Autonomous DevOps Platform",
@@ -598,7 +590,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   {
     id: "ai-powered-hr-suite",
     title: "AI-Powered HR Suite",
@@ -647,7 +638,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   {
     id: "blockchain-supply-chain",
     title: "Blockchain Supply Chain Tracker",
@@ -696,7 +686,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   {
     id: "quantum-financial-modeling",
     title: "Quantum Financial Modeling Platform",
@@ -745,7 +734,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   {
     id: "autonomous-customer-support",
     title: "Autonomous Customer Support AI",
@@ -794,7 +782,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   {
     id: "iot-health-monitoring",
     title: "IoT Health Monitoring Platform",
@@ -843,7 +830,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   {
     id: "autonomous-logistics-optimizer",
     title: "Autonomous Logistics Optimizer",
@@ -892,7 +878,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-  
   {
     id: "quantum-ai-research-platform",
     title: "Quantum AI Research Platform",
@@ -941,7 +926,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-  
   {
     id: "autonomous-energy-management",
     title: "Autonomous Energy Management System",
@@ -990,7 +974,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-  
   {
     id: "ai-powered-legal-assistant",
     title: "AI-Powered Legal Assistant",
@@ -1039,7 +1022,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-  
   {
     id: "quantum-cryptography-platform",
     title: "Quantum Cryptography Platform",
@@ -1088,7 +1070,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-  
   {
     id: "autonomous-marketing-orchestrator",
     title: "Autonomous Marketing Orchestrator",
@@ -1137,7 +1118,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-  
   {
     id: "iot-smart-city-platform",
     title: "IoT Smart City Platform",
@@ -1186,7 +1166,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-  
   {
     id: "ai-powered-education-platform",
     title: "AI-Powered Education Platform",
@@ -1233,7 +1212,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   // Cloud & DevOps Services
   {
     id: "ai-powered-legal-contract-generator",
@@ -1433,7 +1411,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   // Cybersecurity Services
   {
     id: "cybersecurity-1",
@@ -1521,7 +1498,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     rating: 4.8,
     reviewCount: 134,
     estimatedDelivery: "6-8 weeks",
-=======
   {
     id: "iot-predictive-maintenance-platform",
     title: "IoT Predictive Maintenance Platform",
@@ -2923,8 +2899,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   }
-];
-
+]
 export const serviceCategories = [
   {
     id: "ai-services",
@@ -2932,17 +2907,14 @@ export const serviceCategories = [
     description: "Artificial Intelligence and Machine Learning solutions",
     icon: "🤖",
     count: 3
-=======
-import { ProductListing } from "@/types/listings";
-
+import { ProductListing } from "@/types/listings"
 export interface ServiceCategory {
-  id: string;
-  name: string;
-  description: string;
-  icon: string;
-  color: string;
+  id: string
+  name: string
+  description: string
+  icon: string
+  color: string
 }
-
 export const SERVICE_CATEGORIES: ServiceCategory[] = [
   {
     id: "ai-services",
@@ -3000,16 +2972,11 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     icon: "🎯",
     color: "from-teal-500 to-green-600"
   }
-];
-
-=======
-import { ProductListing } from "@/types/listings";
-
+]
+import { ProductListing } from "@/types/listings"
 export const COMPREHENSIVE_SERVICES: ProductListing[] = [
-=======
-  supportLevel: 'basic' | 'premium' | 'enterprise';
+  supportLevel: 'basic' | 'premium' | 'enterprise'
 }
-
 export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
   // AI & Machine Learning Services
   {
@@ -3021,13 +2988,9 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 2500,
     currency: "$",
     tags: ["AI Chatbot", "GPT-4", "Customer Service", "Automation"],
-=======
-import { ProductListing } from "@/types/listings";
-
+import { ProductListing } from "@/types/listings"
 // Comprehensive Micro SAAS Services & Solutions
-=======
-import { ProductListing } from "@/types/listings";
-
+import { ProductListing } from "@/types/listings"
 // Comprehensive Micro SAAS Services and Solutions
 export const COMPREHENSIVE_SERVICES: ProductListing[] = [
   // AI & Machine Learning Services
@@ -3035,7 +2998,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     id: "ai-chatbot-enterprise",
     title: "Enterprise AI Chatbot Platform",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-=======
     description: "Custom AI chatbot solution for enterprise customer service, sales, and support. Features multi-language support, sentiment analysis, and seamless CRM integration. Includes training data preparation and ongoing optimization.",
     category: "AI & Machine Learning",
     subcategory: "Chatbots & Conversational AI",
@@ -3051,13 +3013,11 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     images: ["https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
     rating: 4.9,
-=======
       avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
     rating: 4.9,
-=======
     reviewCount: 156,
     featured: true,
     location: "Global",
@@ -3077,8 +3037,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       name: "Zion Tech Group",
       id: "zion-tech-group",
       email: "kleber@ziontechgroup.com",
-=======
-=======
     id: "ai-content-generation-suite",
     title: "AI Content Generation Suite Pro",
     description: "Complete AI-powered content creation platform for blogs, social media, marketing copy, and technical documentation. Features SEO optimization, brand voice consistency, and plagiarism detection. Includes 50,000 words/month and API access.",
@@ -3095,8 +3053,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-20T14:30:00.000Z",
     rating: 4.8,
-import { ProductListing } from "@/types/listings";
-
+import { ProductListing } from "@/types/listings"
 // Comprehensive Micro SAAS Services & Solutions
 export const COMPREHENSIVE_SERVICES: ProductListing[] = [
   // AI & Machine Learning Services
@@ -3147,9 +3104,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     availability: "Immediate"
   },
   {
-=======
     reviewCount: 234,
-=======
     reviewCount: 89,
     location: "Global",
     availability: "Immediate",
@@ -3168,7 +3123,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       name: "Zion Tech Group",
       id: "zion-tech-group",
       email: "kleber@ziontechgroup.com",
-=======
     },
     images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-25T09:15:00.000Z",
@@ -3263,7 +3217,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     reviewCount: 156,
     estimatedDelivery: "1-2 weeks",
     supportLevel: "premium"
-=======
       "Multi-language support (up to 10 languages)",
       "CRM integration (Salesforce, HubSpot, Zendesk)",
       "Sentiment analysis and emotion detection",
@@ -3388,7 +3341,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   // Cloud & DevOps Services
   {
     },
@@ -3399,7 +3351,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "4-5 Weeks",
     aiScore: 93
-=======
     id: "aws-cost-optimization",
     title: "AWS Cost Optimization & Management",
     description: "Comprehensive AWS cost analysis, optimization strategies, and ongoing monitoring to reduce cloud spending by 30-50%.",
@@ -3493,7 +3444,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise"
   },
-
   // Cybersecurity Services
   {
     id: "penetration-testing",
@@ -3636,7 +3586,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   // Data & Analytics Services
   {
     id: "data-analytics-1",
@@ -3686,7 +3635,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   // Digital Transformation Services
   {
     id: "digital-transformation-1",
@@ -3736,7 +3684,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   // Mobile & Web Development Services
   {
     id: "mobile-web-1",
@@ -3786,7 +3733,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   // Blockchain & Web3 Services
   {
     id: "blockchain-web3-1",
@@ -3836,7 +3782,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   // IoT & Edge Computing Services
   {
     id: "iot-edge-1",
@@ -3886,8 +3831,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       website: "https://ziontechgroup.com"
     }
   }
-];
-
+]
 export const SERVICE_CATEGORIES = [
   {
     id: "ai-ml",
@@ -3945,18 +3889,15 @@ export const SERVICE_CATEGORIES = [
     icon: "🌐",
     count: 1
   }
-];
-
+]
 // Featured Services for homepage display
-export const FEATURED_SERVICES = COMPREHENSIVE_SERVICES.filter(service => service.featured);
-
+export const FEATURED_SERVICES = COMPREHENSIVE_SERVICES.filter(service => service.featured)
 // Services by price range
 export const SERVICES_BY_PRICE = {
   budget: COMPREHENSIVE_SERVICES.filter(s => s.price && s.price < 5000),
   midRange: COMPREHENSIVE_SERVICES.filter(s => s.price && s.price >= 5000 && s.price < 15000),
   enterprise: COMPREHENSIVE_SERVICES.filter(s => s.price && s.price >= 15000)
-};
-=======
+}
   { id: "ai-ml", name: "AI & Machine Learning", description: "Artificial intelligence and machine learning solutions" },
   { id: "cloud-devops", name: "Cloud & DevOps", description: "Cloud infrastructure and development operations" },
   { id: "cybersecurity", name: "Cybersecurity", description: "Security solutions and protection services" },
@@ -3965,8 +3906,7 @@ export const SERVICES_BY_PRICE = {
   { id: "blockchain-web3", name: "Blockchain & Web3", description: "Decentralized technology solutions" },
   { id: "iot-hardware", name: "IoT & Hardware", description: "Internet of Things and hardware solutions" },
   { id: "digital-transformation", name: "Digital Transformation", description: "Business transformation consulting" }
-];
-
+]
 // Pricing tiers for subscription services
 export const SUBSCRIPTION_TIERS = [
   {
@@ -3990,11 +3930,9 @@ export const SUBSCRIPTION_TIERS = [
     period: "month",
     features: ["All features", "24/7 support", "Custom integrations", "Dedicated account manager", "SLA guarantee"]
   }
-];
-=======
+]
   website: "https://ziontechgroup.com"
-};
-=======
+}
   "Process Automation",
   "Governance",
   "Quantum Computing",
@@ -4025,4 +3963,4 @@ export const SUBSCRIPTION_TIERS = [
   "Learning Analytics",
   "Digital Assets",
   "Penetration Testing"
-];
+]

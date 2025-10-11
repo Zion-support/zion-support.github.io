@@ -1,97 +1,72 @@
-
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1";
-import { Resend } from "npm:resend@1.0.0";
-
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1"
+import { Resend } from "npm:resend@1.0.0"
+const resend = new Resend(Deno.env.get("RESEND_API_KEY"))
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
-<<<<<<< HEAD
-    "authorization, x-client-info, apikey, content-type"};
-=======
+    "authorization, x-client-info, apikey, content-type"}
     "authorization, x-client-info, apikey, content-type",
-};
->>>>>>> origin/auto/autonomy-17186719616
-
-interface ReminderPayload {
-  user_id: string;
-  missing_milestone: string;
-  role: string;
 }
-
+interface ReminderPayload {
+  user_id: string
+  missing_milestone: string
+  role: string
+}
 serve(async (req: Request) => {
   // Handle CORS
   if (req.method === "OPTIONS") {
     return new Response(null, {
       status: 204,
-<<<<<<< HEAD
-      headers: corsHeaders});
-=======
+      headers: corsHeaders})
       headers: corsHeaders,
-    });
->>>>>>> origin/auto/autonomy-17186719616
+    })
   }
-  
   try {
     const supabase = createClient(
       supabaseUrl,
       supabaseServiceKey
-    );
-    
-    const payload = await req.json() as ReminderPayload;
-    const { user_id, missing_milestone, role } = payload;
-    
+    )
+    const payload = await req.json() as ReminderPayload
+    const { user_id, missing_milestone, role } = payload
     if (!user_id || !missing_milestone || !role) {
       return new Response(
         JSON.stringify({ error: "Missing required fields" }),
         {
           status: 400,
-<<<<<<< HEAD
           headers: { "Content-Type": "application/json", ...corsHeaders }}
-=======
           headers: { "Content-Type": "application/json", ...corsHeaders },
         }
->>>>>>> origin/auto/autonomy-17186719616
-      );
+      )
     }
-    
     // Get user data
     const { data: userData, error: userError } = await supabase
       .from("profiles")
       .select("email, display_name")
       .eq("id", user_id)
-      .single();
-    
+      .single()
     if (userError || !userData) {
       return new Response(
         JSON.stringify({ error: "User not found", details: userError }),
         {
           status: 404,
-<<<<<<< HEAD
           headers: { "Content-Type": "application/json", ...corsHeaders }}
-=======
           headers: { "Content-Type": "application/json", ...corsHeaders },
         }
->>>>>>> origin/auto/autonomy-17186719616
-      );
+      )
     }
-    
     // Create message based on role and missing milestone
     const milestoneMessages = {
       talent: {
         profile_completed: "complete your profile to get discovered by clients",
         skills_added: "add your skills to get better job matches",
-<<<<<<< HEAD
         availability_set: "set your availability to help clients know when you can work"},
       client: {
         job_posted: "post your first job to start finding talent",
         match_viewed: "check out your AI-matched talent suggestions",
-        talent_invited: "invite talent to speed up your hiring process"}};
-=======
+        talent_invited: "invite talent to speed up your hiring process"}}
         availability_set: "set your availability to help clients know when you can work",
       },
       client: {
@@ -99,14 +74,11 @@ serve(async (req: Request) => {
         match_viewed: "check out your AI-matched talent suggestions",
         talent_invited: "invite talent to speed up your hiring process",
       },
-    };
->>>>>>> origin/auto/autonomy-17186719616
-    
-    const name = userData.display_name || "there";
+    }
+    const name = userData.display_name || "there"
     const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
       missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
-    ] || "complete your next step";
-    
+    ] || "complete your next step"
     // Send email
     const { data: emailData, error: emailError } = await resend.emails.send({
       from: "Zion AI Marketplace <notifications@zion.ai>",
@@ -125,27 +97,19 @@ serve(async (req: Request) => {
           </div>
           <p>The Zion AI Marketplace Team</p>
         </div>
-<<<<<<< HEAD
-      `});
-=======
+      `})
       `,
-    });
->>>>>>> origin/auto/autonomy-17186719616
-    
+    })
     if (emailError) {
       return new Response(
         JSON.stringify({ error: "Failed to send email", details: emailError }),
         {
           status: 500,
-<<<<<<< HEAD
           headers: { "Content-Type": "application/json", ...corsHeaders }}
-=======
           headers: { "Content-Type": "application/json", ...corsHeaders },
         }
->>>>>>> origin/auto/autonomy-17186719616
-      );
+      )
     }
-    
     // Create notification in database
     const { data: notification, error: notificationError } = await supabase.rpc(
       "create_notification",
@@ -153,47 +117,36 @@ serve(async (req: Request) => {
         _user_id: user_id,
         _title: "Complete your next step",
         _message: `Don't forget to ${action} to get the most out of Zion AI Marketplace.`,
-<<<<<<< HEAD
         _type: "onboarding"}
-=======
         _type: "onboarding",
       }
->>>>>>> origin/auto/autonomy-17186719616
-    );
-    
+    )
     if (notificationError) {
-      console.error("Failed to create notification:", notificationError);
+      console.error("Failed to create notification:", notificationError)
     }
-    
     return new Response(
       JSON.stringify({
         message: "Reminder sent successfully",
-<<<<<<< HEAD
         notification_id: notification}),
       {
         status: 200,
         headers: { "Content-Type": "application/json", ...corsHeaders }}
-=======
         notification_id: notification,
       }),
       {
         status: 200,
         headers: { "Content-Type": "application/json", ...corsHeaders },
       }
->>>>>>> origin/auto/autonomy-17186719616
-    );
+    )
   } catch (error) {
-    console.error(error);
+    console.error(error)
     return new Response(
       JSON.stringify({ error: "Internal server error", details: error.message }),
       {
         status: 500,
-<<<<<<< HEAD
         headers: { "Content-Type": "application/json", ...corsHeaders }}
-=======
         headers: { "Content-Type": "application/json", ...corsHeaders },
       }
->>>>>>> origin/auto/autonomy-17186719616
-    );
+    )
   }
-});
+})

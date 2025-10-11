@@ -1,414 +1,222 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
-interface AccessibilityFeatures {
-	highContrast: boolean;
-	reducedMotion: boolean;
-	largeText: boolean;
-	focusHighlight: boolean;
-	screenReaderMode: boolean;
+import React, { useEffect } from 'react'
+interface AccessibilityEnhancerProps {
+    children: React.ReactNode
+  }
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+    </AccessibilityEnhancerProps>useEffect</AccessibilityEnhancerProps>(() => {
+    // Add keyboard navigation support
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation')
+  }
+    }
+    const handleMouseDown = () => {
+    document.body.classList.remove('keyboard-navigation')
+  }
+    // Add focus indicators
+    const addFocusIndicators = () => {
+    const style = document.createElement('style')
+      style.textContent = `
+        .keyboard-navigation *:focus {
+          outline: 2 px solid #06 b6 d4 !important,
+          outline-offset: 2 px !important
+  }
+      `
+      document.head.appendChild(style)
+    }
+    // Add ARIA labels to interactive elements
+    const enhanceAccessibility = () => {
+    const buttons = document.querySelectorAll('button: not([aria-label])'),
+      buttons.forEach(button => {
+        if (!button.getAttribute('aria-label') && button.textContent) {
+          button.setAttribute('aria-label', button.textContent.trim())
+  }
+        // Add role if missing
+        if (!button.getAttribute('role')) {
+    button.setAttribute('role', 'button')
+  }
+      const links = document.querySelectorAll('a: not([aria-label])'),
+      links.forEach(link => {
+    if (!link.getAttribute('aria-label') && link.textContent) {
+          link.setAttribute('aria-label', link.textContent.trim())
+  }
+        // Add external link indicators
+        if (link.getAttribute('href')?.startsWith('http') && !link.getAttribute('href')?.includes('ziontechgroup.com')) {
+          link.setAttribute('aria-label', `${link.textContent?.trim()} (opens in new tab)`)
+          link.setAttribute('target', '_blank')
+          link.setAttribute('rel', 'noopener noreferrer')
+        }
+      })
+      // Add ARIA labels to images
+      const images = document.querySelectorAll('img: not([alt])'),
+      images.forEach(img => {
+    if (!img.getAttribute('alt')) {
+          img.setAttribute('alt', '')
+  }
+      })
+      // Add ARIA labels to form inputs
+      const inputs = document.querySelectorAll('input: not([aria-label])'),
+      inputs.forEach(input => {
+        const label = document.querySelector(`label[for="${input.getAttribute('id')}"]`)
+        if (label && !input.getAttribute('aria-label')) {
+    input.setAttribute('aria-label', label.textContent?.trim() || '')
+  }
+      })
+      // Add skip links
+      const skipLink = document.createElement('a')
+      skipLink.href = '#main-content'
+      skipLink.textContent = 'Skip to main content'
+      skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50',
+      document.body.insertBefore(skipLink, document.body.firstChild)
+    }
+    addFocusIndicators()
+    enhanceAccessibility()
+    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener('mousedown', handleMouseDown)
+    return () => {
+    document.removeEventListener('keydown', handleKeyDown)
+      document.removeEventListener('mousedown', handleMouseDown)
+  }
+  }, [])
+  return <React.Fragment>{children}</React.Fragment>
+import React, { useEffect, useState } from 'react'
+interface AccessibilitySettings {
+    highContrast: boolean
+  reducedMotion: boolean
+  fontSize: 'small' | 'medium' | 'large',
+  focusVisible: boolean
+  }
+const AccessibilityEnhancer: React.FC = () => {
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    highContrast: false,
+    reducedMotion: false,
+    fontSize: 'medium',
+    focusVisible: false})
+  useEffect(() => {
+    // Check for user preferences
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches,
+    setSettings(prev => ({
+      ...prev,
+      reducedMotion: prefersReducedMotion,
+      highContrast: prefersHighContrast}))
+    // Apply accessibility settings
+    const root = document.documentElement
+    if (settings.highContrast) {
+    root.classList.add('high-contrast')
+  } else {
+    root.classList.remove('high-contrast')
+  }
+    if (settings.reducedMotion) {
+    root.classList.add('reduced-motion')
+  } else {
+    root.classList.remove('reduced-motion')
+  }
+    // Font size
+    root.classList.remove('font-small', 'font-medium', 'font-large')
+    root.classList.add(`font-${settings.fontSize}`)
+    // Focus visible
+    if (settings.focusVisible) {
+    root.classList.add('focus-visible')
+  } else {
+    root.classList.remove('focus-visible')
+  }
+    // Add keyboard navigation support
+    const handleKeyDown = (e: KeyboardEvent) => {
+    // Skip to main content
+      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
+        const mainContent = document.querySelector('main, [role="main"]')
+        if (mainContent) {
+          (mainContent as HTMLElement).focus()
+          e.preventDefault()
+  }
+      }
+      // Escape key to close modals/dropdowns
+      if (e.key === 'Escape') {
+    const activeElement = document.activeElement as HTMLElement
+        if (activeElement && activeElement.blur) {
+          activeElement.blur()
+  }
+      }
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => {
+    document.removeEventListener('keydown', handleKeyDown)
+  }
+  }, [settings])
+  // Add ARIA live region for announcements
+  useEffect(() => {
+    const liveRegion = document.createElement('div')
+    liveRegion.setAttribute('aria-live', 'polite')
+    liveRegion.setAttribute('aria-atomic', 'true')
+    liveRegion.className = 'sr-only'
+    liveRegion.id = 'live-region'
+    document.body.appendChild(liveRegion)
+    return () => {
+      const existingLiveRegion = document.getElementById('live-region')
+      if (existingLiveRegion) {
+        existingLiveRegion.remove()
+  }
+    }
+  }, [])
+  // Announce page changes
+  useEffect(() => {
+    const announcePageChange = () => {
+      const liveRegion = document.getElementById('live-region')
+      if (liveRegion) {
+        const pageTitle = document.title
+        liveRegion.textContent = `Page loaded: ${pageTitle}`
+      }
+    }
+    // Announce after a short delay to ensure content is loaded
+    const timeoutId = setTimeout(announcePageChange, 1000)
+    return () => clearTimeout(timeoutId)
+  }, [])
+  // Don't render anything in production
+  if (process.env.NODE_ENV === 'production') {
+    return null
+  }
+  return (
+    <div className="fixed top-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs z-50">
+      <div className="mb-2 font-bold">Accessibility Settings
+      <div className="space-y-2">
+        <label className="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            checked={settings.highContrast}
+            onChange={(e) => setSettings(prev => ({ ...prev, highContrast: e.target.checked }))}
+            className="rounded"
+          />
+          <span>High Contrast
+        <label className="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            checked={settings.reducedMotion}
+            onChange={(e) => setSettings(prev => ({ ...prev, reducedMotion: e.target.checked }))}
+            className="rounded"
+          />
+          <span>Reduced Motion
+        <div>
+          <label className="block mb-1">Font Size:
+          <select
+            value={settings.fontSize}
+            onChange={(e) => setSettings(prev => ({ ...prev, fontSize: e.target.value as any }))}
+            className="bg-gray-700 text-white rounded px-2 py-1">
+            <option value="small">Small
+            <option value="medium">Medium
+            <option value="large">Large
+        <label className="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            checked={settings.focusVisible}
+            onChange={(e) => setSettings(prev => ({ ...prev, focusVisible: e.target.checked }))}
+            className="rounded"
+          />
+          <span>Focus Visible</span>
+        </label>
+      </div>
+    </div>
+  )
 }
-
-interface FocusTrapConfig {
-	containerRef: React.RefObject<HTMLElement>;
-	onEscape?: () => void;
-	returnFocus?: boolean;
-}
-
-export function AccessibilityEnhancer() {
-	const [features, setFeatures] = useState<AccessibilityFeatures>({
-		highContrast: false,
-		reducedMotion: false,
-		largeText: false,
-		focusHighlight: true,
-		screenReaderMode: false
-	});
-
-	const [announcements, setAnnouncements] = useState<string[]>([]);
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const menuRef = useRef<HTMLDivElement>(null);
-	const buttonRef = useRef<HTMLButtonElement>(null);
-
-	// Screen reader announcements
-	const announce = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {
-		const announcement = { message, priority, id: Date.now() } as unknown as { message: string; priority: 'polite' | 'assertive'; id: number };
-		setAnnouncements(prev => [...prev, (announcement as unknown) as string]);
-
-		// Auto-remove after 5 seconds
-		setTimeout(() => {
-			setAnnouncements(prev => prev.filter((a: any) => (a as any).id !== (announcement as any).id));
-		}, 5000);
-	}, []);
-
-	// High contrast mode
-	const toggleHighContrast = useCallback(() => {
-		setFeatures(prev => {
-			const newFeatures = { ...prev, highContrast: !prev.highContrast };
-
-			if (newFeatures.highContrast) {
-				document.documentElement.classList.add('high-contrast');
-				announce('High contrast mode enabled', 'assertive');
-			} else {
-				document.documentElement.classList.remove('high-contrast');
-				announce('High contrast mode disabled', 'assertive');
-			}
-
-			return newFeatures;
-		});
-	}, [announce]);
-
-	// Reduced motion mode
-	const toggleReducedMotion = useCallback(() => {
-		setFeatures(prev => {
-			const newFeatures = { ...prev, reducedMotion: !prev.reducedMotion };
-
-			if (newFeatures.reducedMotion) {
-				document.documentElement.classList.add('reduced-motion');
-				announce('Reduced motion enabled', 'assertive');
-			} else {
-				document.documentElement.classList.remove('reduced-motion');
-				announce('Reduced motion disabled', 'assertive');
-			}
-
-			return newFeatures;
-		});
-	}, [announce]);
-
-	// Large text mode
-	const toggleLargeText = useCallback(() => {
-		setFeatures(prev => {
-			const newFeatures = { ...prev, largeText: !prev.largeText };
-
-			if (newFeatures.largeText) {
-				document.documentElement.classList.add('large-text');
-				announce('Large text mode enabled', 'assertive');
-			} else {
-				document.documentElement.classList.remove('large-text');
-				announce('Large text mode disabled', 'assertive');
-			}
-
-			return newFeatures;
-		});
-	}, [announce]);
-
-	// Focus highlight mode
-	const toggleFocusHighlight = useCallback(() => {
-		setFeatures(prev => {
-			const newFeatures = { ...prev, focusHighlight: !prev.focusHighlight };
-
-			if (newFeatures.focusHighlight) {
-				document.documentElement.classList.add('focus-highlight');
-				announce('Focus highlighting enabled', 'assertive');
-			} else {
-				document.documentElement.classList.remove('focus-highlight');
-				announce('Focus highlighting disabled', 'assertive');
-			}
-
-			return newFeatures;
-		});
-	}, [announce]);
-
-	// Screen reader mode
-	const toggleScreenReaderMode = useCallback(() => {
-		setFeatures(prev => {
-			const newFeatures = { ...prev, screenReaderMode: !prev.screenReaderMode };
-
-			if (newFeatures.screenReaderMode) {
-				document.documentElement.classList.add('screen-reader-mode');
-				announce('Screen reader mode enabled', 'assertive');
-			} else {
-				document.documentElement.classList.remove('screen-reader-mode');
-				announce('Screen reader mode disabled', 'assertive');
-			}
-
-			return newFeatures;
-		});
-	}, [announce]);
-
-	// Keyboard navigation enhancement
-	useEffect(() => {
-		const handleKeyDown = (event: KeyboardEvent) => {
-			// Skip to main content
-			if (event.key === 'Tab' && event.altKey) {
-				event.preventDefault();
-				const mainContent = document.querySelector('main');
-				if (mainContent) {
-					(mainContent as HTMLElement).focus();
-					announce('Moved to main content');
-				}
-			}
-
-			// Skip to navigation
-			if (event.key === 'Tab' && event.shiftKey && event.altKey) {
-				event.preventDefault();
-				const navigation = document.querySelector('nav');
-				if (navigation) {
-					(navigation as HTMLElement).focus();
-					announce('Moved to navigation');
-				}
-			}
-
-			// Skip to footer
-			if (event.key === 'Tab' && event.ctrlKey) {
-				event.preventDefault();
-				const footer = document.querySelector('footer');
-				if (footer) {
-					(footer as HTMLElement).focus();
-					announce('Moved to footer');
-				}
-			}
-		};
-
-		document.addEventListener('keydown', handleKeyDown);
-		return () => document.removeEventListener('keydown', handleKeyDown);
-	}, [announce]);
-
-	// Click outside to close menu
-	useEffect(() => {
-		const handleClickOutside = (event: MouseEvent) => {
-			if (menuRef.current && !menuRef.current.contains(event.target as Node) &&
-				buttonRef.current && !buttonRef.current.contains(event.target as Node)) {
-				setIsMenuOpen(false);
-			}
-		};
-
-		document.addEventListener('mousedown', handleClickOutside);
-		return () => document.removeEventListener('mousedown', handleClickOutside);
-	}, []);
-
-	return (
-		<>
-			{/* Accessibility Menu Button */}
-			<div className="fixed top-4 right-4 z-50">
-				<button
-					ref={buttonRef}
-					onClick={() => setIsMenuOpen(!isMenuOpen)}
-					className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300"
-					aria-label="Accessibility options"
-					aria-expanded={isMenuOpen}
-					aria-haspopup="true"
-				>
-					<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-					</svg>
-				</button>
-
-				{/* Accessibility Menu */}
-				<AnimatePresence>
-					{isMenuOpen && (
-						<motion.div
-							ref={menuRef}
-							initial={{ opacity: 0, y: -10, scale: 0.95 }}
-							animate={{ opacity: 1, y: 0, scale: 1 }}
-							exit={{ opacity: 0, y: -10, scale: 0.95 }}
-							transition={{ duration: 0.2 }}
-							className="absolute right-0 mt-2 w-80 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700"
-						>
-							<div className="p-4">
-								<h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-									Accessibility Options
-								</h3>
-								
-								<div className="space-y-3">
-									<button
-										onClick={toggleHighContrast}
-										className={`w-full text-left p-3 rounded-lg transition-colors ${
-											features.highContrast 
-												? 'bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100' 
-												: 'hover:bg-gray-100 dark:hover:bg-gray-700'
-										}`}
-									>
-										<div className="flex items-center justify-between">
-											<span>High Contrast</span>
-											<div className={`w-4 h-4 rounded border-2 ${
-												features.highContrast ? 'bg-blue-600 border-blue-600' : 'border-gray-400'
-											}`}></div>
-										</div>
-									</button>
-
-									<button
-										onClick={toggleReducedMotion}
-										className={`w-full text-left p-3 rounded-lg transition-colors ${
-											features.reducedMotion 
-												? 'bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100' 
-												: 'hover:bg-gray-100 dark:hover:bg-gray-700'
-										}`}
-									>
-										<div className="flex items-center justify-between">
-											<span>Reduced Motion</span>
-											<div className={`w-4 h-4 rounded border-2 ${
-												features.reducedMotion ? 'bg-blue-600 border-blue-600' : 'border-gray-400'
-											}`}></div>
-										</div>
-									</button>
-
-									<button
-										onClick={toggleLargeText}
-										className={`w-full text-left p-3 rounded-lg transition-colors ${
-											features.largeText 
-												? 'bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100' 
-												: 'hover:bg-gray-100 dark:hover:bg-gray-700'
-										}`}
-									>
-										<div className="flex items-center justify-between">
-											<span>Large Text</span>
-											<div className={`w-4 h-4 rounded border-2 ${
-												features.largeText ? 'bg-blue-600 border-blue-600' : 'border-gray-400'
-											}`}></div>
-										</div>
-									</button>
-
-									<button
-										onClick={toggleFocusHighlight}
-										className={`w-full text-left p-3 rounded-lg transition-colors ${
-											features.focusHighlight 
-												? 'bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100' 
-												: 'hover:bg-gray-100 dark:hover:bg-gray-700'
-										}`}
-									>
-										<div className="flex items-center justify-between">
-											<span>Focus Highlight</span>
-											<div className={`w-4 h-4 rounded border-2 ${
-												features.focusHighlight ? 'bg-blue-600 border-blue-600' : 'border-gray-400'
-											}`}></div>
-										</div>
-									</button>
-
-									<button
-										onClick={toggleScreenReaderMode}
-										className={`w-full text-left p-3 rounded-lg transition-colors ${
-											features.screenReaderMode 
-												? 'bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100' 
-												: 'hover:bg-gray-100 dark:hover:bg-gray-700'
-										}`}
-									>
-										<div className="flex items-center justify-between">
-											<span>Screen Reader Mode</span>
-											<div className={`w-4 h-4 rounded border-2 ${
-												features.screenReaderMode ? 'bg-blue-600 border-blue-600' : 'border-gray-400'
-											}`}></div>
-										</div>
-									</button>
-								</div>
-
-								<div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-									<p className="text-sm text-gray-600 dark:text-gray-400">
-										<strong>Keyboard Shortcuts:</strong><br />
-										Alt + Tab: Skip to main content<br />
-										Alt + Shift + Tab: Skip to navigation<br />
-										Ctrl + Tab: Skip to footer
-									</p>
-								</div>
-							</div>
-						</motion.div>
-					)}
-				</AnimatePresence>
-			</div>
-
-			{/* Screen Reader Announcements */}
-			<div
-				aria-live="polite"
-				aria-atomic="true"
-				className="sr-only"
-				id="accessibility-announcements"
-			>
-				{announcements.map((announcement: any) => (
-					<div key={(announcement as any).id} aria-live={(announcement as any).priority}>
-						{(announcement as any).message}
-					</div>
-				))}
-			</div>
-		</>
-	);
-}
-
-// Focus Trap Hook
-export function useFocusTrap({ containerRef, onEscape, returnFocus }: FocusTrapConfig) {
-	const previousFocus = useRef<HTMLElement | null>(null);
-
-	useEffect(() => {
-		const container = containerRef.current;
-		if (!container) return;
-
-		// Store previous focus
-		previousFocus.current = document.activeElement as HTMLElement;
-
-		// Focus first focusable element
-		const focusableElements = container.querySelectorAll(
-			'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-		);
-		
-		if (focusableElements.length > 0) {
-			(focusableElements[0] as HTMLElement).focus();
-		}
-
-		const handleKeyDown = (event: KeyboardEvent) => {
-			if (event.key === 'Escape' && onEscape) {
-				onEscape();
-				return;
-			}
-
-			if (event.key === 'Tab') {
-				const focusableElements = Array.from(container.querySelectorAll(
-					'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-				)).filter(el => !(el as HTMLElement).disabled) as HTMLElement[];
-
-				if (focusableElements.length === 0) return;
-
-				const firstElement = focusableElements[0];
-				const lastElement = focusableElements[focusableElements.length - 1];
-
-				if (event.shiftKey) {
-					if (document.activeElement === firstElement) {
-						lastElement.focus();
-						event.preventDefault();
-					}
-				} else {
-					if (document.activeElement === lastElement) {
-						firstElement.focus();
-						event.preventDefault();
-					}
-				}
-			}
-		};
-
-		container.addEventListener('keydown', handleKeyDown);
-
-		return () => {
-			container.removeEventListener('keydown', handleKeyDown);
-			
-			// Return focus when unmounting
-			if (returnFocus && previousFocus.current) {
-				previousFocus.current.focus();
-			}
-		};
-	}, [containerRef, onEscape, returnFocus]);
-}
-
-// Skip Link Component
-export function SkipLink({ href, children }: { href: string; children: React.ReactNode }) {
-	return (
-		<a
-			href={href}
-			className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-lg z-50"
-		>
-			{children}
-		</a>
-	);
-}
-
-// Announcement Hook
-export function useAnnouncement() {
-	const [announcements, setAnnouncements] = useState<string[]>([]);
-
-	const announce = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {
-		const announcement = { message, priority, id: Date.now() } as any;
-		setAnnouncements((prev: any) => [...prev, announcement]);
-		
-		setTimeout(() => {
-			setAnnouncements((prev: any) => prev.filter((a: any) => a.id !== announcement.id));
-		}, 5000);
-	}, []);
-
-	return { announcements, announce };
-}
+export default AccessibilityEnhancer</AccessibilitySettings>
+</div></div></span></span>

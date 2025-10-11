@@ -1,52 +1,44 @@
-import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
+import { ServiceVariant } from '../types/service-variants'
 export interface RevolutionaryAIService2026 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: ServiceVariant
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string
+    email: string
+    address: string
+    website: string
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
   // AI Multimodal Fusion Platform
   {
@@ -100,10 +92,6 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
     rating: 4.9,
     reviews: 145
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI Autonomous Business Platform
   {
     id: 'ai-autonomous-business-platform',
@@ -156,10 +144,6 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
     rating: 4.8,
     reviews: 67
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI Creative Studio Platform
   {
     id: 'ai-creative-studio-platform',
@@ -212,10 +196,6 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
     rating: 4.9,
     reviews: 389
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI Healthcare Companion Platform
   {
     id: 'ai-healthcare-companion-platform',
@@ -268,10 +248,6 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
     rating: 4.9,
     reviews: 112
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum Logistics Platform
   {
     id: 'quantum-logistics-platform',
@@ -324,4 +300,4 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
     rating: 4.8,
     reviews: 134
   }
-];
+]

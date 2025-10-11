@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
       label: 'Countries Reached',
       description: 'Global presence and impact across diverse markets'
     },
@@ -11,8 +11,7 @@ import React from 'react';
       number: '100%',
       label: 'Carbon Neutral',
       description: 'Committed to sustainable technology development'
-=======
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { 
   Target, 
   Heart, 
@@ -29,8 +28,7 @@ import {
   Star,
   TrendingUp,
   Eye
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function Mission() {
   const coreValues = [
     {
@@ -77,8 +75,7 @@ export default function Mission() {
         "Trust-based relationships"
       ]
     }
-  ];
-
+  ]
   const missionPillars = [
     {
       title: "AI-Powered Transformation",
@@ -128,8 +125,7 @@ export default function Mission() {
       ],
       metrics: ["25+ countries served", "10+ regional offices", "Multi-language support"]
     }
-  ];
-
+  ]
   const impactAreas = [
     {
       title: "Healthcare",
@@ -175,8 +171,7 @@ export default function Mission() {
         "Improved learning outcomes"
       ]
     }
-  ];
-
+  ]
   const futureVision = [
     {
       year: "2025",
@@ -208,8 +203,7 @@ export default function Mission() {
         "AI-human collaboration ecosystem"
       ]
     }
-  ];
-
+  ]
   return (
       {/* Mission Pillars */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -225,7 +219,7 @@ export default function Mission() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {missionPillars.map((pillar, index) => (
-              <div
+              <$2 />
                 key={index}
                 className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 group"
               >
@@ -271,7 +265,7 @@ export default function Mission() {
             
             <div className="space-y-12">
               {strategicGoals.map((goal, index) => (
-                <div key={index} className={`relative flex items-center ${
+                < key={index} className={`relative flex items-center ${$2 />
                   index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
                 }`}>
                   {/* Timeline dot */}
@@ -292,7 +286,6 @@ export default function Mission() {
                   </div>
                 </div>
               ))}
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -328,14 +321,13 @@ export default function Mission() {
 
       {/* Core Values */}
                 <p className="text-gray-400 leading-relaxed">{value.description}</p>
-=======
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Core Values</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {coreValues.map((value, index) => {
-            const Icon = value.icon;
+            const Icon = value.icon
             return (
-              <div
+              <$2 />
                 key={index}
                 className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
@@ -354,13 +346,12 @@ export default function Mission() {
                   ))}
                 </ul>
               </div>
-            );
+            )
           })}
         </div>
               <div key={index} className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
                   {metric.number}
-=======
       </div>
 
       {/* Mission Pillars */}
@@ -369,9 +360,9 @@ export default function Mission() {
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Mission Pillars</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {missionPillars.map((pillar, index) => {
-              const Icon = pillar.icon;
+              const Icon = pillar.icon
               return (
-                <div
+                <$2 />
                   key={index}
                   className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-600 hover:border-cyan-500"
                 >
@@ -400,7 +391,7 @@ export default function Mission() {
                     <h4 className="text-sm font-semibold text-cyan-400 mb-3">Success Metrics</h4>
                     <div className="flex flex-wrap gap-2">
                       {pillar.metrics.map((metric, idx) => (
-                        <span
+                        <$2 />
                           key={idx}
                           className="px-3 py-1 bg-gray-600 text-gray-300 text-xs rounded-full"
                         >
@@ -410,7 +401,7 @@ export default function Mission() {
                     </div>
                   </div>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -421,9 +412,9 @@ export default function Mission() {
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Impact</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {impactAreas.map((area, index) => {
-            const Icon = area.icon;
+            const Icon = area.icon
             return (
-              <div
+              <$2 />
                 key={index}
                 className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
@@ -442,7 +433,7 @@ export default function Mission() {
                   ))}
                 </ul>
               </div>
-            );
+            )
           })}
         </div>
       </div>
@@ -453,7 +444,7 @@ export default function Mission() {
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Future Vision</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {futureVision.map((vision, index) => (
-              <div
+              <$2 />
                 key={index}
                 className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-600 hover:border-cyan-500"
               >
@@ -485,7 +476,6 @@ export default function Mission() {
       </div>
 
       </div>
-=======
       {/* Call to Action */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
@@ -498,14 +488,14 @@ export default function Mission() {
             to be part of our journey to democratize technology and create positive global impact.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <$2 />
               to="/contact"
               className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
             >
               Get Started Today
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link
+            <$2 />
               to="/careers"
               className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200"
             >
@@ -515,7 +505,6 @@ export default function Mission() {
         </div>
       </div>
     </div>
-  );
-};
-
-export default Mission;
+  )
+}
+export default Mission</$1></div></p></section>

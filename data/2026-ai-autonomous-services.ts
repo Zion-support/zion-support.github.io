@@ -1,27 +1,20 @@
-<<<<<<< HEAD
-export const aiAutonomousServices2026 = [] as any[];
-=======
->>>>>>> origin/auto/autonomy-17186719616
+export const aiAutonomousServices2026 = [] as any[]
 export interface AiAutonomousService2026 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
+  link: string
+  category: string
+  realImplementation: boolean
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-  };
+    mobile: string
+    email: string
+    address: string
+  }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const aiAutonomousServices2026: AiAutonomousService2026[] = [
   {
     id: "2026-ai-autonomous",
@@ -45,8 +38,5 @@ export const aiAutonomousServices2026: AiAutonomousService2026[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-<<<<<<< HEAD
-];
-=======
-];
->>>>>>> origin/auto/autonomy-17186719616
+]
+]

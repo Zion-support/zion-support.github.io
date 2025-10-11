@@ -1,74 +1,70 @@
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-import fs from 'fs';
-import { execSync } from 'child_process';
-// Read sitemap.xml
-const sitemapContent = fs.readFileSync('sitemap.xml', 'utf8');
-// Extract URLs from sitemap
-const urlMatches = sitemapContent.match(
-  /<loc>"https": \/\/ziontechgroup\.com\/([^<]+)<\/loc>/g
-);
-const sitemapUrls = urlMatches
-  ? urlMatches.map(match => {
-      const url = match
-        .replace('<loc>https://ziontechgroup.com/', '')
-        .replace('</loc>', '');
-      return url === '' ? 'index' : url;
-    })
-  : [];
-// Get actual pages
-const actualPages = execSync(
-  'find pages -name "*.tsx" -type f | sed "s/pages\\///g" | sed "s/\\.tsx$//g"',
-  { "encoding": 'utf8' }
-)
-  .trim()
-  .split('\n')
-  .filter(page => page !== '_app');
-console.log('=== SITEMAP ANALYSIS ===');
-console.log('Total URLs in "sitemap": ', sitemapUrls.length);
-console.log('Total actual "pages": ', actualPages.length);
-console.log('\n=== MISSING PAGES (in sitemap but not in pages/) ===');
-const missingPages = sitemapUrls.filter(url => !actualPages.includes(url));
-missingPages.forEach(page => console.log(`- ${page}`));
-console.log('\n=== EXTRA PAGES (in pages/ but not in sitemap) ===');
-const extraPages = actualPages.filter(page => !sitemapUrls.includes(page));
-extraPages.forEach(page => console.log(`- ${page}`));
-console.log('\n=== PAGES THAT NEED SUBDIRECTORIES ===');
-const pagesNeedingSubdirs = sitemapUrls.filter(url => url.includes('/'));
-pagesNeedingSubdirs.forEach(page => console.log(`- ${page}`));
-// Check for broken internal links
-console.log('\n=== CHECKING FOR BROKEN INTERNAL LINKS ===');
-const brokenLinks = [];
-// Check each actual page for internal links
-actualPages.forEach(page => {
-  try {
-    const pageContent = fs.readFileSync(`pages/${page}.tsx`, 'utf8');
-    // Find internal links (href="/...")
-    const internalLinkMatches = pageContent.match(/href="\/([^"]+)"/g);
-    if (internalLinkMatches) {
-      internalLinkMatches.forEach(match => {
-        const link = match.replace('href="/', '').replace('"', '');
-        const fullLink = link === '' ? 'index' : link;
-        if (
-          !actualPages.includes(fullLink) &&
-          !sitemapUrls.includes(fullLink)
-        ) {
-          brokenLinks.push({
-            page,
-            "brokenLink": `/${link}`,
-            fullLink});
-        }
-      });
+#!/usr/bin/env node
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+// Read the footer component to extract all links
+const footerContent = fs.readFileSync('/workspace/app/components/Footer.tsx', 'utf8')
+// Extract all href values from the footer
+const hrefMatches = footerContent.match(/href:\s*'([^']+)'/g)
+const footerLinks = hrefMatches ? hrefMatches.map(match => {
+  const result = match.match(/href:\s*'([^']+)'/)
+  return result ? result[1] : null
+}).filter(Boolean) : []
+// Read the navigation component to extract all links
+const navContent = fs.readFileSync('/workspace/app/components/Navigation.tsx', 'utf8')
+const navMatches = navContent.match(/to="([^"]+)"/g)
+const navLinks = navMatches ? navMatches.map(match => {
+  const result = match.match(/to="([^"]+)"/)
+  return result ? result[1] : null
+}).filter(Boolean) : []
+// Combine all links
+const allLinks = [...new Set([...footerLinks, ...navLinks])]
+// Get all existing page files
+const appDir = '/workspace/app'
+const existingPages = []
+function scanDirectory(dir) {
+  const items = fs.readdirSync(dir)
+  for (const item of items) {
+    const fullPath = path.join(dir, item)
+    const stat = fs.statSync(fullPath)
+    if (stat.isDirectory()) {
+      scanDirectory(fullPath)
+    } else if (item === 'page.tsx') {
+      // Extract the route from the path
+      const route = fullPath.replace('/workspace/app', '').replace('/page.tsx', '') || '/'
+      existingPages.push(route)
     }
-  } catch (error) {
-    console.log(`Error reading ${page}."tsx": `, error.message);
   }
-});
-if (brokenLinks.length > 0) {
-  console.log('Found broken internal "links": ');
-  brokenLinks.forEach(link => {
-    console.log(`- In ${link.page}."tsx": ${link.brokenLink} (${link.fullLink})`);
-  });
-} else {
-  console.log('No broken internal links found');
 }
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+
+scanDirectory(appDir)
+// Check for missing pages
+const missingPages = []
+const existingPagesSet = new Set(existingPages)
+for (const link of allLinks) {
+  if (!existingPagesSet.has(link)) {
+    missingPages.push(link)
+  }
+}
+
+console.log('=== MISSING PAGES ANALYSIS ===')
+console.log(`Total links found: ${allLinks.length}`)
+console.log(`Existing pages: ${existingPages.length}`)
+console.log(`Missing pages: ${missingPages.length}`)
+console.log('\n=== MISSING PAGES ===')
+missingPages.forEach(page => console.log(`- ${page}`))
+console.log('\n=== EXISTING PAGES ===')
+existingPages.sort().forEach(page => console.log(`✓ ${page}`))
+// Write missing pages to a file
+fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({
+  totalLinks: allLinks.length,
+  existingPages: existingPages.length,
+  missingPages: missingPages.length,
+  missingPagesList: missingPages,
+  allLinks: allLinks,
+  existingPagesList: existingPages
+}, null, 2))
+console.log('\n=== ANALYSIS COMPLETE ===')
+console.log('Results saved to missing-pages.json')

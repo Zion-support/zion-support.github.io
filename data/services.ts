@@ -1,451 +1,566 @@
 export interface Service {
-  id: string;
-  name: string;
-  category: 'AI' | 'IT' | 'SAAS' | 'Development' | 'Cloud' | 'Security' | 'Analytics' | 'Automation' | 'Fintech' | 'Healthcare' | 'Education' | 'Marketing';
-  description: string;
-  features: string[];
-  benefits: string[];
+  id: string
+  title: string
+  description: string
+  icon: string
+  category: string
+  features: string[]
+  benefits: string[]
   pricing: {
-    starter: number;
-    professional: number;
-    enterprise: number;
-    currency: string;
-    period: string;
-  };
-  link: string;
-  icon: string;
-  isPopular?: boolean;
-  isNew?: boolean;
+    starting: string
+    popular?: string
+    enterprise?: string
+  }
+  marketPrice: string
+  link: string
+  popular: boolean
+  tags: string[]
 }
 
-// Import enhanced services
-import { enhancedServices2025 } from './enhanced-2025-services';
-import { specializedIndustryServices } from './specialized-industry-services';
-
-export const services: Service[] = [
-  // AI Services
+export const aiServices: Service[] = [
   {
-    id: 'ai-chatbot-platform',
-    name: 'AI Chatbot Platform',
+    id: 'ai-chatbot-builder',
+    title: 'AI Chatbot Builder',
+    description: 'Create intelligent chatbots with natural language processing and machine learning capabilities.',
+    icon: '🤖',
     category: 'AI',
-    description: 'Enterprise-grade AI chatbot platform with natural language processing, multi-language support, and seamless integration.',
     features: [
-      'Advanced NLP with GPT-4 integration',
-      'Multi-language support (50+ languages)',
-      'Custom training on your data',
-      'Analytics and performance insights',
-      'API integration and webhooks',
-      '24/7 customer support'
+      'Natural Language Processing',
+      'Multi-language Support',
+      'Integration with CRM Systems',
+      'Analytics Dashboard',
+      'Custom Training Models',
+      'Voice Recognition'
     ],
     benefits: [
-      'Reduce customer service costs by 60%',
-      'Handle 1000+ conversations simultaneously',
-      'Improve customer satisfaction by 40%',
-      '24/7 availability without human intervention'
+      '24/7 Customer Support',
+      'Reduce Support Costs by 60%',
+      'Instant Response Time',
+      'Scalable Solutions'
     ],
     pricing: {
-      starter: 99,
-      professional: 299,
-      enterprise: 999,
-      currency: 'USD',
-      period: 'month'
+      starting: '$299/month',
+      popular: '$599/month',
+      enterprise: 'Custom'
     },
-    link: 'https://ziontechgroup.com/services/ai-chatbot-platform',
-    icon: '🤖',
-    isPopular: true
+    marketPrice: '$500-2000/month',
+    link: '/ai-chatbot-builder',
+    popular: true,
+    tags: ['NLP', 'Customer Service', 'Automation']
   },
   {
     id: 'ai-content-generator',
-    name: 'AI Content Generator',
+    title: 'AI Content Generator',
+    description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
+    icon: '✍️',
     category: 'AI',
-    description: 'Generate high-quality, SEO-optimized content for blogs, social media, and marketing campaigns.',
     features: [
-      'SEO-optimized content generation',
-      'Multiple content types (blogs, social, ads)',
-      'Plagiarism-free content',
-      'Brand voice customization',
-      'Content calendar management',
-      'Performance analytics'
+      'Blog Post Generation',
+      'Social Media Content',
+      'Email Marketing Copy',
+      'SEO Optimization',
+      'Multiple Content Formats',
+      'Brand Voice Training'
     ],
     benefits: [
-      'Save 80% of content creation time',
-      'Improve SEO rankings by 45%',
-      'Generate 100+ articles per month',
-      'Maintain consistent brand voice'
+      'Save 80% Content Creation Time',
+      'Consistent Brand Voice',
+      'SEO-Optimized Content',
+      'Scalable Content Production'
     ],
     pricing: {
-      starter: 49,
-      professional: 149,
-      enterprise: 499,
-      currency: 'USD',
-      period: 'month'
+      starting: '$199/month',
+      popular: '$399/month',
+      enterprise: 'Custom'
     },
-    link: 'https://ziontechgroup.com/services/ai-content-generator',
-    icon: '✍️'
+    marketPrice: '$300-1500/month',
+    link: '/ai-content-generator',
+    popular: true,
+    tags: ['Content Marketing', 'SEO', 'Automation']
   },
   {
     id: 'ai-data-analytics',
-    name: 'AI-Powered Data Analytics',
-    category: 'AI',
-    description: 'Transform raw data into actionable insights with machine learning algorithms and predictive analytics.',
-    features: [
-      'Real-time data processing',
-      'Predictive analytics models',
-      'Custom dashboard creation',
-      'Automated reporting',
-      'Data visualization tools',
-      'API integration capabilities'
-    ],
-    benefits: [
-      'Increase data-driven decisions by 70%',
-      'Reduce analysis time by 85%',
-      'Predict trends with 90% accuracy',
-      'Automate routine reporting tasks'
-    ],
-    pricing: {
-      starter: 199,
-      professional: 499,
-      enterprise: 1499,
-      currency: 'USD',
-      period: 'month'
-    },
-    link: 'https://ziontechgroup.com/services/ai-data-analytics',
+    title: 'AI Data Analytics Platform',
+    description: 'Advanced data analytics with AI-powered insights and predictive modeling.',
     icon: '📊',
-    isNew: true
-  },
-
-  // IT Services
-  {
-    id: 'managed-it-services',
-    name: 'Managed IT Services',
-    category: 'IT',
-    description: 'Comprehensive IT management including network monitoring, security, and 24/7 technical support.',
+    category: 'AI',
     features: [
-      '24/7 network monitoring',
-      'Proactive issue resolution',
-      'Security patch management',
-      'Backup and disaster recovery',
-      'Help desk support',
-      'Monthly reporting and analytics'
+      'Predictive Analytics',
+      'Real-time Dashboards',
+      'Custom Report Generation',
+      'Data Visualization',
+      'Machine Learning Models',
+      'API Integration'
     ],
     benefits: [
-      'Reduce IT downtime by 95%',
-      'Lower IT costs by 30%',
-      'Improve system reliability',
-      'Focus on core business activities'
+      'Data-Driven Decision Making',
+      'Predict Future Trends',
+      'Automated Reporting',
+      'ROI Optimization'
     ],
     pricing: {
-      starter: 299,
-      professional: 599,
-      enterprise: 1499,
-      currency: 'USD',
-      period: 'month'
+      starting: '$499/month',
+      popular: '$999/month',
+      enterprise: 'Custom'
     },
-    link: 'https://ziontechgroup.com/services/managed-it-services',
-    icon: '🖥️'
+    marketPrice: '$800-3000/month',
+    link: '/ai-data-analytics',
+    popular: true,
+    tags: ['Analytics', 'Machine Learning', 'Business Intelligence']
   },
   {
-    id: 'cybersecurity-suite',
-    name: 'Cybersecurity Suite',
-    category: 'Security',
-    description: 'Advanced cybersecurity solutions including threat detection, vulnerability assessment, and incident response.',
+    id: 'ai-customer-support',
+    title: 'AI Customer Support Suite',
+    description: 'Comprehensive AI-powered customer support with ticket management and automated responses.',
+    icon: '🎧',
+    category: 'AI',
     features: [
-      'Real-time threat detection',
-      'Vulnerability scanning',
-      'Penetration testing',
-      'Security awareness training',
-      'Incident response planning',
-      'Compliance reporting'
+      'Automated Ticket Routing',
+      'Sentiment Analysis',
+      'Knowledge Base Integration',
+      'Multi-channel Support',
+      'Performance Analytics',
+      'Custom AI Training'
     ],
     benefits: [
-      'Protect against 99.9% of cyber threats',
-      'Meet industry compliance standards',
-      'Reduce security breach risk by 80%',
-      '24/7 security monitoring'
+      'Reduce Response Time by 90%',
+      'Improve Customer Satisfaction',
+      '24/7 Availability',
+      'Cost Reduction'
     ],
     pricing: {
-      starter: 399,
-      professional: 799,
-      enterprise: 1999,
-      currency: 'USD',
-      period: 'month'
+      starting: '$399/month',
+      popular: '$799/month',
+      enterprise: 'Custom'
     },
-    link: 'https://ziontechgroup.com/services/cybersecurity-suite',
+    marketPrice: '$600-2500/month',
+    link: '/ai-customer-support',
+    popular: false,
+    tags: ['Customer Service', 'Automation', 'AI']
+  },
+  {
+    id: 'ai-cybersecurity',
+    title: 'AI Cybersecurity Monitor',
+    description: 'Advanced AI-powered cybersecurity monitoring and threat detection system.',
     icon: '🔒',
-    isPopular: true
+    category: 'AI',
+    features: [
+      'Real-time Threat Detection',
+      'Behavioral Analysis',
+      'Automated Incident Response',
+      'Compliance Monitoring',
+      'Security Dashboards',
+      'Machine Learning Models'
+    ],
+    benefits: [
+      'Proactive Threat Detection',
+      'Reduce Security Incidents',
+      'Compliance Assurance',
+      'Cost-Effective Security'
+    ],
+    pricing: {
+      starting: '$599/month',
+      popular: '$1199/month',
+      enterprise: 'Custom'
+    },
+    marketPrice: '$1000-4000/month',
+    link: '/ai-cybersecurity',
+    popular: false,
+    tags: ['Cybersecurity', 'AI', 'Monitoring']
   },
+  {
+    id: 'ai-ecommerce-optimizer',
+    title: 'AI E-commerce Optimizer',
+    description: 'Optimize e-commerce operations with AI-powered recommendations and automation.',
+    icon: '🛒',
+    category: 'AI',
+    features: [
+      'Product Recommendation Engine',
+      'Price Optimization',
+      'Inventory Management',
+      'Customer Segmentation',
+      'Sales Forecasting',
+      'A/B Testing Automation'
+    ],
+    benefits: [
+      'Increase Sales by 25%',
+      'Optimize Inventory Levels',
+      'Personalized Shopping Experience',
+      'Automated Operations'
+    ],
+    pricing: {
+      starting: '$299/month',
+      popular: '$599/month',
+      enterprise: 'Custom'
+    },
+    marketPrice: '$500-2000/month',
+    link: '/ai-ecommerce-optimizer',
+    popular: true,
+    tags: ['E-commerce', 'Optimization', 'AI']
+  }
+]
+export const itServices: Service[] = [
   {
     id: 'cloud-migration',
-    name: 'Cloud Migration Services',
-    category: 'Cloud',
-    description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
+    title: 'Cloud Migration Services',
+    description: 'Seamless migration to cloud platforms with zero downtime and optimized performance.',
+    icon: '☁️',
+    category: 'IT',
     features: [
-      'Migration strategy planning',
-      'Data migration tools',
-      'Performance optimization',
-      'Security implementation',
-      'Training and documentation',
-      'Post-migration support'
+      'AWS/Azure/GCP Migration',
+      'Zero Downtime Migration',
+      'Performance Optimization',
+      'Security Configuration',
+      'Cost Optimization',
+      '24/7 Support'
     ],
     benefits: [
-      'Reduce infrastructure costs by 40%',
-      'Improve scalability and flexibility',
-      'Enhanced disaster recovery',
-      'Access to latest technologies'
+      'Reduce Infrastructure Costs',
+      'Improved Scalability',
+      'Enhanced Security',
+      'Better Performance'
     ],
     pricing: {
-      starter: 2999,
-      professional: 7999,
-      enterprise: 19999,
-      currency: 'USD',
-      period: 'one-time'
+      starting: '$2,000/project',
+      popular: '$5,000/project',
+      enterprise: 'Custom'
     },
-    link: 'https://ziontechgroup.com/services/cloud-migration',
-    icon: '☁️'
-  },
-
-  // SAAS Services
-  {
-    id: 'project-management-platform',
-    name: 'Project Management Platform',
-    category: 'SAAS',
-    description: 'Collaborative project management tool with task tracking, team collaboration, and progress monitoring.',
-    features: [
-      'Task and project tracking',
-      'Team collaboration tools',
-      'Time tracking and reporting',
-      'File sharing and storage',
-      'Mobile app access',
-      'Integration with popular tools'
-    ],
-    benefits: [
-      'Increase team productivity by 35%',
-      'Reduce project delays by 50%',
-      'Improve communication efficiency',
-      'Centralized project information'
-    ],
-    pricing: {
-      starter: 29,
-      professional: 79,
-      enterprise: 199,
-      currency: 'USD',
-      period: 'month'
-    },
-    link: 'https://ziontechgroup.com/services/project-management-platform',
-    icon: '📋'
+    marketPrice: '$3000-15000/project',
+    link: '/cloud-migration',
+    popular: true,
+    tags: ['Cloud', 'Migration', 'Infrastructure']
   },
   {
-    id: 'crm-system',
-    name: 'Customer Relationship Management',
-    category: 'SAAS',
-    description: 'Comprehensive CRM solution for managing customer relationships, sales pipeline, and marketing campaigns.',
+    id: 'devops-ci-cd',
+    title: 'DevOps & CI/CD Pipeline',
+    description: 'Complete DevOps solutions with automated CI/CD pipelines and infrastructure management.',
+    icon: '⚙️',
+    category: 'IT',
     features: [
-      'Contact and lead management',
-      'Sales pipeline tracking',
-      'Email marketing automation',
-      'Customer support integration',
-      'Analytics and reporting',
-      'Mobile app access'
+      'Automated CI/CD Pipelines',
+      'Infrastructure as Code',
+      'Container Orchestration',
+      'Monitoring & Logging',
+      'Security Scanning',
+      'Performance Testing'
     ],
     benefits: [
-      'Increase sales by 30%',
-      'Improve customer retention by 25%',
-      'Streamline sales processes',
-      'Better customer insights'
+      'Faster Deployment',
+      'Reduced Errors',
+      'Improved Collaboration',
+      'Cost Efficiency'
     ],
     pricing: {
-      starter: 39,
-      professional: 99,
-      enterprise: 299,
-      currency: 'USD',
-      period: 'month'
+      starting: '$1,500/month',
+      popular: '$3,000/month',
+      enterprise: 'Custom'
     },
-    link: 'https://ziontechgroup.com/services/crm-system',
-    icon: '👥',
-    isPopular: true
+    marketPrice: '$2000-8000/month',
+    link: '/devops-ci-cd',
+    popular: true,
+    tags: ['DevOps', 'CI/CD', 'Automation']
   },
   {
-    id: 'hr-management-system',
-    name: 'HR Management System',
-    category: 'SAAS',
-    description: 'Complete HR solution for employee management, payroll, benefits, and performance tracking.',
+    id: 'cybersecurity-audit',
+    title: 'Cybersecurity Audit & Assessment',
+    description: 'Comprehensive security assessment and vulnerability testing for your IT infrastructure.',
+    icon: '🛡️',
+    category: 'IT',
     features: [
-      'Employee database management',
-      'Payroll processing',
-      'Benefits administration',
-      'Performance reviews',
-      'Time and attendance',
-      'Compliance reporting'
+      'Penetration Testing',
+      'Vulnerability Assessment',
+      'Compliance Auditing',
+      'Security Policy Review',
+      'Incident Response Planning',
+      'Security Training'
     ],
     benefits: [
-      'Reduce HR administrative tasks by 60%',
-      'Improve employee satisfaction',
-      'Ensure compliance with regulations',
-      'Better workforce analytics'
+      'Identify Security Gaps',
+      'Compliance Assurance',
+      'Risk Mitigation',
+      'Security Best Practices'
     ],
     pricing: {
-      starter: 49,
-      professional: 129,
-      enterprise: 399,
-      currency: 'USD',
-      period: 'month'
+      starting: '$2,500/audit',
+      popular: '$5,000/audit',
+      enterprise: 'Custom'
     },
-    link: 'https://ziontechgroup.com/services/hr-management-system',
-    icon: '👨‍💼'
-  },
-
-  // Development Services
-  {
-    id: 'web-development',
-    name: 'Custom Web Development',
-    category: 'Development',
-    description: 'Professional web development services including responsive design, e-commerce, and custom applications.',
-    features: [
-      'Responsive web design',
-      'E-commerce integration',
-      'Custom functionality',
-      'SEO optimization',
-      'Performance optimization',
-      'Ongoing maintenance'
-    ],
-    benefits: [
-      'Professional online presence',
-      'Improved user experience',
-      'Better search engine rankings',
-      'Scalable and maintainable code'
-    ],
-    pricing: {
-      starter: 2999,
-      professional: 7999,
-      enterprise: 19999,
-      currency: 'USD',
-      period: 'one-time'
-    },
-    link: 'https://ziontechgroup.com/services/web-development',
-    icon: '🌐'
+    marketPrice: '$3000-12000/audit',
+    link: '/cybersecurity-audit',
+    popular: false,
+    tags: ['Cybersecurity', 'Audit', 'Compliance']
   },
   {
-    id: 'mobile-app-development',
-    name: 'Mobile App Development',
-    category: 'Development',
-    description: 'Native and cross-platform mobile app development for iOS and Android platforms.',
+    id: 'managed-it-services',
+    title: 'Managed IT Services',
+    description: 'Complete IT management with 24/7 monitoring, support, and maintenance.',
+    icon: '💻',
+    category: 'IT',
     features: [
-      'Native iOS and Android development',
-      'Cross-platform solutions',
-      'UI/UX design',
-      'App store optimization',
-      'Testing and quality assurance',
-      'Post-launch support'
+      '24/7 IT Support',
+      'Network Monitoring',
+      'Backup & Recovery',
+      'Software Updates',
+      'Security Management',
+      'Help Desk Services'
     ],
     benefits: [
-      'Reach mobile users effectively',
-      'Improve customer engagement',
-      'Increase brand visibility',
-      'Generate additional revenue streams'
+      'Reduced IT Costs',
+      'Proactive Maintenance',
+      'Expert Support',
+      'Business Continuity'
     ],
     pricing: {
-      starter: 4999,
-      professional: 14999,
-      enterprise: 49999,
-      currency: 'USD',
-      period: 'one-time'
+      starting: '$500/month',
+      popular: '$1,200/month',
+      enterprise: 'Custom'
     },
-    link: 'https://ziontechgroup.com/services/mobile-app-development',
-    icon: '📱'
+    marketPrice: '$800-3000/month',
+    link: '/managed-it-services',
+    popular: true,
+    tags: ['IT Support', 'Managed Services', 'Monitoring']
   },
   {
-    id: 'api-development',
-    name: 'API Development & Integration',
-    category: 'Development',
-    description: 'Custom API development and third-party service integration for seamless data exchange.',
+    id: 'database-optimization',
+    title: 'Database Optimization Services',
+    description: 'Optimize database performance, security, and scalability for better application performance.',
+    icon: '🗄️',
+    category: 'IT',
     features: [
-      'RESTful API development',
-      'GraphQL implementation',
-      'Third-party integrations',
-      'API documentation',
-      'Testing and monitoring',
-      'Performance optimization'
+      'Performance Tuning',
+      'Query Optimization',
+      'Index Management',
+      'Backup Strategies',
+      'Security Hardening',
+      'Scalability Planning'
     ],
     benefits: [
-      'Enable system interoperability',
-      'Improve data flow efficiency',
-      'Reduce development time',
-      'Enhance user experience'
+      'Improved Performance',
+      'Reduced Costs',
+      'Better Security',
+      'Enhanced Scalability'
     ],
     pricing: {
-      starter: 1999,
-      professional: 5999,
-      enterprise: 14999,
-      currency: 'USD',
-      period: 'one-time'
+      starting: '$1,000/month',
+      popular: '$2,500/month',
+      enterprise: 'Custom'
     },
-    link: 'https://ziontechgroup.com/services/api-development',
-    icon: '🔌'
+    marketPrice: '$1500-5000/month',
+    link: '/database-optimization',
+    popular: false,
+    tags: ['Database', 'Optimization', 'Performance']
   },
-
-  // Analytics Services
   {
-    id: 'business-intelligence',
-    name: 'Business Intelligence Solutions',
-    category: 'Analytics',
-    description: 'Transform business data into actionable insights with advanced analytics and reporting tools.',
+    id: 'network-security',
+    title: 'Network Security Solutions',
+    description: 'Comprehensive network security with firewalls, monitoring, and threat protection.',
+    icon: '🌐',
+    category: 'IT',
     features: [
-      'Data warehousing',
-      'Interactive dashboards',
-      'Custom reporting',
-      'Data visualization',
-      'Predictive analytics',
-      'Real-time monitoring'
+      'Firewall Configuration',
+      'Intrusion Detection',
+      'VPN Setup',
+      'Network Monitoring',
+      'Threat Prevention',
+      'Compliance Management'
     ],
     benefits: [
-      'Make data-driven decisions',
-      'Identify business opportunities',
-      'Improve operational efficiency',
-      'Gain competitive advantage'
+      'Enhanced Security',
+      'Threat Prevention',
+      'Compliance Assurance',
+      'Network Performance'
     ],
     pricing: {
-      starter: 399,
-      professional: 899,
-      enterprise: 2499,
-      currency: 'USD',
-      period: 'month'
+      starting: '$800/month',
+      popular: '$1,800/month',
+      enterprise: 'Custom'
     },
-    link: 'https://ziontechgroup.com/services/business-intelligence',
-    icon: '📈'
+    marketPrice: '$1200-4000/month',
+    link: '/network-security',
+    popular: true,
+    tags: ['Network', 'Security', 'Firewall']
   }
-];
-
-// Enhanced Services from 2025
-export const enhancedServices = enhancedServices2025;
-
-// Specialized Industry Services
-export const specializedServices = specializedIndustryServices;
-
-// Combined Services Array
-export const allServices = [
-  ...services,
-  ...enhancedServices2025,
-  ...specializedIndustryServices
-];
-
-export const getServicesByCategory = (category: Service['category']) => {
-  return allServices.filter(service => service.category === category);
-};
-
-export const getPopularServices = () => {
-  return allServices.filter(service => service.isPopular);
-};
-
-export const getNewServices = () => {
-  return allServices.filter(service => service.isNew);
-};
-
-export const getServicesByIndustry = (industry: string) => {
-  return specializedIndustryServices.filter(service => service.industry === industry);
-};
-
-export const getServicesByAudience = (audience: string) => {
-  return enhancedServices2025.filter(service => 
-    service.targetAudience.includes(audience)
-  );
-};
+]
+export const microSaasServices: Service[] = [
+  {
+    id: 'analytics-dashboard',
+    title: 'Analytics Dashboard Pro',
+    description: 'Real-time business analytics dashboard with customizable widgets and automated reporting.',
+    icon: '📈',
+    category: 'Micro SaaS',
+    features: [
+      'Real-time Data Visualization',
+      'Custom Widgets',
+      'Automated Reports',
+      'Multi-source Integration',
+      'Mobile Responsive',
+      'Export Capabilities'
+    ],
+    benefits: [
+      'Data-Driven Decisions',
+      'Time Savings',
+      'Better Insights',
+      'Easy Setup'
+    ],
+    pricing: {
+      starting: '$29/month',
+      popular: '$59/month',
+      enterprise: '$99/month'
+    },
+    marketPrice: '$50-200/month',
+    link: '/analytics-dashboard',
+    popular: true,
+    tags: ['Analytics', 'Dashboard', 'Reporting']
+  },
+  {
+    id: 'email-marketing-automation',
+    title: 'Email Marketing Automation',
+    description: 'Advanced email marketing platform with AI-powered personalization and automation workflows.',
+    icon: '📧',
+    category: 'Micro SaaS',
+    features: [
+      'AI-Powered Personalization',
+      'Automated Workflows',
+      'A/B Testing',
+      'Segmentation Tools',
+      'Analytics & Reporting',
+      'Template Library'
+    ],
+    benefits: [
+      'Increase Open Rates by 40%',
+      'Automated Campaigns',
+      'Better Targeting',
+      'ROI Tracking'
+    ],
+    pricing: {
+      starting: '$39/month',
+      popular: '$79/month',
+      enterprise: '$149/month'
+    },
+    marketPrice: '$60-300/month',
+    link: '/email-marketing-automation',
+    popular: true,
+    tags: ['Email Marketing', 'Automation', 'AI']
+  },
+  {
+    id: 'social-media-scheduler',
+    title: 'Social Media Scheduler',
+    description: 'Schedule and manage social media posts across multiple platforms with analytics.',
+    icon: '📱',
+    category: 'Micro SaaS',
+    features: [
+      'Multi-platform Scheduling',
+      'Content Calendar',
+      'Analytics Dashboard',
+      'Hashtag Suggestions',
+      'Team Collaboration',
+      'Auto-posting'
+    ],
+    benefits: [
+      'Save Time',
+      'Consistent Posting',
+      'Better Engagement',
+      'Analytics Insights'
+    ],
+    pricing: {
+      starting: '$19/month',
+      popular: '$39/month',
+      enterprise: '$79/month'
+    },
+    marketPrice: '$30-150/month',
+    link: '/social-media-scheduler',
+    popular: true,
+    tags: ['Social Media', 'Scheduling', 'Analytics']
+  },
+  {
+    id: 'expense-tracker',
+    title: 'Smart Expense Tracker',
+    description: 'AI-powered expense tracking with receipt scanning and automated categorization.',
+    icon: '💰',
+    category: 'Micro SaaS',
+    features: [
+      'Receipt Scanning',
+      'AI Categorization',
+      'Expense Reports',
+      'Budget Tracking',
+      'Tax Preparation',
+      'Mobile App'
+    ],
+    benefits: [
+      'Automated Tracking',
+      'Tax Compliance',
+      'Budget Control',
+      'Time Savings'
+    ],
+    pricing: {
+      starting: '$15/month',
+      popular: '$29/month',
+      enterprise: '$49/month'
+    },
+    marketPrice: '$25-100/month',
+    link: '/expense-tracker',
+    popular: false,
+    tags: ['Finance', 'Expense Tracking', 'AI']
+  },
+  {
+    id: 'project-management',
+    title: 'Project Management Suite',
+    description: 'Comprehensive project management with task tracking, team collaboration, and reporting.',
+    icon: '📋',
+    category: 'Micro SaaS',
+    features: [
+      'Task Management',
+      'Team Collaboration',
+      'Time Tracking',
+      'Gantt Charts',
+      'File Sharing',
+      'Progress Reporting'
+    ],
+    benefits: [
+      'Better Organization',
+      'Team Productivity',
+      'Project Visibility',
+      'Deadline Management'
+    ],
+    pricing: {
+      starting: '$25/month',
+      popular: '$49/month',
+      enterprise: '$99/month'
+    },
+    marketPrice: '$40-200/month',
+    link: '/project-management',
+    popular: true,
+    tags: ['Project Management', 'Collaboration', 'Productivity']
+  },
+  {
+    id: 'inventory-manager',
+    title: 'Inventory Management System',
+    description: 'Smart inventory management with automated reordering and real-time tracking.',
+    icon: '📦',
+    category: 'Micro SaaS',
+    features: [
+      'Real-time Tracking',
+      'Automated Reordering',
+      'Barcode Scanning',
+      'Multi-location Support',
+      'Analytics Dashboard',
+      'Integration APIs'
+    ],
+    benefits: [
+      'Reduce Stockouts',
+      'Optimize Inventory',
+      'Cost Savings',
+      'Better Control'
+    ],
+    pricing: {
+      starting: '$35/month',
+      popular: '$69/month',
+      enterprise: '$129/month'
+    },
+    marketPrice: '$50-250/month',
+    link: '/inventory-manager',
+    popular: false,
+    tags: ['Inventory', 'Management', 'Automation']
+  }
+]
+export const allServices = [...aiServices, ...itServices, ...microSaasServices]

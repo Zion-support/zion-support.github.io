@@ -1,81 +1,79 @@
-import React from 'react';
-import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
-// Removed: import { useNavigate, useLocation } from 'react-router-dom';
-import { getEnqueueSnackbar } from '@/context/SnackbarContext';
-import { logError } from '@/utils/logError';
-
-function GlobalErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
-  // Removed: const navigate = useNavigate();
-  let specificMessage = "Please try again. If the problem continues, please contact support."; // Updated message
-  const errorMessage = error?.message?.toLowerCase() || "";
-
-  if (
-    errorMessage.includes("nextrouter was not mounted") ||
-    errorMessage.includes("router context") ||
-    errorMessage.includes("could not find router")
-  ) {
-    specificMessage = "It looks like there's an issue with loading this page's content or navigation setup. " + specificMessage;
+import React, { Component, ErrorInfo, ReactNode } from 'react'
+interface Props {
+    children: ReactNode
+  fallback?: ReactNode,
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
   }
-
-  const displayErrorId = React.useMemo(() => Date.now().toString(36) + Math.random().toString(36).substring(2), []);
-  return (
-    <div role="alert" className="p-6 m-4 border border-red-300 rounded-md bg-red-50 text-center space-y-4">
-      <h2 className="text-xl font-semibold text-red-700">Oops! Something went wrong.</h2> {/* Updated title */}
-      <p className="text-red-600">{specificMessage}</p>
-      {error?.message && (
-        <details className="p-2 bg-red-100 rounded text-left text-sm">
-          <summary className="cursor-pointer text-red-500 font-medium">Error Details</summary>
-          <pre className="mt-2 text-red-500 whitespace-pre-wrap break-all">
-            {error.message}
-          </pre>
-        </details>
-      )}
-      <button
-        onClick={resetErrorBoundary} // Changed to use resetErrorBoundary
-        className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
-      >
-        Retry {/* Changed button text */}
-      </button>
-      <p className="text-sm text-gray-600 mt-2">If retrying doesn't resolve the issue, please contact support. You can provide them with the error details below and the following Reference ID.</p>
-      <p className="text-sm text-gray-500 mt-1">Error Reference ID: {displayErrorId}</p>
-    </div>
-  );
-}
-
-export default function GlobalErrorBoundary({ children }: { children: React.ReactNode }) {
-  // Removed: const location = useLocation();
-
-  const handleError = (error: Error, info: React.ErrorInfo) => {
-    console.error("GlobalErrorBoundary caught an error:", error, info);
-    const errorId = Date.now().toString(36) + Math.random().toString(36).substring(2);
-    // Modified: logError call to not depend on location from react-router-dom
-    // You might want to get pathname via window.location.pathname if this is purely client-side,
-    // or pass it down as a prop if needed from a Next.js context.
-    // For now, removing the route from this specific log call.
-    logError(error, {
-      route: typeof window !== 'undefined' ? window.location.pathname : 'Unknown route (SSR/SSG)',
-      componentStack: info.componentStack,
-      errorId: errorId
-    });
-
-    try {
-      const enqueueSnackbar = getEnqueueSnackbar();
-      let displayMessage = error.message || "An unexpected error occurred.";
-      if (error.message.includes("cannot read properties of null") || error.message.includes("cannot read property")) {
-        displayMessage = "A critical component failed to initialize. This might be due to a configuration issue or network problem. Please try refreshing. If the problem persists, contact support.";
-      } else if (error.message.includes("network error")) {
-        displayMessage = "A network error occurred. Please check your internet connection and try again.";
-      }
-      enqueueSnackbar(displayMessage, { variant: 'error' });
-    } catch (e) {
-      console.error("Error in enqueueSnackbar:", e);
-      // noop if snackbar itself fails
+interface State {
+    hasError: boolean
+  error?: Error,
+  errorInfo?: ErrorInfo
+  }
+class GlobalErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props),
+    this.state = { hasError: false }
+  }
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error }
+  }
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({ error, errorInfo })
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+    console.error('Error caught by boundary:', error, errorInfo)
+  }
+    // Call onError callback if provided
+    if (this.props.onError) {
+    this.props.onError(error, errorInfo)
+  }
+    // In production, you might want to send this to an error reporting service
+    if (process.env.NODE_ENV === 'production') {
+      // Example: Send to error reporting service
+      // errorReportingService.captureException(error, { extra: errorInfo })
     }
-  };
-
-  return (
-    <ErrorBoundary FallbackComponent={GlobalErrorFallback} onError={handleError}>
-      {children}
-    </ErrorBoundary>
-  );
+  }
+  render() {
+    if (this.state.hasError) {
+      // Custom fallback UI
+      if (this.props.fallback) {
+        return this.props.fallback
+  }
+      // Default error UI
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20">
+            <div className="text-6xl mb-4">⚠️
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Please try refreshing the page.
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="text-left bg-black/20 rounded-lg p-4 mb-6">
+                <summary className="cursor-pointer text-cyan-400 font-medium mb-2">
+                  Error Details (Development Only)
+                <pre className="text-xs text-red-400 overflow-auto">
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
+            )}
+            <div className="space-y-3">
+              <$2 />
+                onClick={() => window.location.reload()}
+                className="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200">
+                Refresh Page
+              <$2 />
+                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
+                className="w-full bg-purple-600 hover: bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200">
+                Try Again</span>
+              <$2 />
+                href="/"
+                className="block w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200">
+                Go Home</span>
+            </div>
+          </div>
+        </div>
+      ),
+    }
+    return this.props.children
+  }
 }
+export { GlobalErrorBoundary }</div></div></div></div></p></p></h1>

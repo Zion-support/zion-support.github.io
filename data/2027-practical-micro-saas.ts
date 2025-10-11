@@ -1,45 +1,38 @@
-<<<<<<< HEAD
 export interface PracticalMicroSaasService2027 {
-=======
 export interface PracticalMicroSaas2027 {
->>>>>>> origin/auto/autonomy-17186719616
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
+  link: string
+  category: string
+  realImplementation: boolean
   contactInfo: {
-    mobile: string;
-    email: string;
-<<<<<<< HEAD
-
+    mobile: string
+    email: string
 export interface PracticalMicroSaasService2027 {
-    address: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  benefits: string[];
-  capabilities: string[];
-  marketAdvantage: string;
-  averageMarketPrice: string;
-  featuresCapabilities: string[];
+    address: string
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
+  benefits: string[]
+  capabilities: string[]
+  marketAdvantage: string
+  averageMarketPrice: string
+  featuresCapabilities: string[]
 }
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
-
+}
 export const practicalMicroSaasServices2027: PracticalMicroSaasService2027[] = [
   // 1. AI-Powered Customer Success Automation Platform
   {
@@ -110,7 +103,6 @@ export const practicalMicroSaasServices2027: PracticalMicroSaasService2027[] = [
       'Success tracking'
     ]
   },
-
   // 2. Intelligent Invoice & Expense Management System
   {
     id: 'intelligent-invoice-expense-management',
@@ -180,7 +172,6 @@ export const practicalMicroSaasServices2027: PracticalMicroSaasService2027[] = [
       'Financial reporting'
     ]
   },
-
   // 3. Smart HR & Recruitment Automation Platform
   {
     id: 'smart-hr-recruitment-automation',
@@ -250,7 +241,6 @@ export const practicalMicroSaasServices2027: PracticalMicroSaasService2027[] = [
       'Compliance monitoring'
     ]
   },
-
   // 4. Intelligent Project Management & Collaboration Suite
   {
     id: 'intelligent-project-management-collaboration',
@@ -320,7 +310,6 @@ export const practicalMicroSaasServices2027: PracticalMicroSaasService2027[] = [
       'Risk assessment'
     ]
   },
-
   // 5. Smart Email Marketing & Automation Platform
   {
     id: 'smart-email-marketing-automation',
@@ -390,7 +379,6 @@ export const practicalMicroSaasServices2027: PracticalMicroSaasService2027[] = [
       'Advanced analytics'
     ]
   },
-
   // 6. Intelligent Inventory & Supply Chain Management
   {
     id: 'intelligent-inventory-supply-chain',
@@ -460,7 +448,6 @@ export const practicalMicroSaasServices2027: PracticalMicroSaasService2027[] = [
       'Cost optimization'
     ]
   },
-
   // 7. Smart Analytics & Business Intelligence Platform
   {
     id: 'smart-analytics-business-intelligence',
@@ -530,7 +517,6 @@ export const practicalMicroSaasServices2027: PracticalMicroSaasService2027[] = [
       'Real-time visualization'
     ]
   },
-
   // 8. Intelligent Customer Support & Help Desk System
   {
     id: 'intelligent-customer-support-helpdesk',
@@ -600,12 +586,10 @@ export const practicalMicroSaasServices2027: PracticalMicroSaasService2027[] = [
       'Support analytics'
     ]
   }
-];
-=======
-    address: string;
-  };
+]
+    address: string
+  }
 }
-
 export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
   {
     id: "2027-practical-micro-saas",
@@ -629,5 +613,4 @@ export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
->>>>>>> origin/auto/autonomy-17186719616
+]

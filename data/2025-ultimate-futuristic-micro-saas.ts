@@ -1,52 +1,44 @@
-import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
+import { ServiceVariant } from '../types/service-variants'
 export interface UltimateFuturisticMicroSaasService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: string
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string
+    email: string
+    address: string
+    website: string
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaasService[] = [
   // AI-Powered Autonomous Business Operations
   {
@@ -100,10 +92,6 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     rating: 4.9,
     reviews: 8
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum-Secure Communication Platform
   {
     id: 'quantum-secure-communication-platform',
@@ -156,10 +144,6 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     rating: 4.8,
     reviews: 15
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Predictive Healthcare Platform
   {
     id: 'ai-predictive-healthcare-platform',
@@ -212,10 +196,6 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     rating: 4.7,
     reviews: 22
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Autonomous Financial Trading AI
   {
     id: 'autonomous-financial-trading-ai',
@@ -268,10 +248,6 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     rating: 4.9,
     reviews: 12
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum Computing as a Service
   {
     id: 'quantum-computing-as-a-service',
@@ -324,10 +300,6 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     rating: 4.8,
     reviews: 5
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Content Creation Studio
   {
     id: 'ai-content-creation-studio',
@@ -380,10 +352,6 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     rating: 4.6,
     reviews: 89
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Autonomous Customer Service AI
   {
     id: 'autonomous-customer-service-ai',
@@ -436,10 +404,6 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     rating: 4.7,
     reviews: 45
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum-Secure Cloud Infrastructure
   {
     id: 'quantum-secure-cloud-infrastructure',
@@ -492,10 +456,6 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     rating: 4.8,
     reviews: 12
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Autonomous Marketing Platform
   {
     id: 'ai-autonomous-marketing-platform',
@@ -548,10 +508,6 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     rating: 4.6,
     reviews: 34
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum AI Research Platform
   {
     id: 'quantum-ai-research-platform',
@@ -604,4 +560,4 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     rating: 4.9,
     reviews: 8
   }
-];
+]

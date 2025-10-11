@@ -1,140 +1,67 @@
 #!/usr/bin/env python3
 """
-Automatic Conflict Resolver
-Resolves merge conflicts by accepting our changes (HEAD)
+Automatically resolve merge conflicts by keeping the HEAD version
 """
-
-import subprocess
 import os
-from datetime import datetime
+import re
+import sys
 
-def log(message):
-    """Log with timestamp"""
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    print(f"[{timestamp}] {message}")
-
-def run_command(command, check=False):
-    """Run a command safely"""
+def resolve_merge_conflicts(filepath):
+    """Resolve merge conflicts in a file by keeping HEAD version"""
     try:
-        result = subprocess.run(
-            command,
-            shell=True,
-            capture_output=True,
-            text=True,
-            timeout=60
-        )
-        return result
-    except subprocess.TimeoutExpired:
-        log(f"⏰ Command timed out: {command}")
-        return None
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Check if file has merge conflicts
+        if '\n...content...\n
+        pattern = r'\n(.*?)\n
+        
+        # Replace with HEAD version (group 1)
+        resolved_content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
+        
+        # Also handle nested conflicts
+        # Pattern for conflicts without content between markers
+        pattern2 = r'\n(.*?)\n
+        resolved_content = re.sub(pattern2, '', resolved_content, flags=re.DOTALL)
+        
+        # Pattern for conflicts with only HEAD content
+        pattern3 = r'\n
+        resolved_content = re.sub(pattern3, r'\1', resolved_content, flags=re.DOTALL)
+        
+        # Write back the resolved content
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(resolved_content)
+        
+        print(f"✓ Resolved conflicts in: {filepath}")
+        return True
+    
     except Exception as e:
-        log(f"❌ Command failed: {command} - {e}")
-        return None
+        print(f"✗ Error resolving {filepath}: {e}")
+        return False
 
-def get_conflicted_files():
-    """Get list of files with conflicts"""
-    result = run_command("git diff --name-only --diff-filter=U")
-    if result and result.returncode == 0:
-        files = result.stdout.strip().split('\n') if result.stdout.strip() else []
-        return [f for f in files if f]
-    return []
-
-def resolve_conflicts():
-    """Resolve all conflicts by accepting our changes"""
-    log("🔧 Starting automatic conflict resolution...")
-    
-    # Get conflicted files
-    conflicted_files = get_conflicted_files()
-    log(f"📋 Found {len(conflicted_files)} files with conflicts")
-    
-    if not conflicted_files:
-        log("✅ No conflicts found")
-        return True
-    
-    # Resolve each conflict by accepting our version (HEAD)
+def find_and_resolve_conflicts(directory):
+    """Find all files with merge conflicts and resolve them"""
+    extensions = ('.ts', '.tsx', '.js', '.jsx', '.json', '.md', '.sh', '.py', '.cjs')
     resolved_count = 0
-    for file_path in conflicted_files:
-        log(f"🔧 Resolving conflict in: {file_path}")
+    
+    for root, dirs, files in os.walk(directory):
+        # Skip node_modules and hidden directories
+        dirs[:] = [d for d in dirs if not d.startswith('.') and d != 'node_modules']
         
-        # Accept our version (HEAD)
-        result = run_command(f"git checkout --ours '{file_path}'")
-        if result and result.returncode == 0:
-            # Add the resolved file
-            run_command(f"git add '{file_path}'")
-            resolved_count += 1
-            log(f"✅ Resolved: {file_path}")
-        else:
-            log(f"⚠️ Failed to resolve: {file_path}")
+        for file in files:
+            if file.endswith(extensions):
+                filepath = os.path.join(root, file)
+                if resolve_merge_conflicts(filepath):
+                    resolved_count += 1
     
-    log(f"📊 Resolved {resolved_count}/{len(conflicted_files)} conflicts")
-    return resolved_count == len(conflicted_files)
+    return resolved_count
 
-def handle_deleted_files():
-    """Handle files that were deleted in remote but modified locally"""
-    log("🗑️ Handling deleted files...")
+if __name__ == '__main__':
+    directory = '/workspace'
+    print("🔧 Resolving merge conflicts...")
+    print("=" * 60)
     
-    # Get status to find deleted files
-    result = run_command("git status --porcelain")
-    if not result or result.returncode != 0:
-        return
+    resolved = find_and_resolve_conflicts(directory)
     
-    lines = result.stdout.strip().split('\n')
-    deleted_files = []
-    
-    for line in lines:
-        if line.startswith('DU ') or line.startswith('UD '):
-            # File deleted by us or them
-            file_path = line[3:].strip()
-            deleted_files.append(file_path)
-    
-    if deleted_files:
-        log(f"📋 Found {len(deleted_files)} deleted files to handle")
-        
-        for file_path in deleted_files:
-            log(f"🗑️ Handling deleted file: {file_path}")
-            # Keep our version (add the file)
-            run_command(f"git add '{file_path}'")
-    
-    return True
-
-def commit_resolution():
-    """Commit the conflict resolution"""
-    log("💾 Committing conflict resolution...")
-    
-    commit_message = f"chore: Resolve merge conflicts automatically - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
-    result = run_command(f'git commit -m "{commit_message}"')
-    
-    if result and result.returncode == 0:
-        log("✅ Conflicts resolved and committed")
-        return True
-    else:
-        log("⚠️ Commit may have failed")
-        return False
-
-def main():
-    """Main function"""
-    log("🚀 Starting Automatic Conflict Resolver...")
-    
-    if not os.path.exists(".git"):
-        log("❌ Not in a git repository")
-        return False
-    
-    # Step 1: Resolve conflicts
-    if not resolve_conflicts():
-        log("❌ Failed to resolve all conflicts")
-        return False
-    
-    # Step 2: Handle deleted files
-    handle_deleted_files()
-    
-    # Step 3: Commit the resolution
-    if not commit_resolution():
-        log("❌ Failed to commit resolution")
-        return False
-    
-    log("🎉 Automatic conflict resolution completed!")
-    return True
-
-if __name__ == "__main__":
-    success = main()
-    exit(0 if success else 1)
+    print("=" * 60)
+    print(f"✓ Resolved merge conflicts in {resolved} files")

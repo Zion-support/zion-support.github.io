@@ -1,35 +1,46 @@
 #!/bin/bash
 
-echo "🔧 Resolving merge conflicts automatically..."
+# Script to resolve merge conflicts by choosing HEAD version
+echo "Resolving merge conflicts in critical files..."
 
-# Find all files with merge conflict markers
-echo "📁 Searching for files with merge conflicts..."
-
-# Function to resolve conflicts in a file
+# Function to resolve merge conflicts
 resolve_conflicts() {
     local file="$1"
-    echo "🔧 Resolving conflicts in: $file"
+    echo "Processing: $file"
     
-    # Remove all conflict markers and keep the newer version (after =======)
-    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-    sed -i '/>>>>>>> /d' "$file"
+    # Create backup
+    cp "$file" "${file}.backup"
     
-    echo "✅ Resolved conflicts in: $file"
+    # Use git checkout to resolve conflicts by choosing HEAD version
+    git checkout --ours "$file" 2>/dev/null || true
+    
+    # If that doesn't work, use sed to remove conflict markers and keep HEAD content
+    if grep -q "/d' "$file"
+        sed -i '/
+        sed -i '/>>>>>>> cursor/d' "$file"
+    fi
 }
 
-# Find and resolve conflicts in TypeScript/JavaScript files
-find src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read -r file; do
-    if grep -q "<<<<<<< HEAD" "$file"; then
+# List of critical files to fix
+files=(
+    "app/page.tsx"
+    "app/components/Footer.tsx"
+    "app/components/Navigation.tsx"
+    "app/components/EnhancedErrorBoundary.tsx"
+    "app/components/LoadingSpinner.tsx"
+    "app/ai-services/page.tsx"
+    "app/it-services/page.tsx"
+    "app/ai-workflow-automation/page.tsx"
+    "app/ai-3d-generation/page.tsx"
+    "app/api-docs/page.tsx"
+    "app/gdpr/page.tsx"
+)
+
+# Process each file
+for file in "${files[@]}"; do
+    if [ -f "$file" ]; then
         resolve_conflicts "$file"
     fi
 done
 
-# Find and resolve conflicts in other source files
-find . -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | grep -v node_modules | grep -v .git | while read -r file; do
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        resolve_conflicts "$file"
-    fi
-done
-
-echo "🎉 All merge conflicts resolved!"
-echo "📝 Please review the changes and test the application"
+echo "Merge conflicts resolved!"

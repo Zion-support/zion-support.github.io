@@ -1,0 +1,25 @@
+{
+  "coverage": {
+    "enabled": true,
+    "threshold": {
+      "statements": 80,
+      "branches": 75,
+      "functions": 80,
+      "lines": 80
+    },
+    "exclude": ["node_modules/**", "dist/**", "**/*.test.ts", "**/*.test.tsx", "**/__tests__/**"]
+  },
+  "e2e": {
+    "enabled": true,
+    "browser": "chromium",
+    "headless": true,
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "visual": {
+    "enabled": false,
+    "threshold": 0.01
+  }
+}

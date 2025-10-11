@@ -1,24 +1,20 @@
-
-import { supabase } from "@/integrations/supabase/client";
-import { TalentProfile } from "@/types/talent";
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
-import { ContractFormValues } from "../components/ContractForm";
-
+import { supabase } from "@/integrations/supabase/client"
+import { TalentProfile } from "@/types/talent"
+import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator"
+import { ContractFormValues } from "../components/ContractForm"
 interface Milestone {
-  title: string;
-  description: string;
-  dueDate: string;
-  estimatedHours: number;
+  title: string
+  description: string
+  dueDate: string
+  estimatedHours: number
 }
-
 export async function generateContract(
   values: ContractFormValues, 
   talent: TalentProfile, 
   clientName: string,
   generatedMilestones: GeneratedMilestone[]
 ): Promise<string> {
-  const additionalClauses = values.additionalClauses || [];
-  
+  const additionalClauses = values.additionalClauses || []
   // Prepare milestone data if we have AI-generated milestones
   const milestoneData = generatedMilestones.length > 0 
     ? generatedMilestones.map(m => ({
@@ -27,8 +23,7 @@ export async function generateContract(
         dueDate: m.dueDate,
         estimatedHours: m.estimatedHours
       }))
-    : [];
-  
+    : []
   const { data, error } = await supabase.functions.invoke("generate-contract", {
     body: {
       talentName: talent.full_name,
@@ -40,21 +35,16 @@ export async function generateContract(
       paymentTerms: values.paymentTerms,
       paymentAmount: values.paymentAmount,
       additionalClauses: additionalClauses,
-<<<<<<< HEAD
       milestones: milestoneData}
-=======
       milestones: milestoneData,
     }
->>>>>>> origin/auto/autonomy-17186719616
-  });
-  
+  })
   if (error) {
-    throw error;
+    throw error
   }
-  
   if (data.success && data.contract) {
-    return data.contract;
+    return data.contract
   } else {
-    throw new Error("Failed to generate contract");
+    throw new Error("Failed to generate contract")
   }
 }

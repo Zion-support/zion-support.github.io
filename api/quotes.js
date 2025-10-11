@@ -1,29 +1,75 @@
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+<<<<<<< HEAD
+    res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
+=======
+    return
+>>>>>>> origin/main
+  }
+
+  try {
+    const { name, email, phone, details, country, service } = req.body || {}
+    if (!name || !email || !phone || !details) {
 <<<<<<< HEAD
       res.statusCode = 400;
-      res.json({ "error": 'Missing: required fields})';
-      return}
-    console.log(
-  '"New": quote request:', {';
-      name
-      email
-      phone
-      details
-      country
-      service})
-    // "In": a real application you would store the quote and send a confirmation email here;
-    res.statusCode: = 200;
-    res.json({ success: true})} "catch": (err) {
-    console.error(
-  'Quote API error: ', err);
-    res."statusCode": = 500;
-    res.json({ error: err.message: ||';Quote: submission failed})}', err);
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Name, email, phone, and details are required' }));
+      return;
+=======
+      return
+>>>>>>> origin/main
+    }
+
+    // Process quote submission logic here
+    // In a real application, you would:
+    // 1. Save to your database
+    // 2. Send notification to your sales team
+    // 3. Send confirmation email to the customer
+    // 4. Integrate with your CRM
+
+    const quoteData = {
+      name,
+      email,
+      phone,
+      details,
+      country: req.body.country || 'Not specified',
+      service: req.body.service || 'General inquiry',
+      timestamp: new Date().toISOString(),
+      status: 'pending'
+    }
+    // Log quote request for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Quote request received:', quoteData)
+    }
+
+    res.statusCode = 200
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Quote request submitted successfully',
+      quoteId: `quote_${Date.now()}`,
+      data: quoteData
+    }))
+  } catch (error) {
+<<<<<<< HEAD
+    console.error('Quote submission error:', error);
     res.statusCode = 500;
-    res.json({ error: err.message || 'Quote submission failed' });
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      error: 'Failed to submit quote request',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    }));
+=======
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Quote submission error:', error)
+    }
+    res.statusCode = 500
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Internal server error' }))
+>>>>>>> origin/main
   }
 }
-
-module.exports = withErrorLogging(handler);
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
-const { withSentry } = require('./withSentry.cjs');;const fs = require('fs');;  if (req.method !== 'POST') {'';    res.setHeader('Allow', POST');;    res.end('Method Not Allowed');;      res.json({ error: Missing required fields' });;    fs.appendFileSync('quote_requests.log', JSON.stringify(logEntry) + \n');;    console.error('Quote API error:', err);;    res.json({ error: Quote submission failed' });
->>>>>>> origin/auto/autonomy-17186719616

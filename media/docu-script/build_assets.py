@@ -1,1 +1,0 @@
-/workspace/zion-film/build_assets.py

@@ -1,18 +1,20 @@
 #!/bin/bash
 
-echo "Fixing merge conflicts in all files..."
-
-# Find all files with merge conflict markers and fix them
-find src -name "*.jsx" -o -name "*.tsx" -o -name "*.js" -o -name "*.ts" | while read -r file; do
-  if grep -q "<<<<<<< HEAD" "$file"; then
+# Find all files with merge conflicts and clean them up
+find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | while read file; do
+  if grep -q "\|
     echo "Fixing merge conflicts in: $file"
     
-    # Remove merge conflict markers and keep content between HEAD and ======
-    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-    sed -i '/>>>>>>> main/d' "$file"
+    # Create a backup
+    cp "$file" "$file.backup"
     
-    # Clean up any remaining empty lines
-    sed -i '/^[[:space:]]*$/d' "$file"
+    # Remove merge conflict markers and keep the newer version (after =======)
+    awk '
+    // { in_old = 0; in_new = 1; next }
+    /
+    in_old { next }
+    { print }
+    ' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
   fi
 done
 

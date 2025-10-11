@@ -1,322 +1,227 @@
+const fs = require('fs');
+const path = require('path');
 
-const fs = require("$1");
-const path = require("path")
-#!/usr/bin/env node
-const fs = require("$1");
-const path = require("$1");
-const { execSync } = require("child_process")
-class PerformanceOptimizer {
-  constructor() {
-    this.projectRoot = process.cwd()
-    this.optimizations = [],
-}
+console.log('Running performance optimizations...');
 
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`),
+// Create critical CSS file
+const criticalCSS = `
+/* Critical CSS for above-the-fold content */
+* {
+  box-sizing: border-box;
 }
 
-  async optimizeImages() {
-    console.log("🖼️ Optimizing images...")
-    // Add image optimization logic here,
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%);
+  color: #ffffff;
+  line-height: 1.6;
 }
 
-  async optimizeCSS() {
-    console.log("🎨 Optimizing CSS...")
-    // Add CSS optimization logic here,
+/* Navigation styles */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(6, 182, 212, 0.2);
 }
 
-  async optimizeJavaScript() {
-    console.log("⚡ Optimizing JavaScript...")
-    // Add JS optimization logic here,
+/* Hero section styles */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1rem;
 }
-    this.log("🖼️ Optimizing images...")
-    try {
-      // Create optimized image directories
-      const publicDir = path.join(this.projectRoot, "public")
-      const optimizedDir = path.join(publicDir, "optimized")
-      if (!fs.existsSync(optimizedDir)) {
-        fs.mkdirSync(optimizedDir, { recursive: true }),
+
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, #22d3ee, #a855f7, #ec4899);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
 }
+
+.hero-subtitle {
+  font-size: clamp(1.125rem, 4vw, 1.5rem);
+  color: #d1d5db;
+  margin-bottom: 2rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Button styles */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #22d3ee, #a855f7);
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(34, 211, 238, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(34, 211, 238, 0.4);
+}
+
+/* Card styles */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgba(34, 211, 238, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(34, 211, 238, 0.1);
+}
+
+/* Loading states */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .btn-primary {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Performance optimizations */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+`;
+
+// Write critical CSS to public directory
+const publicDir = path.join(__dirname, '..', 'public');
+if (!fs.existsSync(publicDir)) {
+  fs.mkdirSync(publicDir, { recursive: true });
+}
+
+fs.writeFileSync(path.join(publicDir, 'critical.css'), criticalCSS);
+
+// Create a simple performance monitoring script
+const performanceScript = `
+// Performance monitoring
+(function() {
+  'use strict';
+  
+  // Monitor Core Web Vitals
+  function measureWebVitals() {
+    if ('performance' in window && 'getEntriesByType' in performance) {
+      // First Contentful Paint
+      const fcp = performance.getEntriesByName('first-contentful-paint')[0];
+      if (fcp) {
+        console.log('FCP:', fcp.startTime);
+      }
       
-      this.optimizations.push("Image optimization directories created")
-      this.log("✅ Image optimization setup completed"),
-} catch (error) {
-      this.log(`❌ Image optimization failed: ${error.message}`),
-}
-  }
-
-  async optimizeBundle() {
-    this.log("📦 Optimizing bundle...")
-    try {
-      // Create bundle analyzer script
-      const bundleAnalyzerScript = `
-const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer")
-module.exports = {
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.plugins.push(
-        new BundleAnalyzerPlugin({
-          analyzerMode: "static",
-          openAnalyzer: false,
-          reportFilename: "bundle-analysis.html",
-})),
-}
-    return config,
-}
-}
-`
-      fs.writeFileSync(
-        path.join(this.projectRoot, "next.config.analyze.js"),
-        bundleAnalyzerScript)
-      this.optimizations.push("Bundle analyzer configuration created")
-      this.log("✅ Bundle optimization setup completed"),
-} catch (error) {
-      this.log(`❌ Bundle optimization failed: ${error.message}`),
-}
-  }
-
-  async createPerformanceScripts() {
-    this.log("📊 Creating performance monitoring scripts...")
-    try {
-      const performanceScript = `
-const { execSync } = require("$1");
-const fs = require("$1");
-const path = require("path")
-class PerformanceMonitor {
-  constructor() {
-    this.reportsDir = path.join(process.cwd(), "performance-reports")
-    this.ensureDirectories(),
-}
-
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true }),
-}
-  }
-
-  async runLighthouse() {
-    console.log("🔍 Running Lighthouse audit...")
-    try {
-      execSync("npm run build", {
-        cwd: this.projectRoot, 
-        encoding: "utf8",
-        stdio: "pipe",
-})
-      this.metrics.buildTime = Date.now() - startTime
-      this.log(`✅ Build completed in ${this.metrics.buildTime}ms`, "SUCCESS")
-      const command = "npx lighthouse http: //localhost:3000 --output=html --output-path=./performance-reports/lighthouse-report.html --chrome-flags="--headless""
-      execSync(command, { stdio: "inherit" })
-      console.log("✅ Lighthouse audit completed")
-} catch (error) {
-      console.log("❌ Lighthouse audit failed: ", error.message),
-}
-  }
-
-  async runBundleAnalysis() {
-    console.log("📦 Running bundle analysis...")
-    try {
-      const command = "ANALYZE=true npm run build"
-      execSync(command, { stdio: "inherit" })
-      console.log("✅ Bundle analysis completed"),
-} catch (error) {
-      console.log("❌ Bundle analysis failed: ", error.message),
-}
-  }
-}
-
-const monitor = new PerformanceMonitor()
-monitor.runLighthouse()
-monitor.runBundleAnalysis()
-`
-      fs.writeFileSync(
-        path.join(this.projectRoot, "scripts", "performance-monitor.cjs"),
-        performanceScript)
-      this.optimizations.push("Performance monitoring scripts created")
-      this.log("✅ Performance monitoring scripts created"),
-} catch (error) {
-      this.log(`❌ Error analyzing dependencies: ${error.message}`, "ERROR"),
-}
-  }
-
-  checkImageOptimization() {
-    this.log("🖼️ Checking image optimization...", "INFO")
-    const publicDir = path.join(this.projectRoot, "public")
-    if (!fs.existsSync(publicDir)) {
-      this.log("⚠️ Public directory not found", "WARN")
-      return,
-}
-
-    const imageExtensions = [".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"]
-    const images = this.findFiles(publicDir, imageExtensions)
-    this.log(`🖼️ Found ${images.length} images`, "INFO")
-    if (images.length > 0) {
-      this.optimizations.push({
-        type: "image",
-        description: "Consider using Next.js Image component for automatic optimization",
-        impact: "high",
-        files: images.slice(0, 5) // Show first 5 files,
-}),
-}
-  }
-
-  findFiles(dir, extensions) {
-    const files = []
-    const scanDirectory = (dir) => {
-      try {
-        const items = fs.readdirSync(dir)
-        for (const item of items) {
-          const fullPath = path.join(dir, item)
-          const stat = fs.statSync(fullPath)
-          if (stat.isDirectory()) {
-            scanDirectory(fullPath),
-} else if (extensions.some(ext => item.toLowerCase().endsWith(ext))) {
-            files.push(path.relative(this.projectRoot, fullPath)),
-}
-        }
-      } catch (error) {
-        // Skip directories we can"t read,
-}
+      // Largest Contentful Paint
+      const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
+      if (lcp) {
+        console.log('LCP:', lcp.startTime);
+      }
+      
+      // First Input Delay
+      const fid = performance.getEntriesByType('first-input')[0];
+      if (fid) {
+        console.log('FID:', fid.processingStart - fid.startTime);
+      }
     }
-    scanDirectory(dir)
-    return files,
-}
-
-  checkCodeSplitting() {
-    this.log("🔀 Checking code splitting...", "INFO")
-    const pagesDir = path.join(this.projectRoot, "pages")
-    const srcDir = path.join(this.projectRoot, "src")
-    let pageCount = 0
-    let componentCount = 0
-    if (fs.existsSync(pagesDir)) {
-      pageCount = this.countFiles(pagesDir, [".js", ".jsx", ".ts", ".tsx"]),
-}
-    
-    if (fs.existsSync(srcDir)) {
-      componentCount = this.countFiles(srcDir, [".js", ".jsx", ".ts", ".tsx"]),
-}
-    
-    this.log(`📄 Pages: ${pageCount}`, "INFO")
-    this.log(`🧩 Components: ${componentCount}`, "INFO")
-    if (pageCount > 20) {
-      this.optimizations.push({
-        type: "code-splitting",
-        description: "Consider implementing dynamic imports for large pages",
-        impact: "medium",
-        current: pageCount,
-}),
-}
   }
-
-  countFiles(dir, extensions) {
-    let count = 0
-    const scanDirectory = (dir) => {
-      try {
-        const items = fs.readdirSync(dir)
-        for (const item of items) {
-          const fullPath = path.join(dir, item)
-          const stat = fs.statSync(fullPath)
-          if (stat.isDirectory()) {
-            scanDirectory(fullPath),
-} else if (extensions.some(ext => item.toLowerCase().endsWith(ext))) {
-            count++,
-}
+  
+  // Run after page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', measureWebVitals);
+  } else {
+    measureWebVitals();
+  }
+  
+  // Image lazy loading
+  function lazyLoadImages() {
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.classList.remove('lazy');
+          observer.unobserve(img);
         }
-      } catch (error) {
-        // Skip directories we can"t read,
-}
-    }
-    scanDirectory(dir)
-    return count,
-}
-
-  generateOptimizations() {
-    this.log("💡 Generating optimization recommendations...", "INFO")
-    // Bundle size optimizations
-    if (this.metrics.bundleSize > 5 * 1024 * 1024) { // 5MB
-      this.optimizations.push({
-        type: "bundle-size",
-        description: "Bundle size is large, consider code splitting and tree shaking",
-        impact: "high",
-        current: `${(this.metrics.bundleSize / 1024 / 1024).toFixed(2)}MB`,
-}),
-}
+      });
+    });
     
-    // Build time optimizations
-    if (this.metrics.buildTime > 60000) { // 1 minute
-      this.optimizations.push({
-        type: "build-time",
-        description: "Build time is slow, consider optimizing build process",
-        impact: "medium",
-        current: `${(this.metrics.buildTime / 1000).toFixed(2)}s`,
-}),
-}
-    
-    // Dependency optimizations
-    if (this.metrics.dependencies > 100) {
-      this.optimizations.push({
-        type: "dependencies",
-        description: "High number of dependencies, consider removing unused packages",
-        impact: "medium",
-        current: this.metrics.dependencies,
-}),
-}
+    images.forEach(img => imageObserver.observe(img));
   }
-
-  generateReport() {
-    this.ensureDirectories()
-    const report = {
-      timestamp: new Date().toISOString(),
-      metrics: this.metrics,
-      optimizations: this.optimizations,
-      recommendations: this.generateRecommendations(),
-}
-    const reportPath = path.join(this.reportsDir, "performance-optimizer-report.json")
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
-    this.log(`📄 Report saved to: ${reportPath}`, "SUCCESS")
-    return report,
-}
-
-  generateRecommendations() {
-    const recommendations = []
-    if (this.optimizations.length === 0) {
-      recommendations.push("Performance looks good! No major optimizations needed."),
-} else {
-      this.optimizations.forEach(opt => {
-        recommendations.push(`${opt.type}: ${opt.description}`),
-}),
-}
-    
-    recommendations.push("Consider running Lighthouse audit for detailed performance metrics")
-    recommendations.push("Monitor Core Web Vitals in production")
-    return recommendations,
-}
-
-  printSummary() {
-    this.log("\n📊 Performance Analysis Summary: ", "INFO")
-    this.log("=".repeat(50), "INFO")
-    this.log(`📦 Bundle Size: ${(this.metrics.bundleSize / 1024 / 1024).toFixed(2)}MB`, "INFO")
-    this.log(`⏱️ Build Time: ${(this.metrics.buildTime / 1000).toFixed(2)}s`, "INFO")
-    this.log(`📁 Files: ${this.metrics.fileCount}`, "INFO")
-    this.log(`📦 Dependencies: ${this.metrics.dependencies}`, "INFO")
-    this.log(`💡 Optimizations: ${this.optimizations.length}`, "INFO")
-    if (this.optimizations.length > 0) {
-      this.log("\n🔍 Optimization Recommendations: ", "INFO")
-      this.optimizations.forEach((opt, index) => {
-        this.log(`  ${index + 1}. [${opt.impact.toUpperCase()}] ${opt.description}`, "INFO"),
-})
-      this.log(`❌ Performance script creation failed: ${error.message}`)
-}
+  
+  // Initialize lazy loading
+  if ('IntersectionObserver' in window) {
+    lazyLoadImages();
   }
+})();
+`;
 
-  async run() {
-    this.log("🚀 Starting performance optimization...")
-    await this.optimizeImages()
-    await this.optimizeBundle()
-    await this.createPerformanceScripts()
-    this.log(`🎉 Performance optimization completed with ${this.optimizations.length} optimizations`)
-    this.optimizations.forEach(opt => this.log(`  - ${opt}`)),
-}
-}
+fs.writeFileSync(path.join(publicDir, 'performance.js'), performanceScript);
 
-const optimizer = new PerformanceOptimizer()
-optimizer.run().catch(console.error)
+console.log('Performance optimizations completed');

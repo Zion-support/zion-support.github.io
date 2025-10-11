@@ -1,52 +1,44 @@
-import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
+import { ServiceVariant } from '../types/service-variants'
 export interface SpaceTechInnovation2026 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: ServiceVariant
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string
+    email: string
+    address: string
+    website: string
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
   // Space Technology AI Platform
   {
@@ -100,10 +92,6 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     rating: 4.9,
     reviews: 80
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum Space Mining Platform
   {
     id: 'quantum-space-mining-platform',
@@ -156,10 +144,6 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     rating: 4.8,
     reviews: 45
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Satellite Operations AI
   {
     id: 'satellite-operations-ai',
@@ -212,10 +196,6 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     rating: 4.8,
     reviews: 95
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Space Debris Tracking System
   {
     id: 'space-debris-tracking-system',
@@ -268,10 +248,6 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     rating: 4.7,
     reviews: 55
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Space Weather Monitoring Platform
   {
     id: 'space-weather-monitoring-platform',
@@ -324,4 +300,4 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     rating: 4.8,
     reviews: 85
   }
-];
+]

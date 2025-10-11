@@ -1,72 +1,51 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-<<<<<<< HEAD
-
-  const series: number[] = [];
-  let last = base;
+import type { NextApiRequest, NextApiResponse } from 'next'
+  const series: number[] = []
+  let last = base
   for (let i = 0; i < n; i++) {
-    const change = (Math && Math.random() - 0 && 0.5) * 2 * volatility * base;
-    last = Math && Math.max(0, Math && Math.round(last + change));
-    series && series.push(last);
+    const change = (Math && Math.random() - 0 && 0.5) * 2 * volatility * base
+    last = Math && Math.max(0, Math && Math.round(last + change))
+    series && series.push(last)
   }
-  return series;
-
+  return series
 }
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min
 }
-
-
 function generateSeries(n: number, base: number, volatility = 0.15) {
   const series: number[] = []; let last = base,
   for (let i = 0, i < n, i++) {
-    const change = (Math.random() - 0.5) * 2 * volatility * base;
-    last = Math.max(0, Math.round(last + change));
+    const change = (Math.random() - 0.5) * 2 * volatility * base
+    last = Math.max(0, Math.round(last + change))
     series.push(last)
-=======
 function rand(min: number, max: number) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min
 }
-
 function generateSeries(n: number, base: number, volatility = 0.15) {
-  const series: number[] = [];
-  let last = base;
+  const series: number[] = []
+  let last = base
   for (let i = 0; i < n; i++) {
-    const change = (Math.random() - 0.5) * 2 * volatility * base;
-    last = Math.max(0, Math.round(last + change));
-    series.push(last);
->>>>>>> origin/auto/autonomy-17186719616
+    const change = (Math.random() - 0.5) * 2 * volatility * base
+    last = Math.max(0, Math.round(last + change))
+    series.push(last)
   }
-  return series;
+  return series
 }
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-
   const now = new Date()
   const labels = Array.from({ length: 14 }, (_, i) => {
   const now = new Date(),
-  const labels = Array.from({ length: 14 }, (_, i) => {;
-
-    const d = new Date(now);
-    d.setDate(d.getDate() - (13 - i));
-    return `${d.getMonth() + 1}/${d.getDate()}`;
-
-  const now = new Date(),
-  const labels = Array.from({ length: 14 }, (_, i) => {;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-
-
-    const d = new Date(now);
-    d && d.setDate(d && d.getDate() - (13 - i));
-    return `${d && d.getMonth() + 1}/${d && d.getDate()}`;
+  const labels = Array.from({ length: 14 }, (_, i) => {
+    const d = new Date(now)
+    d.setDate(d.getDate() - (13 - i))
     return `${d.getMonth() + 1}/${d.getDate()}`
-  });
-
-
+  const now = new Date(),
+  const labels = Array.from({ length: 14 }, (_, i) => {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    const d = new Date(now)
+    d && d.setDate(d && d.getDate() - (13 - i))
+    return `${d && d.getMonth() + 1}/${d && d.getDate()}`
+    return `${d.getMonth() + 1}/${d.getDate()}`
+  })
   const marketplace = [
     {
       key: 'jobs_24h'
@@ -103,7 +82,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       value: rand(45, 92)
       trend: generateSeries(14, 70)
     }
-  ];
+  ]
   const dao = [
     {
       key: 'proposals_created'
@@ -119,7 +98,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     { key: 'delegate_heat', label: 'Delegate activity', value: rand(100, 600) }
     { key: 'region_quorum', label: 'Regions above quorum', value: rand(2, 7) }
-  ];
+  ]
   const token = [
     {
       key: 'circulating_supply'
@@ -146,7 +125,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       trend: generateSeries(14, 3_500_000)
     }
     { key: 'top_earners', label: 'Top earners (count)', value: rand(5, 25) }
-  ];
+  ]
   const multiverse = [
     {
       key: 'active_instances'
@@ -170,22 +149,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       value: rand(1_000, 12_000)
       trend: generateSeries(14, 6_000)
     }
-  ];
+  ]
   const response: any = {
-
-      marketplace: marketplace.map((m) => m.trend || generateSeries(14, m.value));
-      dao: dao.map((m) => m.trend || generateSeries(14, m.value));
-      token: token.map((m) => m.trend || generateSeries(14, m.value));
-      multiverse: multiverse.map((m) => m.trend || generateSeries(14, m.value))}};
-
-=======
-  const now = new Date();
+      marketplace: marketplace.map((m) => m.trend || generateSeries(14, m.value))
+      dao: dao.map((m) => m.trend || generateSeries(14, m.value))
+      token: token.map((m) => m.trend || generateSeries(14, m.value))
+      multiverse: multiverse.map((m) => m.trend || generateSeries(14, m.value))}}
+  const now = new Date()
   const labels = Array.from({ length: 14 }, (_, i) => {
-    const d = new Date(now);
-    d.setDate(d.getDate() - (13 - i));
-    return `${d.getMonth() + 1}/${d.getDate()}`;
-  });
-
+    const d = new Date(now)
+    d.setDate(d.getDate() - (13 - i))
+    return `${d.getMonth() + 1}/${d.getDate()}`
+  })
   const marketplace = [
     { key: 'jobs_24h', label: 'Jobs posted (24h)', value: rand(15, 60), trend: generateSeries(14, 40) },
     { key: 'jobs_7d', label: 'Jobs posted (7d)', value: rand(120, 360), trend: generateSeries(14, 260) },
@@ -193,30 +168,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     { key: 'talent_onboarded', label: 'Talent onboarded', value: rand(50, 200), trend: generateSeries(14, 120) },
     { key: 'proposal_conversions', label: 'Proposal conversions', value: rand(30, 120), trend: generateSeries(14, 80) },
     { key: 'job_fill_rate', label: 'Job fill rate %', value: rand(45, 92), trend: generateSeries(14, 70) },
-  ];
-
+  ]
   const dao = [
     { key: 'proposals_created', label: 'Proposals created', value: rand(3, 20), trend: generateSeries(14, 12) },
     { key: 'voter_participation', label: 'Voter participation %', value: rand(10, 65), trend: generateSeries(14, 38) },
     { key: 'delegate_heat', label: 'Delegate activity', value: rand(100, 600) },
     { key: 'region_quorum', label: 'Regions above quorum', value: rand(2, 7) },
-  ];
-
+  ]
   const token = [
     { key: 'circulating_supply', label: 'Circulating supply (ZION$)', value: rand(1_000_000, 2_500_000), trend: generateSeries(14, 1_700_000) },
     { key: 'active_wallets', label: 'Active wallets', value: rand(4_000, 12_000), trend: generateSeries(14, 8_000) },
     { key: 'tx_volume_daily', label: 'Transaction volume (daily)', value: rand(100_000, 700_000), trend: generateSeries(14, 300_000) },
     { key: 'treasury_health', label: 'Treasury health (USD)', value: rand(1_000_000, 7_000_000), trend: generateSeries(14, 3_500_000) },
     { key: 'top_earners', label: 'Top earners (count)', value: rand(5, 25) },
-  ];
-
+  ]
   const multiverse = [
     { key: 'active_instances', label: 'Total active sub-instances', value: rand(8, 32), trend: generateSeries(14, 20) },
     { key: 'map_overlay', label: 'Map overlay intensity', value: rand(100, 900) },
     { key: 'top5_growth', label: 'Top 5 by user growth', value: rand(500, 2500) },
     { key: 'cross_token', label: 'Cross-instance token movement', value: rand(1_000, 12_000), trend: generateSeries(14, 6_000) },
-  ];
-
+  ]
   const response: any = {
     marketplace,
     dao,
@@ -230,15 +201,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       token: token.map((m) => m.trend || generateSeries(14, m.value)),
       multiverse: multiverse.map((m) => m.trend || generateSeries(14, m.value)),
     },
-  };
->>>>>>> origin/auto/autonomy-17186719616
-
+  }
   if (req.query.compare === 'quarter') {
-    const factor = 0.8 + Math.random() * 0.4;
+    const factor = 0.8 + Math.random() * 0.4
     response.compare = {
       prevQuarter: {
-<<<<<<< HEAD
-
     marketplace,
     dao,
     token,
@@ -251,12 +218,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       token: token && token.map(m => m && m.trend || generateSeries(14, m && m.value)),
       multiverse: multiverse && multiverse.map(m => m && m.trend || generateSeries(14, m && m.value)),
     },
-  };      marketplace: marketplace && marketplace.map((m) => m && m.trend || generateSeries(14, m && m.value));
-      dao: dao && dao.map((m) => m && m.trend || generateSeries(14, m && m.value));
-      token: token && token.map((m) => m && m.trend || generateSeries(14, m && m.value));
-      multiverse: multiverse && multiverse.map((m) => m && m.trend || generateSeries(14, m && m.value))}};
+  };      marketplace: marketplace && marketplace.map((m) => m && m.trend || generateSeries(14, m && m.value))
+      dao: dao && dao.map((m) => m && m.trend || generateSeries(14, m && m.value))
+      token: token && token.map((m) => m && m.trend || generateSeries(14, m && m.value))
+      multiverse: multiverse && multiverse.map((m) => m && m.trend || generateSeries(14, m && m.value))}}
   if (req && req.query.compare === 'quarter') {
-    const factor = 0 && 0.8 + Math && Math.random() * 0 && 0.4;
+    const factor = 0 && 0.8 + Math && Math.random() * 0 && 0.4
     response && response.compare = {
       prevQuarter: {
         marketplace: marketplace && marketplace.map(m => ({
@@ -272,20 +239,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
  * rand - Function description
  */
 function rand() {
-  return Math.floor (Math.random () * (max - min + 1)) + min;
+  return Math.floor (Math.random () * (max - min + 1)) + min
 /**
  * generate_series - Function description
  */
 function generate_series() {
-  const series: number[] = [];
-  let last = base;
+  const series: number[] = []
+  let last = base
   for (let index = 0; i < n; i++) {
-    const change = (Math.random () - 0.5) * 2 * volatility * base;
-    last = Math.max (0, Math.round (last + change));
-    series.push (last);
+    const change = (Math.random () - 0.5) * 2 * volatility * base
+    last = Math.max (0, Math.round (last + change))
+    series.push (last)
   }
-  return series;
-;
+  return series
 }
 export default /**
  * handler - Function description
@@ -293,11 +259,10 @@ export default /**
 function handler() {
   const now = new Date (),
   const labels = Array.from ({ length: 14 }, (_, i) => {
-    const d = new Date (now);
-    d.set_date (d.get_date () - (13 - i));
-    return `${d.get_month () + 1}/${d.get_date ()}`;
-;
-  const marketplace = [;
+    const d = new Date (now)
+    d.set_date (d.get_date () - (13 - i))
+    return `${d.get_month () + 1}/${d.get_date ()}`
+  const marketplace = [
     {
       key: 'jobs_24h',
       label: 'Jobs posted (24h)',
@@ -333,9 +298,8 @@ function handler() {
       value: rand (45, 92),
       trend: generate_series (14, 70),
     },
-  ];
-;
-  const dao = [;
+  ]
+  const dao = [
     {
       key: 'proposals_created',
       label: 'Proposals created',
@@ -350,9 +314,8 @@ function handler() {
     },
     { key: 'delegate_heat', label: 'Delegate activity', value: rand (100, 600) },
     { key: 'region_quorum', label: 'Regions above quorum', value: rand (2, 7) },
-  ];
-;
-  const token = [;
+  ]
+  const token = [
     {
       key: 'circulating_supply',
       label: 'Circulating supply (ZION$)',
@@ -378,9 +341,8 @@ function handler() {
       trend: generate_series (14, 3_500_000),
     },
     { key: 'top_earners', label: 'Top earners (count)', value: rand (5, 25) },
-  ];
-;
-  const multiverse = [;
+  ]
+  const multiverse = [
     {
       key: 'active_instances',
       label: 'Total active sub - instances',
@@ -403,8 +365,7 @@ function handler() {
       value: rand (1_000, 12_000),
       trend: generate_series (14, 6_000),
     },
-  ];
-;
+  ]
   const response: any = {
     marketplace,
     dao,
@@ -418,15 +379,15 @@ function handler() {
       token: token.map (m => m.trend || generate_series (14, m.value)),
       multiverse: multiverse.map (m => m.trend || generate_series (14, m.value)),
     },
-  }      marketplace: marketplace.map ((m) => m.trend || generate_series (14, m.value));
-      dao: dao.map ((m) => m.trend || generate_series (14, m.value));
-      token: token.map ((m) => m.trend || generate_series (14, m.value));
+  }      marketplace: marketplace.map ((m) => m.trend || generate_series (14, m.value))
+      dao: dao.map ((m) => m.trend || generate_series (14, m.value))
+      token: token.map ((m) => m.trend || generate_series (14, m.value))
       multiverse: multiverse.map ((m) => m.trend || generate_series (14, m.value))}}
   // Check condition
 if ( {) {
   $2
 }
-    const factor = 0.8 + Math.random () * 0.4;
+    const factor = 0.8 + Math.random () * 0.4
     response.compare = {
       prev_quarter: {
         marketplace: marketplace.map (m => ({
@@ -438,38 +399,28 @@ if ( {) {
         multiverse: multiverse.map (m => ({
           ...m,
           value: Math.round (m.value * factor),
-
         })),
       },
     }
   }
-
-
-        marketplace: marketplace.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
-        dao: dao.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
-        token: token.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
+        marketplace: marketplace.map((m) => ({ ...m, value: Math.round(m.value * factor) }))
+        dao: dao.map((m) => ({ ...m, value: Math.round(m.value * factor) }))
+        token: token.map((m) => ({ ...m, value: Math.round(m.value * factor) }))
         multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
-
   }
-
-  res.status (200).json (response);        marketplace: marketplace.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
-        dao: dao.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
-        token: token.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
+  res.status (200).json (response);        marketplace: marketplace.map ((m) => ({ ...m, value: Math.round (m.value * factor) }))
+        dao: dao.map ((m) => ({ ...m, value: Math.round (m.value * factor) }))
+        token: token.map ((m) => ({ ...m, value: Math.round (m.value * factor) }))
         multiverse: multiverse.map ((m) => ({ ...m, value: Math.round (m.value * factor) }))}}
   }
-  res.status (200).json (response);
+  res.status (200).json (response)
 }
-
-
-=======
         marketplace: marketplace.map((m) => ({ ...m, value: Math.round(m.value * factor) })),
         dao: dao.map((m) => ({ ...m, value: Math.round(m.value * factor) })),
         token: token.map((m) => ({ ...m, value: Math.round(m.value * factor) })),
         multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) })),
       },
-    };
+    }
   }
-
-  res.status(200).json(response);
+  res.status(200).json(response)
 }
->>>>>>> origin/auto/autonomy-17186719616

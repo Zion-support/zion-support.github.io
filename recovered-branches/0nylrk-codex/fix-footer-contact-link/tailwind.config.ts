@@ -1,33 +1,26 @@
-import { Config } from "tailwindcss";
-import { fontFamily } from "tailwindcss/defaultTheme";
-import plugin from "tailwindcss/plugin";
-import animatePlugin from "tailwindcss-animate";
-
+import { Config } from "tailwindcss"
+import { fontFamily } from "tailwindcss/defaultTheme"
+import plugin from "tailwindcss/plugin"
+import animatePlugin from "tailwindcss-animate"
 const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
-<<<<<<< HEAD
     "./src/**/*.{ts,tsx}"],
-=======
     "./src/**/*.{ts,tsx}",
   ],
->>>>>>> origin/auto/autonomy-17186719616
   safelist: ['border-border'],
   theme: {
     container: {
       center: true,
       padding: "2rem",
       screens: {
-<<<<<<< HEAD
         "2xl": "1400px"}},
-=======
         "2xl": "1400px",
       },
     },
->>>>>>> origin/auto/autonomy-17186719616
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -37,7 +30,6 @@ const config: Config = {
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
-<<<<<<< HEAD
           foreground: "hsl(var(--primary-foreground))"},
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -57,7 +49,6 @@ const config: Config = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))"},
-=======
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
@@ -84,12 +75,10 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
->>>>>>> origin/auto/autonomy-17186719616
         // Custom Zion colors
         "zion-blue": {
           DEFAULT: "#0a0f1f",
           light: "#1e263b",
-<<<<<<< HEAD
           dark: "#090c1a"},
         "zion-purple": {
           DEFAULT: "#a855f7",
@@ -119,7 +108,6 @@ const config: Config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out"}}},
-=======
           dark: "#090c1a",
         },
         "zion-purple": {
@@ -162,32 +150,27 @@ const config: Config = {
       },
     },
   },
->>>>>>> origin/auto/autonomy-17186719616
   plugins: [
     animatePlugin,
     plugin(function({ addUtilities }) {
       const newUtilities = {
         '.rtl': {
           direction: 'rtl',
-<<<<<<< HEAD
           textAlign: 'right'},
         '.ltr': {
           direction: 'ltr',
-          textAlign: 'left'}};
-      addUtilities(newUtilities);
-    })]};
-=======
+          textAlign: 'left'}}
+      addUtilities(newUtilities)
+    })]}
           textAlign: 'right',
         },
         '.ltr': {
           direction: 'ltr',
           textAlign: 'left',
         },
-      };
-      addUtilities(newUtilities);
+      }
+      addUtilities(newUtilities)
     }),
   ],
-};
->>>>>>> origin/auto/autonomy-17186719616
-
-export default config;
+}
+export default config

@@ -1,342 +1,412 @@
+<<<<<<< HEAD
 'use client';
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Zap, TrendingUp, Clock, Database, Globe, 
-  Shield, CheckCircle, AlertCircle, Loader,
-  BarChart3, Brain, ArrowRight
-} from 'lucide-react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-interface PerformanceMetric {
-  id: string;
-  name: string;
-  value: number;
-  target: number;
-  unit: string;
-  status: 'excellent' | 'good' | 'warning' | 'critical';
-  trend: 'up' | 'down' | 'stable';
-}
+const AdvancedPerformanceOptimizerPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
+    }
+  ];
 
-const AdvancedPerformanceOptimizer: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizationComplete, setOptimizationComplete] = useState(false);
+  const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ];
 
-  useEffect(() => {
-    setIsVisible(true);
+=======
+<<<<<<< HEAD
+'use client';
+import React, {useEffect, useState, useCallback}from 'react';
+interface PerformanceOptimizerProps {children: React.ReactNode,}
+  enableOptimizations?: boolean;}const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
+  children,
+  enableOptimizations = true;}) => {const [isOptimized, setIsOptimized] = useState(false);
+  const [optimizationMetrics, setOptimizationMetrics] = useState({)
+    imagesOptimized: 0,
+    scriptsOptimized: 0,
+    cssOptimized: 0,
+<<<<<<< HEAD
+    totalSavings: 0;,})
+  const optimizeImages = useCallback(() => {if (typeof window === 'undefined') return;
+=======
+    totalSavings: 0
+  })
+  const optimizeImages = useCallback(() => {;
+    if (typeof window === 'undefined') return;
+>>>>>>> origin/main
+    const images = document.querySelectorAll('img');
+    let optimizedCount = 0;
+=======
+'use client'
+import React, { useEffect, useState, useCallback } from 'react'
+interface PerformanceOptimizerProps {
+    children: React.ReactNode,
+  enableOptimizations?: boolean
+  }
+const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
+}) => {
+  const [isOptimized, setIsOptimized] = useState(false)
+  const [optimizationMetrics, setOptimizationMetrics] = useState()
+  })
+  const optimizeImages = useCallback(() => {
+    if (typeof window === 'undefined') return
+    const images = document.querySelectorAll('img')
+    let optimizedCount = 0
+>>>>>>> origin/main
+    images.forEach((img) => {
+      // Add lazy loading if not already present;
+      if (!img.hasAttribute('loading')) {
+<<<<<<< HEAD
+        img.setAttribute('loading', 'lazy');
+        optimizedCount++}// Add decoding attribute for better performance;
+      if (!img.hasAttribute('decoding')) {img.setAttribute('decoding', 'async');
+        optimizedCount++}})
+    return optimizedCount;
   }, []);
-
-  const [metrics, setMetrics] = useState<PerformanceMetric[]>([
-    {
-      id: 'page-load',
-      name: 'Page Load Time',
-      value: 1.2,
-      target: 1.0,
-      unit: 's',
-      status: 'good',
-      trend: 'down'
-    },
-    {
-      id: 'lcp',
-      name: 'Largest Contentful Paint',
-      value: 0.8,
-      target: 0.6,
-      unit: 's',
-      status: 'good',
-      trend: 'down'
-    },
-    {
-      id: 'fid',
-      name: 'First Input Delay',
-      value: 45,
-      target: 30,
-      unit: 'ms',
-      status: 'warning',
-      trend: 'stable'
-    },
-    {
-      id: 'cls',
-      name: 'Cumulative Layout Shift',
-      value: 0.05,
-      target: 0.03,
-      unit: '',
-      status: 'warning',
-      trend: 'stable'
-    },
-    {
-      id: 'ttfb',
-      name: 'Time to First Byte',
-      value: 120,
-      target: 100,
-      unit: 'ms',
-      status: 'good',
-      trend: 'down'
-    },
-    {
-      id: 'bundle-size',
-      name: 'JavaScript Bundle Size',
-      value: 450,
-      target: 300,
-      unit: 'KB',
-      status: 'warning',
-      trend: 'up'
-    }
-  ]);
-
-  const handleOptimize = async () => {
-    setIsOptimizing(true);
-    
-    // Simulate optimization process
-    await new Promise(resolve => setTimeout(resolve, 3000));
-    
-    // Update metrics with optimized values
-    setMetrics(prev => prev.map(metric => ({
-      ...metric,
-      value: metric.value * 0.7, // Simulate 30% improvement
-      status: metric.value * 0.7 <= metric.target ? 'excellent' : 'good',
-      trend: 'down'
-    })));
-    
-    setIsOptimizing(false);
-    setOptimizationComplete(true);
-  };
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'excellent': return 'text-green-500 bg-green-100';
-      case 'good': return 'text-blue-500 bg-blue-100';
-      case 'warning': return 'text-yellow-500 bg-yellow-100';
-      case 'critical': return 'text-red-500 bg-red-100';
-      default: return 'text-gray-500 bg-gray-100';
-    }
-  };
-
-  const getTrendIcon = (trend: string) => {
-    switch (trend) {
-      case 'up': return <TrendingUp className="w-4 h-4 text-red-500" />;
-      case 'down': return <TrendingUp className="w-4 h-4 text-green-500 rotate-180" />;
-      case 'stable': return <BarChart3 className="w-4 h-4 text-blue-500" />;
-      default: return null;
-    }
-  };
-
-  if (!isVisible) return null;
-
+<<<<<<< HEAD
+  const optimizeScripts = useCallback(() => {if (typeof window === 'undefined') return;
+=======
+  const optimizeScripts = useCallback(() => {;
+    if (typeof window === 'undefined') return;
+>>>>>>> origin/main
+    const scripts = document.querySelectorAll('script[src]');
+    let optimizedCount = 0;
+=======
+        img.setAttribute('loading', 'lazy')
+        optimizedCount++
+  }
+      // Add decoding attribute for better performance
+      if (!img.hasAttribute('decoding')) {
+    img.setAttribute('decoding', 'async')
+        optimizedCount++
+  }
+    })
+    return optimizedCount
+  }, [])
+  const optimizeScripts = useCallback(() => {
+    if (typeof window === 'undefined') return
+    const scripts = document.querySelectorAll('script[src]')
+    let optimizedCount = 0
+>>>>>>> origin/main
+    scripts.forEach((script) => {
+      // Add defer attribute if not already present;
+      if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
+<<<<<<< HEAD
+        script.setAttribute('defer', '');
+        optimizedCount++}})
+    return optimizedCount;
+  }, []);
+<<<<<<< HEAD
+  const optimizeCSS = useCallback(() => {if (typeof window === 'undefined') return;
+=======
+  const optimizeCSS = useCallback(() => {;
+    if (typeof window === 'undefined') return;
+>>>>>>> origin/main
+    const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
+    let optimizedCount = 0;
+=======
+        script.setAttribute('defer', '')
+        optimizedCount++
+  }
+    })
+    return optimizedCount
+  }, [])
+  const optimizeCSS = useCallback(() => {
+    if (typeof window === 'undefined') return
+    const stylesheets = document.querySelectorAll('link[rel="stylesheet"]')
+    let optimizedCount = 0
+>>>>>>> origin/main
+    stylesheets.forEach((link) => {
+      // Add media attribute for non-critical CSS;
+      if (!link.hasAttribute('media') && !link.hasAttribute('data-critical')) {
+<<<<<<< HEAD
+        link.setAttribute('media', 'print');
+        link.setAttribute('onload', "this.media='all'");
+        optimizedCount++}})
+    return optimizedCount;
+  }, []);
+<<<<<<< HEAD
+  const runOptimizations = useCallback(() => {if (!enableOptimizations) return;
+=======
+  const runOptimizations = useCallback(() => {;
+    if (!enableOptimizations) return;
+>>>>>>> origin/main
+    const imagesOptimized = optimizeImages();
+    const scriptsOptimized = optimizeScripts();
+    const cssOptimized = optimizeCSS();
+    setOptimizationMetrics({)
+      imagesOptimized,
+      scriptsOptimized,
+      cssOptimized,
+      totalSavings: imagesOptimized + scriptsOptimized + cssOptimized;,})
+    setIsOptimized(true);
+  }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS]);
+  useEffect(() => {// Run optimizations after component mount;
+    const timer = setTimeout(runOptimizations, 100);
+<<<<<<< HEAD
+    return () => clearTimeout(timer)}, [runOptimizations]);
+  // Add performance monitoring;
+  useEffect(() => {if (typeof window === 'undefined') return;
+    const observer = new PerformanceObserver((list) => {
+=======
+=======
+        link.setAttribute('media', 'print')
+        link.setAttribute('onload', "this.media='all'")
+        optimizedCount++
+  }
+    })
+    return optimizedCount
+  }, [])
+  const runOptimizations = useCallback(() => {
+    if (!enableOptimizations) return
+    const imagesOptimized = optimizeImages()
+    const scriptsOptimized = optimizeScripts()
+    const cssOptimized = optimizeCSS()
+    setOptimizationMetrics()
+    })
+    setIsOptimized(true)
+  }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS])
+  useEffect(() => {
+    // Run optimizations after component mount
+    const timer = setTimeout(runOptimizations, 100)
+>>>>>>> origin/main
+    return () => clearTimeout(timer)
+  }, [runOptimizations])
+  // Add performance monitoring
+  useEffect(() => {
+<<<<<<< HEAD
+    if (typeof window === 'undefined') return;
+    const observer = new PerformanceObserver((list) => {;
+>>>>>>> origin/main
+      const entries = list.getEntries();
+=======
+    if (typeof window === 'undefined') return
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries()
+>>>>>>> origin/main
+      entries.forEach((entry) => {
+        if (entry.entryType === 'navigation') {
+          const navEntry = entry as PerformanceNavigationTiming
+          if (navEntry.loadEventEnd - navEntry.loadEventStart > 1000) {
+            console.warn('Page load time exceeded 1 second')}}
+      })
+    })
+<<<<<<< HEAD
+    observer.observe({entryTypes: ['navigation', 'paint', 'largest-contentful-paint'])})
+    return () => observer.disconnect();
+  }, []);
+<<<<<<< HEAD
+  return(<div className="performance-optimized" data-optimized={isOptimized)}>{children</div>}{process.env.NODE_ENV === 'development' && (
+=======
+>>>>>>> origin/main
   return (
-    <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <div className="inline-flex items-center bg-blue-100 rounded-full px-6 py-2 mb-6">
-            <Zap className="w-5 h-5 mr-2 text-blue-600" />
-            <span className="text-sm font-medium text-blue-800">ADVANCED PERFORMANCE OPTIMIZER</span>
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AdvancedPerformanceOptimizer | Zion Tech Group</title>
+        <meta name="description" content="Professional AdvancedPerformanceOptimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="AdvancedPerformanceOptimizer, AI solutions, IT services, Zion Tech Group, advancedperformanceoptimizer" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                AdvancedPerformanceOptimizer
+              </span>
+              <br />
+              <span className="text-white">Solutions</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our advanced advancedperformanceoptimizer solutions. 
+              Powered by cutting-edge AI technology and industry expertise.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
           </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Lightning-Fast Performance
-          </h2>
-          
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Real-time performance monitoring and optimization for maximum speed and efficiency
-          </p>
-        </motion.div>
-
-        {/* Performance Metrics */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {metrics.map((metric, index) => (
-            <motion.div
-              key={metric.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white rounded-xl p-6 shadow-lg border border-gray-200"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-gray-900">{metric.name}</h3>
-                <div className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(metric.status)}`}>
-                  {metric.status}
-                </div>
-              </div>
-              
-              <div className="flex items-center justify-between mb-2">
-                <div className="text-3xl font-bold text-gray-900">
-                  {metric.value.toFixed(metric.unit === '' ? 3 : 1)}{metric.unit}
-                </div>
-                {getTrendIcon(metric.trend)}
-              </div>
-              
-              <div className="text-sm text-gray-600">
-                Target: {metric.target}{metric.unit}
-              </div>
-              
-              {/* Progress Bar */}
-              <div className="mt-4">
-                <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div 
-                    className={`h-2 rounded-full transition-all duration-1000 ${
-                      metric.value <= metric.target ? 'bg-green-500' : 
-                      metric.value <= metric.target * 1.2 ? 'bg-yellow-500' : 'bg-red-500'
-                    }`}
-                    style={{ width: `${Math.min((metric.value / metric.target) * 100, 100)}%` }}
-                  />
-                </div>
-              </div>
-            </motion.div>
-          ))}
         </div>
+      </section>
 
-        {/* Optimization Controls */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="bg-white rounded-2xl p-8 shadow-xl border border-gray-200"
-        >
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Performance Optimization</h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Our advanced AI-powered optimizer analyzes your website's performance and applies intelligent optimizations for maximum speed and efficiency.
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our AdvancedPerformanceOptimizer?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our advancedperformanceoptimizer solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="text-center">
-              <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Brain className="w-8 h-8 text-blue-600" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Code Optimization</h4>
-              <p className="text-gray-600 text-sm">Intelligent code splitting and bundling optimization</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Database className="w-8 h-8 text-green-600" />
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Data Optimization</h4>
-              <p className="text-gray-600 text-sm">Efficient data loading and caching strategies</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-8 h-8 text-purple-600" />
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">CDN Optimization</h4>
-              <p className="text-gray-600 text-sm">Global content delivery network optimization</p>
-            </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the power of our advancedperformanceoptimizer solutions for your business.
+            </p>
           </div>
 
-          {/* Optimization Button */}
-          <div className="text-center">
-            <button
-              onClick={handleOptimize}
-              disabled={isOptimizing || optimizationComplete}
-              className={`px-8 py-4 rounded-lg font-semibold text-white transition-all duration-300 ${
-                isOptimizing 
-                  ? 'bg-yellow-500 cursor-not-allowed' 
-                  : optimizationComplete
-                  ? 'bg-green-500 cursor-not-allowed'
-                  : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'
-              }`}
-            >
-              {isOptimizing ? (
-                <div className="flex items-center">
-                  <Loader className="w-5 h-5 mr-2 animate-spin" />
-                  Optimizing Performance...
-                </div>
-              ) : optimizationComplete ? (
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 mr-2" />
-                  Optimization Complete!
-                </div>
-              ) : (
-                <div className="flex items-center">
-                  <Zap className="w-5 h-5 mr-2" />
-                  Optimize Performance
-                </div>
-              )}
-            </button>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              </div>
+            ))}
           </div>
+        ))
+      </section>
 
-          {/* Optimization Results */}
-          <AnimatePresence>
-            {optimizationComplete && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                className="mt-8 bg-green-50 rounded-lg p-6 border border-green-200"
-              >
-                <div className="flex items-center mb-4">
-                  <CheckCircle className="w-6 h-6 text-green-600 mr-2" />
-                  <h4 className="text-lg font-semibold text-green-800">Optimization Results</h4>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-green-600">30%</div>
-                    <div className="text-sm text-green-700">Faster Load Times</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-green-600">25%</div>
-                    <div className="text-sm text-green-700">Smaller Bundle Size</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-green-600">95</div>
-                    <div className="text-sm text-green-700">Performance Score</div>
-                  </div>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </motion.div>
-
-        {/* Performance Features */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.0 }}
-          className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-        >
-          <div className="text-center">
-            <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <BarChart3 className="w-8 h-8 text-blue-600" />
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8">
+              Contact our experts to discuss your advancedperformanceoptimizer needs and get a customized solution.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
+              </button>
             </div>
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Real-time Monitoring</h4>
-            <p className="text-gray-600 text-sm">Continuous performance tracking and analysis</p>
           </div>
-          
-          <div className="text-center">
-            <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <Shield className="w-8 h-8 text-green-600" />
-            </div>
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Security Optimized</h4>
-            <p className="text-gray-600 text-sm">Performance without compromising security</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <BarChart3 className="w-8 h-8 text-purple-600" />
-            </div>
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Analytics Driven</h4>
-            <p className="text-gray-600 text-sm">Data-driven optimization strategies</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <ArrowRight className="w-8 h-8 text-orange-600" />
-            </div>
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">Goal Oriented</h4>
-            <p className="text-gray-600 text-sm">Optimization aligned with business objectives</p>
-          </div>
-        </motion.div>
-      </div>
-    </section>
+        ))
+      </section>
+=======
+    <div className="performance-optimized" data-optimized={isOptimized}>
+      {children},
+    {process.env.NODE_ENV === 'development' && (
+>>>>>>> origin/main
+        <div className="optimization-debug" style={{
+=======
+    observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
+    return () => observer.disconnect()
+  }, [])
+  return (
+    </PerformanceOptimizerProps><div className="performance-optimized" data-optimized={isOptimized}>
+      {children}
+      {process.env.NODE_ENV === 'development' && (
+        </div>< className="optimization-debug" style={{$2 />
+>>>>>>> origin/main
+          position: 'fixed',
+          bottom: '10px',
+          right: '10px',
+  return ()
+          background: 'rgba(0,0,0,0.8)',
+          color: 'white',
+          padding: '10px',
+          borderRadius: '5px',
+          fontSize: '12px',
+<<<<<<< HEAD
+          zIndex: 1000;,}}>
+          <div>Images: {optimizationMetrics.imagesOptimized,</div>}</div>
+          <div>Scripts: {optimizationMetrics.scriptsOptimized,</div>}</div>
+          <div>CSS: {optimizationMetrics.cssOptimized,</div>}</div>
+          <div>Total: {optimizationMetrics.totalSavings,</div>}</div>
+        </div>
+      )}
+>>>>>>> origin/main
+    </div>
   );
 };
 
+<<<<<<< HEAD
+export default AdvancedPerformanceOptimizerPage;
+=======
+<<<<<<< HEAD
 export default AdvancedPerformanceOptimizer;
+  </PerformanceOptimizerProps>
+=======
+export default AdvancedPerformanceOptimizer
+  </PerformanceOptimizerProps>
+>>>>>>> origin/main
+=======
+          zIndex: 1000
+        }}>
+          </div><div>Images: {optimizationMetrics.imagesOptimized}</div>
+          <div>Scripts: {optimizationMetrics.scriptsOptimized}</div>
+          <div>CSS: {optimizationMetrics.cssOptimized}</div>
+          <div>Total: {optimizationMetrics.totalSavings}</div>
+        </div>
+      )}
+    </div>
+  )
+}
+export default AdvancedPerformanceOptimizer
+  </PerformanceOptimizerProps>
+          <div>Images: {optimizationMetrics.imagesOptimized}
+          <div>Scripts: {optimizationMetrics.scriptsOptimized}
+          <div>CSS: {optimizationMetrics.cssOptimized}
+          <div>Total: {optimizationMetrics.totalSavings}
+      )}
+  )
+}
+export default AdvancedPerformanceOptimizer</div></div></div></div></div>
+>>>>>>> origin/main
+>>>>>>> origin/main

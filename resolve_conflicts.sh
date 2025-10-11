@@ -1,33 +1,47 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by choosing the main branch version
-# This will resolve conflicts by keeping the main branch version (HEAD)
+# Script to resolve merge conflicts by keeping the newer version (after =======)
 
-echo "Resolving merge conflicts by keeping main branch version..."
+echo "Resolving merge conflicts in all files..."
 
-# Get list of conflicted files
-git status --porcelain | grep "^UU\|^AA\|^DD" | cut -c4- > conflicted_files.txt
+# Find all files with merge conflicts
+files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
 
-echo "Found $(wc -l < conflicted_files.txt) conflicted files"
+for file in $files; do
+    echo "Processing: $file"
+    
+    # Create a temporary file
+    temp_file="${file}.tmp"
+    
+    # Process the file to resolve conflicts
+    awk '
+    /<<<<<<< HEAD/ {
+        in_conflict = 1
+        next
+    }
+    /=======/ {
+        if (in_conflict) {
+            in_conflict = 2
+            next
+        }
+    }
+    />>>>>>> / {
+        if (in_conflict == 2) {
+            in_conflict = 0
+            next
+        }
+    }
+    {
+        if (in_conflict == 0) {
+            print
+        } else if (in_conflict == 2) {
+            print
+        }
+    }
+    ' "$file" > "$temp_file"
+    
+    # Replace original file with processed version
+    mv "$temp_file" "$file"
+done
 
-# For each conflicted file, resolve by choosing main branch version
-while IFS= read -r file; do
-    if [ -f "$file" ]; then
-        echo "Resolving conflict in: $file"
-        # Use git checkout to choose the main branch version (HEAD)
-        git checkout --ours "$file"
-        git add "$file"
-    fi
-done < conflicted_files.txt
-
-# Clean up
-rm conflicted_files.txt
-
-echo "Conflicts resolved. Committing merge..."
-git commit -m "Resolve merge conflicts by keeping main branch version
-
-- Merged origin/auto/autonomy-17186719616 into main
-- Resolved conflicts by choosing main branch version
-- All conflicts automatically resolved"
-
-echo "Merge completed successfully!"
+echo "Merge conflicts resolved in all files."

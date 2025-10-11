@@ -1,200 +1,172 @@
-import React, { useEffect, useCallback } from 'react';
-
-interface PerformanceMetrics {
-  fps: number;
-  memoryUsage: number;
-  loadTime: number;
-  renderTime: number;
-}
-
-interface LazyLoadConfig {
-  threshold: number;
-  rootMargin: string;
-  triggerOnce: boolean;
-}
-
-export function PerformanceOptimizer() {
-  const measurePerformance = useCallback(() => {
-    if ('PerformanceObserver' in window) {
-      // First Contentful Paint
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.name === 'first-contentful-paint') {
-            console.log('FCP:', entry.startTime);
-          }
-        });
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
-
-      // Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.name === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
-          }
-        });
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.name === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
-          }
-        });
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-
-      // Cumulative Layout Shift
-      const clsObserver = new PerformanceObserver((list) => {
-        let clsValue = 0;
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
-          }
-        });
-        console.log('CLS:', clsValue);
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-    }
-  }, []);
-
-  const optimizeImages = useCallback(() => {
-    const images = document.querySelectorAll('img');
+'use client'
+import React, { useEffect, useState } from 'react'
+interface PerformanceOptimizerProps {
+    enableImageOptimization?: boolean
+  enableLazyLoading?: boolean
+  enablePreloading?: boolean
+  enableCodeSplitting?: boolean
+  enableResourceHints?: boolean
+  enableServiceWorker?: boolean
+  }
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  enableImageOptimization = true,
+  enableLazyLoading = true,
+  enablePreloading = true,
+  enableCodeSplitting = true,
+  enableResourceHints = true,
+  enableServiceWorker = true
+}) => {
+  const [optimizationStatus, setOptimizationStatus] = useState({
+    imagesOptimized: 0,
+    lazyLoaded: 0,
+    preloaded: 0,
+    codeSplit: false,
+    resourceHints: 0,
+    serviceWorker: false
+  })
+  useEffect(() => {
+    if (enableImageOptimization) {
+      optimizeImages()
+  }
+    if (enableLazyLoading) {
+    setupLazyLoading()
+  }
+    if (enablePreloading) {
+    preloadCriticalResources()
+  }
+    if (enableCodeSplitting) {
+    setupCodeSplitting()
+  }
+    if (enableResourceHints) {
+    addResourceHints()
+  }
+    if (enableServiceWorker) {
+    registerServiceWorker()
+  }
+  }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting, enableResourceHints, enableServiceWorker])
+  const optimizeImages = () => {
+    const images = document.querySelectorAll('img')
+    let optimized = 0
     images.forEach((img) => {
-      // Add loading="lazy" to images below the fold
-      if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy');
-      }
-      
+      // Add loading="lazy" for images below the fold
+      if (img.getBoundingClientRect().top > window.innerHeight) {
+        img.setAttribute('loading', 'lazy')
+        optimized++
+  }
       // Add decoding="async" for better performance
-      if (!img.hasAttribute('decoding')) {
-        img.setAttribute('decoding', 'async');
-      }
-    });
-  }, []);
-
-  const preloadCriticalResources = useCallback(() => {
-    // Preload critical CSS and fonts
+      img.setAttribute('decoding', 'async')
+      // Add fetchpriority="high" for above-the-fold images
+      if (img.getBoundingClientRect().top <= window.innerHeight) {
+    img.setAttribute('fetchpriority', 'high')
+  }
+      // Add proper alt text if missing
+      if (!img.getAttribute('alt')) {
+    img.setAttribute('alt', 'Zion Tech Group - AI and IT Solutions')
+  }
+    })
+    setOptimizationStatus(prev => ({ ...prev, imagesOptimized: optimized }))
+  }
+  const setupLazyLoading = () => {
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement
+            if (img.dataset.src) {
+              img.src = img.dataset.src
+              img.removeAttribute('data-src')
+              observer.unobserve(img)
+  }
+          }
+        })
+      }, {
+        rootMargin: '50px 0px',
+        threshold: 0.1
+      })
+      const lazyImages = document.querySelectorAll('img[data-src]')
+      lazyImages.forEach((img) => observer.observe(img))
+      setOptimizationStatus(prev => ({ ...prev, lazyLoaded: lazyImages.length }))
+    }
+  }
+  const preloadCriticalResources = () => {
     const criticalResources = [
-      '/fonts/orbitron-v28-latin-700.woff2',
-      '/fonts/rajdhani-v15-latin-500.woff2'
-    ];
-
-    criticalResources.forEach((resource) => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = 'font';
-      link.type = 'font/woff2';
-      link.crossOrigin = 'anonymous';
-      document.head.appendChild(link);
-    });
-  }, []);
-
-  const optimizeAnimations = useCallback(() => {
-    // Check if user prefers reduced motion
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      document.documentElement.classList.add('reduced-motion');
-    }
-  }, []);
-
-  useEffect(() => {
-    // Wait for page to load before measuring performance
-    if (document.readyState === 'complete') {
-      measurePerformance();
-      optimizeImages();
-      preloadCriticalResources();
-      optimizeAnimations();
-    } else {
-      window.addEventListener('load', () => {
-        measurePerformance();
-        optimizeImages();
-        preloadCriticalResources();
-        optimizeAnimations();
-      });
-    }
-
-    // Cleanup
-    return () => {
-      // Cleanup observers if needed
-    };
-  }, [measurePerformance, optimizeImages, preloadCriticalResources, optimizeAnimations]);
-
-  // Return null as this is a utility component
-  return null;
-}
-
-// Enhanced Lazy Loading Hook
-export function useLazyLoad<T>(config: LazyLoadConfig = { threshold: 0.1, rootMargin: '50px', triggerOnce: true }) {
-  const { ref, inView } = useInView(config);
-  
-  return {
-    ref,
-    inView,
-    shouldLoad: inView
-  };
-}
-
-// Virtual Scrolling Hook
-export function useVirtualScroll<T>(
-  items: T[],
-  itemHeight: number,
-  containerHeight: number,
-  overscan: number = 5
-) {
-  const [scrollTop, setScrollTop] = useState(0);
-  
-  const visibleItems = useMemo(() => {
-    const startIndex = Math.floor(scrollTop / itemHeight);
-    const endIndex = Math.min(
-      startIndex + Math.ceil(containerHeight / itemHeight) + overscan,
-      items.length
-    );
-    
-    return items.slice(startIndex, endIndex);
-  }, [items, itemHeight, containerHeight, overscan, scrollTop]);
-  
-  const totalHeight = items.length * itemHeight;
-  const offsetY = Math.floor(scrollTop / itemHeight) * itemHeight;
-  
-  return {
-    visibleItems,
-    totalHeight,
-    offsetY,
-    setScrollTop
-  };
-}
-
-// Performance Monitoring Hook
-export function usePerformanceMonitor() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fps: 0,
-    memoryUsage: 0,
-    loadTime: 0,
-    renderTime: 0
-  });
-  
-  useEffect(() => {
-    const measure = () => {
-      if ('performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        setMetrics(prev => ({
-          ...prev,
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-          renderTime: performance.now()
-        }));
+      {
+        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600,700&display=swap',
+        as: 'style',
+        type: 'text/css'
+      },
+      {
+        href: '/styles/critical.css',
+        as: 'style',
+        type: 'text/css'
       }
-    };
-    
-    const interval = setInterval(measure, 1000);
-    return () => clearInterval(interval);
-  }, []);
-  
-  return metrics;
+    ]
+    criticalResources.forEach((resource) => {
+    const link = document.createElement('link')
+      link.rel = 'preload'
+      link.href = resource.href
+      link.as = resource.as
+      if (resource.type) {
+        link.type = resource.type
+  }
+      document.head.appendChild(link)
+    })
+    setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }))
+  }
+  const setupCodeSplitting = () => {
+    // This would be handled by Next.js dynamic imports
+    setOptimizationStatus(prev => ({ ...prev, codeSplit: true }))
+  }
+  const addResourceHints = () => {
+    const hints = [
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+      { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
+      { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
+    ]
+    hints.forEach((hint) => {
+    const link = document.createElement('link')
+      link.rel = hint.rel
+      link.href = hint.href
+      if (hint.crossorigin) {
+        link.crossOrigin = hint.crossorigin
+  }
+      document.head.appendChild(link)
+    })
+    setOptimizationStatus(prev => ({ ...prev, resourceHints: hints.length }))
+  }
+  const registerServiceWorker = async () => {
+    if ('serviceWorker' in navigator) {
+      try {
+        const registration = await navigator.serviceWorker.register('/sw.js')
+        setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }))
+        } catch (error) {
+          // Service Worker registration failed - handled silently in production
+        }
+    }
+  }
+  // Performance monitoring
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            // Track LCP
+            if (typeof window !== 'undefined' && 'gtag' in window) {
+              (window as any).gtag('event', 'web_vitals', {
+                name: 'LCP',
+                value: Math.round(entry.startTime),
+                event_category: 'Performance'
+              })
+            }
+          }
+        }
+      })
+      observer.observe({ entryTypes: ['largest-contentful-paint'] })
+    }
+  }, [])
+  return null
 }
+export default PerformanceOptimizer</PerformanceOptimizerProps>

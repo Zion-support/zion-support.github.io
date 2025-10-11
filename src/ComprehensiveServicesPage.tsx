@@ -1,19 +1,17 @@
-=======
-import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES } from '@/data/comprehensiveServices';
-=======
-import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES, ComprehensiveService } from '@/data/comprehensiveServices';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import React, { useState } from 'react';
-import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES, EXPANDED_SERVICE_SUBCATEGORIES } from '@/data/expandedServices';
-import { ProductListing } from '@/types/listings';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES } from '@/data/comprehensiveServices'
+import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES, ComprehensiveService } from '@/data/comprehensiveServices'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Badge } from '@/components/ui/badge'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import React, { useState } from 'react'
+import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES, EXPANDED_SERVICE_SUBCATEGORIES } from '@/data/expandedServices'
+import { ProductListing } from '@/types/listings'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Input } from '@/components/ui/input'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { 
   Search, 
   Filter, 
@@ -38,29 +36,25 @@ import {
   Cloud,
   Brain,
   Server
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
-import { SEO } from '@/components/SEO';
-
+} from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Badge } from '@/components/ui/badge'
+import { SEO } from '@/components/SEO'
       const matchesPrice = priceRange === 'all' || 
         (priceRange === 'low' && parseInt(service.price.replace(/[^0-9]/g, '')) < 5000) ||
         (priceRange === 'medium' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 5000 && parseInt(service.price.replace(/[^0-9]/g, '')) < 15000) ||
-        (priceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 15000);
-      
-      return matchesSearch && matchesCategory && matchesPrice;
-    });
-  }, [searchTerm, selectedCategory, selectedSubcategory]);
-
+        (priceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 15000)
+      return matchesSearch && matchesCategory && matchesPrice
+    })
+  }, [searchTerm, selectedCategory, selectedSubcategory])
   const getSubcategoriesForCategory = (category: string) => {
-    if (category === 'all') return [];
-    return serviceSubcategories[category as keyof typeof serviceSubcategories] || [];
-  };
-
+    if (category === 'all') return []
+    return serviceSubcategories[category as keyof typeof serviceSubcategories] || []
+  }
   return (
-import React, { useState } from 'react';
-import { SEO } from '../components/SEO';
+import React, { useState } from 'react'
+import { SEO } from '../components/SEO'
 import { 
   Brain, 
   Shield, 
@@ -88,18 +82,15 @@ import {
   Server,
   Cpu,
   Monitor
-} from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES, INNOVATIVE_SAAS_CATEGORIES } from '../data/innovativeMicroSaasServices';
-import { SPECIALIZED_IT_SERVICES, SPECIALIZED_IT_CATEGORIES } from '../data/specializedITServices';
-
+} from 'lucide-react'
+import { INNOVATIVE_MICRO_SAAS_SERVICES, INNOVATIVE_SAAS_CATEGORIES } from '../data/innovativeMicroSaasServices'
+import { SPECIALIZED_IT_SERVICES, SPECIALIZED_IT_CATEGORIES } from '../data/specializedITServices'
 export default function ComprehensiveServicesPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [priceRange, setPriceRange] = useState('all');
-
-  const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES, ...SPECIALIZED_IT_SERVICES];
-  const allCategories = [...INNOVATIVE_SAAS_CATEGORIES, ...SPECIALIZED_IT_CATEGORIES];
-
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [searchQuery, setSearchQuery] = useState('')
+  const [priceRange, setPriceRange] = useState('all')
+  const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES, ...SPECIALIZED_IT_SERVICES]
+  const allCategories = [...INNOVATIVE_SAAS_CATEGORIES, ...SPECIALIZED_IT_CATEGORIES]
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: any } = {
       'AI & Analytics': Brain,
@@ -111,26 +102,22 @@ export default function ComprehensiveServicesPage() {
       'API & Integration': Code,
       'Data & Analytics': Database,
       'Network Security': Network
-    };
-    return iconMap[category] || Globe;
-  };
-
+    }
+    return iconMap[category] || Globe
+  }
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || 
-      service.category.toLowerCase().includes(selectedCategory.toLowerCase());
+      service.category.toLowerCase().includes(selectedCategory.toLowerCase())
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase());
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase())
     const matchesPrice = priceRange === 'all' || 
       (priceRange === 'budget' && service.price.starter <= 200) ||
       (priceRange === 'mid-range' && service.price.starter > 200 && service.price.starter <= 500) ||
-      (priceRange === 'premium' && service.price.starter > 500);
-    
-    return matchesCategory && matchesSearch && matchesPrice;
-  });
-
+      (priceRange === 'premium' && service.price.starter > 500)
+    return matchesCategory && matchesSearch && matchesPrice
+  })
   const ServiceCard = ({ service }: { service: any }) => {
-    const CategoryIcon = getCategoryIcon(service.category);
-    
+    const CategoryIcon = getCategoryIcon(service.category)
     return (
       <div className="bg-white rounded-xl shadow-lg p-6 border border-zion-blue-light hover:shadow-xl transition-all duration-300 group">
         <div className="flex items-start justify-between mb-4">
@@ -207,7 +194,7 @@ export default function ComprehensiveServicesPage() {
         </div>
 
         <div className="flex items-center justify-between">
-          <a 
+          <$2 />
             href={service.website}
             target="_blank"
             rel="noopener noreferrer"
@@ -217,13 +204,12 @@ export default function ComprehensiveServicesPage() {
           </a>
           
           <div className="flex gap-2">
-            <a 
+            <$2 />
               href={`mailto:${service.contactInfo.email}`}
               className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-3 py-1 rounded text-xs font-medium transition-colors"
             >
               Get Quote
             </a>
-=======
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
       {/* Hero Section */}
       <div className="pt-24 pb-16">
@@ -272,12 +258,11 @@ export default function ComprehensiveServicesPage() {
               <option value="medium">$5,000 - $15,000</option>
               <option value="high">$15,000+</option>
             </select>
-=======
-import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { Link } from "react-router-dom"
 import { 
   Brain, 
   Cloud, 
@@ -296,12 +281,10 @@ import {
   Star,
   Clock,
   DollarSign
-} from "lucide-react";
-import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES } from "@/data/comprehensiveServices";
-import { SEO } from "@/components/SEO";
-
+} from "lucide-react"
+import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES } from "@/data/comprehensiveServices"
+import { SEO } from "@/components/SEO"
 export default function ComprehensiveServicesPage() {
-=======
   DollarSign, 
   CheckCircle, 
   TrendingUp, 
@@ -314,14 +297,13 @@ export default function ComprehensiveServicesPage() {
   Award,
   Users,
   ArrowUpRight
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-
+} from 'lucide-react'
+import { SEO } from '@/components/SEO'
 interface FilterState {
-  search: string;
-  category: string;
-  pricingModel: string;
-  priceRange: string;
+  search: string
+  category: string
+  pricingModel: string
+  priceRange: string
 }
 
 export default function ComprehensiveServicesPage() {
@@ -330,75 +312,68 @@ export default function ComprehensiveServicesPage() {
     category: '',
     pricingModel: '',
     priceRange: ''
-  });
-
+  })
   const filteredServices = useMemo(() => {
     return COMPREHENSIVE_SERVICES.filter(service => {
       const matchesSearch = service.title.toLowerCase().includes(filters.search.toLowerCase()) ||
                            service.description.toLowerCase().includes(filters.search.toLowerCase()) ||
-                           service.tags.some(tag => tag.toLowerCase().includes(filters.search.toLowerCase()));
-      
-      const matchesCategory = !filters.category || service.category === filters.category;
-      const matchesPricingModel = !filters.pricingModel || service.pricingModel === filters.pricingModel;
-      
-      let matchesPriceRange = true;
+                           service.tags.some(tag => tag.toLowerCase().includes(filters.search.toLowerCase()))
+      const matchesCategory = !filters.category || service.category === filters.category
+      const matchesPricingModel = !filters.pricingModel || service.pricingModel === filters.pricingModel
+      let matchesPriceRange = true
       if (filters.priceRange) {
-        const [min, max] = filters.priceRange.split('-').map(Number);
+        const [min, max] = filters.priceRange.split('-').map(Number)
         if (max) {
-          matchesPriceRange = service.price >= min && service.price <= max;
+          matchesPriceRange = service.price >= min && service.price <= max
         } else {
-          matchesPriceRange = service.price >= min;
+          matchesPriceRange = service.price >= min
         }
       }
       
-      return matchesSearch && matchesCategory && matchesPricingModel && matchesPriceRange;
-    });
-  }, [filters]);
-
-  const featuredServices = COMPREHENSIVE_SERVICES.filter(service => service.featured);
-  const categories = SERVICE_CATEGORIES;
-
+      return matchesSearch && matchesCategory && matchesPricingModel && matchesPriceRange
+    })
+  }, [filters])
+  const featuredServices = COMPREHENSIVE_SERVICES.filter(service => service.featured)
+  const categories = SERVICE_CATEGORIES
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI & Machine Learning':
-        return <Zap className="h-5 w-5" />;
+        return <Zap className="h-5 w-5" />
       case 'Cloud & DevOps':
-        return <Globe className="h-5 w-5" />;
+        return <Globe className="h-5 w-5" />
       case 'Cybersecurity':
-        return <Shield className="h-5 w-5" />;
+        return <Shield className="h-5 w-5" />
       case 'Data & Analytics':
-        return <TrendingUp className="h-5 w-5" />;
+        return <TrendingUp className="h-5 w-5" />
       case 'Web & Mobile Development':
-        return <ArrowUpRight className="h-5 w-5" />;
+        return <ArrowUpRight className="h-5 w-5" />
       case 'Blockchain & Web3':
-        return <Award className="h-5 w-5" />;
+        return <Award className="h-5 w-5" />
       case 'IoT & Hardware':
-        return <Users className="h-5 w-5" />;
+        return <Users className="h-5 w-5" />
       case 'Digital Transformation':
-        return <TrendingUp className="h-5 w-5" />;
+        return <TrendingUp className="h-5 w-5" />
       default:
-        return <ArrowUpRight className="h-5 w-5" />;
+        return <ArrowUpRight className="h-5 w-5" />
     }
-  };
-
+  }
   const getPricingModelLabel = (model: string) => {
     switch (model) {
       case 'one-time':
-        return 'One-time';
+        return 'One-time'
       case 'subscription':
-        return 'Subscription';
+        return 'Subscription'
       case 'usage-based':
-        return 'Usage-based';
+        return 'Usage-based'
       case 'project-based':
-        return 'Project-based';
+        return 'Project-based'
       default:
-        return model;
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+        return model
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 import { 
   Brain, 
   Shield, 
@@ -425,58 +400,55 @@ import {
   Wallet,
   ArrowRight,
   CheckCircle
-} from "lucide-react";
-import { ALL_EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES } from "@/data/expandedServices";
-
+} from "lucide-react"
+import { ALL_EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES } from "@/data/expandedServices"
 const ComprehensiveServicesPage = () => {
   const getCategoryIcon = (category: string) => {
     switch (category.toLowerCase()) {
       case 'ai automation':
       case 'ai analytics':
       case 'ai development':
-        return <Brain className="h-6 w-6 text-blue-500" />;
+        return <Brain className="h-6 w-6 text-blue-500" />
       case 'cybersecurity':
-        return <Shield className="h-6 w-6 text-red-500" />;
+        return <Shield className="h-6 w-6 text-red-500" />
       case 'cloud services':
       case 'devops':
-        return <Cloud className="h-6 w-6 text-green-500" />;
+        return <Cloud className="h-6 w-6 text-green-500" />
       case 'data analytics':
-        return <Database className="h-6 w-6 text-purple-500" />;
+        return <Database className="h-6 w-6 text-purple-500" />
       case 'digital transformation':
-        return <TrendingUp className="h-6 w-6 text-orange-500" />;
+        return <TrendingUp className="h-6 w-6 text-orange-500" />
       case 'iot & edge computing':
-        return <Monitor className="h-6 w-6 text-cyan-500" />;
+        return <Monitor className="h-6 w-6 text-cyan-500" />
       case 'blockchain & web3':
-        return <Wallet className="h-6 w-6 text-yellow-500" />;
+        return <Wallet className="h-6 w-6 text-yellow-500" />
       default:
-        return <Code className="h-6 w-6 text-gray-500" />;
+        return <Code className="h-6 w-6 text-gray-500" />
     }
-  };
-
+  }
   const getCategoryColor = (category: string) => {
     switch (category.toLowerCase()) {
       case 'ai automation':
       case 'ai analytics':
       case 'ai development':
-        return 'bg-blue-100 text-blue-800 border-blue-200';
+        return 'bg-blue-100 text-blue-800 border-blue-200'
       case 'cybersecurity':
-        return 'bg-red-100 text-red-800 border-red-200';
+        return 'bg-red-100 text-red-800 border-red-200'
       case 'cloud services':
       case 'devops':
-        return 'bg-green-100 text-green-800 border-green-200';
+        return 'bg-green-100 text-green-800 border-green-200'
       case 'data analytics':
-        return 'bg-purple-100 text-purple-800 border-purple-200';
+        return 'bg-purple-100 text-purple-800 border-purple-200'
       case 'digital transformation':
-        return 'bg-orange-100 text-orange-800 border-orange-200';
+        return 'bg-orange-100 text-orange-800 border-orange-200'
       case 'iot & edge computing':
-        return 'bg-cyan-100 text-cyan-800 border-cyan-200';
+        return 'bg-cyan-100 text-cyan-800 border-cyan-200'
       case 'blockchain & web3':
-        return 'bg-yellow-100 text-yellow-800 border-yellow-200';
+        return 'bg-yellow-100 text-yellow-800 border-yellow-200'
       default:
-        return 'bg-gray-100 text-gray-800 border-gray-200';
+        return 'bg-gray-100 text-gray-800 border-gray-200'
     }
-  };
-
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
@@ -522,7 +494,6 @@ const ComprehensiveServicesPage = () => {
               <MapPin className="h-5 w-5" />
               <span className="font-medium">364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
-=======
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark py-20 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -541,7 +512,6 @@ const ComprehensiveServicesPage = () => {
               <Mail className="h-5 w-5 mr-2" />
               kleber@ziontechgroup.com
             </Button>
-=======
       {/* Contact Information Banner */}
       <div className="bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 py-6">
@@ -562,7 +532,7 @@ const ComprehensiveServicesPage = () => {
             </div>
             <div className="flex items-center gap-2">
               <Globe className="h-4 w-4 text-zion-purple" />
-              <a 
+              <$2 />
                 href="https://ziontechgroup.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -637,10 +607,9 @@ const ComprehensiveServicesPage = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {EXPANDED_SERVICE_CATEGORIES.map((category) => {
-              let linkPath = `/services/${category.value}`;
-              if (category.value === 'ai-ml') linkPath = '/ai-services';
-              if (category.value === 'cybersecurity') linkPath = '/cybersecurity-services';
-              
+              let linkPath = `/services/${category.value}`
+              if (category.value === 'ai-ml') linkPath = '/ai-services'
+              if (category.value === 'cybersecurity') linkPath = '/cybersecurity-services'
               return (
                 <Card key={category.value} className="hover:shadow-lg transition-shadow duration-300">
                   <CardHeader className="text-center">
@@ -661,7 +630,7 @@ const ComprehensiveServicesPage = () => {
                     </Link>
                   </CardContent>
                 </Card>
-              );
+              )
             })}
           </div>
         </div>
@@ -689,8 +658,7 @@ const ComprehensiveServicesPage = () => {
                     {service.description}
                   </CardDescription>
                 </CardHeader>
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-=======
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all')
   Globe, 
   Shield, 
   Cloud, 
@@ -708,49 +676,44 @@ const ComprehensiveServicesPage = () => {
   Mail,
   MapPin,
   ExternalLink
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-
+} from 'lucide-react'
+import { SEO } from '@/components/SEO'
 export default function ComprehensiveServicesPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('featured');
-
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [sortBy, setSortBy] = useState('featured')
   const filteredServices = COMPREHENSIVE_SERVICES.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
-  const [selectedPricingTier, setSelectedPricingTier] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('rating');
-
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+  const [selectedPricingTier, setSelectedPricingTier] = useState<string>('all')
+  const [sortBy, setSortBy] = useState<string>('rating')
   const filteredServices = useMemo(() => {
-    let filtered = COMPREHENSIVE_SERVICES;
-
+    let filtered = COMPREHENSIVE_SERVICES
     // Filter by search term
     if (searchTerm) {
       filtered = filtered.filter(service =>
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
+      )
     }
 
     // Filter by category
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
+      filtered = filtered.filter(service => service.category === selectedCategory)
     }
 
     // Filter by pricing tier
     if (selectedPricingTier !== 'all') {
-      const tier = SERVICE_PRICING_TIERS[selectedPricingTier as keyof typeof SERVICE_PRICING_TIERS];
+      const tier = SERVICE_PRICING_TIERS[selectedPricingTier as keyof typeof SERVICE_PRICING_TIERS]
       if (tier) {
         filtered = filtered.filter(service => {
-          const discountedPrice = service.price * (1 - tier.discount);
-          if (selectedPricingTier === 'startup') return discountedPrice <= 5000;
-          if (selectedPricingTier === 'smb') return discountedPrice <= 15000;
+          const discountedPrice = service.price * (1 - tier.discount)
+          if (selectedPricingTier === 'startup') return discountedPrice <= 5000
+          if (selectedPricingTier === 'smb') return discountedPrice <= 15000
           return true; // enterprise
-        });
+        })
       }
     }
 
@@ -758,36 +721,32 @@ export default function ComprehensiveServicesPage() {
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
-          return (a.price || 0) - (b.price || 0);
+          return (a.price || 0) - (b.price || 0)
         case 'rating':
-          return (b.rating || 0) - (a.rating || 0);
+          return (b.rating || 0) - (a.rating || 0)
         case 'aiScore':
-          return (b.aiScore || 0) - (a.aiScore || 0);
+          return (b.aiScore || 0) - (a.aiScore || 0)
         case 'newest':
-          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
         default:
-          return 0;
+          return 0
       }
-    });
-
-    return filtered;
-  }, [searchTerm, selectedCategory, selectedPricingTier, sortBy]);
-
+    })
+    return filtered
+  }, [searchTerm, selectedCategory, selectedPricingTier, sortBy])
   const getDiscountedPrice = (price: number, tier: string) => {
-    const pricingTier = SERVICE_PRICING_TIERS[tier as keyof typeof SERVICE_PRICING_TIERS];
+    const pricingTier = SERVICE_PRICING_TIERS[tier as keyof typeof SERVICE_PRICING_TIERS]
     if (pricingTier) {
-      return price * (1 - pricingTier.discount);
+      return price * (1 - pricingTier.discount)
     }
-    return price;
-  };
-
+    return price
+  }
   const formatPrice = (price: number) => {
     if (price >= 1000) {
-      return `$${(price / 1000).toFixed(1)}k`;
+      return `$${(price / 1000).toFixed(1)}k`
     }
-    return `$${price}`;
-  };
-
+    return `$${price}`
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       <SEO 
@@ -832,7 +791,6 @@ export default function ComprehensiveServicesPage() {
             <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue">
               <a href={`tel:${CONTACT_INFO.mobile}`}>Call Now: {CONTACT_INFO.mobile}</a>
             </Button>
-=======
 const categoryIcons = {
   "AI & Machine Learning": <Brain className="h-6 w-6" />,
   "Cloud & DevOps": <Cloud className="h-6 w-6" />,
@@ -842,51 +800,42 @@ const categoryIcons = {
   "Digital Transformation": <TrendingUp className="h-6 w-6" />,
   "Blockchain & Web3": <Code className="h-6 w-6" />,
   "IoT & Edge Computing": <Server className="h-6 w-6" />
-};
-
+}
 const pricingModelColors = {
   "one-time": "bg-blue-100 text-blue-800",
   "monthly": "bg-green-100 text-green-800",
   "hourly": "bg-yellow-100 text-yellow-800",
   "project-based": "bg-purple-100 text-purple-800"
-};
-
+}
 const supportLevelColors = {
   "basic": "bg-gray-100 text-gray-800",
   "premium": "bg-blue-100 text-blue-800",
   "enterprise": "bg-purple-100 text-purple-800"
-};
-
+}
 export default function ComprehensiveServicesPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all');
-  const [priceRange, setPriceRange] = useState<string>('all');
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState<string>('all')
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all')
+  const [priceRange, setPriceRange] = useState<string>('all')
   // Filter services based on search and filters
   const filteredServices = EXPANDED_SERVICES.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
-    const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory;
-    const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
-    
-    let matchesPrice = true;
-    if (priceRange === 'under-5k') matchesPrice = (service.price || 0) < 5000;
-    else if (priceRange === '5k-15k') matchesPrice = (service.price || 0) >= 5000 && (service.price || 0) < 15000;
-    else if (priceRange === '15k-30k') matchesPrice = (service.price || 0) >= 15000 && (service.price || 0) < 30000;
-    else if (priceRange === 'over-30k') matchesPrice = (service.price || 0) >= 30000;
-
-    return matchesSearch && matchesCategory && matchesSubcategory && matchesPrice;
-  });
-
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+    const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory
+    const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory
+    let matchesPrice = true
+    if (priceRange === 'under-5k') matchesPrice = (service.price || 0) < 5000
+    else if (priceRange === '5k-15k') matchesPrice = (service.price || 0) >= 5000 && (service.price || 0) < 15000
+    else if (priceRange === '15k-30k') matchesPrice = (service.price || 0) >= 15000 && (service.price || 0) < 30000
+    else if (priceRange === 'over-30k') matchesPrice = (service.price || 0) >= 30000
+    return matchesSearch && matchesCategory && matchesSubcategory && matchesPrice
+  })
   const getSubcategories = () => {
-    if (selectedCategory === 'all') return [];
-    const categoryKey = selectedCategory as keyof typeof EXPANDED_SERVICE_SUBCATEGORIES;
-    return EXPANDED_SERVICE_SUBCATEGORIES[categoryKey] || [];
-  };
-
+    if (selectedCategory === 'all') return []
+    const categoryKey = selectedCategory as keyof typeof EXPANDED_SERVICE_SUBCATEGORIES
+    return EXPANDED_SERVICE_SUBCATEGORIES[categoryKey] || []
+  }
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
       'AI Development': <Zap className="w-5 h-5" />,
@@ -901,19 +850,16 @@ export default function ComprehensiveServicesPage() {
       'Hardware': <Cpu className="w-5 h-5" />,
       'Business Automation': <BarChart3 className="w-5 h-5" />,
       'Business Solutions': <BarChart3 className="w-5 h-5" />
-    };
-    return iconMap[category] || <Code className="w-5 h-5" />;
-  };
-
+    }
+    return iconMap[category] || <Code className="w-5 h-5" />
+  }
   const formatPrice = (price: number | null) => {
-    if (!price) return 'Contact for pricing';
-    return `$${price.toLocaleString()}`;
-  };
-
+    if (!price) return 'Contact for pricing'
+    return `$${price.toLocaleString()}`
+  }
   const getDeliveryTime = (availability: string) => {
-    return availability || 'Contact for timeline';
-  };
-
+    return availability || 'Contact for timeline'
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
       <SEO 
@@ -1123,7 +1069,6 @@ export default function ComprehensiveServicesPage() {
                   </div>
                 </Card>
               ))}
-=======
       {/* Services Grid */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -1152,18 +1097,17 @@ export default function ComprehensiveServicesPage() {
               <p className="text-zion-slate mb-6">
                 Try adjusting your filters or search terms to find the services you need.
               </p>
-              <button
+              <$2 />
                 onClick={() => {
-                  setSelectedCategory('all');
-                  setSearchQuery('');
-                  setPriceRange('all');
+                  setSelectedCategory('all')
+                  setSearchQuery('')
+                  setPriceRange('all')
                 }}
                 className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-6 py-2 rounded-lg font-medium transition-colors"
               >
                 Clear Filters
               </button>
             </div>
-=======
               {/* Pricing Tier Filter */}
               <select
                 value={selectedPricingTier}
@@ -1237,7 +1181,6 @@ export default function ComprehensiveServicesPage() {
                   <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.slice(0, 3).map((tag, index) => (
                       <Badge key={index} variant="secondary" className="text-xs">
-=======
                 <CardContent className="pt-0">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-2 text-zion-cyan">
@@ -1247,7 +1190,6 @@ export default function ComprehensiveServicesPage() {
                     <div className="flex items-center gap-2 text-zion-slate-light">
                       <Clock className="h-4 w-4" />
                       <span className="text-sm">{service.availability}</span>
-=======
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -1331,10 +1273,10 @@ export default function ComprehensiveServicesPage() {
               <p className="text-zion-slate-light text-lg">No services match your current filters.</p>
               <Button 
                 onClick={() => {
-                  setSearchQuery('');
-                  setSelectedCategory('all');
-                  setSelectedSubcategory('all');
-                  setPriceRange('all');
+                  setSearchQuery('')
+                  setSelectedCategory('all')
+                  setSelectedSubcategory('all')
+                  setPriceRange('all')
                 }}
                 className="mt-4"
               >
@@ -1389,9 +1331,9 @@ export default function ComprehensiveServicesPage() {
                 Try adjusting your search criteria or browse all our services
               </p>
               <Button onClick={() => {
-                setSearchTerm('');
-                setSelectedCategory('all');
-                setSelectedPricingTier('all');
+                setSearchTerm('')
+                setSelectedCategory('all')
+                setSelectedPricingTier('all')
               }}>
                 Clear Filters
               </Button>
@@ -1415,7 +1357,6 @@ export default function ComprehensiveServicesPage() {
               <Mail className="mr-2 h-5 w-5" />
               Email: kleber@ziontechgroup.com
             </Button>
-=======
       {/* Pricing Overview */}
       <section className="py-20 bg-zion-blue-light">
         <div className="container mx-auto px-4">
@@ -1462,7 +1403,7 @@ export default function ComprehensiveServicesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {Object.entries(SERVICE_PRICING_TIERS).map(([key, tier]) => (
-              <div key={key} className={`p-8 rounded-lg border-2 ${
+              < key={key} className={`p-8 rounded-lg border-2 ${$2 />
                 key === 'smb' 
                   ? 'border-zion-blue bg-zion-blue/5 scale-105' 
                   : 'border-zion-slate-light'
@@ -1542,7 +1483,6 @@ export default function ComprehensiveServicesPage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Flexible Scheduling</h3>
               <p className="text-zion-slate-light">Work around your schedule with minimal disruption</p>
-=======
                   
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
@@ -1553,7 +1493,6 @@ export default function ComprehensiveServicesPage() {
                     </div>
                     <Link to={`/services?service=${service.id}`}>
                       <Button size="sm" className="bg-zion-purple hover:bg-zion-purple-dark text-white">
-=======
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -1603,14 +1542,12 @@ export default function ComprehensiveServicesPage() {
                     <div>{service.contactInfo.email}</div>
                   </div>
                 </CardFooter>
-=======
               </Card>
             ))}
           </div>
         </div>
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-zion-blue to-zion-purple text-white">
-=======
       </div>
 
       {/* Pricing Information */}
@@ -1807,7 +1744,6 @@ export default function ComprehensiveServicesPage() {
         </div>
       </div>
     </div>
-  );
-};
-
-export default ComprehensiveServicesPage;
+  )
+}
+export default ComprehensiveServicesPage</$1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></Link></section></section></section></section></section>

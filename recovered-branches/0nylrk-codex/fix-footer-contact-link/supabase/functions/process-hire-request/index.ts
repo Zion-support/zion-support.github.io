@@ -1,119 +1,93 @@
-
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
-import { Configuration, OpenAIApi } from "https://esm.sh/openai@3.2.1";
-
+import { serve } from "https://deno.land/std@0.190.0/http/server.ts"
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
+import { Configuration, OpenAIApi } from "https://esm.sh/openai@3.2.1"
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-<<<<<<< HEAD
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
-=======
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-};
->>>>>>> origin/auto/autonomy-17186719616
-
+}
 interface HireRequest {
   talent: {
-    id: string;
-    full_name: string;
-    professional_title: string;
-    email?: string;
-  };
+    id: string
+    full_name: string
+    professional_title: string
+    email?: string
+  }
   requester: {
-    name: string;
-    email: string;
-    id?: string;
-  };
+    name: string
+    email: string
+    id?: string
+  }
   project: {
-    overview: string;
-    timeline: string;
-    budgetMin: number;
-    budgetMax: number;
-  };
+    overview: string
+    timeline: string
+    budgetMin: number
+    budgetMax: number
+  }
 }
-
 interface EnhancedContent {
-  summary: string;
-  projectType: string;
+  summary: string
+  projectType: string
 }
-
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders });
+    return new Response(null, { headers: corsHeaders })
   }
-  
   try {
     const supabase = createClient(
       Deno.env.get("SUPABASE_URL") ?? "",
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
-    );
-    
-    const requestData: HireRequest = await req.json();
-    const { talent, requester, project } = requestData;
-    
+    )
+    const requestData: HireRequest = await req.json()
+    const { talent, requester, project } = requestData
     // Format budget for display
-    const budgetDisplay = `$${project.budgetMin.toLocaleString()} - $${project.budgetMax.toLocaleString()}`;
-    
+    const budgetDisplay = `$${project.budgetMin.toLocaleString()} - $${project.budgetMax.toLocaleString()}`
     // 1. Optional: Enhance content with AI
-    let enhancedContent: EnhancedContent | null = null;
-    
-    const openAiKey = Deno.env.get("OPENAI_API_KEY");
+    let enhancedContent: EnhancedContent | null = null
+    const openAiKey = Deno.env.get("OPENAI_API_KEY")
     if (openAiKey) {
       try {
         const configuration = new Configuration({
-<<<<<<< HEAD
-          apiKey: openAiKey});
-=======
+          apiKey: openAiKey})
           apiKey: openAiKey,
-        });
->>>>>>> origin/auto/autonomy-17186719616
-        const openai = new OpenAIApi(configuration);
-        
+        })
+        const openai = new OpenAIApi(configuration)
         const prompt = `
           Project Overview: "${project.overview}"
-          
           Please provide:
           1. A brief summary of this project (max 100 characters)
           2. Classify this project into one category (e.g., "AI Development", "Cloud Migration", "Web Design", etc.)
-          
           Format your response as JSON:
           {
             "summary": "Brief summary here",
             "projectType": "Project type here"
           }
-        `;
-        
+        `
         const completion = await openai.createCompletion({
           model: "gpt-3.5-turbo-instruct",
           prompt,
           max_tokens: 150,
-<<<<<<< HEAD
-          temperature: 0.3});
-=======
+          temperature: 0.3})
           temperature: 0.3,
-        });
->>>>>>> origin/auto/autonomy-17186719616
-        
-        const responseText = completion.data.choices[0]?.text || "";
-        
+        })
+        const responseText = completion.data.choices[0]?.text || ""
         try {
           // Extract JSON from the response
-          const jsonMatch = responseText.match(/\{[\s\S]*\}/);
+          const jsonMatch = responseText.match(/\{[\s\S]*\}/)
           if (jsonMatch) {
-            enhancedContent = JSON.parse(jsonMatch[0]);
-            console.log("Enhanced content generated:", enhancedContent);
+            enhancedContent = JSON.parse(jsonMatch[0])
+            console.log("Enhanced content generated:", enhancedContent)
           }
         } catch (jsonError) {
-          console.error("Error parsing AI response:", jsonError);
+          console.error("Error parsing AI response:", jsonError)
           // Continue without enhanced content
         }
       } catch (aiError) {
-        console.error("Error generating enhanced content:", aiError);
+        console.error("Error generating enhanced content:", aiError)
         // Continue without enhanced content
       }
     }
-    
     // 2. Store the request in the database
     const { data: requestRecord, error: requestError } = await supabase
       .from('hire_requests')
@@ -134,37 +108,30 @@ serve(async (req) => {
           expiry_date: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days from now
         }
       ])
-      .select();
-      
+      .select()
     if (requestError) {
-      throw new Error(`Error storing hire request: ${requestError.message}`);
+      throw new Error(`Error storing hire request: ${requestError.message}`)
     }
-    
     // 3. Create notification for the admin
     // Fetch admin users
     const { data: adminUsers, error: adminError } = await supabase
       .from('profiles')
       .select('id')
       .eq('user_type', 'admin')
-      .limit(1);
-      
+      .limit(1)
     if (adminError) {
-      console.error("Error fetching admin users:", adminError);
+      console.error("Error fetching admin users:", adminError)
     }
-    
-    let adminId: string | undefined = undefined;
-    
+    let adminId: string | undefined = undefined
     // Create notification for admin (if any found)
     if (adminUsers && adminUsers.length > 0) {
-      adminId = adminUsers[0].id;
-      
+      adminId = adminUsers[0].id
       const adminNotificationContent = {
         title: `New hiring request for ${talent.full_name}`,
         message: `${requester.name} (${requester.email}) wants to hire ${talent.full_name} for a project with budget ${budgetDisplay}.`,
         type: "hire_request",
         related_id: requestRecord[0].id
-      };
-      
+      }
       const { error: notificationError } = await supabase
         .rpc('create_notification', {
           _user_id: adminId,
@@ -172,13 +139,11 @@ serve(async (req) => {
           _message: adminNotificationContent.message,
           _type: adminNotificationContent.type,
           _related_id: adminNotificationContent.related_id
-        });
-        
+        })
       if (notificationError) {
-        console.error("Error creating admin notification:", notificationError);
+        console.error("Error creating admin notification:", notificationError)
       }
     }
-    
     // 4. Send email notification to talent
     if (talent.email) {
       // In a real implementation, this would call your email sending function
@@ -199,17 +164,12 @@ serve(async (req) => {
             ${enhancedContent?.projectType ? `<p><strong>Project Type:</strong> ${enhancedContent.projectType}</p>` : ''}
             <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>
             <p>Best regards,<br>The Zion AI Marketplace Team</p>
-<<<<<<< HEAD
-          `}});
-=======
+          `}})
           `,
         },
-      });
->>>>>>> origin/auto/autonomy-17186719616
-      
-      console.log("Email sending result:", emailResponse);
+      })
+      console.log("Email sending result:", emailResponse)
     }
-
     return new Response(
       JSON.stringify({ 
         success: true, 
@@ -218,16 +178,12 @@ serve(async (req) => {
       }),
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
-<<<<<<< HEAD
         status: 200}
-=======
         status: 200,
       }
->>>>>>> origin/auto/autonomy-17186719616
-    );
+    )
   } catch (error) {
-    console.error("Error processing hire request:", error.message);
-    
+    console.error("Error processing hire request:", error.message)
     return new Response(
       JSON.stringify({ 
         success: false, 
@@ -236,12 +192,9 @@ serve(async (req) => {
       }),
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
-<<<<<<< HEAD
         status: 500}
-=======
         status: 500,
       }
->>>>>>> origin/auto/autonomy-17186719616
-    );
+    )
   }
-});
+})

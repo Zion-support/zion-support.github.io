@@ -1,36 +1,51 @@
 #!/bin/bash
 
-echo "Resolving merge conflicts..."
+# Function to clean merge conflicts from a file
+clean_conflicts() {
+    local file="$1"
+    # Skip if file doesn't exist or is a directory
+    [[ ! -f "$file" ]] && return
+    
+    # Create temp file
+    local tmp=$(mktemp)
+    
+    # Process file: remove conflict markers and keep the code
+    awk '
+        /^<<<<<<</ { in_conflict=1; next }
+        /^=======/ { in_ours=0; next }
+        /^>>>>>>>/ { in_conflict=0; in_ours=0; next }
+        !in_conflict || in_ours { print }
+        in_conflict && !in_ours { in_ours=1 }
+    ' "$file" > "$tmp"
+    
+    # Only update if different
+    if ! cmp -s "$file" "$tmp"; then
+        mv "$tmp" "$file"
+        echo "Fixed: $file"
+    else
+        rm "$tmp"
+    fi
+}
 
-# Get list of conflicted files
-git status --porcelain | grep "^UU" | cut -c4- > /tmp/conflicted_files.txt
-
-# Count total conflicts
-total_conflicts=$(wc -l < /tmp/conflicted_files.txt)
-echo "Total conflicted files: $total_conflicts"
-
-# Resolve conflicts in disabled/backup directories by accepting incoming changes
-echo "Resolving conflicts in disabled/backup directories..."
-git status --porcelain | grep "^UU" | grep -E "(disabled|backup|temp|\.disabled)" | cut -c4- | while read file; do
-    echo "Resolving $file (accepting incoming)"
-    git checkout --theirs "$file"
-    git add "$file"
+# Main source files to fix (non-backup files)
+for file in \
+    "api/subscribe.js" \
+    "api/wallet.js" \
+    "app/App.tsx" \
+    "components/LoadingComponents.tsx" \
+    "src/hooks/usePerformance.ts" \
+    "lib/error-handler.ts" \
+    "lib/security.js" \
+    "lib/performance.ts" \
+    "src/utils/performanceOptimizer.ts" \
+    "lib/integrations/connectors.ts" \
+    "lib/integrations/fileStore.ts" \
+    "lib/integrations/registry.ts" \
+    "lib/integrations/types.ts" \
+    "src.disabled/utils/analytics.ts" \
+    "corrupted-src-backup/utils/imageOptimization.ts"
+do
+    [[ -f "$file" ]] && clean_conflicts "$file"
 done
 
-# Resolve conflicts in src.disabled by accepting incoming changes
-echo "Resolving conflicts in src.disabled..."
-git status --porcelain | grep "^UU" | grep "src\.disabled" | cut -c4- | while read file; do
-    echo "Resolving $file (accepting incoming)"
-    git checkout --theirs "$file"
-    git add "$file"
-done
-
-# For active source files, keep our changes (accept current)
-echo "Resolving conflicts in active source files..."
-git status --porcelain | grep "^UU" | grep -v -E "(disabled|backup|temp|\.disabled|src\.disabled)" | cut -c4- | while read file; do
-    echo "Resolving $file (keeping current)"
-    git checkout --ours "$file"
-    git add "$file"
-done
-
-echo "Conflict resolution completed!"
+echo "Conflict resolution complete!"

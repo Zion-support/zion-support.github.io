@@ -1,80 +1,73 @@
 #!/bin/bash
 
-# Batch merge PRs script
-# This script will merge multiple PRs systematically
+# Batch merge script for open PRs
+# This script will attempt to merge multiple PRs in sequence
 
-set -e
+echo "Starting batch merge of open PRs..."
 
-echo "Starting batch merge process..."
-
-# List of recent PR branches to process
+# List of recent PR branches to merge
 PR_BRANCHES=(
-    "origin/cursor/create-and-deploy-new-content-ff81"
-    "origin/cursor/create-and-deploy-new-content-ff2a"
-    "origin/cursor/create-and-deploy-new-content-ff16"
-    "origin/cursor/create-and-deploy-new-content-fe8f"
-    "origin/cursor/create-and-deploy-new-content-fe7f"
-    "origin/cursor/create-and-deploy-new-content-fe5c"
-    "origin/cursor/create-and-deploy-new-content-fe5a"
-    "origin/cursor/create-and-deploy-new-content-fe01"
-    "origin/cursor/create-and-deploy-new-content-fdac"
-    "origin/cursor/create-and-deploy-new-content-fd98"
+    "cursor/fix-errors-and-merge-to-main-8726"
+    "cursor/fix-errors-and-merge-to-main-0746"
+    "cursor/fix-errors-and-merge-to-main-4a95"
+    "cursor/display-app-content-on-the-front-end-47a5"
+    "cursor/fix-errors-and-merge-to-main-b724"
+    "cursor/fix-errors-and-merge-to-main-7ab1"
+    "cursor/fix-errors-and-merge-to-main-117c"
+    "cursor/fix-errors-and-merge-to-main-a653"
+    "cursor/fix-errors-and-merge-to-main-acb1"
+    "cursor/fix-errors-and-merge-to-main-bc06"
 )
 
-# Ensure we're on main and up to date
-git checkout main
-git pull origin main
+success_count=0
+fail_count=0
 
-# Process each PR branch
 for branch in "${PR_BRANCHES[@]}"; do
+    echo ""
     echo "Processing branch: $branch"
+    echo "=================================="
     
-    # Checkout the branch
-    git checkout "$branch"
-    
-    # Try to merge with main
-    if git merge main --no-commit; then
-        echo "Merge successful for $branch"
-        git commit -m "Merge main into $branch - resolve conflicts and integrate latest changes"
-        
-        # Push the updated branch
-        git push origin "$branch"
-        
-        # Merge into main
-        git checkout main
-        if git merge "$branch" --no-commit; then
-            git commit -m "Merge $branch into main"
-            git push origin main
-            echo "Successfully merged $branch into main"
-        else
-            echo "Failed to merge $branch into main"
-            git merge --abort
-        fi
+    # Fetch the branch
+    echo "Fetching branch $branch..."
+    if git fetch origin "$branch"; then
+        echo "✅ Successfully fetched $branch"
     else
-        echo "Merge failed for $branch, resolving conflicts..."
+        echo "❌ Failed to fetch $branch"
+        ((fail_count++))
+        continue
+    fi
+    
+    # Attempt to merge
+    echo "Attempting to merge $branch..."
+    if git merge "origin/$branch" --no-ff -m "Merge branch $branch"; then
+        echo "✅ Successfully merged $branch"
+        ((success_count++))
+    else
+        echo "⚠️  Merge failed for $branch, attempting conflict resolution..."
         
-        # Resolve conflicts by keeping our version
-        git checkout --ours .
-        git add .
-        git commit -m "Resolve merge conflicts for $branch"
-        
-        # Push the updated branch
-        git push origin "$branch"
-        
-        # Merge into main
-        git checkout main
-        if git merge "$branch" --no-commit; then
-            git commit -m "Merge $branch into main after conflict resolution"
-            git push origin main
-            echo "Successfully merged $branch into main after conflict resolution"
+        # Try to resolve conflicts
+        if python3 fix_merge_conflicts.py; then
+            echo "✅ Conflicts resolved for $branch"
+            if git add . && git commit -m "Merge branch $branch (conflicts resolved)"; then
+                echo "✅ Successfully merged $branch with conflicts resolved"
+                ((success_count++))
+            else
+                echo "❌ Failed to commit resolved conflicts for $branch"
+                ((fail_count++))
+            fi
         else
-            echo "Failed to merge $branch into main after conflict resolution"
-            git merge --abort
+            echo "❌ Failed to resolve conflicts for $branch"
+            ((fail_count++))
         fi
     fi
     
-    echo "Completed processing $branch"
-    echo "---"
+    echo "Waiting 2 seconds before next merge..."
+    sleep 2
 done
 
-echo "Batch merge process completed!"
+echo ""
+echo "=================================="
+echo "Batch merge completed!"
+echo "✅ Successfully merged: $success_count"
+echo "❌ Failed to merge: $fail_count"
+echo "📊 Total processed: $((success_count + fail_count))"

@@ -1,0 +1,13 @@
+{
+  "enableWebVitals": true,
+  "enableRUM": true,
+  "reportingEndpoint": "/api/analytics",
+  "sampleRate": 1,
+  "thresholds": {
+    "LCP": 2500,
+    "FID": 100,
+    "CLS": 0.1,
+    "FCP": 1800,
+    "TTFB": 600
+  }
+}

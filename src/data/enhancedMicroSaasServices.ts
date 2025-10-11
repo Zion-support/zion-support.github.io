@@ -1,9 +1,8 @@
-  marketPosition: string;
-  competitors: string[];
-  roi: string;
-  implementationTime: string;
+  marketPosition: string
+  competitors: string[]
+  roi: string
+  implementationTime: string
 }
-
 export const ENHANCED_MICRO_SAAS_SERVICES: MicroSaasService[] = [
   // Productivity & Collaboration
   {
@@ -16,28 +15,27 @@ export const ENHANCED_MICRO_SAAS_SERVICES: MicroSaasService[] = [
     pricingModel: "monthly",
     userLimit: "Up to 25 users",
     features: [
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: 'one-time' | 'monthly' | 'yearly' | 'per-user' | 'per-project' | 'usage-based' | 'freemium';
-=======
+  title: string
+  description: string
+  category: string
+  subcategory: string
+  price: number
+  currency: string
+  pricingModel: 'one-time' | 'monthly' | 'yearly' | 'per-user' | 'per-project' | 'usage-based' | 'freemium'
 export interface EnhancedMicroSaasService {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
+  id: string
+  name: string
+  description: string
+  category: string
   price: {
-    monthly: number;
-    yearly: number;
-    currency: string;
-  };
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
+    monthly: number
+    yearly: number
+    currency: string
+  }
+  features: string[]
+  benefits: string[]
+  useCases: string[]
+  targetAudience: string[]
       "Customer behavior analysis",
       "Operational efficiency monitoring",
       "Market trend analysis"
@@ -64,7 +62,6 @@ export interface EnhancedMicroSaasService {
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
     marketPrice: "$2,500 - $8,000/month",
-=======
       "AI invoice generation",
       "Expense categorization",
       "Financial reporting",
@@ -96,39 +93,37 @@ export interface EnhancedMicroSaasService {
     compliance: ["GDPR", "SOC 2", "HIPAA", "ISO 27001"],
     roi: "300% within 12 months"
   },
-
   // Sustainable Business Intelligence
   {
-  technology: string[];
-  integrations: string[];
-  support: string[];
-  deployment: string[];
-  scalability: string;
-  security: string[];
-  compliance: string[];
-  roi: string;
-  implementationTime: string;
+  technology: string[]
+  integrations: string[]
+  support: string[]
+  deployment: string[]
+  scalability: string
+  security: string[]
+  compliance: string[]
+  roi: string
+  implementationTime: string
   contactInfo: {
-    email: string;
-    phone: string;
-    website: string;
-  };
-  demoUrl?: string;
-  documentationUrl?: string;
-  caseStudies?: string[];
+    email: string
+    phone: string
+    website: string
+  }
+  demoUrl?: string
+  documentationUrl?: string
+  caseStudies?: string[]
   testimonials?: Array<{
-    name: string;
-    company: string;
-    role: string;
-    content: string;
-    rating: number;
-  }>;
-  tags: string[];
-  isFeatured?: boolean;
-  isNew?: boolean;
-  isPopular?: boolean;
+    name: string
+    company: string
+    role: string
+    content: string
+    rating: number
+  }>
+  tags: string[]
+  isFeatured?: boolean
+  isNew?: boolean
+  isPopular?: boolean
 }
-
 export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
   {
     id: "ai-powered-customer-intelligence",
@@ -705,37 +700,30 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     isFeatured: true,
     isNew: true
   }
-];
-
+]
 export const getServiceByCategory = (category: string) => {
   return ENHANCED_MICRO_SAAS_SERVICES.filter(service => 
     service.category.toLowerCase() === category.toLowerCase()
-  );
-};
-
+  )
+}
 export const getFeaturedServices = () => {
-  return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.isFeatured);
-};
-
+  return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.isFeatured)
+}
 export const getNewServices = () => {
-  return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.isNew);
-};
-
+  return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.isNew)
+}
 export const getPopularServices = () => {
-  return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.isPopular);
-};
-
+  return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.isPopular)
+}
 export const getServiceById = (id: string) => {
-  return ENHANCED_MICRO_SAAS_SERVICES.find(service => service.id === id);
-};
-
+  return ENHANCED_MICRO_SAAS_SERVICES.find(service => service.id === id)
+}
     marketPosition: "AI-powered HR automation",
     competitors: ["BambooHR", "Workday", "Zenefits"],
     roi: "350% within 4 months",
     implementationTime: "3-4 weeks"
   }
-];
-
+]
 export const SERVICE_CATEGORIES = [
   {
     id: "productivity",
@@ -785,8 +773,7 @@ export const SERVICE_CATEGORIES = [
     icon: "✍️",
     count: 1
   }
-];
-=======
+]
     aiScore: 91,
     rating: 4.4,
     reviewCount: 56,
@@ -795,8 +782,7 @@ export const SERVICE_CATEGORIES = [
     marketSize: "$45.2B (2024)",
     roi: "200% within 8 months"
   }
-];
-
+]
 export const MICRO_SAAS_CATEGORIES = [
   "AI & Analytics",
   "AI & Marketing", 
@@ -808,20 +794,18 @@ export const MICRO_SAAS_CATEGORIES = [
   "AI & E-commerce",
   "AI & Legal",
   "AI & Healthcare"
-];
-
+]
 export const MICRO_SAAS_PRICING_TIERS = [
   { name: "Starter", price: "$99-299", features: ["Basic features", "Email support", "Up to 5 users"] },
   { name: "Professional", price: "$299-799", features: ["Advanced features", "Priority support", "Up to 25 users"] },
   { name: "Enterprise", price: "$799+", features: ["Custom features", "24/7 support", "Unlimited users"] }
-];
-=======
+]
 export const searchServices = (query: string) => {
-  const searchTerm = query.toLowerCase();
+  const searchTerm = query.toLowerCase()
   return ENHANCED_MICRO_SAAS_SERVICES.filter(service =>
     service.name.toLowerCase().includes(searchTerm) ||
     service.description.toLowerCase().includes(searchTerm) ||
     service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||
     service.category.toLowerCase().includes(searchTerm)
-  );
-};
+  )
+}

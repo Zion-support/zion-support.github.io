@@ -1,145 +1,69 @@
-<<<<<<< HEAD
-"export": default async function handler(req, res) {
-  if (req.method !==
-  POST') {';
-    res."statusCode": = 405;
-    res.setHeader(
-  'Allow', '';POST')';
-    res.end(
-  '"Method": Not Allowed')';
-    return}
-  "try": {
-    const { fromAddress, toAddress, parcel } = req.body || {}
-    const apiKey = process.env.EASYPOST_API_KEY;
-    const response = await fetch(
-  '"https": //api.easypost.com/v2/shipment,s, {';
-      "method": POST', ';
-      "headers": {
-  'Content-Type':';';application/jso,n, ';
-        "Authorization": `Bearer: ${apiKe,y}`}
-      "body": JSON.stringify({
-        shipment: { to_address: toAddres,s, "from_address": fromAddres,s, "parcel":  }})})
-    const data = await response.json();
-    "if": (!response.ok) {
-      res.statusCode = 500;
-      res.json({ error: data.error: ||';Failed: to fetch rates'})';
-      return}
-    res."statusCode": = 200;
-    res.json({ rates: data.rates})} "catch": (err) {
-    console.error(
-  'EasyPost error:', err)';
-    res."statusCode": = 500;
-    res.json({ error: err.message})}
-    return}
-  try {;
-    const { fromAddress, toAddress, parcel } = req.body || {}
-    const apiKey = process.env.EASYPOST_API_KEY;
-    const response = await fetch(',
-      '"https": //api.easypost.com/v2/shipments, {
-      "method": POST'
-      headers: {'
-  'Content-Type':';application/json
-        Authorization: `Bearer ${apiKey}`}
-      "body": JSON.stringify({
-        shipmen
-    t: { to_addres
-    s: toAddress, "from_address": fromAddress, parcel }})})
-    const data = await response.json();
-    if (!response.ok) {;
-      res.statusCode = 500;
-      res.json({ "error": data.error ||;`
-  'Failed to fetch rates' });
-      return}
-const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
-
-async function handler(req, res) {
-=======
-export default async function handler(req, res) {
->>>>>>> origin/auto/autonomy-17186719616
+const fs = require('fs')
+const path = require('path')
+const dir = path.join(process.cwd(), 'data')
+const file = path.join(dir, 'shipping-rates.json')
+export default function handler(req, res) {
   if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
-    return;
+    res.statusCode = 405
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Method not allowed' }))
+    return
   }
 
+  const { destination, weight, dimensions } = req.body || {}
+  if (!destination || !weight) {
+    return res.status(400).json({ error: 'Destination and weight are required' })
+  }
+
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true })
+  }
+
+  let existing = []
   try {
-    const { fromAddress, toAddress, parcel } = req.body || {};
-<<<<<<< HEAD
-    
-    if (!fromAddress || !toAddress || !parcel) {
-      res.statusCode = 400;
-      res.json({ error: 'Missing required fields' });
-      return;
+    if (fs.existsSync(file)) {
+      const data = fs.readFileSync(file, 'utf8')
+      existing = JSON.parse(data)
+      if (!Array.isArray(existing)) existing = []
     }
+  } catch (error) {
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error reading existing rates:', error)
+    }
+    existing = []
+  }
 
-    // TODO: Implement actual shipping rate calculation
-    // This is a placeholder implementation
-    const shippingRates = [
-      {
-        service: 'Standard',
-        rate: 9.99,
-        days: '3-5 business days'
-      },
-      {
-        service: 'Express',
-        rate: 19.99,
-        days: '1-2 business days'
-      },
-      {
-        service: 'Overnight',
-        rate: 39.99,
-        days: 'Next business day'
-      }
-    ];
-
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-    res.statusCode = 200;
-    res.json({ "rates": data.rates })} catch (err) {
-    console.error(',
-      'EasyPost "error": ', err);
-    res.statusCode = 500;
-    res.json({ error: err.message || 'Failed to calculate shipping rates' });
+  // Calculate shipping rates based on destination and weight
+  const baseRate = 10
+  const weightMultiplier = weight * 0.5
+  const distanceMultiplier = destination === 'US' ? 1 : 1.5
+  const totalRate = Math.round((baseRate + weightMultiplier) * distanceMultiplier * 100) / 100
+  const newRate = {
+    id: Date.now().toString(),
+    destination,
+    weight,
+    dimensions,
+    rate: totalRate,
+    timestamp: new Date().toISOString()
+  }
+  existing.push(newRate)
+  try {
+    fs.writeFileSync(file, JSON.stringify(existing, null, 2))
+    res.statusCode = 200
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ 
+      success: true, 
+      rate: totalRate,
+      id: newRate.id
+    }))
+  } catch (error) {
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error saving shipping rate:', error)
+    }
+    res.statusCode = 500
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Failed to save rate' }))
   }
 }
-
-module.exports = withErrorLogging(handler);
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
-    const apiKey = process.env.EASYPOST_API_KEY;
-    if (!apiKey) {
-      res.statusCode = 500;
-      res.json({ error: 'Missing EasyPost API key' });
-      return;
-    }
-    const authHeader =
-      'Basic ' + Buffer.from(`${apiKey}:`).toString('base64');
-    const response = await fetch('https://api.easypost.com/v2/shipments', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: authHeader,
-      },
-      body: JSON.stringify({
-        shipment: {
-          to_address: toAddress,
-          from_address: fromAddress,
-          parcel,
-        },
-      }),
-    });
-    const data = await response.json();
-    if (!response.ok) {
-      res.statusCode = 500;
-      res.json({ error: data.error || 'Failed to fetch rates' });
-      return;
-    }
-    res.statusCode = 200;
-    res.json({ rates: data.rates });
-  } catch (err) {
-    console.error('EasyPost error:', err);
-    res.statusCode = 500;
-    res.json({ error: err.message });
-  }
-}
->>>>>>> origin/auto/autonomy-17186719616

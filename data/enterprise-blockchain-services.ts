@@ -1,52 +1,44 @@
-import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
+import { ServiceVariant } from '../types/service-variants'
 export interface EnterpriseBlockchainService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: ServiceVariant
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string
+    email: string
+    address: string
+    website: string
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
   // Enterprise Blockchain Platform
   {
@@ -100,10 +92,6 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     rating: 4.8,
     reviews: 67
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // DeFi Platform for Enterprises
   {
     id: 'defi-enterprise-platform',
@@ -156,10 +144,6 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     rating: 4.9,
     reviews: 38
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // NFT Enterprise Platform
   {
     id: 'nft-enterprise-platform',
@@ -212,10 +196,6 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     rating: 4.7,
     reviews: 134
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Blockchain Supply Chain Platform
   {
     id: 'blockchain-supply-chain-platform',
@@ -268,10 +248,6 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     rating: 4.8,
     reviews: 62
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Blockchain Identity Management
   {
     id: 'blockchain-identity-management',
@@ -324,4 +300,4 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     rating: 4.8,
     reviews: 89
   }
-];
+]

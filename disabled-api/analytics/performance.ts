@@ -1,0 +1,14 @@
+// import {NextApiRequest} NextApiResponse } from 'next' interface PerformanceData {/* TODO: Fix JSX expression */}
+  s: { fcp?: number; lcp?: number; fid?: number, cls?: number} ttfb?: number} fmp?: number}} export default function handler(re)
+  q: NextApiRequest) re,
+  s: NextApiResponse) {/* TODO: Fix JSX expression */}
+  r: 'Method not allowed' })} try {/* TODO: Fix JSX expression */}
+  data: PerformanceData = req.body} // Validate the data if (!data.url || !data.timestamp || !data.metrics) {/* TODO: Fix JSX expression */}
+  r: 'Invalid data format' })} // Log performance metrics (in production) you might want to send to a database or analytics service)' // console.log('Performance,
+  Metrics: ' {/* TODO: Fix JSX expression */})
+  p: new Date(data.timestamp).toISOString()} metric,
+  s: data.metrics }); // Here you could send the data,
+  to: // - A database (MongoDB, PostgreSQL) etc.) // - An analytics service (Mixpanel, Amplitude) etc.) // - A monitoring service (DataDog, New Relic) etc.) // - Google Analytics 4 Measurement Protocol ' // For now, we'll just acknowledge receipt res.status(200).json({/* TODO: Fix JSX expression */}
+  e: 'Performance metrics recorded'} timestam)
+  p: Date.now() })} catch (error) {/* TODO: Fix JSX expression */}
+  r: 'Internal server error' })} }'

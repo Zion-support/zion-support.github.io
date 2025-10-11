@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import { 
   Building, 
   Zap, 
@@ -28,8 +28,7 @@ import {
   ChartBar,
   Clock,
   Award
-} from 'lucide-react';
-=======
+} from 'lucide-react'
   Brain, 
   Cpu, 
   Zap, 
@@ -78,16 +77,13 @@ import {
   Factory,
   Hospital,
   ShoppingCart
-} from 'lucide-react';
-import SEOHead from '../components/SEOHead';
-
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, TrendingUp, Users, DollarSign, Clock, Star } from 'lucide-react';
-
+} from 'lucide-react'
+import SEOHead from '../components/SEOHead'
+import React from 'react'
+import { Link } from 'react-router-dom'
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { ArrowRight, TrendingUp, Users, DollarSign, Clock, Star } from 'lucide-react'
 const CaseStudies: React.FC = () => {
   const caseStudies = [
     {
@@ -106,8 +102,7 @@ const CaseStudies: React.FC = () => {
   BarChart3,
   Cpu,
   Database
-} from 'lucide-react';
-
+} from 'lucide-react'
 const CaseStudies = () => {
   const caseStudies = [
     {
@@ -193,8 +188,7 @@ const CaseStudies = () => {
       icon: Users,
       color: "from-teal-500 to-cyan-500"
     }
-  ];
-
+  ]
   const testimonials = [
     {
       quote: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions have given us a competitive edge we never thought possible.",
@@ -213,7 +207,6 @@ const CaseStudies = () => {
       author: "David Rodriguez",
       title: "Operations Manager",
       company: "Manufacturing Corporation"
-=======
   Star, 
   Users, 
   TrendingUp, 
@@ -239,15 +232,13 @@ const CaseStudies = () => {
   CheckSquare,
   ShoppingCart,
   GraduationCap
-} from 'lucide-react';
-=======
-import { CASE_STUDIES } from "@/data/case-studies";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-
+} from 'lucide-react'
+import { CASE_STUDIES } from "@/data/case-studies"
+import { SEO } from "@/components/SEO"
+import { GradientHeading } from "@/components/GradientHeading"
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
 export default function CaseStudies() {
   const caseStudies = [
     {
@@ -357,7 +348,6 @@ export default function CaseStudies() {
       icon: Target,
       color: "from-orange-500 to-yellow-500",
       featured: false
-=======
   Building2, 
   Shield, 
   Brain, 
@@ -370,8 +360,7 @@ export default function CaseStudies() {
   TrendingUp,
   Users,
   Globe
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function CaseStudies() {
   const caseStudies = [
     {
@@ -406,10 +395,9 @@ export default function CaseStudies() {
       ],
       technologies: ["Quantum Cryptography", "AI Security", "SOC2 Compliance"],
       icon: Shield,
-=======
-import React from 'react';
-import { SEOHead } from '../components/SEOHead';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { SEOHead } from '../components/SEOHead'
+import { Link } from 'react-router-dom'
 import { 
   Building, 
   Users, 
@@ -426,8 +414,7 @@ import {
   CheckCircle,
   Zap,
   BarChart3
-} from 'lucide-react';
-
+} from 'lucide-react'
 const CaseStudies = () => {
   const caseStudies = [
     {
@@ -542,7 +529,6 @@ const CaseStudies = () => {
       technologies: ["Quantum Computing", "Neural Networks", "AI Research"],
       icon: Brain,
       color: "from-violet-500 to-purple-500"
-=======
       icon: Building,
       title: "Global Manufacturing Corporation",
       industry: "Manufacturing",
@@ -625,7 +611,6 @@ const CaseStudies = () => {
         "99.99% service availability"
       ],
       color: "from-teal-500 to-cyan-500"
-=======
       title: "Fortune 500 Manufacturing Transformation",
       description: "How we helped a global manufacturing company achieve 40% efficiency improvement with AI-powered automation",
       industry: "Manufacturing",
@@ -664,7 +649,6 @@ const CaseStudies = () => {
       challenge: "Disconnected customer experiences across channels",
       solution: "AI-powered omnichannel platform with predictive analytics",
       impact: "Became market leader in digital retail innovation"
-=======
   Target,
   Award,
   BarChart3,
@@ -673,8 +657,7 @@ const CaseStudies = () => {
   Brain,
   Globe,
   ShoppingBag
-} from 'lucide-react';
-
+} from 'lucide-react'
 const CaseStudies = () => {
   const caseStudies = [
     {
@@ -792,8 +775,7 @@ const CaseStudies = () => {
       duration: "5 months",
       teamSize: "6 specialists"
     }
-  ];
-
+  ]
   const industries = [
 import { 
   Building, 
@@ -805,8 +787,7 @@ import {
   ArrowRight,
   Star,
   CheckCircle
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function CaseStudies() {
   const caseStudies = [
     {
@@ -905,8 +886,7 @@ export default function CaseStudies() {
       image: "/images/case-studies/ai-research.jpg",
       category: "AI Research & Development"
     }
-  ];
-
+  ]
   const categories = [
     "All",
     "AI & Digital Transformation",
@@ -915,14 +895,10 @@ export default function CaseStudies() {
     "5G & Infrastructure",
     "Micro SAAS Solutions",
     "AI Research & Development"
-  ];
-=======
-=======
-=======
-import React from 'react';
-import { motion } from 'framer-motion';
-import { CheckCircle, TrendingUp, Users, DollarSign, Clock, Target } from 'lucide-react';
-
+  ]
+import React from 'react'
+import { motion } from 'framer-motion'
+import { CheckCircle, TrendingUp, Users, DollarSign, Clock, Target } from 'lucide-react'
 const CaseStudies = () => {
   const caseStudies = [
     {
@@ -1018,10 +994,9 @@ const CaseStudies = () => {
         roi: "380%",
         timeframe: "36 months",
         teamSize: "25 network engineers"
-import React from 'react';
-import { motion } from 'framer-motion';
-import { CheckCircle, Star, TrendingUp, Users, Globe, Shield } from 'lucide-react';
-
+import React from 'react'
+import { motion } from 'framer-motion'
+import { CheckCircle, Star, TrendingUp, Users, Globe, Shield } from 'lucide-react'
 export default function CaseStudies() {
   const caseStudies = [
     {
@@ -1118,21 +1093,18 @@ export default function CaseStudies() {
         timeframe: "30 months",
         teamSize: "50+ engineers"
       }
-=======
     { name: "Healthcare", icon: Heart, count: 12 },
     { name: "Financial Services", icon: DollarSign, count: 8 },
     { name: "Technology", icon: Cpu, count: 15 },
     { name: "Manufacturing", icon: Building, count: 6 },
     { name: "Retail", icon: ShoppingCart, count: 4 },
     { name: "Education", icon: GraduationCap, count: 3 }
-=======
     { name: "Manufacturing", count: 12, icon: Building2 },
     { name: "Financial Services", count: 8, icon: Shield },
     { name: "Healthcare", count: 15, icon: Users },
     { name: "Technology", count: 20, icon: Globe },
     { name: "Retail", count: 6, icon: TrendingUp },
     { name: "Education", count: 4, icon: Brain }
-=======
     { name: "Manufacturing", count: 15, icon: Building },
     { name: "Healthcare", count: 12, icon: Users },
     { name: "Financial Services", count: 18, icon: Shield },
@@ -1141,7 +1113,6 @@ export default function CaseStudies() {
     { name: "Government", count: 8, icon: Globe },
     { name: "Energy", count: 6, icon: Zap },
     { name: "Transportation", count: 11, icon: Network }
-=======
     "Manufacturing",
     "Financial Services",
     "Healthcare",
@@ -1152,15 +1123,13 @@ export default function CaseStudies() {
     "Government",
     "Energy",
     "Transportation"
-=======
     { name: "Healthcare", icon: Users, count: 12, color: "from-blue-500 to-cyan-500" },
     { name: "Financial Services", icon: DollarSign, count: 8, color: "from-green-500 to-emerald-500" },
     { name: "Manufacturing", icon: Target, count: 15, color: "from-orange-500 to-red-500" },
     { name: "Technology", icon: Zap, count: 20, color: "from-purple-500 to-pink-500" },
     { name: "Retail", icon: ShoppingBag, count: 6, color: "from-indigo-500 to-blue-500" },
     { name: "Government", icon: Shield, count: 4, color: "from-gray-500 to-slate-500" }
-  ];
-
+  ]
   const metrics = [
     {
       icon: DollarSign,
@@ -1186,8 +1155,7 @@ export default function CaseStudies() {
       value: "98%",
       description: "Successful project completion rate"
     }
-  ];
-
+  ]
   const testimonials = [
     {
       quote: "Zion Tech Group's AI solutions transformed our healthcare operations completely. The results exceeded our expectations.",
@@ -1207,12 +1175,10 @@ export default function CaseStudies() {
       position: "Research Director, Quantum Research Labs",
       rating: 5
     }
-  ];
-
+  ]
       }
     }
-  ];
-
+  ]
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -1221,11 +1187,10 @@ export default function CaseStudies() {
         staggerChildren: 0.2
       }
     }
-  };
-import { Link } from 'react-router-dom';
-import { ArrowRight, Building2, TrendingUp, Users, Award, Clock, DollarSign, CheckCircle, Star, Zap, Shield, Globe, Target, Brain, Rocket } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-
+  }
+import { Link } from 'react-router-dom'
+import { ArrowRight, Building2, TrendingUp, Users, Award, Clock, DollarSign, CheckCircle, Star, Zap, Shield, Globe, Target, Brain, Rocket } from 'lucide-react'
+import { SEO } from '@/components/SEO'
 const CaseStudies = () => {
   const caseStudies = [
     {
@@ -1354,15 +1319,13 @@ const CaseStudies = () => {
       icon: Rocket,
       color: "from-pink-500 to-rose-500"
     }
-  ];
-
+  ]
   const metrics = [
     { icon: Building2, value: "150+", label: "Projects Completed" },
     { icon: Users, value: "98%", label: "Client Satisfaction" },
     { icon: DollarSign, value: "$50M+", label: "Cost Savings Generated" },
     { icon: Award, value: "25+", label: "Industry Awards" }
-  ];
-
+  ]
   const testimonials = [
     {
       quote: "Zion Tech Group transformed our manufacturing operations with their AI-powered solutions. The results exceeded our expectations.",
@@ -1440,7 +1403,7 @@ const CaseStudies = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {metrics.map((metric, index) => {
-                const Icon = metric.icon;
+                const Icon = metric.icon
                 return (
                   <div key={index} className="group">
                     <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 h-full hover:border-yellow-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
@@ -1452,7 +1415,7 @@ const CaseStudies = () => {
                       <p className="text-gray-300 text-sm">{metric.description}</p>
                     </div>
                   </div>
-                );
+                )
               })}
             </div>
           </div>
@@ -1473,7 +1436,7 @@ const CaseStudies = () => {
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {caseStudies.map((study, index) => {
-                const Icon = study.icon;
+                const Icon = study.icon
                 return (
                   <div key={index} className="group">
                     <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-600/50 rounded-2xl p-8 h-full hover:border-yellow-500/50 transition-all duration-300 hover:transform hover:scale-105">
@@ -1512,7 +1475,7 @@ const CaseStudies = () => {
                       </div>
                     </div>
                   </div>
-                );
+                )
               })}
             </div>
           </div>
@@ -1541,7 +1504,6 @@ const CaseStudies = () => {
                   </div>
                 </div>
               ))}
-=======
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -1551,7 +1513,6 @@ const CaseStudies = () => {
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
               Discover how organizations across industries have transformed their operations 
               with Zion Tech Group's AI-powered solutions. Real results, real impact.
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -1570,7 +1531,6 @@ const CaseStudies = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Discover how leading organizations across industries have transformed their operations 
               with Zion Tech Group's AI-powered solutions. See the measurable impact and real ROI.
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -1588,14 +1548,14 @@ const CaseStudies = () => {
               to achieve breakthrough results and competitive advantages.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
+              <$2 />
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Success Story
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <$2 />
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
               >
@@ -1603,7 +1563,7 @@ const CaseStudies = () => {
               </Link>
             </div>
 
-import React from 'react';
+import React from 'react'
 import { 
   Building, 
   TrendingUp, 
@@ -1615,8 +1575,7 @@ import {
   Star,
   CheckCircle,
   BarChart3
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function CaseStudies() {
   const caseStudies = [
     {
@@ -1727,8 +1686,7 @@ export default function CaseStudies() {
       image: '🏥',
       featured: false
     }
-  ];
-
+  ]
   const industries = [
     'All Industries',
     'Technology',
@@ -1737,8 +1695,7 @@ export default function CaseStudies() {
     'Retail',
     'Healthcare',
     'Government'
-  ];
-
+  ]
   const technologies = [
     'All Technologies',
     'AI/ML',
@@ -1747,8 +1704,7 @@ export default function CaseStudies() {
     'Cloud Computing',
     'Data Analytics',
     'IoT'
-  ];
-=======
+  ]
   CheckCircle, 
   TrendingUp, 
   Users, 
@@ -1759,8 +1715,7 @@ export default function CaseStudies() {
   Globe,
   Award,
   ArrowRight
-} from 'lucide-react';
-
+} from 'lucide-react'
 const CaseStudies = () => {
   const caseStudies = [
     {
@@ -1865,20 +1820,15 @@ const CaseStudies = () => {
       image: "/images/case-studies/soc2-compliance.jpg",
       category: "Compliance"
     }
-  ];
-
-  const categories = ["All", "AI Solutions", "Cybersecurity", "Business Operations", "Infrastructure", "IT Management", "Compliance"];
-  const [selectedCategory, setSelectedCategory] = React.useState("All");
-
+  ]
+  const categories = ["All", "AI Solutions", "Cybersecurity", "Business Operations", "Infrastructure", "IT Management", "Compliance"]
+  const [selectedCategory, setSelectedCategory] = React.useState("All")
   const filteredCaseStudies = selectedCategory === "All" 
     ? caseStudies 
-    : caseStudies.filter(study => study.category === selectedCategory);
-
+    : caseStudies.filter(study => study.category === selectedCategory)
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
       {/* Hero Section */}
-=======
-=======
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -1889,12 +1839,10 @@ const CaseStudies = () => {
         duration: 0.5
       }
     }
-  };
-
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
-=======
       title: "AI-Powered Manufacturing Transformation",
       company: "Global Manufacturing Corp",
       industry: "Manufacturing",
@@ -1989,8 +1937,7 @@ const CaseStudies = () => {
       icon: LightBulbIcon,
       color: "from-yellow-500 to-orange-600"
     }
-  ];
-
+  ]
   const industries = [
     "Manufacturing",
     "Healthcare",
@@ -2000,8 +1947,7 @@ const CaseStudies = () => {
     "Retail",
     "Education",
     "Transportation"
-  ];
-
+  ]
   const technologies = [
     "AI & Machine Learning",
     "5G Networks",
@@ -2011,11 +1957,9 @@ const CaseStudies = () => {
     "Cloud Infrastructure",
     "Blockchain",
     "Robotic Process Automation"
-  ];
-
-=======
-import React from 'react';
-import { motion } from 'framer-motion';
+  ]
+import React from 'react'
+import { motion } from 'framer-motion'
 import { 
   Building, 
   Users, 
@@ -2027,8 +1971,7 @@ import {
   ArrowRight,
   Star,
   Award
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function CaseStudies() {
   const caseStudies = [
     {
@@ -2127,8 +2070,7 @@ export default function CaseStudies() {
       icon: Shield,
       color: "from-indigo-500 to-blue-500"
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       <Helmet>
@@ -2159,8 +2101,7 @@ export default function CaseStudies() {
     { label: "Global Clients", value: "25+", icon: Globe },
     { label: "Team Members", value: "100+", icon: Users },
     { label: "Security Certifications", value: "15+", icon: Shield }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate-darker">
       {/* Hero Section */}
@@ -2223,34 +2164,29 @@ export default function CaseStudies() {
               <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
                 Download Case Studies
               </button>
-=======
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Success Story
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <$2 />
                 to="/demo"
                 className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-white font-semibold hover:border-blue-500 hover:text-blue-400 transition-all duration-300"
               >
                 Request Demo
               </Link>
             </div>
-=======
           </motion.div>
-=======
             Discover how Zion Tech Group's innovative solutions have revolutionized businesses across industries, 
             delivering measurable results and sustainable growth.
           </motion.p>
         </div>
       </section>
 
-import React from 'react';
-=======
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Star, TrendingUp, Users, DollarSign, Clock, Target, Award, CheckCircle, Lightbulb, Zap, Shield, Globe, Database, Cloud, Brain, Atom, Rocket, Wifi, Building2 } from 'lucide-react';
-
+import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { ArrowRight, Star, TrendingUp, Users, DollarSign, Clock, Target, Award, CheckCircle, Lightbulb, Zap, Shield, Globe, Database, Cloud, Brain, Atom, Rocket, Wifi, Building2 } from 'lucide-react'
 const CaseStudies = () => {
   const caseStudies = [
     {
@@ -2367,8 +2303,7 @@ const CaseStudies = () => {
       icon: Lightbulb,
       category: "AI Content"
     }
-  ];
-
+  ]
   const categories = [
     { name: "All", count: caseStudies.length, icon: Globe },
     { name: "AI & Analytics", count: caseStudies.filter(cs => cs.category === "AI & Analytics").length, icon: Brain },
@@ -2377,8 +2312,7 @@ const CaseStudies = () => {
     { name: "Security & Compliance", count: caseStudies.filter(cs => cs.category === "Security & Compliance").length, icon: Shield },
     { name: "Infrastructure", count: caseStudies.filter(cs => cs.category === "Infrastructure").length, icon: Wifi },
     { name: "AI Content", count: caseStudies.filter(cs => cs.category === "AI Content").length, icon: Lightbulb }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
       {/* Hero Section */}
@@ -2409,7 +2343,6 @@ const CaseStudies = () => {
               </div>
             </div>
           </div>
-=======
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
@@ -2435,7 +2368,7 @@ const CaseStudies = () => {
             {/* Industry Filter */}
             <div className="flex flex-wrap gap-3">
               {industries.map((industry) => (
-                <button
+                <$2 />
                   key={industry.id}
                   onClick={() => setSelectedIndustry(industry.id)}
                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-300 ${
@@ -2453,7 +2386,7 @@ const CaseStudies = () => {
             {/* Service Filter */}
             <div className="flex flex-wrap gap-3">
               {services.map((service) => (
-                <button
+                <$2 />
                   key={service.id}
                   onClick={() => setSelectedService(service.id)}
                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-300 ${
@@ -2464,7 +2397,6 @@ const CaseStudies = () => {
                 >
                   <service.icon className="w-4 h-4" />
                   <span>{service.name}</span>
-=======
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-purple-900/50"></div>
         <div className="relative z-10 container mx-auto px-4 py-24">
@@ -2475,7 +2407,6 @@ const CaseStudies = () => {
             <p className="text-xl md:text-2xl text-gray-300 mb-8">
               Discover how Zion Tech Group has transformed businesses across industries with cutting-edge technology solutions
             </p>
-=======
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
@@ -2489,7 +2420,7 @@ const CaseStudies = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
-                <button
+                <$2 />
                   key={category}
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
@@ -2499,7 +2430,6 @@ const CaseStudies = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-=======
           </motion.div>
         </div>
       </section>
@@ -2533,7 +2463,6 @@ const CaseStudies = () => {
               </div>
             </div>
           </motion.div>
-=======
       title: 'Healthcare AI Transformation',
       company: 'Regional Medical Center',
       industry: 'Healthcare',
@@ -2634,8 +2563,7 @@ const CaseStudies = () => {
       image: '🎓',
       readTime: '7 min read'
     }
-  ];
-
+  ]
   const industries = [
     'All Industries',
     'Healthcare',
@@ -2645,8 +2573,7 @@ const CaseStudies = () => {
     'Government',
     'Education',
     'Technology'
-  ];
-
+  ]
   const technologies = [
     'All Technologies',
     'AI/ML',
@@ -2656,8 +2583,7 @@ const CaseStudies = () => {
     'Data Analytics',
     'Automation',
     'Blockchain'
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}
@@ -2697,7 +2623,7 @@ const CaseStudies = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {caseStudies.filter(cs => !cs.featured).map((caseStudy) => (
-              <div
+              <$2 />
                 key={caseStudy.id}
                 className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 group"
               >
@@ -2714,7 +2640,6 @@ const CaseStudies = () => {
                     <span className="text-sm text-gray-400">{caseStudy.company}</span>
                     <span className="text-gray-500">•</span>
                     <span className="text-sm text-gray-400">{caseStudy.industry}</span>
-=======
                       </span>
                     ))}
                   </div>
@@ -2737,8 +2662,6 @@ const CaseStudies = () => {
                         <li key={index} className="flex items-center space-x-2 text-sm">
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span className="text-gray-300 line-clamp-1">{result}</span>
-=======
-=======
       <section className="pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div 
@@ -2779,7 +2702,6 @@ const CaseStudies = () => {
                       {study.results.map((result, index) => (
                         <li key={index} className="flex items-start gap-2 text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-=======
       {/* Industry Overview */}
       <section className="py-20 bg-black/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -2794,7 +2716,7 @@ const CaseStudies = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {industries.map((industry) => (
-              <div
+              <$2 />
                 key={industry.name}
                 className="text-center p-6 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70"
               >
@@ -2827,14 +2749,13 @@ const CaseStudies = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
-              <div
+              <$2 />
                 key={index}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="flex items-center mb-4">
                   <div className={`w-12 h-12 bg-gradient-to-r ${study.color} rounded-lg flex items-center justify-center mr-3`}>
                     <study.icon className="w-6 h-6 text-white" />
-=======
                   </div>
                   {/* Meta Information */}
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
@@ -2872,12 +2793,9 @@ const CaseStudies = () => {
                       <li key={resultIndex} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {result}
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-=======
           <motion.div
-=======
                   <div className="pt-4 border-t border-gray-700/50">
                     <div className="grid grid-cols-3 gap-4 text-center">
                       <div>
@@ -2926,7 +2844,6 @@ const CaseStudies = () => {
               <motion.div
                 key={study.id}
                 initial={{ opacity: 0, y: 20 }}
-=======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid gap-8 md:grid-cols-2">
@@ -2950,12 +2867,11 @@ const CaseStudies = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">{study.title}</h3>
                   <p className="text-zion-slate-light mb-4">{study.company}</p>
-=======
       {/* Category Filter */}
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
-            <button
+            <$2 />
               key={category.name}
               className="flex items-center space-x-2 px-6 py-3 rounded-full bg-zion-slate-dark hover:bg-zion-cyan/20 border border-zion-cyan/30 text-white hover:text-zion-cyan transition-all duration-300 group"
             >
@@ -2971,7 +2887,7 @@ const CaseStudies = () => {
         {/* Case Studies Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {caseStudies.map((study) => (
-            <div
+            <$2 />
               key={study.id}
               className="bg-zion-slate-dark border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 hover:shadow-2xl hover:shadow-zion-cyan/10 transition-all duration-300 group"
             >
@@ -3011,7 +2927,7 @@ const CaseStudies = () => {
                     <h4 className="text-sm font-semibold text-gray-400 mb-3">Technologies Used</h4>
                     <div className="flex flex-wrap gap-2">
                       {study.technologies.map((tech) => (
-                        <span
+                        <$2 />
                           key={tech}
                           className="px-3 py-1 bg-gray-700/50 text-cyan-400 text-sm rounded-full border border-gray-600"
                         >
@@ -3021,7 +2937,7 @@ const CaseStudies = () => {
                     </div>
                   </div>
 
-                  <Link
+                  <$2 />
                     to="/contact"
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors duration-300"
                   >
@@ -3040,13 +2956,12 @@ const CaseStudies = () => {
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Explore our most impactful client transformations and the technologies that made them possible.
             </p>
-=======
             ))}
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {caseStudies.filter(cs => cs.featured).map((caseStudy) => (
-              <div
+              <$2 />
                 key={caseStudy.id}
                 className="p-8 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -3088,7 +3003,7 @@ const CaseStudies = () => {
                   <h4 className="text-lg font-semibold text-cyan-400 mb-2">Technologies Used</h4>
                   <div className="flex flex-wrap gap-2">
                     {caseStudy.technologies.map((tech, index) => (
-                      <span
+                      <$2 />
                         key={index}
                         className="px-3 py-1 rounded-full bg-gray-700/50 text-gray-300 text-sm border border-gray-600"
                       >
@@ -3098,7 +3013,7 @@ const CaseStudies = () => {
                   </div>
                 </div>
                 
-                <Link
+                <$2 />
                   to={`/case-studies/${caseStudy.id}`}
                   className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"
                 >
@@ -3106,7 +3021,6 @@ const CaseStudies = () => {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
-=======
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -3136,7 +3050,6 @@ const CaseStudies = () => {
                   <ul className="space-y-1">
                     {study.results.map((result, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-400">
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredCaseStudies.map((study) => (
@@ -3174,7 +3087,6 @@ const CaseStudies = () => {
                     {study.results.map((result, index) => (
                       <li key={index} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -3279,11 +3191,10 @@ const CaseStudies = () => {
               </motion.div>
             ))}
           </div>
-=======
               </div>
 
               <div className="mt-6 pt-4 border-t border-gray-700/50">
-                <Link
+                <$2 />
                   to={`/case-studies/${study.id}`}
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
                 >
@@ -3310,7 +3221,7 @@ const CaseStudies = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {caseStudies.map((caseStudy) => (
-              <div
+              <$2 />
                 key={caseStudy.id}
                 className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -3343,7 +3254,7 @@ const CaseStudies = () => {
                   </ul>
                 </div>
                 
-                <Link
+                <$2 />
                   to={`/case-studies/${caseStudy.id}`}
                   className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300 text-sm"
                 >
@@ -3370,7 +3281,7 @@ const CaseStudies = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industry, index) => (
-              <div
+              <$2 />
                 key={index}
                 className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
               >
@@ -3399,7 +3310,7 @@ const CaseStudies = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div
+              <$2 />
                 key={index}
                 className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
               >
@@ -3420,7 +3331,6 @@ const CaseStudies = () => {
               </div>
             ))}
           </div>
-=======
 
                 <div className="pt-4 border-t border-white/10">
                   <div className="flex justify-between text-sm text-zion-slate-light">
@@ -3428,8 +3338,6 @@ const CaseStudies = () => {
                     <span>Team: {study.metrics.teamSize}</span>
                   </div>
                 </div>
-=======
-=======
               </motion.div>
             ))}
           </div>
@@ -3441,8 +3349,6 @@ const CaseStudies = () => {
               <p className="text-gray-500">Try adjusting your filters to see more results.</p>
             </div>
           )}
-=======
-=======
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
@@ -3491,8 +3397,6 @@ const CaseStudies = () => {
               </motion.div>
             ))}
           </div>
-=======
-=======
         </div>
       </section>
 
@@ -3513,7 +3417,6 @@ const CaseStudies = () => {
           <p className="text-xl text-gray-300 mb-8">
             Join the organizations that have already transformed their operations with 
             Zion Tech Group's AI-powered solutions. Let's discuss how we can help you achieve similar results.
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -3521,7 +3424,6 @@ const CaseStudies = () => {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Join the growing list of organizations that have transformed their operations with Zion Tech Group's AI solutions.
-=======
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -3529,8 +3431,6 @@ const CaseStudies = () => {
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join the ranks of industry leaders who have transformed their operations with our AI and quantum technologies.
-=======
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-3xl p-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -3541,14 +3441,14 @@ const CaseStudies = () => {
             Schedule a consultation with our experts today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <$2 />
               to="/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
               <Zap className="w-5 h-5 mr-2" />
               Start Your Transformation
             </Link>
-            <Link
+            <$2 />
               to="/services"
               className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
             >
@@ -3558,36 +3458,33 @@ const CaseStudies = () => {
             >
               Start Your Journey
               <ArrowRight className="ml-2 w-5 h-5" />
-=======
               className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
             >
               Start Your Transformation
               <ArrowRight className="w-5 h-5 ml-2" />
-=======
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
               Schedule a Consultation
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <Link
+            <$2 />
               to="/services"
               className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
             >
               Explore Solutions
             </Link>
-            <Link
+            <$2 />
               to="/demo"
               className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-white font-semibold hover:border-blue-500 hover:text-blue-400 transition-all duration-300"
             >
               Schedule Demo
             </Link>
-            <Link
+            <$2 />
               to="/services"
               className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
             >
               Explore Our Solutions
             </Link>
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -3607,12 +3504,10 @@ const CaseStudies = () => {
               <ArrowRight className="w-5 h-5" />
             </button>
           </div>
-=======
       <section className="pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div 
             className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30"
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600/20 to-blue-600/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -3620,7 +3515,6 @@ const CaseStudies = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -3634,16 +3528,13 @@ const CaseStudies = () => {
               Ready to Write Your Success Story?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-=======
       <section className="pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-=======
               {/* Challenge & Solution */}
               <div className="space-y-4 mb-6">
                 <div>
@@ -3675,7 +3566,7 @@ const CaseStudies = () => {
                   <h4 className="text-zion-cyan font-semibold mb-2">Technologies Used</h4>
                   <div className="flex flex-wrap gap-2">
                     {study.technologies.map((tech, index) => (
-                      <span
+                      <$2 />
                         key={index}
                         className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/30"
                       >
@@ -3706,7 +3597,7 @@ const CaseStudies = () => {
 
               {/* CTA */}
               <div className="flex items-center justify-between">
-                <Link
+                <$2 />
                   to={`/case-studies/${study.id}`}
                   className="text-zion-cyan hover:text-white transition-colors font-medium group-hover:underline"
                 >
@@ -3728,14 +3619,14 @@ const CaseStudies = () => {
               Let's discuss how Zion Tech Group can transform your business with cutting-edge AI solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <$2 />
                 to="/contact"
                 className="bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/30 flex items-center justify-center space-x-2"
               >
                 <span>Start Your Project</span>
                 <ArrowRight className="h-5 w-5" />
               </Link>
-              <Link
+              <$2 />
                 to="/services"
                 className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
               >
@@ -3747,8 +3638,7 @@ const CaseStudies = () => {
         </div>
       </div>
     </div>
-  ];
-
+  ]
   return (
     <>
       <SEO 
@@ -3806,7 +3696,7 @@ const CaseStudies = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {metrics.map((metric, index) => {
-                const Icon = metric.icon;
+                const Icon = metric.icon
                 return (
                   <motion.div
                     key={metric.label}
@@ -3822,7 +3712,7 @@ const CaseStudies = () => {
                     <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
                     <div className="text-gray-300">{metric.label}</div>
                   </motion.div>
-                );
+                )
               })}
             </div>
           </div>
@@ -3848,7 +3738,7 @@ const CaseStudies = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {caseStudies.map((study, index) => {
-                const Icon = study.icon;
+                const Icon = study.icon
                 return (
                   <motion.div
                     key={study.id}
@@ -3914,7 +3804,7 @@ const CaseStudies = () => {
                       </div>
                     </div>
                   </motion.div>
-                );
+                )
               })}
             </div>
           </div>
@@ -3962,7 +3852,6 @@ const CaseStudies = () => {
                     <div className="text-sm text-blue-300">{testimonial.company}</div>
                   </div>
                 </motion.div>
-=======
                   className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
                 >
                   {category}
@@ -3988,14 +3877,14 @@ const CaseStudies = () => {
                 Let's discuss how we can help transform your business with innovative technology solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <$2 />
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105"
                 >
                   Start Your Project
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
-                <Link 
+                <$2 />
                   to="/services"
                   className="inline-flex items-center px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-200"
                 >
@@ -4007,9 +3896,6 @@ const CaseStudies = () => {
         </section>
       </div>
     </>
-=======
-=======
-=======
             className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-3xl p-12 border border-cyan-500/20"
           >
             <Award className="w-16 h-16 text-cyan-400 mx-auto mb-6" />
@@ -4029,20 +3915,17 @@ const CaseStudies = () => {
               </button>
             </div>
           </motion.div>
-=======
-=======
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
             >
               Get Started
             </Link>
-            <Link
+            <$2 />
               to="/services"
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300"
             >
               Explore Services
             </Link>
           </div>
-=======
               Join the ranks of successful organizations that have transformed their business with Zion Tech Group's 
               cutting-edge solutions.
             </p>
@@ -4058,7 +3941,6 @@ const CaseStudies = () => {
         </div>
       </div>
     </div>
-=======
     <>
       <SEOHead 
         title="Case Studies - Zion Tech Group"
@@ -4087,13 +3969,13 @@ const CaseStudies = () => {
                 with our AI-powered solutions. Real results, measurable impact, proven success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
+                <$2 />
                   to="/contact"
                   className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your Success Story
                 </Link>
-                <Link
+                <$2 />
                   to="/demo"
                   className="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
                 >
@@ -4103,7 +3985,6 @@ const CaseStudies = () => {
             </div>
           </div>
         </section>
-=======
         {/* CTA Section */}
         <section className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -4126,22 +4007,19 @@ const CaseStudies = () => {
                 </button>
               </div>
             </div>
-=======
     { name: "Manufacturing", icon: Factory, count: "25+ projects" },
     { name: "Healthcare", icon: Hospital, count: "15+ projects" },
     { name: "Financial Services", icon: Shield, count: "20+ projects" },
     { name: "Retail", icon: ShoppingCart, count: "18+ projects" },
     { name: "Technology", icon: Cpu, count: "30+ projects" },
     { name: "Energy", icon: Zap, count: "12+ projects" }
-  ];
-
+  ]
   const stats = [
     { icon: Users, value: "200+", label: "Successful Projects", description: "Delivered across industries" },
     { icon: TrendingUp, value: "95%", label: "Client Satisfaction", description: "Exceeding expectations" },
     { icon: Award, value: "50+", label: "Industry Awards", description: "Recognition for excellence" },
     { icon: Globe, value: "25+", label: "Countries", description: "Global project delivery" }
-  ];
-
+  ]
   return (
     <>
       <SEOHead 
@@ -4166,14 +4044,14 @@ const CaseStudies = () => {
                 Discover how our AI-powered solutions have transformed businesses across industries. Real results, real impact, real success stories.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
+                <$2 />
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your Project
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
-                <Link
+                <$2 />
                   to="/services"
                   className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
                 >
@@ -4294,7 +4172,6 @@ const CaseStudies = () => {
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join hundreds of companies that have transformed their business with our AI-powered solutions.
-=======
       {/* Case Studies Grid */}
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
         <div className="max-w-7xl mx-auto">
@@ -4337,11 +4214,9 @@ const CaseStudies = () => {
                         <li key={index} className="text-gray-300 text-sm flex items-center">
                           <span className="text-cyan-400 mr-2">✓</span>
                           {result}
-=======
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Link } from 'react-router-dom';
-
+import React from 'react'
+import { SEO } from '@/components/SEO'
+import { Link } from 'react-router-dom'
 export default function CaseStudies() {
   const caseStudies = [
     {
@@ -4435,10 +4310,8 @@ export default function CaseStudies() {
       ],
       image: '/images/case-studies/energy-grid.jpg'
     }
-  ];
-
-  const industries = ['All', 'Healthcare', 'Financial Services', 'Manufacturing', 'Government', 'Retail', 'Energy & Utilities'];
-
+  ]
+  const industries = ['All', 'Healthcare', 'Financial Services', 'Manufacturing', 'Government', 'Retail', 'Energy & Utilities']
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -4593,10 +4466,8 @@ export default function CaseStudies() {
       image: '/api/placeholder/400/250',
       category: 'EdTech'
     }
-  ];
-
-  const categories = ['All', 'AI & Automation', 'Healthcare AI', 'Industrial AI', 'Retail AI', 'Government Tech', 'EdTech'];
-
+  ]
+  const categories = ['All', 'AI & Automation', 'Healthcare AI', 'Industrial AI', 'Retail AI', 'Government Tech', 'EdTech']
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -4626,7 +4497,7 @@ export default function CaseStudies() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
-              <button
+              <$2 />
                 key={category}
                 className="px-6 py-3 rounded-xl border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/20 transition-all duration-300 font-medium"
               >
@@ -4638,7 +4509,7 @@ export default function CaseStudies() {
       </div>
 
       {/* Case Studies Grid */}
-                  <Link 
+                  <$2 />
                     to={`/case-studies/${study.id}`}
                     className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-medium"
                   >
@@ -4683,7 +4554,7 @@ export default function CaseStudies() {
                   <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
                     {study.challenge}
                   </p>
-                  <Link 
+                  <$2 />
                     to={`/case-studies/${study.id}`}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium group"
                   >
@@ -4707,13 +4578,13 @@ export default function CaseStudies() {
               Join the ranks of successful organizations that have transformed their operations with our solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <$2 />
                 to="/contact"
                 className="px-8 py-4 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors duration-200"
               >
                 Get Started
               </Link>
-              <Link
+              <$2 />
                 to="/services"
                 className="px-8 py-4 bg-transparent border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold rounded-lg transition-colors duration-200"
               >
@@ -4721,13 +4592,12 @@ export default function CaseStudies() {
               </Link>
             </div>
           </div>
-=======
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30 inline-flex items-center"
               >
                 Start Your Transformation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <$2 />
                 to="/services"
                 className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400/20 transition-all duration-300"
               >
@@ -4738,14 +4608,10 @@ export default function CaseStudies() {
         </div>
       </div>
     </div>
-  );
+  )
 }
-=======
-};
-
-export default CaseStudies;
-=======
-        </div>
+}
+export default CaseStudies</$1>
 
         {/* Success Metrics */}
         <div className="bg-gradient-to-r from-green-900/20 to-teal-900/20 rounded-3xl p-8 border border-green-500/20 mb-16">
@@ -4764,21 +4630,18 @@ export default CaseStudies;
         </div>
       </div>
     </>
-  );
+  )
 }
-=======
         </div>
       </section>
     </div>
-  );
-};
-
-export default CaseStudies;
-=======
+  )
+}
+export default CaseStudies
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {caseStudies.map((study) => (
-            <div
+            <$2 />
               key={study.id}
               className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
             >
@@ -4835,7 +4698,7 @@ export default CaseStudies;
                 <h5 className="text-sm font-semibold text-cyan-400 mb-2">Technologies Used</h5>
                 <div className="flex flex-wrap gap-2">
                   {study.technologies.map((tech, index) => (
-                    <span
+                    <$2 />
                       key={index}
                       className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
                     >
@@ -4867,14 +4730,14 @@ export default CaseStudies;
               measurable results like the ones you see above.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <$2 />
                 to="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
               >
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <$2 />
                 to="/services"
                 className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200"
               >
@@ -4885,5 +4748,6 @@ export default CaseStudies;
         </div>
       </div>
     </div>
-  );
+  )
 }
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></p></p></p></p></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>

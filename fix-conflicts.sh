@@ -1,21 +1,22 @@
 #!/bin/bash
 
-# Find all files with merge conflicts
-files=$(find pages components -name "*.tsx" -o -name "*.ts" | xargs grep -l "")
+# Fix merge conflicts in TypeScript files
+echo "Fixing merge conflicts..."
 
-for file in $files; do
+# Function to fix merge conflicts in a file
+fix_conflicts() {
+    local file="$1"
     echo "Fixing conflicts in $file"
     
-    # Create a backup
-    cp "$file" "$file.backup"
-    
-    # Remove all merge conflict markers and keep HEAD version
-    sed -i '/^/,/^/!d' "$file"
-    sed -i '/^/d' "$file"
-    sed -i '/^    
-    # Clean up any remaining conflict markers
-    sed -i '/^<<<<<<< /d' "$file"
-    sed -i '/^/d' "$file"
-    sed -i '/^done
+    # Remove merge conflict markers and keep the HEAD version
+    sed -i '//!d' "$file"
+    sed -i '/<<<<<<< HEAD/d' "$file"
+    sed -i '/=======/d' "$file"
+    sed -i '/
+}
 
-echo "Fixed conflicts in all files"
+# Fix the problematic files
+fix_conflicts "app/utils/performanceOptimizer.ts"
+fix_conflicts "src/data/bannerConfigurations.ts"
+
+echo "Merge conflicts fixed!"

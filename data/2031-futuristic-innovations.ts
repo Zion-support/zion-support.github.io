@@ -1,50 +1,46 @@
 export interface FuturisticInnovation2031 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string[]
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging';
-  patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
-  aiCapabilities: string[];
-  marketDisruption: string;
+    mobile: string
+    email: string
+    address: string
+    website: string
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
+  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging'
+  patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source'
+  aiCapabilities: string[]
+  marketDisruption: string
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const futuristicInnovations2031: FuturisticInnovation2031[] = [
   // AI CONSCIOUSNESS EVOLUTION PLATFORM
   {
@@ -99,10 +95,6 @@ export const futuristicInnovations2031: FuturisticInnovation2031[] = [
     aiCapabilities: ['Consciousness Development', 'Self-Awareness', 'Emotional Intelligence', 'Philosophical Reasoning', 'Ethical Decision Making'],
     marketDisruption: 'Revolutionizes AI development by introducing genuine consciousness, enabling truly intelligent and self-aware AI systems.'
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // QUANTUM DNA COMPUTING PLATFORM
   {
     id: 'quantum-dna-computing-platform',
@@ -156,10 +148,6 @@ export const futuristicInnovations2031: FuturisticInnovation2031[] = [
     aiCapabilities: ['Molecular Computing', 'Quantum-DNA Integration', 'Biological Algorithms', 'Quantum Error Correction', 'Molecular Programming'],
     marketDisruption: 'Revolutionizes computing by combining quantum mechanics with biological systems, enabling unprecedented processing power and biological integration.'
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // SPACE MINING AUTOMATION PLATFORM
   {
     id: 'space-mining-automation-platform',
@@ -213,10 +201,6 @@ export const futuristicInnovations2031: FuturisticInnovation2031[] = [
     aiCapabilities: ['Space Robotics', 'Autonomous Mining', 'Interplanetary Navigation', 'Resource Optimization', 'Safety Protocols'],
     marketDisruption: 'Revolutionizes space exploration by enabling automated resource extraction, making space mining economically viable and sustainable.'
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // NEUROMORPHIC COMPUTING PLATFORM
   {
     id: 'neuromorphic-computing-platform',
@@ -270,10 +254,6 @@ export const futuristicInnovations2031: FuturisticInnovation2031[] = [
     aiCapabilities: ['Neuromorphic Computing', 'Cognitive Computing', 'Spiking Neural Networks', 'Pattern Recognition', 'Neural Plasticity'],
     marketDisruption: 'Advances AI computing by mimicking human brain architecture, enabling more efficient and intelligent AI systems.'
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AUTONOMOUS DEVOPS PLATFORM
   {
     id: 'autonomous-devops-platform',
@@ -327,10 +307,6 @@ export const futuristicInnovations2031: FuturisticInnovation2031[] = [
     aiCapabilities: ['Autonomous Operations', 'Self-Healing Systems', 'Predictive Maintenance', 'Intelligent Automation', 'DevOps AI'],
     marketDisruption: 'Revolutionizes DevOps by eliminating manual operations, enabling truly autonomous and self-optimizing infrastructure.'
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // QUANTUM CREATIVITY STUDIO
   {
     id: 'quantum-creativity-studio',
@@ -384,4 +360,4 @@ export const futuristicInnovations2031: FuturisticInnovation2031[] = [
     aiCapabilities: ['Quantum Creativity', 'AI Content Generation', 'Creative Algorithms', 'Design Optimization', 'Innovation AI'],
     marketDisruption: 'Advances creative AI by integrating quantum computing principles, enabling breakthrough creative content and innovative design solutions.'
   }
-];
+]

@@ -1,18 +1,10 @@
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'
 const contact = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-};
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
+}
 export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 	{
 		id: 'affiliate-marketing-tracker-pro',
@@ -434,4 +426,4 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		rating: 4.5,
 		reviews: 17
 	}
-];
+]

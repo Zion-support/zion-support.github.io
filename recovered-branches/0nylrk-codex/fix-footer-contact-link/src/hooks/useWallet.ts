@@ -1,66 +1,57 @@
-
-import { useEffect, useState } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { supabase } from '@/integrations/supabase/client';
-import type { Wallet, TokenTransaction } from '@/types/tokens';
-
+import { useEffect, useState } from 'react'
+import { useAuth } from '@/hooks/useAuth'
+import { supabase } from '@/integrations/supabase/client'
+import type { Wallet, TokenTransaction } from '@/types/tokens'
 export function useWallet() {
-  const { user } = useAuth();
-  const [wallet, setWallet] = useState<Wallet | null>(null);
-  const [transactions, setTransactions] = useState<TokenTransaction[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
+  const { user } = useAuth()
+  const [wallet, setWallet] = useState<Wallet | null>(null)
+  const [transactions, setTransactions] = useState<TokenTransaction[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
   async function fetchWallet() {
     if (!user?.id) {
-      setWallet(null);
-      setLoading(false);
-      return;
+      setWallet(null)
+      setLoading(false)
+      return
     }
-
     try {
-      setLoading(true);
+      setLoading(true)
       const { data, error } = await supabase
         .from('wallets')
         .select('*')
         .eq('user_id', user.id)
-        .single();
-
+        .single()
       if (error) {
-        throw error;
+        throw error
       }
-
-      setWallet(data);
+      setWallet(data)
     } catch (err: any) {
-      console.error('Error fetching wallet:', err);
-      setError(err.message);
+      console.error('Error fetching wallet:', err)
+      setError(err.message)
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
   }
-
   async function fetchTransactions() {
     if (!user?.id) {
-      setTransactions([]);
-      return;
+      setTransactions([])
+      return
     }
     try {
       const { data, error } = await supabase
         .from('token_transactions')
         .select('*')
         .eq('user_id', user.id)
-        .order('created_at', { ascending: false });
-
-      if (error) throw error;
-      setTransactions((data || []) as TokenTransaction[]);
+        .order('created_at', { ascending: false })
+      if (error) throw error
+      setTransactions((data || []) as TokenTransaction[])
     } catch (err: any) {
-      console.error('Error fetching transactions:', err);
+      console.error('Error fetching transactions:', err)
     }
   }
-
   async function earnTokens(amount: number, reason?: string) {
-    if (!user?.id) return;
-    setWallet(prev => prev ? { ...prev, balance: prev.balance + amount } : prev);
+    if (!user?.id) return
+    setWallet(prev => prev ? { ...prev, balance: prev.balance + amount } : prev)
     setTransactions(prev => [
       {
         id: crypto.randomUUID(),
@@ -68,22 +59,18 @@ export function useWallet() {
         amount,
         transaction_type: 'earn',
         reason: reason || null,
-<<<<<<< HEAD
         created_at: new Date().toISOString()},
-      ...prev]);
-=======
+      ...prev])
         created_at: new Date().toISOString(),
       },
       ...prev,
-    ]);
->>>>>>> origin/auto/autonomy-17186719616
+    ])
   }
-
   async function spendTokens(amount: number, reason?: string) {
-    if (!user?.id) return;
+    if (!user?.id) return
     setWallet(prev =>
       prev ? { ...prev, balance: Math.max(0, prev.balance - amount) } : prev
-    );
+    )
     setTransactions(prev => [
       {
         id: crypto.randomUUID(),
@@ -91,22 +78,17 @@ export function useWallet() {
         amount,
         transaction_type: 'burn',
         reason: reason || null,
-<<<<<<< HEAD
         created_at: new Date().toISOString()},
-      ...prev]);
-=======
+      ...prev])
         created_at: new Date().toISOString(),
       },
       ...prev,
-    ]);
->>>>>>> origin/auto/autonomy-17186719616
+    ])
   }
-
   useEffect(() => {
-    fetchWallet();
-    fetchTransactions();
-  }, [user?.id]);
-
+    fetchWallet()
+    fetchTransactions()
+  }, [user?.id])
   return {
     wallet,
     transactions,
@@ -115,10 +97,7 @@ export function useWallet() {
     fetchWallet,
     fetchTransactions,
     earnTokens,
-<<<<<<< HEAD
-    spendTokens};
-=======
+    spendTokens}
     spendTokens,
-  };
->>>>>>> origin/auto/autonomy-17186719616
+  }
 }

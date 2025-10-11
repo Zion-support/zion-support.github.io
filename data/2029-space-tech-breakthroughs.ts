@@ -1,33 +1,29 @@
 export interface SpaceTechBreakthroughService2029 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  realImplementation: boolean;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
+  link: string
+  marketPosition: string
+  targetAudience: string
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  realImplementation: boolean
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-  };
-  category: string;
-  technology: string[];
-  benefits: string[];
-  useCases: string[];
-  spaceCapabilities: string[];
+    mobile: string
+    email: string
+    address: string
+  }
+  category: string
+  technology: string[]
+  benefits: string[]
+  useCases: string[]
+  spaceCapabilities: string[]
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029[] = [
   {
     id: "space-mining-automation-platform",
@@ -279,4 +275,4 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
       "Space-time messaging"
     ]
   }
-];
+]

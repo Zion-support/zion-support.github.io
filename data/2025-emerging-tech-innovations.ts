@@ -1,89 +1,83 @@
-<<<<<<< HEAD
 export interface EmergingTechInnovationService {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  price: string;
-  period: string;
-  features: string[];
-  category: string;
-  marketSize: string;
-  targetAudience: string[];
-  competitiveAdvantage: string;
-  useCases: string[];
-  integrations: string[];
-  compliance: string[];
-  website: string;
+  id: string
+  name: string
+  tagline: string
+  description: string
+  price: string
+  period: string
+  features: string[]
+  category: string
+  marketSize: string
+  targetAudience: string[]
+  competitiveAdvantage: string
+  useCases: string[]
+  integrations: string[]
+  compliance: string[]
+  website: string
   contact: {
-    phone: string;
-    email: string;
-    address: string;
-  };
-  trialDays: number;
-  setupTime: string;
-  competitors: string[];
-  roi: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  technologyStack: string[];
-  innovationLevel: string;
-  futureProofing: string;
-  researchPartnerships: string[];
-  popular?: boolean;
-  icon?: string;
-  color?: string;
-  textColor?: string;
-  link?: string;
-  marketPosition?: string;
-  technology?: string[];
-  growthRate?: string;
-  variant?: string;
+    phone: string
+    email: string
+    address: string
+  }
+  trialDays: number
+  setupTime: string
+  competitors: string[]
+  roi: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
+  technologyStack: string[]
+  innovationLevel: string
+  futureProofing: string
+  researchPartnerships: string[]
+  popular?: boolean
+  icon?: string
+  color?: string
+  textColor?: string
+  link?: string
+  marketPosition?: string
+  technology?: string[]
+  growthRate?: string
+  variant?: string
   contactInfo?: {
-=======
-import { ServiceVariant } from '../types/service-variants';
-
+import { ServiceVariant } from '../types/service-variants'
 export interface EmergingTechInnovation {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: ServiceVariant
   contactInfo: {
->>>>>>> origin/auto/autonomy-17186719616
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-<<<<<<< HEAD
-  realImplementation?: boolean;
-  implementationDetails?: string;
+    mobile: string
+    email: string
+    address: string
+    website: string
+  }
+  realImplementation?: boolean
+  implementationDetails?: string
 }
-
 export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
   {
     id: 'ai-quantum-fusion-2025',
@@ -146,26 +140,23 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
     growthRate: '45% YoY',
     variant: 'premium'
   }
-];
-=======
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  benefits: string[];
-  capabilities: string[];
-  marketAdvantage: string;
+]
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
+  benefits: string[]
+  capabilities: string[]
+  marketAdvantage: string
 }
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
-
+}
 export const emergingTechInnovations: EmergingTechInnovation[] = [
   // Quantum Internet & Communication Services
   {
@@ -229,7 +220,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     ],
     marketAdvantage: 'First commercial quantum internet protocol stack with proven infrastructure'
   },
-
   // Autonomous Vehicle AI Services
   {
     id: 'autonomous-vehicle-ai-platform',
@@ -292,7 +282,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     ],
     marketAdvantage: 'Most comprehensive autonomous vehicle AI platform with proven safety record'
   },
-
   // Digital Twin & IoT Services
   {
     id: 'enterprise-digital-twin-platform',
@@ -355,7 +344,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     ],
     marketAdvantage: 'Most comprehensive digital twin platform with advanced 3D visualization and AI analytics'
   },
-
   // Advanced Robotics & Automation Services
   {
     id: 'ai-robotics-orchestration-platform',
@@ -418,7 +406,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     ],
     marketAdvantage: 'Most advanced AI robotics orchestration platform with proven enterprise deployment'
   },
-
   // Quantum Materials & Chemistry Services
   {
     id: 'quantum-materials-discovery-platform',
@@ -481,7 +468,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     ],
     marketAdvantage: 'Only quantum-powered materials discovery platform with proven research applications'
   },
-
   // Metaverse & Virtual Reality Services
   {
     id: 'enterprise-metaverse-platform',
@@ -544,7 +530,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     ],
     marketAdvantage: 'Most comprehensive enterprise metaverse platform with proven business applications'
   },
-
   // Advanced Energy & Sustainability Services
   {
     id: 'quantum-energy-optimization-platform',
@@ -607,7 +592,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     ],
     marketAdvantage: 'Only quantum-powered energy optimization platform with proven grid applications'
   },
-
   // Advanced Biotechnology Services
   {
     id: 'ai-biotechnology-research-platform',
@@ -670,7 +654,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     ],
     marketAdvantage: 'Most comprehensive AI biotech platform with proven research applications'
   },
-
   // Advanced Cybersecurity & Threat Intelligence
   {
     id: 'quantum-threat-intelligence-platform',
@@ -733,5 +716,4 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     ],
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
   }
-];
->>>>>>> origin/auto/autonomy-17186719616
+]

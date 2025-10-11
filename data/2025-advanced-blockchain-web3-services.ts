@@ -1,62 +1,51 @@
-import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
+import { ServiceVariant } from '../types/service-variants'
 export interface AdvancedBlockchainWeb3Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-<<<<<<< HEAD
-  targetAudience: string[];
-=======
-  targetAudience: string;
->>>>>>> origin/auto/autonomy-17186719616
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-<<<<<<< HEAD
-=======
-  variant: string;
->>>>>>> origin/auto/autonomy-17186719616
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string[]
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: string
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string
+    email: string
+    address: string
+    website: string
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
 }
-<<<<<<< HEAD
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+}
 export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[] = [
   {
     id: 'ai-powered-defi-protocol',
@@ -327,8 +316,6 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     customers: 18,
     rating: 4.7,
     reviews: 35
-=======
-
 export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[] = [
   // DeFi Yield Optimization Platform
   {
@@ -382,7 +369,6 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     rating: 4.8,
     reviews: 89
   },
-
   // NFT Marketplace & Management Platform
   {
     id: 'nft-marketplace-management',
@@ -435,7 +421,6 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     rating: 4.7,
     reviews: 67
   },
-
   // DAO Governance & Management Platform
   {
     id: 'dao-governance-management',
@@ -488,7 +473,6 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     rating: 4.8,
     reviews: 34
   },
-
   // Cross-Chain Bridge & Interoperability
   {
     id: 'cross-chain-bridge-interoperability',
@@ -541,7 +525,6 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     rating: 4.9,
     reviews: 28
   },
-
   // Web3 Identity & Authentication Platform
   {
     id: 'web3-identity-authentication',
@@ -593,6 +576,5 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     customers: 123,
     rating: 4.7,
     reviews: 45
->>>>>>> origin/auto/autonomy-17186719616
   }
-];
+]
