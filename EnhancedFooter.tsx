@@ -7,27 +7,27 @@ const EnhancedFooter: React.FC = () => {
   
   const services = [
     { name: 'AI Solutions', href: '/services/ai' },
-    {name: 'Cloud Architecture', href: '/services/cloud'},
-    {name: 'Web Development', href: '/services/web'},
-    {name: 'Mobile Apps', href: '/services/mobile'},
-    {name: 'Data Analytics', href: '/services/analytics'},
-    {name: 'DevOps', href: '/services/devops'},
+    { name: 'Cloud Architecture', href: '/services/cloud' },
+    { name: 'Web Development', href: '/services/web' },
+    { name: 'Mobile Apps', href: '/services/mobile' },
+    { name: 'Data Analytics', href: '/services/analytics' },
+    { name: 'DevOps', href: '/services/devops' }
   ]
   
   const products = [
-    {name: 'AI Platform', href: '/products/ai-platform'},
-    {name: 'Cloud Suite', href: '/products/cloud-suite'},
-    {name: 'Analytics Dashboard', href: '/products/analytics'},
-    {name: 'Mobile SDK', href: '/products/mobile-sdk'},
+    { name: 'AI Platform', href: '/products/ai-platform' },
+    { name: 'Cloud Suite', href: '/products/cloud-suite' },
+    { name: 'Analytics Dashboard', href: '/products/analytics' },
+    { name: 'Mobile SDK', href: '/products/mobile-sdk' }
   ]
   
   const quickLinks = [
-    {name: 'About Us', href: '/about'},
-    {name: 'Contact', href: '/contact'},
-    {name: 'Blog', href: '/blog'},
-    {name: 'Careers', href: '/careers'},
-    {name: 'Privacy Policy', href: '/legal/privacy'},
-    {name: 'Terms of Service', href: '/legal/terms'},
+    { name: 'About Us', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Privacy Policy', href: '/legal/privacy' },
+    { name: 'Terms of Service', href: '/legal/terms' }
   ]
 
   return (
@@ -172,15 +172,8 @@ const EnhancedFooter: React.FC = () => {
         </div>
       </div>
     </footer>
+    </>
   )
 }
 
 export default EnhancedFooter
-                </MapPin>
-              </Phone>
-            </Mail>
-          </Facebook>
-        </Github>
-      </Twitter>
-    </Linkedin>
-  </div>
