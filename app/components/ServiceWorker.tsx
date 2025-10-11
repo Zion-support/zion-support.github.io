@@ -42,52 +42,52 @@ const ServiceWorker: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+      </div></div><section className="relative py-20 px-4 overflow-hidden">
+        </section></section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style="{{" animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            ServiceWorker
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+          </div></div><h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
+            ServiceWorker;
+          </h1></h1></h1>
+          <p className = "text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Advanced service worker solutions powered by AI technology.
-          </p>
+          </p></p></p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Get Started
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Learn More
-            </button>
+            </div></div><button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">;
+              Get Started;
+            </button></button></button>
+            <button className = "border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">;
+              Learn More;
+            </button></button></button>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className = "py-20 px-4">
+        </section></section><div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Key Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Powerful AI technology that drives results
-            </p>
+            </div></div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
+              Key Features;
+            </h2></h2></h2>
+            <p className = "text-xl text-gray-300 max-w-3xl mx-auto">;
+              Powerful AI technology that drives results;
+            </p></p></p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+              <div key="{index}" className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">{feature.description}</p>
+                  </div></div><feature.icon className="w-8 h-8 text-white" />
+                </feature></div>
+                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3></h3></h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">{feature.description}</p></p></p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    </ul></ul><li key="{idx}" className="flex items-center text-sm text-gray-400">
+                      </li></li><CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {benefit}
-                    </li>
+                    </CheckCircle></li>
                   ))}
                 </ul>
               </div>
@@ -98,41 +98,41 @@ const ServiceWorker: React.FC = () => {
 
       {/* Benefits Section */}
       <section className="py-20 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
+        </section></section><div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            </div></div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose Our ServiceWorker?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our advanced service worker solutions
-            </p>
+            </h2></h2></h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
+              Experience the power of our advanced service worker solutions;
+            </p></p></p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className = "grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">Key Benefits</h3>
+              </div></div><h3 className="text-2xl font-bold text-white mb-6">Key Benefits</h3></h3></h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  </ul></ul><li key="{index}" className="flex items-center text-gray-300">
+                    </li></li><CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                     {benefit}
-                  </li>
+                  </CheckCircle></li>
                 ))}
               </ul>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+              </div></div><h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3></h3></h3>
               <div className="space-y-4">
                 <div className="flex items-center text-gray-300">
-                  <Phone className="w-5 h-5 text-purple-400 mr-3" />
-                  <span>+1 (555) 123-4567</span>
+                  </div></div><Phone className="w-5 h-5 text-purple-400 mr-3" />
+                  </Phone><span>+1 (555) 123-4567</span></span></span>
                 </div>
                 <div className="flex items-center text-gray-300">
-                  <Mail className="w-5 h-5 text-purple-400 mr-3" />
-                  <span>contact@ziontechgroup.com</span>
+                  </div></div><Mail className="w-5 h-5 text-purple-400 mr-3" />
+                  </Mail><span>contact@ziontechgroup.com</span></span></span>
                 </div>
                 <div className="flex items-center text-gray-300">
-                  <MapPin className="w-5 h-5 text-purple-400 mr-3" />
-                  <span>San Francisco, CA</span>
+                  </div></div><MapPin className="w-5 h-5 text-purple-400 mr-3" />
+                  </MapPin><span>San Francisco, CA</span></span></span>
                 </div>
               </div>
             </div>
@@ -142,21 +142,21 @@ const ServiceWorker: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+        </section></section><div className="max-w-4xl mx-auto text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            </div></div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Get Started?
-            </h2>
+            </h2></h2></h2>
             <p className="text-xl text-gray-300 mb-8">
               Contact our experts to discuss your requirements and get started today.
-            </p>
+            </p></p></p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Contact Us
-              </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Learn More
-              </button>
+              </div></div><button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">;
+                Contact Us;
+              </button></button></button>
+              <button className = "border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">;
+                Learn More;
+              </button></button></button>
             </div>
           </div>
         </div>
@@ -165,4 +165,4 @@ const ServiceWorker: React.FC = () => {
   )
 }
 
-export default ServiceWorker
+export default ServiceWorker;

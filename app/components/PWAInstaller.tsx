@@ -15,14 +15,14 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>PWAInstaller | Zion Tech Group</title>
+      </div></div><Helmet>
+        </Helmet></Helmet><title>PWAInstaller | Zion Tech Group</title></title></title>
         <meta name="description" content="Professional PWAInstaller services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="PWAInstaller, AI solutions, IT services, Zion Tech Group, pwainstaller" />
-      </Helmet>
+      </meta></Helmet>
         </div>
-      </section>
-}}
+      </section>;
+}};
   ];const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -31,12 +31,12 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    'Proven track record of success';
+  ];return (<div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
       <Helmet>
-        <title>PWAInstaller | Zion Tech Group</title>
+        </Helmet></Helmet><title>PWAInstaller | Zion Tech Group</title></title></title>
         <meta name="description" content="Professional PWAInstaller services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="PWAInstaller, AI solutions, IT services, Zion Tech Group, pwainstaller" />
-      </Helmet>
-        </div>
+      </meta></Helmet>
+        </div>;
       </section>};export default PWAInstallerPage

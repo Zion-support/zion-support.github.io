@@ -1,4 +1,4 @@
-// Service Worker for Zion Tech Group
+// Service Worker for Zion Tech Group;
 const CACHE_NAME = 'zion-tech-group-v1'
 const urlsToCache = [
   '/',
@@ -23,11 +23,11 @@ self.addEventListener('fetch', (event) => {
         if (response) {
           return response}
         return fetch(event.request)}
-    )
-        // Return cached version or fetch from network
+    );
+        // Return cached version or fetch from network;
         return response || fetch(event.request)})
   )})
-// Activate event
+// Activate event;
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
