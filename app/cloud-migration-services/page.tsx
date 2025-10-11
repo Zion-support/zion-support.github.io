@@ -1,6 +1,11 @@
 <<<<<<< HEAD
 'use client';
 import React from 'react';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+
+const PagePage: React.FC = () => {
+=======
 import {Helmet}}from 'react-helmet-async';
 =======
 'use client'
@@ -22,6 +27,7 @@ import { Helmet } from 'react-helmet-async'
 =======
     'Proven track record of success';
   ];];];
+>>>>>>> origin/main
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -29,6 +35,10 @@ import { Helmet } from 'react-helmet-async'
         <title>Cloud Migration Services | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Migration Services by Zion Tech Group. Advanced AI and IT solutions for your business." />
       </Helmet>
+<<<<<<< HEAD
+      
+=======
+>>>>>>> origin/main
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">Cloud Migration Services;</h1>
@@ -36,6 +46,15 @@ import { Helmet } from 'react-helmet-async'
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced cloud migration services.</p>
             Powered by cutting-edge AI technology and industry expertise.
           </p>
+<<<<<<< HEAD
+          <div className="space-y-4">
+            <a
+              href="/contact"
+              className="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+            >
+              Get Started Today
+            </a>
+=======
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our cloud migration solutions deliver unmatched performance, security, and scalability.</p>
           </p>
         </div>
@@ -107,6 +126,7 @@ import { Helmet } from 'react-helmet-async'
           <div className="grid md:grid-cols-2 gap-6" /></div>
             {benefits.map((benefit, index) => ()
             ))}
+>>>>>>> origin/main
           </div>
         </div>
 <<<<<<< HEAD
@@ -241,6 +261,9 @@ import { Helmet } from 'react-helmet-async'
 <<<<<<< HEAD
 };
 
+<<<<<<< HEAD
+export default PagePage;
+=======
 export default CloudMigrationServicesPage;
 =======
 }
@@ -264,3 +287,4 @@ export default CloudMigrationServicesPage
   )
 }
 export default CloudMigrationServicesPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></button></button></p></p></p></p></p></p></h1></h2></h2></h2></h2></h3></section></section>
+>>>>>>> origin/main

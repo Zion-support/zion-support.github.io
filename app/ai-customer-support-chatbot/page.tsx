@@ -34,6 +34,42 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
     icon: BarChart,
 >>>>>>> origin/main
       title: 'Advanced Analytics',
+<<<<<<< HEAD
+      description: 'Comprehensive analytics dashboard with customer insights and performance metrics.',
+      benefits: ['Real-time analytics', 'Customer satisfaction tracking', 'Response time metrics', 'Conversion tracking']
+    },
+    {
+      icon: Bot,
+      title: 'Smart Escalation',
+      description: 'Intelligent routing to human agents when complex issues require human intervention.',
+      benefits: ['Seamless handoff', 'Context preservation', 'Priority queuing', 'Agent workload balancing']
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with data encryption and compliance with industry standards.',
+      benefits: ['End-to-end encryption', 'GDPR compliance', 'SOC 2 certified', 'Data privacy protection']
+    }
+  ];
+
+  const benefits = [
+    'Increase customer satisfaction by 95%',
+    'Reduce response time by 90%',
+    'Lower support costs by 70%',
+    'Handle 10x more inquiries',
+    'Enable 24/7 support',
+    'Improve resolution rates',
+    'Scale support operations',
+    'Enhance customer experience'
+  ];
+
+  const useCases = [
+    {
+      title: 'E-commerce Support',
+      description: 'Handle product inquiries, order tracking, and returns with AI assistance',
+      icon: '🛒'
+    },
+=======
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
 <<<<<<< HEAD
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
@@ -54,6 +90,7 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
 =======
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'],
   },
+>>>>>>> origin/main
     {
     icon: Target,
       title: 'Precision Targeting',
@@ -83,7 +120,10 @@ return(<>)
   ];
 return (
     <>
+<<<<<<< HEAD
+=======
   </>
+>>>>>>> origin/main
       <Helmet>
 >>>>>>> origin/main
         <title>Ai Customer Support Chatbot - Zion Tech Group</title>
@@ -98,6 +138,12 @@ return (
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
+<<<<<<< HEAD
+
+      <Navigation />
+
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
+=======
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>
 <<<<<<< HEAD
@@ -106,6 +152,7 @@ return (
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
 =======
+>>>>>>> origin/main
         {/* Hero Section */}
 <<<<<<< HEAD
         <section className="relative py-20 px-4 overflow-hidden">
@@ -156,11 +203,48 @@ return (
 <<<<<<< HEAD
 
         {/* Features Section */}
+<<<<<<< HEAD
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Advanced Chatbot Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Our AI Customer Support Chatbot combines cutting-edge technology with customer expertise
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg mb-4">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-orange-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+=======
         <section className="py-20 px-4">
         </section>
 =======
 <<<<<<< HEAD
         {/* Features Section */} <section className="py-20 px-4">
+>>>>>>> origin/main
 >>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">

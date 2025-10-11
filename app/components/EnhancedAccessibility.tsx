@@ -1,6 +1,10 @@
 <<<<<<< HEAD
 'use client';
+=======
+<<<<<<< HEAD
+'use client';
 import React, { useEffect, useState } from 'react';
+>>>>>>> origin/main
 
 interface AccessibilitySettings {
   highContrast: boolean;
@@ -8,6 +12,8 @@ interface AccessibilitySettings {
   reducedMotion: boolean;
 }
 
+<<<<<<< HEAD
+=======
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
@@ -19,6 +25,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 import React, { useEffect } from 'react'
 >>>>>>> origin/main
 
+>>>>>>> origin/main
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
 <<<<<<< HEAD
@@ -146,4 +153,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 }
 >>>>>>> origin/main
 
+<<<<<<< HEAD
+export default EnhancedAccessibility;
+=======
 export default EnhancedAccessibility
+>>>>>>> origin/main

@@ -31,6 +31,72 @@ const AiClimateSolutionsProPage: React.FC = () => {
 >>>>>>> origin/main
   const features = [
     {
+<<<<<<< HEAD
+      title: 'Carbon Footprint Analysis',
+      description: 'Comprehensive AI-powered carbon footprint tracking and reduction strategies for organizations',
+      icon: Leaf,
+      benefits: [
+        'Real-time carbon tracking',
+        'Automated reduction recommendations',
+        'Industry-specific benchmarks',
+        'Regulatory compliance monitoring'
+      ]
+    },
+    {
+      title: 'Weather Prediction & Modeling',
+      description: 'Advanced weather forecasting with AI-powered climate modeling and extreme weather prediction',
+      icon: Cloud,
+      benefits: [
+        '95% accuracy in weather predictions',
+        'Extreme weather early warning',
+        'Climate trend analysis',
+        'Long-term forecasting'
+      ]
+    },
+    {
+      title: 'Sustainability Planning',
+      description: 'AI-driven sustainability roadmaps and environmental impact optimization strategies',
+      icon: Target,
+      benefits: [
+        'Custom sustainability roadmaps',
+        'ROI analysis for green initiatives',
+        'Resource optimization',
+        'Progress tracking & reporting'
+      ]
+    },
+    {
+      title: 'Emission Tracking & Monitoring',
+      description: 'Real-time emission monitoring and automated compliance reporting for environmental regulations',
+      icon: Activity,
+      benefits: [
+        'Real-time emission monitoring',
+        'Automated compliance reporting',
+        'Predictive emission modeling',
+        'Regulatory compliance tracking'
+      ]
+    },
+    {
+      title: 'Renewable Energy Optimization',
+      description: 'AI-powered optimization of renewable energy systems and smart grid management',
+      icon: Globe,
+      benefits: [
+        'Energy efficiency optimization',
+        'Smart grid management',
+        'Renewable energy forecasting',
+        'Cost reduction strategies'
+      ]
+    },
+    {
+      title: 'Environmental Risk Assessment',
+      description: 'Comprehensive environmental risk analysis and mitigation strategies using AI',
+      icon: CheckCircle,
+      benefits: [
+        'Risk identification & analysis',
+        'Mitigation strategy recommendations',
+        'Environmental impact assessment',
+        'Compliance risk monitoring'
+      ]
+=======
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
@@ -153,16 +219,61 @@ export default AiClimateSolutionsProPage;
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+>>>>>>> origin/main
     }
 <<<<<<< HEAD
   ];
 
   const benefits = [
+<<<<<<< HEAD
+    'Reduce carbon emissions by 40%',
+    'Lower energy costs by 35%',
+    'Improve sustainability compliance by 90%',
+    'Increase operational efficiency by 50%',
+    'Enable data-driven climate decisions',
+    'Automate environmental reporting',
+    'Scale sustainability initiatives',
+    'Enhance environmental reputation'
+  ];
+
+  const useCases = [
+    {
+      title: 'Corporate Sustainability',
+      description: 'Help corporations achieve their sustainability goals and reduce environmental impact',
+      icon: '🏢'
+    },
+    {
+      title: 'Smart Cities',
+      description: 'Build sustainable smart cities with AI-powered environmental management',
+      icon: '🏙️'
+    },
+    {
+      title: 'Agriculture',
+      description: 'Optimize agricultural practices for climate resilience and sustainability',
+      icon: '🌾'
+    },
+    {
+      title: 'Energy Sector',
+      description: 'Optimize renewable energy systems and reduce carbon footprint',
+      icon: '⚡'
+    },
+    {
+      title: 'Transportation',
+      description: 'Develop sustainable transportation solutions and reduce emissions',
+      icon: '🚗'
+    },
+    {
+      title: 'Manufacturing',
+      description: 'Optimize manufacturing processes for environmental sustainability',
+      icon: '🏭'
+    }
+=======
 'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
+>>>>>>> origin/main
   ];
 
   return (
@@ -204,7 +315,40 @@ export default AiClimateSolutionsProPage;
         </section>
 
         {/* Features Section */}
+<<<<<<< HEAD
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Advanced Climate Solutions Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Our AI Climate Solutions Pro combines cutting-edge technology with environmental expertise
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg mb-4">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+=======
         <section className="py-20 px-4">
+>>>>>>> origin/main
         </section>
 =======
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -299,7 +443,11 @@ export default AiClimateSolutionsProPage;
         </section>
       </div>
       <Footer />
+<<<<<<< HEAD
+    </>
+=======
 
+>>>>>>> origin/main
   );
 };
 

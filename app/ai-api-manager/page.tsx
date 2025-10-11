@@ -111,6 +111,15 @@ const AIApiManagerPage: React.FC = () => {
 
 
   return (
+<<<<<<< HEAD
+    <>
+      <Helmet>
+        <title>AI API Manager - Zion Tech Group</title>
+        <meta name="description" content="Streamline and secure your API infrastructure with our AI API Manager solution. Advanced security, performance optimization, and intelligent monitoring." />
+        <meta name="keywords" content="AI API manager, API gateway, API security, microservices, API monitoring, API optimization" />
+      </Helmet>
+
+=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
 <<<<<<< HEAD
       <Helmet>
@@ -119,6 +128,7 @@ const AIApiManagerPage: React.FC = () => {
         <meta name="keywords" content="AI ai api manager, artificial intelligence, ai api manager, AI solutions, intelligent automation" />
       </Helmet>
       
+>>>>>>> origin/main
       <Navigation />
 
 <Navigation />
@@ -207,6 +217,35 @@ const AIApiManagerPage: React.FC = () => {
       </section>
 
 <<<<<<< HEAD
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Advanced API Management Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Our AI API Manager solution combines cutting-edge technology with enterprise-grade security
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg mb-4">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-orange-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+=======
+<<<<<<< HEAD
       {/* Stats Section */} <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8">,</div>
@@ -224,6 +263,7 @@ const AIApiManagerPage: React.FC = () => {
               </div><div key={index} className="text-center">
                 </div><div className="flex justify-center mb-4">
                   {stat.icon}
+>>>>>>> origin/main
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300">{stat.label}</div>

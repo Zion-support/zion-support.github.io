@@ -64,7 +64,11 @@ const AiAutonomousSystemsPage: React.FC = () => {
     {
       title: 'Autonomous Vehicles',
       description: 'Self-driving cars, trucks, and drones with advanced AI navigation and safety systems.',
+<<<<<<< HEAD
+      icon: '🚗'
+=======
       icon: Car
+>>>>>>> origin/main
     },
     {
       title: 'Smart Manufacturing',
@@ -91,6 +95,64 @@ const AiAutonomousSystemsPage: React.FC = () => {
       </Helmet>
 
       <Navigation />
+<<<<<<< HEAD
+
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full mb-8">
+              <Brain className="w-10 h-10 text-white" />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Autonomous Systems
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Build intelligent autonomous systems with our advanced AI technology. 
+              Self-managing, adaptive, and goal-oriented systems for various industries and applications.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-violet-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-violet-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center">
+                Start Building
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </button>
+              <button className="border border-violet-400 text-violet-300 px-8 py-4 rounded-lg font-semibold hover:bg-violet-500 hover:text-white transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Advanced Autonomous System Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Our AI Autonomous Systems combine cutting-edge technology with intelligent decision-making
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-500 rounded-lg mb-4">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-violet-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+=======
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -320,6 +382,7 @@ export default AIAutonomousSystemsPage;
               <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 View Demo
               </button>
+>>>>>>> origin/main
             </div>
           </div>
         </section>
@@ -437,6 +500,13 @@ export default AiAutonomousSystemsPage;
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+      </main>
+
+      <Footer />
+    </>
+  );
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
@@ -640,6 +710,7 @@ export default AiAutonomousSystemsPage;
     </div>
   ),
 <<<<<<< HEAD
+>>>>>>> origin/main
 };
 
 export default PagePage;

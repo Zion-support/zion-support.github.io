@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -288,6 +291,12 @@ return (
         ))
       </section>
     </div>
+<<<<<<< HEAD
+  );
+};
+
+export default AdvancedAnalyticsPage;
+=======
   ),
 }
 export default AdvancedAnalyticsPage
@@ -369,3 +378,4 @@ export default AdvancedAnalyticsPage
   )
 }
 export default AdvancedAnalyticsPage</span></button></button></button></button></p></p></p></p></h1></h2></h2></h2>
+>>>>>>> origin/main

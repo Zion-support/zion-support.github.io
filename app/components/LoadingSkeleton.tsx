@@ -3,6 +3,42 @@
 import React from 'react';
 
 <<<<<<< HEAD
+const LoadingSkeletonPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
+    }
+  ];
+
+  const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ];
+=======
+<<<<<<< HEAD
 interface SkeletonProps {
   className?: string;
   width?: string | number;
@@ -10,6 +46,7 @@ interface SkeletonProps {
   rounded?: boolean;
   animate?: boolean;
 }
+>>>>>>> origin/main
 
 const Skeleton: React.FC<SkeletonProps> = ({
   className = '',
@@ -31,6 +68,9 @@ const Skeleton: React.FC<SkeletonProps> = ({
   );
 };
 
+<<<<<<< HEAD
+export default LoadingSkeletonPage;
+=======
 export const ServiceCardSkeleton: React.FC = () => (
   <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-200/20 rounded mb-4 w-3/4"></div>
@@ -130,4 +170,5 @@ export default Skeleton;
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+>>>>>>> origin/main
 >>>>>>> origin/main

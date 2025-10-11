@@ -93,11 +93,19 @@ const AiContentDeliveryNetworkPage: React.FC = () => {
     <>
       <Helmet>
 <<<<<<< HEAD
+        <title>AI Content Delivery Network - Zion Tech Group</title>
+        <meta name="description" content="Accelerate your content delivery with our AI-powered CDN. Global edge network, intelligent optimization, and advanced security for better performance." />
+        <meta name="keywords" content="AI CDN, content delivery network, edge computing, global CDN, content optimization, CDN security" />
+      </Helmet>
+
+=======
+<<<<<<< HEAD
 <title>Ai Content Delivery Network - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai content delivery network solution for modern businesses." />
         <meta name="keywords" content="AI ai content delivery network, artificial intelligence, ai content delivery network, AI solutions, intelligent automation" />
       </Helmet>
       
+>>>>>>> origin/main
       <Navigation />
 
 <Navigation />
@@ -206,6 +214,8 @@ const AiContentDeliveryNetworkPage: React.FC = () => {
                 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
+<<<<<<< HEAD
+=======
               </div>
             ))}
           </div>
@@ -254,6 +264,7 @@ const AiContentDeliveryNetworkPage: React.FC = () => {
 >>>>>>> origin/main
                   Learn More,
   
+>>>>>>> origin/main
               </div>
             </div>
           </div>

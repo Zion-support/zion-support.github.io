@@ -62,7 +62,11 @@ const AdvancedCachingPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
+      description: 'Worldwide deployment and support for international businesses'
+=======
       description: 'Worldwide deployment and support for international businesses';}
+>>>>>>> origin/main
     }
   ]
   const benefits = [
@@ -288,6 +292,12 @@ return (
         ))
       </section>
     </div>
+<<<<<<< HEAD
+  );
+};
+
+export default AdvancedCachingPage;
+=======
   ),
 }
 export default AdvancedCachingPage
@@ -369,3 +379,4 @@ export default AdvancedCachingPage
   )
 }
 export default AdvancedCachingPage</span></button></button></button></button></p></p></p></p></h1></h2></h2></h2>
+>>>>>>> origin/main

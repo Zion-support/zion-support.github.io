@@ -38,11 +38,55 @@ const AiCloudInfrastructurePage: React.FC = () => {
   ];
 
   const benefits = [
+<<<<<<< HEAD
+    'Reduce infrastructure costs by 40%',
+    'Improve performance by 60%',
+    'Increase reliability by 95%',
+    'Lower operational overhead by 50%',
+    'Enable global scalability',
+    'Automate infrastructure management',
+    'Enhance security and compliance',
+    'Optimize resource utilization'
+  ];
+
+  const useCases = [
+    {
+      title: 'Enterprise Migration',
+      description: 'Migrate enterprise applications to cloud with AI-powered optimization',
+      icon: '🏢'
+    },
+    {
+      title: 'E-commerce Platforms',
+      description: 'Scale e-commerce platforms with intelligent cloud infrastructure',
+      icon: '🛒'
+    },
+    {
+      title: 'Data Analytics',
+      description: 'Build scalable data analytics platforms in the cloud',
+      icon: '📊'
+    },
+    {
+      title: 'IoT Applications',
+      description: 'Support IoT applications with edge computing and cloud infrastructure',
+      icon: '📡'
+    },
+    {
+      title: 'Mobile Apps',
+      description: 'Power mobile applications with scalable cloud backend services',
+      icon: '📱'
+    },
+    {
+      title: 'AI/ML Workloads',
+      description: 'Run AI and machine learning workloads on optimized cloud infrastructure',
+      icon: '🤖'
+    }
+=======
 'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
+>>>>>>> origin/main
   ];
 
   return (
@@ -123,6 +167,22 @@ const AiCloudInfrastructurePage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
               {features.map((feature, index) => (
+<<<<<<< HEAD
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-sky-500 to-blue-500 rounded-lg mb-4">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-sky-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+=======
                 <div key={index}className="bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow">,</div>
                   <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
@@ -157,10 +217,64 @@ const AiCloudInfrastructurePage: React.FC = () => {
 =======
 >>>>>>> main
 >>>>>>> origin/main
+>>>>>>> origin/main
                 </div>
               ))}
             </div>
           </div>
+<<<<<<< HEAD
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Applications & Use Cases
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                From startups to enterprises, our AI Cloud Infrastructure serves diverse needs
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
+                  <div className="text-4xl mb-4">{useCase.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                  <p className="text-gray-300">{useCase.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our AI Cloud Infrastructure?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Experience the future of cloud computing with our revolutionary AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-sky-500 to-blue-500 rounded-lg mb-4">
+                    <CheckCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <p className="text-white font-medium">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+=======
         </section>
 <<<<<<< HEAD
 
@@ -204,6 +318,7 @@ const AiCloudInfrastructurePage: React.FC = () => {
 {/* CTA Section */}
         <section className="py-20 px-4">
         </section>
+>>>>>>> origin/main
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">

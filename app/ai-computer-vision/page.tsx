@@ -93,11 +93,19 @@ const AiComputerVisionPage: React.FC = () => {
     <>
       <Helmet>
 <<<<<<< HEAD
+        <title>AI Computer Vision - Zion Tech Group</title>
+        <meta name="description" content="Transform your business with our AI Computer Vision solutions. Advanced object detection, image analysis, and real-time processing for better insights." />
+        <meta name="keywords" content="AI computer vision, object detection, image analysis, deep learning, computer vision AI, visual recognition" />
+      </Helmet>
+
+=======
+<<<<<<< HEAD
 <title>Ai Computer Vision - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai computer vision solution for modern businesses." />
         <meta name="keywords" content="AI ai computer vision, artificial intelligence, ai computer vision, AI solutions, intelligent automation" />
       </Helmet>
       
+>>>>>>> origin/main
       <Navigation />
 
 <Navigation />
@@ -206,6 +214,8 @@ const AiComputerVisionPage: React.FC = () => {
                 <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
+<<<<<<< HEAD
+=======
               </div>
             ))}
           </div>
@@ -254,6 +264,7 @@ const AiComputerVisionPage: React.FC = () => {
 >>>>>>> origin/main
                   Learn More,
   
+>>>>>>> origin/main
               </div>
             </div>
           </div>

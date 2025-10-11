@@ -73,6 +73,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
     return () => observer.disconnect();
   }, [optimizeImages]);
 
+<<<<<<< HEAD
+  return <>{children}</>;
+};
+
+export default PerformanceOptimizer;
+=======
   useEffect(() => {
     const interval = setInterval(optimizeMemory, 30000); // Check every 30 seconds
     return () => clearInterval(interval);
@@ -508,3 +514,4 @@ export default PerformanceOptimizer</PerformanceOptimizerProps>
 >>>>>>> origin/main
 
 export default PerformanceOptimizer
+>>>>>>> origin/main

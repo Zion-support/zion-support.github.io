@@ -35,7 +35,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     return () => {
       document.documentElement.classList.remove('high-contrast');
     };
+<<<<<<< HEAD
+  }, [settings.keyboardNavigation]);
+=======
   }, [enableHighContrast]);
+>>>>>>> origin/main
 
   useEffect(() => {
     if (enableKeyboardNavigation) {
@@ -60,6 +64,35 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
+<<<<<<< HEAD
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'skip-link';
+    skipLink.style.cssText = `
+      position: absolute;
+      top: -40px;
+      left: 6px;
+      background: #0891b2;
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      border-radius: 4px;
+      z-index: 1000;
+      transition: top 0.3s;
+    `;
+    
+    skipLink.addEventListener('focus', () => {
+      skipLink.style.top = '6px';
+    });
+    
+    skipLink.addEventListener('blur', () => {
+      skipLink.style.top = '-40px';
+    });
+
+    document.body.insertBefore(skipLink, document.body.firstChild);
+  }, []);
+=======
     // Add keyboard navigation support
     if (enableKeyboardNavigation) {
       const handleKeyDown = (event: KeyboardEvent) => {
@@ -83,6 +116,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           }
         }
       };
+>>>>>>> origin/main
 
       document.addEventListener('keydown', handleKeyDown);
       return () => document.removeEventListener('keydown', handleKeyDown);

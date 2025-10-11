@@ -345,5 +345,18 @@ return (
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
+<<<<<<< HEAD
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default PageOptimizedPage;
+=======
   )
 }</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></button></button></button></button></p></p></p></p></p></p></h1></h2></h2></h2></h3></section></section></section></section>
+>>>>>>> origin/main

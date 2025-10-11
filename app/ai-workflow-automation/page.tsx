@@ -16,6 +16,37 @@ const AiWorkflowAutomationPage: React.FC = () => {
 >>>>>>> origin/main
     {
       icon: Brain,
+<<<<<<< HEAD
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
+    }
+  ];
+
+  const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+=======
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
 <<<<<<< HEAD
@@ -323,6 +354,7 @@ const AIWorkflowAutomation: React.FC = () => {,
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology';
+>>>>>>> origin/main
   ];
 
   return (
@@ -333,6 +365,19 @@ const AIWorkflowAutomation: React.FC = () => {,
         <meta name="description" content="Transform your business with AI-powered workflow automation solutions. Increase efficiency, reduce costs, and scale operations with intelligent automation." />
         <meta name="keywords" content="AI workflow automation, business process automation, intelligent automation, workflow optimization" />
       </Helmet>
+<<<<<<< HEAD
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Page
+              </span>
+              <br />
+              <span className="text-white">Solutions</span>
+=======
       <Navigation />
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -345,6 +390,7 @@ const AIWorkflowAutomation: React.FC = () => {,
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Ai Workflow Automation
+>>>>>>> origin/main
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AI-powered ai workflow automation solution for modern businesses.
@@ -360,6 +406,28 @@ const AIWorkflowAutomation: React.FC = () => {,
           </div>
         </section>
 
+<<<<<<< HEAD
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Page?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our page solutions deliver unmatched performance, security, and scalability.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+=======
         {/* Features Section */}
         <section className="py-20 px-4">
         </section>
@@ -442,6 +510,7 @@ const AIWorkflowAutomation: React.FC = () => {,
 =======
 >>>>>>> origin/main
 >>>>>>> origin/main
+>>>>>>> origin/main
               </div>
             </div>
           ))
@@ -460,3 +529,7 @@ const AIWorkflowAutomation: React.FC = () => {,
 export default AiWorkflowAutomationPage;
 >>>>>>> origin/main
 
+<<<<<<< HEAD
+export default PagePage;
+=======
+>>>>>>> origin/main

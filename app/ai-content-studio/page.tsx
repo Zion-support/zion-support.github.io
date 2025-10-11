@@ -10,6 +10,12 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 const AiContentStudioPage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
+      icon: Palette,
+      title: 'AI Design Studio',
+      description: 'Create stunning visual content with AI-powered design tools and templates.',
+      benefits: ['AI design generation', 'Custom templates', 'Brand consistency', 'High-quality output']
+=======
 icon: Brain,
 =======
 =======
@@ -23,6 +29,7 @@ import Footer from '../components/Footer'
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'],
+>>>>>>> origin/main
     },
     {icon: BarChart,
       title: 'Advanced Analytics',
@@ -47,11 +54,18 @@ import Footer from '../components/Footer'
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'],
     },
     {
+<<<<<<< HEAD
+      icon: BarChart,
+      title: 'Analytics & Insights',
+      description: 'Comprehensive analytics and insights to optimize content performance.',
+      benefits: ['Performance metrics', 'Engagement analytics', 'ROI tracking', 'Custom reports']
+=======
       icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
 <<<<<<< HEAD
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+>>>>>>> origin/main
     }
   ];
 
@@ -63,8 +77,16 @@ import Footer from '../components/Footer'
     'Gain competitive advantage with advanced technology'
   ];
 
+<<<<<<< HEAD
+  const useCases = [
+    {
+      title: 'Marketing Campaigns',
+      description: 'Create compelling marketing campaigns with AI-powered content generation',
+      icon: '📢'
+=======
 =======
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
+>>>>>>> origin/main
     },
 >>>>>>> origin/main
   ]
@@ -95,8 +117,14 @@ import Footer from '../components/Footer'
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Ai Content Studio
             </h1>
+<<<<<<< HEAD
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Create stunning content with our AI Content Studio. Advanced design tools, 
+              content generation, and collaboration features for better content creation.
+=======
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AI-powered ai content studio solution for modern businesses.
+>>>>>>> origin/main
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -110,7 +138,40 @@ import Footer from '../components/Footer'
         </section>
 
         {/* Features Section */}
+<<<<<<< HEAD
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Advanced Content Studio Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Our AI Content Studio combines cutting-edge technology with creative expertise
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-rose-500 to-pink-500 rounded-lg mb-4">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-rose-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+=======
         <section className="py-20 px-4">
+>>>>>>> origin/main
         </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">

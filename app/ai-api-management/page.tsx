@@ -146,6 +146,11 @@ const AIApiManagementPage: React.FC = () => {
       <Navigation />
 
 <<<<<<< HEAD
+      <Navigation />
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
 =======
 <Navigation />
@@ -231,6 +236,8 @@ const AIApiManagementPage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       {/* Stats Section */} <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
@@ -427,6 +434,7 @@ export default AIApiManagementPage
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales
+>>>>>>> origin/main
         {/* Features Section */}
 <<<<<<< HEAD
         <section className="py-20 px-4">

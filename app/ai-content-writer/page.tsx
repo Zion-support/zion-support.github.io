@@ -5,9 +5,15 @@ import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 <<<<<<< HEAD
+import { FileText, PenTool, Target, CheckCircle, Phone, Mail, MapPin, ArrowRight, Star, Users, Brain, Zap, Globe, Shield, Clock, Activity, TrendingUp } from 'lucide-react';
+
+const AIContentWriterPage: React.FC = () => {
+=======
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AiContentWriterPage: React.FC = () => {
+>>>>>>> origin/main
   const features = [
     {
       icon: Brain,
@@ -33,7 +39,11 @@ const AiContentWriterPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
+<<<<<<< HEAD
+  ];
 =======
+=======
+>>>>>>> origin/main
 
 const AIContentWriterPage: React.FC = () => {,
 =======
@@ -87,11 +97,55 @@ const AIContentWriterPage: React.FC = () => {
 >>>>>>> origin/main
   const benefits = [
 <<<<<<< HEAD
+    'Increase content output by 10x',
+    'Improve SEO rankings by 150%',
+    'Save 80% of content creation time',
+    'Increase engagement by 200%',
+    'Enable consistent brand voice',
+    'Automate content workflows',
+    'Scale content across channels',
+    'Enhance content quality'
+  ];
+
+  const useCases = [
+    {
+      title: 'Blog Writing',
+      description: 'High-quality blog posts that engage readers and rank well in search engines',
+      icon: '📝'
+    },
+    {
+      title: 'Social Media',
+      description: 'Engaging social media content that drives engagement and conversions',
+      icon: '📱'
+    },
+    {
+      title: 'Marketing Copy',
+      description: 'Compelling marketing copy that converts visitors into customers',
+      icon: '📢'
+    },
+    {
+      title: 'E-commerce Content',
+      description: 'Product descriptions and e-commerce content that drives sales',
+      icon: '🛒'
+    },
+    {
+      title: 'Email Campaigns',
+      description: 'Personalized email campaigns that improve open and click rates',
+      icon: '📧'
+    },
+    {
+      title: 'Technical Writing',
+      description: 'Clear and concise technical documentation and user guides',
+      icon: '📋'
+    }
+=======
+<<<<<<< HEAD
 'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
+>>>>>>> origin/main
   ];
 
   return (
@@ -492,9 +546,16 @@ const AIContentWriterPage: React.FC = () => {
                 </button>
               </div>
             </div>
+<<<<<<< HEAD
+          </div>
+        </section>
+      </main>
+
+=======
           ))
         </section>
       </div>
+>>>>>>> origin/main
       <Footer />
     </div>
   );

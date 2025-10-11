@@ -70,7 +70,11 @@ const LoadingPage: React.FC = () => {
   ]
   return (
 <<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+<<<<<<< HEAD
     <>
+>>>>>>> origin/main
       <Helmet>
 >>>>>>> origin/main
         <title>Loading - Zion Tech Group</title>
@@ -196,6 +200,26 @@ const LoadingPage: React.FC = () => {
             </h2>
             <p className="text-xl text-blue-100 mb-8">Contact us today to learn more about our services.</p>
             </p>
+<<<<<<< HEAD
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default LoadingPage;
+=======
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover: bg-gray-100 transition-colors font-semibold">,</button>
               Contact Us;
   </
@@ -232,3 +256,4 @@ export default LoadingPage
   </button>
   </button>
   </h1>
+>>>>>>> origin/main

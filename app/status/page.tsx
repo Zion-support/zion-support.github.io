@@ -165,8 +165,34 @@ const overallStatus = services.every(service => service.status === 'operational'
     : services.some(service => service.status === 'outage');
       ? 'outage';
       : 'degraded';
+<<<<<<< HEAD
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOOptimizer 
+        title="System Status - Zion Tech Group"
+        description="Real-time status of Zion Tech Group's AI and IT services. Check uptime, performance, and incident reports."
+        keywords="system status, uptime, service status, incidents, monitoring, API status"
+      />
+      <Navigation />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            System
+            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Status
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Real-time status of all our services. We're committed to providing reliable, 
+=======
 return(</h1>)
           <p>Real-time status of all our services. We're committed to providing reliable,</p>
+>>>>>>> origin/main
             high-performance AI and IT solutions.
           </p>
 <<<<<<< HEAD

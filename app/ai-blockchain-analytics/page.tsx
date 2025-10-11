@@ -93,6 +93,15 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
       <Navigation />
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900">
         {/* Hero Section */}
+<<<<<<< HEAD
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full mb-8">
+              <BarChart className="w-10 h-10 text-white" />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Blockchain Analytics
+=======
         <section className="relative py-20 px-4 overflow-hidden">
         </section>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -100,6 +109,7 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Ai Blockchain Analytics
+>>>>>>> origin/main
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AI-powered ai blockchain analytics solution for modern businesses.
@@ -264,10 +274,16 @@ export default AiBlockchainAnalyticsPage;
           </div>
         </section>
 <<<<<<< HEAD
+      </main>
+
+      <Footer />
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
 =======
       </main>
+>>>>>>> origin/main
     </>
   );
 }

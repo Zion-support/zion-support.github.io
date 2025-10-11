@@ -468,6 +468,12 @@ return (
 <<<<<<< HEAD
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+                <div className="flex items-center mb-4">
+=======
+>>>>>>> origin/main
                   <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
 =======
@@ -510,6 +516,13 @@ return (
         </div>
       </section>
 
+<<<<<<< HEAD
+      {/* Solutions Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+=======
+>>>>>>> origin/main
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive Solutions
             </h2>
@@ -533,6 +546,23 @@ return (
 >>>>>>> origin/main
             </p>
           </div>
+<<<<<<< HEAD
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {solutions.map((solution, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300">
+                <div className="flex items-center mb-6">
+                  <solution.icon className="w-12 h-12 text-purple-400 mr-4" />
+                  <h3 className="text-2xl font-semibold text-white">{solution.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-6">{solution.description}</p>
+                <ul className="space-y-3">
+                  {solution.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      {benefit}
+=======
+>>>>>>> origin/main
                     </li>
 <<<<<<< HEAD
 =======
@@ -579,6 +609,37 @@ return (
       {/* Benefits Section */}
       <section className="py-20 px-4">
 <<<<<<< HEAD
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our Enterprise Solutions?</h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Our enterprise solutions are designed to meet the unique challenges of large organizations, 
+                providing the scalability, security, and performance you need to succeed.
+              </p>
+              <div className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1" />
+                    <span className="text-gray-300">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-white mb-6">Get Started Today</h3>
+              <p className="text-gray-300 mb-6">
+                Ready to transform your enterprise? Contact our experts to discuss your requirements 
+                and get a customized solution that fits your business needs.
+              </p>
+              <div className="space-y-4">
+                <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
+                  Schedule Consultation
+                </button>
+                <button className="w-full border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
+                  Download Brochure
+=======
+<<<<<<< HEAD
 =======
           </section>< className="$2 />
             </div><div className="text-center mb-16">
@@ -589,6 +650,7 @@ return (
           </div>
 >>>>>>> origin/main
         </section>
+>>>>>>> origin/main
                 </button>
               </div>
             </div>
@@ -680,8 +742,11 @@ export default EnterprisePage
 };
 
 export default EnterprisePage;
+<<<<<<< HEAD
+=======
 =======
   )
 }
 export default EnterprisePage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></button></button></button></button></p></p></p></p></p></h1></h2></h2></h2></h3></ul></li></section></section></section></section></section>
+>>>>>>> origin/main
 >>>>>>> origin/main

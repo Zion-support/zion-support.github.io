@@ -1,6 +1,11 @@
 <<<<<<< HEAD
 'use client';
 import React from 'react';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+
+=======
 import {Helmet}}from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
 const PagePage: React.FC = () => {,
@@ -9,6 +14,7 @@ const PagePage: React.FC = () => {,
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+>>>>>>> origin/main
 const PagePage: React.FC = () => {
 >>>>>>> origin/main
     const features = [
@@ -51,6 +57,26 @@ const benefits = [
     'Cost-effective pricing plans',
 
 <<<<<<< HEAD
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Page
+              </span>
+              <br />
+              <span className="text-white">Solutions</span>
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     'Proven track record of success'
   ]
@@ -75,11 +101,23 @@ return (
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
+>>>>>>> origin/main
             </h1>
 <<<<<<< HEAD
             <p>Transform your business with our advanced page solutions.;</p>
               Powered by cutting-edge AI technology and industry expertise.
             </p>
+<<<<<<< HEAD
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Learn More
+              </button>
+=======
+>>>>>>> origin/main
             </div>
           </div>
         </div>
@@ -265,6 +303,12 @@ return (
         </div>
       </section>
     </div>
+<<<<<<< HEAD
+  );
+};
+
+export default PagePage;
+=======
   ),
 }
 export default PagePage
@@ -280,3 +324,4 @@ export default PagePage
   )
 }
 export default PagePage</div></div></div></div></div></div></div></div></div></div></div></div></div></button></button></p></p></p></p></p></p></h2></h2></h2></h3></section></section></section>
+>>>>>>> origin/main

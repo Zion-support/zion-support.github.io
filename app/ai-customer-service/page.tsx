@@ -18,6 +18,84 @@ const AiCustomerServicePage: React.FC = () => {
     const features = [
     {
       icon: Brain,
+<<<<<<< HEAD
+      title: 'Intelligent Problem Solving',
+      description: 'AI agents that understand context and provide accurate solutions to complex customer issues.',
+      benefits: ['Context understanding', 'Problem resolution', 'Learning capabilities', 'Escalation management']
+    },
+    {
+      icon: Globe,
+      title: 'Multilingual Support',
+      description: 'Support customers in 50+ languages with natural language processing and translation.',
+      benefits: ['50+ languages', 'Natural language processing', 'Cultural adaptation', 'Real-time translation']
+    },
+    {
+      icon: Zap,
+      title: 'Instant Response',
+      description: 'Immediate responses to customer queries with sub-second response times.',
+      benefits: ['Sub-second response', 'High availability', 'Scalable infrastructure', 'Performance optimization']
+    },
+    {
+      icon: Target,
+      title: 'Personalized Service',
+      description: 'Tailored customer service based on individual preferences and history.',
+      benefits: ['Personalization', 'Customer history', 'Preference learning', 'Customized solutions']
+    },
+    {
+      icon: BarChart,
+      title: 'Analytics & Insights',
+      description: 'Comprehensive analytics and insights to improve customer service performance.',
+      benefits: ['Performance metrics', 'Customer satisfaction', 'Trend analysis', 'ROI tracking']
+    }
+  ];
+
+  const benefits = [
+    'Increase customer satisfaction by 95%',
+    'Reduce response time by 90%',
+    'Lower support costs by 70%',
+    'Handle 10x more inquiries',
+    'Enable 24/7 support',
+    'Improve resolution rates',
+    'Scale support operations',
+    'Enhance customer experience'
+  ];
+
+  const useCases = [
+    {
+      title: 'E-commerce Support',
+      description: 'Handle product inquiries, order issues, and returns with AI assistance',
+      icon: '🛒'
+    },
+    {
+      title: 'Technical Support',
+      description: 'Provide technical assistance and troubleshooting for software and hardware',
+      icon: '🔧'
+    },
+    {
+      title: 'Billing & Payments',
+      description: 'Assist with billing questions, payment issues, and account management',
+      icon: '💳'
+    },
+    {
+      title: 'Product Information',
+      description: 'Answer questions about products, features, and specifications',
+      icon: '📋'
+    },
+    {
+      title: 'Appointment Scheduling',
+      description: 'Help customers schedule appointments and manage bookings',
+      icon: '📅'
+    },
+    {
+      title: 'General Inquiries',
+      description: 'Handle general questions and provide information about services',
+      icon: '❓'
+    }
+  ];
+
+  return (
+    <>
+=======
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
 <<<<<<< HEAD
@@ -84,6 +162,7 @@ return(<>)
 return (
     <>
   </>
+>>>>>>> origin/main
       <Helmet>
 >>>>>>> origin/main
         <title>Ai Customer Service - Zion Tech Group</title>
@@ -98,6 +177,10 @@ return (
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/main
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900"></div>
 <<<<<<< HEAD
@@ -107,6 +190,22 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
 =======
         {/* Hero Section */}
+<<<<<<< HEAD
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mb-8">
+              <MessageSquare className="w-10 h-10 text-white" />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Customer Service
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your customer service with our AI Customer Service solutions. 24/7 support, 
+              multilingual capabilities, and intelligent problem solving for better customer experience.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300 flex items-center justify-center">
+=======
 <<<<<<< HEAD
         <section className="relative py-20 px-4 overflow-hidden">
         </section>
@@ -144,6 +243,7 @@ return (
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
               <button></button>
+>>>>>>> origin/main
                 Get Started
               </button>
               <button></button>
@@ -154,6 +254,42 @@ return (
           </div>
         </section>
 <<<<<<< HEAD
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Advanced Customer Service Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Our AI Customer Service solutions combine cutting-edge technology with customer expertise
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg mb-4">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
 
         {/* Features Section */}
         <section className="py-20 px-4">
@@ -333,6 +469,29 @@ return (
         <section className="py-20 px-4">
         </section>
           <div className="max-w-4xl mx-auto text-center">
+<<<<<<< HEAD
+            <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl p-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Customer Service?
+              </h2>
+              <p className="text-xl text-green-100 mb-8">
+                Join thousands of businesses who are already using our AI Customer Service solutions
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                  Get Started Now
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </button>
+                <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-300">
+                  Schedule Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+=======
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 =======
@@ -371,6 +530,7 @@ return (
         </section>
       </div>
 <<<<<<< HEAD
+>>>>>>> origin/main
       <Footer />
 
   );

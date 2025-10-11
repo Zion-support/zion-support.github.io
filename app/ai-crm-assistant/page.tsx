@@ -93,11 +93,19 @@ const AiCrmAssistantPage: React.FC = () => {
     <>
       <Helmet>
 <<<<<<< HEAD
+        <title>AI CRM Assistant - Zion Tech Group</title>
+        <meta name="description" content="Transform your customer relationship management with our AI CRM Assistant. Intelligent automation, lead scoring, and sales insights for better business growth." />
+        <meta name="keywords" content="AI CRM, customer relationship management, sales automation, lead scoring, CRM AI, business intelligence" />
+      </Helmet>
+
+=======
+<<<<<<< HEAD
 <title>Ai Crm Assistant - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai crm assistant solution for modern businesses." />
         <meta name="keywords" content="AI ai crm assistant, artificial intelligence, ai crm assistant, AI solutions, intelligent automation" />
       </Helmet>
       
+>>>>>>> origin/main
       <Navigation />
 
 <Navigation />
@@ -206,6 +214,8 @@ const AiCrmAssistantPage: React.FC = () => {
                 <button className="border border-violet-400 text-violet-400 hover:bg-violet-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
+<<<<<<< HEAD
+=======
               </div>
             ))}
           </div>
@@ -254,6 +264,7 @@ const AiCrmAssistantPage: React.FC = () => {
 >>>>>>> origin/main
                   Learn More,
   
+>>>>>>> origin/main
               </div>
             </div>
           </div>

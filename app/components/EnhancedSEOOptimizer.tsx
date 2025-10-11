@@ -223,6 +223,25 @@ return (
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
                 <p className="text-gray-300">{feature.description}
             ))}
+<<<<<<< HEAD
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the power of our enhancedseooptimizer solutions for your business.
+            </p>
+          </div>
+
+=======
+>>>>>>> origin/main
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
@@ -311,6 +330,19 @@ export default EnhancedSEOOptimizerPage
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
+<<<<<<< HEAD
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default EnhancedSEOOptimizerPage;
+=======
   )
 }
 export default EnhancedSEOOptimizerPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></button></button></button></button></p></p></p></p></p></h1></h2></h2></h3></section></section></section>
+>>>>>>> origin/main

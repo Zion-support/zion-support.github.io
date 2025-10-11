@@ -19,6 +19,17 @@ const Header: React.FC = () => {
   return (
 <<<<<<< HEAD
     <>
+      <Navigation />
+      {/* Spacer to prevent content from going under fixed header */}
+      <div className="h-16 lg:h-20" />
+    </>
+  );
+};
+
+export default Header;
+=======
+<<<<<<< HEAD
+    <>
   </>
       <Navigation />
       {/* Spacer to prevent content from going under fixed header */}
@@ -45,4 +56,5 @@ export default Header
   )
 }
 export default Header</div>
+>>>>>>> origin/main
 >>>>>>> origin/main

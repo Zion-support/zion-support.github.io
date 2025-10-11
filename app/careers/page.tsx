@@ -24,6 +24,10 @@ const CareersPage: React.FC = () => {
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'lucide-react';
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
 
 const CareersPage: React.FC = () => {
   const openPositions = [
@@ -65,6 +69,10 @@ const CareersPage: React.FC = () => {
       type: 'Full-time',
       experience: '5+ years',
 <<<<<<< HEAD
+      description: 'Lead development of cutting-edge AI solutions and machine learning models.'
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
     },
     {
 =======
@@ -93,6 +101,17 @@ const CareersPage: React.FC = () => {
       location: 'New York, NY',
       type: 'Full-time',
       experience: '7+ years',
+<<<<<<< HEAD
+      description: 'Design and implement scalable cloud infrastructure solutions for enterprise clients.'
+    },
+    {
+      title: 'Data Scientist',
+      department: 'Analytics',
+      location: 'Remote / Austin',
+      type: 'Full-time',
+      experience: '3+ years',
+      description: 'Extract insights from complex datasets and build predictive models.'
+=======
       description: 'Design and implement scalable cloud infrastructure solutions for enterprise clients.',
 <<<<<<< HEAD
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
@@ -114,6 +133,7 @@ const CareersPage: React.FC = () => {
       ],
       posted: '1 week ago',
       featured: true
+>>>>>>> origin/main
     },
     {
       id: '3',
@@ -122,6 +142,9 @@ const CareersPage: React.FC = () => {
       location: 'San Francisco, CA',
       type: 'Full-time',
       experience: '4+ years',
+<<<<<<< HEAD
+      description: 'Automate deployment pipelines and manage infrastructure at scale.'
+=======
       description: 'Protect our clients\' digital assets and infrastructure from cyber threats.',
       requirements: [
         '4+ years experience in cybersecurity',
@@ -210,6 +233,7 @@ const CareersPage: React.FC = () => {
       ],
       posted: '4 days ago',
       featured: false
+>>>>>>> origin/main
 >>>>>>> origin/main
     }
   ];
@@ -318,29 +342,6 @@ const CareersPage: React.FC = () => {
     'Career growth opportunities'
   ];
 
-  const values = [
-    {
-      icon: Star,
-      title: 'Innovation',
-      description: 'We push the boundaries of what\'s possible with technology'
-    },
-    {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'We work together to achieve extraordinary results'
-    },
-    {
-      icon: Heart,
-      title: 'Impact',
-      description: 'We create solutions that make a real difference'
-    },
-    {
-      icon: Award,
-      title: 'Excellence',
-      description: 'We strive for the highest quality in everything we do'
-    }
-  ];
-
   return (
     <>
   </>
@@ -387,6 +388,71 @@ const CareersPage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
+          {/* Why Work With Us */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            <div>
+              <h2 className="text-4xl font-bold text-white mb-6">Why Work With Us?</h2>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Star className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">Cutting-Edge Technology</h3>
+                    <p className="text-gray-300">
+                      Work with the latest AI, quantum computing, and cloud technologies 
+                      that are shaping the future.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Users className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">World-Class Team</h3>
+                    <p className="text-gray-300">
+                      Collaborate with industry experts and thought leaders in AI, 
+                      quantum computing, and enterprise technology.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Heart className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">Meaningful Impact</h3>
+                    <p className="text-gray-300">
+                      Help transform businesses and create solutions that make a 
+                      real difference in people's lives.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+              <h3 className="text-2xl font-bold text-white mb-6">Our Benefits</h3>
+              <div className="grid grid-cols-1 gap-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-cyan-400" />
+                    <span className="text-gray-300">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Open Positions */}
+          <div className="mb-16">
+            <h2 className="text-4xl font-bold text-white mb-8 text-center">Open Positions</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+=======
       {/* Job Openings Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -435,36 +501,41 @@ const CareersPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Open Positions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+>>>>>>> origin/main
               {openPositions.map((position, index) => (
                 <div
                   key={index}
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group"
+                  className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                        {position.title}
-                      </h3>
-                      <p className="text-gray-300">{position.department}</p>
+                      <h3 className="text-xl font-bold text-white mb-2">{position.title}</h3>
+                      <p className="text-cyan-400 font-medium">{position.department}</p>
                     </div>
-                    <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">
+                    <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm">
                       {position.type}
                     </span>
                   </div>
 
-                  <p className="text-gray-300 mb-4">{position.description}</p>
-
-                  <div className="flex items-center gap-4 mb-4 text-sm text-gray-400">
-                    <div className="flex items-center gap-1">
+                  <div className="flex items-center space-x-4 text-sm text-gray-300 mb-4">
+                    <div className="flex items-center space-x-1">
                       <MapPin className="w-4 h-4" />
                       <span>{position.location}</span>
                     </div>
-                    <div className="flex items-center gap-1">
+                    <div className="flex items-center space-x-1">
                       <Clock className="w-4 h-4" />
                       <span>{position.experience}</span>
                     </div>
                   </div>
 
+<<<<<<< HEAD
+                  <p className="text-gray-300 mb-4">{position.description}</p>
+
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2">
+                    <span>Apply Now</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+=======
                   <div className="mb-6">
                     <h4 className="text-white font-semibold mb-2">Key Requirements:</h4>
                     <ul className="space-y-1">
@@ -502,6 +573,7 @@ const CareersPage: React.FC = () => {
                   <p className="text-gray-600">
                     {benefit.description}
                   </p>
+>>>>>>> origin/main
                 </div>
               ))}
             </div>
@@ -509,6 +581,12 @@ const CareersPage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
+          {/* CTA Section */}
+          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Don't See Your Role?
+=======
       {/* Featured Positions */}
       {featuredPositions.length > 0 && (
         <section className="py-16 bg-gray-50">
@@ -557,6 +635,7 @@ const CareersPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Work With Us?
+>>>>>>> origin/main
             </h2>
             <p className="text-xl text-gray-300">
               We offer competitive benefits and a great work environment.
@@ -695,6 +774,20 @@ export default CareersPage;
               Don't see a position that matches your skills? We're always looking for talented individuals. Send us your resume!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
+                Send Your Resume
+              </a>
+              <a
+                href="/about"
+                className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+              >
+                Learn About Us
+              </a>
+=======
               <Link
                 to="/contact"
                 className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
@@ -707,6 +800,7 @@ export default CareersPage;
               >
                 Browse All Positions
               </Link>
+>>>>>>> origin/main
             </div>
           </div>
 =======
@@ -714,6 +808,9 @@ export default CareersPage;
         </div>
       </section>
 
+<<<<<<< HEAD
+export default CareersPage;
+=======
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -735,4 +832,5 @@ export default CareersPage;
 }
 
 export default CareersPage
+>>>>>>> origin/main
 >>>>>>> origin/main

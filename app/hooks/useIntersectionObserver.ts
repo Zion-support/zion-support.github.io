@@ -16,6 +16,11 @@ interface UseIntersectionObserverOptions {
   }
 }
 interface UseIntersectionObserverReturn {
+<<<<<<< HEAD
+  ref: React.RefObject<Element>;
+  isIntersecting: boolean;
+  entry: IntersectionObserverEntry | undefined;
+=======
     ref: React.RefObject<HTMLElement></HTMLElement>
 >>>>>>> origin/main
   isIntersecting: boolean,
@@ -30,6 +35,7 @@ export function useIntersectionObserver(;)
 =======
   entry: IntersectionObserverEntry | undefined
   }
+>>>>>>> origin/main
 }
 export function useIntersectionObserver()
 ): UseIntersectionObserverReturn {
@@ -44,6 +50,23 @@ export function useIntersectionObserver()
 >>>>>>> origin/main
 const [isIntersecting, setIsIntersecting] = useState(false);
   const [entry, setEntry] = useState<IntersectionObserverEntry | undefined>();
+<<<<<<< HEAD
+  const ref = useRef<Element>(null);
+
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsIntersecting(entry.isIntersecting);
+        setEntry(entry);
+
+        if (entry.isIntersecting && freezeOnceVisible) {
+          observer.disconnect();
+        }
+      },
+=======
   const ref = useRef<HTMLElement>(null);
 useEffect(() => {const element = ref.current;
     if (!element) return;
@@ -71,16 +94,28 @@ if (entry.isIntersecting && freezeOnceVisible) {
           observer.disconnect()
   }
         },
+>>>>>>> origin/main
       {
     threshold,
         root,
         rootMargin,
+<<<<<<< HEAD
+      }
+    );
+
+    observer.observe(element);
+
+    return () => {
+      observer.disconnect();
+    };
+=======
   }
       } )
 <<<<<<< HEAD
 >>>>>>> origin/main
 observer.observe(element);
 return () => {observer.disconnect()}}
+>>>>>>> origin/main
   }, [threshold, root, rootMargin, freezeOnceVisible]);
 return {ref, isIntersecting, entry}}}
 export default useIntersectionObserver;

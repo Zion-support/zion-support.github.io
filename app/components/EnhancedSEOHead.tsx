@@ -7,8 +7,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
+<<<<<<< HEAD
+  title?: string;
+  description?: string;
+=======
   title: string;
   description: string;
+>>>>>>> origin/main
   keywords?: string;
   image?: string;
   url?: string;
@@ -153,6 +158,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   twitterCard?: string
 }
 
+<<<<<<< HEAD
+export default EnhancedSEOHead;
+=======
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - AI & IT Solutions',
   description = 'Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.',
@@ -226,3 +234,4 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 >>>>>>> origin/main
 
 export default SEOHead
+>>>>>>> origin/main
