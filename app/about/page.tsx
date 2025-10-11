@@ -68,8 +68,11 @@ const AboutPage: React.FC = () => {
         <meta name="keywords" content="about us, team, mission, values, AI experts, IT solutions" />
 <<<<<<< HEAD
       </Helmet>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-0f52
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
       <Navigation />
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -91,10 +94,15 @@ const AboutPage: React.FC = () => {
                 We combine cutting-edge technology with deep industry expertise to deliver exceptional results
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-0f52
+=======
+            </div>
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => {
                 const IconComponent = feature.icon;
@@ -113,7 +121,11 @@ const AboutPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-0f52
                     <p className="text-gray-300">{feature.description}</p>
                 );
+<<<<<<< HEAD
               })}
+=======
+              })}</div></section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
 
         {/* Values Section */}
         <section className="py-20 px-4 bg-white/5">
@@ -124,9 +136,14 @@ const AboutPage: React.FC = () => {
                 The principles that guide everything we do
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-0f52
+=======
+            </div>
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {values.map((value, index) => {
                 const IconComponent = value.icon;
@@ -147,6 +164,7 @@ const AboutPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-0f52
                     <p className="text-gray-300">{value.description}</p>
                 );
+<<<<<<< HEAD
               })}
 <<<<<<< HEAD
             </div>
@@ -154,6 +172,9 @@ const AboutPage: React.FC = () => {
         </section>
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-0f52
+=======
+              })}</div></section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
 
         {/* Team Section */}
         <section className="py-20 px-4">
@@ -163,6 +184,7 @@ const AboutPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 The brilliant minds behind our innovative solutions
               </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -176,6 +198,10 @@ const AboutPage: React.FC = () => {
                   <p className="text-gray-300">{member.description}</p>
                 </div>
 =======
+=======
+            </div>
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {team.map((member, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
@@ -187,6 +213,7 @@ const AboutPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
                   <p className="text-purple-400 font-medium mb-3">{member.role}</p>
                   <p className="text-gray-300">{member.description}</p>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-0f52
               ))}
 
@@ -212,6 +239,14 @@ const AboutPage: React.FC = () => {
         </section>
       </main>
 =======
+=======
+                </div>
+              ))}</div></section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
+          <div className="container mx-auto text-center">
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Work With Us?
             </h2>
@@ -224,14 +259,21 @@ const AboutPage: React.FC = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 Contact Us
+<<<<<<< HEAD
               </button>
 >>>>>>> cursor/fix-errors-and-merge-to-main-0f52
 
+=======
+              </button></div></section>
+      </main>
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
       <Footer />
   );
 };
 
 export default AboutPage;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 </Footer>
@@ -279,3 +321,5 @@ export default AboutPage;
 </Helmet>
 </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-0f52
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd

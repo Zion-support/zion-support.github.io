@@ -99,6 +99,7 @@ const FiveGImplementationPage: React.FC = () => {
     }
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -108,6 +109,8 @@ const FiveGImplementationPage: React.FC = () => {
         <meta name="keywords" content="5G implementation, network deployment, ultra-low latency, edge computing, IoT connectivity" />
       </Helmet>
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -145,13 +148,18 @@ const FiveGImplementationPage: React.FC = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 Schedule Demo
+<<<<<<< HEAD
               </button>
 >>>>>>> cursor/fix-errors-and-merge-to-main-0f52
+=======
+              </button></div></section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
 
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="container mx-auto">
             <div className="text-center mb-16">
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h2 className="text-4xl font-bold text-white mb-4">5G Capabilities</h2>
 =======
@@ -159,6 +167,11 @@ const FiveGImplementationPage: React.FC = () => {
                 Advanced 5G Features
               </h2>
 >>>>>>> cursor/fix-errors-and-merge-to-main-0f52
+=======
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Advanced 5G Features
+              </h2>
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Unlock the full potential of 5G with our comprehensive implementation services
               </p>
@@ -206,8 +219,14 @@ const FiveGImplementationPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {benefit}
                     ))}
+<<<<<<< HEAD
               ))}
 >>>>>>> cursor/fix-errors-and-merge-to-main-0f52
+=======
+                  </ul>
+                </div>
+              ))}</div></section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
 
         {/* Use Cases Section */}
         <section className="py-20 px-4 bg-white/5">
@@ -259,10 +278,19 @@ const FiveGImplementationPage: React.FC = () => {
                     {useCase.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+<<<<<<< HEAD
 {benefit}
                     ))}
               ))}
 >>>>>>> cursor/fix-errors-and-merge-to-main-0f52
+=======
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}</div></section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
 
         {/* Implementation Process Section */}
         <section className="py-20 px-4">
@@ -286,6 +314,7 @@ const FiveGImplementationPage: React.FC = () => {
                       <li key={detailIndex} className="text-sm text-gray-400">
                         {detail}
                     ))}
+<<<<<<< HEAD
               ))}
 
         {/* CTA Section */}
@@ -310,6 +339,13 @@ const FiveGImplementationPage: React.FC = () => {
         </section>
       </main>
 =======
+=======
+                  </ul>
+                </div>
+              ))}</div></section>
+
+        {/* CTA Section */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -322,10 +358,18 @@ const FiveGImplementationPage: React.FC = () => {
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 Start Your Project
                 <ArrowRight className="ml-2 h-5 w-5" />
+<<<<<<< HEAD
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 Contact Our Experts
               </button>
 >>>>>>> cursor/fix-errors-and-merge-to-main-0f52
+=======
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Contact Our Experts
+              </button></div></section>
+      </main>
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
 
       <Footer />
   );

@@ -26,9 +26,12 @@ export default function RootLayout({
           <meta name="description" content="Leading provider of AI and IT solutions for modern businesses. Transform your operations with cutting-edge technology."
           <meta name="keywords" content="AI solutions, IT services, artificial intelligence, business automation, technology consulting"
           <meta name="viewport" content="width=device-width, initial-scale=1"
+<<<<<<< HEAD
 <link rel="icon" href="/favicon.ico">
         </Helmet>
       <body className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
         <Navigation />
         <main className="pt-20">
           {children}

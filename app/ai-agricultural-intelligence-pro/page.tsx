@@ -52,8 +52,11 @@ return (
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       <Navigation />
+<<<<<<< HEAD
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
         <title>AI Agricultural Intelligence Pro - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered agricultural intelligence platform for precision farming, crop monitoring, and yield optimization." />
         <meta name="keywords" content="AI agriculture, precision farming, crop monitoring, agricultural intelligence, smart farming" />
@@ -75,7 +78,11 @@ return (
                 <ArrowRight className="ml-2 h-5 w-5" />
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-300">
                 Schedule Demo
+<<<<<<< HEAD
               </button>
+=======
+              </button></div></section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
 
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -105,7 +112,11 @@ return (
                           {benefit}
                       ))}
                 );
+<<<<<<< HEAD
               })}
+=======
+              })}</div></section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
 
         {/* Services Section */}
         <section className="py-20 px-4 bg-slate-800/50">
@@ -132,7 +143,11 @@ return (
                           {benefit}
                       ))}
                 );
+<<<<<<< HEAD
               })}
+=======
+              })}</div></section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
 
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -148,7 +163,7 @@ return (
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
-                <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${
+                <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${>
                   tier.name === 'Professional' 
                     ? 'border-green-400/50 scale-105' 
                     : 'border-white/20 hover:border-green-400/50'>
@@ -158,22 +173,32 @@ return (
                     <p className="text-gray-300 mb-4">{tier.description}</p>
                     <div className="flex items-baseline justify-center">
                       <span className="text-4xl font-bold text-white">{tier.price}</span>
+<<<<<<< HEAD
                       <span className="text-gray-300 ml-1">{tier.period}</span>
 
                   <ul className="space-y-3 mb-8">
+=======
+                      <span className="text-gray-300 ml-1">{tier.period}</span></div><ul className="space-y-3 mb-8">
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                     ))}
 
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${>
                     tier.name === 'Professional'
                       ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700'
                       : 'border border-white text-white hover:bg-white hover:text-green-600'>
                   }`}>
                     {tier.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
+<<<<<<< HEAD
               ))}
+=======
+                  </button>
+                </div>
+              ))}</div></section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
 
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -190,7 +215,12 @@ return (
                 <ArrowRight className="ml-2 w-5 h-5" />
               <button className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-white transition-all duration-300">
                 Contact Sales
+<<<<<<< HEAD
               </button>
+=======
+              </button></div></section>
+      </main>
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
 
       <Footer />
   )

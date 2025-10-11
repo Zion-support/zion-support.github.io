@@ -122,8 +122,11 @@ const AIAccountingAssistantPage: React.FC = () => {
       <Navigation />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<<<<<<< HEAD
 <Helmet>
         <title>AI Accounting Assistant - Zion Tech Group</title>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
         <meta name="description" content="Revolutionary AI-powered accounting assistant that automates bookkeeping, financial reporting, and compliance for businesses of all sizes." />
         <meta name="keywords" content="AI accounting, automated bookkeeping, financial software, accounting assistant, business finance" />
 
@@ -131,6 +134,7 @@ const AIAccountingAssistantPage: React.FC = () => {
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
+<<<<<<< HEAD
 <section className="pt-20 pb-16 px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
@@ -138,6 +142,8 @@ const AIAccountingAssistantPage: React.FC = () => {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
                   AI Accounting Assistant
                 </span>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Transform your accounting processes with our intelligent AI assistant. Automate bookkeeping, gain insights, and ensure compliance with ease.
@@ -148,7 +154,11 @@ const AIAccountingAssistantPage: React.FC = () => {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 <button className="border border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
                   Watch Demo
+<<<<<<< HEAD
                 </button>
+=======
+                </button></div></section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
 
         {/* Features Section */}
 
@@ -180,7 +190,7 @@ const AIAccountingAssistantPage: React.FC = () => {
                 Tailored solutions for different business types
               </p>
 
-            <div className="
+            <div className=">
     ,>
     d: grid-cols-2 l, g:grid-cols-4 gap-8">
               {useCases.map((useCase, index) => {
@@ -206,8 +216,11 @@ const AIAccountingAssistantPage: React.FC = () => {
       <Footer />
     </>
               ))}
+<<<<<<< HEAD
 <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Powerful Features
@@ -233,7 +246,11 @@ const AIAccountingAssistantPage: React.FC = () => {
                           {benefit}
                       ))}
                 );
+<<<<<<< HEAD
               })}
+=======
+              })}</div></section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
 
         {/* Services Section */}
         <section className="py-20 px-4 bg-slate-800/50">
@@ -260,7 +277,11 @@ const AIAccountingAssistantPage: React.FC = () => {
                           {benefit}
                       ))}
                 );
+<<<<<<< HEAD
               })}
+=======
+              })}</div></section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
 
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -273,7 +294,10 @@ const AIAccountingAssistantPage: React.FC = () => {
                 Choose the plan that fits your business needs
               </p>
             </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -310,12 +334,17 @@ const AIAccountingAssistantPage: React.FC = () => {
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 Contact Sales
               </button>
+<<<<<<< HEAD
+=======
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
       <Footer />
     </>
   );
 };
 
 export default AiAccountingAssistantPage;
+<<<<<<< HEAD
 </Footer>
 </ArrowRight>
 </button>
@@ -397,3 +426,5 @@ export default AiAccountingAssistantPage;
 </Navigation>
 </title>
 </Helmet>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd

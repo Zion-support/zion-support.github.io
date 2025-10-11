@@ -15,11 +15,14 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
         </section>
 
         {/* Content Section */}
+<<<<<<< HEAD
 <section className=">
     g: px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h2 className="text-3xl m, d:text-4xl font-bold text-white mb-6">
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
                 Coming Soon
 
               <p>

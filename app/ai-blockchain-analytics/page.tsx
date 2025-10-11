@@ -1,12 +1,12 @@
 'use client'
 import React from 'react';
-import {Helmet;} from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async'
 import {ArrowRight;, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const PagePage: React.FC = () => {const features = [
-    {;,} icon: Brain,
+    { icon: Brain,
     };,
 title: 'AI-Powered Solutions',;,
 description: 'Advanced artificial intelligence technology to transform your business operations.',;,
@@ -35,7 +35,7 @@ const benefits = [
     'Scale operations without proportional staff increases',
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
-  ]
+  ];
 
 return (
     <>
@@ -53,7 +53,10 @@ return (
         <meta name="keywords" content="AI, page, artificial intelligence, business solutions, automation" />
 
       <Navigation />
+<<<<<<< HEAD
 <main className="pt-16">
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center">
@@ -146,7 +149,12 @@ Join thousands of businesses already using our AI-powered solutions.>
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
 Start Free Trial>
                 <ArrowRight className="ml-2 h-5 w-5">
+<<<<<<< HEAD
               <button className="
+=======
+              </button>
+              <button className=">
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
     ,>
     r: bg-blue-600 hove, r:text-white transition-colors">
                 Schedule Demo
@@ -158,6 +166,7 @@ Start Free Trial>
   );
 }
 
+<<<<<<< HEAD
       <Footer />
     </>
     </>
@@ -225,3 +234,9 @@ Start Free Trial>
 </Navigation>
 </title>
 </Helmet>
+=======
+      <Footer /></>)
+      </div>
+
+      <Footer /></>);
+>>>>>>> cursor/fix-errors-and-merge-to-main-52bd
