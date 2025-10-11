@@ -1,104 +1,95 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Share2, TrendingUp, Users, BarChart3, CheckCircle, Zap } from 'lucide-react';
+import { Calendar, Clock, Users, Zap, CheckCircle, Star } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AISocialMediaManagerPage: React.FC = () => {
+const AISmartSchedulerPage: React.FC = () => {
   const features = [
     {
-      icon: <Share2 className="w-6 h-6 text-pink-500" />,
-      title: 'AI Content Creation',
-      description: 'Generate engaging social media posts, captions, and hashtags using advanced AI technology.',
-      benefits: ['Auto-generated posts', 'Hashtag optimization', 'Content calendar', 'Multi-platform support']
+      icon: <Calendar className="w-6 h-6 text-blue-500" />,
+      title: 'Intelligent Scheduling',
+      description: 'AI-powered calendar management that learns your preferences and optimizes your schedule automatically.',
+      benefits: ['Auto-scheduling', 'Conflict resolution', 'Time zone handling', 'Recurring events']
     },
     {
-      icon: <TrendingUp className="w-6 h-6 text-green-500" />,
-      title: 'Smart Analytics',
-      description: 'Track performance across all platforms with AI-powered insights and recommendations.',
-      benefits: ['Engagement metrics', 'Growth tracking', 'Audience insights', 'ROI analysis']
+      icon: <Users className="w-6 h-6 text-green-500" />,
+      title: 'Team Coordination',
+      description: 'Seamlessly coordinate meetings across teams with smart availability detection and booking.',
+      benefits: ['Team calendars', 'Meeting rooms', 'Resource booking', 'Group scheduling']
     },
     {
-      icon: <Users className="w-6 h-6 text-blue-500" />,
-      title: 'Community Management',
-      description: 'Automate responses and manage your community with AI-powered customer service.',
-      benefits: ['Auto-responses', 'Sentiment analysis', 'Comment moderation', 'Brand monitoring']
+      icon: <Zap className="w-6 h-6 text-purple-500" />,
+      title: 'Smart Automation',
+      description: 'Automate routine scheduling tasks and reduce administrative overhead with AI assistance.',
+      benefits: ['Auto-reminders', 'Follow-up scheduling', 'Deadline tracking', 'Workflow automation']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$29.99',
+      price: '$9.99',
       period: '/month',
-      description: 'Perfect for small businesses and influencers',
+      description: 'Perfect for individuals and small teams',
       features: [
-        '3 social accounts',
-        '50 posts/month',
-        'Basic analytics',
-        'Content suggestions',
-        'Email support'
+        'Up to 5 calendars',
+        'Basic AI scheduling',
+        'Email integration',
+        'Mobile app access',
+        'Standard support'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$79.99',
+      price: '$19.99',
       period: '/month',
-      description: 'Ideal for growing businesses and agencies',
+      description: 'Ideal for growing businesses',
       features: [
-        '10 social accounts',
-        'Unlimited posts',
-        'Advanced analytics',
-        'AI content creation',
+        'Up to 25 calendars',
+        'Advanced AI features',
+        'Team collaboration tools',
+        'API access',
         'Priority support',
-        'Team collaboration'
+        'Custom integrations'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$199.99',
+      price: '$49.99',
       period: '/month',
-      description: 'For large organizations and agencies',
+      description: 'For large organizations',
       features: [
-        'Unlimited accounts',
-        'White-label options',
-        'Custom integrations',
-        'Dedicated support',
-        'Advanced AI features',
-        'API access'
+        'Unlimited calendars',
+        'Full AI suite',
+        'Advanced analytics',
+        'Custom workflows',
+        '24/7 support',
+        'White-label options'
       ],
       popular: false
     }
   ];
 
-  const platforms = [
-    { name: 'Facebook', color: 'bg-blue-600' },
-    { name: 'Instagram', color: 'bg-pink-600' },
-    { name: 'Twitter', color: 'bg-blue-400' },
-    { name: 'LinkedIn', color: 'bg-blue-800' },
-    { name: 'TikTok', color: 'bg-black' },
-    { name: 'YouTube', color: 'bg-red-600' }
-  ];
-
   const testimonials = [
     {
-      name: 'Jessica Martinez',
-      role: 'Marketing Director, Creative Agency',
-      content: 'AI Social Media Manager has increased our engagement by 300%. The AI content suggestions are spot-on!',
+      name: 'Sarah Johnson',
+      role: 'CEO, TechStart Inc.',
+      content: 'AI Smart Scheduler has revolutionized how we manage our time. The AI learns our patterns and schedules meetings perfectly.',
       rating: 5
     },
     {
-      name: 'David Kim',
-      role: 'E-commerce Owner',
-      content: 'This tool has saved us 20 hours per week. The automated posting and analytics are game-changers.',
+      name: 'Michael Chen',
+      role: 'Project Manager, Global Corp',
+      content: 'The team coordination features are incredible. We\'ve reduced meeting scheduling time by 80%.',
       rating: 5
     },
     {
-      name: 'Lisa Thompson',
-      role: 'Influencer & Content Creator',
-      content: 'The AI helps me create consistent, engaging content across all platforms. My follower growth has been incredible.',
+      name: 'Emily Rodriguez',
+      role: 'Freelance Consultant',
+      content: 'As a freelancer, this tool helps me manage multiple client schedules effortlessly. Highly recommended!',
       rating: 5
     }
   ];
@@ -106,9 +97,9 @@ const AISocialMediaManagerPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Social Media Manager - Zion Tech Group</title>
-        <meta name="description" content="AI-powered social media management with content creation, analytics, and automation. Boost your social presence today!" />
-        <meta name="keywords" content="social media management, AI content creation, social media analytics, automation, digital marketing" />
+        <title>AI Smart Scheduler - Zion Tech Group</title>
+        <meta name="description" content="Intelligent calendar management with AI-powered scheduling, team coordination, and smart automation. Start free trial today!" />
+        <meta name="keywords" content="AI scheduler, calendar management, team scheduling, smart automation, productivity tools" />
       </Helmet>
       
       <Navigation />
@@ -118,14 +109,14 @@ const AISocialMediaManagerPage: React.FC = () => {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Social Media Manager
+              AI Smart Scheduler
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your social media presence with AI-powered content creation, smart analytics, 
-              and automated community management across all major platforms.
+              Revolutionize your calendar management with AI-powered scheduling that learns your preferences, 
+              coordinates teams, and automates routine tasks for maximum productivity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-700 hover:to-purple-700 transition-all duration-300">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
                 Start Free Trial
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
@@ -155,38 +146,19 @@ const AISocialMediaManagerPage: React.FC = () => {
             ))}
           </div>
 
-          {/* Platforms Section */}
-          <div className="mb-20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">All Major Platforms Supported</h2>
-              <p className="text-xl text-gray-300">Manage all your social media accounts from one powerful dashboard</p>
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-6 gap-6">
-              {platforms.map((platform, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center hover:bg-white/20 transition-all duration-300">
-                  <div className={`w-12 h-12 ${platform.color} rounded-lg flex items-center justify-center mx-auto mb-3`}>
-                    <span className="text-white font-bold text-lg">{platform.name.charAt(0)}</span>
-                  </div>
-                  <p className="text-white font-medium">{platform.name}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* Pricing Section */}
           <div className="mb-20">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Choose Your Plan</h2>
-              <p className="text-xl text-gray-300">Start with a 14-day free trial. No credit card required.</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
+              <p className="text-xl text-gray-300">Choose the plan that fits your needs. All plans include a 14-day free trial.</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${plan.popular ? 'border-pink-500 ring-2 ring-pink-500' : 'border-white/20'} relative`}>
+                <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500' : 'border-white/20'} relative`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -209,7 +181,7 @@ const AISocialMediaManagerPage: React.FC = () => {
                   </ul>
                   <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular 
-                      ? 'bg-gradient-to-r from-pink-600 to-purple-600 text-white hover:from-pink-700 hover:to-purple-700' 
+                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700' 
                       : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
                   }`}>
                     Get Started
@@ -222,8 +194,8 @@ const AISocialMediaManagerPage: React.FC = () => {
           {/* Testimonials Section */}
           <div className="mb-20">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">What Our Customers Say</h2>
-              <p className="text-xl text-gray-300">Join thousands of satisfied users who trust AI Social Media Manager</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">What Our Users Say</h2>
+              <p className="text-xl text-gray-300">Join thousands of satisfied customers who trust AI Smart Scheduler</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -231,7 +203,7 @@ const AISocialMediaManagerPage: React.FC = () => {
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Zap key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
@@ -246,13 +218,13 @@ const AISocialMediaManagerPage: React.FC = () => {
 
           {/* CTA Section */}
           <div className="text-center">
-            <div className="bg-gradient-to-r from-pink-600 to-purple-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Social Media?</h2>
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Scheduling?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Join thousands of businesses and creators who have revolutionized their social media strategy with AI.
+                Join thousands of professionals who have revolutionized their time management with AI Smart Scheduler.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-pink-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                   Start Free Trial
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
@@ -269,4 +241,4 @@ const AISocialMediaManagerPage: React.FC = () => {
   );
 };
 
-export default AISocialMediaManagerPage;
+export default AISmartSchedulerPage;
