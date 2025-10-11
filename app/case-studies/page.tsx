@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink, Building, Users, TrendingUp } from 'lucide-react';
 
 const CaseStudiesPage: React.FC = () => {
-  const caseStudies = const caseStudies = const caseStudies = [
+  const caseStudies = [
     {
       title: 'AI-Powered Customer Service for E-commerce',
       client: 'ShopTech Solutions',
@@ -28,7 +28,7 @@ const CaseStudiesPage: React.FC = () => {
       industry: 'Healthcare',
       image: '/api/placeholder/600/400',
       description: 'Implemented comprehensive cybersecurity solutions to protect sensitive patient data.',
-        results: ['100% compliance achieved', 'Zero security breaches', 'Reduced risk by 80%'];
+        results: ['100% compliance achieved', 'Zero security breaches', 'Reduced risk by 80%']
       };
     ];
   return ()

@@ -7,7 +7,7 @@ import { Search, Calendar, User, Clock, ArrowRight } from 'lucide-react';
 const BlogPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
-  const blogPosts = const blogPosts = const blogPosts = [
+  const blogPosts = [
     {
       id: 1,
       title: 'The Future of AI in Business',

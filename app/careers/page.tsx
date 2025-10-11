@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, ArrowRight } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
-  const openPositions = const openPositions = const openPositions = [
+  const openPositions = [
     {
       title: 'Senior AI Engineer',
       department: 'AI Solutions',
@@ -34,7 +34,7 @@ const CareersPage: React.FC = () => {
         requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistical analysis skills'];
       };
     ];
-  const benefits = const benefits = const benefits = [
+  const benefits = [
     'Competitive salary and equity',
     'Comprehensive health insurance',
     'Flexible work arrangements',
@@ -43,7 +43,7 @@ const CareersPage: React.FC = () => {
     'Team building events',;
       'Career growth opportunities';
   ];
-  const values = const values = const values = [
+  const values = [
     {
       icon: Star,
       title: 'Innovation',
