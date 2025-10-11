@@ -12,15 +12,15 @@ import ErrorBoundary from './app/components/ErrorBoundary';
 import SEOHead from './app/components/EnhancedSEOHead';
 import SkipLink from './app/components/EnhancedSkipLink';
 import Breadcrumb from './app/components/Breadcrumb';
-import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer';
+import PerformanceOptimizer from './app/components/PerformanceOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import ServiceWorker from './app/components/ServiceWorker';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
 import FuturisticBackground from './app/components/FuturisticBackground';
+import StructuredData from './app/components/StructuredData';
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
@@ -65,19 +65,39 @@ const App: React.FC = () => {
           keywords={['AI solutions', 'IT services', 'quantum computing', 'digital transformation', 'enterprise software', 'automation', 'machine learning']}
           canonicalUrl="https://ziontechgroup.com"
         />
+        <StructuredData
+          type="Organization"
+          data={{
+            name: "Zion Tech Group",
+            url: "https://ziontechgroup.com",
+            logo: "https://ziontechgroup.com/logo.png",
+            description: "Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services",
+            address: {
+              streetAddress: "364 E Main St STE 1008",
+              addressLocality: "Middletown",
+              addressRegion: "DE",
+              postalCode: "19709",
+              addressCountry: "US"
+            },
+            contactPoint: {
+              telephone: "+1-302-464-0950",
+              contactType: "customer service",
+              email: "kleber@ziontechgroup.com"
+            }
+          }}
+        />
         <SkipLink />
         <ServiceWorker />
         <Router>
           <AppWithPerformanceMonitoring>
             <AnalyticsProvider>
               <PerformanceOptimizer>
-                <EnhancedAccessibility>
-                  <AccessibilityEnhancer
-                    enableKeyboardNavigation={true}
-                    enableScreenReaderSupport={true}
-                    enableHighContrast={false}
-                    enableFocusManagement={true}
-                  >
+                <AccessibilityEnhancer
+                  enableKeyboardNavigation={true}
+                  enableScreenReaderSupport={true}
+                  enableHighContrast={false}
+                  enableFocusManagement={true}
+                >
                     <PerformanceMonitor />
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
                       <FuturisticBackground />
@@ -116,8 +136,7 @@ const App: React.FC = () => {
                       </main>
                       <Footer />
                     </div>
-                  </AccessibilityEnhancer>
-                </EnhancedAccessibility>
+                </AccessibilityEnhancer>
               </PerformanceOptimizer>
             </AnalyticsProvider>
           </AppWithPerformanceMonitoring>

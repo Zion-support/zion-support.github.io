@@ -154,8 +154,6 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $129/month',
       marketPrice: '$250-600/month',
       benefits: ['Save 80% content creation time', 'Consistent brand voice', 'SEO optimization', 'Multi-platform publishing']
-<<<<<<< HEAD
-=======
     },
     {
       icon: Users,
@@ -676,7 +674,6 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $2,500/month',
       marketPrice: '$4000-15000/month',
       benefits: ['Complete process automation', 'Reduced manual work', 'Improved efficiency', 'Cost savings']
->>>>>>> cursor/website-audit-and-update-with-deployment-43a6
     }
   ];
 
@@ -697,29 +694,18 @@ const ServicesPage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Services - Zion Tech Group | AI, IT & Micro SaaS Solutions</title>
         <meta name="description" content="Comprehensive AI services, IT solutions, and Micro SaaS tools. From quantum computing to cloud migration, we provide cutting-edge technology solutions for modern businesses." />
         <meta name="keywords" content="AI services, IT services, micro saas, cloud migration, cybersecurity, quantum computing, blockchain, business automation" />
-        <link rel="canonical" href="https://ziontechgroup.com/services" />
-=======
-        <title>Our Services - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Comprehensive AI and IT services including chatbots, analytics, cloud migration, cybersecurity, and custom software development." />
-        <meta name="keywords" content="AI services, IT services, cloud migration, cybersecurity, software development, micro saas" />
         <meta property="og:title" content="Our Services - Zion Tech Group" />
         <meta property="og:description" content="Comprehensive AI and IT solutions for your business" />
         <meta property="og:type" content="website" />
->>>>>>> cursor/website-audit-and-update-with-deployment-43a6
+        <link rel="canonical" href="https://ziontechgroup.com/services" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-<<<<<<< HEAD
         <main className="pt-20">
-=======
-        
-        <main className="container mx-auto px-4 py-16 pt-24">
->>>>>>> cursor/website-audit-and-update-with-deployment-43a6
           {/* Hero Section */}
           <section className="py-20 px-4">
             <div className="max-w-7xl mx-auto text-center">
