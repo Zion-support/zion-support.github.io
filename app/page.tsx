@@ -143,5 +143,3 @@ const AppPage: React.FC = () => {
     </div>
   );
 };
-
-export default AppPage;
