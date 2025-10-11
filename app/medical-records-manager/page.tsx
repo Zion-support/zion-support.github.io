@@ -1,16 +1,11 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
             </div>
           </div>
         </section>
-=======
 'use client';
 import React from 'react';
 ))}
-
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
-
 
         {/* Benefits Section */}
         <section></section>
@@ -30,8 +25,6 @@ import React from 'react';
 
                   <p>{benefit}</p>
               ))}
-
-
 
         {/* CTA Section */}
         <section></section>

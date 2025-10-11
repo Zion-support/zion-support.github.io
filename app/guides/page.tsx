@@ -1,4 +1,3 @@
-<<<<<<< HEAD
               </button>
             </div>
           </div>
@@ -6,13 +5,8 @@
   )
 }
 export default GuidesPage
-=======
-
-
-
 
   );
 };
 
 export default GuidesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5

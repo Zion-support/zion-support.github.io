@@ -12,7 +12,6 @@ const PagePage: React.FC = () => {
       description: 'Description for feature 1.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     },
-<<<<<<< HEAD
     {icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
@@ -26,7 +25,6 @@ const PagePage: React.FC = () => {
       description: 'Target specific goals and objectives with precision.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']}
   ]
-=======
     {
       icon: BarChart,
       title: 'Feature 2', 
@@ -41,7 +39,6 @@ const PagePage: React.FC = () => {
     }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
   const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
@@ -51,10 +48,8 @@ const PagePage: React.FC = () => {
     'Seamless integration with existing systems'
   ]
   return (
-<<<<<<< HEAD
     <>
 </div>
-=======
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Page Page - Zion Tech Group</title>
@@ -82,7 +77,6 @@ const PagePage: React.FC = () => {
                 </button>
               </div>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
           </div>
         </section>
 
@@ -166,7 +160,6 @@ const PagePage: React.FC = () => {
       </main>
       
       <Footer />
-<<<<<<< HEAD
     </>
   )
 }
@@ -174,10 +167,8 @@ const PagePage: React.FC = () => {
       </ArrowRight>
     </Zap>
   </CheckCircle>
-=======
     </div>
   );
 };
 
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5

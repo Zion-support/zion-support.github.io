@@ -1,7 +1,7 @@
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div></div>
+      </div><div></di></div>
       <Footer />
     </>
   )

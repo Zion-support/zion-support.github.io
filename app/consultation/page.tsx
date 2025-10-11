@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react';
 import {Helmet;} from 'react-helmet-async'
 import {ArrowRight;, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
-=======
 'use client';
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
@@ -11,78 +9,61 @@ import { ArrowRight;, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Ta
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
     {;,
 icon: Brain,;,
 title: 'AI-Powered Solutions',;,
 description: 'Advanced artificial intelligence technology to transform your business operations.',;,
-<<<<<<< HEAD
 benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights']},
-=======
 
     },
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
     {;,
 icon: BarChart,;,
 title: 'Advanced Analytics',;,
 description: 'Comprehensive analytics dashboard with real-time data visualization.',;,
-<<<<<<< HEAD
 benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
-=======
 
     },
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
     {;,
 icon: TrendingUp,;,
 title: 'Performance Optimization',;,
 description: 'AI-powered insights to optimize your business performance.',;,
-<<<<<<< HEAD
 benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']},
-=======
 
     },
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
     {;,
 icon: Target,;,
 title: 'Precision Targeting',;,
 description: 'Target specific goals and objectives with precision.',;,
-<<<<<<< HEAD
 benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']}
   ]
 
 const benefits = [
-=======
 
   ];
 ;
 const benefits = [;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
-<<<<<<< HEAD
   ]
 
 return (
-=======
   ];
 ;
 return (
     <div className="min-h-screen bg-gray-50">
       ;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
     <>
 
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology." />
         <meta name="keywords" content="AI, page, artificial intelligence, business solutions, automation" />
-<<<<<<< HEAD
       </Helmet>
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -103,8 +84,6 @@ Learn More
             </div>
           </div>
         </section>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
 
         {/* Hero Section */}
         <section></section>
@@ -119,10 +98,6 @@ Get Started</button>
 
                 <button>;
 Learn More
-
-
-
-
 
         {/* Features Section */}</button>
         <section></section>
@@ -143,22 +118,16 @@ Learn More
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {benefit}
-<<<<<<< HEAD
                       </li>
                     )
     </>
   )
                   </ul>
                 </div>
-=======
 
                     ))}
 
-
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
               ))}
-
-
 
         {/* Benefits Section */}
         <section></section>
@@ -173,20 +142,12 @@ Learn More
 
                   <p>{benefit}</p>
               ))}
-<<<<<<< HEAD
             </div>
           </div>
         </section>
-=======
-
 
         </section>;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
 Learn More
-
-
-
-
 
       <Footer />
     </>

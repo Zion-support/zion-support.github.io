@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
@@ -34,7 +33,6 @@ const SitemapXMLPage: React.FC = () => {return (
       </div&gt
     </&gt
     </>
-=======
 'use client';
 import React from 'react';
 import {  Helmet  } from 'react-helmet-async';
@@ -180,6 +178,5 @@ const SitemapXMLPage: React.FC = () => {
       
       <Footer />
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
   );
 export default SitemapXMLPage

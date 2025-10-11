@@ -11,7 +11,6 @@ const CookiesPage: React.FC = () => {
       description: 'Description for feature 1.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     },
-<<<<<<< HEAD
     {icon: Settings,
       title: 'Functional Cookies',
       description: 'These cookies enable enhanced functionality and personalization.',
@@ -28,7 +27,6 @@ const CookiesPage: React.FC = () => {
   return (
     <>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
     {
       icon: BarChart,
       title: 'Feature 2', 
@@ -59,7 +57,6 @@ const CookiesPage: React.FC = () => {
         <meta name="description" content="Advanced AI and IT solutions for modern businesses." />
       </Helmet>
       
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
       <Navigation />
       
       <main className="pt-16">
@@ -102,7 +99,6 @@ const CookiesPage: React.FC = () => {
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
                     <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
                   </div>
-<<<<<<< HEAD
                   <h3 className="text-xl font-semibold text-white mb-3">{type.title}</h3>
                   <p className="text-gray-300 mb-4">{type.description}</p>
                   <ul className="text-sm text-gray-400 space-y-1">
@@ -111,7 +107,6 @@ const CookiesPage: React.FC = () => {
                     )
     </>
   )
-=======
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
@@ -120,7 +115,6 @@ const CookiesPage: React.FC = () => {
                         {benefit}
                       </li>
                     ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
                   </ul>
                 </div>
               ))}
@@ -174,15 +168,12 @@ const CookiesPage: React.FC = () => {
       
       <Footer />
     </div>
-<<<<<<< HEAD
   )
 }
 export default CookiesPage
     </Footer>
   </Navigation>
-=======
   );
 };
 
 export default CookiesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5

@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const PagePage: React.FC = () => {return (
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -59,7 +57,6 @@ const PagePage: React.FC = () => {
               </h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Transform your business with our cutting-edge AI and IT solutions designed for the modern enterprise.
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
@@ -151,14 +148,11 @@ const PagePage: React.FC = () => {
       </main>
       
       <Footer />
-<<<<<<< HEAD
     </>
   );}
   </Footer>
-=======
     </div>
   );
 };
 
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5

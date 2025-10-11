@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
 import Navigation from './components/Navigation'
@@ -33,7 +32,6 @@ export default RootLayout
       </Footer>
     </Navigation>
   </RootLayoutProps>
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -186,4 +184,3 @@ const RootLayout: React.FC = () => {
 };
 
 export default RootLayout;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5

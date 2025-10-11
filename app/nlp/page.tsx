@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
@@ -13,7 +12,6 @@ import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Targ
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -24,7 +22,6 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
           <div></div>
             <div></div>
               <h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
                 Coming Soon
 
               <p>
@@ -33,10 +30,6 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
               <button>
                 Learn More</button>
                 <ArrowRight className="w-5 h-5 ml-2" />
-
-
-
-
 
       <Footer />
     </>

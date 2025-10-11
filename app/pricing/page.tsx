@@ -1,13 +1,10 @@
-<<<<<<< HEAD
 import React, {useState} from 'react'
 import {Helmet} from 'react-helmet-async'
 import {Check, Star, ArrowRight, Zap, Shield, Users} from 'lucide-react'
-=======
 'use client';
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Check, Star, ArrowRight, Zap, Shield, Users } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
@@ -19,7 +16,6 @@ const PricingPage: React.FC = () => {
       description: 'Description for feature 1.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     },
-<<<<<<< HEAD
     {name: 'Professional',
       ],
       popular: true,
@@ -96,7 +92,6 @@ const PricingPage: React.FC = () => {
                   Save 20%
                 </span>
               )}
-=======
     {
       icon: BarChart,
       title: 'Feature 2', 
@@ -147,7 +142,6 @@ const PricingPage: React.FC = () => {
                   Learn More
                 </button>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
             </div>
           </div>
         </section>
@@ -234,9 +228,5 @@ const PricingPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-
   </Footer>
-=======
 export default PricingPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5

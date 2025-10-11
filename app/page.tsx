@@ -2,7 +2,8 @@
 import React from 'react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import {ArrowRight, CheckCircle, Brain, Cloud, Shield, Code} from 'lucide-react'
+import {ArrowRight, CheckCircle, Brain, Cloud, Shield, Code, Wifi, BarChart} from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
 
 const HomePage: React.FC = () => {
   const features = [
@@ -12,7 +13,6 @@ const HomePage: React.FC = () => {
       description: 'Description for feature 1.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     },
-<<<<<<< HEAD
     {icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions tailored to your business needs.',
@@ -32,24 +32,6 @@ const HomePage: React.FC = () => {
     {number: '99.9%', label: 'Uptime Guarantee'},
     {number: '24/7', label: 'Support Available'}
   ]
-  return (
-    <>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-    {
-      icon: BarChart,
-      title: 'Feature 2', 
-      description: 'Description for feature 2.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    },
-    {
-      icon: CheckCircle,
-      title: 'Feature 3',
-      description: 'Description for feature 3.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    }
-  ];
-
   const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
@@ -66,7 +48,6 @@ const HomePage: React.FC = () => {
         <meta name="description" content="Advanced AI and IT solutions for modern businesses." />
       </Helmet>
       
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
       <Navigation />
       
       <main className="pt-16">
@@ -170,12 +151,7 @@ const HomePage: React.FC = () => {
       
       <Footer />
     </div>
-    </>
   )
 }
 
-<<<<<<< HEAD
 export default HomePage
-=======
-export default HomePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -7,15 +6,10 @@ import React from 'react'
             </div>
           </div>
         </section>
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
 
               <p>
                 Discover our comprehensive solutions designed to transform your business.
-
-
-
 
         {/* Content Section */}</p>
         <section></section>
@@ -30,10 +24,6 @@ import React from 'react';
               <button>
                 Learn More</button>
                 <ArrowRight className="w-5 h-5 ml-2" />
-
-
-
-
 
       <Footer />
     </>

@@ -12,7 +12,6 @@ const PerformanceOptimizationPage: React.FC = () => {
       description: 'Description for feature 1.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     },
-<<<<<<< HEAD
     {icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
@@ -40,7 +39,6 @@ const PerformanceOptimizationPage: React.FC = () => {
         <title>Page Title - Zion Tech Group</title>
         <meta name="description" content="Description of the page and its benefits." />
         <meta name="keywords" content="relevant, keywords, for, seo" />
-=======
     {
       icon: BarChart,
       title: 'Feature 2', 
@@ -69,7 +67,6 @@ const PerformanceOptimizationPage: React.FC = () => {
       <Helmet>
         <title>Performance Optimization Page - Zion Tech Group</title>
         <meta name="description" content="Advanced AI and IT solutions for modern businesses." />
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
       </Helmet>
       
       <Navigation />
@@ -114,7 +111,6 @@ const PerformanceOptimizationPage: React.FC = () => {
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
                     <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
                   </div>
-<<<<<<< HEAD
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {feature.benefits && (
@@ -129,7 +125,6 @@ const PerformanceOptimizationPage: React.FC = () => {
   )
                     </ul>
                   )}
-=======
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
@@ -139,7 +134,6 @@ const PerformanceOptimizationPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
                 </div>
               ))}
             </div>
@@ -191,7 +185,6 @@ const PerformanceOptimizationPage: React.FC = () => {
       </main>
       
       <Footer />
-<<<<<<< HEAD
     </>
   )
 }
@@ -200,10 +193,8 @@ export default PerformanceOptimizationPage
       </CheckCircle>
     </CheckCircle>
   </Navigation>
-=======
     </div>
   );
 };
 
 export default PerformanceOptimizationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5

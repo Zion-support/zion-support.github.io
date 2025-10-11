@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
@@ -97,7 +96,6 @@ const AIAccountingAssistantPage: React.FC = () => {
 <Helmet>
         <title>AI Accounting Assistant - Zion Tech Group</title>
         <meta name="description" content="Streamline your accounting with our AI-powered assistant. Automated bookkeeping, financial analytics, and compliance management." />
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -138,12 +136,10 @@ const AiAccountingAssistantPage: React.FC = () => {
       <Helmet>
         <title>Ai Accounting Assistant Page - Zion Tech Group</title>
         <meta name="description" content="Advanced AI and IT solutions for modern businesses." />
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
       </Helmet>
       
       <Navigation />
       
-<<<<<<< HEAD
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -162,7 +158,6 @@ const AiAccountingAssistantPage: React.FC = () => {
                 </button>
                 <button className="border border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
                   Watch Demo
-=======
       <main className="pt-16">
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -179,14 +174,12 @@ const AiAccountingAssistantPage: React.FC = () => {
                 </button>
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                   Learn More
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
                 </button>
               </div>
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -207,7 +200,6 @@ const AiAccountingAssistantPage: React.FC = () => {
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-=======
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -231,7 +223,6 @@ const AiAccountingAssistantPage: React.FC = () => {
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
                         {benefit}
                       </li>
                     )
@@ -250,7 +241,6 @@ const AiAccountingAssistantPage: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Us
               </h2>
-<<<<<<< HEAD
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Tailored solutions for different business types
               </p>
@@ -346,7 +336,6 @@ const AiAccountingAssistantPage: React.FC = () => {
                   }`}>
                     {tier.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
                   </button>
-=======
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Experience the benefits of working with industry leaders.
               </p>
@@ -359,14 +348,12 @@ const AiAccountingAssistantPage: React.FC = () => {
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3" />
                     <span className="text-lg font-medium text-gray-900">{benefit}</span>
                   </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -402,7 +389,6 @@ export default AIAccountingAssistantPage
       </section>
     </ArrowRight>
   </Navigation>
-=======
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -429,4 +415,3 @@ export default AIAccountingAssistantPage
 };
 
 export default AiAccountingAssistantPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5

@@ -1,13 +1,10 @@
-<<<<<<< HEAD
 import React, {useState} from 'react'
 import {Helmet} from 'react-helmet-async'
 import {Calendar, Clock, User, ArrowRight, Search, Filter, Tag} from 'lucide-react'
-=======
 'use client';
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Calendar, Clock, User, ArrowRight, Search, Filter, Tag } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
@@ -19,7 +16,6 @@ const BlogPage: React.FC = () => {
       description: 'Description for feature 1.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     },
-<<<<<<< HEAD
     {id: 2,
       title: 'Building Scalable Cloud Infrastructure: Best Practices',
       excerpt: 'Learn how to design and implement cloud infrastructure that can scale with your business growth and handle increasing demands.',
@@ -77,7 +73,6 @@ const BlogPage: React.FC = () => {
 
   return (
     
-=======
     {
       icon: BarChart,
       title: 'Feature 2', 
@@ -103,7 +98,6 @@ const BlogPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
       <Helmet>
         <title>Blog Page - Zion Tech Group</title>
         <meta name="description" content="Advanced AI and IT solutions for modern businesses." />
@@ -133,11 +127,8 @@ const BlogPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-
     </Navigation>
   </Helmet>
-=======
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -221,4 +212,3 @@ const BlogPage: React.FC = () => {
 };
 
 export default BlogPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5

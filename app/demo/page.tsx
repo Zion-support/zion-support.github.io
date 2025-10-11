@@ -1,6 +1,5 @@
 'use client';
 
-<<<<<<< HEAD
 const DemoPage: React.FC = () => {
 const [selectedDemo, setSelectedDemo] = useState(0)
 
@@ -23,7 +22,6 @@ Action
             </h1>
 Schedule Live Demo
               </button>
-=======
 
 const DemoPage: React.FC = () => {
   const features = [
@@ -83,7 +81,6 @@ const DemoPage: React.FC = () => {
                   Learn More
                 </button>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
             </div>
           </div>
         </section>
@@ -145,17 +142,14 @@ const DemoPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* CTA Section */}
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 Ready to See More?
-=======
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Ready to Get Started?
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Contact us today to learn how our solutions can transform your business.
@@ -173,7 +167,6 @@ Ready to See More?
       </main>
       
       <Footer />
-<<<<<<< HEAD
     </>
   )
 }
@@ -181,10 +174,8 @@ Ready to See More?
 export default DemoPage
     </Footer>
   </Navigation>
-=======
     </div>
   );
 };
 
 export default DemoPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5

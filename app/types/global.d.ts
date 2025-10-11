@@ -1,4 +1,4 @@
-    gtag?: (...args: any[]) => void,
+    gtag?: (...args: any[]) => void,,
     dataLayer?: any[]}}
 }
     NEXT_PUBLIC_GA_ID?: string,

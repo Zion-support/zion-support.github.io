@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import {Helmet;} from 'react-helmet-async'
 import Navigation from '../components/Navigation';
@@ -75,7 +74,6 @@ return (
     <>
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-=======
 'use client';
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
@@ -116,7 +114,6 @@ const PrivacyPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
       <Helmet>
         <title>Privacy Page - Zion Tech Group</title>
         <meta name="description" content="Advanced AI and IT solutions for modern businesses." />
@@ -124,7 +121,6 @@ const PrivacyPage: React.FC = () => {
       
       <Navigation />
       
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -255,7 +251,6 @@ Contact our privacy team for any questions or concerns about your data
             <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
 Contact Privacy Team
             </button>
-=======
       <main className="pt-16">
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -275,7 +270,6 @@ Contact Privacy Team
                 </button>
               </div>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
           </div>
         </section>
 
@@ -358,7 +352,6 @@ Contact Privacy Team
       
       <Footer />
     </div>
-<<<<<<< HEAD
   )
 }
 
@@ -370,9 +363,7 @@ export default PrivacyPage
       </Mail>
     </Shield>
   </Navigation>
-=======
   );
 };
 
 export default PrivacyPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5

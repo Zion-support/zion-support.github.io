@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
             </div>
@@ -16,12 +15,9 @@ Why Choose Our Solution?
 Proven results that drive business growth
               </p>
             </div>
-=======
 'use client';
 import React from 'react';
 import React from 'react';
-
-
 
         {/* Benefits Section */}
         <section></section>
@@ -29,7 +25,6 @@ import React from 'react';
             <div></div>
               <h2>;
 Why Choose Our Solution?
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
 
               <p>;
 Proven results that drive business growth
@@ -42,8 +37,6 @@ Proven results that drive business growth
 
                   <p>{benefit}</p>
               ))}
-
-
 
         {/* CTA Section */}
         <section></section>

@@ -1,9 +1,6 @@
 'use client';
 
-
-<<<<<<< HEAD
 const PagePage: React.FC = () => {return (
-=======
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -62,7 +59,6 @@ const PagePage: React.FC = () => {
                   Learn More
                 </button>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
             </div>
           </div>
         </section>
@@ -145,15 +141,12 @@ const PagePage: React.FC = () => {
       </main>
       
       <Footer />
-<<<<<<< HEAD
     </>
   );}
 export default PagePage
   </Footer>
-=======
     </div>
   );
 };
 
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5

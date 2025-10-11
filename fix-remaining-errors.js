@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-<<<<<<< HEAD
 import { glob } from 'glob';
 
 // Function to fix specific syntax errors
@@ -181,7 +180,6 @@ async function main() {
 main().catch(console.error);
 
 export { fixSpecificErrors, processFile };
-=======
 import path from 'path';
 import { glob } from 'glob';
 
@@ -286,4 +284,3 @@ async function main() {
 
 // Run the script
 main().catch(console.error);
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5

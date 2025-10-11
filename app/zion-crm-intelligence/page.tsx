@@ -35,7 +35,6 @@ const PagePage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -43,7 +42,6 @@ const PagePage: React.FC = () => {
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-=======
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Page Page - Zion Tech Group</title>
@@ -55,7 +53,6 @@ const PagePage: React.FC = () => {
       <main className="pt-16">
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page Page
@@ -153,12 +150,9 @@ const PagePage: React.FC = () => {
       </main>
       
       <Footer />
-<<<<<<< HEAD
     </>
     </>
-=======
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
   );
 export default PagePage
       </Footer>

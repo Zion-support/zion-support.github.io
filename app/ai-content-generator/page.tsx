@@ -12,7 +12,6 @@ const PagePage: React.FC = () => {
       description: 'Description for feature 1.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     },
-<<<<<<< HEAD
     {icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
@@ -26,7 +25,6 @@ const PagePage: React.FC = () => {
       description: 'Target specific goals and objectives with precision.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']}
   ]
-=======
     {
       icon: BarChart,
       title: 'Feature 2', 
@@ -77,7 +75,6 @@ const PagePage: React.FC = () => {
                   Learn More
                 </button>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
             </div>
           </div>
         </section>
@@ -160,7 +157,6 @@ const PagePage: React.FC = () => {
       </main>
       
       <Footer />
-<<<<<<< HEAD
     </>
   )
 }
@@ -169,10 +165,8 @@ export default PagePage
       </ArrowRight>
     </Zap>
   </CheckCircle>
-=======
     </div>
   );
 };
 
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5

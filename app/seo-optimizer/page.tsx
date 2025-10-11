@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 const SeoOptimizerPage: React.FC = () => {
 const features = [
@@ -40,9 +39,7 @@ const benefits = [
     'Gain competitive advantage with advanced technology'
   ]
 return (
-=======
 'use client';
-
 
 const SeoOptimizerPage: React.FC = () => {
   const features = [
@@ -77,7 +74,6 @@ const SeoOptimizerPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
       <Helmet>
         <title>Seo Optimizer Page - Zion Tech Group</title>
         <meta name="description" content="Advanced AI and IT solutions for modern businesses." />
@@ -85,7 +81,6 @@ const SeoOptimizerPage: React.FC = () => {
       
       <Navigation />
       
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4 relative overflow-hidden">
@@ -104,7 +99,6 @@ Get Started
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
 Learn More
-=======
       <main className="pt-16">
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -198,7 +192,6 @@ Learn More
               </button>
               <button className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
                 Schedule Demo
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
               </button>
             </div>
           </div>
@@ -210,7 +203,6 @@ Learn More
   );
 };
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -248,6 +240,4 @@ Learn More
       </section>
     </CheckCircle>
   </Navigation>
-=======
 export default SeoOptimizerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5

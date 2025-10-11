@@ -7,7 +7,6 @@ import Footer from '../components/Footer'
 const AccessibilityPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: Eye,
       title: 'Visual Accessibility',
       description: 'Comprehensive solutions for users with visual impairments and color vision deficiencies.',
@@ -77,7 +76,6 @@ const AccessibilityPage: React.FC = () => {
 <Helmet>
         <title>Accessibility Services - Zion Tech Group</title>
         <meta name="description" content="Make your digital products accessible to everyone. Comprehensive accessibility services including audits, implementation, and ongoing support." />
-=======
       icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
@@ -111,12 +109,10 @@ const AccessibilityPage: React.FC = () => {
       <Helmet>
         <title>Accessibility Page - Zion Tech Group</title>
         <meta name="description" content="Advanced AI and IT solutions for modern businesses." />
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
       </Helmet>
       
       <Navigation />
       
-<<<<<<< HEAD
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -134,7 +130,6 @@ const AccessibilityPage: React.FC = () => {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
                 <button className="border border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
-=======
       <main className="pt-16">
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -150,7 +145,6 @@ const AccessibilityPage: React.FC = () => {
                   Get Started
                 </button>
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
                   Learn More
                 </button>
               </div>
@@ -158,7 +152,6 @@ const AccessibilityPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -184,7 +177,6 @@ const AccessibilityPage: React.FC = () => {
                     )
     </>
   )
-=======
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -211,7 +203,6 @@ const AccessibilityPage: React.FC = () => {
                         {benefit}
                       </li>
                     ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
                   </ul>
                 </div>
               ))}
@@ -219,7 +210,6 @@ const AccessibilityPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Services Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -246,7 +236,6 @@ const AccessibilityPage: React.FC = () => {
                   </ul>
                 </div>
               ))}
-=======
         <section className="py-20 bg-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -286,7 +275,6 @@ const AccessibilityPage: React.FC = () => {
               <button className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
                 Schedule Demo
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
             </div>
           </div>
         </section>
@@ -384,7 +372,6 @@ const AccessibilityPage: React.FC = () => {
       </main>
 
       <Footer />
-<<<<<<< HEAD
     </>
   )
 }
@@ -399,10 +386,8 @@ export default AccessibilityPage
       </CheckCircle>
     </ArrowRight>
   </Navigation>
-=======
     </div>
   );
 };
 
 export default AccessibilityPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5

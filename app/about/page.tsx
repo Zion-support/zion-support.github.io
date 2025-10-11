@@ -8,7 +8,6 @@ import Footer from '../components/Footer'
 const AboutPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: Target,
       title: 'Mission-Driven',
       description: 'We are committed to delivering AI and IT solutions that transform businesses and drive meaningful impact.'
@@ -44,7 +43,6 @@ const AboutPage: React.FC = () => {
       role: 'Head of AI Research',
       description: 'Leading expert in natural language processing and computer vision technologies.'}
   ]
-=======
       icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
@@ -72,23 +70,18 @@ const AboutPage: React.FC = () => {
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-<<<<<<< HEAD
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission, values, and team of experts in AI and IT solutions." />
-=======
         <title>About Page - Zion Tech Group</title>
         <meta name="description" content="Advanced AI and IT solutions for modern businesses." />
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
       </Helmet>
       
       <Navigation />
       
-<<<<<<< HEAD
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -100,7 +93,6 @@ const AboutPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.
               </p>
-=======
       <main className="pt-16">
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -119,12 +111,10 @@ const AboutPage: React.FC = () => {
                   Learn More
                 </button>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Mission Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -142,7 +132,6 @@ const AboutPage: React.FC = () => {
                   <feature.icon className="w-12 h-12 text-purple-400 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-=======
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -170,14 +159,12 @@ const AboutPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Values Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -213,7 +200,6 @@ const AboutPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
                   <p className="text-purple-400 mb-4">{member.role}</p>
                   <p className="text-gray-300">{member.description}</p>
-=======
         <section className="py-20 bg-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -232,14 +218,12 @@ const AboutPage: React.FC = () => {
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3" />
                     <span className="text-lg font-medium text-gray-900">{benefit}</span>
                   </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -253,7 +237,6 @@ const AboutPage: React.FC = () => {
               Get Started
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
-=======
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -270,21 +253,17 @@ const AboutPage: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
           </div>
         </section>
       </main>
 
       <Footer />
-<<<<<<< HEAD
     </>
   )
 }
-=======
     </div>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
 
 export default AboutPage
       </Footer>

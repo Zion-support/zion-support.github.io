@@ -1,6 +1,5 @@
 'use client';
 
-
 const ItInfrastructureDesignPage: React.FC = () => {
   const features = [
     {
@@ -15,7 +14,6 @@ const ItInfrastructureDesignPage: React.FC = () => {
       description: 'Description for feature 2.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     },
-<<<<<<< HEAD
     {icon: TrendingUp,
       title: 'Performance Optimization',
       description: 'AI-powered insights to optimize your business performance.',
@@ -29,7 +27,6 @@ const ItInfrastructureDesignPage: React.FC = () => {
       description: 'Target specific goals and objectives with precision.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']}
   ]
-=======
     {
       icon: CheckCircle,
       title: 'Feature 3',
@@ -38,7 +35,6 @@ const ItInfrastructureDesignPage: React.FC = () => {
     }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
   const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
@@ -48,17 +44,14 @@ const ItInfrastructureDesignPage: React.FC = () => {
     'Seamless integration with existing systems'
   ]
   return (
-<<<<<<< HEAD
     <>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>It Infrastructure Design Page - Zion Tech Group</title>
         <meta name="description" content="Advanced AI and IT solutions for modern businesses." />
       </Helmet>
       
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
       <Navigation />
       
       <main className="pt-16">
@@ -160,12 +153,10 @@ const ItInfrastructureDesignPage: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
   )
 }
 export default ItInfrastructureDesignPage
   </Navigation>
-=======
       </main>
       
       <Footer />
@@ -174,4 +165,3 @@ export default ItInfrastructureDesignPage
 };
 
 export default ItInfrastructureDesignPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5

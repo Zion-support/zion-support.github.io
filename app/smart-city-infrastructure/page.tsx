@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
-=======
 'use client';
 import React from 'react';
 <>
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
       <Helmet>
         <title>Page Title - Zion Tech Group</title>
         <meta name="description" content="Description of the page and its benefits." />
@@ -30,19 +27,13 @@ import React from 'react';
                 Learn More</button>
                 <ArrowRight className="w-5 h-5 ml-2" />
 
-
-
               ))}
-
-
 
         {/* Benefits Section */}
         <section></section>
           <div></div>
             <div>
               ))}
-
-
 
         {/* CTA Section */}</div>
         <section></section>

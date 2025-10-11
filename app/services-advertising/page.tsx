@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
@@ -10,7 +9,6 @@ import {Helmet} from 'react-helmet-async'
     <>
 <Helmet>
       </Helmet>
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -28,20 +26,14 @@ const features = [
       <>
       <Helmet>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
       <Navigation />
       
       <div>
         {/* Hero Section */}
 
-
-
         {/* Features Section */}
 
-
-
         {/* Benefits Section */}
-<<<<<<< HEAD
                 </div>
               )
     </>
@@ -49,12 +41,8 @@ const features = [
             </div>
           </div>
         </section>
-=======
 
               ))}
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
 
         {/* CTA Section */}
 

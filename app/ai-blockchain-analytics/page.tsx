@@ -1,19 +1,15 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react';
 import {Helmet;} from 'react-helmet-async'
 import {ArrowRight;, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const PagePage: React.FC = () => {
-<<<<<<< HEAD
 const features = [
     {;,
 }
@@ -40,7 +36,6 @@ benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'S
   ]
 
 const benefits = [
-=======
   const features = [
     {
       icon: Wifi,
@@ -63,25 +58,21 @@ const benefits = [
   ];
 
   const benefits = [
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
-<<<<<<< HEAD
   ]
 
 return (
     <>
 
-=======
   ];
 
   return (
     <div className="min-h-screen bg-gray-50">
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
       <Helmet>
         <title>Page Page - Zion Tech Group</title>
         <meta name="description" content="Advanced AI and IT solutions for modern businesses." />
@@ -94,17 +85,14 @@ return (
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-<<<<<<< HEAD
 Page <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Solutions</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 Discover our comprehensive page solutions designed to transform your business with AI and advanced technology.
-=======
                 Page Page
               </h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Transform your business with our cutting-edge AI and IT solutions designed for the modern enterprise.
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
@@ -177,7 +165,6 @@ Discover our comprehensive page solutions designed to transform your business wi
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -189,7 +176,6 @@ Join thousands of businesses already using our AI-powered solutions.
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
 Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
-=======
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -201,7 +187,6 @@ Start Free Trial
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                 Contact Us
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
               </button>
               <button className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
                 Schedule Demo
@@ -212,7 +197,6 @@ Start Free Trial
       </main>
       
       <Footer />
-<<<<<<< HEAD
     </>
   )
 }
@@ -223,10 +207,8 @@ Start Free Trial
       </CheckCircle>
     </div>
   </Navigation>
-=======
     </div>
   );
 };
 
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5

@@ -8,7 +8,6 @@ const FiveGImplementationPage: React.FC = () => {
   const features = [
     {
       icon: Wifi,
-<<<<<<< HEAD
       title: 'Ultra-Low Latency',
       description: 'Achieve sub-millisecond latency for real-time applications and critical operations.',
       benefits: ['< 1ms latency', 'Real-time processing', 'Critical operations support', 'Edge computing ready']
@@ -70,7 +69,6 @@ const FiveGImplementationPage: React.FC = () => {
       description: 'Continuous monitoring and optimization for peak performance.',
       details: ['Performance monitoring', 'Network optimization', 'Capacity management', 'Security updates']}
   ]
-=======
       title: 'Feature 1',
       description: 'Description for feature 1.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
@@ -98,22 +96,17 @@ const FiveGImplementationPage: React.FC = () => {
     'Seamless integration with existing systems'
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-<<<<<<< HEAD
         <title>5G Implementation Services - Zion Tech Group</title>
         <meta name="description" content="Transform your business with cutting-edge 5G implementation services. Ultra-low latency, high-speed connectivity, and AI-powered optimization." />
-=======
         <title>Five G Implementation Page - Zion Tech Group</title>
         <meta name="description" content="Advanced AI and IT solutions for modern businesses." />
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
       </Helmet>
       
       <Navigation />
       
-<<<<<<< HEAD
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -158,7 +151,6 @@ const FiveGImplementationPage: React.FC = () => {
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-=======
       <main className="pt-16">
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -204,7 +196,6 @@ const FiveGImplementationPage: React.FC = () => {
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
                         {benefit}
                       </li>
                     ))}
@@ -215,7 +206,6 @@ const FiveGImplementationPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Use Cases Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -276,7 +266,6 @@ const FiveGImplementationPage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-=======
         <section className="py-20 bg-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -295,14 +284,12 @@ const FiveGImplementationPage: React.FC = () => {
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3" />
                     <span className="text-lg font-medium text-gray-900">{benefit}</span>
                   </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -332,7 +319,6 @@ export default FiveGImplementationPage
       </CheckCircle>
     </ArrowRight>
   </Navigation>
-=======
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -359,4 +345,3 @@ export default FiveGImplementationPage
 };
 
 export default FiveGImplementationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5

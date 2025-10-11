@@ -1,23 +1,18 @@
-<<<<<<< HEAD
 import React from 'react'
 const ServicesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const services = [
-=======
 'use client';
-
 
 const ServicesPage: React.FC = () => {
   const features = [
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
     {
       icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     },
-<<<<<<< HEAD
     {id: 2,
       title: 'Cloud Services',}
   ]
@@ -40,7 +35,6 @@ const ServicesPage: React.FC = () => {
         <title>Services - Zion Tech Group | AI and IT Solutions</title>
         <meta name="description" content="Discover our comprehensive range of AI and IT services designed to transform your business. From AI solutions to cloud services and data analytics." />
         <meta name="keywords" content="AI services, IT services, cloud services, data analytics, cybersecurity, Zion Tech Group" />
-=======
     {
       icon: BarChart,
       title: 'Feature 2', 
@@ -69,7 +63,6 @@ const ServicesPage: React.FC = () => {
       <Helmet>
         <title>Services Page - Zion Tech Group</title>
         <meta name="description" content="Advanced AI and IT solutions for modern businesses." />
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
       </Helmet>
       
       <Navigation />
@@ -174,12 +167,9 @@ const ServicesPage: React.FC = () => {
       </main>
       
       <Footer />
-<<<<<<< HEAD
     </>
     </>
-=======
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
   );
 export default ServicesPage
     </Footer>
