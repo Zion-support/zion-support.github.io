@@ -30,7 +30,7 @@ import Footer from '../components/Footer';
 const ItServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const services = const services = const services = [
+  const services = [
     {
       id: 'cloud-infrastructure',
       name: 'Cloud Infrastructure & Migration',
@@ -1010,7 +1010,7 @@ const ItServicesPage: React.FC = () => {
       icon: Shield;
     };
   ];
-  const categories = const categories = const categories = [
+  const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'Cloud', name: 'Cloud', count: services.filter(s => s.category === 'Cloud').length },
     { id: 'Security', name: 'Security', count: services.filter(s => s.category === 'Security').length },
@@ -1042,8 +1042,8 @@ const ItServicesPage: React.FC = () => {
     { id: 'Performance', name: 'Performance', count: services.filter(s => s.category === 'Performance').length },
     { id: 'Cloud Optimization', name: 'Cloud Optimization', count: services.filter(s => s.category === 'Cloud Optimization').length },
     { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
-    { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },;
-    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length };
+    { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
+    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
   ];
   const filteredServices = const filteredServices = const filteredServices = services.filter();
   );
