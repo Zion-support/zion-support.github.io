@@ -1,40 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import { CheckCircle } from 'lucide-react'
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services and solutions.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-'use client'
-import React from 'react'
-import {Helmet} from 'react-helmet-async'
-import {ArrowRight} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-=======
-'use client';
-import React from 'react';
-
-=======
 'use client';
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -43,13 +9,8 @@ const PagePage: React.FC = () => {
   const features = [
     {
       title: 'Page',
-<<<<<<< HEAD
-      description: 'Professional page services and solutions.',
-      benefits: ['High Quality', 'Expert Team', '24/7 Support', 'Custom Solutions']
-=======
       description: 'Professional page services for modern businesses.',
       benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
     },
     {
       title: 'Advanced Technology',
@@ -62,10 +23,6 @@ const PagePage: React.FC = () => {
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
     }
   ];
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -126,15 +83,7 @@ const PagePage: React.FC = () => {
       
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default BlockchainPage
-=======
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
-=======
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-710b

@@ -1,31 +1,16 @@
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import { CheckCircle } from 'lucide-react'
-import {Helmet} from 'react-helmet-async'
-import {ArrowRight} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-const AiAnalyticsPage: React.FC = () => {
-    return (
-=======
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-
-=======
 import { CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AiAnalyticsPage: React.FC = () => {
+const PagePage: React.FC = () => {
   const features = [
     {
-      title: 'AI Analytics',
-      description: 'Advanced analytics and insights powered by artificial intelligence.',
-      benefits: ['Real-time Analytics', 'Predictive Insights', 'Custom Dashboards', 'Data Visualization']
+      title: 'Page',
+      description: 'Professional page services for modern businesses.',
+      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
     },
     {
       title: 'Advanced Technology',
@@ -40,12 +25,11 @@ const AiAnalyticsPage: React.FC = () => {
   ];
 
   return (
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional AI analytics services and solutions." />
-        <meta name="keywords" content="ai analytics, services, solutions, technology" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services and solutions." />
+        <meta name="keywords" content="page, services, solutions, technology" />
       </Helmet>
       
       <Navigation />
@@ -54,17 +38,10 @@ const AiAnalyticsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              AI Analytics
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
-=======
-              AI Analytics
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
+              Page
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional AI analytics services to help your business succeed and grow.
+              Professional page services to help your business succeed and grow.
             </p>
           </div>
           
@@ -89,7 +66,7 @@ const AiAnalyticsPage: React.FC = () => {
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our AI analytics services.
+                Contact us today to learn more about our page services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -106,17 +83,7 @@ const AiAnalyticsPage: React.FC = () => {
       
       <Footer />
     </div>
-<<<<<<< HEAD
-  )
-}
-export default AiAnalyticsPage
-=======
   );
 };
 
-<<<<<<< HEAD
-export default AiAnalyticsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
-=======
-export default AiAnalyticsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
+export default PagePage;

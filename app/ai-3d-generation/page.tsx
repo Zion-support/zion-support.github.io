@@ -1,35 +1,16 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-const AI3DGenerationPage: React.FC = () => {
-=======
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-=======
 import { CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const Ai3DGenerationPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
+const PagePage: React.FC = () => {
   const features = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
     {
-<<<<<<< HEAD
       title: 'Page',
-      description: 'Professional page services and solutions.',
-      benefits: ['High Quality', 'Expert Team', '24/7 Support', 'Custom Solutions']
-=======
-      title: 'AI 3D Generation',
-      description: 'Advanced AI-powered 3D content generation for modern businesses.',
-      benefits: ['Automated 3D Modeling', 'Real-time Rendering', 'Custom Textures', 'Animation Support']
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
+      description: 'Professional page services for modern businesses.',
+      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
     },
     {
       title: 'Advanced Technology',
@@ -37,106 +18,18 @@ const Ai3DGenerationPage: React.FC = () => {
       benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: Eye,
-      title: 'Advanced Rendering',
-      description: 'High-quality rendering with ray tracing, global illumination, and real-time preview capabilities.',
-      benefits: ['Ray tracing support', 'Global illumination', 'Real-time preview', 'Batch rendering']
-    },
-    {
-      icon: Zap,
-      title: 'Animation Generation',
-      description: 'Create smooth animations and rigs automatically using AI-powered motion generation.',
-      benefits: ['Auto-rigging', 'Motion capture', 'Keyframe generation', 'Physics simulation']
-    }
-  ]
-    {
-      icon: Brain,
-      title: 'Game Development',
-      description: 'Rapidly prototype and create 3D assets for games with AI assistance.',
-      benefits: ['Character generation', 'Environment creation', 'Asset optimization', 'LOD generation']
-    },
-    {
-      icon: Target,
-      title: 'Architecture Visualization',
-      description: 'Create stunning architectural visualizations and walkthroughs with AI-generated 3D models.',
-      benefits: ['Building generation', 'Interior design', 'Landscape creation', 'Lighting optimization']
-    },
-    {
-      icon: BarChart,
-      title: 'Product Design',
-      description: 'Design and visualize products with AI-powered 3D modeling and rendering.',
-      benefits: ['Concept visualization', 'Prototype generation', 'Material testing', 'Design iteration']
-    },
-    {
-      icon: Shield,
-      title: 'Education & Training',
-      description: 'Create interactive 3D educational content and training simulations.',
-      benefits: ['Educational models', 'Interactive simulations', 'VR/AR content', 'Training scenarios']
-    }
-  ]
-    {
-      name: 'Starter',
-      price: '$29',
-      period: '/month',
-      features: [
-        '100 3D model generations',
-        'Basic texturing',
-        'Standard rendering',
-        'Community support'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$99',
-      period: '/month',
-      features: [
-        '500 3D model generations',
-        'Advanced texturing',
-        'High-quality rendering',
-        'Animation tools',
-        'Priority support'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$299',
-      period: '/month',
-      features: [
-        'Unlimited generations',
-        'Custom AI training',
-        'API access',
-        'White-label solution',
-        'Dedicated support'
-      ],
-      popular: false
-=======
       title: 'Proven Results',
       description: 'Track record of successful projects and satisfied clients.',
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
-=======
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
     }
-  ]
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services and solutions." />
         <meta name="keywords" content="page, services, solutions, technology" />
-=======
-        <title>AI 3D Generation - Zion Tech Group</title>
-        <meta name="description" content="Professional AI 3D generation services and solutions." />
-        <meta name="keywords" content="ai 3d generation, services, solutions, technology" />
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
       </Helmet>
       
       <Navigation />
@@ -145,17 +38,10 @@ const Ai3DGenerationPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-<<<<<<< HEAD
               Page
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Professional page services to help your business succeed and grow.
-=======
-              AI 3D Generation
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional AI 3D generation services to help your business succeed and grow.
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
             </p>
           </div>
           
@@ -180,11 +66,7 @@ const Ai3DGenerationPage: React.FC = () => {
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-<<<<<<< HEAD
                 Contact us today to learn more about our page services.
-=======
-                Contact us today to learn more about our AI 3D generation services.
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -193,31 +75,6 @@ const Ai3DGenerationPage: React.FC = () => {
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
                   Learn More
                 </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export default function Ai3DGenerationPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI 3D Generation
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services and solutions.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
               </div>
             </div>
           </div>
@@ -226,15 +83,7 @@ export default function Ai3DGenerationPage() {
       
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default AI3DGenerationPage
-=======
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
-=======
-export default Ai3DGenerationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-710b

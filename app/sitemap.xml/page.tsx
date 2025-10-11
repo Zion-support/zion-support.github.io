@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-
+import { CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -9,8 +9,8 @@ const PagePage: React.FC = () => {
   const features = [
     {
       title: 'Page',
-      description: 'Professional page services and solutions.',
-      benefits: ['High Quality', 'Expert Team', '24/7 Support', 'Custom Solutions']
+      description: 'Professional page services for modern businesses.',
+      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
     },
     {
       title: 'Advanced Technology',
@@ -82,38 +82,8 @@ const PagePage: React.FC = () => {
       </main>
       
       <Footer />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'use client';
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services and solutions.
-            </p>
-          </div>
-        </div>
-      </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
     </div>
-  )
-}
-    </div>
-  )
-}
+  );
+};
 
-<<<<<<< HEAD
-export default SitemapPage
-=======
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb

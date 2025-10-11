@@ -1,77 +1,35 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import { CheckCircle } from 'lucide-react'
-import {Helmet} from 'react-helmet-async'
-import {ArrowRight} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-=======
-'use client';
-import React from 'react';
-
-=======
 'use client';
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
-const SystemAdministrationPage: React.FC = () => {
+const PagePage: React.FC = () => {
+  const features = [
     {
-      title: 'Server Management',
-      description: 'Comprehensive server administration and maintenance services.',
-      benefits: ['Server monitoring', 'Performance tuning', 'Security updates', 'Backup management']
-=======
-const SystemAdministrationPage: React.FC = () => {
-  const adminFeatures = [
-    {
-      title: 'Server Management',
-      description: 'Comprehensive server administration and maintenance services.',
-      benefits: ['Server monitoring', 'Performance tuning', 'Backup management', 'Security updates']
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
+      title: 'Page',
+      description: 'Professional page services for modern businesses.',
+      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
     },
     {
-      title: 'Network Administration',
-      description: 'Manage and optimize your network infrastructure.',
-<<<<<<< HEAD
-      benefits: ['Network monitoring', 'Firewall management', 'VPN setup', 'Traffic optimization']
+      title: 'Advanced Technology',
+      description: 'Cutting-edge tools and technologies to deliver superior results.',
+      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
     },
     {
-      title: 'Security Management',
-      description: 'Implement and maintain robust security measures.',
-      benefits: ['Security audits', 'Access control', 'Intrusion detection', 'Compliance monitoring']
-    }
-  ]
-  return (
-<<<<<<< HEAD
-    <>
-
-  return (
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
-=======
-      benefits: ['Network monitoring', 'Traffic analysis', 'Security configuration', 'Troubleshooting']
-    },
-    {
-      title: 'User Support',
-      description: 'Provide technical support and user assistance.',
-      benefits: ['Help desk support', 'User training', 'Documentation', 'Issue resolution']
+      title: 'Proven Results',
+      description: 'Track record of successful projects and satisfied clients.',
+      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
     }
   ];
 
   return (
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>System Administration - Zion Tech Group</title>
-        <meta name="description" content="Professional system administration services and solutions." />
-        <meta name="keywords" content="system administration, services, solutions, technology" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services and solutions." />
+        <meta name="keywords" content="page, services, solutions, technology" />
       </Helmet>
       
       <Navigation />
@@ -80,20 +38,16 @@ const SystemAdministrationPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              System Administration
+              Page
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional system administration services to help your business succeed and grow.
+              Professional page services to help your business succeed and grow.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-<<<<<<< HEAD
-            {systemFeatures.map((feature, index) => (
-=======
-            {adminFeatures.map((feature, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
@@ -112,7 +66,7 @@ const SystemAdministrationPage: React.FC = () => {
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our system administration services.
+                Contact us today to learn more about our page services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -129,6 +83,7 @@ const SystemAdministrationPage: React.FC = () => {
       
       <Footer />
     </div>
-  )
-}
-export default SystemAdministrationPage
+  );
+};
+
+export default PagePage;

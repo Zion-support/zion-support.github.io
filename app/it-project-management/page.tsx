@@ -1,78 +1,35 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import { CheckCircle } from 'lucide-react'
-import {Helmet} from 'react-helmet-async'
-import {ArrowRight} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-=======
-'use client';
-import React from 'react';
-
-=======
 'use client';
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
-const ItProjectManagementPage: React.FC = () => {
+const PagePage: React.FC = () => {
+  const features = [
     {
-      title: 'Agile Methodology',
-      description: 'Implement agile project management practices for better results.',
-      benefits: ['Sprint planning', 'Daily standups', 'Retrospectives', 'Continuous improvement']
+      title: 'Page',
+      description: 'Professional page services for modern businesses.',
+      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
     },
     {
-      title: 'Resource Management',
-      description: 'Efficiently manage project resources and team allocation.',
-      benefits: ['Team coordination', 'Resource planning', 'Timeline management', 'Budget control']
+      title: 'Advanced Technology',
+      description: 'Cutting-edge tools and technologies to deliver superior results.',
+      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
     },
     {
-      title: 'Quality Assurance',
-      description: 'Ensure high-quality deliverables through comprehensive testing.',
-      benefits: ['Testing strategies', 'Quality metrics', 'Code reviews', 'Performance monitoring']
-    }
-  ]
-  return (
-<<<<<<< HEAD
-    <>
-
-  return (
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
-=======
-const ItProjectManagementPage: React.FC = () => {
-  const projectFeatures = [
-    {
-      title: 'Agile Methodology',
-      description: 'Implement agile project management practices for better results.',
-      benefits: ['Sprint planning', 'Daily standups', 'Retrospectives', 'Continuous delivery']
-    },
-    {
-      title: 'Risk Management',
-      description: 'Identify and mitigate project risks effectively.',
-      benefits: ['Risk assessment', 'Mitigation strategies', 'Contingency planning', 'Monitoring']
-    },
-    {
-      title: 'Team Collaboration',
-      description: 'Foster effective collaboration and communication within teams.',
-      benefits: ['Team coordination', 'Communication tools', 'Documentation', 'Knowledge sharing']
+      title: 'Proven Results',
+      description: 'Track record of successful projects and satisfied clients.',
+      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
     }
   ];
 
   return (
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>IT Project Management - Zion Tech Group</title>
-        <meta name="description" content="Professional IT project management services and solutions." />
-        <meta name="keywords" content="it project management, services, solutions, technology" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services and solutions." />
+        <meta name="keywords" content="page, services, solutions, technology" />
       </Helmet>
       
       <Navigation />
@@ -81,16 +38,16 @@ const ItProjectManagementPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              IT Project Management
+              Page
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional IT project management services to help your business succeed and grow.
+              Professional page services to help your business succeed and grow.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {projectFeatures.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
@@ -109,7 +66,7 @@ const ItProjectManagementPage: React.FC = () => {
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our IT project management services.
+                Contact us today to learn more about our page services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -126,6 +83,7 @@ const ItProjectManagementPage: React.FC = () => {
       
       <Footer />
     </div>
-  )
-}
-export default ItProjectManagementPage
+  );
+};
+
+export default PagePage;

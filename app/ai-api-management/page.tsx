@@ -1,39 +1,16 @@
-<<<<<<< HEAD
-'use client'
-import { CheckCircle } from 'lucide-react'
-import {Helmet} from 'react-helmet-async'
-import {ArrowRight} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-export default function AiApiManagementPage() {
-=======
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-=======
 import { CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
-const AiApiManagementPage: React.FC = () => {
+const PagePage: React.FC = () => {
   const features = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
     {
-      title: 'AI API Management',
-<<<<<<< HEAD
-      description: 'Advanced API management and insights powered by artificial intelligence.',
-      benefits: ['Real-time Monitoring', 'Predictive Analytics', 'Custom APIs', 'Data Integration']
-=======
-      description: 'Professional AI API management services delivered by experienced professionals.',
-      benefits: ['Quality Assurance', 'Fast Delivery', '24/7 Support', 'Custom Solutions']
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
+      title: 'Page',
+      description: 'Professional page services for modern businesses.',
+      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
     },
     {
       title: 'Advanced Technology',
@@ -45,21 +22,14 @@ const AiApiManagementPage: React.FC = () => {
       description: 'Track record of successful projects and satisfied clients.',
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
     }
-<<<<<<< HEAD
-  ]
-=======
   ];
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI API Management - Zion Tech Group</title>
-        <meta name="description" content="Professional AI API management services and solutions." />
-        <meta name="keywords" content="ai api management, services, solutions, technology" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services and solutions." />
+        <meta name="keywords" content="page, services, solutions, technology" />
       </Helmet>
       
       <Navigation />
@@ -68,17 +38,10 @@ const AiApiManagementPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              AI API Management
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
-=======
-              AI API Management
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
+              Page
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional AI API management services to help your business succeed and grow.
+              Professional page services to help your business succeed and grow.
             </p>
           </div>
           
@@ -103,7 +66,7 @@ const AiApiManagementPage: React.FC = () => {
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our AI API management services.
+                Contact us today to learn more about our page services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -120,15 +83,7 @@ const AiApiManagementPage: React.FC = () => {
       
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default AiApiManagementPage
-=======
-export default AiApiManagementPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
-=======
-export default AiApiManagementPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
+export default PagePage;

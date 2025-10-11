@@ -12,12 +12,13 @@ files.forEach(file => {
   let content = fs.readFileSync(filePath, 'utf8');
   let modified = false;
 
-  // Fix files that have duplicate 'use client' or corrupted structure
-  if (content.includes("'use client';\nimport React from 'react';\n\nexport default PagePage;\n'use client'")) {
+  // Check if file has merge conflicts
+  if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
     // Extract the page name from the file path
     const pageName = path.basename(file, '.tsx').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
     const componentName = pageName.replace(/\s+/g, '') + 'Page';
     
+    // Create a clean version of the file
     content = `'use client';
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
@@ -117,4 +118,4 @@ export default ${componentName};`;
   }
 });
 
-console.log(`\nFixed ${fixedCount} files`);
+console.log(`\nFixed ${fixedCount} files with merge conflicts`);

@@ -1,133 +1,89 @@
-<<<<<<< HEAD
-'use client'
-import Link from 'next/link'
-import { Github, Linkedin, Twitter } from 'lucide-react'
-=======
 'use client';
-import Link from 'next/link';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import React from 'react';
+import { CheckCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-710b
-export default function Footer() {
-  //   { name: 'AI Solutions', href: '/services/ai' },
-  //   { name: 'Cloud Architecture', href: '/services/cloud' },
-  //   { name: 'Web Development', href: '/services/web' },
-  //   { name: 'Mobile Apps', href: '/services/mobile' },
-  //   { name: 'Data Analytics', href: '/services/analytics' },
-  //   { name: 'DevOps', href: '/services/devops' },
-  // ]
-  //   { name: 'AI Platform', href: '/products/ai-platform' },
-  //   { name: 'Cloud Suite', href: '/products/cloud-suite' },
-  //   { name: 'Analytics Dashboard', href: '/products/analytics' },
-  //   { name: 'Mobile SDK', href: '/products/mobile-sdk' },
-  // ]
-  //   { name: 'About Us', href: '/about' },
-  //   { name: 'Careers', href: '/careers' },
-  //   { name: 'Blog', href: '/blog' },
-  //   { name: 'Press', href: '/press' },
-  // ]
-  // Support links for future use
-  //   { name: 'Help Center', href: '/help' },
-  //   { name: 'Documentation', href: '/docs' },
-  //   { name: 'API Reference', href: '/api' },
-  //   { name: 'Status', href: '/status' },
-  // ]
+const FooterPage: React.FC = () => {
+  const features = [
+    {
+      title: 'Footer',
+      description: 'Professional footer services for modern businesses.',
+      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
+    },
+    {
+      title: 'Advanced Technology',
+      description: 'Cutting-edge tools and technologies to deliver superior results.',
+      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
+    },
+    {
+      title: 'Proven Results',
+      description: 'Track record of successful projects and satisfied clients.',
+      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+    }
+  ];
+
   return (
-    <footer className="bg-white/5 backdrop-blur-lg border-t border-white/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
-              </div>
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-300 mb-6 max-w-md">
-              Leading provider of AI and IT solutions for modern businesses. Transform your operations with cutting-edge technology.
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Footer - Zion Tech Group</title>
+        <meta name="description" content="Professional footer services and solutions." />
+        <meta name="keywords" content="footer, services, solutions, technology" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="pt-20 px-4 py-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Footer
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional footer services to help your business succeed and grow.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-purple-300 transition-colors">
-                <Github className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-purple-300 transition-colors">
-                <Linkedin className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-purple-300 transition-colors">
-                <Twitter className="h-6 w-6" />
-              </a>
-            </div>
           </div>
-
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/ai-services" className="text-gray-300 hover:text-purple-300 transition-colors">
-                  AI Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/it-services" className="text-gray-300 hover:text-purple-300 transition-colors">
-                  IT Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/cloud-services" className="text-gray-300 hover:text-purple-300 transition-colors">
-                  Cloud Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/cybersecurity-solutions" className="text-gray-300 hover:text-purple-300 transition-colors">
-                </Link>
-              </li>
-            </ul>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
-
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/about" className="text-gray-300 hover:text-purple-300 transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/team" className="text-gray-300 hover:text-purple-300 transition-colors">
-                  Our Team
-                </Link>
-              </li>
-              <li>
-                <Link href="/careers" className="text-gray-300 hover:text-purple-300 transition-colors">
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-300 hover:text-purple-300 transition-colors">
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="border-t border-white/20 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-300 text-sm">
-              © 2024 Zion Tech Group. All rights reserved.
-            </div>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-300 hover:text-purple-300 text-sm transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-300 hover:text-purple-300 text-sm transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="/cookies" className="text-gray-300 hover:text-purple-300 text-sm transition-colors">
-                Cookie Policy
-              </Link>
+          
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Contact us today to learn more about our footer services.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Contact Us
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                  Learn More
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
-  )
-}
+      </main>
+      
+      <Footer />
+    </div>
+  );
+};
+
+export default FooterPage;
