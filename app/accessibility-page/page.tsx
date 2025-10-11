@@ -4,7 +4,6 @@ import {Helmet} from 'react-helmet-async'
 import {Eye, Ear, Hand, Brain, Shield, CheckCircle, ArrowRight, Target, BarChart, Zap} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-
 const AccessibilityPage: React.FC = () => {
   const features = [
     {
@@ -44,9 +43,6 @@ const AccessibilityPage: React.FC = () => {
       benefits: ['Optimized loading', 'Efficient rendering', 'Minimal overhead', 'Fast interactions']
     }
   ];
-<<<<<<< HEAD
-
-=======
   const services = [
     {
       title: 'Accessibility Audits',
@@ -73,16 +69,12 @@ const AccessibilityPage: React.FC = () => {
       benefits: ['Team training', 'Best practices', 'Tool training', 'Compliance education']
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
   const standards = [
     'WCAG 2.1 AA Compliance',
     'Section 508 Compliance',
     'ADA Compliance',
     'EN 301 549 Compliance'
   ];
-<<<<<<< HEAD
-
-=======
   const benefits = [
     {
       title: 'Legal Compliance',
@@ -105,7 +97,6 @@ const AccessibilityPage: React.FC = () => {
       icon: BarChart
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -113,7 +104,6 @@ const AccessibilityPage: React.FC = () => {
         <meta name="description" content="Learn about our commitment to web accessibility and inclusive design practices." />
         <meta name="keywords" content="accessibility, inclusive design, WCAG compliance, ADA compliance, web accessibility" />
       <Navigation />
-
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
@@ -123,17 +113,13 @@ const AccessibilityPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               We believe technology should be accessible to everyone. Our commitment to inclusive design ensures that our solutions work for all users.
             </p>
-
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
 Accessibility Features
               </h2>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our accessibility solutions cover all aspects of digital inclusion, ensuring your products work for everyone.
               </p>
@@ -154,23 +140,16 @@ Accessibility Features
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {benefit}
                     ))}
-<<<<<<< HEAD
 ))}
-=======
                   </ul></div></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
-
         {/* Services Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Our Services
-<<<<<<< HEAD
 </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
                 Comprehensive accessibility services to make your digital products inclusive
               </p>
             </div>
@@ -190,14 +169,10 @@ Accessibility Features
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {benefit}
                     ))}
-<<<<<<< HEAD
               ))}
-=======
                   </ul>
                 </div>
               ))}</div></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
-
         {/* Standards Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -215,18 +190,13 @@ Accessibility Features
                   <Shield className="w-12 h-12 text-green-400 mx-auto mb-4" />
                   <h3 className="text-lg font-semibold text-white">
                     {standard}
-<<<<<<< HEAD
                   </h3>
 ))}
-
         {/* Benefits Section */}
 <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
-=======
                   </h3></div></section>
-
         {/* Benefits Section */}
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Why Accessibility Matters
@@ -244,46 +214,32 @@ Accessibility Features
                   </h3>
                   <p className="text-gray-300">
                     {benefit.description}
-<<<<<<< HEAD
 </p>
               ))}
-
         {/* CTA Section */}
 <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
           <div className="max-w-4xl mx-auto text-center">
-=======
               ))}</div></section>
-
         {/* CTA Section */}
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Make Your Products Accessible?
             </h2>
             <p className="text-xl text-gray-100 mb-8">
-<<<<<<< HEAD
 Let's work together to create inclusive digital experiences that work for everyone.
             </p>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 Start Your Accessibility Journey
                 <ArrowRight className="ml-2 h-5 w-5" />
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 Schedule Consultation
-<<<<<<< HEAD
               </button>
-=======
               </button></div></section>
       </main>
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
-
       <Footer />
   );
 };
-
 export default AccessibilityPage;
-<<<<<<< HEAD
 </Footer>
 </ArrowRight>
 </button>
@@ -325,5 +281,3 @@ export default AccessibilityPage;
 </title>
 </Helmet>
 </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd

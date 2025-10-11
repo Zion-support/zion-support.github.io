@@ -4,7 +4,6 @@ import {Helmet} from 'react-helmet-async'
 import {Cube, Zap, Eye, Palette, ArrowRight, CheckCircle, Target, BarChart, Brain, Shield} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-
 const AI3DGenerationPage: React.FC = () => {
   const features = [
     {
@@ -44,7 +43,6 @@ const AI3DGenerationPage: React.FC = () => {
       benefits: ['Data encryption', 'Secure processing', 'Compliance ready', 'Access controls']
     }
   ]
-
   const useCases = [
     {
       title: 'Game Development',
@@ -71,7 +69,6 @@ const AI3DGenerationPage: React.FC = () => {
       benefits: ['Educational models', 'Training simulations', 'Interactive content', 'VR integration']
     }
   ]
-
   const pricingTiers = [
     {
       name: 'Starter',
@@ -112,15 +109,12 @@ const AI3DGenerationPage: React.FC = () => {
       ]
     }
   ]
-
   return (
-    <>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       <Navigation />
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI 3D Generation - Zion Tech Group</title>
@@ -128,12 +122,8 @@ const AI3DGenerationPage: React.FC = () => {
         <meta name="keywords" content="AI 3D generation, 3D modeling, artificial intelligence, design automation, 3D assets" />
         <title>AI 3D Generation - Zion Tech Group</title>
         <meta name="description" content="AI-powered 3D model generation and rendering solutions for creative professionals" />
-<<<<<<< HEAD
 <meta name="keywords" content="AI, 3D generation, 3D modeling, computer graphics, AI art, 3D rendering" />
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
       <Navigation />
-
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -150,16 +140,10 @@ const AI3DGenerationPage: React.FC = () => {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                   View Gallery
-<<<<<<< HEAD
                 </button>
-=======
                 </button></div></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
-
         {/* Features Section */}
-
       <Footer />
-    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -171,11 +155,8 @@ const AI3DGenerationPage: React.FC = () => {
                       <li key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2">
                         {benefit}
-                    )
-    </>
   )
               ))}
-
         <section className="py-20 bg-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -185,7 +166,6 @@ const AI3DGenerationPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Discover how AI 3D generation can transform your industry
               </p>
-
             <div className=">
     ,>
     d: grid-cols-2 l, g:grid-cols-4 gap-8">
@@ -197,9 +177,7 @@ const AI3DGenerationPage: React.FC = () => {
                       <Icon className="w-8 h-8 text-white">
                     <h3 className="text-xl font-semibold text-white mb-4">
                     <p className="text-gray-300">
-
       <Footer />
-    </>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
@@ -208,15 +186,10 @@ const AI3DGenerationPage: React.FC = () => {
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {benefit}
                     ))}
-
       <Footer />
-    </>
               ))}
-<<<<<<< HEAD
 <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Powerful Features
@@ -225,7 +198,6 @@ const AI3DGenerationPage: React.FC = () => {
                 Advanced AI technology meets creative 3D design tools
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => {
                 const Icon = feature.icon
@@ -241,13 +213,8 @@ const AI3DGenerationPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {benefit}
                       ))}
-                );
-<<<<<<< HEAD
               })}
-=======
               })}</div></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
-
         {/* Use Cases Section */}
         <section className="py-20 px-4 bg-slate-800/50">
           <div className="container mx-auto">
@@ -256,7 +223,6 @@ const AI3DGenerationPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Transform your creative workflow across industries
               </p>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {useCases.map((useCase, index) => {
                 const Icon = useCase.icon
@@ -272,13 +238,8 @@ const AI3DGenerationPage: React.FC = () => {
                           <CheckCircle className="h-4 w-4 text-purple-400 mr-2 flex-shrink-0" />
                           {benefit}
                       ))}
-                );
-<<<<<<< HEAD
               })}
-=======
               })}</div></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -290,32 +251,18 @@ const AI3DGenerationPage: React.FC = () => {
                 Choose the plan that fits your creative needs
               </p>
             </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
       <Footer />
-    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <div className="flex-shrink-0">
                     <Zap className="h-6 w-6 text-cyan-400" />
-
       <Footer />
-    </>
                   <p className="text-gray-300">{benefit}</p>
-
       <Footer />
-    </>
               ))}
-
       <Footer />
-    </>
-
       <Footer />
-    </>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="container mx-auto">
@@ -327,9 +274,7 @@ const AI3DGenerationPage: React.FC = () => {
                 Powerful tools for creating professional 3D content
               </p>
             </div>
-
       <Footer />
-    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => {
                 const Icon = feature.icon;
@@ -337,9 +282,7 @@ const AI3DGenerationPage: React.FC = () => {
                   <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
                     <div className="text-cyan-400 mb-4">
                       <Icon className="h-8 w-8" />
-
       <Footer />
-    </>
                     <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description}</p>
                     <ul className="space-y-2">
@@ -348,18 +291,11 @@ const AI3DGenerationPage: React.FC = () => {
                           <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
                           {benefit}
                       ))}
-
       <Footer />
-    </>
                 );
               })}
-
       <Footer />
-    </>
-
       <Footer />
-    </>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
@@ -371,25 +307,16 @@ const AI3DGenerationPage: React.FC = () => {
                 Revolutionize your 3D workflow with artificial intelligence
               </p>
             </div>
-
       <Footer />
-    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
-
       <Footer />
-    </>
               ))}
-
       <Footer />
-    </>
-
       <Footer />
-    </>
-
         {/* Pricing Section */}
         <section className="py-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -401,9 +328,7 @@ const AI3DGenerationPage: React.FC = () => {
                 Choose the perfect plan for your 3D generation needs. Scale up or down as your requirements change.
               </p>
             </div>
-
       <Footer />
-    </>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => {
                 const Icon = useCase.icon
@@ -411,26 +336,14 @@ const AI3DGenerationPage: React.FC = () => {
                   <div key={index} className="text-center">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                       <Icon className="w-8 h-8 text-white" />
-
       <Footer />
-    </>
                     <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
                     <p className="text-gray-300">{useCase.description}</p>
-
       <Footer />
-    </>
                 );
               })}
-
       <Footer />
-    </>
-
       <Footer />
-<<<<<<< HEAD
-</>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
-
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -446,44 +359,22 @@ const AI3DGenerationPage: React.FC = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
                 Schedule Demo
-<<<<<<< HEAD
               </button>
-
       <Footer />
-
-=======
               </button></div></section>
       </main>
-
       <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
-    </>
   );
 };
-
-<<<<<<< HEAD
 export default Ai3dGenerationPage
-
       <Footer />
-    </>
-    </>
   )
-
       <Footer />
-    </>
-    </>
   )
-
       <Footer />
-    </>
-    </>
   )
-
       <Footer />
-    </>
-    </>
   );
-
 export default Ai3dGenerationPage;
 </Footer>
 </Footer>
@@ -611,6 +502,4 @@ export default Ai3dGenerationPage;
 </Navigation>
 </title>
 </Helmet>
-=======
 export default Ai3dGenerationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd

@@ -37,7 +37,6 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-<<<<<<< HEAD
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">Z</span>
               </div>
@@ -46,15 +45,6 @@ const Footer: React.FC = () => {
             <p className="text-gray-300 mb-6 max-w-md">
               Leading technology solutions provider helping businesses transform their digital
               presence with cutting-edge AI, cloud architecture and innovative development services.
-=======
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-300 mb-6 max-w-md">
-              Leading provider of AI and IT solutions, transforming businesses through innovative technology and expert consulting.
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
             </p>
             <div className="flex space-x-4">
               <a
@@ -81,7 +71,6 @@ const Footer: React.FC = () => {
               >
                 <Linkedin className="w-5 h-5" />
               </a>
-<<<<<<< HEAD
               <a
                 href="https://github.com"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -93,12 +82,10 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-=======
             </div>
           </div>
 
           {/* Services */}
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
@@ -115,10 +102,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-<<<<<<< HEAD
-=======
           {/* Solutions */}
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
           <div>
             <h3 className="text-lg font-semibold mb-4">Products</h3>
             <ul className="space-y-2">
@@ -135,7 +119,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-<<<<<<< HEAD
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -153,61 +136,22 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8">
-=======
-          {/* Contact */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300">info@ziontech.com</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300">123 Tech Street, Innovation City</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Bottom Section */}
         <div className="border-t border-gray-700 mt-12 pt-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
             </p>
-<<<<<<< HEAD
-            <div className="flex items-center space-x-4 mt-4 md:mt-0">
-              <div className="flex items-center text-gray-400 text-sm">
-                <MapPin className="w-4 h-4 mr-1" />
-                <span>New York, NY</span>
-              </div>
-              <div className="flex items-center text-gray-400 text-sm">
-                <Phone className="w-4 h-4 mr-1" />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center text-gray-400 text-sm">
-                <Mail className="w-4 h-4 mr-1" />
-                <span>info@ziontech.com</span>
-              </div>
-=======
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Terms of Service
               </Link>
-              <Link to="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Cookie Policy
               </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
             </div>
           </div>
         </div>

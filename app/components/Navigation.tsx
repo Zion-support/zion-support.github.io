@@ -39,50 +39,8 @@ const Navigation: React.FC = () => {
               </Link>
             </div>
           </div>
-
-<<<<<<< HEAD
-=======
-            {/* IT Services Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => toggleDropdown('it-services')}
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
-                IT Services
-              </button>
-            </div>
-            <div className="relative">
-              <button
-                onClick={toggleMenu}
-                className="text-gray-300 hover:text-white p-2 rounded-md">
-                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </button>
-              {activeDropdown === 'solutions' && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-slate-800 rounded-lg shadow-lg border border-white/10">
-                  <Link to="/ai-solutions" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-t-lg">
-                    AI Solutions
-                  </Link>
-                  <Link to="/cloud-solutions" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700">
-                    Cloud Solutions
-                  </Link>
-                  <Link to="/enterprise-solutions" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700">
-                    Enterprise Solutions
-                  </Link>
-                </div>
-              )}
-            </div>
-            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-              About
-            </Link>
-            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
-              Contact
-            </Link>
-            <Link to="/demo" className="bg-cyan-500 text-white px-4 py-2 rounded-lg hover:bg-cyan-600 transition-colors">
-              Demo
-            </Link>
-          </div>
           
           {/* Mobile menu button */}
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
@@ -91,7 +49,6 @@ const Navigation: React.FC = () => {
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
-<<<<<<< HEAD
         </div>
       </div>
 
@@ -113,36 +70,6 @@ const Navigation: React.FC = () => {
           </div>
         </div>
       )}
-=======
-          
-          {/* Mobile Navigation */}
-          {isMenuOpen && (
-            <div className="md:hidden">
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800">
-                <Link to="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                  Home
-                </Link>
-                <Link to="/ai-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                  AI Services
-                </Link>
-                <Link to="/it-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                  IT Services
-                </Link>
-                <Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                  About
-                </Link>
-                <Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                  Contact
-                </Link>
-                <Link to="/demo" className="block px-3 py-2 bg-cyan-500 text-white rounded-md hover:bg-cyan-600">
-                  Demo
-                </Link>
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
     </nav>
   );
 };
