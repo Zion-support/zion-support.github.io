@@ -3,30 +3,30 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   keywords?: string[];
   canonicalUrl?: string;
-  structuredData?: any;
   ogImage?: string;
   twitterCard?: string;
+  structuredData?: any;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title,
-  description,
-  keywords = [],
+  title = 'Zion Tech Group - AI & IT Solutions',
+  description = 'Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.',
+  keywords = ['AI', 'artificial intelligence', 'IT services', 'cloud computing', 'cybersecurity', 'data analytics', 'digital transformation'],
   canonicalUrl,
-  structuredData,
-  ogImage,
-  twitterCard = 'summary_large_image'
+  ogImage = '/og-image.jpg',
+  twitterCard = 'summary_large_image',
+  structuredData
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   
   return (
-    </SEOHeadProps><Helmet>
+    <Helmet>
       {/* Basic Meta Tags */}
-      </Helmet><title>{fullTitle}</title>
+      <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
@@ -49,6 +49,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       
       {/* Structured Data */}
       {structuredData && (
@@ -56,94 +57,51 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           {JSON.stringify(structuredData)}
         </script>
       )}
-    </Helmet>
-  );
-};
-
-export default SEOHead;
-'use client'
-import React from 'react'
-import Head from 'next/head'
-
-interface SEOHeadProps {
-  title?: string
-  description?: string
-  keywords?: string
-  canonical?: string
-  ogImage?: string
-  ogType?: string
-  twitterCard?: string
-}
-
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - AI & IT Solutions',
-  description = 'Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.',
-  keywords = 'AI, artificial intelligence, IT services, cloud computing, cybersecurity, data analytics, digital transformation',
-  canonical,
-  ogImage = '/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image'
-}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
-  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
-
-  return (
-    <Head>
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="theme-color" content="#0f172a" />
       
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter Card */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      
-      {/* Additional SEO */}
-      <meta name="google-site-verification" content="your-google-verification-code" />
-      <meta name="msvalidate.01" content="your-bing-verification-code" />
-      
-      {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+      {/* Default Structured Data if none provided */}
+      {!structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
+            "@type": "TechCompany",
             "name": "Zion Tech Group",
-            "description": description,
             "url": "https://ziontechgroup.com",
-            "logo": "https://ziontechgroup.com/logo.png",
+            "description": description,
+            "foundingDate": "2020",
+            "numberOfEmployees": "50-100",
+            "industry": "Technology",
+            "services": [
+              "AI Solutions",
+              "IT Services",
+              "Cloud Computing",
+              "Cybersecurity",
+              "Data Analytics",
+              "Digital Transformation"
+            ],
             "contactPoint": {
               "@type": "ContactPoint",
-              "telephone": "+1-555-123-4567",
-              "contactType": "customer service",
-              "email": "info@ziontechgroup.com"
+              "telephone": "+1-302-464-0950",
+              "contactType": "Customer Service",
+              "areaServed": "US",
+              "availableLanguage": "en"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "364 E Main St STE 1008",
+              "addressLocality": "Middletown",
+              "addressRegion": "DE",
+              "postalCode": "19709",
+              "addressCountry": "US"
             },
             "sameAs": [
               "https://linkedin.com/company/ziontechgroup",
               "https://twitter.com/ziontechgroup"
             ]
-          })
-        }}
-      />
-    </Head>
-  )
-}
+          })}
+        </script>
+      )}
+    </Helmet>
+  );
+};
 
-export default SEOHead
+export default SEOHead;
