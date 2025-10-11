@@ -61,8 +61,7 @@ export class SecurityManager {}
     validRequests.push(now)
     storage.set(key, validRequests)
     return true
-  }}</></>
-  private getRateLimitStorage(): Map<string, number[]> {}
+  }}</>private getRateLimitStorage(): Map<string, number[]> {}
     if (!global._rateLimitStorage) {}
       global._rateLimitStorage = new Map();}
   private getRateLimitStorage(): Map</string><string, number[]> {/* TODO: Fix JSX expression */}

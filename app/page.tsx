@@ -2,7 +2,7 @@
 import React from 'react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import {ArrowRight, CheckCircle, Brain, Cloud, Shield, Code} from 'lucide-react'
+import {ArrowRight, CheckCircle, Brain, Cloud, Shield, Code, Wifi} from 'lucide-react'
 
 const HomePage: React.FC = () => {
   const features = [
@@ -72,7 +72,9 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               ))}
-            </div></div></section>
+            </div>
+          </div>
+        </section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -84,13 +86,15 @@ const HomePage: React.FC = () => {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover the powerful features that make our solutions stand out.
               </p>
-            </div><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <feature.icon className="w-8 h-8 text-cyan-400 mr-3" />
                     <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
-                  </div><p className="text-gray-300 mb-4">{feature.description}</p>
+                  </div>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-600">
@@ -117,7 +121,7 @@ const HomePage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+              {['Expert Team', 'Proven Results', '24/7 Support', 'Scalable Solutions', 'Cost Effective', 'Innovation Driven'].map((benefit, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3" />

@@ -14,7 +14,7 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
           entries.forEach((entry: PerformanceEntry) => {,
         fidObserver.observe({ entryTypes: ['first-input'] });
         // Cumulative Layout Shift
-        let clsValue = 0
+        let clsValue = 0;
         const clsObserver = new PerformanceObserver()
     const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {

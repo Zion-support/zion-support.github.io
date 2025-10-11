@@ -42,14 +42,6 @@ const PagePage: React.FC = () => {const features = [
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-<<<<<<< HEAD
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">        {/* Hero Section */}
-=======
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <div className="text-center">;
@@ -110,12 +102,6 @@ const PagePage: React.FC = () => {const features = [
                 </div>
 
       <Footer />
-<<<<<<< HEAD
-    </>              ))}
-=======
-    </>
-              ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
             </div>;
       <Footer />;
     </>;
@@ -170,7 +156,7 @@ const PagePage: React.FC = () => {const features = [
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                 Contact Us
               </button>
-              <button className="
+              <button className=">
     ,>
     r: bg-blue-600 hove, r:text-white transition-colors">
                 Schedule Demo
@@ -195,10 +181,6 @@ const PagePage: React.FC = () => {const features = [
       <Footer />
     </>
         </section>
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">;
           <div className="max-w-7xl mx-auto">;
@@ -294,7 +276,3 @@ const PagePage: React.FC = () => {const features = [
       <Footer />;
     </>;);
 };
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb

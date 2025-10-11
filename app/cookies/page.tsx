@@ -25,10 +25,6 @@ const CookiesPage: React.FC = () => {const features = [
     <>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -55,7 +51,7 @@ const CookiesPage: React.FC = () => {const features = [
                 Discover the powerful features that make our solutions stand out.
               </p>
 
-            <div className="
+            <div className=">
     ,>
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -64,10 +60,6 @@ const CookiesPage: React.FC = () => {const features = [
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3">
                     <h3 className="text-xl font-semibold text-gray-900">
                   </div>
-<<<<<<< HEAD
-=======
-      <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
     </>
                   <h3 className="text-xl font-semibold text-white mb-3">{type.title}</h3>
                   <p className="text-gray-300 mb-4">{type.description}</p>
@@ -103,7 +95,7 @@ const CookiesPage: React.FC = () => {const features = [
                 Experience the benefits of working with industry leaders.
               </p>
 
-            <div className="
+            <div className=">
     ,>
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -112,10 +104,6 @@ const CookiesPage: React.FC = () => {const features = [
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3">
                     <span className="text-lg font-medium text-gray-900">
                   </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
       <Footer />
     </>
                   <div>

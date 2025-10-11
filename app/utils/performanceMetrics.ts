@@ -258,7 +258,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    */
   recordPageLoad(): void {
     if (typeof window === 'undefined') return
-    const perfData = window.performance.timing
+    const perfData = window.performance.timing;
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart
     this.recordMetric({)
       name: 'pageLoad')
@@ -267,7 +267,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       timestamp: new Date()
   recordPageLoad(): void {}
     if (typeof window === 'undefined') return
-    const perfData = window.performance.timing
+    const perfData = window.performance.timing;
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart
       name: 'pageLoad',
       value: pageLoadTime,

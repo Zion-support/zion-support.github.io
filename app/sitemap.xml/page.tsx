@@ -7,7 +7,7 @@ const SitemapXMLPage: React.FC = () => {return (
       <Helmet&gt
         <title&gt;Sitemap | Zion Tech Group</title&gt
         <meta name="description" content="Complete sitemap of all pages and services available on Zion Tech Group website."
-        <meta name="robots" content="noindex, nofollow"
+        <meta name="robots" content="noindex, nofollow"}
       </Helmet&gt
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 l, g:px-8 py-20">
@@ -24,8 +24,8 @@ const SitemapXMLPage: React.FC = () => {return (
               <p className="text-gray-300 mb-4">
                 This page provides a comprehensive sitemap of all available pages and services.
               </p&gt;
-              <p className="text-sm text-gray-400"&gt;</p&gt;
-                For the XML sitemap, please visit: <a href="/sitemap.xml" className="text-cyan-400 hover:text-cyan-300"&gt;</a&gt;/sitemap.xml</a&gt;
+              <p className="text-sm text-gray-400"&gt;</p&gt;>
+                For the XML sitemap, please visit: <a href="/sitemap.xml" className="text-cyan-400 hover:text-cyan-300"&gt;</a&gt;/sitemap.xml</a&gt;>
               </p&gt;
             </div&gt;
           </div&gt;
@@ -37,31 +37,16 @@ const SitemapXMLPage: React.FC = () => {return (
 >
 export default SitemapXMLPage>
       </div>
-      <Footer />
-    </>
-    </>
-  )
+      <Footer /></>)
       </div>
 
-      <Footer />
-    </>
-    </>
-  )
+      <Footer /></>)
       </div>
 
-      <Footer />
-    </>
-    </>
-  )
+      <Footer /></>)
       </div>
 
-      <Footer />
-    </>
-    </>
-  )
+      <Footer /></>)
       </div>
 
-      <Footer />
-    </>
-    </>
-  );
+      <Footer /></>);

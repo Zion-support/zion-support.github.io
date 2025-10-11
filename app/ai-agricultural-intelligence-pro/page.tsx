@@ -53,14 +53,6 @@ return (
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-<<<<<<< HEAD
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">      <Helmet>
-=======
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
         <title>AI Agricultural Intelligence Pro - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered agricultural intelligence platform for precision farming, crop monitoring, and yield optimization." />
         <meta name="keywords" content="AI agriculture, precision farming, crop monitoring, agricultural intelligence, smart farming" />
@@ -85,10 +77,7 @@ return (
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-300">
                 Schedule Demo
-              </button>
-            </div>
-          </div>
-        </section>
+              </button></div></section>
 
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -122,10 +111,7 @@ return (
                     </ul>
                   </div>
                 );
-              })}
-            </div>
-          </div>
-        </section>
+              })}</div></section>
 
         {/* Services Section */}
         <section className="py-20 px-4 bg-slate-800/50">
@@ -157,10 +143,7 @@ return (
                     </ul>
                   </div>
                 );
-              })}
-            </div>
-          </div>
-        </section>
+              })}</div></section>
 
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -176,7 +159,7 @@ return (
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
-                <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${
+                <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${>
                   tier.name === 'Professional' 
                     ? 'border-green-400/50 scale-105' 
                     : 'border-white/20 hover:border-green-400/50'>
@@ -186,11 +169,7 @@ return (
                     <p className="text-gray-300 mb-4">{tier.description}</p>
                     <div className="flex items-baseline justify-center">
                       <span className="text-4xl font-bold text-white">{tier.price}</span>
-                      <span className="text-gray-300 ml-1">{tier.period}</span>
-                    </div>
-                  </div>
-
-                  <ul className="space-y-3 mb-8">
+                      <span className="text-gray-300 ml-1">{tier.period}</span></div><ul className="space-y-3 mb-8">
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
@@ -199,7 +178,7 @@ return (
                     ))}
                   </ul>
 
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${>
                     tier.name === 'Professional'
                       ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700'
                       : 'border border-white text-white hover:bg-white hover:text-green-600'>
@@ -207,10 +186,7 @@ return (
                     {tier.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
                   </button>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              ))}</div></section>
 
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -228,10 +204,7 @@ return (
               </button>
               <button className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-white transition-all duration-300">
                 Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
+              </button></div></section>
       </main>
 
       <Footer />

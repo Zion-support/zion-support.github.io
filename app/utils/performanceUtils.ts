@@ -195,7 +195,7 @@ export const lazyLoad = (callback: () => void): void => {,
   private observeCLS(): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return
     try {
-      let clsValue = 0
+      let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (!(entry as any).hadRecentInput) {
@@ -211,7 +211,7 @@ export const lazyLoad = (callback: () => void): void => {,
     }
   }
 
-  public getMetrics(): PerformanceMetrics {;}
+  public getMetrics(): PerformanceMetrics {}
     return { ...this.metrics }
   }
 
@@ -260,7 +260,7 @@ export const measureFunction = <T extends (...args: any[]) => any>(
     const start = performance.now()
     const result = fn(...args)
     const end = performance.now()
-    if (name) {;}
+    if (name) {}
       console.log(`${name} took ${end - start} milliseconds`)
     }
 

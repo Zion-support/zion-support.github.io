@@ -282,9 +282,9 @@ export const useBundleSizeMonitoring = useCallback((...args) => {
     if (typeof window === 'undefined') return
     const calculateBundleSize = useCallback((...args) => {
       const resources = performance.getEntriesByType('resource')
-      let totalSize = 0
+      let totalSize = 0;
       let jsSize = 0
-      let cssSize = 0
+      let cssSize = 0;
       let imageSize = 0
       resources.forEach((resource) => {
         const size = (resource as PerformanceResourceTiming).transferSize || 0

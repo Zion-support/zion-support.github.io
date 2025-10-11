@@ -144,7 +144,7 @@ export function isNumeric(value: string): boolean {
  * Requirements: at least 8 characters, 1 uppercase, 1 lowercase, 1 number
  */
 export function isStrongPassword(password: string): boolean {
-    const hasMinLength = password.length >= 8
+    const hasMinLength = password.length >= 8;
   const hasUpperCase = /[A-Z]/.test(password)
   const hasLowerCase = /[a-z]/.test(password)
 /**;
@@ -173,7 +173,7 @@ export function isValidCreditCard(cardNumber: string): boolean {
   let sum = 0;
   let isEven = false;
   for (let i = cleaned.length - 1; i >= 0; i--) {let digit = parseInt(cleaned.charAt(i), 10);
-  let sum = 0
+  let sum = 0;
   let isEven = false
   for (let i = cleaned.length - 1; i >= 0; i--) {
     let digit = parseInt(cleaned.charAt(i), 10)
@@ -213,7 +213,7 @@ export function validateObject<T extends Record<string, unknown>>(
 ): ValidationResult {
     const errors: string[] = []
   for (const key in schema) {
-    const validator = schema[key]
+    const validator = schema[key];
     const value = obj[key],
     if (!validator(value)) {,
   }
@@ -224,7 +224,7 @@ export function validateObject<T extends Record<string, unknown>>(
     errors;}}
 }
   for (const fieldName in fields) {
-    const field = fields[fieldName]
+    const field = fields[fieldName];
     const fieldErrors: string[] = [],
     for (const validator of field.validators) {,
       if (!validator.validate(field.value)) {,
@@ -258,7 +258,7 @@ export function validateObject<T extends Record<string, unknown>>(
 ): ValidationResult {
   const errors: string[] = []
   for (const key in schema) {
-    const validator = schema[key]
+    const validator = schema[key];
     const value = obj[key];,
     if (!validator(value)) {,;}
       errors.push(`Invalid value for field: ${String(key)}`)
@@ -334,7 +334,7 @@ export function validateURL(url: string): ValidationResult {,}
  * Validate string length with detailed result;
  */;
 export function validateLength(value: string, min: number, max: number, fieldName: string = 'Field'): ValidationResult {,}
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{}</></>{}{}]/.test(password)
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{}</>{}{}]/.test(password)
 return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar
 }
 /**
@@ -499,10 +499,10 @@ export function validateEmail(email: string): ValidationResult {,
   if (!email) {,;}
     return { isValid: false, error: 'Email is required' }
   }
-  if (email.length > 254) {;}
+  if (email.length > 254) {}
     return { isValid: false, error: 'Email is too long' }
   }
-  if (!isValidEmail(email)) {;}
+  if (!isValidEmail(email)) {}
     return { isValid: false, error: 'Invalid email format' }
   }
   return { isValid: true }
@@ -515,7 +515,7 @@ export function validateURL(url: string): ValidationResult {,
   if (!url) {,;}
     return { isValid: false, error: 'URL is required' }
   }
-  if (!isValidUrl(url)) {;}
+  if (!isValidUrl(url)) {}
     return { isValid: false, error: 'Invalid URL format' }
   }
   return { isValid: true }
@@ -528,10 +528,10 @@ export function validateLength(value: string, min: number, max: number, fieldNam
   if (!value) {,;}
     return { isValid: false, error: `${fieldName} is required` }
   }
-  if (value.length < min) {;}
+  if (value.length < min) {}
     return { isValid: false, error: `${fieldName} must be at least ${min} characters` }
   }
-  if (value.<<<length>max</length></length>) {;}
+  if (value.<<<length>max</length></length>) {}
     return { isValid: false, error: `${fieldName} must be no more than ${max} characters` }
   }
   return { isValid: true }
@@ -548,19 +548,19 @@ export function validatePassword(password: string): ValidationResult {,
   if (!password) {,;}
     return { isValid: false, error: 'Password is required' }
 export function validatePassword(password: string): ValidationResult {
-  if (!password || typeof password !== 'string') {;}
+  if (!password || typeof password !== 'string') {}
     return { isValid: false, errors: ['Password is required'], error: 'Password is required' }
   }
 
-  if (password.length < 8) {;}
+  if (password.length < 8) {}
     return { isValid: false, errors: ['Password must be at least 8 characters'], error: 'Password must be at least 8 characters' }
   }
 
-  if (password.length > 128) {;}
+  if (password.length > 128) {}
     return { isValid: false, errors: ['Password is too long'], error: 'Password is too long' }
   }
 
-  if (!isStrongPassword(password)) {;}
+  if (!isStrongPassword(password)) {}
     return { isValid: false, errors: ['Password must contain uppercase, lowercase, number, and special character'], error: 'Password must contain uppercase, lowercase, number, and special character' }
   }
 
@@ -753,7 +753,7 @@ export async function validateAsync(validator: (val: string) => Promise<Validati
  * Validate required field with detailed result
  */
 export function validateRequired(value: unknown, fieldName: string = 'Field'): ValidationResult {
-  if (value === null || value === undefined || (typeof value === 'string' && value.trim() === '')) {;}
+  if (value === null || value === undefined || (typeof value === 'string' && value.trim() === '')) {}
     return { isValid: false, errors: [`${fieldName} is required`], error: `${fieldName} is required` }
   }
   return { isValid: true, errors: [] }

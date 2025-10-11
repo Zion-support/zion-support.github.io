@@ -57,7 +57,7 @@ const PagePage: React.FC = () => {const features = [
                 Discover the powerful features that make our solutions stand out.
               </p>
 
-            <div className="
+            <div className=">
     ,>
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
               {features.map((feature, index) => (

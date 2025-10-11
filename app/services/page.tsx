@@ -82,7 +82,7 @@ const ServicesPage: React.FC = () => {const [searchTerm, setSearchTerm] = useSta
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                 Contact Us
               </button>
-              <button className="
+              <button className=">
     ,>
     r: bg-blue-600 hove, r:text-white transition-colors">
                 Schedule Demo

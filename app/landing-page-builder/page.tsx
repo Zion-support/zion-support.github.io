@@ -59,13 +59,6 @@ return (
       </Helmet>
 
       <Navigation />
-<<<<<<< HEAD
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900"
-=======
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
         {/* Hero Section */}
         <section className="py-20 px-4 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse">
@@ -81,7 +74,7 @@ AI-powered landing page builder solution for intelligent automation and optimiza
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
 Get Started
               </button>
-              <button className="
+              <button className=">
     ,>
     r: bg-cyan-400 hove, r:text-white transition-all duration-300">
 Learn More

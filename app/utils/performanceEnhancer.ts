@@ -243,7 +243,7 @@ export const optimizeScrollPerformance = () => {}
 observer.observe({entryTypes: ['layout-shift'] ,)});
     return () => {}observer.disconnect();
       return clsValue;
-    let clsValue = 0
+    let clsValue = 0;
     let clsEntries: PerformanceEntry[] = [],
     interface LayoutShiftEntry extends PerformanceEntry {}
       hadRecentInput?: boolean

@@ -135,7 +135,7 @@ const PagePage: React.FC = () => {const features = [
                 Experience the benefits of working with industry leaders.
               </p>
             
-            <div className="
+            <div className=">
     ,>
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -159,7 +159,7 @@ const PagePage: React.FC = () => {const features = [
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                 Contact Us
               </button>
-              <button className="
+              <button className=">
     ,>
     r: bg-blue-600 hove, r:text-white transition-colors">
                 Schedule Demo
@@ -173,7 +173,4 @@ const PagePage: React.FC = () => {const features = [
 export default PagePage
       </div>
         </section>
-      <Footer />
-    </>
-    </>
-  );
+      <Footer /></>);

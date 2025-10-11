@@ -47,8 +47,5 @@ import Footer from '../components/Footer'
       <Footer />
     </>
         </section>
-      <Footer />
-    </>
-    </>
-  )
+      <Footer /></>)
     </div>

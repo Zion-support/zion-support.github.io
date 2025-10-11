@@ -138,8 +138,7 @@ export const validationRules = {}
    * Validate matching fields (e.g., password confirmation);
   /**
    * Validate matching fields (e.g., password confirmation)
-   */}</></>
-  matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({
+   */}</>matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({
     ,
   }
   matches: (otherFieldValue: string, fieldName: string): ValidationRule</string><string> => ({}
@@ -316,8 +315,7 @@ export function sanitizeInput(inpu)
 }
 /**
  * Debounce function for form validation
- */}</></>
-export function debounce<T extends (...args: Parameters<T>) => ReturnType</T><T>>(,
+ */}</>export function debounce<T extends (...args: Parameters<T>) => ReturnType</T><T>>(,
   func: T,
   wait: number,
 ): (...args: Parameters</T><T>) => void {

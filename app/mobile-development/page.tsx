@@ -135,7 +135,7 @@ const PagePage: React.FC = () => {const features = [
                 Experience the benefits of working with industry leaders.
               </p>
             
-            <div className="
+            <div className=">
     ,>
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (

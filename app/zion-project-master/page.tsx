@@ -63,11 +63,7 @@ const PagePage: React.FC = () => {
                 </button>
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                   Learn More
-                </button>
-              </div>
-            </div>
-
-      <Footer />
+                </button></div><Footer />
     </>
           </div>
 
@@ -103,10 +99,7 @@ const PagePage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              ))}</div></section>
 
         <section className="py-20 bg-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -124,13 +117,7 @@ const PagePage: React.FC = () => {
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3" />
-                    <span className="text-lg font-medium text-gray-900">{benefit}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+                    <span className="text-lg font-medium text-gray-900">{benefit}</span></div>))}</div></section>
 
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

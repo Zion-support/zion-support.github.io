@@ -98,10 +98,6 @@ const AiApiManagementPage: React.FC = () => {
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3">
                     <h3 className="text-xl font-semibold text-gray-900">
                   </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
       <Footer />
     </>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -148,10 +144,6 @@ const AiApiManagementPage: React.FC = () => {
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3">
                     <span className="text-lg font-medium text-gray-900">
                   </div>
-<<<<<<< HEAD
-=======
-      <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
     </>
                   <p className="text-gray-300">{benefit}</p>
                 </div>
@@ -181,7 +173,7 @@ const AiApiManagementPage: React.FC = () => {
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                 Contact Us
               </button>
-              <button className="
+              <button className=">
     ,>
     r: bg-blue-600 hove, r:text-white transition-colors">
                 Schedule Demo

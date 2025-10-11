@@ -143,10 +143,6 @@ const AiAnalyticsPage: React.FC = () => {
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3">
                     <span className="text-lg font-medium text-gray-900">
                   </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
       <Footer />
     </>
                   <p className="text-gray-300">{benefit}</p>
@@ -177,7 +173,7 @@ const AiAnalyticsPage: React.FC = () => {
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                 Contact Us
               </button>
-              <button className="
+              <button className=">
     ,>
     r: bg-blue-600 hove, r:text-white transition-colors">
                 Schedule Demo

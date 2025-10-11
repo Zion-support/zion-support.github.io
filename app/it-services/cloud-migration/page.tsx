@@ -12,7 +12,7 @@
         <section className="py-16 px-4 sm: px-6 l, g: px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <h2 className="
+              <h2 className=">
       ,>
     d:text-4xl font-bold text-white mb-6">
                 Coming Soon

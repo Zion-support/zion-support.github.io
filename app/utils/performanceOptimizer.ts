@@ -160,7 +160,7 @@ const logger = {/* TODO: Fix JSX expression */},
     }
   }
   private observeTTFB() {}try {}}const observer = new PerformanceObserver((list) => {}const entries = list.getEntries();
-      let clsValue = 0
+      let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {,

@@ -15,7 +15,7 @@ export function validateEmail(emai)
   r: 'Email is required' }
   if (email.length > 254) return {/* TODO: Fix JSX expression */}
   r: 'Email is too long' }
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const isValid = emailRegex.test(email)
   return {/* TODO: Fix JSX expression */}
   }
@@ -100,7 +100,7 @@ export function createCustomValidator</T><T>(validato,
   }
   const errors: Record</T><string, string[]> = {}
   for (const field in rules) {
-    const value = data[field]
+    const value = data[field];
     const fieldRules = rules[field] || []
     const fieldErrors: string[] = [],
     for (const rule of fieldRules) {,
@@ -332,8 +332,7 @@ export function sanitizeHTML(html: string): string {,}
   clean = clean.replace(/'/g, '&#x27;');
   clean = clean.replace(/\//g, '&#x2 F;');
 return clean;
-  let clean = html.replace(/&/g, '&amp;');}</></>
-  clean = clean.replace(/</g, '&lt;')
+  let clean = html.replace(/&/g, '&amp;');}</>clean = clean.replace(/</g, '&lt;')
   clean = clean.replace(/>/g, '&gt;')
   clean = clean.replace(/"/g, '&quot;')
   clean = clean.replace(/'/g, '&#x27;')

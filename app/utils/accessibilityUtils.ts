@@ -27,7 +27,7 @@ export const trapFocus = (container: HTMLElement): (() => void) => {
     const focusableElements = container.querySelectorAll()
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   )
-const firstElement = focusableElements[0] as HTMLElement
+const firstElement = focusableElements[0] as HTMLElement;
   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
 const handleTabKey = ()
     if (e.key === 'Tab') {

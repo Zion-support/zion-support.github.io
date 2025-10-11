@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import {Helmet;} from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async'
 import {ArrowRight;, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -32,7 +32,7 @@ const benefits = [
     'Scale operations without proportional staff increases',
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
-  ]
+  ];
 
 return (
     <>
@@ -61,7 +61,7 @@ return (
 Get Started
                   <ArrowRight className="ml-2 h-5 w-5">
                 </button>
-                <button className="
+                <button className=">
     ,>
     r: bg-cyan-400 hove, r:text-white transition-all duration-300">
 Learn More

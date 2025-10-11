@@ -54,11 +54,11 @@ class PerformanceMonitoringService {}}private static instance: PerformanceMonito
       lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
       this.observers.push(lcpObserver)
       // Observe CLS
-      let clsValue = 0
+      let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
     // Observe CLS
       let clsValue = let clsValue = let clsValue = 0
-  }
+  };
       const clsObserver = new PerformanceObserver((list) => {}
         list.getEntries().forEach((entry) => {}
           if (!(entry as PerformanceEntry & { hadRecentInput: boolean }).hadRecentInput) {}
@@ -161,7 +161,7 @@ class PerformanceMonitoringService {}}private static instance: PerformanceMonito
   d: true });
       this.observers.push(lcpObserver)
       // Observe CLS
-      let clsValue = 0
+      let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   t: boolean }).hadRecentInput) {/* TODO: Fix JSX expression */}
   e: number }).value

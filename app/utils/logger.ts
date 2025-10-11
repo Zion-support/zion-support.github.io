@@ -120,7 +120,7 @@ this.logs.push(logEntry);
 this.logs.push(logEntry)
     // Keep only last 1000 logs
     if (this.logs.length > 1000) {
-    const levelName = LogLevel[level]
+    const levelName = LogLevel[level];
     const timestamp = new Date().toISOString()
     const contextStr = context ? ` [${JSON.stringify(context)}]` : ''
     const metaStr = metadata ? ` ${JSON.stringify(metadata)}` : ''
@@ -186,7 +186,7 @@ this.logs.push(logEntry)
     }
 
     // Console output
-    const levelName = LogLevel[level]
+    const levelName = LogLevel[level];
     const timestamp = new Date().toISOString()
     const contextStr = context ? ` [${JSON.stringify(context)}]` : ''
     const metaStr = metadata ? ` ${JSON.stringify(metadata)}` : ''
