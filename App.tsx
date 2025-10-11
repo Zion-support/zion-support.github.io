@@ -7,7 +7,7 @@ import './app/styles/futuristic-enhanced.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import HomePage from './app/page';
-import { PageLoader } from './app/components/LoadingStates';
+import { PageLoader } from './app/components/EnhancedLoadingStates';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import SEOHead from './app/components/EnhancedSEOHead';
 import SkipLink from './app/components/EnhancedSkipLink';

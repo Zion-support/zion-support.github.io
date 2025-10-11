@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
@@ -7,10 +8,22 @@ interface PerformanceMetrics {
   largestContentfulPaint: number;
   firstInputDelay: number;
   cumulativeLayoutShift: number;
+=======
+import React, { useEffect, useState } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+
+interface PerformanceMetrics {
+  cls: number | null;
+  inp: number | null;
+  fcp: number | null;
+  lcp: number | null;
+  ttfb: number | null;
+>>>>>>> cursor/analyze-improve-and-deploy-application-d4cc
 }
 
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
+<<<<<<< HEAD
     loadTime: 0,
     firstContentfulPaint: 0,
     largestContentfulPaint: 0,
@@ -42,9 +55,33 @@ const PerformanceMonitor: React.FC = () => {
     // Only show in development or when performance monitoring is enabled
       const shouldMonitor = const shouldMonitor = process.env.NODE_ENV === 'development' ||;
                          localStorage.getItem('performance-monitoring') === 'true';
+=======
+    cls: null,
+    inp: null,
+    fcp: null,
+    lcp: null,
+    ttfb: null
+  });
 
-    if (!shouldMonitor) return;
+  useEffect(() => {
+    // Measure Core Web Vitals
+    onCLS((metric) => {
+      setMetrics(prev => ({ ...prev, cls: metric.value }));
+      console.log('CLS:', metric.value);
+    });
 
+    onINP((metric) => {
+      setMetrics(prev => ({ ...prev, inp: metric.value }));
+      console.log('INP:', metric.value);
+    });
+>>>>>>> cursor/analyze-improve-and-deploy-application-d4cc
+
+    onFCP((metric) => {
+      setMetrics(prev => ({ ...prev, fcp: metric.value }));
+      console.log('FCP:', metric.value);
+    });
+
+<<<<<<< HEAD
     const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {;
       setMetrics(prev => ({ ...prev, ...newMetrics }));
     }
@@ -82,11 +119,35 @@ const PerformanceMonitor: React.FC = () => {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'paint'] });
       } catch (e) {;
         console.warn('Performance Observer not supported:', e);
+=======
+    onLCP((metric) => {
+      setMetrics(prev => ({ ...prev, lcp: metric.value }));
+      console.log('LCP:', metric.value);
+    });
+
+    onTTFB((metric) => {
+      setMetrics(prev => ({ ...prev, ttfb: metric.value }));
+      console.log('TTFB:', metric.value);
+    });
+
+    // Monitor resource loading
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'navigation') {
+          const navEntry = entry as PerformanceNavigationTiming;
+          console.log('Navigation timing:', {
+            domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
+            loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
+            domInteractive: navEntry.domInteractive - navEntry.navigationStart
+          });
+        }
+>>>>>>> cursor/analyze-improve-and-deploy-application-d4cc
       }
+    });
 
-      return () => observer.disconnect();
-    }
+    observer.observe({ entryTypes: ['navigation', 'resource'] });
 
+<<<<<<< HEAD
     // Show performance panel after 3 seconds
     const timer = setTimeout(() => setIsVisible(true), 3000);
     return () => clearTimeout(timer);
@@ -181,6 +242,53 @@ const PerformanceMonitor: React.FC = () => {
       </div>
     </div>
   );
+=======
+    // Monitor long tasks
+    const longTaskObserver = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        console.warn('Long task detected:', entry.duration);
+      }
+    });
+
+    longTaskObserver.observe({ entryTypes: ['longtask'] });
+
+    return () => {
+      observer.disconnect();
+      longTaskObserver.disconnect();
+    };
+  }, []);
+
+  // Send metrics to analytics (if configured)
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      Object.entries(metrics).forEach(([key, value]) => {
+        if (value !== null) {
+          window.gtag('event', 'web_vitals', {
+            metric_name: key.toUpperCase(),
+            metric_value: Math.round(value),
+            metric_delta: Math.round(value)
+          });
+        }
+      });
+    }
+  }, [metrics]);
+
+  // Development mode: show metrics overlay
+  if (process.env.NODE_ENV === 'development') {
+    return (
+      <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
+        <div className="mb-2 font-bold">Performance Metrics</div>
+        <div>CLS: {metrics.cls?.toFixed(3) || 'N/A'}</div>
+        <div>INP: {metrics.inp?.toFixed(1) || 'N/A'}ms</div>
+        <div>FCP: {metrics.fcp?.toFixed(1) || 'N/A'}ms</div>
+        <div>LCP: {metrics.lcp?.toFixed(1) || 'N/A'}ms</div>
+        <div>TTFB: {metrics.ttfb?.toFixed(1) || 'N/A'}ms</div>
+      </div>
+    );
+  }
+
+  return null;
+>>>>>>> cursor/analyze-improve-and-deploy-application-d4cc
 };
 
 export default PerformanceMonitor;

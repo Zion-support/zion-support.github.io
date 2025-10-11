@@ -111,10 +111,14 @@ const DigitalTransformationPage = lazy(() => import('./digital-transformation/pa
 const EdgeComputingPage = lazy(() => import('./edge-computing/page'));
 <<<<<<< HEAD
 // Loading component
-const AppLoadingSpinner = const AppLoadingSpinner = const AppLoadingSpinner = () => ();
+const AppLoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400"></div>
+  </div>
 );
 
 const App: React.FC = () => {
+<<<<<<< HEAD
     return ()
 =======
 // Loading component;
@@ -134,6 +138,16 @@ const App: React.FC = () => {
             <Suspense fallback=<AppLoadingSpinner />}>
               <Routes>
                 {/* Main Pages */}
+=======
+  return (
+    <ErrorBoundary>
+      <HelmetProvider>
+        <BrowserRouter>
+          <PerformanceMonitor />
+          <AccessibilityEnhancer>
+            <Suspense fallback={<AppLoadingSpinner />}>
+              <Routes>
+>>>>>>> cursor/analyze-improve-and-deploy-application-d4cc
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
@@ -146,6 +160,10 @@ const App: React.FC = () => {
                 <Route path="/privacy" element={<PrivacyPage />} />
                 <Route path="/terms" element={<TermsPage />} />
                 <Route path="/cookies" element={<CookiesPage />} />
+<<<<<<< HEAD
+=======
+                
+>>>>>>> cursor/analyze-improve-and-deploy-application-d4cc
                 {/* AI Services */}
                 <Route path="/ai-services" element={<AiServicesPage />} />
                 <Route path="/ai-marketing" element={<AiMarketingPage />} />
@@ -159,7 +177,10 @@ const App: React.FC = () => {
                 <Route path="/ai-customer-support" element={<AiCustomerSupportPage />} />
                 <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                 <Route path="/ai-data-visualization" element={<AiDataVisualizationPage />} />
+<<<<<<< HEAD
                 {/* Additional AI Services */}
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d4cc
                 <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
                 <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
                 <Route path="/ai-crm" element={<AiCrmPage />} />
@@ -174,13 +195,20 @@ const App: React.FC = () => {
                 <Route path="/ai-financial-services" element={<AiFinancialServicesPage />} />
                 <Route path="/ai-voice-solutions" element={<AiVoiceSolutionsPage />} />
                 <Route path="/ai-hr-solutions" element={<AiHrSolutionsPage />} />
+<<<<<<< HEAD
+=======
+                
+>>>>>>> cursor/analyze-improve-and-deploy-application-d4cc
                 {/* IT Services */}
                 <Route path="/it-services" element={<ItServicesPage />} />
                 <Route path="/it-infrastructure" element={<ItInfrastructurePage />} />
                 <Route path="/it-support" element={<ItSupportPage />} />
                 <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                 <Route path="/cybersecurity" element={<CybersecurityPage />} />
+<<<<<<< HEAD
                 {/* Additional IT Services */}
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d4cc
                 <Route path="/api" element={<ApiDevelopmentPage />} />
                 <Route path="/database-management" element={<DatabaseManagementPage />} />
                 <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
@@ -191,32 +219,53 @@ const App: React.FC = () => {
                 <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
                 <Route path="/it-asset-management" element={<ItAssetManagementPage />} />
                 <Route path="/performance-optimization" element={<PerformanceOptimizationPage />} />
+<<<<<<< HEAD
                 <Route path="/api-development" element={<ApiDevelopmentPage />} />
                 <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
                 <Route path="/data-analytics-bi" element={<DataAnalyticsBiPage />} />
                 <Route path="/custom-software" element={<CustomSoftwarePage2 />} />
+=======
+                <Route path="/api-development" element={<ApiDevelopmentPage2 />} />
+                <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
+                <Route path="/data-analytics-bi" element={<DataAnalyticsBiPage />} />
+                <Route path="/custom-software" element={<CustomSoftwarePage2 />} />
+                
+>>>>>>> cursor/analyze-improve-and-deploy-application-d4cc
                 {/* Emerging Technologies */}
                 <Route path="/blockchain" element={<BlockchainPage />} />
                 <Route path="/quantum-computing" element={<QuantumComputingPage />} />
                 <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
                 <Route path="/ar-vr-solutions" element={<ARVRSolutionsPage />} />
                 <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
+<<<<<<< HEAD
                 {/* Additional Emerging Technologies */}
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d4cc
                 <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
                 <Route path="/ai-3d-generation" element={<Ai3DGenerationPage />} />
                 <Route path="/ai-holographic-workspace" element={<AiHolographicWorkspacePage />} />
                 <Route path="/ai-blockchain-solutions" element={<AiBlockchainSolutionsPage />} />
                 <Route path="/machine-learning" element={<MachineLearningPage />} />
                 <Route path="/iot" element={<IotPage />} />
+<<<<<<< HEAD
                 {/* Micro SaaS */}
                 <Route path="/micro-saas" element={<MicroSaasPage />} />
+=======
+                
+                {/* Micro SaaS */}
+                <Route path="/micro-saas" element={<MicroSaasPage />} />
+                
+>>>>>>> cursor/analyze-improve-and-deploy-application-d4cc
                 {/* Support Pages */}
                 <Route path="/docs" element={<DocsPage />} />
                 <Route path="/api-docs" element={<ApiDocsPage />} />
                 <Route path="/support" element={<SupportPage />} />
                 <Route path="/status" element={<StatusPage />} />
                 <Route path="/consultation" element={<ConsultationPage />} />
+<<<<<<< HEAD
                 {/* Additional Important Pages */}
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-d4cc
                 <Route path="/faq" element={<FaqPage />} />
                 <Route path="/demo" element={<DemoPage />} />
                 <Route path="/partners" element={<PartnersPage />} />
@@ -229,11 +278,18 @@ const App: React.FC = () => {
                 <Route path="/edge-computing" element={<EdgeComputingPage />} />
               </Routes>
             </Suspense>
+<<<<<<< HEAD
           </div>
         </BrowserRouter>
       </HelmetProvider>)
     </ErrorBoundary>)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+          </AccessibilityEnhancer>
+        </BrowserRouter>
+      </HelmetProvider>
+    </ErrorBoundary>
+>>>>>>> cursor/analyze-improve-and-deploy-application-d4cc
   );
 };
 

@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Mail, Code, Cloud, Smartphone } from 'lucide-react';
 =======
 import Layout from './layout';
@@ -14,6 +15,10 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { PageLoader, ServiceCardSkeleton } from './components/LoadingStates';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Mail, Code, Cloud, Smartphone, Eye } from 'lucide-react';
 >>>>>>> cursor/analyze-improve-and-deploy-application-89d8
+=======
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Mail, Code, Cloud, Smartphone, Eye } from 'lucide-react';
+import ImageOptimizer from './components/ImageOptimizer';
+>>>>>>> cursor/analyze-improve-and-deploy-application-d4cc
 
 // Remove duplicate ServiceCardSkeleton since it's now imported
 

@@ -1,11 +1,7 @@
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
-
-# Crawl-delay
-Crawl-delay: 1
 
 # Disallow admin and private areas
 Disallow: /admin/
@@ -14,6 +10,7 @@ Disallow: /_next/
 Disallow: /private/
 
 # Allow important pages
+<<<<<<< HEAD
 Allow: /
 Allow: /about
 Allow: /contact
@@ -29,3 +26,9 @@ Disallow: /*?*
 Disallow: /*#
 Disallow: /search?*
 Disallow: /filter?*
+=======
+Allow: /ai-services/
+Allow: /it-services/
+Allow: /blog/
+Allow: /case-studies/
+>>>>>>> cursor/analyze-improve-and-deploy-application-d4cc
