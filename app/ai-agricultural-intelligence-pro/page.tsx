@@ -5,7 +5,7 @@ import {Leaf, BarChart, Shield, Zap, CheckCircle, ArrowRight, Brain, Target, Tre
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const AIAgriculturalIntelligenceProPage: React.FC = () => 
+const AIAgriculturalIntelligenceProPage: React.FC = () => {
     },
     
     },

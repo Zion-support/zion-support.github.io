@@ -1,5 +1,5 @@
 import React from 'react'
-const ServicesPage: React.FC = () => 
+const ServicesPage: React.FC = () => {
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
     
       title: 'Cloud Services',} ]
@@ -90,8 +90,6 @@ const ServicesPage: React.FC = () =>
         </section>
       </div>
       
-      <Footer />
-    </>
       <Footer />
     </>
   );

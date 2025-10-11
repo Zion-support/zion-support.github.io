@@ -4,7 +4,7 @@ import {Helmet} from 'react-helmet-async';
 import {BarChart, TrendingUp, PieChart, Target, CheckCircle, ArrowRight} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const AnalyticsDashboardPage: React.FC = () => 
+const AnalyticsDashboardPage: React.FC = () => {
     },
     
     },

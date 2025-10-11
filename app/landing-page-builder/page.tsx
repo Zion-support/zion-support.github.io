@@ -1,5 +1,5 @@
 import React from 'react'
-const LandingPageBuilderPage: React.FC = () => 
+const LandingPageBuilderPage: React.FC = () => {
     {} 'Advanced AI technology integration'},
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',

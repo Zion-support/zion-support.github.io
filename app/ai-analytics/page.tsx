@@ -5,14 +5,29 @@ import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Targ
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AiAnalyticsPage: React.FC = () => 
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']} ,
-    
-      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']} ,
-    
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
+const AiAnalyticsPage: React.FC = () => {
+  const features = [
+    {
+      title: 'Real-time Analytics',
+      description: 'Get instant insights from your data',
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+    },
+    {
+      title: 'Custom Dashboards',
+      description: 'Build personalized analytics views',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      title: 'Predictive Insights',
+      description: 'AI-powered forecasting and trends',
+      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
+    },
+    {
+      title: 'Performance Tracking',
+      description: 'Monitor and optimize your metrics',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    }
+  ];
   const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
@@ -62,9 +77,6 @@ const AiAnalyticsPage: React.FC = () =>
       <Footer />
     </>
 
-      <Footer />
-    </>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -98,9 +110,6 @@ const AiAnalyticsPage: React.FC = () =>
       <Footer />
     </>
 
-      <Footer />
-    </>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -128,9 +137,6 @@ const AiAnalyticsPage: React.FC = () =>
       <Footer />
     </>
 
-      <Footer />
-    </>
-
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -152,11 +158,6 @@ const AiAnalyticsPage: React.FC = () =>
       <Footer />
     </>
 
-      <Footer />
-    </>
-
-      <Footer />
-    </>
       <Footer />
     </>
   );

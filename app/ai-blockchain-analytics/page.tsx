@@ -1,11 +1,11 @@
 'use client'
 import React from 'react';
 import { Helmet } from 'react-helmet-async'
-import {ArrowRight;, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const PagePage: React.FC = () => 
+const PagePage: React.FC = () => {
     };,
 title: 'AI-Powered Solutions',;,
 description: 'Advanced artificial intelligence technology to transform your business operations.',;,
@@ -56,9 +56,6 @@ Discover our comprehensive page solutions designed to transform your business wi
       <Footer />
     </>
 
-      <Footer />
-    </>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
@@ -94,9 +91,6 @@ Discover our comprehensive page solutions designed to transform your business wi
       <Footer />
     </>
 
-      <Footer />
-    </>
-
         {/* Benefits Section */}
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -122,9 +116,6 @@ Discover our comprehensive page solutions designed to transform your business wi
       <Footer />
     </>
 
-      <Footer />
-    </>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -142,8 +133,6 @@ Start Free Trial>
     r: bg-blue-600 hove, r:text-white transition-colors">
                 Schedule Demo
 
-      <Footer />
-    </>
       <Footer />
     </>
   );

@@ -5,55 +5,74 @@ import {Cube, Zap, Eye, Palette, ArrowRight, CheckCircle, Target, BarChart, Brai
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const AI3DGenerationPage: React.FC = () => 
+const AI3DGenerationPage: React.FC = () => {
+  const features = [
+    {
+      title: '3D Model Generation',
+      description: 'Create stunning 3D models with AI assistance'
     },
-    
+    {
+      title: 'Texture Mapping',
+      description: 'Apply realistic textures to your 3D creations'
     },
-    
+    {
+      title: 'Animation Tools',
+      description: 'Bring your models to life with smooth animations'
     },
-    
+    {
+      title: 'Rendering Engine',
+      description: 'High-quality rendering for professional results'
     },
-    
-    },
-    
+    {
+      title: 'Export Options',
+      description: 'Multiple export formats for various platforms'
     }
-  ]
+  ];
 
   const useCases = [
-    
+    {
+      title: 'Gaming Industry',
+      description: 'Create game assets and characters'
     },
-    
+    {
+      title: 'Architecture',
+      description: 'Design and visualize buildings'
     },
-    
+    {
+      title: 'Product Design',
+      description: 'Prototype and showcase products'
     },
-    
+    {
+      title: 'Entertainment',
+      description: 'Create content for movies and shows'
     }
   ]
 
   const pricingTiers = [
-    
+    {
+      name: 'Starter',
+      price: '$99/month',
+      features: ['Basic 3D generation', 'Standard textures', 'Community support']
     },
-    
+    {
+      name: 'Professional',
+      price: '$299/month',
+      features: ['Advanced generation', 'Premium textures', 'Priority support']
     },
-    
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      features: ['Unlimited generation', 'Custom models', 'Dedicated support']
     }
-  ]
+  ];
 
   return (
     <>
       <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
-        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
-      <Navigation />
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
         <title>AI 3D Generation - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered 3D model generation and design automation solutions" />
         <meta name="keywords" content="AI 3D generation, 3D modeling, artificial intelligence, design automation, 3D assets" />
-        <title>AI 3D Generation - Zion Tech Group</title>
-        <meta name="description" content="AI-powered 3D model generation and rendering solutions for creative professionals" />
+      </Helmet>
 
       <Navigation />
 
@@ -211,9 +230,6 @@ const AI3DGenerationPage: React.FC = () =>
       <Footer />
     </>
 
-      <Footer />
-    </>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="container mx-auto">
@@ -253,9 +269,6 @@ const AI3DGenerationPage: React.FC = () =>
       <Footer />
     </>
 
-      <Footer />
-    </>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
@@ -279,9 +292,6 @@ const AI3DGenerationPage: React.FC = () =>
       <Footer />
     </>
               ))}
-
-      <Footer />
-    </>
 
       <Footer />
     </>

@@ -5,7 +5,7 @@ import {Eye, Ear, Hand, Brain, Shield, CheckCircle, ArrowRight, Target, BarChart
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const AccessibilityPage: React.FC = () => 
+const AccessibilityPage: React.FC = () => {
     },
     
     },

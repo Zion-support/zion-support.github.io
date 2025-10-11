@@ -5,7 +5,7 @@ import {Calculator, BarChart, Shield, Zap, CheckCircle, ArrowRight, Brain, Targe
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const AIAccountingAssistantPage: React.FC = () => 
+const AIAccountingAssistantPage: React.FC = () => {
     },
     
     },
@@ -201,9 +201,6 @@ const AIAccountingAssistantPage: React.FC = () =>
       <Footer />
     </>
               ))}
-
-      <Footer />
-    </>
 
       <Footer />
     </>

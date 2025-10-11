@@ -1,6 +1,6 @@
 'use client';
 
-const PagePage: React.FC = () => 
+const PagePage: React.FC = () => {
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />}
       </Helmet>
       <Navigation />
@@ -152,8 +152,6 @@ const PagePage: React.FC = () =>
 
       <Footer />
     </>
-      <Footer />
-    </>
           </div>
 
       <Footer />
@@ -163,8 +161,10 @@ const PagePage: React.FC = () =>
 
       <Footer />
     </>
-      <Footer />
-    </>
+  );
+
+  return (
+    <div>Page content</div>
   );
 };
 

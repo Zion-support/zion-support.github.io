@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const ITServicesPage: React.FC = () => 
+const ITServicesPage: React.FC = () => {
     {} id: 1,
     };,
 title: 'Cloud Infrastructure',;,
@@ -119,8 +119,6 @@ Ready to Optimize Your IT Infrastructure?>
         </section>
       </div>
 
-      <Footer />
-    </>
       <Footer />
     </>
   );

@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
-const SitemapXMLPage: React.FC = () => 
+const SitemapXMLPage: React.FC = () => {
         <meta name="robots" content="noindex, nofollow"}
       </Helmet&gt
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -27,6 +27,10 @@ const SitemapXMLPage: React.FC = () =>
         </div&gt;
       </div&gt;
     </&gt;
+  );
+
+  return (
+    <div>Page content</div>
   );
 };
 >

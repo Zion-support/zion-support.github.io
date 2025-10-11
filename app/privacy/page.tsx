@@ -2,8 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Shield;, Eye, Database, Server, Mail, Phone, MapPin, CheckCircle, User, Edit, Trash2} from 'lucide-react'
-const PrivacyPage: React.FC = () => 
+import {Shield, Eye, Database, Server, Mail, Phone, MapPin, CheckCircle, User, Edit, Trash2} from 'lucide-react'
+const PrivacyPage: React.FC = () => {
     {} category: 'Personal Information'},;,
 icon: User,;,
 description: 'Name, email, phone number, and other identifying information'

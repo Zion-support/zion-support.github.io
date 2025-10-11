@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-const PagePage: React.FC = () => 
+const PagePage: React.FC = () => {
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
     
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']} ,

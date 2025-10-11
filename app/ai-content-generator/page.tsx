@@ -4,7 +4,7 @@ import {Helmet} from 'react-helmet-async'
 import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const PagePage: React.FC = () => 
+const PagePage: React.FC = () => {
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
     
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']} ,
@@ -12,9 +12,6 @@ const PagePage: React.FC = () =>
       benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']} ,
     
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
-
-      <Footer />
-    </>
 
       <Footer />
     </>
@@ -53,9 +50,6 @@ const PagePage: React.FC = () =>
       <Footer />
     </>
 
-      <Footer />
-    </>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -78,9 +72,6 @@ const PagePage: React.FC = () =>
       <Footer />
     </>
               ))}
-
-      <Footer />
-    </>
 
       <Footer />
     </>
@@ -108,11 +99,10 @@ const PagePage: React.FC = () =>
 
       <Footer />
     </>
+  );
 
-      <Footer />
-    </>
-      <Footer />
-    </>
+  return (
+    <div>Page content</div>
   );
 };
 

@@ -38,8 +38,6 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 
       <Footer />
     </>
-      <Footer />
-    </>
   );
 };
 

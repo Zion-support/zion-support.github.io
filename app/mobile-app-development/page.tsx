@@ -1,6 +1,6 @@
 'use client';
 
-const MobileAppDevelopmentPage: React.FC = () => 
+const MobileAppDevelopmentPage: React.FC = () => {
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
     
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,

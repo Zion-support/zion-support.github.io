@@ -4,7 +4,7 @@ import {Check, Star, ArrowRight, Zap, Shield, Users} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const PricingPage: React.FC = () => 
+const PricingPage: React.FC = () => {
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
     
     }
@@ -189,8 +189,6 @@ const PricingPage: React.FC = () =>
         </section>
       </div>
 
-      <Footer />
-    </>
       <Footer />
     </>
   )

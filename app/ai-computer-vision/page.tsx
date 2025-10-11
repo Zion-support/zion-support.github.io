@@ -4,7 +4,7 @@ import {Helmet} from 'react-helmet-async'
 import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const PagePage: React.FC = () => 
+const PagePage: React.FC = () => {
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
     
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
@@ -45,9 +45,6 @@ const PagePage: React.FC = () =>
 
       <Footer />
     </>
-
-      <Footer />
-    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -75,9 +72,6 @@ const PagePage: React.FC = () =>
       <Footer />
     </>
 
-      <Footer />
-    </>
-
         {/* Benefits Section */}
 
       <Footer />
@@ -99,9 +93,6 @@ const PagePage: React.FC = () =>
       <Footer />
     </>
 
-      <Footer />
-    </>
-
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -119,9 +110,6 @@ const PagePage: React.FC = () =>
     r: bg-blue-600 hove, r:text-white transition-colors">
                 Schedule Demo
             </div>
-
-      <Footer />
-    </>
 
       <Footer />
     </>

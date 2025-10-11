@@ -1,5 +1,5 @@
 import React from 'react'
-const SeoOptimizerPage: React.FC = () => 
+const SeoOptimizerPage: React.FC = () => {
     {} 'Advanced AI technology integration'},
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',

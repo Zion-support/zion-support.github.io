@@ -1,6 +1,6 @@
 'use client';
 
-const ItInfrastructureDesignPage: React.FC = () => 
+const ItInfrastructureDesignPage: React.FC = () => {
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
     
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,

@@ -1,29 +1,59 @@
-import React;, {useState} from 'react'
+import React, {useState} from 'react'
 import { Helmet } from 'react-helmet-async'
-import {Phone;, Mail, MapPin, Clock, Send} from 'lucide-react'
+import {Phone, Mail, MapPin, Clock, Send} from 'lucide-react'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const ContactPage: React.FC = () => 
-message: ''} });
-const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => 
-setFormData({} ...formData},
+
+const ContactPage: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
       [e.target.name]: e.target.value
     });
   }
 
-const handleSubmit = (e: React.FormEvent) => 
-console.log('Form submitte, d:', formData);} }
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+  }
 
-const contactInfo = [
-    
-description: 'Mon-Fri 9AM-6PM EST'} ,
-    
-description: 'We\'ll respond within 24 hours'} ,
-    
-description: 'Visit our headquarters'} ,
-    
-    9: 00 AM - , 6:00 PM EST'} ]
-const services = [
+  const contactInfo = [
+    {
+      icon: Phone,
+      title: 'Phone',
+      value: '+1 (555) 123-4567',
+      description: 'Mon-Fri 9AM-6PM EST'
+    },
+    {
+      icon: Mail,
+      title: 'Email',
+      value: 'info@ziontechgroup.com',
+      description: 'We\'ll respond within 24 hours'
+    },
+    {
+      icon: MapPin,
+      title: 'Address',
+      value: '123 Tech Street, Innovation City',
+      description: 'Visit our headquarters'
+    },
+    {
+      icon: Clock,
+      title: 'Business Hours',
+      value: 'Monday - Friday',
+      description: '9:00 AM - 6:00 PM EST'
+    }
+  ];
+
+  const services = [
     'AI Solutions',
     'Cloud Infrastructure',
     'Cybersecurity',
@@ -32,7 +62,7 @@ const services = [
     'Mobile Development',
     'IT Consulting',
     'Other'
-  ]
+  ];
 return (
     <>
 
@@ -334,8 +364,6 @@ Why Choose Us?
         </section>
       </div>
 
-      <Footer />
-    </>
       <Footer />
     </>
   )

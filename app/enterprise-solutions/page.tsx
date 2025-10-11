@@ -1,6 +1,6 @@
 'use client';
 
-const EnterpriseSolutionsPage: React.FC = () => 
+const EnterpriseSolutionsPage: React.FC = () => {
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
     
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,

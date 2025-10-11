@@ -4,7 +4,7 @@ import {Helmet} from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import {Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target} from 'lucide-react'
-const PerformanceOptimizationPage: React.FC = () => 
+const PerformanceOptimizationPage: React.FC = () => {
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
     
       benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']} ,

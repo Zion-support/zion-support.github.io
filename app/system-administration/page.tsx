@@ -1,6 +1,6 @@
 'use client';
 
-const SystemAdministrationPage: React.FC = () => 
+const SystemAdministrationPage: React.FC = () => {
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
     
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
