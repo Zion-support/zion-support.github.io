@@ -15,15 +15,20 @@ import React from 'react'
 
       <Navigation />
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Description of the page and its benefits for your business.
+              <p Description of the page and its benefits for your business.>
+                  $2
+                </p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Get Started
+                <button $2>
+                  $2
                 </button>
-                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
+                </button>
+                </button>
+                <button $2>
+                  $2
+                </button>
+                </button>
                 </button>
               </div>
       
@@ -39,23 +44,27 @@ import React from 'react'
     </>
         </section>
 
-              <p>
-                Description of the page and its benefits for your business.
-
+              <p Description of the page and its benefits for your business.
+>
+                  $2
+                </p>
               <div></div>
-                <button>
-                  Get Started
-
-                <button>
-                  Learn More
-
-              <p>
-                This page is under development. Please check back soon for updates.
+                <button $2>
+                  $2
+                </button>
+                </button>
+                <button $2>
+                  $2
+                </button>
+                </button>
+              <p This page is under development. Please check back soon for updates.>
+                  $2
+                </p>
               </p>
-              <button className="cyber-button">
-                Learn More
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
+              <button Learn More
+                >
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </button>
             </div>
       
       <Footer />
@@ -74,8 +83,8 @@ import React from 'react'
       <Footer />
     </>
         </section>
-
-        {/* Benefits Section */}
+            {/* Benefits Section */}
+          </div>
         <section></section>
           <div></div>
             <div>
@@ -96,18 +105,23 @@ import React from 'react'
         <section></section>
           <div></div>
             <div></div>
-              <h2>
-                Ready to Get Started?
+              <h2 2>
+                  Ready to Get Started?
 
-              <p>
-                Contact our experts to discuss your requirements and get started today.
-
+                </h2>
+              <p Contact our experts to discuss your requirements and get started today.
+>
+                  $2
+                </p>
               <div></div>
-                <button>
-                  Contact Us
-
-                <button>
-                  Learn More
+                <button $2>
+                  $2
+                </button>
+                </button>
+                <button $2>
+                  $2
+                </button>
+                </button>
                 </button>
               </div>
       

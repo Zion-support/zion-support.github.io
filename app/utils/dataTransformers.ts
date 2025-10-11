@@ -27,7 +27,9 @@ export function flattenObject(ob,
   j: Record</T><string, unknown>,
   prefix = '',
   separator = '.')
-): Record</string><string, unknown> {/* TODO: Fix JSX expression */}
+): Record</string><string, unknown>
+            {/* TODO: Fix JSX expression */}
+          </div>
   flattened: Record</string><string, unknown> = {}
     }
   }
@@ -40,7 +42,9 @@ export function flattenObject(ob,
   j: Record<string, unknown>,
   prefix = '',
   separator = '.')
-): Record<string, unknown> {/* TODO: Fix JSX expression */}
+): Record<string, unknown>
+            {/* TODO: Fix JSX expression */}
+          </div>
   flattened: Record<string, unknown> = {}
   for (const key in obj) {/* TODO: Fix JSX expression */}
       const newKey = prefix ? `${prefix}${separator}${key}` : key
@@ -59,7 +63,9 @@ export function flattenObject(ob,
 export function unflattenObject(ob,
   j: Record</string><string, unknown>,
   separator = '.')
-): Record</string><string, unknown> {/* TODO: Fix JSX expression */}
+): Record</string><string, unknown>
+            {/* TODO: Fix JSX expression */}
+          </div>
   result: Record</string><string, unknown> = {}
   for (const key in obj) {/* TODO: Fix JSX expression */}
         } else {/* TODO: Fix JSX expression */}
@@ -71,7 +77,9 @@ export function unflattenObject(ob,
 export function unflattenObject(ob,
   j: Record<string, unknown>,
   separator = '.')
-): Record<string, unknown> {/* TODO: Fix JSX expression */}
+): Record<string, unknown>
+            {/* TODO: Fix JSX expression */}
+          </div>
   result: Record<string, unknown> = {}
   for (const key in obj) {/* TODO: Fix JSX expression */}
         } else {/* TODO: Fix JSX expression */}

@@ -6,24 +6,27 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AiApiManagementPage: React.FC = () => {
+
   const features = [
     {
       icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']},
     {icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']} ,
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
     {icon: TrendingUp,
       title: 'Performance Optimization',
       description: 'AI-powered insights to optimize your business performance.',
-      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']} ,
+      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']},
     {icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']}
+  ]
+
   const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
@@ -49,23 +52,30 @@ const AiApiManagementPage: React.FC = () => {
       </Helmet>
       <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+      <div $1>
+            {/* Hero Section */}
+          </div>
+          </div>
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">API Management</span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Streamline your API operations with intelligent management solutions
+              <p Streamline your API operations with intelligent management solutions>
+                  $2
+                </p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                  Get Started
+                <button $2>
+                  $2
                 </button>
-                <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                  View Demo
+                </button>
+                </button>
+                <button $2>
+                  $2
+                </button>
+                </button>
                 </button>
               </div>
       
@@ -80,8 +90,8 @@ const AiApiManagementPage: React.FC = () => {
       <Footer />
     </>
         </section>
-
-        {/* Features Section */}
+            {/* Features Section */}
+          </div>
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -91,8 +101,8 @@ const AiApiManagementPage: React.FC = () => {
       
       <Footer />
     </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+            <div $1>
+            {features.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
                   <div className="flex items-center mb-4"
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3"
@@ -102,11 +112,12 @@ const AiApiManagementPage: React.FC = () => {
     </>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
+                  <ul $1>
+            {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
-                        {benefit}
+            {benefit}
+          </div>
                       </li>
                     )
     </>
@@ -126,8 +137,8 @@ const AiApiManagementPage: React.FC = () => {
       <Footer />
     </>
         </section>
-
-        {/* Benefits Section */}
+            {/* Benefits Section */}
+          </div>
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -137,8 +148,8 @@ const AiApiManagementPage: React.FC = () => {
       
       <Footer />
     </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+            <div $1>
+            {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg"
                   <div className="flex items-center"
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3"

@@ -10,7 +10,7 @@ export interface LogContext {
   sessionId?: string;
   component?: string;
   action?: string;
-  [key: string]: unknown;,}}
+  [key: string]: unknown, }}
 class Logger {private logLevel: LogLevel = LogLevel.INFO,}
   private logs: Array<{,
     level: LogLevel,
@@ -41,7 +41,7 @@ class Logger {
     errorOrContextOrMetadata?: Error | string | Record<string, unknown>);
     contextOrMetadata?: string | Record<string, unknown>);
     metadata?: Record<string>
-  ): void {let error: Error | undefined;,}
+  ): void {let error: Error | undefined, }
     errorOrContextOrMetadata?: Error | string | Record<string, unknown>)
     contextOrMetadata?: string | Record</string><string, unknown>)
     metadata?: Record</string><string>
@@ -210,13 +210,15 @@ getLogs(level?: LogLevel): Array<{level: LogLevel,
   getLogs(level?: LogLevel): Array<{
     level: LogLevel,
     message: string,
-  }> {
+  }>
+            {
     if (level !== undefined) {
       return this.logs.filter(log => log.level === level)
   /**
    * Log a fatal error message
    */
   e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
+          </div>
   }
   /**
    * Core logging method

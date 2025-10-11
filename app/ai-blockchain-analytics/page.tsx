@@ -1,12 +1,14 @@
 'use client'
 import React from 'react';
-import {Helmet;} from 'react-helmet-async'
-import {ArrowRight;, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight,  CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const PagePage: React.FC = () => {const features = [
-    {;,} icon: Brain,
+const PagePage: React.FC = () => {
+
+  const features = [
+    {, } icon: Brain,
     };,
 title: 'AI-Powered Solutions',;,
 description: 'Advanced artificial intelligence technology to transform your business operations.',;,
@@ -15,20 +17,21 @@ benefits: ['Machine learning', 'Natural language processing', 'Predictive analyt
     {;,
 icon: BarChart,;,
 title: 'Advanced Analytics',;,
-description: 'Comprehensive analytics dashboard with real-time data visualization.',;,
-benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']} ,
+description: 'Comprehensive analytics dashboard with real-time data visualization.',, 
+benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
     {;,
 icon: TrendingUp,;,
 title: 'Performance Optimization',;,
-description: 'AI-powered insights to optimize your business performance.',;,
-benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']} ,
+description: 'AI-powered insights to optimize your business performance.',, 
+benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']},
     {;,
 icon: Target,;,
 title: 'Precision Targeting',;,
-description: 'Target specific goals and objectives with precision.',;,
-benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
+description: 'Target specific goals and objectives with precision.',, 
+benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']}
+  ]
 
-const benefits = [
+  const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -75,8 +78,8 @@ Discover our comprehensive page solutions designed to transform your business wi
       <Footer />
     </>
         </section>
-
-        {/* Features Section */}
+            {/* Features Section */}
+          </div>
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -86,8 +89,8 @@ Discover our comprehensive page solutions designed to transform your business wi
       
       <Footer />
     </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature), index) => (
+            <div $1>
+            {features.map((feature), index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="text-cyan-400 mb-4">
                     <feature.icon className="h-8 w-8" />
@@ -97,11 +100,12 @@ Discover our comprehensive page solutions designed to transform your business wi
     </>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit), benefitIndex) => (
+                  <ul $1>
+            {feature.benefits.map((benefit), benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
-                        {benefit}
+            {benefit}
+          </div>
                       </li>
                     )
     </>
@@ -121,8 +125,8 @@ Discover our comprehensive page solutions designed to transform your business wi
       <Footer />
     </>
         </section>
-
-        {/* Benefits Section */}
+            {/* Benefits Section */}
+          </div>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions?</h2>
@@ -131,8 +135,8 @@ Discover our comprehensive page solutions designed to transform your business wi
       
       <Footer />
     </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit), index) => (
+            <div $1>
+            {benefits.map((benefit), index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <div className="flex-shrink-0">
                     <Zap className="h-6 w-6 text-cyan-400" />
@@ -155,25 +159,23 @@ Discover our comprehensive page solutions designed to transform your business wi
       <Footer />
     </>
         </section>
-
-        {/* CTA Section */}
+            {/* CTA Section */}
+          </div>
         <section className="py-20 px-4 sm: px-6 lg:px-8"
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
-            <p className="text-xl text-gray-300 mb-8">
-Join thousands of businesses already using our AI-powered solutions.>
+            <p Join thousands of businesses already using our AI-powered solutions.>>
+                  $2
+                </p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-Start Free Trial>
-                <ArrowRight className="ml-2 h-5 w-5">
-              </button>
-              <button className="
-    ,
-    r: bg-blue-600 hove, r:text-white transition-colors"
-                Schedule Demo
-              </button>
-      
+              <button  >
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </button>
+              <button $2>
+                  $2
+                </button>
+                </button>
       <Footer />
     </>
       <Footer />

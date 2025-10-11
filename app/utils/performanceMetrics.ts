@@ -208,7 +208,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       metadata: {,
         dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart;,
         tcpConnection: perfData.connectEnd - perfData.connectStart,
-        serverResponse: perfData.responseEnd - perfData.requestStart;,}recordPageLoad(): void {}}if (typeof window === 'undefined') return;
+        serverResponse: perfData.responseEnd - perfData.requestStart, }recordPageLoad(): void {}}if (typeof window === 'undefined') return;
     const perfData = window.performance.timing;
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
     this.recordMetric({)}name: 'pageLoad',
@@ -528,7 +528,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    */;
   generateReport(): PerformanceReport {}}const loadMetrics = this.getMetricsByCategory('load');
     const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;
-    return {metrics: this.getMetrics();,}
+    return {metrics: this.getMetrics(), }
   /**
    * Get performance recommendations
    */

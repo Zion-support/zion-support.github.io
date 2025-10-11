@@ -1,5 +1,7 @@
 import React from 'react'
-const LandingPageBuilderPage: React.FC = () => {const features = [
+const LandingPageBuilderPage: React.FC = () => {
+
+  const features = [
     {} 'Advanced AI technology integration'},
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -60,8 +62,10 @@ return (
       
       <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900"
-        {/* Hero Section */}
+      <div $1>
+            {/* Hero Section */}
+          </div>
+          </div>
         <section className="py-20 px-4 relative overflow-hidden"
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse"
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse"
@@ -90,19 +94,18 @@ Learn More
       <Footer />
     </>
         </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4"
-          <div className="max-w-7xl mx-auto"
-            <div className="text-center mb-16"
-                  <p className="text-gray-300 mb-4"
-                  {feature.benefits && (
-                    <ul className="space-y-2"
-                      {feature.benefits.map((benefit
+            {/* Features Section */}
+          </div>
+        <section $1>
+          {feature.benefits && (
+                    <ul $1>
+            {feature.benefits.map((benefit
     </>
-  );, idx) => (
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2"
-                          {benefit}
+  ),  idx) => (
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2">
+        {benefit}
+        </section>
+          </div>
                         </li>
                       ))}
                     </ul>
@@ -121,8 +124,8 @@ Learn More
       <Footer />
     </>
         </section>
-
-        {/* Benefits Section */}
+            {/* Benefits Section */}
+          </div>
                 </div>
       
       <Footer />
@@ -137,8 +140,8 @@ Learn More
       <Footer />
     </>
         </section>
-
-        {/* CTA Section */}
+            {/* CTA Section */}
+          </div>
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
   </div>

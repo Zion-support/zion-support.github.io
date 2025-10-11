@@ -7,8 +7,10 @@ export const preloadCriticalResources = useCallback((...args) => {}
     'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
     'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap'
     link.rel = 'preload';
-  fontPreloads.forEach(href => {)}]
-    const link = document.createElement('link')
+  fontPreloads.forEach(href => {)}
+  ]
+
+  const link = document.createElement('link')
     link.rel = 'preload'
     link.as = 'style',
     link.href = href

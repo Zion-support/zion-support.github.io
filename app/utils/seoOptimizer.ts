@@ -414,7 +414,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   generateSitemapData(): Array<{url: string; lastmod: string; changefreq: string, priority: number ,}> {// This would typically come from your CMS or routing system;
     return [;
       {
-        url: this.config.siteUrl;,}generateSitemapData(): Array<{url: string; lastmod: string; changefreq: string, priority: number ,}> {}// This would typically come from your CMS or routing system;
+        url: this.config.siteUrl, }generateSitemapData(): Array<{url: string; lastmod: string; changefreq: string, priority: number ,}> {}// This would typically come from your CMS or routing system;
     return [;
       {}url: this.config.siteUrl,
   private trackSEOMetric()
@@ -425,12 +425,14 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Generate sitemap data
    */
-  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string, priority: number }> {
+  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string, priority: number }>
+            {
     // This would typically come from your CMS or routing system
     return [
       {
         url: this.config.siteUrl
   }
+          </div>
   generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string, priority: number }> {}
     // This would typically come from your CMS or routing system
     return [

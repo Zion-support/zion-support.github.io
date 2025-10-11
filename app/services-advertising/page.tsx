@@ -1,8 +1,9 @@
 'use client'
 import React from 'react'
-import {Helmet} from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
     }
   ]
+
   const benefits = [
   ]
   return (
@@ -19,8 +20,10 @@ import {Helmet} from 'react-helmet-async'
       </Helmet>
       <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+      <div $1>
+            {/* Hero Section */}
+          </div>
+          </div>
             </div>
       
       <Footer />
@@ -30,8 +33,8 @@ import {Helmet} from 'react-helmet-async'
       <Footer />
     </>
         </section>
-
-        {/* Features Section */}
+            {/* Features Section */}
+          </div>
             </div>
       
       <Footer />
@@ -41,8 +44,8 @@ import {Helmet} from 'react-helmet-async'
       <Footer />
     </>
         </section>
-
-        {/* Benefits Section */}
+            {/* Benefits Section */}
+          </div>
                 </div>
       
       <Footer />
@@ -57,8 +60,8 @@ import {Helmet} from 'react-helmet-async'
       <Footer />
     </>
         </section>
-
-        {/* CTA Section */}
+            {/* CTA Section */}
+          </div>
               </button>
             </div>
       

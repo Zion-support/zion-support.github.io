@@ -35,11 +35,13 @@ const meta = document.createElement('meta')
 }
     if (typeof document === 'undefined') return;
 // Utility functions
-export const generateMetaDescription = (content: string, maxLength: number = 160): string => {
+export const generateMetaDescription = (content: string, maxLength: number = 160): string =>
+            {
     const cleanContent = content.replace(/<[^>]*>/g, '').trim()
   if (cleanContent.length <= maxLength) {
     return cleanContent
   }
+          </div>
   }
   return cleanContent.substring(0, maxLength - 3) + '...'
 }

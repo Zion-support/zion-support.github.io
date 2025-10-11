@@ -51,7 +51,9 @@ export const,
  * Get security headers as key-value pairs;
  */;
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
-): Record<string, string> {/* TODO: Fix JSX expression */}
+): Record<string, string>
+            {/* TODO: Fix JSX expression */}
+          </div>
   const config = { ...defaultSecurityHeaders, ...customConfig }
   const,
   headers: Record<string, string> = {/* TODO: Fix JSX expression */}
@@ -78,10 +80,12 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
 /**
  * Get security headers in Next.js format
  */
-): Array<{ key: string, value: string }> {
+): Array<{ key: string, value: string }>
+            {
     export function getNextSecurityHeaders()
   customConfig?: Partial<SecurityHeadersConfig&gt;</SecurityHeadersConfig&gt;
   }
+          </div>
 ): Array<{ key: string, value: string }> {}
     value}
   }));
@@ -92,7 +96,9 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
   }))
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />)
 ): Array<{/* TODO: Fix JSX expression */}
-  e: string }> {/* TODO: Fix JSX expression */}
+  e: string }>
+            {/* TODO: Fix JSX expression */}
+          </div>
   }))
 }
 export default defaultSecurityHeaders

@@ -1,12 +1,13 @@
 'use client'
 import React from 'react';
-import {Helmet;} from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
     },
     {;,
-icon: BarChart,;,
-title: 'Advanced Analytics',} ]
+icon: BarChart,, 
+title: 'Advanced Analytics',}
+  ]
 
-const benefits = [
+  const benefits = [
   ]
 
 return (
@@ -26,36 +27,40 @@ return (
       
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+      <main $1>
         {/* Hero Section */}
+      </main>
+          </div>
         <section className="pt-20 pb-16 px-4">
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               AI Agricultural <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Intelligence Pro</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your farming operations with advanced AI-powered agricultural intelligence solutions.
+            <p Transform your farming operations with advanced AI-powered agricultural intelligence solutions.>
+                  $2
+                </p>
             </p>
           </div>
       
       <Footer />
     </>
         </section>
-
-        {/* Features Section */}
+            {/* Features Section */}
+          </div>
         <section className="py-20 px-4">
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Advanced Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive AI solutions for modern agriculture
+              <p Comprehensive AI solutions for modern agriculture>
+                  $2
+                </p>
               </p>
             </div>
       
       <Footer />
     </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => {
+            <div $1>
+            {features.map((feature, index) => {
                 const Icon = feature.icon;
   return (
                   <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-green-400/50 transition-all duration-300">
@@ -67,11 +72,12 @@ return (
     </>
                     <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description}</p>
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
+                    <ul $1>
+            {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {benefit}
+            {benefit}
+          </div>
                         </li>
                       ))}
                     </ul>
@@ -90,21 +96,22 @@ return (
       <Footer />
     </>
         </section>
-
-        {/* Benefits Section */}
+            {/* Benefits Section */}
+          </div>
         <section className="py-20 px-4 bg-slate-800/50">
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven benefits for agricultural operations
+              <p Proven benefits for agricultural operations>
+                  $2
+                </p>
               </p>
             </div>
       
       <Footer />
     </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
+            <div $1>
+            {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
@@ -122,21 +129,24 @@ return (
       <Footer />
     </>
         </section>
-
-        {/* CTA Section */}
+            {/* CTA Section */}
+          </div>
         <section className="py-20 px-4">
           <div className="container mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Transform Your Agriculture?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Get started with our AI agricultural intelligence platform today.
+            <p Get started with our AI agricultural intelligence platform today.>
+                  $2
+                </p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
-              <button className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-white transition-all duration-300">
-                Learn More
+              <button Start Free Trial
+                >
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </button>
+              <button $2>
+                  $2
+                </button>
+                </button>
               </button>
             </div>
       

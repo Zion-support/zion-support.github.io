@@ -288,7 +288,9 @@ export function getFormErrors<T extends Record<string, unknown>>(validationResul
 ): Record<keyof T, string[]> {/* TODO: Fix JSX expression */,}const errors = {}as Record<keyof>
   for (const fieldName in validationResults) {/* TODO: Fix JSX expression */,}}
   s: Record<keyof T, ValidationResult></keyof>)
-): Record<keyof T, string[]> {/* TODO: Fix JSX expression */}
+): Record<keyof T, string[]>
+            {/* TODO: Fix JSX expression */}
+          </div>
   const errors = {} as Record<keyof T, string[]>
   for (const fieldName in validationResults) {/* TODO: Fix JSX expression */}
     }

@@ -3,15 +3,15 @@
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency',,
-    }
+    },
     {icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results',,
-    }
+    },
     {icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards',,
-    }
+    },
     {icon: Globe,
       title: 'Global Reach',
 const benefits = [
@@ -19,8 +19,9 @@ const benefits = [
   const benefits = [
 'use client'
 import React from 'react'
-import {  Helmet  } from 'react-helmet-async'import {  CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from 'lucide-react'
+import {  Helmet  } from 'react-helmet-async'import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const ApiCachePage: React.FC = () => {
+
   const features = [
     {
       icon: Brain,
@@ -42,6 +43,7 @@ const ApiCachePage: React.FC = () => {
       title: 'Global Reach',
     }
   ]
+
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -55,7 +57,7 @@ const ApiCachePage: React.FC = () => {
         <meta />
       </Helmet>
               </span>
-              <br>
+              <br $1 />
               <span className="text-white"></span></span>Solutions</span>
             </h1>
             <p>Transform your business with our advanced apicache solutions.;</p>
@@ -73,23 +75,27 @@ return (
         <meta>
         <meta>
       </Helmet>
-      {/* Hero Section */}
+            {/* Hero Section */}
+          </div>
       <section className="relative py-20 px-4 sm: px-6 lg:px-8"></section></section></section></section>
         <div className="max-w-7xl mx-auto"></div></div></div>
           <div className="text-center"></div></div></div>
             <h1>
               </h1><span>
                 ApiCache</span>
-              <br>
+              <br $1 />
               <span className="text-white"></span></span>Solutions</span>
             </h1>
-            <p>
-              Transform your business with our advanced apicache solutions.
-              Powered by cutting-edge AI technology and industry expertise.
+            <p Transform your business with our advanced apicache solutions.
+              Powered by cutting-edge AI technology and industry expertise.>
+                  $2
+                </p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div></div>
-              <button>
-                Get Started
+              <button $2>
+                  $2
+                </button>
+                </button>
                 </button><ArrowRight>
               </button>
               <button>Learn More,</button>
@@ -170,14 +176,15 @@ export default ApiCachePage
         <title>ApiCache | Zion Tech Group</title>
         <meta name="description" content="Professional ApiCache services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="apiCache, AI solutions, IT services, Zion Tech Group, apicache" /></$1>
-      {/* Hero Section */}
+            {/* Hero Section */}
+          </div>
       <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section></section></section>
         <div className="max-w-7xl mx-auto"></div></div></div>
           <div className="text-center"></div></div></div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1></h1>
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"></span></span>
                 ApiCache</$1>
-              <br />
+              <br $1 />
               <span className="text-white"></span></span>Solutions</span></$1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>
               Transform your business with our advanced apicache solutions.
@@ -188,7 +195,8 @@ export default ApiCachePage
                 <ArrowRight className="ml-2 h-5 w-5" /></$1>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"></button>
                 Learn More</$1></$1></$1></$1></$1>
-      {/* Features Section */}
+            {/* Features Section */}
+          </div>
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section></section>
         <div className="max-w-7xl mx-auto"></div></div></div>
           <div className="text-center mb-16"></div></div></div>
@@ -198,6 +206,7 @@ export default ApiCachePage
               Our apicache solutions deliver unmatched performance, security, and scalability.</$1></$1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div></div>
             {features.map((feature, index) =&gt; (;}
+          </div>
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div></div></div>
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div></div></div>
                   <feature.icon className="h-6 w-6 text-white" /></$1>
@@ -205,7 +214,8 @@ export default ApiCachePage
                 <p className="text-gray-300"></p></p>{feature.description}</p></$1>
             ))}
           </div></$1></$1>
-      {/* Benefits Section */}
+            {/* Benefits Section */}
+          </div>
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section></section></section>
         <div className="max-w-7xl mx-auto"></div></div></div>
           <div className="text-center mb-16"></div></div></div>
@@ -215,12 +225,14 @@ export default ApiCachePage
               Experience the power of our apicache solutions for your business.</$1></$1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div></div></div>
             {benefits.map((benefit, index) =&gt; (;}
+          </div>
               <div key={index} className="flex items-start space-x-3"></div></div></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg"></p></p>{benefit}</p></$1>
             ))}
           </div></$1></$1>
-      {/* CTA Section */}
+            {/* CTA Section */}
+          </div>
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section></section>
         <div className="max-w-4xl mx-auto text-center"></div></div></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div></div></div>

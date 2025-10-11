@@ -490,7 +490,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     const structuredLog = {
         timestamp: entry.timestamp,
         level: levelName,
-        message: entry.message;,
+        message: entry.message, 
         source: entry.source,
           }
           break
@@ -562,7 +562,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @private
    * @param entry - Log entry to send
    */
-  private async logToRemote(entry: LogEntry): Promise</string><void> {
+  private async logToRemote(entry: LogEntry): Promise</string><void>
+            {
     ,
     if (!this.config.remoteEndpoint) return
     try {,
@@ -570,6 +571,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
         method: 'POST'),
         headers: {)
   }
+          </div>
           'Content-Type': 'application/json')})
         body: JSON.stringify()
     ),
@@ -589,8 +591,9 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @returns Object containing log statistics;
    */;
   public getStatistics(): {total: number,
-    byLevel: Record<string&gt;,
-    bySource: Record<string, number&gt;}} {}const byLevel: Record<string, number> = {}const bySource: Record<string, number> = {}this.logs.forEach(log => {)
+    byLevel: Record<string&gt, 
+    bySource: Record<string, number&gt;}},
+    {}const byLevel: Record<string, number> = {}const bySource: Record<string, number> = {}this.logs.forEach(log => {)
     );
       const levelName = LogLevel[log.level]);
       byLevel[levelName] = (byLevel[levelName] || 0) + 1;
@@ -604,7 +607,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     byLevel: Record</void><string>
     bySource: Record</string><string, number>
   }
-  } {}
+  },
+    {}
     const byLevel: Record</string><string, number> = {}
     const bySource: Record</string><string, number> = {}
     this.logs.forEach(log => {

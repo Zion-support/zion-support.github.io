@@ -22,7 +22,7 @@ return observer
 export const measurePerformance = (name: string, fn: () => void) => {,
     ,
     isTablet: width &gt;= 768 && width < 1024,
-    isDesktop: width &gt;= 1024;,}}
+    isDesktop: width &gt;= 1024, }}
   private observers: PerformanceObserver[] = [],
   private isMonitoring: boolean = false,
   constructor(config?: Partial<OptimizationConfig>) {,}return {}}isMobile: width < 768,
@@ -198,7 +198,7 @@ images.forEach((img) => imageObserver.observe(img))
   }
   addCriticalResourceHints(): void {/* TODO: Fix JSX expression */}
   n: 'anonymous' },
-      {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */}
   s: 'style' }]
     criticalResources.forEach(resource => {/* TODO: Fix JSX expression */})
     })

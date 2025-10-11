@@ -6,6 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {
+
   const features = [
     {
       icon: Target,
@@ -69,30 +70,34 @@ const AboutPage: React.FC = () => {
       </Helmet>
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <main $1>
         {/* Hero Section */}
+      </main>
+          </div>
         <section className="pt-20 pb-16 px-4">
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               About <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Zion Tech Group</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We are a team of passionate technologists dedicated to transforming businesses through innovative AI and technology solutions.
+            <p We are a team of passionate technologists dedicated to transforming businesses through innovative AI and technology solutions.>
+                  $2
+                </p>
             </p>
           </div>
         </section>
-
-        {/* Features Section */}
+            {/* Features Section */}
+          </div>
         <section className="py-20 px-4">
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">What Drives Us</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our core principles guide everything we do
+              <p Our core principles guide everything we do>
+                  $2
+                </p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {features.map((feature, index) => {
+            <div $1>
+            {features.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
                   <div key={index} className="text-center">
@@ -107,18 +112,19 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* Values Section */}
+            {/* Values Section */}
+          </div>
         <section className="py-20 px-4 bg-white/5">
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Values</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                The principles that guide our work and relationships
+              <p The principles that guide our work and relationships>
+                  $2
+                </p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {values.map((value, index) => {
+            <div $1>
+            {values.map((value, index) => {
                 const Icon = value.icon;
                 return (
                   <div key={index} className="text-center">
@@ -133,22 +139,24 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* Team Section */}
+            {/* Team Section */}
+          </div>
         <section className="py-20 px-4">
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Meet Our Team</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                The experts behind our innovative solutions
+              <p The experts behind our innovative solutions>
+                  $2
+                </p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {team.map((member, index) => (
+            <div $1>
+            {team.map((member, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
                   <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-2xl">
-                      {member.name.split(' ').map(n => n[0]).join('')}
+                    <span {member.name.split(' ').map(n => n[0]).join('')}>
+                  $2
+                </span>
                     </span>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
@@ -159,23 +167,27 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* CTA Section */}
+            {/* CTA Section */}
+          </div>
         <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
           <div className="container mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Work With Us?
+            <h2 2>
+                  Ready to Work With Us?
+                </h2>
             </h2>
-            <p className="text-xl text-gray-100 mb-8 max-w-3xl mx-auto">
-              Let's discuss how we can help transform your business with cutting-edge AI and technology solutions.
+            <p Let's discuss how we can help transform your business with cutting-edge AI and technology solutions.>
+                  $2
+                </p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Contact Us
+              <button Get Started
+                >
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </button>
+              <button $2>
+                  $2
+                </button>
+                </button>
               </button>
             </div>
           </div>

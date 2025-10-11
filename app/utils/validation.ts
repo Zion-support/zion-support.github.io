@@ -183,9 +183,11 @@ export function validateComposite()
 export async function validateAsync(
   validator: (val: unknown) => Promise<ValidationResult>
   value: unknown,
-): Promise<ValidationResult> {,
+): Promise<ValidationResult>
+            {,
   try {,
     return await validator(value);}
+          </div>
   } catch (error) {
     return {
       isValid: false,
@@ -196,13 +198,17 @@ export async function validateAsync()
   valu,
   e: unknown,
   }
-): Promise</ValidationResult><ValidationResult> {/* TODO: Fix JSX expression */}
+): Promise</ValidationResult><ValidationResult>
+            {/* TODO: Fix JSX expression */}
+          </div>
 export async function validateAsync(validato,
   r: (va)
   l: unknown) => Promise<ValidationResult>,
   valu,
   e: unknown,;}
-): Promise<ValidationResult> {/* TODO: Fix JSX expression */}
+): Promise<ValidationResult>
+            {/* TODO: Fix JSX expression */}
+          </div>
   } catch (error) {/* TODO: Fix JSX expression */}
     }
   }

@@ -65,7 +65,9 @@ export class SecurityManager {}
   private getRateLimitStorage(): Map<string, number[]> {}
     if (!global._rateLimitStorage) {}
       global._rateLimitStorage = new Map();}
-  private getRateLimitStorage(): Map</string><string, number[]> {/* TODO: Fix JSX expression */}
+  private getRateLimitStorage(): Map</string><string, number[]>
+            {/* TODO: Fix JSX expression */}
+          </div>
     }
     return global._rateLimitStorage
   }

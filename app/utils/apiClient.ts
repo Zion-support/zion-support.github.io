@@ -59,7 +59,7 @@ try {
 const apiResponse: APIResponse<T> = {,
     data;
         status: response.status,
-        statusText: response.statusText;,}headers: Object.fromEntries(response.headers.entries()),}
+        statusText: response.statusText, }headers: Object.fromEntries(response.headers.entries()),}
 // Cache successful GET requests;
       if (method === 'GET' && cache && response.ok) {}
     try {}
@@ -89,7 +89,9 @@ const apiResponse: APIResponse</T><T> = {}
         statusText: response.statusText,
         headers: Object.fromEntries(response.headers.entries())
 }
-export interface ApiResponse</RequestInit><T = unknown> {/* TODO: Fix JSX expression */}
+export interface ApiResponse</RequestInit><T = unknown>
+            {/* TODO: Fix JSX expression */}
+          </div>
 }
 export class ApiError extends Error {/* TODO: Fix JSX expression */}
   }

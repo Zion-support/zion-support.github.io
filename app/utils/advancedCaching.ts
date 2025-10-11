@@ -3,15 +3,15 @@
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency',,
-    }
+    },
     {icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results',,
-    }
+    },
     {icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards',,
-    }
+    },
     {icon: Globe,
       title: 'Global Reach',
 const benefits = [
@@ -19,8 +19,9 @@ const benefits = [
   const benefits = [
 'use client'
 import React from 'react'
-import {  Helmet  } from 'react-helmet-async'import {  CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from 'lucide-react'
+import {  Helmet  } from 'react-helmet-async'import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const AdvancedCachingPage: React.FC = () => {
+
   const features = [
     {
       icon: Brain,
@@ -42,6 +43,7 @@ const AdvancedCachingPage: React.FC = () => {
       title: 'Global Reach',
     }
   ]
+
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -55,7 +57,7 @@ const AdvancedCachingPage: React.FC = () => {
         <meta />
       </Helmet>
               </span>
-              <br>
+              <br $1 />
               <span className="text-white"></span></span>Solutions</span>
             </h1>
             <p>Transform your business with our advanced advancedcaching solutions.;</p>
@@ -73,23 +75,27 @@ return (
         <meta>
         <meta>
       </Helmet>
-      {/* Hero Section */}
+            {/* Hero Section */}
+          </div>
       <section className="relative py-20 px-4 sm: px-6 lg:px-8"></section></section></section></section>
         <div className="max-w-7xl mx-auto"></div></div></div>
           <div className="text-center"></div></div></div>
             <h1>
               </h1><span>
                 AdvancedCaching</span>
-              <br>
+              <br $1 />
               <span className="text-white"></span></span>Solutions</span>
             </h1>
-            <p>
-              Transform your business with our advanced advancedcaching solutions.
-              Powered by cutting-edge AI technology and industry expertise.
+            <p Transform your business with our advanced advancedcaching solutions.
+              Powered by cutting-edge AI technology and industry expertise.>
+                  $2
+                </p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div></div>
-              <button>
-                Get Started
+              <button $2>
+                  $2
+                </button>
+                </button>
                 </button><ArrowRight>
               </button>
               <button>Learn More,</button>

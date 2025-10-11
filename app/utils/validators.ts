@@ -259,7 +259,7 @@ export function validateObject<T extends Record<string, unknown>>(
   const errors: string[] = []
   for (const key in schema) {
     const validator = schema[key]
-    const value = obj[key];,
+    const value = obj[key], 
     if (!validator(value)) {,;}
       errors.push(`Invalid value for field: ${String(key)}`)
     }
@@ -334,7 +334,8 @@ export function validateURL(url: string): ValidationResult {,}
  * Validate string length with detailed result;
  */;
 export function validateLength(value: string, min: number, max: number, fieldName: string = 'Field'): ValidationResult {,}
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{}</></>{}{}]/.test(password)
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{}</></>{},
+    {}]/.test(password)
 return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar
 }
 /**
@@ -461,9 +462,10 @@ export function hasMaxLength(value: string, maxLength: number): boolean {
 export function isStrongPassword(password: string): boolean {
   if (!password || password.length < 8) return false
   const hasUpperCase = /[A-Z]/.test(password)
-  const hasLowerCase = /[a-z]/.test(password);,
+  const hasLowerCase = /[a-z]/.test(password), 
   const hasNumbers = /\d/.test(password);}
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{}</>{}{}]/.test(password)
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{}</>{},
+    {}]/.test(password)
   return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar
 }
 
@@ -761,10 +763,12 @@ export function validateRequired(value: unknown, fieldName: string = 'Field'): V
 /**
  * Validate async
  */
-export async function validateAsync(validator: (val: string) => Promise</ValidationResult><ValidationResult>, value: string): Promise</ValidationResult><ValidationResult> {
+export async function validateAsync(validator: (val: string) => Promise</ValidationResult><ValidationResult>, value: string): Promise</ValidationResult><ValidationResult>
+            {
     try {
     return await validator(value)
   }
+          </div>
   } catch (error) {}
     return { isValid: false, errors: ['Validation failed'], error: 'Validation failed' }
   }

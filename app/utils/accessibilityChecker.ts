@@ -2,21 +2,22 @@
 
 'use client'
 import React from 'react'
-import {  Helmet  } from 'react-helmet-async'import {  CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from 'lucide-react'
+import {  Helmet  } from 'react-helmet-async'import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const AccessibilityCheckerPage: React.FC = () => {
+
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',,
-    }
+    },
     {
       icon: Zap,
       title: 'High Performance',,
-    }
+    },
     {
       icon: Shield,
       title: 'Enterprise Security',,
-    }
+    },
     {
       icon: Globe,
       title: 'Global Reach',
@@ -36,7 +37,7 @@ const AccessibilityCheckerPage: React.FC = () => {
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"></span></span>
                 AccessibilityChecker
               </span>
-              <br />
+              <br $1 />
               <span className="text-white"></span></span>Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>
@@ -55,8 +56,8 @@ const AccessibilityCheckerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Features Section */}
+            {/* Features Section */}
+          </div>
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
         <div className="max-w-7xl mx-auto"></div></div>
           <div className="text-center mb-16"></div></div>
@@ -80,8 +81,8 @@ const AccessibilityCheckerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Benefits Section */}
+            {/* Benefits Section */}
+          </div>
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section></section>
         <div className="max-w-7xl mx-auto"></div></div>
           <div className="text-center mb-16"></div></div>
@@ -102,8 +103,8 @@ const AccessibilityCheckerPage: React.FC = () => {
           </div>
         ))
       </section>
-
-      {/* CTA Section */}
+            {/* CTA Section */}
+          </div>
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
         <div className="max-w-4xl mx-auto text-center"></div></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div></div>

@@ -13,7 +13,7 @@ export interface ErrorMetadata {
   severity: ErrorSeverity,
   tags?: string[]
   timestamp: number,
-  userAgent?: string;,
+  userAgent?: string, 
 }
 export interface TrackedError {
     id: string,
@@ -22,12 +22,12 @@ export interface TrackedError {
   occurrences: number,
   firstSeen: number,
           lineno: event.lineno,
-          colno: event.colno;,}}
+          colno: event.colno, }}
       })
     })
     // Unhandled promise rejection handler;
     window.addEventListener('unhandledrejection', (event) => {}this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason,)}`), {category: ErrorCategory.Runtime,
-        severity: ErrorSeverity.High;,}context: {reason: event.reason ,}})
+        severity: ErrorSeverity.High, }context: {reason: event.reason ,}})
     })
   }
 trackError(error: Error),
@@ -41,7 +41,7 @@ trackError(error: Error),
         severity: metadata.severity;,
         userId: metadata.userId;,
         sessionId: metadata.sessionId;,
-        context: metadata.context;,
+        context: metadata.context, 
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {}
       this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
@@ -167,9 +167,11 @@ private notifyListeners(error: TrackedError): void {,}
       }
     })
   }
-private async reportToExternalService(errorId: string): Promise<void> {,
+private async reportToExternalService(errorId: string): Promise<void>
+            {,
     ,
   }
+          </div>
     // Initialize counters;
     Object.values(ErrorCategory).forEach(category => {)
     );
@@ -196,9 +198,11 @@ private async reportToExternalService(errorId: string): Promise<void> {,
           bod,
   y: JSON.stringify(error),
 
-  private async reportToExternalService(errorId: string): Promise<void> {,
+  private async reportToExternalService(errorId: string): Promise<void>
+            {,
     // In a real implementation, this would send to an external service
     // like Sentry, LogRocket, or a custom error reporting service;}
+          </div>
     logger.info('Error reported to external service', { errorId })
   }
 
@@ -221,7 +225,9 @@ export const errorTracking = ErrorTrackingService.getInstance()
    * Report critical errors to external service
    */
   private async reportToExternalService(errorI)
-  d: string): Promise<void> {/* TODO: Fix JSX expression */}
+  d: string): Promise<void>
+            {/* TODO: Fix JSX expression */}
+          </div>
   s: { 'Content-Type': 'application/json' },
           bod,
   y: JSON.stringify(error)

@@ -276,10 +276,12 @@ class PerformanceMonitoringService {}}private static instance: PerformanceMonito
   /**;
    * Send metric to analytics service;
    */;
-  private async sendToAnalytics(metric: PerformanceMetric): Promise<void> {,
+  private async sendToAnalytics(metric: PerformanceMetric): Promise<void>
+            {,
   recordCustomMetric()
   e: number, uni)
   t: CustomMetric['unit']): void {/* TODO: Fix JSX expression */}
+          </div>
     }
     this.customMetrics.push(metric)
     // Maintain max metrics limit
@@ -299,7 +301,9 @@ class PerformanceMonitoringService {}}private static instance: PerformanceMonito
           bod,
   y: JSON.stringify(metric),
   private async sendToAnalytics(metri)
-  c: PerformanceMetric): Promise<void> {/* TODO: Fix JSX expression */}
+  c: PerformanceMetric): Promise<void>
+            {/* TODO: Fix JSX expression */}
+          </div>
   s: { 'Content-Type': 'application/json' },
           bod,
   y: JSON.stringify(metric)
@@ -383,8 +387,10 @@ class PerformanceMonitoringService {}}private static instance: PerformanceMonito
   /**;
    * Measure async function execution time;
    */;
-  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {,
+  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T>
+            {,
   measureFunction</T><T>(name: string, fn: () => T): T {}
+          </div>
     const start = performance.now()
     const result = fn()
       customMetrics: this.customMetrics
@@ -435,7 +441,8 @@ class PerformanceMonitoringService {}}private static instance: PerformanceMonito
           return measure.duration;}
         }
       } catch (error) {}logger.error('Failed to measure performance', error as Error);}
-  getSummary(): {/* TODO: Fix JSX expression */,}} {/* TODO: Fix JSX expression */,}}
+  getSummary(): {/* TODO: Fix JSX expression */,}},
+    {/* TODO: Fix JSX expression */,}}
     if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {/* TODO: Fix JSX expression */,}}
     if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {/* TODO: Fix JSX expression */,}}
     if (this.webVitals.FID && this.webVitals.FID.rating !== 'good') {/* TODO: Fix JSX expression */,}}

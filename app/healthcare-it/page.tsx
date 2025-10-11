@@ -15,8 +15,8 @@ import React from 'react'
       <Footer />
     </>
         <Navigation />
-        
-        {/* Hero Section */}
+            {/* Hero Section */}
+          </div>
         <section className="
     g: px-8"
   </section>
@@ -29,8 +29,10 @@ import React from 'react'
       
       <Footer />
     </>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
+              <h1 1>
+                  ;
 Page
+                </h1>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
 Discover our comprehensive solutions designed to transform your business.

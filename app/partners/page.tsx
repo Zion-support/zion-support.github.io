@@ -13,26 +13,29 @@ import React from 'react'
     </>
         </section>
 
-              <p>
-                Discover our comprehensive solutions designed to transform your business.
+              <p Discover our comprehensive solutions designed to transform your business.
 
 
 
-
+>
+                  $2
+                </p>
         {/* Content Section */}</p>
         <section></section>
           <div></div>
             <div></div>
-              <h2>
-                Coming Soon
+              <h2 2>
+                  Coming Soon
 
-              <p>
-                This page is under development. Please check back soon for updates.
+                </h2>
+              <p This page is under development. Please check back soon for updates.>
+                  $2
+                </p>
               </p>
-              <button className="cyber-button">
-                Learn More
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
+              <button Learn More
+                >
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </button>
             </div>
       
       <Footer />

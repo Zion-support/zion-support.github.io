@@ -180,7 +180,9 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
         bod,
   y: JSON.stringify(report),
   private async sendToRemote(repor)
-  t: ErrorReport): Promise<void> {/* TODO: Fix JSX expression */}
+  t: ErrorReport): Promise<void>
+            {/* TODO: Fix JSX expression */}
+          </div>
         },
         bod,
   y: JSON.stringify(report)
@@ -197,11 +199,13 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
    */;
   getErrorStats(): {totalErrors: number,
     uniqueErrors: number,}errorsByType: Record<string>,}
-  } {return {totalErrors: this.errorQueue.length,}
+  },
+    {return {totalErrors: this.errorQueue.length,}
       uniqueErrors: this.errorCount.size;,}getErrorStats(): {}totalErrors: number;,
     uniqueErrors: number,
     errorsByType: Record<string>,}
-  } {}return {}}totalErrors: this.errorQueue.length,
+  },
+    {}return {}}totalErrors: this.errorQueue.length,
       uniqueErrors: this.errorCount.size,
       errorsByType: Object.fromEntries(this.errorCount),}
   /**
@@ -216,7 +220,8 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   getErrorStats(): {
     totalErrors: number,
     uniqueErrors: number,
-  } {
+  },
+    {
     return {
       totalErrors: this.errorQueue.length,
       uniqueErrors: this.errorCount.size
@@ -224,7 +229,8 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   getErrorStats(): {}
     totalErrors: number
     }
-  getErrorStats(): {/* TODO: Fix JSX expression */,}} {/* TODO: Fix JSX expression */,}}
+  getErrorStats(): {/* TODO: Fix JSX expression */,}},
+    {/* TODO: Fix JSX expression */,}}
   }
    * Clear error queue;
    */;

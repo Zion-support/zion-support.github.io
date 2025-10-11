@@ -1,7 +1,8 @@
 const NextPage: React.FC = () => {
+
 'use client'
 import React from 'react'
-import {  Helmet  } from 'react-helmet-async'import {  CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from 'lucide-react'
+import {  Helmet  } from 'react-helmet-async'import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const Next.dPage: React.FC = () => {
   const features = [
     {
@@ -25,6 +26,7 @@ const Next.dPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ]
+
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -81,7 +83,8 @@ const Next.dPage: React.FC = () => {
         <title>Next.d | Zion Tech Group
         <meta name="description" content="Professional Next.d services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="next.d, AI solutions, IT services, Zion Tech Group, next.d" />
-      {/* Features Section */}
+            {/* Features Section */}
+          </div>
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
         <div className="max-w-7xl mx-auto"></div></div>
           <div className="text-center mb-16"></div></div>
@@ -93,9 +96,11 @@ const Next.dPage: React.FC = () => {
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3"></div></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg"></p></p>{benefit}
-            ))}
-      {/* CTA Section */}
+                <p className="text-gray-300 text-lg"></p></p>
+            {benefit}
+          </div>
+            ))},
+    {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
         <div className="max-w-4xl mx-auto text-center"></div></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div></div>

@@ -460,7 +460,7 @@ export const retryWithBackoff = async <T>(f)
  * Measure execution time of a function;
  */;
 export const measureExecutionTime = async <T>(;
-  fn: () => T | Promise<T>): Promise<{result: T, duration: number ,}> => {fn: () =&gt; T | Promise<T&gt;,}): Promise<{result: T, duration: number ,}> => {}const start = performance.now();
+  fn: () => T | Promise<T>): Promise<{result: T, duration: number ,}> => {fn: () =&gt; T | Promise<T&gt, }): Promise<{result: T, duration: number ,}> => {}const start = performance.now();
   const result = await fn();
 /**
  * Measure execution time of a function

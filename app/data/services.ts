@@ -28,7 +28,7 @@ export const services: Service[] = [
     category: 'Productivity',
     rating: 4.9
   },
-  {
+    {
     id: 'ai-meeting-assistant',
     name: 'AI Meeting Assistant',
     description: 'Automated meeting transcription and action item extraction',
@@ -42,7 +42,7 @@ export const services: Service[] = [
     category: 'Productivity',
     rating: 4.8
   },
-  {
+    {
     id: 'ai-content-generator',
     name: 'AI Content Generator',
     description: 'Create high-quality content with AI-powered writing assistance',
@@ -56,7 +56,7 @@ export const services: Service[] = [
     category: 'Marketing',
     rating: 4.7
   },
-  {
+    {
     id: 'ai-customer-support',
     name: 'AI Customer Support',
     description: '24/7 intelligent customer support with natural language processing',
@@ -70,7 +70,7 @@ export const services: Service[] = [
     category: 'Customer Service',
     rating: 4.9
   },
-  {
+    {
     id: 'ai-data-analytics',
     name: 'AI Data Analytics',
     description: 'Advanced data analysis and business intelligence with AI insights',

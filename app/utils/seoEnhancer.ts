@@ -1,19 +1,19 @@
 }) => {}
   const tags = [
     { name: 'title', content: data.title,
-    }
+    },
     { name: 'description', content: data.description,
-    }
+    },
     { name: 'keywords', content: data.keywords || '' },
     { name: 'robots', content: 'index, follow' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     { name: 'author', content: 'Zion Holdings' },
     { name: 'canonical', content: data.canonical || '' },
     { property: 'og:title', content: data.ogTitle || data.title,
-    }
+    },
     {}
       property: 'og:description',,
-    }
+    },
     { property: 'og:image', content: data.ogImage || '/og-image.webp' },
     { property: 'og:type', content: 'website' },
     { property: 'og:site_name', content: 'Zion Holdings' },
@@ -21,20 +21,20 @@
       name: 'twitter:card',
       content: data.twitterCard || 'summary_large_image'},
     { name: 'twitter:title', content: data.twitterTitle || data.title,
-    }
+    },
     {}
       name: 'twitter:description',,
-    }
+    },
     {}
       name: 'twitter:image',
       content: data.twitterImage || data.ogImage || '/og-image.webp',
   a: {/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   t: data.title,
-    }
+    },
     {/* TODO: Fix JSX expression */}
   t: data.description,
-    }
+    },
     {/* TODO: Fix JSX expression */}
   t: data.keywords || '' },
     {/* TODO: Fix JSX expression */}
@@ -47,7 +47,7 @@
   t: data.canonical || '' },
     {/* TODO: Fix JSX expression */}
   t: data.ogTitle || data.title,
-    }
+    },
     {/* TODO: Fix JSX expression */}
   t: data.ogImage || '/og-image.jpg' },
     {/* TODO: Fix JSX expression */}
@@ -166,18 +166,18 @@ export class SEOEnhancer {}
     })
   }
     ,
-    const twitterTags = [}
-      { name: 'twitter:card', content: config.twitterCard || this.config.twitterCard,
-    }
-      { name: 'twitter:site', content: config.twitterSite || this.config.twitterSite,
-    }
-      { name: 'twitter:creator', content: config.twitterCreator || this.config.twitterCreator,
-    }
-      { name: 'twitter:title', content: config.title || this.config.title,
-    }
-      { name: 'twitter:description', content: config.description || this.config.description,
-    }
-      { name: 'twitter:image', content: config.ogImage || this.config.ogImage }]
+    const twitterTags = [},
+    { name: 'twitter:card', content: config.twitterCard || this.config.twitterCard,
+    },
+    { name: 'twitter:site', content: config.twitterSite || this.config.twitterSite,
+    },
+    { name: 'twitter:creator', content: config.twitterCreator || this.config.twitterCreator,
+    },
+    { name: 'twitter:title', content: config.title || this.config.title,
+    },
+    { name: 'twitter:description', content: config.description || this.config.description,
+    },
+    { name: 'twitter:image', content: config.ogImage || this.config.ogImage }]
     twitterTags.forEach(({ name, content }) => {}
       this.updateMetaTag(name, content);}
     })
@@ -252,23 +252,23 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
   updateOpenGraph(confi);
   g: Partial<SEOConfig>) {/* TODO: Fix JSX expression */}
   t: config.title || this.config.title,
-    }
-      {/* TODO: Fix JSX expression */}
+    },
+    {/* TODO: Fix JSX expression */}
   t: config.description || this.config.description,
-    }
-      {/* TODO: Fix JSX expression */}
+    },
+    {/* TODO: Fix JSX expression */}
   t: config.ogImage || this.config.ogImage,
-    }
-      {/* TODO: Fix JSX expression */}
+    },
+    {/* TODO: Fix JSX expression */}
   t: config.canonicalUrl || this.config.canonicalUrl,
-    }
-      {/* TODO: Fix JSX expression */}
+    },
+    {/* TODO: Fix JSX expression */}
   t: config.ogType || this.config.ogType,
-    }
-      {/* TODO: Fix JSX expression */}
+    },
+    {/* TODO: Fix JSX expression */}
   t: config.siteName || this.config.siteName,
-    }
-      {/* TODO: Fix JSX expression */}
+    },
+    {/* TODO: Fix JSX expression */}
   t: config.locale || this.config.locale }]
     if (config.publishedTime) {/* TODO: Fix JSX expression */}
     }
@@ -284,20 +284,20 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
   updateTwitterCard(confi);
   g: Partial<SEOConfig>) {/* TODO: Fix JSX expression */}
   t: config.twitterCard || this.config.twitterCard,
-    }
-      {/* TODO: Fix JSX expression */}
+    },
+    {/* TODO: Fix JSX expression */}
   t: config.twitterSite || this.config.twitterSite,
-    }
-      {/* TODO: Fix JSX expression */}
+    },
+    {/* TODO: Fix JSX expression */}
   t: config.twitterCreator || this.config.twitterCreator,
-    }
-      {/* TODO: Fix JSX expression */}
+    },
+    {/* TODO: Fix JSX expression */}
   t: config.title || this.config.title,
-    }
-      {/* TODO: Fix JSX expression */}
+    },
+    {/* TODO: Fix JSX expression */}
   t: config.description || this.config.description,
-    }
-      {/* TODO: Fix JSX expression */}
+    },
+    {/* TODO: Fix JSX expression */}
   }
   }
   // Update robots meta tag
@@ -398,7 +398,7 @@ ${pages}.map();
   generateSitemap(pages: Array<{ url: string; lastmod: string; changefreq: string, priority: string }>)
   ) {
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?&gt;
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9"&gt;,
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9"&gt, 
   generateSitemap()
   }
     pages: Array<{ url: string; lastmod: string; changefreq: string, priority: string }>
@@ -622,10 +622,12 @@ ${disallowRules}Sitema,`;
 // SEO validation;
 export const validateSEOData = (;
   if (data.title.length < 30) {
-    ,) => {
+    ,) =>
+            {
   return ()
   )
   }
+          </div>
 // SEO validation;}
 export const validateSEOData = (data: {// title: string; description: string, url: string}) => {}
   const issues: string[] = []

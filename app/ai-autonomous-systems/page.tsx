@@ -1,27 +1,31 @@
 'use client'
 import React from 'react'
-import {Helmet} from 'react-helmet-async'
-import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const PagePage: React.FC = () => {const features = [
+const PagePage: React.FC = () => {
+
+  const features = [
     {
       icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']},
     {icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']} ,
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
     {icon: TrendingUp,
       title: 'Performance Optimization',
       description: 'AI-powered insights to optimize your business performance.',
-      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']} ,
+      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']},
     {icon: CheckCircle,
       title: 'Feature 3',
       description: 'Description for feature 3.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ]
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']}
+  ]
+
   const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
@@ -39,16 +43,19 @@ const PagePage: React.FC = () => {const features = [
       </Helmet>
       <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+      <div $1>
+            {/* Hero Section */}
+          </div>
+          </div>
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Solutions</span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your data into actionable insights with our advanced AI analytics platform
+              <p Transform your data into actionable insights with our advanced AI analytics platform>
+                  $2
+                </p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"
                 <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
@@ -77,14 +84,11 @@ const PagePage: React.FC = () => {const features = [
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
                 Key Features
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto"
-                Discover the powerful features that make our solutions stand out.
-              </p>
-            
-            <div className="
-    ,
-    d: grid-cols-2 l, g:grid-cols-3 gap-8"
-              {features.map((feature, index) => (
+              <p  >
+                  $2
+                </p>
+            <div $1>
+            {features.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
                   <div className="flex items-center mb-4"
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3"
@@ -94,11 +98,12 @@ const PagePage: React.FC = () => {const features = [
     </>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
+                  <ul $1>
+            {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
-                        {benefit}
+            {benefit}
+          </div>
                       </li>
                     )
     </>
@@ -125,14 +130,11 @@ const PagePage: React.FC = () => {const features = [
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
                 Why Choose Us
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto"
-                Experience the benefits of working with industry leaders.
-              </p>
-            
-            <div className="
-    ,
-    d: grid-cols-2 l, g:grid-cols-3 gap-8"
-              {benefits.map((benefit, index) => (
+              <p  >
+                  $2
+                </p>
+            <div $1>
+            {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg"
                   <div className="flex items-center"
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3"

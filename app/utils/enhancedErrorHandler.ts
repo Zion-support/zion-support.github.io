@@ -280,7 +280,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     const tags = this.generateTags(errorData)
     return {
       message: errorData.message,
-      stack: errorData.stack;,}return {}}id: this.generateErrorId(),
+      stack: errorData.stack, }return {}}id: this.generateErrorId(),
       type: errorData.type,
       message: errorData.message,
       stack: errorData.stack,

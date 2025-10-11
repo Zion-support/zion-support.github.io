@@ -1,5 +1,5 @@
 import React from 'react'
-import {Helmet} from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import './globals.css'
@@ -17,8 +17,10 @@ interface RootLayoutProps {children: React.ReactNode;} const RootLayout: React.F
         </Helmet>
       <body className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
         <Navigation />
-        <main className="pt-20"
-          {children}
+        <main $1>
+        {children}
+      </main>
+          </div>
         </main>
         <Footer />
       </body>

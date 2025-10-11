@@ -313,7 +313,9 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
    * Parse response based on content type
    */
   private async parseResponse</APIResponse><T>(respons)
-  e: Response): Promise</T><T> {/* TODO: Fix JSX expression */}
+  e: Response): Promise</T><T>
+            {/* TODO: Fix JSX expression */}
+          </div>
     }
     if (contentType?.includes('text/')) {/* TODO: Fix JSX expression */}
     }
@@ -364,7 +366,9 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
    * Delay helper for retry logic
    */
   private delay(m)
-  s: number): Promise</T><void> {/* TODO: Fix JSX expression */}
+  s: number): Promise</T><void>
+            {/* TODO: Fix JSX expression */}
+          </div>
   }
   /**
    * Update configuration

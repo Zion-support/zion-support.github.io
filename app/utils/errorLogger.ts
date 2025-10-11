@@ -126,7 +126,9 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
     } catch (error) {}
       // Silently fail to avoid infinite loop}
   private async sendToExternalService(entr)
-  y: ErrorLogEntry): Promise</void><void> {/* TODO: Fix JSX expression */}
+  y: ErrorLogEntry): Promise</void><void>
+            {/* TODO: Fix JSX expression */}
+          </div>
       }
       await fetch()
             : undefined;)

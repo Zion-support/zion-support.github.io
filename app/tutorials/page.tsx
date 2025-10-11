@@ -1,14 +1,16 @@
 import React from 'react'
-const TutorialsPage: React.FC = () => {const features = [
+const TutorialsPage: React.FC = () => {
+
+  const features = [
     {
       icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']},
     {icon: BarChart,
       title: 'Feature 2', 
       description: 'Description for feature 2.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']},
     {icon: CheckCircle,
       title: 'Feature 3',
       description: 'Description for feature 3.',
@@ -35,8 +37,8 @@ const TutorialsPage: React.FC = () => {const features = [
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
-        {/* Hero Section */}
+            {/* Hero Section */}
+          </div>
         <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8"
           <div className="max-w-7xl mx-auto"
             <div className="text-center"

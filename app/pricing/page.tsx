@@ -1,24 +1,27 @@
 import React, {useState} from 'react'
-import {Helmet} from 'react-helmet-async'
-import {Check, Star, ArrowRight, Zap, Shield, Users} from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Check, Star, ArrowRight, Zap, Shield, Users } from 'lucide-react';
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const PricingPage: React.FC = () => {const features = [
+const PricingPage: React.FC = () => {
+
+  const features = [
     {
       icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']},
     {name: 'Professional',
       ],
       popular: true,
       icon: Star,
-    }
+    },
     {name: 'Enterprise',
       ],
       popular: false,
-      icon: Shield} ]
+      icon: Shield}
+  ]
 
   const addOns = [
     {name: 'Additional Users',
@@ -38,27 +41,32 @@ const PricingPage: React.FC = () => {const features = [
   const addOns = [
     {name: 'AI Chatbot',
       price: '$500/month',
-      description: 'Intelligent customer support chatbot'} ,
+      description: 'Intelligent customer support chatbot'},
     {name: 'Data Analytics Pro',
       price: '$800/month',
-      description: 'Advanced business intelligence dashboard'} ,
+      description: 'Advanced business intelligence dashboard'},
     {name: 'Cybersecurity Suite',
       price: '$1,200/month',
-      description: 'Comprehensive security monitoring'} ,
+      description: 'Comprehensive security monitoring'},
     {name: 'Custom Development',
       price: '$150/hour',
-      description: 'Tailored solutions for your business'} ]
+      description: 'Tailored solutions for your business'}
+  ]
+
   return (
     <>
 </p>
-            
             {/* Billing Toggle */}
+          </div>
             <div className="flex items-center justify-center mb-12">
-              <span className={`text-lg font-medium ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'} `}>
-                Monthly
+              <span Monthly>
+                  $2
+                </span>
               </span>
-              <button
-                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly'
+              <button $2>
+                  $2
+                </button>
+                </button>
     </>
   )
                 className="
@@ -69,14 +77,14 @@ const PricingPage: React.FC = () => {const features = [
                     billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1'} inline-block h-4 w-4 transform rounded-full bg-white transition-transform`}
                 />
               </button>
-              <span className={`text-lg font-medium ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'} `}>
-                Yearly
+              <span Yearly>
+                  $2
+                </span>
               </span>
               {billingCycle === 'yearly' && (
-                <span className="ml-2 bg-green-500 text-white text-sm px-2 py-1 rounded-full"
-                  Save 20%
+                <span )}>
+                  $2
                 </span>
-              )}
             </div>
       
       <Footer />
@@ -95,12 +103,14 @@ const PricingPage: React.FC = () => {const features = [
       
       <Footer />
     </>
-        {/* FAQ Section */}
+            {/* FAQ Section */}
+          </div>
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Frequently Asked Questions
+              <h2 2>
+                  Frequently Asked Questions
+                </h2>
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto"
                 Discover the powerful features that make our solutions stand out.
@@ -111,44 +121,52 @@ const PricingPage: React.FC = () => {const features = [
     </>
             <div className="space-y-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-3">
+                <h3 3>
                   Can I change my plan at any time?
                 </h3>
-                <p className="text-gray-300">
-                  Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle.
+                </h3>
+                <p Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle.>
+                  $2
+                </p>
                 </p>
               </div>
       
       <Footer />
     </>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-3">
+                <h3 3>
                   Do you offer custom pricing for large enterprises?
                 </h3>
-                <p className="text-gray-300">
-                  Absolutely! We offer custom pricing and solutions for large enterprises with specific requirements. Contact us to discuss your needs.
+                </h3>
+                <p Absolutely! We offer custom pricing and solutions for large enterprises with specific requirements. Contact us to discuss your needs.>
+                  $2
+                </p>
                 </p>
               </div>
       
       <Footer />
     </>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-3">
+                <h3 3>
                   What's included in the support?
                 </h3>
-                <p className="text-gray-300">
-                  Support includes email support, documentation, and access to our knowledge base. Higher tiers include priority support and dedicated account managers.
+                </h3>
+                <p Support includes email support, documentation, and access to our knowledge base. Higher tiers include priority support and dedicated account managers.>
+                  $2
+                </p>
                 </p>
               </div>
       
       <Footer />
     </>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-3">
+                <h3 3>
                   Is there a free trial available?
                 </h3>
-                <p className="text-gray-300">
-                  Yes, we offer a 14-day free trial for all our plans. No credit card required to get started.
+                </h3>
+                <p Yes, we offer a 14-day free trial for all our plans. No credit card required to get started.>
+                  $2
+                </p>
                 </p>
               </div>
       
@@ -167,17 +185,15 @@ const PricingPage: React.FC = () => {const features = [
         <section className="py-20 bg-gray-100"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Us>
+              <h2 2>
+                  Why Choose Us>
+                </h2>
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto"
-                Experience the benefits of working with industry leaders.
-              </p>
-            
-            <div className="
-    ,
-    d: grid-cols-2 l, g:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+              <p  >
+                  $2
+                </p>
+            <div $1>
+            {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg"
                   <div className="flex items-center"
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3">
@@ -188,15 +204,19 @@ const PricingPage: React.FC = () => {const features = [
 
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Ready to Get Started?>
+            <h2 2>
+                  Ready to Get Started?>
+                </h2>
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
               Contact us today to learn how our solutions can transform your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                Contact Us>
+              <button >
+                  $2>
+                  $2
+                </button>
+                </button>
               </button>
               <button className="
     ,

@@ -24,7 +24,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */,}}}
     ,
       }
     }
-    return {valid: missing.length === 0;,}}public validate(requiredVars: (keyof EnvConfig)[]): {,}valid: boolean;,
+    return {valid: missing.length === 0, }}public validate(requiredVars: (keyof EnvConfig)[]): {,}valid: boolean;,
     missing: string[],}
       }
     }

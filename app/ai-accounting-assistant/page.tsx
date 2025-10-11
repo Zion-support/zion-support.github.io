@@ -1,52 +1,58 @@
 'use client'
 import React from 'react'
-import {Helmet} from 'react-helmet-async'
-import {Calculator, BarChart, Shield, Zap, CheckCircle, ArrowRight, Brain, Target, TrendingUp, FileText} from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { Calculator, BarChart, Shield, Zap, CheckCircle, ArrowRight, Brain, Target, TrendingUp, FileText } from 'lucide-react';
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const AIAccountingAssistantPage: React.FC = () => {const features = [
+const AIAccountingAssistantPage: React.FC = () => {
+
+  const features = [
     {
       icon: Calculator,
       title: 'Automated Bookkeeping',
       description: 'AI-powered bookkeeping that automatically categorizes transactions and maintains accurate records.',
-      benefits: ['Transaction categorization', 'Receipt scanning', 'Expense tracking', 'Invoice processing']} ,
+      benefits: ['Transaction categorization', 'Receipt scanning', 'Expense tracking', 'Invoice processing']},
     {icon: BarChart,
       title: 'Financial Analytics',
       description: 'Advanced analytics and reporting to help you understand your financial performance.',
-      benefits: ['Profit & loss reports', 'Cash flow analysis', 'Budget tracking', 'Financial forecasting']} ,
+      benefits: ['Profit & loss reports', 'Cash flow analysis', 'Budget tracking', 'Financial forecasting']},
     {icon: Shield,
       title: 'Compliance & Security',
       description: 'Ensure compliance with accounting standards and maintain the highest security standards.',
-      benefits: ['Tax compliance', 'Audit trails', 'Data encryption', 'Regulatory reporting']} ,
+      benefits: ['Tax compliance', 'Audit trails', 'Data encryption', 'Regulatory reporting']},
     {icon: Zap,
       title: 'Real-Time Processing',
       description: 'Process financial data in real-time for up-to-date insights and decision making.',
-      benefits: ['Live updates', 'Instant reporting', 'Real-time alerts', 'Automated workflows']} ,
+      benefits: ['Live updates', 'Instant reporting', 'Real-time alerts', 'Automated workflows']},
     {icon: Brain,
       title: 'Intelligent Insights',
       description: 'AI-driven insights and recommendations to optimize your financial management.',
-      benefits: ['Spending analysis', 'Cost optimization', 'Revenue insights', 'Predictive analytics']} ,
+      benefits: ['Spending analysis', 'Cost optimization', 'Revenue insights', 'Predictive analytics']},
     {icon: Target,
       title: 'Goal Tracking',
       description: 'Set and track financial goals with AI-powered monitoring and recommendations.',
-      benefits: ['Goal setting', 'Progress tracking', 'Milestone alerts', 'Achievement insights']} ]
+      benefits: ['Goal setting', 'Progress tracking', 'Milestone alerts', 'Achievement insights']}
+  ]
+
   const capabilities = [
     {title: 'Invoice Management',
       description: 'Automated invoice processing, approval workflows, and payment tracking.',
       icon: FileText,
-      benefits: ['Invoice scanning', 'Approval workflows', 'Payment tracking', 'Vendor management']} ,
+      benefits: ['Invoice scanning', 'Approval workflows', 'Payment tracking', 'Vendor management']},
     {title: 'Expense Management',
       description: 'Streamlined expense reporting and reimbursement processes.',
       icon: TrendingUp,
-      benefits: ['Expense categorization', 'Receipt capture', 'Policy compliance', 'Reimbursement processing']} ,
+      benefits: ['Expense categorization', 'Receipt capture', 'Policy compliance', 'Reimbursement processing']},
     {title: 'Financial Reporting',
       description: 'Comprehensive financial reports and dashboards for better decision making.',
       icon: BarChart,
-      benefits: ['Custom reports', 'Interactive dashboards', 'Data visualization', 'Export capabilities']} ,
+      benefits: ['Custom reports', 'Interactive dashboards', 'Data visualization', 'Export capabilities']},
     {title: 'Tax Preparation',
       description: 'Automated tax calculations and preparation assistance.',
       icon: Calculator,
-      benefits: ['Tax calculations', 'Deduction optimization', 'Form generation', 'Filing assistance']} ]
+      benefits: ['Tax calculations', 'Deduction optimization', 'Form generation', 'Filing assistance']}
+  ]
+
   const pricingTiers = [
     {name: 'Basic',
       price: '$29',
@@ -59,7 +65,7 @@ const AIAccountingAssistantPage: React.FC = () => {const features = [
         'Mobile app access',
         'Cloud storage'
       ],
-      popular: false} ,
+      popular: false},
     {name: 'Professional',
       price: '$79',
       period: '/month',
@@ -72,7 +78,7 @@ const AIAccountingAssistantPage: React.FC = () => {const features = [
         'Custom reports',
         'Multi-user access'
       ],
-      popular: true} ,
+      popular: true},
     {name: 'Enterprise',
       price: 'Custom',
       period: '',
@@ -85,7 +91,9 @@ const AIAccountingAssistantPage: React.FC = () => {const features = [
         'Advanced security',
         'Custom workflows'
       ],
-      popular: false} ]
+      popular: false}
+  ]
+
   return (
     <>
       <Helmet>
@@ -103,8 +111,10 @@ const AIAccountingAssistantPage: React.FC = () => {const features = [
       
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
+      <main $1>
         {/* Hero Section */}
+      </main>
+          </div>
         <section className="
     g: px-8"
           <div className="max-w-7xl mx-auto"
@@ -138,23 +148,19 @@ const AIAccountingAssistantPage: React.FC = () => {const features = [
       <Footer />
     </>
         </section>
-
-        {/* Features Section */}
+            {/* Features Section */}
+          </div>
             </div>
       
       <Footer />
     </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
-                  <feature.icon className="w-12 h-12 text-purple-400 mb-4"
-                  <h3 className="text-xl font-semibold text-white mb-3"
-                  <p className="text-gray-300 mb-4"
-                  <ul className="space-y-2"
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300"
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2"
-                        {benefit}
+            <div $1>
+            {features.map((feature, index) => (
+                <div $1>
+            {feature.benefits.map((benefit, idx) => (
+                      <li {benefit}>
+                  $2
+                </li>
                       </li>
                     )
     </>
@@ -169,33 +175,30 @@ const AIAccountingAssistantPage: React.FC = () => {const features = [
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
                 Why Choose Us
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto"
-                Tailored solutions for different business types
-              </p>
-            
-            <div className="
-    ,
-    d: grid-cols-2 l, g:grid-cols-4 gap-8"
-              {useCases.map((useCase, index) => {
+              <p  >
+                  $2
+                </p>
+            <div $1>
+            {useCases.map((useCase, index) => {
                 const Icon = useCase.icon
                 return (
                   <div key={index} className="text-center"
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6"
                       <Icon className="w-8 h-8 text-white"
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-4"
-                    <p className="text-gray-300"
-                  </div>
-      
+                    <h3 3>
+                   
+                </h3>
       <Footer />
     </>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
+                  <ul $1>
+            {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
-                        {benefit}
+            {benefit}
+          </div>
                       </li>
                     ))}
                   </ul>
@@ -207,18 +210,20 @@ const AIAccountingAssistantPage: React.FC = () => {const features = [
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful Accounting Features
+              <h2 2>
+                  Powerful Accounting Features
+                </h2>
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Advanced AI technology for modern accounting needs
+              <p Advanced AI technology for modern accounting needs>
+                  $2
+                </p>
               </p>
             </div>
       
       <Footer />
     </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => {
+            <div $1>
+            {features.map((feature, index) => {
                 const Icon = feature.icon
                 return (
                   <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
@@ -230,11 +235,12 @@ const AIAccountingAssistantPage: React.FC = () => {const features = [
     </>
                     <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description}</p>
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, benefitIndex) => (
+                    <ul $1>
+            {feature.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
-                          {benefit}
+            {benefit}
+          </div>
                         </li>
                       ))}
                     </ul>
@@ -253,23 +259,25 @@ const AIAccountingAssistantPage: React.FC = () => {const features = [
       <Footer />
     </>
         </section>
-
-        {/* Use Cases Section */}
+            {/* Use Cases Section */}
+          </div>
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Perfect For
+              <h2 2>
+                  Perfect For
+                </h2>
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Tailored solutions for different business types
+              <p Tailored solutions for different business types>
+                  $2
+                </p>
               </p>
             </div>
       
       <Footer />
     </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => {
+            <div $1>
+            {useCases.map((useCase, index) => {
                 const Icon = useCase.icon
                 return (
                   <div key={index} className="text-center">
@@ -296,23 +304,25 @@ const AIAccountingAssistantPage: React.FC = () => {const features = [
       <Footer />
     </>
         </section>
-
-        {/* Benefits Section */}
+            {/* Benefits Section */}
+          </div>
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our AI Accounting Assistant?
+              <h2 2>
+                  Why Choose Our AI Accounting Assistant?
+                </h2>
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Transform your accounting workflow with intelligent automation
+              <p Transform your accounting workflow with intelligent automation>
+                  $2
+                </p>
               </p>
             </div>
       
       <Footer />
     </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+            <div $1>
+            {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <div className="flex-shrink-0">
                     <Zap className="h-6 w-6 text-cyan-400" />
@@ -335,21 +345,24 @@ const AIAccountingAssistantPage: React.FC = () => {const features = [
       <Footer />
     </>
         </section>
-
-        {/* CTA Section */}
+            {/* CTA Section */}
+          </div>
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Automate Your Accounting?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your data into actionable insights with our advanced AI analytics platform
+            <p Transform your data into actionable insights with our advanced AI analytics platform>
+                  $2
+                </p>
               </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Contact Sales
+              <button Start Free Trial
+                >
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </button>
+              <button $2>
+                  $2
+                </button>
+                </button>
               </button>
             </div>
       
