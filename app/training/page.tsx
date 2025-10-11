@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -43,30 +41,6 @@ const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-=======
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
-]
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
-      <Helmet />
->>>>>>> origin/main
-        <title>Page | Zion Tech Group</title>
-=======
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-]
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
-        </Helmet><title>Page | Zion Tech Group</title>
->>>>>>> origin/main
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      </Helmet>
-
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -113,26 +87,12 @@ return (
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
-=======
-      {/* Hero Section */} </div>
->>>>>>> origin/main
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description</p>}</p>
-              </div>
-            ))}
-
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-=======
-<<<<<<< HEAD
             <h2>Key Benefits;</h2>
             </h2>
             <p>Experience the power of our page solutions for your business.</p>
@@ -141,16 +101,6 @@ return (
             <h2>Ready to Get Started?</h2>
             </h2>
             <p>Contact our experts to discuss your page needs and get a customized solution.</p>
-=======
-            <h2></h2>
->>>>>>> origin/main
-              Key Benefits
-            </h2>
-            <p></p>
-              Experience the power of our page solutions for your business.
-            </p>
-          </div>
-<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
@@ -168,42 +118,6 @@ return (
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-=======
-            <h2></h2>
->>>>>>> origin/main
-              Ready to Get Started?
-            </h2>
-            <p></p>
-              Contact our experts to discuss your page needs and get a customized solution.
->>>>>>> origin/main
-            </p>
-    </div>
-  )
-}
-export default PagePage
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-  ]
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page | Zion Tech Group
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-      {/* Hero Section */}
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
-                <p className="text-gray-300">{feature.description}
-            ))}
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
-<<<<<<< HEAD
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
@@ -223,9 +137,3 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 };
 
 export default PagePage;
-=======
-  )
-}
-export default PagePage
-</div></p></p></p></h2></h2></h3>
->>>>>>> origin/main

@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
+import { Loader2 } from 'lucide-react'
 
-<<<<<<< HEAD
 export const PageLoader: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -15,15 +15,6 @@ export const PageLoader: React.FC = () => {
     </div>
   );
 };
-=======
-export const PageLoader: React.FC = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-400 mx-auto mb-4"></div>
-      <p className="text-cyan-400 text-lg font-medium">Loading...</p>
-    </div>
-  </div>
-)
 
 export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg' | 'xl'; text?: string; fullScreen?: boolean }> = ({ 
   size = 'md', 
@@ -38,15 +29,17 @@ export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg' | 'xl'; text?:
   };
 
   const spinner = (
-    <div className="flex flex-col items-center justify-center space-y-4">
-      <div className={`animate-spin rounded-full border-b-2 border-cyan-400 ${sizeClasses[size]}`}></div>
-      {text && <p className="text-cyan-400 font-medium">{text}</p>}
+    <div className="flex flex-col items-center justify-center">
+      <Loader2 className={`${sizeClasses[size]} animate-spin text-cyan-400`} />
+      {text && (
+        <p className="mt-2 text-gray-400 text-sm font-medium">{text}</p>
+      )}
     </div>
   );
 
   if (fullScreen) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         {spinner}
       </div>
     );
@@ -55,18 +48,32 @@ export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg' | 'xl'; text?:
   return spinner;
 };
 
-export const LoadingSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (
-  <div className="animate-pulse space-y-4">
-    {Array.from({ length: lines }).map((_, index) => (
-      <div key={index} className="h-4 bg-gray-200 rounded w-full"></div>
-    ))}
+export const CardSkeleton: React.FC = () => (
+  <div className="bg-slate-800 rounded-lg p-6 animate-pulse">
+    <div className="h-4 bg-slate-700 rounded w-3/4 mb-4"></div>
+    <div className="h-3 bg-slate-700 rounded w-1/2 mb-2"></div>
+    <div className="h-3 bg-slate-700 rounded w-2/3"></div>
   </div>
 );
 
-export default {
-  PageLoader,
-  LoadingSpinner,
-  LoadingSkeleton,
-  ServiceCardSkeleton
-}
->>>>>>> origin/main
+export const TableSkeleton: React.FC = () => (
+  <div className="bg-slate-800 rounded-lg p-6 animate-pulse">
+    <div className="space-y-3">
+      {[...Array(5)].map((_, i) => (
+        <div key={i} className="flex space-x-4">
+          <div className="h-4 bg-slate-700 rounded w-1/4"></div>
+          <div className="h-4 bg-slate-700 rounded w-1/4"></div>
+          <div className="h-4 bg-slate-700 rounded w-1/4"></div>
+          <div className="h-4 bg-slate-700 rounded w-1/4"></div>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
+export const ChartSkeleton: React.FC = () => (
+  <div className="bg-slate-800 rounded-lg p-6 animate-pulse">
+    <div className="h-4 bg-slate-700 rounded w-1/3 mb-4"></div>
+    <div className="h-64 bg-slate-700 rounded"></div>
+  </div>
+);
