@@ -55,7 +55,12 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                <Link href="/micro-saas" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Micro SAAS Solutions
+                </Link>
+              </li>
+              <li>
+                <Link href="/cybersecurity-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                   Cybersecurity
                 </Link>
               </li>
@@ -67,6 +72,11 @@ const Footer: React.FC = () => {
               <li>
                 <Link href="/cloud-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                   Cloud Infrastructure
+                </Link>
+              </li>
+              <li>
+                <Link href="/web-development" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Web Development
                 </Link>
               </li>
             </ul>
@@ -142,20 +152,24 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300 text-sm">info@ziontechgroup.com</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 text-sm hover:text-cyan-400 transition-colors duration-200">
+                  kleber@ziontechgroup.com
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300 text-sm">+1 (555) 123-4567</span>
+                <a href="tel:+13024640950" className="text-gray-300 text-sm hover:text-cyan-400 transition-colors duration-200">
+                  +1 (302) 464-0950
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300 text-sm">San Francisco, CA</span>
+                <span className="text-gray-300 text-sm">364 E Main St STE 1008<br />Middletown, DE 19709</span>
               </div>
             </div>
             <Link 
               href="/consultation" 
-              className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 futuristic-btn"
             >
               <span>Get Started</span>
               <ArrowRight className="w-4 h-4" />
