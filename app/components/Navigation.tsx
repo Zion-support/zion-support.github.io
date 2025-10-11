@@ -1,11 +1,12 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Brain, ChevronDown, Menu, X, ArrowRight } from 'lucide-react'
+import { Brain, ChevronDown, Menu, X, ArrowRight, Zap, Code, Cloud, Shield, BarChart, Smartphone, Users, Phone, Mail, MapPin, MessageSquare, Eye, FileText, Heart, Mic, Calendar, Workflow, Wifi, Package, Database, Settings } from 'lucide-react'
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +17,42 @@ const Navigation: React.FC = () => {
   }, [])
 
   const toggleMenu = () => setIsOpen(!isOpen)
+  const toggleDropdown = (dropdown: string) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
+  }
+
+  const aiServices = [
+    { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart },
+    { name: 'AI Automation', href: '/ai-automation', icon: Zap },
+    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: MessageSquare },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield },
+    { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: Eye },
+    { name: 'AI Document Processing', href: '/ai-document-processing', icon: FileText },
+    { name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart },
+    { name: 'AI Voice Processing', href: '/ai-voice-processing', icon: Mic }
+  ]
+
+  const itServices = [
+    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud },
+    { name: 'Cybersecurity Solutions', href: '/cybersecurity-solutions', icon: Shield },
+    { name: 'Web Development', href: '/web-development', icon: Code },
+    { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone },
+    { name: 'Database Management', href: '/database-management', icon: Database },
+    { name: 'IT Support', href: '/it-support', icon: Users },
+    { name: 'System Integration', href: '/system-integration', icon: Settings },
+    { name: 'IT Consulting', href: '/it-consulting', icon: BarChart }
+  ]
+
+  const microSaasServices = [
+    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart },
+    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: MessageSquare },
+    { name: 'AI Document Processor', href: '/ai-document-processor', icon: FileText },
+    { name: 'AI Scheduling Assistant', href: '/ai-scheduling-assistant', icon: Calendar },
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Workflow },
+    { name: 'AI Content Moderator', href: '/ai-content-moderator', icon: Eye },
+    { name: 'AI Network Monitor', href: '/ai-network-monitor', icon: Wifi },
+    { name: 'AI Inventory Manager', href: '/ai-inventory-manager', icon: Package }
+  ]
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -29,7 +66,7 @@ const Navigation: React.FC = () => {
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-white">Zion Tech</span>
+              <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </Link>
           </div>
 
@@ -41,22 +78,133 @@ const Navigation: React.FC = () => {
             <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
             </Link>
-            <Link href="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Services
-            </Link>
-            <Link href="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              AI Services
-            </Link>
-            <Link href="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              IT Services
-            </Link>
+            
+            {/* Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('services')}
+                className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+              >
+                Services
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              {activeDropdown === 'services' && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-lg border border-gray-700">
+                  <div className="py-2">
+                    <Link href="/services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                      All Services
+                    </Link>
+                    <div className="border-t border-gray-700 my-2"></div>
+                    <div className="px-4 py-2">
+                      <h3 className="text-sm font-semibold text-cyan-400 mb-2">AI Services</h3>
+                      {aiServices.slice(0, 4).map((service) => (
+                        <Link key={service.name} href={service.href} className="block py-1 text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                    <div className="px-4 py-2">
+                      <h3 className="text-sm font-semibold text-cyan-400 mb-2">IT Services</h3>
+                      {itServices.slice(0, 4).map((service) => (
+                        <Link key={service.name} href={service.href} className="block py-1 text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* AI Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('ai')}
+                className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+              >
+                AI Services
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              {activeDropdown === 'ai' && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-lg border border-gray-700">
+                  <div className="py-2">
+                    <Link href="/ai-services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+                      All AI Services
+                    </Link>
+                    <div className="border-t border-gray-700 my-2"></div>
+                    {aiServices.map((service) => (
+                      <Link key={service.name} href={service.href} className="flex items-center px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                        <service.icon className="w-4 h-4 mr-2" />
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* IT Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('it')}
+                className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+              >
+                IT Services
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              {activeDropdown === 'it' && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-lg border border-gray-700">
+                  <div className="py-2">
+                    <Link href="/it-services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+                      All IT Services
+                    </Link>
+                    <div className="border-t border-gray-700 my-2"></div>
+                    {itServices.map((service) => (
+                      <Link key={service.name} href={service.href} className="flex items-center px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                        <service.icon className="w-4 h-4 mr-2" />
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Micro-SaaS Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('microsaas')}
+                className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+              >
+                Micro-SaaS
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              {activeDropdown === 'microsaas' && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-lg border border-gray-700">
+                  <div className="py-2">
+                    <Link href="/micro-saas" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+                      All Micro-SaaS Solutions
+                    </Link>
+                    <div className="border-t border-gray-700 my-2"></div>
+                    {microSaasServices.map((service) => (
+                      <Link key={service.name} href={service.href} className="flex items-center px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                        <service.icon className="w-4 h-4 mr-2" />
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
             <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Contact
             </Link>
             <Link 
               href="/consultation" 
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center"
             >
+              <Zap className="w-4 h-4 mr-2" />
               Get Started
             </Link>
           </div>
@@ -110,6 +258,13 @@ const Navigation: React.FC = () => {
                 onClick={toggleMenu}
               >
                 IT Services
+              </Link>
+              <Link 
+                href="/micro-saas" 
+                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                onClick={toggleMenu}
+              >
+                Micro-SaaS
               </Link>
               <Link 
                 href="/contact" 
