@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """
-Script to automatically resolve merge conflicts in TypeScript files.
-This script keeps the HEAD version (current branch) and removes conflict markers.
+Script to automatically resolve merge conflicts by keeping the HEAD version.
+This script will process all TypeScript/JavaScript files and remove merge conflict markers.
 """
 
 import os
 import re
-import sys
-from pathlib import Path
+import glob
 
 def fix_merge_conflicts(file_path):
     """Fix merge conflicts in a single file by keeping HEAD version."""
@@ -15,38 +14,30 @@ def fix_merge_conflicts(file_path):
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Check if file has merge conflict markers
+        # Check if file has merge conflicts
         if '<<<<<<< HEAD' not in content:
             return False
         
-        # Split content by merge conflict markers
-        lines = content.split('\n')
-        fixed_lines = []
-        in_conflict = False
-        keep_section = False
+        print(f"Fixing merge conflicts in: {file_path}")
         
-        for line in lines:
-            if line.strip() == '<<<<<<< HEAD':
-                in_conflict = True
-                keep_section = True
-                continue
-            elif line.strip() == '=======':
-                keep_section = False
-                continue
-            elif line.strip().startswith('>>>>>>>'):
-                in_conflict = False
-                keep_section = False
-                continue
-            elif in_conflict and not keep_section:
-                # Skip lines in the other branch
-                continue
-            else:
-                # Keep the line
-                fixed_lines.append(line)
+        # Pattern to match merge conflict blocks
+        # This will match from <<<<<<< HEAD to ======= and keep everything before =======
+        # Then remove the ======= to >>>>>>> branch-name part
+        pattern = r'<<<<<<< HEAD\n(.*?)\n=======.*?\n>>>>>>> [^\n]+\n?'
+        
+        # Replace merge conflict blocks with just the HEAD content
+        fixed_content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
+        
+        # Also handle cases where there might be multiple conflicts in one file
+        # Remove any remaining conflict markers
+        fixed_content = re.sub(r'<<<<<<< HEAD\n?', '', fixed_content)
+        fixed_content = re.sub(r'=======\n?', '', fixed_content)
+        fixed_content = re.sub(r'>>>>>>> [^\n]+\n?', '', fixed_content)
+        
+        # Clean up any extra newlines
+        fixed_content = re.sub(r'\n\n\n+', '\n\n', fixed_content)
         
         # Write the fixed content back
-        fixed_content = '\n'.join(fixed_lines)
-        
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(fixed_content)
         
@@ -57,36 +48,35 @@ def fix_merge_conflicts(file_path):
         return False
 
 def main():
-    """Main function to process all TypeScript files."""
-    app_dir = Path('/workspace/app')
+    """Main function to process all files with merge conflicts."""
+    # Find all TypeScript and JavaScript files
+    patterns = [
+        './app/**/*.tsx',
+        './app/**/*.ts',
+        './app/**/*.js',
+        './app/**/*.jsx',
+        './components/**/*.tsx',
+        './components/**/*.ts',
+        './components/**/*.js',
+        './components/**/*.jsx',
+        './*.tsx',
+        './*.ts',
+        './*.js',
+        './*.jsx'
+    ]
     
-    if not app_dir.exists():
-        print("App directory not found!")
-        return 1
+    files_processed = 0
+    files_fixed = 0
     
-    # Find all TypeScript files
-    tsx_files = list(app_dir.rglob('*.tsx'))
+    for pattern in patterns:
+        for file_path in glob.glob(pattern, recursive=True):
+            if os.path.isfile(file_path):
+                files_processed += 1
+                if fix_merge_conflicts(file_path):
+                    files_fixed += 1
     
-    print(f"Found {len(tsx_files)} TypeScript files")
-    
-    fixed_count = 0
-    error_count = 0
-    
-    for file_path in tsx_files:
-        try:
-            if fix_merge_conflicts(file_path):
-                fixed_count += 1
-                print(f"Fixed: {file_path}")
-        except Exception as e:
-            error_count += 1
-            print(f"Error with {file_path}: {e}")
-    
-    print(f"\nSummary:")
-    print(f"Files processed: {len(tsx_files)}")
-    print(f"Files fixed: {fixed_count}")
-    print(f"Errors: {error_count}")
-    
-    return 0 if error_count == 0 else 1
+    print(f"\nProcessed {files_processed} files")
+    print(f"Fixed merge conflicts in {files_fixed} files")
 
-if __name__ == '__main__':
-    sys.exit(main())
+if __name__ == "__main__":
+    main()

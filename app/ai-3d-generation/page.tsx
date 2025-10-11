@@ -1,16 +1,8 @@
 'use client';
 import React from 'react';
 
-<<<<<<< HEAD
 const AI3DGenerationPage: React.FC = () => {
-=======
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
   const features = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
     {
       title: 'Page',
       description: 'Professional page services and solutions.',
@@ -22,7 +14,6 @@ const PagePage: React.FC = () => {
       benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
     },
     {
-<<<<<<< HEAD
       icon: Eye,
       title: 'Advanced Rendering',
       description: 'High-quality rendering with ray tracing, global illumination, and real-time preview capabilities.',
@@ -33,8 +24,7 @@ const PagePage: React.FC = () => {
       title: 'Animation Generation',
       description: 'Create smooth animations and rigs automatically using AI-powered motion generation.',
       benefits: ['Auto-rigging', 'Motion capture', 'Keyframe generation', 'Physics simulation']
-    }
-  ]
+    },
     {
       icon: Brain,
       title: 'Game Development',
@@ -59,7 +49,9 @@ const PagePage: React.FC = () => {
       description: 'Create interactive 3D educational content and training simulations.',
       benefits: ['Educational models', 'Interactive simulations', 'VR/AR content', 'Training scenarios']
     }
-  ]
+  ];
+
+  const pricingPlans = [
     {
       name: 'Starter',
       price: '$29',
@@ -97,11 +89,6 @@ const PagePage: React.FC = () => {
         'Dedicated support'
       ],
       popular: false
-=======
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
     }
   ]
   return (
@@ -155,7 +142,6 @@ const PagePage: React.FC = () => {
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
                   Learn More
                 </button>
-<<<<<<< HEAD
 
 export default function Ai3DGenerationPage() {
   return (
@@ -175,8 +161,6 @@ export default function Ai3DGenerationPage() {
     </div>
   )
 }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
               </div>
             </div>
           </div>
@@ -188,8 +172,4 @@ export default function Ai3DGenerationPage() {
   )
 }
 
-<<<<<<< HEAD
 export default AI3DGenerationPage
-=======
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb

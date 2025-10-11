@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from './components/Navigation';
@@ -22,45 +21,17 @@ const HomePage: React.FC = () => {
     {
       icon: Shield,
       title: 'Cybersecurity',
-      description: 'Protect your digital assets with our comprehensive security solutions.',
-      benefits: ['Threat Detection', 'Data Protection', 'Compliance', 'Risk Assessment']
+      description: 'Comprehensive security solutions to protect your digital assets.',
+      benefits: ['Threat Detection', 'Data Protection', 'Compliance', 'Security Audits']
     },
     {
       icon: Code,
       title: 'Custom Development',
-      description: 'Bespoke software solutions designed to meet your unique requirements.',
+      description: 'Tailored software solutions designed specifically for your business requirements.',
       benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
     }
   ];
 
-  const stats = [
-    {number: '500+', label: 'Projects Completed'},
-    {number: '100+', label: 'Happy Clients'},
-    {number: '99.9%', label: 'Uptime Guarantee'},
-    {number: '24/7', label: 'Support Available'}
-  ];
-
-<<<<<<< HEAD
-  return (
-    <>
-      <Navigation />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <main className="pt-20 px-4 py-20">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Zion Tech Group
-              </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Advanced AI and IT Solutions for Modern Businesses
-=======
-'use client'
-import React from 'react'
-import {CheckCircle, Cloud, Shield, Code, Wifi} from 'lucide-react'
-const AppPage: React.FC = () => {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -69,10 +40,7 @@ const AppPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-<<<<<<< HEAD
-=======
               Zion Tech Group
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced AI and IT Solutions for Modern Businesses
@@ -96,80 +64,57 @@ const AppPage: React.FC = () => {
                   ))}
                 </ul>
               </div>
-<<<<<<< HEAD
-              <p className="text-gray-300 mb-4">
-                Professional app services delivered by experienced professionals.
->>>>>>> cursor/fix-errors-and-merge-to-main-6202
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    <feature.icon className="h-8 w-8 text-blue-400 mr-3" />
-                    <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
-                  </div>
-                  <p className="text-gray-300 mb-4">
-                    {feature.description}
-                  </p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-=======
             ))}
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300">{stat.label}</div>
+          <div className="text-center mb-16">
+            <p className="text-gray-300 mb-4">
+              Professional app services delivered by experienced professionals.
+            </p>
+          </div>
+            
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <feature.icon className="h-8 w-8 text-purple-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
           </div>
-<<<<<<< HEAD
-        </main>
-      </div>
-      
-      <Footer />
-    </>
-  );
-};
-
-export default HomePage;
-=======
+          
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Let our expert team help you implement cutting-edge technology solutions that drive growth and innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
         </div>
       </main>
       
       <Footer />
     </div>
-<<<<<<< HEAD
-  )
-}
-export default AppPage
->>>>>>> cursor/fix-errors-and-merge-to-main-6202
-=======
   );
 };
 
 export default HomePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb

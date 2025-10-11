@@ -22,7 +22,7 @@ const PagePage: React.FC = () => {
       description: 'Track record of successful projects and satisfied clients.',
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -82,7 +82,6 @@ const PagePage: React.FC = () => {
       </main>
       
       <Footer />
-<<<<<<< HEAD
 
 export default function PagePage() {
   return (
@@ -98,8 +97,6 @@ export default function PagePage() {
           </div>
         </div>
       </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
     </div>
   )
 }
@@ -107,8 +104,4 @@ export default function PagePage() {
   )
 }
 
-<<<<<<< HEAD
 export default SitemapPage
-=======
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb

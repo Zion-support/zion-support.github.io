@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { CheckCircle } from 'lucide-react'
@@ -25,33 +24,6 @@ import {Helmet} from 'react-helmet-async'
 import {ArrowRight} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-=======
-'use client';
-import React from 'react';
-
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  const features = [
-    {
-      title: 'Page',
-      description: 'Professional page services and solutions.',
-      benefits: ['High Quality', 'Expert Team', '24/7 Support', 'Custom Solutions']
-    },
-    {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
-    },
-    {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
-    }
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -115,8 +87,4 @@ const PagePage: React.FC = () => {
   )
 }
 
-<<<<<<< HEAD
 export default PrivacyPage
-=======
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb

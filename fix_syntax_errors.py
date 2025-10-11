@@ -1,53 +1,49 @@
 #!/usr/bin/env python3
 """
-Script to fix syntax errors in TypeScript/TSX files
+Script to fix common syntax errors in TypeScript/JavaScript files.
 """
+
 import os
 import re
 import glob
 
 def fix_syntax_errors(file_path):
-    """Fix syntax errors in a single file"""
+    """Fix common syntax errors in a file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix common syntax issues
+        # Fix missing commas in array/object literals
+        # Pattern: } followed by newline and {
+        content = re.sub(r'}\s*\n\s*{', '},\n    {', content)
         
-        # Fix unclosed JSX tags
-        content = re.sub(r'<h1[^>]*>(?!.*</h1>)', lambda m: m.group(0) + '</h1>', content)
-        content = re.sub(r'<h2[^>]*>(?!.*</h2>)', lambda m: m.group(0) + '</h2>', content)
-        content = re.sub(r'<h3[^>]*>(?!.*</h3>)', lambda m: m.group(0) + '</h3>', content)
-        content = re.sub(r'<p[^>]*>(?!.*</p>)', lambda m: m.group(0) + '</p>', content)
-        content = re.sub(r'<div[^>]*>(?!.*</div>)', lambda m: m.group(0) + '</div>', content)
+        # Fix missing semicolons after variable declarations
+        content = re.sub(r'(\w+)\s*=\s*\[([^\]]+)\]\s*\n\s*{', r'\1 = [\2],\n    {', content)
         
-        # Fix malformed JSX attributes
-        content = re.sub(r'className="[^"]*"[^>]*>', lambda m: m.group(0).replace('>', '>'), content)
+        # Fix missing export statements
+        if 'export default' not in content and 'const ' in content and 'React.FC' in content:
+            # Find the component name
+            match = re.search(r'const (\w+): React\.FC', content)
+            if match:
+                component_name = match.group(1)
+                content += f'\n\nexport default {component_name};'
         
-        # Fix missing closing braces
-        content = re.sub(r'(\s*)(\w+)\s*:\s*\[([^\]]*)\],?\s*$', r'\1\2: [\3],', content, flags=re.MULTILINE)
+        # Fix missing imports
+        if 'React' in content and 'import React' not in content:
+            content = "import React from 'react';\n" + content
         
-        # Fix malformed object properties
-        content = re.sub(r'(\w+)\s*:\s*([^,}]+),?\s*$', r'\1: \2,', content, flags=re.MULTILINE)
+        # Fix missing semicolons at end of statements
+        content = re.sub(r'(\w+)\s*=\s*\[([^\]]+)\]\s*$', r'\1 = [\2];', content, flags=re.MULTILINE)
         
-        # Fix missing commas in arrays
-        content = re.sub(r'(\w+)\s*\n\s*\]', r'\1\n]', content)
-        
-        # Fix malformed JSX expressions
-        content = re.sub(r'\{([^}]*)\s*$', r'{\1}', content, flags=re.MULTILINE)
-        
-        # Fix unclosed parentheses
-        content = re.sub(r'\(([^)]*)\s*$', r'(\1)', content, flags=re.MULTILINE)
-        
-        # Fix malformed arrow functions
-        content = re.sub(r'=>\s*\{([^}]*)\s*$', r'=> {\1}', content, flags=re.MULTILINE)
+        # Fix missing closing brackets
+        if content.count('{') > content.count('}'):
+            content += '\n}'
         
         # Clean up extra whitespace
-        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
+        content = re.sub(r'\n\n\n+', '\n\n', content)
         
-        # Only write if content changed
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
@@ -56,29 +52,31 @@ def fix_syntax_errors(file_path):
         return False
         
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix all syntax errors"""
-    # Find all TypeScript/TSX files
+    """Main function to process all files."""
     patterns = [
-        'app/**/*.tsx',
-        'app/**/*.ts',
-        'components/**/*.tsx',
-        'components/**/*.ts'
+        './app/**/*.tsx',
+        './app/**/*.ts',
+        './components/**/*.tsx',
+        './components/**/*.ts'
     ]
     
+    files_processed = 0
     files_fixed = 0
-    total_files = 0
     
     for pattern in patterns:
         for file_path in glob.glob(pattern, recursive=True):
-            total_files += 1
-            if fix_syntax_errors(file_path):
-                files_fixed += 1
+            if os.path.isfile(file_path):
+                files_processed += 1
+                if fix_syntax_errors(file_path):
+                    files_fixed += 1
+                    print(f"Fixed syntax errors in: {file_path}")
     
-    print(f"Fixed syntax errors in {files_fixed} out of {total_files} files")
+    print(f"\nProcessed {files_processed} files")
+    print(f"Fixed syntax errors in {files_fixed} files")
 
 if __name__ == "__main__":
     main()

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { CheckCircle } from 'lucide-react'
@@ -8,35 +7,6 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const AiAnalyticsPage: React.FC = () => {
     return (
-=======
-'use client';
-import React from 'react';
-
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const AiAnalyticsPage: React.FC = () => {
-  const features = [
-    {
-      title: 'AI Analytics',
-      description: 'Advanced analytics and insights powered by artificial intelligence.',
-      benefits: ['Real-time Analytics', 'Predictive Insights', 'Custom Dashboards', 'Data Visualization']
-    },
-    {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
-    },
-    {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
-    }
-  ];
-
-  return (
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
@@ -50,10 +20,7 @@ const AiAnalyticsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-<<<<<<< HEAD
-=======
               AI Analytics
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Professional AI analytics services to help your business succeed and grow.
@@ -98,13 +65,6 @@ const AiAnalyticsPage: React.FC = () => {
       
       <Footer />
     </div>
-<<<<<<< HEAD
   )
 }
 export default AiAnalyticsPage
-=======
-  );
-};
-
-export default AiAnalyticsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb

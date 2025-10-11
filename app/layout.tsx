@@ -2,7 +2,6 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
@@ -27,9 +26,6 @@ const LayoutPage: React.FC = () => {
     </div>
   )
 }
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
 export default function RootLayout({
   children,
 }: {
@@ -44,9 +40,5 @@ export default function RootLayout({
       </body>
     </html>
   )
-<<<<<<< HEAD
 }
 export default LayoutPage
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb

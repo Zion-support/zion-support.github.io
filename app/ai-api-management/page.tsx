@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import { CheckCircle } from 'lucide-react'
 import {Helmet} from 'react-helmet-async'
@@ -6,17 +5,6 @@ import {ArrowRight} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 export default function AiApiManagementPage() {
-=======
-'use client';
-import React from 'react';
-
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const AiApiManagementPage: React.FC = () => {
-  const features = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
     {
       title: 'AI API Management',
       description: 'Advanced API management and insights powered by artificial intelligence.',
@@ -32,12 +20,7 @@ const AiApiManagementPage: React.FC = () => {
       description: 'Track record of successful projects and satisfied clients.',
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
     }
-<<<<<<< HEAD
   ]
-=======
-  ];
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -52,10 +35,7 @@ const AiApiManagementPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-<<<<<<< HEAD
-=======
               AI API Management
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Professional AI API management services to help your business succeed and grow.
@@ -103,8 +83,4 @@ const AiApiManagementPage: React.FC = () => {
   )
 }
 
-<<<<<<< HEAD
 export default AiApiManagementPage
-=======
-export default AiApiManagementPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
