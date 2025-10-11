@@ -5,7 +5,7 @@ import http from 'http';
 import { URL } from 'url';
 import fs from 'fs';
 
-class WebsiteAuditor {
+class ComprehensiveWebsiteAuditor {
   constructor(baseUrl) {
     this.baseUrl = baseUrl;
     this.visitedUrls = new Set();
@@ -13,8 +13,14 @@ class WebsiteAuditor {
     this.validLinks = [];
     this.missingPages = [];
     this.externalLinks = [];
-    this.maxDepth = 3;
+    this.internalLinks = [];
+    this.maxDepth = 2;
     this.currentDepth = 0;
+    this.delay = 100; // Delay between requests in ms
+  }
+
+  async sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 
   async checkUrl(url) {
@@ -176,6 +182,9 @@ class WebsiteAuditor {
     this.visitedUrls.add(url);
     console.log(`🔍 Auditing: ${url} (depth: ${depth})`);
 
+    // Add delay to be respectful
+    await this.sleep(this.delay);
+
     // Check if URL is accessible
     const urlCheck = await this.checkUrl(url);
     
@@ -200,6 +209,7 @@ class WebsiteAuditor {
 
     // If it's an internal link, get the content and extract more links
     if (this.isInternalLink(url)) {
+      this.internalLinks.push(url);
       const pageContent = await this.getPageContent(url);
       
       if (pageContent.success) {
@@ -226,7 +236,39 @@ class WebsiteAuditor {
     console.log(`📊 Maximum depth: ${this.maxDepth}`);
     console.log('='.repeat(50));
 
+    // Start with the main page
     await this.auditPage(this.baseUrl);
+
+    // Check common pages that might exist
+    const commonPages = [
+      '/about',
+      '/contact',
+      '/services',
+      '/pricing',
+      '/blog',
+      '/case-studies',
+      '/careers',
+      '/ai-services',
+      '/it-services',
+      '/micro-saas',
+      '/tutorials',
+      '/consultation',
+      '/demo',
+      '/support',
+      '/privacy',
+      '/terms',
+      '/cookies',
+      '/sitemap',
+      '/team'
+    ];
+
+    console.log('\n🔍 Checking common pages...');
+    for (const page of commonPages) {
+      const fullUrl = new URL(page, this.baseUrl).href;
+      if (!this.visitedUrls.has(fullUrl)) {
+        await this.auditPage(fullUrl, 0);
+      }
+    }
 
     // Generate report
     this.generateReport();
@@ -240,16 +282,18 @@ class WebsiteAuditor {
         totalPagesVisited: this.visitedUrls.size,
         validLinks: this.validLinks.length,
         brokenLinks: this.brokenLinks.length,
-        externalLinks: this.externalLinks.length
+        externalLinks: this.externalLinks.length,
+        internalLinks: this.internalLinks.length
       },
       brokenLinks: this.brokenLinks,
       validLinks: this.validLinks,
       externalLinks: this.externalLinks,
+      internalLinks: this.internalLinks,
       recommendations: this.generateRecommendations()
     };
 
     // Save report to file
-    fs.writeFileSync('website-audit-report.json', JSON.stringify(report, null, 2));
+    fs.writeFileSync('comprehensive-audit-report.json', JSON.stringify(report, null, 2));
     
     // Print summary
     console.log('\n' + '='.repeat(50));
@@ -259,6 +303,7 @@ class WebsiteAuditor {
     console.log(`✅ Valid links: ${report.summary.validLinks}`);
     console.log(`❌ Broken links: ${report.summary.brokenLinks}`);
     console.log(`🔗 External links: ${report.summary.externalLinks}`);
+    console.log(`🏠 Internal links: ${report.summary.internalLinks}`);
 
     if (this.brokenLinks.length > 0) {
       console.log('\n❌ BROKEN LINKS:');
@@ -267,12 +312,17 @@ class WebsiteAuditor {
       });
     }
 
+    console.log('\n🏠 INTERNAL PAGES FOUND:');
+    this.internalLinks.forEach(link => {
+      console.log(`  - ${link}`);
+    });
+
     console.log('\n💡 RECOMMENDATIONS:');
     report.recommendations.forEach(rec => {
       console.log(`  - ${rec}`);
     });
 
-    console.log('\n📄 Full report saved to: website-audit-report.json');
+    console.log('\n📄 Full report saved to: comprehensive-audit-report.json');
   }
 
   generateRecommendations() {
@@ -290,6 +340,8 @@ class WebsiteAuditor {
     recommendations.push('Add sitemap.xml for better SEO');
     recommendations.push('Implement proper redirects for moved pages');
     recommendations.push('Add meta descriptions and proper heading structure');
+    recommendations.push('Ensure all internal links are working');
+    recommendations.push('Add proper navigation structure');
 
     return recommendations;
   }
@@ -297,7 +349,7 @@ class WebsiteAuditor {
 
 // Run the audit
 async function main() {
-  const auditor = new WebsiteAuditor('https://ziontechgroup.com');
+  const auditor = new ComprehensiveWebsiteAuditor('https://ziontechgroup.com');
   await auditor.runAudit();
 }
 
@@ -306,4 +358,4 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   main().catch(console.error);
 }
 
-export default WebsiteAuditor;
+export default ComprehensiveWebsiteAuditor;
