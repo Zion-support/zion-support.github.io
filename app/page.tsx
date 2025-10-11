@@ -44,10 +44,9 @@ export default function HomePage() {
     <div>
   
       <Helmet>
-  
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta>
-  
+        <meta name="description" content="Professional AI and IT solutions by Zion Tech Group. Advanced technology services for your business." />
+        <meta name="keywords" content="AI solutions, IT services, Zion Tech Group, artificial intelligence, technology consulting" />
       </Helmet>
       
       <Navigation>
@@ -75,8 +74,7 @@ export default function HomePage() {
                 <a>
   
                   Get Started
-                  <ArrowRight>
-  
+                  <ArrowRight className="w-4 h-4 inline ml-2" />
                 </a>
                 <a>
   
