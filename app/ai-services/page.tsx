@@ -1010,8 +1010,372 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Content Generation',
       popular: true,
-      icon: FileText;
-    };
+      icon: FileText
+    },
+    {
+      id: 'ai-quantum-computing',
+      name: 'AI Quantum Computing Solutions',
+      description: 'Revolutionary quantum computing applications for optimization, cryptography, and complex problem solving',
+      price: '$2,999/month',
+      marketPrice: '$5000-20000/month',
+      features: [
+        'Quantum Optimization',
+        'Cryptographic Security',
+        'Complex Simulations',
+        'Machine Learning Acceleration',
+        'Quantum Algorithms',
+        'Quantum Error Correction',
+        'Quantum Machine Learning',
+        'Quantum Neural Networks'
+      ],
+      benefits: [
+        'Exponential processing power',
+        'Unbreakable encryption',
+        'Revolutionary problem solving',
+        'Future-proof technology'
+      ],
+      category: 'Quantum Computing',
+      popular: true,
+      icon: Brain
+    },
+    {
+      id: 'ai-holographic-interface',
+      name: 'AI Holographic Interface',
+      description: 'Next-generation holographic user interfaces powered by AI for immersive business applications',
+      price: '$1,499/month',
+      marketPrice: '$2500-10000/month',
+      features: [
+        '3D Holographic Displays',
+        'Gesture Recognition',
+        'Spatial Computing',
+        'AR/VR Integration',
+        'Real-time Rendering',
+        'Haptic Feedback',
+        'Eye Tracking',
+        'Voice Commands'
+      ],
+      benefits: [
+        'Immersive user experience',
+        'Enhanced productivity',
+        'Cutting-edge technology',
+        'Competitive advantage'
+      ],
+      category: 'Holographic Technology',
+      popular: true,
+      icon: Eye
+    },
+    {
+      id: 'ai-edge-computing-platform',
+      name: 'AI Edge Computing Platform',
+      description: 'Distributed AI processing at the edge for real-time decision making and reduced latency',
+      price: '$899/month',
+      marketPrice: '$1500-6000/month',
+      features: [
+        'Edge AI Processing',
+        'Real-time Analytics',
+        'Low Latency Response',
+        'Offline Capability',
+        'Distributed Learning',
+        'Edge Model Deployment',
+        'Federated Learning',
+        'Edge Security'
+      ],
+      benefits: [
+        'Ultra-low latency',
+        'Reduced bandwidth costs',
+        'Enhanced privacy',
+        'Real-time processing'
+      ],
+      category: 'Edge Computing',
+      popular: true,
+      icon: Cpu
+    },
+    {
+      id: 'ai-quantum-security-suite',
+      name: 'AI Quantum Security Suite',
+      description: 'Advanced quantum-resistant cybersecurity solutions for future-proof protection',
+      price: '$1,299/month',
+      marketPrice: '$2000-8000/month',
+      features: [
+        'Quantum Key Distribution',
+        'Post-Quantum Cryptography',
+        'Quantum Threat Detection',
+        'Advanced Encryption',
+        'Future-Proof Security',
+        'Quantum Random Number Generation',
+        'Quantum Authentication',
+        'Zero-Trust Architecture'
+      ],
+      benefits: [
+        'Quantum-resistant security',
+        'Future-proof protection',
+        'Advanced threat detection',
+        'Military-grade encryption'
+      ],
+      category: 'Cybersecurity',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'ai-neural-database',
+      name: 'AI Neural Database',
+      description: 'Revolutionary database system that learns and optimizes itself using neural networks',
+      price: '$799/month',
+      marketPrice: '$1200-5000/month',
+      features: [
+        'Self-Optimizing Queries',
+        'Predictive Indexing',
+        'Automatic Scaling',
+        'Neural Query Optimization',
+        'Intelligent Caching',
+        'Auto-tuning Performance',
+        'Predictive Analytics',
+        'Real-time Optimization'
+      ],
+      benefits: [
+        'Self-optimizing performance',
+        'Reduced maintenance',
+        'Intelligent scaling',
+        'Predictive optimization'
+      ],
+      category: 'Database',
+      popular: true,
+      icon: Database
+    },
+    {
+      id: 'ai-3d-generation',
+      name: 'AI 3D Generation',
+      description: 'Advanced 3D content generation using AI for models, animations, and virtual environments',
+      price: '$699/month',
+      marketPrice: '$1200-4000/month',
+      features: [
+        '3D Model Generation',
+        'Texture Synthesis',
+        'Animation Creation',
+        'Virtual Environment Design',
+        'Real-time Rendering',
+        '3D Asset Optimization',
+        'Procedural Generation',
+        'AR/VR Content'
+      ],
+      benefits: [
+        'Faster 3D content creation',
+        'Reduced design costs',
+        'Automated asset generation',
+        'Enhanced creativity'
+      ],
+      category: '3D Technology',
+      popular: false,
+      icon: Eye
+    },
+    {
+      id: 'ai-accounting-assistant',
+      name: 'AI Accounting Assistant',
+      description: 'Intelligent accounting platform with automated bookkeeping and financial analysis',
+      price: '$149/month',
+      marketPrice: '$250-600/month',
+      features: [
+        'Automated Bookkeeping',
+        'Expense Categorization',
+        'Financial Analysis',
+        'Tax Preparation',
+        'Invoice Processing',
+        'Compliance Reporting',
+        'Cash Flow Analysis',
+        'Financial Forecasting'
+      ],
+      benefits: [
+        'Reduced accounting costs',
+        'Improved accuracy',
+        'Better financial insights',
+        'Time savings'
+      ],
+      category: 'Finance',
+      popular: true,
+      icon: DollarSign
+    },
+    {
+      id: 'ai-agricultural-intelligence',
+      name: 'AI Agricultural Intelligence Pro',
+      description: 'Smart farming solutions with AI-powered crop monitoring and yield optimization',
+      price: '$399/month',
+      marketPrice: '$800-2500/month',
+      features: [
+        'Crop Monitoring',
+        'Yield Prediction',
+        'Pest Detection',
+        'Soil Analysis',
+        'Weather Integration',
+        'Irrigation Optimization',
+        'Harvest Planning',
+        'Market Analysis'
+      ],
+      benefits: [
+        'Increased crop yields',
+        'Reduced resource waste',
+        'Better pest management',
+        'Optimized farming practices'
+      ],
+      category: 'Agriculture',
+      popular: false,
+      icon: Target
+    },
+    {
+      id: 'ai-climate-prediction',
+      name: 'AI Climate Prediction Engine',
+      description: 'Advanced climate modeling and prediction system for environmental planning and risk assessment',
+      price: '$1,199/month',
+      marketPrice: '$2500-8000/month',
+      features: [
+        'Climate Modeling',
+        'Weather Prediction',
+        'Risk Assessment',
+        'Environmental Monitoring',
+        'Disaster Prediction',
+        'Carbon Footprint Analysis',
+        'Sustainability Metrics',
+        'Policy Impact Analysis'
+      ],
+      benefits: [
+        'Better climate planning',
+        'Reduced environmental risks',
+        'Improved sustainability',
+        'Data-driven decisions'
+      ],
+      category: 'Climate Technology',
+      popular: true,
+      icon: Globe
+    },
+    {
+      id: 'ai-drug-discovery',
+      name: 'AI Drug Discovery Pro',
+      description: 'Revolutionary drug discovery platform using AI for molecular design and pharmaceutical research',
+      price: '$2,499/month',
+      marketPrice: '$5000-20000/month',
+      features: [
+        'Molecular Design',
+        'Drug Target Identification',
+        'Compound Screening',
+        'Toxicity Prediction',
+        'Clinical Trial Optimization',
+        'Patent Analysis',
+        'Market Research',
+        'Regulatory Compliance'
+      ],
+      benefits: [
+        'Faster drug development',
+        'Reduced research costs',
+        'Better success rates',
+        'Accelerated innovation'
+      ],
+      category: 'Pharmaceutical',
+      popular: true,
+      icon: Heart
+    },
+    {
+      id: 'ai-energy-grid-management',
+      name: 'AI Energy Grid Management Pro',
+      description: 'Smart grid optimization platform with AI-powered energy distribution and management',
+      price: '$1,599/month',
+      marketPrice: '$3000-10000/month',
+      features: [
+        'Grid Optimization',
+        'Load Balancing',
+        'Renewable Integration',
+        'Demand Forecasting',
+        'Fault Detection',
+        'Energy Trading',
+        'Storage Management',
+        'Carbon Tracking'
+      ],
+      benefits: [
+        'Improved grid efficiency',
+        'Reduced energy waste',
+        'Better renewable integration',
+        'Lower operational costs'
+      ],
+      category: 'Energy',
+      popular: true,
+      icon: Zap
+    },
+    {
+      id: 'ai-financial-crime-detection',
+      name: 'AI Financial Crime Detection Pro',
+      description: 'Advanced financial crime detection system with real-time monitoring and prevention',
+      price: '$1,899/month',
+      marketPrice: '$3500-12000/month',
+      features: [
+        'Real-time Monitoring',
+        'Pattern Recognition',
+        'Risk Scoring',
+        'Compliance Reporting',
+        'Transaction Analysis',
+        'Behavioral Analytics',
+        'Regulatory Updates',
+        'Case Management'
+      ],
+      benefits: [
+        'Reduced financial crime',
+        'Better compliance',
+        'Faster detection',
+        'Cost savings'
+      ],
+      category: 'Financial Security',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'ai-holographic-workspace',
+      name: 'AI Holographic Workspace',
+      description: 'Immersive 3D workspace platform with AI-powered collaboration and spatial computing',
+      price: '$1,299/month',
+      marketPrice: '$2500-8000/month',
+      features: [
+        '3D Virtual Workspace',
+        'Spatial Computing',
+        'Holographic Displays',
+        'Gesture Control',
+        'Real-time Collaboration',
+        'AI Assistant Integration',
+        'Virtual Meetings',
+        'Data Visualization'
+      ],
+      benefits: [
+        'Enhanced collaboration',
+        'Immersive experience',
+        'Improved productivity',
+        'Future-ready workspace'
+      ],
+      category: 'Holographic Technology',
+      popular: true,
+      icon: Eye
+    },
+    {
+      id: 'ai-blockchain-analytics',
+      name: 'AI Blockchain Analytics',
+      description: 'Advanced blockchain data analysis and cryptocurrency market insights using AI',
+      price: '$1,499/month',
+      marketPrice: '$3000-10000/month',
+      features: [
+        'Blockchain Transaction Analysis',
+        'Cryptocurrency Market Prediction',
+        'Smart Contract Auditing',
+        'DeFi Protocol Analysis',
+        'Risk Assessment',
+        'Compliance Monitoring',
+        'Trading Insights',
+        'Portfolio Optimization'
+      ],
+      benefits: [
+        'Better investment decisions',
+        'Risk mitigation',
+        'Market opportunity identification',
+        'Compliance monitoring'
+      ],
+      category: 'Blockchain',
+      popular: true,
+      icon: Link
+    }
   ];
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
@@ -1041,7 +1405,20 @@ const AiServicesPage: React.FC = () => {
     { id: 'Conversational AI', name: 'Conversational AI', count: services.filter(s => s.category === 'Conversational AI').length },
     { id: 'Knowledge Management', name: 'Knowledge Management', count: services.filter(s => s.category === 'Knowledge Management').length },
     { id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length },
-    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length }
+    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length },
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: services.filter(s => s.category === 'Quantum Computing').length },
+    { id: 'Holographic Technology', name: 'Holographic Technology', count: services.filter(s => s.category === 'Holographic Technology').length },
+    { id: 'Edge Computing', name: 'Edge Computing', count: services.filter(s => s.category === 'Edge Computing').length },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: services.filter(s => s.category === 'Cybersecurity').length },
+    { id: 'Database', name: 'Database', count: services.filter(s => s.category === 'Database').length },
+    { id: '3D Technology', name: '3D Technology', count: services.filter(s => s.category === '3D Technology').length },
+    { id: 'Finance', name: 'Finance', count: services.filter(s => s.category === 'Finance').length },
+    { id: 'Agriculture', name: 'Agriculture', count: services.filter(s => s.category === 'Agriculture').length },
+    { id: 'Climate Technology', name: 'Climate Technology', count: services.filter(s => s.category === 'Climate Technology').length },
+    { id: 'Pharmaceutical', name: 'Pharmaceutical', count: services.filter(s => s.category === 'Pharmaceutical').length },
+    { id: 'Energy', name: 'Energy', count: services.filter(s => s.category === 'Energy').length },
+    { id: 'Financial Security', name: 'Financial Security', count: services.filter(s => s.category === 'Financial Security').length },
+    { id: 'Blockchain', name: 'Blockchain', count: services.filter(s => s.category === 'Blockchain').length }
   ];
   const filteredServices = services.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;

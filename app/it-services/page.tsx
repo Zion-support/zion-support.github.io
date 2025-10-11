@@ -1007,8 +1007,372 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud Security',
       popular: true,
-      icon: Shield;
-    };
+      icon: Shield
+    },
+    {
+      id: 'quantum-computing-infrastructure',
+      name: 'Quantum Computing Infrastructure',
+      description: 'Revolutionary quantum computing infrastructure setup and management for advanced computational needs',
+      price: '$5,000/month',
+      marketPrice: '$10000-50000/month',
+      features: [
+        'Quantum Hardware Setup',
+        'Quantum Software Integration',
+        'Quantum Algorithm Development',
+        'Quantum Security Implementation',
+        'Quantum Performance Optimization',
+        'Quantum Error Correction',
+        'Quantum Networking',
+        'Quantum Cloud Services'
+      ],
+      benefits: [
+        'Exponential processing power',
+        'Revolutionary problem solving',
+        'Future-proof technology',
+        'Competitive advantage'
+      ],
+      category: 'Quantum Computing',
+      popular: true,
+      icon: Cpu
+    },
+    {
+      id: 'holographic-technology-solutions',
+      name: 'Holographic Technology Solutions',
+      description: 'Advanced holographic display and interaction systems for immersive business applications',
+      price: '$3,500/month',
+      marketPrice: '$6000-25000/month',
+      features: [
+        'Holographic Display Setup',
+        '3D Content Creation',
+        'Gesture Recognition Systems',
+        'Spatial Computing Integration',
+        'AR/VR Implementation',
+        'Haptic Feedback Systems',
+        'Eye Tracking Technology',
+        'Real-time Rendering'
+      ],
+      benefits: [
+        'Immersive user experience',
+        'Enhanced productivity',
+        'Cutting-edge technology',
+        'Competitive differentiation'
+      ],
+      category: 'Holographic Technology',
+      popular: true,
+      icon: Eye
+    },
+    {
+      id: 'ai-infrastructure-mlops',
+      name: 'AI Infrastructure & MLOps',
+      description: 'Complete AI infrastructure setup with machine learning operations and model deployment',
+      price: '$2,800/month',
+      marketPrice: '$4500-15000/month',
+      features: [
+        'AI Model Deployment',
+        'MLOps Pipeline Setup',
+        'GPU Infrastructure',
+        'Model Monitoring',
+        'Auto-scaling AI Services',
+        'Data Pipeline Management',
+        'Model Versioning',
+        'A/B Testing Framework'
+      ],
+      benefits: [
+        'Scalable AI infrastructure',
+        'Automated ML operations',
+        'High-performance computing',
+        'Cost-effective AI deployment'
+      ],
+      category: 'AI Infrastructure',
+      popular: true,
+      icon: Brain
+    },
+    {
+      id: 'zero-trust-security-architecture',
+      name: 'Zero-Trust Security Architecture',
+      description: 'Comprehensive zero-trust security implementation with advanced threat protection and monitoring',
+      price: '$2,200/month',
+      marketPrice: '$3500-12000/month',
+      features: [
+        'Zero-Trust Implementation',
+        'Identity & Access Management',
+        'Micro-segmentation',
+        'Continuous Monitoring',
+        'Threat Intelligence',
+        'Behavioral Analytics',
+        'Risk Assessment',
+        'Compliance Automation'
+      ],
+      benefits: [
+        'Enhanced security posture',
+        'Reduced attack surface',
+        'Continuous monitoring',
+        'Compliance assurance'
+      ],
+      category: 'Security',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'blockchain-web3-infrastructure',
+      name: 'Blockchain & Web3 Infrastructure',
+      description: 'Complete blockchain infrastructure setup with smart contracts and decentralized applications',
+      price: '$3,200/month',
+      marketPrice: '$5000-20000/month',
+      features: [
+        'Blockchain Network Setup',
+        'Smart Contract Development',
+        'DeFi Integration',
+        'NFT Platform Development',
+        'Web3 Security',
+        'Cryptocurrency Integration',
+        'Token Development',
+        'Decentralized Storage'
+      ],
+      benefits: [
+        'Decentralized solutions',
+        'Enhanced security',
+        'Transparent operations',
+        'Future-proof technology'
+      ],
+      category: 'Blockchain',
+      popular: true,
+      icon: Link
+    },
+    {
+      id: 'edge-computing-solutions',
+      name: 'Edge Computing Solutions',
+      description: 'Distributed edge computing infrastructure for low-latency applications and IoT integration',
+      price: '$1,800/month',
+      marketPrice: '$3000-10000/month',
+      features: [
+        'Edge Server Deployment',
+        'IoT Integration',
+        'Real-time Processing',
+        'Distributed Architecture',
+        'Edge Security',
+        'Content Delivery Networks',
+        'Edge AI Processing',
+        '5G Integration'
+      ],
+      benefits: [
+        'Ultra-low latency',
+        'Reduced bandwidth costs',
+        'Enhanced privacy',
+        'Real-time processing'
+      ],
+      category: 'Edge Computing',
+      popular: true,
+      icon: Globe
+    },
+    {
+      id: '5g-network-implementation',
+      name: '5G Network Implementation',
+      description: 'Complete 5G network infrastructure setup and optimization for high-speed connectivity',
+      price: '$4,500/month',
+      marketPrice: '$8000-30000/month',
+      features: [
+        '5G Network Design',
+        'Infrastructure Deployment',
+        'Performance Optimization',
+        'Security Implementation',
+        'IoT Integration',
+        'Network Slicing',
+        'Edge Computing Integration',
+        'Mobile Edge Computing'
+      ],
+      benefits: [
+        'Ultra-fast connectivity',
+        'Low latency',
+        'Massive IoT support',
+        'Enhanced mobile experience'
+      ],
+      category: '5G Technology',
+      popular: true,
+      icon: Wifi
+    },
+    {
+      id: 'advanced-monitoring-observability',
+      name: 'Advanced Monitoring & Observability',
+      description: 'Comprehensive monitoring and observability platform with AI-powered insights and automation',
+      price: '$1,500/month',
+      marketPrice: '$2500-8000/month',
+      features: [
+        'Full-Stack Monitoring',
+        'AI-Powered Analytics',
+        'Automated Alerting',
+        'Performance Optimization',
+        'Predictive Maintenance',
+        'Distributed Tracing',
+        'Log Aggregation',
+        'Real-time Dashboards'
+      ],
+      benefits: [
+        'Proactive issue detection',
+        'Improved uptime',
+        'Better performance',
+        'Reduced downtime'
+      ],
+      category: 'Monitoring',
+      popular: true,
+      icon: Monitor
+    },
+    {
+      id: 'hyperautomation-solutions',
+      name: 'Hyperautomation Solutions',
+      description: 'End-to-end hyperautomation implementation with AI, RPA, and process intelligence',
+      price: '$2,500/month',
+      marketPrice: '$4000-15000/month',
+      features: [
+        'RPA Implementation',
+        'Process Mining',
+        'AI Integration',
+        'Workflow Automation',
+        'Intelligent Document Processing',
+        'Cognitive Automation',
+        'Process Intelligence',
+        'Digital Workforce'
+      ],
+      benefits: [
+        'Complete process automation',
+        'Reduced manual work',
+        'Improved efficiency',
+        'Cost savings'
+      ],
+      category: 'Automation',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'metaverse-infrastructure',
+      name: 'Metaverse Infrastructure',
+      description: 'Complete metaverse infrastructure setup with virtual worlds, avatars, and immersive experiences',
+      price: '$4,200/month',
+      marketPrice: '$8000-25000/month',
+      features: [
+        'Virtual World Creation',
+        'Avatar Systems',
+        'Immersive Experiences',
+        'Virtual Economy',
+        'Social Features',
+        'Cross-platform Integration',
+        'Real-time Collaboration',
+        'Virtual Events'
+      ],
+      benefits: [
+        'Immersive experiences',
+        'Enhanced engagement',
+        'New revenue streams',
+        'Future-ready platform'
+      ],
+      category: 'Metaverse',
+      popular: true,
+      icon: Eye
+    },
+    {
+      id: 'ai-powered-cybersecurity',
+      name: 'AI-Powered Cybersecurity',
+      description: 'Advanced AI-driven cybersecurity solutions with machine learning threat detection and response',
+      price: '$2,800/month',
+      marketPrice: '$5000-15000/month',
+      features: [
+        'AI Threat Detection',
+        'Behavioral Analysis',
+        'Automated Response',
+        'Threat Hunting',
+        'Security Orchestration',
+        'Incident Response',
+        'Vulnerability Management',
+        'Compliance Monitoring'
+      ],
+      benefits: [
+        'Faster threat detection',
+        'Reduced false positives',
+        'Automated response',
+        'Better security posture'
+      ],
+      category: 'Cybersecurity',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'quantum-cybersecurity',
+      name: 'Quantum Cybersecurity',
+      description: 'Next-generation quantum-resistant cybersecurity solutions for future-proof protection',
+      price: '$3,500/month',
+      marketPrice: '$6000-20000/month',
+      features: [
+        'Quantum Key Distribution',
+        'Post-Quantum Cryptography',
+        'Quantum Random Number Generation',
+        'Quantum Authentication',
+        'Quantum Threat Detection',
+        'Zero-Trust Architecture',
+        'Advanced Encryption',
+        'Compliance Framework'
+      ],
+      benefits: [
+        'Quantum-resistant security',
+        'Future-proof protection',
+        'Advanced threat detection',
+        'Military-grade encryption'
+      ],
+      category: 'Quantum Security',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'autonomous-systems',
+      name: 'Autonomous Systems Infrastructure',
+      description: 'Complete infrastructure for autonomous systems including robotics, drones, and self-driving vehicles',
+      price: '$3,800/month',
+      marketPrice: '$7000-25000/month',
+      features: [
+        'Robotics Integration',
+        'Drone Fleet Management',
+        'Autonomous Vehicle Systems',
+        'Sensor Networks',
+        'AI Processing',
+        'Real-time Control',
+        'Safety Systems',
+        'Regulatory Compliance'
+      ],
+      benefits: [
+        'Automated operations',
+        'Reduced human error',
+        '24/7 operation',
+        'Cost optimization'
+      ],
+      category: 'Autonomous Systems',
+      popular: true,
+      icon: Cpu
+    },
+    {
+      id: 'digital-twin-platform',
+      name: 'Digital Twin Platform',
+      description: 'Comprehensive digital twin platform for real-time monitoring and simulation of physical assets',
+      price: '$2,200/month',
+      marketPrice: '$4000-12000/month',
+      features: [
+        '3D Asset Modeling',
+        'Real-time Data Integration',
+        'Predictive Analytics',
+        'Simulation Engine',
+        'IoT Connectivity',
+        'Visualization Tools',
+        'Performance Monitoring',
+        'Maintenance Optimization'
+      ],
+      benefits: [
+        'Better asset management',
+        'Predictive maintenance',
+        'Reduced downtime',
+        'Optimized performance'
+      ],
+      category: 'Digital Twin',
+      popular: true,
+      icon: Monitor
+    }
   ];
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
@@ -1043,57 +1407,106 @@ const ItServicesPage: React.FC = () => {
     { id: 'Cloud Optimization', name: 'Cloud Optimization', count: services.filter(s => s.category === 'Cloud Optimization').length },
     { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
     { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
-    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
+    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length },
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: services.filter(s => s.category === 'Quantum Computing').length },
+    { id: 'Holographic Technology', name: 'Holographic Technology', count: services.filter(s => s.category === 'Holographic Technology').length },
+    { id: 'AI Infrastructure', name: 'AI Infrastructure', count: services.filter(s => s.category === 'AI Infrastructure').length },
+    { id: 'Blockchain', name: 'Blockchain', count: services.filter(s => s.category === 'Blockchain').length },
+    { id: 'Edge Computing', name: 'Edge Computing', count: services.filter(s => s.category === 'Edge Computing').length },
+    { id: '5G Technology', name: '5G Technology', count: services.filter(s => s.category === '5G Technology').length },
+    { id: 'Monitoring', name: 'Monitoring', count: services.filter(s => s.category === 'Monitoring').length },
+    { id: 'Metaverse', name: 'Metaverse', count: services.filter(s => s.category === 'Metaverse').length },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: services.filter(s => s.category === 'Cybersecurity').length },
+    { id: 'Quantum Security', name: 'Quantum Security', count: services.filter(s => s.category === 'Quantum Security').length },
+    { id: 'Autonomous Systems', name: 'Autonomous Systems', count: services.filter(s => s.category === 'Autonomous Systems').length },
+    { id: 'Digital Twin', name: 'Digital Twin', count: services.filter(s => s.category === 'Digital Twin').length }
   ];
-  const filteredServices = const filteredServices = const filteredServices = services.filter();
-  );
+  const filteredServices = services.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    return matchesCategory;
+  });
 
-  return() {categories.map((category) => ()
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      selectedCategory === category.id
-                        ? 'bg-cyan-500 text-white'
-                        : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                    }`}
-                  >
-                    {category.name} ({category.count})
-                  </button>
-                ))}
-              </div>
+  return (
+    <>
+      <Helmet>
+        <title>IT Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, DevOps, and enterprise solutions." />
+      </Helmet>
+      
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              IT <span className="text-purple-400">Services</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+              Comprehensive IT solutions to modernize your infrastructure, enhance security, and drive digital transformation.
+            </p>
+
+            {/* Category Filter */}
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? 'bg-purple-500 text-white'
+                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+                  }`}
+                >
+                  {category.name} ({category.count})
+                </button>
+              ))}
             </div>
 
             {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" /></div>
-              {filteredServices.map((service) => ()
-                    )}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              {filteredServices.map((service) => (
+                <div key={service.id} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-4">
+                      <service.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">{service.name}</h3>
+                      <div className="flex items-center space-x-2">
+                        <span className="text-2xl font-bold text-purple-400">{service.price}</span>
+                        <span className="text-gray-400 text-sm line-through">{service.marketPrice}</span>
+                      </div>
+                    </div>
                   </div>
                   
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   
-                  <div className="flex items-center justify-between mb-4" /></div>
-                    <div></div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div>
                       <span className="text-2xl font-bold text-purple-400">{service.price}</span>
                       <span className="text-gray-400 text-sm ml-2 line-through">{service.marketPrice}</span>
                     </div>
                     <span className="text-gray-400 text-sm">{service.category}</span>
                   </div>
 
-                  <div className="mb-6" /></div>
+                  <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
-                    <ul className="space-y-2" /></ul>
-                      {service.features.slice(0, 3).map((feature, index) => ()
+                    <ul className="space-y-2">
+                      {service.features.slice(0, 3).map((feature, index) => (
+                        <li key={index} className="text-gray-300 text-sm flex items-center">
+                          <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="flex items-center justify-between" /></div>
+                  <div className="flex items-center justify-between">
                     <Link to="/contact"
-                      className="flex items-center text-purple-400 hover:text-purple-300 transition-colors" /></Link>
+                      className="flex items-center text-purple-400 hover:text-purple-300 transition-colors">
                       Learn More
-                      <ArrowRight className="w-4 h-4 ml-1" / /></ArrowRight>
+                      <ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
                     <Link to="/contact"
-                      className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300" /></Link>
+                      className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300">
                       Get Quote
                     </Link>
                   </div>
@@ -1102,22 +1515,22 @@ const ItServicesPage: React.FC = () => {
             </div>
 
             {/* CTA Section */}
-            <div className="text-center" /></div>
-              <div className="bg-slate-800/50 rounded-lg p-8" /></div>
-                <h2 className="text-2xl font-bold text-white mb-4" /></h2>
+            <div className="text-center">
+              <div className="bg-slate-800/50 rounded-lg p-8">
+                <h2 className="text-2xl font-bold text-white mb-4">
                   Ready to Modernize Your IT Infrastructure?
                 </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto" /></p>
+                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
                   Let our IT experts help you choose the right solutions for your business needs. 
                   Get a free consultation and see how we can transform your technology infrastructure.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link to="/contact"
-                    className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></Link>
+                    className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
                     Get Free Consultation
                   </Link>
                   <a href="tel:+13024640950"
-                    className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
+                    className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
                     Call: (302) 464-0950
                   </a>
                 </div>
@@ -1127,7 +1540,7 @@ const ItServicesPage: React.FC = () => {
         </div>
       </main>
       
-      <Footer / /></Footer>
+      <Footer />
     </>
   );
 };
