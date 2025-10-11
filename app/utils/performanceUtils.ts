@@ -30,15 +30,6 @@ private measureCoreWebVitals(): void {
 private observePaint(type: string, callback: (entry: PerformanceEntry) => void): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return,
 try {
-<<<<<<< HEAD
-      const observer = const observer = const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.name === type) {
-=======
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()
-          if (entry.name === type) 
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             callback(entry)
   }
           }
@@ -56,13 +47,6 @@ private observeLCP(): void {
 try 
       const observer = new PerformanceObserver((list) => ;
         const entries = list.getEntries();
-<<<<<<< HEAD
-        const lastEntry = const lastEntry = const lastEntry = entries[entries.length - 1]
-        this.metrics.largestContentfulPaint = lastEntry.startTime
-=======
-        const lastEntry = entries[entries.length - 1]
-        this.metrics.largestContentfulPaint = lastEntry.startTime;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
       });
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -75,15 +59,6 @@ try
 private observeFID(): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 try {
-<<<<<<< HEAD
-      const observer = const observer = const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          this.metrics.firstInputDelay = entry.processingStart - entry.startTime
-=======
-      const observer = new PerformanceObserver((list) => 
-        for (const entry of list.getEntries()
-          this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
         }
       });
@@ -98,17 +73,6 @@ private observeCLS(): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 try {
       let clsValue = 0;
-<<<<<<< HEAD
-      const observer = const observer = const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value
-=======
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()
-          if (!(entry as any).hadRecentInput) 
-            clsValue += (entry as any).value;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
           };
         };
@@ -145,16 +109,6 @@ public getCumulativeLayoutShift(): number {
   }
   }
 public isPerformanceGood(): boolean {
-<<<<<<< HEAD
-    return ()
-    )
-=======
-    return (
-      this.metrics.firstContentfulPaint < 1800 &&;
-      this.metrics.largestContentfulPaint < 2500 &&;
-      this.metrics.firstInputDelay < 100 &&;)
-      this.metrics.cumulativeLayoutShift < 0.1;)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
   }
 public cleanup(): void {
@@ -165,39 +119,11 @@ public cleanup(): void {
 }
 export const performanceMonitor = new PerformanceMonitor();
 // Utility functions;
-<<<<<<< HEAD
-export const measureFunction = const measureFunction = const measureFunction = <T extends (...args: any[]) => any>()
-): T => {
-  return ((...args: Parameters<T>) => {
-    const start = const start = performance.now()
-    const result = fn(...args)
-    const end = performance.now(),;
-if (name) {};
-=======
-export const measureFunction = <T extends (...args: any[]) => any>(,
-  fn: T,)
-  name?: string;)
-): T => {
-  return ((...args: Parameters<T>) => 
-    const start = performance.now()
-    const result = fn(...args)
-    const end = performance.now(),
-if (name) }
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       console.log(`${name} took ${end - start} milliseconds`);
     }
 return result;
   }) as T;
 }
-<<<<<<< HEAD
-export const debounce = const debounce = const debounce = <T extends (...args: any[]) => any>();
-): T => {;
-=======
-export const debounce = <T extends (...args: any[]) => any>(,
-  func: T,)
-  wait: number)
-): T => {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     let timeout: NodeJS.Timeout;
 return ((...args: Parameters<T>) => 
     clearTimeout(timeout),
@@ -205,13 +131,6 @@ return ((...args: Parameters<T>) =>
   }
   }) as T;
 }
-<<<<<<< HEAD
-export const throttle = const throttle = const throttle = <T extends (...args: any[]) => any>()
-=======
-export const throttle = <T extends (...args: any[]) => any>(,
-  func: T,)
-  limit: number;)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 ): T => {
     let inThrottle: boolean;
 return ((...args: Parameters<T>) => 
@@ -223,13 +142,6 @@ return ((...args: Parameters<T>) =>
     };
   }) as T;
 }
-<<<<<<< HEAD
-export const lazyLoad = const lazyLoad = const lazyLoad = (callback: () => void): void => {
-    if ('requestIdleCallback' in window) {
-=======
-export const lazyLoad = (callback: () => void): void => {
-    if ('requestIdleCallback' in window) 
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     requestIdleCallback(callback)
   }
   } else {

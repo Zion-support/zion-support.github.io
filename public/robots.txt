@@ -7,28 +7,10 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /private/
+Disallow: /static/
 
 # Allow important pages
-<<<<<<< HEAD
-Allow: /
-Allow: /about
-Allow: /contact
-Allow: /ai-services
-Allow: /it-services
-Allow: /blog
-Allow: /case-studies
-Allow: /careers
-
-# Block common bot traps
-Disallow: /*.json$
-Disallow: /*?*
-Disallow: /*#
-Disallow: /search?*
-Disallow: /filter?*
-=======
 Allow: /ai-services/
 Allow: /it-services/
 Allow: /blog/
 Allow: /case-studies/
->>>>>>> cursor/analyze-improve-and-deploy-application-d4cc

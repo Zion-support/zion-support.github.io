@@ -236,21 +236,6 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   ): void {}
     const logData = const logData = const logData = { ...data }
     if (error) {
-<<<<<<< HEAD
-    logData.error = {
-        name: error.name
-        message: error.message,
-        stack: error.stack
-  };
-      };
-=======
-    logData.error = 
-        name: error.name;,
-      message: error.message,
-        stack: error.stack;
-  }
-      }
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
    * @example;`;
    * ```typescript;
    * try {/* TODO: Fix JSX expression */}
@@ -259,14 +244,6 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * }`;
    * ```;
    */;
-<<<<<<< HEAD
-  public error()
-=======
-  public error(messag,
-  e: string,
-    data?: Record<string, unknown>,)
-    error?: Error,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     source?: string;);
   ): void {/* TODO: Fix JSX expression */}
     const logData = const logData = const logData = { ...data }
@@ -296,14 +273,6 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
         stack: error.stack;
   }
       }
-<<<<<<< HEAD
-  public fatal();
-=======
-  public fatal(messag,
-  e: string,
-    data?: Record<string, unknown>,)
-    error?: Error,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     source?: string;);
   ): void {/* TODO: Fix JSX expression */}
     const logData = const logData = const logData = { ...data }
@@ -364,13 +333,6 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     }
     const duration = performance.now() - startTime;
     this.performanceMarks.delete(markName);`;
-<<<<<<< HEAD
-    this.info() {/* TODO: Fix JSX expression */})`;
-=======
-    this.info(`Performanc,`;)
-  e: ${markName}`,)
-      {/* TODO: Fix JSX expression */})`;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   n: `${duration.toFixed(2)}ms`,
         ...data;
       },
@@ -424,16 +386,6 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     // Remote logging;
     if (this.config.enableRemote && this.config.remoteEndpoint) {
     this.logToRemote(logEntry);
-<<<<<<< HEAD
-  private log()
-=======
-  private log(leve,
-  l: LogLevel,
-    messag,
-  e: string,
-    data?: Record<string, unknown>,)
-    source?: string,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     stack?: string;)
   }
   ): void {/* TODO: Fix JSX expression */}
@@ -475,11 +427,6 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     const source = entry.source ? ` [${entry.source}]` : '';
     const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
     if (this.config.enableStructured) {
-<<<<<<< HEAD
-    const structuredLog = const structuredLog = const structuredLog = {
-=======
-    const structuredLog = 
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         timestamp: entry.timestamp,
         level: levelName,
         message: entry.message;,
@@ -592,11 +539,6 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
         headers: )
   }
           'Content-Type': 'application/json')})
-<<<<<<< HEAD
-        body: JSON.stringify()
-=======
-        body: JSON.stringify({)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     ),
           ...entry),
   }
@@ -693,22 +635,10 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    */;
   public getStatistics(): {
     total: number,
-<<<<<<< HEAD
-    byLevel: Record<string></string>
-    bySource: Record<string, number></string>
-=======
-    byLevel: Record<string>,
-      bySource: Record<string, number>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
   }, {}
     const byLevel: Record<string, number> = {}
     const bySource: Record<string, number> = {}
-<<<<<<< HEAD
-    this.logs.forEach()
-=======
-    this.logs.forEach(log => {)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     );
       const levelName = LogLevel[log.level]);
       byLevel[levelName] = (byLevel[levelName] || 0) + 1;
@@ -728,11 +658,6 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   byLevel: Record<string, number> = {}
     const,
   bySource: Record<string, number> = {}
-<<<<<<< HEAD
-    this.logs.forEach()
-=======
-    this.logs.forEach(log => {/* TODO: Fix JSX expression */})
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       })
     })
     return {/* TODO: Fix JSX expression */}

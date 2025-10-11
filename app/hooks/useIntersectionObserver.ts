@@ -7,22 +7,6 @@ interface UseIntersectionObserverOptions {
   }
 }
 interface UseIntersectionObserverReturn {
-<<<<<<< HEAD
-    ref: React.RefObject<HTMLElement></HTMLElement>
-  isIntersecting: boolean,
-  entry: IntersectionObserverEntry | undefined
-  }
-}
-export function useIntersectionObserver()
-=======
-    ref: React.RefObject<HTMLElement>,
-      isIntersecting: boolean,
-  entry: IntersectionObserverEntry | undefined;
-  }
-}
-export function useIntersectionObserver(;)
-  options: UseIntersectionObserverOptions = {})
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 ): UseIntersectionObserverReturn {
     const;
     threshold = 0,
@@ -37,13 +21,6 @@ const [isIntersecting, setIsIntersecting] = useState(false);
 useEffect(() => {
     const element = ref.current;
     if (!element) return;
-<<<<<<< HEAD
-const observer = const observer = new IntersectionObserver()
-      ([entry]) => {;
-=======
-const observer = new IntersectionObserver(;)
-      ([entry]) => 
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         setIsIntersecting(entry.isIntersecting);
         setEntry(entry);
 if (entry.isIntersecting && freezeOnceVisible) 

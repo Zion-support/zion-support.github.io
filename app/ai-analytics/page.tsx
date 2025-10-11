@@ -5,21 +5,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const AiAnalyticsPage: React.FC = () => {
-<<<<<<< HEAD
-  const features = const features = const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',;
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',;
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
-=======
-  const features = [
-    
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: [''Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis''];
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     },
     {
       icon: BarChart,
@@ -87,47 +72,6 @@ const AiAnalyticsPage: React.FC = () => {
     {
       title: 'Risk Management',
       description: 'Identify and mitigate business risks proactively',
-<<<<<<< HEAD
-      icon: '🛡️';
-    };
-  ];
-  return ()
-=======
-      icon: '🛡️'
-    }
-  ];];];
-  return (
-    <>
-      <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
-        <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />
-      </Helmet>
-      <Navigation />
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm: px-6 lg:px-8">
-          </section></section><div className="max-w-7xl mx-auto">
-            </div></div><div className="text-center">
-              </div></div><h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                AI Analytics;
-  </h1></h1></
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Transform your business with intelligent analytics powered by cutting-edge AI technology.
-              </p></p></p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                </div></div><button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                  Get Started;
-  </button></button></
-                <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
-                  Learn More,
-  </button></button></
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>)
-    </>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   );
 }
       </main>
@@ -137,48 +81,9 @@ const AiAnalyticsPage: React.FC = () => {
       </main>
     </>
   );
-<<<<<<< HEAD
-}, {/* Features Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" /></h2>
-                Powerful AI Analytics Features,
-  </
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto" /></p>
-=======
-} {/* Features Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8">
-          </section></section><div className="max-w-7xl mx-auto">
-            </div></div><div className="text-center mb-16">
-              </div></div><h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Powerful AI Analytics Features,
-  </h2></h2></
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 Discover how our AI analytics platform can revolutionize your business intelligence.
               </p></p></p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" /></div>
-              {features.map((feature, index) => ()
-                    {feature.benefits.map((benefit, benefitIndex) => ()
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                </div></div><div key=index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  </div></div><div className="flex items-center mb-4">
-                    </div></div><feature.icon className="h-8 w-8 text-blue-600 mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3></h3></h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">{feature.description}</p></p></p>)
-                  <ul className="space-y-2">)
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key=benefitIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                        {benefit})
-                      </li>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                     ))}
                   </ul>
                 </div>
@@ -187,31 +92,6 @@ const AiAnalyticsPage: React.FC = () => {
           </div>
         </section>
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600" /></section>
-          <div className="max-w-4xl mx-auto text-center" /></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" /></h2>
-              Ready to Transform Your Analytics?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8" /></p>
-              Join thousands of businesses already using our AI analytics platform.
-            </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold" /></button>
-              Start Your Free Trial
-  </
-=======
-        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">
-          </section></section><div className="max-w-4xl mx-auto text-center">
-            </div></div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Analytics?
-            </h2></h2></h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Join thousands of businesses already using our AI analytics platform.
-            </p></p></p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
-              Start Your Free Trial;
-  </button></button></
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           </div>
         </section>
       </main>

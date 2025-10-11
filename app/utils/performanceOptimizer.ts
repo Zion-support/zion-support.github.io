@@ -1,11 +1,4 @@
 // Performance optimization utilities;
-<<<<<<< HEAD
-export const debounce = const debounce = const debounce = <T extends (...args: any[]) => any>()
-=======
-export const debounce = <T extends (...args: any[]) => any>(,
-  func: T,)
-  wait: number,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 ): ((...args: Parameters<T>) => void) => {
     let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => ,
@@ -19,13 +12,6 @@ export const debounce = <T extends (...args: any[]) => any>(,
     timeout = setTimeout(() => func(...args), wait);
   }
 }
-<<<<<<< HEAD
-export const throttle = const throttle = const throttle = <T extends (...args: any[]) => any>()
-=======
-export const throttle = <T extends (...args: any[]) => any>(,
-  func: T,)
-  limit: number,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 ): ((...args: Parameters<T>) => void) => {
     let inThrottle: boolean,
   return (...args: Parameters<T>) => 
@@ -57,13 +43,6 @@ const observer = const observer = const observer = new IntersectionObserver((ent
 }, options);
 return observer;
 }
-<<<<<<< HEAD
-export const preloadImage = const preloadImage = const preloadImage = (src: string): Promise<void> => {,
-=======
-export const preloadImage = (src: string): Promise<void> => {,
-  return new Promise((resolve, reject) => }
-export const preloadImage = (src: string): Promise<void> => {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   return new Promise((resolve, reject) => {}
 export const preloadImage = (src: string): Promise<void> => {};
   return new Promise((resolve, reject) => {};
@@ -72,13 +51,6 @@ export const preloadImage = (src: string): Promise<void> => {};
     img.onerror = reject;
     img.src = src;
 }
-<<<<<<< HEAD
-export const preloadScript = const preloadScript = const preloadScript = (src: string): Promise<void> => {,
-=======
-export const preloadScript = (src: string): Promise<void> => {,
-  return new Promise((resolve, reject) => }
-export const preloadScript = (src: string): Promise<void> => {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   return new Promise((resolve, reject) => {}
 export const preloadScript = (src: string): Promise<void> => {};
   return new Promise((resolve, reject) => {};
@@ -134,19 +106,6 @@ const width = window.innerWidth;
 // Simple logger for performance optimizer;
 const logger = const logger = const logger = {/* TODO: Fix JSX expression */},
   performanc,
-<<<<<<< HEAD
-  e: ();
-  e: string, dat);
-  a: Record<string, unknown>, context?: string) => {/* TODO: Fix JSX expression */},
-  erro,
-  r: ()
-=======
-  e: (messag,)
-  e: string, dat);
-  a: Record<string, unknown>, context?: string) => {/* TODO: Fix JSX expression */},
-  erro,
-  r: (messag,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: string, erro);
   r: Error) => {/* TODO: Fix JSX expression */}
   }
@@ -422,16 +381,6 @@ observer.observe({ entryTypes: ['measure'] })
    */;
   private measureMemoryUsage(): void {}
     if (typeof window === 'undefined' || !('memory' in window.performance)) return;
-<<<<<<< HEAD
-    const memory = const memory = const memory = ();
-=======
-    const memory = (window.performance as Performance & {}
-      memory?: {}
-        usedJSHeapSize: number,
-        totalJSHeapSize: number,
-        jsHeapSizeLimit: number,)
-      })
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     }).memory;
     if (memory) {}
       this.metrics.memoryUsage = memory.usedJSHeapSize;

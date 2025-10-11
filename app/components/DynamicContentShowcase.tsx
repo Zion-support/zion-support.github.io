@@ -5,13 +5,6 @@ import { Brain, Cloud, Zap, Shield, Globe, Users, CheckCircle, Star, ArrowRight 
 const DynamicContentShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-<<<<<<< HEAD
-  const features = const features = const features = [
-    {
-=======
-  const features = [
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       id: 1,
       title: 'AI Solutions',
       description: 'Transform your business with cutting-edge artificial intelligence solutions.',
@@ -86,121 +79,27 @@ const DynamicContentShowcase: React.FC = () => {
       role: 'VP Engineering',
       content: 'The best investment we made. Seamless integration and exceptional support.',
       rating: 5;
-<<<<<<< HEAD
-    };
-  ];
-
-  useEffect(() => {];
-    const timer = setInterval(() => {;
-=======
-    }
-  ];
-
-  useEffect(() => {];];
-    const timer = setInterval(() => ;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       setCurrentIndex((prev) => (prev + 1) % features.length);
     }, 3000);
 
     return () => clearInterval(timer);
   }, [features.length]);
 
-<<<<<<< HEAD
-  return() {features.map((feature, index) => ()
-=======
-  return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      {/* Features Showcase */}
-      </div></div><div className="text-center mb-16">
-        </div></div><h2 className="text-3xl font-bold text-white mb-4">
-          Dynamic Content Showcase;
-        </h2></h2></h2>
-        <p className="text-gray-300 max-w-2xl mx-auto">
-          Experience our cutting-edge solutions through interactive demonstrations;
-        </p></p></p>
-      </div>
-
-      {/* Feature Cards */})
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">)
-        {features.map((feature, index) => (
-          </div></div><div;
-            key=feature.id}
-            className={`bg-gradient-to-br $feature.color} p-6 rounded-2xl text-white transform transition-all duration-500 ${
-              index === currentIndex ? 'scale-105 shadow-2xl' : 'scale-100'
-            }`}
-          >
-            </div></div><div className="flex items-center mb-4">
-              </div></div><div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
-                </div></div><feature.icon className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-bold">{feature.title}</h3></h3></h3>
-            </div>
-            <p className="text-white/90">{feature.description}</p></p></p>)
-          </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         ))}
       </div>
 
       {/* Benefits Section */}
-<<<<<<< HEAD
-      <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16" /></div>
-        <h3 className="text-2xl font-bold text-white mb-6 text-center">Key Benefits</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" /></div>
-          {benefits.map((benefit, index) => ()
-=======
-      <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16">
-        </div></div><h3 className="text-2xl font-bold text-white mb-6 text-center">Key Benefits</h3></h3></h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {benefits.map((benefit, index) => (
-            </div></div><div key=index} className="flex items-center space-x-3">
-              </div></div><CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-              <span className="text-gray-300">{benefit}</span></span></span>)
-            </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           ))}
         </div>
       </div>
 
       {/* Testimonials */}
-<<<<<<< HEAD
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8" /></div>
-        {testimonials.map((testimonial, index) => ()
-              {[...Array(testimonial.rating)].map((_, i) => ()
-              ))}
-            </div>
-            <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-            <div className="border-t border-white/10 pt-4" /></div>
-              <p className="text-white font-semibold">{testimonial.name}</p>
-              <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p>
-=======
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {testimonials.map((testimonial, index) => (
-          </div></div><div key=index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">)</div></div><div className="flex items-center mb-4">)
-              {[...Array(testimonial.rating)].map((_, i) => ()</div></div><Star key=i} className="w-5 h-5 text-yellow-400 fill-current" />)
-              ))}
-            </div>
-            <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p></p></p>
-            <div className="border-t border-white/10 pt-4">
-              </div></div><p className="text-white font-semibold">{testimonial.name}</p></p></p>
-              <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p></p></p>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             </div>
           </div>
         ))}
       </div>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <div className="text-center mt-16" /></div>
-        <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300" /></button>
-          Get Started Today
-          <ArrowRight className="w-5 h-5 ml-2" / /></ArrowRight>
-=======
-      <div className="text-center mt-16">
-        </div></div><button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-          Get Started Today;
-          </button></button><ArrowRight className="w-5 h-5 ml-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         </button>
       </div>
     </div>

@@ -1,11 +1,6 @@
 'use client';
 export const useRouter = (;) => {
     return ()
-<<<<<<< HEAD
-  )
-=======
-    $3)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
   const push = const push = const push = useCallback((url: string) => {
     ,;

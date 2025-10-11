@@ -25,23 +25,6 @@ const Breadcrumb: React.FC = () => {
 
   return() {breadcrumbItems.map((item, index) => ()
               )}
-<<<<<<< HEAD
-              <a href={item.path}
-                className={`flex items-center space-x-1 transition-colors duration-200 ${
-                  index === breadcrumbItems.length - 1
-                    ? 'text-cyan-400 font-medium'
-                    : 'text-gray-300 hover:text-cyan-400'
-                }`} /></a>
-                {item.icon && <item.icon className="w-4 h-4" />}
-                <span>{item.name}</span>
-=======
-              <a
-                href={item.path}
-                className="text-gray-300 hover:text-white transition-colors"
-              >
-                {item.icon && <item.icon className="w-4 h-4 inline mr-1" />}
-                {item.name}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               </a>
             </li>
           ))}

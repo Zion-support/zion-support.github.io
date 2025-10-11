@@ -90,15 +90,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    * Generate optimized title;
    */;
   generateTitle(pageTitle?: string): string {
-<<<<<<< HEAD
-    const title = const title = const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle
-  };
-  generateTitle(pageTitle?: string): string {};
-=======
-    const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle;
-  }
-  generateTitle(pageTitle?: string): string {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle;
     return title.includes(this.config.siteName);
       ? title }
@@ -195,12 +186,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);
       document.head.appendChild(meta);}
-<<<<<<< HEAD
-  private setMetaTag()
-=======
-  private setMetaTag(nam,)
-  e: string, conten,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   t: string, attribut);
   e: string = 'name'): void {/* TODO: Fix JSX expression */}`;
     let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
@@ -245,21 +230,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    */;
   private updateStructuredData(): void {
     if (!this.currentPageData) return;
-<<<<<<< HEAD
-    const structuredData = const structuredData = const structuredData = {
-      '@context': 'https: //schema.org',;
-      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',;
-      headline: this.generateTitle();
-      description: this.generateDescription()
-      url: this.currentPageData.url || window.location.href
-=======
-    const structuredData = 
-      '@context': 'https: //schema.org',
-      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
-      headline: this.generateTitle();,
-      description: this.generateDescription(),
-      url: this.currentPageData.url || window.location.href;,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       image: this.currentPageData.image || this.config.defaultImage,
       publisher: ,
   }
@@ -280,13 +250,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     };
     // Add article-specific properties;
     if (this.currentPageData.type === 'article') {
-<<<<<<< HEAD
-    Object.assign()
-        author: {)
-=======
-    Object.assign(structuredData, )
-        author: )
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 // '@type': 'Person')
 // name: this.currentPageData.author || this.config.siteName,)
   }
@@ -359,15 +322,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         const entries = list.getEntries();
         const lastEntry = const lastEntry = const lastEntry = entries[entries.length - 1]
         if (lastEntry.startTime > 4000) {
-<<<<<<< HEAD
-    // Poor LCP
-  };
-        if (lastEntry.startTime > 4000) { // Poor LCP};
-=======
-    // Poor, LCP;
-  }
-        if (lastEntry.startTime > 4000) { // Poor, LCP}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           this.trackSEOMetric('poor_lcp', lastEntry.startTime);}
         }
       }).observe({ entryTypes: ['largest-contentful-paint'] })
@@ -385,11 +339,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         }
         if (clsValue > 0.25) {
     // Poor CLS;
-<<<<<<< HEAD
-      let clsValue = let clsValue = let clsValue = 0
-=======
-      let clsValue = 0;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
       new PerformanceObserver((list) => {}
         for (const entry of list.getEntries()) {};
@@ -426,11 +375,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         metric_value: Math.round(value),
         event_category: 'seo'}
       })
-<<<<<<< HEAD
-  private trackSEOMetric()
-=======
-  private trackSEOMetric(metri,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   c: string, valu);
   e: number): void {/* TODO: Fix JSX expression */}
       })
@@ -492,25 +436,6 @@ Disallo,`;
    */;
   checkSEOIssues(): string[] {}
     const issues: string[] = []
-<<<<<<< HEAD
-    // Check title length
-    const title = const title = const title = document.title,,
-    if (title.length < 30) {;
-    ,;
-    // Check title length;
-    const title = const title = const title = document.title
-  };
-    if (title.length < 30) {};
-=======
-    // Check title length;
-    const title = document.title,,
-    if (title.length < 30) {
-    ,
-    // Check title length;
-    const title = document.title;
-  }
-    if (title.length < 30) {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       issues.push('Title is too short (less than 30 characters)');}
     } else if (title.length > 60) {}
       issues.push('Title is too long (more than 60 characters)');}
@@ -570,17 +495,6 @@ Disallo,`;
   }
 }
 // Default configuration;
-<<<<<<< HEAD
-const defaultConfig: SEOConfig = {
-    siteName: 'Zion Tech Group',
-    siteUrl: 'https://zion.app',
-// Default configuration
-=======
-const defaultConfig: SEOConfig = {,
-      siteName: 'Zion Tech Group',
-      siteUrl: 'https://zion.app',
-// Default, configuration;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
 const defaultConfig: SEOConfig = {}
   siteName: 'Zion Tech Group',

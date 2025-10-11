@@ -6,21 +6,6 @@ import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AiWorkflowAutomationPage: React.FC = () => {
-<<<<<<< HEAD
-  const features = const features = const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',;
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',;
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
-=======
-  const features = [
-    
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: [''Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis''];
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     },
     {
       icon: BarChart,
@@ -49,44 +34,6 @@ const AiWorkflowAutomationPage: React.FC = () => {
     'Gain competitive advantage with advanced technology';
   ];
 
-<<<<<<< HEAD
-  return ()
-=======
-  return (
-    <>
-      <Helmet>
-        <title>AI Workflow Automation - Zion Tech Group</title>
-        <meta name="description" content="Transform your business with AI-powered workflow automation solutions. Increase efficiency, reduce costs, and scale operations with intelligent automation." />
-        <meta name="keywords" content="AI workflow automation, business process automation, intelligent automation, workflow optimization" />
-      </Helmet>
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          </section></section><div className="max-w-7xl mx-auto">
-            </div></div><div className="text-center">
-              </div></div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Workflow Automation;
-              </h1></h1></h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your business processes with intelligent automation. 
-                Streamline operations, reduce costs, and scale efficiently with AI-powered workflows.
-              </p></p></p>
-
-                </button>
-                <button className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-                  Learn More;
-                </button></button></button>
-
-              </div>
-            </div>
-          </div>
-        </section>
-
-      </main>)
-    </>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   );
 }
       </main>

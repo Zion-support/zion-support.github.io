@@ -76,39 +76,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <meta name="keywords" content={keywords.join(', ')} />
-=======
-      {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      
-      {/* Open Graph Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-<<<<<<< HEAD
-      <meta property="og:type" content="website" />
-      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-      {ogImage && <meta property="og:image" content={ogImage} />}
-      <meta property="og:site_name" content="Zion Tech Group" />
-=======
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:type" content="website" />
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-      
-      {/* Twitter Card Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      {ogImage && <meta name="twitter:image" content={ogImage} />}
-      
-<<<<<<< HEAD
-      {/* Additional SEO Tags */}
-      <meta name="robots" content="index, follow" />
-=======
       <meta name="keywords" content={keywords} />
->>>>>>> cursor/analyze-improve-and-deploy-application-d4cc
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
       <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -159,8 +127,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="apple-touch-icon" href="/logo192.png" />
       <link rel="manifest" href="/manifest.json" />
       
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}

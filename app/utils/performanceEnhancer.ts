@@ -5,13 +5,6 @@
  */;
 import React from 'react';
 // Debounce function for performance optimization;
-<<<<<<< HEAD
-export const debounce = const debounce = const debounce = <T extends (...args: unknown[]) => unknown>()
-=======
-export const debounce = <T extends (...args: unknown[]) => unknown>(,
-  func: T,)
-  wait: number,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 ): ((...args: Parameters<T>) => void) => {
     let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => ,
@@ -26,13 +19,6 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(,
   }
 }
 // Throttle function for performance optimization;
-<<<<<<< HEAD
-export const throttle = const throttle = const throttle = <T extends (...args: unknown[]) => unknown>()
-=======
-export const throttle = <T extends (...args: unknown[]) => unknown>(,
-  func: T,)
-  limit: number,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 ): ((...args: Parameters<T>) => void) => {
     let inThrottle: boolean,
   return (...args: Parameters<T>) => 
@@ -90,13 +76,6 @@ export class PerformanceMonitor {}
       const memory = (performance as { memory?:  usedJSHeapSize: number } }).memory;
       if (memory) {}
 export const debounce = <T extends (...arg);
-<<<<<<< HEAD
-  s: unknown[]) => unknown>()
-=======
-  s: unknown[]) => unknown>(fun,
-  c: T,)
-  wai,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   t: number;)
 ): ((...arg),
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
@@ -104,13 +83,6 @@ export const debounce = <T extends (...arg);
 }
 // Throttle function for performance optimization;
 export const throttle = <T extends (...arg);
-<<<<<<< HEAD
-  s: unknown[]) => unknown>()
-=======
-  s: unknown[]) => unknown>(fun,
-  c: T,)
-  limi,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   t: number;)
 ): ((...arg),
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
@@ -123,11 +95,6 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */}
     return PerformanceMonitor.instance;
   }
   // Track component render time;
-<<<<<<< HEAD
-  trackRender()
-=======
-  trackRender(componentNam,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: string, renderTim);
   e: number) {/* TODO: Fix JSX expression */}
     this.metrics.set(`${componentName}_render`, renderTime);
@@ -168,17 +135,6 @@ if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}`
   // Monitor long tasks;
   startLongTaskMonitoring() {/* TODO: Fix JSX expression */}
     }
-<<<<<<< HEAD
-const observer = const observer = new PerformanceObserver((list) => {;
-    list.getEntries().forEach((entry) => {;
-        if (entry.duration > 50) { // Tasks longer than 50ms;
-  // Get performance metrics
-=======
-const observer = new PerformanceObserver((list) => {
-    list.getEntries().forEach((entry) => ;
-        if (entry.duration > 50)  // Tasks longer than 50ms;
-  // Get performance, metrics;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
   getMetrics() {}
     return Object.fromEntries(this.metrics);
@@ -192,15 +148,6 @@ const observer = new PerformanceObserver((list) => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {}
       return;
     }
-<<<<<<< HEAD
-    const observer = const observer = const observer = new PerformanceObserver((list) => {}
-      list.getEntries().forEach((entry) => {};
-        if (entry.duration > 50) { // Tasks longer than 50ms};
-=======
-    const observer = new PerformanceObserver((list) => {}
-      list.getEntries().forEach((entry) => {}
-        if (entry.duration > 50) { // Tasks longer than, 50ms}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           }ms`);
         }
 observer.observe({ entryTypes: ['longtask'] })
@@ -218,11 +165,6 @@ observer.observe({ entryTypes: ['longtask'] })
 // React hook for performance monitoring;
 export const usePerformanceMonitor = (;) => {
     return ()
-<<<<<<< HEAD
-  )
-=======
-    $3)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
 // React hook for performance monitoring;}
 export const usePerformanceMonitor = const usePerformanceMonitor = (componentName: string) => {};
@@ -271,11 +213,6 @@ export const usePerformanceMonitor = (componentNam);
 // Image lazy loading utility;
 export const lazyLoadImages = (;) => {
     return ()
-<<<<<<< HEAD
-  )
-=======
-    $3)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
 // Image lazy loading utility;}
 export const lazyLoadImages = const lazyLoadImages = () => {};
@@ -296,11 +233,6 @@ images.forEach((img) => imageObserver.observe(img));
 // Preload critical resources;
 export const preloadCriticalResources = (;) => {
     return ()
-<<<<<<< HEAD
-  )
-=======
-    $3)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
 // Preload critical resources;}
 export const preloadCriticalResources = const preloadCriticalResources = () => {};
@@ -321,23 +253,6 @@ export const preloadCriticalResources = const preloadCriticalResources = const p
     document.head.appendChild(link);
 }
 // Optimize scroll performance;
-<<<<<<< HEAD
-export const optimizeScrollPerformance = const optimizeScrollPerformance = ();
-  if (typeof window === 'undefined') return;
-  let ticking = false;
-  const updateScrollPosition = () => {;
-    // Update scroll position indicators;) => {
-  return ()
-  )
-=======
-export const optimizeScrollPerformance = (;)
-  if (typeof window === 'undefined') return;
-  let ticking = false;
-  const updateScrollPosition = () => {;
-    // Update scroll position indicators;) => 
-  return ()
-    $3)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
 // Optimize scroll performance;}
 export const optimizeScrollPerformance = const optimizeScrollPerformance = () => {};
@@ -356,22 +271,6 @@ export const optimizeScrollPerformance = const optimizeScrollPerformance = () =>
     }
   }
   // Track Core Web Vitals;
-<<<<<<< HEAD
-  const trackCLS = const trackCLS = ()
-    ,) => {
-  return ()
-  )
-  };
-=======
-  const trackCLS = (;
-    let clsValue = 0;
-    let clsEntries: PerformanceEntry[] = [],)
-    interface LayoutShiftEntry extends PerformanceEntry {)
-    ,) => 
-  return ()
-    $3)
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   // Track Core Web Vitals;}
   const trackCLS = const trackCLS = () => {};
     let clsValue = 0;
@@ -469,21 +368,6 @@ export const optimizeScrollPerformance = () => {/* TODO: Fix JSX expression */}`
   }
 }
 // Memory usage monitoring;
-<<<<<<< HEAD
-export const getMemoryUsage = const getMemoryUsage = ()
-  if (typeof window === 'undefined' || !('memory' in performance)) {
-    ) => {
-  return ()
-  )
-  };
-=======
-export const getMemoryUsage = (;)
-  if (typeof window === 'undefined' || !('memory' in performance)) {
-    ) => 
-  return ()
-    $3)
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     return null;}
   }
   const memory = (performance as unknown as { memory: // usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number} }).memory;
@@ -496,28 +380,10 @@ export const getMemoryUsage = (;)
   }
 }
 // Performance metrics collection;
-<<<<<<< HEAD
-export const collectPerformanceMetrics = const collectPerformanceMetrics = ();
-=======
-export const collectPerformanceMetrics = (;)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   if (typeof window === 'undefined') return null;
   const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
   const paint = performance.getEntriesByType('paint');
   return {
-<<<<<<< HEAD
-    navigation: {
-// domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
-// loadComplete: navigation.loadEventEnd - navigation.loadEventStart,) => {
-  return ()
-  )
-=======
-    navigation: 
-// domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
-// loadComplete: navigation.loadEventEnd - navigation.loadEventStart,) => 
-  return ()
-    $3)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
 // totalTime: navigation.loadEventEnd - navigation.fetchStart,},
     paint: {
@@ -558,11 +424,6 @@ export const collectPerformanceMetrics = const collectPerformanceMetrics = () =>
 // Initialize performance enhancements;
 export const initializePerformanceEnhancements = (;) => {
     return ()
-<<<<<<< HEAD
-  )
-=======
-    $3)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
 // Initialize performance enhancements;}
 export const initializePerformanceEnhancements = const initializePerformanceEnhancements = () => {};

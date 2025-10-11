@@ -114,14 +114,6 @@ class Logger {/* TODO: Fix JSX expression */}
   /**;
    * Log an error message;
    */;
-<<<<<<< HEAD
-  error()
-=======
-  error(messag,
-  e: string,
-    errorOrContextOrMetadata?: Error | string | Record<string, unknown>,)
-    contextOrMetadata?: string | Record<string, unknown>,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     metadata?: Record<string, unknown></string>);
   ): void {/* TODO: Fix JSX expression */}
     } else if (typeof errorOrContextOrMetadata === 'string') {/* TODO: Fix JSX expression */}
@@ -190,15 +182,6 @@ getLogs(level?: LogLevel): Array<{
   /**;
    * Core logging method;
    */;
-<<<<<<< HEAD
-  private log()
-=======
-  private log(leve,
-  l: LogLevel,
-    messag,
-  e: string,)
-    context?: LogContext,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     metadata?: Record<string, unknown></string>);
   ): void {/* TODO: Fix JSX expression */}
     }
@@ -242,12 +225,6 @@ getLogs(level?: LogLevel): Array<{
   /**;
    * Output to console with appropriate styling;
    */;
-<<<<<<< HEAD
-  private outputToConsole()
-=======
-  private outputToConsole(leve,)
-  l: LogLevel, messag,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: string, entr);
   y: LogMetadata): void {/* TODO: Fix JSX expression */}
     }
@@ -273,13 +250,6 @@ getLogs(level?: LogLevel): Array<{
   }
     //   headers: {// 'Content-Type': 'application/json'})
     //   body: JSON.stringify(entry),
-<<<<<<< HEAD
-    // }).catch()
-    )
-  }
-=======
-    // }).catch(err => {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     //   // })
   }
 exportLogs(): string {

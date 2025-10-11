@@ -11,19 +11,6 @@ interface SEOOptimizerProps {
   structuredData?: object;
   children: React.ReactNode;
   }
-<<<<<<< HEAD
-const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ()
-=======
-const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
-  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
-  canonicalUrl,
-  ogImage = '/images/og-image.jpg',
-  twitterCard = 'summary_large_image',
-  structuredData,)
-  children)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 }) => {
     const [seoScore, setSeoScore] = useState(0);
   const [recommendations, setRecommendations] = useState<string[]>([]);
@@ -83,13 +70,6 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
   useEffect(() => {
     analyzeSEO()
   }, [analyzeSEO]);
-<<<<<<< HEAD
-  const generateStructuredData = const generateStructuredData = const generateStructuredData = () => {
-    const defaultStructuredData = {
-=======
-  const generateStructuredData = () => {
-    const defaultStructuredData = 
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Zion Tech Group",
@@ -98,53 +78,6 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
       "logo": ogImage,
       "sameAs": [
         "https://twitter.com/ziontechgroup",
-<<<<<<< HEAD
-        "https://linkedin.com/company/ziontechgroup"
-      ];
-    };
-    return structuredData || defaultStructuredData;
-  }
-  return() {JSON.stringify(generateStructuredData())}
-        </script>
-      </Helmet>
-      {children},
-    {process.env.NODE_ENV === 'development' && ()
-=======
-        "https: //linkedin.com/company/ziontechgroup"
-    }]
-    }
-    return structuredData || defaultStructuredData;
-  }
-  return (
-    <>
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        {canonicalUrl && <link rel="canonical" href=canonicalUrl} />},
-    {/* Open Graph */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:type" content="website" />
-        {canonicalUrl && <meta property="og:url" content=canonicalUrl} />},
-    {/* Twitter Card */}
-        <meta name="twitter:card" content={twitterCard} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        {/* Structured Data */})
-        <script type="application/ld+json">)
-          {JSON.stringify(generateStructuredData())}
-        </script>
-      </Helmet>
-      {children},
-    {process.env.NODE_ENV === 'development' && (
-        <div className="seo-debug" style=
-          position: 'fixed',
-          top: '10px',)
-          left: '10px',)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           background: 'rgba(0,0,0,0.8)',
           color: 'white',
           padding: '10px',
@@ -152,21 +85,6 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
           fontSize: '12px',
           zIndex: 1000,
           maxWidth: '300px'
-<<<<<<< HEAD
-        }}></div>
-          <div>SEO Score: {seoScore}/100</div>
-          {recommendations.length > 0 && ()
-                {recommendations.map((rec, index) => ()
-=======
-        }>
-          </div></div><div>SEO Score: {seoScore}/100</div></div></div>
-          {recommendations.length > 0 && (
-            <div>
-              </div></div><div>Recommendations:</div></div></div>)
-              <ul style= margin: '5px 0', paddingLeft: '15px' }>)
-                {recommendations.map((rec, index) => ()
-                  <li key=index}>{rec}</li>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 ))}
               </ul>
             </div>

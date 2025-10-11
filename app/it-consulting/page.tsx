@@ -484,46 +484,11 @@ const categories = const categories = const categories = [
     { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },;
     { id: 'compliance', name: 'Compliance', icon: CheckSquare };
   ];
-<<<<<<< HEAD
-const filteredServices = const filteredServices = itServices.filter();
-=======
-const filteredServices = itServices.filter(service => {;)
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   }
   })
-<<<<<<< HEAD
-return ()
-              Call (302) 464-0950
-=======
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
-      {/* Hero Section */}</div>
-      <section className="py-20 px-4">
-          </section></section><div className="max-w-7xl mx-auto">
-            </div></div><div className="text-center mb-16">
-              </div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
-              <p className="text-xl text-gray-300">Section description</p></p></p>
-            </div>
-          </div>
-        </section>
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div></div></div>
-        <div className="relative z-10 max-w-7xl mx-auto text-center"></div></div></div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1></h1></h1>
-            Professional <span className="holographic-text">IT Services</span></span></span>
-          </h1>
-          <p>
-            Comprehensive IT solutions designed to optimize your technology infrastructure,
-            enhance security, and drive business growth. Expert consulting and implementation.
-          </p></p></p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12"></div></div></div>
-            <a>)
-              <Phone>)
-              Call (302) 464-0950;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             </a>
             <a></a>
               <Mail></Mail>
@@ -534,37 +499,6 @@ return (
       </section>
 
       {/* Search and Filter Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-7xl mx-auto" / /></div>
-          <div className="flex flex-col lg:flex-row gap-6 mb-8" / /></div>
-            {/* Search */}</div>
-            <div className="flex-1" / /></div>
-              <div className="relative" / /></div>
-                <Search></Search>
-=======
-      <section className="py-20 px-4">
-          </section></section><div className="max-w-7xl mx-auto">
-            </div></div><div className="text-center mb-16">
-              </div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
-              <p className="text-xl text-gray-300">Section description</p></p></p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-7xl mx-auto"></div></div></div>
-          <div className="flex flex-col lg:flex-row gap-6 mb-8"></div></div></div>
-            {/* Search */}</div>
-            <div className="flex-1"></div></div></div>
-              <div className="relative"></div></div></div>
-                <Search>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 <input;
                   type="text";
                   placeholder="Search IT services...";
@@ -577,11 +511,6 @@ return (
             </div>
 
             {/* Category Filter */}
-<<<<<<< HEAD
-            <div className="lg: w-64" / /></div>
-=======
-            <div className="lg: w-64"></div></div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               <select,
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
@@ -589,16 +518,6 @@ return (
                 className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               >,
                 {
-<<<<<<< HEAD
-    categories.map((category) => ()
-=======
-    categories.map((category) => (
-  }
-                  <option>
-
-                    {category.name})
-                  </option>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 ))}
 
               </select>
@@ -606,18 +525,6 @@ return (
           </div>
 
           {/* Category Pills */}
-<<<<<<< HEAD
-          <div className="flex flex-wrap gap-2 mb-8" / /></div>
-            {
-    categories.map((category) => ()
-=======
-          <div className="flex flex-wrap gap-2 mb-8"></div></div></div>
-            {
-    categories.map((category) => (</div>
-              <button;
-  })
-                key={category.id})
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 onClick={() => setSelectedCategory(category.id)}
                 className={
     `px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 $
@@ -635,137 +542,10 @@ return (
         </div>
       </section>
       {/* Services Grid */}
-<<<<<<< HEAD
-      <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-7xl mx-auto" / /></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
-            {
-    filteredServices.map((service) => ()
-    service.features.slice(0, 4).map((feature, idx) => ()
-                      ))}
-                    </ul>
-                  </div>
-                  <div / /></div>
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
-                    <ul></ul>
-                      {
-    service.benefits.slice(0, 2).map((benefit, idx) => ()
-=======
-      <section className="py-20 px-4">
-          </section></section><div className="max-w-7xl mx-auto">
-            </div></div><div className="text-center mb-16">
-              </div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
-              <p className="text-xl text-gray-300">Section description</p></p></p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-7xl mx-auto"></div></div></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div></div></div>
-            {
-    filteredServices.map((service) => (</div>
-  }
-              <div key={service.id} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse"></div></div></div>
-                <div className="flex items-start justify-between mb-4"></div></div></div>
-                  <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors"></div></div></div>
-                    <service />
-                  <div className="text-right"></div></div></div>
-                    <div className="text-2xl font-bold text-white">{service.price}</div></div></div>
-                    <div className="text-sm text-gray-400">starting price</div></div></div>
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3 neon-glow">{service.name}</h3></h3></h3>
-                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p></p></p>
-                <div className="space-y-3 mb-6"></div></div></div>
-                  <div />
-                    </div></div><h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
-                    <ul>)
-                      {)
-    service.features.slice(0, 4).map((feature, idx) => (
-  }
-                        <li>
-                          <CheckCircle>
-                          <span>{feature}</span></span></span>)
-                        </li>)
-                      ))}
-                    </ul>
-                  </div>
-                  <div />
-                    </div></div><h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
-                    <ul>
-                      {
-    service.benefits.slice(0, 2).map((benefit, idx) => (
-  }
-                        <li>
-                          <TrendingUp>
-                          <span>{benefit}</span></span></span>)
-                        </li>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                       ))}
                     </ul>
                   </div>
                 </div>
-<<<<<<< HEAD
-                <div className="space-y-2 mb-6 text-sm" / /></div>
-                  <div className="flex justify-between" / /></div>
-                    <span className="text-gray-400">Setup Time:</span>
-                    <span className="text-white">{service.setupTime}</span>
-                  </div>
-                  <div className="flex justify-between" / /></div>
-                    <span className="text-gray-400">Free Consultation:</span>
-                    <span className="text-green-400">{service.freeConsultation}</span>
-                  </div>
-                  <div className="flex justify-between" / /></div>
-                    <span className="text-gray-400">Target:</span>
-                    <span className="text-white">{service.targetAudience}</span>
-                  </div>
-                </div>
-                {
-    service.caseStudy && ()
-                )}
-<div className="space-y-3" / /></div>
-                  <a></a>
-                    Get Free Consultation
-                  </a>
-                  <a></a>
-                    <Phone></Phone>
-                    Call for Quote
-=======
-                <div className="space-y-2 mb-6 text-sm"></div></div></div>
-                  <div className="flex justify-between"></div></div></div>
-                    <span className="text-gray-400">Setup Time:</span></span></span>
-                    <span className="text-white">{service.setupTime}</span></span></span>
-                  </div>
-                  <div className="flex justify-between"></div></div></div>
-                    <span className="text-gray-400">Free Consultation:</span></span></span>
-                    <span className="text-green-400">{service.freeConsultation}</span></span></span>
-                  </div>
-                  <div className="flex justify-between"></div></div></div>
-                    <span className="text-gray-400">Target:</span></span></span>
-                    <span className="text-white">{service.targetAudience}</span></span></span>
-                  </div>
-                </div>
-                {
-    service.caseStudy && (;
-                  <div className="mb-4 p-3 bg-green-900/20 border border-green-400/20 rounded-lg"></div></div></div>
-  }
-                    <p className="text-sm text-green-300 italic">"{service.caseStudy}"</p></p></p>)
-                  </div>)
-                )}
-<div className="space-y-3"></div></div></div>
-                  <a>
-                    Get Free Consultation;
-                  </a>
-                  <a>
-                    <Phone>
-                    Call for Quote;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                   </a>
                 </div>
               </div>
@@ -774,57 +554,6 @@ return (
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-4xl mx-auto text-center" / /></div>
-          <h2></h2>
-            Ready to Optimize Your IT Infrastructure?,
-          </h2>
-          <p></p>
-            Our certified IT professionals deliver reliable, secure, and scalable solutions.;
-            All services include free consultations and ongoing support.
-          </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
-            <a></a>
-              <Phone></Phone>
-              Call (302) 464-0950
-            </a>
-            <a></a>
-              <Mail></Mail>
-              Get Custom IT Strategy
-=======
-      <section className="py-20 px-4">
-          </section></section><div className="max-w-7xl mx-auto">
-            </div></div><div className="text-center mb-16">
-              </div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
-              <p className="text-xl text-gray-300">Section description</p></p></p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-4xl mx-auto text-center"></div></div></div>
-          <h2>
-            Ready to Optimize Your IT Infrastructure?,
-          </h2></h2></h2>
-          <p>
-            Our certified IT professionals deliver reliable, secure, and scalable solutions.;
-            All services include free consultations and ongoing support.
-          </p></p></p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>
-            <a>
-              <Phone>
-              Call (302) 464-0950;
-            </a>
-            <a>
-              <Mail>
-              Get Custom IT Strategy;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             </a>
           </div>
         </div>

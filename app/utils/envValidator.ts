@@ -82,15 +82,6 @@ class EnvValidator {/* TODO: Fix JSX expression */}
     const nodeEnv = this.getNodeEnv();
     // In production, these should be set;
     if (nodeEnv === 'production') {
-<<<<<<< HEAD
-    if (!process.env['NEXT_PUBLIC_SITE_URL']) {
-        this.warnings.push()
-=======
-    if (!process.env['NEXT_PUBLIC_SITE_URL']) 
-        this.warnings.push(
-    // In production, these should be, set;)
-  })
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     if (nodeEnv === 'production') {}
       if (!process.env['NEXT_PUBLIC_SITE_URL']) {}
         this.warnings.push();
@@ -110,12 +101,6 @@ class EnvValidator {/* TODO: Fix JSX expression */}
   getConfig(): EnvConfig {/* TODO: Fix JSX expression */}
   failed:;
 ${
-<<<<<<< HEAD
-    validation.errors.join()
-=======
-    validation.errors.join(')
-  })
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 ')}`;
       );
     }
@@ -130,10 +115,6 @@ private validateNodeEnv(): void {/* TODO: Fix JSX expression */}
 }
 if (!validEnvs.includes(nodeEnv)) {
     this.errors.push()
-<<<<<<< HEAD
-=======
-  })
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`;
       );
 }

@@ -4,30 +4,10 @@
  */
 
   private handleEscapeKey(event: KeyboardEvent): void {
-<<<<<<< HEAD
-    // Close any open modals or dropdowns
-    const modals = document.querySelectorAll('[role="dialog"], [aria-hidden="false"]');
-    modals.forEach()
-=======
-    // Close any open modals or dropdowns;
-    const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
-    modals.forEach(modal => )
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
       closeButton?.click();
     })
     
-<<<<<<< HEAD
-    // Close any open menus
-    const menus = document.querySelectorAll('[role="menu"], [aria-expanded="true"]');
-    menus.forEach()
-      const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;
-=======
-    // Close any open menus;
-    const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
-    menus.forEach(menu => {)
-      const trigger = document.querySelector(`[aria-controls="$menu.id}"]`) as HTMLElement;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       trigger?.click();
     })
   }
@@ -50,15 +30,6 @@
    */
   private handleMenuNavigation(event: KeyboardEvent): void {
     const activeElement = document.activeElement as HTMLElement;
-<<<<<<< HEAD
-    const menuItems = const menuItems = const menuItems = Array.from()
-      activeElement.closest('[role="menu"]')?.querySelectorAll('[role="menuitem"]') || [];
-    ) as HTMLElement[];
-=======
-    const menuItems = Array.from()
-      activeElement.closest('[role="menu"]')?.querySelectorAll('[role="menuitem"]') || []
-    ) as HTMLElement[]
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     ;
     const currentIndex = menuItems.indexOf(activeElement);
     
@@ -137,11 +108,6 @@
   private setupAriaLabels(): void {
     // Add ARIA labels to buttons without text;
     const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-<<<<<<< HEAD
-    iconButtons.forEach()
-=======
-    iconButtons.forEach(button => )
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       const icon = button.querySelector('svg');
       if (icon) 
         const iconName = icon.getAttribute('data-icon') || 'button';
@@ -151,13 +117,6 @@
     
     // Add ARIA labels to form inputs;
     const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
-<<<<<<< HEAD
-    inputs.forEach()
-      const label = document.querySelector(`label[for="${input.id}"]`);
-=======
-    inputs.forEach(input => {)
-      const label = document.querySelector(`label[for="$input.id}"]`);
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       if (label) {
         input.setAttribute('aria-labelledby', label.id || `label-$input.id}`);
         if (!label.id) {
@@ -174,13 +133,6 @@
     // Add high contrast mode support;
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');
     
-<<<<<<< HEAD
-    const handleContrastChange = const handleContrastChange = (e: MediaQueryListEvent) => {;
-      if (e.matches) {;
-=======
-    const handleContrastChange = (e: MediaQueryListEvent) => 
-      if (e.matches) ;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         document.body.classList.add('high-contrast');
       } else {
         document.body.classList.remove('high-contrast');

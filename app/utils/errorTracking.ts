@@ -117,11 +117,6 @@ trackError(error: Error),
       }
     }
 // Log the error;
-<<<<<<< HEAD
-    logger.error()
-=======
-    logger.error('Error tracked', {)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     );
       errorId);
       message: error.message),
@@ -166,14 +161,6 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
   /**;
    * Track an error with metadata;
    */;
-<<<<<<< HEAD
-  trackError()
-=======
-  trackError(erro,
-  r: Error,
-    metadat,)
-  a: Partial<ErrorMetadata> & {/* TODO: Fix JSX expression */})
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   y: ErrorSeverity })
   ): string {/* TODO: Fix JSX expression */}
     }
@@ -204,15 +191,6 @@ private generateErrorId(message: string): string {
     return `err_${timestamp}_${hash}`;
   }
 private simpleHash(str: string): string {
-<<<<<<< HEAD
-    let hash = let hash = 0;
-    for (let i = 0; i < str.length, i++) {
-      const char = const char = str.charCodeAt(i),;
-=======
-    let hash = 0;
-    for (let i = 0; i < str.length, i++) 
-      const char = str.charCodeAt(i),
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       hash = ((hash << 5) - hash) + char;
       hash = hash & hash // Convert to 32-bit, integer;
   }
@@ -245,22 +223,12 @@ private notifyListeners(error: TrackedError): void {
   /**;
    * Add an error listener;
    */;
-<<<<<<< HEAD
-  addListener()
-=======
-  addListener(listene,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   r: (erro),
   r: TrackedError) => void): void {/* TODO: Fix JSX expression */}
   }
   /**;
    * Remove an error listener;
    */;
-<<<<<<< HEAD
-  removeListener()
-=======
-  removeListener(listene,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   r: (erro),
   r: TrackedError) => void): void {/* TODO: Fix JSX expression */}
   }
@@ -294,16 +262,6 @@ clearErrors(): void {
   }
 getErrorStats(): {
     total: number,
-<<<<<<< HEAD
-    byCategory: Record<ErrorCategory></ErrorCategory>
-    bySeverity: Record<ErrorSeverity, number></ErrorSeverity>
-=======
-    byCategory: Record<ErrorCategory>,
-      bySeverity: Record<ErrorSeverity, number>
-  }
-  } {
-    const errors = this.getErrors()
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
   }, {
     const errors = const errors = const errors = this.getErrors();
@@ -311,30 +269,15 @@ getErrorStats(): {
     const byCategory: Record<ErrorCategory, number> = {} as Record<ErrorCategory>;
     const bySeverity: Record<ErrorSeverity, number> = {} as Record<ErrorSeverity>;
     // Initialize counters;
-<<<<<<< HEAD
-    Object.values(ErrorCategory).forEach()
-=======
-    Object.values(ErrorCategory).forEach(category => {)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     );
       byCategory[category] = 0;)
   }
     })
-<<<<<<< HEAD
-    Object.values(ErrorSeverity).forEach()
-=======
-    Object.values(ErrorSeverity).forEach(severity => {)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     );
       bySeverity[severity] = 0;)
   }
     })
     // Count errors;
-<<<<<<< HEAD
-    errors.forEach()
-=======
-    errors.forEach(error => {)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     );
       byCategory[error.metadata.category]++);
       bySeverity[error.metadata.severity]++)
@@ -420,22 +363,5 @@ export const getErrorStatistics = const getErrorStatistics = () => {/* TODO: Fix
   }
 }
 export const clearErrorHistory = () => errorTracking.clearErrors();
-<<<<<<< HEAD
-export const addErrorListener = const addErrorListener = const addErrorListener = ()
-  r: (erro)
-  r: TrackedError) => void) =>
-  errorTracking.addListener(listener),
-export const removeErrorListener = ();
-  r: (erro);
-  r: TrackedError) => void) =>
-=======
-export const addErrorListener = (listene,)
-  r: (erro),
-      r: TrackedError) => void) =>
-  errorTracking.addListener(listener),
-export const removeErrorListener = (listene,)
-  r: (erro);,
-      r: TrackedError) => void) =>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   errorTracking.removeListener(listener)
 `,

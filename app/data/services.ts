@@ -291,11 +291,6 @@ export const aiServices = const aiServices = const aiServices = [
     link: '/machine-learning',
     popular: true,
     category: 'AI Development',
-<<<<<<< HEAD
-    rating: 4.9,
-=======
-      rating: 4.9,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     users: '500+',
   }
     freeTrial: '30 days'},
@@ -310,11 +305,6 @@ export const aiServices = const aiServices = const aiServices = [
     link: '/ai-cybersecurity',
     popular: true,
     category: 'Security',
-<<<<<<< HEAD
-    rating: 4.8,
-=======
-      rating: 4.8,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     users: '300+',
   }
     freeTrial: '30 days'},
@@ -329,11 +319,6 @@ export const aiServices = const aiServices = const aiServices = [
     link: '/ai-healthcare',
     popular: true,
     category: 'Healthcare',
-<<<<<<< HEAD
-    rating: 4.9,
-=======
-      rating: 4.9,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     users: '200+',
   }
     freeTrial: '30 days'},
@@ -348,11 +333,6 @@ export const aiServices = const aiServices = const aiServices = [
     link: '/ai-financial-advisor',
     popular: true,
     category: 'Finance',
-<<<<<<< HEAD
-    rating: 4.7,
-=======
-      rating: 4.7,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     users: '400+',
   }
     freeTrial: '30 days'},
@@ -367,11 +347,6 @@ export const aiServices = const aiServices = const aiServices = [
     link: '/ai-supply-chain',
     popular: true,
     category: 'Logistics',
-<<<<<<< HEAD
-    rating: 4.8,
-=======
-      rating: 4.8,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     users: '250+',
   }
     freeTrial: '30 days'},
@@ -386,11 +361,6 @@ export const aiServices = const aiServices = const aiServices = [
     link: '/ai-legal-assistant',
     popular: true,
     category: 'Legal',
-<<<<<<< HEAD
-    rating: 4.6,
-=======
-      rating: 4.6,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     users: '150+',
   }
     freeTrial: '30 days'},
@@ -405,11 +375,6 @@ export const aiServices = const aiServices = const aiServices = [
     link: '/ai-manufacturing',
     popular: true,
     category: 'Manufacturing',
-<<<<<<< HEAD
-    rating: 4.9,
-=======
-      rating: 4.9,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     users: '180+',
   }
     freeTrial: '30 days'},
@@ -424,11 +389,6 @@ export const aiServices = const aiServices = const aiServices = [
     link: '/ai-education',
     popular: true,
     category: 'Education',
-<<<<<<< HEAD
-    rating: 4.7,
-=======
-      rating: 4.7,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     users: '600+',
   };
     freeTrial: '30 days'};
@@ -445,11 +405,6 @@ export const itServices = const itServices = const itServices = [
     link: '/cloud-migration',
     popular: true,
     category: 'Cloud Services',
-<<<<<<< HEAD
-    rating: 4.8,
-=======
-      rating: 4.8,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     users: '600+',
   }
     freeTrial: '30 days'},
@@ -464,11 +419,6 @@ export const itServices = const itServices = const itServices = [
     link: '/enterprise-infrastructure',
     popular: true,
     category: 'Infrastructure',
-<<<<<<< HEAD
-    rating: 4.9,
-=======
-      rating: 4.9,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     users: '100+',
   }
     freeTrial: '30 days'},
@@ -483,11 +433,6 @@ export const itServices = const itServices = const itServices = [
     link: '/devops-automation',
     popular: true,
     category: 'DevOps',
-<<<<<<< HEAD
-    rating: 4.8,
-=======
-      rating: 4.8,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     users: '400+',
   }
     freeTrial: '30 days'},
@@ -502,11 +447,6 @@ export const itServices = const itServices = const itServices = [
     link: '/database-management',
     popular: true,
     category: 'Database',
-<<<<<<< HEAD
-    rating: 4.7,
-=======
-      rating: 4.7,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     users: '350+',
   }
     freeTrial: '30 days'},
@@ -521,11 +461,6 @@ export const itServices = const itServices = const itServices = [
     link: '/network-security',
     popular: true,
     category: 'Security',
-<<<<<<< HEAD
-    rating: 4.9,
-=======
-      rating: 4.9,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     users: '500+',
   }
     freeTrial: '30 days'},
@@ -540,11 +475,6 @@ export const itServices = const itServices = const itServices = [
     link: '/it-consulting',
     popular: true,
     category: 'Consulting',
-<<<<<<< HEAD
-    rating: 4.8,
-=======
-      rating: 4.8,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     users: '200+',
   };
     freeTrial: '30 days'};
@@ -561,11 +491,6 @@ export const specializedServices = const specializedServices = const specialized
     link: '/quantum-computing',
     popular: true,
     category: 'Quantum',
-<<<<<<< HEAD
-    rating: 4.9,
-=======
-      rating: 4.9,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     users: '50+',
   }
     freeTrial: '60 days'},
@@ -580,11 +505,6 @@ export const specializedServices = const specializedServices = const specialized
     link: '/autonomous-systems',
     popular: true,
     category: 'Autonomous',
-<<<<<<< HEAD
-    rating: 4.8,
-=======
-      rating: 4.8,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     users: '100+',
   }
     freeTrial: '30 days'},
@@ -599,11 +519,6 @@ export const specializedServices = const specializedServices = const specialized
     link: '/blockchain',
     popular: true,
     category: 'Blockchain',
-<<<<<<< HEAD
-    rating: 4.7,
-=======
-      rating: 4.7,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     users: '300+',
   }
     freeTrial: '30 days'},
@@ -618,11 +533,6 @@ export const specializedServices = const specializedServices = const specialized
     link: '/iot-edge',
     popular: true,
     category: 'IoT',
-<<<<<<< HEAD
-    rating: 4.8,
-=======
-      rating: 4.8,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     users: '400+',
   };
     freeTrial: '30 days'};

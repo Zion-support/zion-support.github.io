@@ -17,44 +17,15 @@ setTimeout(() =>
   }
   }, 1000);
 }
-<<<<<<< HEAD
-export const focusElement = const focusElement = const focusElement = (element: HTMLElement | null): void => {
-    if (element) {
-=======
-export const focusElement = (element: HTMLElement | null): void => {
-    if (element) 
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     element.focus()
   }
   };
 };
 export const trapFocus = (container: HTMLElement): (() => void) => {;
-<<<<<<< HEAD
-    const focusableElements = const focusableElements = const focusableElements = container.querySelectorAll();
-=======
-    const focusableElements = container.querySelectorAll(,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
   );
 const firstElement = focusableElements[0] as HTMLElement;
   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-<<<<<<< HEAD
-const handleTabKey = const handleTabKey = ()
-    if (e.key === 'Tab') {
-      if (e.shiftKey) {
-        if (document.activeElement === firstElement) {;
-          lastElement.focus();) => {
-  return ()
-  )
-=======
-const handleTabKey = (;)
-    if (e.key === 'Tab') {
-      if (e.shiftKey) {
-        if (document.activeElement === firstElement) 
-          lastElement.focus();) => 
-  return ()
-    $3)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
           e.preventDefault();}
         }
@@ -111,18 +82,6 @@ return skipLink,
 }
 export const checkColorContrast = const checkColorContrast = const checkColorContrast = (foreground: string, background: string): boolean => {
     // Simple contrast ratio calculation (simplified)
-<<<<<<< HEAD
-  const getLuminance = (color: string): number => {
-    const rgb = color.match(/\d+/g);
-    if (!rgb) return 0,;
-const [r, g, b] = rgb.map(Number).map()
-=======
-  const getLuminance = (color: string): number => 
-    const rgb = color.match(/\d+/g)
-    if (!rgb) return 0,
-const [r, g, b] = rgb.map(Number).map(c => ;)
-      c = c / 255;)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)
   }
     })

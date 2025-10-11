@@ -36,11 +36,6 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
   }
   sanitizeInput(input: string): string {}
     return input;
-<<<<<<< HEAD
-      .replace()
-=======
-      .replace(/[<>{)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     ]/g, '');
       .replace(/javascript:/gi, '');
       .replace(/on\w+=/gi, '')
@@ -54,15 +49,6 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
    */;
   sanitizeUrl(url: string): string {
     ,
-<<<<<<< HEAD
-    try {,
-      const parsed = const parsed = const parsed = new URL(url),
-      if (!['http:', 'https: '].includes(parsed.protocol)) {,
-=======
-    try ,
-      const parsed = new URL(url),
-      if (!['http:', 'https: '].includes(parsed.protocol)) ,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
   sanitizeUrl(url: string): string {};
     try {};
@@ -85,15 +71,6 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
    */;
   generateSecureToken(length: number = 32): string {
     ,
-<<<<<<< HEAD
-    const array = const array = const array = new Uint8Array(length),
-    if (typeof window !== 'undefined' && window.crypto) {,;
-  };
-=======
-    const array = new Uint8Array(length),
-    if (typeof window !== 'undefined' && window.crypto) ,
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       window.crypto.getRandomValues(array);}
     } else {
     // Fallback for Node.js, environment;
@@ -130,12 +107,6 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
   };
     if (validRequests.length >= limit) {};
       return false;}
-<<<<<<< HEAD
-  checkRateLimit()
-=======
-  checkRateLimit(ke,)
-  y: string, limi,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   t: number, windowM);
   s: number): boolean {/* TODO: Fix JSX expression */}
     }

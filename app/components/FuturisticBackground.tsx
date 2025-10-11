@@ -19,8 +19,6 @@ const FuturisticBackground: React.FC = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-<<<<<<< HEAD
-    // Quantum particles
     const particles: Array<{
       x: number;
       y: number;
@@ -28,37 +26,35 @@ const FuturisticBackground: React.FC = () => {
       vy: number;
       size: number;
       opacity: number;
-      color: string;
-    }> = []
+    }> = [];
 
-    const colors = ['#00ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6'];
     // Create particles
     for (let i = 0; i < 50; i++) {
-      particles.push()
+      particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 0.5,
         vy: (Math.random() - 0.5) * 0.5,
-        size: Math.random() * 3 + 1,
-        opacity: Math.random() * 0.5 + 0.2,
-        color: colors[Math.floor(Math.random() * colors.length)]
-        })
-      }
-    const animate = () => {;
-=======
-    // Simple animated background
+        size: Math.random() * 2 + 1,
+        opacity: Math.random() * 0.5 + 0.1
+      });
+    }
+
     const animate = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      // Draw gradient background
-      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-      gradient.addColorStop(0, 'rgba(6, 182, 212, 0.1)');
-      gradient.addColorStop(0.5, 'rgba(147, 51, 234, 0.1)');
-      gradient.addColorStop(1, 'rgba(236, 72, 153, 0.1)');
-      
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      particles.forEach(particle => {
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+
+        if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
+        if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
+
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(0, 255, 255, ${particle.opacity})`;
+        ctx.fill();
+      });
 
       requestAnimationFrame(animate);
     };
@@ -70,16 +66,12 @@ const FuturisticBackground: React.FC = () => {
     };
   }, []);
 
-<<<<<<< HEAD
-  return ()
-=======
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 w-full h-full pointer-events-none"
-      style={{ zIndex: -1 }}
+      className="fixed inset-0 pointer-events-none z-0"
+      style={{ background: 'transparent' }}
     />
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   );
 };
 

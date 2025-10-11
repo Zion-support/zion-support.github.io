@@ -20,15 +20,6 @@ export interface ErrorLogEntry {}
       severity: ErrorSeverity;,
       message: string;
   error?: Error;
-<<<<<<< HEAD
-  context?: Record<string></string>
-  userAgent?: string
-  url?: string
-=======
-  context?: Record<string>
-  userAgent?: string;
-  url?: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   stackTrace?: string,}
 }
 class ErrorLogger {}
@@ -137,22 +128,11 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
       if (!endpoint) {}
         return;}
       }
-<<<<<<< HEAD
-      await fetch()
-=======
-      await fetch(endpoint, {)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     method: 'POST'),
         headers: )
   }
           'Content-Type': 'application/json'})
         })
-<<<<<<< HEAD
-        body: JSON.stringify()
-    )
-=======
-        body: JSON.stringify({)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           ...entry;)
           error: entry.error;),
             ? ),
@@ -179,14 +159,6 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
   private async sendToExternalService(entr);
   y: ErrorLogEntry): Promise<void> {/* TODO: Fix JSX expression */}
       }
-<<<<<<< HEAD
-      await fetch()
-=======
-      await fetch(endpoint, {/* TODO: Fix JSX expression */},
-        bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
-              })
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             : undefined;);
         })
       })

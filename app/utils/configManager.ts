@@ -51,17 +51,6 @@ export interface AppConfig {
   }
   }
 }
-<<<<<<< HEAD
-const defaultConfig: AppConfig = {
-    environment: 'development',
-    api: {
-    baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
-=======
-const defaultConfig: AppConfig = {,
-      environment: 'development',
-      api:  ,
-      baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     timeout: 30000,
     retryAttempts: 3,
     enableCaching: true,
@@ -270,11 +259,6 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**;
    * Deep merge two config objects;
    */;
-<<<<<<< HEAD
-  private mergeConfig()
-=======
-  private mergeConfig(bas,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: AppConfig, overrid);
   e: Partial<AppConfig>): AppConfig {/* TODO: Fix JSX expression */}
     const result = { ...base } as AppConfig;
@@ -292,20 +276,6 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    */;
   get<K extends keyof AppConfig>(ke);
   y: K): AppConfig[K],
-<<<<<<< HEAD
-  get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
-  y: NK;)
-  ): AppConfig[K], [NK],
-  get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
-=======
-  get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
-  y: K,)
-    nestedKe,)
-  y: NK;)
-  ): AppConfig[K][NK],
-  get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,)
-  y: K,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     nestedKey?: NK;);
   ): AppConfig[K] | AppConfig[K], [NK] {/* TODO: Fix JSX expression */}
     }
@@ -314,32 +284,6 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**;
    * Set configuration value;
    */;
-<<<<<<< HEAD
-  set<K extends keyof AppConfig>()
-  y: K, valu);
-  e: AppConfig[K]): void,
-  set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
-  e: AppConfig[K], [NK])
-  ): void,
-  set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
-    value?: AppConfig[K], [NK]);
-=======
-  set<K extends keyof AppConfig>(ke,)
-  y: K, valu);
-  e: AppConfig[K]): void,
-  set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
-  y: K,
-    nestedKe,
-  y: NK,)
-    valu,)
-  e: AppConfig[K][NK])
-  ): void,
-  set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
-  y: K,
-    nestedKeyOrValu,)
-  e: NK | AppConfig[K],)
-    value?: AppConfig[K][NK]);
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   ): void {/* TODO: Fix JSX expression */}
         this.config[key] = Object.assign({}, currentValue, {/* TODO: Fix JSX expression */})
         }) as AppConfig[K]

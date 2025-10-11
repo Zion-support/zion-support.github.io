@@ -6,13 +6,6 @@ interface StructuredDataProps {
   data?: Record<string, unknown>;
 }
 
-<<<<<<< HEAD
-const StructuredData: React.FC<StructuredDataProps> = ()
-=======
-const StructuredData: React.FC<StructuredDataProps> = ({ 
-  type = 'Organization', )
-  data )
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 }) => {
   const getDefaultData = const getDefaultData = const getDefaultData = () => {
     switch (type) {
@@ -173,20 +166,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({
 ;
   const structuredData = data || getDefaultData();
 
-<<<<<<< HEAD
-  return ()
-        __html: JSON.stringify(structuredData, null, 2)
-      }}
-    /></script>
-=======
-  return (
-    <script;
-      type="application/ld+json")
-      dangerouslySetInnerHTML={)
-        __html: JSON.stringify(structuredData, null, 2)
-      }
-    />
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   );
 };
 

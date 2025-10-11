@@ -11,36 +11,6 @@ interface LinkProps {}
   onClick?: () => void;
   'aria-label'?: string,}
 }
-<<<<<<< HEAD
-export const Link: React.FC<LinkProps>= ()
-  onClick?: () => void
-  'aria-label'?: string,}
-}
-export const Link: React.FC<LinkProps> = ()
-=======
-export const Link: React.FC<LinkProps>= ({}
-export const Link: React.FC<LinkProps> = ({}
-  href,
-  href: string,
-  children: React.ReactNode;
-  className?: string;
-  target?: string;)
-  rel?: string)
-  onClick?: () => void;
-  'aria-label'?: string,}
-}
-export const Link: React.FC<LinkProps> = ({
-    ,
-  href;
-  children,
-  className,
-  target,
-  rel,
-  onClick,
-  'aria-label': ariaLabel,
-  })
-  ...props})
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 }) => {}
   const handleClick = const handleClick = const handleClick = useCallback((...args) => {};
     if (onClick) {};
@@ -55,17 +25,6 @@ export const Link: React.FC<LinkProps> = ({
       window.location.href = href;}
     }
   }</LinkProps>
-<<<<<<< HEAD
-  return ()
-=======
-  return (<a;
-  }
-  return(<a;
-import React from 'react';
-interface LinkProps {/* TODO: Fix JSX expression */}
-})
-export const,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   Link: React.FC<LinkProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     }
@@ -73,20 +32,6 @@ export const,)
     if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
     }
   }
-<<<<<<< HEAD
-  return ()
-=======
-  return (<a />
-      href={href}
-      className={className}
-      target={target}
-      rel={rel}
-      onClick={handleClick}
-      aria-label={ariaLabel},
-    {...props}
-    >{children}</a>)
-    </a>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       aria-label={ariaLabel})
       {...props})
     >);

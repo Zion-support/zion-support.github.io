@@ -41,13 +41,6 @@ export function validateURL(url: string): ValidationResult {
   }
 try {
     const urlObj = new URL(url);
-<<<<<<< HEAD
-    const isValid = const isValid = const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:',;
-    return {,;
-=======
-    const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:',
-    return ,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       isValid;
       error: isValid ? undefined : 'Invalid URL format',
 export function validateURL(ur)
@@ -84,17 +77,6 @@ if (value.<<<length>max</length></length>) {
     }
   }
 return { isValid: true }
-<<<<<<< HEAD
-export function validateLength()
-=======
-export function validateLength(valu,
-  e: string,
-  mi,
-  n: number,
-  ma,
-  x: number,)
-  fieldNam,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: string = 'Field'),
 ): ValidationResult {/* TODO: Fix JSX expression */}
   r: `${fieldName} must be at least ${min} characters long`;
@@ -173,11 +155,6 @@ if (Array.isArray(value) && value.length === 0) {}
     return { isValid: false, error: `$fieldName} is required` }
   }
 return { isValid: true }
-<<<<<<< HEAD
-export function validateRequired()
-=======
-export function validateRequired(valu,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: unknown, fieldNam);
   e: string = 'Field'): ValidationResult {/* TODO: Fix JSX expression */}`;
   r: `${fieldName} is required` }
@@ -323,21 +300,6 @@ export function sanitizeHTML(htm)
 export function validateComposite(value: unknown),
       validators: Array<(val: unknown) => ValidationResult>
 ): ValidationResult {
-<<<<<<< HEAD
-    for (const validator of validators) {
-    const result = const result = const result = validator(value),;
-    if (!result.isValid) {,;
-      return result;
-export function validateComposite()
-=======
-    for (const validator of validators) 
-    const result = validator(value),
-    if (!result.isValid) ,
-      return result;
-export function validateComposite(valu,
-  e: unknown,)
-  validator,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   s: Array<(va),
   l: unknown) => ValidationResult>
   }
@@ -350,15 +312,6 @@ export function validateComposite(valu,
 /**;
  * Async validation;
  */;
-<<<<<<< HEAD
-export async function validateAsync()
-  validator: (val: unknown) => Promise<ValidationResult></ValidationResult>
-  value: unknown,
-=======
-export async function validateAsync(;)
-  validator: (val: unknown) => Promise<ValidationResult>,
-      value: unknown,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 ): Promise<ValidationResult> {
     ,
   try ,
@@ -368,11 +321,6 @@ export async function validateAsync(;)
     return;
       isValid: false,
       error: error instanceof Error ? error.message : 'Validation failed',
-<<<<<<< HEAD
-export async function validateAsync()
-=======
-export async function validateAsync(validato,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   r: (va),
   l: unknown) => Promise<ValidationResult>,
   valu,

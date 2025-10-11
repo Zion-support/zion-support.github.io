@@ -11,12 +11,6 @@ const ServiceWorker: React.FC = () => {
           });
 
           console.log('Service Worker registered successfully:', registration);
-<<<<<<< HEAD
-        })
-        .catch((error) => {
-          console.log('Service Worker registration failed:', error);
-        });
-=======
 
           // Handle updates
           registration.addEventListener('updatefound', () => {
@@ -44,7 +38,6 @@ const ServiceWorker: React.FC = () => {
       };
 
       registerSW();
->>>>>>> cursor/analyze-improve-and-deploy-application-d4cc
     }
   }, []);
 

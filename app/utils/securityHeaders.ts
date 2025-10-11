@@ -123,13 +123,6 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
   }
 ): Array<{ key: string, value: string }> {}
   const headers = getSecurityHeaders(customConfig);
-<<<<<<< HEAD
-  return Object.entries(headers).map(([key, value]) => ()
-=======
-  return Object.entries(headers).map(([key, value]) => ({}
-    key,)
-    value})
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }));
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
 ): Array<{/* TODO: Fix JSX expression */}

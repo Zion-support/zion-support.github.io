@@ -60,17 +60,6 @@ export const generateSitemap = const generateSitemap = const generateSitemap = u
 </urlset>`;
   return sitemap;
 }
-<<<<<<< HEAD
-export const generateRobotsTxt = const generateRobotsTxt = useCallback((...args) => {};
-  return `User-agent: *;
-Allow: /
-Sitemap: https://ziontechgroup.com/sitemap.xml
-=======
-export const generateRobotsTxt = useCallback((...args) => {}
-  return `User-agent: *;,
-      Allow: /,
-      Sitemap: https://ziontechgroup.com/sitemap.xml;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 # Crawl-delay for better server performance,
 Crawl-delay: 1,
 # Disallow admin and private areas;

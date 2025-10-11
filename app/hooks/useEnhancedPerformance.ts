@@ -34,14 +34,6 @@ return () => {
         const _duration = performance.now() - mountTimeRef.current;
         if (duration > 5000) 
           // Long-lived component;
-<<<<<<< HEAD
-          analytics.trackCustomEvent()
-=======
-          analytics.trackCustomEvent(
-            'Performance',
-            'Long Component Lifetime',)
-            component,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             Math.round(duration);
           )
   }
@@ -59,42 +51,10 @@ return () => {
     renderCountRef.current++;
 if (trackPerformance && renderCountRef.current > 10) 
       // Many re-renders detected;
-<<<<<<< HEAD
-      analytics.trackCustomEvent()
-      )
-  }
-    }
-  })
-const trackError = const trackError = useCallback()
-    (error: Error, context?: Record<string, unknown>) => {
-    if (trackErrors) {
-        errorTracker.trackError()
-=======
-      analytics.trackCustomEvent(
-        'Performance',
-        'High Render Count',
-        component,)
-        renderCountRef.current;)
-  }
-    }
-  })
-const trackError = useCallback(;)
-    (error: Error, context?: Record<string, unknown>) => {
-    if (trackErrors) 
-        errorTracker.trackError(error, 
-          component,
-          ...context,)
-  })
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         })
       },
     [component, trackErrors];
   );
-<<<<<<< HEAD
-const trackUserAction = const trackUserAction = useCallback()
-=======
-const trackUserAction = useCallback(;)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     (action: string, metadata?: Record<string, unknown>) => {
     if (trackAnalytics) 
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata)
@@ -102,31 +62,6 @@ const trackUserAction = useCallback(;)
       },
     [component, trackAnalytics];
   );
-<<<<<<< HEAD
-const measureOperation = const measureOperation = useCallback()
-    (operationName: string) => {};
-      const _markName = `${component}-${operationName}`;
-      const _startTime = performance.now();
-return {
-    end: () => {
-          const _duration = const _duration = const _duration = performance.now() - startTime,
-if (trackPerformance) {
-            analytics.trackPerformance();
-=======
-const measureOperation = useCallback(;)
-    (operationName: string) => {}
-      const _markName = `${component}-${operationName}`;
-      const _startTime = performance.now();
-return {
-    end: () => 
-          const _duration = performance.now() - startTime,
-if (trackPerformance) 
-            analytics.trackPerformance(
-  }
-              `${component}-${operationName}`,
-              duration,)
-              duration > 1000 ? 'slow' : 'fast';)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             );
           }
 return duration;

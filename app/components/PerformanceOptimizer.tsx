@@ -1,24 +1,6 @@
 import React, { useEffect, memo } from 'react';
 
 interface PerformanceOptimizerProps {
-<<<<<<< HEAD
-    children: React.ReactNode;
-  enableImageOptimization?: boolean;
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean,
-  enableCodeSplitting?: boolean;
-  }
-
-<<<<<<< HEAD
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
-=======
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ 
-  children, 
-  enableImageOptimization = true,
-  enableLazyLoading = true,
-  enablePreloading = true,)
-  enableCodeSplitting = true)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 }) => {
     const [isOptimizing, setIsOptimizing] = useState(false);
   const [optimizations, setOptimizations] = useState<string[]>([]);
@@ -71,78 +53,17 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     setOptimizations(newOptimizations);
     setIsOptimizing(false);
   }, [enableImageOptimization, optimizeImages, optimizeMemory]);
-=======
   children: React.ReactNode;
 }
 >>>>>>> cursor/analyze-improve-and-deploy-application-89d8
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ children }) => {
   useEffect(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Run initial optimizations
-    const timer = const timer = const timer = setTimeout(() => {;
-      runOptimizations();
-=======
-    // Run initial optimizations;
-    const timer = setTimeout(() => 
-      runOptimizations()
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }, 1000);
 
     return () => clearTimeout(timer);
   }, [runOptimizations]);
 
-<<<<<<< HEAD
-  return() {/* Performance Status Indicator (only in development) */},
-    {process.env.NODE_ENV === 'development' && ()
-          ) : ()
-              )}
-              
-              <div className="text-xs text-gray-300" /></div>
-                {optimizations.length > 0 ? ()
-                    {optimizations.map((opt, index) => ()
-                    ))}
-                  </ul>
-                ) : ()
-=======
-  return (
-    <div className="performance-optimizer">)
-      {children},)
-    {/* Performance Status Indicator (only in development) */},
-    {process.env.NODE_ENV === 'development' && (
-        </div></div><div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-white text-sm max-w-xs">
-          </div></div><div className="flex items-center space-x-2 mb-2">
-            </div></div><Settings className="w-4 h-4 text-cyan-400" />
-            <span className="font-semibold">Performance Optimizer</span></span></span>
-          </div>
-          
-          {isOptimizing ? (
-            <div className="flex items-center space-x-2 text-yellow-400">
-              </div></div><Zap className="w-4 h-4 animate-pulse" />
-              <span>Optimizing...</span></span></span>)
-            </div>)
-          ) : (
-            <div className="space-y-2">
-              performanceScore && (
-                </div></div><div className="flex items-center space-x-2">
-                  </div></div><CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Score: performanceScore}/100</span></span></span>)
-                </div>)
-              )}
-              
-              <div className="text-xs text-gray-300">
-                {optimizations.length > 0 ? ()</div></div><ul className="space-y-1">)
-                    optimizations.map((opt, index) => (
-                      <li key=index} className="flex items-center space-x-1">
-                        <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
-                        <span>{opt}</span></span></span>)
-                      </li>)
-                    ))}
-                  </ul>
-                ) : ()
-                  <span>No optimizations applied</span></span></span>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 )}
               </div>
             </div>
@@ -152,15 +73,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
     </div>
   );
 
-<<<<<<< HEAD
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
-=======
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enableImageOptimization = true,
-  enableLazyLoading = true,
-  enablePreloading = true,)
-  enableCodeSplitting = true)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 }) => {
     useEffect(() => {
     // Preload critical resources;
@@ -172,22 +84,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       fontPreload.as = 'style'
       document.head.appendChild(fontPreload),
 
-<<<<<<< HEAD
-      // Preload critical images
-      const criticalImages = const criticalImages = const criticalImages = [;
-        '/images/hero-bg.jpg',;
-        '/images/logo.png';
-      ];
-      criticalImages.forEach()
-=======
-      // Preload critical images;
-      const criticalImages = [
-        '/images/hero-bg.jpg',
-        '/images/logo.png';
-      ];
-      criticalImages.forEach(src => ];];)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-=======
     // Preload critical resources
     const preloadCriticalResources = () => {
       const criticalResources = [
@@ -209,18 +105,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       });
     };
 
-<<<<<<< HEAD
-    // Optimize images;
-    if (enableImageOptimization && typeof window !== 'undefined') {
-    const images = document.querySelectorAll('img');
-<<<<<<< HEAD
-      images.forEach()
-        if (enableLazyLoading && !img.hasAttribute('loading')) {
-=======
-      images.forEach(img => )
-        // Add loading="lazy" for non-critical images)
-        if (enableLazyLoading && !img.hasAttribute('loading')
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           img.loading = 'lazy'
   }
 
@@ -233,22 +117,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
     // Intersection Observer for lazy loading;
     if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {
-<<<<<<< HEAD
-    const imageObserver = const imageObserver = const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach();
-          if (entry.isIntersecting) {;
-=======
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {)
-          if (entry.isIntersecting) ;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             const img = entry.target as HTMLImageElement;
             if (img.dataset.src) 
               img.src = img.dataset.src;
               img.removeAttribute('data-src');
               observer.unobserve(img)
   }
-=======
     // Optimize images
     const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]');
@@ -264,24 +138,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         });
       });
 
-<<<<<<< HEAD
-      const lazyImages = document.querySelectorAll('img[data-src]');
-      lazyImages.forEach(img => imageObserver.observe(img));
-    }
-
-    // Performance monitoring;
-    if (typeof window !== 'undefined' && 'performance' in window) {
-<<<<<<< HEAD
-      const observer = const observer = const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            // LCP measurement logged for performance monitoring
-=======
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => 
-          if (entry.entryType === 'largest-contentful-paint') 
-            // LCP measurement logged for performance, monitoring;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           }
           if (entry.entryType === 'first-input') {
             // FID measurement logged for performance, monitoring;
@@ -292,17 +148,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       try {
         observer.observe( entryTypes: ['largest-contentful-paint', 'first-input'] })
       } catch (e) {
-<<<<<<< HEAD
-        // Fallback for browsers that don't support these entry types
-      };
-    };
-=======
-        // Fallback for browsers that don't support these entry, types;
-      }
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
-=======
       images.forEach(img => imageObserver.observe(img));
     };
 >>>>>>> cursor/analyze-improve-and-deploy-application-89d8
