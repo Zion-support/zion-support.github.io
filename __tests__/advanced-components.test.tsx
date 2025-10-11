@@ -187,7 +187,7 @@ describe('AdvancedPerformanceMonitor', () => {
       configurable: true,
     })
     // Mock PerformanceObserver
-    global.PerformanceObserver = MockPerformanceObserver as any})
+    global.PerformanceObserver = MockPerformanceObserver as unknown as typeof PerformanceObserver})
   afterEach(() => {
     jest.clearAllMocks()})
   it('renders nothing in production mode', () => {
@@ -252,16 +252,8 @@ describe('AdvancedPerformanceMonitor', () => {
         <MemoryRouter>
           <ThrowError shouldThrow={true} />
         </MemoryRouter>
-<<<<<<< HEAD
-      )
-    }).not.toThrow()
-    consoleSpy.mockRestore()
-  })
-})
-=======
       );
     }).not.toThrow();
     consoleSpy.mockRestore();
   });
 });
->>>>>>> cursor/fix-errors-and-merge-to-main-4fca
