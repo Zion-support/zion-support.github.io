@@ -4,6 +4,14 @@ import Navigation from './app/components/Navigation'
 import Footer from './app/components/Footer'
 import HomePage from './app/page'
 import AboutPage from './app/about/page'
+import ServicesPage from './app/services/page'
+import PricingPage from './app/pricing/page'
+import ContactPage from './app/contact/page'
+import AIServicesPage from './app/ai-services/page'
+import ITServicesPage from './app/it-services/page'
+import MicroSaasServicesPage from './app/micro-saas-services/page'
+import AIContentWriterPage from './app/micro-saas-services/ai-content-writer/page'
+import AIAnalyticsDashboardPage from './app/micro-saas-services/ai-analytics-dashboard/page'
 import FiveGImplementationPage from './app/5g-implementation/page'
 
 function App() {
@@ -14,6 +22,14 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/ai-services" element={<AIServicesPage />} />
+          <Route path="/it-services" element={<ITServicesPage />} />
+          <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
+          <Route path="/micro-saas-services/ai-content-writer" element={<AIContentWriterPage />} />
+          <Route path="/micro-saas-services/ai-analytics-dashboard" element={<AIAnalyticsDashboardPage />} />
           <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
         </Routes>
         <Footer />

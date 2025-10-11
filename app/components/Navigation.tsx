@@ -1,10 +1,17 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
+
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
+  
   const toggleMenu = () => {
     setIsOpen(!isOpen)
+  }
+
+  const toggleServices = () => {
+    setIsServicesOpen(!isServicesOpen)
   }
 
   return (
@@ -28,14 +35,44 @@ export default function Navigation() {
               <Link to="/about" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 About
               </Link>
-              <Link to="/services" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Services
+              
+              {/* Services Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={toggleServices}
+                  className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+                >
+                  Services
+                  <ChevronDown className="w-4 h-4 ml-1" />
+                </button>
+                {isServicesOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-white/95 backdrop-blur-lg rounded-lg shadow-lg border border-white/20 py-2 z-50">
+                    <Link to="/services" className="block px-4 py-2 text-gray-800 hover:bg-purple-50 text-sm font-medium">
+                      All Services
+                    </Link>
+                    <div className="border-t border-gray-200 my-1"></div>
+                    <Link to="/ai-services" className="block px-4 py-2 text-gray-800 hover:bg-purple-50 text-sm">
+                      AI Services
+                    </Link>
+                    <Link to="/it-services" className="block px-4 py-2 text-gray-800 hover:bg-purple-50 text-sm">
+                      IT Services
+                    </Link>
+                    <Link to="/micro-saas-services" className="block px-4 py-2 text-gray-800 hover:bg-purple-50 text-sm">
+                      Micro SAAS
+                    </Link>
+                    <div className="border-t border-gray-200 my-1"></div>
+                    <Link to="/5g-implementation" className="block px-4 py-2 text-gray-800 hover:bg-purple-50 text-sm">
+                      5G Implementation
+                    </Link>
+                  </div>
+                )}
+              </div>
+              
+              <Link to="/pricing" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Pricing
               </Link>
               <Link to="/contact" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Contact
-              </Link>
-              <Link to="/ai-services" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                AI Services
               </Link>
             </div>
           </div>
@@ -60,14 +97,31 @@ export default function Navigation() {
             <Link to="/about" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
               About
             </Link>
-            <Link to="/services" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
-              Services
+            <div className="space-y-1">
+              <div className="text-white px-3 py-2 text-base font-medium text-purple-300">
+                Services
+              </div>
+              <Link to="/services" className="text-white hover:text-purple-300 block px-6 py-2 rounded-md text-sm">
+                All Services
+              </Link>
+              <Link to="/ai-services" className="text-white hover:text-purple-300 block px-6 py-2 rounded-md text-sm">
+                AI Services
+              </Link>
+              <Link to="/it-services" className="text-white hover:text-purple-300 block px-6 py-2 rounded-md text-sm">
+                IT Services
+              </Link>
+              <Link to="/micro-saas-services" className="text-white hover:text-purple-300 block px-6 py-2 rounded-md text-sm">
+                Micro SAAS
+              </Link>
+              <Link to="/5g-implementation" className="text-white hover:text-purple-300 block px-6 py-2 rounded-md text-sm">
+                5G Implementation
+              </Link>
+            </div>
+            <Link to="/pricing" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
+              Pricing
             </Link>
             <Link to="/contact" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
               Contact
-            </Link>
-            <Link to="/ai-services" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
-              AI Services
             </Link>
           </div>
         </div>

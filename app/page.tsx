@@ -52,17 +52,17 @@ const HomePage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/about" 
+                to="/services" 
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
-                Learn More
+                View Our Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link 
                 to="/contact" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
-                Get Started
+                Get Free Consultation
               </Link>
             </div>
           </div>
@@ -126,10 +126,10 @@ const HomePage: React.FC = () => {
                   Start Your Project
                 </Link>
                 <Link 
-                  to="/about" 
+                  to="/pricing" 
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-                  Learn About Us
+                  View Pricing
                 </Link>
               </div>
             </div>

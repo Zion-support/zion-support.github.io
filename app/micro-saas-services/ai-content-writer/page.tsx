@@ -1,64 +1,64 @@
 import React from 'react';
-import { CheckCircle, Star, BarChart3, TrendingUp, Eye, Zap, ArrowRight } from 'lucide-react';
+import { CheckCircle, Star, Zap, Brain, BarChart3, Users, ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const AIAnalyticsDashboardPage: React.FC = () => {
+const AIContentWriterPage: React.FC = () => {
   const features = [
     {
-      icon: <BarChart3 className="w-6 h-6 text-blue-500" />,
-      title: 'Real-Time Dashboards',
-      description: 'Monitor your business performance with live, interactive dashboards that update in real-time.'
+      icon: <Brain className="w-6 h-6 text-blue-500" />,
+      title: 'AI-Powered Content Generation',
+      description: 'Generate high-quality, engaging content using advanced AI models trained on millions of articles and marketing materials.'
     },
     {
-      icon: <TrendingUp className="w-6 h-6 text-green-500" />,
-      title: 'Predictive Analytics',
-      description: 'Get AI-powered forecasts and trend analysis to make data-driven decisions for your business.'
+      icon: <BarChart3 className="w-6 h-6 text-green-500" />,
+      title: 'SEO Optimization',
+      description: 'Automatically optimize content for search engines with keyword suggestions, meta descriptions, and readability scores.'
     },
     {
-      icon: <Eye className="w-6 h-6 text-purple-500" />,
-      title: 'Custom Visualizations',
-      description: 'Create beautiful, interactive charts and graphs tailored to your specific business needs.'
+      icon: <Users className="w-6 h-6 text-purple-500" />,
+      title: 'Brand Voice Training',
+      description: 'Train the AI to match your unique brand voice and tone across all content types and marketing channels.'
     },
     {
       icon: <Zap className="w-6 h-6 text-orange-500" />,
-      title: 'Automated Reports',
-      description: 'Generate comprehensive reports automatically and schedule them to be delivered to your team.'
+      title: 'Multi-Language Support',
+      description: 'Create content in 25+ languages with native-level quality and cultural adaptation for global markets.'
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$49',
+      price: '$29',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for small businesses and freelancers',
       features: [
-        '5 dashboard views',
-        'Basic analytics',
-        'Email reports',
-        'Standard integrations',
+        '1,000 AI-generated content pieces/month',
+        'Basic SEO optimization',
+        '5 brand voice profiles',
         'Email support',
-        '1 user account'
+        'Standard templates',
+        'Basic analytics'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$99',
+      price: '$79',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for growing businesses and agencies',
       features: [
-        'Unlimited dashboards',
-        'Advanced analytics',
-        'Predictive insights',
-        'Custom visualizations',
+        '10,000 AI-generated content pieces/month',
+        'Advanced SEO optimization',
+        'Unlimited brand voice profiles',
         'Priority support',
-        '5 user accounts',
+        'Custom templates',
+        'Advanced analytics',
         'API access',
-        'Advanced integrations'
+        'Team collaboration'
       ],
       popular: true
     },
@@ -66,32 +66,50 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       name: 'Enterprise',
       price: '$199',
       period: '/month',
-      description: 'For large organizations',
+      description: 'For large organizations with high volume needs',
       features: [
-        'Everything in Professional',
-        'Custom AI models',
+        'Unlimited AI-generated content',
+        'Custom AI model training',
         'White-label options',
-        'Dedicated support',
-        'Unlimited users',
+        'Dedicated account manager',
+        '24/7 phone support',
         'Custom integrations',
-        'SLA guarantee',
-        'On-premise deployment'
+        'Advanced security features',
+        'SLA guarantee'
       ],
       popular: false
     }
   ];
 
-  const integrations = [
-    'Google Analytics', 'Facebook Ads', 'Google Ads', 'Salesforce', 'HubSpot', 'Shopify',
-    'Stripe', 'PayPal', 'Mailchimp', 'Zapier', 'Slack', 'Microsoft Teams'
+  const useCases = [
+    {
+      title: 'Blog Posts & Articles',
+      description: 'Generate engaging blog posts, articles, and thought leadership content that drives traffic and engagement.',
+      examples: ['How-to guides', 'Industry insights', 'Product reviews', 'Case studies']
+    },
+    {
+      title: 'Marketing Copy',
+      description: 'Create compelling marketing copy for ads, landing pages, email campaigns, and social media posts.',
+      examples: ['Ad copy', 'Email subject lines', 'Social media posts', 'Product descriptions']
+    },
+    {
+      title: 'Technical Documentation',
+      description: 'Generate clear, comprehensive technical documentation and user guides for your products and services.',
+      examples: ['API documentation', 'User manuals', 'Tutorials', 'FAQ content']
+    },
+    {
+      title: 'E-commerce Content',
+      description: 'Create product descriptions, category pages, and promotional content that converts visitors into customers.',
+      examples: ['Product descriptions', 'Category pages', 'Promotional content', 'Review responses']
+    }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Analytics Dashboard - Zion Tech Group</title>
-        <meta name="description" content="Real-time business intelligence with predictive analytics and automated reporting. Transform your data into actionable insights. Starting at $49/month." />
-        <meta name="keywords" content="AI analytics, business intelligence, data visualization, predictive analytics, dashboard, reporting" />
+        <title>AI Content Writer Pro - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered content creation tool with SEO optimization, brand voice matching, and multi-language support. Starting at $29/month." />
+        <meta name="keywords" content="AI content writer, content generation, SEO optimization, brand voice, content marketing, AI writing tool" />
       </Helmet>
       
       <Navigation />
@@ -100,20 +118,20 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-20">
-            <div className="inline-flex items-center bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <BarChart3 className="w-4 h-4 mr-2" />
-              AI-Powered Business Intelligence
+            <div className="inline-flex items-center bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Brain className="w-4 h-4 mr-2" />
+              AI-Powered Content Creation
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Analytics Dashboard
+              AI Content Writer Pro
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive analytics, and automated reporting.
+              Generate high-quality, SEO-optimized content at scale with our advanced AI writing assistant. Perfect for blogs, marketing copy, technical documentation, and more.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
-                className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -130,9 +148,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
           {/* Features Section */}
           <section className="mb-20">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Everything you need to make data-driven decisions
+                Everything you need to create professional content at scale
               </p>
             </div>
             
@@ -147,43 +165,50 @@ const AIAnalyticsDashboardPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Integrations Section */}
+          {/* Use Cases Section */}
           <section className="mb-20">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Seamless Integrations</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Perfect For</h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Connect with your favorite tools and platforms
+                Versatile content creation for every business need
               </p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                {integrations.map((integration, index) => (
-                  <div key={index} className="bg-white/20 rounded-lg p-4 text-center hover:bg-white/30 transition-colors">
-                    <span className="text-white text-sm font-medium">{integration}</span>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                  <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
+                  <p className="text-gray-300 mb-6">{useCase.description}</p>
+                  <div className="grid grid-cols-2 gap-2">
+                    {useCase.examples.map((example, exampleIndex) => (
+                      <div key={exampleIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {example}
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </section>
 
           {/* Pricing Section */}
           <section className="mb-20">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Choose Your Plan</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Start with a free trial, no credit card required
+                Choose the plan that fits your content needs
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-2 transition-all duration-300 hover:scale-105 ${
-                  plan.popular ? 'border-green-500 bg-white/15' : 'border-white/20'
+                  plan.popular ? 'border-purple-500 bg-white/15' : 'border-white/20'
                 }`}>
                   {plan.popular && (
                     <div className="flex items-center justify-center mb-4">
-                      <div className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
+                      <div className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
                         <Star className="w-4 h-4 mr-1" />
                         Most Popular
                       </div>
@@ -209,7 +234,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                     to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${
                       plan.popular 
-                        ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700'
+                        ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
                         : 'bg-white/20 text-white hover:bg-white/30'
                     }`}
                   >
@@ -223,9 +248,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
           {/* CTA Section */}
           <div className="text-center">
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Unlock Your Data?</h2>
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Content?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Join thousands of businesses using AI Analytics Dashboard to make smarter decisions with their data.
+                Join thousands of businesses already using AI Content Writer Pro to create better content faster.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
@@ -251,4 +276,4 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   );
 };
 
-export default AIAnalyticsDashboardPage;
+export default AIContentWriterPage;

@@ -63,24 +63,34 @@ export default function Footer() {
             <h3 className="text-lg font-semibold">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  AI Solutions
+                <Link to="/services" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  All Services
                 </Link>
+              </li>
+              <li>
+                <Link to="/pricing" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Pricing Plans
+                </Link>
+              </li>
+              <li>
+                <a href="https://ziontechgroup.com/micro-saas-services" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Micro SAAS
+                </a>
+              </li>
+              <li>
+                <a href="https://ziontechgroup.com/it-services" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  IT Services
+                </a>
+              </li>
+              <li>
+                <a href="https://ziontechgroup.com/ai-services" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  AI Solutions
+                </a>
               </li>
               <li>
                 <Link to="/5g-implementation" className="text-gray-400 hover:text-white transition-colors text-sm">
                   5G Implementation
                 </Link>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Cloud Services
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Digital Transformation
-                </a>
               </li>
             </ul>
           </div>
@@ -91,15 +101,15 @@ export default function Footer() {
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-gray-400" />
-                <span className="text-gray-400 text-sm">info@ziontechgroup.com</span>
+                <span className="text-gray-400 text-sm">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-gray-400" />
-                <span className="text-gray-400 text-sm">+1 (555) 123-4567</span>
+                <span className="text-gray-400 text-sm">+1 302 464 0950</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-gray-400" />
-                <span className="text-gray-400 text-sm">San Francisco, CA</span>
+                <span className="text-gray-400 text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
           </div>
