@@ -1,8 +1,18 @@
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { ArrowRight, Phone, Mail, MapPin } from 'lucide-react'
+
+const ConsultationPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     phone: '',
+    message: ''
+  })
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -11,39 +21,6 @@
     }));
   };
 
-      <Helmet>
-        <title>Consultation - Zion Tech Group | Expert AI & IT Consulting</title>
-        <meta name="description" content="Schedule a consultation with our AI and IT experts. Get personalized advice and solutions for your business needs." />
-        <meta name="keywords" content="AI consultation, IT consulting, technology consulting, business transformation, expert advice" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Consultation</span>
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Get personalized advice from our AI and IT experts to transform your business with cutting-edge technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#consultation-types"
-                className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                View Consultation Options
-              </a>
-              <a
-                href="#contact"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors"
-              >
-                Contact Us Directly
-              </a>
-            </div>
-    message: ''
-  })
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // Handle form submission
@@ -51,18 +28,16 @@
     alert('Thank you for your consultation request! We will contact you within 24 hours.')
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
-  ]
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
+      <Helmet>
+        <title>Consultation - Zion Tech Group | Expert AI & IT Consulting</title>
+        <meta name="description" content="Schedule a consultation with our AI and IT experts. Get personalized advice and solutions for your business needs." />
+        <meta name="keywords" content="AI consultation, IT consulting, technology consulting, business transformation, expert advice" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -77,7 +52,70 @@
         </div>
       </section>
 
+      {/* Consultation Form */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Schedule Your Consultation</h2>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-white font-medium mb-2">Name *</label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    placeholder="Your full name"
+                  />
                 </div>
+                
+                <div>
+                  <label className="block text-white font-medium mb-2">Email *</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    placeholder="your.email@company.com"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-white font-medium mb-2">Company</label>
+                  <input
+                    type="text"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    placeholder="Your company name"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-white font-medium mb-2">Phone</label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    placeholder="+1 (555) 123-4567"
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <label className="block text-white font-medium mb-2">Service Interest</label>
+                <select
+                  name="service"
+                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                >
                   <option value="">Select a service</option>
                   <option value="ai-solutions">AI Solutions</option>
                   <option value="cloud-services">Cloud Services</option>
@@ -100,7 +138,7 @@
                 />
               </div>
               
-              <button type="submit" className="cyber-button w-full">
+              <button type="submit" className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
                 <ArrowRight className="w-5 h-5 mr-2" />
                 Schedule Consultation
               </button>
@@ -132,5 +170,9 @@
         </div>
       </section>
 
+      <Footer />
+    </div>
   );
 };
+
+export default ConsultationPage;

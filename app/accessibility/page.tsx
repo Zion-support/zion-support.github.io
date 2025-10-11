@@ -1,3 +1,8 @@
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { Eye, MousePointer, Volume2, Shield, Users, Globe, CheckCircle } from 'lucide-react'
 
 const AccessibilityPage: React.FC = () => {
   const features = [
@@ -5,6 +10,7 @@ const AccessibilityPage: React.FC = () => {
       icon: Eye,
       title: 'Visual Accessibility',
       description: 'Comprehensive visual accessibility features including high contrast modes, text scaling, and screen reader compatibility.',
+      benefits: ['High contrast mode', 'Text scaling', 'Screen reader support', 'Color blind friendly']
     },
     {
       icon: MousePointer,
@@ -66,6 +72,8 @@ const AccessibilityPage: React.FC = () => {
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -90,6 +98,7 @@ const AccessibilityPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
                 Comprehensive Accessibility Features
@@ -125,7 +134,7 @@ const AccessibilityPage: React.FC = () => {
 
         {/* Standards Compliance Section */}
         <section className="py-20 px-4">
-          <div className="container mx-auto">
+          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
                 Standards Compliance
@@ -134,6 +143,11 @@ const AccessibilityPage: React.FC = () => {
                 We ensure full compliance with international accessibility standards and regulations.
               </p>
             </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {standards.map((standard, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300">
+                  <h3 className="text-xl font-bold text-white mb-4">{standard.name}</h3>
+                  <p className="text-gray-300">{standard.description}</p>
                 </div>
               ))}
             </div>
@@ -142,9 +156,29 @@ const AccessibilityPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4">
-              </button>
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Make Your Digital Experience Accessible?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Let us help you create inclusive digital experiences that work for everyone.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                  Start Your Project
+                </button>
+                <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                  Contact Us
+                </button>
+              </div>
             </div>
           </div>
         </section>
       </div>
+      <Footer />
     </>
+  )
+}
+
+export default AccessibilityPage
