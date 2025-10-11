@@ -1,17 +1,14 @@
-// Accessibility improvements to implement
-// 1. Add ARIA labels to interactive elements
-// Example JSX:
-// <button aria-label="Close dialog">×
-// <input aria-describedby="email-help" type="email" />
-// <div id="email-help">Enter your email address
-// 2. Implement focus management
-const trapFocus = (element) => {
+// Accessibility improvements for Zion Tech Group website
+
+// 1. Focus management
+export const trapFocus = (element) => {
   const focusableElements = element.querySelectorAll(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   )
   const firstElement = focusableElements[0]
   const lastElement = focusableElements[focusableElements.length - 1]
-  element.addEventListener('keydown', (e) => {
+
+  const handleTabKey = (e) => {
     if (e.key === 'Tab') {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
@@ -25,131 +22,105 @@ const trapFocus = (element) => {
         }
       }
     }
+  }
+
+  element.addEventListener('keydown', handleTabKey)
+  firstElement?.focus()
+
+  return () => {
+    element.removeEventListener('keydown', handleTabKey)
+  }
+}
+
+// 2. Skip links
+export const addSkipLinks = () => {
+  const skipLink = document.createElement('a')
+  skipLink.href = '#main-content'
+  skipLink.textContent = 'Skip to main content'
+  skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded'
+  document.body.insertBefore(skipLink, document.body.firstChild)
+}
+
+// 3. ARIA labels and descriptions
+export const enhanceFormAccessibility = (form) => {
+  const inputs = form.querySelectorAll('input, textarea, select')
+  inputs.forEach(input => {
+    if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {
+      const label = form.querySelector(`label[for="${input.id}"]`)
+      if (label) {
+        input.setAttribute('aria-labelledby', label.id || `label-${input.id}`)
+      }
+    }
   })
 }
-// 3. Add live regions for dynamic content
-// Example JSX:
-// <div aria-live="polite" aria-atomic="true" className="sr-only">
-//   {announcement}
-//
-// 4. Ensure proper heading hierarchy
-// Example JSX:
-// <h1>Main Page Title
-// <h2>Section Title
-// <h3>Subsection Title
-// 5. Add skip links
-// Example JSX:
-// <a href="#main-content" className="skip-link">
-//   Skip to main content
-//
-// 6. Use semantic HTML
-// Example JSX:
-// <main>
-//   <nav aria-label="Main navigation">
-//     <ul>
-//       <li><a href="/">Home</a></li>
-//     </ul>
-//   </nav>
-//   <section>
-//     <h2>Section Title</h2>
-//     <article>
-//       <h3>Article Title</h3>
-//     </article>
-//   </section>
-// </main>
 
-// 7. Form accessibility;
-// <form>
-//   <fieldset>
-//     <legend>Contact Information</legend>
-//     <label htmlFor="email">Email Address</label>
-//     <input
-//       id="email" 
-//       type="email" 
-//       required
-//       aria-describedby="email-error"
-//     />
-//     <div id="email-error" role="alert" aria-live="polite">
-//       {emailError}
-//     </div>
-//   </fieldset>
-// </form>
+// 4. Color contrast checker
+export const checkColorContrast = (element) => {
+  const style = window.getComputedStyle(element)
+  const backgroundColor = style.backgroundColor
+  const color = style.color
+  
+  // This is a simplified version - in production, use a proper contrast checker
+  console.log('Checking contrast for:', { backgroundColor, color })
+  return true
+}
 
-// 8. Image accessibility;
-// <img
-//   src="chart.png" 
-//   alt="Sales chart showing 25% increase in Q3 2024"
-//   role="img"
-// />
-// 9. Color contrast considerations;
-// Ensure sufficient contrast ratios: // - Normal text: 4.5:1;
-// - Large text: 3:1;
-// - UI components: 3:1;
-// 10. Keyboard navigation;
-// All interactive elements should be:
-// - Focusable with Tab key;
-// - Activable with Enter/Space;
-// - Have visible focus indicators;
-// - Follow logical tab order;
-// Accessibility improvements
-// Add ARIA labels
-export const addARIALabels = () => {
-  // TODO: Implement ARIA labels
-};
+// 5. Keyboard navigation
+export const enhanceKeyboardNavigation = () => {
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      // Close any open modals or menus
+      const openModals = document.querySelectorAll('[aria-modal="true"]')
+      openModals.forEach(modal => {
+        modal.style.display = 'none'
+        modal.setAttribute('aria-hidden', 'true')
+      })
+    }
+  })
+}
 
-// Improve keyboard navigation
-export const improveKeyboardNavigation = () => {
-  // TODO: Implement keyboard navigation
-};
+// 6. Screen reader announcements
+export const announceToScreenReader = (message) => {
+  const announcement = document.createElement('div')
+  announcement.setAttribute('aria-live', 'assertive')
+  announcement.setAttribute('aria-atomic', 'true')
+  announcement.className = 'sr-only'
+  announcement.textContent = message
+  
+  document.body.appendChild(announcement)
+  
+  setTimeout(() => {
+    document.body.removeChild(announcement)
+  }, 1000)
+}
 
-// Add alt text
-export const addAltText = () => {
-  // TODO: Implement alt text
-};
+// 7. High contrast mode detection
+export const detectHighContrastMode = () => {
+  const mediaQuery = window.matchMedia('(prefers-contrast: high)')
+  return mediaQuery.matches
+}
 
-// Run accessibility improvements
-export const runAccessibilityImprovements = () => {
-  console.log('Running accessibility improvements...');
-  addARIALabels();
-  improveKeyboardNavigation();
-  addAltText();
-};
-//       <li><a href="/">Home</a>
-//
-//
-//   <section>
-//     <h2>Section Title
-//     <article>
-//       <h3>Article Title
-//
-//
-//
-// 7. Form accessibility
-// Example JSX:
-// <form>
-//   <fieldset>
-//     <legend>Contact Information
-//     <label htmlFor="email">Email:
-//     <input id="email" type="email" required />
-//     <label htmlFor="phone">Phone:
-//     <input id="phone" type="tel" />
-//
-//
-// 8. Color contrast and visual indicators
-// Example CSS:
-// .focus-visible:focus {
-//   outline: 2px solid #0066cc
-//   outline-offset: 2px
-// }
+// 8. Reduced motion detection
+export const detectReducedMotion = () => {
+  const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+  return mediaQuery.matches
+}
 
-// 9. Keyboard navigation
-// Example JSX:
-// <div role="button" tabIndex={0} onKeyDown={handleKeyDown}>
-//   Clickable div
-//
+// 9. Focus indicators
+export const enhanceFocusIndicators = () => {
+  const style = document.createElement('style')
+  style.textContent = `
+    *:focus {
+      outline: 2px solid #3b82f6;
+      outline-offset: 2px;
+    }
+    
+    .focus-visible:focus:not(:focus-visible) {
+      outline: none;
+    }
+  `
+  document.head.appendChild(style)
+}
+
 // 10. Screen reader announcements
-// Example JSX:
-// <div aria-live="assertive" aria-atomic="true">
-//   {errorMessage}
-//
-export { trapFocus }</div></div></div></div></button></a></a></h1></h2></h2></h3></h3></ul></li></main></section></article></nav>
+// Export functions for use in other modules

@@ -37,7 +37,6 @@
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
->>>>>>> main
             </div>
           ))}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">

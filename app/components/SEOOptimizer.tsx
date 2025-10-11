@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-    </Helmet>
-  )
-}
-export default SEOOptimizer
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
-=======
 'use client';
 
 import React, { useEffect } from 'react';
@@ -93,28 +86,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
->>>>>>> cursor/website-audit-and-update-with-deployment-635f
       <meta name="twitter:image" content={ogImage} />
       
       {/* Additional SEO meta tags */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
-<<<<<<< HEAD
-=======
-      <meta name="theme-color" content="#1e40af" />
-      
-      {/* Structured Data */}
-      {structuredData && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData)
-          }}
-        />
-      )}
-    </Helmet>
-  );
-};
-
-export default SEOOptimizer;
->>>>>>> cursor/website-audit-and-update-with-deployment-635f

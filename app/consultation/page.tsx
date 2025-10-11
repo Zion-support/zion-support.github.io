@@ -1,5 +1,3 @@
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -60,7 +58,6 @@
     })
   }
   ]
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -76,7 +73,6 @@
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Get expert advice on your AI and IT needs. Schedule a free consultation with our specialists.
             </p>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
           </div>
         </div>
       </section>
@@ -90,7 +86,6 @@
                   <option value="custom-development">Custom Development</option>
                   <option value="other">Other</option>
                 </select>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
               </div>
               
               <div>
@@ -139,5 +134,3 @@
 
   );
 };
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-635f
