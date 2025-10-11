@@ -5,6 +5,9 @@ import Footer from './app/components/Footer'
 import HomePage from './app/page'
 import AboutPage from './app/about/page'
 import FiveGImplementationPage from './app/5g-implementation/page'
+import ServicesPage from './app/services/page'
+import ContactPage from './app/contact/page'
+import AIServicesPage from './app/it-services/page'
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/ai-services" element={<AIServicesPage />} />
           <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
         </Routes>
         <Footer />
