@@ -25,6 +25,7 @@ const AboutPage: React.FC = () => {
 
   const values = [
     {
+<<<<<<< HEAD
       icon: Lightbulb,
       title: 'Innovation',
       description: 'We constantly push the boundaries of technology to create solutions that were previously thought impossible.'
@@ -56,6 +57,21 @@ const AboutPage: React.FC = () => {
       name: 'Dr. Priya Patel',
       role: 'Head of AI Research',
       description: 'Leading expert in natural language processing and computer vision technologies.'
+=======
+      icon: Target,
+      title: 'Innovation',
+      description: 'We constantly push the boundaries of what\'s possible with AI and technology.'
+    },
+    {
+      icon: Users,
+      title: 'Collaboration',
+      description: 'We believe in the power of teamwork and building strong partnerships.'
+    },
+    {
+      icon: Award,
+      title: 'Excellence',
+      description: 'We maintain the highest standards in everything we do.'
+>>>>>>> cursor/fix-errors-and-merge-to-main-fe05
     }
   ]
 
@@ -63,8 +79,13 @@ const AboutPage: React.FC = () => {
     <>
       <Helmet>
         <title>About Us - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize business through AI and advanced technology solutions." />
         <meta name="keywords" content="about us, AI company, technology solutions, artificial intelligence, business innovation" />
+=======
+        <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize business through AI and technology solutions." />
+        <meta name="keywords" content="about, company, AI, technology, team, mission, values" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-fe05
       </Helmet>
       <Navigation />
       
@@ -77,6 +98,7 @@ const AboutPage: React.FC = () => {
                 About <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Zion Tech Group</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+<<<<<<< HEAD
                 We are pioneers in AI and technology solutions, dedicated to transforming businesses through innovative artificial intelligence and cutting-edge technology.
               </p>
             </div>
@@ -93,12 +115,16 @@ const AboutPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
                 To democratize artificial intelligence and make advanced technology accessible to businesses of all sizes, 
                 empowering them to achieve unprecedented growth and efficiency through intelligent automation and data-driven insights.
+=======
+                We are a leading technology company specializing in AI-powered solutions that transform businesses and drive innovation across industries.
+>>>>>>> cursor/fix-errors-and-merge-to-main-fe05
               </p>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -107,6 +133,16 @@ const AboutPage: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 The principles that drive our success and client satisfaction
+=======
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                What Drives Us
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Our core principles and commitment to excellence
+>>>>>>> cursor/fix-errors-and-merge-to-main-fe05
               </p>
             </div>
             

@@ -19,7 +19,10 @@ export default async function handler(req, res) {
     // Process quote submission logic here
     const quote = {
       id: Date.now().toString(),
+<<<<<<< HEAD
       timestamp: new Date().toISOString(),
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fe05
       name,
       email,
       phone,
