@@ -1,91 +1,92 @@
 'use client'
 import React, { useEffect, useState } from 'react'
+import { Activity, Zap, Clock, Database } from 'lucide-react'
 
 interface PerformanceMetrics {
   loadTime: number
-  domContentLoaded: number
-  firstContentfulPaint: number
-  largestContentfulPaint: number
-  cumulativeLayoutShift: number
+  memoryUsage: number
+  renderTime: number
+  bundleSize: number
 }
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    memoryUsage: 0,
+    renderTime: 0,
+    bundleSize: 0
+  })
+
+  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    const measurePerformance = () => {
-      if (typeof window === 'undefined' || !('performance' in window)) return
-
-      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      if (!perfData) return
-
-      const newMetrics: PerformanceMetrics = {
-        loadTime: perfData.loadEventEnd - perfData.fetchStart,
-        domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
-        firstContentfulPaint: 0,
-        largestContentfulPaint: 0,
-        cumulativeLayoutShift: 0
+    // Only show in development or when explicitly enabled
+    if (process.env.NODE_ENV === 'development' || window.location.search.includes('debug=true')) {
+      setIsVisible(true)
+      
+      // Measure performance metrics
+      const measurePerformance = () => {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+        const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0
+        
+        // Memory usage (if available)
+        const memory = (performance as any).memory
+        const memoryUsage = memory ? Math.round(memory.usedJSHeapSize / 1024 / 1024) : 0
+        
+        // Render time
+        const renderTime = performance.now()
+        
+        // Bundle size estimation
+        const bundleSize = document.querySelectorAll('script[src]').length * 50 // Rough estimation
+        
+        setMetrics({
+          loadTime: Math.round(loadTime),
+          memoryUsage,
+          renderTime: Math.round(renderTime),
+          bundleSize
+        })
       }
 
-      // Get FCP if available
-      const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0]
-      if (fcpEntry) {
-        newMetrics.firstContentfulPaint = fcpEntry.startTime
-      }
-
-      // Get LCP if available
-      const lcpEntries = performance.getEntriesByType('largest-contentful-paint')
-      if (lcpEntries.length > 0) {
-        newMetrics.largestContentfulPaint = lcpEntries[lcpEntries.length - 1].startTime
-      }
-
-      // Get CLS if available
-      const clsEntries = performance.getEntriesByType('layout-shift')
-      if (clsEntries.length > 0) {
-        newMetrics.cumulativeLayoutShift = clsEntries.reduce((sum, entry) => {
-          return sum + (entry as any).value
-        }, 0)
-      }
-
-      setMetrics(newMetrics)
-
-      // Log metrics in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Metrics:', newMetrics)
-      }
-    }
-
-    // Measure performance after page load
-    if (document.readyState === 'complete') {
-      measurePerformance()
-    } else {
-      window.addEventListener('load', measurePerformance)
-    }
-
-    return () => {
-      window.removeEventListener('load', measurePerformance)
+      // Measure after initial load
+      setTimeout(measurePerformance, 1000)
+      
+      // Update metrics periodically
+      const interval = setInterval(measurePerformance, 5000)
+      
+      return () => clearInterval(interval)
     }
   }, [])
 
-  // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') {
-    return null
-  }
+  if (!isVisible) return null
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
-      <div className="font-bold mb-2">Performance Metrics</div>
-      {metrics ? (
-        <div className="space-y-1">
-          <div>Load Time: {metrics.loadTime.toFixed(2)}ms</div>
-          <div>DOM Ready: {metrics.domContentLoaded.toFixed(2)}ms</div>
-          <div>FCP: {metrics.firstContentfulPaint.toFixed(2)}ms</div>
-          <div>LCP: {metrics.largestContentfulPaint.toFixed(2)}ms</div>
-          <div>CLS: {metrics.cumulativeLayoutShift.toFixed(4)}</div>
+    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-white text-xs font-mono z-50">
+      <div className="flex items-center space-x-2 mb-2">
+        <Activity className="w-4 h-4 text-cyan-400" />
+        <span className="font-semibold">Performance Monitor</span>
+      </div>
+      
+      <div className="space-y-1">
+        <div className="flex items-center space-x-2">
+          <Clock className="w-3 h-3 text-green-400" />
+          <span>Load: {metrics.loadTime}ms</span>
         </div>
-      ) : (
-        <div>Measuring...</div>
-      )}
+        
+        <div className="flex items-center space-x-2">
+          <Database className="w-3 h-3 text-blue-400" />
+          <span>Memory: {metrics.memoryUsage}MB</span>
+        </div>
+        
+        <div className="flex items-center space-x-2">
+          <Zap className="w-3 h-3 text-yellow-400" />
+          <span>Render: {metrics.renderTime}ms</span>
+        </div>
+        
+        <div className="flex items-center space-x-2">
+          <Activity className="w-3 h-3 text-purple-400" />
+          <span>Bundle: ~{metrics.bundleSize}KB</span>
+        </div>
+      </div>
     </div>
   )
 }
