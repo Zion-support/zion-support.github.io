@@ -60,6 +60,12 @@ const TeamPage = React.lazy(() => import('./app/team/page'))
 // Additional Service Pages
 const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'))
 const DataAnalyticsPage = React.lazy(() => import('./app/data-analytics/page'))
+// Micro SAAS Pages
+const ZionAnalyticsProPage = React.lazy(() => import('./app/zion-analytics-pro/page'))
+const ZionChatAIPage = React.lazy(() => import('./app/zion-chat-ai/page'))
+const ZionSecurityShieldPage = React.lazy(() => import('./app/zion-security-shield/page'))
+const ZionCloudVaultPage = React.lazy(() => import('./app/zion-cloud-vault/page'))
+const ZionContentStudioPage = React.lazy(() => import('./app/zion-content-studio/page'))
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor()
@@ -140,6 +146,13 @@ const App: React.FC = () => {
                             {/* Additional Service Pages */}
                             <Route path="/cybersecurity" element={<CybersecurityPage />} />
                             <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                            
+                            {/* Micro SAAS Pages */}
+                            <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
+                            <Route path="/zion-chat-ai" element={<ZionChatAIPage />} />
+                            <Route path="/zion-security-shield" element={<ZionSecurityShieldPage />} />
+                            <Route path="/zion-cloud-vault" element={<ZionCloudVaultPage />} />
+                            <Route path="/zion-content-studio" element={<ZionContentStudioPage />} />
                           </Routes>
                         </Suspense>
                       </main>
