@@ -2,45 +2,29 @@
 import React from 'react';
 import { Loader2 } from 'lucide-react';
 
-<<<<<<< HEAD
 export const PageLoader: React.FC = () => {
-  return ()
-=======
-const LoadingStates: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="text-center">
-        <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mb-4">
-          <Loader2 className="w-8 h-8 text-slate-900 animate-spin" />
-        </div>
-        <h2 className="text-xl font-semibold text-white mb-2">Loading...</h2>
-        <p className="text-gray-400">Please wait while we prepare your content.</p>
+        <Loader2 className="w-12 h-12 text-cyan-400 animate-spin mx-auto mb-4" />
+        <p className="text-white text-lg">Loading...</p>
       </div>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   );
 };
 
-<<<<<<< HEAD
-export const ComponentLoader: React.FC = () => {
-  return ()
-  );
-}
-
-export const ServiceCardSkeleton: React.FC = () => {
-  return ()
-  );
-}
-
-export const ContentSkeleton: React.FC = () => {
-  return ()
-  );
-}
-
-export const LoadingSpinner: React.FC = () => ()
+export const ServiceCardSkeleton: React.FC = () => (
+  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
+    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
+    <div className="h-4 bg-gray-200 rounded mb-2"></div>
+    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+  </div>
 );
-=======
-export const PageLoader = LoadingStates;
 
-export default LoadingStates;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+export const ContentPromotionBanner: React.FC = () => (
+  <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 text-center">
+    <p className="text-sm font-medium">
+      🚀 New: AI-Powered Business Solutions - Transform Your Operations Today!
+    </p>
+  </div>
+);

@@ -63,7 +63,6 @@ const Navigation: React.FC = () => {
     setItServicesOpen(false);
   }, [microSaasOpen]);
 
-<<<<<<< HEAD
   const closeAllMenus = useCallback(() => {
     setIsOpen(false);
     setServicesOpen(false);
@@ -72,176 +71,74 @@ const Navigation: React.FC = () => {
     setMicroSaasOpen(false);
   }, []);
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-lg border-b border-cyan-500/20' : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 text-white font-bold text-xl">
-            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
-              <Brain className="w-5 h-5 text-white" />
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
+              <Zap className="w-5 h-5 text-white" />
             </div>
             <span>Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-white hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/" className="text-white hover:text-cyan-400 transition-colors">
               Home
             </Link>
-<<<<<<< HEAD
-            
-            {/* AI Services Dropdown */}
-            <div className="relative group">
-              <button
-                onClick={toggleAiServices}
-                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
-              >
-                <Brain className="w-4 h-4" />
-                <span>AI Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {aiServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-cyan-500/20 p-6">
-                  <div className="grid grid-cols-1 gap-3">
-                    <Link to="/ai-analytics" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
-                      <BarChart className="w-5 h-5 text-cyan-400" />
-                      <div>
-                        <div className="font-medium text-white">AI Analytics</div>
-                        <div className="text-sm text-gray-400">Advanced data insights</div>
-                      </div>
-                    </Link>
-                    <Link to="/ai-automation" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
-                      <Zap className="w-5 h-5 text-cyan-400" />
-                      <div>
-                        <div className="font-medium text-white">AI Automation</div>
-                        <div className="text-sm text-gray-400">Streamline workflows</div>
-                      </div>
-                    </Link>
-                    <Link to="/ai-chatbot-builder" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
-                      <MessageCircle className="w-5 h-5 text-cyan-400" />
-                      <div>
-                        <div className="font-medium text-white">AI Chatbot</div>
-                        <div className="text-sm text-gray-400">Intelligent conversations</div>
-                      </div>
-                    </Link>
-                    <Link to="/ai-cybersecurity" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
-                      <Shield className="w-5 h-5 text-cyan-400" />
-                      <div>
-                        <div className="font-medium text-white">AI Cybersecurity</div>
-                        <div className="text-sm text-gray-400">Advanced threat protection</div>
-                      </div>
-                    </Link>
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-cyan-500/20">
-                    <Link
-                      to="/ai-services"
-                      className="flex items-center justify-center w-full py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                      onClick={closeAllMenus}
-                    >
-                      View All AI Services
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* IT Services Dropdown */}
-            <div className="relative group">
-              <button
-                onClick={toggleItServices}
-                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
-              >
-                <Cloud className="w-4 h-4" />
-                <span>IT Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {itServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-cyan-500/20 p-6">
-                  <div className="grid grid-cols-1 gap-3">
-                    <Link to="/cloud-infrastructure" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
-                      <Cloud className="w-5 h-5 text-cyan-400" />
-                      <div>
-                        <div className="font-medium text-white">Cloud Infrastructure</div>
-                        <div className="text-sm text-gray-400">Scalable cloud solutions</div>
-                      </div>
-                    </Link>
-                    <Link to="/cybersecurity-solutions" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
-                      <Shield className="w-5 h-5 text-cyan-400" />
-                      <div>
-                        <div className="font-medium text-white">Cybersecurity</div>
-                        <div className="text-sm text-gray-400">Comprehensive security</div>
-                      </div>
-                    </Link>
-                    <Link to="/web-development" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
-                      <Globe className="w-5 h-5 text-cyan-400" />
-                      <div>
-                        <div className="font-medium text-white">Web Development</div>
-                        <div className="text-sm text-gray-400">Modern web applications</div>
-                      </div>
-                    </Link>
-                    <Link to="/mobile-development" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
-                      <Smartphone className="w-5 h-5 text-cyan-400" />
-                      <div>
-                        <div className="font-medium text-white">Mobile Development</div>
-                        <div className="text-sm text-gray-400">iOS & Android apps</div>
-                      </div>
-                    </Link>
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-cyan-500/20">
-                    <Link
-                      to="/it-services"
-                      className="flex items-center justify-center w-full py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                      onClick={closeAllMenus}
-                    >
-                      View All IT Services
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">
               About
             </Link>
-            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            
+            {/* Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={toggleServices}
+                className="flex items-center text-white hover:text-cyan-400 transition-colors"
+              >
+                Services
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              {servicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20">
+                  <div className="p-4">
+                    <Link to="/services" className="block text-white hover:text-cyan-400 py-2">
+                      All Services
+                    </Link>
+                    <Link to="/ai-services" className="block text-white hover:text-cyan-400 py-2">
+                      AI Services
+                    </Link>
+                    <Link to="/it-services" className="block text-white hover:text-cyan-400 py-2">
+                      IT Services
+                    </Link>
+                    <Link to="/micro-saas" className="block text-white hover:text-cyan-400 py-2">
+                      Micro SaaS
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors">
+              Pricing
+            </Link>
+            <Link to="/blog" className="text-white hover:text-cyan-400 transition-colors">
+              Blog
+            </Link>
+            <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">
               Contact
             </Link>
             
             {/* CTA Button */}
             <Link
               to="/contact"
-              className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
             >
               Get Started
-            </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="lg:hidden text-gray-300 hover:text-cyan-400 transition-colors duration-300"
-            aria-label="Toggle mobile menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-=======
-            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors duration-300 font-medium">
-              About
-            </Link>
-            <Link to="/services" className="text-white hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Services
-            </Link>
-            <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Contact
             </Link>
           </div>
 
@@ -249,90 +146,88 @@ const Navigation: React.FC = () => {
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
-              className="text-white hover:text-cyan-400 transition-colors duration-300 p-2"
+              className="text-white hover:text-cyan-400 transition-colors"
+              aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden mobile-menu">
-<<<<<<< HEAD
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800/95 backdrop-blur-lg rounded-lg mt-2 border border-cyan-500/20">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800/95 backdrop-blur-lg rounded-lg mt-2">
               <Link
                 to="/"
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                className="block text-white hover:text-cyan-400 px-3 py-2 rounded-md"
                 onClick={closeAllMenus}
-=======
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-900/95 backdrop-blur-md rounded-lg mt-2">
-              <Link
-                to="/"
-                className="block px-3 py-2 text-white hover:text-cyan-400 transition-colors duration-300 font-medium"
-                onClick={() => setIsOpen(false)}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               >
                 Home
               </Link>
               <Link
-<<<<<<< HEAD
+                to="/about"
+                className="block text-white hover:text-cyan-400 px-3 py-2 rounded-md"
+                onClick={closeAllMenus}
+              >
+                About
+              </Link>
+              <Link
+                to="/services"
+                className="block text-white hover:text-cyan-400 px-3 py-2 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Services
+              </Link>
+              <Link
                 to="/ai-services"
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                className="block text-white hover:text-cyan-400 px-3 py-2 rounded-md"
                 onClick={closeAllMenus}
               >
                 AI Services
               </Link>
               <Link
                 to="/it-services"
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                className="block text-white hover:text-cyan-400 px-3 py-2 rounded-md"
                 onClick={closeAllMenus}
               >
                 IT Services
               </Link>
               <Link
-                to="/about"
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                to="/micro-saas"
+                className="block text-white hover:text-cyan-400 px-3 py-2 rounded-md"
                 onClick={closeAllMenus}
-=======
-                to="/about"
-                className="block px-3 py-2 text-white hover:text-cyan-400 transition-colors duration-300 font-medium"
-                onClick={() => setIsOpen(false)}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               >
-                About
+                Micro SaaS
               </Link>
               <Link
-<<<<<<< HEAD
+                to="/pricing"
+                className="block text-white hover:text-cyan-400 px-3 py-2 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Pricing
+              </Link>
+              <Link
+                to="/blog"
+                className="block text-white hover:text-cyan-400 px-3 py-2 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Blog
+              </Link>
+              <Link
                 to="/contact"
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                className="block text-white hover:text-cyan-400 px-3 py-2 rounded-md"
                 onClick={closeAllMenus}
               >
                 Contact
               </Link>
               <Link
                 to="/contact"
-                className="block px-3 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 text-center mt-4"
+                className="block bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white px-3 py-2 rounded-md text-center font-semibold transition-all duration-300"
                 onClick={closeAllMenus}
               >
                 Get Started
               </Link>
-=======
-                to="/services"
-                className="block px-3 py-2 text-white hover:text-cyan-400 transition-colors duration-300 font-medium"
-                onClick={() => setIsOpen(false)}
-              >
-                Services
-              </Link>
-              <Link
-                to="/contact"
-                className="block px-3 py-2 text-white hover:text-cyan-400 transition-colors duration-300 font-medium"
-                onClick={() => setIsOpen(false)}
-              >
-                Contact
-              </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             </div>
           </div>
         )}
