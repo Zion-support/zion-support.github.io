@@ -4,7 +4,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { BarChart, TrendingUp, PieChart, ArrowRight, CheckCircle, Zap, Shield, Target } from 'lucide-react';
 
-const 5gImplementationPage: React.FC = () => {
+const FiveGImplementationPage: React.FC = () => {
   const features = [
     {
       icon: BarChart,
@@ -141,4 +141,4 @@ const 5gImplementationPage: React.FC = () => {
   );
 };
 
-export default 5gImplementationPage;
+export default FiveGImplementationPage;
