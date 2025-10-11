@@ -985,8 +985,6 @@ export interface Attachment {
         ticket.resolvedAt = new Date(),
         if (ticket.createdAt && ticket.resolvedAt) {
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       }
       this.updateAnalytics()
@@ -1202,7 +1200,6 @@ if ( {) {
   private detectIntent(message: string): { intent: string, confidence: number } {
     const lowerMessage = message.toLowerCase(),
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return { intent: 'authentication_issue', confidence: 0.9 }
     } else if (lowerMessage.includes('billing') |lowerMessage.includes('payment')) {
       return { intent: 'billing_question', confidence: 0.85 }
@@ -1472,7 +1469,6 @@ if ( {) {
     }
     return recommendations
   }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     return recommendations
   }
@@ -1617,8 +1613,6 @@ if ( {) {
       chatbotResolutionRate,
       topCategories,
       agentPerformance
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
     return this && this.tickets.find(t => t && t.id === ticketId) || null

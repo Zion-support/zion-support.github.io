@@ -10,7 +10,6 @@
       "sameAs": [
         "https://twitter.com/ziontechgroup",
   }
-      </Helmet>
         <div className="seo-debug" style={{
     {process.env.NODE_ENV === 'development' && ()
       {children}

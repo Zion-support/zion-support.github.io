@@ -1,23 +1,15 @@
+<<<<<<< HEAD
 import React, { Suspense  } from 'react';
 import {  BrowserRouter, Routes, Route   } from 'react-router-dom';
 import {  HelmetProvider   } from 'react-helmet-async';
 import {  ErrorBoundary   } from 'react-error-boundary';
+=======
+import React from 'react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 
-// Import the main page component
-import HomePage from './page';
-
-// Import other page components
-import AboutPage from './about/page';
-import AccessibilityPage from './accessibility/page';
-import FiveGImplementationPage from './5g-implementation/page';
-
-// Components
-import PerformanceMonitor from './components/PerformanceMonitor';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import AppLoadingSpinner from './components/AppLoadingSpinner';
-
-const App: React.FC = () => {
+const App = () => {
   return (
+<<<<<<< HEAD
     <ErrorBoundary>
       <HelmetProvider>
         <BrowserRouter>
@@ -41,5 +33,12 @@ const App: React.FC = () => {
     </ErrorBoundary>
   );
 };
+=======
+    <div>
+      <h1>App Component</h1>
+    </div>
+  )
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 
-export default App;
+export default App

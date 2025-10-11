@@ -1,23 +1,22 @@
   isIntersecting: boolean,
-}
-export function useIntersectionObserver()
-): UseIntersectionObserverReturn {
-    const {
-    threshold = 0,
-    root = null,
-    rootMargin = '0%',
-    freezeOnceVisible = false,
-  }
 const [isIntersecting, setIsIntersecting] = useState(false);
   const [entry, setEntry] = useState<IntersectionObserverEntry | undefined>();
+  const ref = useRef<HTMLElement>(null);
+useEffect(() => {const element = ref.current;
+    if (!element) return;
+const observer = new IntersectionObserver(;)
+  } = options
+const [isIntersecting, setIsIntersecting] = useState(false)
+  const [entry, setEntry] = useState</HTMLElement><IntersectionObserverEntry | undefined>()
+  const ref = useRef</IntersectionObserverEntry><HTMLElement>(null)
+useEffect(() => {
+    const element = ref.current
+    if (!element) return
+const observer = new IntersectionObserver()
       ([entry]) => {
         setIsIntersecting(entry.isIntersecting)
         setEntry(entry)
 if (entry.isIntersecting && freezeOnceVisible) {
-      {
-    threshold,
-        root,
-        rootMargin,
 observer.observe(element);
 return () => {observer.disconnect()}}
   }, [threshold, root, rootMargin, freezeOnceVisible]);

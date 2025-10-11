@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+    if (!content.includes('') && !content.includes('>>>>>>>')) {
+=======
 #!/usr/bin/env node
 
 const fs = require('fs')
@@ -24,12 +27,18 @@ function resolveMergeConflicts(filePath) {
     let separatorFound = false
     let branchContent = []
     for (let i = 0; i < lines.length; i++) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
       const line = lines[i];
       
       if (line.startsWith('')) {
         separatorFound = true;
         conflictType = 'separator';
         continue;
+<<<<<<< HEAD
+          const content = fs.readFileSync(fullPath, 'utf8');
+          if (content.includes('') || content.includes('>>>>>>>')) {
+            files.push(fullPath);
+=======
       const line = lines[i]
       if (line.startsWith('')) {
         inConflict = true
@@ -154,3 +163,4 @@ try {
   console.error('❌ Error during merge conflict resolution:', error.message)
   process.exit(1)
 }
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7

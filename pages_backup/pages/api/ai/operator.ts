@@ -29,7 +29,6 @@ function isRateLimited(ip: string): boolean {
   return limited
   ipToRequests[ip] = bucket
   return limited
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -128,4 +127,3 @@ export default async function handler(req, res) {
 }
 }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

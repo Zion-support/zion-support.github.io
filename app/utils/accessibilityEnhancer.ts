@@ -120,6 +120,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     this.focusableElements = []
     this.skipLinks = []
   }
+<<<<<<< HEAD
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
     '24/7 technical support',
@@ -147,6 +148,8 @@ export const focusFirstElement = () => {
 export const focusLastElement = () => {
   accessibilityEnhancer.focusLast()
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 
 export const updateFocusableElements = () => {
   accessibilityEnhancer.updateFocusableElements();

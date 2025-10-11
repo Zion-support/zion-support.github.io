@@ -140,7 +140,7 @@ observer.observe({entryTypes: ['longtask'] ,)})
   }
 }
 // React hook for performance monitoring;
-export const usePerformanceMonitor = (;) => {return($3;)
+export const usePerformanceMonitor = (;) => {return ($3;)
   )}// React hook for performance monitoring;}
 export const usePerformanceMonitor = (componentName: string) => {,}const renderStartTime = useRef<number>(0);
   const monitor = PerformanceMonitor.getInstance();
@@ -175,7 +175,7 @@ export const usePerformanceMonitor = (componentNam);
   }
 }
 // Image lazy loading utility;
-export const lazyLoadImages = (;) => {return($3;)
+export const lazyLoadImages = (;) => {return ($3;)
   )}// Image lazy loading utility;}
 export const lazyLoadImages = () => {}if (typeof window === 'undefined') return;
   const images = document.querySelectorAll('img[data-src]');
@@ -188,7 +188,7 @@ export const lazyLoadImages = () => {/* TODO: Fix JSX expression */,}}
 images.forEach((img) => imageObserver.observe(img));
 }
 // Preload critical resources;
-export const preloadCriticalResources = (;) => {return($3;)
+export const preloadCriticalResources = (;) => {return ($3;)
   )}// Preload critical resources;}
 export const preloadCriticalResources = () => {}if (typeof window === 'undefined') return;
   const criticalResources = [

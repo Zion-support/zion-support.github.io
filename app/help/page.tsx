@@ -2,6 +2,7 @@
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
       <Helmet>
@@ -13,7 +14,23 @@
               Why Choose Our Page?
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>
               Our page solutions deliver unmatched performance, security, and scalability.
+=======
+      {/* Hero Section */} <h2>Why Choose Our Page?</h2>
+            </h2>
+            <p>Our page solutions deliver unmatched performance, security, and scalability.</p>
+            </p>
+              </div>
+            ))}
+
+          </div>
+        </div>
+      </section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
             ))}
           </div>
         </div>
       </section>
+    </div>
+  )
+}
+export default PagePage</$1></p></h2>

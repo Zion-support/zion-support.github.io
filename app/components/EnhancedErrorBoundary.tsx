@@ -1,7 +1,8 @@
-'use client'
-import React, { Component, ErrorInfo, ReactNode } from 'react'
+'use client';
+import React, { Component, ReactNode } from 'react';
 
 interface Props {
+<<<<<<< HEAD
   children: ReactNode
   fallback?: ReactNode
 }
@@ -9,18 +10,34 @@ interface Props {
 interface State {
   hasError: boolean
   error?: Error
+=======
+  children: ReactNode;
+  fallback?: ReactNode;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 }
 
-class ErrorBoundary extends Component<Props, State> {
+interface State {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: React.ErrorInfo;
+}
+
+class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
+<<<<<<< HEAD
     super(props)
     this.state = { hasError: false }
+=======
+    super(props);
+    this.state = { hasError: false };
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
   }
 
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
   }
 
+<<<<<<< HEAD
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo)
     
@@ -29,6 +46,11 @@ class ErrorBoundary extends Component<Props, State> {
       // You can integrate with error reporting services like Sentry here
       console.error('ErrorBoundary caught an error:', error, errorInfo)
     }
+=======
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    this.setState({ error, errorInfo });
+    console.error('Error caught by boundary:', error, errorInfo);
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
   }
 
   render() {
@@ -37,6 +59,7 @@ class ErrorBoundary extends Component<Props, State> {
         <div className="min-h-screen flex items-center justify-center bg-slate-900">
           <div className="text-center p-8">
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+<<<<<<< HEAD
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
@@ -64,3 +87,22 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary
+=======
+            <p className="text-gray-300 mb-6">We're sorry, but something unexpected happened.</p>
+            <button
+              onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
+              className="bg-cyan-500 text-white px-6 py-2 rounded-lg hover:bg-cyan-600 transition-colors"
+            >
+              Try again
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+export default EnhancedErrorBoundary;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa

@@ -1,13 +1,8 @@
-import React from 'react'
-
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg'
-  color?: 'primary' | 'white' | 'cyan'
-  text?: string
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
+<<<<<<< HEAD
   }
 
   return (
@@ -16,7 +11,13 @@ interface LoadingSpinnerProps {
       {text && (
         <p className="{`text-sm" ${color === 'white' ? 'text-white' : 'text-gray-600'}`}></p></p>
           {text}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
       )}
     </div>
   )
 }
+export default LoadingSpinner
+  )
+}
+export default LoadingSpinner</div></div></p>

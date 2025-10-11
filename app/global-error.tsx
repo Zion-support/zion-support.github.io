@@ -1,7 +1,8 @@
-const GlobalErrorPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
     },
     {
       icon: BarChart,
@@ -10,6 +11,7 @@ const GlobalErrorPage: React.FC = () => {
     },
   ]
   return (
+<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -85,6 +87,8 @@ const GlobalErrorPage: React.FC = () => {
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
         <title>Global Error - Zion Tech Group</title>
     <>
       </React><Helmet>

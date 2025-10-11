@@ -1,8 +1,9 @@
-'use client'
-import React from 'react'
-import Head from 'next/head'
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
+<<<<<<< HEAD
   title?: string
   description?: string
   keywords?: string
@@ -11,18 +12,27 @@ interface SEOHeadProps {
   type?: string
   siteName?: string
   structuredData?: object
+=======
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 }
 
-const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology.',
-  keywords = 'AI solutions, artificial intelligence, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, IT consulting',
-  image = 'https://ziontechgroup.com/og-image.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
-  siteName = 'Zion Tech Group',
-  structuredData
+const SEOHead: React.FC<SEOHeadProps> = ({
+  title = 'Zion Tech Group - AI & IT Solutions',
+  description = 'Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.',
+  keywords = 'AI, artificial intelligence, IT services, cloud computing, cybersecurity, data analytics, digital transformation',
+  canonical,
+  ogImage = '/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image'
 }) => {
+<<<<<<< HEAD
   const defaultStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -100,3 +110,69 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
 }
 
 export default EnhancedSEOHead
+=======
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
+
+  return (
+    <Helmet>
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <link rel="canonical" href={canonicalUrl} />
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      
+      {/* Additional SEO */}
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "url": "https://ziontechgroup.com",
+          "logo": "https://ziontechgroup.com/logo.png",
+          "description": description,
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "364 E Main St STE 1008",
+            "addressLocality": "Middletown",
+            "addressRegion": "DE",
+            "postalCode": "19709",
+            "addressCountry": "US"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-302-464-0950",
+            "contactType": "customer service",
+            "email": "kleber@ziontechgroup.com"
+          },
+          "sameAs": [
+            "https://twitter.com/ziontechgroup",
+            "https://linkedin.com/company/ziontechgroup",
+            "https://facebook.com/ziontechgroup"
+          ]
+        })}
+      </script>
+    </Helmet>
+  );
+};
+
+export default SEOHead;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa

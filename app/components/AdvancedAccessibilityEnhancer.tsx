@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     }
   ];
 
@@ -129,6 +130,8 @@
 };
 
 export default AdvancedAccessibilityEnhancerPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
     setIsReducedMotion(mediaQuery.matches)
     // Check for high contrast preference;
     const highContrastQuery = window.matchMedia('(prefers-contrast: high)'),

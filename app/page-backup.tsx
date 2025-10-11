@@ -169,6 +169,7 @@ const PageBackupPage: React.FC = () => {
       
       <Navigation />
       
+<<<<<<< HEAD
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p></p>We help businesses leverage cutting-edge technology to drive growth,</p>
               improve efficiency, and stay ahead of the competition.
@@ -178,6 +179,10 @@ const PageBackupPage: React.FC = () => {
 
                 <div className="text-center mb-16"></div></div>
                   <h2 className="text-3xl md: text-4xl font-bold text-white mb-4"></h2></h2>,</h2>
+=======
+                <div className="text-center mb-16">
+                  <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
                     Our Core Services;
                   </h2>
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>Comprehensive technology solutions designed to accelerate your digital transformation;</p>
@@ -305,6 +310,11 @@ export default HomePage
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>
               Transform your business with our advanced page backup solutions. 
               Powered by cutting-edge AI technology and industry expertise.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our page backup solutions deliver unmatched performance, security, and scalability.
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
+                <p className="text-gray-300">{feature.description}
+            ))}
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
         </section>
@@ -321,3 +331,6 @@ export default HomePage
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"></button>
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
+  )
+}
+export default PageBackupPage</div></div></div></button></button></p></p></p></p></h2></h3></section>

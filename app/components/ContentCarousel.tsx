@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  Cloud, Zap, Shield, ChevronLeft, ChevronRight  } from 'lucide-react';
 import React from 'react';
 import {  ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp   } from 'lucide-react';
@@ -13,62 +14,52 @@ interface Slide {
 }
 
 const ContentCarousel: React.FC = () => {,
+=======
+'use client';
+import React, { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight, Star, Users, Zap } from 'lucide-react';
+
+const ContentCarousel: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides: Slide[] = [
-'use client'
-      features: [
-        'Machine Learning',
-        'Natural Language Processing',
-        'Computer Vision',
-        'Predictive Analytics'
-      ],
-    },
+  const slides = [
     {
-      id: 2,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions that grow with your business needs.',
-      features: [,
-        'Auto-scaling capabilities',
-        '99.9% uptime guarantee',
-        'Advanced security',
-        'Cost optimization'
-      ],
-      icon: Cloud,
-      color: 'from-green-500 to-blue-600',},
-    {id: 3,
-      title: 'AI Automation',
-      description: 'Automate complex business processes with intelligent AI systems.',
-      features: [,
-        'Process automation',
-        'Workflow optimization',
-        'Smart decision making',
-        'Performance monitoring'
-      ],
+      title: 'AI-Powered Solutions',
+      description: 'Transform your business with cutting-edge artificial intelligence',
       icon: Zap,
+      stats: '300% efficiency boost'
     },
     {
-      id: 4,
-      title: 'Cybersecurity Solutions',
-      description: 'Protect your business with comprehensive AI-powered security solutions.',
-      features: [,
-        'Threat detection',
-        'Real-time monitoring',
-        'Automated response',
-        'Compliance management'
-      ],
-      icon: Shield,
+      title: 'Expert Team',
+      description: 'Work with industry-leading professionals and innovators',
+      icon: Users,
+      stats: '50+ experts'
+    },
+    {
+      title: 'Proven Results',
+      description: 'Delivering measurable business outcomes for our clients',
+      icon: Star,
+      stats: '500+ projects completed'
     }
   ];
+<<<<<<< HEAD
 
   useEffect(() => {const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);}, 5000);
       color: 'from-red-500 to-pink-600'
     }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
     return () => clearInterval(timer);
   }, [slides.length]);
 
+<<<<<<< HEAD
   return (
     <div className="relative w-full max-w-4xl mx-auto"></div></div>
       </div><div className="relative overflow-hidden rounded-2xl"></div></div>
@@ -105,6 +96,8 @@ const ContentCarousel: React.FC = () => {,
         </div>
           />
         ))}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
   const nextSlide = () => {
     setCurrentSlide((prev) =&gt; (prev + 1) % slides.length);
   };
@@ -114,6 +107,7 @@ const ContentCarousel: React.FC = () => {,
   };
 
   return (
+<<<<<<< HEAD
     <div className="relative w-full max-w-6xl mx-auto"></div></div>
       <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-sm border border-cyan-500/20"></div></div>
         <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}></div></div>
@@ -163,10 +157,73 @@ const ContentCarousel: React.FC = () => {,
               onClick={() =&gt; setCurrentSlide(index)}
               className="{`w-3" h-3 rounded-full transition-all duration-300 ${
                 index === currentSlide ? 'bg-cyan-400 scale-125' : 'bg-slate-600 hover:bg-slate-500'
+=======
+    <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Why Choose Us
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover what makes Zion Tech Group the preferred choice for AI and IT solutions.
+          </p>
+        </div>
+        
+        <div className="relative">
+          <div className="overflow-hidden rounded-2xl">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {slides.map((slide, index) => (
+                <div key={index} className="w-full flex-shrink-0">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 text-center">
+                    <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto mb-6">
+                      <slide.icon className="text-white" size={40} />
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                      {slide.title}
+                    </h3>
+                    <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
+                      {slide.description}
+                    </p>
+                    <div className="text-cyan-400 font-semibold text-lg">
+                      {slide.stats}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+          >
+            <ChevronLeft size={24} />
+          </button>
+          
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+          >
+            <ChevronRight size={24} />
+          </button>
+        </div>
+        
+        <div className="flex justify-center mt-8 space-x-2">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-colors ${
+                index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
               }`}
             />
           ))}
         </div>
+<<<<<<< HEAD
       </div>
     </div>
     },
@@ -197,8 +254,11 @@ const ContentCarousel: React.FC = () => {,
             </div>
           </div>
         </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
       </div>
     </div>
   );
 };
 
+export default ContentCarousel;

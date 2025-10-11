@@ -46,6 +46,7 @@ const EnhancedFooter: React.FC = () => {
               presence with cutting-edge AI, cloud architecture and innovative development services.
             </p>
             <div className="flex space-x-4">
+<<<<<<< HEAD
               <a
                 href="https://linkedin.com/company/ziontechgroup"
                 className="text-gray-400 hover:text-white transition-colors">
@@ -66,6 +67,28 @@ const EnhancedFooter: React.FC = () => {
                 className="text-gray-400 hover:text-white transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
+=======
+              <Link
+                to="https://linkedin.com/company/ziontechgroup"
+                className="text-gray-400 hover:text-white transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </Link>
+              <Link
+                to="https://twitter.com/ziontechgroup"
+                className="text-gray-400 hover:text-white transition-colors">
+                <Twitter className="w-5 h-5" />
+              </Link>
+              <Link
+                to="https://github.com/ziontechgroup"
+                className="text-gray-400 hover:text-white transition-colors">
+                <Github className="w-5 h-5" />
+              </Link>
+              <Link
+                to="https://facebook.com/ziontechgroup"
+                className="text-gray-400 hover:text-white transition-colors">
+                <Facebook className="w-5 h-5" />
+              </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
             </div>
           </div>
           
@@ -135,6 +158,7 @@ const EnhancedFooter: React.FC = () => {
               <MapPin className="w-5 h-5 text-blue-400" />
               <div>
                 <p className="text-sm text-gray-400">Address</p>
+<<<<<<< HEAD
                 <p className="text-white">123 Tech Street, Silicon Valley, CA 94000</p>
               </div>
             </div>
@@ -144,6 +168,36 @@ const EnhancedFooter: React.FC = () => {
             <p className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
             </p>
+=======
+                <p className="text-white">123 Tech Street, Innovation City</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="border-t border-gray-700 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-300 text-sm">
+              &copy; {currentYear} Zion Tech Group. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link to="/legal/privacy">
+                <span className="text-gray-400 hover:text-white text-sm transition-colors">
+                  Privacy Policy
+                </span>
+              </Link>
+              <Link to="/legal/terms">
+                <span className="text-gray-400 hover:text-white text-sm transition-colors">
+                  Terms of Service
+                </span>
+              </Link>
+              <Link to="/legal/cookies">
+                <span className="text-gray-400 hover:text-white text-sm transition-colors">
+                  Cookie Policy
+                </span>
+              </Link>
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
           </div>
         </div>
       </div>

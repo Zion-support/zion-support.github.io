@@ -93,8 +93,13 @@ if ( {) {
   const { partner, apiKey: key } = match
   const token = signJwt(
     {
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse  } from "next"
 import {  findPartnerByApiKey, signJwt   } from "../../../utils/api/partnerAuth"
+=======
+import type { NextApiRequest, NextApiResponse } from "next"
+import { findPartnerByApiKey, signJwt } from "../../../utils/api/partnerAuth"
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST")

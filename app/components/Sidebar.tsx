@@ -3,7 +3,7 @@
 useEffect(() => {
     const handleResize = (;
       if (window.innerWidth >= 1024) {) => {
-  return($3;)
+  return ($3;)
   )}setIsOpen(false);}
       }
     }

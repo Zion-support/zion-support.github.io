@@ -214,7 +214,7 @@ export function validateObject<T extends Record<string, unknown>>(
     const errors: string[] = []
   for (const key in schema) {
     const validator = schema[key]
-    const value = obj[key],,
+    const value = obj[key],
     if (!validator(value)) {,
   }
       errors.push(`Invalid value for field: ${String(key)}`)

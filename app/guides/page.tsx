@@ -1,104 +1,52 @@
+<<<<<<< HEAD
 import React from 'react';
 import {  Link  } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import { Brain, BarChart, Target, TrendingUp, FileText, Zap, Shield, CheckCircle } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 
 const GuidesPage: React.FC = () => {
-  const guides = [
+  const features = [
     {
-      id: 1,
-      title: 'Getting Started with AI Implementation',
-      description: 'A comprehensive guide to implementing AI solutions in your organization.',
-      category: 'AI Implementation',
-      difficulty: 'Beginner',
-      duration: '45 min',
-      topics: ['AI Strategy', 'Data Preparation', 'Model Selection', 'Deployment'],
-      featured: true
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
     },
     {
-      id: 2,
-      title: 'Quantum Computing Fundamentals',
-      description: 'Understanding the basics of quantum computing and its applications.',
-      category: 'Quantum Computing',
-      difficulty: 'Intermediate',
-      duration: '60 min',
-      topics: ['Quantum Mechanics', 'Qubits', 'Quantum Algorithms', 'Applications'],
-      featured: false
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'],
     },
     {
-      id: 3,
-      title: 'Building Autonomous Systems',
-      description: 'Step-by-step guide to creating self-managing intelligent systems.',
-      category: 'Autonomous Systems',
-      difficulty: 'Advanced',
-      duration: '90 min',
-      topics: ['System Architecture', 'Machine Learning', 'Decision Making', 'Monitoring'],
-      featured: false
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'],
     },
     {
-      id: 4,
-      title: 'AI Cybersecurity Best Practices',
-      description: 'Essential security measures for AI-powered systems and applications.',
-      category: 'Cybersecurity',
-      difficulty: 'Intermediate',
-      duration: '50 min',
-      topics: ['Threat Modeling', 'Data Protection', 'Model Security', 'Compliance'],
-      featured: false
-    },
-    {
-      id: 5,
-      title: 'Blockchain Development Guide',
-      description: 'Complete guide to developing blockchain applications and smart contracts.',
-      category: 'Blockchain',
-      difficulty: 'Intermediate',
-      duration: '75 min',
-      topics: ['Blockchain Basics', 'Smart Contracts', 'DApps', 'DeFi'],
-      featured: false
-    },
-    {
-      id: 6,
-      title: 'IoT and Edge Computing Architecture',
-      description: 'Designing scalable IoT solutions with edge computing capabilities.',
-      category: 'IoT & Edge',
-      difficulty: 'Advanced',
-      duration: '80 min',
-      topics: ['IoT Protocols', 'Edge Computing', 'Data Processing', 'Security'],
-      featured: false
-    },
-    {
-      id: 7,
-      title: 'AI Data Analytics Pipeline',
-      description: 'Building robust data analytics pipelines with AI and machine learning.',
-      category: 'Data Analytics',
-      difficulty: 'Intermediate',
-      duration: '65 min',
-      topics: ['Data Collection', 'ETL Processes', 'ML Pipelines', 'Visualization'],
-      featured: false
-    },
-    {
-      id: 8,
-      title: 'Cloud Infrastructure Optimization',
-      description: 'Optimizing cloud infrastructure for AI workloads and applications.',
-      category: 'Cloud Computing',
-      difficulty: 'Advanced',
-      duration: '70 min',
-      topics: ['Cloud Architecture', 'Cost Optimization', 'Performance Tuning', 'Monitoring'],
-      featured: false
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
     }
-  ];
+  ]
 
-  const categories = ['All', 'AI Implementation', 'Quantum Computing', 'Autonomous Systems', 'Cybersecurity', 'Blockchain', 'IoT & Edge', 'Data Analytics', 'Cloud Computing'];
-
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
-      case 'Beginner': return 'bg-green-500';
-      case 'Intermediate': return 'bg-yellow-500';
-      case 'Advanced': return 'bg-red-500';
-      default: return 'bg-gray-500';
-    }
-  };
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
       <Navigation />
       
@@ -111,9 +59,40 @@ const GuidesPage: React.FC = () => {
             <p className="text-lg text-gray-300 max-w-3xl mx-auto"></p></p>
               Comprehensive technical documentation and step-by-step guides to help you 
               implement cutting-edge AI and technology solutions.
+=======
+    <>
+      <Helmet>
+        <title>Guides - Zion Tech Group</title>
+        <meta name="description" content="AI-powered guides solution for intelligent automation and optimization" />
+        <meta name="keywords" content="AI, guides, automation, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Guides
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              AI-powered guides solution for intelligent automation and optimization
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                Learn More
+              </button>
+            </div>
           </div>
+        </section>
 
+<<<<<<< HEAD
           {/* Featured Guide */}
           <div className="mb-16"></div></div>
             {guides.filter(guide => guide.featured).map(guide => (
@@ -174,10 +153,38 @@ const GuidesPage: React.FC = () => {
                 ></button>
                   {category}
                 </button>
+=======
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300">Powerful AI capabilities for your business</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+                  <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
               ))}
             </div>
           </div>
+        </section>
 
+<<<<<<< HEAD
           {/* Guides Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div></div>
             {guides.filter(guide => !guide.featured).map(guide => (
@@ -214,8 +221,24 @@ const GuidesPage: React.FC = () => {
                     <button className="text-cyan-400 hover:text-cyan-300 font-medium"></button>
                       Read Guide →
                     </button>
+=======
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Guides?</h2>
+              <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <Zap className="w-6 h-6 text-cyan-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
                   </div>
+                  <p className="text-gray-300">{benefit}</p>
                 </div>
+<<<<<<< HEAD
               </article>
             ))}
           </div>
@@ -242,14 +265,35 @@ const GuidesPage: React.FC = () => {
               ></Link>
                 View Our Services
               </Link>
+=======
+              ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
             </div>
           </div>
-        </div>
-      </main>
-      
-      <Footer />
-    </div>
-  );
-};
+        </section>
 
-export default GuidesPage;
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Guides and experience the future of intelligent automation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  )
+}
+
+export default GuidesPage

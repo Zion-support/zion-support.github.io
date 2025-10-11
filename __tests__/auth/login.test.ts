@@ -23,6 +23,7 @@ describe('Login', () => {
     vi.resetAllMocks()
   })
 
+<<<<<<< HEAD
   it('should login successfully with valid credentials', async () => {
     const mockResponse = {
       data: {
@@ -33,10 +34,22 @@ describe('Login', () => {
     }
 
     mockSignInWithPassword.mockResolvedValue(mockResponse)
+=======
+  it('should work', () => {
+    expect(true).toBe(true)
+  })
+
+  it('should login user successfully', async () => {
+    mockSignInWithPassword.mockResolvedValue({
+      data: { user: { id: '123', email: 'test@example.com' } },
+      error: null
+    })
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 
     const result = await loginUser('test@example.com', 'password123')
 
     expect(result.success).toBe(true)
+<<<<<<< HEAD
     expect(result.user).toEqual(mockResponse.data.user)
   })
 
@@ -47,6 +60,16 @@ describe('Login', () => {
     }
 
     mockSignInWithPassword.mockResolvedValue(mockError)
+=======
+    expect(result.user).toBeDefined()
+  })
+
+  it('should handle login errors', async () => {
+    mockSignInWithPassword.mockResolvedValue({
+      data: null,
+      error: { message: 'Invalid credentials' }
+    })
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 
     const result = await loginUser('test@example.com', 'wrongpassword')
 

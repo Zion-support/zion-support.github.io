@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
 
 interface ErrorBoundaryProps {
@@ -38,6 +39,8 @@ class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props)
     this.state = { hasError: false }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
   }
 
   handleGoHome = () => {
@@ -107,3 +110,4 @@ class ErrorBoundary extends Component<Props, State> {
     return this.props.children
   }
 }
+export default ErrorBoundary</$1></p>

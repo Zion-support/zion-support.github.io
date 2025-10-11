@@ -25,7 +25,6 @@ await app.register(cors, {
     }
     cb(new Error('Not allowed'), false)
   })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 })
 app && app.post('/jobs/generate', async (req: any, reply: any) => {
   const body = (req && req.body as any) || {}

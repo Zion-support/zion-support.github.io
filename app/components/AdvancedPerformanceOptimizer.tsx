@@ -80,7 +80,6 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
             console.warn('Page load time exceeded 1 second')}}
       })
     })
-  return (
         <div className="optimization-debug" style={{
     observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
     return () =></div></div> observer.disconnect()

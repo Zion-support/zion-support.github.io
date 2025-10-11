@@ -18,7 +18,6 @@ function load(): Record<string, KycProfile> {
   try {
 const DATA_DIR = path.join(process.cwd(), 'datakyc')
 const FILE = path.join(DATA_DIR, 'profiles.json')
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch {
     return {}
   }
@@ -78,5 +77,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

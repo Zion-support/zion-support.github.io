@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const CommunityPage: React.FC = () => {,
   const [activeTab, setActiveTab] = useState('overview');
@@ -7,6 +8,8 @@ import React, { useState  } from 'react'
 import {  Helmet  } from 'react-helmet-async'import {  Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart   } from 'lucide-react'
 const CommunityPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview')
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
   const communityStats = [
   ]
   const events = [
@@ -91,7 +94,13 @@ const CommunityPage: React.FC = () => {
             </div&gt;
           </div&gt;
 
+<<<<<<< HEAD
               </div&gt;
+=======
+          {/* Stats */} <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-16">,</div>
+            {communityStats.map((stat, index) => (
+              </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
             ))}
           </div>
 

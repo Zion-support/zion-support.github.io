@@ -122,7 +122,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })

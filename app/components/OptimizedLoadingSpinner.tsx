@@ -24,7 +24,11 @@ const colorClasses = useMemo(;)
       []
     );
         case 'dots':;
+<<<<<<< HEAD
           return(<div className='flex space-x-1' role='status' aria-label='Loading'></div></div></div>)
+=======
+          return (<div className='flex space-x-1' role='status' aria-label='Loading'></div>)
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
               {[0, 1, 2].map(i => (</div>)
                 <div;}key={i}className="{`w-2" h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
                   style={{ animationDelay: `${i * 0.1,}s` }}
@@ -32,15 +36,25 @@ const colorClasses = useMemo(;)
               ))}</div>
           );
 case 'pulse':;
+<<<<<<< HEAD
           return(<div;)
               className="{`${baseClasses}rounded-full" animate-pulse`}
+=======
+          return (<div;)
+              className={`${baseClasses}rounded-full animate-pulse`}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
               role='status';
               aria-label='Loading';
             /></div>
           );
 case 'skeleton':;
+<<<<<<< HEAD
           return(</div>)
             <div className='space-y-2' role='status' aria-label='Loading'></div></div></div>
+=======
+          return (</div>)
+            <div className='space-y-2' role='status' aria-label='Loading'></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
               <div;
 
                 className="{`h-4" bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
@@ -55,9 +69,15 @@ case 'skeleton':;
               /></div>
           );
 case 'bars':;
+<<<<<<< HEAD
           return(<div className='flex space-x-1' role='status' aria-label='Loading'></div></div></div>)
               {[0, 1, 2, 3].map(i =&gt; (</div&gt;)
                 <div;}key={i}className="{`w-1" ${colorClasses[color].split(' ')[1]}animate-pulse`}
+=======
+          return (<div className='flex space-x-1' role='status' aria-label='Loading'></div>)
+              {[0, 1, 2, 3].map(i => (</div>)
+                <div;}key={i}className={`w-1 ${colorClasses[color].split(' ')[1]}animate-pulse`}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
                   style={{}height: `${12 + i * 4,}px`,
                     animationDelay: `${i * 0.1,}s`,
 'use client'

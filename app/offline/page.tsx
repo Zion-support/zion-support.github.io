@@ -1,3 +1,4 @@
+<<<<<<< HEAD
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -17,6 +18,9 @@ import {  Helmet  } from 'react-helmet-async'return (
       </Helmet>
       {/* Hero Section */}
               <p className="text-xl text-gray-300"></p></p>Section description</p>
+=======
+              <p className="text-xl text-gray-300">Section description</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
             </div>
           </div>
         </section>
@@ -57,3 +61,7 @@ export default PagePage
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"></button>
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">Learn More
+  )
+}
+export default PagePage</div></div></div></div></span></span></button></button></p></h1></section>

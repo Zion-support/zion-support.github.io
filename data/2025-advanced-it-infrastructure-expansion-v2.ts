@@ -1357,7 +1357,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
     features: [
       'Identity verificationAccess controlThreat detectionPerformance monitoring'
     ]
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ]
   }

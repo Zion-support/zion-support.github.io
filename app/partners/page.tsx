@@ -11,6 +11,7 @@ interface Partner {
 const PartnersPage: React.FC = () => {
   const partners: Partner[] = [
 'use client'
+<<<<<<< HEAD
 import React from 'react';
   const partnerTiers = {
     strategic: {
@@ -39,16 +40,58 @@ import React from 'react';
   }, {} as Record<string, Partner[]>);
 
   return (
+=======
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+const PartnersPage: React.FC = () => {
+  const partners = [
+import { ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight } from 'lucide-react'
+interface Partner {
+  id: string
+  name: string
+  logo: string
+  description: string
+  category: string
+  website: string
+  tier: 'preferred' | 'certified' | 'strategic'
+}]
+const PartnersPage: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [selectedTier, setSelectedTier] = useState('all')
+  const partners: Partner[] = [
+    {
+      id: '1',
+      name: 'Microsoft',
+      logo: '/images/partners/microsoft.png',},
+    {id: '2',
+      name: 'Amazon Web Services',
+      logo: '/images/partners/aws.png',}'Access to cutting-edge technology',
+    {
+      id: '1',
+      name: 'Microsoft',
+    },
+    {
+      id: '2',
+      name: 'Amazon Web Services',
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
     'Joint go-to-market opportunities',
     'Technical support and training',
     'Co-innovation projects',
     'Global reach and scalability',
     'Certified expertise and solutions'
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
         <section className="py-20 px-4"></section></section>
           <div className="max-w-7xl mx-auto"></div></div>
             <div className="text-center mb-16"></div></div>
               <h1 className="text-4xl md: text-6xl font-bold text-white mb-6"></h1></h1>,</h1>
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,</h1>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
                 Our Technology Partners;
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>We work with leading technology companies to deliver the best solutions for our clients.</p>
@@ -86,7 +129,11 @@ import React from 'react';
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div></div>,</div>
               {partners.map((partner, index) => (
                   </div>
+<<<<<<< HEAD
                   <h3 className="text-xl font-bold text-white mb-2"></h3></h3>{partner.name}</h3>
+=======
+                  <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
                 </div>
               ))}
             </div>

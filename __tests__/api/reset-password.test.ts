@@ -1,7 +1,11 @@
 import { createMocks, RequestMethod } from 'node-mocks-http'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import handler from '@/pages/api/auth/reset'
+<<<<<<< HEAD
 import { describe, it, expect, vi } from 'vitest'
+=======
+import { describe, it, expect } from 'vitest'
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 
 interface ErrorResponse {
   message: string

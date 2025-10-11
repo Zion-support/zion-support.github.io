@@ -175,6 +175,7 @@ export const respectReducedMotion = () => {
 }
 
 // 10. Screen reader announcements
+<<<<<<< HEAD
 export const setupScreenReaderAnnouncements = () => {
   // Add live region for dynamic content updates
   const liveRegion = document.createElement('div')
@@ -194,3 +195,10 @@ export const initializeAccessibility = () => {
   respectReducedMotion()
   setupScreenReaderAnnouncements()
 }
+=======
+// Example JSX:
+// <div aria-live="assertive" aria-atomic="true">
+//   {errorMessage}
+//
+export { trapFocus }
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa

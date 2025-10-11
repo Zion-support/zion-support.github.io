@@ -10,7 +10,17 @@ interface MockApiResponse extends NextApiResponse {
 }
 
 function mockReq(method: string, body?: unknown): NextApiRequest {
+<<<<<<< HEAD
   return { method, body, headers: {}, query: {}, cookies: {} } as NextApiRequest
+=======
+  return {
+    method,
+    body,
+    headers: {},
+    query: {},
+    cookies: {}
+  } as NextApiRequest
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 }
 
 function mockRes(): MockApiResponse {

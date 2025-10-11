@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse  } from 'next'
  import type { NextApiRequest, NextApiResponse  } from 'next'
+=======
+import type { NextApiRequest, NextApiResponse } from 'next'
+ import type { NextApiRequest, NextApiResponse } from 'next'
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 interface EmailValidationResult {
   email: string
   is_valid: boolean

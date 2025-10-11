@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React, { useState  } from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -20,137 +21,62 @@ import {
   Mail,
   MapPin
   } from 'lucide-react'
+=======
+'use client';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Brain, Cloud, Shield, Code, BarChart, Users, ArrowRight, CheckCircle } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 
 const ServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState('all')
-  const [currentPage, setCurrentPage] = useState(1)
-  const servicesPerPage = 9
-
   const services = [
     {
       icon: Brain,
       title: 'AI Solutions',
-      description: 'Cutting-edge artificial intelligence solutions to transform your business',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Automation', 'Chatbots'],
-      pricing: 'Starting at $5,000/month',
-      marketPrice: '$8,000-15,000/month',
-      category: 'AI Services',
-      popular: true,
-      link: '/ai-services'
+      description: 'Advanced artificial intelligence solutions to transform your business operations and drive innovation.',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+      href: '/ai-solutions'
     },
     {
       icon: Cloud,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions for modern businesses',
-      features: ['AWS Integration', 'Azure Services', 'Google Cloud', 'Hybrid Solutions', 'Migration Services', 'Cost Optimization'],
-      pricing: 'Starting at $2,500/month',
-      marketPrice: '$4,000-8,000/month',
-      category: 'IT Services',
-      popular: true,
-      link: '/it-services'
+      title: 'Cloud Services',
+      description: 'Scalable cloud infrastructure and services to support your business growth and digital transformation.',
+      features: ['Cloud Migration', 'Infrastructure as Code', 'DevOps Automation', 'Multi-Cloud Strategy'],
+      href: '/cloud-services'
     },
     {
       icon: Shield,
       title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets',
-      features: ['Threat Detection', 'Data Protection', 'Compliance', 'Incident Response', 'Security Audits', 'Penetration Testing'],
-      pricing: 'Starting at $3,000/month',
-      marketPrice: '$5,000-12,000/month',
-      category: 'IT Services',
-      popular: true,
-      link: '/cybersecurity-solutions'
+      description: 'Comprehensive security solutions to protect your digital assets and ensure business continuity.',
+      features: ['Threat Detection', 'Security Audits', 'Compliance Management', 'Incident Response'],
+      href: '/cybersecurity'
     },
     {
-      icon: Database,
+      icon: Code,
+      title: 'Software Development',
+      description: 'Custom software solutions tailored to your business needs and built with modern technologies.',
+      features: ['Web Applications', 'Mobile Apps', 'API Development', 'Legacy Modernization'],
+      href: '/software-development'
+    },
+    {
+      icon: BarChart,
       title: 'Data Analytics',
-      description: 'Turn your data into actionable insights with advanced analytics platforms',
-      features: ['Real-time Dashboards', 'Data Visualization', 'Business Intelligence', 'Custom Reports', 'Predictive Analytics', 'Data Mining'],
-      pricing: 'From $3,000/month',
-      marketPrice: '$5,000-15,000/month',
-      category: 'AI Services',
-      popular: false,
-      link: '/data-analytics'
+      description: 'Transform your data into actionable insights with our advanced analytics and visualization solutions.',
+      features: ['Business Intelligence', 'Data Warehousing', 'Real-time Analytics', 'Custom Dashboards'],
+      href: '/data-analytics'
     },
     {
-      icon: Smartphone,
-      title: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android',
-      features: ['Native Apps', 'Cross-platform', 'UI/UX Design', 'App Store Deployment', 'Maintenance', 'API Integration'],
-      pricing: 'Starting at $8,000/project',
-      marketPrice: '$15,000-50,000/project',
-      category: 'IT Services',
-      popular: false,
-      link: '/mobile-development'
-    },
-    {
-      icon: Globe,
-      title: 'Web Development',
-      description: 'Custom web applications and e-commerce solutions',
-      features: ['Custom Web Apps', 'E-commerce Solutions', 'CMS Development', 'Responsive Design', 'SEO Optimization', 'Performance Tuning'],
-      pricing: 'Starting at $5,000/project',
-      marketPrice: '$10,000-30,000/project',
-      category: 'IT Services',
-      popular: true,
-      link: '/web-development'
-    },
-    {
-      icon: Zap,
-      title: 'Automation',
-      description: 'Streamline your operations with intelligent automation solutions',
-      features: ['Process Automation', 'Workflow Optimization', 'RPA Solutions', 'Integration', 'Monitoring', 'Scalability'],
-      pricing: 'Starting at $2,000/month',
-      marketPrice: '$4,000-10,000/month',
-      category: 'AI Services',
-      popular: false,
-      link: '/ai-automation'
-    },
-    {
-      icon: BarChart3,
-      title: 'Business Intelligence',
-      description: 'Advanced analytics and reporting solutions for data-driven decisions',
-      features: ['Custom Dashboards', 'KPI Tracking', 'Report Automation', 'Data Integration', 'Real-time Analytics', 'Forecasting'],
-      pricing: 'Starting at $4,000/month',
-      marketPrice: '$7,000-20,000/month',
-      category: 'AI Services',
-      popular: false,
-      link: '/ai-analytics'
-    },
-    {
-      icon: Database,
-      title: 'Database Management',
-      description: 'Comprehensive database design, optimization, and maintenance services',
-      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening', 'Migration Services', 'Monitoring'],
-      pricing: 'Starting at $1,500/month',
-      marketPrice: '$2,500-5,000/month',
-      category: 'IT Services',
-      popular: false,
-      link: '/it-services'
+      icon: Users,
+      title: 'IT Consulting',
+      description: 'Strategic IT consulting services to help you make informed technology decisions and optimize operations.',
+      features: ['Technology Assessment', 'Digital Strategy', 'Process Optimization', 'Change Management'],
+      href: '/it-consulting'
     }
-  ]
-
-  const categories = [
-    { id: 'all', name: 'All Services', count: services.length },
-    { id: 'AI Services', name: 'AI Services', count: services.filter(s => s.category === 'AI Services').length },
-    { id: 'IT Services', name: 'IT Services', count: services.filter(s => s.category === 'IT Services').length }
-  ]
-
-  const filteredServices = services.filter(service => 
-    (selectedCategory === 'all' || service.category === selectedCategory) &&
-    (searchTerm === '' || 
-     service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-     service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-     service.features.some(feature => feature.toLowerCase().includes(searchTerm.toLowerCase()))
-    )
-  )
-
-  const totalPages = Math.ceil(filteredServices.length / servicesPerPage)
-  const currentServices = filteredServices.slice(
-    (currentPage - 1) * servicesPerPage,
-    currentPage * servicesPerPage
-  )
+  ];
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Services - Zion Tech Group | AI and IT Solutions</title>
@@ -226,10 +152,26 @@ const ServicesPage: React.FC = () => {
                 ))}
               </div>
             </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      
+      <main className="pt-20">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
+              Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Services</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Comprehensive solutions designed to accelerate your digital transformation and drive business growth.
+            </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
           </div>
         </section>
 
         {/* Services Grid */}
+<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
           <div className="max-w-7xl mx-auto"></div></div>
             <div className="flex justify-between items-center mb-8"></div></div>
@@ -300,10 +242,40 @@ const ServicesPage: React.FC = () => {
                     <button className="flex-1 border border-white/20 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300"></button>
                       Learn More
                     </button>
+=======
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+                >
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4 group-hover:scale-110 transition-transform">
+                    <service.icon className="text-white" size={32} />
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
                   </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="text-green-400 mr-2 flex-shrink-0" size={16} />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href={service.href}
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 group-hover:translate-x-1 transition-transform"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-1" size={16} />
+                  </a>
                 </div>
               ))}
             </div>
+<<<<<<< HEAD
             
             {/* Pagination */}
             {totalPages > 1 && (
@@ -388,14 +360,40 @@ const ServicesPage: React.FC = () => {
                   Contact Us
                 </button>
               </div>
-            </div>
+=======
           </div>
         </section>
 
-        <Footer />
-      </div>
-    </>
-  )
-}
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our services can help transform your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+              >
+                Get Free Consultation
+                <ArrowRight className="ml-2" size={20} />
+              </a>
+              <a
+                href="/about"
+                className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
+              >
+                Learn More About Us
+              </a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </div>
+  );
+};
 
-export default ServicesPage
+export default ServicesPage;

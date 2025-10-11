@@ -1,4 +1,6 @@
 const CACHE_NAME = 'zion-tech-group-v1';
+<<<<<<< HEAD
+=======
 
 // Service Worker for Zion Tech Group
 const CACHE_NAME = 'zion-tech-group-v1';
@@ -25,10 +27,13 @@ const urlsToCache = [
   '/contact',
   '/static/js/bundle.js',
   '/static/css/main.css',
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
   '/manifest.json'
 ];
 
 // Install event
+<<<<<<< HEAD
+=======
 
   '/manifest.json',
   '/favicon.ico'
@@ -243,10 +248,13 @@ console.log('Service Worker loaded successfully');
         console.log('Opened cache')
         return cache.addAll(urlsToCache)
       })
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
   );
 });
 
 // Fetch event
+<<<<<<< HEAD
+=======
 
   )
 })
@@ -272,6 +280,7 @@ self.addEventListener('activate', (event) => {
         })
       )
     })
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
   );
 });
 
@@ -286,6 +295,9 @@ async function syncContactForm() {
   // Handle offline form submissions
   console.log('Syncing contact form data');
 }
+<<<<<<< HEAD
+=======
 
   )
 })
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
