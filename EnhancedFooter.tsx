@@ -87,8 +87,6 @@ const EnhancedFooter: React.FC = () => {
                 </li>
               )
     </>
-  )
-            </ul>
           </div>
           
           <div>
@@ -178,11 +176,3 @@ const EnhancedFooter: React.FC = () => {
 }
 
 export default EnhancedFooter
-                </MapPin>
-              </Phone>
-            </Mail>
-          </Facebook>
-        </Github>
-      </Twitter>
-    </Linkedin>
-  </div>

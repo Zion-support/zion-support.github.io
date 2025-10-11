@@ -44,8 +44,6 @@ const MobileAppDevelopmentPage: React.FC = () => {
                 </div>
               )
     </>
-  )
-            </div>
           </div>
         </section>
 
@@ -64,4 +62,3 @@ const MobileAppDevelopmentPage: React.FC = () => {
   )
 }
 export default MobileAppDevelopmentPage
-  </Navigation>

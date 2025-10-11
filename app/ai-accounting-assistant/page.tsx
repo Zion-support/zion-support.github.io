@@ -121,7 +121,6 @@ const AIAccountingAssistantPage: React.FC = () => {
                 </button>
               </div>
             </div>
-          </div>
         </section>
 
         {/* Features Section */}
@@ -148,8 +147,6 @@ const AIAccountingAssistantPage: React.FC = () => {
                       </li>
                     )
     </>
-  )
-                  </ul>
                 </div>
               ))}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -318,16 +315,4 @@ const AIAccountingAssistantPage: React.FC = () => {
   )
 }
 export default AIAccountingAssistantPage
-                          </Footer>
-                        </ArrowRight>
-                      </CheckCircle>
-                    </CheckCircle>
-                  </Icon>
-                </CheckCircle>
-              </Icon>
-            </CheckCircle>
           </div>
-        </div>
-      </section>
-    </ArrowRight>
-  </Navigation>

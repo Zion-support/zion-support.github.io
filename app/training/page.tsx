@@ -42,6 +42,3 @@ import React from 'react'
     </>
   );
 export default PagePage
-      </Footer>
-    </ArrowRight>
-  </Navigation>

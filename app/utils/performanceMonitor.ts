@@ -21,7 +21,7 @@ interface PerformanceMetrics {}
     if (this.isInitialized || typeof window === 'undefined') return
     this.isInitialized = true
     this.setupWebVitals()
-    this.setupCustomMetrics();,
+    this.setupCustomMetrics(),
     this.setupResourceTiming()
   init(): void {/* TODO: Fix JSX expression */}
   }

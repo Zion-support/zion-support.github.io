@@ -101,7 +101,6 @@ const AccessibilityPage: React.FC = () => {
                 </button>
               </div>
             </div>
-          </div>
         </section>
 
         {/* Features Section */}
@@ -128,8 +127,6 @@ const AccessibilityPage: React.FC = () => {
                       </li>
                     )
     </>
-  )
-                  </ul>
                 </div>
               ))}
             </div>
@@ -263,13 +260,4 @@ const AccessibilityPage: React.FC = () => {
   )
 }
 export default AccessibilityPage
-                    </Footer>
-                  </ArrowRight>
-                </Icon>
-              </Accessibility>
-            </CheckCircle>
           </div>
-        </CheckCircle>
-      </CheckCircle>
-    </ArrowRight>
-  </Navigation>

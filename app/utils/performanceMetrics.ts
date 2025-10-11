@@ -29,11 +29,11 @@ export interface PerformanceReport {}}metrics: PerformanceMetric[],
 }
 export class PerformanceMetrics {private static instance: PerformanceMetrics,}}private metrics: PerformanceMetric[] = [],}
   private webVitals: WebVitalsMetrics = {,}private observers: PerformanceObserver[] = [],
-  constructor() {,;
-    if (typeof window !== 'undefined') {,}export class PerformanceMetrics {}}private static instance: PerformanceMetrics;,
+  constructor() {,
+    if (typeof window !== 'undefined') {,}export class PerformanceMetrics {}}private static instance: PerformanceMetrics,
   private metrics: PerformanceMetric[] = [],}
 }
-export class PerformanceMetrics {/* TODO: Fix JSX expression */,}}webVitals: WebVitalsMetrics = {,}private,;
+export class PerformanceMetrics {/* TODO: Fix JSX expression */,}}webVitals: WebVitalsMetrics = {,}private,
   private webVitals: WebVitalsMetrics = {}
   private observers: PerformanceObserver[] = [],
   constructor() {
@@ -200,15 +200,15 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     const perfData = window.performance.timing;
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
     this.recordMetric({);
-      name: 'pageLoad');,
-      value: pageLoadTime);,
-      unit: 'ms');,
-      timestamp: new Date();,
+      name: 'pageLoad'),
+      value: pageLoadTime),
+      unit: 'ms'),
+      timestamp: new Date(),
       category: 'load',
       metadata: {,
-        dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart;,
+        dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
         tcpConnection: perfData.connectEnd - perfData.connectStart,
-        serverResponse: perfData.responseEnd - perfData.requestStart;,}recordPageLoad(): void {}}if (typeof window === 'undefined') return;
+        serverResponse: perfData.responseEnd - perfData.requestStart,}recordPageLoad(): void {}}if (typeof window === 'undefined') return;
     const perfData = window.performance.timing;
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
     this.recordMetric({)}name: 'pageLoad',
@@ -528,7 +528,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    */;
   generateReport(): PerformanceReport {}}const loadMetrics = this.getMetricsByCategory('load');
     const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;
-    return {metrics: this.getMetrics();,}
+    return {metrics: this.getMetrics(),}
   /**
    * Get performance recommendations
    */

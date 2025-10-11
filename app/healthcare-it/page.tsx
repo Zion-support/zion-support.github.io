@@ -22,6 +22,4 @@ Discover our comprehensive solutions designed to transform your business.
       <Footer />
     </>
     </>
-  )
-    </Footer>
   </Navigation>

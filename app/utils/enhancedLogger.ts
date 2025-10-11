@@ -490,7 +490,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     const structuredLog = {
         timestamp: entry.timestamp,
         level: levelName,
-        message: entry.message;,
+        message: entry.message,
         source: entry.source,
           }
           break
@@ -506,7 +506,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
           break
         case LogLevel.ERRO,
         case LogLevel.FATA,
-  L: ;,
+  L: ,
           logger.error(message, structuredLog);
           if (entry.stack) {/* TODO: Fix JSX expression */,}k: entry.stack ,}, 'Logger');
   R: 
@@ -529,7 +529,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
           break
         case LogLevel.ERRO,
         case LogLevel.FATA,
-  L: ;,
+  L: ,
           logger.error(message, entry.data);
           break;
       }
@@ -589,7 +589,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @returns Object containing log statistics;
    */;
   public getStatistics(): {total: number,
-    byLevel: Record<string&gt;,
+    byLevel: Record<string&gt,
     bySource: Record<string, number&gt;}} {}const byLevel: Record<string, number> = {}const bySource: Record<string, number> = {}this.logs.forEach(log => {)
     );
       const levelName = LogLevel[log.level]);

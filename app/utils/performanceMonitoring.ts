@@ -352,8 +352,8 @@ class PerformanceMonitoringService {}}private static instance: PerformanceMonito
   getSummary(): {
     score: number,
     webVitals: WebVitals,
-    customMetrics: CustomMetric[],}getSummary(): {}score: number;,
-    webVitals: WebVitals;,
+    customMetrics: CustomMetric[],}getSummary(): {}score: number,
+    webVitals: WebVitals,
     customMetrics: CustomMetric[],
     const recommendations: string[] = [],
     // Generate recommendations based on metrics;
@@ -396,7 +396,7 @@ class PerformanceMonitoringService {}}private static instance: PerformanceMonito
    */
   measureFunction<T>(name: string, fn: () => T): T {,
     const start = performance.now(),
-    const result = fn(),;}
+    const result = fn()}
   measureFunction<T>(name: string, fn: () => T): T {}
     const start = performance.now()
     const result = fn()

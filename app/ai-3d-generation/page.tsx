@@ -148,8 +148,6 @@ const AI3DGenerationPage: React.FC = () => {
                       </li>
                     )
     </>
-  )
-                  </ul>
                 </div>
               ))}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -319,15 +317,3 @@ const AI3DGenerationPage: React.FC = () => {
   )
 }
 export default AI3DGenerationPage
-                        </Footer>
-                      </ArrowRight>
-                    </CheckCircle>
-                  </CheckCircle>
-                </Icon>
-              </CheckCircle>
-            </Icon>
-          </CheckCircle>
-        </div>
-      </section>
-    </ArrowRight>
-  </Navigation>

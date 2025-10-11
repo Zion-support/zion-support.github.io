@@ -19,6 +19,4 @@ import Footer from '../components/Footer'
       <Footer />
     </>
     </>
-  )
-    </Footer>
   </Navigation>

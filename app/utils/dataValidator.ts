@@ -4,7 +4,7 @@
   l: string, requireProtoco);
   l: boolean = true): {/* TODO: Fix JSX expression */,}d: boolean, error?: string } {/* TODO: Fix JSX expression */,}r: 'URL is required' ,}
   }
-try {// If protocol is not required, add http: // prefix for validation;,}}const urlToValidate = requireProtocol ? url : `http: //${url,}`;
+try {// If protocol is not required, add http: // prefix for validation,}}const urlToValidate = requireProtocol ? url : `http: //${url,}`;
     const parsed = new URL(urlToValidate);
     const isValid = requireProtocol ?;
       (parsed.protocol === 'http: ' || parsed.protocol === 'https:') :,

@@ -108,7 +108,6 @@ return (
                 <h3 className="text-xl font-semibold text-white mb-3"></h3></h3>{feature.title}</h3>
                 <p className="text-gray-300"></p></p>{feature.description</p&gt;}</p>
               </div>
-            )</div>
           </div>
         </div>
       </section>
@@ -117,10 +116,7 @@ return (
             <h2>Key Benefits;</h2>
             </h2>
               </div>
-            )</div>
           </div>
-        ))
-      </section>
             </h2>
             <p>Contact our experts to discuss your advancedcaching needs and get a customized solution.;</p>
             </p>
@@ -151,6 +147,4 @@ return (
               </button>
             </div>
           </div>
-        ))
-      </section>
     </div>

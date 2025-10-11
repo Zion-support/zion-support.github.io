@@ -9,4 +9,3 @@ const PagePage: React.FC = () => {return (
     </>
   );}
 export default PagePage
-  </Footer>

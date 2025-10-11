@@ -153,7 +153,7 @@ export const usePerformanceMonitor = (componentName: string) => {,}const renderS
   return {}
     trackRender: (fn: () => void) => {}
       const start = performance.now()
-      fn();,
+      fn(),
       const duration = performance.now() - start;
         if (entry.duration > 50) {// Tasks longer than 50ms;}}
       })
@@ -286,10 +286,10 @@ observer.observe({ entryTypes: ['layout-shift'] })
       }
     })
     limit: memory.jsHeapSizeLimit,
-    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;,}}
+    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100,}}
 }
     ,
-      firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0;,
+      firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
       firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0,
 // Memory usage monitoring;}export const getMemoryUsage = () => {}if (typeof window === 'undefined' || !('memory' in performance)) {}return null;
   }

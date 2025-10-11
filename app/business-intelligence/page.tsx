@@ -9,4 +9,3 @@ import Footer from '../components/Footer'
   )
 }
 export default PagePage
-  </Footer>

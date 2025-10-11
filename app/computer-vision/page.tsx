@@ -31,5 +31,3 @@ import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Targ
   )
 }
 export default PagePage
-    </Footer>
-  </ArrowRight>

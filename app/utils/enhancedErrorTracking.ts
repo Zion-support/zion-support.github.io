@@ -4,7 +4,7 @@ class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
   private maxErrors = 100,
   private sessionId: string,
   private maxErrors = 100;
-  private sessionId: string;,}constructor() {}this.sessionId = this.generateSessionId();
+  private sessionId: string,}constructor() {}this.sessionId = this.generateSessionId();
     this.setupGlobalErrorHandler();}
   }
   private generateSessionId(): string {}}return `${Date.now()}-${Math.random().toString(36).substring(7)}`;
@@ -53,7 +53,7 @@ class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
   }
       stack: error.stack,
       timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent;,
+      userAgent: navigator.userAgent,
       url: window.location.href,
     }
   }

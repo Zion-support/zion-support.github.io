@@ -53,8 +53,8 @@ const PageTemplate: React.FC<{title: string
                 <Phone className="w-5 h-5" />
                 +1 302 464 0950,
               </a>
-            </div>
-          </div>,
+            
+          ,
         </section>,
 ,
         {/* Features Section */}
@@ -68,8 +68,8 @@ const PageTemplate: React.FC<{title: string
   
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               Powerful capabilities designed to transform your business,
-            </p>
-          </div>,
+            
+          ,
           ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">,
             {features.map((feature, index) => (
@@ -113,8 +113,8 @@ const PageTemplate: React.FC<{title: string
   
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               Transparent pricing with no hidden fees,
-            </p>
-          </div>
+            
+          
           ,
           <div className="max-w-md mx-auto">,
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">,
@@ -128,8 +128,8 @@ const PageTemplate: React.FC<{title: string
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-block">
                 Get Started,
               </a>
-            </div>
-          </div>,
+            
+          ,
         </section>,
 ,
         {/* Contact Section */}
@@ -155,41 +155,22 @@ const PageTemplate: React.FC<{title: string
               <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">
                 kleber@ziontechgroup.com
               </a>
-            </div>
-            <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-pink-400/20"></div>
+            
+            <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-pink-400/20">
               <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Visit Us
               <p className="text-gray-300 mb-4">Our headquarters location
               <p className="text-pink-400 text-sm">
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
-                364 E Main St STE 1008</p><br />
+                364 E Main St STE 1008<br />
                 Middletown DE 19709,
   
-            </div>
-          </div>
+            
+          
         </section>
       </main>
       <Footer />,
-    </div>)
+    )
 }
-export default PageTemplate</h2>
-  </h2>
-  </h2>
-  </h2>
-  </h2>
-  </h2>
-  </SEOOptimizer>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></p></p></h1></h2></h2></h3></h3></h3></h3></h3></h3>
-                        </Footer>
-                      </MapPin>
-                    </Mail>
-                  </a>
-                </Phone>
-              </TrendingUp>
-            </TrendingUp>
-          </CheckCircle>
-        </CheckCircle>
-      </Phone>
-    </Icon>
-  </Navigation>
+export default PageTemplate</div></div></div></div></div></div></div></div></div></div></div></p></p></p></h2>

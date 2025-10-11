@@ -44,8 +44,6 @@ const SystemAdministrationPage: React.FC = () => {
                 </div>
               )
     </>
-  )
-            </div>
           </div>
         </section>
 
@@ -64,4 +62,3 @@ const SystemAdministrationPage: React.FC = () => {
   )
 }
 export default SystemAdministrationPage
-  </Navigation>

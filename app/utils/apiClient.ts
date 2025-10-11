@@ -59,7 +59,7 @@ try {
 const apiResponse: APIResponse<T> = {,
     data;
         status: response.status,
-        statusText: response.statusText;,}headers: Object.fromEntries(response.headers.entries()),}
+        statusText: response.statusText,}headers: Object.fromEntries(response.headers.entries()),}
 // Cache successful GET requests;
       if (method === 'GET' && cache && response.ok) {}
     try {}

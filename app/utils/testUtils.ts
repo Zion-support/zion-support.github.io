@@ -274,7 +274,7 @@ export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {,
 export const generateTestData = {
   string: (length = 10): string => {,
     return Math.random(),
-      .toString(36),;}
+      .toString(36)}
 export const generateTestData = {}
   string: (length = 10): string => {}
     return Math.random()
@@ -284,7 +284,7 @@ export const generateTestData = {}
   number: (min = 0, max = 100): number => {}
     return Math.floor(Math.random() * (max - min + 1)) + min;}
   },
-  boolean: (): boolean => {,;}
+  boolean: (): boolean => {}
   boolean: (): boolean => {}
     return Math.random() > 0.5;}
   },
@@ -294,7 +294,7 @@ export const generateTestData = {}
   url: (): string => {`}
     return `https://example.com/${generateTestData.string(10)}`
   },
-  date: (): Date => {,;}
+  date: (): Date => {}
   date: (): Date => {}
     return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000);}
   },
@@ -411,7 +411,7 @@ export class ConsoleSpy {/* TODO: Fix JSX expression */}
       return await fn();}
     } catch (error) {
       if (i < maxRetries - 1) {
-  initialDelay = 1000;}): Promise<T> => {}let lastError: Error;,
+  initialDelay = 1000;}): Promise<T> => {}let lastError: Error,
   for (let i = 0; i < maxRetries, i++) {}try {}}return await fn();}
     } catch (error) {}lastError = error as Error;
       if (i < maxRetries - 1) {}await wait(initialDelay * Math.pow(2, i));}
@@ -438,7 +438,7 @@ export const retryWithBackoff = async <T>(f)
 ): Promise<T> => {
   let lastError: Error,
   for (let i = 0; i < maxRetries; i++) {,
-    try {,;}
+    try {}
       return await fn();}
     } catch (error) {
       lastError = error as Error
@@ -460,7 +460,7 @@ export const retryWithBackoff = async <T>(f)
  * Measure execution time of a function;
  */;
 export const measureExecutionTime = async <T>(;
-  fn: () => T | Promise<T>): Promise<{result: T, duration: number ,}> => {fn: () =&gt; T | Promise<T&gt;,}): Promise<{result: T, duration: number ,}> => {}const start = performance.now();
+  fn: () => T | Promise<T>): Promise<{result: T, duration: number ,}> => {fn: () =&gt; T | Promise<T&gt,}): Promise<{result: T, duration: number ,}> => {}const start = performance.now();
   const result = await fn();
 /**
  * Measure execution time of a function

@@ -100,8 +100,6 @@ const AccessibilityCheckerPage: React.FC = () => {
                 <p className="text-gray-300 text-lg"></p></p>{benefit}</p>
               </div>
           </div>
-        ))
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
@@ -124,7 +122,5 @@ const AccessibilityCheckerPage: React.FC = () => {
               </button>
             </div>
           </div>
-        ))
-      </section>
     </div>
   );

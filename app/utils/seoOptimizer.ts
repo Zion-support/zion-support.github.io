@@ -34,7 +34,7 @@ interface PageSEOData {}
 }
 class SEOOptimizer {private config: SEOConfig,}
   private currentPageData: PageSEOData | null = null,
-  constructor(config: SEOConfig) {,}class SEOOptimizer {}}private config: SEOConfig;,
+  constructor(config: SEOConfig) {,}class SEOOptimizer {}}private config: SEOConfig,
   private currentPageData: PageSEOData | null = null,
     return keywords.join(', ');}
   generateKeywords(pageKeywords?: string[]): string {/* TODO: Fix JSX expression */,}}}
@@ -414,7 +414,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   generateSitemapData(): Array<{url: string; lastmod: string; changefreq: string, priority: number ,}> {// This would typically come from your CMS or routing system;
     return [;
       {
-        url: this.config.siteUrl;,}generateSitemapData(): Array<{url: string; lastmod: string; changefreq: string, priority: number ,}> {}// This would typically come from your CMS or routing system;
+        url: this.config.siteUrl,}generateSitemapData(): Array<{url: string; lastmod: string; changefreq: string, priority: number ,}> {}// This would typically come from your CMS or routing system;
     return [;
       {}url: this.config.siteUrl,
   private trackSEOMetric()
@@ -471,8 +471,8 @@ Disallo,`
     const issues: string[] = []
     // Check title length
     // Check title length;
-    const title = document.title,;
-    if (title.length < 30) {,;
+    const title = document.title,
+    if (title.length < 30) {,
     // Check title length;
     const title = document.title;}if (title.length < 30) {}issues.push('Title is too short (less than 30 characters)');}
     } else if (title.length > 60) {}issues.push('Title is too long (more than 60 characters)');}

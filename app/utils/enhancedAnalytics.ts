@@ -238,7 +238,7 @@ class EnhancedAnalytics {}
     this.queue.push(...this.offlineQueue)
     this.offlineQueue = []
       offlineQueueSize: this.offlineQueue.length,
-      sessionId: this.sessionId;,}public getAnalyticsSummary(): {}queueSize: number;,
+      sessionId: this.sessionId,}public getAnalyticsSummary(): {}queueSize: number,
     offlineQueueSize: number,
     sessionId: string,
     userProperties: UserProperties,}

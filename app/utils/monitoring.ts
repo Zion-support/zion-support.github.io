@@ -62,7 +62,7 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
   }
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
-        url: window.location.href;,}})
+        url: window.location.href,}})
     })
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {

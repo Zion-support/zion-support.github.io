@@ -20,5 +20,3 @@
   )
 }
 export default PagePage
-    </Footer>
-  </ArrowRight>

@@ -29,6 +29,3 @@ const RootLayout: React.FC<RootLayoutProps> = ({children}) => {
     </>
   );
 export default RootLayout
-      </Footer>
-    </Navigation>
-  </RootLayoutProps>

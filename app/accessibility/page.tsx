@@ -122,8 +122,6 @@ const AccessibilityPage: React.FC = () => {
                       </li>
                     )
     </>
-  )
-                  </ul>
                 </div>
               ))}
             </div>
@@ -204,9 +202,3 @@ const AccessibilityPage: React.FC = () => {
   )
 }
 export default AccessibilityPage
-            </Footer>
-          </ArrowRight>
-        </CheckCircle>
-      </CheckCircle>
-    </ArrowRight>
-  </Navigation>

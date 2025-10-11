@@ -78,7 +78,7 @@ Learn More
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit
     </>
-  );, idx) => (
+  ), idx) => (
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>

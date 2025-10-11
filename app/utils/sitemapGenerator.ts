@@ -43,8 +43,7 @@
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>${page === '' ? '1.0' : '0.8'}</priority>
-  </url>`).join(''))
-</urlset>`
+  </url>`).join(''`
   return sitemap
 }
 export const generateRobotsTxt = useCallback((...args) => {}

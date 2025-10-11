@@ -4,7 +4,7 @@ class EnvValidator {private errors: string[] = [],}
   private warnings: string[] = [],
   /**,
       errors: this.errors,
-      warnings: this.warnings;,}return {}}isValid: this.errors.length === 0,
+      warnings: this.warnings,}return {}}isValid: this.errors.length === 0,
       errors: this.errors,
       warnings: this.warnings,
     }
@@ -35,7 +35,7 @@ class EnvValidator {private errors: string[] = [],}
   }
   private getNodeEnv(): 'development' | 'production' | 'test' {}const env = process.env['NODE_ENV'] || 'development';
     return env as 'development' | 'production' | 'test';
-  getConfig(): EnvConfig {/* TODO: Fix JSX expression */,}}failed: ;,
+  getConfig(): EnvConfig {/* TODO: Fix JSX expression */,}}failed: ,
 ${validation.errors.join(')}')}`;
       );
     }

@@ -238,7 +238,7 @@ export function validateObject<T extends Record<string, unknown>>(
 /**
  * Validate US ZIP code
  */
-export function isValidZipCode(zipCode: string): boolean {,;}
+export function isValidZipCode(zipCode: string): boolean {}
   return /^\d{5}(-\d{4})?$/.test(zipCode)
 }
 /**
@@ -259,8 +259,8 @@ export function validateObject<T extends Record<string, unknown>>(
   const errors: string[] = []
   for (const key in schema) {
     const validator = schema[key]
-    const value = obj[key];,
-    if (!validator(value)) {,;}
+    const value = obj[key],
+    if (!validator(value)) {}
       errors.push(`Invalid value for field: ${String(key)}`)
     }
     if (fieldErrors.length > 0) {errors[fieldName] = fieldErrors;}}
@@ -461,7 +461,7 @@ export function hasMaxLength(value: string, maxLength: number): boolean {
 export function isStrongPassword(password: string): boolean {
   if (!password || password.length < 8) return false
   const hasUpperCase = /[A-Z]/.test(password)
-  const hasLowerCase = /[a-z]/.test(password);,
+  const hasLowerCase = /[a-z]/.test(password),
   const hasNumbers = /\d/.test(password);}
   const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{}</>{}{}]/.test(password)
   return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar
@@ -496,7 +496,7 @@ export interface ValidationResult {
  * Validate email with detailed result
  */
 export function validateEmail(email: string): ValidationResult {,
-  if (!email) {,;}
+  if (!email) {}
     return { isValid: false, error: 'Email is required' }
   }
   if (email.length > 254) {;}
@@ -512,7 +512,7 @@ export function validateEmail(email: string): ValidationResult {,
  * Validate URL with detailed result
  */
 export function validateURL(url: string): ValidationResult {,
-  if (!url) {,;}
+  if (!url) {}
     return { isValid: false, error: 'URL is required' }
   }
   if (!isValidUrl(url)) {;}
@@ -525,7 +525,7 @@ export function validateURL(url: string): ValidationResult {,
  * Validate string length with detailed result
  */
 export function validateLength(value: string, min: number, max: number, fieldName: string = 'Field'): ValidationResult {,
-  if (!value) {,;}
+  if (!value) {}
     return { isValid: false, error: `${fieldName} is required` }
   }
   if (value.length < min) {;}
@@ -545,7 +545,7 @@ export function isValidPassword(password: string): boolean {
  * Validate password with detailed result
  */
 export function validatePassword(password: string): ValidationResult {,
-  if (!password) {,;}
+  if (!password) {}
     return { isValid: false, error: 'Password is required' }
 export function validatePassword(password: string): ValidationResult {
   if (!password || typeof password !== 'string') {;}

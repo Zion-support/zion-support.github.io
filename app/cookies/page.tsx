@@ -59,8 +59,6 @@ const CookiesPage: React.FC = () => {
                       <li key={exampleIndex}>• {example}</li>
                     )
     </>
-  )
-                  </ul>
                 </div>
               ))}
             </div>
@@ -144,5 +142,3 @@ const CookiesPage: React.FC = () => {
   )
 }
 export default CookiesPage
-    </Footer>
-  </Navigation>

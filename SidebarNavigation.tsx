@@ -64,6 +64,3 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({isOpen, onClose}) 
 }
 
 export default SidebarNavigation
-      </Icon>
-    </X>
-  </SidebarNavigationProps>

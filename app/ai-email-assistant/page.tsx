@@ -50,8 +50,6 @@ const PagePage: React.FC = () => {
                       </li>
                     )
     </>
-  )
-                  </ul>
                 </div>
               ))}
             </div>
