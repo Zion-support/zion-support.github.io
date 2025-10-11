@@ -52,6 +52,11 @@ const AiSecurityMonitorPage = React.lazy(() => import('./app/ai-security-monitor
 const AiFinancialPlannerPage = React.lazy(() => import('./app/ai-financial-planner/page'))
 const AiHealthTrackerPage = React.lazy(() => import('./app/ai-health-tracker/page'))
 const AiLearningPlatformPage = React.lazy(() => import('./app/ai-learning-platform/page'))
+const AiSocialMediaManagerPage = React.lazy(() => import('./app/ai-social-media-manager/page'))
+const AiVideoEditorPage = React.lazy(() => import('./app/ai-video-editor/page'))
+const AiEmailMarketingAutomationPage = React.lazy(() => import('./app/ai-email-marketing-automation/page'))
+const AiProjectManagementPage = React.lazy(() => import('./app/ai-project-management/page'))
+const AiCustomerInsightsPage = React.lazy(() => import('./app/ai-customer-insights/page'))
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(() => import('./app/cloud-infrastructure/page'))
 const CybersecuritySolutionsPage = React.lazy(() => import('./app/cybersecurity-solutions/page'))
@@ -123,6 +128,11 @@ const App: React.FC = () => {
                             <Route path="/ai-financial-planner" element={<AiFinancialPlannerPage />} />
                             <Route path="/ai-health-tracker" element={<AiHealthTrackerPage />} />
                             <Route path="/ai-learning-platform" element={<AiLearningPlatformPage />} />
+                            <Route path="/ai-social-media-manager" element={<AiSocialMediaManagerPage />} />
+                            <Route path="/ai-video-editor" element={<AiVideoEditorPage />} />
+                            <Route path="/ai-email-marketing-automation" element={<AiEmailMarketingAutomationPage />} />
+                            <Route path="/ai-project-management" element={<AiProjectManagementPage />} />
+                            <Route path="/ai-customer-insights" element={<AiCustomerInsightsPage />} />
                             
                             {/* IT Service Pages */}
                             <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />

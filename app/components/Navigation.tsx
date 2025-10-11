@@ -20,6 +20,11 @@ const Navigation: React.FC = () => {
 
   const servicesDropdown = [
     { name: 'AI Services', href: '/ai-services', icon: Brain },
+    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: Brain },
+    { name: 'AI Video Editor', href: '/ai-video-editor', icon: Brain },
+    { name: 'AI Email Marketing', href: '/ai-email-marketing-automation', icon: Brain },
+    { name: 'AI Project Management', href: '/ai-project-management', icon: Brain },
+    { name: 'AI Customer Insights', href: '/ai-customer-insights', icon: Brain },
     { name: 'IT Services', href: '/it-services', icon: Code },
     { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud },
     { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },

@@ -64,6 +64,31 @@ const Footer: React.FC = () => {
                   AI Cybersecurity
                 </Link>
               </li>
+              <li>
+                <Link href="/ai-social-media-manager" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  AI Social Media Manager
+                </Link>
+              </li>
+              <li>
+                <Link href="/ai-video-editor" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  AI Video Editor
+                </Link>
+              </li>
+              <li>
+                <Link href="/ai-email-marketing-automation" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  AI Email Marketing
+                </Link>
+              </li>
+              <li>
+                <Link href="/ai-project-management" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  AI Project Management
+                </Link>
+              </li>
+              <li>
+                <Link href="/ai-customer-insights" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  AI Customer Insights
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -189,15 +214,15 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300 text-sm">info@ziontechgroup.com</span>
+                <span className="text-gray-300 text-sm">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300 text-sm">+1 (555) 123-4567</span>
+                <span className="text-gray-300 text-sm">+1 302 464 0950</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300 text-sm">San Francisco, CA</span>
+                <span className="text-gray-300 text-sm">364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
             <Link 
