@@ -3,27 +3,18 @@ import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const ITServicesPage: React.FC = () => {const services = [
+const ITServicesPage: React.FC = () => 
     {} id: 1,
     };,
 title: 'Cloud Infrastructure',;,
 description: 'Scalable and secure cloud solutions for your business needs.',;,
 icon: Cloud,,
     }
-    {;,
-id: 2,;,
-title: 'Cybersecurity',;,
-description: 'Comprehensive security solutions to protect your digital assets.',;,
-icon: Shield,;,
-features: ['Security Audit', 'Penetration Testing', 'Compliance', 'Incident Response'],;,
+    
 price: 'From $1,000/month'} ,
-    {icon: BarChart,
-      title: 'Feature 2', 
-      description: 'Description for feature 2.',
+    
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    {icon: CheckCircle,
-      title: 'Feature 3',
-      description: 'Description for feature 3.',
+    
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ]
 const categories = [
     {id: 'all', name: 'All Services'} ,
@@ -134,4 +125,3 @@ Ready to Optimize Your IT Infrastructure?>
     </>
   );
 };
-

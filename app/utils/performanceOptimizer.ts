@@ -7,8 +7,7 @@ export const debounce = <T extends (...args: any[]) => any>(,
     <>
       ...args: Parameters</T><T>
     </>
-  ) => {,
-  func: T,
+  ) => 
   }
 }
 export const throttle = </T><T extends (...args: any[]) => any>(,
@@ -19,13 +18,11 @@ export const throttle = </T><T extends (...args: any[]) => any>(,
 return observer
 }
 }
-export const measurePerformance = (name: string, fn: () => void) => {,
-    ,
-    isTablet: width &gt;= 768 && width < 1024,
+export const measurePerformance = (name: string, fn: () => void) => 
     isDesktop: width &gt;= 1024;,}}
   private observers: PerformanceObserver[] = [],
   private isMonitoring: boolean = false,
-  constructor(config?: Partial<OptimizationConfig>) {,}return {}}isMobile: width < 768,
+  constructor(config?: Partial<OptimizationConfig>) {,}return }isMobile: width < 768,
     isTablet: width >= 768 && width < 1024,
     isDesktop: width >= 1024,}
   private observers: PerformanceObserver[] = [],
@@ -56,11 +53,11 @@ const logger = {/* TODO: Fix JSX expression */},
       observer.observe({/* TODO: Fix JSX expression */,)});
   s: ['largest-contentful-paint'] ,});
       this.observers.push(observer);
-    } catch {// Ignore if not supported;}}} catch {}}// Ignore if not supported;
+    } catch {// Ignore if not supported;}}} catch }// Ignore if not supported;
     }
   }
-  private observeFID() {}try {}}const observer = new PerformanceObserver((list) => {}const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {,
+  private observeFID() {}try }const observer = new PerformanceObserver((list) => {}const entries = list.getEntries();
+        entries.forEach((entry: PerformanceEntry) => 
     ,}entries.forEach((entry: PerformanceEntry) => {,}const fidEntry = entry as PerformanceEntry & {processingStart: number ,}} catch {/* TODO: Fix JSX expression */,}}}
   }
   private observeFID() {/* TODO: Fix JSX expression */,}t: number ,}
@@ -89,8 +86,7 @@ const logger = {/* TODO: Fix JSX expression */},
       observer.observe({/* TODO: Fix JSX expression */});
   s: ['largest-contentful-paint'] });
       this.observers.push(observer)
-    } catch {
-    // Ignore if not supported
+    } catch 
   }
     } catch {}
       // Ignore if not supported
@@ -100,8 +96,7 @@ const logger = {/* TODO: Fix JSX expression */},
     try {}
       const observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {
-    ,
+        entries.forEach((entry: PerformanceEntry) => 
   }
         entries.forEach((entry: PerformanceEntry) => {}
           const fidEntry = entry as PerformanceEntry & { processingStart: number }
@@ -116,14 +111,13 @@ const logger = {/* TODO: Fix JSX expression */},
       observer.observe({/* TODO: Fix JSX expression */});
   s: ['first-input'] });
       this.observers.push(observer)
-    } catch {
-    // Ignore if not supported
+    } catch 
   }
         const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {,}const clsEntry = entry as PerformanceEntry & {hadRecentInput?: boolean; value: number ,}if (!clsEntry.hadRecentInput) {clsValue += clsEntry.value;}} catch {}}// Ignore if not supported;
+        entries.forEach((entry: PerformanceEntry) => {,}const clsEntry = entry as PerformanceEntry & {hadRecentInput?: boolean; value: number ,}if (!clsEntry.hadRecentInput) {clsValue += clsEntry.value;}} catch }// Ignore if not supported;
     }
   }
-  private observeCLS() {}try {}}let clsValue = 0;
+  private observeCLS() {}try }let clsValue = 0;
       const observer = new PerformanceObserver((list) => {}const entries = list.getEntries();
         entries.forEach((entry: PerformanceEntry) => {,}const clsEntry = entry as PerformanceEntry & {hadRecentInput?: boolean; value: number ,}if (!clsEntry.hadRecentInput) {}clsValue += clsEntry.value;
           }
@@ -132,11 +126,11 @@ const logger = {/* TODO: Fix JSX expression */},
       });
       observer.observe({entryTypes: ['layout-shift'] ,)});
       this.observers.push(observer);
-    } catch {// Ignore if not supported;}}} catch {}}// Ignore if not supported;
+    } catch {// Ignore if not supported;}}} catch }// Ignore if not supported;
     }
   }
-  private observeFCP() {}try {}}const observer = new PerformanceObserver((list) => {}const entries = list.getEntries();
-        entries.forEach((entry) => {if (entry.name === 'first-contentful-paint') {
+  private observeFCP() {}try }const observer = new PerformanceObserver((list) => {}const entries = list.getEntries();
+        entries.forEach((entry) => 
             this.metrics.fcp = entry.startTime;}entries.forEach((entry) => {}if (entry.name === 'first-contentful-paint') {}this.metrics.fcp = entry.startTime;
     } catch {/* TODO: Fix JSX expression */,}}}
   }
@@ -156,23 +150,21 @@ const logger = {/* TODO: Fix JSX expression */},
       observer.observe({/* TODO: Fix JSX expression */,)});
   s: ['paint'] ,});
       this.observers.push(observer);
-    } catch {// Ignore if not supported;}}} catch {}}// Ignore if not supported;
+    } catch {// Ignore if not supported;}}} catch }// Ignore if not supported;
     }
   }
-  private observeTTFB() {}try {}}const observer = new PerformanceObserver((list) => {}const entries = list.getEntries();
+  private observeTTFB() {}try }const observer = new PerformanceObserver((list) => {}const entries = list.getEntries();
       let clsValue = 0;
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {,
+      const observer = new PerformanceObserver((list) => 
     ,}const navEntry = entry as PerformanceEntry & {responseStart: number, requestStart: number ,}if (navEntry.responseStart > 0) {this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;}entries.forEach((entry: PerformanceEntry) => {,}const navEntry = entry as PerformanceEntry & {responseStart: number, requestStart: number ,}if (navEntry.responseStart > 0) {}this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;
     } catch {/* TODO: Fix JSX expression */,}}}
   }
-      if (!img.hasAttribute('loading')) {
+      if (!img.hasAttribute('loading')) 
         img.setAttribute('loading', 'lazy')}}
       // Add proper alt text if missing;
       if (!img.hasAttribute('alt')) {img.setAttribute('alt', 'Zion Tech Group content')}}
       // Optimize image format;
-      if (img.src.includes('.webp') || img.src.includes('.webp')) {// Convert to WebP if supported;
+      if (img.src.includes('.webp') || img.src.includes('.webp')) 
         if (this.supportsWebP()) {}images.forEach((img) => {}// Add loading="lazy" for better performance;
       if (!img.hasAttribute('loading')) {}img.setAttribute('loading', 'lazy');
       }

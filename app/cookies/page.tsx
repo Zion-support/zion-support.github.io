@@ -3,32 +3,19 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import {Cookie, Settings, Shield, Eye} from 'lucide-react'
-const CookiesPage: React.FC = () => {const features = [
-    {
-      icon: Wifi,
-      title: 'Feature 1',
-      description: 'Description for feature 1.',
+const CookiesPage: React.FC = () => 
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    {icon: Settings,
-      title: 'Functional Cookies',
-      description: 'These cookies enable enhanced functionality and personalization.',
+    
       examples: ['Language preferences', 'User settings', 'Remember me']} ,
-    {icon: Eye,
-      title: 'Analytics Cookies',
-      description: 'These cookies help us understand how visitors interact with our website.',
+    
       examples: ['Page views', 'User behavior', 'Performance metrics']} ,
-    {icon: Shield,
-      title: 'Marketing Cookies',
-      description: 'These cookies are used to deliver relevant advertisements and track campaign performance.',
+    
       examples: ['Ad targeting', 'Campaign tracking', 'Conversion tracking']} ]
   return (
     <>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -58,22 +45,18 @@ const CookiesPage: React.FC = () => {const features = [
             <div className=">
     ,>
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3">
                     <h3 className="text-xl font-semibold text-gray-900">
                   </div>
-<<<<<<< HEAD
 
-      <Footer />
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
     </>
                   <h3 className="text-xl font-semibold text-white mb-3">{type.title}</h3>
                   <p className="text-gray-300 mb-4">{type.description}</p>
                   <ul className="text-sm text-gray-400 space-y-1">
-                    {type.examples.map((example, exampleIndex) => (
+                    
                       <li key={exampleIndex}>• {example}</li>
                     )
     </>
@@ -107,16 +90,13 @@ const CookiesPage: React.FC = () => {const features = [
             <div className=">
     ,>
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+              
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3">
                     <span className="text-lg font-medium text-gray-900">
                   </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
       <Footer />
     </>
                   <div>
@@ -207,3 +187,6 @@ const CookiesPage: React.FC = () => {const features = [
 };
 
 export default CookiesPage;
+</div>
+</h3>
+</button>

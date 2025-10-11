@@ -25,3 +25,4 @@ import React from 'react'
   )
 }
     </Helmet>
+</main>

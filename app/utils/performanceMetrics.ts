@@ -1,4 +1,4 @@
-  value: number,
+value: number,
   unit: string,
   timestamp: Date,
 }
@@ -13,12 +13,9 @@ export interface WebVitalsMetrics {}
   TTFB?: number; // Time to First Byte
   INP?: number; // Interaction to Next Paint}
 }
-export interface PerformanceReport {}}metrics: PerformanceMetric[],
+export interface PerformanceReport }metrics: PerformanceMetric[],
   webVitals: WebVitalsMetrics,
-  summary: {,
-    avgLoadTime: number,
-    totalMetrics: number,
-    performanceScore: number,
+  summary: 
   summary: {}
     avgLoadTime: number
     totalMetrics: number
@@ -29,16 +26,14 @@ export interface PerformanceReport {}}metrics: PerformanceMetric[],
 }
 export class PerformanceMetrics {private static instance: PerformanceMetrics,}}private metrics: PerformanceMetric[] = [],}
   private webVitals: WebVitalsMetrics = {,}private observers: PerformanceObserver[] = [],
-  constructor() {,;
-    if (typeof window !== 'undefined') {,}export class PerformanceMetrics {}}private static instance: PerformanceMetrics;,
+  constructor() 
+    if (typeof window !== 'undefined') {,}export class PerformanceMetrics }private static instance: PerformanceMetrics;,
   private metrics: PerformanceMetric[] = [],}
 }
 export class PerformanceMetrics {/* TODO: Fix JSX expression */,}}webVitals: WebVitalsMetrics = {,}private,;
   private webVitals: WebVitalsMetrics = {}
   private observers: PerformanceObserver[] = [],
-  constructor() {
-    ,
-    if (typeof window !== 'undefined') {,
+  constructor() 
   }
 export class PerformanceMetrics {}
   private static instance: PerformanceMetrics
@@ -70,22 +65,9 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    * Initialize performance observers;
    */;
   private initializeObservers(): void {// Observe navigation timing;}
-    if ('PerformanceObserver' in window) {
+    if ('PerformanceObserver' in window) 
       try {// Navigation timing;}
-        const navObserver = new PerformanceObserver(list => {);
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'navigation') {
-              const navEntry = entry as PerformanceNavigationTiming;
-                value: navEntry.loadEventEnd - navEntry.fetchStart),
-                unit: 'ms'),
-                timestamp: new Date(),
-                category: 'load',
-                metadata: {,
-                name: 'pageLoadTime',
-                value: navEntry.loadEventEnd - navEntry.fetchStart,
-                unit: 'ms',
-                timestamp: new Date(),
-                category: 'load',
+        const navObserver = new PerformanceObserver(list => 
               });
             }
           }
@@ -97,17 +79,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
         // Paint timing
         const paintObserver = new PerformanceObserver()
     )
-          for (const entry of list.getEntries()) {
-            if (entry.name === 'first-contentful-paint') {
-              this.webVitals.FCP = entry.startTime
-              this.recordMetric({)
-                name: 'FCP'),
-                value: entry.startTime),
-                unit: 'ms'),
-                name: 'FCP',
-                value: entry.startTime,
-                unit: 'ms',
-                timestamp: new Date(),
+          for (const entry of list.getEntries()) 
               });
             }
           }
@@ -122,14 +94,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     )
           const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1]
-          if (lastEntry) {
-            this.webVitals.LCP = lastEntry.startTime
-            this.recordMetric({)
-              name: 'LCP'),
-              value: lastEntry.startTime),
-              unit: 'ms'),
-          const entries = list.getEntries()
-          const lastEntry = entries[entries.length - 1]
+          if (lastEntry) 
           if (lastEntry) {}
             this.webVitals.LCP = lastEntry.startTime
               name: 'LCP',
@@ -145,15 +110,11 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
         const clsObserver = new PerformanceObserver()
     )
           let clsValue = 0;)
-          for (const entry of list.getEntries()) {
+          for (const entry of list.getEntries()) 
             if ((entry as LayoutShift).hadRecentInput) continue;}clsValue += (entry as LayoutShift).value;}
           }
           this.webVitals.CLS = clsValue;
-          this.recordMetric({)
-    );
-            name: 'CLS'),
-            value: clsValue),
-            unit: 'score'),
+          this.recordMetric(
         // Layout Shift;}const clsObserver = new PerformanceObserver(list => {)}let clsValue = 0;
           for (const entry of list.getEntries()) {}if ((entry as LayoutShift).hadRecentInput) continue;
             clsValue += (entry as LayoutShift).value;}
@@ -199,16 +160,8 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   recordPageLoad(): void {if (typeof window === 'undefined') return;}
     const perfData = window.performance.timing;
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-    this.recordMetric({);
-      name: 'pageLoad');,
-      value: pageLoadTime);,
-      unit: 'ms');,
-      timestamp: new Date();,
-      category: 'load',
-      metadata: {,
-        dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart;,
-        tcpConnection: perfData.connectEnd - perfData.connectStart,
-        serverResponse: perfData.responseEnd - perfData.requestStart;,}recordPageLoad(): void {}}if (typeof window === 'undefined') return;
+    this.recordMetric(
+        serverResponse: perfData.responseEnd - perfData.requestStart;,}recordPageLoad(): void }if (typeof window === 'undefined') return;
     const perfData = window.performance.timing;
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
     this.recordMetric({)}name: 'pageLoad',
@@ -238,11 +191,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   /**
    * Record a custom performance metric
    */
-  recordMetric(metric: PerformanceMetric): void {
-    ,
-    this.metrics.push(metric),
-    // Keep only last 1000 metrics
-    if (this.metrics.length > 1000) {,
+  recordMetric(metric: PerformanceMetric): void 
   }
   recordMetric(metric: PerformanceMetric): void {}
     this.metrics.push(metric)
@@ -256,15 +205,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   /**
    * Record page load time
    */
-  recordPageLoad(): void {
-    if (typeof window === 'undefined') return
-    const perfData = window.performance.timing;
-    const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart
-    this.recordMetric({)
-      name: 'pageLoad')
-      value: pageLoadTime)
-      unit: 'ms')
-      timestamp: new Date()
+  recordPageLoad(): void 
   recordPageLoad(): void {}
     if (typeof window === 'undefined') return
     const perfData = window.performance.timing;
@@ -283,17 +224,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   /**
    * Record network request timing
    */
-  recordNetworkRequest(url: string, duration: number, status: number): void {
-    this.recordMetric({)
-      unit: 'ms'),
-      timestamp: new Date(),
-      category: 'network',
-      metadata: {,
-      value: duration,
-      unit: 'ms',
-      timestamp: new Date(),
-      category: 'network',
-  n: number, statu);
+  recordNetworkRequest(url: string, duration: number, status: number): void 
   s: number): void {/* TODO: Fix JSX expression */,}}}
     });
   }
@@ -306,13 +237,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       unit: 'bytes'),
       timestamp: new Date(),
       category: 'memory',
-      metadata: {,
-        total: memory.totalJSHeapSize,
-      name: 'memoryUsage',
-      value: memory.usedJSHeapSize,
-      unit: 'bytes',
-      timestamp: new Date(),
-      category: 'memory',
+      metadata: 
       metadata: {,}total: memory.totalJSHeapSize,
         limit: memory.jsHeapSizeLimit,
    * Measure function execution time;
@@ -346,13 +271,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       categor,
    * Measure async function execution time;
    */;
-  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {,
-  /**
-   * Measure async function execution time
-   */
-    ,
-      value: endTime - startTime),
-      unit: 'ms'),
+  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> 
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {,}const startTime = performance.now();
     const result = await fn();
     const endTime = performance.now();
@@ -382,14 +301,14 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   /**;
    * Get metrics by category;
    */;
-  getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {,
+  getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] 
     ,}getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {,}return this.metrics.filter(m => m.category === category);}
   getMetricsByCategory(categor);
   y: PerformanceMetric['category']): PerformanceMetric[] {/* TODO: Fix JSX expression */,}}
   /**;
    * Get Web Vitals;
    */;
-  getWebVitals(): WebVitalsMetrics {}}return {...this.webVitals}}getWebVitals(): WebVitalsMetrics {/* TODO: Fix JSX expression */,}}return {...this.webVitals}}}
+  getWebVitals(): WebVitalsMetrics }return {...this.webVitals}}getWebVitals(): WebVitalsMetrics {/* TODO: Fix JSX expression */,}}return {...this.webVitals}}}
   /**;
    * Calculate performance score (0-100);
    */;
@@ -404,8 +323,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   /**
    * Get metrics by category
    */
-  getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {
-    ,
+  getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] 
   }
   getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {}
     return this.metrics.filter(m => m.category === category);}
@@ -422,13 +340,10 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   /**
    * Calculate performance score (0-100)
    */
-  calculatePerformanceScore(): number {
-    let score = 100
-    // FCP scoring
-    if (this.webVitals.FCP) {
+  calculatePerformanceScore(): number 
     }
     // FID scoring;
-    if (this.webVitals.FID) {if (this.webVitals.FID &gt; 300) score -= 15;}calculatePerformanceScore(): number {}}let score = 100;
+    if (this.webVitals.FID) {if (this.webVitals.FID &gt; 300) score -= 15;}calculatePerformanceScore(): number }let score = 100;
     // FCP scoring;
     if (this.webVitals.FCP) {}if (this.webVitals.FCP > 3000) score -= 20;
       else if (this.webVitals.FCP > 1800) score -= 10;}
@@ -450,20 +365,17 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     // FID scoring;
     if (this.webVitals.FID) {}if (this.webVitals.FID > 300) score -= 15;
     // LCP scoring
-    if (this.webVitals.LCP) {
-    if (this.webVitals.LCP &gt; 4000) score -= 25
+    if (this.webVitals.LCP) 
   }
       else if (this.webVitals.LCP > 2500) score -= 12;}
     }
     // CLS scoring
-    if (this.webVitals.CLS) {
-    if (this.webVitals.CLS &gt; 0.25) score -= 20
+    if (this.webVitals.CLS) 
   }
       else if (this.webVitals.CLS > 0.1) score -= 10;}
     }
     // FID scoring
-    if (this.webVitals.FID) {
-    if (this.webVitals.FID &gt; 300) score -= 15
+    if (this.webVitals.FID) 
   }
   calculatePerformanceScore(): number {}
     let score = 100
@@ -516,7 +428,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     const networkMetrics = this.getMetricsByCategory('network');
     const avgNetworkTime =;
       networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;
-    if (avgNetworkTime > 500) {recommendations.push('Optimize network requests - consider caching and reducing payload sizes');
+    if (avgNetworkTime > 500) 
       networkMetrics.reduce((sum, m) =&gt; sum + m.value, 0) / networkMetrics.length;}if (avgNetworkTime > 500) {}recommendations.push();
         'Optimize network requests - consider caching and reducing payload sizes';
       );}
@@ -526,17 +438,13 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   /**;
    * Generate performance report;
    */;
-  generateReport(): PerformanceReport {}}const loadMetrics = this.getMetricsByCategory('load');
+  generateReport(): PerformanceReport }const loadMetrics = this.getMetricsByCategory('load');
     const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;
     return {metrics: this.getMetrics();,}
   /**
    * Get performance recommendations
    */
-  getRecommendations(): string[] {
-    const recommendations: string[] = [],
-    if (this.webVitals.FCP && this.webVitals.FCP > 1800) {,
-      recommendations.push()
-        'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources',
+  getRecommendations(): string[] 
   }
   getRecommendations(): string[] {}
     const recommendations: string[] = [],
@@ -568,9 +476,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     const networkMetrics = this.getMetricsByCategory('network')
     const avgNetworkTime =
       networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length
-    if (avgNetworkTime > 500) {
-    recommendations.push('Optimize network requests - consider caching and reducing payload sizes')
-      networkMetrics.reduce((sum, m) =&gt; sum + m.value, 0) / networkMetrics.length
+    if (avgNetworkTime > 500) 
   }
     if (avgNetworkTime > 500) {}
       recommendations.push()
@@ -585,13 +491,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   generateReport(): PerformanceReport {}
     const loadMetrics = this.getMetricsByCategory('load')
     const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0
-    return {
-    metrics: this.getMetrics()
-      webVitals: this.getWebVitals()
-      summary: {
-        avgLoadTime
-        totalMetrics: this.metrics.length,
-    const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0
+    return 
   }
     return {}
       metrics: this.getMetrics(),
@@ -601,23 +501,23 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   }
    * Export metrics as JSON;
    */;
-  exportMetrics(): string {}}return JSON.stringify(this.generateReport(), null, 2);}
+  exportMetrics(): string }return JSON.stringify(this.generateReport(), null, 2);}
   exportMetrics(): string {/* TODO: Fix JSX expression */,}}}
   /**;
    * Clear all metrics;
    */;
-  clearMetrics(): void {}}this.metrics = []}
-    this.webVitals = {}clearMetrics(): void {/* TODO: Fix JSX expression */,}}this.webVitals = {}}
+  clearMetrics(): void }this.metrics = []}
+    this.webVitals = {}clearMetrics(): void {/* TODO: Fix JSX expression */,}}this.webVitals = }
   /**;
    * Cleanup observers;
    */;
-  cleanup(): void {}}this.observers.forEach(observer => observer.disconnect());
+  cleanup(): void }this.observers.forEach(observer => observer.disconnect());
     this.observers = []}
   }
 }
 // Type for performance.memory;
 interface PerformanceWithMemory extends Performance {memory: {,}
-// Type for performance.memory;}interface PerformanceWithMemory extends Performance {}}memory: {,}// usedJSHeapSize: number,
+// Type for performance.memory;}interface PerformanceWithMemory extends Performance }memory: {,}// usedJSHeapSize: number,
   /**
    * Export metrics as JSON
    */
@@ -639,9 +539,7 @@ interface PerformanceWithMemory extends Performance {memory: {,}
   cleanup(): void {}
     this.observers.forEach(observer => observer.disconnect())
 // Type for performance.memory
-interface PerformanceWithMemory extends Performance {
-    memory: {
-// Type for performance.memory
+interface PerformanceWithMemory extends Performance 
   }
 interface PerformanceWithMemory extends Performance {}
   memory: {}
@@ -665,9 +563,7 @@ export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics;
 `;
 // Type for LayoutShift
-interface LayoutShift extends PerformanceEntry {
-    value: number,
-// Type for LayoutShift
+interface LayoutShift extends PerformanceEntry 
   }
 interface LayoutShift extends PerformanceEntry {}
   value: number

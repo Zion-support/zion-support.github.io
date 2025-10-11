@@ -31,7 +31,7 @@ const PagePage: React.FC = () => {return (}
             <div className=">
     ,>
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3">
@@ -39,7 +39,7 @@ const PagePage: React.FC = () => {return (}
                   </div>
                   <p className="text-gray-600 mb-4">
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
+                    
                       <li key={idx} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2">
                         {benefit}
@@ -62,7 +62,7 @@ const PagePage: React.FC = () => {return (}
             <div className=">
     ,>
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+              
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3">
@@ -93,3 +93,7 @@ const PagePage: React.FC = () => {return (}
     </>
   );}
   </Footer>
+
+</section></section>
+</div></div></div></div></div>
+</h3>

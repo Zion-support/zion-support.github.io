@@ -35,7 +35,7 @@ function fixFile(filePath) {
     let modified = false;
 
     // Remove any remaining merge conflict markers
-    const conflictRegex = /<<<<<<< HEAD|=======|>>>>>>> [^\n]+/g;
+    const conflictRegex = /|
     if (conflictRegex.test(content)) {
       content = content.replace(conflictRegex, '');
       modified = true;

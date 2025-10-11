@@ -1,4 +1,4 @@
-            </div>
+</div>
 
       <Footer />
     </>
@@ -54,3 +54,5 @@
 }
 export default PagePage
     </ArrowRight>
+</p>
+</button>

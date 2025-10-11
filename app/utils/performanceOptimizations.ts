@@ -4,9 +4,7 @@
     <>
       ...args: Parameters</T><T>
     </>
-  ) => {,
-    clearTimeout(timeout),
-  func: T,
+  ) => 
     timeout = setTimeout(() =&gt; func(...args), wait);}
   }
 }
@@ -14,10 +12,7 @@
 export const throttle = </T><T extends (...args: any[]) => any>(,
   func: T,
   limit: number,
-    if (!inThrottle) {,
-      func(...args),
-      inThrottle = true
-  func: T,
+    if (!inThrottle) 
 ): ((...args: Parameters<T>) => void) => {}
   let inThrottle: boolean
   return (...args: Parameters<T>) => {}
@@ -92,15 +87,11 @@ export const useIntersectionObserver = (callbac,
   return { observe, disconnect }
 }
 // Image lazy loading hook
-export const useLazyImage = useCallback((...args) => {
-    const [imageSrc, setImageSrc] = useState(placeholder || '')
-  const [isLoaded, setIsLoaded] = useState(false)
+export const useLazyImage = useCallback((...args) => 
   }
   const [isError, setIsError] = useState(false);}
   const { observe } = useIntersectionObserver(useCallback()
-      (entries) => {
-    entries.forEach((entry) => {
-          if (entry.isIntersecting && !isLoaded && !isError) {
+      (entries) => 
               setIsLoaded(true);}
             }
             img.onerror = () => {}setIsError(true);}
@@ -132,14 +123,7 @@ export const useLazyImage = (sr)
     lcp?: number;
     fid?: number;
   }>({});
-    const updateMetrics = useCallback((...args) => {
-  useEffect(() => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
-      setMetrics({);
-        fcp);
+    const updateMetrics = useCallback((...args) => 
         lcp)}ttfb: navigation?.responseStart - navigation?.requestStart,}
       });
     }
@@ -155,8 +139,7 @@ export const useLazyImage = (sr)
       const paint = performance.getEntriesByType('paint');
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
-    if (document.readyState === 'complete') {
-    // Performance monitoring hook
+    if (document.readyState === 'complete') 
   }
 export const usePerformanceMonitoring = useCallback((...args) => {}
   const [metrics, setMetrics] = useState<{}
@@ -201,18 +184,7 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
 }
     usedJSHeapSize?: number;
   }>({});
-    const updateMemoryInfo = useCallback((...args) => {
-  useEffect(() => {
-      const memory = (performance as any).memory;
-    if (typeof window === 'undefined' || !('memory' in performance)) return
-    const updateMemoryInfo = useCallback((...args) => {
-      const memory = (performance as any).memory
-      if (memory) {
-        setMemoryInfo({)
-          usedJSHeapSize: memory.usedJSHeapSize),
-          totalJSHeapSize: memory.totalJSHeapSize),
-          usedJSHeapSize: memory.usedJSHeapSize,
-          totalJSHeapSize: memory.totalJSHeapSize,
+    const updateMemoryInfo = useCallback((...args) => 
       }
     }
     updateMemoryInfo()
@@ -243,9 +215,7 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
     jsSize?: number;
     cssSize?: number;}imageSize?: number;}
 // Resource preloading utility
-export const preloadResource = useCallback((...args) => {
-    if (typeof window === 'undefined') return
-// Resource preloading utility
+export const preloadResource = useCallback((...args) => 
   }
 export const preloadResource = useCallback((...args) => {}
   if (typeof window === 'undefined') return
@@ -254,10 +224,7 @@ export const preloadResource = useCallback((...args) => {}
   document.head.appendChild(link);}
 }
 // Critical resource preloading
-export const preloadCriticalResources = useCallback((...args) => {
-    if (typeof window === 'undefined') return
-  // Preload critical fonts
-// Critical resource preloading
+export const preloadCriticalResources = useCallback((...args) => 
   }
 export const preloadCriticalResources = useCallback((...args) => {}
   if (typeof window === 'undefined') return
@@ -270,26 +237,9 @@ export const preloadCriticalResources = useCallback((...args) => {}
   preloadResource('/styles/critical.css', 'style');}
 }
 // Bundle size monitoring
-export const useBundleSizeMonitoring = useCallback((...args) => {
+export const useBundleSizeMonitoring = useCallback((...args) => 
   }>({});
-    const calculateBundleSize = useCallback((...args) => {
-  useEffect(() => {
-      const resources = performance.getEntriesByType('resource');
-      let totalSize = 0;
-      let jsSize = 0;
-      let cssSize = 0;
-      let imageSize = 0;
-    if (typeof window === 'undefined') return
-    const calculateBundleSize = useCallback((...args) => {
-      const resources = performance.getEntriesByType('resource')
-      let totalSize = 0;
-      let jsSize = 0
-      let cssSize = 0;
-      let imageSize = 0
-      resources.forEach((resource) => {
-        const size = (resource as PerformanceResourceTiming).transferSize || 0
-        totalSize += size
-        if (resource.name.includes('.js')) {
+    const calculateBundleSize = useCallback((...args) => 
     if (document.readyState === 'complete') {}
       setBundleSize({)}
         totalSize,

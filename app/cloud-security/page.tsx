@@ -4,23 +4,13 @@ import {Helmet} from 'react-helmet-async'
 import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const PagePage: React.FC = () => {const features = [
-    {
-      icon: Wifi,
-      title: 'Feature 1',
-      description: 'Description for feature 1.',
+const PagePage: React.FC = () => 
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    {icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+    
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']} ,
-    {icon: TrendingUp,
-      title: 'Performance Optimization',
-      description: 'AI-powered insights to optimize your business performance.',
+    
       benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']} ,
-    {icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision.',
+    
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
   const benefits = [
     'Increase efficiency by up to 80%',
@@ -92,7 +82,7 @@ const PagePage: React.FC = () => {const features = [
             <div className=">
     ,>
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3">
@@ -100,7 +90,7 @@ const PagePage: React.FC = () => {const features = [
                   </div>
                   <p className="text-gray-600 mb-4">
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
+                    
                       <li key={idx} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2">
                         {benefit}
@@ -123,7 +113,7 @@ const PagePage: React.FC = () => {const features = [
             <div className=">
     ,>
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+              
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3">
@@ -157,3 +147,10 @@ export default PagePage
       </div>
       
       <Footer /></>);
+
+</Helmet>
+</main>
+</section></section></section>
+</div></div></div></div></div></div></div></div>
+</h3>
+</p>

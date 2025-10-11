@@ -3,69 +3,37 @@ import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {Shield;, Eye, Database, Server, Mail, Phone, MapPin, CheckCircle, User, Edit, Trash2} from 'lucide-react'
-const PrivacyPage: React.FC = () => {const dataTypes = [
+const PrivacyPage: React.FC = () => 
     {} category: 'Personal Information'},;,
 icon: User,;,
 description: 'Name, email, phone number, and other identifying information'
     },
-    {;,
-category: 'Contact Information',;,
-icon: Database,;,
+    
 description: 'Name, email, phone number, and contact details'} ,
-    {;,
-category: 'Usage Data',;,
-icon: Server,;,
+    
 description: 'How you interact with our services and website'} ,
-    {;,
-category: 'Technical Data',;,
-icon: Server,;,
+    
 description: 'IP address, browser type, device information, and cookies'} ]
 const purposes = [
-    {;,
-title: 'Service Provision',;,
-description: 'To provide and maintain our AI and IT services',;,
-icon: CheckCircle,
+    
     }
-    {;,
-title: 'Communication',;,
-description: 'To respond to inquiries and provide customer support',;,
-icon: CheckCircle,
+    
     }
-    {;,
-title: 'Improvement',;,
-description: 'To analyze usage patterns and improve our services',;,
-icon: CheckCircle,
+    
     }
-    {;,
-title: 'Legal Compliance',;,
-description: 'To comply with applicable laws and regulations',;,
+    
 icon: CheckCircle} ]
 const rights = [
-    {;,
-title: 'Access',;,
-description: 'Request access to your personal data',;,
-icon: Eye,
+    
     }
-    {;,
-title: 'Rectification',;,
-description: 'Correct inaccurate or incomplete data',;,
-icon: Edit,
+    
     }
-    {;,
-title: 'Erasure',;,
-description: 'Request deletion of your personal data',;,
-icon: Trash2,
+    
     }
-    {;,
-title: 'Portability',;,
-description: 'Receive your data in a structured format',;,
+    
 icon: Database} ]
-const contactInfo={;;,
-email: 'privacy@ziontechgroup.com',;,
-phone: '+1 (302) 464-0950',;,
-address: '364 E Main St STE 1008, Middletown, DE 19709'} const contactInfo={;;,
-email: 'privacy@ziontechgroup.com',;,
-phone: '+1 (302) 464-0950',;,
+const contactInfo=
+address: '364 E Main St STE 1008, Middletown, DE 19709'} const contactInfo=
 address: '364 E Main St STE 1008, Middletown, DE 19709'} return (
     <>
 
@@ -117,15 +85,12 @@ We collect information to provide better services to our users
       <Footer />
     </>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {dataTypes.map((type), index) => (
+            
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                   <type.icon className="w-8 h-8 text-white">
                 </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
       <Footer />
     </>
                 <h3 className="text-xl font-bold text-white mb-4">{type.category}</h3>
@@ -161,7 +126,7 @@ We use your information for specific, legitimate purposes
       <Footer />
     </>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {purposes.map((purpose), index) => (
+            
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
@@ -212,16 +177,12 @@ You have control over your personal data
       <Footer />
     </>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {rights.map((right), index) => (
+            
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
                   <right.icon className="w-8 h-8 text-white">
                 </div>
-<<<<<<< HEAD
 
-      <Footer />
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
     </>
                 <h3 className="text-xl font-bold text-white mb-4">{right.title}</h3>
                 <p className="text-gray-300">{right.description}</p>
@@ -252,14 +213,7 @@ Questions About Privacy?>
             <p className="text-xl text-gray-300 mb-8">
 Contact our privacy team for any questions or concerns about your data
             </p>
-<<<<<<< HEAD
-<div className="grid grid-cols-1 m, d: grid-cols-3 gap-8 mb-8">
-              <div className="flex items-center justify-center">
-                <Mail className="w-6 h-6 text-cyan-400 mr-3">
-                <span className="text-white">
-              </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
+
       <Footer />
     </>
               <div className="flex items-center justify-center">
@@ -306,7 +260,7 @@ Contact Privacy Team
             <div className=">
     ,>
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3">
@@ -314,7 +268,7 @@ Contact Privacy Team
                   </div>
                   <p className="text-gray-600 mb-4">
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
+                    
                       <li key={idx} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2">
                         {benefit}
@@ -337,7 +291,7 @@ Contact Privacy Team
             <div className=">
     ,>
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+              
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3">
@@ -375,3 +329,7 @@ Contact Privacy Team
 export default PrivacyPage
 
             </Navigation>
+</section></section></section>
+</div></div></div></div></div></div></div>
+</h3></h3>
+</p></p></p>

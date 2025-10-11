@@ -1,5 +1,5 @@
 import React from 'react'
-const LandingPageBuilderPage: React.FC = () => {const features = [
+const LandingPageBuilderPage: React.FC = () => 
     {} 'Advanced AI technology integration'},
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -59,10 +59,7 @@ return (
       </Helmet>
 
       <Navigation />
-<<<<<<< HEAD
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
+
         {/* Hero Section */}
         <section className="py-20 px-4 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse">
@@ -98,12 +95,7 @@ Learn More
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
                   <p className="text-gray-300 mb-4">
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit
-    </>
-  );, idx) => (
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2">
+                  
                           {benefit}
                         </li>
                       ))}
@@ -147,3 +139,5 @@ Learn More
 
       <Footer />
     </>
+</Helmet>
+</p>

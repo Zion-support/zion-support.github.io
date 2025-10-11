@@ -1,28 +1,12 @@
-const NextPage: React.FC = () => {
-'use client'
-import React from 'react'
+const NextPage: React.FC = () => 
 import {  Helmet  } from 'react-helmet-async'import {  CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from 'lucide-react'
-const Next.dPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+const Next.dPage: React.FC = () => 
     },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+    
     },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+    
     },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+    
     }
   ]
   const benefits = [
@@ -35,58 +19,26 @@ const Next.dPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
-  openGraph?: {
-    title?: string;
-    description?: string;
-    url?: string;
-    siteName?: string;
-    images?: Array<{
-      url: string,
-      width?: number;
-      height?: number;
-      alt?: string;
+  openGraph?: 
     }>;
     locale?: string;
     type?: string;
     authors?: Array<{ name: string; url?: string }> | string[]
     publishedTime?: string;
   }
-  twitter?: {
-    card?: 'summary' | 'summary_large_image' | 'app' | 'player';
-    site?: string;
-    creator?: string;
-    title?: string;
-    description?: string;
-    images?: string[]
+  twitter?: 
   }
-  robots?: {
-    index?: boolean;
-    follow?: boolean;
-    googleBot?: {
-      index?: boolean;
-      follow?: boolean;
-      'max-video-preview'?: number;
-      'max-image-preview'?: 'none' | 'standard' | 'large';
-      'max-snippet'?: number;
+  robots?: 
     }
   }
-  verification?: {
-    google?: string;
-    yandex?: string;
-    yahoo?: string;
-    other?: Record<string, string>;
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div><Helmet>
-        <title>Next.d | Zion Tech Group
-        <meta name="description" content="Professional Next.d services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="next.d, AI solutions, IT services, Zion Tech Group, next.d" />
+  verification?: 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
         <div className="max-w-7xl mx-auto"></div><div className="text-center mb-16"></div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>
               Why Choose Our Next.d?
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>
               Our next.d solutions deliver unmatched performance, security, and scalability.
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>{benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               <div key={index} className="flex items-start space-x-3"></div><CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg"></p></p>{benefit}
             ))}
@@ -106,76 +58,39 @@ const Next.dPage: React.FC = () => {
 }
 export default Next.dPage
 // Type definitions for Next.js compatibility in Vite
-export interface Metadata {
-  title?: string
-  description?: string
-  keywords?: string[]
+export interface Metadata 
   authors?: Array<{ name: string; url?: string }> | string[]
   creator?: string
   publisher?: string
-  formatDetection?: {
-    email?: boolean
-    address?: boolean
-    telephone?: boolean
+  formatDetection?: 
   }
   metadataBase?: URL
-  alternates?: {
-    canonical?: string
-    languages?: Record<string, string&gt;
+  alternates?: 
   }
-  openGraph?: {
-    title?: string
-    description?: string
-    url?: string
-    siteName?: string
-    images?: Array<{
-      url: string,
-      width?: number
-      height?: number
-      alt?: string
+  openGraph?: 
     }>
     locale?: string
     type?: string
     authors?: Array<{ name: string; url?: string }> | string[]
     publishedTime?: string
   }
-  twitter?: {
-    card?: 'summary' | 'summary_large_image' | 'app' | 'player'
-    site?: string
-    creator?: string
-    title?: string
-    description?: string
-    images?: string[]
+  twitter?: 
   }
-  robots?: {
-    index?: boolean
-    follow?: boolean
-    googleBot?: {
-      index?: boolean
-      follow?: boolean
-      'max-video-preview'?: number
-      'max-image-preview'?: 'none' | 'standard' | 'large'
-      'max-snippet'?: number
+  robots?: 
     }
   }
-  verification?: {
-    google?: string
-    yandex?: string
-    yahoo?: string
-    other?: Record<string, string&gt;
+  verification?: 
   }
 }
 
-export interface MetadataRoute {
-  url: string,
+export interface MetadataRoute 
 }
 
-export interface MetadataRouteSitemap extends MetadataRoute {
-  url: string,
+export interface MetadataRouteSitemap extends MetadataRoute 
 }
 
 // Custom Next.js types
-export interface NextPageProps {
+export interface NextPageProps 
   params: { [key: string]: string }
   searchParams: { [key: string]: string | string[] | undefined }
 }
@@ -185,42 +100,35 @@ export interface NextPageProps {
 }
 
 // Route handlers
-export interface RouteHandler {
-  GET?: (req: Request) =&gt; Promise<Response&gt;
-  POST?: (req: Request) =&gt; Promise<Response&gt;
-  PUT?: (req: Request) =&gt; Promise<Response&gt;
-  DELETE?: (req: Request) =&gt; Promise<Response&gt;
-  PATCH?: (req: Request) =&gt; Promise<Response&gt;
+export interface RouteHandler 
 }
 
 // Dynamic route types
-export interface DynamicRoute {
+export interface DynamicRoute 
   params: { [key: string]: string }
 }
 
 // Static generation types
-export interface StaticProps {
+export interface StaticProps 
   props: { [key: string]: any }
 }
 
 // ISR types
-export interface ISRConfig {
-  tags?: string[]
+export interface ISRConfig 
 }
 
 // Edge runtime types
-export interface EdgeRuntime {
+export interface EdgeRuntime 
 }
 
 // Node.js runtime types
-export interface NodeRuntime {
+export interface NodeRuntime 
 }
 
 // Extend Next.js types
-declare module 'next' {
-  interface NextApiRequest {
-    user?: {
+declare module 'next' 
     }
   }
 }
 
+</Helmet>

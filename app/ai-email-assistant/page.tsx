@@ -4,19 +4,11 @@ import {Helmet} from 'react-helmet-async'
 import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const PagePage: React.FC = () => {const features = [
-    {
-      icon: Wifi,
-      title: 'Feature 1',
-      description: 'Description for feature 1.',
+const PagePage: React.FC = () => 
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    {icon: BarChart,
-      title: 'Feature 2', 
-      description: 'Description for feature 2.',
+    
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    {icon: CheckCircle,
-      title: 'Feature 3',
-      description: 'Description for feature 3.',
+    
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ]
   const benefits = [
     'Increase efficiency by up to 80%',
@@ -40,11 +32,7 @@ const PagePage: React.FC = () => {const features = [
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       <Navigation />
-<<<<<<< HEAD
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
+
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <div className="text-center">;
@@ -77,7 +65,7 @@ const PagePage: React.FC = () => {const features = [
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3">
@@ -87,7 +75,7 @@ const PagePage: React.FC = () => {const features = [
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
+                    
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {benefit}
@@ -96,12 +84,7 @@ const PagePage: React.FC = () => {const features = [
   )
 
       <Footer />
-<<<<<<< HEAD
-</>
-              ))}
-=======
-            </div>;
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
+</div>;
       <Footer />;
     </>;
       <Footer />;
@@ -116,7 +99,7 @@ const PagePage: React.FC = () => {const features = [
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+              
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3">
@@ -165,68 +148,7 @@ const PagePage: React.FC = () => {const features = [
 
       <Footer />
     </>
-<<<<<<< HEAD
-</Footer>
-</Footer>
-</Footer>
-</Footer>
-</Footer>
-</div>
 </section>
-</Footer>
-</Footer>
-</Footer>
-</p>
-</Footer>
-</span>
-</CheckCircle>
-</div>
-</div>
-</div>
-</Footer>
-</p>
-</h2>
-</div>
-</div>
-</section>
-</Footer>
-</Footer>
-</Footer>
-</CheckCircle>
-</li>
-</ul>
-</p>
-</h3>
-</Footer>
-</h3>
-</feature>
-</div>
-</div>
-</div>
-</Footer>
-</p>
-</h2>
-</div>
-</div>
-</section>
-</Footer>
-</Footer>
-</Footer>
-</span>
-</h1>
-</div>
-</div>
-</section>
-</div>
-</Navigation>
-</title>
-</Helmet>
-</div>
-</Navigation>
-</title>
-</Helmet>
-=======
-        </section>
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">;
           <div className="max-w-7xl mx-auto">;
@@ -322,4 +244,12 @@ const PagePage: React.FC = () => {const features = [
       <Footer />;
     </>;);
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
+
+</Helmet></Helmet>
+</section></section></section>
+</div></div></div></div></div></div></div></div></div></div></div></div>
+</h1>
+</h3>
+</ul>
+</li>
+</button>

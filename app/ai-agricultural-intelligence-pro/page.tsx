@@ -5,43 +5,17 @@ import {Leaf, BarChart, Shield, Zap, CheckCircle, ArrowRight, Brain, Target, Tre
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const AIAgriculturalIntelligenceProPage: React.FC = () => {
-  const features = [
-    {
-      icon: Leaf,
-      title: 'Crop Monitoring',
-      description: 'Advanced AI-powered crop monitoring with real-time analysis and predictive insights.',
-      benefits: ['Real-time monitoring', 'Disease detection', 'Growth tracking', 'Yield prediction']
+const AIAgriculturalIntelligenceProPage: React.FC = () => 
     },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive data analytics for optimizing agricultural operations and decision making.',
-      benefits: ['Data visualization', 'Trend analysis', 'Performance metrics', 'Predictive modeling']
+    
     },
-    {
-      icon: Shield,
-      title: 'Pest & Disease Control',
-      description: 'AI-driven pest and disease detection with automated treatment recommendations.',
-      benefits: ['Early detection', 'Treatment plans', 'Prevention strategies', 'Cost optimization']
+    
     },
-    {
-      icon: Zap,
-      title: 'Automated Irrigation',
-      description: 'Smart irrigation systems that optimize water usage based on AI analysis.',
-      benefits: ['Water optimization', 'Weather integration', 'Soil monitoring', 'Energy efficiency']
+    
     },
-    {
-      icon: Brain,
-      title: 'Predictive Analytics',
-      description: 'Machine learning models that predict crop yields, weather patterns, and market trends.',
-      benefits: ['Yield forecasting', 'Weather prediction', 'Market analysis', 'Risk assessment']
+    
     },
-    {
-      icon: Target,
-      title: 'Precision Agriculture',
-      description: 'GPS-guided precision farming techniques for maximum efficiency and minimal waste.',
-      benefits: ['GPS guidance', 'Variable rate application', 'Field mapping', 'Resource optimization']
+    
     }
   ]
 
@@ -52,11 +26,7 @@ return (
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       <Navigation />
-<<<<<<< HEAD
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
+
         <title>AI Agricultural Intelligence Pro - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered agricultural intelligence platform for precision farming, crop monitoring, and yield optimization." />
         <meta name="keywords" content="AI agriculture, precision farming, crop monitoring, agricultural intelligence, smart farming" />
@@ -78,11 +48,7 @@ return (
                 <ArrowRight className="ml-2 h-5 w-5" />
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-300">
                 Schedule Demo
-<<<<<<< HEAD
-              </button>
-=======
-              </button></div></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
+</button></div></section>
 
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -97,26 +63,20 @@ return (
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => {
-                const Icon = feature.icon;
-  return (
+              
                   <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-green-400/50 transition-all duration-300">
                     <div className="text-green-400 mb-4">
                       <Icon className="w-8 h-8" />
                     <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description}</p>
                     <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
+                      
                         <li key={idx} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {benefit}
                       ))}
                 );
-<<<<<<< HEAD
-              })}
-=======
-              })}</div></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
+})}</div></section>
 
         {/* Services Section */}
         <section className="py-20 px-4 bg-slate-800/50">
@@ -128,26 +88,20 @@ return (
               </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => {
-                const Icon = service.icon
-                return (
+              
                   <div key={index} className="text-center">
                     <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                       <Icon className="w-8 h-8 text-white" />
                     <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
                     <p className="text-gray-300 mb-4">{service.description}</p>
                     <ul className="space-y-2">
-                      {service.benefits.map((benefit, benefitIndex) => (
+                      
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
                           {benefit}
                       ))}
                 );
-<<<<<<< HEAD
-              })}
-=======
-              })}</div></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
+})}</div></section>
 
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -162,43 +116,27 @@ return (
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingTiers.map((tier, index) => (
-                <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${>
-                  tier.name === 'Professional' 
-                    ? 'border-green-400/50 scale-105' 
-                    : 'border-white/20 hover:border-green-400/50'>
+              
+                <div key={index} className=
                 }`}>
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                     <p className="text-gray-300 mb-4">{tier.description}</p>
                     <div className="flex items-baseline justify-center">
                       <span className="text-4xl font-bold text-white">{tier.price}</span>
-<<<<<<< HEAD
-                      <span className="text-gray-300 ml-1">{tier.period}</span>
-
-                  <ul className="space-y-3 mb-8">
-=======
-                      <span className="text-gray-300 ml-1">{tier.period}</span></div><ul className="space-y-3 mb-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
-                    {tier.features.map((feature, featureIndex) => (
+<span className="text-gray-300 ml-1">{tier.period}</span></div><ul className="space-y-3 mb-8">
+                    
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                     ))}
 
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${>
-                    tier.name === 'Professional'
-                      ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700'
-                      : 'border border-white text-white hover:bg-white hover:text-green-600'>
+                  <button className=
                   }`}>
                     {tier.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
-<<<<<<< HEAD
-              ))}
-=======
-                  </button>
+</button>
                 </div>
               ))}</div></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
 
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -215,12 +153,8 @@ return (
                 <ArrowRight className="ml-2 w-5 h-5" />
               <button className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-white transition-all duration-300">
                 Contact Sales
-<<<<<<< HEAD
-              </button>
-=======
-              </button></div></section>
+</button></div></section>
       </main>
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
 
       <Footer />
   )
@@ -284,3 +218,4 @@ export default AIAgriculturalIntelligenceProPage
 </Navigation>
 </title>
 </Helmet>
+</>

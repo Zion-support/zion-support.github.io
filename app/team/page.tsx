@@ -1,11 +1,6 @@
 'use client';
 
-const PagePage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
+const PagePage: React.FC = () => 
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />}
       </Helmet>
       <Navigation />
@@ -61,7 +56,7 @@ const PagePage: React.FC = () => {
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="text-cyan-400 mb-4">
                     <feature.icon className="h-8 w-8" />
@@ -72,7 +67,7 @@ const PagePage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
+                    
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {benefit}
@@ -105,7 +100,7 @@ const PagePage: React.FC = () => {
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+              
                 <div key={index} className="flex items-start space-x-3">
                   <div className="flex-shrink-0">
                     <Zap className="h-6 w-6 text-cyan-400" />

@@ -4,19 +4,11 @@ import {Helmet} from 'react-helmet-async'
 import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const PagePage: React.FC = () => {const features = [
-    {
-      icon: Wifi,
-      title: 'Feature 1',
-      description: 'Description for feature 1.',
+const PagePage: React.FC = () => 
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    {icon: BarChart,
-      title: 'Feature 2', 
-      description: 'Description for feature 2.',
+    
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    {icon: CheckCircle,
-      title: 'Feature 3',
-      description: 'Description for feature 3.',
+    
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ]
   const benefits = [
     'Increase efficiency by up to 80%',
@@ -57,22 +49,18 @@ const PagePage: React.FC = () => {const features = [
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3">
                     <h3 className="text-xl font-semibold text-gray-900">
-<<<<<<< HEAD
-
-=======
-                  </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
+</div>
       <Footer />
     </>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
+                    
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {benefit}
@@ -95,17 +83,12 @@ const PagePage: React.FC = () => {const features = [
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+              
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3">
                     <span className="text-lg font-medium text-gray-900">
-<<<<<<< HEAD
-
-      <Footer />
-=======
-                  </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
+</div>
     </>
                   <p className="text-gray-300">{benefit}</p>
 
@@ -186,3 +169,4 @@ const PagePage: React.FC = () => {const features = [
 </Navigation>
 </title>
 </Helmet>
+</button>

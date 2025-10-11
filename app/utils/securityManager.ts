@@ -1,8 +1,8 @@
- * Generated: 2025-10-08T02:06:22.083Z,
+* Generated: 2025-10-08T02:06:22.083Z,
  * Enhanced Security Utilities;
  * Generated: 2025-10-08 T02:06:22.083 Z,
- */}export class SecurityManager {}}private static instance: SecurityManager,}
-  private constructor() {}static getInstance(): SecurityManager {}}if (!SecurityManager.instance) {}SecurityManager.instance = new SecurityManager();}
+ */}export class SecurityManager }private static instance: SecurityManager,}
+  private constructor() {}static getInstance(): SecurityManager }if (!SecurityManager.instance) {}SecurityManager.instance = new SecurityManager();}
  * Enhanced Security Utilities;
  * Enhanced Security Utilities
  * Generated: 2025-10-08 T02:06:22.083 Z,

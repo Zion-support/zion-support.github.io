@@ -3,19 +3,11 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart} from 'lucide-react'
-const PagePage: React.FC = () => {const features = [
-    {
-      icon: Wifi,
-      title: 'Feature 1',
-      description: 'Description for feature 1.',
+const PagePage: React.FC = () => 
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    {icon: BarChart,
-      title: 'Feature 2', 
-      description: 'Description for feature 2.',
+    
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    {icon: CheckCircle,
-      title: 'Feature 3',
-      description: 'Description for feature 3.',
+    
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ];
 
   const benefits = [
@@ -60,7 +52,7 @@ const PagePage: React.FC = () => {const features = [
             <div className=">
     ,>
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3">
@@ -68,7 +60,7 @@ const PagePage: React.FC = () => {const features = [
                   </div>
                   <p className="text-gray-600 mb-4">
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
+                    
                       <li key={idx} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2">
                         {benefit}
@@ -94,3 +86,6 @@ const PagePage: React.FC = () => {const features = [
   );
 export default PagePage
     </Footer>
+</div>
+</h3>
+</p>

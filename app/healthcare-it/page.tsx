@@ -22,10 +22,7 @@ import React from 'react'
   </section>
           <div className="max-w-7xl mx-auto">
   </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
       <Footer />
     </>
             <div className="text-center">
@@ -41,3 +38,4 @@ Discover our comprehensive solutions designed to transform your business.
 
       <Footer /></>)
     </p>
+</div>

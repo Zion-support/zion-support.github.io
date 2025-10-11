@@ -4,23 +4,13 @@ import {Helmet} from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import {Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target} from 'lucide-react'
-const MicroSaasServicesPage: React.FC = () => {const features = [
-    {
-      icon: Wifi,
-      title: 'Feature 1',
-      description: 'Description for feature 1.',
+const MicroSaasServicesPage: React.FC = () => 
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    {icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+    
       benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']} ,
-    {icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing with optimized algorithms and infrastructure.',
+    
       benefits: ['Fast processing', 'Optimized algorithms', 'Scalable infrastructure', 'High availability']} ,
-    {icon: Shield,
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security and reliability for mission-critical applications.',
+    
       benefits: ['Data encryption', 'Access control', 'Audit logging', 'Compliance ready']} ]
   const benefits = [
     'Enhanced productivity and efficiency',
@@ -93,7 +83,7 @@ const MicroSaasServicesPage: React.FC = () => {const features = [
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3">
@@ -103,9 +93,7 @@ const MicroSaasServicesPage: React.FC = () => {const features = [
     </>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
+                  
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2">
                           {benefit}
@@ -144,7 +132,7 @@ const MicroSaasServicesPage: React.FC = () => {const features = [
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+              
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3">
@@ -224,3 +212,8 @@ const MicroSaasServicesPage: React.FC = () => {const features = [
 }
 export default MicroSaasServicesPage
         </Navigation>
+
+</Helmet>
+</section>
+</div></div></div>
+</h3>

@@ -4,8 +4,6 @@ import Link from 'next/link';
 import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-
   const services = [
     { name: 'AI Solutions', href: '/services/ai' },
     { name: 'Cloud Architecture', href: '/services/cloud' },
@@ -22,83 +20,53 @@ const Footer: React.FC = () => {
     { name: 'Mobile SDK', href: '/products/mobile-sdk' },
   ];
 
-  const quickLinks = [
+  const company = [
     { name: 'About Us', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
-    { name: 'Privacy Policy', href: '/legal/privacy' },
-    { name: 'Terms of Service', href: '/legal/terms' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Press', href: '/press' },
+  ];
+
+  const support = [
+    { name: 'Help Center', href: '/help' },
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Reference', href: '/api' },
+    { name: 'Status', href: '/status' },
   ];
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-<<<<<<< HEAD
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
-              </div>
-              <div className="text-xl font-bold">Zion Tech Group</div>
-            </div>
-            <p className="text-gray-300 mb-6 max-w-md">
-              Leading technology solutions provider helping businesses transform their digital
-              presence with cutting-edge AI, cloud architecture and innovative development services.
-=======
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">Z</span>
               </div>
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Leading provider of AI and IT solutions, transforming businesses through innovative technology and expert consulting.
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
+              Leading provider of AI-powered solutions and cutting-edge technology services 
+              for modern businesses worldwide.
             </p>
             <div className="flex space-x-4">
-              <a
-                href="https://facebook.com"
-                className="text-gray-400 hover:text-white transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Facebook className="w-5 h-5" />
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Facebook className="h-5 w-5" />
               </a>
-              <a
-                href="https://twitter.com"
-                className="text-gray-400 hover:text-white transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Twitter className="w-5 h-5" />
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Twitter className="h-5 w-5" />
               </a>
-              <a
-                href="https://linkedin.com"
-                className="text-gray-400 hover:text-white transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Linkedin className="w-5 h-5" />
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Linkedin className="h-5 w-5" />
               </a>
-<<<<<<< HEAD
-              <a
-                href="https://github.com"
-                className="text-gray-400 hover:text-white transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github className="w-5 h-5" />
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Github className="h-5 w-5" />
               </a>
-            </div>
-          </div>
-
-=======
             </div>
           </div>
 
           {/* Services */}
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
@@ -115,10 +83,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-<<<<<<< HEAD
-=======
-          {/* Solutions */}
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
+          {/* Products */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Products</h3>
             <ul className="space-y-2">
@@ -135,17 +100,17 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-<<<<<<< HEAD
+          {/* Company */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              {quickLinks.map((link, index) => (
+              {company.map((item, index) => (
                 <li key={index}>
                   <Link
-                    href={link.href}
+                    href={item.href}
                     className="text-gray-300 hover:text-white transition-colors"
                   >
-                    {link.name}
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -153,62 +118,39 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
+        {/* Contact Info */}
         <div className="border-t border-gray-800 mt-8 pt-8">
-=======
-          {/* Contact */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300">info@ziontech.com</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300">123 Tech Street, Innovation City</span>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex items-center space-x-3">
+              <MapPin className="h-5 w-5 text-blue-400" />
+              <span className="text-gray-300">123 Tech Street, Innovation City, IC 12345</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <Phone className="h-5 w-5 text-blue-400" />
+              <span className="text-gray-300">+1 (555) 123-4567</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <Mail className="h-5 w-5 text-blue-400" />
+              <span className="text-gray-300">info@ziontechgroup.com</span>
             </div>
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="border-t border-gray-700 mt-12 pt-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </p>
-<<<<<<< HEAD
-            <div className="flex items-center space-x-4 mt-4 md:mt-0">
-              <div className="flex items-center text-gray-400 text-sm">
-                <MapPin className="w-4 h-4 mr-1" />
-                <span>New York, NY</span>
-              </div>
-              <div className="flex items-center text-gray-400 text-sm">
-                <Phone className="w-4 h-4 mr-1" />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center text-gray-400 text-sm">
-                <Mail className="w-4 h-4 mr-1" />
-                <span>info@ziontech.com</span>
-              </div>
-=======
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Terms of Service
-              </Link>
-              <Link to="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Cookie Policy
-              </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
-            </div>
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-300 text-sm">
+            © 2024 Zion Tech Group. All rights reserved.
+          </p>
+          <div className="flex space-x-6 mt-4 md:mt-0">
+            <Link href="/privacy" className="text-gray-300 hover:text-white text-sm transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="text-gray-300 hover:text-white text-sm transition-colors">
+              Terms of Service
+            </Link>
+            <Link href="/cookies" className="text-gray-300 hover:text-white text-sm transition-colors">
+              Cookie Policy
+            </Link>
           </div>
         </div>
       </div>

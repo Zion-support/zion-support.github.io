@@ -4,49 +4,32 @@ import {Check, Star, ArrowRight, Zap, Shield, Users} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const PricingPage: React.FC = () => {const features = [
-    {
-      icon: Wifi,
-      title: 'Feature 1',
-      description: 'Description for feature 1.',
+const PricingPage: React.FC = () => 
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    {name: 'Professional',
-      ],
-      popular: true,
-      icon: Star,
+    
     }
-    {name: 'Enterprise',
-      ],
-      popular: false,
+    
       icon: Shield} ]
 
   const addOns = [
-    {name: 'Additional Users',
-      description: 'Add more team members to your plan',
+    
       price: { monthl, y: 50, yearly: 500} },
-    {name: 'Priority Support',
-      description: 'Get faster response times and dedicated support',
+    
       price: { monthl, y: 200, yearly: 2000} },
-    {name: 'Custom Development',
-      description: 'Bespoke solutions tailored to your needs',
+    
       price: { monthl, y: 1000, yearly: 10000} },
-    {name: 'Training & Onboarding',
-      description: 'Comprehensive training for your team',
+    
       price: { monthl, y: 500, yearly: 5000} }
   ]
 
   const addOns = [
-    {name: 'AI Chatbot',
-      price: '$500/month',
+    
       description: 'Intelligent customer support chatbot'} ,
-    {name: 'Data Analytics Pro',
-      price: '$800/month',
+    
       description: 'Advanced business intelligence dashboard'} ,
-    {name: 'Cybersecurity Suite',
-      price: '$1,200/month',
+    
       description: 'Comprehensive security monitoring'} ,
-    {name: 'Custom Development',
-      price: '$150/hour',
+    
       description: 'Tailored solutions for your business'} ]
   return (
     <>
@@ -58,22 +41,14 @@ const PricingPage: React.FC = () => {const features = [
                 Monthly
               </span>
               <button>
-                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly'
-    </>
-  )
-                className="
-    s: ring-offset-2 focu, s:ring-offset-slate-900">
-              >
-                <span
-                  className={`${
+                onClick=
                     billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1'} inline-block h-4 w-4 transform rounded-full bg-white transition-transform`}>
                 />
               </button>
               <span className={`text-lg font-medium ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'} `}>
                 Yearly
               </span>
-              {billingCycle === 'yearly' && (
-                <span className="ml-2 bg-green-500 text-white text-sm px-2 py-1 rounded-full">
+              
                   Save 20%}
                 </span>
               )}
@@ -177,7 +152,7 @@ const PricingPage: React.FC = () => {const features = [
             <div className=">
     ,>
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+              
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3">

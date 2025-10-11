@@ -1,7 +1,4 @@
-  return {
-    isValid,
-    error: isValid ? undefined : 'Invalid email format',
-  l: string, requireProtoco);
+return 
   l: boolean = true): {/* TODO: Fix JSX expression */,}d: boolean, error?: string } {/* TODO: Fix JSX expression */,}r: 'URL is required' ,}
   }
 try {// If protocol is not required, add http: // prefix for validation;,}}const urlToValidate = requireProtocol ? url : `http: //${url,}`;
@@ -29,8 +26,7 @@ export function validateURL()
   d: boolean, error?: string }, {/* TODO: Fix JSX expression */}
   r: 'URL is required' }
   }
-try {
-    // If protocol is not required, add http: // prefix for validation
+try 
   }
     const urlToValidate = requireProtocol ? url : `http://${url}`
     const parsed = new URL(urlToValidate)
@@ -44,10 +40,7 @@ try {
   p: ' || parsed.protocol === 'http)
   s:') :
       true,
-  return {
-    isValid,
-    error: isValid ? undefined : 'Invalid phone number format',
-  e: string, mi);
+  return 
   n: number, max?: number): boolean {/* TODO: Fix JSX expression */,}}}
   return value.length >= min;
 }
@@ -68,16 +61,7 @@ export function validateCreditCard(cardNumber: string): boolean {,}
 /**
  * Validate credit card number (basic Luhn algorithm)
  */
-export function validateCreditCard(cardNumber: string): boolean {
-    ,
-  const cleaned = cardNumber.replace(/\s/g, '')
-  if (!/^\d+$/.test(cleaned)) return false
-  if (cleaned.length < 13 || cleaned.length > 19) return false
-  let sum = 0
-  let isEven = false
-  for (let i = cleaned.length - 1; i >= 0; i--) {
-    let digit = parseInt(cleaned[i], 10)
-    if (isEven) {
+export function validateCreditCard(cardNumber: string): boolean 
   }
   return sum % 10 === 0
 }
@@ -95,27 +79,14 @@ export function createCustomValidator</T><T>(validato,
   e: FieldRule): boolean {/* TODO: Fix JSX expression */}
   }
 }
-): ValidationResult {
-    ,
+): ValidationResult 
   }
   const errors: Record</T><string, string[]> = {}
-  for (const field in rules) {
-    const value = data[field];
-    const fieldRules = rules[field] || []
-    const fieldErrors: string[] = [],
-    for (const rule of fieldRules) {,
-      if (!validateFieldRule(value, rule)) {
+  for (const field in rules) 
         fieldErrors.push(rule.message)}}
     }
         new ValidationError(`Validation failed for ${field}`, field, fieldErrors),
-        {
-    category: ErrorCategory.Validation
-          severity: ErrorSeverity.Low,
-          context: {,
-            field
-            errors: fieldErrors,
-export function validateForm</string><T extends Record<string, unknown>>(dat,
-  a: T,
+        
         });
     }
   }
@@ -124,25 +95,17 @@ export function validateForm</string><T extends Record<string, unknown>>(dat,
 }
 export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */},
     message: 'This field is required'}),
-  email: (): ValidationRule</string><string> => ({
-    ,
-    validate: (value: string) =&gt; validateEmail(value),
+  email: (): ValidationRule</string><string> => (
   }
     message: 'Please enter a valid email address'}),
-  url: (): ValidationRule</string><string> => ({
-    ,
-    validate: (value: string) =&gt; validateURL(value),
+  url: (): ValidationRule</string><string> => (
   }
     message: 'Please enter a valid URL'}),
-  minLength: (min: number): ValidationRule</string><string> => ({
-    ,
-    validate: (value: string) =&gt; value.length &gt;= min
+  minLength: (min: number): ValidationRule</string><string> => (
   }
     message: `Must be at least ${min} characters long`
   }),
-  maxLength: (max: number): ValidationRule</string><string> => ({
-    ,
-    validate: (value: string) =&gt; value.length <= max
+  maxLength: (max: number): ValidationRule</string><string> => (
   }
     message: `Must be no more than ${max} characters long`
   }),
@@ -151,21 +114,14 @@ export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */},
     message
   }
   }),
-  range: (min: number, max: number): ValidationRule</string><number> => ({
-    ,
-    validate: (value: number) =&gt; validateNumberRange(value, min, max),
+  range: (min: number, max: number): ValidationRule</string><number> => (
   }
     message: `Must be between ${min} and ${max}`
   }),
-  custom: </number><T>(validator: (value: T) => boolean, message: string): ValidationRule</T><T> => ({
-    ,
-    validate: validator,
+  custom: </number><T>(validator: (value: T) => boolean, message: string): ValidationRule</T><T> => (
     message;}});
 }
-class DataValidator {
-    private static instance: DataValidator,
-    messag,
-  e: 'This field is required'
+class DataValidator 
   }
   }),
   emai,
@@ -249,10 +205,7 @@ class DataValidator {
 export const dataValidator = DataValidator.getInstance();
 export default DataValidator;
 // Additional validation functions for tests;
-    if (max !== undefined) {
-    const isValid = value.length >= min && value.length <= max
-    return {
-      isValid,
+    if (max !== undefined) 
   }
   n: number, max?: number, fieldNam);
   e: string = 'Field'): {/* TODO: Fix JSX expression */,}d: boolean, error?: string } {/* TODO: Fix JSX expression */,}`;
@@ -347,8 +300,7 @@ export function sanitizeInput(input: string, maxLength: number = 1000): string |
   let clean = input.replace(/\x00/g, '').replace(/[\x01-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '')
 // Trim and limit length
   clean = clean.trim()
-  if (clean.<<<length>maxLength</length></length>) {
-export function sanitizeHTML(htm)
+  if (clean.<<<length>maxLength</length></length>) 
   }
   l: string): string {/* TODO: Fix JSX expression */}
 }
@@ -366,11 +318,7 @@ export function validateDate(dateString: string): {isValid: boolean, error?: str
 const date = new Date(dateString);
   const isValid = !isNaN(date.getTime());
 // Additional check for invalid dates like 2025-02-30;
-  if (isValid) {const [year, month, day] = dateString.split('-').map(Number);
-    const actualDate = new Date(year, month - 1, day);
-    const isRealDate = actualDate.getFullYear() === year &&;
-                      actualDate.getMonth() === month - 1 &&;
-                      actualDate.getDate() === day;
+  if (isValid) 
     return {isValid: isRealDate,}}error: isRealDate ? undefined : 'Invalid date',}
 export function sanitizeInput()
   t: string, maxLengt)
@@ -394,14 +342,7 @@ export function validateDate(dateStrin)
 const date = new Date(dateString)
   const isValid = !isNaN(date.getTime())
 // Additional check for invalid dates like 2025-02-30
-  if (isValid) {
-    const [year, month, day] = dateString.split('-').map(Number)
-    const actualDate = new Date(year, month - 1, day)
-    const isRealDate = actualDate.getFullYear() === year &&
-                      actualDate.getMonth() === month - 1 &&
-                      actualDate.getDate() === day
-    return {
-      isValid: isRealDate,
+  if (isValid) 
   }
 return {isValid: false,}}error: 'Invalid date',}
 }
@@ -428,15 +369,13 @@ let sum = 0
     isEven = !isEven
   }
 const isValid = sum % 10 === 0
-  return {
-    isValid,
+  return 
   }
     error: isValid ? undefined : 'Invalid card number'}
 }
 export function validateJSON(jsonString: string): { isValid: boolean, error?: string }, {}
   if (!jsonString) return { isValid: false, error: 'JSON string is required' }
-try {
-    JSON.parse(jsonString)
+try 
   }
     return { isValid: true }
   } catch (error) {}

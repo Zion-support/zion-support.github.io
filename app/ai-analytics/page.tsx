@@ -5,24 +5,13 @@ import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Targ
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AiAnalyticsPage: React.FC = () => {
-  const features = [
-    {
-      icon: Wifi,
-      title: 'Feature 1',
-      description: 'Description for feature 1.',
+const AiAnalyticsPage: React.FC = () => 
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    {icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+    
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']} ,
-    {icon: TrendingUp,
-      title: 'Performance Optimization',
-      description: 'AI-powered insights to optimize your business performance.',
+    
       benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']} ,
-    {icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision.',
+    
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
   const benefits = [
     'Increase efficiency by up to 80%',
@@ -86,7 +75,7 @@ const AiAnalyticsPage: React.FC = () => {
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="text-cyan-400 mb-4">
                     <feature.icon className="h-8 w-8" />
@@ -96,7 +85,7 @@ const AiAnalyticsPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
+                    
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {benefit}
@@ -122,16 +111,12 @@ const AiAnalyticsPage: React.FC = () => {
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+              
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3">
                     <span className="text-lg font-medium text-gray-900">
-<<<<<<< HEAD
-
-=======
-                  </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
+</div>
       <Footer />
     </>
                   <p className="text-gray-300">{benefit}</p>
@@ -235,3 +220,4 @@ export default AiAnalyticsPage;
 </Navigation>
 </title>
 </Helmet>
+</button>
