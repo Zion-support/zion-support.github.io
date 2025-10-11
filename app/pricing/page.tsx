@@ -8,7 +8,7 @@ import { CheckCircle, Star, ArrowRight, Zap, Brain, Cloud, Cpu, Phone, Mail, Map
 const PricingPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
 
-  const aiServices = const aiServices = const aiServices = [
+  const aiServices = [
     { name: 'AI-Powered Chatbots', price: '$299', period: '/month', marketPrice: '$500-2000', features: ['Natural Language Processing', 'Multi-language Support', 'Sentiment Analysis', 'CRM Integration'] },
     { name: 'AI Content Generation', price: '$199', period: '/month', marketPrice: '$300-1500', features: ['Blog Post Generation', 'Social Media Content', 'Email Campaigns', 'SEO Optimization'] },
     { name: 'AI Data Analytics', price: '$399', period: '/month', marketPrice: '$800-3000', features: ['Predictive Analytics', 'Real-time Dashboards', 'Automated Reporting', 'Anomaly Detection'] },
@@ -23,10 +23,11 @@ const PricingPage: React.FC = () => {
     { name: 'AI Language Translation', price: '$149', period: '/month', marketPrice: '$250-1000', features: ['Real-time Translation', 'Multi-language Support', 'Context Understanding', 'Voice Translation'] },
     { name: 'AI Voice Recognition', price: '$299', period: '/month', marketPrice: '$500-2000', features: ['Speech-to-Text', 'Voice Commands', 'Speaker Identification', 'Noise Cancellation'] },
     { name: 'AI Data Processing', price: '$199', period: '/month', marketPrice: '$350-1500', features: ['Data Cleaning', 'Validation Rules', 'Duplicate Detection', 'Data Enrichment'] },
-    { name: 'AI Cybersecurity', price: '$799', period: '/month', marketPrice: '$1500-5000', features: ['Threat Detection', 'Behavioral Analysis', 'Incident Response', 'Vulnerability Scanning'] },;
-    { name: 'AI Scheduling Assistant', price: '$99', period: '/month', marketPrice: '$150-600', features: ['Smart Scheduling', 'Meeting Optimization', 'Conflict Resolution', 'Time Zone Management'] };
+    { name: 'AI Cybersecurity', price: '$799', period: '/month', marketPrice: '$1500-5000', features: ['Threat Detection', 'Behavioral Analysis', 'Incident Response', 'Vulnerability Scanning'] },
+    { name: 'AI Scheduling Assistant', price: '$99', period: '/month', marketPrice: '$150-600', features: ['Smart Scheduling', 'Meeting Optimization', 'Conflict Resolution', 'Time Zone Management'] }
   ];
-  const itServices = const itServices = const itServices = [
+  
+  const itServices = [
     { name: 'Cloud Infrastructure & Migration', price: '$2,500', period: '/month', marketPrice: '$4000-15000', features: ['Cloud Architecture Design', 'Multi-cloud Strategies', 'Cost Optimization', 'Disaster Recovery'] },
     { name: 'Cybersecurity Solutions', price: '$1,800', period: '/month', marketPrice: '$3000-12000', features: ['Threat Detection & Response', 'Vulnerability Assessments', 'Penetration Testing', 'Security Monitoring'] },
     { name: 'Database Management', price: '$1,200', period: '/month', marketPrice: '$2000-8000', features: ['Database Design & Optimization', 'Performance Tuning', 'Backup & Recovery', 'Data Migration'] },
@@ -40,11 +41,11 @@ const PricingPage: React.FC = () => {
     { name: 'IT Asset Management', price: '$299', period: '/month', marketPrice: '$500-1500', features: ['Asset Inventory', 'Lifecycle Management', 'Procurement Services', 'Deployment Planning'] },
     { name: 'Business Intelligence & Analytics', price: '$799', period: '/month', marketPrice: '$1200-4000', features: ['Data Visualization', 'Dashboard Creation', 'Report Automation', 'Data Integration'] },
     { name: 'Data Backup & Recovery', price: '$199', period: '/month', marketPrice: '$350-1200', features: ['Automated Backups', 'Disaster Recovery Planning', 'Data Encryption', 'Offsite Storage'] },
-    { name: 'System Administration', price: '$1,000', period: '/month', marketPrice: '$1500-5000', features: ['Server Management', 'User Account Management', 'Security Updates', 'Performance Monitoring'] },;
-    { name: 'Performance Optimization', price: '$1,200', period: '/month', marketPrice: '$2000-6000', features: ['Application Optimization', 'Database Tuning', 'Infrastructure Scaling', 'Load Testing'] };
+    { name: 'System Administration', price: '$1,000', period: '/month', marketPrice: '$1500-5000', features: ['Server Management', 'User Account Management', 'Security Updates', 'Performance Monitoring'] },
+    { name: 'Performance Optimization', price: '$1,200', period: '/month', marketPrice: '$2000-6000', features: ['Application Optimization', 'Database Tuning', 'Infrastructure Scaling', 'Load Testing'] }
   ];
 
-  const microSaasServices = const microSaasServices = const microSaasServices = [
+  const microSaasServices = [
     { name: 'Zion Analytics Pro', price: '$89', period: '/month', marketPrice: '$150-500', features: ['Real-time Data Visualization', 'AI-powered Predictive Analytics', 'Custom Dashboard Builder', 'Advanced Data Connectors'] },
     { name: 'Zion Chat AI', price: '$149', period: '/month', marketPrice: '$300-800', features: ['GPT-4 Powered AI', 'Multi-channel Support', 'Advanced Sentiment Analysis', 'Automated Ticket Routing'] },
     { name: 'Zion Invoice Genius', price: '$49', period: '/month', marketPrice: '$100-300', features: ['AI-powered Invoice Generation', 'Automated Recurring Billing', 'Multi-currency Support', 'Payment Tracking'] },
@@ -79,11 +80,12 @@ const PricingPage: React.FC = () => {
     { name: 'Zion AI Supply Chain Optimizer', price: '$219', period: '/month', marketPrice: '$400-1000', features: ['Demand Forecasting', 'Inventory Optimization', 'Supplier Management', 'Risk Assessment'] },
     { name: 'Zion AI Fraud Detector', price: '$249', period: '/month', marketPrice: '$500-1500', features: ['Real-time Monitoring', 'Behavioral Analysis', 'Risk Scoring', 'Automated Alerts'] },
     { name: 'Zion AI Customer Service Pro', price: '$189', period: '/month', marketPrice: '$350-800', features: ['AI Chatbots', 'Sentiment Analysis', 'Ticket Routing', 'Knowledge Base'] },
-    { name: 'Zion AI Marketing Automation', price: '$159', period: '/month', marketPrice: '$300-700', features: ['Campaign Automation', 'Personalization Engine', 'Lead Scoring', 'A/B Testing'] },;
-    { name: 'Zion AI Document AI', price: '$139', period: '/month', marketPrice: '$250-600', features: ['Document OCR', 'Data Extraction', 'Form Processing', 'Document Classification'] };
+    { name: 'Zion AI Marketing Automation', price: '$159', period: '/month', marketPrice: '$300-700', features: ['Campaign Automation', 'Personalization Engine', 'Lead Scoring', 'A/B Testing'] },
+    { name: 'Zion AI Document AI', price: '$139', period: '/month', marketPrice: '$250-600', features: ['Document OCR', 'Data Extraction', 'Form Processing', 'Document Classification'] }
   ];
-  const getCurrentServices = const getCurrentServices = const getCurrentServices = () => {;
-    switch (activeTab) {;
+  
+  const getCurrentServices = () => {
+    switch (activeTab) {
       case 'ai': return aiServices;
       case 'it': return itServices;
       case 'saas': return microSaasServices;
@@ -91,8 +93,8 @@ const PricingPage: React.FC = () => {
     }
   };
 
-  const getTabIcon = const getTabIcon = const getTabIcon = (tab: string) => {;
-    switch (tab) {;
+  const getTabIcon = (tab: string) => {
+    switch (tab) {
       case 'ai': return Brain;
       case 'it': return Cloud;
       case 'saas': return Cpu;
@@ -100,7 +102,7 @@ const PricingPage: React.FC = () => {
     }
   };
 
-  const plans = const plans = const plans = [
+  const plans = [
     {
       name: 'Starter',
       price: '$2,999',
@@ -150,48 +152,160 @@ const PricingPage: React.FC = () => {
         'SLA Guarantee',
         'Unlimited Users'
       ],
-      popular: false;
-    };
+      popular: false
+    }
   ];
-  return() {plans.map((plan, index) => ()
-                  )}
-                  
+
+  return (
+    <>
+      <Helmet>
+        <title>Pricing - Zion Tech Group | AI & IT Solutions Pricing</title>
+        <meta name="description" content="Transparent pricing for AI, IT, and Micro SaaS solutions. Choose the perfect plan for your business needs with Zion Tech Group." />
+        <meta name="keywords" content="pricing, AI services pricing, IT solutions pricing, Micro SaaS pricing, business plans" />
+      </Helmet>
+      
+      <main className="min-h-screen">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Transparent <span className="text-cyan-400">Pricing</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the perfect plan for your business needs. All plans include 24/7 support and regular updates.
+            </p>
+          </div>
+
+          {/* Pricing Plans */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {plans.map((plan, index) => (
+              <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${plan.popular ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' : 'border-gray-700'} hover:border-cyan-500/50 transition-all duration-300`}>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
                   <p className="text-gray-300 mb-6">{plan.description}</p>
                   
-                  <div className="mb-6" /></div>
-                    <span className="text-4xl font-bold text-white">${plan.price}</span>
-                    <span className="text-gray-400 ml-2">/month</span>
+                  <div className="mb-6">
+                    <span className="text-5xl font-bold text-cyan-400">{plan.price}</span>
+                    <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
+                  
+                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular 
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white' 
+                      : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                  }`}>
+                    Get Started
+                  </button>
+                </div>
+                
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-white mb-4">What's included:</h4>
+                  {plan.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
 
-                  <ul className="space-y-3 mb-8" /></ul>
-                    {plan.features.map((feature, featureIndex) => ()
+          {/* Service Categories */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              Service <span className="text-cyan-400">Categories</span>
+            </h2>
+            
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              {['ai', 'it', 'saas'].map((tab) => {
+                const Icon = getTabIcon(tab);
+                return (
+                  <button
+                    key={tab}
+                    onClick={() => setActiveTab(tab)}
+                    className={`flex items-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      activeTab === tab
+                        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
+                        : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50'
+                    }`}
+                  >
+                    <Icon className="w-5 h-5 mr-2" />
+                    {tab === 'ai' ? 'AI Services' : tab === 'it' ? 'IT Services' : 'Micro SaaS'}
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Services Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {getCurrentServices().map((service, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-lg font-semibold text-white">{service.name}</h3>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
+                      <div className="text-sm text-gray-400">{service.period}</div>
+                    </div>
+                  </div>
+                  
+                  <div className="mb-4">
+                    <span className="text-sm text-gray-400">Market Price: </span>
+                    <span className="text-sm text-green-400 line-through">{service.marketPrice}</span>
+                    <span className="text-sm text-cyan-400 ml-2">You Save: {Math.round((1 - parseFloat(service.price.replace(/[$,]/g, '')) / parseFloat(service.marketPrice.split('-')[0].replace(/[$,]/g, ''))) * 100)}%</span>
+                  </div>
+                  
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
                     ))}
                   </ul>
-
-                  <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
-                      : 'bg-white/10 text-white hover:bg-white/20'
-                  }`} /></button>
-                    {plan.popular ? 'Get Started' : 'Choose Plan'}
+                  
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-all duration-300">
+                    Get Quote
                   </button>
                 </div>
               ))}
             </div>
+          </div>
 
-            <div className="text-center mt-16" /></div>
-              <h2 className="text-3xl font-bold text-white mb-4">Need a Custom Solution?</h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto" /></p>
-                We offer tailored AI and IT solutions for enterprise clients. Contact us for a personalized quote.
-              </p>
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300" /></button>
-                Contact Sales
-              </button>
+          {/* Contact CTA */}
+          <div className="text-center bg-slate-800/50 backdrop-blur-sm rounded-xl p-12 border border-cyan-500/20">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Need a Custom Solution?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Contact our experts for a personalized quote tailored to your specific business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+              >
+                Contact Us
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+              >
+                Call Now
+              </a>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </main>
+      
+      <Footer />
     </>
   );
 };

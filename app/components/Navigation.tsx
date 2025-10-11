@@ -205,8 +205,71 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
+            {/* Micro SaaS Dropdown */}
+            <div className="relative group">
+              <button
+                onClick={toggleMicroSaas}
+                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+              >
+                <Code className="w-4 h-4" />
+                <span>Micro SaaS</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {microSaasOpen && (
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-cyan-500/20 p-6">
+                  <div className="grid grid-cols-1 gap-3">
+                    <Link to="/micro-saas" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                      <BarChart className="w-5 h-5 text-cyan-400" />
+                      <div>
+                        <div className="font-medium text-white">Analytics Tools</div>
+                        <div className="text-sm text-gray-400">Business intelligence</div>
+                      </div>
+                    </Link>
+                    <Link to="/micro-saas" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                      <MessageCircle className="w-5 h-5 text-cyan-400" />
+                      <div>
+                        <div className="font-medium text-white">Customer Service</div>
+                        <div className="text-sm text-gray-400">AI-powered support</div>
+                      </div>
+                    </Link>
+                    <Link to="/micro-saas" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                      <Shield className="w-5 h-5 text-cyan-400" />
+                      <div>
+                        <div className="font-medium text-white">Security Tools</div>
+                        <div className="text-sm text-gray-400">Cybersecurity solutions</div>
+                      </div>
+                    </Link>
+                    <Link to="/micro-saas" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                      <Target className="w-5 h-5 text-cyan-400" />
+                      <div>
+                        <div className="font-medium text-white">Marketing Tools</div>
+                        <div className="text-sm text-gray-400">Lead generation & automation</div>
+                      </div>
+                    </Link>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-cyan-500/20">
+                    <Link
+                      to="/micro-saas"
+                      className="flex items-center justify-center w-full py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                      onClick={closeAllMenus}
+                    >
+                      View All Micro SaaS
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
             <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
+            </Link>
+            <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Pricing
+            </Link>
+            <Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Blog
             </Link>
             <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Contact
@@ -257,11 +320,32 @@ const Navigation: React.FC = () => {
                 IT Services
               </Link>
               <Link
+                to="/micro-saas"
+                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                onClick={closeAllMenus}
+              >
+                Micro SaaS
+              </Link>
+              <Link
                 to="/about"
                 className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 onClick={closeAllMenus}
               >
                 About
+              </Link>
+              <Link
+                to="/pricing"
+                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                onClick={closeAllMenus}
+              >
+                Pricing
+              </Link>
+              <Link
+                to="/blog"
+                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                onClick={closeAllMenus}
+              >
+                Blog
               </Link>
               <Link
                 to="/contact"

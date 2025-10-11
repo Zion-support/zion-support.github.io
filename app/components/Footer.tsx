@@ -121,6 +121,41 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
 
+          {/* Micro SaaS */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <Code className="w-5 h-5 text-cyan-400 mr-2" />
+              Micro SaaS
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/micro-saas" className="hover:text-cyan-400 transition-colors">
+                  Analytics Tools
+                </Link>
+              </li>
+              <li>
+                <Link to="/micro-saas" className="hover:text-cyan-400 transition-colors">
+                  Customer Service
+                </Link>
+              </li>
+              <li>
+                <Link to="/micro-saas" className="hover:text-cyan-400 transition-colors">
+                  Security Tools
+                </Link>
+              </li>
+              <li>
+                <Link to="/micro-saas" className="hover:text-cyan-400 transition-colors">
+                  Marketing Tools
+                </Link>
+              </li>
+              <li>
+                <Link to="/micro-saas" className="text-cyan-400 hover:text-cyan-300 font-medium">
+                  View All Micro SaaS →
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Company Links */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
@@ -134,8 +169,8 @@ const Footer: React.FC = memo(() => {
                 </Link>
               </li>
               <li>
-                <Link to="/team" className="hover:text-cyan-400 transition-colors">
-                  Our Team
+                <Link to="/pricing" className="hover:text-cyan-400 transition-colors">
+                  Pricing
                 </Link>
               </li>
               <li>
@@ -144,13 +179,13 @@ const Footer: React.FC = memo(() => {
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-cyan-400 transition-colors">
-                  Contact
+                <Link to="/blog" className="hover:text-cyan-400 transition-colors">
+                  Blog
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="hover:text-cyan-400 transition-colors">
-                  Blog
+                <Link to="/contact" className="hover:text-cyan-400 transition-colors">
+                  Contact
                 </Link>
               </li>
             </ul>
