@@ -3,7 +3,13 @@ import React from 'react'
 import Link from 'next/link'
 import { ChevronRight, Home } from 'lucide-react'
 
-  const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
+const Breadcrumb: React.FC = () => {
+  const pathSegments = typeof window !== 'undefined' ? window.location.pathname.split('/').filter(segment => segment !== '') : [];
+  const items = pathSegments.map((segment, index) => ({
+    label: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
+    href: index === pathSegments.length - 1 ? undefined : '/' + pathSegments.slice(0, index + 1).join('/')
+  }));
+  
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
     ...items
@@ -37,7 +43,7 @@ import { ChevronRight, Home } from 'lucide-react'
         </ol>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Breadcrumb
+export default Breadcrumb;
