@@ -10,6 +10,7 @@ import AboutPage from './app/about/page'
 import ContactPage from './app/contact/page'
 import AIServicesPage from './app/ai-services/page'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ITServicesPage from './app/it-services/page'
 import MicroSAASServicesPage from './app/micro-saas-services/page'
 import FiveGImplementationPage from './app/5g-implementation/page'
@@ -40,12 +41,21 @@ const MicroSAASServicesPage = React.lazy(() => import('./app/micro-saas-services
 const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'))
 const DigitalTransformationPage = React.lazy(() => import('./app/digital-transformation/page'))
 >>>>>>> cursor/analyze-improve-and-deploy-application-04ca
+=======
+import ITServicesPage from './app/it-services/page'
+import MicroSaasServicesPage from './app/micro-saas-services/page'
+import ServicesPage from './app/services/page'
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8af7
 
 function App() {
   return (
     <Router>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="min-h-screen bg-gray-900">
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8af7
         <Navigation />
 <<<<<<< HEAD
         <main>
@@ -67,6 +77,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
 <<<<<<< HEAD
           <Route path="/services" element={<ServicesPage />} />
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-93a1
           <Route path="/ai-services" element={<AIServicesPage />} />
@@ -77,6 +88,11 @@ function App() {
           <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
           <Route path="/careers" element={<CareersPage />} />
           <Route path="/blog" element={<BlogPage />} />
+=======
+          <Route path="/ai-services" element={<AIServicesPage />} />
+          <Route path="/it-services" element={<ITServicesPage />} />
+          <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8af7
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
 >>>>>>> cursor/website-audit-and-update-with-deployment-bee6
