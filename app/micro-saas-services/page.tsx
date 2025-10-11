@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield, Brain, Globe, Settings } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield, Brain, Globe, Settings, Mail, MessageSquare, BarChart3 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -7,14 +7,47 @@ const MicroSAASServicesPage: React.FC = () => {
   const microSAAS = [
     {
       icon: <Zap className="w-8 h-8 text-blue-500" />,
-      title: 'AI Task Manager',
-      description: 'Intelligent task management with AI-powered prioritization, scheduling, and productivity insights.',
-      features: ['AI task prioritization', 'Smart scheduling', 'Productivity analytics', 'Team collaboration'],
+      title: 'AI Social Media Scheduler',
+      description: 'AI-powered social media scheduling with optimal posting times, content suggestions, and analytics.',
+      features: ['Smart scheduling', 'Multi-platform support', 'AI content suggestions', 'Advanced analytics'],
       pricing: '$19/month',
-      link: '/ai-task-manager',
+      link: '/ai-social-media-scheduler',
       popular: true,
-      users: '1,200+',
+      users: '2,500+',
       rating: '4.9'
+    },
+    {
+      icon: <Mail className="w-8 h-8 text-green-500" />,
+      title: 'AI Email Marketing Automation',
+      description: 'Automated email campaigns with AI segmentation, content generation, and performance optimization.',
+      features: ['Smart segmentation', 'Automated campaigns', 'AI content generation', 'Advanced analytics'],
+      pricing: '$29/month',
+      link: '/ai-email-marketing-automation',
+      popular: true,
+      users: '1,800+',
+      rating: '4.8'
+    },
+    {
+      icon: <MessageSquare className="w-8 h-8 text-purple-500" />,
+      title: 'AI Customer Support Chatbot',
+      description: 'Handle 80% of customer inquiries automatically with AI-powered chatbot that never sleeps.',
+      features: ['Natural language processing', 'Multi-channel support', 'Smart escalation', 'Instant setup'],
+      pricing: '$39/month',
+      link: '/ai-customer-support-chatbot',
+      popular: true,
+      users: '3,200+',
+      rating: '4.9'
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8 text-indigo-500" />,
+      title: 'AI Analytics Dashboard Pro',
+      description: 'AI-powered analytics with predictive insights, real-time dashboards, and automated reporting.',
+      features: ['AI-powered insights', 'Real-time analytics', 'Custom dashboards', 'Automated reports'],
+      pricing: '$79/month',
+      link: '/ai-analytics-dashboard-pro',
+      popular: true,
+      users: '1,500+',
+      rating: '4.8'
     },
     {
       icon: <DollarSign className="w-8 h-8 text-green-500" />,
@@ -23,52 +56,19 @@ const MicroSAASServicesPage: React.FC = () => {
       features: ['Receipt scanning', 'Auto categorization', 'Budget tracking', 'Financial reports'],
       pricing: '$15/month',
       link: '/ai-expense-tracker',
-      popular: true,
-      users: '850+',
-      rating: '4.8'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: 'AI Password Manager',
-      description: 'Secure password management with AI-powered security recommendations and breach monitoring.',
-      features: ['Secure storage', 'AI security audit', 'Breach monitoring', 'Multi-device sync'],
-      pricing: '$12/month',
-      link: '/ai-password-manager',
       popular: false,
-      users: '650+',
+      users: '850+',
       rating: '4.7'
     },
     {
-      icon: <Clock className="w-8 h-8 text-purple-500" />,
+      icon: <Clock className="w-8 h-8 text-orange-500" />,
       title: 'AI Invoice Generator',
       description: 'Automated invoice generation with AI-powered templates, payment tracking, and client management.',
       features: ['Auto invoice generation', 'Payment tracking', 'Client management', 'Tax calculations'],
       pricing: '$25/month',
       link: '/ai-invoice-generator',
-      popular: true,
-      users: '980+',
-      rating: '4.9'
-    },
-    {
-      icon: <Brain className="w-8 h-8 text-orange-500" />,
-      title: 'AI Content Writer',
-      description: 'AI-powered content creation for blogs, social media, and marketing materials with SEO optimization.',
-      features: ['Content generation', 'SEO optimization', 'Multiple languages', 'Brand voice training'],
-      pricing: '$29/month',
-      link: '/ai-content-writer',
-      popular: true,
-      users: '1,500+',
-      rating: '4.8'
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-cyan-500" />,
-      title: 'AI Website Builder',
-      description: 'Build professional websites with AI assistance, including design, content, and SEO optimization.',
-      features: ['AI design suggestions', 'Auto content generation', 'SEO optimization', 'Mobile responsive'],
-      pricing: '$39/month',
-      link: '/ai-website-builder',
       popular: false,
-      users: '750+',
+      users: '980+',
       rating: '4.6'
     }
   ];

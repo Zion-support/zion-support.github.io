@@ -1,131 +1,156 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Calendar, BarChart3, Users, Zap, DollarSign, Star, Clock, Globe, Smartphone } from 'lucide-react';
+import { CheckCircle, ArrowRight, BarChart3, TrendingUp, Target, Zap, DollarSign, Star, Clock, Database, Brain, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-const AISocialMediaSchedulerPage: React.FC = () => {
+const AIAnalyticsDashboardProPage: React.FC = () => {
   const features = [
     {
-      icon: <Calendar className="w-6 h-6 text-blue-500" />,
-      title: 'Smart Scheduling',
-      description: 'AI-powered optimal posting times based on your audience engagement patterns'
+      icon: <Brain className="w-6 h-6 text-blue-500" />,
+      title: 'AI-Powered Insights',
+      description: 'Get intelligent recommendations and predictions based on your data patterns and trends'
     },
     {
       icon: <BarChart3 className="w-6 h-6 text-green-500" />,
-      title: 'Analytics Dashboard',
-      description: 'Comprehensive analytics to track performance across all platforms'
+      title: 'Real-Time Analytics',
+      description: 'Monitor your business metrics in real-time with live dashboards and alerts'
     },
     {
-      icon: <Users className="w-6 h-6 text-purple-500" />,
-      title: 'Multi-Platform Support',
-      description: 'Manage Facebook, Instagram, Twitter, LinkedIn, and TikTok from one dashboard'
+      icon: <Target className="w-6 h-6 text-purple-500" />,
+      title: 'Custom Dashboards',
+      description: 'Create personalized dashboards tailored to your specific business needs and KPIs'
     },
     {
       icon: <Zap className="w-6 h-6 text-orange-500" />,
-      title: 'Content Suggestions',
-      description: 'AI-generated content ideas and hashtag recommendations'
+      title: 'Automated Reports',
+      description: 'Generate and schedule automated reports with AI-generated insights and recommendations'
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$19',
+      price: '$79',
       period: '/month',
-      description: 'Perfect for individuals and small businesses',
+      description: 'Perfect for small businesses',
       features: [
-        '3 social media accounts',
-        '30 posts per month',
-        'Basic analytics',
-        'AI content suggestions',
-        'Email support'
+        '5 data sources',
+        'Basic dashboards',
+        'Standard reports',
+        'Email support',
+        '1 user',
+        '30-day data retention'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$49',
+      price: '$199',
       period: '/month',
-      description: 'Ideal for growing businesses and agencies',
+      description: 'Ideal for growing businesses',
       features: [
-        '10 social media accounts',
-        'Unlimited posts',
-        'Advanced analytics',
-        'AI content generation',
-        'Team collaboration (3 users)',
+        '20 data sources',
+        'Advanced dashboards',
+        'AI-powered insights',
         'Priority support',
-        'Custom branding'
+        '5 users',
+        '1-year data retention',
+        'Custom integrations',
+        'API access'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$99',
+      price: '$499',
       period: '/month',
-      description: 'For large teams and agencies',
+      description: 'For large organizations',
       features: [
-        'Unlimited social media accounts',
-        'Unlimited posts',
-        'White-label analytics',
-        'AI content studio',
-        'Unlimited team members',
-        '24/7 phone support',
-        'Custom integrations',
-        'API access'
+        'Unlimited data sources',
+        'White-label dashboards',
+        'Custom AI models',
+        'Dedicated support',
+        'Unlimited users',
+        'Unlimited data retention',
+        'Advanced integrations',
+        'SLA guarantee'
       ],
       popular: false
     }
   ];
 
+  const integrations = [
+    {
+      title: 'Google Analytics',
+      description: 'Track website performance and user behavior',
+      icon: <Globe className="w-8 h-8 text-blue-500" />
+    },
+    {
+      title: 'Salesforce CRM',
+      description: 'Monitor sales pipeline and customer data',
+      icon: <Database className="w-8 h-8 text-green-500" />
+    },
+    {
+      title: 'Social Media',
+      description: 'Analyze social media engagement and reach',
+      icon: <BarChart3 className="w-8 h-8 text-purple-500" />
+    },
+    {
+      title: 'E-commerce Platforms',
+      description: 'Track sales, inventory, and customer metrics',
+      icon: <TrendingUp className="w-8 h-8 text-orange-500" />
+    }
+  ];
+
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      company: 'Digital Marketing Agency',
-      content: 'This tool has increased our social media engagement by 300%. The AI scheduling is incredibly accurate.',
+      name: 'Robert Kim',
+      company: 'Marketing Director',
+      content: 'The AI insights helped us identify a 25% increase opportunity in our conversion funnel. Revenue is up 40%.',
       rating: 5,
-      avatar: 'SJ'
+      avatar: 'RK'
     },
     {
-      name: 'Mike Chen',
-      company: 'E-commerce Store',
-      content: 'The content suggestions are spot-on. We save 10 hours per week on social media management.',
+      name: 'Sarah Williams',
+      company: 'CEO, Tech Startup',
+      content: 'Finally, a dashboard that tells us what to do, not just what happened. The predictions are incredibly accurate.',
       rating: 5,
-      avatar: 'MC'
+      avatar: 'SW'
     },
     {
-      name: 'Emily Rodriguez',
-      company: 'Personal Brand',
-      content: 'Finally, a tool that understands my audience. The analytics insights are game-changing.',
+      name: 'Michael Davis',
+      company: 'Data Analyst',
+      content: 'Setup was seamless. We connected 15 data sources in under an hour and had actionable insights immediately.',
       rating: 5,
-      avatar: 'ER'
+      avatar: 'MD'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       <Helmet>
-        <title>AI Social Media Scheduler - Zion Tech Group</title>
-        <meta name="description" content="AI-powered social media scheduling tool with smart posting times, content suggestions, and comprehensive analytics. Start your free trial today!" />
-        <meta name="keywords" content="social media scheduler, AI scheduling, social media management, content automation, Zion Tech Group" />
+        <title>AI Analytics Dashboard Pro - Zion Tech Group</title>
+        <meta name="description" content="AI-powered analytics dashboard with real-time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence." />
+        <meta name="keywords" content="AI analytics, business intelligence, data dashboard, predictive analytics, Zion Tech Group" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Social Media
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Scheduler</span>
+            AI Analytics Dashboard
+            <span className="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent"> Pro</span>
             <br />
-            That Actually Works
+            That Predicts the Future
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Stop guessing when to post. Our AI analyzes your audience behavior to find the perfect posting times, 
-            suggests engaging content, and tracks performance across all platforms.
+            Stop reacting to the past. Our AI analytics dashboard predicts trends, identifies opportunities, 
+            and provides actionable insights to drive your business forward.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-indigo-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
             >
               Start Free Trial
             </Link>
@@ -144,10 +169,10 @@ const AISocialMediaSchedulerPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our AI Scheduler?
+              Powerful AI Analytics
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Powerful features designed to maximize your social media impact
+              Everything you need to turn data into actionable business intelligence
             </p>
           </div>
 
@@ -168,8 +193,37 @@ const AISocialMediaSchedulerPage: React.FC = () => {
         </div>
       </section>
 
+      {/* Integrations Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Connect All Your Data Sources
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Seamlessly integrate with 100+ popular business tools and platforms
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {integrations.map((integration, index) => (
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+              >
+                <div className="mb-6">
+                  {integration.icon}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">{integration.title}</h3>
+                <p className="text-gray-300">{integration.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -186,12 +240,12 @@ const AISocialMediaSchedulerPage: React.FC = () => {
                 key={index}
                 className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 group ${
                   plan.popular 
-                    ? 'border-blue-500 bg-white/20 scale-105' 
+                    ? 'border-indigo-500 bg-white/20 scale-105' 
                     : 'border-white/20 hover:bg-white/20'
                 }`}
               >
                 {plan.popular && (
-                  <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold text-center mb-6">
+                  <div className="bg-gradient-to-r from-indigo-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold text-center mb-6">
                     Most Popular
                   </div>
                 )}
@@ -218,7 +272,7 @@ const AISocialMediaSchedulerPage: React.FC = () => {
                   to="/contact"
                   className={`w-full py-3 rounded-lg font-semibold text-center block transition-all duration-300 group-hover:scale-105 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
+                      ? 'bg-gradient-to-r from-indigo-500 to-cyan-600 text-white hover:from-indigo-600 hover:to-cyan-700'
                       : 'bg-white text-gray-900 hover:bg-gray-100'
                   }`}
                 >
@@ -231,14 +285,14 @@ const AISocialMediaSchedulerPage: React.FC = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by 10,000+ Users
+              Trusted by 3,000+ Businesses
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our customers say about their experience
+              See what our customers say about their results
             </p>
           </div>
 
@@ -246,7 +300,7 @@ const AISocialMediaSchedulerPage: React.FC = () => {
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
                     {testimonial.avatar}
                   </div>
                   <div>
@@ -269,23 +323,23 @@ const AISocialMediaSchedulerPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-12">
+          <div className="bg-gradient-to-r from-indigo-500 to-cyan-600 rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Transform Your Social Media?
+              Ready to Predict Your Success?
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Join thousands of users who have increased their engagement by 300% with our AI scheduler
+            <p className="text-xl text-indigo-100 mb-8">
+              Join thousands of businesses using AI analytics to make data-driven decisions and stay ahead of the competition
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Free Trial
               </Link>
               <Link
                 to="#pricing"
-                className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
+                className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
               >
                 View All Plans
               </Link>
@@ -297,4 +351,4 @@ const AISocialMediaSchedulerPage: React.FC = () => {
   );
 };
 
-export default AISocialMediaSchedulerPage;
+export default AIAnalyticsDashboardProPage;

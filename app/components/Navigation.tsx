@@ -54,12 +54,19 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className="bg-gray-900 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-gray-900/90 backdrop-blur-lg shadow-lg border-b border-cyan-500/20 relative">
+      {/* Neon glow effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 blur-xl"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-white">Zion Tech Group</span>
+            <Link to="/" className="flex-shrink-0 flex items-center group">
+              <span className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </span>
+              </span>
             </Link>
           </div>
 

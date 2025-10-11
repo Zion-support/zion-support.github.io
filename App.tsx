@@ -11,6 +11,10 @@ import MicroSAASServicesPage from './app/micro-saas-services/page'
 import FiveGImplementationPage from './app/5g-implementation/page'
 import CloudServicesPage from './app/cloud-services/page'
 import DigitalTransformationPage from './app/digital-transformation/page'
+import AISocialMediaSchedulerPage from './app/ai-social-media-scheduler/page'
+import AIEmailMarketingAutomationPage from './app/ai-email-marketing-automation/page'
+import AICustomerSupportChatbotPage from './app/ai-customer-support-chatbot/page'
+import AIAnalyticsDashboardProPage from './app/ai-analytics-dashboard-pro/page'
 
 function App() {
   return (
@@ -28,6 +32,10 @@ function App() {
             <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
             <Route path="/cloud-services" element={<CloudServicesPage />} />
             <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+            <Route path="/ai-social-media-scheduler" element={<AISocialMediaSchedulerPage />} />
+            <Route path="/ai-email-marketing-automation" element={<AIEmailMarketingAutomationPage />} />
+            <Route path="/ai-customer-support-chatbot" element={<AICustomerSupportChatbotPage />} />
+            <Route path="/ai-analytics-dashboard-pro" element={<AIAnalyticsDashboardProPage />} />
           </Routes>
         </main>
         <Footer />
