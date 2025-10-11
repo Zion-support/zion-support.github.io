@@ -36,6 +36,7 @@ const AdvancedCachingPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Reach',
+      description: 'Description',
     }
   ]
   const benefits = [

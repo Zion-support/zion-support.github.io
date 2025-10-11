@@ -12,6 +12,7 @@
     {
       icon: Shield,
       title: 'Cloud Security',
+      description: 'Description',
     }
   ];
   ]

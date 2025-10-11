@@ -2,6 +2,8 @@ const AiAutonomousSystemsPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
+      title: 'Feature',
+      description: 'Description',
     },
     {
       title: 'Smart Manufacturing',

@@ -23,8 +23,10 @@
     {icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards',},
-    {icon: Globe,
+    {
+      icon: Globe,
       title: 'Global Reach',
+      description: 'Description',
     }
   ]
   const smartCityServices = [

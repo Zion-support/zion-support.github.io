@@ -13,7 +13,6 @@ const AiContentGenerationPage: React.FC = () => {
   ]
   return (
     <>
-  </>
       <Helmet>
         </section>
           <div className="max-w-7xl mx-auto">

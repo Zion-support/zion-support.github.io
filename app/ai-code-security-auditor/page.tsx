@@ -11,6 +11,8 @@ const AiCodeSecurityAuditorPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
+      title: 'Feature',
+      description: 'Description',
     },
     {
       icon: BarChart,

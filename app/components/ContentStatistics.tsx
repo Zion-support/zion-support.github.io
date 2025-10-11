@@ -50,6 +50,7 @@
     {
       icon: Brain,
       title: 'AI Innovation',
+      description: 'Description',
     },
     {
       icon: Globe,

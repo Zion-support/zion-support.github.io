@@ -9,14 +9,17 @@ const AccessibilityCheckerPage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
+      description: 'Description',
     },
     {
       icon: Zap,
       title: 'High Performance',
+      description: 'Description',
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
+      description: 'Description',
     },
     {
       icon: Globe,

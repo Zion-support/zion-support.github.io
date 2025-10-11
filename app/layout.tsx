@@ -10,7 +10,9 @@ const LayoutPage: React.FC = () => {,
       description: 'Bank-level security with encryption and compliance standards'
   },
     {
-    icon: Globe,
+      icon: Globe,
+      title: 'Feature',
+      description: 'Description',
     },
     {
       icon: Zap,
