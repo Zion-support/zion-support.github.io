@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, ArrowRight } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
-  const openPositions = const openPositions = const openPositions = [
+  const openPositions = [
     {
       title: 'Senior AI Engineer',
       department: 'AI Solutions',
