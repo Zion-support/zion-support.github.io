@@ -15,6 +15,26 @@ export default function handler(req, res) {
   }
 
   try {
+    const { name, email, phone, company, message, service } = req.body || {}
+    
+    if (!name || !email || !phone) {
+      res.statusCode = 400
+      res.setHeader('Content-Type', 'application/json')
+      res.end(JSON.stringify({ error: 'Name, email, and phone are required' }))
+      return
+    }
+
+    const request = {
+      id: Date.now().toString(),
+      name,
+      email,
+      phone,
+      company: company || 'Not specified',
+      message: message || 'No message provided',
+      service: service || 'General inquiry',
+      timestamp: new Date().toISOString()
+    }
+
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ 
       success: true, 
@@ -26,3 +46,6 @@ export default function handler(req, res) {
     console.error('Error processing onsite request:', error)
     res.statusCode = 500
     res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Internal server error' }))
+  }
+}
