@@ -1,8 +1,8 @@
 
 'use client'
 /**
- * Comprehensive Error Logging System;
- * Provides structured error logging with different severity levels;
+ * Comprehensive Error Logging System
+ * Provides structured error logging with different severity levels
  */
 
 export enum ErrorSeverity {
@@ -26,9 +26,9 @@ export interface ErrorLogEntry {
     severit,
   y: ErrorSeverity,,
     messag,
-  e: string;
-  error?: Error;
-  context?: Record;
+  e: string
+  error?: Error
+  context?: Record
           <string>
   userAgent?: string
   url?: string
@@ -49,8 +49,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
     _severit,
   y: ErrorSeverity = ErrorSeverity.MEDIUM,
     error?: Error,
-    context?: Record;
-
+    context?: Record
           <string, unknown>
   ): void {
     // TODO: Add content
@@ -74,28 +73,28 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
       stackTrace: error?.stack,
 
     }
-    // Add to internal log;
-    this.logs.push(entry);
+    // Add to internal log
+    this.logs.push(entry)
     if (this.logs.length > this.maxLogs) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.logs.shift();
+      this.logs.shift()
     }
-    // Console logging in development;
+    // Console logging in development
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.logToConsole(entry);
+      this.logToConsole(entry)
     }
-    // Send to external logging service in production;
+    // Send to external logging service in production
     if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.sendToExternalService(entry);
+      this.sendToExternalService(entry)
     }
   }
   /**
-   * Log to console with appropriate styling;
+   * Log to console with appropriate styling
    */
 
   private logToConsole(entry: ErrorLogEntry): void {
@@ -115,7 +114,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
       [ErrorSeverity.CRITICAL]: 'color: #ef4444, font-weight: bold'
 
     }
-    console.group(`%c[${entry.severity.toUpperCase()}] ${entry.message}`, styles[entry.severity]);
+    console.group(`%c[${entry.severity.toUpperCase()}] ${entry.message}`, styles[entry.severity])
     if (entry.error) {/* TODO: Fix JSX expression */}
   r:', entry.error);}
     }
@@ -130,7 +129,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
     console.groupEnd()
   }
   /**
-   * Send error to external logging service;
+   * Send error to external logging service
    */
 
   private async sendToExternalService(entry: ErrorLogEntry): Promise,
@@ -146,7 +145,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
       if (!endpoint) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        return;
+        return
       }
       await fetch(endpoint, {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -174,21 +173,18 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
                 name: entry.error.name,
                 stack: entry.error.stack,
               }
-            : undefined;
-
+            : undefined
         })
-      });
+      })
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      // Silently fail to avoid infinite loop;
-
-      // // console.error('Failed to send error to external service:', error);
-
+      // Silently fail to avoid infinite loop
+      // // console.error('Failed to send error to external service:', error)
     }
   }
   /**
-   * Get recent logs;
+   * Get recent logs
    */
 
   getRecentLogs(count: number = 10): ErrorLogEntry[] {
@@ -196,10 +192,10 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
   }
 
 }
-    return this.logs.slice(-count);
+    return this.logs.slice(-count)
   }
   /**
-   * Get logs by severity;
+   * Get logs by severity
    */
 
   getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {
@@ -207,10 +203,10 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
   }
 
 }
-    return this.logs.filter(log => log.severity === severity);
+    return this.logs.filter(log => log.severity === severity)
   }
   /**
-   * Clear all logs;
+   * Clear all logs
    */
 
   clearLogs(): void {
@@ -218,10 +214,10 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
   }
 
 }
-    this.logs = [];
+    this.logs = []
   }
   /**
-   * Export logs as JSON;
+   * Export logs as JSON
    */
 
   exportLogs(): string {
@@ -229,13 +225,12 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
   }
 
 }
-    return JSON.stringify(this.logs, null, 2);
+    return JSON.stringify(this.logs, null, 2)
   }
 }
-// Singleton instance;
-const errorLogger = new ErrorLogger();
-// Convenience functions;
-
+// Singleton instance
+const errorLogger = new ErrorLogger()
+// Convenience functions
 export const logError = (message: string, error?: Error, context?: Record;)
 
           <string, unknown>) =>

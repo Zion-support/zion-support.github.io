@@ -1,8 +1,7 @@
 
 'use client'
 export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
-import { useEffect, useCallback } from 'react';
-
+import { useEffect, useCallback } from 'react'
 export const _usePerformanceMonitoring = () => {
     // TODO: Add content
   }
@@ -12,12 +11,12 @@ export const _usePerformanceMonitoring = () => {
   c: any) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const body = JSON.stringify(metric);
-    const url = '/api/analytics';
+    const body = JSON.stringify(metric)
+    const url = '/api/analytics'
     if (navigator.sendBeacon) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      navigator.sendBeacon(url, body);
+      navigator.sendBeacon(url, body)
     } else {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -25,17 +24,17 @@ export const _usePerformanceMonitoring = () => {
   e: true }).catch(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        // Analytics reporting failed;
-      });
+        // Analytics reporting failed
+      })
     }
-  }, []);
+  }, [])
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     if (typeof window !== 'undefined' && 'performance' in window) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      // Monitor Core Web Vitals;
+      // Monitor Core Web Vitals
 const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

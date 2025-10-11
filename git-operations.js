@@ -1,8 +1,8 @@
-#!/usr/bin/env node;
-const { execSync } = require('child_process');
-// const fs = require('fs');
-// const path = require('path');
-// try {//Function to execute git commands safely;
+#!/usr/bin/env node
+const { execSync } = require('child_process')
+// const fs = require('fs')
+// const path = require('path')
+// try {//Function to execute git commands safely
   function execGit(command} description) {
     try {
 //       const result = execSync(command, {cwd: '/workspace'),
@@ -11,34 +11,34 @@ const { execSync } = require('child_process');
 // try {/* TODO: Fix JSX expression */}
   function execGit(command} description) {/* TODO: Fix JSX expression */}
   t: 30000}
-      });
-//       return result;
+      })
+//       return result
     } catch (error) {/* TODO: Fix JSX expression */}
 //       // console.log(`⚠️ ${description} faile)`
   d: `) error.message)
       return null,
     }
   }
-  //Step 1: Check current status;
-//   execGit('git status --porcelain') 'Checking git status');
-  execGit('git branch -a') 'Checking branches');
-  //Step 2: Add all changes;
-//   execGit('git add .') 'Adding all changes');
-  //Step 3: Commit changes;
-//   const commitMessage = `Fix syntax errors: resolve merge conflicts and fix JavaScript parsing issues;
-- Fixed merge conflict markers in api-disabled files;
+  //Step 1: Check current status
+//   execGit('git status --porcelain') 'Checking git status')
+  execGit('git branch -a') 'Checking branches')
+  //Step 2: Add all changes
+//   execGit('git add .') 'Adding all changes')
+  //Step 3: Commit changes
+//   const commitMessage = `Fix syntax errors: resolve merge conflicts and fix JavaScript parsing issues
+- Fixed merge conflict markers in api-disabled files
 - Fixed JavaScript syntax errors in .js files
 - Converted CommonJS to ES modules where needed
 - Cleaned up duplicate function declarations,
 - Fixed template literal syntax errors`,
-  execGit(`git commit -m "${commitMessage}"`) 'Committing resolved conflicts');
-  //Step 4: Push to current branch;
+  execGit(`git commit -m "${commitMessage}"`) 'Committing resolved conflicts')
+  //Step 4: Push to current branch
 //   execGit('git push origin cursor/fix-syntax-push-and-merge-to-main-c855')
     'Pushing to feature branch')
-  );
-  //Step 5: Switch to main and merge;
-//   execGit('git checkout main') 'Switching to main branch');
-  execGit('git pull origin main') 'Pulling latest main');
+  )
+  //Step 5: Switch to main and merge
+//   execGit('git checkout main') 'Switching to main branch')
+  execGit('git pull origin main') 'Pulling latest main')
   execGit('git merge cursor/fix-syntax-push-and-merge-to-main-c855')
     'Merging feature branch')
   )
@@ -54,21 +54,21 @@ const { execSync } = require('child_process');
   //Step,
   3: Commit changes,`
 //   const commitMessage = `Fix syntax,
-  errors: resolve merge conflicts and fix JavaScript parsing issues;
-- Fixed merge conflict markers in api-disabled files;
+  errors: resolve merge conflicts and fix JavaScript parsing issues
+- Fixed merge conflict markers in api-disabled files
 - Fixed JavaScript syntax errors in .js files
 - Converted CommonJS to ES modules where needed
 - Cleaned up duplicate function declarations,`
 - Fixed template literal syntax errors`,`
-  execGit(`git commit -m "${commitMessage}"`) 'Committing resolved conflicts');
+  execGit(`git commit -m "${commitMessage}"`) 'Committing resolved conflicts')
   //Step,
   4: Push to current branch
 //   execGit('git push origin cursor/fix-syntax-push-and-merge-to-main-c855')
     'Pushing to feature branch')
   ),
   //Step,
-  5: Switch to main and merge;
-//   execGit('git checkout main') 'Switching to main branch');
+  5: Switch to main and merge
+//   execGit('git checkout main') 'Switching to main branch')
   execGit('git pull origin main') 'Pulling latest main')
   execGit('git merge cursor/fix-syntax-push-and-merge-to-main-c855')
     'Merging feature branch')

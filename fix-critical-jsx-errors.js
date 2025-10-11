@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-
+import fs from 'fs'
 // Critical files that are preventing build
 const criticalFiles = [
   './app/careers/page.tsx',
@@ -95,16 +94,14 @@ const criticalFiles = [
   './app/terms/page.tsx',
   './app/training/page.tsx',
   './app/web-development/page.tsx'
-];
-
+]
 // Template for a basic page
-const createBasicPageTemplate = (pageName, title, description) => `'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
+const createBasicPageTemplate = (pageName, title, description) => `'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const ${pageName}Page: React.FC = () => {
   const features = [
     {
@@ -131,16 +128,13 @@ const ${pageName}Page: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ];
-
+  ]
   return (
     <>
       <Helmet>
-        <title>${title} - Zion Tech Group</title>
+        <title>${title} - Zion Tech Group
         <meta name="description" content="${description}" />
         <meta name="keywords" content="${title.toLowerCase()}, AI solutions, IT services, business transformation" />
-      </Helmet>
-      
       <Navigation />
       
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -150,79 +144,49 @@ const ${pageName}Page: React.FC = () => {
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
                 ${title}
-              </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                 ${description}
-              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                   Get Started
-                </button>
                 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
                   Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Services
-              </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover how our solutions can help transform your business.
-              </p>
-            </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">{feature.description}</p>
+                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}
+                  <p className="text-gray-600 mb-4">{feature.description}
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {benefit}
-                      </li>
                     ))}
-                  </ul>
-                </div>
               ))}
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
-            </h2>
             <p className="text-xl text-blue-100 mb-8">
               Contact us today to learn more about our services.
-            </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
               Contact Us
-            </button>
-          </div>
-        </section>
-      </main>
-      
       <Footer />
     </>
-  );
-};
-
-export default ${pageName}Page;`;
-
+  )
+}
+export default ${pageName}Page;`
 // Page configurations
 const pageConfigs = {
   'careers': { name: 'Careers', title: 'Careers', description: 'Join our team and help shape the future of AI and IT solutions.' },
@@ -316,27 +280,23 @@ const pageConfigs = {
   'terms': { name: 'Terms', title: 'Terms of Service', description: 'Terms of service and legal information.' },
   'training': { name: 'Training', title: 'Training', description: 'Professional training and certification programs.' },
   'web-development': { name: 'WebDevelopment', title: 'Web Development', description: 'Custom web development services.' }
-};
-
+}
 // Process all critical files
-console.log('🔧 Fixing critical JSX errors...\n');
-
+console.log('🔧 Fixing critical JSX errors...\n')
 criticalFiles.forEach(filePath => {
   try {
-    const pathParts = filePath.split('/');
-    const fileName = pathParts[pathParts.length - 1].replace('.tsx', '');
-    const config = pageConfigs[fileName];
-    
+    const pathParts = filePath.split('/')
+    const fileName = pathParts[pathParts.length - 1].replace('.tsx', '')
+    const config = pageConfigs[fileName]
     if (config) {
-      const content = createBasicPageTemplate(config.name, config.title, config.description);
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Fixed ${filePath}`);
+      const content = createBasicPageTemplate(config.name, config.title, config.description)
+      fs.writeFileSync(filePath, content, 'utf8')
+      console.log(`✅ Fixed ${filePath}`)
     } else {
-      console.log(`⚠️  No config found for ${fileName}`);
+      console.log(`⚠️  No config found for ${fileName}`)
     }
   } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
+    console.error(`❌ Error processing ${filePath}:`, error.message)
   }
-});
-
-console.log('\n✨ Critical JSX error fixes complete!');
+})
+console.log('\n✨ Critical JSX error fixes complete!')</div></div></div></div></div></div></div></div></div></button></button></button></p></p></p></p></h1></h2></h2></h3></ul></li></main></section></section></section>

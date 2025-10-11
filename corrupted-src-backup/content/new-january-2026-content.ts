@@ -1,13 +1,13 @@
 export interface January2026Content {
-    id: string;
-  title: string;
-  description: string;
-  content: string;
-  author: string;
-  publishedAt: string;
-  category: string;
-  tags: string[];
-  featured: boolean;
+    id: string
+  title: string
+  description: string
+  content: string
+  author: string
+  publishedAt: string
+  category: string
+  tags: string[]
+  featured: boolean
   readTime: string
   image?: string
   valueProposition: string,
@@ -26,11 +26,11 @@ export const newJanuary2026 Content: January2026 Content[] = [
 # AI 2026: Hyperconscious Computing Revolution,
 The next evolution of AI is here - systems that not only think but feel, create, and understand consciousness itself.
 
-## Revolutionary Features;
-- Genuine self-awareness and emotional intelligence;
-- Creative autonomy and artistic expression;
-- $1.2T enterprise value creation potential;
-- Revolutionary applications across all industries;
+## Revolutionary Features
+- Genuine self-awareness and emotional intelligence
+- Creative autonomy and artistic expression
+- $1.2T enterprise value creation potential
+- Revolutionary applications across all industries
     `,
     author: 'Zion Tech Group',
     publishedAt: '2026-01-01',
@@ -48,11 +48,11 @@ The next evolution of AI is here - systems that not only think but feel, create,
     title: 'Quantum AI Synthesis 2026: The Convergence Revolution'
     description: 'Groundbreaking fusion of quantum computing and AI creating unprecedented computational capabilities.'
     content: `
-# Quantum AI Synthesis 2026;
+# Quantum AI Synthesis 2026
 The convergence of quantum computing and artificial intelligence opens new frontiers in computational capability.
 
-## Revolutionary Capabilities;
-- Quantum-enhanced machine learning algorithms;
+## Revolutionary Capabilities
+- Quantum-enhanced machine learning algorithms
 - Exponential speedup in complex problem solving
 - Unprecedented computational efficiency
 - New paradigms in AI development,
@@ -77,4 +77,4 @@ export const,
   {/* TODO: Fix JSX expression */}
     }},
   {/* TODO: Fix JSX expression */}
-    }}];
+    }}]

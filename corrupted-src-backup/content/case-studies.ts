@@ -1,10 +1,10 @@
 export type CaseStudy = {
-    id: string;
-  title: string;
-  company: string;
-  industry: string;
-  challenge: string;
-  solution: string;
+    id: string
+  title: string
+  company: string
+  industry: string
+  challenge: string
+  solution: string
   results: string[]
   technologies: string[]
   duration: string,
@@ -192,4 +192,4 @@ export const,
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
-  }];
+  }]

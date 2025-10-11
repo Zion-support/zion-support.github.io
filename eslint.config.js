@@ -1,10 +1,9 @@
-import globals from 'globals';
-import js from '@eslint/js';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsParser from '@typescript-eslint/parser';
-import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
-
+import globals from 'globals'
+import js from '@eslint/js'
+import tseslint from '@typescript-eslint/eslint-plugin'
+import tsParser from '@typescript-eslint/parser'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
 export default [
   // Global ignores
   {
@@ -35,6 +34,10 @@ export default [
       'fix-*.js',
       '*.cjs',
       '*.js.broken',
+<<<<<<< HEAD
+      'jest.setup.js'
+    ],
+=======
       'components.disabled_full/**',
       'backup/**',
       'backup-merge-conflicts/**',
@@ -50,6 +53,7 @@ export default [
       '*.min.css',
       'chunk-*.js'
     ]
+>>>>>>> origin/main
   },
   // Base JavaScript configuration
   {
@@ -106,4 +110,4 @@ export default [
       'no-unused-vars': 'off'
     }
   }
-];
+]

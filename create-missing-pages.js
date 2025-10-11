@@ -1,37 +1,31 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Read the missing pages from the analysis;
-const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8'));
-const missingPages = analysisData.missingPagesList;
-
-// Template for creating pages;
-const createPageTemplate = (route, title, description, category) => `'use client';
-import React from 'react';
-import { ArrowRight, CheckCircle, Star, Zap, Brain, Cloud, Shield, Code, BarChart, Users, Target, Globe, Settings, FileText, Phone, Mail, MapPin, Clock, Award, TrendingUp, Activity, Database, Cpu, Lock, MessageSquare, Eye, Sparkles, Palette, Camera, Music, Video, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Truck, Smartphone, ChefHat, Rocket, Sprout, Scale } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import PerformanceOptimizer from '../components/PerformanceOptimizer';
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+// Read the missing pages from the analysis
+const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8'))
+const missingPages = analysisData.missingPagesList
+// Template for creating pages
+const createPageTemplate = (route, title, description, category) => `'use client'
+import React from 'react'
+import { ArrowRight, CheckCircle, Star, Zap, Brain, Cloud, Shield, Code, BarChart, Users, Target, Globe, Settings, FileText, Phone, Mail, MapPin, Clock, Award, TrendingUp, Activity, Database, Cpu, Lock, MessageSquare, Eye, Sparkles, Palette, Camera, Music, Video, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Truck, Smartphone, ChefHat, Rocket, Sprout, Scale } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import PerformanceOptimizer from '../components/PerformanceOptimizer'
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer'
 const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOOptimizer;
+      <SEOOptimizer
         title="${title} - Zion Tech Group"
         description="${description}"
         keywords={['${category}', 'AI', 'Technology', 'Solutions', 'Enterprise']}
         canonicalUrl="https://ziontechgroup.com${route}"
-      /></SEOOptimizer>
-      <PerformanceOptimizer /></PerformanceOptimizer>
-      <AccessibilityEnhancer enableKeyboardNavigation enableScreenReaderSupport enableHighContrast enableFocusManagement enableSkipLinks></AccessibilityEnhancer>
-        <div /></div>
-      </AccessibilityEnhancer>
-      
+      />
+      <PerformanceOptimizer />
+      <AccessibilityEnhancer enableKeyboardNavigation enableScreenReaderSupport enableHighContrast enableFocusManagement enableSkipLinks>
+        <div />
       <Navigation />)
       {/* Hero Section */})
       <section className="relative py-20 overflow-hidden">)
@@ -40,16 +34,12 @@ const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">,
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">,
             ${title}
-          </h1>
           <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">,
             ${description}
-          </p>
-          
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-16">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
               Get Started Today
               <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
             <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
               Learn More,
             </button>
@@ -62,37 +52,26 @@ const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
         <div className="max-w-7xl mx-auto">,
           <div className="text-center mb-16">,
             <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>,
-            <p className="text-xl text-gray-300">Comprehensive ${category.toLowerCase()} solutions for modern enterprises</p>
-          </div>
-          
+            <p className="text-xl text-gray-300">Comprehensive ${category.toLowerCase()} solutions for modern enterprises
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover:border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-400/10 transition-all duration-300">,
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">,
                 <Zap className="w-6 h-6 text-white" />,
               </div>,
               <h3 className="text-xl font-bold text-white mb-3">Advanced Technology</h3>,
-              <p className="text-gray-300">Cutting-edge ${category.toLowerCase()} solutions powered by AI and machine learning.</p>
-            </div>
-            
+              <p className="text-gray-300">Cutting-edge ${category.toLowerCase()} solutions powered by AI and machine learning.
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover: border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-400/10 transition-all duration-300">,
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">,
                 <Shield className="w-6 h-6 text-white" />,
               </div>,
               <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3>,
-              <p className="text-gray-300">Bank-level security and compliance for all your ${category.toLowerCase()} needs.</p>
-            </div>
-            
+              <p className="text-gray-300">Bank-level security and compliance for all your ${category.toLowerCase()} needs.
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover: border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-400/10 transition-all duration-300">,
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">,
                 <BarChart className="w-6 h-6 text-white" />,
               </div>,
               <h3 className="text-xl font-bold text-white mb-3">Real-time Analytics</h3>,
-              <p className="text-gray-300">Comprehensive insights and analytics for your ${category.toLowerCase()} operations.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+              <p className="text-gray-300">Comprehensive insights and analytics for your ${category.toLowerCase()} operations.
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
@@ -101,8 +80,6 @@ const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
           </h2>,
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
             Contact us today for a free consultation and discover how our ${category.toLowerCase()} solutions can transform your business.
-          </p>
-          
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
               Get Free Consultation
@@ -115,29 +92,27 @@ const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
       </section>
 
       <Footer />,
-    </div>);
+    </div>)
 }
 
-export default ${title.replace(/[^a-zA-Z0-9]/g, '')}Page;
-`;
-
-// Function to create a page;
+export default ${title.replace(/[^a-zA-Z0-9]/g, '')}Page
+`
+// Function to create a page
 const createPage = (route, title, description, category) => {
-  const pageContent = createPageTemplate(route, title, description, category);
-  const pagePath = path.join('/workspace/src', route, 'page.tsx');
-  
-  // Create directory if it doesn't exist;
-  const dir = path.dirname(pagePath);
+  const pageContent = createPageTemplate(route, title, description, category)
+  const pagePath = path.join('/workspace/src', route, 'page.tsx')
+  // Create directory if it doesn't exist
+  const dir = path.dirname(pagePath)
   if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
+    fs.mkdirSync(dir, { recursive: true })
   }
   
-  // Write the page file;
-  fs.writeFileSync(pagePath, pageContent);
-  console.log(`Created page: ${route}`);
+  // Write the page file
+  fs.writeFileSync(pagePath, pageContent)
+  console.log(`Created page: ${route}`)
 }
 
-// Page configurations;
+// Page configurations
 const pageConfigs = {
   '/ai-task-manager': { title: 'AI Task Manager Pro', description: 'Intelligent task management with AI-powered prioritization and productivity insights', category: 'Productivity' },
   '/ai-time-tracker': { title: 'AI Time Tracker Pro', description: 'Advanced time tracking with AI-powered productivity analysis and reporting', category: 'Productivity' },
@@ -285,31 +260,27 @@ const pageConfigs = {
   '/biotech-it': { title: 'Biotech IT', description: 'Biotechnology IT solutions and systems', category: 'Biotech' }
 }
 
-// Create pages in batches;
-let createdCount = 0;
-const batchSize = 10;
-
-console.log(`Creating ${missingPages.length} missing pages...`);
-
+// Create pages in batches
+let createdCount = 0
+const batchSize = 10
+console.log(`Creating ${missingPages.length} missing pages...`)
 for (const route of missingPages) {
   if (pageConfigs[route]) {
-    const config = pageConfigs[route];
-    createPage(route, config.title, config.description, config.category);
-    createdCount++;
-    
+    const config = pageConfigs[route]
+    createPage(route, config.title, config.description, config.category)
+    createdCount++
     if (createdCount % batchSize === 0) {
-      console.log(`Created ${createdCount} pages...`);
+      console.log(`Created ${createdCount} pages...`)
     }
   } else {
-    // Create a generic page for routes without specific configs;
-    const title = route.split('/').pop().replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-    const description = `Advanced ${title.toLowerCase()} solutions powered by AI and cutting-edge technology`;
-    const category = 'Technology';
-    
-    createPage(route, title, description, category);
-    createdCount++;
+    // Create a generic page for routes without specific configs
+    const title = route.split('/').pop().replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+    const description = `Advanced ${title.toLowerCase()} solutions powered by AI and cutting-edge technology`
+    const category = 'Technology'
+    createPage(route, title, description, category)
+    createdCount++
   }
 }
 
-console.log(`\n✅ Successfully created ${createdCount} missing pages!`);
-console.log('All navigation links should now work properly.');
+console.log(`\n✅ Successfully created ${createdCount} missing pages!`)
+console.log('All navigation links should now work properly.')</div></div></div></div></div></div></div></div></div></div></button></button></button></button></p></p></p></p></p></p></h1></section></section>

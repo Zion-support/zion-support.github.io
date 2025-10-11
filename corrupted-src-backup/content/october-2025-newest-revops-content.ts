@@ -1,13 +1,13 @@
 export interface RevOpsContent {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  date: string;
-  readTime: string;
-  tags: string[];
-  featured: boolean;
-  content?: string;
+  id: string
+  title: string
+  description: string
+  category: string
+  date: string
+  readTime: string
+  tags: string[]
+  featured: boolean
+  content?: string
   author?: string
   valueProposition?: string
   highlights: string[],
@@ -15,9 +15,9 @@ export interface RevOpsContent {
     [key: string]: string,
 export interface RevOpsContent {/* TODO: Fix JSX expression */}
   }
-  icon?: string;
-  gradient?: string;
-  breaking?: boolean;
+  icon?: string
+  gradient?: string
+  breaking?: boolean
   cta?: {/* TODO: Fix JSX expression */}
   }
 }
@@ -90,8 +90,7 @@ export const,
   a: {/* TODO: Fix JSX expression */}
     }},
   {/* TODO: Fix JSX expression */}
-    }}];
-
+    }}]
 export const getFeaturedRevOpsContent = () => {/* TODO: Fix JSX expression */}
 }
 

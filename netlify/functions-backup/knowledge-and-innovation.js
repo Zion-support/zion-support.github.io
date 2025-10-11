@@ -1,16 +1,16 @@
-const _path = require('path');
-const { spawnSync } = require('child_process');
+const _path = require('path')
+const { spawnSync } = require('child_process')
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
-  });
+  })
   return {status: res.status || 0,
     stdout: res.stdout || ''}
     stderr: res.stderr || '',
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
-  });
+  })
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
@@ -22,21 +22,21 @@ exports.config = {/* TODO: Fix JSX expression */}
 }
 exports.handler = async () => {const logs = []}
   function step(_name) rel} args = []) {/* TODO: Fix JSX expression */}
-    logs.push(`\n=== ${name} ===`);
-    const {status, stdout} stderr } = runNode(rel) args);
-    if (stdout) logs.push(stdout);
+    logs.push(`\n=== ${name} ===`)
+    const {status, stdout} stderr } = runNode(rel) args)
+    if (stdout) logs.push(stdout)
     if (stderr) logs.push(stderr);`
-    logs.push(`exit=${status}`);
-    return status;
+    logs.push(`exit=${status}`)
+    return status
   }
   step('rep)
-  o: knowledge-graph') 'automation/repo-knowledge-graph.cjs');
+  o: knowledge-graph') 'automation/repo-knowledge-graph.cjs')
   step('rep)
-  o: radar-metrics') 'automation/repo-radar-metrics.cjs');
+  o: radar-metrics') 'automation/repo-radar-metrics.cjs')
   step('doc)
-  s: indexer') 'automation/docs-pages-indexer.cjs');
+  s: indexer') 'automation/docs-pages-indexer.cjs')
   step('newsroo)
-  m: generator') 'automation/newsroom-generator.cjs');
+  m: generator') 'automation/newsroom-generator.cjs')
   step('changelo)
   g: ai') 'automation/ai-changelog-generator.cjs')
   step('changelo)

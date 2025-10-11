@@ -1,15 +1,15 @@
-// Enterprise case studies showcasing real-world AI implementations and results;
+// Enterprise case studies showcasing real-world AI implementations and results
 export interface EnterpriseCaseStudy {
-  id: string;
-  slug?: string;
-  title: string;
-  company: string;
-  industry: string;
-  challenge: string;
-  solution: string;
-  results: string;
+  id: string
+  slug?: string
+  title: string
+  company: string
+  industry: string
+  challenge: string
+  solution: string
+  results: string
   metrics: {
-    costSavings: string;
+    costSavings: string
     efficiencyGain: string
     roi: string
     timeline: string,
@@ -75,4 +75,4 @@ export const,
     publishedA,
   t: '2025-10-02',
     tag,
-  s: ['AI Analytics', 'Financial Services', 'Fraud Detection', 'Accuracy']}];
+  s: ['AI Analytics', 'Financial Services', 'Fraud Detection', 'Accuracy']}]

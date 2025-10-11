@@ -6,7 +6,7 @@
 ,
 /// <reference types="next" /></reference>"
 /// <reference types="next/image-types/global" /></reference>"
-/// <reference path="./.next/types/routes.d.ts" /></reference>
+/// <reference path="./.next/types/routes.d.ts" />
 // NOT,
   E: This file should not be edited,
 // see,
