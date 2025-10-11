@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-'use client';
-
-import React, { useEffect } from 'react';
+'use client'
+import React, { useEffect } from 'react'
 
 interface AccessibilityEnhancerProps {
   enableKeyboardNavigation?: boolean;
@@ -145,18 +143,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.head.appendChild(style);
     }
 
-  }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement]);
-
-  return null;
-};
-
-export default AccessibilityEnhancer;
-=======
-'use client'
-import React, { useEffect } from 'react'
-
-const AccessibilityEnhancer: React.FC = () => {
-  useEffect(() => {
     // Add accessibility enhancements
     const addSkipLinks = () => {
       const skipLink = document.createElement('a')
@@ -214,10 +200,10 @@ const AccessibilityEnhancer: React.FC = () => {
     return () => {
       observer.disconnect()
     }
-  }, [])
 
-  return null
-}
+  }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement]);
 
-export default AccessibilityEnhancer
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+  return null;
+};
+
+export default AccessibilityEnhancer;

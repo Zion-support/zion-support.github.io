@@ -46,22 +46,32 @@ const Navigation: React.FC = () => {
                 Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
-              <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+              <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                 <div className="py-2">
                   <Link href="/services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
                     All Services
                   </Link>
+                  <div className="border-t border-gray-600 my-2"></div>
+                  <div className="px-4 py-1 text-xs font-semibold text-cyan-400 uppercase tracking-wider">AI & Technology</div>
                   <Link href="/ai-services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
                     AI Services
                   </Link>
                   <Link href="/it-services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
                     IT Services
                   </Link>
+                  <Link href="/micro-saas" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                    Micro SaaS Solutions
+                  </Link>
+                  <div className="border-t border-gray-600 my-2"></div>
+                  <div className="px-4 py-1 text-xs font-semibold text-cyan-400 uppercase tracking-wider">Specialized Services</div>
                   <Link href="/cybersecurity" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
                     Cybersecurity
                   </Link>
                   <Link href="/data-analytics" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
                     Data Analytics
+                  </Link>
+                  <Link href="/cloud-infrastructure" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                    Cloud Infrastructure
                   </Link>
                 </div>
               </div>
@@ -116,6 +126,7 @@ const Navigation: React.FC = () => {
               >
                 All Services
               </Link>
+              <div className="px-3 py-1 text-xs font-semibold text-cyan-400 uppercase tracking-wider">AI & Technology</div>
               <Link 
                 href="/ai-services" 
                 className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
@@ -131,6 +142,14 @@ const Navigation: React.FC = () => {
                 IT Services
               </Link>
               <Link 
+                href="/micro-saas" 
+                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                onClick={toggleMenu}
+              >
+                Micro SaaS Solutions
+              </Link>
+              <div className="px-3 py-1 text-xs font-semibold text-cyan-400 uppercase tracking-wider">Specialized Services</div>
+              <Link 
                 href="/cybersecurity" 
                 className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 onClick={toggleMenu}
@@ -143,6 +162,13 @@ const Navigation: React.FC = () => {
                 onClick={toggleMenu}
               >
                 Data Analytics
+              </Link>
+              <Link 
+                href="/cloud-infrastructure" 
+                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                onClick={toggleMenu}
+              >
+                Cloud Infrastructure
               </Link>
               <Link 
                 href="/blog" 
