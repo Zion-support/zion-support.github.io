@@ -3,8 +3,8 @@ import fs from 'fs';
 
 // Function to fix remaining import issues;
 function fixImports(filePath) {
-  try {;
-let content = fs.readFileSync(filePath, 'utf8');
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
     
     // Fix duplicate imports more aggressively;
     content = content.replace(
@@ -15,11 +15,12 @@ let content = fs.readFileSync(filePath, 'utf8');
         
         // Remove duplicates while preserving order;
         const uniqueImports = [...new Set(importList)];
-        ;
+        
 function fixImports(filePath) {/* TODO: Fix JSX expression */}
       /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"]/g,
       (match, imports) => {/* TODO: Fix JSX expression */}
-        return `import { ${uniqueImports.join(', ')} } from 'lucide-react'`}
+        return `import { ${uniqueImports.join(', ')} } from 'lucide-react'`;
+      }
     );
     
     // Fix any remaining syntax issues;
@@ -27,13 +28,15 @@ function fixImports(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/,\s*}/g, '}');
     content = content.replace(/{/* TODO: Fix JSX expression */})`
   in: ${filePath}`);
-    return true} catch (error) {/* TODO: Fix JSX expression */}`
-    // console.error removed for production
-return false}
+    return true;
+  } catch (error) {/* TODO: Fix JSX expression */}`
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
 }
 
 // Main function;
-function main() {;
+function main() {
 function main() {/* TODO: Fix JSX expression */}
 }
   const files = [
@@ -49,9 +52,9 @@ function main() {/* TODO: Fix JSX expression */}
     'src/test-page.tsx'
   ];
   
-  // console.log removed for production
-;
-let fixedCount = 0;
+  console.log('Fixing remaining import issues...');
+  
+  let fixedCount = 0;
   files.forEach(file => {)
     if (fs.existsSync(file)) {
       if (fixImports(file)) {
@@ -61,7 +64,7 @@ let fixedCount = 0;
     })
   });
   `
-  // console.log removed for production
+  console.log(`Fixed ${fixedCount} files`);
 }
 
 main();"`

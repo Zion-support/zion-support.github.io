@@ -3,27 +3,15 @@ import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
 import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react';
-
 import { Link } from 'react-router-dom';
-
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-;
-const AIMLPlatformPage: React.FC = () => {;
-const features = [
-=======
-import Navigation from '../components
-import Footer from '../components
-
 const AIMLPlatformPage: React.FC = () => {
   const features = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     {
-      ico,
-    n: Brain,
+      icon: Brain,
       title: 'Complete ML Platform',
       description: 'End-to-end machine learning platform with model development, training, and deployment',
       benefits: ['Rapid model development', 'Automated training', 'Seamless deployment']
@@ -42,13 +30,11 @@ const AIMLPlatformPage: React.FC = () => {
       benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing']
     }
   ];
-;
-const pricingPlans = [
+  const pricingPlans = [
       name: 'Developer',
       price: '$999',
-      period: '
-      descriptio,
-    n: 'Perfect for individual developers',
+      period: '/month',
+      description: 'Perfect for individual developers',
       features: [
         'Up to 5 models',
         'Basic ML tools',
@@ -56,20 +42,16 @@ const pricingPlans = [
         'Standard compute',
         'Basic analytics'
       ],
-      popular: false
-      nam,
-    e: 'Team',
+      popular: false,
+    name: 'Team',
       price: '$2,499',
-      description: 'Ideal for development teams',;
-const features = [];
+      description: 'Ideal for development teams',
+  const features = [];
   return (
-<<<<<<< HEAD
-    {// TODO: Add content}
-=======
-    {/
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
-};
+    {
+    // TODO: Add content
+  }
+}
   ico,
   n: Brain,
       titl,
@@ -77,7 +59,8 @@ const features = [];
       descriptio,
   n: 'End-to-end machine learning platform with model development, training, and deployment',
       benefit,
-  s: ['Rapid model development', 'Automated training', 'Seamless deployment']},
+  s: ['Rapid model development', 'Automated training', 'Seamless deployment'];
+    },
       ico,
   n: TrendingUp,
       titl,
@@ -109,15 +92,13 @@ const features = [];
         'High-performance compute',
         'Advanced analytics',
         'Team collaboration'
-      popular: true
-      nam,
-    e: 'Enterprise',
+      popular: true,
+    name: 'Enterprise',
       price: '$4,999',
       description: 'For large organizations',
         'Unlimited models',
       popula,
   r: true,
-
       nam,
   e: 'Enterprise',
       pric,
@@ -126,75 +107,74 @@ const features = [];
   n: 'For large organizations',
 'Unlimited models',
         'Premium ML features',
-        '24
+        '24/7 support',
         'Custom compute',
         'Custom analytics',
         'White-label options',
-<<<<<<< HEAD
-        'API access';
-const stats = [;
-const stats = [
-  // TOD,
-=======
         'API access'
-
   const stats = [
   const stats = [
-  /
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-  O: Add items;
-];;
-
-    { ico,
-    n: Users, value: '500+', label: 'Data Scientists' },
+  // TOD,
+  O: Add items
+],
+    { icon: Users, value: '500+', label: 'Data Scientists' },
     { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
     { icon: Clock, value: '70%', label: 'Faster Development' },
-    { icon: Star, value: '4.9
-
+    { icon: Star, value: '4.9/5', label: 'User Rating' }
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      
-        <title>AI ML Platform | Zion Tech Group<
-        <meta name="description" content="Advanced AI ML platform solutions by Zion Tech Group." 
-      <
-
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">AI ML Platform<
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet>
+        <title>AI ML Platform | Zion Tech Group</title>
+        <meta name="description" content="Advanced AI ML platform solutions by Zion Tech Group." />
+      </Helmet>
+      <Navigation />
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center"></div>
+          <h1 className="text-5xl font-bold text-white mb-6">AI ML Platform</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Coming Soon - Advanced AI ML platform solutions that will transform your business.
-          <
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </p>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us
-            <
+              Contact Us;
+  </
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More
-          <
-
+              Learn More;
+  </
+      <Footer />
+      <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-
-          <
+            Page
+  </
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
-          <
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hove,
-    r:bg-cyan-600 transition-colors">
-
-/
-          <
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg),
+  </
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+// Contact Us,
+          </button>"
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg,
   hover:bg-cyan-400,"
-  hover:text-slate-900 transition-colors"><
-Learn More;
-          <
+  hover: text-slate-900 transition-colors"></button>
+Learn More
+          </div>
+      <Footer />
+    </div>
+  ),
+}
+};
 
-      <Footer 
-    <
+};
 
-  )};
 
-export default $1;
 export default AiMlPlatformPage;
-
+  </p>
+  </h1>
+  </section>
+  </main>
+  </button>
+  </button>
+  </div>
+  </div>
+  </div>

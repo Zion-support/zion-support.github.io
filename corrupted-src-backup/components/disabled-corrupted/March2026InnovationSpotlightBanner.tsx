@@ -209,6 +209,7 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
         </div>
       </div>
     </div>
-  )};
+  );
+}
 export default March2026InnovationSpotlightBanner;
 "`

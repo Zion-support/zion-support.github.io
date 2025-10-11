@@ -16,11 +16,13 @@ export type ExpandedService2027 =
     currency: string;
     pricingTiers: unknown;
       starter: number;
-      professional: number;
-      enterprise: number;
-      custom: string};
-    freeTier: boolean;
-    trialPeriod: string};
+      professional: number
+      enterprise: number
+      custom: string,
+    }
+    freeTier: boolean
+    trialPeriod: string,
+  }
   marketPrice: string;
   competitors: string[];
   roi: string;
@@ -32,114 +34,116 @@ export type ExpandedService2027 =
   growthRate: string;
   contactInfo: unknown;
     phone: string;
-    email: string;
-    website: string;
-    address: string};
+    email: string
+    website: string
+    address: string,
+  }
   technicalSpecs: unknown;
     uptime: string;
     security: string[];
-    compliance: string[];
-    apiEndpoints: number;
-    scalability: string};
+    compliance: string[]
+    apiEndpoints: number
+    scalability: string,
+  }
   support: string;
-  rating: number;
-  reviews: number;
-  launchDate: string;
+  rating: number
+  reviews: number
+  launchDate: string,
   status: 'active' | 'beta' | 'coming-soon'}
 // 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE;
 export const advancedCybersecurityServices: ExpandedService2027[] = [
-    id: 'quantum-threat-hunter',
+    id: 'quantum-threat-hunter'
     name: 'Quantum Threat Hunter',
     category: 'Cybersecurity',
     subcategory: 'Threat Intelligence',
     description: 'AI-powered cybersecurity platform that uses quantum-resistant algorithms to detect and neutralize advanced persistent threats in real-time',
     features: [,
   i,
-  d: string;
+  d: string,
   nam,
-  e: string;
+  e: string,
   categor,
-  y: string;
+  y: string,
   subcategor,
-  y: string;
+  y: string,
   descriptio,
-  n: string;
+  n: string,
   feature,
-  s: string[];
+  s: string[],
   benefit,
-  s: string[];
+  s: string[],
   useCase,
-  s: string[];
+  s: string[],
   targetAudienc,
-  e: string[];
+  e: string[],
   pricin,
-  g: unknown;
+  g: unknown,
     mode,
-  l: string;
+  l: string,
     basePric,
-  e: number;
+  e: number,
     currenc,
-  y: string;
+  y: string,
     pricingTier,
-  s: unknown;
+  s: unknown,
       starte,
-  r: number;
+  r: number,
       professiona,
-  l: number;
+  l: number,
       enterpris,
-  e: number;
+  e: number,
       custo,
-  m: string};
+  m: string}
     freeTie,
-  r: boolean;
+  r: boolean,
     trialPerio,
-  d: string};
+  d: string}
   marketPric,
-  e: string;
+  e: string,
   competitor,
-  s: string[];
+  s: string[],
   ro,
-  i: string;
+  i: string,
   setupTim,
-  e: string;
+  e: string,
   integration,
-  s: string[];
+  s: string[],
   technolog,
-  y: string[];
+  y: string[],
   innovationLeve,
-  l: string;
+  l: string,
   marketSiz,
-  e: string;
+  e: string,
   growthRat,
-  e: string;
+  e: string,
   contactInf,
-  o: unknown;
+  o: unknown,
     phon,
-  e: string;
+  e: string,
     emai,
-  l: string;
+  l: string,
     websit,
-  e: string;
+  e: string,
     addres,
-  s: string};
+  s: string}
   technicalSpec,
-  s: unknown;
+  s: unknown,
     uptim,
-  e: string;
+  e: string,
     securit,
-  y: string[];
+  y: string[],
     complianc,
-  e: string[];
+  e: string[],
     apiEndpoint,
-  s: number;
+  s: number,
     scalabilit,
-  y: string};
+  y: string}
   suppor,
-  t: string;
+  t: string,
   ratin,
-  g: number;
+  g: number,
   review,
-  s: number;
+  s: number,
   launchDat,
   e: string,
   statu,
@@ -197,17 +201,15 @@ export const,
       'Critical infrastructure operators'
     ],
     pricing: unknown;
-      model: 'Tiered Subscription',
-      basePrice:
-        basePrice: 2500;
-      currency: 'USD',
-      pricingTiers:
-        pricingTiers: unknown;
-        starter: 2500;
-        professional: 5000;
-        enterprise: 10000;
+      model: 'Tiered Subscription'
+      basePrice: 2500;
+      currency: 'USD'
+      pricingTiers: unknown;
+        starter: 2500
+        professional: 5000
+        enterprise: 10000,
         custom: 'Contact Sales'},
-      freeTier: false;
+      freeTier: false,
       trialPeriod: '30 days'},
     marketPrice: '$2,500 - $15,000/month',
     competitors: ['CrowdStrike', 'SentinelOne', 'Palo Alto Networks'],
@@ -215,28 +217,26 @@ export const,
     setupTime: '2-4 weeks',
     integrations: ['SIEM systems', 'EDR platforms', 'Cloud providers', 'Security tools'],
     technology: ['Quantum Computing', 'AI/ML', 'Behavioral Analytics', 'Zero Trust'],
-    innovationLevel: 'Revolutionary',
-    marketSize: '$4.2 billion by 2027',
-    growthRate: '280% annual growth',
-    contactInfo:
-        contactInfo: unknown;
-      phone: '+1 302 464 0950',
+    innovationLevel: 'Revolutionary'
+    marketSize: '$4.2 billion by 2027'
+    growthRate: '280% annual growth'
+    contactInfo: unknown,
+      phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/quantum-threat-hunter',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    technicalSpecs: unknown;
+    technicalSpecs: unknown,
       uptime: '99.99%',
       security: ['Zero Trust Architecture', 'Quantum Encryption', 'AI-Powered Detection'],
       compliance: ['SOC 2 Type II', 'ISO 27001', 'FedRAMP', 'GDPR'],
-      apiEndpoints: 200;
+      apiEndpoints: 200,
       scalability: 'Unlimited'},
-    support: '24/7 Security Operations Center',
-    rating:
-        rating: 4.9;
-    reviews: 342;
+    support: '24/7 Security Operations Center'
+    rating: 4.9
+    reviews: 342,
     launchDate: '2027-01-15',
     status: 'active'},
-    id: 'ai-compliance-automator',
+    id: 'ai-compliance-automator'
     name: 'AI Compliance Automator',
     category: 'Cybersecurity',
     subcategory: 'Compliance Automation',
@@ -369,17 +369,15 @@ export const,
       'Risk management teams'
     ],
     pricing: unknown;
-      model: 'Per-User + Base',
-      basePrice:
-        basePrice: 1500;
-      currency: 'USD',
-      pricingTiers:
-        pricingTiers: unknown;
-        starter: 1500;
-        professional: 3000;
-        enterprise: 6000;
+      model: 'Per-User + Base'
+      basePrice: 1500;
+      currency: 'USD'
+      pricingTiers: unknown;
+        starter: 1500
+        professional: 3000
+        enterprise: 6000,
         custom: 'Contact Sales'},
-      freeTier: true;
+      freeTier: true,
       trialPeriod: '14 days'},
     marketPrice: '$1,500 - $8,000/month',
     competitors: ['OneTrust', 'TrustArc', 'LogicGate'],
@@ -387,31 +385,29 @@ export const,
     setupTime: '1-2 weeks',
     integrations: ['GRC platforms', 'Security tools', 'HR systems', 'Cloud providers'],
     technology: ['AI/ML', 'Automation', 'Compliance Frameworks', 'Risk Management'],
-    innovationLevel: 'Advanced',
-    marketSize: '$3.8 billion by 2027',
-    growthRate: '220% annual growth',
-    contactInfo:
-        contactInfo: unknown;
-      phone: '+1 302 464 0950',
+    innovationLevel: 'Advanced'
+    marketSize: '$3.8 billion by 2027'
+    growthRate: '220% annual growth'
+    contactInfo: unknown,
+      phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/ai-compliance-automator',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    technicalSpecs: unknown;
+    technicalSpecs: unknown,
       uptime: '99.9%',
       security: ['Role-based Access Control', 'Data Encryption', 'Audit Logging'],
       compliance: ['SOC 2', 'ISO 27001', 'GDPR', 'HIPAA'],
-      apiEndpoints: 150;
+      apiEndpoints: 150,
       scalability: 'Enterprise-grade'},
-    support: 'Business hours + emergency support',
-    rating:
-        rating: 4.8;
-    reviews: 189;
+    support: 'Business hours + emergency support'
+    rating: 4.8
+    reviews: 189,
     launchDate: '2027-02-01',
     status: 'active'}
 ];
 // 2. ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE;
 export const advancedDataAnalyticsServices: ExpandedService2027[] = [
-    id: 'predictive-insights-engine',
+    id: 'predictive-insights-engine'
     name: 'Predictive Insights Engine',
     category: 'Data Analytics',
     subcategory: 'Predictive Analytics',
@@ -548,17 +544,15 @@ export const,
       'Consulting firms'
     ],
     pricing: unknown;
-      model: 'Usage-based + Base',
-      basePrice:
-        basePrice: 1800;
-      currency: 'USD',
-      pricingTiers:
-        pricingTiers: unknown;
-        starter: 1800;
-        professional: 3500;
-        enterprise: 7000;
+      model: 'Usage-based + Base'
+      basePrice: 1800;
+      currency: 'USD'
+      pricingTiers: unknown;
+        starter: 1800
+        professional: 3500
+        enterprise: 7000,
         custom: 'Contact Sales'},
-      freeTier: true;
+      freeTier: true,
       trialPeriod: '21 days'},
     marketPrice: '$1,800 - $10,000/month',
     competitors: ['Tableau', 'Power BI', 'Qlik', 'Looker'],
@@ -566,28 +560,26 @@ export const,
     setupTime: '2-3 weeks',
     integrations: ['Data warehouses', 'CRM systems', 'ERP platforms', 'Cloud services'],
     technology: ['Machine Learning', 'Big Data', 'Data Visualization', 'Predictive Modeling'],
-    innovationLevel: 'Advanced',
-    marketSize: '$5.6 billion by 2027',
-    growthRate: '240% annual growth',
-    contactInfo:
-        contactInfo: unknown;
-      phone: '+1 302 464 0950',
+    innovationLevel: 'Advanced'
+    marketSize: '$5.6 billion by 2027'
+    growthRate: '240% annual growth'
+    contactInfo: unknown,
+      phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/predictive-insights-engine',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    technicalSpecs: unknown;
+    technicalSpecs: unknown,
       uptime: '99.9%',
       security: ['Data Encryption', 'Access Control', 'Audit Logging'],
       compliance: ['GDPR', 'CCPA', 'SOC 2', 'ISO 27001'],
-      apiEndpoints: 180;
+      apiEndpoints: 180,
       scalability: 'Unlimited data processing'},
-    support: 'Business hours + 24/7 emergency',
-    rating:
-        rating: 4.7;
-    reviews: 267;
+    support: 'Business hours + 24/7 emergency'
+    rating: 4.7
+    reviews: 267,
     launchDate: '2027-01-20',
     status: 'active'},
-    id: 'real-time-data-streaming',
+    id: 'real-time-data-streaming'
     name: 'Real-Time Data Streaming Platform',
     category: 'Data Analytics',
     subcategory: 'Real-Time Processing',
@@ -720,17 +712,15 @@ export const,
       'Telecommunications'
     ],
     pricing: unknown;
-      model: 'Per-Stream + Processing',
-      basePrice:
-        basePrice: 2200;
-      currency: 'USD',
-      pricingTiers:
-        pricingTiers: unknown;
-        starter: 2200;
-        professional: 4500;
-        enterprise: 9000;
+      model: 'Per-Stream + Processing'
+      basePrice: 2200;
+      currency: 'USD'
+      pricingTiers: unknown;
+        starter: 2200
+        professional: 4500
+        enterprise: 9000,
         custom: 'Contact Sales'},
-      freeTier: false;
+      freeTier: false,
       trialPeriod: '14 days'},
     marketPrice: '$2,200 - $12,000/month',
     competitors: ['Apache Kafka', 'Amazon Kinesis', 'Google Cloud Dataflow'],
@@ -738,31 +728,29 @@ export const,
     setupTime: '3-5 weeks',
     integrations: ['Message queues', 'Data warehouses', 'Cloud platforms', 'Streaming services'],
     technology: ['Stream Processing', 'Real-Time Analytics', 'Event Streaming', 'Big Data'],
-    innovationLevel: 'Advanced',
-    marketSize: '$4.8 billion by 2027',
-    growthRate: '260% annual growth',
-    contactInfo:
-        contactInfo: unknown;
-      phone: '+1 302 464 0950',
+    innovationLevel: 'Advanced'
+    marketSize: '$4.8 billion by 2027'
+    growthRate: '260% annual growth'
+    contactInfo: unknown,
+      phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/real-time-data-streaming',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    technicalSpecs: unknown;
+    technicalSpecs: unknown,
       uptime: '99.99%',
       security: ['Data Encryption', 'Access Control', 'Network Security'],
       compliance: ['SOC 2', 'ISO 27001', 'GDPR', 'Industry standards'],
-      apiEndpoints: 250;
+      apiEndpoints: 250,
       scalability: 'Millions of events per second'},
-    support: '24/7 technical support',
-    rating:
-        rating: 4.8;
-    reviews: 198;
+    support: '24/7 technical support'
+    rating: 4.8
+    reviews: 198,
     launchDate: '2027-02-15',
     status: 'active'}
 ];
 // 3. ADVANCED CLOUD & DEVOPS SOLUTIONS;
 export const advancedCloudDevOpsServices: ExpandedService2027[] = [
-    id: 'multi-cloud-orchestrator',
+    id: 'multi-cloud-orchestrator'
     name: 'Multi-Cloud Orchestrator',
     category: 'Cloud & DevOps',
     subcategory: 'Multi-Cloud Management',
@@ -899,17 +887,15 @@ export const,
       'E-commerce platforms'
     ],
     pricing: unknown;
-      model: 'Percentage of Cloud Spend',
-      basePrice:
-        basePrice: 2000;
-      currency: 'USD',
-      pricingTiers:
-        pricingTiers: unknown;
-        starter: 2000;
-        professional: 4000;
-        enterprise: 8000;
+      model: 'Percentage of Cloud Spend'
+      basePrice: 2000;
+      currency: 'USD'
+      pricingTiers: unknown;
+        starter: 2000
+        professional: 4000
+        enterprise: 8000,
         custom: 'Contact Sales'},
-      freeTier: false;
+      freeTier: false,
       trialPeriod: '30 days'},
     marketPrice: '$2,000 - $15,000/month',
     competitors: ['Terraform', 'Ansible', 'HashiCorp', 'AWS Systems Manager'],
@@ -917,25 +903,23 @@ export const,
     setupTime: '4-6 weeks',
     integrations: ['AWS', 'Azure', 'GCP', 'Kubernetes', 'Docker', 'CI/CD tools'],
     technology: ['Multi-Cloud', 'DevOps', 'Automation', 'Orchestration', 'Monitoring'],
-    innovationLevel: 'Advanced',
-    marketSize: '$6.2 billion by 2027',
-    growthRate: '280% annual growth',
-    contactInfo:
-        contactInfo: unknown;
-      phone: '+1 302 464 0950',
+    innovationLevel: 'Advanced'
+    marketSize: '$6.2 billion by 2027'
+    growthRate: '280% annual growth'
+    contactInfo: unknown,
+      phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/multi-cloud-orchestrator',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    technicalSpecs: unknown;
+    technicalSpecs: unknown,
       uptime: '99.9%',
       security: ['Multi-cloud Security', 'Access Control', 'Encryption'],
       compliance: ['SOC 2', 'ISO 27001', 'FedRAMP', 'Industry standards'],
-      apiEndpoints: 300;
+      apiEndpoints: 300,
       scalability: 'Unlimited cloud resources'},
-    support: '24/7 cloud operations support',
-    rating:
-        rating: 4.9;
-    reviews: 312;
+    support: '24/7 cloud operations support'
+    rating: 4.9
+    reviews: 312,
     launchDate: '2027-01-10',
     status: 'active',
     pricin,
@@ -1065,17 +1049,15 @@ export const,
       'Release managers'
     ],
     pricing: unknown;
-      model: 'Per-Developer + Base',
-      basePrice:
-        basePrice: 1200;
-      currency: 'USD',
-      pricingTiers:
-        pricingTiers: unknown;
-        starter: 1200;
-        professional: 2500;
-        enterprise: 5000;
+      model: 'Per-Developer + Base'
+      basePrice: 1200;
+      currency: 'USD'
+      pricingTiers: unknown;
+        starter: 1200
+        professional: 2500
+        enterprise: 5000,
         custom: 'Contact Sales'},
-      freeTier: true;
+      freeTier: true,
       trialPeriod: '21 days'},
     marketPrice: '$1,200 - $8,000/month',
     competitors: ['Jenkins', 'GitLab CI/CD', 'GitHub Actions', 'CircleCI'],
@@ -1083,25 +1065,23 @@ export const,
     setupTime: '2-3 weeks',
     integrations: ['Git platforms', 'CI/CD tools', 'Cloud providers', 'Monitoring tools'],
     technology: ['AI/ML', 'DevOps', 'Automation', 'CI/CD', 'Monitoring'],
-    innovationLevel: 'Advanced',
-    marketSize: '$5.4 billion by 2027',
-    growthRate: '250% annual growth',
-    contactInfo:
-        contactInfo: unknown;
-      phone: '+1 302 464 0950',
+    innovationLevel: 'Advanced'
+    marketSize: '$5.4 billion by 2027'
+    growthRate: '250% annual growth'
+    contactInfo: unknown,
+      phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/ai-powered-devops-automation',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    technicalSpecs: unknown;
+    technicalSpecs: unknown,
       uptime: '99.9%',
       security: ['Secure CI/CD', 'Access Control', 'Audit Logging'],
       compliance: ['SOC 2', 'ISO 27001', 'DevSecOps standards'],
-      apiEndpoints: 200;
+      apiEndpoints: 200,
       scalability: 'Unlimited developers and projects'},
-    support: 'Business hours + emergency support',
-    rating:
-        rating: 4.7;
-    reviews: 245;
+    support: 'Business hours + emergency support'
+    rating: 4.7
+    reviews: 245,
     launchDate: '2027-02-05',
     status: 'active'}
 ];
@@ -1244,17 +1224,15 @@ export const,
       'Mining operations'
     ],
     pricing: unknown;
-      model: 'Per-Smartphone + Data Processing',
-      basePrice:
-        basePrice: 2800;
-      currency: 'USD',
-      pricingTiers:
-        pricingTiers: unknown;
-        starter: 2800;
-        professional: 5500;
-        enterprise: 11000;
+      model: 'Per-Smartphone + Data Processing'
+      basePrice: 2800;
+      currency: 'USD'
+      pricingTiers: unknown;
+        starter: 2800
+        professional: 5500
+        enterprise: 11000,
         custom: 'Contact Sales'},
-      freeTier: false;
+      freeTier: false,
       trialPeriod: '30 days'},
     marketPrice: '$2,800 - $18,000/month',
     competitors: ['PTC ThingWorx', 'Siemens Mindsphere', 'GE Predix', 'IBM Watson IoT'],
@@ -1262,25 +1240,23 @@ export const,
     setupTime: '6-8 weeks',
     integrations: ['PLC systems', 'SCADA systems', 'ERP platforms', 'Cloud services'],
     technology: ['IoT', 'Edge Computing', 'AI/ML', 'Predictive Analytics', 'Industrial Protocols'],
-    innovationLevel: 'Advanced',
-    marketSize: '$7.8 billion by 2027',
-    growthRate: '320% annual growth',
-    contactInfo:
-        contactInfo: unknown;
-      phone: '+1 302 464 0950',
+    innovationLevel: 'Advanced'
+    marketSize: '$7.8 billion by 2027'
+    growthRate: '320% annual growth'
+    contactInfo: unknown,
+      phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/industrial-iot-intelligence',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    technicalSpecs: unknown;
+    technicalSpecs: unknown,
       uptime: '99.9%',
       security: ['Industrial Security', 'Data Encryption', 'Access Control'],
       compliance: ['ISO 27001', 'IEC 62443', 'Industry 4.0 standards'],
-      apiEndpoints: 400;
+      apiEndpoints: 400,
       scalability: 'Unlimited devices and data'},
-    support: '24/7 industrial support',
-    rating:
-        rating: 4.8;
-    reviews: 178;
+    support: '24/7 industrial support'
+    rating: 4.8
+    reviews: 178,
     launchDate: '2027-01-25',
     status: 'active',
     pricin,
@@ -1410,17 +1386,15 @@ export const,
       'Public safety agencies'
     ],
     pricing: unknown;
-      model: 'City Size + Services',
-      basePrice:
-        basePrice: 5000;
-      currency: 'USD',
-      pricingTiers:
-        pricingTiers: unknown;
-        starter: 5000;
-        professional: 10000;
-        enterprise: 20000;
+      model: 'City Size + Services'
+      basePrice: 5000;
+      currency: 'USD'
+      pricingTiers: unknown;
+        starter: 5000
+        professional: 10000
+        enterprise: 20000,
         custom: 'Contact Sales'},
-      freeTier: false;
+      freeTier: false,
       trialPeriod: '60 days'},
     marketPrice: '$5,000 - $50,000/month',
     competitors: ['Cisco Smart Cities', 'IBM Smart Cities', 'Microsoft CityNext', 'Siemens Smart Cities'],
@@ -1428,31 +1402,29 @@ export const,
     setupTime: '8-12 weeks',
     integrations: ['City systems', 'IoT sensors', 'Traffic systems', 'Utility networks'],
     technology: ['IoT', 'Edge Computing', 'AI/ML', 'Big Data', 'Urban Analytics'],
-    innovationLevel: 'Advanced',
-    marketSize: '$8.9 billion by 2027',
-    growthRate: '280% annual growth',
-    contactInfo:
-        contactInfo: unknown;
-      phone: '+1 302 464 0950',
+    innovationLevel: 'Advanced'
+    marketSize: '$8.9 billion by 2027'
+    growthRate: '280% annual growth'
+    contactInfo: unknown,
+      phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/smart-city-operations',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    technicalSpecs: unknown;
+    technicalSpecs: unknown,
       uptime: '99.9%',
       security: ['City Security', 'Data Privacy', 'Access Control'],
       compliance: ['Government standards', 'Data protection', 'Urban regulations'],
-      apiEndpoints: 500;
+      apiEndpoints: 500,
       scalability: 'City-wide deployment'},
-    support: '24/7 city operations support',
-    rating:
-        rating: 4.9;
-    reviews: 156;
+    support: '24/7 city operations support'
+    rating: 4.9
+    reviews: 156,
     launchDate: '2027-02-10',
     status: 'active'}
 ];
 // 5. ADVANCED FINANCIAL TECHNOLOGY;
 export const advancedFinTechServices: ExpandedService2027[] = [
-    id: 'quantum-financial-modeling',
+    id: 'quantum-financial-modeling'
     name: 'Quantum Financial Modeling Platform',
     category: 'Financial Technology',
     subcategory: 'Quantum Finance',
@@ -1589,17 +1561,15 @@ export const,
       'Financial advisors'
     ],
     pricing: unknown;
-      model: 'Usage-based + Base',
-      basePrice:
-        basePrice: 8000;
-      currency: 'USD',
-      pricingTiers:
-        pricingTiers: unknown;
-        starter: 8000;
-        professional: 15000;
-        enterprise: 30000;
+      model: 'Usage-based + Base'
+      basePrice: 8000;
+      currency: 'USD'
+      pricingTiers: unknown;
+        starter: 8000
+        professional: 15000
+        enterprise: 30000,
         custom: 'Contact Sales'},
-      freeTier: false;
+      freeTier: false,
       trialPeriod: '30 days'},
     marketPrice: '$8,000 - $50,000/month',
     competitors: ['Bloomberg Terminal', 'Thomson Reuters', 'FactSet', 'Refinitiv'],
@@ -1607,25 +1577,23 @@ export const,
     setupTime: '8-12 weeks',
     integrations: ['Trading platforms', 'Market data feeds', 'Risk systems', 'Compliance tools'],
     technology: ['Quantum Computing', 'Financial Modeling', 'AI/ML', 'Risk Analytics'],
-    innovationLevel: 'Revolutionary',
-    marketSize: '$12.5 billion by 2027',
-    growthRate: '350% annual growth',
-    contactInfo:
-        contactInfo: unknown;
-      phone: '+1 302 464 0950',
+    innovationLevel: 'Revolutionary'
+    marketSize: '$12.5 billion by 2027'
+    growthRate: '350% annual growth'
+    contactInfo: unknown,
+      phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/quantum-financial-modeling',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    technicalSpecs: unknown;
+    technicalSpecs: unknown,
       uptime: '99.99%',
       security: ['Financial-grade Security', 'Quantum Encryption', 'Access Control'],
       compliance: ['SOX', 'Basel III', 'MiFID II', 'Financial regulations'],
-      apiEndpoints: 600;
+      apiEndpoints: 600,
       scalability: 'Unlimited financial calculations'},
-    support: '24/7 financial support',
-    rating:
-        rating: 4.9;
-    reviews: 89;
+    support: '24/7 financial support'
+    rating: 4.9
+    reviews: 89,
     launchDate: '2027-01-05',
     status: 'active',
     pricin,
@@ -1755,17 +1723,15 @@ export const,
       'Global users'
     ],
     pricing: unknown;
-      model: 'Transaction Fees + Governance',
-      basePrice:
-        basePrice: 0;
-      currency: 'USD',
-      pricingTiers:
-        pricingTiers: unknown;
-        starter: 0;
-        professional: 0;
-        enterprise: 0;
+      model: 'Transaction Fees + Governance'
+      basePrice: 0;
+      currency: 'USD'
+      pricingTiers: unknown;
+        starter: 0
+        professional: 0
+        enterprise: 0,
         custom: 'Governance tokens'},
-      freeTier: true;
+      freeTier: true,
       trialPeriod: 'Immediate'},
     marketPrice: 'Transaction fees only',
     competitors: ['Uniswap', 'Compound', 'Aave', 'MakerDAO'],
@@ -1773,31 +1739,29 @@ export const,
     setupTime: 'Immediate',
     integrations: ['Ethereum', 'Polygon', 'Binance Smart Chain', 'Other blockchains'],
     technology: ['Blockchain', 'Smart Contracts', 'DeFi Protocols', 'Web3'],
-    innovationLevel: 'Advanced',
-    marketSize: '$15.2 billion by 2027',
-    growthRate: '400% annual growth',
-    contactInfo:
-        contactInfo: unknown;
-      phone: '+1 302 464 0950',
+    innovationLevel: 'Advanced'
+    marketSize: '$15.2 billion by 2027'
+    growthRate: '400% annual growth'
+    contactInfo: unknown,
+      phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/defi-protocol',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    technicalSpecs: unknown;
+    technicalSpecs: unknown,
       uptime: '99.9%',
       security: ['Smart Contract Security', 'Multi-sig Wallets', 'Audit Reports'],
       compliance: ['DeFi standards', 'Smart contract best practices'],
-      apiEndpoints: 300;
+      apiEndpoints: 300,
       scalability: 'Layer 2 solutions'},
-    support: 'Community + Developer support',
-    rating:
-        rating: 4.6;
-    reviews: 423;
+    support: 'Community + Developer support'
+    rating: 4.6
+    reviews: 423,
     launchDate: '2027-01-01',
     status: 'active'}
 ];
 // 6. ADVANCED HEALTHCARE TECHNOLOGY;
 export const advancedHealthcareServices: ExpandedService2027[] = [
-    id: 'ai-diagnostic-assistant',
+    id: 'ai-diagnostic-assistant'
     name: 'AI Diagnostic Assistant',
     category: 'Healthcare Technology',
     subcategory: 'AI Diagnostics',
@@ -1934,17 +1898,15 @@ export const,
       'Medical device companies'
     ],
     pricing: unknown;
-      model: 'Per-Provider + Usage',
-      basePrice:
-        basePrice: 3500;
-      currency: 'USD',
-      pricingTiers:
-        pricingTiers: unknown;
-        starter: 3500;
-        professional: 7000;
-        enterprise: 14000;
+      model: 'Per-Provider + Usage'
+      basePrice: 3500;
+      currency: 'USD'
+      pricingTiers: unknown;
+        starter: 3500
+        professional: 7000
+        enterprise: 14000,
         custom: 'Contact Sales'},
-      freeTier: false;
+      freeTier: false,
       trialPeriod: '30 days'},
     marketPrice: '$3,500 - $25,000/month',
     competitors: ['IBM Watson Health', 'Google Health', 'Microsoft Healthcare', 'Philips Healthcare'],
@@ -1952,25 +1914,23 @@ export const,
     setupTime: '6-8 weeks',
     integrations: ['EHR systems', 'PACS systems', 'Lab systems', 'Medical devices'],
     technology: ['AI/ML', 'Computer Vision', 'Natural Language Processing', 'Medical AI'],
-    innovationLevel: 'Advanced',
-    marketSize: '$18.7 billion by 2027',
-    growthRate: '320% annual growth',
-    contactInfo:
-        contactInfo: unknown;
-      phone: '+1 302 464 0950',
+    innovationLevel: 'Advanced'
+    marketSize: '$18.7 billion by 2027'
+    growthRate: '320% annual growth'
+    contactInfo: unknown,
+      phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/ai-diagnostic-assistant',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    technicalSpecs: unknown;
+    technicalSpecs: unknown,
       uptime: '99.9%',
       security: ['HIPAA Compliance', 'Data Encryption', 'Access Control'],
       compliance: ['HIPAA', 'FDA', 'CE Mark', 'Medical standards'],
-      apiEndpoints: 250;
+      apiEndpoints: 250,
       scalability: 'Enterprise healthcare'},
-    support: '24/7 medical support',
-    rating:
-        rating: 4.8;
-    reviews: 134;
+    support: '24/7 medical support'
+    rating: 4.8
+    reviews: 134,
     launchDate: '2027-02-01',
     status: 'active',
     pricin,
@@ -2100,17 +2060,15 @@ export const,
       'Healthcare startups'
     ],
     pricing: unknown;
-      model: 'Per-Provider + Transaction',
-      basePrice:
-        basePrice: 2500;
-      currency: 'USD',
-      pricingTiers:
-        pricingTiers: unknown;
-        starter: 2500;
-        professional: 5000;
-        enterprise: 10000;
+      model: 'Per-Provider + Transaction'
+      basePrice: 2500;
+      currency: 'USD'
+      pricingTiers: unknown;
+        starter: 2500
+        professional: 5000
+        enterprise: 10000,
         custom: 'Contact Sales'},
-      freeTier: false;
+      freeTier: false,
       trialPeriod: '30 days'},
     marketPrice: '$2,500 - $20,000/month',
     competitors: ['Teladoc', 'Amwell', 'MDLive', 'Doxy.me'],
@@ -2118,25 +2076,23 @@ export const,
     setupTime: '4-6 weeks',
     integrations: ['EHR systems', 'Insurance systems', 'Payment processors', 'Mobile platforms'],
     technology: ['Video Conferencing', 'AI/ML', 'Mobile Apps', 'Cloud Computing'],
-    innovationLevel: 'Advanced',
-    marketSize: '$22.4 billion by 2027',
-    growthRate: '380% annual growth',
-    contactInfo:
-        contactInfo: unknown;
-      phone: '+1 302 464 0950',
+    innovationLevel: 'Advanced'
+    marketSize: '$22.4 billion by 2027'
+    growthRate: '380% annual growth'
+    contactInfo: unknown,
+      phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/telemedicine-platform',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    technicalSpecs: unknown;
+    technicalSpecs: unknown,
       uptime: '99.9%',
       security: ['HIPAA Compliance', 'End-to-End Encryption', 'Secure Video'],
       compliance: ['HIPAA', 'HITECH', 'State regulations', 'International standards'],
-      apiEndpoints: 300;
+      apiEndpoints: 300,
       scalability: 'Unlimited providers and patients'},
-    support: '24/7 healthcare support',
-    rating:
-        rating: 4.7;
-    reviews: 289;
+    support: '24/7 healthcare support'
+    rating: 4.7
+    reviews: 289,
     launchDate: '2027-01-15',
     status: 'active',
     pricin,
@@ -2238,76 +2194,80 @@ export const EXPANDED_SERVICE_CATEGORIES = [
   'Healthcare Technology'
 ];
 // Helper function to get services by category;
-export const getExpandedServicesByCategory = (category: string): ExpandedService2027[] =>;
+export const getExpandedServicesByCategory = (category: string): ExpandedService2027[] =>,
   if (category === 'All'),
 export const getExpandedServicesByCategory = (categor)
-  y: string): ExpandedService2027[] =>;
+  y: string): ExpandedService2027[] =>
   if (category === 'All')
-    return ALL_EXPANDED_SERVICES_2027}
-  return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category)};
+    return ALL_EXPANDED_SERVICES_2027,
+  }
+  return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category);
+}
 // Helper function to get services by subcategory;
-export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedService2027[] =>;
-  return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory)};
+export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedService2027[] =>
+  return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory),}
 // Helper function to search services;
-export const searchExpandedServices = (query: string): ExpandedService2027[] =>;
+export const searchExpandedServices = (query: string): ExpandedService2027[] =>
 export const getExpandedServicesBySubcategory = (subcategor)
-  y: string): ExpandedService2027[] =>;
-  return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory)};
+  y: string): ExpandedService2027[] =>
+  return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory),
+}
 // Helper function to search services;
 export const searchExpandedServices = (quer)
-  y: string): ExpandedService2027[] =>;
-//   const lowercaseQuery = query.toLowerCase();
+  y: string): ExpandedService2027[] =>
+//   const lowercaseQuery = query.toLowerCase(),
   return ALL_EXPANDED_SERVICES_2027.filter(service =>)
     service.name.toLowerCase().includes(lowercaseQuery) ||
     service.description.toLowerCase().includes(lowercaseQuery) ||
     service.category.toLowerCase().includes(lowercaseQuery) ||
     service.subcategory.toLowerCase().includes(lowercaseQuery) ||
     service.category.toLowerCase().includes(lowercaseQuery) ||,
-    service.subcategory.toLowerCase().includes(lowercaseQuery))};
+    service.subcategory.toLowerCase().includes(lowercaseQuery));
+}
 // Expanded Innovative Services 2027 - Zion Tech Group // Additional Micro SAAS, IT Infrastructure, and AI Services export type ExpandedService2027 = i,
-  d: string; nam,
-  e: string; categor,
-  y: string; subcategor,
-  y: string; descriptio,
-  n: string; feature,
-  s: string[]; benefit,
-  s: string[]; useCase,
-  s: string[]; targetAudienc,
-  e: string[]; pricin,
+  d: string, nam,
+  e: string, categor,
+  y: string, subcategor,
+  y: string, descriptio,
+  n: string, feature,
+  s: string[], benefit,
+  s: string[], useCase,
+  s: string[], targetAudienc,
+  e: string[], pricin,
   g: mode,
-  l: string; basePric,
-  e: number; currenc,
-  y: string; pricingTier,
+  l: string, basePric,
+  e: number, currenc,
+  y: string, pricingTier,
   s: starte,
-  r: number; professiona,
-  l: number; enterpris,
-  e: number; custo,
-  m: string}; freeTie,
-  r: boolean; trialPerio,
-  d: string}; marketPric,
-  e: string; competitor,
-  s: string[]; ro,
-  i: string; setupTim,
-  e: string; integration,
-  s: string[]; technolog,
-  y: string[]; innovationLeve,
-  l: string; marketSiz,
-  e: string; growthRat,
-  e: string; contactInf,
+  r: number, professiona,
+  l: number, enterpris,
+  e: number, custo,
+  m: string} freeTie,
+  r: boolean, trialPerio,
+  d: string} marketPric,
+  e: string, competitor,
+  s: string[], ro,
+  i: string, setupTim,
+  e: string, integration,
+  s: string[], technolog,
+  y: string[], innovationLeve,
+  l: string, marketSiz,
+  e: string, growthRat,
+  e: string, contactInf,
   o: phon,
-  e: string; emai,
-  l: string; websit,
-  e: string; addres,
-  s: string}; technicalSpec,
+  e: string, emai,
+  l: string, websit,
+  e: string, addres,
+  s: string} technicalSpec,
   s: uptim,
-  e: string; securit,
-  y: string[]; complianc,
-  e: string[]; apiEndpoint,
-  s: number; scalabilit,
-  y: string}; suppor,
-  t: string; ratin,
-  g: number; review,
-  s: number; launchDat,
+  e: string, securit,
+  y: string[], complianc,
+  e: string[], apiEndpoint,
+  s: number, scalabilit,
+  y: string} suppor,
+  t: string, ratin,
+  g: number, review,
+  s: number, launchDat,
   e: string, statu,
   s: 'active' | 'beta' | 'coming-soon' } // 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE export const,
   advancedCybersecurityServices: ExpandedService2027[] = [ ' i,
@@ -2868,6 +2828,6 @@ export const searchExpandedServices = (quer)
   s: 289,' launchDat,
   e: '2027-01-15',' statu,
   s: 'active' } ]; // Export all expanded services export const ALL_EXPANDED_SERVICES_2027 = [ ...advancedCybersecurityServices, ...advancedDataAnalyticsServices, ...advancedCloudDevOpsServices, ...advancedIoTServices, ...advancedFinTechServices, ...advancedHealthcareServices ]; // Service categories for filtering export const EXPANDED_SERVICE_CATEGORIES = [' 'All',' 'Cybersecurity',' 'Data Analytics',' 'Cloud & DevOps',' 'IoT & Edge Computing',' 'Financial Technology',' 'Healthcare Technology' ]; // Helper function to get services by category export const getExpandedServicesByCategory = (categor)
-  y: string): ExpandedService2027[] => ' if (category === 'All') return ALL_EXPANDED_SERVICES_2027} return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category)}; // Helper function to get services by subcategory export const getExpandedServicesBySubcategory = (subcategor)
-  y: string): ExpandedService2027[] => return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory)}; // Helper function to search services export const searchExpandedServices = (quer)
-  y: string): ExpandedService2027[] => const lowercaseQuery = query.toLowerCase(); return ALL_EXPANDED_SERVICES_2027.filter(service => service.name.toLowerCase().includes(lowercaseQuery) || service.description.toLowerCase().includes(lowercaseQuery) || service.category.toLowerCase().includes(lowercaseQuery) || service.subcategory.toLowerCase().includes(lowercaseQuery) || service.category.toLowerCase().includes(lowercaseQuery) || service.subcategory.toLowerCase().includes(lowercaseQuery) )};'
+  y: string): ExpandedService2027[] => ' if (category === 'All') return ALL_EXPANDED_SERVICES_2027, } return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category); } // Helper function to get services by subcategory export const getExpandedServicesBySubcategory = (subcategor)
+  y: string): ExpandedService2027[] => return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory), } // Helper function to search services export const searchExpandedServices = (quer)
+  y: string): ExpandedService2027[] => const lowercaseQuery = query.toLowerCase(); return ALL_EXPANDED_SERVICES_2027.filter(service => service.name.toLowerCase().includes(lowercaseQuery) || service.description.toLowerCase().includes(lowercaseQuery) || service.category.toLowerCase().includes(lowercaseQuery) || service.subcategory.toLowerCase().includes(lowercaseQuery) || service.category.toLowerCase().includes(lowercaseQuery) || service.subcategory.toLowerCase().includes(lowercaseQuery) ), }'

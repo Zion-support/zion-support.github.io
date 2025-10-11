@@ -1,15 +1,15 @@
-import React from 'react';
 export type CaseStudy = {
-  id: string;
+    id: string;
   title: string;
   company: string;
   industry: string;
   challenge: string;
   solution: string;
-  results: string[];
-  technologies: string[];
-  duration: string;
-  imageUrl?: string};
+  results: string[]
+  technologies: string[]
+  duration: string,
+  imageUrl?: string
+  }
 
 export const caseStudies: CaseStudy[] = [
   {
@@ -72,7 +72,7 @@ export const caseStudies: CaseStudy[] = [
     duration: '8 weeks',
     imageUrl: '/images/case-studies/healthcare-chatbot.jpg'},
   {
-    id: 'ecommerce-optimization',
+    id: 'ecommerce-optimization'
     title: 'E-commerce AI Optimization Suite',
     company: 'RetailMax Online',
     industry: 'E-commerce',
@@ -139,7 +139,7 @@ export const caseStudies: CaseStudy[] = [
     duration: '20 weeks',
     imageUrl: '/images/case-studies/cybersecurity.jpg'},
   {
-    id: 'telco-edge-observability',
+    id: 'telco-edge-observability'
     title: 'Telco Edge Observability Overhaul',
     company: 'GlobalTel Communications',
     industry: 'Telecommunications',
@@ -155,7 +155,7 @@ export const caseStudies: CaseStudy[] = [
     duration: '18 weeks',
     imageUrl: '/images/case-studies/telco-edge.jpg'},
   {
-    id: 'enterprise-rag-rollout',
+    id: 'enterprise-rag-rollout'
     title: 'Enterprise RAG Rollout at Fortune 500',
     company: 'Global Consumer Goods Co.',
     industry: 'Consumer Goods',
@@ -171,7 +171,7 @@ export const caseStudies: CaseStudy[] = [
     duration: '10 weeks',
     imageUrl: '/images/case-studies/enterprise-rag.jpg',
 export type CaseStudy = {/* TODO: Fix JSX expression */}
-};
+}
 
 export const,
   caseStudies: CaseStudy[] = [

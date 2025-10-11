@@ -1,11 +1,10 @@
 import React from 'react';
 impo, r, t { Li, n, k, useLocati, o, n } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-;
-const Sideba, r: React.FC = () => { ,;
-const locatio, n = useLocat, i, o, n(); const isActiv, e = (pa, t, h: str, i, n, g) = > locati, o, n.pathna, m, e = == pa, t, h; const section, s = [
+const Sideba, r: React.FC = () => { ,
+  const locatio, n = useLocat, i, o, n(); const isActiv, e = (pa, t, h: str, i, n, g) = > locati, o, n.pathna, m, e = == pa, t, h; const section, s = [
     {
       title: 'Exp, l, o, r, e',
-      lin, k, s: [,;
+      lin, k, s: [,
 const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
         { lab, e, l: 'H, o, m, e', pa, t, h: '/'  },
         { lab, e, l: 'Soluti, o, n, s', pa, t, h: '/solution, s' },
@@ -72,7 +71,6 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
             </n, a, v>
           </div>
         ))}
-
         <div, classNam, e = 'pt-4, borde, r-t, borde, r-gr, a, y-2, 0, 0'></div>
           <Link, t, o='/conta, c, t'
             className='bloc, k, w-full, b, g-bl, u, e-600, tex, t-white, tex, t-center, p, y-2, p, x-4, rounde, d-md, hove, r: bg-bl, u, e-700, transitio, n-colors, fon, t-medi, u, m'
@@ -83,7 +81,7 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
         </div>
       </div>
     </a, s, i, d, e>
-  )};
-
+  );
+}
 export default Sidebar;
 `

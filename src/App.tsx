@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 import { performanceMonitor } from './utils/performanceMonitor';
-
-// Lazy load components for better performance;
+// Lazy load components for better performance
 const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ContactPage = lazy(() => import('./contact/page'));
@@ -12,8 +11,7 @@ const ServicesPage = lazy(() => import('./services/page'));
 const BlogPage = lazy(() => import('./blog/page'));
 const CaseStudiesPage = lazy(() => import('./case-studies/page'));
 const NotFoundPage = lazy(() => import('./not-found'));
-
-// AI Services Pages;
+// AI Services Pages
 const AIAnalyticsDashboardPage = lazy(() => import('./ai-analytics-dashboard/page'));
 const AIChatbotBuilderPage = lazy(() => import('./ai-chatbot-builder/page'));
 const AIContentGenerationPage = lazy(() => import('./ai-content-generation/page'));
@@ -35,8 +33,7 @@ const AISchedulerPage = lazy(() => import('./ai-scheduler/page'));
 const AIServicesPage = lazy(() => import('./ai-services/page'));
 const AIWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/page'));
 const AIWritingAssistantPage = lazy(() => import('./ai-writing-assistant/page'));
-
-// Additional AI Services Pages;
+// Additional AI Services Pages
 const AIProjectManagerPage = lazy(() => import('./ai-project-manager/page'));
 const AISocialMediaManagerPage = lazy(() => import('./ai-social-media-manager/page'));
 const AIEmailMarketingPage = lazy(() => import('./ai-email-marketing/page'));
@@ -57,8 +54,7 @@ const QuantumAIPage = lazy(() => import('./quantum-ai/page'));
 const DatabaseServicesPage = lazy(() => import('./database-services/page'));
 const NetworkInfrastructurePage = lazy(() => import('./network-infrastructure/page'));
 const ITSupportPage = lazy(() => import('./it-support/page'));
-
-// IT Services Pages;
+// IT Services Pages
 const AnalyticsToolsPage = lazy(() => import('./analytics-tools/page'));
 const APIDocsPage = lazy(() => import('./api-docs/page'));
 const APIPage = lazy(() => import('./api/page'));
@@ -105,8 +101,7 @@ const SystemStatusPage = lazy(() => import('./system-status/page'));
 const TaskManagerProPage = lazy(() => import('./task-manager-pro/page'));
 const TeamPage = lazy(() => import('./team/page'));
 const TermsPage = lazy(() => import('./terms/page'));
-
-// Blog Pages;
+// Blog Pages
 const BlogAgentReleaseRunbooksV22026Page = lazy(() => import('./blog/agent-release-runbooks-v2-2026/page'));
 const BlogAI20252026MegaTrendsBreakthroughPage = lazy(() => import('./blog/ai-2025-2026-mega-trends-breakthrough/page'));
 const BlogAI2025JanuaryAdvancedAIRevolutionPage = lazy(() => import('./blog/ai-2025-january-advanced-ai-revolution/page'));
@@ -135,19 +130,17 @@ const BlogAIEnterpriseTransformationUltimateGuide2025Page = lazy(() => import('.
 const BlogAIInnovationLabsProductDevelopment2025Page = lazy(() => import('./blog/ai-innovation-labs-product-development-2025/page'));
 const BlogAIPoweredAutonomousBusinessProcesses2026Page = lazy(() => import('./blog/ai-powered-autonomous-business-processes-2026/page'));
 const BlogAITrends2026FutureEnterpriseTransformationPage = lazy(() => import('./blog/ai-trends-2026-future-enterprise-transformation/page'));
-
-// Main loading component;
+// Main loading component
 const MainLoadingSpinner = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
     <LoadingSpinner size="xl" text="Loading Zion Tech Group..." />
   </div>
 );
-;
 const App: React.FC = () => {
   // Initialize performance monitoring
   React.useEffect(() => {
-    performanceMonitor.reportMetrics()}, []);
-
+    performanceMonitor.reportMetrics();
+  }, []);
   return (
     <ErrorBoundary>
       <Router>
@@ -160,7 +153,6 @@ const App: React.FC = () => {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/case-studies" element={<CaseStudiesPage />} />
-            
             {/* AI Services Pages */}
             <Route path="/ai-analytics-dashboard" element={<AIAnalyticsDashboardPage />} />
             <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
@@ -183,7 +175,6 @@ const App: React.FC = () => {
             <Route path="/ai-services" element={<AIServicesPage />} />
             <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
             <Route path="/ai-writing-assistant" element={<AIWritingAssistantPage />} />
-            
             {/* Additional AI Services Pages */}
             <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
             <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
@@ -205,7 +196,6 @@ const App: React.FC = () => {
             <Route path="/database-services" element={<DatabaseServicesPage />} />
             <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
             <Route path="/it-support" element={<ITSupportPage />} />
-            
             {/* IT Services Pages */}
             <Route path="/analytics-tools" element={<AnalyticsToolsPage />} />
             <Route path="/api-docs" element={<APIDocsPage />} />
@@ -253,7 +243,6 @@ const App: React.FC = () => {
             <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
             <Route path="/team" element={<TeamPage />} />
             <Route path="/terms" element={<TermsPage />} />
-            
             {/* Blog Pages */}
             <Route path="/blog/agent-release-runbooks-v2-2026" element={<BlogAgentReleaseRunbooksV22026Page />} />
             <Route path="/blog/ai-2025-2026-mega-trends-breakthrough" element={<BlogAI20252026MegaTrendsBreakthroughPage />} />
@@ -283,13 +272,12 @@ const App: React.FC = () => {
             <Route path="/blog/ai-innovation-labs-product-development-2025" element={<BlogAIInnovationLabsProductDevelopment2025Page />} />
             <Route path="/blog/ai-powered-autonomous-business-processes-2026" element={<BlogAIPoweredAutonomousBusinessProcesses2026Page />} />
             <Route path="/blog/ai-trends-2026-future-enterprise-transformation" element={<BlogAITrends2026FutureEnterpriseTransformationPage />} />
-            
             {/* 404 Page */}
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Suspense>
       </Router>
     </ErrorBoundary>
-  )};
-
+  );
+};
 export default App;

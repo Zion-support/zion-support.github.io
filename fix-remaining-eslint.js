@@ -1,4 +1,3 @@
-import React from 'react';
 #!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
@@ -18,37 +17,47 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
     }
   }
   
-  return files}
+  return files;
+}
 
 // Fix unused variables by prefixing with underscore;
 function fixUnusedVariables(content) {
   // Fix unused parameters in function declarations;
-  content = content.replace(/function\s*\(([^)]*)\)/g, (_match, _params) => {;
-const newParams = params.split(',').map(param => {)
-      if (trimmed && trimmed.startsWith('_') && trimmed !== 'props' && trimmed !== 'event' && trimmed !== 'index') {;
+  content = content.replace(/function\s*\(([^)]*)\)/g, (_match, _params) => {
+    const newParams = params.split(',').map(param => {)
+      if (trimmed && trimmed.startsWith('_') && trimmed !== 'props' && trimmed !== 'event' && trimmed !== 'index') {
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
-        return `_${trimmed}`}
-      return trimmed}).join(', ');
-    return match.replace(params, newParams)});
+        return `_${trimmed}`;
+      }
+      return trimmed;
+    }).join(', ');
+    return match.replace(params, newParams);
+  });
 
   // Fix unused parameters in arrow functions;
-  content = content.replace(/\(([^)]*)\)\s*=>/g, (_match, _params) => {;
-const newParams = params.split(',').map(param => {)
+  content = content.replace(/\(([^)]*)\)\s*=>/g, (_match, _params) => {
+    const newParams = params.split(',').map(param => {)
       if (trimmed && trimmed.startsWith('_') && trimmed !== 'props' && trimmed !== 'event' && trimmed !== 'index') {
   content = content.replace(/\(([^)]*)\)\s*=>/g, (_match, _params) => {/* TODO: Fix JSX expression */}`
-        return `_${trimmed}`}
-      return trimmed}).join(', ');
-    return match.replace(params, newParams)});
+        return `_${trimmed}`;
+      }
+      return trimmed;
+    }).join(', ');
+    return match.replace(params, newParams);
+  });
 
   // Fix unused variable declarations;
   content = content.replace(/^\s*(const|let|var)\s+(\w+)\s*=.*?;\s*$/gm, (_match, _decl, _varName) => {
     if (varName.startsWith('_') || varName === 'props' || varName === 'event' || varName === 'index') {
-      return match}
+      return match;
+    }
   content = content.replace(/^\s*(const|let|var)\s+(\w+)\s*=.*?;\s*$/gm, (_match, _decl, _varName) => {/* TODO: Fix JSX expression */}
     }`
-    return match.replace(varName, `_${varName}`)});
+    return match.replace(varName, `_${varName}`);
+  });
 
-  return content}
+  return content;
+}
 
 // Fix unused imports;
 function fixUnusedImports(content) {
@@ -72,14 +81,16 @@ function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
     return true;)
   });
   
-  return filteredLines.join('\n')}
+  return filteredLines.join('\n');
+}
 
 // Fix console statements;
 function fixConsoleStatements(content) {
   // Remove console.log, console.warn, console.error, console.info, console.debug;
   content = content.replace(/^\s*console\.(log|warn|error|info|debug)\([^)]*\);\s*$/gm, '');
   content = content.replace(/console\.(log|warn|error|info|debug)\([^)]*\);\s*/g, '');
-  return content}
+  return content;
+}
 
 // Fix React refresh warnings by moving constants to separate files;
 function fixReactRefreshWarnings(content, filePath) {
@@ -95,17 +106,20 @@ function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
 // Fix React refresh warnings by moving constants to separate files;
 function fixReactRefreshWarnings(content, filePath) {/* TODO: Fix JSX expression */}
   }
-  return content}
+  return content;
+}
 
 // Fix non-null assertions;
 function fixNonNullAssertions(content) {
   content = content.replace(/!(\w+)/g, '$1');
-  return content}
+  return content;
+}
 
 // Fix any types;
 function fixAnyTypes(content) {
   content = content.replace(/:\s*any\b/g, ': unknown');
-  return content}
+  return content;
+}
 
 // Main function;
 function main() {
@@ -125,8 +139,10 @@ function main() {
       if (content !== originalContent) {
         fs.writeFileSync(file, content, 'utf8');
 
-        fixedFiles++}
-    } catch (error) {;
+        fixedFiles++;
+      }
+    } catch (error) {
+
 function fixNonNullAssertions(content) {/* TODO: Fix JSX expression */}
 }
 
@@ -141,7 +157,9 @@ function main() {/* TODO: Fix JSX expression */}
       })
     } catch (error) {/* TODO: Fix JSX expression */}
     }
-  })}
+  });
+
+}
 
 // Run if this is the main module;
 if (import.meta.url === `file://${process.argv[1]}`) {

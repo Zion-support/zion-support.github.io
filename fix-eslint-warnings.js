@@ -17,7 +17,8 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
     }
   }
   
-  return files}
+  return files;
+}
 
 // Fix console statements;
 function fixConsoleStatements(content) {
@@ -27,7 +28,8 @@ function fixConsoleStatements(content) {
   // Remove console statements that are part of multi-line expressions;
   content = content.replace(/console\.(log|warn|error|info|debug)\([^)]*\);\s*/g, '');
   
-  return content}
+  return content;
+}
 
 // Fix unused variables;
 function fixUnusedVariables(content) {
@@ -46,9 +48,12 @@ function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
 // Fix unused variables;
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
       }
-      return `_${param}`})});
+      return `_${param}`;
+    });
+  });
   
-  return content}
+  return content;
+}
 
 // Fix unused imports;
 function fixUnusedImports(content) {
@@ -73,7 +78,8 @@ function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
     return true;)
   });
   
-  return filteredLines.join('\n')}
+  return filteredLines.join('\n');
+}
 
 // Main function;
 function main() {
@@ -90,15 +96,19 @@ function main() {
       if (content !== originalContent) {
         fs.writeFileSync(file, content, 'utf8');
 
-        fixedFiles++}
-    } catch (error) {;
+        fixedFiles++;
+      }
+    } catch (error) {
+
 function main() {/* TODO: Fix JSX expression */}
 }
   files.forEach(file => {/* TODO: Fix JSX expression */}
       })
     } catch (error) {/* TODO: Fix JSX expression */}
     }
-  })}
+  });
+
+}
 
 // Run if this is the main module;
 if (import.meta.url === `file://${process.argv[1]}`) {

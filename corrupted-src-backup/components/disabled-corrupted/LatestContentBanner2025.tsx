@@ -1,6 +1,6 @@
 import React from 'react';
-const LatestContentBanner202, 5: React.FC = () => {,;
-const latestArticle, s = [
+const LatestContentBanner202, 5: React.FC = () => {,
+  const latestArticle, s = [
     {
       title: "AI, 2026, Mega Breakthrough, Revolut, i, o, n",
       description: "Me, t, a-Cognitiv, e, A, I, Quant, u, m-Neural, Network, s, Autonomous, Operation, s - $5, 0, M+ Annual, Saving, s",
@@ -8,7 +8,7 @@ const latestArticle, s = [
       category: "Revolutionar, y, A, I",
       emo, j, i: "🚀",
       highlig, h, t: "BREAKTHRO, U, G, H",
-      impa, c, t: "$5, 0, M+ Savi, n, g, s";
+      impa, c, t: "$5, 0, M+ Savi, n, g, s"
 const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
@@ -251,14 +251,12 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
               </p>"
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>"
                 <a, hre, f="/bl, o, g""
-                  className="bg-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, hove, r:fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
-                ></a>"
+                  className="bg-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, hove, r:fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"></a>"
                   <Sparkles, className="w-5 h-5" /></Sparkles>
                   <sp, a, n>Explore, All, Articles</sp, a, n>
                 </a>"
                 <a, hre, f="/conta, c, t""
-                  className="bord, e, r-2, borde, r-cy, a, n-500, tex, t-cy, a, n-400, hove, r:bg-cy, a, n-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
-                ></a>
+                  className="bord, e, r-2, borde, r-cy, a, n-500, tex, t-cy, a, n-400, hove, r:bg-cy, a, n-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"></a>
                   <sp, a, n>Getted, with Zion, A, I</sp, a, n>"
                   <Link, className="w-5 h-5" /></Link>
                 </a>
@@ -299,5 +297,6 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
         </div>
       </div>
     </di, v>
-  )};
+  );
+}
 export default LatestContentBanner2025;"`

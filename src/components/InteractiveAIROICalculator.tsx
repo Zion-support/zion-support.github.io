@@ -1,21 +1,20 @@
-
-
 'use client';
 import React, { useState } from 'react';
 const,
   InteractiveAIROICalculator: React.FC = () => {return (}
     <div>Coming Soon</div>)
-  )};
+  );
+}
   const [currentCost, setCurrentCost] = useState(100000);
   const [efficiencyGain, setEfficiencyGain] = useState(70);
   const [timeframe, setTimeframe] = useState(12);
-;
-const calculateROI = () => {return Math.max(0, roi)};return (
+  const calculateROI = () => {
+    return Math.max(0, roi)
+  }return (
     <section className='bg-white py-16 rounded-2xl shadow-lg'>
       <div className='container mx-auto px-4'>
         <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'>
-          AI ROI Calculator
-        </h2>
+          AI ROI Calculator</span>
         <div className='max-w-4xl mx-auto'>
           <div className='grid md:grid-cols-2 gap-8'>
             <div className='space-y-6'>
@@ -32,15 +31,6 @@ const calculateROI = () => {return Math.max(0, roi)};return (
   focus:ring-blue-500,
   focus:border-transparent'
 // />
-              
-          
-          
-          
-          
-          
-          
-          
-          
           </div>
 Expected Efficiency Gain (%)
                   type='range'
@@ -63,17 +53,16 @@ Expected Efficiency Gain (%)
                 </select>
             <div className='bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl'></div>
               <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'></h3>
-// Your ROI Projection;
-          </h3>
+// Your ROI Projection</h3>
               <div className='text-center'></div>
                 <div className='text-6xl font-bold text-blue-600 mb-4'></div>
                   {roi.toFixed(0)}%
                 <p className='text-gray-600 text-sm'></p>
-                  Expected return on investment over {timeframe} months;
-                </p>
+                  Expected return on investment over {timeframe} months</p>
     </section>
   );
-
-export default InteractiveAIROICalculator;
-
-
+export default InteractiveAIROICalculator</div>
+  </div>
+  </div>
+  </h2>
+  </div>

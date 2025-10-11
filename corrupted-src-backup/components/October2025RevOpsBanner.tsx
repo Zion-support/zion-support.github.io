@@ -1,20 +1,16 @@
 const, October2025RevOpsBanne, r = () => {
-return (
-
   return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">
-);
-}
-      {/* Animated, background, elements */};
+      {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-10">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  />
   return (
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">
-      {/* Animated, background, elements */};</div>
+      {/* Animated, background, elements */}</div>
       <div, className="absolute, inse, t-0, opacit, y-10"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  /></div>
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }} />;
+        <div>
       </d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8, p, y-8">"
         {/* Breaking, News, Badge */}</div>
         <div, className="flex, justif, y-center, m, b-4"></div>
@@ -23,13 +19,13 @@ return (
             JUST, PUBLISHE, D - OCTOBE, R, 1, 20, 2, 5;
             <Sparkles, className="w-4 h-4, m, l-2  />
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">";
-      {/* Animated, background, elements */};
+      {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-10">";
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />";)
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }} />';)
       </d, i, v>)
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;),
-      {/* Animated, background, elements */};</div>
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,),
+      {/* Animated, background, elements */}</div>
       <div, className="absolute, inse, t-0, opacit, y-10">";</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />";</div>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }} />';
@@ -38,12 +34,12 @@ return (
   g:px-8, p, y-8">";
         {/* Breaking, News, Badge */}</div>
         <div, className="flex, justif, y-center, m, b-4">";</div>
-          <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-boun, c, e">";</div>;
+          <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-boun, c, e">";</div>
 const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
-      {/* Animated, background, elements */};
+      {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-10"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  /></div>"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }} />;
+        <div>
       </d, i, v>"
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
   g:px-8, p, y-8">"
@@ -54,7 +50,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
             JUST, PUBLISHE, D - OCTOBE, R, 1, 20, 2, 5;"
             <Sparkles, className="w-4 h-4, m, l-2  /></Sparkles>"
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">";
-      {/* Animated, background, elements */};"
+      {/* Animated, background, elements */}"
       <div, className="absolute, inse, t-0, opacit, y-10">";"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />";"
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }} />';
@@ -550,6 +546,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  )};
+  );
+}
 export default October2025RevOpsBanner;
-;"
+"

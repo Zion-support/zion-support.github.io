@@ -1,3 +1,2 @@
-// main().catch((error) => {// // console.error removed for production
-} process.exitCod,
+// main().catch((error) => {// console.error(error)} process.exitCod,
   e: = 1})

@@ -34,11 +34,10 @@ const October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
         </div>)
         {/* Articles, Gri, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">)
-          { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > {;
-const Ico, n = artic, l, e.ic, o, n; return(<Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l";
-const Ico, n = artic, l, e.ic, o, n; return (</div>
-              <Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l"
-              >
+          { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > {
+            const Ico, n = artic, l, e.ic, o, n; return(<Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l"
+            const Ico, n = artic, l, e.ic, o, n; return (</div>
+              <Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l">
                 {/* Gradient, over, l, a, y */}
                 <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.co, l, o, r }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, rounde, d-2xl, transitio, n-opacity, duratio, n-30, 0`} />
                 {/* Conte, n, t */}</div>
@@ -70,8 +69,7 @@ const Ico, n = artic, l, e.ic, o, n; return (</div>
         {/* Articles, Gri, d */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8"></div>
           {/* TODO: Fix JSX expression */}"
-              <Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l"
-              ></Link>
+              <Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l"></Link>
                 {/* Gradient, over, l, a, y */}
                 <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.co, l, o, r }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, rounde, d-2xl, transitio, n-opacity, duratio, n-30, 0`} /></div>
                 {/* Conte, n, t */}"`
@@ -111,7 +109,8 @@ const Ico, n = artic, l, e.ic, o, n; return (</div>
                   </div>
                 </div>
               </Li, n, k>)
-            )})}
+            );
+          })}
         </div>
         {/* Bottom, CT, A */}
         <div, classNam, e = "te, x, t-cent, e, r"></div>
@@ -121,14 +120,12 @@ const Ico, n = artic, l, e.ic, o, n; return (</div>
         <div, classNam, e = "te, x, t-cent, e, r"></div>"
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-cent, e, r"></div>"
             <Link, t, o="/bl, o, g""
-              className="inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-xl, hove, r:fr, o, m-bl, u, e-500, hove, r:to-bl, u, e-400, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, grou, p"
-            ></Link>
+              className="inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-xl, hove, r:fr, o, m-bl, u, e-500, hove, r:to-bl, u, e-400, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, grou, p"></Link>
               <sp, a, n>Explore, All, AI Insigh, t, s</sp, a, n>"
               <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" /></Link>
             </Li, n, k>"
             <Link, t, o="/conta, c, t""
-              className="inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-xl, hove, r:bg-whi, t, e/20, transitio, n-all, duratio, n-300, border, border-whi, t, e/20"
-            ></Link>
+              className="inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-xl, hove, r:bg-whi, t, e/20, transitio, n-all, duratio, n-300, border, border-whi, t, e/20"></Link>
               <sp, a, n>Schedule, Expert, Consultation</sp, a, n>
             </Li, n, k>
           </div>
@@ -158,6 +155,7 @@ const Ico, n = artic, l, e.ic, o, n; return (</div>
         </div>
       </div>
     </div>
-  )};
+  );
+}
 export default October2025AIOperationsBanner;
 "`

@@ -1,42 +1,38 @@
 const, February2026ContentShowcaseBanne, r = () => {
-return (
-;
-const, featuredConten, t = [
+  const, featuredConten, t = [
     {
-      id: 1;
+      id: 1,
       tit, l, e: 'Autonomous, Neural, Networks 20, 2, 6','
       catego, r, y: 'AI, Architectur, e','
       readTi, m, e: '12, mi, n','
-      rati, n, g: 5.0;
+      rati, n, g: 5.0,
       reade, r, s: '18, 0, K+','
       bad, g, e: 'BREAKTHROU, G, H','
       gradie, n, t: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0','
-      ic, o, n: <Brain, className="w-6 h-6/>,"</Brain>li</Brain>
-);
-}, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-autonomo, u, s-neur, a, l-networ, k, s','
+      ic, o, n: <Brain, className="w-6 h-6/>,"</Brain>li</Brain>, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-autonomo, u, s-neur, a, l-networ, k, s','
       descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g}
     {
-      id: 2;
+      id: 2,
       tit, l, e: 'Quantum, Edge, Computing Revoluti, o, n','
       catego, r, y: 'Edge, Computin, g','
       readTi, m, e: '15, mi, n','
-      rati, n, g: 4.9;
+      rati, n, g: 4.9,
       reade, r, s: '15, 6, K+','
       bad, g, e: 'FEATUR, E, D','
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0','
       ic, o, n: <Zap, className="w-6 h-6/>,"</Zap>li</Zap>, n, k: '/bl, o, g/ed, g, e-20, 2, 6-f, e, b-quant, u, m-computi, n, g','
       descripti, o, n: 'Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, times}
     {
-      id: 3;
+      id: 3,
       tit, l, e: 'Me, t, a-Cognitive, AI, Systems','
       catego, r, y: 'AI, Psycholog, y','
       readTi, m, e: '18, mi, n','
-      rati, n, g: 5.0;
+      rati, n, g: 5.0,
       reade, r, s: '20, 3, K+','
       bad, g, e: 'REVOLUTIONA, R, Y','
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0','
       ic, o, n: <Sparkles, className="w-6 h-6/>,"
-      li, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-me, t, a-cogniti, v, e-syste, m, s',';
+      li, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-me, t, a-cogniti, v, e-syste, m, s','
 const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression */}
       descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g}
     {/* TODO: Fix JSX expression */}
@@ -46,7 +42,7 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
       tit, l, e: 'Autonomous, Neural, Networks 20, 2, 6',';
       catego, r, y: 'AI, Architectur, e',';
       readTi, m, e: '12, mi, n',';
-      rati, n, g: 5.0;
+      rati, n, g: 5.0,
       reade, r, s: '18, 0, K+',';
       bad, g, e: 'BREAKTHROU, G, H',';
       gradie, n, t: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0',';
@@ -54,11 +50,11 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
       descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g'
     }
     {
-      id: 2;
+      id: 2,
       tit, l, e: 'Quantum, Edge, Computing Revoluti, o, n',';
       catego, r, y: 'Edge, Computin, g',';
       readTi, m, e: '15, mi, n',';
-      rati, n, g: 4.9;
+      rati, n, g: 4.9,
       reade, r, s: '15, 6, K+',';
       bad, g, e: 'FEATUR, E, D',';
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0',';
@@ -66,11 +62,11 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
       descripti, o, n: 'Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, times'
     }
     {
-      id: 3;
+      id: 3,
       tit, l, e: 'Me, t, a-Cognitive, AI, Systems',';
       catego, r, y: 'AI, Psycholog, y',';
       readTi, m, e: '18, mi, n',';
-      rati, n, g: 5.0;
+      rati, n, g: 5.0,
       reade, r, s: '20, 3, K+',';
       bad, g, e: 'REVOLUTIONA, R, Y',';
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0',';

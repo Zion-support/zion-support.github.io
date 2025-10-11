@@ -1,4 +1,4 @@
-export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Development Platform 2026',
+export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Development Platform 2026'
     path: '/services/metaverse-development-platform-2026',
     description: 'Complete metaverse development and deployment solution',
     icon: 'Globe',
@@ -9,12 +9,12 @@ export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Developmen
       'Virtual commerce integration',
       'Multi-platform deployment'
     ],
-    pricing: unknown;
+    pricing: unknown,
       starter: '$399/month',
       professional: '$799/month'}
       enterprise: 'Custom'}
   },
-    name: 'Digital Reality Solutions 2026',
+    name: 'Digital Reality Solutions 2026'
     path: '/services/digital-reality-solutions-2026',
     description: 'Advanced AR/VR and mixed reality services',
     icon: 'Eye',
@@ -43,7 +43,7 @@ export const metaverseDigitalRealityServices2026 = [{/* TODO: Fix JSX expression
       'Mixed reality integration',
       'Spatial computing solutions'
     ],
-    pricing: unknown;
+    pricing: unknown,
       starter: '$299/month',
       professional: '$599/month',
       enterprise: 'Custom',
@@ -66,10 +66,10 @@ export const metaverseDigitalCategories2026 = [
 ];
 export const metaverseDigitalStats2026 =
   totalServices: 2;
-  categories: 4;
-  averageRating: 4.7;
-  activeUsers: 1200;
-export const metaverseDigitalStats2026 = {};
+  categories: 4
+  averageRating: 4.7
+  activeUsers: 1200,
+export const metaverseDigitalStats2026 = {}
   totalService,
   s: 2,
   categorie,
@@ -77,7 +77,7 @@ export const metaverseDigitalStats2026 = {};
   averageRatin,
   g: 4.7,
   activeUser,
-  s: 1200};
+  s: 1200}
 export const metaverseDigitalRealityServices2026 = [ nam,
   e: 'Metaverse Development Platform 2026',' pat,
   h: '/services/metaverse-development-platform-2026',' descriptio,
@@ -102,4 +102,4 @@ export const metaverseDigitalRealityServices2026 = [ nam,
   s: 2, categorie,
   s: 4, averageRatin,
   g: 4.7, activeUser,
-  s: 1200 };'
+  s: 1200 }'

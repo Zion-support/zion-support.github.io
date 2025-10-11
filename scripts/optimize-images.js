@@ -10,9 +10,10 @@ class ImageOptimizer {/* TODO: Fix JSX expression */}
     }
 
     if (!fs.existsSync(this.outputDir)) {/* TODO: Fix JSX expression */}
-  e: true })}
-;
-const _files = fs.readdirSync(this.inputDir);
+  e: true });
+    }
+
+    const _files = fs.readdirSync(this.inputDir);
     const imageFiles = files.filter(file => )
       /.(jpg|jpeg|png|webp)$/i.test(file)
     );
@@ -36,7 +37,7 @@ const _files = fs.readdirSync(this.inputDir);
     }
   }
 }
-;
+
 const _optimizer = new ImageOptimizer();
 optimizer.optimizeImages();
 `

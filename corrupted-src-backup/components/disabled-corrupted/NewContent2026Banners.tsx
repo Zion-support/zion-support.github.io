@@ -1,6 +1,5 @@
-
-// Latest Content 2026 Banner export function LatestContent2026Bann e r() { 
-  return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, vi, a-bl, u, e-600, t, o-te, a, l-600, tex, t-white, p, y-4'>
+// Latest Content 2026 Banner export function LatestContent2026Bann e r() {
+    return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, vi, a-bl, u, e-600, t, o-te, a, l-600, tex, t-white, p, y-4'>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         <div, className='flex, fle, x-col, m, d: fl, e, x-row, item, s-center, justif, y-between, ga, p-4'>
           <div, className='flex, item, s-center, ga, p-4'>
@@ -37,10 +36,10 @@
           </Li, n, k>)
         </div>)
       </div>)
-    </d, i, v > )}
-
-// AI Security Enterprise 2026 Banner export functio; n AISecurityEnterprise2026Banne r() { 
-  return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-oran, g, e-600, tex, t-white, p, y-6'>
+    </d, i, v > )
+  }
+// AI Security Enterprise 2026 Banner export functio; n AISecurityEnterprise2026Banne r() {
+    return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-oran, g, e-600, tex, t-white, p, y-6'>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         <div, className='te, x, t-cent, e, r'>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'>
@@ -74,10 +73,10 @@
           </div>)
         </div>)
       </div>)
-    </d, i, v > )}
-
-// AI Multimodal Enterprise 2026 Banner export functio; n AIMultimodalEnterprise2026Banne r() { 
-  return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, tex, t-white, p, y-6'>
+    </d, i, v > )
+  }
+// AI Multimodal Enterprise 2026 Banner export functio; n AIMultimodalEnterprise2026Banne r() {
+    return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, tex, t-white, p, y-6'>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         <div, className='te, x, t-cent, e, r'>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'>
@@ -121,10 +120,10 @@
           </Li, n, k>)
         </div>)
       </div>)
-    </d, i, v > )}
-
-// AI Sustainability Transformation Banner export function AISustainabilityTransformationBann e r() { 
-  return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, tex, t-white, p, y-6'>
+    </d, i, v > )
+  }
+// AI Sustainability Transformation Banner export function AISustainabilityTransformationBann e r() {
+    return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, tex, t-white, p, y-6'>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         <div, className='te, x, t-cent, e, r'>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'>
@@ -168,10 +167,10 @@
           </Li, n, k>)
         </div>)
       </div>)
-    </d, i, v > )}
-
-// New Latest 2026 Content Banner export functio; n NewLatest2026ContentBanne r() { 
-  return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-pi, n, k-600, vi, a-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, p, y-6'>
+    </d, i, v > )
+  }
+// New Latest 2026 Content Banner export functio; n NewLatest2026ContentBanne r() {
+    return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-pi, n, k-600, vi, a-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, p, y-6'>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         <div, className='te, x, t-cent, e, r'>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'>
@@ -224,10 +223,10 @@
           </Li, n, k>)
         </div>)
       </div>)
-    </d, i, v > )}
-
-// AI Autonomous Cloud Ops Banner export functio; n AIAutonomousCloudOpsBanne r() { 
-  return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, tex, t-white, p, y-6'>
+    </d, i, v > )
+  }
+// AI Autonomous Cloud Ops Banner export functio; n AIAutonomousCloudOpsBanne r() {
+    return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, tex, t-white, p, y-6'>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         <div, className='te, x, t-cent, e, r'>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'>
@@ -250,7 +249,6 @@
           <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6'></div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-cy, a, n-3, 0, 0'>99.9%</div>
-
               <div, className='te, x, t-sm, opacit, y-90'>
                 Se, l, f-healing, infrastructur, e;
               </div>
@@ -272,10 +270,10 @@
           </Li, n, k>)
         </div>)
       </div>)
-    </d, i, v > )}
-
-// AI FinTech Transformation Banner export function AIFinTechTransformationBann e r() { 
-  return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-gre, e, n-600, tex, t-white, p, y-6'>
+    </d, i, v > )
+  }
+// AI FinTech Transformation Banner export function AIFinTechTransformationBann e r() {
+    return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-gre, e, n-600, tex, t-white, p, y-6'>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         <div, className='te, x, t-cent, e, r'>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'>
@@ -299,7 +297,6 @@
           <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6'></div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0'>95%</div>
-
               <div, className='te, x, t-sm, opacit, y-90'>Process, efficienc, y</div>
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
@@ -309,7 +306,6 @@
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0'>99.9%</div>
-
               <div, className='te, x, t-sm, opacit, y-90'>Transaction, processin, g</div>
             </div>
           </div>
@@ -319,10 +315,10 @@
           </Li, n, k>
         </div>
       </div>
-    </d, i, v > )}
-
-// AI Retail Automation Banner export function AIRetailAutomationBann e r() { 
-  return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, tex, t-white, p, y-6'>
+    </d, i, v > )
+  }
+// AI Retail Automation Banner export function AIRetailAutomationBann e r() {
+    return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, tex, t-white, p, y-6'>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         <div, className='te, x, t-cent, e, r'>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'>
@@ -351,7 +347,6 @@
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-oran, g, e-3, 0, 0'>3, 0, 0%</div>
-
               <div, className='te, x, t-sm, opacit, y-90'>Performance, gain, s</div>
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
@@ -367,8 +362,8 @@
           </Li, n, k>)
         </div>)
       </div>)
-    </d, i, v > )}
-
+    </d, i, v > )
+  }
 // Latest 2026 Content Banner export function Latest2026ContentBann e r() { 
   return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-viol, e, t-600, vi, a-purp, l, e-600, t, o-fuchs, i, a-600, tex, t-white, p, y-6'>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
@@ -422,27 +417,19 @@
     </d, i, v > );
 // Latest Content 2026 Banner export function LatestContent2026Bann e r() {/* TODO: Fix JSX expression */}
  }
-
 // AI Security Enterprise 2026 Banner export functio; n AISecurityEnterprise2026Banne r() {/* TODO: Fix JSX expression */}
  }
-
 // AI Multimodal Enterprise 2026 Banner export functio; n AIMultimodalEnterprise2026Banne r() {/* TODO: Fix JSX expression */}
  }
-
 // AI Sustainability Transformation Banner export function AISustainabilityTransformationBann e r() {/* TODO: Fix JSX expression */}
  }
-
 // New Latest 2026 Content Banner export functio; n NewLatest2026ContentBanne r() {/* TODO: Fix JSX expression */}
  }
-
 // AI Autonomous Cloud Ops Banner export functio; n AIAutonomousCloudOpsBanne r() {/* TODO: Fix JSX expression */}
  }
-
 // AI FinTech Transformation Banner export function AIFinTechTransformationBann e r() {/* TODO: Fix JSX expression */}
  }
-
 // AI Retail Automation Banner export function AIRetailAutomationBann e r() {/* TODO: Fix JSX expression */}
  }
-
 // Latest 2026 Content Banner export function Latest2026ContentBann e r() {/* TODO: Fix JSX expression */}
  }

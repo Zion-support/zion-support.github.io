@@ -1,4 +1,4 @@
-export const cuttingEdge2027Innovations = [{name: 'Cutting Edge AI Innovation 2027',
+export const cuttingEdge2027Innovations = [{name: 'Cutting Edge AI Innovation 2027'
     path: '/services/cutting-edge-ai-innovation-2027',
     description: 'Next-generation AI innovations for 2027',
     icon: 'Brain',
@@ -9,12 +9,12 @@ export const cuttingEdge2027Innovations = [{name: 'Cutting Edge AI Innovation 20
       'Future-ready technology',
       'Performance optimization'
     ],
-    pricing: unknown;
+    pricing: unknown,
       starter: '$699/month',
       professional: '$1399/month'}
       enterprise: 'Custom'}
   },
-    name: 'Cutting Edge Tech Innovation 2027',
+    name: 'Cutting Edge Tech Innovation 2027'
     path: '/services/cutting-edge-tech-innovation-2027',
     description: 'Revolutionary technology innovations for 2027',
     icon: 'Zap',
@@ -43,7 +43,7 @@ export const cuttingEdge2027Innovations = [{/* TODO: Fix JSX expression */}
       'Future-ready platform',
       'Advanced capabilities'
     ],
-    pricing: unknown;
+    pricing: unknown,
       starter: '$599/month',
       professional: '$1199/month',
       enterprise: 'Custom',
@@ -66,10 +66,10 @@ export const cuttingEdge2027 Categories = [
 ];
 export const cuttingEdge2027Stats =
   totalServices: 2;
-  categories: 4;
-  averageRating: 4.9;
-  activeUsers: 3500;
-export const cuttingEdge2027Stats = {};
+  categories: 4
+  averageRating: 4.9
+  activeUsers: 3500,
+export const cuttingEdge2027Stats = {}
   totalService,
   s: 2,
   categorie,
@@ -77,7 +77,7 @@ export const cuttingEdge2027Stats = {};
   averageRatin,
   g: 4.9,
   activeUser,
-  s: 3500};
+  s: 3500}
 export const cuttingEdge2027Innovations = [ nam,
   e: 'Cutting Edge AI Innovation 2027',' pat,
   h: '/services/cutting-edge-ai-innovation-2027',' descriptio,
@@ -102,4 +102,4 @@ export const cuttingEdge2027Innovations = [ nam,
   s: 2, categorie,
   s: 4, averageRatin,
   g: 4.9, activeUser,
-  s: 3500 };'
+  s: 3500 }'

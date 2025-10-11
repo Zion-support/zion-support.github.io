@@ -3,21 +3,21 @@
  * Comprehensive SEO optimization and monitoring utilities;
  */
 
-class SEOOptimizer {;
-constructor() {
+class SEOOptimizer {
+  constructor() {
     this.seoConfig = {
       siteName: 'Zion Tech Group',
       siteDescription:,
         'Advanced AI and IT Solutions - Leading technology company providing cutting-edge AI, machine learning, and IT consulting services.',
-      siteUrl: 'https://ziontechgroup.com',
+      siteUrl: 'https://ziontechgroup.com'
       defaultImage: '/images/og-image.jpg',
       twitterHandle: '@ZionTechGroup',
       structuredData: {,
         organization: {,
           '@context': 'https://schema.org',
           '@type': 'Organization',
-          name: 'Zion Tech Group',
-          url: 'https://ziontechgroup.com',
+          name: 'Zion Tech Group'
+          url: 'https://ziontechgroup.com'
           logo: 'https://ziontechgroup.com/images/logo.png',
           description: 'Advanced AI and IT Solutions',
           address: {,
@@ -33,8 +33,9 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
             'http,
   s://linkedin.com/company/ziontechgroup',
             'http,
-  s://twitter.com/ziontechgroup']}}};
-    this.init()}
+  s://twitter.com/ziontechgroup']}}}
+    this.init();
+  }
 
   init() {/* TODO: Fix JSX expression */}
   }
@@ -89,24 +90,21 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   q: 'yearly' },
       {/* TODO: Fix JSX expression */}
   q: 'yearly' }];
-;
-const _sitemap = this.buildSitemapXML(pages);
-    this.createSitemapFile(sitemap)}
+
+    const _sitemap = this.buildSitemapXML(pages);
+    this.createSitemapFile(sitemap);
+  }
 
   buildSitemapXML(pages) {
     //     const baseUrl = this.seoConfig.siteUrl;
     //     const lastmod = new Date().toISOString().split('T')[0];
-;
-let _xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-    xml += '<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">\n';
 
-    pages.forEach(page => {
-return (
-),
+    let _xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+    xml += '<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">\n',
+
+    pages.forEach(page => {),
       xml += '  <url>\n';),
-      xml += `    <loc>
-);
-}${baseUrl}${page.url}</loc>\n`;
+      xml += `    <loc>${baseUrl}${page.url}</loc>\n`;
       xml += `    <lastmod>${lastmod}</lastmod>\n`;
       xml += `    <changefreq>${page.changefreq}</changefreq>\n`;
   buildSitemapXML(pages) {/* TODO: Fix JSX expression */}`
@@ -114,18 +112,21 @@ return (
       xml += `    <lastmod>${lastmod}</lastmod>\n`;`
       xml += `    <changefreq>${page.changefreq}</changefreq>\n`;`
       xml += `    <priority>${page.priority}</priority>\n`;
-      xml += '  </url>\n'});
+      xml += '  </url>\n';
+    });
 
     xml += '</urlset>';
-    return xml}
+    return xml;
+  }
 
   createSitemapFile(sitemap) {
     // In a real implementation, this would be saved to a file;
     // For now, we'll store it in a data attribute for reference;
-    document.documentElement.setAttribute('data-sitemap', sitemap)}
+    document.documentElement.setAttribute('data-sitemap', sitemap)
+  }
 
-  setupRobotsTxt() {;
-const robotsTxt = `User-agent: *,
+  setupRobotsTxt() {
+    const robotsTxt = `User-agent: *,
 Allow: /,
 ,
 Sitemap: ${this.seoConfig.siteUrl}/sitemap.xml;
@@ -167,16 +168,18 @@ Disallow: /src/pages/blog-disabled/
 Disallow: /hooks/,
 Disallow: /lib_backup/,
 Disallow: /services/,
-Disallow: /middleware/`;
+Disallow: /middleware/`,
 ,
-    document.documentElement.setAttribute('data-robots-txt', robotsTxt)}
+    document.documentElement.setAttribute('data-robots-txt', robotsTxt);
+  }
 
   setupCanonicalUrls() {
     // Add canonical URL;
     const _canonical = document.createElement('link');
     canonical.rel = 'canonical';
     canonical.href = this.seoConfig.siteUrl + window.location.pathname;
-    document.head.appendChild(canonical)}
+    document.head.appendChild(canonical)
+  }
 
   setupOpenGraph() {
     // Open Graph meta tags;
@@ -267,9 +270,10 @@ Disallo,
 Disallo,
   w: /services/
 Disallo,`
-  w: /middleware/`;
+  w: /middleware/`,
 
-    document.documentElement.setAttribute('data-robots-txt', robotsTxt)}
+    document.documentElement.setAttribute('data-robots-txt', robotsTxt);
+  }
 
   setupCanonicalUrls() {/* TODO: Fix JSX expression */}
   }
@@ -315,16 +319,16 @@ Disallo,`
     return {
       '@context': 'https: //schema.org',
       '@type': 'WebSite',
-      name: 'Zion Tech Group',
-      url:
-        url: this.seoConfig.siteUrl;
-      description: this.seoConfig.siteDescription;
+      name: 'Zion Tech Group'
+      url: this.seoConfig.siteUrl
+      description: this.seoConfig.siteDescription,
       potentialAction: {,
         '@type': 'SearchAction',
         target: `${this.seoConfig.siteUrl}/search?q={search_term_string}`,
   getHomePageSchema() {/* TODO: Fix JSX expression */}`
   t: `${this.seoConfig.siteUrl}/search?q={search_term_string}`,
-        'query-input': 'required name=search_term_string'}}}
+        'query-input': 'required name=search_term_string'}}
+  }
 
   getAboutPageSchema() {
     return {
@@ -333,17 +337,20 @@ Disallo,`
       name: 'About Zion Tech Group',
       description: 'Learn about Zion Tech Group, a leading AI and IT solutions company.',
       url: `${this.seoConfig.siteUrl}/about`,
-      mainEntity: this.seoConfig.structuredData.organization}}
+      mainEntity: this.seoConfig.structuredData.organization,
+    }
+  }
 
   getServicesPageSchema() {
     return {
       '@context': 'https: //schema.org',
       '@type': 'Service',
-      name: 'AI and IT Solutions',
-      description: 'Comprehensive AI and IT consulting services',
-      provider: this.seoConfig.structuredData.organization;
+      name: 'AI and IT Solutions'
+      description: 'Comprehensive AI and IT consulting services'
+      provider: this.seoConfig.structuredData.organization,
       serviceType: 'Technology Consulting',
-      areaServed: 'Worldwide'}}
+      areaServed: 'Worldwide'}
+  }
 
   getContactPageSchema() {
     return {
@@ -352,7 +359,9 @@ Disallo,`
       name: 'Contact Zion Tech Group',
       description: 'Get in touch with our team for AI and IT solutions',
       url: `${this.seoConfig.siteUrl}/contact`,
-      mainEntity: this.seoConfig.structuredData.organization}}
+      mainEntity: this.seoConfig.structuredData.organization,
+    }
+  }
 
   getBlogPageSchema() {
     return {
@@ -361,24 +370,29 @@ Disallo,`
       name: 'Zion Tech Group Blog',
       description: 'Latest insights on AI, technology, and IT solutions',
       url: `${this.seoConfig.siteUrl}/blog`,
-      publisher: this.seoConfig.structuredData.organization}}
+      publisher: this.seoConfig.structuredData.organization,
+    }
+  }
 
   setupPerformanceSEO() {
     // Optimize for Core Web Vitals;
     this.optimizeImages();
     this.optimizeFonts();
-    this.optimizeCriticalCSS()}
+    this.optimizeCriticalCSS()
+  }
 
-  optimizeImages() {;
-const _images = document.querySelectorAll('img');
+  optimizeImages() {
+    const _images = document.querySelectorAll('img');
     images.forEach(img => {)
       // Add loading="lazy" for non-critical images;)
       if (!img.hasAttribute('loading')) {
-        img.loading = 'lazy'}
+        img.loading = 'lazy'
+  }
 
       // Add alt text if missing;
       if (!img.alt) {
-        img.alt = this.generateAltText(img.src)}
+    img.alt = this.generateAltText(img.src)
+  }
 
       // Add width and height attributes;
       if (!img.width && !img.height) {
@@ -388,20 +402,24 @@ const _images = document.querySelectorAll('img');
   getAboutPageSchema() {/* TODO: Fix JSX expression */}`
   l: `${this.seoConfig.siteUrl}/about`,
       mainEntit,
-  y: this.seoConfig.structuredData.organization}}
+  y: this.seoConfig.structuredData.organization}
+  }
 
   getServicesPageSchema() {/* TODO: Fix JSX expression */}
-    }}
+    }
+  }
 
   getContactPageSchema() {/* TODO: Fix JSX expression */}`
   l: `${this.seoConfig.siteUrl}/contact`,
       mainEntit,
-  y: this.seoConfig.structuredData.organization}}
+  y: this.seoConfig.structuredData.organization}
+  }
 
   getBlogPageSchema() {/* TODO: Fix JSX expression */}`
   l: `${this.seoConfig.siteUrl}/blog`,
       publishe,
-  r: this.seoConfig.structuredData.organization}}
+  r: this.seoConfig.structuredData.organization}
+  }
 
   setupPerformanceSEO() {/* TODO: Fix JSX expression */}
   }
@@ -415,8 +433,10 @@ const _images = document.querySelectorAll('img');
 
       // Add width and height attributes;
       if (!img.width && !img.height) {/* TODO: Fix JSX expression */}
-        })}
-    })}
+        });
+      }
+    });
+  }
 
   generateAltText(src) {/* TODO: Fix JSX expression */}
   }
@@ -427,52 +447,67 @@ const _images = document.querySelectorAll('img');
       'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
     ];
 
-    criticalFonts.forEach(font => {);
-const _link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = font;
-      link.as = 'style';
+    criticalFonts.forEach(font => {)
+      const _link = document.createElement('link');
+      link.rel = 'preload'
+      link.href = font
+      link.as = 'style',
       link.onload = () => {,
         link.rel = 'stylesheet';
   optimizeFonts() {/* TODO: Fix JSX expression */}
-      };
-      document.head.appendChild(link)})}
+      }
+      document.head.appendChild(link);
+    });
+  }
 
   optimizeCriticalCSS() {
     // Inline critical CSS for above-the-fold content;
     const criticalCSS = `
-      body { font-family: Inter, sans-serif; margin: 0; padding: 0}
-      .container { max-width: 1200px; margin: 0 auto; padding: 0 20px}
-      .header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100}
-      .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 0; text-align: center}
-      .btn { background: #007bff; color: white; padding: 12px 24px; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; display: inline-block}
+      body { font-family: Inter, sans-serif; margin: 0, padding: 0
+  }
+      .container {
+    max-width: 1200px; margin: 0 auto, padding: 0 20px
+  }
+      .header {
+    background: #fff, box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0, z-index: 100
+  }
+      .hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 0, text-align: center
+  }
+      .btn {
+    background: #007bff; color: white; padding: 12px 24px; border: none; border-radius: 4px; cursor: pointer; text-decoration: none, display: inline-block
+  }
   optimizeCriticalCSS() {/* TODO: Fix JSX expression */}
-  g: 0}
+  g: 0, }
       .container {/* TODO: Fix JSX expression */}
-  g: 0 20px}
+  g: 0 20px, }
       .header {/* TODO: Fix JSX expression */}
-  x: 100}
+  x: 100, }
       .hero {/* TODO: Fix JSX expression */}
-  n: center}
+  n: center, }
       .btn {/* TODO: Fix JSX expression */}
-  y: inline-block}`
+  y: inline-block, }`
     `;
-;
-const _style = document.createElement('style');
+
+    const _style = document.createElement('style');
     style.textContent = criticalCSS;
-    document.head.appendChild(style)}
+    document.head.appendChild(style);
+  }
 
   getPageTitle() {/* TODO: Fix JSX expression */}
-    };
-    return titles[currentPath] || this.seoConfig.siteName}
+    }
+    return titles[currentPath] || this.seoConfig.siteName;
+  }
 
   getPageDescription() {/* TODO: Fix JSX expression */}
-    };
-    return descriptions[currentPath] || this.seoConfig.siteDescription}
+    }
+    return descriptions[currentPath] || this.seoConfig.siteDescription;
+  }
 
   getPageImage() {/* TODO: Fix JSX expression */}
-    };
-    return this.seoConfig.siteUrl + (images[currentPath] || this.seoConfig.defaultImage)}
+    }
+    return this.seoConfig.siteUrl + (images[currentPath] || this.seoConfig.defaultImage);
+  }
 
   // Public methods;
   updatePageSEO(title, description, image) {
@@ -486,7 +521,8 @@ const _style = document.createElement('style');
     this.updateOGTag('og:title', title);
     this.updateOGTag('og:description', description);
     if (image) {
-      this.updateOGTag('og:image', image)}
+      this.updateOGTag('og:image', image)
+  }
 
     // Update Twitter Card tags;
     this.updateTwitterTag('twitter:title', title);
@@ -505,49 +541,51 @@ const _style = document.createElement('style');
     }
   }
 
-  updateMetaTag(name, content) {/* TODO: Fix JSX expression */}"`;
-const _meta = document.querySelector(`meta[name="${name}"]`);
+  updateMetaTag(name, content) {/* TODO: Fix JSX expression */}"`
+    const _meta = document.querySelector(`meta[name="${name}"]`);
     if (meta) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
   }
 
-  updateOGTag(property, content) {/* TODO: Fix JSX expression */}"`;
-const _meta = document.querySelector(`meta[property="${property}"]`);
+  updateOGTag(property, content) {/* TODO: Fix JSX expression */}"`
+    const _meta = document.querySelector(`meta[property="${property}"]`);
     if (meta) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
   }
 
-  updateTwitterTag(name, content) {/* TODO: Fix JSX expression */}"`;
-const _meta = document.querySelector(`meta[name="${name}"]`);
+  updateTwitterTag(name, content) {/* TODO: Fix JSX expression */}"`
+    const _meta = document.querySelector(`meta[name="${name}"]`);
     if (meta) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
   }
 
-  generateBreadcrumbs(items) {;
-const breadcrumbSchema = {
+  generateBreadcrumbs(items) {
+    const breadcrumbSchema = {
       '@context': 'https: //schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: items.map((item, index) => ({
         '@type': 'ListItem',
-        position: index + 1;
-        name: item.name;
-        item: item.url;
+        position: index + 1
+        name: item.name
+        item: item.url,
   generateBreadcrumbs(items) {/* TODO: Fix JSX expression */}
-      }))};
+      }))}
 
-    this.addStructuredData(breadcrumbSchema)}
+    this.addStructuredData(breadcrumbSchema);
+  }
 
   trackPageView() {
     // Track page view for analytics;
     if (window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {)
         page_title: this.getPageTitle(),
-        page_location: window.location.href;
+        page_location: window.location.href,
   trackPageView() {/* TODO: Fix JSX expression */}
-      })}
+      });
+    }
   }
 }
 

@@ -10,7 +10,7 @@ const TrendingContentBanne, r: React.FC = () => {,
       category: "AI, Operatio, n, s",
       ic, o, n: Trendin, g, U, p,",
       li, n, k: "/bl, o, g/ai-disast, e, r-recove, r, y-playboo, k, s-2, 0, 2, 5",
-      bad, g, e: "NE, W";
+      bad, g, e: "NE, W"
 const TrendingContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
@@ -29,18 +29,19 @@ const TrendingContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
     }
   ]; useEffect(() => {/* TODO: Fix JSX expression */}
      }, 40, 0, 0);
-    return () => clearInterv, a, l(interv, a, l)}, [trendingIte, m, s.leng, t, h]);
+    return () => clearInterv, a, l(interv, a, l);
+  }, [trendingIte, m, s.leng, t, h]);
   const currentIte, m = trendingIte, m, s[currentInd, e, x]; const getBadgeColo, r = (bad, g, e: str, i, n, g) => {/* TODO: Fix JSX expression */}
     }
-  };
+  }
   const Ico, n = currentIt, e, m.ic, o, n; return(<div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p"></div>
       <div, className="flex, item, s-center, justif, y-betwe, e, n"></div>
         <div, className="fl, e, x-1"></div>
           <div, className="flex, item, s-center, ga, p-3, m, b-3"></div>
             <div, className="flex, item, s-center, ga, p-2"></div>
               <TrendingUp, className="w-5 h-5, tex, t-zi, o, n-cyan, animat, e-pul, s, e" />)
-              <span, className="te, x, t-sm, fon, t-semibold, tex, t-zi, o, n-cy, a, n">TRENDING, NO, W</sp, a, n>);
-const Ico, n = currentIt, e, m.ic, o, n; return (<div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p"></div>"
+              <span, className="te, x, t-sm, fon, t-semibold, tex, t-zi, o, n-cy, a, n">TRENDING, NO, W</sp, a, n>)
+  const Ico, n = currentIt, e, m.ic, o, n; return (<div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p"></div>"
       <div, className="flex, item, s-center, justif, y-betwe, e, n"></div>"
         <div, className="fl, e, x-1"></div>"
           <div, className="flex, item, s-center, ga, p-3, m, b-3"></div>"
@@ -115,5 +116,6 @@ const Ico, n = currentIt, e, m.ic, o, n; return (<div, className="bg-gradie, n, 
           sty, l, e={{ wid, t, h: `${((currentInd, e, x + , 1) / trendingIte, m, s.leng, t, h) * 10, 0}%` }}
       </div>
     </div>
-  )};
+  );
+}
 export default TrendingContentBanner;"`

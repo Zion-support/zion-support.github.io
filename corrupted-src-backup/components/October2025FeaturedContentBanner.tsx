@@ -1,5 +1,5 @@
-const, October2025FeaturedContentBanne, r = () => {;
-const, featuredConten, t = [
+const, October2025FeaturedContentBanne, r = () => {
+  const, featuredConten, t = [
     {
       tit, l, e: "Enterprise, AI, Value Realizati, o, n"
       descripti, o, n: "90, days, to shipped, outcom, e;
@@ -165,9 +165,8 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
         { val, u, e: "S, L, A", lab, e, l: "Aware, Routin, g" }"
         { val, u, e: "$", lab, e, l: "Predictable, Spen, d" }"
       tit, l, e: "Enterprise, AI, Value Realizati, o, n",";"
-      descripti, o, n: '90, days, to shipped, outcom, e,',
-  s:
-        s: scorecar, d, s, evaluator, gate, s, tiered, routin, g",";"
+      descripti, o, n: "90, days, to shipped, outcom, e,"
+  s: scorecar, d, s, evaluator, gate, s, tiered, routin, g",";"
       li, n, k: "/bl, o, g/enterpri, s, e-ai-val, u, e-realizati, o, n-20, 2, 5-10-08",";
       ic, o, n: Bra, i, n;"
       gradie, n, t: "fr, o, m-indi, g, o-600, t, o-bl, u, e-6, 0, 0",";"
@@ -246,19 +245,13 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">")
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";)
           {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => {
-return (
-;
-const, Ico, n = conte, n, t.ic, o, n;
+            const, Ico, n = conte, n, t.ic, o, n;
             return(<Li, n, k;
         {/* Featured, Content, Cards */}
-        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">
-);
-}"</div>
+        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";
           {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => {
-return (
-;
-const, Ico, n = conte, n, t.ic, o, n;
+            const, Ico, n = conte, n, t.ic, o, n;
             return (</div>
               <Li, n, k
   k, e, y={ind, e, x}
@@ -267,8 +260,6 @@ const, Ico, n = conte, n, t.ic, o, n;
   r:shad, o, w-2, x, l"
                 sty, l, e={{ borderCol, o, r: conte, n, t.borderCol, o, r }}
               >
-);
-}
                 <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.bgGradie, n, t} opaci, t, y-50, grou, p-hov, e, r:opaci, t, y-70, transitio, n-opaci, t, y`}></d, i, v>`;`
                 <div, className="relativ, e, p-8">
                   {/* Ic, o, n & Tit, l, e */}</div>
@@ -371,7 +362,8 @@ const, Ico, n = conte, n, t.ic, o, n;
                 {/* Hover, Effect, Overlay */}`
                 <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-10, transitio, n-opaci, t, y`}></d, i, v>`;`
               </Li, n, k>
-            )})}
+            );
+          })}
         </d, i, v>
         {/* Bottom, CT, A */}
         <div, className="te, x, t-cent, e, r">";
@@ -438,6 +430,7 @@ const, Ico, n = conte, n, t.ic, o, n;
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  )};
+  );
+}
 export default October2025FeaturedContentBanner;
-;"`
+"`

@@ -4,9 +4,8 @@ import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarCha
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-
-export default function MicroSaasPage() {;
-const microSaasServices = [
+export default function MicroSaasPage() {
+  const microSaasServices = [
     {
       icon: BarChart3,
       title: 'AI Analytics Dashboard',
@@ -239,8 +238,7 @@ const microSaasServices = [
       benefits: ['Increase productivity by 25%', 'Better time management', 'Detailed insights']
     }
   ];
-;
-const categories = [
+  const categories = [
     { name: 'All', count: microSaasServices.length },
     { name: 'Analytics', count: microSaasServices.filter(s => s.category === 'Analytics').length },
     { name: 'E-commerce', count: microSaasServices.filter(s => s.category === 'E-commerce').length },
@@ -257,8 +255,7 @@ const categories = [
     { name: 'Automation', count: microSaasServices.filter(s => s.category === 'Automation').length },
     { name: 'Content Creation', count: microSaasServices.filter(s => s.category === 'Content Creation').length }
   ];
-;
-const benefits = [
+  const benefits = [
     {
       icon: TrendingUp,
       title: 'Proven ROI',
@@ -280,14 +277,12 @@ const benefits = [
       description: 'Enterprise-grade security with 99.9% uptime guarantee'
     }
   ];
-;
-const stats = [
+  const stats = [
     { label: 'Active Users', value: '10,000+' },
     { label: 'Apps Available', value: '50+' },
     { label: 'Uptime Guarantee', value: '99.9%' },
     { label: 'Support Available', value: '24/7' }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer 
@@ -296,36 +291,32 @@ const stats = [
         keywords="micro SAAS, AI tools, business applications, productivity software, marketing automation, analytics dashboard"
       />
       <Navigation />
-      
       {/* Hero Section */}
       <section className="pt-24 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Micro SAAS Solutions
-            </h1>
+              Micro SAAS Solutions,
+  </
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               50+ AI-powered micro SAAS applications designed for modern businesses. Affordable, powerful, and easy to use.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
-                className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
-              >
+                className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center">
                 <Phone className="h-5 w-5 mr-2" />
                 Call (302) 464-0950
-              </a>
+  </
               <Link
                 to="/contact"
-                className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Get Free Trial
-              </Link>
+                className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Get Free Trial,
+  </
             </div>
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -343,7 +334,6 @@ const stats = [
           </div>
         </div>
       </section>
-
       {/* Category Filter */}
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -351,15 +341,13 @@ const stats = [
             {categories.map((category, index) => (
               <button
                 key={index}
-                className="bg-slate-800/50 hover:bg-cyan-500/20 text-gray-300 hover:text-white px-4 py-2 rounded-lg transition-colors duration-300"
-              >
+                className="bg-slate-800/50 hover:bg-cyan-500/20 text-gray-300 hover:text-white px-4 py-2 rounded-lg transition-colors duration-300">
                 {category.name} ({category.count})
               </button>
             ))}
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -369,8 +357,8 @@ const stats = [
                 {service.popular && (
                   <div className="flex items-center justify-center mb-4">
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
+                      Most Popular;
+  </
                   </div>
                 )}
                 <div className="flex items-center mb-4">
@@ -390,8 +378,8 @@ const stats = [
                   ))}
                   {service.features.length > 3 && (
                     <li className="text-xs text-gray-400">
-                      +{service.features.length - 3} more features
-                    </li>
+                      +{service.features.length - 3} more features;
+  </
                   )}
                 </ul>
                 <div className="text-center">
@@ -401,17 +389,15 @@ const stats = [
                   </div>
                   <Link
                     to={service.link}
-                    className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors inline-block text-sm"
-                  >
-                    Learn More
-                  </Link>
+                    className="bg-purple-500 hover: bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors inline-block text-sm">
+                    Learn More,
+  </
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-24 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -420,8 +406,8 @@ const stats = [
               Why Choose Our Micro SAAS Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We deliver powerful, affordable tools that help businesses grow and succeed
-            </p>
+              We deliver powerful, affordable tools that help businesses grow and succeed;
+  </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
@@ -436,83 +422,80 @@ const stats = [
           </div>
         </div>
       </section>
-
       {/* Pricing Tiers */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
-            </h2>
+              Simple, Transparent Pricing;
+  </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that fits your business needs. All plans include 24/7 support and regular updates.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg">
               <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
               <div className="text-4xl font-bold text-cyan-400 mb-4">$19<span className="text-lg text-gray-400">/month</span></div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  5 Micro SAAS Apps
-                </li>
+                  5 Micro SAAS Apps;
+  </
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  Basic Support
-                </li>
+                  Basic Support;
+  </
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  Standard Features
-                </li>
+                  Standard Features;
+  </
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  Email Support
-                </li>
+                  Email Support;
+  </
               </ul>
               <Link
                 to="/contact"
-                className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block"
-              >
-                Get Started
-              </Link>
+                className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block">
+                Get Started;
+  </
             </div>
             <div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 p-8 rounded-xl shadow-lg ring-2 ring-cyan-400">
               <div className="flex items-center justify-center mb-4">
                 <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                  Most Popular
-                </span>
+                  Most Popular;
+  </
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
               <div className="text-4xl font-bold text-cyan-400 mb-4">$49<span className="text-lg text-gray-400">/month</span></div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  15 Micro SAAS Apps
-                </li>
+                  15 Micro SAAS Apps;
+  </
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  Priority Support
-                </li>
+                  Priority Support;
+  </
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  Advanced Features
-                </li>
+                  Advanced Features;
+  </
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  Phone & Email Support
-                </li>
+                  Phone & Email Support;
+  </
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  API Access
-                </li>
+                  API Access;
+  </
               </ul>
               <Link
                 to="/contact"
-                className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block"
-              >
-                Get Started
-              </Link>
+                className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block">
+                Get Started;
+  </
             </div>
             <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg">
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
@@ -520,39 +503,37 @@ const stats = [
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  All 50+ Apps
-                </li>
+                  All 50+ Apps;
+  </
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  24/7 Premium Support
-                </li>
+                  24/7 Premium Support;
+  </
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  Custom Features
-                </li>
+                  Custom Features;
+  </
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
                   Dedicated Manager
-                </li>
+  </
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
                   White-label Options
-                </li>
+  </
               </ul>
               <Link
                 to="/contact"
-                className="w-full bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block"
-              >
-                Contact Sales
-              </Link>
+                className="w-full bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block">
+                Contact Sales,
+  </
             </div>
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -563,22 +544,50 @@ const stats = [
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
-                className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors hover:bg-gray-100 flex items-center justify-center"
-              >
+                className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors hover:bg-gray-100 flex items-center justify-center">
                 <Phone className="h-5 w-5 mr-2" />
                 Call (302) 464-0950
-              </a>
+  </
               <Link
                 to="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
+                className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors">
                 Start Free Trial
-              </Link>
+  </
             </div>
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
-  )}
+  ),
+}
+  </Link>
+  </a>
+  </Link>
+  </li>
+  </li>
+  </li>
+  </li>
+  </li>
+  </Link>
+  </li>
+  </li>
+  </li>
+  </li>
+  </li>
+  </Link>
+  </li>
+  </li>
+  </li>
+  </li>
+  </div>
+  </h2>
+  </div>
+  </p>
+  </Link>
+  </li>
+  </Link>
+  </a>
+  </h1>
+  </SEOOptimizer>
+  </div>

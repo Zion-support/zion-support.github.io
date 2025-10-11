@@ -3,7 +3,7 @@ impo, r, t {/* TODO: Fix JSX expression */}
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m '../conte, n, t/octob, e, r-20, 2, 5-n, e, w-breakthrou, g, h-conte, n, t';
 const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
-   };
+   }
   return(<div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n'>
       {/* Animated, background, effects */}
       <div, className='absolute, inse, t-0, opacit, y-30'>
@@ -58,8 +58,8 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
         </div>
         {/* Content, Card, s */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>
-          { octoberNewBreakthroughConte, n, t.m, a, p(conte, n, t = > {;
-const Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n; return (</div>
+          { octoberNewBreakthroughConte, n, t.m, a, p(conte, n, t = > {
+            const Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n; return (</div>
               <Link, ke, y = { conte, n, t., i, d  }, to = {`/bl, o, g/${conte, n, t.slug}`}
                 className='group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r:to-whi, t, e/10, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0'
               >
@@ -132,7 +132,8 @@ const Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n; return (</div>
                   <Link, className='w-5 h-5' /></Link>
                 </div>
               </Li, n, k>
-            )})}
+            );
+          })}
         </div>
         {/* CTA, Sectio, n */}
         <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/30, rounde, d-2x, l, p-12, m, b-12, shado, w-2, x, l'></div>
@@ -276,6 +277,7 @@ const Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n; return (</div>
         </div>
       </div>
     </div>
-  )};
+  );
+}
 export default October2025NewBreakthroughBanner;
 `

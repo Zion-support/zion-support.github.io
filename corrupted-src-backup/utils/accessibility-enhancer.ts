@@ -13,21 +13,22 @@ interface AccessibilityReport {/* TODO: Fix JSX expression */}
 }
 
 class AccessibilityEnhancer {
-  private config: AccessibilityConfig;
-  private issues: AccessibilityIssue[] = [];
-,;
-constructor(config: Partial<AccessibilityConfig> = {}) {
+  private config: AccessibilityConfig
+  private issues: AccessibilityIssue[] = [],
+,
+  constructor(config: Partial<AccessibilityConfig> = {}) {
     this.config = {
       enableAutoFix: true;
       enableKeyboardNavigation: true;
       enableScreenReaderSupport: true;
-      enableColorContrastCheck: true;
-      enableFocusManagement: true;
-      enableARIALabels: true;
+      enableColorContrastCheck: true
+      enableFocusManagement: true
+      enableARIALabels: true,
       ...config,
 class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   g: Partial<AccessibilityConfig> = {}) {/* TODO: Fix JSX expression */}
-    }}
+    }
+  }
 
   /**
    * Initialize accessibility enhancements;
@@ -50,12 +51,15 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     // Make all interactive elements focusable;
     const interactiveElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]')
     );
-    interactiveElements.forEach(element => {)
+    interactiveElements.forEach(element => {
+    )
       if (!element.hasAttribute('tabindex')) {
-        element.setAttribute('tabindex', '0')}
+        element.setAttribute('tabindex', '0')
+  }
     interactiveElements.forEach(element => {/* TODO: Fix JSX expression */}
       })
-    })}
+    });
+  }
 
   /**
    * Handle keyboard navigation;
@@ -76,8 +80,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     }
 
     // Escape key to close modals;
-    if (key === 'Escape') {;
-const _modal = document.querySelector('.modal[aria-hidden="false"]');
+    if (key === 'Escape') {
+      const _modal = document.querySelector('.modal[aria-hidden="false"]');
       if (modal) {
         this.closeModal(modal as HTMLElement);
     if (key === 'Escape') {/* TODO: Fix JSX expression */}
@@ -102,15 +106,16 @@ const _modal = document.querySelector('.modal[aria-hidden="false"]');
 
     if (!menu) return;
 
-    e.preventDefault();";
-const _items = Array.from(menu.querySelectorAll('[role="menuitem"]'));
+    e.preventDefault();"
+    const _items = Array.from(menu.querySelectorAll('[role="menuitem"]'));
     //     const currentIndex = items.indexOf(element);
     let _nextIndex = currentIndex;
 
     switch (key) {/* TODO: Fix JSX expression */}
     }
 
-    (items[nextIndex] as HTMLElement).focus()}
+    (items[nextIndex] as HTMLElement).focus();
+  }
 
   /**
    * Setup focus management;
@@ -120,30 +125,35 @@ const _items = Array.from(menu.querySelectorAll('[role="menuitem"]'));
 
     // Track focus changes;
     document.addEventListener('focusin', e => {)
-      this.manageFocus(e.target as HTMLElement)});
+      this.manageFocus(e.target as HTMLElement)
+  });
 
     // Trap focus in modals;
-    document.addEventListener('keydown', e => {)
+    document.addEventListener('keydown', e => {
+    )
       if (e.key === 'Tab') {
-        this.trapFocusInModal(e)}
+        this.trapFocusInModal(e)
+  }
   private setupFocusManagement(): void {/* TODO: Fix JSX expression */}
     });
 
     // Trap focus in modals;
     document.addEventListener('keydown', e => {/* TODO: Fix JSX expression */}
       })
-    })}
+    });
+  }
 
   /**
    * Manage focus for better accessibility;
    */
   private manageFocus(element: HTMLElement): void {
-    // Add focus indicators;
-    element.classList.add('focus-visible');
+    // Add focus indicators
+    element.classList.add('focus-visible'),
 ,
     // Remove focus indicator after blur;
     element.addEventListener('blur', () => {
-      element.classList.remove('focus-visible')});
+      element.classList.remove('focus-visible')
+  });
 
     // Announce focus changes to screen readers;
     if (this.config.enableScreenReaderSupport) {
@@ -153,17 +163,18 @@ const _items = Array.from(menu.querySelectorAll('[role="menuitem"]'));
 
     // Announce focus changes to screen readers;
     if (this.config.enableScreenReaderSupport) {/* TODO: Fix JSX expression */}
-      this.announceToScreenReader(`Focused on ${this.getElementDescription(element)}`)}
+      this.announceToScreenReader(`Focused on ${this.getElementDescription(element)}`);
+    }
   }
 
   /**
    * Trap focus in modal;
    */
-  private trapFocusInModal(e: KeyboardEvent): void {;
-const _modal = document.querySelector('.modal[aria-hidden="false"]');
-    if (!modal) return;
-,;
-const focusableElements = modal.querySelectorAll()
+  private trapFocusInModal(e: KeyboardEvent): void {
+    const _modal = document.querySelector('.modal[aria-hidden="false"]')
+    if (!modal) return,
+,
+    const focusableElements = modal.querySelectorAll()
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     const _firstElement = focusableElements[0] as HTMLElement;
@@ -171,7 +182,8 @@ const focusableElements = modal.querySelectorAll()
 
     if (e.shiftKey && document.activeElement === firstElement) {
       e.preventDefault();
-      lastElement.focus()} else if (!e.shiftKey && document.activeElement === lastElement) {
+      lastElement.focus()
+  } else if (!e.shiftKey && document.activeElement === lastElement) {
       e.preventDefault();
       firstElement.focus();
   private trapFocusInModal(e: KeyboardEvent): void {/* TODO: Fix JSX expression */}
@@ -186,47 +198,48 @@ const focusableElements = modal.querySelectorAll()
     if (!this.config.enableARIALabels) return;
 
     // Add ARIA labels to buttons without text;
-    const _buttons = document.querySelectorAll('button: not([aria-label])');
-    buttons.forEach(button => {),;
-const _icon = button.querySelector('svg, i');
-      if (icon && !button.textContent?.trim()) {;
-const _label = this.generateARIALabel(button);
+    const _buttons = document.querySelectorAll('button: not([aria-label])'),
+    buttons.forEach(button => {),
+      const _icon = button.querySelector('svg, i');
+      if (icon && !button.textContent?.trim()) {
+        const _label = this.generateARIALabel(button);
         button.setAttribute('aria-label', label);
   private enhanceARIALabels(): void {/* TODO: Fix JSX expression */}
       }
     });
 
     // Add ARIA labels to form inputs;
-    const _inputs = document.querySelectorAll('input: not([aria-label]):not([aria-labelledby])');
-    inputs.forEach(input => {),;
-const _label = this.findAssociatedLabel(input as HTMLInputElement);
+    const _inputs = document.querySelectorAll('input: not([aria-label]):not([aria-labelledby])'),
+    inputs.forEach(input => {
+    ),
+      const _label = this.findAssociatedLabel(input as HTMLInputElement);
       if (label) {,
-        input.setAttribute('aria-labelledby', label.id || this.generateId(label))}
+        input.setAttribute('aria-labelledby', label.id || this.generateId(label))
+  }
     const _inputs = document.querySelectorAll('inpu)
-  t:not([aria-label]):not([aria-labelledby])');
+  t: not([aria-label]):not([aria-labelledby])'),
     inputs.forEach(input => {/* TODO: Fix JSX expression */}
       })
     });
 
     // Add ARIA descriptions;
-    this.addARIADescriptions()}
+    this.addARIADescriptions();
+  }
 
   /**
    * Check color contrast;
    */
   private checkColorContrast(): void {
     if (!this.config.enableColorContrastCheck) return;
-;
-const _elements = document.querySelectorAll('*');
-    elements.forEach(element => {
-return (
-);
-const _styles = window.getComputedStyle(element);
+
+    const _elements = document.querySelectorAll('*');
+    elements.forEach(element => {)
+      const _styles = window.getComputedStyle(element);
       //       const color = styles.color;
       //       const backgroundColor = styles.backgroundColor;
 
-      if (color && backgroundColor && backgroundColor !== 'rgba(0, 0, 0, 0)') {;
-const _contrast = this.calculateContrast(color, backgroundColor);
+      if (color && backgroundColor && backgroundColor !== 'rgba(0, 0, 0, 0)') {
+        const _contrast = this.calculateContrast(color, backgroundColor);
         if (contrast < 4.5) {
           this.addIssue({)
             type: 'warning'),
@@ -239,39 +252,42 @@ const _contrast = this.calculateContrast(color, backgroundColor);
             fi,
   x: 'Increase color contrast to at least 4.5:1',
             severit,
-  y: 'high'})}
+  y: 'high'});
+        }
       }
-    })}
+    });
+  }
 
   /**
    * Optimize images for accessibility;
    */
-  private optimizeImages(): void {;
-const _images = document.querySelectorAll('img');
+  private optimizeImages(): void {
+    const _images = document.querySelectorAll('img');
 
-    images.forEach(img =>
-);
-} {)
+    images.forEach(img => {)
       // Add alt text if missing;)
       if (!img.alt) {
         img.alt = this.generateAltText(img);
         this.addIssue({)
           type: 'error')
-          element: img;)
+          element: img,)
           message: 'Image missing alt text'),
           fix: 'Add descriptive alt text'),
-          severity: 'high')})}
+          severity: 'high')});
+      }
 
       // Add loading="lazy" for non-critical images;
       if (!img.hasAttribute('loading')) {
-        img.loading = 'lazy'}
+    img.loading = 'lazy'
+  }
 
       // Add width and height attributes;
       if (!img.hasAttribute('width') || !img.hasAttribute('height')) {
         img.width = img.naturalWidth || 800;
         img.height = img.naturalHeight || 600;
   private optimizeImages(): void {/* TODO: Fix JSX expression */}
-        })}
+        });
+      }
 "
       // Add loading="lazy" for non-critical images;
       if (!img.hasAttribute('loading')) {/* TODO: Fix JSX expression */}
@@ -280,22 +296,23 @@ const _images = document.querySelectorAll('img');
       // Add width and height attributes;
       if (!img.hasAttribute('width') || !img.hasAttribute('height')) {/* TODO: Fix JSX expression */}
       }
-    })}
+    });
+  }
 
   /**
    * Enhance forms for accessibility;
    */
-  private enhanceForms(): void {;
-const _forms = document.querySelectorAll('form');
+  private enhanceForms(): void {
+    const _forms = document.querySelectorAll('form');
 
     forms.forEach(form => {)
-      // Add form labels;);
-const _inputs = form.querySelectorAll('input, select, textarea');
+      // Add form labels;)
+      const _inputs = form.querySelectorAll('input, select, textarea');
       inputs.forEach(input => {)
-        if (!input.hasAttribute('aria-label') && !input.hasAttribute('aria-labelledby')) {;
-const _label = this.findAssociatedLabel(input as HTMLInputElement);
-          if (!label) {;
-const _generatedLabel = this.generateFormLabel(input as HTMLInputElement);
+        if (!input.hasAttribute('aria-label') && !input.hasAttribute('aria-labelledby')) {
+          const _label = this.findAssociatedLabel(input as HTMLInputElement);
+          if (!label) {
+            const _generatedLabel = this.generateFormLabel(input as HTMLInputElement);
             const _labelElement = document.createElement('label');
             labelElement.textContent = generatedLabel;
             labelElement.setAttribute('for', input.id || this.generateId(input));
@@ -310,7 +327,9 @@ const _generatedLabel = this.generateFormLabel(input as HTMLInputElement);
       form.addEventListener('submit', e => {)
         this.validateForm(form as HTMLFormElement, e);
       form.addEventListener('submit', e => {/* TODO: Fix JSX expression */})
-      })})}
+      });
+    });
+  }
 
   /**
    * Add skip links;
@@ -339,16 +358,18 @@ const _generatedLabel = this.generateFormLabel(input as HTMLInputElement);
         position: absolute;
         width: 1 px;
         height: 1 px;
-        padding: 0;
-        margin: -1 px;
-        overflow: hidden;
+        padding: 0
+        margin: -1 px
+        overflow: hidden,
         clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0}
+        white-space: nowrap,
+        border: 0
+  }
   private setupScreenReaderSupport(): void {/* TODO: Fix JSX expression */}
       }`
     `;
-    document.head.appendChild(style)}
+    document.head.appendChild(style);
+  }
 
   /**
    * Generate accessibility report;
@@ -359,17 +380,18 @@ const _generatedLabel = this.generateFormLabel(input as HTMLInputElement);
 
     return {
       score,
-      issues: this.issues;
+      issues: this.issues,
       recommendations,
       timestamp: new Date().toISOString(),
   public generateReport(): AccessibilityReport {/* TODO: Fix JSX expression */}
-    }}
+    }
+  }
 
   /**
    * Calculate accessibility score;
    */
-  private calculateScore(): number {;
-let _score = 100;
+  private calculateScore(): number {
+    let _score = 100;
 
     this.issues.forEach(issue => {)
       switch (issue.severity) {
@@ -386,55 +408,64 @@ let _score = 100;
       }
     });
 
-    return Math.max(0, score)}
+    return Math.max(0, score);
+  }
 
   /**
    * Generate recommendations;
    */
-  private generateRecommendations(): string[] {;
-const recommendations: string[] = [];
-
-    //     const errorCount = this.issues.filter(i => i.type === 'error').length;
-    //     const warningCount = this.issues.filter(i => i.type === 'warning').length;
+  private generateRecommendations(): string[] {
+    const recommendations: string[] = []
+    //     const errorCount = this.issues.filter(i => i.type === 'error').length
+    //     const warningCount = this.issues.filter(i => i.type === 'warning').length,
 ,
     if (errorCount > 0) {,
   private generateRecommendations(): string[] {/* TODO: Fix JSX expression */}`
-      recommendations.push(`Fix ${errorCount} accessibility errors`)}
+      recommendations.push(`Fix ${errorCount} accessibility errors`);
+    }
     if (warningCount > 0) {/* TODO: Fix JSX expression */}`
-      recommendations.push(`Address ${warningCount} accessibility warnings`)}
+      recommendations.push(`Address ${warningCount} accessibility warnings`);
+    }
     if (this.issues.some(i => i.message.includes('alt text'))) {/* TODO: Fix JSX expression */}
     }
     if (this.issues.some(i => i.message.includes('contrast'))) {/* TODO: Fix JSX expression */}
     }
 
-    return recommendations}
+    return recommendations;
+  }
 
   // Helper methods;
-  private generateARIALabel(element: HTMLElement): string {,;
-const _icon = element.querySelector('svg, i');
-    if (icon) {;
-const _iconClass = icon.className;
+  private generateARIALabel(element: HTMLElement): string {,
+    const _icon = element.querySelector('svg, i');
+    if (icon) {
+      const _iconClass = icon.className;
       return iconClass.replace(/fa-|icon-|svg-/g, '').replace(/-/g, ' ');
   private generateARIALabel(elemen)
   t: HTMLElement): string {/* TODO: Fix JSX expression */}
     }
-    return 'Button'}
+    return 'Button';
+  }
 
   private findAssociatedLabel(input: HTMLInputElement): HTMLLabelElement | null {,
     //     const id = input.id;
     if (id) {,
   private findAssociatedLabel(inpu)
   t: HTMLInputElement): HTMLLabelElement | null {/* TODO: Fix JSX expression */}"`
-      return document.querySelector(`label[for="${id}"]`)}
-    return input.closest('label')}
+      return document.querySelector(`label[for="${id}"]`);
+    }
+    return input.closest('label');
+  }
 
   private generateId(element: HTMLElement): string {,
-    return `id-${Math.random().toString(36).substr(2, 9)}`}
+    return `id-${Math.random().toString(36).substr(2, 9)}`;
+  }
 
-  private generateAltText(img: HTMLImageElement): string {,;
-const _src = img['src'];,
+  private generateAltText(img: HTMLImageElement): string {
+    ,
+    const _src = img['src'];,
     //     const filename = src.split('/').pop()?.split('.')[0] || 'image';,
-    return filename.replace(/[-_]/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+    return filename.replace(/[-_]/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+  }
 
   private generateFormLabel(input: HTMLInputElement): string {
     //     const type = input.type;
@@ -446,22 +477,27 @@ const _src = img['src'];,
       case 'email':
         return 'Email address';
       case 'password':
-        return 'Password';
+        return 'Password'
       case 'tel':
-        return 'Phone number';
+        return 'Phone number'
       case 'url':
-        return 'Website URL';
+        return 'Website URL',
       default:,
-        return 'Input field'}
+        return 'Input field'
+  }
   }
 
-  private calculateContrast(color1: string, color2: string): number {,
+  private calculateContrast(color1: string, color2: string): number {
+    ,
     // Simplified contrast calculation;
     // In a real implementation, you'd parse the colors and calculate luminance;
-    return 4.5; // Placeholder}
+    return 4.5; // Placeholder
+  }
 
-  private addIssue(issue: AccessibilityIssue): void {,
-    this.issues.push(issue)}
+  private addIssue(issue: AccessibilityIssue): void {
+    ,
+    this.issues.push(issue)
+  }
 
   private addARIADescriptions(): void {
     // Add ARIA descriptions for complex elements;
@@ -471,7 +507,8 @@ const _src = img['src'];,
       if (description) {
   private generateId(elemen)
   t: HTMLElement): string {/* TODO: Fix JSX expression */}`
-    return `id-${Math.random().toString(36).substr(2, 9)}`}
+    return `id-${Math.random().toString(36).substr(2, 9)}`;
+  }
 
   private generateAltText(im)
   g: HTMLImageElement): string {/* TODO: Fix JSX expression */}
@@ -498,20 +535,25 @@ const _src = img['src'];,
         descElement.textContent = description;
         descElement.className = 'sr-only';
         element.setAttribute('aria-describedby', descId);
-        element.parentNode?.appendChild(descElement)}
-    })}
-
-  private announceToScreenReader(message: string): void {;
-const _liveRegion = document.getElementById('live-region');
-    if (liveRegion) {,
-      liveRegion.textContent = message}
+        element.parentNode?.appendChild(descElement);
+      }
+    });
   }
 
-  private closeModal(modal: HTMLElement): void {,
+  private announceToScreenReader(message: string): void {
+    const _liveRegion = document.getElementById('live-region'),
+    if (liveRegion) {,
+      liveRegion.textContent = message
+  }
+  }
+
+  private closeModal(modal: HTMLElement): void {
+    ,
     modal.setAttribute('aria-hidden', 'true');
     const _focusableElement = modal.querySelector('[data-focus-trap-start]') as HTMLElement;
     if (focusableElement) {
-      focusableElement.focus()}
+      focusableElement.focus()
+  }
   }
 
   private getElementDescription(element: HTMLElement): string {
@@ -519,10 +561,9 @@ const _liveRegion = document.getElementById('live-region');
     if (ariaLabel) return ariaLabel;
 
     //     const text = element.textContent?.trim();
-    if (text) return text;
-
-    //     const alt = element.getAttribute('alt');
-    if (alt) return alt;
+    if (text) return text
+    //     const alt = element.getAttribute('alt')
+    if (alt) return alt,
 ,
     return element.tagName.toLowerCase();
   private announceToScreenReader(messag)

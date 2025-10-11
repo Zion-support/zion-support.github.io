@@ -1,39 +1,34 @@
 'use client';
-
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
 interface Props {/* TODO: Fix JSX expression */}
 }
-
 interface State {/* TODO: Fix JSX expression */}
 }
-
-class EnhancedErrorBoundary extends Component<Props, State> {;
-constructor(props: Props) {,
+class EnhancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {,
     super(props);
-    this.state = { hasError: false }}
-
+    this.state = { hasError: false };
+  }
   static getDerivedStateFromError(error: Error): State {,
-    return { hasError: true, error }}
-
+    return { hasError: true, error };
+  }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
     this.setState({)
       error),
-      errorInfo});
-
+      errorInfo;
+    });
     // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {
-      // // console.error removed for production
-}
-
+      // console.error('Error caught by boundary:', error, errorInfo);
+    }
     // Call custom error handler if provided;
     if (this.props.onError) {
-      this.props.onError(error, errorInfo)}
-
+      this.props.onError(error, errorInfo);
+    }
     // Enhanced error reporting;
     if (this.props.enableErrorReporting) {
-      this.reportError(error, errorInfo)}
-
+      this.reportError(error, errorInfo);
+    }
     // Log to console in development;
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console;
@@ -41,9 +36,9 @@ constructor(props: Props) {,
     // In production, you might want to send this to an error reporting service;
     if (process.env.NODE_ENV === 'production') {
       // Example: send to error reporting service;
-      // errorReportingService.captureException(error, { extra: errorInfo })}
+      // errorReportingService.captureException(error, { extra: errorInfo });
+    }
   }
-
       return(<div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
       return (
@@ -62,42 +57,37 @@ constructor(props: Props) {,
             <div className="space-y-4"></div>
               <button
                 onClick={() => window.location.reload()}
-                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-indigo-700 transition-colors"
-              >
+                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-indigo-700 transition-colors">
                 Refresh Page;
               </button>,
               <button;
                 onClick={() => window.history.back()}
                 className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover: bg-gray-300 transition-colors"
 class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
-  r: false }}
-
+  r: false };
+  }
   static getDerivedStateFromError(erro)
   r: Error): State {/* TODO: Fix JSX expression */}
-  r: true, error }}
-
+  r: true, error };
+  }
   componentDidCatch(erro,
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
     });
-
     // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
     }
-
     // Call custom error handler if provided;
     if (this.props.onError) {/* TODO: Fix JSX expression */}
     }
-
     // Enhanced error reporting;
     if (this.props.enableErrorReporting) {/* TODO: Fix JSX expression */}
     }
-
     // Log to console in development;
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
-  a: errorInfo })}
+  a: errorInfo });
+    }
   }
-
       return (<div className="min-h-screen flex items-center justify-center bg-gray-50"></div>"
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>"
             <div className="text-6xl mb-4">⚠️</div>"
@@ -137,9 +127,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
             )}
           </div>
         </div>
-      )}
-
-    return this.props.children}
+      );
+    }
+    return this.props.children;
+  }
 }
-
 export default EnhancedErrorBoundary;"

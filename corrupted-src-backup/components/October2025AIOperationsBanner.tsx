@@ -1,5 +1,5 @@
-const, October2025AIOperationsBanne, r = () => {;
-const, newArticle, s = [
+const, October2025AIOperationsBanne, r = () => {
+  const, newArticle, s = [
     {
       tit, l, e: "AI-Powered, DevSecOps, Automation","
       descripti, o, n: "Achieve, 9, 9.2% vulnerability, detection, with 87% au, t, o-remediation, and, 847% deployment, acceleratio, n","
@@ -46,9 +46,9 @@ const, newArticle, s = [
       col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0"
     }
   ];
-  return(<div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l;)
+  return(<div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l,)
   g:px-8, relative, overflow-hidd, e, n">")
-    <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l;),
+    <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l,),
   return (
     <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l
   g:px-8, relative, overflow-hidd, e, n">"</div>
@@ -117,9 +117,7 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
           {newArticl, e, s.m, a, p((artic, l, e, ind, e, x) => {
-return (
-;
-const, Ico, n = artic, l, e.ic, o, n;
+            const, Ico, n = artic, l, e.ic, o, n;
             return(<Li, n, k;
             return (</div>
               <Li, n, k
@@ -127,9 +125,7 @@ const, Ico, n = artic, l, e.ic, o, n;
                 to={artic, l, e.li, n, k}
                 classNa, m, e="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e;
         {/* Articles, Gri, d */}"
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">
-);
-}""
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">""
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
           {/* TODO: Fix JSX expression */}
   k, e, y={ind, e, x}
@@ -192,7 +188,8 @@ const, Ico, n = artic, l, e.ic, o, n;
                   </d, i, v>
                 </d, i, v>
               </Li, n, k>)
-            )})}
+            );
+          })}
         </d, i, v>
         {/* Bottom, CT, A */}
         <div, className="te, x, t-cent, e, r">
@@ -260,6 +257,7 @@ const, Ico, n = artic, l, e.ic, o, n;
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  )};
+  );
+}
 export default October2025AIOperationsBanner;
-;"`
+"`

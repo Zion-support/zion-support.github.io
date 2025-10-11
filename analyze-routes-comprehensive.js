@@ -236,16 +236,17 @@ const results = {
   working: [],
   broken: [],
   errors: [],
-  total: 0};
+  total: 0;
+};
 
 // Helper function to make HTTP requests;
 function makeRequest(url) {
-  return new Promise((resolve, reject) => {;
-const urlObj = new URL(url);
+  return new Promise((resolve, reject) => {
+    const urlObj = new URL(url);
     const isHttps = urlObj.protocol === 'https: ';
     const client = isHttps ? https : http;
-    ;
-const requestOptions = {
+    
+    const requestOptions = {
       hostname: urlObj.hostname;
       port: urlObj.port || (isHttps ? 443 : 80)
       path: urlObj.pathname + urlObj.search;
@@ -258,84 +259,98 @@ const requestOptions = {
         'Connection': 'keep-alive',
         'Upgrade-Insecure-Requests': '1'
       },
-      timeout: TIMEOUT};
-;
-const req = client.request(requestOptions, (res) => {;
-let data = '';
+      timeout: TIMEOUT;
+    };
+
+    const req = client.request(requestOptions, (res) => {
+      let data = '';
       
       res.on('data', (chunk) => {
-        data += chunk});
+        data += chunk;
+      });
       
       res.on('end', () => {
         resolve({)
           statusCode: res.statusCode;)
           headers: res.headers),
           body: data),
-          url: url})})});
+          url: url;
+        });
+      });
+    });
 
     req.on('error', (error) => {
-      reject(error)});
+      reject(error);
+    });
 
     req.on('timeout', () => {
       req.destroy();
-      reject(new Error('Request timeout'))});
+      reject(new Error('Request timeout'));
+    });
 
     req.setTimeout(TIMEOUT);
-    req.end()})}
+    req.end();
+  });
+}
 
 // Analyze a single route;
-async function analyzeRoute(route) {;
-const url = BASE_URL + route;
+async function analyzeRoute(route) {
+  const url = BASE_URL + route;
   results.total++;
   
   try {
-    // console.log removed for production
-const response = await makeRequest(url);
+    console.log(`Checking: ${url}`);
+    const response = await makeRequest(url);
     
     if (response.statusCode >= 200 && response.statusCode < 300) {
       results.working.push({)
         route: route),
         url: url),
-        statusCode: response.statusCode});
-      // console.log removed for production
-} else {
+        statusCode: response.statusCode;
+      });
+      console.log(`✅ ${route} - ${response.statusCode}`);
+    } else {
       results.broken.push({)
         route: route;),
         url: url),
         statusCode: response.statusCode),
         reason: `HTTP ${response.statusCode}`
       });
-      // console.log removed for production
-}
+      console.log(`❌ ${route} - ${response.statusCode}`);
+    }
   } catch (error) {
     results.errors.push({)
       route: route),
       url: url),
-      error: error.message});
-    // console.log removed for production
-}
+      error: error.message;
+    });
+    console.log(`⚠️  ${route} - Error: ${error.message}`);
+  }
 }
 
 // Main analysis function;
 async function analyzeAllRoutes() {
-  // console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// Process routes in batches to avoid overwhelming the server;
+  console.log('Starting comprehensive route analysis...');
+  console.log(`Base URL: ${BASE_URL}`);
+  console.log(`Total routes to check: ${definedRoutes.length}`);
+  console.log('---');
+
+  // Process routes in batches to avoid overwhelming the server;
   const batchSize = 10;
-  for (let i = 0; i < definedRoutes.length; i += batchSize) {;
-const batch = definedRoutes.slice(i, i + batchSize);
+  for (let i = 0; i < definedRoutes.length; i += batchSize) {
+    const batch = definedRoutes.slice(i, i + batchSize);
     const promises = batch.map(route => analyzeRoute(route));
     
     try {
-      await Promise.all(promises)} catch (error) {
-      // console.log removed for production
-}
+      await Promise.all(promises);
+    } catch (error) {
+      console.log(`Batch error: ${error.message}`);
+    }
     
     // Small delay between batches;
     if (i + batchSize < definedRoutes.length) {
-      await new Promise(resolve => setTimeout(resolve, 1000))}
+      await new Promise(resolve => setTimeout(resolve, 1000));
+    }
   }
 
   // Generate report;
@@ -346,33 +361,38 @@ const batch = definedRoutes.slice(i, i + batchSize);
       total: results.total;
       working: results.working.length;
       broken: results.broken.length;
-      errors: results.errors.length},
+      errors: results.errors.length;
+    },
     working: results.working;
     broken: results.broken;
-    errors: results.errors};
+    errors: results.errors;
+  };
 
   // Save detailed report;
   fs.writeFileSync('route-analysis-report.json', JSON.stringify(report, null, 2));
   
   // Generate summary;
-  // console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-if (results.broken.length > 0) {
-    // console.log removed for production
-results.broken.forEach(route => {)
-      // console.log removed for production
-})}
+  console.log('\n=== ROUTE ANALYSIS SUMMARY ===');
+  console.log(`Total Routes Checked: ${results.total}`);
+  console.log(`Working Routes: ${results.working.length}`);
+  console.log(`Broken Routes: ${results.broken.length}`);
+  console.log(`Error Routes: ${results.errors.length}`);
+  
+  if (results.broken.length > 0) {
+    console.log('\n=== BROKEN ROUTES ===');
+    results.broken.forEach(route => {)
+      console.log(`❌ ${route.route} - ${route.reason}`);
+    });
+  }
 
   if (results.errors.length > 0) {
-    // console.log removed for production
-results.errors.forEach(route => {)
-      // console.log removed for production
-})}
+    console.log('\n=== ERROR ROUTES ===');
+    results.errors.forEach(route => {)
+      console.log(`⚠️  ${route.route} - ${route.error}`);
+    });
+  }
 
-  // console.log removed for production
+  console.log('\nDetailed report saved to: route-analysis-report.json');
 }
 
 // Run the analysis;

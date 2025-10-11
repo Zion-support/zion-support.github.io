@@ -1,47 +1,41 @@
 import React from 'react';
 'use client';
-
-
 interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
-;
 const,
   SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     }
-    
     // Add breadcrumb structured data;
     addBreadcrumbStructuredData();
-    
     // Add FAQ structured data;
     addFAQStructuredData();
-    
     // Add organization structured data;
-    addOrganizationStructuredData()}, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
-;
-const updateMetaTag = (nam,
+    addOrganizationStructuredData();
+  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
+  const updateMetaTag = (nam,
   e: string, conten,
   t: string, attribut)
   e: string = 'name') => {/* TODO: Fix JSX expression */}
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
     if (!meta) {/* TODO: Fix JSX expression */}
     }
-    meta.setAttribute('content', content)};
-;
-const updateCanonicalUrl = (ur)
+    meta.setAttribute('content', content);
+  }
+  const updateCanonicalUrl = (ur)
   l: string) => {/* TODO: Fix JSX expression */}
     }
-    canonical.setAttribute('href', url)};
-;
-const addStructuredData = (dat)
+    canonical.setAttribute('href', url);
+  }
+  const addStructuredData = (dat)
   a: any) => {/* TODO: Fix JSX expression */}
     }
-    document.head.appendChild(script)};
-;
-const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */}
+    document.head.appendChild(script);
+  }
+  const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */}
         }
       ]
-    };
+    }
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(breadcrumbData);
@@ -50,9 +44,9 @@ const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */}
     const existing = document.getElementById('breadcrumb-structured-data');
     if (existing) {/* TODO: Fix JSX expression */}
     }
-    document.head.appendChild(script)};
-;
-const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
+    document.head.appendChild(script);
+  }
+  const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
           }
         },
         {/* TODO: Fix JSX expression */}
@@ -62,7 +56,7 @@ const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
           }
         }
       ]
-    };
+    }
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(faqData);
@@ -71,9 +65,9 @@ const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
     const existing = document.getElementById('faq-structured-data');
     if (existing) {/* TODO: Fix JSX expression */}
     }
-    document.head.appendChild(script)};
-;
-const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
+    document.head.appendChild(script);
+  }
+  const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
       },
       'address': {/* TODO: Fix JSX expression */}
       },
@@ -83,7 +77,7 @@ const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
         'http,
   s://linkedin.com/company/ziontechgroup'
       ]
-    };
+    }
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(organizationData);
@@ -91,12 +85,9 @@ const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
     // Remove existing organization data;
     const existing = document.getElementById('organization-structured-data');
     if (existing) {/* TODO: Fix JSX expression */}
-
     }
-  };
-;
-const mergedSEOData = { ...defaultSEOData, ...seoData };
-
+  }
+  const mergedSEOData = { ...defaultSEOData, ...seoData }
   useEffect(() => {
     // Log SEO optimization
     logger.info('SEO optimization applied', { 
@@ -104,7 +95,6 @@ const mergedSEOData = { ...defaultSEOData, ...seoData };
       title: mergedSEOData.title,
       description: mergedSEOData.description 
     });
-
     // Track page view for analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
@@ -113,9 +103,9 @@ const mergedSEOData = { ...defaultSEOData, ...seoData };
         custom_map: {
           page_type: page
         }
-      })}
+      });
+    }
   }, [mergedSEOData, page]);
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -128,10 +118,8 @@ const mergedSEOData = { ...defaultSEOData, ...seoData };
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="format-detection" content="telephone=no,address=no,email=no" />
       <meta name="color-scheme" content="dark light" />
-
       {/* Canonical URL */}
       <link rel="canonical" href={mergedSEOData.canonical} />
-
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={mergedSEOData.ogType} />
       <meta property="og:url" content={mergedSEOData.canonical} />
@@ -142,7 +130,6 @@ const mergedSEOData = { ...defaultSEOData, ...seoData };
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-
       {/* Twitter */}
       <meta property="twitter:card" content={mergedSEOData.twitterCard} />
       <meta property="twitter:url" content={mergedSEOData.canonical} />
@@ -151,35 +138,29 @@ const mergedSEOData = { ...defaultSEOData, ...seoData };
       <meta property="twitter:image" content={mergedSEOData.ogImage} />
       <meta property="twitter:creator" content="@ziontechgroup" />
       <meta property="twitter:site" content="@ziontechgroup" />
-
       {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#0f172a" />
       <meta name="msapplication-TileColor" content="#0f172a" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-
       {/* Favicon */}
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="icon" type="image/png" href="/favicon.png" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       <link rel="manifest" href="/manifest.json" />
-
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.googletagmanager.com" />
-
       {/* DNS Prefetch for performance */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(mergedSEOData.structuredData)}
       </script>
-
       {/* Additional structured data for services */}
       <script type="application/ld+json">
         {JSON.stringify({
@@ -226,10 +207,8 @@ const mergedSEOData = { ...defaultSEOData, ...seoData };
         })}
       </script>
     </Helmet>
-  )};
-
-
+  );
+}
 SEOOptimizer.displayName = 'SEOOptimizer';
 export default SEOOptimizer;"`
-
-
+  </SEOOptimizerProps>

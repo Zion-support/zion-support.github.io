@@ -4,12 +4,13 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 // const __filename = fileURLToPath(import.meta.url);
-// // __dirname removed
+// const __dirname = path.dirname(__filename);
+
 // // Optimize CSS;
 function optimizeCSS() {
 //   const cssPath = path.join(process.cwd(), '.next/static/css');
-  if (fs.existsSync(cssPath)) {;
-const _files = fs.readdirSync(cssPath);
+  if (fs.existsSync(cssPath)) {
+    const _files = fs.readdirSync(cssPath);
     files.forEach(file => {)
       if (file.endsWith('.css')) {
 //         const filePath = path.join(cssPath, file);
@@ -24,7 +25,8 @@ function optimizeCSS() {/* TODO: Fix JSX expression */}
         content = content.replace(/;\s*}/g, '}');
         content = content.replace(/,\s+/g, ',');
         
-        fs.writeFileSync(filePath, content)}
+        fs.writeFileSync(filePath, content);
+      }
     });
 //     }
 }
@@ -32,8 +34,8 @@ function optimizeCSS() {/* TODO: Fix JSX expression */}
 // Optimize JavaScript bundles;
 function optimizeJS() {
 //   const jsPath = path.join(process.cwd(), '.next/static/chunks');
-  if (fs.existsSync(jsPath)) {;
-const _files = fs.readdirSync(jsPath);
+  if (fs.existsSync(jsPath)) {
+    const _files = fs.readdirSync(jsPath);
     files.forEach(file => {)
       if (file.endsWith('.js')) {
 //         const filePath = path.join(jsPath, file);
@@ -50,7 +52,8 @@ function optimizeJS() {/* TODO: Fix JSX expression */}
   if (fs.existsSync(jsPath)) {/* TODO: Fix JSX expression */}
         }
         
-        fs.writeFileSync(filePath, content)}
+        fs.writeFileSync(filePath, content);
+      }
     });
 //     }
 }

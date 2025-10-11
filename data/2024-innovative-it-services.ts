@@ -1,4 +1,3 @@
-import React from 'react';
 export interface InnovativeITService2024 {id: string;
   name: string;
   tagline: string;
@@ -27,16 +26,17 @@ export interface InnovativeITService2024 {id: string;
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
+  contactInfo: unknown
+    mobile: string
+    email: string,
     address: string}
     website: string}
-};
+}
   realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  reviews: number}
+  implementationDetails: string
+  launchDate: string
+  reviews: number,
+}
 export const innovativeITServices2024: InnovativeITService2024[] = [
     id: "autonomous-devops-platform",
     name: "Autonomous DevOps Platform",
@@ -56,49 +56,47 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       "Integration with popular DevOps tools",
       "White-label solution for MSPs"
     ],
-    popular: true;
-    icon: '',
-    color: 'from-blue-500 to-cyan-600',
+    popular: true,
+    icon: ""
+    color: "from-blue-500 to-cyan-600",
     textColor: "text-blue-400",
     link: "https://ziontechgroup.com/autonomous-devops",
     marketPosition: "Competitive with GitLab ($99/user/month), Jenkins (free), and CircleCI ($15/month). Our advantage: AI-powered automation, self-healing capabilities, and comprehensive infrastructure management.",
     targetAudience: "DevOps teams, Software companies, IT departments, Cloud service providers, Managed service providerstups",
-    trialDays: 14;
+    trialDays: 14,
     setupTime: "2 hours",
     category: "DevOps & Infrastructure",
-    realService: true;
+    realService: true,
     technology: ["React", "Node.js", "Python", "Kubernetes", "Docker", "AWS", "Azure", "GCP"],
     integrations: ["GitHub", "GitLab", "Jenkins", "CircleCI", "AWS CodePipeline", "Azure DevOps"],
     useCases: ["Continuous integration and deployment", "Infrastructure monitoring", "Performance optimization", "Security automation", "Disaster recovery"],
     roi: "Average customer reduces DevOps overhead by 60% and improves deployment frequency by 300% within 4 months.",
     competitors: ["GitLab", "Jenkins", "CircleCI", "GitHub Actions", "Azure DevOps"],
-marketSize: '$8.2B market',
-    growthRate: '20.1% annual growth',
-    variant: 'ai-futuristic',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+    marketSize: "$8.2B market"
+    growthRate: "20.1% annual growth"
+    variant: "ai-futuristic"
+    contactInfo: unknown,
+      mobile: "+1 302 464 0950"
+      email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup.com"},
-    realImplementation: true;
+    realImplementation: true,
     implementationDetails: "Production-ready DevOps platform with AI-powered automation, real-time monitoring, and comprehensive infrastructure management capabilities.",
-    launchDate: '2024-01-15',
-    customers:
-        customers: 950;
-    rating: 4.8;
-    reviews: 520;
+    launchDate: "2024-01-15"
+    customers: 950
+    rating: 4.8
+    reviews: 520,
 export interface InnovativeITService2024 {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-};
+}
   realImplementatio,
-  n: boolean;
+  n: boolean,
   implementationDetail,
-  s: string;
+  s: string,
   launchDat,
-  e: string;
+  e: string,
   review,
   s: number}
 export const,
@@ -137,13 +135,11 @@ export const,
     textColo,"
   r: "text-blue-400",
     lin,"
-  k: 'http,',
-  s:
-        s://ziontechgroup.com/autonomous-devops",
+  k: "http,"
+  s://ziontechgroup.com/autonomous-devops",
     marketPositio,"
-  n: 'Competitive with GitLab ($99/user/month), Jenkins (free), and CircleCI ($15/month). Our,',
-  advantage:
-        advantage: AI-powered automation, self-healing capabilities, and comprehensive infrastructure management.",
+  n: "Competitive with GitLab ($99/user/month), Jenkins (free), and CircleCI ($15/month). Our,"
+  advantage: AI-powered automation, self-healing capabilities, and comprehensive infrastructure management.",
     targetAudienc,"
   e: "DevOps teams, Software companies, IT departments, Cloud service providers, Managed service providerstups",
     trialDay,
@@ -167,8 +163,8 @@ export const,
     marketSiz,"
   e: "$8.2B market",
     growthRat,"
-  e: "20.1% annual growth",;
-varian,"
+  e: "20.1% annual growth",
+    varian,"
   t: "ai-futuristic",
     contactInf,
   o: unknown,
@@ -179,9 +175,8 @@ varian,"
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709",
       websit,"
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
+  e: "http,"
+  s://ziontechgroup.com"
     },
     realImplementatio,
   n: true,
@@ -197,42 +192,42 @@ varian,"
   s: 520}
 ];
 export interface InnovativeITService2024,
-  id: string; nam,
-  e: string; taglin,
-  e: string; pric,
+  id: string, nam,
+  e: string, taglin,
+  e: string, pric,
   e: string, perio,
   d: string, descriptio,
-  n: string; feature,
-  s: string[]; ratin,
-  g: number; customer,
-  s: number; popula,
-  r: boolean; ico,
-  n: string; colo,
-  r: string; textColo,
-  r: string; lin,
-  k: string; marketPositio,
-  n: string; targetAudienc,
-  e: string; trialDay,
-  s: number; setupTim,
-  e: string; categor,
-  y: string; realServic,
-  e: boolean; technolog,
-  y: string[]; integration,
-  s: string[]; useCase,
-  s: string[]; ro,
-  i: string; competitor,
-  s: string[]; marketSiz,
-  e: string; growthRat,
-  e: string; varian,
-  t: string; contactInf,
+  n: string, feature,
+  s: string[], ratin,
+  g: number, customer,
+  s: number, popula,
+  r: boolean, ico,
+  n: string, colo,
+  r: string, textColo,
+  r: string, lin,
+  k: string, marketPositio,
+  n: string, targetAudienc,
+  e: string, trialDay,
+  s: number, setupTim,
+  e: string, categor,
+  y: string, realServic,
+  e: boolean, technolog,
+  y: string[], integration,
+  s: string[], useCase,
+  s: string[], ro,
+  i: string, competitor,
+  s: string[], marketSiz,
+  e: string, growthRat,
+  e: string, varian,
+  t: string, contactInf,
   o: mobil,
-  e: string; emai,
-  l: string; addres,
+  e: string, emai,
+  l: string, addres,
   s: string, websit,
-  e: string }; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; review,
+  e: string } realImplementatio,
+  n: boolean, implementationDetail,
+  s: string, launchDat,
+  e: string, review,
   s: number} export const,
   innovativeITServices2024: InnovativeITService2024[] = [ i,"
   d: "autonomous-devops-platform", nam,"
@@ -246,12 +241,10 @@ export interface InnovativeITService2024,
   n: "⚡", colo,"
   r: "from-blue-500 to-cyan-600", textColo,"
   r: "text-blue-400", lin,"
-  k: 'http,',
-  s:
-        s://ziontechgroup.com/autonomous-devops", marketPositio,"
-  n: 'Competitive with GitLab ($99/user/month), Jenkins (free), and CircleCI ($15/month). Our,',
-  advantage:
-        advantage: AI-powered automation, self-healing capabilities, and comprehensive infrastructure management.", targetAudienc,"
+  k: "http,"
+  s://ziontechgroup.com/autonomous-devops", marketPositio,"
+  n: "Competitive with GitLab ($99/user/month), Jenkins (free), and CircleCI ($15/month). Our,"
+  advantage: AI-powered automation, self-healing capabilities, and comprehensive infrastructure management.", targetAudienc,"
   e: "DevOps teams, Software companies, IT departments, Cloud service providers, Managed service providerstups", trialDay,
   s: 14, setupTim,"
   e: "2 hours", categor,"
@@ -269,9 +262,8 @@ export interface InnovativeITService2024,
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com", addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709", websit,"
-  e: 'http,',
-  s:
-        s://ziontechgroup.com" }, realImplementatio,
+  e: "http,"
+  s://ziontechgroup.com" }, realImplementatio,
   n: true, implementationDetail,"
   s: "Production-ready DevOps platform with AI-powered automation, real-time monitoring, and comprehensive infrastructure management capabilities.", launchDat,"
   e: "2024-01-15", customer,

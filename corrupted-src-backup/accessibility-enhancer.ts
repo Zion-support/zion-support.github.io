@@ -1,13 +1,14 @@
 class AccessibilityEnhancer {
-  private static instance: AccessibilityEnhancer;
-  private isInitialized: boolean = false;
+  private static instance: AccessibilityEnhancer
+  private isInitialized: boolean = false,
 ,
 class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   private constructor() {}
 
   public static getInstance(): AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     }
-    return AccessibilityEnhancer.instance}
+    return AccessibilityEnhancer.instance;
+  }
 
   public initialize(): void {/* TODO: Fix JSX expression */}
   }

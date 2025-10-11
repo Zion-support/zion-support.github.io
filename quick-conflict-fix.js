@@ -3,13 +3,14 @@ const { execSync } = require('child_process');
 
 // //Function to fix a single file;
 function fixFile(filePath) {
-  try {
+    try {
     //Check if file has conflicts;
-    if(!content.includes('      return false}
+    if(!content.includes('      return false
+  }
     )
-//     //Remove conflict markers and choose the better version;);
-const sections = content.split(/)
-);
+//     //Remove conflict markers and choose the better version;)
+    const sections = content.split(/)
+)
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
     }
     

@@ -11,7 +11,6 @@
           conte, n, t='cognitive, automati, o, n, intelligent, automatio, n, R, P, A, AI, workflow, s, process, automatio, n, business, automatio, n, hyperautomati, o, n'
         /></meta>
       </Helm, e, t>
-
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>
         <Head, e, r />
         <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ }
@@ -32,7 +31,6 @@
                 Starting, a, t $, 7,9, 9, 9/mon, t, h;
               </sp, a, n>
             </div>
-
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
               Re, a, l-Time, Cognitive, Automation Platfo, r, m;
               Re, a, l-Time, Cognitive, Automation Platfo, r, m</h1>
@@ -43,7 +41,6 @@
                 Transform, Business, Operations with, Intelligent, Automation;
               </sp, a, n>
             </h1>
-
             <p, className='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'></p>
               Revolutionize, your, business operations, with, AI-powered, workflows, that deliver, instant, decision-ma, k, i, n, g, se, l, f-learning, automatio, n,
               and, 9, 9.97% accura, c, y. Achieve, 8, 7% cost, reduction, and 10x, productivity, gains.</p>
@@ -156,9 +153,11 @@
                       '99.97% S, L, A']}].m, a, p((p, k, g, ind, e, x) => (
                   <div, ke, y = { in, d, e, x }, classNa, m, e = { `bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-purp, l, e-5, 0, 0/50, rin, g-2, rin, g-purp, l, e-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' }`}
                   >
-                    {  p, k, g.popul, a, r  && (</div>
+                    {
+    p, k, g.popul, a, r  && (</div>
                       <div, className='bg-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-full, inlin, e-block, m, b-4'>
-                        MOST, POPULA, R})
+                        MOST, POPULA, R
+  })
                 ].m, a, p((p, k, g, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = { `bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-purp, l, e-5, 0, 0/50, rin, g-2, rin, g-purp, l, e-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' }`}
                   ></div>
                     {/* TODO: Fix JSX expression */})

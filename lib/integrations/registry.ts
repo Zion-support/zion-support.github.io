@@ -15,7 +15,6 @@ export const PROVIDERS: IntegrationProviderMeta[] = [,
   { id: 'workable', name: 'Workable', category: 'ats', description: 'Recruiting software' },
 import type { IntegrationProviderMeta } from './types';
 
-
 export const,
   PROVIDERS: IntegrationProviderMeta[] = [
   {/* TODO: Fix JSX expression */}
@@ -97,13 +96,9 @@ export const,
 
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
 
-
-
-
   {/* TODO: Fix JSX expression */}
   n: 'HRIS & ATS' }
 ];
-
 
   {/* TODO: Fix JSX expression */}
   n: 'HRIS & ATS' }
@@ -116,7 +111,7 @@ export const,
 export function getProviderById(id: string): IntegrationProviderMeta | undefined {,
     description: 'HRIS & ATS'}];
 
-export function getProviderById(id: string;)): IntegrationProviderMeta | undefined {,
+export function getProviderById(id: string,)): IntegrationProviderMeta | undefined {,
   return PROVIDERS.find(p => p.id === id);
 
 export function getProviderById(i)
@@ -124,7 +119,7 @@ export function getProviderById(i)
   }];
 
 export function getProviderById(i,
-  d: string;)
+  d: string,)
 ): IntegrationProviderMeta | undefined {/* TODO: Fix JSX expression */}
 }
 

@@ -146,15 +146,11 @@
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -538,15 +534,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -930,15 +922,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -1322,15 +1310,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -1714,15 +1698,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -2106,15 +2086,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -2498,15 +2474,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -2890,15 +2862,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -3282,15 +3250,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -3674,15 +3638,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -4066,15 +4026,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = } res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = } res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -4458,15 +4414,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = } res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = } res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -4854,15 +4806,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}}' header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -5250,15 +5198,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}}' header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -5507,8 +5451,7 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   s:  ,3, logFil,
   e:} this.initialize()} this.setupLogging(); this.validateConfiguration(); this.ensureLogDirectory(); setupLogging() {/* TODO: Fix JSX expression */}
   g: = message => { const timestamp = new Date().toISOString()} cons,`
-  t: logMessage = `[${timestamp}] ${message}`; // // console.log removed for production
-} this.error = (message) error) => { const timestamp = new Date().toISOString()} } validateConfiguration() {' if (!this.config.netlifySiteId) {'' this.error('NETLIFY_SITE_ID environment variable is required)' ');' throw new Error('Missing NETLIFY_SITE_ID}' ')}' if (!this.config.netlifyToken) {'' this.error('NETLIFY_TOKEN environment variable is required)' ');' throw new Error('Missing NETLIFY_TOKEN}' ')}' this.log('Netlify configuration validated successfully)' ')} ensureLogDirectory() {/* TODO: Fix JSX expression */}
+  t: logMessage = `[${timestamp}] ${message}`; // console.log(logMessage)} this.error = (message) error) => { const timestamp = new Date().toISOString()} } validateConfiguration() {' if (!this.config.netlifySiteId) {'' this.error('NETLIFY_SITE_ID environment variable is required)' ');' throw new Error('Missing NETLIFY_SITE_ID}' ')}' if (!this.config.netlifyToken) {'' this.error('NETLIFY_TOKEN environment variable is required)' ');' throw new Error('Missing NETLIFY_TOKEN}' ')}' this.log('Netlify configuration validated successfully)' ')} ensureLogDirectory() {/* TODO: Fix JSX expression */}
   t: logDir = path.dirname(this.config.logFile)} i,
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}
   e: true })} } return} this.isRunnin,
@@ -5741,15 +5684,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -6133,15 +6072,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -6525,15 +6460,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -6917,15 +6848,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -7309,15 +7236,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -7701,15 +7624,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -8093,15 +8012,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -8485,15 +8400,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -8877,15 +8788,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -9269,15 +9176,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -9661,15 +9564,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = } res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = } res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -10053,15 +9952,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = } res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = } res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -10449,15 +10344,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}}' header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -10845,15 +10736,11 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
   d: 'method'}}' header,
   s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {
-return (
-try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
+  n: `Bearer ${this.config.netlifyToken}`,Content-Type`: application/json`;User-Agent': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data)} options.headers['Content-Length'] = Buffer.byteLength(postData)} const req = https.request(options,res => {' let responseData = ''} res.on(')'data'}chunk => { responseData += chunk}) res.on(`end`)() => {try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.parse(responseData)} resolve(parsed)} els,`
   e: { reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))} } catc,
   h: (error) {/* TODO: Fix JSX expression */}`
   response: ${error.messag}e}`))} })}) req.on(error')erro,
-  r: =>
-);
-} {' reject(error)}) i,`
+  r: => {' reject(error)}) i,`
   f: (data) { req.write(JSON.stringify(data))} reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try { return await this.makeNetlifyRequest( `/sites/${this.config.netlifySiteId}`)} catch (error) {this.error( 'Failed to get site info'}error)' retur,`
   n: 'null'} } async getBuilds(limit = 10) { try { return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {this.error( 'Failed to get builds'}error)' retur,`
   n: '[]'} } async getBuildLogs(buildId) { try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {this.error( 'Failed to get build logs'}error)' retur,`
@@ -11102,8 +10989,7 @@ try { if (res.statusCode >= 200 && res.statusCode < 300) { const parsed = JSON.p
   s:  ,3, logFil,
   e:} this.initialize()} this.setupLogging(); this.validateConfiguration(); this.ensureLogDirectory(); setupLogging() {/* TODO: Fix JSX expression */}
   g: = message => { const timestamp = new Date().toISOString()} cons,`
-  t: logMessage = `[${timestamp}] ${message}`; // // // console.log removed for production
-} this.error = (message) error) => { const timestamp = new Date().toISOString()} } validateConfiguration() {' if (!this.config.netlifySiteId) {'' this.error('NETLIFY_SITE_ID environment variable is required)' ');' throw new Error('Missing NETLIFY_SITE_ID}' ')}' if (!this.config.netlifyToken) {'' this.error('NETLIFY_TOKEN environment variable is required)' ');' throw new Error('Missing NETLIFY_TOKEN}' ')}' this.log('Netlify configuration validated successfully)' ')} ensureLogDirectory() {/* TODO: Fix JSX expression */}
+  t: logMessage = `[${timestamp}] ${message}`; // // console.log(logMessage)} this.error = (message) error) => { const timestamp = new Date().toISOString()} } validateConfiguration() {' if (!this.config.netlifySiteId) {'' this.error('NETLIFY_SITE_ID environment variable is required)' ');' throw new Error('Missing NETLIFY_SITE_ID}' ')}' if (!this.config.netlifyToken) {'' this.error('NETLIFY_TOKEN environment variable is required)' ');' throw new Error('Missing NETLIFY_TOKEN}' ')}' this.log('Netlify configuration validated successfully)' ')} ensureLogDirectory() {/* TODO: Fix JSX expression */}
   t: logDir = path.dirname(this.config.logFile)} i,
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}
   e: true })} } return} this.isRunnin,

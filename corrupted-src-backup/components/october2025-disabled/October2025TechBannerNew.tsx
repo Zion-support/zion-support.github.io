@@ -74,7 +74,7 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
               classNa, m, e = "relative, grou, p"
             >
               <Link, t, o={`/bl, o, g/${artic, l, e.slug}`}>
-                <div, className="relative, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6 h-full, border, border-whi, t, e/20, hove, r: bord, e, r-whi, t, e/40, transitio, n-all, duratio, n-3, 0, 0"  > {/* Highlight, Ba, d, g, e */}</div>
+                <div, className="relative, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6 h-full, border, border-whi, t, e/20, hove, r: bord, e, r-whi, t, e/40, transitio, n-all, duratio, n-3, 0, 0"> {/* Highlight, Ba, d, g, e */}</div>
                   <div, classNam, e = {`absolute, to, p-4, righ, t-4, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${artic, l, e.col, o, r}`}>
                     {artic, l, e.highlig, h, t}
                   </d, i, v  > {/* Ic, o, n */}
@@ -84,7 +84,7 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">
             ></moti>
               <Link, t, o={`/bl, o, g/${artic, l, e.slug}`}></Link>"
-                <div, className="relative, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6 h-full, border, border-whi, t, e/20, hove, r: bord, e, r-whi, t, e/40, transitio, n-all, duratio, n-3, 0, 0"  > {/* Highlight, Ba, d, g, e */}`
+                <div, className="relative, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6 h-full, border, border-whi, t, e/20, hove, r: bord, e, r-whi, t, e/40, transitio, n-all, duratio, n-3, 0, 0"> {/* Highlight, Ba, d, g, e */}`
                   <div, classNam, e = {`absolute, to, p-4, righ, t-4, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${artic, l, e.col, o, r}`}></div>
                     {artic, l, e.highlig, h, t}
                   </d, i, v  > {/* Ic, o, n */}`
@@ -119,21 +119,19 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
         <div, classNam, e = "te, x, t-cent, e, r"></div>"
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-center, justif, y-cent, e, r"></div>"
             <Link, t, o="/bl, o, g""
-              className="group, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r:fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-bold, rounde, d-xl, shado, w-lg, hove, r:shad, o, w-xl, transitio, n-all, duratio, n-300, flex, items-center, ga, p-2"
-            ></Link>
+              className="group, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r:fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-bold, rounde, d-xl, shado, w-lg, hove, r:shad, o, w-xl, transitio, n-all, duratio, n-300, flex, items-center, ga, p-2"></Link>
               <sp, a, n>Explore, All, Articles</sp, a, n>"
               <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" /></Link>
             </Li, n, k>"
             <Link, t, o="/conta, c, t""
-              className="px-8, p, y-4, b, g-whi, t, e/10, hove, r:bg-whi, t, e/20, backdro, p-bl, u, r-lg, tex, t-white, fon, t-bold, rounde, d-xl, borde, r-2, borde, r-whi, t, e/30, hove, r:bord, e, r-whi, t, e/50, transitio, n-all, duratio, n-3, 0, 0"
-            >
+              className="px-8, p, y-4, b, g-whi, t, e/10, hove, r:bg-whi, t, e/20, backdro, p-bl, u, r-lg, tex, t-white, fon, t-bold, rounde, d-xl, borde, r-2, borde, r-whi, t, e/30, hove, r:bord, e, r-whi, t, e/50, transitio, n-all, duratio, n-3, 0, 0">
               Get, Expert, Consultation;
             </Li, n, k>
           </div>
           <p, className="mt-6, tex, t-purp, l, e-300, tex, t-sm">
             💡 <stro, n, g>Jo, i, n , 1, 0,0, 0, 0+ tech, leader, s</stro, n, g> staying, ahead, with our, insight, s;
-            💡</p> <stro, n, g>Jo, i, n , 1, 0,0, 0, 0+ tech, leader, s</stro, n, g> staying, ahead, with our, insight, s
-          </p>
+            💡</p> <stro, n, g>Jo, i, n , 1, 0,0, 0, 0+ tech, leader, s</stro, n, g> staying, ahead, with our, insight, s;
+  </
         </div>
       </div>
       {/* Floating, particles, effect */}
@@ -165,6 +163,7 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
         ))}
       </div></moti>
     </moti, o, n.d, i, v>
-  )};
+  );
+}
 export default October2025TechBannerNew;
 "`

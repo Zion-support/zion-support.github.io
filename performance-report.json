@@ -1,10 +1,19 @@
 {
-  "timestamp": "2025-10-09T01:54:34.096Z",
-  "buildSize": 837,
-  "pageCount": 0,
+  "timestamp": "2025-10-11T01:19:39.598Z",
+  "optimizations": {
+    "images": "completed",
+    "css": "completed",
+    "javascript": "completed"
+  },
+  "buildSize": {
+    "bytes": 1440898,
+    "kb": 1407,
+    "mb": 1.37
+  },
   "recommendations": [
-    "Consider code splitting to reduce bundle size",
-    "Enable gzip compression on server",
-    "Consider using a CDN for static assets"
+    "Enable gzip compression on your server",
+    "Use a CDN for static assets",
+    "Implement lazy loading for images",
+    "Consider using a service worker for caching"
   ]
 }

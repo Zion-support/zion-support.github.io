@@ -1,40 +1,93 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-;
-const ErrorPage: React.FC = () => {const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+import {Helmet}}from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+const ErrorPage: React.FC = () => {
     },
     {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: [''Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'']
     },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: [''Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'']
     },
     {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
-;
-const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: [''Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'']
+    },
+  ];];
   return (
+    <>
+      <Helmet>
+        <title>Error - Zion Tech Group</title>
+        <meta name="description" content="Error page." />
+        <meta name="keywords" content="error, AI solutions, IT services, business transformation" />
+      </Helmet>
+      <Navigation />
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm: px-6 lg:px-8">
+          </section></section><div className="max-w-7xl mx-auto">
+            </div></div><div className="text-center">
+              </div></div><h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                Error;
+  </h1></h1></
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Error page.
+              </p></p></p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                </div></div><button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                  Get Started;
+  </button></button></
+                <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
+                  Learn More,
+  </button></button></
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>)
+    </>)
+  );
+}
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+                Discover how our solutions can help transform your business.
+              </p></p></p>
+            </div>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* CTA Section */}
+          </div>
+        </section>
+      </main>
+      <Footer / /></Footer>
+    </>
+  ),
+};
+
+export default ErrorPage;
+  </button>
+  </h2>
+  </button>
+  </button>
+  </h1>

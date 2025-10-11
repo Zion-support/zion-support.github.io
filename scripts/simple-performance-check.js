@@ -4,11 +4,10 @@ import path from 'path';
 import { execSync } from 'child_process';
 
 // 1. Build size analysis;
-try {;
-const _distPath = path.join(process.cwd(), 'dist');
-  if (fs.existsSync(distPath)) {;
-const _stats = execSync('du -sh dist/*', { encoding: 'utf8' });
-
+try {
+  const _distPath = path.join(process.cwd(), 'dist');
+  if (fs.existsSync(distPath)) {
+    const _stats = execSync('du -sh dist/*', { encoding: 'utf8' });
 
     // Check total size;
     const _totalSize = execSync('du -sh dist', { encoding: 'utf8' }).trim();
@@ -19,7 +18,6 @@ const _stats = execSync('du -sh dist/*', { encoding: 'utf8' });
   } else {
 try {/* TODO: Fix JSX expression */}
   g: 'utf8' });
-
 
     // Check total size;
     const _totalSize = execSync('du -sh dist', {/* TODO: Fix JSX expression */})
@@ -37,8 +35,8 @@ try {/* TODO: Fix JSX expression */}
 }
 
 // 2. Functions count;
-try {;
-const _functionsCount = execSync('find netlify/functions -name "*.js" | wc -l', { encoding: 'utf8' }).trim();
+try {
+  const _functionsCount = execSync('find netlify/functions -name "*.js" | wc -l', { encoding: 'utf8' }).trim();
 
   if (parseInt(functionsCount) < 100) {} else {
 try {/* TODO: Fix JSX expression */}
@@ -52,12 +50,11 @@ try {/* TODO: Fix JSX expression */}
 
 // 3. Check for performance issues;
 // Check for unused dependencies;
-try {;
-const _packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+try {
+  const _packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 try {/* TODO: Fix JSX expression */}
   const _dependencies = Object.keys(packageJson.dependencies || {});
   const _devDependencies = Object.keys(packageJson.devDependencies || {});
-
 
   // Check for potential performance issues;
   const _heavyDeps = ['framer-motion', 'recharts', 'lighthouse'];
@@ -66,8 +63,8 @@ try {/* TODO: Fix JSX expression */}
   );
   
   if (foundHeavyDeps.length > 0) {
-    // // console.log removed for production
-)} else {
+    // console.log('⚠️  Heavy dependencies detected:', foundHeavyDeps.join(', '))
+  } else {
   if (foundHeavyDeps.length > 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
   }
@@ -75,8 +72,8 @@ try {/* TODO: Fix JSX expression */}
 }
 
 // 4. Check build configuration;
-try {;
-const _viteConfig = fs.readFileSync('vite.config.js', 'utf8');
+try {
+  const _viteConfig = fs.readFileSync('vite.config.js', 'utf8');
   const _netlifyToml = fs.readFileSync('netlify.toml', 'utf8');
   
   if (viteConfig.includes('maxParallelFileOps')) {} else {}
@@ -95,13 +92,13 @@ try {/* TODO: Fix JSX expression */}
 // 5. Generate performance report;
 const report = {
   timestamp: new Date().toISOString(),
-  buildSize: execSync('du -sh dist', { encoding: 'utf8' }).trim(),;
-functionsCount: execSync('find netlify/functions -name "*.js" | wc -l', { encoding: 'utf8' }).trim(),
+  buildSize: execSync('du -sh dist', { encoding: 'utf8' }).trim(),
+  functionsCount: execSync('find netlify/functions -name "*.js" | wc -l', { encoding: 'utf8' }).trim(),
   optimizationStatus: 'Completed',
-  improvements: [,;
+  improvements: [,
 const report = {/* TODO: Fix JSX expression */}
-  g: 'utf8' }).trim(),;
-functionsCoun,
+  g: 'utf8' }).trim(),
+  functionsCoun,
   t: execSync('find netlify/functions -name "*.js" | wc -l', {/* TODO: Fix JSX expression */})
   g: 'utf8' }).trim(),
   optimizationStatu,
@@ -120,14 +117,8 @@ functionsCoun,
     'Consider code splitting for large vendor bundle',
     'Monitor bundle size in future builds',
     'Regular cleanup of unused functions']
-};
+}
 
 fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
 
-
-
-
-
-
-report.improvements.forEach(improvement => // // console.log removed for production
-);"`
+report.improvements.forEach(improvement => // console.log(`  ${improvement}`));"`

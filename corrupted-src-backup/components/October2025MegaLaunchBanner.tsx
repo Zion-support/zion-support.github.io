@@ -1,14 +1,14 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";
-const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {;
-const, megaArticle, s = [
+const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {
+  const, megaArticle, s = [
     {
       ti, t, l;
   e: "🚀 Autonomous, DevOps, Platforms","
       descripti, o, n: "Se, l, f-healing, infrastructure, achieving 99.9% upti, m, e","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-04-autonomo, u, s-devo, p, s-platfor, m, s","
-      catego, r, y: "DevO, p, s & Infrastructu, r, e";
+      catego, r, y: "DevO, p, s & Infrastructu, r, e"
 const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -25,14 +25,14 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
 } fr, o, m "rea, c, t-rout, e, r-d, o, m";';
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';
-const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {;
-const, megaArticle, s = [
+const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {
+  const, megaArticle, s = [
     {
       ti, t, l;
   e: "🚀 Autonomous, DevOps, Platforms",";
       descripti, o, n: "Se, l, f-healing, infrastructure, achieving 99.9% upti, m, e",";
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-04-autonomo, u, s-devo, p, s-platfor, m, s",";
-      catego, r, y: "DevO, p, s & Infrastructu, r, e";
+      catego, r, y: "DevO, p, s & Infrastructu, r, e"
 const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -133,5 +133,7 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
         </Li, n, k>
       </d, i, v>
     </d, i, v>
-  )};
-export default October2025MegaLaunchBanner}}"
+  );
+}
+export default October2025MegaLaunchBanner;
+}}"

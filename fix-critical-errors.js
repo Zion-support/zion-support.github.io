@@ -2,18 +2,19 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-;
+
 const __filename = fileURLToPath(import.meta.url);
-// __dirname removed
+const __dirname = path.dirname(__filename);
+
 // Function to fix critical parsing errors;
 function fixCriticalErrors(filePath) {
-  try {;
-let content = fs.readFileSync(filePath, 'utf8');
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
     // Fix merge conflict markers;
     if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
-      // console.log removed for production
+      console.log(`Fixing merge conflicts in: ${filePath}`);
 function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
   in: ${filePath}`);
       const lines = content.split('\n');
@@ -21,25 +22,30 @@ function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
       let inConflict = false;
       let keepCurrent = true;
       
-      for (let i = 0; i < lines.length; i++) {;
-const line = lines[i];
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
         
         if (line.startsWith('<<<<<<<')) {
           inConflict = true;
           keepCurrent = true;
-          continue} else if (line.startsWith('')) {
+          continue;
+        } else if (line.startsWith('')) {
           keepCurrent = false;
-          continue} else if (line.startsWith('>>>>>>>')) {
+          continue;
+        } else if (line.startsWith('>>>>>>>')) {
           inConflict = false;
           keepCurrent = false;
-          continue}
+          continue;
+        }
         
         if (!inConflict || keepCurrent) {
-          result.push(line)}
+          result.push(line);
+        }
       }
       
       content = result.join('\n');
-      modified = true}
+      modified = true;
+    }
     
     // Fix common syntax errors;
     content = content.replace(/export\s+return/g, 'export const rateLimitingMiddleware =');
@@ -61,35 +67,38 @@ const line = lines[i];
     
     // Fix specific patterns;
     if (filePath.includes('App.tsx')) {
-      content = content.replace(/catch\s*{\s*}/g, 'catch (error) { // console.warn removed for production
-}');
+      content = content.replace(/catch\s*{\s*}/g, 'catch (error) { console.warn("Error:", error); }');
     if (filePath.includes('App.tsx')) {/* TODO: Fix JSX expression */}
       content = content.replace(/catch\s*{\s*}/g, 'catch (error) {/* TODO: Fix JSX expression */}
-  r:", error)}')}
+  r:", error); }');
+    }
     
     if (filePath.includes('middleware')) {/* TODO: Fix JSX expression */}
     }
     
     // Write the cleaned content back;
     fs.writeFileSync(filePath, content, 'utf8');
-    return modified} catch (error) {/* TODO: Fix JSX expression */}`
-    // console.error removed for production
-return false}
+    return modified;
+  } catch (error) {/* TODO: Fix JSX expression */}`
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
 }
 
 // Function to find all files that need fixing;
-function findFilesToFix(dir) {;
-const files = [];
-  ;
-function walkDir(currentPath) {;
-const items = fs.readdirSync(currentPath);
+function findFilesToFix(dir) {
+  const files = [];
+  
+  function walkDir(currentPath) {
+    const items = fs.readdirSync(currentPath);
     
-    for (const item of items) {;
-const fullPath = path.join(currentPath, item);
+    for (const item of items) {
+      const fullPath = path.join(currentPath, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        walkDir(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+        walkDir(fullPath);
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         files.push(fullPath);
 function findFilesToFix(dir) {/* TODO: Fix JSX expression */}
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {/* TODO: Fix JSX expression */}
@@ -98,19 +107,19 @@ function findFilesToFix(dir) {/* TODO: Fix JSX expression */}
   }
   
   walkDir(dir);
-  return files}
+  return files;
+}
 
 // Main execution;
 const srcDir = path.join(__dirname, 'src');
-// console.log removed for production
-;
+console.log('Fixing critical parsing errors...');
+
 const filesToFix = findFilesToFix(srcDir);`
-// console.log removed for production
-;
+console.log(`Processing ${filesToFix.length} files`);
+
 let fixedCount = 0;
 for (const file of filesToFix) {/* TODO: Fix JSX expression */}
   }
 }
 `
-// console.log removed for production
-"`
+console.log(`Fixed ${fixedCount} files`);"`

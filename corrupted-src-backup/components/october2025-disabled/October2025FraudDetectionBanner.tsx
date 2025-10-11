@@ -1,9 +1,5 @@
-const October2025FraudDetectionBanne, r = () => {
-return (
- 
-  return(<div, classNam, e = "relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n"  >
-);
-} {/* Animated, background, effects */ }
+const October2025FraudDetectionBanne, r = () => { 
+  return(<div, classNam, e = "relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n"  > {/* Animated, background, effects */ }
       <div, className="absolute, inse, t-0, opacit, y-10">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-r, e, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' }} />
@@ -98,7 +94,7 @@ return (
               </div>
               <d, i, v></d>
                 <div, className="fo, n, t-semibold, tex, t-white, m, b-1">Graph, Intelligenc, e</div>
-                <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">;
+                <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">
 const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
     <div, classNam, e = "relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n"  > {/* Animated, background, effects */ }"
       <div, className="absolute, inse, t-0, opacit, y-10"></div>"
@@ -364,8 +360,7 @@ const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
         {/* Call, to, Action Sec, t, i, o, n */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6"></div>
           <Link, t, o="/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-fra, u, d-detecti, o, n-revoluti, o, n"
-            className="group, b, g-gradie, n, t-to-br, fro, m-r, e, d-600, t, o-r, e, d-700, hove, r:fr, o, m-r, e, d-500, hove, r:to-r, e, d-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-r, e, d-5, 0, 0/50"
-          >
+            className="group, b, g-gradie, n, t-to-br, fro, m-r, e, d-600, t, o-r, e, d-700, hove, r:fr, o, m-r, e, d-500, hove, r:to-r, e, d-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-r, e, d-5, 0, 0/50">
             <Brain, className="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4" />
             <div, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">
               Read, Technical, Deep-Di, v, e;
@@ -379,8 +374,7 @@ const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
             </div>
           </Li, n, k>
           <Link, t, o="/ca, s, e-studi, e, s/glob, a, l-financi, a, l-fra, u, d-detecti, o, n-84, 7, b-succe, s, s"
-            className="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-purp, l, e-700, hove, r:fr, o, m-purp, l, e-500, hove, r:to-purp, l, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50"
-          >
+            className="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-purp, l, e-700, hove, r:fr, o, m-purp, l, e-500, hove, r:to-purp, l, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50">
             <Shield, className="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4" />
             <div, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">
               $847B, Success, Story;
@@ -394,8 +388,7 @@ const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
             </div>
           </Li, n, k>
           <Link, t, o="/servic, e, s/ai-fra, u, d-detecti, o, n-servic, e, s"
-            className="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-bl, u, e-700, hove, r:fr, o, m-bl, u, e-500, hove, r:to-bl, u, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/50"
-          >
+            className="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-bl, u, e-700, hove, r:fr, o, m-bl, u, e-500, hove, r:to-bl, u, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/50">
             <Target, className="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4" />
             <div, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">
               Our, Fraud, Detection Servic, e, s;
@@ -422,8 +415,7 @@ const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
         {/* Call, to, Action Sec, t, i, o, n */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6"></div>"
           <Link, t, o="/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-fra, u, d-detecti, o, n-revoluti, o, n""
-            className="group, b, g-gradie, n, t-to-br, fro, m-r, e, d-600, t, o-r, e, d-700, hove, r:fr, o, m-r, e, d-500, hove, r:to-r, e, d-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-r, e, d-5, 0, 0/50"
-          ></Link>"
+            className="group, b, g-gradie, n, t-to-br, fro, m-r, e, d-600, t, o-r, e, d-700, hove, r:fr, o, m-r, e, d-500, hove, r:to-r, e, d-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-r, e, d-5, 0, 0/50"></Link>"
             <Brain, className="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4" /></Brain>"
             <div, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2"></div>
               Read, Technical, Deep-Di, v, e;
@@ -437,8 +429,7 @@ const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
             </div>
           </Li, n, k>"
           <Link, t, o="/ca, s, e-studi, e, s/glob, a, l-financi, a, l-fra, u, d-detecti, o, n-84, 7, b-succe, s, s""
-            className="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-purp, l, e-700, hove, r:fr, o, m-purp, l, e-500, hove, r:to-purp, l, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50"
-          ></Link>"
+            className="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-purp, l, e-700, hove, r:fr, o, m-purp, l, e-500, hove, r:to-purp, l, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50"></Link>"
             <Shield, className="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4" /></Shield>"
             <div, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2"></div>
               $847B, Success, Story;
@@ -452,8 +443,7 @@ const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
             </div>
           </Li, n, k>"
           <Link, t, o="/servic, e, s/ai-fra, u, d-detecti, o, n-servic, e, s""
-            className="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-bl, u, e-700, hove, r:fr, o, m-bl, u, e-500, hove, r:to-bl, u, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/50"
-          ></Link>"
+            className="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-bl, u, e-700, hove, r:fr, o, m-bl, u, e-500, hove, r:to-bl, u, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/50"></Link>"
             <Target, className="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4" /></Target>"
             <div, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2"></div>
               Our, Fraud, Detection Servic, e, s;
@@ -477,8 +467,7 @@ const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
               Discover, your, fraud expos, u, r, e, quantify, potential, savings, and, receive, a custom, ROI, projection — completely, free, and confidenti, a, l;
             </div>"
             <Link, t, o = "/conta, c, t""
-              className="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-purp, l, e-600, hove, r: fr, o, m-r, e, d-500, hove, r:to-purp, l, e-500, rounde, d-lg, tex, t-white, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-r, e, d-5, 0, 0/50"
-            ></Link>"
+              className="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-purp, l, e-600, hove, r: fr, o, m-r, e, d-500, hove, r:to-purp, l, e-500, rounde, d-lg, tex, t-white, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-r, e, d-5, 0, 0/50"></Link>"
               <Shield, className="w-6 h-6" /></Shield>
               <sp, a, n>Schedule, Free, Assessment</sp, a, n>"
               <Link, className="w-6 h-6" /></Link>
@@ -533,6 +522,7 @@ const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
         </div>
       </div>
     </di, v>
-  )};
+  );
+}
 export default October2025FraudDetectionBanner;
 "

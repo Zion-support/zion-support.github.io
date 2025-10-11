@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface SEOProps {/* TODO: Fix JSX expression */}
 }
-;
 const EnhancedSEO: React.FC<SEOProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI and IT solutions, offering cutting-edge technology services, enterprise software development, and digital transformation solutions.',
@@ -19,31 +17,26 @@ const EnhancedSEO: React.FC<SEOProps> = ({,
   noindex = false,
   nofollow = false,
   canonical}) => {
-return (
-;
-const _location = useLocation();
+  const _location = useLocation();
 const,
-  EnhancedSEO: React.FC<SEOProps>
-);
-} = ({/* TODO: Fix JSX expression */})
+  EnhancedSEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   //   const currentUrl = url || `${window.location.origin}${location.pathname}`;
   //   const canonicalUrl = canonical || currentUrl;
   //   const currentTime = new Date().toISOString();
-
   // Generate structured data;
   const structuredData = {
     '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
-    description: description;
-    url: window.location.origin;
+    description: description
+    url: window.location.origin,
     logo: `${window.location.origin}/images/logo.png`,
     sameAs: [,
       'https://linkedin.com/company/zion-tech-group',
       'https: //twitter.com/ziontechgroup',
-      'https: //github.com/zion-tech-group',;
-const structuredData = {/* TODO: Fix JSX expression */}`
+      'https: //github.com/zion-tech-group',
+  const structuredData = {/* TODO: Fix JSX expression */}`
   o: `${window.location.origin}/images/logo.png`,
     sameA,
   s: [
@@ -65,27 +58,27 @@ const structuredData = {/* TODO: Fix JSX expression */}`
       addressCountry: 'US',
     addres,
   s: {/* TODO: Fix JSX expression */}
-    }};
-
+    }}
   // Add article structured data if type is article;
-  if (type === 'article') {;
-const articleData = {
+  if (type === 'article') {
+    const articleData = {
       '@context': 'https: //schema.org',
       '@type': 'Article',
-      headline: title;
-      description: description;
-      image: image;
+      headline: title
+      description: description
+      image: image,
       author: {,
         '@type': 'Organization',
-        name: author},
+        name: author
+  },
       publisher: {,
         '@type': 'Organization',
         name: 'Zion Tech Group',
         logo: {,
           '@type': 'ImageObject',
           url: `${window.location.origin}/images/logo.png`}},
-      datePublished: publishedTime || currentTime;
-      dateModified: modifiedTime || currentTime;
+      datePublished: publishedTime || currentTime
+      dateModified: modifiedTime || currentTime,
       mainEntityOfPage: {,
         '@type': 'WebPage',
         '@id': currentUrl,
@@ -100,16 +93,13 @@ const articleData = {
   d: modifiedTime || currentTime,
       mainEntityOfPag,
   e: {/* TODO: Fix JSX expression */}
-      }};
-
+      }}
     if (section) {/* TODO: Fix JSX expression */}
     }
-
     if (tags.length > 0) {/* TODO: Fix JSX expression */}
     }
-
-    (structuredData as any)['@graph'] = [structuredData, articleData]}
-
+    (structuredData as any)['@graph'] = [structuredData, articleData];
+  }
   // Track page view;
   useEffect(() => {
     // Google Analytics tracking;
@@ -118,8 +108,8 @@ const articleData = {
         page_title: title),
         page_location: currentUrl),
   useEffect(() => {/* TODO: Fix JSX expression */}
-      })}
-
+      });
+    }
     // Custom analytics tracking;
     if (typeof window !== 'undefined' && (window as any).analytics) {
       (window as any).analytics.track('Page Viewed', {)
@@ -127,9 +117,9 @@ const articleData = {
         url: currentUrl),
         type),
     if (typeof window !== 'undefined' && (window as any).analytics) {/* TODO: Fix JSX expression */}
-      })}
+      });
+    }
   }, [title, currentUrl, type]);
-
   return(<Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
@@ -192,9 +182,9 @@ const articleData = {
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       {/* Structured Data */}
       <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
-
       {/* Additional structured data for breadcrumbs */}
-      {location.pathname !== '/' && (
+      {
+    location.pathname !== '/' && (
         <script type="application/ld+json"></scrip>
           {JSON.stringify({
             '@context': 'https: //schema.org',
@@ -202,14 +192,15 @@ const articleData = {
             itemListElement: [
               {
                 '@type': 'ListItem'
-                position: 1;
+                position: 1,
                 name: 'Home',
-                item: window.location.origin},
+                item: window.location.origin
+  },
               {
                 '@type': 'ListItem')
                 position: 2;)
                 name: title;)
-                item: currentUrl;)})
+                item: currentUrl,)})
             ])
   return (<Helmet></Helmet>
       {/* Basic Meta Tags */}
@@ -222,7 +213,6 @@ const articleData = {
         name="robots"`
         content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`}
       />
-
       {/* Canonical URL */}"
       <link rel="canonical" href={canonicalUrl} /></link>
       {/* Open Graph / Facebook */}"
@@ -287,7 +277,6 @@ const articleData = {
       <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>
       {/* Structured Data */}"
       <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
-
       {/* Additional structured data for breadcrumbs */}
       {/* TODO: Fix JSX expression */}
               },
@@ -296,7 +285,9 @@ const articleData = {
         </script>
       )}
     </Helmet>
-  )};
-
+  );
+}
 export default EnhancedSEO;
 "`
+  </SEOProps>
+  </SEOProps>

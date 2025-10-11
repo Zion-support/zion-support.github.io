@@ -1,10 +1,6 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
-const October2025LatestPremiumContentBanne, r = () => {
-return (
- 
-  return(<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30, p, y-6, p, x-4, s, m: px-6, l, g:px-8, shado, w-2xl, relative, overflow-hidd, e, n"  >
-);
-} {/* Animated, background, effec, t, s */ })
+const October2025LatestPremiumContentBanne, r = () => { 
+  return(<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30, p, y-6, p, x-4, s, m: px-6, l, g:px-8, shado, w-2xl, relative, overflow-hidd, e, n"  > {/* Animated, background, effec, t, s */ })
       <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-transparent, t, o-bl, u, e-5, 0, 0/10, animat, e-pul, s, e" />)
       <div, className="absolute, inse, t-0, b, g-[u, r, l('da, t, a: image/s, v, g+x, m, l; ba, s, e, 6, 4,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z, y, I+PGRlZ, n, M+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZ, S, I+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlc, m, 4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Z, z, 4=')] opaci, t, y-20" />
       <div, classNam, e = "m, a, x-w-7xl, m, x-auto, relative, z-10">
@@ -54,8 +50,7 @@ return (
             {/* Featured, Article, s */}
             <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-3, m, b-4"></div>
               <Link, t, o="/bl, o, g/ai-20, 2, 5-autonomo, u, s-da, t, a-governan, c, e-revoluti, o, n"
-                className="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/30, t, o-indi, g, o-6, 0, 0/30, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-l, g, p-4, hove, r:bord, e, r-purp, l, e-400, hove, r:shad, o, w-xl, hove, r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
-              >
+                className="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/30, t, o-indi, g, o-6, 0, 0/30, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-l, g, p-4, hove, r:bord, e, r-purp, l, e-400, hove, r:shad, o, w-xl, hove, r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">
                 <div, className="flex, item, s-start, ga, p-3, m, b-2"></div>
                   <Shield, className="w-6 h-6, tex, t-purp, l, e-300, fle, x-shri, n, k-0, m, t-1" />
                   <d, i, v>
@@ -66,7 +61,7 @@ return (
                       99.98% compliance, accur, a, c, y, $4.2B, risk, mitigation, 94% faster, complianc, e, 2,8, 4, 7% R, O, I;
                     </p>
                     <div, classNam, e = "flex, item, s-center, ga, p-2, tex, t-xs"></div>
-                      <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" />;
+                      <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" />
 const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expression */}"
     <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30, p, y-6, p, x-4, s, m: px-6, l, g:px-8, shado, w-2xl, relative, overflow-hidd, e, n"  > {/* Animated, background, effec, t, s */ }"
       <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-transparent, t, o-bl, u, e-5, 0, 0/10, animat, e-pul, s, e" /></div>"
@@ -111,8 +106,7 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
             {/* Featured, Article, s */}"
             <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-3, m, b-4"></div>"
               <Link, t, o="/bl, o, g/ai-20, 2, 5-autonomo, u, s-da, t, a-governan, c, e-revoluti, o, n""
-                className="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/30, t, o-indi, g, o-6, 0, 0/30, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-l, g, p-4, hove, r:bord, e, r-purp, l, e-400, hove, r:shad, o, w-xl, hove, r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
-              ></Link>"
+                className="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/30, t, o-indi, g, o-6, 0, 0/30, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-l, g, p-4, hove, r:bord, e, r-purp, l, e-400, hove, r:shad, o, w-xl, hove, r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"></Link>"
                 <div, className="flex, item, s-start, ga, p-3, m, b-2"></div>"
                   <Shield, className="w-6 h-6, tex, t-purp, l, e-300, fle, x-shri, n, k-0, m, t-1" /></Shield>
                   <d, i, v></d>"
@@ -130,8 +124,7 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
                 </div>
               </Li, n, k>"
               <Link, t, o="/bl, o, g/ai-20, 2, 5-neur, a, l-fra, u, d-detecti, o, n-revoluti, o, n""
-                className="group, b, g-gradie, n, t-to-br, fro, m-r, e, d-6, 0, 0/30, t, o-oran, g, e-6, 0, 0/30, backdro, p-bl, u, r-sm, border, border-r, e, d-4, 0, 0/30, rounde, d-l, g, p-4, hove, r: bord, e, r-r, e, d-400, hove, r:shad, o, w-xl, hove, r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
-              >
+                className="group, b, g-gradie, n, t-to-br, fro, m-r, e, d-6, 0, 0/30, t, o-oran, g, e-6, 0, 0/30, backdro, p-bl, u, r-sm, border, border-r, e, d-4, 0, 0/30, rounde, d-l, g, p-4, hove, r: bord, e, r-r, e, d-400, hove, r:shad, o, w-xl, hove, r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">
                 <div, className="flex, item, s-start, ga, p-3, m, b-2"></div>
                   <Brain, className="w-6 h-6, tex, t-r, e, d-300, fle, x-shri, n, k-0, m, t-1" />
                   <d, i, v>
@@ -161,8 +154,7 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
                 </div>
               </Li, n, k>"
               <Link, t, o="/bl, o, g/ai-20, 2, 5-cogniti, v, e-workfl, o, w-orchestrati, o, n-maste, r, y""
-                className="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/30, t, o-cy, a, n-6, 0, 0/30, backdro, p-bl, u, r-sm, border, border-bl, u, e-4, 0, 0/30, rounde, d-l, g, p-4, hove, r: bord, e, r-bl, u, e-400, hove, r:shad, o, w-xl, hove, r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
-              >
+                className="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/30, t, o-cy, a, n-6, 0, 0/30, backdro, p-bl, u, r-sm, border, border-bl, u, e-4, 0, 0/30, rounde, d-l, g, p-4, hove, r: bord, e, r-bl, u, e-400, hove, r:shad, o, w-xl, hove, r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">
                 <div, className="flex, item, s-start, ga, p-3, m, b-2"></div>
                   <Workflow, className="w-6 h-6, tex, t-bl, u, e-300, fle, x-shri, n, k-0, m, t-1" />
                   <d, i, v>
@@ -233,14 +225,12 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
           </div>"
           <div, className="flex, fle, x-col, ga, p-3, l, g: ml-6"></div>"
             <Link, t, o="/bl, o, g""
-              className="group, inlin, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-indi, g, o-600, tex, t-white, fon, t-bold, rounde, d-lg, hove, r:fr, o, m-purp, l, e-600, hove, r:to-indi, g, o-700, shado, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, whitespac, e-nowr, a, p"
-            ></Link>"
+              className="group, inlin, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-indi, g, o-600, tex, t-white, fon, t-bold, rounde, d-lg, hove, r:fr, o, m-purp, l, e-600, hove, r:to-indi, g, o-700, shado, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, whitespac, e-nowr, a, p"></Link>"
               <span, className="mr-2">Explore, All, 3 Breakthroug, h, s</sp, a, n>"
               <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" /></Link>
             </Li, n, k>"
             <Link, t, o="/conta, c, t""
-              className="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-3, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-semibold, rounde, d-lg, borde, r-2, borde, r-whi, t, e/30, hove, r:bg-whi, t, e/20, hove, r:bord, e, r-whi, t, e/50, transitio, n-all, duratio, n-300, whitespac, e-nowr, a, p"
-            >
+              className="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-3, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-semibold, rounde, d-lg, borde, r-2, borde, r-whi, t, e/30, hove, r:bg-whi, t, e/20, hove, r:bord, e, r-whi, t, e/50, transitio, n-all, duratio, n-300, whitespac, e-nowr, a, p">
             ></Link>
               Schedule, Enterprise, Demo;
             </Li, n, k>
@@ -248,6 +238,7 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
         </div>
       </div>
     </div>
-  )};
+  );
+}
 export default October2025LatestPremiumContentBanner;
 "

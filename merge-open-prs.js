@@ -23,7 +23,8 @@ function mergeBranch(branchName) {
       { stdio: 'inherit' }
     );
 
-//     return { success: true, method: 'direct' }} catch (error) {
+//     return { success: true, method: 'direct' }
+  } catch (error) {
 //     try {
       //Check for merge conflicts;
       if (
@@ -34,7 +35,7 @@ function mergeBranch(branchName) {
 //         //Try auto-resolve with theirs strategy;
         try {
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
-          execSync(;
+          execSync(
 function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
     execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
   o: 'inherit' });
@@ -46,7 +47,8 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
     );
 
 //     return {/* TODO: Fix JSX expression */}
-  d: 'direct' }} catch (error) {/* TODO: Fix JSX expression */}
+  d: 'direct' }
+  } catch (error) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
           execSync(")`
             `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
@@ -54,7 +56,8 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
   o: 'inherit' }
           );
 //           return {/* TODO: Fix JSX expression */}
-  d: 'theirs' }} catch (theirsError) {/* TODO: Fix JSX expression */}
+  d: 'theirs' }
+        } catch (theirsError) {/* TODO: Fix JSX expression */}
 //           }
 
         //Try auto-resolve with ours strategy;
@@ -69,7 +72,8 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
   o: 'inherit' }
           );
 //           return {/* TODO: Fix JSX expression */}
-  d: 'ours' }} catch (oursError) {/* TODO: Fix JSX expression */}
+  d: 'ours' }
+        } catch (oursError) {/* TODO: Fix JSX expression */}
 //           }
 
         //Try manual conflict resolution;
@@ -118,7 +122,8 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
   o: 'inherit' })
           );
 //           return {/* TODO: Fix JSX expression */}
-  d: 'manual' }} catch (manualError) {/* TODO: Fix JSX expression */}
+  d: 'manual' }
+        } catch (manualError) {/* TODO: Fix JSX expression */}
 //           }
       }
     } catch (statusError) {/* TODO: Fix JSX expression */}
@@ -132,10 +137,12 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
     try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
 //       } catch (abortError) {/* TODO: Fix JSX expression */}
-  o: 'inherit' })}
+  o: 'inherit' });
+    }
 
     return {/* TODO: Fix JSX expression */}
-  d: 'failed' }}
+  d: 'failed' }
+  }
 }
 
 //Execute merge process;
@@ -143,12 +150,12 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
   successful: []
   failed: []
   summary: {
-    total: 0;
-    successful: 0;
-    failed: 0;
+    total: 0
+    successful: 0
+    failed: 0,
     methods: { direct: 0, theirs: 0, ours: 0, manual: 0, failed: 0 },
 // const results = {/* TODO: Fix JSX expression */}
-  d: 0 }}};
+  d: 0 }}}
 
 //Merge each branch;
 for (const branch of openPRBranches) {
@@ -158,17 +165,19 @@ for (const branch of openPRBranches) {
 for (const branch of openPRBranches) {/* TODO: Fix JSX expression */}
     results.successful.push({ branch, ...result });
     results.summary.successful++;
-    results.summary.methods[result.method]++} else {/* TODO: Fix JSX expression */}
+    results.summary.methods[result.method]++;
+  } else {/* TODO: Fix JSX expression */}
     results.failed.push({ branch, ...result });
     results.summary.failed++;
-    results.summary.methods.failed++}
+    results.summary.methods.failed++;
+  }
 }
 
 //Generate report;
 // // // // // // // // // // if (results.failed.length > 0) {
 // // // // // // // // // // if (results.failed.length > 0) {/* TODO: Fix JSX expression */}`
-//   //   results.failed.forEach(result => // // console.log removed for production
-)}
+//   //   results.failed.forEach(result => // console.log(`  - ${result.branch}`));
+}
 
 //Save report;
 results.timestamp = new Date().toISOString();

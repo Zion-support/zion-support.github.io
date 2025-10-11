@@ -1,14 +1,10 @@
 const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
-return (
-;
-const, storie, s = [
+  const, storie, s = [
     {
       comp, a, n;
   y: "TechCorp, Internationa, l"
       indust, r, y: "Technolo, g, y"
-      ic, o, n: <TrendingUp, className="w-8 h-8" /></TrendingUp>resu</TrendingUp>
-);
-}, l, t: "3, 0, 0% Revenue, Growt, h"
+      ic, o, n: <TrendingUp, className="w-8 h-8" /></TrendingUp>resu</TrendingUp>, l, t: "3, 0, 0% Revenue, Growt, h"
       descripti, o, n: "Implemented, multimodal, AI achieving, unprecedented, customer engagement, and, conversion rat, e, s."
       metri, c, s: [,
         "98% prediction, accurac, y"
@@ -30,8 +26,8 @@ const, storie, s = [
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
     }
     {
-      company: 'FinanceFirst Bank',
-      industry: 'Financial Services',
+      company: "FinanceFirst Bank"
+      industry: "Financial Services"
       icon: <Users className="w-8 h-8" />,
       result: "99.95% Fraud Detection",
       description: "AI fraud prevention system achieved industry-leading accuracy while reducing false positives by 95%.",
@@ -55,13 +51,12 @@ key={index}
           {stories.map((story, index) => (</div>
             <div
 key={index}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"
-            ></div>
+              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"></div>
               <div className={`bg-gradient-to-r ${story.color} text-white p-6`}></div>
                 <div className="flex items-center gap-3 mb-4">
                   {story.icon}</div>
                   <div></div>
-                    <h3 className="font-bold text-xl">{story.company}</h3>;
+                    <h3 className="font-bold text-xl">{story.company}</h3>
 const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}

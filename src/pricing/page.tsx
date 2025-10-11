@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 import { CheckCircle, X, Zap, Brain, Cloud, ArrowRight, Star, Users, Shield, Clock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-;
-const PricingPage: React.FC = () => {;
-const plans = [
+const PricingPage: React.FC = () => {
+  const plans = [
     {
       name: 'Starter',
       description: 'Perfect for small businesses getting started with AI',
@@ -75,8 +74,7 @@ const plans = [
       popular: false
     }
   ];
-;
-const addOns = [
+  const addOns = [
     {
       name: 'Additional AI Models',
       description: 'Extra custom AI models beyond your plan limits',
@@ -102,8 +100,7 @@ const addOns = [
       period: '/day'
     }
   ];
-;
-const faqs = [
+  const faqs = [
     {
       question: 'Can I change my plan at any time?',
       answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the beginning of your next billing cycle.'
@@ -129,8 +126,7 @@ const faqs = [
       answer: 'Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees.'
     }
   ];
-;
-const getColorClasses = (color: string) => {
+  const getColorClasses = (color: string) => {
     switch (color) {
       case 'blue':
         return {
@@ -139,7 +135,7 @@ const getColorClasses = (color: string) => {
           border: 'border-blue-500',
           light: 'bg-blue-50',
           textLight: 'text-blue-600'
-        };
+        }
       case 'cyan':
         return {
           bg: 'bg-cyan-500',
@@ -147,7 +143,7 @@ const getColorClasses = (color: string) => {
           border: 'border-cyan-500',
           light: 'bg-cyan-50',
           textLight: 'text-cyan-600'
-        };
+        }
       case 'purple':
         return {
           bg: 'bg-purple-500',
@@ -155,7 +151,7 @@ const getColorClasses = (color: string) => {
           border: 'border-purple-500',
           light: 'bg-purple-50',
           textLight: 'text-purple-600'
-        };
+        }
       default:
         return {
           bg: 'bg-gray-500',
@@ -163,13 +159,12 @@ const getColorClasses = (color: string) => {
           border: 'border-gray-500',
           light: 'bg-gray-50',
           textLight: 'text-gray-600'
-        }}
-  };
-
+        }
+    }
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -181,15 +176,12 @@ const getColorClasses = (color: string) => {
           </p>
         </div>
       </section>
-
       {/* Pricing Plans */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {plans.map((plan, index) => {
-return (
-;
-const colors = getColorClasses(plan.color);
+              const colors = getColorClasses(plan.color);
               return (
                 <div
                   key={index}
@@ -197,14 +189,11 @@ const colors = getColorClasses(plan.color);
                     plan.popular ? colors.border : 'border-gray-200'
                   } overflow-hidden`}
                 >
-);
-}
                   {plan.popular && (
                     <div className={`absolute top-0 left-0 right-0 ${colors.bg} text-white text-center py-2 text-sm font-semibold`}>
-                      Most Popular
-                    </div>
+                      Most Popular;
+  </
                   )}
-                  
                   <div className={`p-8 ${plan.popular ? 'pt-12' : ''}`}>
                     <div className="text-center mb-8">
                       <div className={`w-16 h-16 ${colors.light} rounded-full flex items-center justify-center mx-auto mb-4`}>
@@ -217,7 +206,6 @@ const colors = getColorClasses(plan.color);
                         <span className="text-gray-600 ml-1">{plan.period}</span>
                       </div>
                     </div>
-
                     <div className="mb-8">
                       <h4 className="font-semibold text-gray-900 mb-4">What's included:</h4>
                       <ul className="space-y-3">
@@ -229,7 +217,6 @@ const colors = getColorClasses(plan.color);
                         ))}
                       </ul>
                     </div>
-
                     {plan.limitations.length > 0 && (
                       <div className="mb-8">
                         <h4 className="font-semibold text-gray-900 mb-4">Limitations:</h4>
@@ -243,7 +230,6 @@ const colors = getColorClasses(plan.color);
                         </ul>
                       </div>
                     )}
-
                     <Link
                       to="/contact"
                       className={`w-full ${
@@ -256,21 +242,21 @@ const colors = getColorClasses(plan.color);
                     </Link>
                   </div>
                 </div>
-              )})}
+              );
+            })}
           </div>
         </div>
       </section>
-
       {/* Add-ons */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Add-on Services
-            </h2>
+  </
             <p className="text-xl text-gray-600">
-              Enhance your plan with additional services and features
-            </p>
+              Enhance your plan with additional services and features,
+  </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {addOns.map((addOn, index) => (
@@ -286,17 +272,16 @@ const colors = getColorClasses(plan.color);
           </div>
         </div>
       </section>
-
       {/* FAQ Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
-            </h2>
+  </
             <p className="text-xl text-gray-600">
-              Everything you need to know about our pricing and plans
-            </p>
+              Everything you need to know about our pricing and plans,
+  </
           </div>
           <div className="space-y-8">
             {faqs.map((faq, index) => (
@@ -308,10 +293,9 @@ const colors = getColorClasses(plan.color);
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>
@@ -321,22 +305,26 @@ const colors = getColorClasses(plan.color);
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300"
-            >
+              className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
               Start Free Trial
-            </Link>
+  </
             <Link
               to="/demo"
-              className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300"
-            >
+              className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
               Schedule Demo
-            </Link>
+  </
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
-  )};
-
+  ),
+}
 export default PricingPage;
+  </Link>
+  </Link>
+  </p>
+  </h2>
+  </p>
+  </h2>
+  </div>

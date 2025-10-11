@@ -1,10 +1,12 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-;
+
 const __filename = fileURLToPath(import.meta.url);
-// __dirname removed
-// console.log removed for production
+const __dirname = path.dirname(__filename);
+
+console.log('♿ Starting accessibility audit...');
+
 // Accessibility checklist;
 const accessibilityChecklist = {
   semanticHTML: {,
@@ -71,86 +73,89 @@ const accessibilityChecklist = {
       'Touch targets are at least 44 px'
     ]
   }
-};
+}
 
 // Check HTML files for accessibility issues;
 function auditHTMLFiles() {
-  // console.log removed for production
-;
-const distDir = path.join(__dirname, '../dist');
+  console.log('📄 Auditing HTML files...');
+  
+  const distDir = path.join(__dirname, '../dist');
   const htmlFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.html'));
   
-  htmlFiles.forEach(file => {);
-const filePath = path.join(distDir, file);
+  htmlFiles.forEach(file => {)
+    const filePath = path.join(distDir, file);
     const content = fs.readFileSync(filePath, 'utf8');
     
-    // console.log removed for production
-// Check for semantic HTML;
+    console.log(`  - Auditing ${file}`);
+    
+    // Check for semantic HTML;
     if (!content.includes('<main')) {
-      // console.log removed for production
-</main>
+      console.log('    ⚠️  Missing <main>element</main>');</main>
     }
     
     if (!content.includes('<nav')) {
-      // console.log removed for production
-</nav>
+      console.log('    ⚠️  Missing <nav>element</nav>');</nav>
     }
     
     // Check for alt attributes;
     const imgTags = content.match(/<img[^>]*>/g) || [];
-    imgTags.forEach(img => {)
+    imgTags.forEach(img => {
+    )
       if (!img.includes('alt=')) {
-        // console.log removed for production
-}
+        console.log('    ⚠️  Image missing alt attribute')
+  }
     });
     
     // Check for heading hierarchy;
     const headings = content.match(/<h[1-6][^>]*>/g) || [];
     if (headings.length === 0) {
-      // console.log removed for production
-}
+    console.log('    ⚠️  No heading elements found')
+  }
     
     // Check for skip links;
     if (!content.includes('skip') && !content.includes('Skip')) {
-      // console.log removed for production
+    console.log('    ⚠️  No skip links found')
+  }
+  });
 }
-  })}
 
 // Check CSS files for accessibility issues;
 function auditCSSFiles() {
-  // console.log removed for production
-;
-const distDir = path.join(__dirname, '../dist');
+  console.log('🎨 Auditing CSS files...');
+  
+  const distDir = path.join(__dirname, '../dist');
   const cssFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.css'));
   
-  cssFiles.forEach(file => {);
-const filePath = path.join(distDir, file);
+  cssFiles.forEach(file => {)
+    const filePath = path.join(distDir, file);
     const content = fs.readFileSync(filePath, 'utf8');
     
-    // console.log removed for production
-// Check for focus styles;
+    console.log(`  - Auditing ${file}`);
+    
+    // Check for focus styles;
     if (!content.includes(':focus')) {
-      // console.log removed for production
-}
+    console.log('    ⚠️  No focus styles found')
+  }
     
     // Check for high contrast support;
     if (!content.includes('prefers-contrast')) {
-      // console.log removed for production
-}
+    console.log('    ⚠️  No high contrast support')
+  }
     
     // Check for reduced motion support;
     if (!content.includes('prefers-reduced-motion')) {
-      // console.log removed for production
+    console.log('    ⚠️  No reduced motion support')
+  }
+  });
 }
-  })}
 
 // Generate accessibility report;
 function generateAccessibilityReport() {
-  // console.log removed for production
-;
-const report = {
+  console.log('📊 Generating accessibility report...');
+  
+  const report = {
     timestamp: new Date().toISOString()
-    checklist: accessibilityChecklist;
+    checklist: accessibilityChecklist,
     recommendations: [,
       'Add ARIA labels to interactive elements',
       'Implement focus management for modals',
@@ -171,21 +176,21 @@ const report = {
       'Keyboard-only navigation testing',
       'Color contrast analyzers'
     ]
-  };
+  }
   
   fs.writeFileSync(
     path.join(__dirname, '../accessibility-report.json'), 
     JSON.stringify(report, null, 2)
   );
   
-  // console.log removed for production
+  console.log('  - Generated accessibility-report.json');
 }
 
 // Generate accessibility improvements;
 function generateAccessibilityImprovements() {
-  // console.log removed for production
-;
-const improvements = `
+    console.log('🔧 Generating accessibility improvements...');
+  
+  const improvements = `
 // Accessibility improvements to implement;
 // 1. Add ARIA labels to interactive elements;
 <button aria-label="Close dialog">×</button>
@@ -193,8 +198,8 @@ const improvements = `
 <div id="email-help">Enter your email address</div>
 
 // 2. Implement focus management;
-const trapFocus = (element) => {;
-const focusableElements = element.querySelectorAll(
+const trapFocus = (element) => {
+  const focusableElements = element.querySelectorAll(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   );
   const firstElement = focusableElements[0];
@@ -205,14 +210,17 @@ const focusableElements = element.querySelectorAll(
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
           lastElement.focus();
-          e.preventDefault()}
+          e.preventDefault()
+  }
       } else {
-        if (document.activeElement === lastElement) {
+    if (document.activeElement === lastElement) {
           firstElement.focus();
-          e.preventDefault()}
+          e.preventDefault()
+  }
       }
     }
-  })};
+  });
+}
 
 // 3. Add live regions for dynamic content;
 <div aria-live="polite" aria-atomic="true" className="sr-only">
@@ -275,32 +283,33 @@ const focusableElements = element.querySelectorAll(
 // All interactive elements should be:
 // - Focusable with Tab key;
 // - Activable with Enter/Space;
-// - Have visible focus indicators;
-// - Follow logical tab order;
-`;
+// - Have visible focus indicators
+// - Follow logical tab order
+`,
 ,
   fs.writeFileSync()
     path.join(__dirname, '../accessibility-improvements.js'), 
     improvements;
   );
   
-  // console.log removed for production
+  console.log('  - Generated accessibility-improvements.js');
 }
 
 // Main audit function;
 function audit() {
-  try {
+    try {
     auditHTMLFiles();
     auditCSSFiles();
     generateAccessibilityReport();
     generateAccessibilityImprovements();
     
-    // console.log removed for production
-// console.log removed for production
-// console.log removed for production
-} catch (error) {
-    // console.error removed for production
-process.exit(1)}
+    console.log('✅ Accessibility audit completed successfully!');
+    console.log('📋 Check accessibility-report.json for detailed results');
+    console.log('🔧 Check accessibility-improvements.js for implementation guide')
+  } catch (error) {
+    console.error('❌ Error during accessibility audit:', error);
+    process.exit(1)
+  }
 }
 
 // Run audit;

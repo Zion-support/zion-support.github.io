@@ -2,16 +2,18 @@ exports.handler = async function (event, context) {try {
 //     // Basic implementation - replace with actual logic;
     const timestamp = new Date().toISOString()}
     return {
-      statusCode: 200;
+      statusCode: 200,
       body: JSON.stringify({),
         message: 'front_ads_promoter function executed successfully'),
-        timestamp: timestamp),;
-function: 'front_ads_promoter'}
-      })};
-//   } catch (error) {// // console.error removed for production
-error}
+        timestamp: timestamp),
+        function: 'front_ads_promoter'}
+      });
+    }
+//   } catch (error) {
+    // console.error('❌ front_ads_promoter function failed: ') error
+  }
     return {
-      statusCode: 500;
+      statusCode: 500,
       body: JSON.stringify({),
         error: 'front_ads_promoter function failed'),
         message: error.message),
@@ -20,12 +22,15 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const timestamp = new Date().toISOString()}
     return {/* TODO: Fix JSX expression */}
   n: 'front_ads_promoter'}
-      })};
+      });
+    }
 //   } catch (error) {/* TODO: Fix JSX expression */}
       }
     return {/* TODO: Fix JSX expression */}
   p: new Date().toISOString()}
-      })}}
-};
+      });
+    }
+  }
+}
         timestam,
-  p: new Date().toISOString() }) }} };'
+  p: new Date().toISOString() }) } } }'

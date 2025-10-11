@@ -1,15 +1,16 @@
 export interface BlogPost {
-  slug: string;
+    slug: string;
   title: string;
   description: string;
   content: string;
   author: string;
   date: string;
   category: string;
-  tags: string[];
-  featured: boolean;
-  readTime: string;
-  image?: string}
+  tags: string[]
+  featured: boolean
+  readTime: string,
+  image?: string
+  }
 
 export const blogPosts: BlogPost[] = [,
   {,
@@ -23,16 +24,16 @@ export const blogPosts: BlogPost[] = [,
 ## What You'll Implement;
 - KPI-linked SLIs that predict outcomes;
 - Online canaries as deploy gates;
-- Budget-aware routing with safe fallbacks;
-- One-click rollback with blast-radius checks;
-## Results;
+- Budget-aware routing with safe fallbacks
+- One-click rollback with blast-radius checks
+## Results,
 - Fewer regressions, faster iteration, clearer ownership;
     `,
     author: 'Zion Tech Group Reliability Lab',
     date: '2025-10-04',
     category: 'AI Reliability',
     tags: ['Scorecards', 'SLIs', 'Canaries', 'Rollback'],
-    featured: true;
+    featured: true,
     readTime: '7 min read',
     image: '/images/operational-ai-scorecards-v2.jpg'},
   {
@@ -40,20 +41,20 @@ export const blogPosts: BlogPost[] = [,
     title: 'Enterprise RAG Quality Budgets: Lift Correctness, Cut Spend',
     description:
       'Freshness windows, retrieval tiers, and semantic caches that raise answer quality while reducing cost.',
-    content: '
+    content: `
 # Enterprise RAG Quality Budgets: Production RAG needs governance and budgets.
 
 ## Core Patterns;
 - Domain schemas and strict source governance;
-- Freshness windows per intent;
-- Retrieval budgets with quality tiers;
-- Semantic caches for cost optimization;
-    ',
+- Freshness windows per intent
+- Retrieval budgets with quality tiers
+- Semantic caches for cost optimization,
+    `
     author: 'Zion Tech Group Knowledge Systems',
     date: '2025-10-04',
     category: 'RAG Engineering',
     tags: ['RAG', 'Quality', 'Budgets', 'Caching'],
-    featured: true;
+    featured: true,
     readTime: '8 min read',
     image: '/images/enterprise-rag-quality-budgets.jpg'},
   {
@@ -78,7 +79,7 @@ This guide shows how to ship agentic systems that operate within explicit budget
     date: '2025-10-04',
     category: 'AI Operations',
     tags: ['Agents', 'Governance', 'Guardrails', 'Rollback'],
-    featured: true;
+    featured: true,
     readTime: '8 min read',
     image: '/images/governed-agentic-automation.jpg'},
   {
@@ -86,13 +87,13 @@ This guide shows how to ship agentic systems that operate within explicit budget
     title: 'GenAI Cost Optimization v6: Quality Tiers, Coalesce, Distill',
     description:
       'Cut inference spend 60–85% with tiered routing, request coalescing, and selective distillation.',
-    content: `# GenAI Cost Optimization v6;
+    content: `# GenAI Cost Optimization v6,
 Control GenAI costs without UX regressions: quality-tier routers, request coalescing, semantic caches, and selective distillation for hot paths. Includes rollout rituals, SLO templates, and dashboards used by platform teams.`,
     author: 'Zion Tech Group Platform Team',
     date: '2025-10-03',
     category: 'GenAI Engineering',
     tags: ['Cost', 'Caching', 'Distillation', 'Routing', 'SLO'],
-    featured: true;
+    featured: true,
     readTime: '9 min read',
     image: '/images/genai-cost-optimization-v6.jpg'},
   {
@@ -117,7 +118,7 @@ Modern enterprises need shipping speed without surprise risk. This field guide s
     date: '2025-10-01',
     category: 'AI Governance',
     tags: ['Governance', 'Scorecards', 'Guardrails', 'Rollouts'],
-    featured: true;
+    featured: true,
     readTime: '10 min read',
     image: '/images/enterprise-ai-governance-2025.jpg',
 export interface BlogPost {/* TODO: Fix JSX expression */}

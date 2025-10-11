@@ -12,7 +12,7 @@ packageJson.scripts = {
     'analyze: bundle': 'vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html',
     'perf:audit': 'lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html',
 packageJson.scripts = {/* TODO: Fix JSX expression */}
-};
+}
 
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
 // // 2. Create performance optimization script;
@@ -86,10 +86,11 @@ describe('Comprehensive Test Suite', () => {/* TODO: Fix JSX expression */}
     });
 
     it('should pass performance test', () => {
-//         const startTime = Date.now();
+    //         const startTime = Date.now();
         // Simulate some work;
 //         const endTime = Date.now();
-        expect(endTime - startTime).toBeLessThan(1000)});
+        expect(endTime - startTime).toBeLessThan(1000)
+  });
 
     it('should pass accessibility test', () => {
         // Basic accessibility check;
@@ -98,7 +99,8 @@ describe('Comprehensive Test Suite', () => {/* TODO: Fix JSX expression */}
     });
 
     it('should pass accessibility test', () => {/* TODO: Fix JSX expression */}
-    })});`
+    });
+});`
 `;
 
 fs.writeFileSync('/workspace/__tests__/comprehensive.test.js', testSuite);
@@ -107,8 +109,8 @@ fs.writeFileSync('/workspace/__tests__/comprehensive.test.js', testSuite);
 
 // // Monitor performance;
 // try {
-//     // // console.log removed for production
-rss: Math.round(memUsage.rss / 1024 / 1024) + ' MB',
+//     // console.log('Memory usage:', {)
+        rss: Math.round(memUsage.rss / 1024 / 1024) + ' MB',
         heapUsed: Math.round(memUsage.heapUsed / 1024 / 1024) + ' MB',
         heapTotal: Math.round(memUsage.heapTotal / 1024 / 1024) + ' MB',
 // // 6. Create monitoring script;`
@@ -166,23 +168,23 @@ pnpm perf: audit;
 - \`pnpm dev\` - Start development server;
 - \`pnpm build\` - Build for production;
 - \`pnpm test\` - Run tests;
-- \`pnpm lint\` - Run linting;
-- \`pnpm optimize:all\` - Run all optimizations;
-- \`pnpm perf:audit\` - Run performance audit;
+- \`pnpm lint\` - Run linting
+- \`pnpm optimize:all\` - Run all optimizations
+- \`pnpm perf:audit\` - Run performance audit,
 pnpm,
-  perf:audit;`
+  perf: audit;`
 \`\`\`
 
 ## Available Scripts;`
 - \`pnpm dev\` - Start development server;`
 - \`pnpm build\` - Build for production;`
 - \`pnpm test\` - Run tests;`
-- \`pnpm lint\` - Run linting;`
+- \`pnpm lint\` - Run linting,`
 - \`pnpm,`
-  optimize:all\` - Run all optimizations;`
+  optimize: all\` - Run all optimizations,`
 - \`pnpm,`
-  perf:audit\` - Run performance audit;`
-`;
+  perf: audit\` - Run performance audit;`
+`,
 ,
 fs.writeFileSync('/workspace/README.md', readmeContent);
 // // 8. Create improvement summary;
@@ -202,9 +204,9 @@ const improvementSummary = {
         'Test accessibility features',
         'Verify SEO improvements',
         'Monitor system performance'
-    ];
+    ]
 const improvementSummary = {/* TODO: Fix JSX expression */}
-};
+}
 
 fs.writeFileSync('/workspace/improvements-summary.json', JSON.stringify(improvementSummary, null, 2));
 // // // // // // // // // // // // // // `

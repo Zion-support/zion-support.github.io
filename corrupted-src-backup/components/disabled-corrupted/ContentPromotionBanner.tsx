@@ -33,15 +33,13 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
           </div>
           <div, classNam, e = "flex, fle, x-col, ga, p-4"></div>
             <Link, t, o="/bl, o, g" 
-              className="bg-white, tex, t-indi, g, o-700, hove, r: bg-indi, g, o-50, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg"
-            >
+              className="bg-white, tex, t-indi, g, o-700, hove, r: bg-indi, g, o-50, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg">
               <BookOpen, className="w-5 h-5" />
               Explore, All, Articles;
               <Link, className="w-5 h-5" />
             </Li, n, k>
             <Link, t, o="/ca, s, e-studi, e, s" 
-              className="bord, e, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-indi, g, o-700, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"
-            >
+              className="bord, e, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-indi, g, o-700, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">
               <Zap, className="w-5 h-5" />
               View, Case, Studies;
             </Li, n, k>
@@ -87,15 +85,13 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
           </div>"
           <div, classNam, e = "flex, fle, x-col, ga, p-4"></div>"
             <Link, t, o="/bl, o, g" "
-              className="bg-white, tex, t-indi, g, o-700, hove, r: bg-indi, g, o-50, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg"
-            ></Link>"
+              className="bg-white, tex, t-indi, g, o-700, hove, r: bg-indi, g, o-50, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg"></Link>"
               <BookOpen, className="w-5 h-5" /></BookOpen>
               Explore, All, Articles;"
               <Link, className="w-5 h-5" /></Link>
             </Li, n, k>"
             <Link, t, o="/ca, s, e-studi, e, s" "
-              className="bord, e, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-indi, g, o-700, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"
-            ></Link>"
+              className="bord, e, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-indi, g, o-700, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"></Link>"
               <Zap, className="w-5 h-5" /></Zap>
               View, Case, Studies;
             </Li, n, k>
@@ -162,4 +158,5 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
         </div>
       </div>
     </div>
-  )}"
+  );
+}"

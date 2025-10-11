@@ -1,6 +1,6 @@
 import React from 'react';
-const January2026RevolutionaryContentBanne, r: React.FC = () => {,;
-const revolutionaryConten, t = [
+const January2026RevolutionaryContentBanne, r: React.FC = () => {,
+  const revolutionaryConten, t = [
     {
       title: 'Ne, x, t-Generation, Enterprise, Automation: The, 2026, AI Revolu, t, i, o, n',
       description: '98% Automation, Ra, t, e, 1000 x, Processing, Speed, $2.5 B, Cost, Savings',
@@ -10,7 +10,7 @@ const revolutionaryConten, t = [
       highlig, h, t: 'BREAKTHRO, U, G, H',
       impa, c, t: '98% Automat, i, o, n',
       ty, p, e: 'b, l, o, g',
-      readTime: '15, m, i, n',;
+      readTime: '15, m, i, n',
 const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
@@ -177,6 +177,7 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
         </div>
       </div>
     </sec, t, i, o, n>
-  )};
+  );
+}
 export default January2026RevolutionaryContentBanner;
 `

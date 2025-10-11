@@ -1,39 +1,44 @@
 #!/usr/bin/env node;
 import { readFileSync, writeFileSync } from 'fs';
 
-// console.log removed for production
+console.log('🔧 Resolving merge conflicts in app/page.tsx...');
+
 try {
-  // Read the file;
+    // Read the file;
   const content = readFileSync('/workspace/app/page.tsx', 'utf8');
   
-  // Split by conflict markers and keep our version (after );
-const lines = content.split('\n');
+  // Split by conflict markers and keep our version (after )
+  const lines = content.split('\n');
   const resolvedLines = [];
   let skipUntilNextMarker = false;
   
-  for (let i = 0; i < lines.length; i++) {;
-const line = lines[i];
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
     
     if (line.includes('')) {
       skipUntilNextMarker = true;
-      continue}
+      continue
+  }
     
     if (line.includes('')) {
-      skipUntilNextMarker = false;
-      continue}
+    skipUntilNextMarker = false;
+      continue
+  }
     
     if(line.includes('      continue;)
     })
     )
     if (!skipUntilNextMarker) {
-      resolvedLines.push(line)}
+    resolvedLines.push(line)
+  }
   }
   
   // Write the resolved content;
   writeFileSync('/workspace/app/page.tsx', resolvedLines.join('\n'));
   
-  // console.log removed for production
-// Also clean up duplicate imports;
+  console.log('✅ Merge conflicts resolved successfully!');
+  
+  // Also clean up duplicate imports;
   const finalContent = readFileSync('/workspace/app/page.tsx', 'utf8');
   const importLines = finalContent.split('\n').filter(line => line.startsWith('import'));
   const uniqueImports = [...new Set(importLines)];
@@ -44,7 +49,9 @@ const line = lines[i];
   
   writeFileSync('/workspace/app/page.tsx', cleanedContent);
   
-  // console.log removed for production
+  console.log('✅ Duplicate imports cleaned up!');
+  
 } catch (error) {
-  // console.error removed for production
-process.exit(1)}
+    console.error('❌ Error resolving conflicts:', error.message);
+  process.exit(1)
+  }

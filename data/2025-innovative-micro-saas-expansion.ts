@@ -1,4 +1,3 @@
-import React from 'react';
 
   id: string;
   name: string;
@@ -28,95 +27,94 @@ import React from 'react';
   variant: ServiceVariant;
   contact_info: unknown;
     mobile: string;
-    email: string;
-    address: string;
-    website: string;
+    email: string
+    address: string
+    website: string,
   i,
-  d: string;
+  d: string,
   nam,
-  e: string;
+  e: string,
   taglin,
-  e: string;
+  e: string,
   pric,
   e: string,
   perio,
   d: string,
   descriptio,
-  n: string;
+  n: string,
   feature,
-  s: string[];
+  s: string[],
   popula,
-  r: boolean;
+  r: boolean,
   ico,
-  n: string;
+  n: string,
   colo,
-  r: string;
+  r: string,
   text_colo,
-  r: string;
+  r: string,
   lin,
-  k: string;
+  k: string,
   market_positio,
-  n: string;
+  n: string,
   target_audienc,
-  e: string;
+  e: string,
   trial_day,
-  s: number;
+  s: number,
   setup_tim,
-  e: string;
+  e: string,
   categor,
-  y: string;
+  y: string,
   real_servic,
-  e: boolean;
+  e: boolean,
   technolog,
-  y: string[];
+  y: string[],
   integration,
-  s: string[];
+  s: string[],
   use_case,
-  s: string[];
+  s: string[],
   ro,
-  i: string;
+  i: string,
   competitor,
-  s: string[];
+  s: string[],
   market_siz,
-  e: string;
+  e: string,
   growth_rat,
-  e: string;
+  e: string,
   varian,
-  t: ServiceVariant;
+  t: ServiceVariant,
   contact_inf,
-  o: unknown;
+  o: unknown,
     mobil,
-  e: string;
+  e: string,
     emai,
-  l: string;
+  l: string,
     addres,
-  s: string;
+  s: string,
     websit,
   e: string}
         'AI-powered churn prediction with 94% accuracy',
   real_implementatio,
-  n: boolean;
+  n: boolean,
   implementation_detail,
-  s: string;
+  s: string,
   launch_dat,
-  e: string;
+  e: string,
   customer,
-  s: number;
+  s: number,
   ratin,
-  g: number;
+  g: number,
   review,
-  s: number;
-;
+  s: number,
 export const,
-  innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionService[] =;
+  innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionService[] =
   [
-    // AI - Powered Customer Success Automation;
-      id: 'ai - customer - success - automation',
-      name: 'AI Customer Success Automation',
-      tagline: 'Automate customer success with intelligent AI',
+    // AI - Powered Customer Success Automation,
+      id: 'ai - customer - success - automation'
+      name: 'AI Customer Success Automation'
+      tagline: 'Automate customer success with intelligent AI'
       price: '$299',
       period: '/month',
-      description: unknown;
+      description: unknown,
     // AI - Powered Customer Success Automation,
       i,
   d: 'ai - customer - success - automation',
@@ -143,7 +141,7 @@ export const,
         'Integration with CRM and support tools',
         'Advanced analytics and reporting',
         'Multi - channel communication orchestration'],
-      popular: true;
+      popular: true,
       icon: '',
       popula,
   r: true,
@@ -161,22 +159,21 @@ export const,
       roi: 'Average customer sees 300% ROI within 3 months through improved retention and reduced churn.',
       competitors: [,
         'Gainsight, Totango, ChurnZero, CustomerSuccessBox, Vitally'],
-marketSize: '$1 && 1.2B market',
-      growthRate: '22 && 22.5% annual growth',
-      variant: 'ai-autonomous',
-      contactInfo:
-        contactInfo: unknown;
-      color: 'from - blue - 600 to - cyan - 500',
+      marketSize: '$1 && 1.2B market'
+      growthRate: '22 && 22.5% annual growth'
+      variant: 'ai-autonomous'
+      contactInfo: unknown,
+      color: 'from - blue - 600 to - cyan - 500'
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / services / ai - customer - success - automation',
-      market_position: unknown;
+      market_position: unknown,
         'Competitive with Gainsight ($500 / month), Totango ($400 / month), and ChurnZero ($300 / month). Our advantage: AI automation, 94% churn prediction accuracy, and 40% cost reduction.',
-      target_audience: unknown;
+      target_audience: unknown,
         'SaaS companies, Subscription businesses, Customer success teams, Account managers, Growth teams',
-      trial_days: 14;
-      setup_time: '1 hour',
+      trial_days: 14,
+      setup_time: '1 hour'
       category: 'Customer Success & Retention',
-      real_service: true;
+      real_service: true,
       technology: [,
       ro,
   i: 'Average customer sees 300% ROI within 3 months through improved retention and reduced churn.'
@@ -186,8 +183,8 @@ marketSize: '$1 && 1.2B market',
       marketSiz,
   e: '$1 && 1.2B market',
       growthRat,
-  e: '22 && 22.5% annual growth',;
-varian,
+  e: '22 && 22.5% annual growth',
+      varian,
   t: 'ai-autonomous',
       contactInf,
   o: unknown,
@@ -227,37 +224,36 @@ varian,
       competitor,
   s: [,
         'Gainsight, Totango, ChurnZero, CustomerSuccessBox, Vitally'],
-market_size: '$1.2B market',
-      growth_rate: '22.5% annual growth',
-      variant: 'ai - autonomous',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
+      market_size: '$1.2B market'
+      growth_rate: '22.5% annual growth'
+      variant: 'ai - autonomous'
+      contact_info: unknown,
+        mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
-      real_implementation: true;
-      implementation_details: unknown;
+      real_implementation: true
+      implementation_details: unknown,
         'Full - featured AI customer success platform with real - time monitoring, automated workflows, and intelligent insights. Includes mobile - responsive dashboards and comprehensive API access.',
-      launch_date: '2024 - 11 - 15',
-      customers:
-        customers: 320;
-      rating: 4 && 4.8;
-      reviews: 156},
+      launch_date: '2024 - 11 - 15'
+      customers: 320
+      rating: 4 && 4.8
+      reviews: 156,
+    },
         'Advanced document processing platform that uses AI to extract, classify, and process documents with 99 && 99.2% accuracy, automating workflows and reducing manual data entry.',
-      features: [;
-    // Intelligent Document Processing Hub;
-      id: 'intelligent - document - processing - hub',
-      name: 'Intelligent Document Processing Hub',
-      tagline: 'AI - powered document intelligence and automation',
+      features: [
+    // Intelligent Document Processing Hub,
+      id: 'intelligent - document - processing - hub'
+      name: 'Intelligent Document Processing Hub'
+      tagline: 'AI - powered document intelligence and automation'
       price: '$199',
       period: '/month',
-      description: unknown;
+      description: unknown,
       market_siz,
   e: '$1.2B market',
       growth_rat,
-  e: '22.5% annual growth',;
-varian,
+  e: '22.5% annual growth',
+      varian,
   t: 'ai - autonomous',
       contact_inf,
   o: unknown,
@@ -285,7 +281,7 @@ varian,
   s: 156},
         'Advanced document processing platform that uses AI to extract, classify, and process documents with 99 && 99.2% accuracy, automating workflows and reducing manual data entry.',
       feature,
-  s: [;
+  s: [,
     // Intelligent Document Processing Hub,
       i,
   d: 'intelligent - document - processing - hub',
@@ -312,7 +308,7 @@ varian,
         'Real - time processing and notifications',
         'Advanced search and retrieval',
         'Integration with business systems'],
-      popular: false;
+      popular: false,
       icon: '',
       popula,
   r: false,
@@ -327,14 +323,14 @@ varian,
       color: 'from - green - 600 to - emerald - 500',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / services / intelligent - document - processing - hub',
-      market_position: unknown;
+      market_position: unknown,
         'Competitive with UiPath ($420 / month), Automation Anywhere ($350 / month), and Blue Prism ($400 / month). Our advantage: 99.2% accuracy, faster processing, and 50% cost reduction.',
-      target_audience: unknown;
+      target_audience: unknown,
         'Legal firms, Healthcare providers, Financial institutions, Insurance companies, Government agencies',
-      trial_days: 21;
-      setup_time: '2 hours',
+      trial_days: 21,
+      setup_time: '2 hours'
       category: 'Document Automation & AI',
-      real_service: true;
+      real_service: true,
       technology: [,
       useCase,
   s: [,
@@ -371,30 +367,29 @@ varian,
         'Document processing, Form automation, Data extraction, Compliance management, Workflow automation'],
       roi: 'Average customer saves 15 hours per week and sees 400% ROI through automation and efficiency gains.',
       competitors: ['UiPath, Automation Anywhere, Blue Prism, Kofax, ABBYY'],
-market_size: '$2.8B market',
-      growth_rate: '19.8% annual growth',
-      variant: 'ai - autonomous',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
+      market_size: '$2.8B market'
+      growth_rate: '19.8% annual growth'
+      variant: 'ai - autonomous'
+      contact_info: unknown,
+        mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
-      real_implementation: true;
-      implementation_details: unknown;
+      real_implementation: true
+      implementation_details: unknown,
         'Enterprise - grade document processing platform with AI - powered intelligence, automated workflows, and comprehensive compliance features. Includes mobile access and extensive API capabilities.',
-      launch_date: '2024 - 10 - 20',
-      customers:
-        customers: 280;
-      rating: 4 && 4.7;
-      reviews: 134},
+      launch_date: '2024 - 10 - 20'
+      customers: 280
+      rating: 4 && 4.7
+      reviews: 134,
+    },
     // Smart Inventory Management System;
-      id: 'smart - inventory - management - system',
+      id: 'smart - inventory - management - system'
       name: 'Smart Inventory Management System',
       tagline: 'AI - powered inventory optimization and forecasting',
       price: '$149',
       period: '/month',
-      description: unknown;
+      description: unknown,
       ro,
   i: 'Average customer saves 15 hours per week and sees 400% ROI through automation and efficiency gains.',
       competitor,
@@ -402,8 +397,8 @@ market_size: '$2.8B market',
       market_siz,
   e: '$2.8B market',
       growth_rat,
-  e: '19.8% annual growth',;
-varian,
+  e: '19.8% annual growth',
+      varian,
   t: 'ai - autonomous',
       contact_inf,
   o: unknown,
@@ -455,7 +450,7 @@ varian,
         'Integration with ERP and e - commerce',
         'Barcode and QR code scanning',
         'Automated inventory audits'],
-      popular: true;
+      popular: true,
       icon: '',
       popula,
   r: true,
@@ -471,22 +466,21 @@ varian,
         'Inventory tracking, Demand forecasting, Supplier management, Multi-location operations, E-commerce integration'],
       roi: 'Average customer reduces inventory costs by 25% and sees 350% ROI within 6 months.',
       competitors: ['TradeGecko, Zoho Inventory, Fishbowl, Cin7, Unleashed'],
-marketSize: '$3 && 3.1B market',
-      growthRate: '16 && 16.9% annual growth',
-      variant: 'ai-autonomous',
-      contactInfo:
-        contactInfo: unknown;
-      color: 'from - orange - 600 to - red - 500',
+      marketSize: '$3 && 3.1B market'
+      growthRate: '16 && 16.9% annual growth'
+      variant: 'ai-autonomous'
+      contactInfo: unknown,
+      color: 'from - orange - 600 to - red - 500'
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / services / smart - inventory - management - system',
-      market_position: unknown;
+      market_position: unknown,
         'Competitive with TradeGecko ($139 / month), Zoho Inventory ($119 / month), and Fishbowl ($4) 395 / year). Our advantage: AI forecasting, 96% accuracy, and comprehensive automation.',
-      target_audience: unknown;
+      target_audience: unknown,
         'Retail businesses, E - commerce companies, Manufacturing firms, Distribution centers, Warehouses',
-      trial_days: 30;
-      setup_time: '3 hours',
+      trial_days: 30,
+      setup_time: '3 hours'
       category: 'Inventory & Supply Chain',
-      real_service: true;
+      real_service: true,
       technology: [,
       ro,
   i: 'Average customer reduces inventory costs by 25% and sees 350% ROI within 6 months.',
@@ -495,8 +489,8 @@ marketSize: '$3 && 3.1B market',
       marketSiz,
   e: '$3 && 3.1B market',
       growthRat,
-  e: '16 && 16.9% annual growth',;
-varian,
+  e: '16 && 16.9% annual growth',
+      varian,
   t: 'ai-autonomous',
       contactInf,
   o: unknown,
@@ -533,31 +527,30 @@ varian,
         'Inventory tracking, Demand forecasting, Supplier management, Multi - location operations, E - commerce integration'],
       roi: 'Average customer reduces inventory costs by 25% and sees 350% ROI within 6 months.',
       competitors: ['TradeGecko, Zoho Inventory, Fishbowl, Cin7, Unleashed'],
-market_size: '$3.1B market',
-      growth_rate: '16.9% annual growth',
-      variant: 'ai - autonomous',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
+      market_size: '$3.1B market'
+      growth_rate: '16.9% annual growth'
+      variant: 'ai - autonomous'
+      contact_info: unknown,
+        mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
-      real_implementation: true;
-      implementation_details: unknown;
+      real_implementation: true
+      implementation_details: unknown,
         'Comprehensive inventory management solution with AI - powered forecasting, real - time tracking, and automated workflows. Includes mobile apps and extensive integration capabilities.',
-      launch_date: '2024 - 09 - 10',
-      customers:
-        customers: 450;
-      rating: 4 && 4.9;
-      reviews: 223},
+      launch_date: '2024 - 09 - 10'
+      customers: 450
+      rating: 4 && 4.9
+      reviews: 223,
+    },
         'AI-powered candidate screening and matching',
     // AI - Powered HR Recruitment Suite;
-      id: 'ai - hr - recruitment - suite',
+      id: 'ai - hr - recruitment - suite'
       name: 'AI HR Recruitment Suite',
       tagline: 'Intelligent recruitment and talent acquisition',
       price: '$399',
       period: '/month',
-      description: unknown;
+      description: unknown,
       ro,
   i: 'Average customer reduces inventory costs by 25% and sees 350% ROI within 6 months.',
       competitor,
@@ -565,8 +558,8 @@ market_size: '$3.1B market',
       market_siz,
   e: '$3.1B market',
       growth_rat,
-  e: '16.9% annual growth',;
-varian,
+  e: '16.9% annual growth',
+      varian,
   t: 'ai - autonomous',
       contact_inf,
   o: unknown,
@@ -619,7 +612,7 @@ varian,
         'Compliance and diversity tracking',
         'Integration with HRIS systems',
         'Mobile app for recruiters'],
-      popular: false;
+      popular: false,
       icon: '',
       popula,
   r: false,
@@ -634,14 +627,14 @@ varian,
       color: 'from - purple - 600 to - pink - 500',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / services / ai - hr - recruitment - suite',
-      market_position: unknown;
+      market_position: unknown,
         'Competitive with Greenhouse ($500 / month), Lever ($500 / month), and BambooHR ($6.19 / employee). Our advantage: AI automation, 60% faster hiring, and comprehensive features.',
-      target_audience: unknown;
+      target_audience: unknown,
         'HR departments, Recruitment agencies, Staffing firms, Growing companies, Enterprise organizations',
-      trial_days: 21;
-      setup_time: '2 hours',
+      trial_days: 21,
+      setup_time: '2 hours'
       category: 'HR & Recruitment',
-      real_service: true;
+      real_service: true,
       technology: [,
       useCase,
   s: [,
@@ -678,31 +671,30 @@ varian,
         'Candidate screening, Job posting, Interview scheduling, Skill assessment, Compliance tracking'],
       roi: 'Average customer reduces time - to - hire by 60% and sees 250% ROI through efficiency gains.',
       competitors: ['Greenhouse, Lever, BambooHR, Workday, ADP'],
-market_size: '$2.3B market',
-      growth_rate: '18.2% annual growth',
-      variant: 'ai - autonomous',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
+      market_size: '$2.3B market'
+      growth_rate: '18.2% annual growth'
+      variant: 'ai - autonomous'
+      contact_info: unknown,
+        mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
-      real_implementation: true;
-      implementation_details: unknown;
+      real_implementation: true
+      implementation_details: unknown,
         'Full - featured HR recruitment platform with AI - powered automation, comprehensive candidate management, and advanced analytics. Includes mobile apps and extensive integration capabilities.',
-      launch_date: '2024 - 08 - 25',
-      customers:
-        customers: 380;
-      rating: 4 && 4.8;
-      reviews: 187},
+      launch_date: '2024 - 08 - 25'
+      customers: 380
+      rating: 4 && 4.8
+      reviews: 187,
+    },
         'AI-powered project risk prediction',
     // Intelligent Project Management Hub;
-      id: 'intelligent - project - management - hub',
+      id: 'intelligent - project - management - hub'
       name: 'Intelligent Project Management Hub',
       tagline: 'AI - powered project planning and execution',
       price: '$179',
       period: '/month',
-      description: unknown;
+      description: unknown,
       ro,
   i: 'Average customer reduces time - to - hire by 60% and sees 250% ROI through efficiency gains.',
       competitor,
@@ -710,8 +702,8 @@ market_size: '$2.3B market',
       market_siz,
   e: '$2.3B market',
       growth_rat,
-  e: '18.2% annual growth',;
-varian,
+  e: '18.2% annual growth',
+      varian,
   t: 'ai - autonomous',
       contact_inf,
   o: unknown,
@@ -764,7 +756,7 @@ varian,
         'Mobile app for field teams',
         'Automated milestone tracking',
         'Custom workflow automation'],
-      popular: true;
+      popular: true,
       icon: '',
       popula,
   r: true,
@@ -780,22 +772,21 @@ varian,
         'Project planning, Resource management, Risk assessment, Team collaboration, Progress tracking'],
       roi: 'Average customer improves project success rate by 35% and sees 300% ROI through better management.',
       competitors: ['Asana, Monday && Monday.com, Jira, Trello, Basecamp'],
-marketSize: '$4 && 4.2B market',
-      growthRate: '20 && 20.1% annual growth',
-      variant: 'ai-autonomous',
-      contactInfo:
-        contactInfo: unknown;
-      color: 'from - indigo - 600 to - blue - 500',
+      marketSize: '$4 && 4.2B market'
+      growthRate: '20 && 20.1% annual growth'
+      variant: 'ai-autonomous'
+      contactInfo: unknown,
+      color: 'from - indigo - 600 to - blue - 500'
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / services / intelligent - project - management - hub',
-      market_position: unknown;
+      market_position: unknown,
         'Competitive with Asana ($10.99 / user / month), Monday.com ($8 / user / month), and Jira ($7.50 / user / month). Our advantage: AI risk prediction, resource optimization, and comprehensive automation.',
-      target_audience: unknown;
+      target_audience: unknown,
         'Project managers, Development teams, Construction firms, Consulting companies, Marketing agencies',
-      trial_days: 30;
-      setup_time: '2 hours',
+      trial_days: 30,
+      setup_time: '2 hours'
       category: 'Project Management & Collaboration',
-      real_service: true;
+      real_service: true,
       technology: [,
       ro,
   i: 'Average customer improves project success rate by 35% and sees 300% ROI through better management.',
@@ -804,8 +795,8 @@ marketSize: '$4 && 4.2B market',
       marketSiz,
   e: '$4 && 4.2B market',
       growthRat,
-  e: '20 && 20.1% annual growth',;
-varian,
+  e: '20 && 20.1% annual growth',
+      varian,
   t: 'ai-autonomous',
       contactInf,
   o: unknown,
@@ -842,17 +833,16 @@ varian,
         'Project planning, Resource management, Risk assessment, Team collaboration, Progress tracking'],
       roi: 'Average customer improves project success rate by 35% and sees 300% ROI through better management.',
       competitors: ['Asana, Monday.com, Jira, Trello, Basecamp'],
-market_size: '$4.2B market',
-      growth_rate: '20.1% annual growth',
-      variant: 'ai - autonomous',
-      contact_info:
-        contact_info: unknown;
-        mobile: '+1 302 464 0950',
+      market_size: '$4.2B market'
+      growth_rate: '20.1% annual growth'
+      variant: 'ai - autonomous'
+      contact_info: unknown,
+        mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
-      real_implementation: true;
-      implementation_details: unknown;
+      real_implementation: true
+      implementation_details: unknown,
       ro,
   i: 'Average customer improves project success rate by 35% and sees 300% ROI through better management.',
       competitor,
@@ -860,8 +850,8 @@ market_size: '$4.2B market',
       market_siz,
   e: '$4.2B market',
       growth_rat,
-  e: '20.1% annual growth',;
-varian,
+  e: '20.1% annual growth',
+      varian,
   t: 'ai - autonomous',
       contact_inf,
   o: unknown,
@@ -882,44 +872,44 @@ varian,
       launch_dat,
   e: '2024 - 07 - 15',
 i,
-  d: string; nam,
-  e: string; taglin,
-  e: string; pric,
+  d: string, nam,
+  e: string, taglin,
+  e: string, pric,
   e: string, perio,
   d: string, descriptio,
-  n: string; feature,
-  s: string[]; popula,
-  r: boolean; ico,
-  n: string; colo,
-  r: string; text_colo,
-  r: string; lin,
-  k: string; market_positio,
-  n: string; target_audienc,
-  e: string; trial_day,
-  s: number; setup_tim,
-  e: string; categor,
-  y: string; real_servic,
-  e: boolean; technolog,
-  y: string[]; integration,
-  s: string[]; use_case,
-  s: string[]; ro,
-  i: string; competitor,
-  s: string[]; market_siz,
-  e: string; growth_rat,
-  e: string; varian,
-  t: ServiceVariant; contact_inf,
+  n: string, feature,
+  s: string[], popula,
+  r: boolean, ico,
+  n: string, colo,
+  r: string, text_colo,
+  r: string, lin,
+  k: string, market_positio,
+  n: string, target_audienc,
+  e: string, trial_day,
+  s: number, setup_tim,
+  e: string, categor,
+  y: string, real_servic,
+  e: boolean, technolog,
+  y: string[], integration,
+  s: string[], use_case,
+  s: string[], ro,
+  i: string, competitor,
+  s: string[], market_siz,
+  e: string, growth_rat,
+  e: string, varian,
+  t: ServiceVariant, contact_inf,
   o: mobil,
-  e: string; emai,
-  l: string; addres,
-  s: string; websit,
+  e: string, emai,
+  l: string, addres,
+  s: string, websit,
   e: string} 'AI-powered churn prediction with 94% accuracy', real_implementatio,
-  n: boolean; implementation_detail,
-  s: string; launch_dat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number; export const,
-  innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionService[] =; [; // AI - Powered Customer Success Automation, ' i,
+  n: boolean, implementation_detail,
+  s: string, launch_dat,
+  e: string, customer,
+  s: number, ratin,
+  g: number, review,
+  s: number, export const,
+  innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionService[] =; [, // AI - Powered Customer Success Automation, ' i,
   d: 'ai - customer - success - automation',' nam,
   e: 'AI Customer Success Automation',' taglin,
   e: 'Automate customer success with intelligent AI',' pric,

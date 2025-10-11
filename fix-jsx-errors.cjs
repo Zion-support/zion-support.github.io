@@ -2,149 +2,133 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-// Get list of files with TypeScript errors
-function getFilesWithErrors() {
+// Function to fix common JSX syntax errors
+function fixJsxErrors(filePath) {
   try {
-    const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' });
-    const lines = output.split('\n');
-    const files = new Set();
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
     
-    lines.forEach(line => {
-      const match = line.match(/^([^(]+\.tsx)\([0-9]+,[0-9]+\):/);
-      if (match) {
-        files.add(match[1]);
+    // Fix 1: Add missing closing tags for common patterns
+    // Look for unclosed div, section, main tags
+    const unclosedTagPatterns = [
+      { open: '<div', close: '</div>' },
+      { open: '<section', close: '</section>' },
+      { open: '<main', close: '</main>' },
+      { open: '<article', close: '</article>' },
+      { open: '<header', close: '</header>' },
+      { open: '<footer', close: '</footer>' },
+      { open: '<nav', close: '</nav>' }
+    ];
+    
+    // Fix 2: Fix JSX fragments - ensure proper opening and closing
+    content = content.replace(/<>/g, '<React.Fragment>');
+    content = content.replace(/<\/>/g, '</React.Fragment>');
+    
+    // Fix 3: Fix common syntax errors
+    // Fix missing commas in object literals
+    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):/g, '$1: $2,\n    $3:');
+    
+    // Fix missing semicolons in JSX expressions
+    content = content.replace(/(\w+)\s*\n\s*<\/\w+>/g, '$1;\n  </');
+    
+    // Fix 4: Ensure proper JSX structure
+    // Add missing React import if needed
+    if (content.includes('React.FC') || content.includes('useState') || content.includes('useEffect')) {
+      if (!content.includes("import React")) {
+        content = "import React from 'react';\n" + content;
       }
-    });
-    
-    return Array.from(files);
-  } catch (error) {
-    console.log('Error getting files with errors:', error.message);
-    return [];
-  }
-}
-
-// Common JSX fixes
-function fixJSXContent(content) {
-  let fixed = content;
-  
-  // Fix missing closing tags - common patterns
-  const fixes = [
-    // Fix self-closing tags that should be closed
-    [/(<[^>]+[^/])>(\s*<)/g, '$1></$1>$2'],
-    
-    // Fix malformed JSX expressions
-    [/<([^>]+)>([^<]+)<\/\1>/g, '<$1>$2</$1>'],
-    
-    // Fix missing closing tags for common elements
-    [/<h1([^>]*)>([^<]+)<\/h1>/g, '<h1$1>$2</h1>'],
-    [/<h2([^>]*)>([^<]+)<\/h2>/g, '<h2$1>$2</h2>'],
-    [/<h3([^>]*)>([^<]+)<\/h3>/g, '<h3$1>$2</h3>'],
-    [/<p([^>]*)>([^<]+)<\/p>/g, '<p$1>$2</p>'],
-    [/<div([^>]*)>([^<]+)<\/div>/g, '<div$1>$2</div>'],
-    [/<span([^>]*)>([^<]+)<\/span>/g, '<span$1>$2</span>'],
-    
-    // Fix malformed JSX fragments
-    [/<>([^<]+)<\/>/g, '<>{$1}</>'],
-    
-    // Fix missing closing tags in complex structures
-    [/<section([^>]*)>([^<]+)<\/section>/g, '<section$1>$2</section>'],
-    [/<main([^>]*)>([^<]+)<\/main>/g, '<main$1>$2</main>'],
-    
-    // Fix malformed className attributes
-    [/className="([^"]*)"\s*>/g, 'className="$1">'],
-    
-    // Fix missing closing tags for lists
-    [/<ul([^>]*)>([^<]+)<\/ul>/g, '<ul$1>$2</ul>'],
-    [/<li([^>]*)>([^<]+)<\/li>/g, '<li$1>$2</li>'],
-    
-    // Fix malformed imports
-    [/import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, 'import { $1 } from "$2";'],
-    
-    // Fix missing semicolons
-    [/export default ([^;]+)(?!;)/g, 'export default $1;'],
-    
-    // Fix malformed function declarations
-    [/const\s+([^=]+)\s*=\s*\(\)\s*=>\s*{/g, 'const $1 = () => {'],
-    
-    // Fix missing closing braces
-    [/}\s*$/g, '}\n'],
-    
-    // Fix malformed JSX expressions
-    [/{\s*([^}]+)\s*}/g, '{$1}'],
-    
-    // Fix missing closing tags for components
-    [/<([A-Z][a-zA-Z0-9]*)([^>]*)>([^<]+)<\/\1>/g, '<$1$2>$3</$1>'],
-  ];
-  
-  fixes.forEach(([pattern, replacement]) => {
-    fixed = fixed.replace(pattern, replacement);
-  });
-  
-  return fixed;
-}
-
-// Fix a single file
-function fixFile(filePath) {
-  try {
-    console.log(`Fixing ${filePath}...`);
-    
-    if (!fs.existsSync(filePath)) {
-      console.log(`File not found: ${filePath}`);
-      return false;
     }
     
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixJSXContent(content);
+    // Fix 5: Fix malformed JSX attributes
+    content = content.replace(/className=\s*{([^}]+)}\s*>/g, 'className={$1}>');
+    content = content.replace(/className=\s*"([^"]+)"\s*>/g, 'className="$1">');
     
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed ${filePath}`);
+    // Fix 6: Fix unclosed JSX elements by adding proper closing tags
+    // This is a more complex fix that requires parsing the structure
+    const lines = content.split('\n');
+    const fixedLines = [];
+    const tagStack = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      fixedLines.push(line);
+      
+      // Check for opening tags
+      const openTagMatch = line.match(/<(\w+)(?:\s[^>]*)?(?:>|$)/);
+      if (openTagMatch && !line.includes('/>')) {
+        const tagName = openTagMatch[1];
+        if (!['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName)) {
+          tagStack.push(tagName);
+        }
+      }
+      
+      // Check for closing tags
+      const closeTagMatch = line.match(/<\/(\w+)>/);
+      if (closeTagMatch) {
+        const tagName = closeTagMatch[1];
+        const lastIndex = tagStack.lastIndexOf(tagName);
+        if (lastIndex !== -1) {
+          tagStack.splice(lastIndex, 1);
+        }
+      }
+    }
+    
+    // Add missing closing tags at the end
+    while (tagStack.length > 0) {
+      const tag = tagStack.pop();
+      fixedLines.push(`  </${tag}>`);
+    }
+    
+    content = fixedLines.join('\n');
+    
+    // Fix 7: Clean up extra whitespace and empty lines
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    content = content.replace(/^\s*\n/gm, '');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`✓ Fixed JSX errors in ${filePath}`);
       return true;
-    } else {
-      console.log(`No changes needed for ${filePath}`);
-      return false;
     }
+    
+    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Main function
-function main() {
-  console.log('Getting list of files with TypeScript errors...');
-  const files = getFilesWithErrors();
-  
-  console.log(`Found ${files.length} files with errors`);
-  
-  let fixedCount = 0;
-  let errorCount = 0;
-  
-  files.forEach(file => {
-    if (fixFile(file)) {
-      fixedCount++;
-    } else {
-      errorCount++;
-    }
-  });
-  
-  console.log(`\nFixed ${fixedCount} files`);
-  console.log(`Errors in ${errorCount} files`);
-  
-  // Run type check again to see if we fixed anything
-  console.log('\nRunning type check again...');
+// Function to find all files with JSX errors
+function findFilesWithJsxErrors() {
   try {
-    execSync('pnpm run type-check', { stdio: 'inherit' });
-    console.log('Type check passed!');
+    const { execSync } = require('child_process');
+    const result = execSync('find . -name "*.tsx" -o -name "*.jsx" | grep -v node_modules', { 
+      encoding: 'utf8',
+      cwd: process.cwd()
+    });
+    return result.trim().split('\n').filter(line => line.trim());
   } catch (error) {
-    console.log('Type check still has errors, but we made progress');
+    return [];
   }
 }
 
-if (require.main === module) {
-  main();
-}
+// Main execution
+console.log('🔧 Starting JSX error fixes...\n');
 
-module.exports = { fixJSXContent, fixFile };
+const filesToFix = findFilesWithJsxErrors();
+console.log(`Found ${filesToFix.length} JSX files to check:\n`);
+
+let fixedCount = 0;
+let totalFiles = filesToFix.length;
+
+filesToFix.forEach((filePath, index) => {
+  console.log(`[${index + 1}/${totalFiles}] Processing ${filePath}`);
+  
+  if (fixJsxErrors(filePath)) {
+    fixedCount++;
+  }
+});
+
+console.log(`\n✅ JSX fixes complete!`);
+console.log(`📊 Fixed errors in ${fixedCount} out of ${totalFiles} files`);

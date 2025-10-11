@@ -21,34 +21,36 @@ const filesWithErrors = [
   'src/blog/ai-powered-autonomous-business-processes-2026/page.tsx',
   'src/blog/ai-trends-2026-future-enterprise-transformation/page.tsx'
 ];
-;
+
 function fixParsingError(filePath) {
-  try {;
-let content = fs.readFileSync(filePath, 'utf8');
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Check if file ends with ); but is missing the closing brace;
-    if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {;
+    if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {
 function fixParsingError(filePath) {/* TODO: Fix JSX expression */}
     if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {/* TODO: Fix JSX expression */}
       content = content.trim() + '\n};';
-      modified = true}
+      modified = true;
+    }
 
     if (modified) {/* TODO: Fix JSX expression */}
-  d: ${path.relative(__dirname, filePath)}`)}
+  d: ${path.relative(__dirname, filePath)}`);
+    }
   } catch (error) {/* TODO: Fix JSX expression */}`
-    // console.error removed for production
-}
+    console.error(`Error processing ${filePath}:`, error.message);
+  }
 }
 
 // Process all files;
-filesWithErrors.forEach(file => {);
-const fullPath = path.join(__dirname, file);
+filesWithErrors.forEach(file => {)
+  const fullPath = path.join(__dirname, file);
   if (fs.existsSync(fullPath)) {
-    fixParsingError(fullPath)}
+    fixParsingError(fullPath);
+  }
 filesWithErrors.forEach(file => {/* TODO: Fix JSX expression */}
   })
 });
 
-// console.log removed for production
-`
+console.log('Fixed remaining parsing errors!');`

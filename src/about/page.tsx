@@ -5,9 +5,8 @@ import { Link } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Users, Target, Brain, Shield } from 'lucide-react';
 import Footer from '../components/Footer';
-;
-const AboutPage: React.FC = () => {;
-const team = [
+const AboutPage: React.FC = () => {
+  const team = [
     {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
@@ -23,15 +22,13 @@ const team = [
       role: 'Lead AI Engineer',
       image: '/images/team/michael.jpg',
       bio: 'AI researcher and developer with expertise in deep learning and NLP.'}];
-;
-const stats = [
+  const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Client Satisfaction' }
   ];
-;
-const values = [
+  const values = [
     {
       icon: Brain,
       title: 'Innovation',
@@ -48,7 +45,6 @@ const values = [
       icon: Users,
       title: 'Partnership',
       description: 'We work closely with our clients as strategic technology partners.'}];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
@@ -58,8 +54,8 @@ const values = [
             We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.
           </p>
 import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from 'lucide-react';
-export default function AboutPage() {;
-const teamMembers = [
+export default function AboutPage() {
+  const teamMembers = [
     {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
@@ -169,8 +165,8 @@ const teamMembers = [
         <div className='prose prose-lg max-w-none'>
           <div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
             <h2 className='text-2xl font-bold text-gray-900 mb-4'>
-              Our Mission
-            </h2>
+              Our Mission;
+  </
             <p className='text-gray-600 mb-4'>
               At Zion Tech Group, we are dedicated to transforming
               businesses through cutting-edge AI and IT solutions. Our
@@ -183,7 +179,6 @@ const teamMembers = [
             </p>
           </div>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
             <Users className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
@@ -206,7 +201,6 @@ const teamMembers = [
             <p className="text-gray-300">Enterprise-grade security</p>
           </div>
         </div>
-
         {/* Stats Section */}
         <section className="py-16 bg-white rounded-xl mb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -224,15 +218,14 @@ const teamMembers = [
             </div>
           </div>
         </section>
-
         {/* Mission Section */}
         <section className="py-20 bg-gray-50 rounded-xl mb-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Our Mission
-                </h2>
+                  Our Mission,
+  </
                 <p className="text-lg text-gray-600 mb-6">
                   To democratize access to advanced AI technology and empower businesses of all sizes 
                   to achieve their full potential through innovative digital solutions.
@@ -243,10 +236,9 @@ const teamMembers = [
                 </p>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Get in Touch
-                </Link>
+                  className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">
+                  Get in Touch,
+  </
               </div>
               <div className="bg-white rounded-xl shadow-lg p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
@@ -259,19 +251,17 @@ const teamMembers = [
             </div>
           </div>
         </section>
-
         {/* Values Section */}
         <section className="py-20 bg-white rounded-xl mb-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Values
-              </h2>
+  </
               <p className="text-xl text-gray-600">
-                The principles that guide everything we do
-              </p>
+                The principles that guide everything we do,
+  </
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
                 <div key={index} className="text-center">
@@ -289,19 +279,17 @@ const teamMembers = [
             </div>
           </div>
         </section>
-
         {/* Team Section */}
         <section className="py-20 bg-gray-50 rounded-xl mb-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Meet Our Team
-              </h2>
+  </
               <p className="text-xl text-gray-600">
-                The experts behind our innovative solutions
-              </p>
+                The experts behind our innovative solutions,
+  </
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {team.map((member, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
@@ -326,10 +314,9 @@ const teamMembers = [
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Work With Us?
             </h2>
@@ -339,16 +326,14 @@ const teamMembers = [
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300"
-              >
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
                 Start a Project
-              </Link>
+  </
               <Link
                 to="/careers"
-                className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition-all duration-300"
-              >
-                Join Our Team
-              </Link>
+                className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition-all duration-300">
+                Join Our Team,
+  </
             </div>
           </div>
         </section>
@@ -365,13 +350,13 @@ const teamMembers = [
                 <div className="text-gray-600 font-medium">
                   {stat.label}
                 </div>
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      <section className="relative py-20 lg: py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              About Zion Tech Group
-            </h1>
+              About Zion Tech Group,
+  </
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
               Leading the future of AI-powered enterprise solutions with cutting-edge technology, 
               innovative thinking, and unwavering commitment to client success.
@@ -396,11 +381,11 @@ const teamMembers = [
       {/* Mission & Vision */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Our Mission
-              </h2>
+                Our Mission,
+  </
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                 To democratize artificial intelligence and cutting-edge technology for enterprises worldwide, 
                 enabling them to achieve unprecedented levels of efficiency, innovation, and growth.
@@ -421,9 +406,9 @@ const teamMembers = [
               </div>
             </div>
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Our Vision
-              </h2>
+              <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
+                Our Vision,
+  </
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                 To be the world's leading provider of AI and quantum computing solutions, 
                 creating a future where technology seamlessly integrates with human potential 
@@ -454,12 +439,12 @@ const teamMembers = [
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
               Our Values
-            </h2>
+  </
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              The principles that guide everything we do and shape our culture
-            </p>
+              The principles that guide everything we do and shape our culture,
+  </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
@@ -478,12 +463,12 @@ const teamMembers = [
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Meet Our Team
-            </h2>
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+              Meet Our Team,
+  </
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              World-class experts in AI, quantum computing, and enterprise technology
-            </p>
+              World-class experts in AI, quantum computing, and enterprise technology;
+  </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
@@ -512,12 +497,12 @@ const teamMembers = [
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
               Our Achievements
-            </h2>
+  </
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Numbers that speak to our impact and success
-            </p>
+              Numbers that speak to our impact and success,
+  </
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
@@ -540,12 +525,12 @@ const teamMembers = [
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
               Our Journey
-            </h2>
+  </
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Key milestones in our company's growth and innovation
-            </p>
+              Key milestones in our company's growth and innovation,
+  </
           </div>
           <div className="max-w-4xl mx-auto">
             <div className="relative">
@@ -570,7 +555,7 @@ const teamMembers = [
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
@@ -579,20 +564,48 @@ const teamMembers = [
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
-            >
+              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center">
               <MessageSquare className="w-5 h-5 mr-2" />
               Get Started Today
-            </a>
+  </
             <a
               href="/consultation"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
-            >
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center">
               <Calendar className="w-5 h-5 mr-2" />
               Free Consultation
-            </a>
+  </
           </div>
         </div>
       </section>
     </div>
-  )}
+  ),
+}
+  </a>
+  </a>
+  </p>
+  </h2>
+  </p>
+  </h2>
+  </p>
+  </h2>
+  </p>
+  </h2>
+  </h2>
+  </h2>
+  </h1>
+  </div>
+  </div>
+  </section>
+  </Link>
+  </Link>
+  </p>
+  </h2>
+  </p>
+  </h2>
+  </Link>
+  </h2>
+  </h2>
+  </section>
+  </div>
+  </div>
+  </div>

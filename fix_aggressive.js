@@ -1,11 +1,11 @@
-import React from 'react';
 #!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 // const __filename = fileURLToPath(import.meta.url);
-// // __dirname removed
+// const __dirname = path.dirname(__filename);
+
 //Function to aggressively fix corrupted syntax;
 function fixCorruptedSyntax(text) {
 
@@ -27,8 +27,8 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
   //Fix corrupted import statements;
   fixed = fixed.replace(
     /import\s*\{([^}]+)\}\s*from\s*['"]([^'"]+)['"];?/g,
-    (match, imports, module) => {;
-const cleanImports = imports;
+    (match, imports, module) => {
+      const cleanImports = imports;
         .replace(/,\s*,/g, ',')
         .replace(/\s*,\s*/g, ', ')
         .trim();
@@ -59,7 +59,7 @@ const cleanImports = imports;
     /const\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*React\.FC\s*=\s*\(/g,
     'const $1: React.FC = (',
     'const $1: React.FC = (')
-  );
+  ),
   fixed = fixed.replace(/const\s*([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*=\s*\(/g, 'const $1 = (');
 
   //Fix corrupted JSX;
@@ -80,8 +80,10 @@ const cleanImports = imports;
   fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*([^)]*)\s*\)/g, '$1($2)');
 
   //Fix corrupted arrow functions;
-  fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{/g, match => {
-    return match.replace(/\s+/g, ' ').trim()});
+  fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{
+    /g, match => {
+    return match.replace(/\s+/g, ' ').trim()
+  });
 
   //Fix corrupted string literals;
   fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{/* TODO: Fix JSX expression */}
@@ -199,7 +201,8 @@ const cleanImports = imports;
     'performanceMetrics, setPerformanceMetrics')
   );
 
-  return fixed}
+  return fixed;
+}
 
 //Function to process a file;
 function processFile(filePath) {
@@ -212,7 +215,8 @@ function processFile(filePath) {
       //       return true;
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
-    return false} catch (error) {/* TODO: Fix JSX expression */}
+    return false;
+  } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
@@ -243,7 +247,8 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
     //     }
 
-  return processedCount}
+  return processedCount;
+}
 
 //Main execution;
 // let processedCount = processDirectory('./src');

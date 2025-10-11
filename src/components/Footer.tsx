@@ -2,11 +2,9 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
-;
-const Footer: React.FC = memo(() => {;
-const currentYear = new Date().getFullYear();
-  ;
-const microSaasServices = [
+const Footer: React.FC = memo(() => {
+  const currentYear = new Date().getFullYear(),
+  const microSaasServices = [
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media', icon: '📱', popular: true },
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'AI-powered analytics', icon: '📈', popular: true },
@@ -16,8 +14,7 @@ const microSaasServices = [
     { name: 'AI Content Generator', url: '/ai-content-generation', description: 'AI content creation', icon: '✍️', popular: false },
     { name: 'AI SEO Optimizer', url: '/ai-marketing', description: 'AI-driven SEO', icon: '🎯', popular: false }
   ];
-;
-const aiServices = [
+  const aiServices = [
     { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Intelligent process automation' },
@@ -41,8 +38,7 @@ const aiServices = [
     { name: 'AI Research & Development', url: '/ai-research-development', description: 'Custom AI R&D' },
     { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'AI at the edge' }
   ];
-;
-const itServices = [
+  const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
@@ -60,8 +56,7 @@ const itServices = [
     { name: 'IT Automation', url: '/it-automation', description: 'IT process automation' },
     { name: 'Global IT Support', url: '/global-it-support', description: 'Worldwide support' }
   ];
-;
-const emergingTech = [
+  const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
     { name: 'Robotics', url: '/robotics', description: 'Intelligent robotics' },
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
@@ -75,16 +70,14 @@ const emergingTech = [
     { name: 'Sustainability Tech', url: '/sustainability-tech', description: 'Green technology solutions' },
     { name: 'Future Technologies', url: '/future-technologies', description: 'Emerging tech solutions' }
   ];
-;
-const companyLinks = [
+  const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
     { name: 'News', url: '/news' },
     { name: 'Contact', url: '/contact' }
   ];
-;
-const supportLinks = [
+  const supportLinks = [
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api-docs' },
     { name: 'Support Center', url: '/support' },
@@ -92,8 +85,7 @@ const supportLinks = [
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' }
   ];
-;
-const socialLinks = [
+  const socialLinks = [
     { name: 'Facebook', url: 'https://facebook.com/ziontechgroup', icon: Facebook },
     { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter },
     { name: 'LinkedIn', url: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
@@ -101,21 +93,18 @@ const socialLinks = [
     { name: 'YouTube', url: 'https://youtube.com/@ziontechgroup', icon: Youtube },
     { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: Github }
   ];
-;
-const contactInfo = {
+  const contactInfo = {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
     hours: 'Mon-Fri: 9AM-6PM EST'
-  };
-;
-const achievements = [
+  }
+  const achievements = [
     { icon: Award, text: '50+ Successful Projects' },
     { icon: Users, text: '100+ Happy Clients' },
     { icon: TrendingUp, text: '300% Average ROI' },
     { icon: Shield, text: '99.9% Uptime Guarantee' }
   ];
-
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
       {/* Main Footer Content */}
@@ -124,7 +113,7 @@ const achievements = [
           {/* Company Info */}
           <div className="space-y-6">
             <div>
-              <Link href="/" className="flex items-center space-x-2 group">
+              <Link to="/" className="flex items-center space-x-2 group">
                 <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-white font-bold text-lg">Z</span>
                 </div>
@@ -134,12 +123,10 @@ const achievements = [
                 </div>
               </Link>
             </div>
-            
             <p className="text-gray-300 text-sm leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, 
               and digital transformation services. Transform your business with cutting-edge technology.
             </p>
-
             {/* Social Links */}
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -156,7 +143,6 @@ const achievements = [
               ))}
             </div>
           </div>
-
           {/* Micro SAAS Solutions */}
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
@@ -164,7 +150,7 @@ const achievements = [
               {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -175,7 +161,7 @@ const achievements = [
               ))}
               <li>
                 <Link 
-                  href="/ai-services"
+                  to="/ai-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All AI Services →
@@ -183,7 +169,6 @@ const achievements = [
               </li>
             </ul>
           </div>
-
           {/* IT Services */}
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">IT Services</h3>
@@ -191,7 +176,7 @@ const achievements = [
               {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -202,7 +187,7 @@ const achievements = [
               ))}
               <li>
                 <Link 
-                  href="/it-services"
+                  to="/it-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All IT Services →
@@ -210,22 +195,20 @@ const achievements = [
               </li>
               <li>
                 <Link
-                href="/micro-saas"
-                className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center group"
-              >
-                View All Solutions
-                <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
+                  to="/micro-saas"
+                  className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center group"
+                >
+                  View All Solutions
+                  <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                </Link>
               </li>
             </ul>
           </div>
-
           {/* AI & IT Services */}
           <div>
             <h4 className="text-lg font-semibold text-white mb-6 neon-text flex items-center">
               <Brain className="w-5 h-5 mr-2 text-purple-400" />
-              AI & IT Services
-            </h4>
+              AI & IT Services</span>
             <div className="space-y-4">
               <div>
                 <h5 className="text-sm font-semibold text-purple-400 mb-2">AI Services</h5>
@@ -233,7 +216,7 @@ const achievements = [
                   {aiServices.slice(0, 4).map((service, index) => (
                     <Link
                       key={index}
-                      href={service.url}
+                      to={service.url}
                       className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm"
                     >
                       <service.icon className="w-3 h-3" />
@@ -248,7 +231,7 @@ const achievements = [
                   {itServices.slice(0, 4).map((service, index) => (
                     <Link
                       key={index}
-                      href={service.url}
+                      to={service.url}
                       className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm"
                     >
                       <service.icon className="w-3 h-3" />
@@ -260,7 +243,6 @@ const achievements = [
             </div>
           </div>
         </div>
-
         {/* Contact Information */}
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
           <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">Get In Touch</h3>
@@ -295,7 +277,6 @@ const achievements = [
             </div>
           </div>
         </div>
-
         {/* Company Links */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
           <div>
@@ -304,7 +285,7 @@ const achievements = [
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
-                    href={link.url}
+                    to={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
                     {link.name}
@@ -319,7 +300,7 @@ const achievements = [
               {supportLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
-                    href={link.url}
+                    to={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
                     {link.name}
@@ -331,10 +312,10 @@ const achievements = [
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link></li>
-              <li><Link href="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link></li>
-              <li><Link href="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</Link></li>
-              <li><Link href="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</Link></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link></li>
+              <li><Link to="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link></li>
+              <li><Link to="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</Link></li>
+              <li><Link to="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</Link></li>
             </ul>
           </div>
           <div>
@@ -347,13 +328,11 @@ const achievements = [
                 className="flex-1 px-3 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white text-sm focus:outline-none focus:border-cyan-400"
               />
               <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all text-sm">
-                Subscribe
-              </button>
+                Subscribe</span>
             </div>
           </div>
         </div>
       </div>
-
       {/* Bottom Bar */}
       <div className="border-t border-gray-700/50">
         <div className="container mx-auto px-4 py-6">
@@ -362,13 +341,13 @@ const achievements = [
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              <Link href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              <Link to="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              <Link to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Cookie Policy
               </Link>
             </div>
@@ -390,7 +369,15 @@ const achievements = [
         </div>
       </div>
     </footer>
-  )});
-
+  ),
+});
 Footer.displayName = 'Footer';
-export default Footer;
+export default Footer</Link>
+  </Link>
+  </Link>
+  </button>
+  </li>
+  </li>
+  </li>
+  </li>
+  </h4>

@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 // const __filename = fileURLToPath(import.meta.url);
-// // __dirname removed
+// const __dirname = path.dirname(__filename);
 //Function to fix corrupted text by removing erroneous commas;
 function fixCorruptedText(text) {
   //Pattern to match commas that are incorrectly placed in the middle of words;
@@ -115,7 +115,8 @@ function fixCorruptedText(text) {/* TODO: Fix JSX expression */}
   fixed = fixed.replace(/;+/g, ';');
   fixed = fixed.replace(/,\s*,/g, ',');
   fixed = fixed.replace(/;\s*;/g, ';');
-  return fixed}
+  return fixed;
+}
 //Function to process a file;
 function processFile(filePath) {
   try {
@@ -126,7 +127,8 @@ function processFile(filePath) {
       //       return true;
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
-    return false} catch (error) {/* TODO: Fix JSX expression */}
+    return false;
+  } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 //Function to recursively find and process files;
@@ -152,7 +154,8 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
     }
   } catch (error) {/* TODO: Fix JSX expression */}
     //     }
-  return processedCount}
+  return processedCount;
+}
 //Main execution;
 // // const processedCount = processDirectory('./src');
 // 

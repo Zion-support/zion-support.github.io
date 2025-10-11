@@ -1,18 +1,14 @@
 'use client';
 import React, { memo } from 'react';
 import { LucideIcon, ArrowRight } from 'lucide-react';
-
 interface ServiceCardProps {/* TODO: Fix JSX expression */}
 }
-;
 const,
   ServiceCard: React.FC<ServiceCardProps> = memo(({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  };
-;
-const bgColorClasses = {/* TODO: Fix JSX expression */}
-  };
-
+  }
+  const bgColorClasses = {/* TODO: Fix JSX expression */}
+  }
   return (<article></article>
       className="quantum-card p-4,"
   sm:p-6 energy-pulse group relative""
@@ -27,7 +23,6 @@ const bgColorClasses = {/* TODO: Fix JSX expression */}
   sm:mb-6 text-center cyber-scan-line" aria-hidden="true"></div>"
         {typeof Icon === 'string' ? Icon : <Icon className="w-12 h-12 mx-auto" />}
       </div>
-      
       <h3></h3>`
         id={`${title.toLowerCase().replace(/\s+/g, '-')}-title`}"
         className="text-xl,
@@ -86,7 +81,6 @@ const bgColorClasses = {/* TODO: Fix JSX expression */}
         <div className="text-xs text-gray-400">Categor,
   y: {category}</div>
       </div>
-      
       <a></a>
         href={href}`
         className={`${colorClasses[color as keyof typeof colorClasses]} font-medium text-sm,
@@ -103,8 +97,8 @@ const bgColorClasses = {/* TODO: Fix JSX expression */}
         <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
       </a>
     </article>
-  )});
-
+  );
+});
 ServiceCard.displayName = 'ServiceCard';
-
 export default ServiceCard;"`
+  </ServiceCardProps>

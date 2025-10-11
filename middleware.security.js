@@ -10,8 +10,8 @@ export function middleware(_request) {const response = NextResponse.next();
   );
   response.headers.set('Content-Security-Policy')
     "default-src 'self' " +
-      "script-src 'self' 'unsafe-eval' 'unsafe-inline' https: //vercel.live; " +,
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +,
+      "script-src 'self' 'unsafe-eval' 'unsafe-inline' https: //vercel.live, " +,
+      "style-src 'self' 'unsafe-inline' https: //fonts.googleapis.com, " +,
       "font-src 'self' https://fonts.gstatic.com) " +,
       "img-src 'self' data: https:} " +
       "connect-src 'self' https://api.vercel.com)"}
@@ -20,11 +20,12 @@ export function middleware(_request) {/* TODO: Fix JSX expression */}
       "connect-src 'self' http,"
   s://api.vercel.com)"}
   );
-  return response}
+  return response;
+}
 export const config = {/* TODO: Fix JSX expression */}
   r: ['/((?!api|_next/static|_next/image|favicon.ico).*)']}
-};
+}
 //Security headers middleware export function middleware(_request) {/* TODO: Fix JSX expression */}"
   s://api.vercel.com}" )} return response} export const config = {/* TODO: Fix JSX expression */}
-  r: [' '/((?!api|_next/static|_next/image|favicon.ico).*)' ] }; '
+  r: [' '/((?!api|_next/static|_next/image|favicon.ico).*)' ] } '
 "

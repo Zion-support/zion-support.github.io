@@ -1,11 +1,9 @@
 'use client';
 import React from 'react';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
-
-export default function TermsPage() {;
-const lastUpdated = 'January 1, 2024';
-;
-const sections = [
+export default function TermsPage() {
+  const lastUpdated = 'January 1, 2024';
+  const sections = [
     {
       title: 'Acceptance of Terms',
       icon: CheckCircle,
@@ -37,8 +35,7 @@ const sections = [
       content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
     }
   ];
-;
-const prohibitedUses = [
+  const prohibitedUses = [
     'Violating any applicable laws or regulations',
     'Transmitting malicious code or harmful content',
     'Attempting to gain unauthorized access to our systems',
@@ -48,8 +45,7 @@ const prohibitedUses = [
     'Collecting user information without consent',
     'Engaging in any form of harassment or abuse'
   ];
-;
-const serviceLevels = [
+  const serviceLevels = [
     {
       service: 'AI Services',
       uptime: '99.9%',
@@ -75,17 +71,16 @@ const serviceLevels = [
       response: '4 hours'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      <section className="relative py-20 lg: py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              Terms of Service
-            </h1>
+              Terms of Service,
+  </
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
               Please read these terms carefully before using our services. By using our services, you agree to be bound by these terms.
             </p>
@@ -106,7 +101,6 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-
       {/* Last Updated */}
       <section className="py-8">
         <div className="container mx-auto px-4">
@@ -122,7 +116,6 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-
       {/* Key Terms */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -142,7 +135,6 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-
       {/* Prohibited Uses */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -162,7 +154,6 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-
       {/* Service Level Agreements */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -193,7 +184,6 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-
       {/* Payment Terms */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -224,7 +214,6 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-
       {/* Termination */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -256,7 +245,6 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-
       {/* Governing Law */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -283,7 +271,6 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
         <div className="container mx-auto px-4">
@@ -308,13 +295,15 @@ const serviceLevels = [
             </div>
             <a
               href="/contact"
-              className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
-            >
+              className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover: bg-cyan-600 transition-colors inline-flex items-center">
               <Mail className="w-5 h-5 mr-2" />
               Contact Us
-            </a>
+  </
           </div>
         </div>
       </section>
     </div>
-  )}
+  ),
+}
+  </a>
+  </h1>

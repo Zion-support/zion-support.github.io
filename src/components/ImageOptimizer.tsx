@@ -1,17 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
-
 interface ImageOptimizerProps {
-  src: string;
+    src: string;
   alt: string;
   className?: string;
   width?: number;
   height?: number;
-  priority?: boolean;
-  placeholder?: string;
-  onLoad?: () => void;
-  onError?: () => void}
-;
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
+  priority?: boolean
+  placeholder?: string
+  onLoad?: () => void,
+  onError?: () => void
+  }
+const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
+    ,
   src;
   alt,
   className = '',
@@ -20,50 +20,42 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   priority = false,
   placeholder,
   onLoad,
-  onError}) => {
-return (
-;
-const [isLoaded, setIsLoaded] = useState(false);
+  onError
+  }) => {
+    const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);</HTMLImageElement>useEffect</HTMLImageElement>
-);
-}(() => {
+  const imgRef = useRef<HTMLImageElement>(null);</HTMLImageElement>useEffect</HTMLImageElement>(() => {
     if (priority) return;
-;
-const observer = new IntersectionObserver(
+    const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
-          observer.disconnect()}
+          observer.disconnect()
+  }
       },
       {
-        rootMargin: '50px 0px',
-        threshold: 0.01}
+    rootMargin: '50px 0px',
+        threshold: 0.01
+  }
     );
-
     if (imgRef.current) {
-      observer.observe(imgRef.current)}
-
-    return () => observer.disconnect()}, [priority]);
-;
-const handleLoad = () => {
+    observer.observe(imgRef.current)
+  }
+    return () => observer.disconnect();
+  }, [priority]);
+  const handleLoad = () => {
     setIsLoaded(true);
-    onLoad?.()};
-;
-const handleError = () => {
+    onLoad?.()
+  }
+  const handleError = () => {
     setHasError(true);
-    onError?.()};
-;
-const generatePlaceholder = () => {
-return (
-
+    onError?.()
+  }
+  const generatePlaceholder = () => {
     if (placeholder) return placeholder;
-    ;
-const svg = `
+    const svg = `
       <svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
-);
-}
         <rect width="100%" height="100%" fill="#1e293b"/>
         <rect x="0" y="0" width="100%" height="2" fill="#00ffff" opacity="0.3"/>
         <rect x="0" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>
@@ -75,8 +67,8 @@ const svg = `
       </svg>,
     `;
     ,
-    return `data:image/svg+xml;base64,${btoa(svg)}`};
-
+    return `data: image/svg+xml,base64,${btoa(svg)}`;
+  }
   if (hasError) {
     return(<div;
         className={`bg-slate-800 flex items-center justify-center ${className}`}
@@ -87,8 +79,8 @@ const svg = `
           <div className="text-sm">Image failed to load</div>)
         </div>)
       </div>)
-    )}
-
+    );
+  }
   return(<div;
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
@@ -106,7 +98,6 @@ const svg = `
           style={{ filter: 'blur(1 px)' }}
         /></img>
       )}
-      
       {/* Actual Image */}
       {isInView && (
         <img;
@@ -123,6 +114,7 @@ const svg = `
         /></img>
       )}
     </div>
-  )};
-
+  );
+}
 export default ImageOptimizer;
+  </ImageOptimizerProps>

@@ -3,16 +3,7 @@
   a: http,
   s:; font-src \'self\' dat,
   a:; connect-src \'self\' http,"
-  s:, frame-ancestors \'none\'\\" /> {} <meta name=\\"format-detection\\" content=\\"telephone=no\\" /> <meta name=\\"msapplication-tap-highlight\\" content=\\"no\\" /> </Head> )}; export default SecurityHeaders;' const React,{ useEffect } from "react" import Head from "next/head" const,"
-  SecurityHeaders: React.FC = () => { useEffect(() => { const addSecurityHeaders = () => { // // console.log removed for production
-}; addSecurityHeaders()},[]); return (<Head> {} <meta httpEquiv="X-Content-Type-Options" content="nosniff" /> <meta httpEquiv="X-Frame-Options" content="DENY" /> <meta httpEquiv="X-XSS-Protection" content="1) mode=block" /> <meta httpEquiv="Referrer-Policy" content="origin-when-cross-origin" /> <meta httpEquiv="Permissions-Policy" content="camera=(),microphone=(),geolocation=()" /> {} <meta httpEquiv="Content-Security-Policy" content="default-src "self" script-src "self" "unsafe-inline" "unsafe-eval" style-src "self" "unsafe-inline" img-src "self" dat,
-  a: http,"
-  s: font-src "self" dat,"
-  a: connect-src "self" http,"
-  s: frame-ancestors "none"" /> {} <meta name="format-detection" content="telephone=no" /> <meta name="msapplication-tap-highlight" content="no" /> </Head> )}; export default SecurityHeaders;'"'"' import _React;{ useEffect } from 'react' import Head from 'next/head' const,"
-  SecurityHeaders: _React.FC = () => { useEffect(() => { const addSecurityHeaders = () => { _// // console.log removed for production
-}; addSecurityHeaders()},[]); return (<Head> {} <meta httpEquiv="X-Content-Type-Options" content="nosniff" /> <meta httpEquiv="X-Frame-Options" content="DENY" /> <meta httpEquiv="X-XSS-Protection" content="1) mode=block" /> <meta httpEquiv="Referrer-Policy" content="origin-when-cross-origin" /> <meta httpEquiv="Permissions-Policy" content="camera=(),microphone=(),geolocation=()" /> {} <meta httpEquiv="Content-Security-Policy" content="default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' style-src 'self' 'unsafe-inline' img-src 'self' dat,
-  a: http,
-  s:; font-src 'self' dat,
-  a:; connect-src 'self' http,"
-  s:, frame-ancestors 'none'" /> {} <meta name="format-detection" content="telephone=no" /> <meta name="msapplication-tap-highlight" content="no" /> </Head> )}; export default SecurityHeaders;'"
+  s:, frame-ancestors \'none\'\\" /> {} <meta name=\\"format-detection\\" content=\\"telephone=no\\" /> <meta name=\\"msapplication-tap-highlight\\" content=\\"no\\" /> </Head> )}; };
+ };
+
+ export default SecurityHeaders;'"

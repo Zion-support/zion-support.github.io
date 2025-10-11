@@ -1,5 +1,5 @@
-const, October2025LatestContentBanne, r = () => {;
-const, article, s = [
+const, October2025LatestContentBanne, r = () => {
+  const, article, s = [
     {
       tit, l, e: "Advanced, GenAI, Orchestration Platfo, r, m","
       descripti, o, n: "Master, mult, i-model, coordination, and intelligent, workflow, automation at, enterprise, scale","
@@ -97,19 +97,13 @@ const, October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">")
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">";)
           {articl, e, s.m, a, p((artic, l, e, i, d, x) => {
-return (
-;
-const, IconComponen, t = artic, l, e.ic, o, n;
+            const, IconComponen, t = artic, l, e.ic, o, n;
             return(<Li, n, k;
         {/* Articles, Gri, d */}
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">
-);
-}"</div>
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">";
           {articl, e, s.m, a, p((artic, l, e, i, d, x) => {
-return (
-;
-const, IconComponen, t = artic, l, e.ic, o, n;
+            const, IconComponen, t = artic, l, e.ic, o, n;
             return (</div>
               <Li, n, k
   k, e, y={i, d, x}
@@ -117,8 +111,6 @@ const, IconComponen, t = artic, l, e.ic, o, n;
                 classNa, m, e="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-viol, e, t-5, 0, 0/20"
               >
-);
-}
                 <div, className={`w-1, 2, h-12, b, g-gradie, n, t-to-r ${artic, l, e.gradie, n, t} round, e, d-lg, flex, items-center, justif, y-center, m, b-4, grou, p-hov, e, r:sca, l, e-110, transitio, n-transfo, r, m`}>`;`</div>
                   <IconComponent, className="w-6 h-6, tex, t-whi, t, e  />
                 </d, i, v>
@@ -160,7 +152,8 @@ const, IconComponen, t = artic, l, e.ic, o, n;
                   <Link, className="w-4 h-4" />";
                 </d, i, v>
               </Li, n, k>)
-            )})}
+            );
+          })}
         </d, i, v>
         {/* Stats, Ba, r */}
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, b, g-sla, t, e-8, 0, 0/30, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, rounde, d-x, l, p-8">"</div>
@@ -225,6 +218,7 @@ const, IconComponen, t = artic, l, e.ic, o, n;
         </d, i, v>
       </d, i, v>
     </secti, o, n>
-  )};
+  );
+}
 export default October2025LatestContentBanner;
-;"`
+"`

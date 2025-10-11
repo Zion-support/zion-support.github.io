@@ -9,15 +9,8 @@ export const metadata = {
   keywords:,
     'enterprise AI, Fortune 500, autonomous systems, quantum computing, enterprise transformation, business intelligence'};
 
-export default function EnterprisePage() {
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <header className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div;
-export const metadata = {/* TODO: Fix JSX expression */}
 };
+
 
 export default function EnterprisePage() {/* TODO: Fix JSX expression */}
 }
@@ -32,9 +25,9 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
   y: '2s' }}
           ></div>
         </div>
-        <div className="relative z-10 container mx-auto px-4 py-24">
-          <div className="text-center">
-            <div className="flex items-center justify-center gap-3 mb-6">
+        <div className="relative z-10 container mx-auto px-4 py-24"></div>
+          <div className="text-center"></div>
+            <div className="flex items-center justify-center gap-3 mb-6"></div>
               <span className="text-2xl">🏢</span>
               <span className="text-cyan-400 font-bold text-xl">
                 Enterprise AI Solutions;
@@ -51,7 +44,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               $100M+ cost savings, 500% productivity gains, and 99.9% system;
               uptime with enterprise-grade security and compliance.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <Link;
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
@@ -108,9 +101,9 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
 ,
       {/* Stats Section */}
       <section className="py-20 bg-black/20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
-            <div className="text-center">
+        <div className="container mx-auto px-4"></div>
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8"></div>
+            <div className="text-center"></div>
               <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
         </div>
       </header>
@@ -142,8 +135,8 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
 ,
       {/* Solutions Section */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-6">
               Enterprise AI Solutions;
             </h2>
@@ -166,8 +159,8 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
             </p>
           </div>
 
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
               <div className="text-4xl mb-4">🤖</div>
               <h3 className="text-2xl font-bold text-white mb-4">
                 Autonomous Operations;
@@ -194,7 +187,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               </ul>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
               <div className="text-4xl mb-4">🧠</div>
               <h3 className="text-2xl font-bold text-white mb-4">
                 Quantum Intelligence;
@@ -218,7 +211,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               </ul>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
               <div className="text-4xl mb-4">🔒</div>
               <h3 className="text-2xl font-bold text-white mb-4">
                 Enterprise Security;
@@ -255,7 +248,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               Join 500+ Fortune 500 companies already using our AI solutions;
               to achieve unprecedented growth and efficiency.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <Link;
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
@@ -306,7 +299,8 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
     </div>,
       </section>
     </div>)
-  )}`
+  );
+}`
 `;
 
 // Write the fixed content;

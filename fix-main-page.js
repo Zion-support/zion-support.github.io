@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-;
+
 function fixMainPage() {
-  try {;
-let content = fs.readFileSync('/workspace/app/page.tsx', 'utf8');
+  try {
+    let content = fs.readFileSync('/workspace/app/page.tsx', 'utf8');
     
     // Fix self-closing div tags that have content after them
     content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<[^/]/g, '<div$1>');
@@ -28,12 +28,14 @@ let content = fs.readFileSync('/workspace/app/page.tsx', 'utf8');
     content = content.replace(/<\/div>\s*<\/section>/g, '</div>\n        </div>\n      </section>');
     
     fs.writeFileSync('/workspace/app/page.tsx', content);
-    // console.log removed for production
-return true} catch (error) {
-    // console.error removed for production
-return false}
+    console.log('✅ Fixed main page.tsx file');
+    return true;
+  } catch (error) {
+    console.error('Error fixing main page:', error.message);
+    return false;
+  }
 }
 
-// console.log removed for production
+console.log('🔧 Fixing main page.tsx...');
 fixMainPage();
-// console.log removed for production
+console.log('🎉 Main page fixes completed!');

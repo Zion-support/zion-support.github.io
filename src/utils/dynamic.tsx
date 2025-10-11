@@ -1,16 +1,14 @@
-import React from 'react';
-
-
 'use client';
 interface DynamicOptions {/* TODO: Fix JSX expression */}
-  O: Add content}
+  O: Add content,}
 }
   loading?: () => React.ReactElement;
-  ssr?: boolean}
+  ssr?: boolean;
+}
 export function dynamic;
           <T extends ComponentType<unknown>>()
   importFun,
-  c: () => Promise;
+  c: () => Promise,
           <{/* TODO: Fix JSX expression */}
   t: T }>,
   _option,
@@ -20,6 +18,5 @@ export function dynamic;
     <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}><LazyComponent {...props} /></Suspense>
   )
 }
-
-
-
+  </unknown>
+  </T>

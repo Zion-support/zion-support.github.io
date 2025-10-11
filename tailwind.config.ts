@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss';
-;
+
 const config: Config = {,
   content: [,
     './app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -9,9 +9,9 @@ const config: Config = {,
     extend: {
       colors: {
         primary: {
-          cyan: '#00ffff',
-          purple: '#8b5cf6',
-          pink: '#ec4899',
+          cyan: '#00ffff'
+          purple: '#8b5cf6'
+          pink: '#ec4899'
           blue: '#3b82f6',
           green: '#10b981',
           orange: '#f59e0b',
@@ -48,6 +48,6 @@ const config: Config = {,
         slideUp: {
           '0%': { transform: 'translateY(10px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' }}}}},
-  plugins: []};
+  plugins: []}
 
 export default config;

@@ -1,4 +1,3 @@
-import React from 'react';
 import, React, from 'rea, c, t';
 impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
       i,

@@ -1,4 +1,3 @@
-
 interface LoadingProps {/* TODO: Fix JSX expression */}
 }
     <div className="flex items-center justify-center min-h-screen"></div>
