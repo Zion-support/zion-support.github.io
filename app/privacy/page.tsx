@@ -61,7 +61,6 @@ const PrivacyPage: React.FC = () => {
         'Opt-out: You can unsubscribe from marketing communications at any time.'
       ]
     };
-<<<<<<< HEAD;
   ];
   const purposes = [
     {;
@@ -85,10 +84,6 @@ const PrivacyPage: React.FC = () => {
       title: 'Portability',;
       description: 'Receive your data in a structured format',;
       icon: Database];
-=======
-  ];
-
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
   return ()
                 Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy and personal information. 
                 This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit 
@@ -227,4 +222,26 @@ const PrivacyPage: React.FC = () => {
 };
 
 export default PrivacyPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
+  ];
+  const purposes = [
+    {;
+    };
+  ];
+  const rights = [
+    {
+      title: 'Access',
+      description: 'Request access to your personal data',
+      icon: Eye
+    },
+    {
+      title: 'Rectification',
+      description: 'Correct inaccurate or incomplete data',
+    },
+    {
+      title: 'Erasure',
+      description: 'Request deletion of your personal data',
+    },
+    {
+      title: 'Portability',;
+      description: 'Receive your data in a structured format',;
+      icon: Database];

@@ -1,9 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-
-=======
 import { Cookie, Shield, Settings, Eye, Database, Users, Mail, Phone, Calendar } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -42,7 +39,6 @@ const CookiesPage: React.FC = () => {
     };
   ];
 
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
   return() {cookieTypes.map((type, index) => ()
                           )}
                         </div>

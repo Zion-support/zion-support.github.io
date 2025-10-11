@@ -11,14 +11,6 @@ const MicroSaasPage: React.FC = () => {
 
   const products = [
     {;
-<<<<<<< HEAD;
-;];
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-
-  const filteredProducts = selectedCategory === 'All' ;
-    ? products ;
-    : products.filter(product => product.category === selectedCategory);
-=======
       title: 'Zion Analytics Pro',
       description: 'Advanced real-time business intelligence and analytics platform with AI-powered insights and predictive modeling.',
       features: ['Real-time Data Visualization', 'AI-powered Predictive Analytics', 'Custom Dashboard Builder', 'Advanced Data Connectors', 'Automated Report Generation', 'Multi-tenant Architecture'],
@@ -424,7 +416,6 @@ const MicroSaasPage: React.FC = () => {
     const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
 
   return ()
                     onChange={(e) => setSearchTerm(e.target.value)}
@@ -443,7 +434,6 @@ const MicroSaasPage: React.FC = () => {
               </div>
             </div>
 
-<<<<<<< HEAD
 interface MicroSaasProduct {
   id: string;
   name: string;
@@ -611,7 +601,6 @@ const MicroSaasPage: React.FC = () => {
                       Get Started
                     </a>
                   </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
                 </div>
               ))}
             </div>
@@ -643,7 +632,6 @@ const MicroSaasPage: React.FC = () => {
       
       <Footer / /></Footer>
     </>
-<<<<<<< HEAD
       )},
     {/* All Products */}
       <section className="py-16 px-4 bg-white/5" /></section>
@@ -755,8 +743,6 @@ const MicroSaasPage: React.FC = () => {
       </section>
     </div>
 
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
   );
 };
 

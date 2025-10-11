@@ -70,9 +70,6 @@ const TermsPage: React.FC = () => {
     },
     {
       title: 'Governing Law',;
-<<<<<<< HEAD;
-      icon: Scale,];
-=======
       content: 'These terms and conditions are governed by and construed in accordance with the laws of Delaware, United States, and you irrevocably submit to the exclusive jurisdiction of the courts in that state or location.'
     },
     {
@@ -93,7 +90,6 @@ const TermsPage: React.FC = () => {
     }
   ];
 
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
   return ()
                 Welcome to Zion Tech Group. These Terms of Service ("Terms") govern your use of our website located at 
                 ziontechgroup.com (the "Service") operated by Zion Tech Group ("us", "we", or "our").
@@ -205,4 +201,23 @@ const TermsPage: React.FC = () => {
 };
 
 export default TermsPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
+      content: 'These terms and conditions are governed by and construed in accordance with the laws of Delaware, United States, and you irrevocably submit to the exclusive jurisdiction of the courts in that state or location.'
+    },
+    {
+      title: 'Intellectual Property',
+      content: 'All content, trademarks, service marks, trade names, logos, and other intellectual property on this website are the property of Zion Tech Group or its licensors and are protected by copyright and other intellectual property laws. You may not use, reproduce, or distribute any content without our express written permission.'
+    },
+    {
+      title: 'Privacy Policy',
+      content: 'Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the website, to understand our practices.'
+    },
+    {
+      title: 'Prohibited Uses',
+      content: 'You may not use our website or services for any unlawful purpose or to solicit others to perform unlawful acts, to violate any international, federal, provincial, or state regulations, rules, laws, or local ordinances, to infringe upon or violate our intellectual property rights or the intellectual property rights of others, to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate, to submit false or misleading information, or to upload or transmit viruses or any other type of malicious code.'
+    },
+    {
+      title: 'Termination',
+      content: 'We may terminate or suspend your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms. Upon termination, your right to use the service will cease immediately.'
+    }
+  ];
+
