@@ -1,8 +1,24 @@
-import React from 'react'
+const fs = require('fs');
+const path = require('path');
+
+// List of corrupted files to fix
+const corruptedFiles = [
+  'app/ai-accounting-assistant/page.tsx',
+  'app/ai-agricultural-intelligence-pro/page.tsx',
+  'app/ai-analytics-dashboard/page.tsx',
+  'app/ai-api-management/page.tsx',
+  'app/ai-api-manager/page.tsx',
+  'app/ai-sentiment-analyzer/page.tsx',
+  'app/it-training/page.tsx',
+  'app/specialized-services/page.tsx'
+];
+
+// Template for a basic page component
+const pageTemplate = (title, description, keywords) => `import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Brain, Zap, Shield, Users } from 'lucide-react'
 
-const SpecializedServicesPage: React.FC = () => {
+const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -33,9 +49,9 @@ const SpecializedServicesPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Specialized Services - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Advanced specialized services solution powered by AI and modern technology." />
-        <meta name="keywords" content="specialized services, AI, artificial intelligence, business solutions, technology" />
+        <title>${title} - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="${description}" />
+        <meta name="keywords" content="${keywords}" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -44,10 +60,10 @@ const SpecializedServicesPage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Specialized Services
+              ${title}
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Advanced specialized services solution powered by AI and modern technology.
+              ${description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
@@ -119,4 +135,39 @@ const SpecializedServicesPage: React.FC = () => {
   )
 }
 
-export default SpecializedServicesPage
+export default ${title.replace(/[^a-zA-Z0-9]/g, '')}Page`;
+
+// Function to fix a file
+function fixFile(filePath) {
+  try {
+    const fullPath = path.join(__dirname, filePath);
+    
+    // Extract title from file path
+    const pathParts = filePath.split('/');
+    const fileName = pathParts[pathParts.length - 2]; // Get the directory name
+    const title = fileName.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ');
+    
+    const description = `Advanced ${title.toLowerCase()} solution powered by AI and modern technology.`;
+    const keywords = `${title.toLowerCase()}, AI, artificial intelligence, business solutions, technology`;
+    
+    const content = pageTemplate(title, description, keywords);
+    
+    // Create directory if it doesn't exist
+    const dir = path.dirname(fullPath);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+    
+    fs.writeFileSync(fullPath, content);
+    console.log(`Fixed: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+}
+
+// Fix all corrupted files
+console.log('Fixing corrupted files...');
+corruptedFiles.forEach(fixFile);
+console.log('Done!');

@@ -1,8 +1,54 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Brain, Zap, Shield, Users } from 'lucide-react'
+const fs = require('fs');
+const path = require('path');
 
-const SpecializedServicesPage: React.FC = () => {
+// Function to get all corrupted files
+function findCorruptedFiles(dir) {
+  const corruptedFiles = [];
+  
+  function scanDirectory(currentDir) {
+    const files = fs.readdirSync(currentDir);
+    
+    for (const file of files) {
+      const filePath = path.join(currentDir, file);
+      const stat = fs.statSync(filePath);
+      
+      if (stat.isDirectory()) {
+        scanDirectory(filePath);
+      } else if (file.endsWith('.tsx') && !file.includes('node_modules')) {
+        try {
+          // Try to read the file and check for common corruption patterns
+          const content = fs.readFileSync(filePath, 'utf8');
+          
+          // Check for common corruption patterns
+          if (content.includes('<<<<<<< HEAD') || 
+              content.includes('>>>>>>> origin/main') ||
+              content.includes('=======') ||
+              content.includes('export default App</div>') ||
+              content.includes('JSX expressions must have one parent element') ||
+              content.includes('Expected corresponding JSX closing tag') ||
+              content.includes('Unexpected token') ||
+              content.includes('Declaration or statement expected') ||
+              content.length < 100) {
+            corruptedFiles.push(filePath);
+          }
+        } catch (error) {
+          // If we can't read the file, it's probably corrupted
+          corruptedFiles.push(filePath);
+        }
+      }
+    }
+  }
+  
+  scanDirectory(dir);
+  return corruptedFiles;
+}
+
+// Template for a basic page component
+const pageTemplate = (title, description, keywords, icon = 'Brain') => `import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Brain, Zap, Shield, Users, BarChart, Globe } from 'lucide-react'
+
+const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -33,9 +79,9 @@ const SpecializedServicesPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Specialized Services - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Advanced specialized services solution powered by AI and modern technology." />
-        <meta name="keywords" content="specialized services, AI, artificial intelligence, business solutions, technology" />
+        <title>${title} - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="${description}" />
+        <meta name="keywords" content="${keywords}" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -44,10 +90,10 @@ const SpecializedServicesPage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Specialized Services
+              ${title}
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Advanced specialized services solution powered by AI and modern technology.
+              ${description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
@@ -119,4 +165,43 @@ const SpecializedServicesPage: React.FC = () => {
   )
 }
 
-export default SpecializedServicesPage
+export default ${title.replace(/[^a-zA-Z0-9]/g, '')}Page`;
+
+// Function to fix a file
+function fixFile(filePath) {
+  try {
+    // Extract title from file path
+    const pathParts = filePath.split('/');
+    const fileName = pathParts[pathParts.length - 2]; // Get the directory name
+    const title = fileName.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ');
+    
+    const description = `Advanced ${title.toLowerCase()} solution powered by AI and modern technology.`;
+    const keywords = `${title.toLowerCase()}, AI, artificial intelligence, business solutions, technology`;
+    
+    const content = pageTemplate(title, description, keywords);
+    
+    // Create directory if it doesn't exist
+    const dir = path.dirname(filePath);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+}
+
+// Find and fix all corrupted files
+console.log('Scanning for corrupted files...');
+const corruptedFiles = findCorruptedFiles(path.join(__dirname, 'app'));
+
+console.log(`Found ${corruptedFiles.length} corrupted files:`);
+corruptedFiles.forEach(file => console.log(`  - ${file}`));
+
+console.log('\nFixing corrupted files...');
+corruptedFiles.forEach(fixFile);
+console.log('Done!');
