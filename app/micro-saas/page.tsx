@@ -1,7 +1,8 @@
-  ];
-
+import React from 'react'
+  ]
   return (
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
@@ -74,3 +75,36 @@
   );
 };
 
+=======
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
+        <Navigation />
+        
+        {/* Hero Section */}
+
+                </div>
+              )
+    </>
+  )
+            </section>
+
+
+              ))}
+
+
+
+              ))}
+
+
+
+        {/* CTA Section */}
+
+
+
+
+
+      <Footer />
+    </>
+  )
+}
+    </Navigation>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe

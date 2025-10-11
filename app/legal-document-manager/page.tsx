@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
             </div>
@@ -24,13 +25,20 @@ import React from 'react';
       <Footer />
     </>
         </section>
+=======
+'use client'
+import React from 'react'
+            </section>
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <section></section>
+          <div></div>
+            <div></div>
+              <h2>
                 Why Choose Our Solution?
+<<<<<<< HEAD
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Proven results that drive business growth
@@ -63,23 +71,40 @@ import React from 'react';
       <Footer />
     </>
         </section>
+=======
+
+              <p>
+                Proven results that drive business growth
+
+            <div>
+              {benefits.map((benefit, index) => (</div>
+                <div></div>
+                  <div></div>
+                    <CheckCircle className="w-8 h-8 text-white"
+
+                  <p>{benefit}</p>
+              ))}
+
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <section></section>
+          <div></div>
+            <div></div>
+              <h2>
                 Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
+
+              <p>
                 Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+
+              <div></div>
+                <button>
                   Contact Us
-                </button>
-                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+
+                <button>
                   Learn More
+<<<<<<< HEAD
                 </button>
               </div>
       
@@ -94,8 +119,11 @@ import React from 'react';
       <Footer />
     </>
         </section>
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
       <Footer />
     </>
-  );
-};
-
+  )
+}
+    </h2>

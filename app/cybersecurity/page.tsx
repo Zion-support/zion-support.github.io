@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -172,8 +173,14 @@
       <Footer />
     </>
         </section>
+=======
+
+  return (
+    <div className="min-h-screen bg-gray-50"
+      <div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
       <Footer />
     </>
-  );
-};
-
+  )
+}
+  </div>

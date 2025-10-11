@@ -1,5 +1,6 @@
-'use client';
+'use client'
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, PieChart, Target, CheckCircle, ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -57,12 +58,15 @@ const AnalyticsDashboardPage: React.FC = () => {
       <Helmet>
         <title>AI Analytics Dashboard - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics dashboard for comprehensive business intelligence and data visualization." />
+=======
+import {Helmet;} from 'react-helmet-async'
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
       </Helmet>
-      
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="pt-20 pb-16 px-4">
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -143,11 +147,27 @@ const AnalyticsDashboardPage: React.FC = () => {
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
+=======
+        <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8"
+          <div className="max-w-7xl mx-auto"
+            <div className="text-center"
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
+  </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"
+                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+Get Started
+                  <ArrowRight className="ml-2 h-5 w-5"
+                </button>
+                <button className="
+    ,
+    r: bg-cyan-400 hove, r:text-white transition-all duration-300"
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
                 </div>
       
       <Footer />
     </>
               ))}
+<<<<<<< HEAD
             </div>
       
       <Footer />
@@ -164,12 +184,15 @@ const AnalyticsDashboardPage: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Get Started?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Start analyzing your data with our AI-powered analytics dashboard today.
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center">
-                Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5" />
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+Start Free Trial
+                <ArrowRight className="ml-2 h-5 w-5"
               </button>
+<<<<<<< HEAD
               <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
                 View Demo
               </button>
@@ -183,10 +206,15 @@ const AnalyticsDashboardPage: React.FC = () => {
     </>
         </section>
       </main>
+=======
+              <button className="
+    ,
+    r: bg-cyan-400 hove, r:text-white transition-all duration-300"
+              </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
       
       <Footer />
     </>
-  );
-};
-
-export default AnalyticsDashboardPage;
+  )
+}
+        </Navigation>

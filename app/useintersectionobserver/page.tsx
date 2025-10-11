@@ -1,3 +1,4 @@
+<<<<<<< HEAD
             </div>
       
       <Footer />
@@ -22,3 +23,10 @@
 };
 
 export default UseintersectionobserverPage;
+=======
+
+              </section>
+  )
+}
+export default UseintersectionobserverPage
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe

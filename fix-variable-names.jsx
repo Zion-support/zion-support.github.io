@@ -13,3 +13,4 @@
   e: h1 content newContent = newContent.replace( /<h1>.*?<\\/h1>/g` `<h1>${title}</h1>`); // console.error(`Error fixing ${filePath}:`) error.message); return false} } function fixedCount = 0; fixedCount++} } } return fixedCount} //Start fixing files; ursor/automate-test-fix-improve-and-merge-code-48f3; // // // // // // // expor,
   t: { toCamelCase } export default toCamelCase; '
 `</h1>
+  </title>

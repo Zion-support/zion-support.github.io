@@ -1,85 +1,73 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Wifi, BarChart, CheckCircle, Brain, Target, TrendingUp, FileText, Zap, Shield, ArrowRight } from 'lucide-react';
-import { Wifi, BarChart, CheckCircle, Brain, Target, TrendingUp, FileText, Zap, Shield, ArrowRight, PieChart } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const FiveGImplementationPage: React.FC = () => {
-  const features = [
+'use client'
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {Wifi, BarChart, CheckCircle, Brain, Target, TrendingUp, FileText, Zap, Shield, ArrowRight, PieChart} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+const FiveGImplementationPage: React.FC = () => {const features = [
     {
-      icon: Wifi,
+      ico, n: Wifi,
       title: 'Ultra-Low Latency',
-      description: 'Achieve sub-millisecond latency for real-time applications and critical communications.',
-      benefits: ['< 1ms latency', 'Real-time processing', 'Critical communications', 'IoT applications']
-    },
-    {
-      icon: BarChart,
+      description: 'Achieve sub-millisecond latency for real-time applications and critical operations.',
+      benefits: ['< 1ms latency', 'Real-time processing', 'Critical operations support', 'Edge computing ready']} ,
+    {icon: BarChart,
       title: 'High-Speed Connectivity',
       description: 'Experience blazing-fast speeds up to 10 Gbps for seamless data transfer.',
-    },
-    {
-    },
-    {
-      icon: Shield,
+      benefits: ['Up to 10 Gbps speeds', 'Massive data transfer', '4K/8K streaming', 'Cloud integration']} ,
+    {icon: Brain,
+      title: 'AI-Powered Optimization',
+      description: 'Intelligent network management with AI-driven performance optimization.',
+      benefits: ['Smart routing', 'Predictive maintenance', 'Load balancing', 'Performance analytics']} ,
+    {icon: Target,
+      title: 'Massive IoT Support',
+      description: 'Connect millions of devices with enhanced capacity and efficiency.',
+      benefits: ['1M+ devices per km²', 'Low power consumption', 'Extended battery life', 'Smart city ready']} ,
+    {icon: Shield,
       title: 'Enhanced Security',
-      description: 'Advanced security protocols and encryption for secure 5G communications.',
-      icon: TrendingUp,
-      title: 'Performance Optimization',
-      description: 'AI-powered insights to optimize your 5G network performance.',
-      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
-    },
-    {
+      description: 'Advanced security protocols and encryption for secure communications.',
+      benefits: ['End-to-end encryption', 'Network slicing', 'Zero-trust architecture', 'Compliance ready']} ,
+    {icon: Zap,
+      title: 'Edge Computing',
+      description: 'Process data closer to the source for faster response times.',
+      benefits: ['Reduced latency', 'Bandwidth optimization', 'Real-time analytics', 'Local processing']} ]
+  const useCases = [
+    {title: 'Smart Manufacturing',
+      description: 'Real-time monitoring and control of industrial processes.',
       icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
+      benefits: ['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Worker safety']} ,
+    {title: 'Autonomous Vehicles',
+      description: 'Ultra-reliable communication for self-driving cars.',
+      icon: CheckCircle,
+      benefits: ['Vehicle-to-vehicle communication', 'Traffic optimization', 'Safety systems', 'Route planning']} ,
+    {title: 'Healthcare',
+      description: 'Remote surgery and telemedicine applications.',
       icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Leverage artificial intelligence for smart network management.',
-      benefits: ['Smart routing', 'Predictive maintenance', 'Automated optimization', 'Intelligent analytics']
-    },
-    {
-      icon: Shield,
-      title: 'Enhanced Security',
-      description: 'Advanced security protocols for 5G network protection.',
-      benefits: ['End-to-end encryption', 'Threat detection', 'Secure authentication', 'Privacy protection']
-    }
-  ];
-
-  const benefits = [
-    'Increase network efficiency by up to 80%',
-    'Reduce operational costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Real-time processing and analysis',
-    'Enhanced security and compliance'
-  ];
-
+      benefits: ['Remote surgery', 'Telemedicine', 'Patient monitoring', 'Medical imaging']} ,
+    {title: 'Smart Cities',
+      description: 'Connected infrastructure for urban management.',
+      icon: PieChart,
+      benefits: ['Traffic management', 'Energy optimization', 'Public safety', 'Environmental monitoring']} ]
   const values = [
-    {
-      icon: Brain,
-      title: 'Innovation',
-      description: 'We push the boundaries of what\'s possible with AI and technology.'
-    },
-    {
-      icon: Target,
-      title: 'Excellence',
-      description: 'We maintain the highest standards in everything we do.'
-    },
-    {
-      icon: Shield,
-      title: 'Security',
-      description: 'Your data and systems are protected with enterprise-grade security.'
-    }
-  ];
-
+    {step: '01',
+      title: 'Network Assessment',
+      description: 'Comprehensive analysis of current infrastructure and requirements.',
+      details: ['Site surveys', 'Coverage analysis', 'Capacity planning', 'Security audit']} ,
+    {step: '02',
+      title: 'Infrastructure Design',
+      description: 'Custom 5G network architecture tailored to your needs.',
+      details: ['Core network design', 'RAN planning', 'Backhaul solutions', 'Edge computing setup']} ,
+    {step: '03',
+      title: 'Deployment',
+      description: 'Professional installation and configuration of 5G equipment.',
+      details: ['Equipment installation', 'Network configuration', 'Testing and validation', 'Performance tuning']} ,
+    {step: '04',
+      title: 'Optimization',
+      description: 'Continuous monitoring and optimization for peak performance.',
+      details: ['Performance monitoring', 'Network optimization', 'Capacity management', 'Security updates']} ]
   return (
-    <>
+    <div className="min-h-screen bg-gray-50"
       <Helmet>
+<<<<<<< HEAD
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
@@ -91,11 +79,17 @@ const FiveGImplementationPage: React.FC = () => {
         <title>5G Implementation - Zion Tech Group</title>
         <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." />
         <meta name="keywords" content="5G implementation, network infrastructure, ultra-low latency, high-speed connectivity, IoT, smart cities, edge computing" />
+=======
+        <title>5G Implementation Services - Zion Tech Group</title>
+        <meta name="description" content="Transform your business with cutting-edge 5G implementation services. Ultra-low latency, high-speed connectivity, and AI-powered optimization."
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
       </Helmet>
+      
       <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
@@ -122,18 +116,57 @@ const FiveGImplementationPage: React.FC = () => {
       <Footer />
     </>
         </section>
+=======
+        <section className="
+    g: px-8"
+          <div className="max-w-7xl mx-auto"
+            <div className="text-center"
+              <h1 className="text-4xl m, d:text-6xl font-bold text-white mb-6"
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400"
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
+                Transform your business with cutting-edge 5G technology. Ultra-low latency, high-speed connectivity, and AI-powered optimization for the next generation of applications.
+              </p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"
+                <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center"
+                  Get Started
+                  <ArrowRight className="w-5 h-5 ml-2"
+                </button>
+                <button className="
+    ,
+    r: bg-purple-400 hove, r:text-white transition-all duration-300"
+                  Learn More
+                </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Advanced 5G Features
-              </h2>
-              <p className="text-xl text-gray-300">
-                Cutting-edge 5G technology for the next generation of connectivity
+        <section className="py-16 px-4 sm: px-6 lg:px-8"
+          <div className="max-w-7xl mx-auto"
+            <div className="text-center mb-16"
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"
+                Unlock the full potential of 5G technology with our comprehensive implementation services.
               </p>
+
+            <div className="
+    ,
+    d: grid-cols-2 l, g:grid-cols-3 gap-8"
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
+                  <feature.icon className="w-12 h-12 text-purple-400 mb-4"
+                  <h3 className="text-xl font-semibold text-white mb-3"
+                  <p className="text-gray-300 mb-4"
+                  <ul className="space-y-2"
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300"
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2"
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+              ))}
             </div>
+<<<<<<< HEAD
       
       <Footer />
     </>
@@ -250,16 +283,78 @@ const FiveGImplementationPage: React.FC = () => {
       <Footer />
     </>
         </section>
+=======
+
+        {/* Use Cases Section */}
+        <section className="py-16 px-4 sm: px-6 lg:px-8 bg-white/5"
+          <div className="max-w-7xl mx-auto"
+            <div className="text-center mb-16"
+              <h2 className="
+    ,
+    d: text-4xl font-bold text-white mb-6"
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"
+                Discover how 5G can transform your industry and unlock new possibilities.
+              </p>
+
+            <div className="grid m, d:grid-cols-2 gap-8"
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
+                  <useCase.icon className="w-12 h-12 text-purple-400 mb-4"
+                  <h3 className="text-xl font-semibold text-white mb-3"
+                  <p className="text-gray-300 mb-4"
+                  <ul className="space-y-2"
+                    {useCase.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300"
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2"
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+              ))}
+            </div>
+
+        {/* Implementation Process */}
+        <section className="
+    g: px-8"
+          <div className="max-w-7xl mx-auto"
+            <div className="text-center mb-16"
+              <h2 className="text-3xl m, d:text-4xl font-bold text-white mb-6"
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"
+                Our proven methodology ensures successful 5G deployment and optimization.
+              </p>
+
+            <div className="space-y-8"
+              {implementationSteps.map((step, index) => (
+                <div key={index} className="flex flex-col md:flex-row items-center gap-8"
+                  <div className="flex-shrink-0"
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xl"
+                      {step.step}
+                    </div>
+                  <div className="flex-1"
+                    <h3 className="text-2xl font-semibold text-white mb-3"
+                    <p className="text-gray-300 mb-4"
+                    <ul className="grid grid-cols-2 gap-2"
+                      {step.details.map((detail, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-300"
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2"
+                          {detail}
+                        </li>
+                      ))}
+                    </ul>
+              ))}
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
+        <section className="py-16 px-4 sm: px-6 lg:px-8"
+          <div className="max-w-4xl mx-auto text-center"
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"
+              Ready to Implement 5G?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Get started with our 5G implementation services today and experience the future of connectivity.
+            <p className="text-xl text-gray-300 mb-8"
+              Let's discuss how 5G can transform your business operations and unlock new opportunities.
             </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
               </button>
@@ -282,3 +377,18 @@ const FiveGImplementationPage: React.FC = () => {
 };
 
 export default FiveGImplementationPage;
+=======
+            <button className="
+    ,
+    r: from-purple-600 hove, r:to-pink-600 transition-all duration-300 flex items-center mx-auto"
+              Start Your 5G Journey
+              <ArrowRight className="w-5 h-5 ml-2"
+            </button>
+
+      <Footer />
+    </>
+  )
+}
+export default FiveGImplementationPage
+              </Navigation>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe

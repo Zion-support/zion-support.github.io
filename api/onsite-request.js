@@ -15,7 +15,7 @@ export default function handler(req, res) {
   }
 
   try {
-    const { name, email, phone, company, message, preferredDate, serviceType } = req.body || {}
+    const { name, email, phone } = req.body || {}
     
     if (!name || !email || !phone) {
       res.statusCode = 400

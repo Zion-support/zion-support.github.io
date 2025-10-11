@@ -1,41 +1,32 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Cookie, Settings, Shield, Eye } from 'lucide-react';
-
-const CookiesPage: React.FC = () => {
-  const cookieTypes = [
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import {Cookie, Settings, Shield, Eye} from 'lucide-react'
+const CookiesPage: React.FC = () => {const features = [
     {
-      icon: Cookie,
-      title: 'Essential Cookies',
-      description: 'These cookies are necessary for the website to function properly and cannot be disabled.',
-      examples: ['Session management', 'Security', 'Load balancing']
-    },
-    {
-      icon: Settings,
+      ico, n: Wifi,
+      title: 'Feature 1',
+      description: 'Description for feature 1.',
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+    {icon: Settings,
       title: 'Functional Cookies',
       description: 'These cookies enable enhanced functionality and personalization.',
-      examples: ['Language preferences', 'User settings', 'Remember me']
-    },
-    {
-      icon: Eye,
+      examples: ['Language preferences', 'User settings', 'Remember me']} ,
+    {icon: Eye,
       title: 'Analytics Cookies',
       description: 'These cookies help us understand how visitors interact with our website.',
-      examples: ['Page views', 'User behavior', 'Performance metrics']
-    },
-    {
-      icon: Shield,
+      examples: ['Page views', 'User behavior', 'Performance metrics']} ,
+    {icon: Shield,
       title: 'Marketing Cookies',
       description: 'These cookies are used to deliver relevant advertisements and track campaign performance.',
-      examples: ['Ad targeting', 'Campaign tracking', 'Conversion tracking']
-    }
-  ];
-
+      examples: ['Ad targeting', 'Campaign tracking', 'Conversion tracking']} ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
       <Navigation />
       
+<<<<<<< HEAD
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -51,27 +42,64 @@ const CookiesPage: React.FC = () => {
       <Footer />
     </>
         </section>
+=======
+      <main className="pt-16"
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700"
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"
+            <div className="text-center"
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
+                Cookies Page
+              </h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"
+                Transform your business with our cutting-edge AI and IT solutions designed for the modern enterprise.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"
+                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+                  Get Started
+                </button>
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                  Learn More
+                </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
-        {/* Cookie Types */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Types of Cookies We Use</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {cookieTypes.map((type, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto mb-4">
-                    <type.icon className="text-white" size={32} />
+        <section className="py-20"
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+            <div className="text-center mb-16"
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto"
+                Discover the powerful features that make our solutions stand out.
+              </p>
+            
+            <div className="
+    ,
+    d: grid-cols-2 l, g:grid-cols-3 gap-8"
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                  <div className="flex items-center mb-4"
+                    <feature.icon className="h-8 w-8 text-blue-600 mr-3"
+                    <h3 className="text-xl font-semibold text-gray-900"
                   </div>
+<<<<<<< HEAD
       
       <Footer />
     </>
                   <h3 className="text-xl font-semibold text-white mb-3">{type.title}</h3>
                   <p className="text-gray-300 mb-4">{type.description}</p>
                   <ul className="text-sm text-gray-400 space-y-1">
+=======
+                  <h3 className="text-xl font-semibold text-white mb-3"
+                  <p className="text-gray-300 mb-4"
+                  <ul className="text-sm text-gray-400 space-y-1"
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
                     {type.examples.map((example, exampleIndex) => (
                       <li key={exampleIndex}>• {example}</li>
-                    ))}
+                    )
+    </>
+  )
                   </ul>
+<<<<<<< HEAD
                 </div>
       
       <Footer />
@@ -86,23 +114,31 @@ const CookiesPage: React.FC = () => {
       <Footer />
     </>
         </section>
+=======
+              ))}
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
-        {/* Cookie Management */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-4">Managing Your Cookie Preferences</h3>
-                <p className="text-gray-300 mb-4">
-                  You can control and manage cookies in various ways. Please note that removing or blocking cookies can impact your user experience and parts of our website may no longer be fully accessible.
-                </p>
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="text-lg font-semibold text-cyan-400 mb-2">Browser Settings</h4>
-                    <p className="text-gray-300">
-                      Most web browsers allow you to control cookies through their settings preferences. You can set your browser to refuse cookies or delete certain cookies.
-                    </p>
+        <section className="py-20 bg-gray-100"
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"
+            <div className="text-center mb-16"
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+                Why Choose Us
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto"
+                Experience the benefits of working with industry leaders.
+              </p>
+            
+            <div className="
+    ,
+    d: grid-cols-2 l, g:grid-cols-3 gap-8"
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg"
+                  <div className="flex items-center"
+                    <CheckCircle className="h-6 w-6 text-green-500 mr-3"
+                    <span className="text-lg font-medium text-gray-900"
                   </div>
+<<<<<<< HEAD
       
       <Footer />
     </>
@@ -155,20 +191,23 @@ const CookiesPage: React.FC = () => {
       <Footer />
     </>
         </section>
+=======
+              ))}
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
-        {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Questions About Cookies?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              If you have any questions about our use of cookies, please contact us.
+        <section className="py-20"
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
+              Contact us today to learn how our solutions can transform your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-              >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                 Contact Us
+<<<<<<< HEAD
               </a>
               <a
                 href="mailto:privacy@ziontechgroup.com"
@@ -196,3 +235,18 @@ const CookiesPage: React.FC = () => {
 };
 
 export default CookiesPage;
+=======
+              </button>
+              <button className="
+    ,
+    r: bg-blue-600 hove, r:text-white transition-colors"
+                Schedule Demo
+              </button>
+      
+      <Footer />
+    </div>
+  )
+}
+export default CookiesPage
+    </Navigation>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe

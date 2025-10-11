@@ -1,28 +1,26 @@
-import React from 'react';;
-import Head from 'next/head';;
-interface SEOHeadProps {;
-title?: string;
-description?: string;
-keywords?: string;
-canonical?: string;
-ogImage?: string;
-ogType?: string;
-twitterCard?: string;
-structuredData?: object
-}
-;
-export default function SEOHead({;
-title = "Zion Tech Group - Leading AI & Technology Solutions",;
-description = "Revolutionary AI solutions, enterprise IT services, and innovative micro SaaS products. Transform your business with cutting-edge technology from quantum computing to metaverse intelligence.",;
-keywords = "AI solutions, IT services, micro SaaS, quantum computing, blockchain, machine learning, digital transformation, enterprise technology",;
-canonical,;
-ogImage = "/og-image.jpg",;
-ogType = "website",;
-twitterCard = "summary_large_image",;
-structuredData,
-}: SEOHeadProps) {;
-const fullTitle = title.includes("Zion Tech Group") ? title : `${title;} | Zion Tech Group`;
-const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');;
+import React from 'react';
+import Head from 'next/head';
+interface SEOHeadProps {
+title?: string
+description?: string
+keywords?: string
+canonical?: string
+ogImage?: string
+ogType?: string
+twitterCard?: string
+structuredData?: object}
+
+export default function SEOHead({
+title = "Zion Tech Group - Leading AI & Technology Solutions",
+description = "Revolutionary AI solutions, enterprise IT services, and innovative micro SaaS products. Transform your business with cutting-edge technology from quantum computing to metaverse intelligence.",
+keywords = "AI solutions, IT services, micro SaaS, quantum computing, blockchain, machine learning, digital transformation, enterprise technology",
+canonical,
+ogImage = "/og-image.jpg",
+ogType = "website",
+twitterCard = "summary_large_image",
+structuredData,}: SEOHeadProps) {
+const fullTitle = title.includes("Zion Tech Group") ? title : `${title;} | Zion Tech Group`
+const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
 const defaultStructuredData={"@context": "https://schema.org";,
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -37,12 +35,10 @@ const defaultStructuredData={"@context": "https://schema.org";,
       "addressRegion": "DE",
       "postalCode": "19709",
       "addressCountry": "US"},
-    "contactPoint": {
-      "@type": "ContactPoint",
+    "contactPoint": {"@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
+      "email": "kleber@ziontechgroup.com"},
     "sameAs": [
       "https://linkedin.com/company/zion-tech-group",
       "https://twitter.com/ziontechgroup",
@@ -57,21 +53,19 @@ const defaultStructuredData={"@context": "https://schema.org";,
           "name": "AI Solutions",
           "description": "Revolutionary AI solutions from quantum computing to metaverse intelligence"
         },
-        {
-          "@type": "Offer",
+        {"@type": "Offer",
           "name": "IT Services",
-          "description": "Enterprise-grade infrastructure from 5G networks to space technology"
-        },
-        {
-          "@type": "Offer",
+          "description": "Enterprise-grade infrastructure from 5G networks to space technology"},
+        {"@type": "Offer",
           "name": "Micro SaaS",
-          "description": "Innovative SaaS solutions from AI code generation to metaverse builders"
-        }
+          "description": "Innovative SaaS solutions from AI code generation to metaverse builders"}
       ]
     }
   }
-  const finalStructuredData = structuredData || defaultStructuredData;;
-return (;
+  const finalStructuredData = structuredData || defaultStructuredData;
+return (
+    <>
+
     <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
@@ -136,10 +130,12 @@ return (;
   </link>
       
       {/* Structured Data */}
-      <script;
-type="application/ld+json";
+      <script
+type="application/ld+json"
 dangerouslySetInnerHTML={{};,
-__html: JSON.stringify(finalStructuredData)},
+__html: JSON.stringify(finalStructuredData
+    </>
+  );,
         }}
       />
       

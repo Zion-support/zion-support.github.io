@@ -1,7 +1,8 @@
-import React from 'react';
+import React from 'react'
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
                 Discover our comprehensive solutions designed to transform your business.
+<<<<<<< HEAD
               </p>
             </div>
       
@@ -12,16 +13,26 @@ import React from 'react';
       <Footer />
     </>
         </section>
+=======
+              </section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
-        {/* Content Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <p>
+                Discover our comprehensive solutions designed to transform your business.
+
+
+
+
+        {/* Content Section */}</p>
+        <section></section>
+          <div></div>
+            <div></div>
+              <h2>
                 Coming Soon
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
+
+              <p>
                 This page is under development. Please check back soon for updates.
+<<<<<<< HEAD
               </p>
               <button className="cyber-button">
                 Learn More
@@ -45,3 +56,19 @@ import React from 'react';
   );
 };
 
+=======
+
+              <button>
+                Learn More</button>
+                <ArrowRight className="w-5 h-5 ml-2"
+
+
+
+
+
+      <Footer />
+    </>
+  )
+}
+    </h2>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe

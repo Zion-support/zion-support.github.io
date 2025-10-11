@@ -1,51 +1,17 @@
-'use client';
+'use client'
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { BarChart, Leaf, Cloud, Target, CheckCircle, ArrowRight } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import {Helmet;} from 'react-helmet-async'
+    },
+    {;,
+icon: BarChart,;,
+title: 'Advanced Analytics',} ]
 
-const AgriculturalIntelligenceProPage: React.FC = () => {
-  const features = [
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive data analysis and insights for agricultural optimization.',
-      benefits: ['Yield prediction', 'Weather analysis', 'Soil monitoring', 'Crop health tracking']
-    },
-    {
-      icon: Leaf,
-      title: 'Crop Intelligence',
-      description: 'AI-powered crop monitoring and disease detection for better yields.',
-      benefits: ['Disease detection', 'Growth monitoring', 'Harvest optimization', 'Quality assessment']
-    },
-    {
-      icon: Cloud,
-      title: 'Weather Integration',
-      description: 'Real-time weather data integration for informed decision making.',
-      benefits: ['Weather forecasting', 'Climate analysis', 'Risk assessment', 'Seasonal planning']
-    },
-    {
-      icon: Target,
-      title: 'Precision Agriculture',
-      description: 'Targeted interventions based on AI analysis and field conditions.',
-      benefits: ['Precision planting', 'Variable rate application', 'Resource optimization', 'Cost reduction']
-    }
+const benefits = [
   ]
 
-  const benefits = [
-    'Increase crop yields by up to 30%',
-    'Reduce water usage by 25%',
-    'Minimize pesticide application',
-    'Optimize fertilizer usage',
-    'Predict and prevent crop diseases',
-    'Improve soil health monitoring',
-    'Enhance weather-based decisions',
-    'Reduce operational costs'
-  ]
-
-  return (
+return (
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
@@ -183,10 +149,52 @@ const AgriculturalIntelligenceProPage: React.FC = () => {
     </>
         </section>
       </main>
+=======
+
+      <Helmet>
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8"
+          <div className="max-w-7xl mx-auto"
+            <div className="text-center"
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
+  </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"
+                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+Get Started
+                  <ArrowRight className="ml-2 h-5 w-5"
+                </button>
+                <button className="
+    ,
+    r: bg-cyan-400 hove, r:text-white transition-all duration-300"
+Learn More
+                </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 sm: px-6 lg:px-8"
+          <div className="max-w-7xl mx-auto"
+            <div className="text-center mb-16"
+            <div className="
+    ,
+    d: grid-cols-2 l, g:grid-cols-3 gap-8"
+              {benefits.map((benefit), index) => (
+                <div key={index} className="flex items-start space-x-3"
+                  <div className="flex-shrink-0"
+                  </div>
+                  <p className="text-gray-300"
+                </div>
+              )
+    </>
+  )
+            </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm: px-6 l, g:px-8"
+          <div className="max-w-4xl mx-auto text-center"
+              </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
       
       <Footer />
     </>
-  );
-};
-
-export default AgriculturalIntelligenceProPage;
+  )
+}
+    </Helmet>

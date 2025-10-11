@@ -1,5 +1,7 @@
+import React from 'react'
   return (
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
@@ -9,14 +11,18 @@
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
         <Navigation />
         
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <section></section>
+          <div></div>
+            <div></div>
+              <h1>
                 Page
+<<<<<<< HEAD
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Discover our comprehensive solutions designed to transform your business.
@@ -30,16 +36,25 @@
       <Footer />
     </>
         </section>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
-        {/* Content Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <p>
+                Discover our comprehensive solutions designed to transform your business.
+
+
+
+
+        {/* Content Section */}</p>
+        <section></section>
+          <div></div>
+            <div></div>
+              <h2>
                 Coming Soon
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
+
+              <p>
                 This page is under development. Please check back soon for updates.
+<<<<<<< HEAD
               </p>
               <button className="cyber-button">
                 Learn More
@@ -59,8 +74,20 @@
       <Footer />
     </>
       <Footer />
+=======
+
+              <button>
+                Learn More</button>
+                <ArrowRight className="w-5 h-5 ml-2"
+
+
+
+
+
+      <Footer />
+    </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
     </>
   );
-};
-
-export default PagePage;
+export default PagePage
+      </div>

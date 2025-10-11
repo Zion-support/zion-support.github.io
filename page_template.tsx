@@ -3,17 +3,17 @@ import React from 'react'
 import Navigation from '../app/components/Navigation'
 import Footer from '../app/components/Footer'
 import SEOOptimizer from '../app/components/SEOOptimizer'
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation as NavIcon, PieChart, TrendingDown, Activity } from 'lucide-react'
-const PageTemplate: React.FC<{
-    title: string
+import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation as NavIcon, PieChart, TrendingDown, Activity} from 'lucide-react'
+const PageTemplate: React.FC<{title: string
   description: string
   icon: React.ComponentType<any></any>features</any>: string[]
   benefits: string[]
   price: string
   category: string,
-  keywords: string[]
-  }> = ({ title, description, icon: Icon, features, benefits, price, category, keywords }) => {
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
+  keywords: string[]}> = ({title, description, icon: Icon, features, benefits, price, category, keywords}) => {
+  return (
+    <>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
       <SEOOptimizer;)
         title={`${title} - Zion Tech Group`})
         description={description})
@@ -24,7 +24,9 @@ const PageTemplate: React.FC<{
         title={`${title} - Zion Tech Group`}
         description={description}
         keywords={keywords}
-        canonicalUrl={`https://ziontechgroup.com/${title.toLowerCase().replace(/\s+/g, '-')}`}
+        canonicalUrl={`https://ziontechgroup.com/${title.toLowerCase().replace(/\s+/g, '-'
+    </>
+  );`}
       />
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -179,3 +181,15 @@ export default PageTemplate</h2>
   </h2>
   </SEOOptimizer>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></p></p></h1></h2></h2></h3></h3></h3></h3></h3></h3>
+                        </Footer>
+                      </MapPin>
+                    </Mail>
+                  </a>
+                </Phone>
+              </TrendingUp>
+            </TrendingUp>
+          </CheckCircle>
+        </CheckCircle>
+      </Phone>
+    </Icon>
+  </Navigation>

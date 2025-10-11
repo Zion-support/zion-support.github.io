@@ -1,110 +1,83 @@
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Check, Star, ArrowRight, Zap, Shield, Users } from 'lucide-react'
+import React, {useState} from 'react'
+import {Helmet} from 'react-helmet-async'
+import {Check, Star, ArrowRight, Zap, Shield, Users} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const PricingPage: React.FC = () => {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly')
-
-  const plans = [
+const PricingPage: React.FC = () => {const features = [
     {
-      name: 'Starter',
-      description: 'Perfect for small businesses getting started with AI',
-      price: { monthly: 999, yearly: 9999 },
-      features: [
-        'Monthly reports'
-      ],
-      popular: false,
-      icon: Zap
-    },
-    {
-      name: 'Professional',
+      ico, n: Wifi,
+      title: 'Feature 1',
+      description: 'Description for feature 1.',
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+    {name: 'Professional',
       ],
       popular: true,
-      icon: Star
-    },
-    {
-      name: 'Enterprise',
+      icon: Star} ,
+    {name: 'Enterprise',
       ],
       popular: false,
-      icon: Shield
-    }
-  ]
+      icon: Shield} ]
 
   const addOns = [
-    {
-      name: 'Additional Users',
+    {name: 'Additional Users',
       description: 'Add more team members to your plan',
-      price: { monthly: 50, yearly: 500 }
-    },
-    {
-      name: 'Priority Support',
+      price: { monthl, y: 50, yearly: 500} },
+    {name: 'Priority Support',
       description: 'Get faster response times and dedicated support',
-      price: { monthly: 200, yearly: 2000 }
-    },
-    {
-      name: 'Custom Development',
+      price: { monthl, y: 200, yearly: 2000} },
+    {name: 'Custom Development',
       description: 'Bespoke solutions tailored to your needs',
-      price: { monthly: 1000, yearly: 10000 }
-    },
-    {
-      name: 'Training & Onboarding',
+      price: { monthl, y: 1000, yearly: 10000} },
+    {name: 'Training & Onboarding',
       description: 'Comprehensive training for your team',
-      price: { monthly: 500, yearly: 5000 }
-    }
+      price: { monthl, y: 500, yearly: 5000} }
   ]
 
   const addOns = [
-    {
-      name: 'AI Chatbot',
+    {name: 'AI Chatbot',
       price: '$500/month',
-      description: 'Intelligent customer support chatbot'
-    },
-    {
-      name: 'Data Analytics Pro',
+      description: 'Intelligent customer support chatbot'} ,
+    {name: 'Data Analytics Pro',
       price: '$800/month',
-      description: 'Advanced business intelligence dashboard'
-    },
-    {
-      name: 'Cybersecurity Suite',
+      description: 'Advanced business intelligence dashboard'} ,
+    {name: 'Cybersecurity Suite',
       price: '$1,200/month',
-      description: 'Comprehensive security monitoring'
-    },
-    {
-      name: 'Custom Development',
+      description: 'Comprehensive security monitoring'} ,
+    {name: 'Custom Development',
       price: '$150/hour',
-      description: 'Tailored solutions for your business'
-    }
-  ];
-
+      description: 'Tailored solutions for your business'} ]
   return (
-            </p>
+    <>
+</p>
             
             {/* Billing Toggle */}
-            <div className="flex items-center justify-center mb-12">
-              <span className={`text-lg font-medium ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
+            <div className="flex items-center justify-center mb-12"
+              <span className={`text-lg font-medium ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'} `}>
                 Monthly
               </span>
               <button
-                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
-                className="mx-4 relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly'
+    </>
+  )
+                className="
+    s: ring-offset-2 focu, s:ring-offset-slate-900"
               >
                 <span
                   className={`${
-                    billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1'
-                  } inline-block h-4 w-4 transform rounded-full bg-white transition-transform`}
+                    billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1'} inline-block h-4 w-4 transform rounded-full bg-white transition-transform`}
                 />
               </button>
-              <span className={`text-lg font-medium ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
+              <span className={`text-lg font-medium ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'} `}>
                 Yearly
               </span>
               {billingCycle === 'yearly' && (
-                <span className="ml-2 bg-green-500 text-white text-sm px-2 py-1 rounded-full">
+                <span className="ml-2 bg-green-500 text-white text-sm px-2 py-1 rounded-full"
                   Save 20%
                 </span>
               )}
             </div>
+<<<<<<< HEAD
       
       <Footer />
     </>
@@ -128,10 +101,19 @@ const PricingPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Frequently Asked Questions
+=======
+
+        <section className="py-20"
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"
+            <div className="text-center mb-16"
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+                Key Features
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
               </h2>
-              <p className="text-xl text-gray-300">
-                Everything you need to know about our pricing and services
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto"
+                Discover the powerful features that make our solutions stand out.
               </p>
+<<<<<<< HEAD
             </div>
       
       <Footer />
@@ -190,23 +172,70 @@ const PricingPage: React.FC = () => {
       <Footer />
     </>
         </section>
+=======
+            
+            <div className="
+    ,
+    d: grid-cols-2 l, g:grid-cols-3 gap-8"
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                  <div className="flex items-center mb-4"
+                    <feature.icon className="h-8 w-8 text-blue-600 mr-3"
+                    <h3 className="text-xl font-semibold text-gray-900"
+                  </div>
+                  <p className="text-gray-600 mb-4"
+                  <ul className="space-y-2"
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-600"
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2"
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+              ))}
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <section className="py-20 bg-gray-100"
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"
+            <div className="text-center mb-16"
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+                Why Choose Us
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto"
+                Experience the benefits of working with industry leaders.
+              </p>
+            
+            <div className="
+    ,
+    d: grid-cols-2 l, g:grid-cols-3 gap-8"
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg"
+                  <div className="flex items-center"
+                    <CheckCircle className="h-6 w-6 text-green-500 mr-3"
+                    <span className="text-lg font-medium text-gray-900"
+                  </div>
+              ))}
+            </div>
+
+        <section className="py-20"
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Choose your plan and start transforming your business with our AI and IT solutions today.
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
+              Contact us today to learn how our solutions can transform your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
-                Start Free Trial
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                Contact Us
               </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Contact Sales
+              <button className="
+    ,
+    r: bg-blue-600 hove, r:text-white transition-colors"
+                Schedule Demo
               </button>
+<<<<<<< HEAD
             </div>
       
       <Footer />
@@ -224,4 +253,13 @@ const PricingPage: React.FC = () => {
     </>
   )
 }
+=======
+      
+      <Footer />
+    </div>
+  );
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
+
+  </Footer>
