@@ -72,17 +72,10 @@ const AIApiManagementPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-<<<<<<< HEAD
-                Our Services
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive AI API management solutions tailored to your business needs.
-=======
                 Powerful API Management Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive AI API management platform designed for modern businesses.
->>>>>>> cursor/fix-errors-and-merge-to-main-fd18
               </p>
             </div>
             
@@ -127,11 +120,7 @@ const AIApiManagementPage: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-
-=======
         
->>>>>>> cursor/fix-errors-and-merge-to-main-fd18
         <Footer />
       </div>
     </>
