@@ -105,10 +105,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Consultation', url: '/consultation' },
     { name: 'Custom Development', url: '/custom-software' }
   ]
-'use client'
-import React from 'react'
-import Link from 'next/link'
-import { Brain, Mail, Phone, MapPin, ArrowRight } from 'lucide-react'
 
 const Footer: React.FC = () => {
   return (
@@ -136,27 +132,27 @@ const Footer: React.FC = () => {
               innovation, and exceptional service delivery.
             </p>
             <div className="space-y-4">
-              </div><div className="flex items-center text-sm text-gray-300 group">
-                </div><div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
-                  </div><Phone className="w-4 h-4 text-white" />
+              <div className="flex items-center text-sm text-gray-300 group">
+                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
+                  <Phone className="w-4 h-4 text-white" />
                 </div>
                 <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors font-medium">+1 302 464 0950</a>
               </div>
               <div className="flex items-center text-sm text-gray-300 group">
-                </div><div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
-                  </div><Mail className="w-4 h-4 text-white" />
+                <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
+                  <Mail className="w-4 h-4 text-white" />
                 </div>
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors font-medium">kleber@ziontechgroup.com</a>
               </div>
               <div className="flex items-start text-sm text-gray-300 group">
-                </div><div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-3 mt-0.5 group-hover:scale-110 transition-transform">
-                  </div><MapPin className="w-4 h-4 text-white" />
+                <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-3 mt-0.5 group-hover:scale-110 transition-transform">
+                  <MapPin className="w-4 h-4 text-white" />
                 </div>
-                <span className="font-medium">364 E Main St STE 1008</span><br />
+                <span className="font-medium">364 E Main St STE 1008<br />Middletown, DE 19709</span>
               </div>
               <div className="flex items-center text-sm text-gray-300 group">
-                </div><div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
-                  </div><Clock className="w-4 h-4 text-white" />
+                <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
+                  <Clock className="w-4 h-4 text-white" />
                 </div>
                 <span className="font-medium">Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support</span>
               </div>
@@ -165,29 +161,31 @@ const Footer: React.FC = () => {
 
           {/* AI Services */}
           <div className="cyber-card-enhanced p-6 rounded-2xl">
-            </div><h3 className="text-lg font-bold mb-6 text-cyan-400 flex items-center neon-text-enhanced">
-              </h3><div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3">
-                </div><Brain className="w-5 h-5 text-white" />
+            <h3 className="text-lg font-bold mb-6 text-cyan-400 flex items-center neon-text-enhanced">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3">
+                <Brain className="w-5 h-5 text-white" />
               </div>
               AI Services
             </h3>
             <ul className="space-y-3">
               {aiServices.slice(0, 6).map((service, index) => (
-                </ul><li key={index}>
-                  </li><Link 
+                <li key={index}>
+                  <Link 
                     to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-all duration-300 text-sm group flex items-center">
-                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25"></div>
+                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25 mr-3">
+                      <Brain className="w-5 h-5 text-white" />
+                    </div>
                     {service.name}
                   </Link>
                 </li>
               ))}
               <li className="pt-2 border-t border-cyan-500/20">
-                </li><Link 
+                <Link 
                   to="/ai-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-all duration-300 text-sm font-semibold flex items-center group">
                   View All AI Services
-                  </Link><Zap className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <Zap className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </li>
             </ul>
@@ -195,20 +193,20 @@ const Footer: React.FC = () => {
 
           {/* Micro SAAS Services */}
           <div>
-            </div><h3 className="text-lg font-semibold mb-6 flex items-center">
-              </h3><Cpu className="w-5 h-5 mr-2 text-cyan-400" />
+            <h3 className="text-lg font-semibold mb-6 flex items-center">
+              <Cpu className="w-5 h-5 mr-2 text-cyan-400" />
               Micro SAAS Tools
             </h3>
             <ul className="space-y-3">
-              {microSaasServices.map((service, index) => (
-                </ul><li key={index}>
-                  </li><Link
-                    href={service.url}
+              {microSaasServices.slice(0, 6).map((service, index) => (
+                <li key={index}>
+                  <Link
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 group flex items-start"
                   >
-                    </Link><ArrowRight className="w-3 h-3 text-cyan-400 mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowRight className="w-3 h-3 text-cyan-400 mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                     <div>
-                      </div><div className="font-medium">{service.name}</div>
+                      <div className="font-medium">{service.name}</div>
                       <div className="text-xs text-gray-400 group-hover:text-gray-300">
                         {service.description}
                       </div>
@@ -221,50 +219,31 @@ const Footer: React.FC = () => {
 
           {/* IT Services */}
           <div className="cyber-card-enhanced p-6 rounded-2xl">
-            </div><h3 className="text-lg font-bold mb-6 text-purple-400 flex items-center neon-text-enhanced">
-              </h3><div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-3">
-                </div><Cloud className="w-5 h-5 text-white" />
+            <h3 className="text-lg font-bold mb-6 text-purple-400 flex items-center neon-text-enhanced">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-3">
+                <Cloud className="w-5 h-5 text-white" />
               </div>
               IT Services
             </h3>
             <ul className="space-y-3">
               {itServices.slice(0, 6).map((service, index) => (
-                </ul><li key={index}>
-                  </li><Link 
+                <li key={index}>
+                  <Link 
                     to={service.url}
                     className="text-gray-300 hover:text-purple-400 transition-all duration-300 text-sm group flex items-center">
-                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25"></div>
+                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25 mr-3">
+                      <Cloud className="w-5 h-5 text-white" />
+                    </div>
                     {service.name}
                   </Link>
                 </li>
               ))}
               <li className="pt-2 border-t border-purple-500/20">
-                </li><Link 
+                <Link 
                   to="/it-services"
                   className="text-purple-400 hover:text-purple-300 transition-all duration-300 text-sm font-semibold flex items-center group">
                   View All IT Services
-                  </Link><Zap className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  Cloud Infrastructure
-                </Link>
-              </li>
-              <li>
-                <Link to="/cybersecurity-solutions" className="hover:text-cyan-400 transition-colors">
-                  Cybersecurity
-                </Link>
-              </li>
-              <li>
-                <Link to="/web-development" className="hover:text-cyan-400 transition-colors">
-                  Web Development
-                </Link>
-              </li>
-              <li>
-                <Link to="/mobile-development" className="hover:text-cyan-400 transition-colors">
-                  Mobile Development
-                </Link>
-              </li>
-              <li>
-                <Link to="/it-services" className="text-cyan-400 hover:text-cyan-300 font-medium">
-                  View All IT Services →
+                  <Zap className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </li>
             </ul>
@@ -272,29 +251,31 @@ const Footer: React.FC = () => {
           
           {/* Micro SAAS */}
           <div className="cyber-card-enhanced p-6 rounded-2xl">
-            </div><h3 className="text-lg font-bold mb-6 text-green-400 flex items-center neon-text-enhanced">
-              </h3><div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-3">
-                </div><Code className="w-5 h-5 text-white" />
+            <h3 className="text-lg font-bold mb-6 text-green-400 flex items-center neon-text-enhanced">
+              <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-3">
+                <Code className="w-5 h-5 text-white" />
               </div>
               Micro SAAS
             </h3>
             <ul className="space-y-3">
               {microSaasServices.slice(0, 6).map((service, index) => (
-                </ul><li key={index}>
-                  </li><Link 
+                <li key={index}>
+                  <Link 
                     to={service.url}
                     className="text-gray-300 hover:text-green-400 transition-all duration-300 text-sm group flex items-center">
-                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25"></div>
+                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25 mr-3">
+                      <Code className="w-5 h-5 text-white" />
+                    </div>
                     {service.name}
                   </Link>
                 </li>
               ))}
               <li className="pt-2 border-t border-green-500/20">
-                </li><Link 
+                <Link 
                   to="/micro-saas"
                   className="text-green-400 hover:text-green-300 transition-all duration-300 text-sm font-semibold flex items-center group">
                   View All Micro SAAS
-                  </Link><Zap className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <Zap className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </li>
             </ul>
@@ -303,12 +284,12 @@ const Footer: React.FC = () => {
 
         {/* Additional Links Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mt-12 pt-8 border-t border-gray-700">
-          </div><div>
-            </div><h3 className="text-lg font-semibold mb-4 text-cyan-400">Company</h3>
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Company</h3>
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
-                </ul><li key={index}>
-                  </li><Link 
+                <li key={index}>
+                  <Link 
                     to={link.url} 
                     className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
                   >
