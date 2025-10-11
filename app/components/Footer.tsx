@@ -20,12 +20,24 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h3 className="text-lg font-semibold mb-4">AI Services</h3>
             <ul className="space-y-2">
               <li><Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors">AI Services</Link></li>
-              <li><Link to="/it-services" className="text-gray-400 hover:text-white transition-colors">IT Services</Link></li>
-              <li><Link to="/cloud-services" className="text-gray-400 hover:text-white transition-colors">Cloud Services</Link></li>
-              <li><Link to="/micro-saas-services" className="text-gray-400 hover:text-white transition-colors">Micro SAAS</Link></li>
+              <li><Link to="/ai-content-generation" className="text-gray-400 hover:text-white transition-colors">Content Generation</Link></li>
+              <li><Link to="/ai-computer-vision" className="text-gray-400 hover:text-white transition-colors">Computer Vision</Link></li>
+              <li><Link to="/ai-conversational-ai" className="text-gray-400 hover:text-white transition-colors">Conversational AI</Link></li>
+              <li><Link to="/ai-analytics" className="text-gray-400 hover:text-white transition-colors">Predictive Analytics</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Micro SAAS</h3>
+            <ul className="space-y-2">
+              <li><Link to="/micro-saas-services" className="text-gray-400 hover:text-white transition-colors">All Micro SAAS</Link></li>
+              <li><Link to="/ai-smart-scheduler" className="text-gray-400 hover:text-white transition-colors">Smart Scheduler</Link></li>
+              <li><Link to="/ai-customer-insights" className="text-gray-400 hover:text-white transition-colors">Customer Insights</Link></li>
+              <li><Link to="/ai-document-processor" className="text-gray-400 hover:text-white transition-colors">Document Processor</Link></li>
+              <li><Link to="/ai-social-media-optimizer" className="text-gray-400 hover:text-white transition-colors">Social Media Optimizer</Link></li>
             </ul>
           </div>
 
@@ -43,15 +55,15 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center">
                 <Mail className="w-4 h-4 text-purple-400 mr-2" />
-                <span className="text-gray-400">info@ziontechgroup.com</span>
+                <span className="text-gray-400">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center">
                 <Phone className="w-4 h-4 text-purple-400 mr-2" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <span className="text-gray-400">+1 302 464 0950</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 text-purple-400 mr-2" />
-                <span className="text-gray-400">New York, NY</span>
+                <span className="text-gray-400">364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
           </div>
