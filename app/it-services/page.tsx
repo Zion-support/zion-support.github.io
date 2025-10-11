@@ -3,19 +3,13 @@ import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const ITServicesPage: React.FC = () => 
-    {} id: 1,
+const ITServicesPage: React.FC = () => { => {} id: 1,
     };,
 title: 'Cloud Infrastructure',;,
 description: 'Scalable and secure cloud solutions for your business needs.',;,
 icon: Cloud,,
-    }
-    
-price: 'From $1,000/month'} ,
-    
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ]
+
+price: 'From $1,000/month'} ,]
 const categories = [
     {id: 'all', name: 'All Services'} ,
     {id: 'cloud', name: 'Cloud Services'} ,
@@ -29,6 +23,12 @@ selectedCategory === 'all' || service.category === selectedCategory
 return (
     <>
       <Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />

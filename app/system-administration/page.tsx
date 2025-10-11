@@ -1,15 +1,6 @@
 'use client';
 
-const SystemAdministrationPage: React.FC = () => 
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']} ,
-    
-      benefits: ['Interactive charts', 'Custom reports', 'Data export', 'Visual storytelling']} ,
-    
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
+const SystemAdministrationPage: React.FC = () =>]
   const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',

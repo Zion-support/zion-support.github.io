@@ -27,12 +27,12 @@ const Footer: React.FC = () => {
     { name: 'Press', href: '/press' },
   ];
 
-  const support = [
-    { name: 'Help Center', href: '/help' },
-    { name: 'Documentation', href: '/docs' },
-    { name: 'API Reference', href: '/api' },
-    { name: 'Status', href: '/status' },
-  ];
+  // const supportLinks = [
+  //   { name: 'Help Center', href: '/help' },
+  //   { name: 'Documentation', href: '/docs' },
+  //   { name: 'API Reference', href: '/api' },
+  //   { name: 'Status', href: '/status' },
+  // ];
 
   return (
     <footer className="bg-gray-900 text-white">

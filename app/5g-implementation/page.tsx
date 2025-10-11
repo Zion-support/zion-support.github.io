@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
-import {Wifi, BarChart, CheckCircle, Brain, Target, Zap, Shield, PieChart} from 'lucide-react';
+// import {Zap, Shield} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

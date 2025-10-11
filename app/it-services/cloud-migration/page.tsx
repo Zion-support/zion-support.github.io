@@ -51,7 +51,7 @@
       <Footer /></Footer>
     </>
   )
-}
+
 export default PagePage
     </ArrowRight>
 </p>

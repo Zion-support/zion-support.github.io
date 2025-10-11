@@ -1,17 +1,9 @@
 'use client'
 import React from 'react';
 import { Helmet } from 'react-helmet-async'
-import {ArrowRight;, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
+import {ArrowRight;, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-    
-benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights']} ,
-    
-benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']} ,
-    
-benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']} ,
-    
-benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
+import Footer from '../components/Footer';]
 
 const benefits = [
     'Increase efficiency by up to 80%',
@@ -26,6 +18,12 @@ return (
     <>
 
       <Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
@@ -34,6 +32,12 @@ return (
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology."
         <meta name="keywords" content="AI, page, artificial intelligence, business solutions, automation"

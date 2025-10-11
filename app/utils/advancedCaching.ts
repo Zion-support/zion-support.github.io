@@ -1,23 +1,15 @@
 const features = [
-    
-    }
-    
-    }
-    
-    }
-    
-import {  Helmet  } from 'react-helmet-async'import {  CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from 'lucide-react'
+
+
+
+import {  Helmet  } from 'react-helmet-async'import {  CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from 'lucide-react';
 const AdvancedCachingPage: React.FC = () => 
       description: 'Advanced AI technology to transform your business operations and improve efficiency';}
-    },
-    
+
       description: 'Lightning-fast processing and real-time analytics for optimal results';}
-    },
-    
+
       description: 'Bank-level security with encryption and compliance standards';}
-    },
-    
-    }
+
   ]
   const benefits = [
     'Advanced AI technology integration',
@@ -45,6 +37,12 @@ const AdvancedCachingPage: React.FC = () =>
   ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div><Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
         </Helmet><title>AdvancedCaching | Zion Tech Group</title>
         <meta>
         <meta>

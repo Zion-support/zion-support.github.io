@@ -1,10 +1,9 @@
 'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import {Cookie, Settings, Shield, Eye} from 'lucide-react'
-const CookiesPage: React.FC = () => 
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import {Cookie, Settings, Shield, Eye} from 'lucide-react';
+const CookiesPage: React.FC = () =>
     
       examples: ['Language preferences', 'User settings', 'Remember me']} ,
     

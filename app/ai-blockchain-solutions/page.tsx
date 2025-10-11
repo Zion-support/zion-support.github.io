@@ -1,11 +1,10 @@
 'use client'
-import React from 'react'
-import {Helmet} from 'react-helmet-async'
-import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-const PagePage: React.FC = () => 
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+const PagePage: React.FC = () =>
     
       description: 'Comprehensive analytics dashboard with real-time data visualization.',} ]
   const benefits = [
@@ -133,7 +132,7 @@ const PagePage: React.FC = () =>
       <Footer />
     </>
   )
-}
+
 </Footer>
 </Footer>
 </Footer>

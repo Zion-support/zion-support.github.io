@@ -2,35 +2,25 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Shield;, Eye, Database, Server, Mail, Phone, MapPin, CheckCircle, User, Edit, Trash2} from 'lucide-react'
-const PrivacyPage: React.FC = () => 
-    {} category: 'Personal Information'},;,
+import {Shield;, Eye, Database, Server, Mail, Phone, MapPin, CheckCircle, User, Edit, Trash2} from 'lucide-react';
+const PrivacyPage: React.FC = () => { => {} category: 'Personal Information'},;,
 icon: User,;,
 description: 'Name, email, phone number, and other identifying information'
-    },
-    
+
 description: 'Name, email, phone number, and contact details'} ,
     
 description: 'How you interact with our services and website'} ,
     
 description: 'IP address, browser type, device information, and cookies'} ]
 const purposes = [
-    
-    }
-    
-    }
-    
-    }
-    
+
+
+
 icon: CheckCircle} ]
 const rights = [
-    
-    }
-    
-    }
-    
-    }
-    
+
+
+
 icon: Database} ]
 const contactInfo=
 address: '364 E Main St STE 1008, Middletown, DE 19709'} const contactInfo=
@@ -39,6 +29,12 @@ address: '364 E Main St STE 1008, Middletown, DE 19709'} return (
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
         <title>Privacy Page - Zion Tech Group</title>
         <meta name="description" content="Advanced AI and IT solutions for modern businesses."
       </Helmet>
@@ -324,7 +320,6 @@ Contact Privacy Team
       <Footer />
     </>
   )
-}
 
 export default PrivacyPage
 

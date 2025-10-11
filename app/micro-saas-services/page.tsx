@@ -1,17 +1,10 @@
 'use client'
-import React from 'react'
-import {Helmet} from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import {Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target} from 'lucide-react'
-const MicroSaasServicesPage: React.FC = () => 
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-      benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']} ,
-    
-      benefits: ['Fast processing', 'Optimized algorithms', 'Scalable infrastructure', 'High availability']} ,
-    
-      benefits: ['Data encryption', 'Access control', 'Audit logging', 'Compliance ready']} ]
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import {Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target} from 'lucide-react';
+const MicroSaasServicesPage: React.FC = () =>]
   const benefits = [
     'Enhanced productivity and efficiency',
     'Reduced operational costs',
@@ -23,6 +16,12 @@ const MicroSaasServicesPage: React.FC = () =>
   return (
     <>
       <Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
@@ -31,6 +30,12 @@ const MicroSaasServicesPage: React.FC = () =>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
         <title>Page Title - Zion Tech Group</title>
         <meta name="description" content="Description of the page and its benefits."
         <meta name="keywords" content="relevant, keywords, for, seo"
@@ -209,7 +214,7 @@ const MicroSaasServicesPage: React.FC = () =>
       <Footer />
     </>
   )
-}
+
 export default MicroSaasServicesPage
         </Navigation>
 

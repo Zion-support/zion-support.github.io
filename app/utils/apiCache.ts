@@ -1,23 +1,15 @@
 const features = [
-    
-    }
-    
-    }
-    
-    }
-    
-import {  Helmet  } from 'react-helmet-async'import {  CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from 'lucide-react'
+
+
+
+import {  Helmet  } from 'react-helmet-async'import {  CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from 'lucide-react';
 const ApiCachePage: React.FC = () => 
       description: 'Advanced AI technology to transform your business operations and improve efficiency';}
-    },
-    
+
       description: 'Lightning-fast processing and real-time analytics for optimal results';}
-    },
-    
+
       description: 'Bank-level security with encryption and compliance standards';}
-    },
-    
-    }
+
   ]
   const benefits = [
     'Advanced AI technology integration',
@@ -45,6 +37,12 @@ const ApiCachePage: React.FC = () =>
   ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div><Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
         </Helmet><title>ApiCache | Zion Tech Group</title>
         <meta>
         <meta>
@@ -111,7 +109,7 @@ return (
       </section>
     </div>
   ),
-}
+
 export default ApiCachePage
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
@@ -119,6 +117,12 @@ export default ApiCachePage
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div><Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
         <title>ApiCache | Zion Tech Group</title>
         <meta name="description" content="Professional ApiCache services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="apiCache, AI solutions, IT services, Zion Tech Group, apicache" /></$1>
@@ -173,5 +177,5 @@ export default ApiCachePage
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us</$1></$1></$1></$1></$1></$1>
   )
-}
+
 export default ApiCachePage</span></button></button></button></button></p></p></p></p></h1></h2></h2></h2>

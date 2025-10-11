@@ -1,14 +1,11 @@
 import React, {useState} from 'react'
-import {Helmet} from 'react-helmet-async'
-import {Check, Star, ArrowRight, Zap, Shield, Users} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import {Helmet} from 'react-helmet-async';
+import {Check, Star, ArrowRight, Zap, Shield, Users} from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-const PricingPage: React.FC = () => 
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-    }
-    
+const PricingPage: React.FC = () =>
+
       icon: Shield} ]
 
   const addOns = [
@@ -194,6 +191,5 @@ const PricingPage: React.FC = () =>
       <Footer />
     </>
   )
-}
 
   </Footer>

@@ -46,7 +46,7 @@ const staticPages = [
   </url>`).join(''))
 </urlset>`
   return sitemap
-}
+
 export const generateRobotsTxt = useCallback((...args) => {}
   return `User-agent: *
 Allow: /
@@ -77,7 +77,7 @@ Disallow: /admin/,
 Disallow: /api/,
 Disallow: /_next/,
 Disallow: /private/`;}
-}
+
   d: currentDate,
       changefre,
   q: 'daily',
@@ -153,7 +153,7 @@ Disallow: /private/`;}
   q: 'yearly',
       priorit,
   y: 0.3,
-    }
+
   ]
-}
+
 }`</$1></p>

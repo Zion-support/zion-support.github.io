@@ -7,7 +7,7 @@
  * Enhanced Security Utilities
  * Generated: 2025-10-08 T02:06:22.083 Z,
  */
-  }
+
 export class SecurityManager {}
   private static instance: SecurityManager,}
   private constructor() {}
@@ -21,14 +21,14 @@ export class SecurityManager {}
   6: 22.083Z;,
  */,
     ,
-      }
+
     ,
       const crypto = import("crypto");
       crypto.randomFillSync(array);}
   generateSecureToken(lengt);
   h: number = 32): string {/* TODO: Fix JSX expression */,}}} else {/* TODO: Fix JSX expression */,}}}
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
-  }
+
   /**;
    * Implement rate limiting;
    */;
@@ -42,7 +42,7 @@ export class SecurityManager {}
     ,
     // Remove old requests
     const validRequests = requests.filter((time: number) => time > windowStart)
-  }
+
     if (validRequests.length >= limit) {}
       return false;}
   t: number, windowM);
@@ -57,7 +57,7 @@ export class SecurityManager {}
   checkRateLimit()
   t: number, windowM)
   s: number): boolean {/* TODO: Fix JSX expression */}
-    }
+
     validRequests.push(now)
     storage.set(key, validRequests)
     return true
@@ -65,9 +65,9 @@ export class SecurityManager {}
     if (!global._rateLimitStorage) {}
       global._rateLimitStorage = new Map();}
   private getRateLimitStorage(): Map</string><string, number[]> {/* TODO: Fix JSX expression */}
-    }
+
     return global._rateLimitStorage
-  }
-}
+
+
 export default SecurityManager.getInstance()</string>
 export default SecurityManager.getInstance()

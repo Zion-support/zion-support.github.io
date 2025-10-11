@@ -10,25 +10,21 @@ const HomePage: React.FC = () => {
       icon: Wifi,
       title: 'AI Solutions',
       description: 'Cutting-edge artificial intelligence solutions for modern businesses.',
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
     },
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions tailored to your business needs.',
-      benefits: ['AWS Integration', 'Azure Services', 'Google Cloud', 'Hybrid Solutions']
     },
     {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Protect your digital assets with our comprehensive security solutions.',
-      benefits: ['Threat Detection', 'Data Protection', 'Compliance', 'Risk Assessment']
     },
     {
       icon: Code,
       title: 'Custom Development',
       description: 'Bespoke software solutions designed to meet your unique requirements.',
-      benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
     }
   ];
 

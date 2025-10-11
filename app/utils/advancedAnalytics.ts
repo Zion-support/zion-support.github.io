@@ -3,27 +3,20 @@ import React from 'react';
 import { Helmet}  } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe }  } from 'lucide-react';
 const AdvancedAnalyticsPage: React.FC = () => 
-import {  Helmet  } from 'react-helmet-async'import {  CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from 'lucide-react'
-const AdvancedAnalyticsPage: React.FC = () => 
-    }
-    
-    }
-    
-    }
-    
-import {  Helmet  } from 'react-helmet-async'import {  CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from 'lucide-react'
+import {  Helmet  } from 'react-helmet-async'import {  CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from 'lucide-react';
+const AdvancedAnalyticsPage: React.FC = () => { => {
+
+
+import {  Helmet  } from 'react-helmet-async'import {  CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from 'lucide-react';
 const AdvancedAnalyticsPage: React.FC = () => 
       description: 'Advanced AI technology to transform your business operations and improve efficiency';}
-    },
-    
+
       description: 'Lightning-fast processing and real-time analytics for optimal results';}
-    },
-    
+
       description: 'Bank-level security with encryption and compliance standards';}
-    },
-    
+
       description: 'Worldwide deployment and support for international businesses';}
-    }
+
   ]
   const benefits = [
     'Advanced AI technology integration',
@@ -51,6 +44,12 @@ const AdvancedAnalyticsPage: React.FC = () =>
   ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div><Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
         </Helmet><title>AdvancedAnalytics | Zion Tech Group</title>
         <meta>
         <meta>
@@ -117,7 +116,7 @@ return (
       </section>
     </div>
   ),
-}
+
 export default AdvancedAnalyticsPage
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
@@ -126,6 +125,12 @@ export default AdvancedAnalyticsPage
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Page description" />
+      </Helmet>
         <title>AdvancedAnalytics | Zion Tech Group</title>
         <meta name="description" content="Professional AdvancedAnalytics services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="advancedAnalytics, AI solutions, IT services, Zion Tech Group, advancedanalytics" /></$1>
@@ -195,5 +200,5 @@ export default AdvancedAnalyticsPage
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us</$1></$1></$1></$1></$1></$1>
   )
-}
+
 export default AdvancedAnalyticsPage</span></button></button></button></button></p></p></p></p></h1></h2></h2></h2>
