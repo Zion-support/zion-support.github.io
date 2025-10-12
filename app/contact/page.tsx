@@ -1,12 +1,22 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Mail, Phone, MapPin, Send, MessageCircle, CheckCircle, Clock } from 'lucide-react'
 
 export default function ContactPage() {
+=======
+'use client'
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react'
+
+const ContactPage: React.FC = () => {
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5683
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
+<<<<<<< HEAD
     subject: '',
     message: ''
   })
@@ -30,29 +40,59 @@ export default function ContactPage() {
     
     setIsSubmitting(false)
     setIsSubmitted(true)
+=======
+    message: ''
+  })
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // Handle form submission here
+    setIsSubmitted(true)
+    setTimeout(() => setIsSubmitted(false), 3000)
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5683
   }
 
   const contactInfo = [
     {
-      icon: <Mail className="w-6 h-6 text-cyan-400" />,
+      icon: <Mail className="w-6 h-6 text-blue-500" />,
       title: 'Email',
+<<<<<<< HEAD
       details: 'contact@ziontechgroup.com',
+=======
+      details: 'info@ziontechgroup.com',
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5683
       description: 'Send us an email anytime'
     },
     {
-      icon: <Phone className="w-6 h-6 text-purple-400" />,
+      icon: <Phone className="w-6 h-6 text-green-500" />,
       title: 'Phone',
       details: '+1 (555) 123-4567',
+<<<<<<< HEAD
       description: 'Mon-Fri 9am-6pm PST'
     },
     {
       icon: <MapPin className="w-6 h-6 text-green-400" />,
+=======
+      description: 'Mon-Fri from 9am to 6pm'
+    },
+    {
+      icon: <MapPin className="w-6 h-6 text-purple-500" />,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5683
       title: 'Office',
       details: 'San Francisco, CA',
       description: 'Visit our headquarters'
     }
   ]
 
+<<<<<<< HEAD
   const services = [
     'AI Content Generation',
     'AI Chatbot Builder',
@@ -285,3 +325,145 @@ export default function ContactPage() {
     </div>
   )
 }
+=======
+  return (
+    <>
+      <Helmet>
+        <title>Contact Us - Zion Tech Group | Get In Touch</title>
+        <meta name="description" content="Contact Zion Tech Group for AI and IT solutions. Get in touch with our experts for consultation and support." />
+        <meta name="keywords" content="contact, get in touch, consultation, support, Zion Tech Group" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
+                Contact Us
+              </h1>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
+                Ready to transform your business? Get in touch with our experts 
+                for a free consultation and discover how we can help you succeed.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Form & Info Section */}
+        <section className="py-12 sm:py-16 lg:py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Contact Form */}
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                <h2 className="text-2xl font-bold text-white mb-6">Send us a message</h2>
+                {isSubmitted ? (
+                  <div className="text-center py-8">
+                    <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
+                    <p className="text-gray-300">We'll get back to you within 24 hours.</p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                        Full Name
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        placeholder="Your full name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                        Email Address
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        placeholder="your@email.com"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                        Company
+                      </label>
+                      <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        placeholder="Your company name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                        Message
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                        rows={5}
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        placeholder="Tell us about your project..."
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+                    >
+                      <Send className="w-5 h-5 mr-2" />
+                      Send Message
+                    </button>
+                  </form>
+                )}
+              </div>
+
+              {/* Contact Info */}
+              <div className="space-y-8">
+                <div>
+                  <h2 className="text-2xl font-bold text-white mb-6">Get in touch</h2>
+                  <p className="text-gray-300 mb-8">
+                    We're here to help you succeed. Reach out to us through any of the channels below, 
+                    and we'll respond as quickly as possible.
+                  </p>
+                </div>
+                <div className="space-y-6">
+                  {contactInfo.map((info, index) => (
+                    <div key={index} className="flex items-start space-x-4">
+                      <div className="flex-shrink-0">{info.icon}</div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white mb-1">{info.title}</h3>
+                        <p className="text-gray-300 mb-1">{info.details}</p>
+                        <p className="text-gray-400 text-sm">{info.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  )
+}
+
+export default ContactPage
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5683

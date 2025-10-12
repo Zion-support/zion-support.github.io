@@ -13,13 +13,26 @@ const AboutPage = React.lazy(() => import('./app/about/page'))
 const ContactPage = React.lazy(() => import('./app/contact/page'))
 const PricingPage = React.lazy(() => import('./app/pricing/page'))
 const AIServicesPage = React.lazy(() => import('./app/ai-services/page'))
+const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'))
 const ITServicesPage = React.lazy(() => import('./app/it-services/page'))
+<<<<<<< HEAD
 const MicroSaasServicesPage = React.lazy(() => import('./app/micro-saas-services/page'))
 const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'))
 const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'))
 const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'))
 const AIContentGenerationPage = React.lazy(() => import('./app/ai-content-generation/page'))
 const AIChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'))
+=======
+const PricingPage = React.lazy(() => import('./app/pricing/page'))
+const BlogPage = React.lazy(() => import('./app/blog/page'))
+const NewsPage = React.lazy(() => import('./app/news/page'))
+const SupportPage = React.lazy(() => import('./app/support/page'))
+const CareersPage = React.lazy(() => import('./app/careers/page'))
+const InvestorsPage = React.lazy(() => import('./app/investors/page'))
+const StatusPage = React.lazy(() => import('./app/status/page'))
+const SystemStatusPage = React.lazy(() => import('./app/system-status/page'))
+const NotFoundPage = React.lazy(() => import('./app/not-found'))
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5683
 
 // Loading component for Suspense
 const PageLoader = () => (
@@ -33,6 +46,7 @@ function App() {
   return (
     <HelmetProvider>
       <ErrorBoundary>
+<<<<<<< HEAD
         <PerformanceMonitor>
           <AccessibilityEnhancer>
             <Router>
@@ -78,6 +92,39 @@ function App() {
             </Router>
           </AccessibilityEnhancer>
         </PerformanceMonitor>
+=======
+        <Router>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            <a href="#main-content" className="skip-link">Skip to main content</a>
+            <Navigation />
+            <main id="main-content" className="min-h-screen">
+              <Suspense fallback={<PageLoader />}>
+                <Routes>
+                  {/* Main Pages */}
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/micro-saas" element={<MicroSaasPage />} />
+                  <Route path="/it-services" element={<ITServicesPage />} />
+                  <Route path="/pricing" element={<PricingPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/news" element={<NewsPage />} />
+                  <Route path="/support" element={<SupportPage />} />
+                  <Route path="/careers" element={<CareersPage />} />
+                  <Route path="/investors" element={<InvestorsPage />} />
+                  <Route path="/status" element={<StatusPage />} />
+                  <Route path="/system-status" element={<SystemStatusPage />} />
+                  
+                  {/* 404 Page */}
+                  <Route path="*" element={<NotFoundPage />} />
+                </Routes>
+              </Suspense>
+            </main>
+            <Footer />
+          </div>
+        </Router>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5683
       </ErrorBoundary>
     </HelmetProvider>
   )
