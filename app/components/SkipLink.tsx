@@ -1,5 +1,5 @@
-'use client';
 import React from 'react';
+'use client';
 
 const SkipLink: React.FC = () => {
   return (

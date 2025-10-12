@@ -1,6 +1,6 @@
+import { useEffect } from 'react';
 'use client';
 
-import { useEffect } from 'react';
 
 interface AnalyticsProps {
   children: React.ReactNode;
@@ -21,7 +21,7 @@ interface AnalyticsProps {
     initAnalytics();
   }, []);
 
-  return <>{children}</>;
+  return <React.Fragment />{children}</React.Fragment>;
 }
 
 // Extend Window interface for gtag

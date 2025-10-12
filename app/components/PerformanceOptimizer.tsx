@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState} from 'react';
+import { onCLS, onFID, onFCP, onLCP, onTTFB };
 
 }
 
 const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics, setMetrics] = useState<PerformanceMetrics />({
     lcp: null,
     fid: null,
     cls: null,
@@ -65,7 +66,6 @@ const PerformanceOptimizer: React.FC = () => {
 
     // Monitor Core Web Vitals
     const monitorWebVitals = () => {
-import { onCLS, onFID, onFCP, onLCP, onTTFB } 
         onCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
         onFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))
         onFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })))
@@ -99,11 +99,11 @@ import { onCLS, onFID, onFCP, onLCP, onTTFB }
   // Log performance metrics in development
   useEffect(() => {
     if (process.env.NODE_ENV === 'development' && Object.values(metrics).some(val => val !== null)) {
-      console.log('Performance Metrics:', metrics)
+      console.log('Performance Metrics: ', metrics)
     }
   }, [metrics])
 
   return null
 }
 
-export default PerformanceOptimizer
+export default PerformanceOptimizer;

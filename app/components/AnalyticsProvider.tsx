@@ -1,14 +1,13 @@
+import { createContext, useContext, useEffect} from 'react';
 'use client';
 
-import { createContext, useContext, useEffect, useState } from 'react';
 
 interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
+  trackEvent: (eventName: string, parameters?: Record<string, any />) => void;
   trackPageView: (pageName: string) => void;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
+const AnalyticsContext = createContext<AnalyticsContextType | undefined />(undefined);
 export function useAnalytics() {
   const context = useContext(AnalyticsContext);
   if (!context) {
@@ -26,7 +25,7 @@ interface AnalyticsProviderProps {
     // Analytics initialization logic here
   }, []);
 
-  const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
+  const trackEvent = (eventName: string, parameters?: Record<string, unknown />) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', eventName, parameters);
     }
@@ -41,13 +40,12 @@ interface AnalyticsProviderProps {
     }
   };
 
-  const value: AnalyticsContextType = {
+  const value: const AnalyticsContextType = {
     trackEvent,
     trackPageView,
   };
-
   return (
-    <AnalyticsContext.Provider value={value}>
+    <AnalyticsContext.Provider const value = {value} />
       {children}
     </AnalyticsContext.Provider>
   );

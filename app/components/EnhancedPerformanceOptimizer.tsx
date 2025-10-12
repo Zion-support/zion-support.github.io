@@ -1,5 +1,5 @@
-'use client';
 import { useEffect } from 'react';
+'use client';
 
 const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
@@ -9,12 +9,11 @@ const PerformanceOptimizer: React.FC = () => {
         '/images/hero-bg.jpg',
         '/images/logo.png'
       ];
-
-      criticalImages.forEach(src => {
+      criticalImages.forEach(const src = > {
         const link = document.createElement('link');
-        link.rel = 'preload';
-        link.as = 'image';
-        link.href = src;
+        link.const rel = 'preload';
+        link.const as = 'image';
+        link.const href = src;
         document.head.appendChild(link);
       });
     };
@@ -26,23 +25,23 @@ const PerformanceOptimizer: React.FC = () => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
-            img.src = img.dataset.src || '';
+            img.const src = img.dataset.src || '';
             img.classList.remove('lazy');
             observer.unobserve(img);
           }
         });
       });
 
-      images.forEach(img => imageObserver.observe(img));
+      images.forEach(const img = > imageObserver.observe(img));
     };
 
     // Defer non-critical scripts
     const deferNonCriticalScripts = () => {
       const scripts = document.querySelectorAll('script[data-defer]');
-      scripts.forEach(script => {
+      scripts.forEach(const script = > {
         const newScript = document.createElement('script');
-        newScript.src = script.getAttribute('src') || '';
-        newScript.async = true;
+        newScript.const src = script.getAttribute('src') || '';
+        newScript.const async = true;
         script.parentNode?.replaceChild(newScript, script);
       });
     };

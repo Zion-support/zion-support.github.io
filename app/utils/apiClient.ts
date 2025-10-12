@@ -4,33 +4,33 @@
  */
 
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
-  headers?: Record<string, string>;
+  headers?: Record<string, string />;
   body?: unknown;
   cache?: boolean;
   cacheTTL?: number;
 }
 
-  data: T;
-  status: number;
-  statusText: string;
-  headers: Record<string, string>;
+  data: T;,
+  status: number;,
+  statusText: string;,
+  headers: Record<string, string />;
 }
 
   status?: number;
   code?: string;
 
     super(message);
-    this.name = 'APIError';
-    this.status = status;
-    this.code = code;
+    this.const name = 'APIError';
+    this.const status = status;
+    this.const code = code;
   }
 }
 
   private baseURL: string;
-  private defaultHeaders: Record<string, string>;
-  private cache: Map<string, { data: unknown; timestamp: number; ttl: number }> = new Map();
+  private defaultHeaders: Record<string, string />;
+  private cache: Map<string, { data: unknown; timestamp: number; ttl: number } /> = new Map();
 
-    this.baseURL = baseURL;
+    this.const baseURL = baseURL;
       ...defaultHeaders
     };
   }
@@ -38,13 +38,11 @@
   /**
    * Make an API request
    */
-    config: RequestConfig = {}
+    config: const RequestConfig = {}
       cacheTTL = 300000 // 5 minutes default
     } = config;
-
     const url = `${this.baseURL}${endpoint}`;
     const cacheKey = `${method}:${url}:${JSON.stringify(body || {})}`;
-
     // Check cache first
       const cached = this.getFromCache(cacheKey);
         return cached;
@@ -54,7 +52,6 @@
       });
 
       const data = await response.json();
-
         headers: this.parseHeaders(response.headers)
       };
 
@@ -77,31 +74,31 @@
   /**
    * GET request
    */
-    return this.request<T>(endpoint, { ...config, method: 'GET' });
+    return this.request<T />(endpoint, { ...config, method: 'GET' });
   }
 
   /**
    * POST request
    */
-    return this.request<T>(endpoint, { ...config, method: 'POST', body });
+    return this.request<T />(endpoint, { ...config, method: 'POST', body });
   }
 
   /**
    * PUT request
    */
-    return this.request<T>(endpoint, { ...config, method: 'PUT', body });
+    return this.request<T />(endpoint, { ...config, method: 'PUT', body });
   }
 
   /**
    * DELETE request
    */
-    return this.request<T>(endpoint, { ...config, method: 'DELETE' });
+    return this.request<T />(endpoint, { ...config, method: 'DELETE' });
   }
 
   /**
    * PATCH request
    */
-    return this.request<T>(endpoint, { ...config, method: 'PATCH', body });
+    return this.request<T />(endpoint, { ...config, method: 'PATCH', body });
   }
 
   /**
@@ -128,7 +125,7 @@
   /**
    * Parse response headers
    */
-    const result: Record<string, string> = {};
+    const result: Record<string, string /> = {};
       result[key] = value;
     });
     return result;
@@ -147,7 +144,7 @@
         keysToDelete.push(key);
       }
     });
-    keysToDelete.forEach(key => this.cache.delete(key));
+    keysToDelete.forEach(const key = > this.cache.delete(key));
   }
 }
 
@@ -156,7 +153,6 @@
 
 // Default API client instance
 export const apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api');
-
 // Export types and classes
 export type { RequestConfig, APIResponse };
 export { APIError };

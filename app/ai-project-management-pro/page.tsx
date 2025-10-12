@@ -142,6 +142,7 @@ const Page: React.FC = () => {
               </p>
             </div>
             
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300">
@@ -169,6 +170,9 @@ const Page: React.FC = () => {
                   >
                     Get Started
                   </Link>
+=======
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"  > </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2a00
                 </div>
               ))}
             </div>
@@ -208,6 +212,7 @@ const Page: React.FC = () => {
       </div>
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
     </>
   );
@@ -215,3 +220,6 @@ const Page: React.FC = () => {
 
 export default Page;
 >>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
+=======
+;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2a00
