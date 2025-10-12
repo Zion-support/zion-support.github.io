@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Link } from 'react'
 
 import { Home, ArrowLeft } from 'lucide-react';
 
@@ -44,5 +44,3 @@ const NotFound: React.FC = () => {
     </div>
   )
 }
-
-export default NotFound

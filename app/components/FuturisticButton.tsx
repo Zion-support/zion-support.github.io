@@ -13,7 +13,6 @@ interface FuturisticButtonProps {
   type?: 'button' | 'submit' | 'reset';
 }
 
-export default function FuturisticButton({
   children,
   onClick,
   variant = 'primary',
@@ -85,7 +84,7 @@ export default function FuturisticButton({
       <motion.div
         className="absolute inset-0 rounded-lg"
         style={{
-          boxShadow: variant === 'primary' 
+          boxShadow: variant === 'primary'
             ? '0 0 20px rgba(6, 182, 212, 0.4)'
             : variant === 'secondary'
             ? '0 0 20px rgba(168, 85, 247, 0.4)'
@@ -143,5 +142,5 @@ export default function FuturisticButton({
         )}
       </span>
     </motion.button>
-  );
+  </div></div>);
 }

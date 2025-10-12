@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import { Helmet } from 'react-helmet-async';
 
 import { ArrowRight, Mail, Brain } from 'lucide-react';
   const benefits = [
@@ -11,31 +11,29 @@ import { ArrowRight, Mail, Brain } from 'lucide-react';
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
-
+  ];
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      description: 'Lightning-fast processing and real-time analytics for optimal results',
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      description: 'Bank-level security with encryption and compliance standards',
     },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      description: 'Worldwide deployment and support for international businesses',
     }
-  ]
-
+  ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -43,7 +41,7 @@ import { ArrowRight, Mail, Brain } from 'lucide-react';
         <meta name="description" content="Professional futuristic service card solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="futuristic service card, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -56,7 +54,7 @@ import { ArrowRight, Mail, Brain } from 'lucide-react';
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced futuristic service card solutions. 
+              Transform your business with our advanced futuristic service card solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -83,5 +81,5 @@ import { ArrowRight, Mail, Brain } from 'lucide-react';
               Discover the powerful features that make our futuristic service card solutions stand out.
             </p>
           </div>
-        </div>)};export default FuturisticServiceCardPage
+        </div></div></section>)};export default FuturisticServiceCardPage
 }
