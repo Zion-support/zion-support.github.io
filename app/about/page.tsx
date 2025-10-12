@@ -4,8 +4,33 @@ import React from 'react';
 import { Users, Target, Award, Globe, Zap, Shield, Database, Brain, Clock, Star, TrendingUp, Cloud, ArrowRight, CheckCircle, Phone, Mail, MapPin, Github, Linkedin, Twitter } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {
+  const stats = [
+    {
+      icon: <Users className="w-8 h-8 text-blue-500" />,
+      number: '500+',
+      label: 'Projects Completed'
+    },
+    {
+      icon: <Award className="w-8 h-8 text-green-500" />,
+      number: '100+',
+      label: 'Happy Clients'
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-purple-500" />,
+      number: '50+',
+      label: 'Countries Served'
+    },
+    {
+      icon: <Star className="w-8 h-8 text-yellow-500" />,
+      number: '99%',
+      label: 'Success Rate'
+    }
+  ];
+
   const values = [
     {
       icon: <Brain className="w-8 h-8 text-blue-500" />,
@@ -63,6 +88,8 @@ const AboutPage: React.FC = () => {
         <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Our mission is to help businesses thrive in the digital age." />
         <meta name="keywords" content="about us, AI solutions, IT services, company, team, Zion Tech Group" />
       </Helmet>
+
+      <Navigation />
 
       {/* Hero Section */}
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
@@ -171,8 +198,9 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </section>
-      </div>
-    </>
+
+      <Footer />
+    </div>
   );
 };
 
