@@ -10,6 +10,7 @@ const Navigation: React.FC = () => {
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
+  const [emergingTechOpen, setEmergingTechOpen] = useState(false);
 
   // Handle scroll effect
   useEffect(() => {
@@ -61,33 +62,44 @@ const Navigation: React.FC = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
+    setEmergingTechOpen(false);
   }, [microSaasOpen]);
 
+  const toggleEmergingTech = useCallback(() => {
+    setEmergingTechOpen(!emergingTechOpen);
+    setServicesOpen(false);
+    setAiServicesOpen(false);
+    setItServicesOpen(false);
+    setMicroSaasOpen(false);
+  }, [emergingTechOpen]);
+
   const aiServices = [
-    { name: 'AI Analytics', url: '/ai-analytics', icon: BarChart },
-    { name: 'AI Automation', url: '/ai-automation', icon: Workflow },
+    { name: 'AI Analytics Pro', url: '/ai-analytics-dashboard-pro', icon: BarChart },
+    { name: 'AI Content Studio Pro', url: '/ai-content-studio-pro', icon: FileText },
+    { name: 'AI Customer Service Pro', url: '/ai-customer-service-pro', icon: MessageCircle },
+    { name: 'AI Workflow Automation Pro', url: '/ai-workflow-automation-pro', icon: Workflow },
+    { name: 'AI Cybersecurity Monitor', url: '/ai-cybersecurity-monitor', icon: Shield },
+    { name: 'AI Financial Forecasting', url: '/ai-financial-forecasting', icon: TrendingUp },
     { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', icon: MessageCircle },
     { name: 'AI Content Generation', url: '/ai-content-generation', icon: FileText },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', icon: Shield },
     { name: 'AI CRM', url: '/ai-crm', icon: Users },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', icon: Database },
     { name: 'AI Healthcare', url: '/ai-healthcare', icon: Heart },
     { name: 'AI Computer Vision', url: '/ai-computer-vision', icon: Eye },
     { name: 'AI Voice Solutions', url: '/ai-voice-solutions', icon: Mic },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', icon: Settings },
     { name: 'AI Document Processing', url: '/ai-document-processing', icon: FileText }
   ];
 
   const itServices = [
-    { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', icon: Cloud },
+    { name: 'Cloud Infrastructure Setup', url: '/cloud-infrastructure', icon: Cloud },
     { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', icon: Shield },
-    { name: 'Web Development', url: '/web-development', icon: Code },
-    { name: 'Mobile Development', url: '/mobile-development', icon: Smartphone },
+    { name: 'Enterprise Web Development', url: '/web-development', icon: Code },
+    { name: 'Mobile App Development', url: '/mobile-development', icon: Smartphone },
+    { name: 'DevOps & CI/CD Pipeline', url: '/devops-cicd', icon: Settings },
+    { name: 'Data Analytics & BI', url: '/data-analytics-bi', icon: BarChart },
     { name: 'API Development', url: '/api-development', icon: LinkIcon },
     { name: 'Database Management', url: '/database-management', icon: Database },
-    { name: 'DevOps & CI/CD', url: '/devops-cicd', icon: Settings },
     { name: 'IT Support', url: '/it-support', icon: Users },
-    { name: 'Data Analytics & BI', url: '/data-analytics-bi', icon: BarChart },
     { name: 'Custom Software', url: '/custom-software', icon: Code },
     { name: 'Network Infrastructure', url: '/network-infrastructure', icon: Wifi },
     { name: 'IT Asset Management', url: '/it-asset-management', icon: Package }
@@ -95,17 +107,29 @@ const Navigation: React.FC = () => {
 
   const microSaasServices = [
     { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', icon: BarChart },
+    { name: 'Zion Security Shield Pro', url: '/zion-security-shield', icon: Shield },
+    { name: 'Zion Content Studio Pro', url: '/zion-content-studio', icon: FileText },
+    { name: 'Zion CRM Intelligence Pro', url: '/zion-crm-intelligence', icon: Users },
+    { name: 'Zion AI Video Editor', url: '/zion-ai-video-editor', icon: Monitor },
+    { name: 'Zion AI Translator Pro', url: '/zion-ai-translator-pro', icon: Globe },
+    { name: 'Zion AI Code Reviewer', url: '/zion-ai-code-reviewer', icon: Code },
+    { name: 'Zion AI Meeting Assistant', url: '/zion-ai-meeting-assistant', icon: Mic },
     { name: 'Zion Chat AI', url: '/zion-chat-ai', icon: MessageCircle },
-    { name: 'Zion Security Shield', url: '/zion-security-shield', icon: Shield },
     { name: 'Zion Cloud Vault', url: '/zion-cloud-vault', icon: Cloud },
-    { name: 'Zion Content Studio', url: '/zion-content-studio', icon: FileText },
-    { name: 'Zion CRM Intelligence', url: '/zion-crm-intelligence', icon: Users },
     { name: 'Zion Data Sync', url: '/zion-data-sync', icon: Database },
-    { name: 'Zion Lead Magnet', url: '/zion-lead-magnet', icon: Target },
-    { name: 'Zion Project Master', url: '/zion-project-master', icon: CheckSquare },
-    { name: 'Zion Email Automation', url: '/zion-email-automation', icon: Mail },
-    { name: 'Zion Inventory Smart', url: '/zion-inventory-smart', icon: Box },
-    { name: 'Zion Invoice Genius', url: '/zion-invoice-genius', icon: DollarSign }
+    { name: 'Zion Lead Magnet', url: '/zion-lead-magnet', icon: Target }
+  ];
+
+  const emergingTechServices = [
+    { name: 'Quantum Computing', url: '/quantum-computing', icon: Cpu },
+    { name: 'AR/VR Solutions', url: '/ar-vr-solutions', icon: Eye },
+    { name: '5G Implementation', url: '/5g-implementation', icon: Wifi },
+    { name: 'AI 3D Generation', url: '/ai-3d-generation', icon: Sparkles },
+    { name: 'AI Holographic Workspace', url: '/ai-holographic-workspace', icon: Monitor },
+    { name: 'AI Autonomous Systems', url: '/ai-autonomous-systems', icon: Settings },
+    { name: 'AI Blockchain Solutions', url: '/ai-blockchain-solutions', icon: Shield },
+    { name: 'IoT Integration', url: '/iot-integration', icon: Wifi },
+    { name: 'Machine Learning', url: '/machine-learning', icon: Brain }
   ];
 
   return (
@@ -233,6 +257,31 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
+            {/* Emerging Technologies Dropdown */}
+            <div className="relative group">
+              <button
+                onClick={toggleEmergingTech}
+                className="flex items-center text-gray-300 hover:text-white transition-colors"
+              >
+                Emerging Tech
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              {emergingTechOpen && (
+                <div className="absolute top-full left-0 mt-2 w-80 bg-gray-800 rounded-lg shadow-xl border border-gray-700 py-2 max-h-96 overflow-y-auto">
+                  {emergingTechServices.map((service, index) => (
+                    <Link
+                      key={index}
+                      to={service.url}
+                      className="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >
+                      <service.icon className="h-4 w-4 mr-3" />
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">
               Pricing
             </Link>
@@ -301,6 +350,13 @@ const Navigation: React.FC = () => {
                 onClick={() => setIsOpen(false)}
               >
                 Micro SAAS
+              </Link>
+              <Link
+                to="/quantum-computing"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+                onClick={() => setIsOpen(false)}
+              >
+                Emerging Tech
               </Link>
               <Link
                 to="/pricing"

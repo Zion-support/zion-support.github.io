@@ -7,48 +7,60 @@ const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
-    { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' },
+    { name: 'AI Analytics Pro', url: '/ai-analytics-dashboard-pro', description: 'Advanced BI platform' },
+    { name: 'AI Content Studio Pro', url: '/ai-content-studio-pro', description: 'Multi-modal content' },
+    { name: 'AI Customer Service Pro', url: '/ai-customer-service-pro', description: 'Intelligent support' },
+    { name: 'AI Workflow Automation Pro', url: '/ai-workflow-automation-pro', description: 'Enterprise automation' },
+    { name: 'AI Cybersecurity Monitor', url: '/ai-cybersecurity-monitor', description: 'Threat detection' },
+    { name: 'AI Financial Forecasting', url: '/ai-financial-forecasting', description: 'Predictive modeling' },
+    { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'Conversational AI' },
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'Automated content' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Business intelligence' },
     { name: 'AI Computer Vision', url: '/ai-computer-vision', description: 'Image analysis' },
     { name: 'AI Voice Solutions', url: '/ai-voice-solutions', description: 'Speech recognition' },
-    { name: 'AI Workflow Automation', url: '/ai-automation', description: 'Process automation' },
-    { name: 'AI Healthcare Solutions', url: '/ai-healthcare', description: 'Medical AI' },
-    { name: 'AI Financial Services', url: '/ai-financial-services', description: 'Fintech AI' },
-    { name: 'AI Document Processing', url: '/ai-document-processing', description: 'Document analysis' },
-    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', description: 'Business forecasting' },
-    { name: 'AI HR Solutions', url: '/ai-hr-solutions', description: 'Human resources AI' },
-    { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'Distributed AI processing' }
+    { name: 'AI Healthcare Solutions', url: '/ai-healthcare', description: 'Medical AI' }
   ];
 
   const itServices = [
-    { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'AWS, Azure, GCP' },
-    { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Automation pipelines' },
-    { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', description: 'Security solutions' },
-    { name: 'Web Development', url: '/web-development', description: 'Modern web apps' },
-    { name: 'Mobile Development', url: '/mobile-development', description: 'iOS & Android' },
-    { name: 'API Development', url: '/api-development', description: 'API solutions' },
-    { name: 'IT Support', url: '/it-support', description: '24/7 technical support' },
+    { name: 'Cloud Infrastructure Setup', url: '/cloud-infrastructure', description: 'Multi-cloud architecture' },
+    { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', description: 'Comprehensive security' },
+    { name: 'Enterprise Web Development', url: '/web-development', description: 'Scalable web apps' },
+    { name: 'Mobile App Development', url: '/mobile-development', description: 'iOS & Android' },
+    { name: 'DevOps & CI/CD Pipeline', url: '/devops-cicd', description: 'Automation pipelines' },
     { name: 'Data Analytics & BI', url: '/data-analytics-bi', description: 'Business intelligence' },
-    { name: 'Custom Software', url: '/custom-software', description: 'Tailored solutions' },
+    { name: 'API Development', url: '/api-development', description: 'API solutions' },
     { name: 'Database Management', url: '/database-management', description: 'Database optimization' },
+    { name: 'IT Support', url: '/it-support', description: '24/7 technical support' },
+    { name: 'Custom Software', url: '/custom-software', description: 'Tailored solutions' },
     { name: 'Network Infrastructure', url: '/network-infrastructure', description: 'Network setup' },
     { name: 'IT Asset Management', url: '/it-asset-management', description: 'Asset lifecycle' }
   ];
 
   const microSaasServices = [
-    { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', description: 'Business intelligence platform' },
+    { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', description: 'Advanced BI platform' },
+    { name: 'Zion Security Shield Pro', url: '/zion-security-shield', description: 'Enterprise security' },
+    { name: 'Zion Content Studio Pro', url: '/zion-content-studio', description: 'Multi-modal content' },
+    { name: 'Zion CRM Intelligence Pro', url: '/zion-crm-intelligence', description: 'Smart CRM solution' },
+    { name: 'Zion AI Video Editor', url: '/zion-ai-video-editor', description: 'AI video editing' },
+    { name: 'Zion AI Translator Pro', url: '/zion-ai-translator-pro', description: 'Advanced translation' },
+    { name: 'Zion AI Code Reviewer', url: '/zion-ai-code-reviewer', description: 'Code quality assurance' },
+    { name: 'Zion AI Meeting Assistant', url: '/zion-ai-meeting-assistant', description: 'Meeting automation' },
     { name: 'Zion Chat AI', url: '/zion-chat-ai', description: 'AI customer support' },
-    { name: 'Zion Security Shield', url: '/zion-security-shield', description: 'Cybersecurity monitoring' },
     { name: 'Zion Cloud Vault', url: '/zion-cloud-vault', description: 'Cloud backup & recovery' },
-    { name: 'Zion Content Studio', url: '/zion-content-studio', description: 'Content creation platform' },
-    { name: 'Zion CRM Intelligence', url: '/zion-crm-intelligence', description: 'Smart CRM solution' },
     { name: 'Zion Data Sync', url: '/zion-data-sync', description: 'Data synchronization' },
-    { name: 'Zion Lead Magnet', url: '/zion-lead-magnet', description: 'Lead generation tool' },
-    { name: 'Zion Project Master', url: '/zion-project-master', description: 'Project management' },
-    { name: 'Zion Email Automation', url: '/zion-email-automation', description: 'Email marketing' },
-    { name: 'Zion Inventory Smart', url: '/zion-inventory-smart', description: 'Inventory management' },
-    { name: 'Zion Invoice Genius', url: '/zion-invoice-genius', description: 'Invoice automation' }
+    { name: 'Zion Lead Magnet', url: '/zion-lead-magnet', description: 'Lead generation tool' }
+  ];
+
+  const emergingTechServices = [
+    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
+    { name: 'AR/VR Solutions', url: '/ar-vr-solutions', description: 'Immersive experiences' },
+    { name: '5G Implementation', url: '/5g-implementation', description: 'Next-gen networks' },
+    { name: 'AI 3D Generation', url: '/ai-3d-generation', description: '3D content creation' },
+    { name: 'AI Holographic Workspace', url: '/ai-holographic-workspace', description: 'Holographic interfaces' },
+    { name: 'AI Autonomous Systems', url: '/ai-autonomous-systems', description: 'Autonomous solutions' },
+    { name: 'AI Blockchain Solutions', url: '/ai-blockchain-solutions', description: 'Blockchain AI' },
+    { name: 'IoT Integration', url: '/iot-integration', description: 'IoT solutions' },
+    { name: 'Machine Learning', url: '/machine-learning', description: 'ML algorithms' }
   ];
 
   const companyLinks = [
@@ -80,7 +92,7 @@ const Footer: React.FC = memo(() => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
@@ -194,6 +206,35 @@ const Footer: React.FC = memo(() => {
                   className="text-green-400 hover:text-green-300 transition-colors text-sm font-medium flex items-center"
                 >
                   View All Products
+                  <ArrowRight className="h-3 w-3 ml-1" />
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Emerging Technologies */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <Cpu className="h-5 w-5 mr-2 text-purple-400" />
+              Emerging Tech
+            </h3>
+            <ul className="space-y-2">
+              {emergingTechServices.slice(0, 6).map((service, index) => (
+                <li key={index}>
+                  <Link
+                    to={service.url}
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  to="/quantum-computing"
+                  className="text-purple-400 hover:text-purple-300 transition-colors text-sm font-medium flex items-center"
+                >
+                  View All Technologies
                   <ArrowRight className="h-3 w-3 ml-1" />
                 </Link>
               </li>
