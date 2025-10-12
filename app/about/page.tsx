@@ -73,18 +73,8 @@ const AboutPage: React.FC = () => {
     {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
-      image: '/team/kleber.jpg',
-      bio: 'Visionary leader with 15+ years in AI and IT solutions, passionate about transforming businesses through technology.'
       image: '/images/team/kleber.jpg',
-      bio: 'Visionary leader with 15+ years in technology and business transformation.',
-      expertise: ['AI Strategy', 'Business Development', 'Technology Leadership']
-      description: 'Visionary leader with 15+ years in AI and enterprise technology',
-      image: '/team/kleber.jpg'
-      image: '/images/team/kleber.jpg',
-      bio: 'Visionary leader with 15+ years in technology and business transformation.',
-      expertise: ['AI Strategy', 'Business Development', 'Technology Leadership']
-      image: '/images/team/kleber.jpg',
-      bio: 'Visionary leader with 15+ years in technology and business transformation.',
+      bio: 'Visionary leader with 15+ years in AI and IT solutions, passionate about transforming businesses through technology.',
       expertise: ['AI Strategy', 'Business Development', 'Technology Leadership']
     },
     {

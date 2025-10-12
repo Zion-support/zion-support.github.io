@@ -105,10 +105,8 @@ const AiChatbotBuilderPage: React.FC = () => {
         'Dedicated account manager'
       ],
       popular: false
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { MessageSquare, Brain, Zap, CheckCircle, ArrowRight, Users, Award, Star, Globe, Settings } from 'lucide-react';
+    }
+  ];
 
 const AIChatbotBuilderPage: React.FC = () => {
   const features = [

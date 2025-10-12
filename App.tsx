@@ -459,12 +459,17 @@ const App: React.FC = () => {
               </Suspense>
             </main>
             <Footer />
+            <SkipLink />
           </div>
+                    </AccessibilityEnhancer>
+                </EnhancedAccessibility>
+              </PerformanceOptimizer>
+            </AnalyticsProvider>
+          </AppWithPerformanceMonitoring>
         </Router>
       </HelmetProvider>
     </ErrorBoundary>
   );
 };
 
-export default App;
 export default App;
