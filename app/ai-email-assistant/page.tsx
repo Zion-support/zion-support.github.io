@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 'use client';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0a63
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -65,19 +62,19 @@ const AIEmailAssistantPage: React.FC = () => {
         <meta name="keywords" content="AI email assistant, email automation, smart email management, auto-responses, email classification" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         {/* Hero Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h1 className="w-5 h-5ml-2" />
-                AI <span className="w-5 h-5ml-2" />Email Assistant</span>
+        <section className="w-5 h-5 ml-2" />
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h1 className="w-5 h-5 ml-2" />
+                AI <span className="w-5 h-5 ml-2" />Email Assistant</span>
               </h1>
-              <p className="w-5 h-5ml-2">Transform your email management with intelligent automation, smart classification, 
+              <p className="w-5 h-5 ml-2">Transform your email management with intelligent automation, smart classification, 
                 and AI-powered responses that save time and improve productivity.
               </p>
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Building
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Building
                 </Link>
                 <Link to="/ai-services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All AI Services
                 </Link>
@@ -86,49 +83,49 @@ const AIEmailAssistantPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />
-                Powerful <span className="w-5 h-5ml-2" />Features</span>
+        <section className="w-5 h-5 ml-2" />
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5 ml-2" />
+                Powerful <span className="w-5 h-5 ml-2" />Features</span>
               </h2>
-              <p className="w-5 h-5ml-2">Everything you need to automate and optimize your email management
+              <p className="w-5 h-5 ml-2">Everything you need to automate and optimize your email management
               </p>
             </div>
 
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {features.map((feature, index) => (
                 <div key={index} className="text-centergroup" />
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                     {feature.icon}
                   </div>
-                  <h3 className="w-5 h-5ml-2" />{feature.title}</h3>
-                  <p className="w-5 h-5ml-2">{feature.description}</p>
+                  <h3 className="w-5 h-5 ml-2" />{feature.title}</h3>
+                  <p className="w-5 h-5 ml-2">{feature.description}</p>
                 </div>
               ))}
             </div>
         </section>
 
         {/* Use Cases Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />
-                Use <span className="w-5 h-5ml-2" />Cases</span>
+        <section className="w-5 h-5 ml-2" />
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5 ml-2" />
+                Use <span className="w-5 h-5 ml-2" />Cases</span>
               </h2>
-              <p className="w-5 h-5ml-2">Discover how our AI email assistant can transform your communication workflows
+              <p className="w-5 h-5 ml-2">Discover how our AI email assistant can transform your communication workflows
               </p>
             </div>
 
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {useCases.map((useCase, index) => (
                 <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 grouphover:transformhover:scale-105" />
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                     {useCase.icon}
                   </div>
-                  <h3 className="w-5 h-5ml-2" />{useCase.title}
+                  <h3 className="w-5 h-5 ml-2" />{useCase.title}
                   </h3>
-                  <p className="w-5 h-5ml-2">{useCase.description}
+                  <p className="w-5 h-5 ml-2">{useCase.description}
                   </p>
                 </div>
               ))}
@@ -136,15 +133,15 @@ const AIEmailAssistantPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />Ready to Transform Your Email Management?
+        <section className="w-5 h-5 ml-2" />
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5 ml-2" />Ready to Transform Your Email Management?
               </h2>
-              <p className="w-5 h-5ml-2">Start automating your email workflows and boost productivity with AI-powered assistance.
+              <p className="w-5 h-5 ml-2">Start automating your email workflows and boost productivity with AI-powered assistance.
               </p>
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Building Now
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Building Now
                 </Link>
                 <Link to="/about" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More About Us
                 </Link>

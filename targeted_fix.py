@@ -3,8 +3,8 @@ import os
 import re
 import glob
 
-def fix_merge_conflicts(file_path):
-    """Fix merge conflicts in a file by keeping the HEAD version"""
+def fix_merge_conflicts_safely(file_path):
+    """Fix merge conflicts by keeping HEAD version"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -47,15 +47,15 @@ def fix_merge_conflicts(file_path):
         print(f"Error fixing {file_path}: {e}")
         return False
 
-def fix_jsx_syntax_errors(file_path):
-    """Fix common JSX syntax errors"""
+def fix_common_syntax_errors(file_path):
+    """Fix common syntax errors without being too aggressive"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix common spacing issues in className
+        # Fix specific patterns that are safe to fix
         content = re.sub(r'bg-gradient-to-brfrom-', 'bg-gradient-to-br from-', content)
         content = re.sub(r'mx-autopx-', 'mx-auto px-', content)
         content = re.sub(r'font-boldtext-', 'font-bold text-', content)
@@ -70,22 +70,20 @@ def fix_jsx_syntax_errors(file_path):
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"Fixed JSX syntax in {file_path}")
+            print(f"Fixed syntax in {file_path}")
             return True
         
         return False
         
     except Exception as e:
-        print(f"Error fixing JSX syntax in {file_path}: {e}")
+        print(f"Error fixing syntax in {file_path}: {e}")
         return False
 
 def main():
     # Find all TypeScript/TSX files with merge conflicts
     patterns = [
         'app/**/*.tsx',
-        'app/**/*.ts',
-        'components/**/*.tsx',
-        'components/**/*.ts'
+        'app/**/*.ts'
     ]
     
     files_fixed = 0
@@ -94,11 +92,10 @@ def main():
         for file_path in glob.glob(pattern, recursive=True):
             if os.path.isfile(file_path):
                 # Fix merge conflicts first
-                if fix_merge_conflicts(file_path):
+                if fix_merge_conflicts_safely(file_path):
                     files_fixed += 1
-                
-                # Then fix JSX syntax
-                fix_jsx_syntax_errors(file_path)
+                    # Then fix syntax
+                    fix_common_syntax_errors(file_path)
     
     print(f"Fixed {files_fixed} files with merge conflicts")
 

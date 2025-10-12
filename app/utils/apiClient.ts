@@ -27,14 +27,8 @@
 }
 
   private baseURL: string;
-<<<<<<< HEAD
   private defaultHeaders: Record<string, string>;
   private cache: Map<string, { data: unknown; timestamp: number; ttl: number }> = new Map();
-=======
-    <>
-  private defaultHeaders: Record<string, string />;
-  private cache: Map<string, { data: unknown; timestamp: number; ttl: number } /> = new Map();
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 
     this.baseURL = baseURL;
       ...defaultHeaders
