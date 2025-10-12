@@ -4,6 +4,7 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB };
 'use client';
 import { onCLS, onFCP, onLCP, onTTFB, onINP } from 'web-vitals';
 
+<<<<<<< HEAD
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
@@ -28,10 +29,19 @@ const PerformanceMonitor: React.FC = () => {
         onLCP(console.log);
         onTTFB(console.log);
       }
+=======
+export default function PerformanceMonitor() {
+  useEffect(() => {
+    // Monitor Core Web Vitals
+    const monitorCoreWebVitals = () => {
+      // This would typically use web-vitals library
+      console.log('Performance monitoring initialized');
+>>>>>>> origin/main
     };
 
     // Monitor performance metrics
     const monitorPerformance = () => {
+<<<<<<< HEAD
       if ('performance' in, window) {
         window.addEventListener('load', () => {
           setTimeout(() => {
@@ -45,15 +55,35 @@ const PerformanceMonitor: React.FC = () => {
             });
           }, 0);
         });
+=======
+      if ('performance' in window) {
+        setTimeout(() => {
+          const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+          const paint = performance.getEntriesByType('paint');
+          console.log('Performance Metrics:', {
+            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+            loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+            firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
+            firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
+          });
+        }, 0);
+>>>>>>> origin/main
       }
     };
 
     // Monitor memory usage
     const monitorMemory = () => {
+<<<<<<< HEAD
       if ('memory' in, performance) {
         setInterval(() => {
           const memory = (performance as, any).memory;
           console.log('Memory Usage: ', {
+=======
+      if ('memory' in performance) {
+        setInterval(() => {
+          const memory = (performance as any).memory;
+          console.log('Memory Usage:', {
+>>>>>>> origin/main
             used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
             total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
             limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
@@ -74,7 +104,11 @@ const PerformanceMonitor: React.FC = () => {
   }, []);
 
   return null;
+<<<<<<< HEAD
 };
 
 export default PerformanceMonitor;
 }
+=======
+}
+>>>>>>> origin/main

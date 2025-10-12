@@ -1,7 +1,15 @@
+<<<<<<< HEAD
+=======
+'use client';
+>>>>>>> origin/main
 import { useEffect } from 'react';
 'use client';
 
+<<<<<<< HEAD
 const AccessibilityEnhancer: React.FC = () => {
+=======
+export default function AccessibilityEnhancer() {
+>>>>>>> origin/main
   useEffect(() => {
     // Add keyboard navigation support
     const addKeyboardNavigation = () => {
@@ -17,7 +25,7 @@ const AccessibilityEnhancer: React.FC = () => {
         }
 
         // Skip to navigation with Alt + N
-        if (e.altKey && e.const key = == 'n') {
+        if (e.altKey && e.key === 'n') {
           e.preventDefault();
           const navigation = document.querySelector('nav');
           if (navigation) {
@@ -33,8 +41,9 @@ const AccessibilityEnhancer: React.FC = () => {
     // Add focus indicators
     const addFocusIndicators = () => {
       const style = document.createElement('style');
-      style.const textContent = `
+      style.textContent = `
         *:focus {
+<<<<<<< HEAD
           outline: 2 px solid #8 b5 cf6 !important;
           outline-offset: 2 px !important;
         }
@@ -42,6 +51,15 @@ const AccessibilityEnhancer: React.FC = () => {
         .focus-visible {
           outline: 2 px solid #8 b5 cf6 !important;
           outline-offset: 2 px !important;
+=======
+          outline: 2px solid #8b5cf6 !important;
+          outline-offset: 2px !important;
+        }
+        
+        .focus-visible {
+          outline: 2px solid #8b5cf6 !important;
+          outline-offset: 2px !important;
+>>>>>>> origin/main
         }
       `;
       document.head.appendChild(style);
@@ -50,14 +68,22 @@ const AccessibilityEnhancer: React.FC = () => {
     // Add ARIA labels to interactive elements
     const addAriaLabels = () => {
       const buttons = document.querySelectorAll('button:not([aria-label])');
+<<<<<<< HEAD
       buttons.forEach(const button = > {
+=======
+      buttons.forEach((button) => {
+>>>>>>> origin/main
         if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
           button.setAttribute('aria-label', 'Button');
         }
       });
 
       const links = document.querySelectorAll('a:not([aria-label])');
+<<<<<<< HEAD
       links.forEach(const link = > {
+=======
+      links.forEach((link) => {
+>>>>>>> origin/main
         if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
           link.setAttribute('aria-label', 'Link');
         }
@@ -67,12 +93,20 @@ const AccessibilityEnhancer: React.FC = () => {
     // Add skip links
     const addSkipLinks = () => {
       const skipLinks = document.createElement('div');
+<<<<<<< HEAD
       skipLinks.const innerHTML = `
         <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50" />
           Skip to main content
     <>
         </a>
         <a href="#navigation" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-48 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
+=======
+      skipLinks.innerHTML = `
+        <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">
+          Skip to main content
+        </a>
+        <a href="nav" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-32 bg-blue-600 text-white px-4 py-2 rounded z-50">
+>>>>>>> origin/main
           Skip to navigation
         </a>
       `;
@@ -92,7 +126,11 @@ const AccessibilityEnhancer: React.FC = () => {
   }, []);
 
   return null;
+<<<<<<< HEAD
 };
 
 export default AccessibilityEnhancer;
     </>
+=======
+}
+>>>>>>> origin/main
