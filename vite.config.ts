@@ -105,6 +105,13 @@ export default defineConfig({
     hmr: {
       overlay: true,
     },
+    // Add security headers
+    headers: {
+      'X-Frame-Options': 'DENY',
+      'X-Content-Type-Options': 'nosniff',
+      'Referrer-Policy': 'strict-origin-when-cross-origin',
+      'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; img-src 'self' data: https:; connect-src 'self' https:; frame-src 'none';"
+    },
   },
   preview: {
     port: 4173,
@@ -120,7 +127,12 @@ export default defineConfig({
       'react-helmet-async',
       'framer-motion',
       'lucide-react',
+      'scheduler',
     ],
+  },
+  define: {
+    // Define global variables for better compatibility
+    global: 'globalThis',
   },
   // CSS optimization
   css: {

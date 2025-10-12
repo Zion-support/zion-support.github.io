@@ -88,6 +88,15 @@ const FiveGPrivateNetworksPage = React.lazy(() => import('./app/5g-private-netwo
 const FiveGSmartCitySolutionsPage = React.lazy(() => import('./app/5g-smart-city-solutions/page'));
 const FiveGSolutionsPage = React.lazy(() => import('./app/5g-solutions/page'));
 
+// Global error handler
+window.addEventListener('error', (event) => {
+  console.error('Global error caught:', event.error);
+});
+
+window.addEventListener('unhandledrejection', (event) => {
+  console.error('Unhandled promise rejection:', event.reason);
+});
+
 // Main App Component
 function App() {
 
