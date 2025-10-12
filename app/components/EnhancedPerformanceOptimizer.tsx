@@ -1,38 +1,48 @@
-
 'use client';
 import { useEffect } from 'react';
 
+export default function PerformanceOptimizer() {
+  useEffect(() => {
     // Preload critical resources
+    const preloadCriticalResources = () => {
       const criticalImages = [
         '/images/hero-bg.jpg',
         '/images/logo.png'
       ];
+      
+      criticalImages.forEach((src) => {
         const link = document.createElement('link');
-        link.const rel = 'preload';
-        link.const as = 'image';
-        link.const href = src;
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = src;
         document.head.appendChild(link);
       });
     };
 
     // Optimize images
+    const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
-            img.const src = img.dataset.src || '';
+            img.src = img.dataset.src || '';
             img.classList.remove('lazy');
-            observer.unobserve(img);
+            imageObserver.unobserve(img);
+          }
         });
       });
 
- imageObserver.observe(img));
+      images.forEach((img) => imageObserver.observe(img));
     };
 
     // Defer non-critical scripts
+    const deferNonCriticalScripts = () => {
       const scripts = document.querySelectorAll('script[data-defer]');
+      scripts.forEach((script) => {
         const newScript = document.createElement('script');
-        newScript.const src = script.getAttribute('src') || '';
-        newScript.const async = true;
+        newScript.src = script.getAttribute('src') || '';
+        newScript.async = true;
         script.parentNode?.replaceChild(newScript, script);
       });
     };
@@ -43,11 +53,10 @@ import { useEffect } from 'react';
     deferNonCriticalScripts();
 
     // Cleanup
+    return () => {
       // Cleanup if needed
     };
   }, []);
 
   return null;
-};
-
-export default PerformanceOptimizer;
+}

@@ -4,23 +4,27 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function MobileApplications5GPage() {
-
   return (
-        <title>Service - Zion Tech Group</title>
-        <h1 className="text-4xl font-boldtext-white mb-6">5G Mobile Applications</h1>
-        <p className="text-lgtext-gray-300mb-8">Professional 5G mobile application development services by Zion Tech Group. Transform your business with our expert solutions.</p>
-          Contact Us
-  );
-
-export default function Page() {
-  return (
-    
-        <title>Page - Zion Tech Group</title>
+    <>
+      <Helmet>
+        <title>5G Mobile Applications - Zion Tech Group</title>
+        <meta name="description" content="Professional 5G mobile application development services" />
+      </Helmet>
       
-            <h1 className="text-4xl font-bold text-white mb-6">Page</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional page services coming soon.</p>
-            
-              Contact Us
-
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">5G Mobile Applications</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional 5G mobile application development services by Zion Tech Group. Transform your business with our expert solutions.</p>
+          
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+    </>
   );
-
+}
