@@ -7,22 +7,22 @@ import Layout from '../layout'
 export default function AdvancedSecuritySuite() {
   const features = [
     {
-      icon: <Shield className="w-6 h-6 text-cyan-400" />,
+    {
       title: '360° Protection',
       description: 'Comprehensive security coverage across all endpoints, networks, and cloud infrastructure'
     },
     {
-      icon: <Brain className="w-6 h-6 text-purple-400" />,
+    {
       title: 'AI Threat Detection',
       description: 'Advanced machine learning algorithms detect and prevent sophisticated cyber attacks'
     },
     {
-      icon: <Eye className="w-6 h-6 text-yellow-400" />,
+    {
       title: 'Real-time Monitoring',
       description: '24/7 security monitoring with instant threat response and automated remediation'
     },
     {
-      icon: <Lock className="w-6 h-6 text-green-400" />,
+    {
       title: 'Compliance Ready',
       description: 'Meet GDPR, HIPAA, SOX, and other regulatory requirements with built-in compliance tools'
     }

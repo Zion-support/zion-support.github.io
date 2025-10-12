@@ -6,32 +6,32 @@ import { Link } from 'react-router-dom'
 const AITranslationServicesPage: React.FC = () => {
   const features = [
     {
-      icon: <Globe className="w-6 h-6 text-cyan-400" />,
+    {
       title: '100+ Languages',
       description: 'Support for over 100 languages with native-level accuracy and cultural context.'
     },
     {
-      icon: <Zap className="w-6 h-6 text-emerald-400" />,
+    {
       title: 'Real-time Translation',
       description: 'Instant translation for live conversations, meetings, and customer support.'
     },
     {
-      icon: <Brain className="w-6 h-6 text-purple-400" />,
+    {
       title: 'AI-Powered Context',
       description: 'Advanced AI understands context, tone, and cultural nuances for accurate translations.'
     },
     {
-      icon: <FileText className="w-6 h-6 text-orange-400" />,
+    {
       title: 'Document Translation',
       description: 'Translate documents, websites, and content while preserving formatting and structure.'
     },
     {
-      icon: <Mic className="w-6 h-6 text-pink-400" />,
+    {
       title: 'Voice Translation',
       description: 'Convert speech to text and translate in real-time with natural voice synthesis.'
     },
     {
-      icon: <Shield className="w-6 h-6 text-blue-400" />,
+    {
       title: 'Enterprise Security',
       description: 'Bank-level security with end-to-end encryption for sensitive business communications.'
     }

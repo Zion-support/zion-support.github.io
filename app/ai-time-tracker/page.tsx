@@ -6,37 +6,37 @@ import { Link } from 'react-router-dom'
 const AITimeTrackerPage: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+    {
       title: 'AI Activity Recognition',
       description: 'Automatically detect and categorize work activities using AI to eliminate manual time entry.',
       benefits: ['Auto-detection', 'Smart categorization', 'Context awareness', 'Learning algorithms']
     },
     {
-      icon: <Timer className="w-8 h-8 text-emerald-400" />,
+    {
       title: 'Smart Time Tracking',
       description: 'AI-powered time tracking that learns your work patterns and suggests optimal time allocation.',
       benefits: ['Pattern learning', 'Optimal suggestions', 'Focus time detection', 'Break reminders']
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
+    {
       title: 'Productivity Analytics',
       description: 'Comprehensive analytics with AI insights to improve productivity and work-life balance.',
       benefits: ['Productivity metrics', 'Efficiency analysis', 'Distraction tracking', 'Goal setting']
     },
     {
-      icon: <Zap className="w-8 h-8 text-red-400" />,
+    {
       title: 'Automated Reporting',
       description: 'Generate detailed time reports automatically with AI-powered insights and recommendations.',
       benefits: ['Auto reports', 'Client billing', 'Project insights', 'Team analytics']
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-orange-400" />,
+    {
       title: 'Project Management',
       description: 'AI-driven project time estimation and resource allocation for better project planning.',
       benefits: ['Time estimation', 'Resource planning', 'Deadline tracking', 'Budget monitoring']
     },
     {
-      icon: <Shield className="w-8 h-8 text-pink-400" />,
+    {
       title: 'Privacy Protection',
       description: 'Advanced privacy controls with local processing to protect sensitive work data.',
       benefits: ['Local processing', 'Data encryption', 'Privacy controls', 'GDPR compliance']

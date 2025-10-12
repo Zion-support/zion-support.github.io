@@ -14,32 +14,32 @@ import {
 export default function AICodeAssistantProPage() {
   const features = [
     {
-      icon: <Bot className="w-6 h-6 text-cyan-400" />,
+    {
       title: 'AI Code Generation',
       description: 'Generate high-quality code from natural language descriptions with 95% accuracy'
     },
     {
-      icon: <Code className="w-6 h-6 text-emerald-400" />,
+    {
       title: 'Smart Code Completion',
       description: 'Intelligent autocomplete that understands context and suggests optimal solutions'
     },
     {
-      icon: <Search className="w-6 h-6 text-purple-400" />,
+    {
       title: 'Code Analysis & Debugging',
       description: 'Automatically detect bugs, security vulnerabilities, and performance issues'
     },
     {
-      icon: <GitBranch className="w-6 h-6 text-orange-400" />,
+    {
       title: 'Version Control Integration',
       description: 'Seamless integration with Git, GitHub, GitLab, and other version control systems'
     },
     {
-      icon: <Database className="w-6 h-6 text-pink-400" />,
+    {
       title: 'Multi-Language Support',
       description: 'Support for 50+ programming languages including Python, JavaScript, Java, C++, and more'
     },
     {
-      icon: <Shield className="w-6 h-6 text-red-400" />,
+    {
       title: 'Security & Compliance',
       description: 'Built-in security scanning and compliance checking for enterprise-grade code quality'
     }
@@ -123,22 +123,22 @@ export default function AICodeAssistantProPage() {
 
   const benefits = [
     {
-      icon: <TrendingUp className="w-8 h-8 text-cyan-400" />,
+    {
       title: '300% Faster Development',
       description: 'AI-powered code generation accelerates development cycles'
     },
     {
-      icon: <Target className="w-8 h-8 text-emerald-400" />,
+    {
       title: '80% Fewer Bugs',
       description: 'Advanced analysis and debugging reduce code issues significantly'
     },
     {
-      icon: <Clock className="w-8 h-8 text-purple-400" />,
+    {
       title: 'Save 20+ Hours Weekly',
       description: 'Automated code generation and optimization eliminate repetitive tasks'
     },
     {
-      icon: <Shield className="w-8 h-8 text-orange-400" />,
+    {
       title: 'Enterprise Security',
       description: 'Built-in security scanning ensures code quality and compliance'
     }

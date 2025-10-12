@@ -18,37 +18,37 @@ export default function CloudMigrationPage() {
 
   const features = [
     {
-      icon: <Cloud className="w-6 h-6 text-cyan-400" />,
+    {
       title: 'Multi-Cloud Strategy',
       description: 'Comprehensive cloud migration strategy supporting AWS, Azure, Google Cloud, and hybrid environments.',
       benefits: ['AWS expertise', 'Azure migration', 'Google Cloud setup', 'Hybrid cloud solutions']
     },
     {
-      icon: <Shield className="w-6 h-6 text-emerald-400" />,
+    {
       title: 'Security-First Approach',
       description: 'Enterprise-grade security with zero-downtime migration and comprehensive compliance validation.',
       benefits: ['Zero-downtime migration', 'Security compliance', 'Data encryption', 'Access controls']
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-purple-400" />,
+    {
       title: 'Cost Optimization',
       description: 'Intelligent resource allocation and cost monitoring to reduce cloud expenses by up to 40%.',
       benefits: ['Cost analysis', 'Resource optimization', 'Auto-scaling', 'Budget monitoring']
     },
     {
-      icon: <Zap className="w-6 h-6 text-pink-400" />,
+    {
       title: 'Performance Enhancement',
       description: 'Optimize application performance with advanced monitoring, caching, and load balancing.',
       benefits: ['Performance monitoring', 'Load balancing', 'Caching strategies', 'Auto-scaling']
     },
     {
-      icon: <Database className="w-6 h-6 text-orange-400" />,
+    {
       title: 'Database Migration',
       description: 'Seamless database migration with minimal downtime and data integrity guarantees.',
       benefits: ['Zero data loss', 'Schema migration', 'Data validation', 'Backup strategies']
     },
     {
-      icon: <Network className="w-6 h-6 text-red-400" />,
+    {
       title: 'Network Architecture',
       description: 'Design and implement robust cloud network architecture with high availability and scalability.',
       benefits: ['VPC design', 'Load balancing', 'CDN setup', 'Global distribution']

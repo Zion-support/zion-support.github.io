@@ -39,37 +39,37 @@ export default function AiFinancialAnalyticsProPage() {
 
   const features = [
     {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+    {
       title: 'AI-Powered Insights',
       description: 'Advanced machine learning algorithms analyze your financial data to provide actionable insights',
       benefits: ['Predictive analytics', 'Risk assessment', 'Trend identification', 'Anomaly detection']
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
+    {
       title: 'Real-Time Analytics',
       description: 'Monitor your financial performance with live dashboards and instant reporting',
       benefits: ['Live data feeds', 'Instant alerts', 'Real-time KPIs', 'Dynamic reporting']
     },
     {
-      icon: <Shield className="w-8 h-8 text-purple-400" />,
+    {
       title: 'Enterprise Security',
       description: 'Bank-grade security with end-to-end encryption and compliance standards',
       benefits: ['256-bit encryption', 'SOC 2 compliance', 'GDPR ready', 'Audit trails']
     },
     {
-      icon: <Target className="w-8 h-8 text-orange-400" />,
+    {
       title: 'Custom Dashboards',
       description: 'Create personalized financial dashboards tailored to your business needs',
       benefits: ['Drag-and-drop builder', 'Custom widgets', 'Role-based views', 'Mobile optimization']
     },
     {
-      icon: <Zap className="w-8 h-8 text-red-400" />,
+    {
       title: 'Automated Reporting',
       description: 'Generate comprehensive financial reports automatically with AI-driven insights',
       benefits: ['Scheduled reports', 'Custom templates', 'Multi-format export', 'Email delivery']
     },
     {
-      icon: <Globe className="w-8 h-8 text-blue-400" />,
+    {
       title: 'Multi-Currency Support',
       description: 'Handle multiple currencies and global financial operations seamlessly',
       benefits: ['Real-time exchange rates', 'Currency conversion', 'Global compliance', 'Tax calculations']

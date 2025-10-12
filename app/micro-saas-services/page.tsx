@@ -1,56 +1,12 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { 
-<<<<<<< HEAD
-  Layers, BarChart3, Calendar, MessageCircle, FileText, 
-  Mail, DollarSign, Package, Clock, Users, Shield, 
-  CheckCircle, ArrowRight, Sparkles, Target, Award, 
-  Lightbulb, Monitor, Server, CircuitBoard, Atom, 
-  Satellite, Wrench, PieChart, LineChart, Activity, 
-  Search, Filter, Download, Upload, Share, Phone, 
-  MapPin, Globe, TrendingUp, Star, Zap, Brain
-} from 'lucide-react'
-=======
-  ArrowRight, 
-  CheckCircle, 
-  Star,
-  Brain,
-  Cloud,
-  Shield,
-  Database,
-  Code,
-  Smartphone,
-  Cpu,
-  Globe,
-  Lock,
-  Users,
-  TrendingUp,
-  Phone,
-  Mail,
-  MapPin,
-  Settings,
-  FileText,
-  BarChart3,
-  MessageSquare,
-  Calendar,
-  CreditCard,
-  Zap
-} from 'lucide-react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
-=======
 import React from 'react';
 import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield, Brain, Settings } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
 
 export default function MicroSAASServicesPage() {
   const microSaasServices = [
     {
-<<<<<<< HEAD
-      icon: <BarChart3 className="w-8 h-8 text-cyan-400" />,
+    {
       title: 'AI Customer Insights',
       description: 'Transform customer data into actionable insights with AI-powered analytics and churn prediction.',
       price: '$299/month',
@@ -58,7 +14,7 @@ export default function MicroSAASServicesPage() {
       link: '/ai-customer-insights'
     },
     {
-      icon: <Zap className="w-8 h-8 text-emerald-400" />,
+    {
       title: 'AI Workflow Automation',
       description: 'Automate complex business processes with intelligent AI that learns and adapts to your workflow.',
       price: '$299/month',
@@ -66,7 +22,7 @@ export default function MicroSAASServicesPage() {
       link: '/ai-workflow-automation'
     },
     {
-      icon: <Calendar className="w-8 h-8 text-blue-400" />,
+    {
       title: 'Smart Appointment Scheduler',
       description: 'Intelligent scheduling system with automated reminders and calendar integration.',
       price: '$79/month',
@@ -74,7 +30,7 @@ export default function MicroSAASServicesPage() {
       link: '/micro-saas/appointment-scheduler'
     },
     {
-      icon: <MessageCircle className="w-8 h-8 text-purple-400" />,
+    {
       title: 'AI Chat Analytics',
       description: 'Advanced chat analytics with sentiment analysis and customer insights.',
       price: '$129/month',
@@ -82,7 +38,7 @@ export default function MicroSAASServicesPage() {
       link: '/micro-saas/chat-analytics'
     },
     {
-      icon: <FileText className="w-8 h-8 text-orange-400" />,
+    {
       title: 'AI Content Generator',
       description: 'Generate high-quality content for blogs, social media, and marketing campaigns.',
       price: '$99/month',
@@ -90,7 +46,7 @@ export default function MicroSAASServicesPage() {
       link: '/micro-saas/content-generator'
     },
     {
-      icon: <Package className="w-8 h-8 text-pink-400" />,
+    {
       title: 'Document Processor',
       description: 'Automated document processing with OCR and intelligent data extraction.',
       price: '$179/month',
@@ -98,7 +54,7 @@ export default function MicroSAASServicesPage() {
       link: '/micro-saas/document-processor'
     },
     {
-      icon: <Mail className="w-8 h-8 text-green-400" />,
+    {
       title: 'AI Email Marketing',
       description: 'Intelligent email campaigns with AI-powered personalization and optimization.',
       price: '$149/month',
@@ -106,7 +62,7 @@ export default function MicroSAASServicesPage() {
       link: '/micro-saas/email-marketing'
     },
     {
-      icon: <DollarSign className="w-8 h-8 text-indigo-400" />,
+    {
       title: 'Expense Tracker Pro',
       description: 'Smart expense management with receipt scanning and automated categorization.',
       price: '$59/month',
@@ -117,42 +73,42 @@ export default function MicroSAASServicesPage() {
 
   const additionalServices = [
     {
-      icon: <Package className="w-6 h-6 text-cyan-400" />,
+    {
       title: 'Inventory Manager',
       description: 'Smart inventory tracking with predictive analytics and automated reordering.',
       price: '$199/month',
       link: '/micro-saas/inventory-management'
     },
     {
-      icon: <Users className="w-6 h-6 text-emerald-400" />,
+    {
       title: 'Lead Generation Suite',
       description: 'AI-powered lead generation and qualification with CRM integration.',
       price: '$249/month',
       link: '/micro-saas/lead-generation'
     },
     {
-      icon: <Share className="w-6 h-6 text-blue-400" />,
+    {
       title: 'Social Media Scheduler',
       description: 'Automated social media posting with AI-optimized timing and content.',
       price: '$89/month',
       link: '/micro-saas/social-scheduler'
     },
     {
-      icon: <Shield className="w-6 h-6 text-purple-400" />,
+    {
       title: 'Password Manager Pro',
       description: 'Enterprise-grade password management with team sharing and security features.',
       price: '$39/month',
       link: '/micro-saas/password-manager'
     },
     {
-      icon: <CheckCircle className="w-6 h-6 text-orange-400" />,
+    {
       title: 'Task Manager AI',
       description: 'Intelligent task management with AI prioritization and team collaboration.',
       price: '$79/month',
       link: '/micro-saas/task-manager'
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-pink-400" />,
+    {
       title: 'Analytics Dashboard',
       description: 'Custom analytics dashboards with real-time data visualization and reporting.',
       price: '$159/month',
@@ -166,8 +122,7 @@ export default function MicroSAASServicesPage() {
     { number: '24/7', label: 'Support Available', icon: <Monitor className="w-6 h-6 text-blue-400" /> },
     { number: '10,000+', label: 'Active Users', icon: <Users className="w-6 h-6 text-purple-400" /> }
   ]
-=======
-      icon: <Brain className="w-8 h-8 text-cyan-500" />,
+    {
       title: 'AI Task Manager',
       description: 'Intelligent task management with AI-powered prioritization and automation.',
       features: ['Smart prioritization', 'Automated scheduling', 'Progress tracking', 'Team collaboration'],
@@ -176,7 +131,7 @@ export default function MicroSAASServicesPage() {
       popular: true
     },
     {
-      icon: <CreditCard className="w-8 h-8 text-green-500" />,
+    {
       title: 'AI Expense Tracker',
       description: 'Automated expense tracking with AI categorization and budget insights.',
       features: ['Auto categorization', 'Budget alerts', 'Receipt scanning', 'Financial reports'],
@@ -185,7 +140,7 @@ export default function MicroSAASServicesPage() {
       popular: false
     },
     {
-      icon: <Shield className="w-8 h-8 text-purple-500" />,
+    {
       title: 'AI Password Manager',
       description: 'Secure password management with AI-powered security recommendations.',
       features: ['Secure storage', 'Auto-generation', 'Breach monitoring', 'Multi-device sync'],
@@ -194,7 +149,7 @@ export default function MicroSAASServicesPage() {
       popular: false
     },
     {
-      icon: <FileText className="w-8 h-8 text-orange-500" />,
+    {
       title: 'AI Invoice Generator',
       description: 'Automated invoice creation with AI-powered customization and tracking.',
       features: ['Auto-generation', 'Custom templates', 'Payment tracking', 'Tax calculations'],
@@ -203,7 +158,7 @@ export default function MicroSAASServicesPage() {
       popular: true
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-blue-500" />,
+    {
       title: 'AI Analytics Dashboard',
       description: 'Business intelligence with AI-powered insights and predictive analytics.',
       features: ['Real-time analytics', 'Predictive insights', 'Custom dashboards', 'Data visualization'],
@@ -212,7 +167,7 @@ export default function MicroSAASServicesPage() {
       popular: true
     },
     {
-      icon: <MessageSquare className="w-8 h-8 text-pink-500" />,
+    {
       title: 'AI Chatbot Builder',
       description: 'Create intelligent chatbots for customer service and support automation.',
       features: ['No-code builder', 'Multi-channel support', 'Sentiment analysis', 'Custom training'],
@@ -221,7 +176,7 @@ export default function MicroSAASServicesPage() {
       popular: false
     },
     {
-      icon: <Calendar className="w-8 h-8 text-indigo-500" />,
+    {
       title: 'AI Smart Calendar',
       description: 'Intelligent scheduling with AI-powered optimization and conflict resolution.',
       features: ['Smart scheduling', 'Conflict detection', 'Meeting optimization', 'Integration sync'],
@@ -230,7 +185,7 @@ export default function MicroSAASServicesPage() {
       popular: false
     },
     {
-      icon: <Settings className="w-8 h-8 text-pink-500" />,
+    {
       title: 'AI Climate Solutions',
       description: 'Environmental monitoring and sustainability solutions powered by AI.',
       features: ['Carbon tracking', 'Sustainability goals', 'Impact reporting', 'Green recommendations'],
@@ -267,12 +222,10 @@ export default function MicroSAASServicesPage() {
       rating: 5
     }
   ];
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Micro SaaS Services - Zion Tech Group | Ready-to-Deploy Software Solutions</title>
         <meta name="description" content="Powerful micro SaaS solutions that integrate seamlessly with your workflow. From AI automation to business tools, deploy instantly and scale effortlessly." />
         <meta name="keywords" content="micro SaaS, software as a service, business tools, automation, AI solutions, ready-to-deploy, Zion Tech Group" />
@@ -470,7 +423,6 @@ export default function MicroSAASServicesPage() {
       </section>
     </>
   )
-=======
         <title>Micro SAAS Services - Zion Tech Group | AI-Powered Solutions</title>
         <meta name="description" content="Discover our collection of AI-powered micro SAAS solutions including task management, expense tracking, password management, and more. Streamline your business operations." />
         <meta name="keywords" content="micro SAAS, AI solutions, task management, expense tracking, password manager, invoice generator, Zion Tech Group" />
@@ -641,5 +593,4 @@ export default function MicroSAASServicesPage() {
       </div>
     </>
   );
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 }

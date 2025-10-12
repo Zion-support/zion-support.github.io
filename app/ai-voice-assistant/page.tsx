@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -41,38 +40,33 @@ const AiVoiceAssistantPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AiVoiceAssistantPage;
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
 import { Mic, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Users, BarChart3, Star, Sparkles, TrendingUp, Target, Clock, Volume2 } from 'lucide-react'
 import Layout from '../layout'
-=======
 import { ArrowRight, Mic, Brain, Zap, Users, BarChart3, Shield } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
 
 export default function AIVoiceAssistant() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
+    {
       title: 'Natural Language Understanding',
       description: 'Advanced AI processes complex voice commands and maintains context across conversations'
     },
     {
-      icon: <Volume2 className="w-6 h-6 text-purple-400" />,
+    {
       title: 'Human-like Voice Synthesis',
       description: 'Generate natural, expressive speech with customizable voices and emotional tones'
     },
     {
-      icon: <Clock className="w-6 h-6 text-yellow-400" />,
+    {
       title: '24/7 Availability',
       description: 'Always-on voice assistant that can handle tasks, answer questions, and provide support'
     },
     {
-      icon: <Target className="w-6 h-6 text-green-400" />,
+    {
       title: 'Multi-platform Integration',
       description: 'Seamlessly integrate with mobile apps, websites, smart devices, and IoT systems'
     }
@@ -381,7 +375,4 @@ export default function AIVoiceAssistant() {
     </Layout>
   )
 }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
-=======
 export default AiVoiceAssistantPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-9d9d

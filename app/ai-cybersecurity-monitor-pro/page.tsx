@@ -39,37 +39,37 @@ export default function AiCybersecurityMonitorProPage() {
 
   const features = [
     {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+    {
       title: 'AI Threat Detection',
       description: 'Advanced machine learning algorithms detect and prevent cyber threats in real-time',
       benefits: ['Behavioral analysis', 'Anomaly detection', 'Threat prediction', 'Zero-day protection']
     },
     {
-      icon: <Shield className="w-8 h-8 text-green-400" />,
+    {
       title: '24/7 Monitoring',
       description: 'Continuous security monitoring with instant threat response and automated remediation',
       benefits: ['Real-time alerts', 'Automated response', 'Incident management', 'Threat hunting']
     },
     {
-      icon: <Eye className="w-8 h-8 text-purple-400" />,
+    {
       title: 'Network Visibility',
       description: 'Complete visibility into your network infrastructure with advanced traffic analysis',
       benefits: ['Network mapping', 'Traffic analysis', 'Device discovery', 'Vulnerability scanning']
     },
     {
-      icon: <Lock className="w-8 h-8 text-orange-400" />,
+    {
       title: 'Compliance Management',
       description: 'Automated compliance monitoring for GDPR, HIPAA, SOX, and other regulatory standards',
       benefits: ['Regulatory compliance', 'Audit trails', 'Policy enforcement', 'Risk assessment']
     },
     {
-      icon: <Zap className="w-8 h-8 text-red-400" />,
+    {
       title: 'Automated Response',
       description: 'Intelligent incident response with automated threat containment and remediation',
       benefits: ['Auto-quarantine', 'Threat isolation', 'System restoration', 'Forensic analysis']
     },
     {
-      icon: <Globe className="w-8 h-8 text-blue-400" />,
+    {
       title: 'Global Threat Intelligence',
       description: 'Access to global threat intelligence feeds and security research databases',
       benefits: ['Threat intelligence', 'IOC feeds', 'Malware analysis', 'Attack patterns']

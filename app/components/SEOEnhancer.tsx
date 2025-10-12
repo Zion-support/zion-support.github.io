@@ -36,7 +36,6 @@ const SEOEnhancer: React.FC = () => {
     'Proven track record of success'
   ];
   return (
-<<<<<<< HEAD
     <div className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 ${className}`}>
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center space-x-3">
@@ -124,7 +123,6 @@ const SEOEnhancer: React.FC = () => {
     </div>
   )
 }
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>SEOEnhancer | Zion Tech Group</title>
@@ -231,4 +229,3 @@ const SEOEnhancer: React.FC = () => {
 }
 
 export default SEOEnhancerPage
->>>>>>> cursor/fix-errors-and-merge-to-main-33db

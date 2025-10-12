@@ -6,42 +6,42 @@ import { Link } from 'react-router-dom'
 const AIBlockchainAnalyticsPage: React.FC = () => {
   const features = [
     {
-      icon: <Shield className="w-8 h-8 text-cyan-400" />,
+    {
       title: 'Smart Contract Analysis',
       description: 'AI-powered analysis of smart contracts with vulnerability detection and security scoring.',
       price: '$399/month',
       benefits: ['Vulnerability detection', 'Security scoring', 'Code optimization', 'Gas analysis']
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-emerald-400" />,
+    {
       title: 'DeFi Analytics',
       description: 'Comprehensive DeFi protocol analysis with yield farming optimization and risk assessment.',
       price: '$299/month',
       benefits: ['Yield optimization', 'Risk assessment', 'Protocol analysis', 'APY tracking']
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
+    {
       title: 'Trading Intelligence',
       description: 'Advanced trading signals and market analysis powered by machine learning algorithms.',
       price: '$199/month',
       benefits: ['Trading signals', 'Market analysis', 'Price prediction', 'Portfolio optimization']
     },
     {
-      icon: <Target className="w-8 h-8 text-orange-400" />,
+    {
       title: 'NFT Analytics',
       description: 'Comprehensive NFT market analysis with rarity scoring and valuation models.',
       price: '$149/month',
       benefits: ['Rarity scoring', 'Valuation models', 'Market trends', 'Collection analysis']
     },
     {
-      icon: <Zap className="w-8 h-8 text-pink-400" />,
+    {
       title: 'Real-time Monitoring',
       description: 'Live blockchain monitoring with instant alerts and anomaly detection.',
       price: '$179/month',
       benefits: ['Live monitoring', 'Instant alerts', 'Anomaly detection', 'Real-time data']
     },
     {
-      icon: <Globe className="w-8 h-8 text-yellow-400" />,
+    {
       title: 'Cross-Chain Analysis',
       description: 'Multi-blockchain analysis supporting Ethereum, BSC, Polygon, and other major chains.',
       price: '$249/month',

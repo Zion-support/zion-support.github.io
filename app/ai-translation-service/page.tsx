@@ -7,22 +7,22 @@ import Layout from '../layout'
 export default function AITranslationService() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
+    {
       title: 'Neural Machine Translation',
       description: 'Advanced AI models provide contextually accurate translations in 100+ languages'
     },
     {
-      icon: <FileText className="w-6 h-6 text-purple-400" />,
+    {
       title: 'Document Translation',
       description: 'Translate entire documents while preserving formatting, layout, and structure'
     },
     {
-      icon: <Clock className="w-6 h-6 text-yellow-400" />,
+    {
       title: 'Real-time Translation',
       description: 'Instant translation for live conversations, meetings, and customer support'
     },
     {
-      icon: <Target className="w-6 h-6 text-green-400" />,
+    {
       title: 'Industry-Specific Translation',
       description: 'Specialized translation models for legal, medical, technical, and business content'
     }

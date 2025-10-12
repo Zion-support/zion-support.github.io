@@ -14,37 +14,37 @@ export default function AIContentGeneratorPage() {
 
   const features = [
     {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
+    {
       title: 'AI-Powered Writing',
       description: 'Advanced GPT-4 and Claude-3 powered content generation with 99.9% accuracy and human-like quality.',
       benefits: ['Natural language processing', 'Context-aware generation', 'Multi-language support', 'Brand voice adaptation']
     },
     {
-      icon: <FileText className="w-6 h-6 text-emerald-400" />,
+    {
       title: 'Content Templates',
       description: '500+ professionally designed templates for blogs, social media, emails, ads, and more.',
       benefits: ['Industry-specific templates', 'Customizable layouts', 'SEO-optimized structure', 'Mobile-responsive design']
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-purple-400" />,
+    {
       title: 'SEO Optimization',
       description: 'Built-in SEO tools with keyword research, density analysis, and readability scoring.',
       benefits: ['Keyword optimization', 'Meta tag generation', 'Readability analysis', 'Competitor analysis']
     },
     {
-      icon: <Palette className="w-6 h-6 text-pink-400" />,
+    {
       title: 'Brand Voice Training',
       description: 'Train AI to match your unique brand voice and tone across all content types.',
       benefits: ['Voice consistency', 'Tone adaptation', 'Style guidelines', 'Brand personality']
     },
     {
-      icon: <Globe className="w-6 h-6 text-orange-400" />,
+    {
       title: 'Multi-Language Support',
       description: 'Generate content in 50+ languages with native-level quality and cultural adaptation.',
       benefits: ['50+ languages', 'Cultural adaptation', 'Local SEO optimization', 'Regional preferences']
     },
     {
-      icon: <Shield className="w-6 h-6 text-red-400" />,
+    {
       title: 'Plagiarism Detection',
       description: 'Built-in plagiarism checker with 99.8% accuracy and originality scoring.',
       benefits: ['Real-time checking', 'Originality reports', 'Citation suggestions', 'Copyright compliance']

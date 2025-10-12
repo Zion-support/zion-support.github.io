@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
 import { 
   Server, Shield, Cloud, Database, Network, Code, Monitor, 
   Smartphone, Wrench, BarChart3, Eye, CheckCircle, ArrowRight,
@@ -11,21 +8,16 @@ import {
   Satellite, Zap, Target, Users, DollarSign, Phone, Mail, 
   MapPin, Calendar, Timer, Globe, TrendingUp, Star
 } from 'lucide-react'
-=======
 import { ArrowRight, CheckCircle, Cloud, Shield, Server, Database, Smartphone, Globe, MessageCircle, Code, Network, Settings, Cpu, Zap } from 'lucide-react'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
-=======
 import React from 'react';
 import { CheckCircle, ArrowRight, Cloud, Shield, Server, Database, Code, Network, Settings, Users, Clock, DollarSign } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
 
 export default function ITServicesPage() {
   const services = [
     {
-<<<<<<< HEAD
-      icon: <Code className="w-8 h-8 text-cyan-400" />,
+    {
       title: 'Web Development',
       description: 'Custom web applications built with modern technologies and best practices.',
       price: 'Starting at $2,999',
@@ -33,7 +25,7 @@ export default function ITServicesPage() {
       link: '/web-development'
     },
     {
-      icon: <Smartphone className="w-8 h-8 text-emerald-400" />,
+    {
       title: 'Mobile Development',
       description: 'Native and cross-platform mobile apps for iOS and Android devices.',
       price: 'Starting at $4,999',
@@ -41,7 +33,7 @@ export default function ITServicesPage() {
       link: '/mobile-development'
     },
     {
-      icon: <Cloud className="w-8 h-8 text-blue-400" />,
+    {
       title: 'Cloud Migration',
       description: 'Seamless migration to cloud platforms with zero downtime and enhanced security.',
       price: 'Starting at $1,999',
@@ -49,7 +41,7 @@ export default function ITServicesPage() {
       link: '/cloud-migration'
     },
     {
-      icon: <Shield className="w-8 h-8 text-red-400" />,
+    {
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets and data.',
       price: 'Starting at $399/month',
@@ -57,7 +49,7 @@ export default function ITServicesPage() {
       link: '/cybersecurity'
     },
     {
-      icon: <Database className="w-8 h-8 text-purple-400" />,
+    {
       title: 'Database Management',
       description: 'Expert database design, optimization, and maintenance services.',
       price: 'Starting at $299/month',
@@ -65,7 +57,7 @@ export default function ITServicesPage() {
       link: '/database-management'
     },
     {
-      icon: <Network className="w-8 h-8 text-orange-400" />,
+    {
       title: 'Network Infrastructure',
       description: 'Robust network solutions for reliable connectivity and performance.',
       price: 'Starting at $499/month',
@@ -73,7 +65,7 @@ export default function ITServicesPage() {
       link: '/network-infrastructure'
     },
     {
-      icon: <Wrench className="w-8 h-8 text-pink-400" />,
+    {
       title: 'DevOps Solutions',
       description: 'Streamline development and deployment with modern DevOps practices.',
       price: 'Starting at $599/month',
@@ -81,7 +73,7 @@ export default function ITServicesPage() {
       link: '/devops-solutions'
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
+    {
       title: 'Data Analytics',
       description: 'Transform your data into actionable insights with advanced analytics solutions.',
       price: 'Starting at $399/month',
@@ -95,13 +87,18 @@ export default function ITServicesPage() {
     { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6 text-emerald-400" /> },
     { number: '24/7', label: 'Support Available', icon: <Monitor className="w-6 h-6 text-blue-400" /> },
     { number: '150+', label: 'Expert Engineers', icon: <Users className="w-6 h-6 text-purple-400" /> }
-=======
+  ]
+
+  const services = [
+    {
+    {
       title: 'Cloud Migration & Management',
       description: 'Seamlessly migrate your infrastructure to the cloud with our expert cloud services.',
       icon: <Cloud className="w-8 h-8 text-blue-400" />,
       link: '/cloud-services',
       features: ['AWS, Azure, GCP expertise', 'Zero-downtime migration', 'Cost optimization', '24/7 monitoring']
     },
+    {
     {
       title: 'Cybersecurity Solutions',
       description: 'Protect your business with comprehensive security assessments and implementations.',
@@ -110,12 +107,14 @@ export default function ITServicesPage() {
       features: ['Security audits', 'Threat detection', 'Compliance management', 'Incident response']
     },
     {
+    {
       title: 'DevOps & CI/CD',
       description: 'Streamline your development process with automated deployment and monitoring.',
       icon: <Settings className="w-8 h-8 text-green-400" />,
       link: '/devops',
       features: ['Automated deployments', 'Infrastructure as code', 'Monitoring & alerting', 'Performance optimization']
     },
+    {
     {
       title: 'Web Development',
       description: 'Modern, responsive websites and web applications built with cutting-edge technologies.',
@@ -124,12 +123,14 @@ export default function ITServicesPage() {
       features: ['React, Next.js, Vue.js', 'Mobile-first design', 'SEO optimization', 'Performance tuning']
     },
     {
+    {
       title: 'Mobile App Development',
       description: 'Native and cross-platform mobile applications for iOS and Android.',
       icon: <Smartphone className="w-8 h-8 text-yellow-400" />,
       link: '/mobile-development',
       features: ['iOS & Android apps', 'Cross-platform solutions', 'App store optimization', 'Push notifications']
     },
+    {
     {
       title: 'Data Analytics & BI',
       description: 'Transform your data into actionable insights with advanced analytics solutions.',
@@ -169,20 +170,15 @@ export default function ITServicesPage() {
       title: 'Deployment & Support',
       description: 'We deploy your solution and provide ongoing maintenance and support.'
     }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
   ]
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-deploy-application-9d9d
 
 const ItServicesPage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <title>IT Services - Zion Tech Group | Comprehensive Technology Solutions</title>
         <meta name="description" content="Professional IT services including web development, cloud migration, cybersecurity, and infrastructure management. Trusted by businesses worldwide." />
         <meta name="keywords" content="IT services, web development, cloud migration, cybersecurity, database management, network infrastructure, DevOps, Zion Tech Group" />
@@ -215,7 +211,6 @@ const ItServicesPage: React.FC = () => {
             <Link 
               to="/contact" 
               className="group bg-gradient-to-r from-emerald-500 to-blue-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-emerald-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transform hover:scale-105"
-=======
         <title>IT Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT services including cloud migration, cybersecurity, DevOps, web development, and more. Transform your business with our expert solutions." />
         <meta name="keywords" content="IT services, cloud migration, cybersecurity, DevOps, web development, mobile development, data analytics" />
@@ -238,31 +233,26 @@ const ItServicesPage: React.FC = () => {
             <Link
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
             >
               <span>Get Started</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-<<<<<<< HEAD
             <Link 
               to="/demo" 
               className="group border-2 border-emerald-400 text-emerald-400 px-10 py-4 rounded-xl font-semibold hover:bg-emerald-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
             >
               <span>View Portfolio</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-=======
             <Link
               to="/pricing"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
               View Pricing
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
             </Link>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Stats Section */}
       <section className="py-20 px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-blue-500/5" />
@@ -288,7 +278,6 @@ const ItServicesPage: React.FC = () => {
       {/* IT Services Grid */}
       <section className="py-20 px-4 relative">
         <div className="relative max-w-7xl mx-auto">
-=======
         <title>It Services - Zion Tech Group</title>
         <meta name="description" content="It Services services by Zion Tech Group. Professional AI and IT solutions." />
         <meta name="keywords" content="it-services, AI solutions, IT services" />
@@ -296,7 +285,6 @@ const ItServicesPage: React.FC = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
->>>>>>> cursor/analyze-improve-and-deploy-application-9d9d
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -307,7 +295,6 @@ const ItServicesPage: React.FC = () => {
               Professional it services services by Zion Tech Group.
             </p>
           </div>
-<<<<<<< HEAD
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {itServices.map((service, index) => (
@@ -340,7 +327,6 @@ const ItServicesPage: React.FC = () => {
                     Learn More
                   </Link>
                 </div>
-=======
         {/* Services Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Our IT Services</h2>
@@ -402,15 +388,11 @@ const ItServicesPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
                 <p className="text-gray-300">{step.description}</p>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
               </div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9d9d
 
           <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
@@ -425,8 +407,6 @@ const ItServicesPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
-=======
 
         {/* CTA Section */}
         <div className="text-center">
@@ -455,12 +435,9 @@ const ItServicesPage: React.FC = () => {
         </div>
       </div>
     </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
   )
 }
-=======
   );
 };
 
 export default ItServicesPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-9d9d

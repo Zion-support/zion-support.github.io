@@ -13,32 +13,32 @@ import {
 export default function AICustomerSupportChatbotPage() {
   const features = [
     {
-      icon: <Bot className="w-6 h-6 text-cyan-400" />,
+    {
       title: 'Natural Language Processing',
       description: 'Advanced NLP understands context, intent, and sentiment with 98% accuracy'
     },
     {
-      icon: <MessageSquare className="w-6 h-6 text-emerald-400" />,
+    {
       title: 'Multi-Channel Support',
       description: 'Deploy across website, mobile app, social media, and messaging platforms'
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-purple-400" />,
+    {
       title: 'Real-time Analytics',
       description: 'Comprehensive insights into customer satisfaction, response times, and resolution rates'
     },
     {
-      icon: <Zap className="w-6 h-6 text-orange-400" />,
+    {
       title: 'Instant Responses',
       description: '24/7 availability with sub-second response times for immediate customer assistance'
     },
     {
-      icon: <Target className="w-6 h-6 text-pink-400" />,
+    {
       title: 'Smart Escalation',
       description: 'Intelligently routes complex queries to human agents when needed'
     },
     {
-      icon: <Shield className="w-6 h-6 text-red-400" />,
+    {
       title: 'Secure & Compliant',
       description: 'Enterprise-grade security with GDPR, HIPAA, and SOC 2 compliance'
     }
@@ -122,22 +122,22 @@ export default function AICustomerSupportChatbotPage() {
 
   const benefits = [
     {
-      icon: <Clock className="w-8 h-8 text-cyan-400" />,
+    {
       title: '70% Faster Resolution',
       description: 'Instant responses reduce average resolution time significantly'
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-emerald-400" />,
+    {
       title: '40% Higher Satisfaction',
       description: 'AI-powered personalization improves customer experience'
     },
     {
-      icon: <DollarSign className="w-8 h-8 text-purple-400" />,
+    {
       title: '60% Cost Reduction',
       description: 'Automated responses reduce support team workload'
     },
     {
-      icon: <Target className="w-8 h-8 text-orange-400" />,
+    {
       title: '98% Accuracy',
       description: 'Advanced NLP ensures accurate understanding and responses'
     }
