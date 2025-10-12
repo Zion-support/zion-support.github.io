@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi, Users, BarChart3, Settings } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi, Users, BarChart3, Settings, MessageSquare } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -29,7 +29,8 @@ export default function Navigation() {
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'AI Automation', path: '/ai-automation', icon: <Settings className="w-4 h-4" /> },
     { name: 'AI Computer Vision', path: '/ai-computer-vision', icon: <Smartphone className="w-4 h-4" /> },
-    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <Database className="w-4 h-4" /> }
+    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <Database className="w-4 h-4" /> },
+    { name: 'AI Services Overview', path: '/ai-services', icon: <Brain className="w-4 h-4" /> }
   ]
 
   const itServices = [
@@ -38,7 +39,9 @@ export default function Navigation() {
     { name: 'DevOps', path: '/devops', icon: <Server className="w-4 h-4" /> },
     { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'Cloud Services', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> }
+    { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
+    { name: 'IT Consulting', path: '/it-consulting', icon: <Settings className="w-4 h-4" /> },
+    { name: 'IT Services', path: '/it-services', icon: <Server className="w-4 h-4" /> }
   ]
 
   const fiveGServices = [
@@ -48,6 +51,24 @@ export default function Navigation() {
     { name: '5G Edge Computing', path: '/5g-edge-computing', icon: <Cpu className="w-4 h-4" /> },
     { name: '5G Private Networks', path: '/5g-private-networks', icon: <Shield className="w-4 h-4" /> },
     { name: '5G Mobile Applications', path: '/5g-mobile-applications', icon: <Smartphone className="w-4 h-4" /> }
+  ]
+
+  const companyPages = [
+    { name: 'About Us', path: '/about', icon: <Users className="w-4 h-4" /> },
+    { name: 'Our Team', path: '/team', icon: <Users className="w-4 h-4" /> },
+    { name: 'Careers', path: '/careers', icon: <Users className="w-4 h-4" /> },
+    { name: 'Case Studies', path: '/case-studies', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'Partners', path: '/partners', icon: <Globe className="w-4 h-4" /> },
+    { name: 'Blog', path: '/blog', icon: <Code className="w-4 h-4" /> }
+  ]
+
+  const supportPages = [
+    { name: 'Contact Us', path: '/contact', icon: <MessageSquare className="w-4 h-4" /> },
+    { name: 'Help Center', path: '/help', icon: <MessageSquare className="w-4 h-4" /> },
+    { name: 'Documentation', path: '/docs', icon: <Code className="w-4 h-4" /> },
+    { name: 'Support', path: '/support', icon: <MessageSquare className="w-4 h-4" /> },
+    { name: 'Status', path: '/status', icon: <Shield className="w-4 h-4" /> },
+    { name: 'SLA', path: '/sla', icon: <Shield className="w-4 h-4" /> }
   ]
 
   return (
@@ -151,9 +172,57 @@ export default function Navigation() {
               )}
             </div>
 
-            <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">
-              Contact
-            </Link>
+            {/* Company Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('company')}
+                className="flex items-center text-white hover:text-cyan-400 transition-colors"
+              >
+                Company
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              {activeDropdown === 'company' && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
+                  {companyPages.map((page, index) => (
+                    <Link
+                      key={index}
+                      to={page.path}
+                      onClick={closeDropdown}
+                      className="flex items-center px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
+                    >
+                      {page.icon}
+                      <span className="ml-3">{page.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Support Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('support')}
+                className="flex items-center text-white hover:text-cyan-400 transition-colors"
+              >
+                Support
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              {activeDropdown === 'support' && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
+                  {supportPages.map((page, index) => (
+                    <Link
+                      key={index}
+                      to={page.path}
+                      onClick={closeDropdown}
+                      className="flex items-center px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
+                    >
+                      {page.icon}
+                      <span className="ml-3">{page.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -237,13 +306,39 @@ export default function Navigation() {
                 </div>
               </div>
 
-              <Link
-                to="/contact"
-                className="block px-3 py-2 text-white hover:text-cyan-400 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Contact
-              </Link>
+              {/* Mobile Company Pages */}
+              <div className="px-3 py-2">
+                <div className="text-cyan-400 font-medium mb-2">Company</div>
+                <div className="pl-4 space-y-1">
+                  {companyPages.map((page, index) => (
+                    <Link
+                      key={index}
+                      to={page.path}
+                      onClick={() => setIsOpen(false)}
+                      className="block text-gray-300 hover:text-cyan-400 transition-colors"
+                    >
+                      {page.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Mobile Support Pages */}
+              <div className="px-3 py-2">
+                <div className="text-cyan-400 font-medium mb-2">Support</div>
+                <div className="pl-4 space-y-1">
+                  {supportPages.map((page, index) => (
+                    <Link
+                      key={index}
+                      to={page.path}
+                      onClick={() => setIsOpen(false)}
+                      className="block text-gray-300 hover:text-cyan-400 transition-colors"
+                    >
+                      {page.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         )}

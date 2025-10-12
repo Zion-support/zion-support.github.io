@@ -9,7 +9,8 @@ export default function Footer() {
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
     { name: 'AI Automation', path: '/ai-automation' },
     { name: 'AI Computer Vision', path: '/ai-computer-vision' },
-    { name: 'AI Data Analytics', path: '/ai-data-analytics' }
+    { name: 'AI Data Analytics', path: '/ai-data-analytics' },
+    { name: 'AI Services Overview', path: '/ai-services' }
   ]
 
   const itServices = [
@@ -18,7 +19,18 @@ export default function Footer() {
     { name: 'DevOps', path: '/devops' },
     { name: 'Data Analytics', path: '/data-analytics' },
     { name: 'Cloud Services', path: '/cloud-services' },
-    { name: 'Cybersecurity', path: '/cybersecurity' }
+    { name: 'Cybersecurity', path: '/cybersecurity' },
+    { name: 'IT Consulting', path: '/it-consulting' },
+    { name: 'IT Services', path: '/it-services' }
+  ]
+
+  const fiveGServices = [
+    { name: '5G Implementation', path: '/5g-implementation' },
+    { name: '5G Network Infrastructure', path: '/5g-network-infrastructure' },
+    { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
+    { name: '5G Edge Computing', path: '/5g-edge-computing' },
+    { name: '5G Private Networks', path: '/5g-private-networks' },
+    { name: '5G Mobile Applications', path: '/5g-mobile-applications' }
   ]
 
   const companyLinks = [
@@ -42,7 +54,7 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
@@ -103,6 +115,27 @@ export default function Footer() {
                   <Link
                     to={service.path}
                     className="text-gray-300 hover:text-purple-400 transition-colors flex items-center"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* 5G Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 flex items-center">
+              <Zap className="w-5 h-5 mr-2 text-yellow-400" />
+              5G Solutions
+            </h3>
+            <ul className="space-y-3">
+              {fiveGServices.map((service, index) => (
+                <li key={index}>
+                  <Link
+                    to={service.path}
+                    className="text-gray-300 hover:text-yellow-400 transition-colors flex items-center"
                   >
                     <ArrowRight className="w-3 h-3 mr-2" />
                     {service.name}
