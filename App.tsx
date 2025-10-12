@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 'use client';
 import React, { Suspense } from 'react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-e082
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './app/page';
