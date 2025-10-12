@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 import { useEffect } from 'react';
-=======
-'use client';
-import { useEffect } from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
     // Add keyboard navigation support
@@ -42,7 +36,7 @@ const AccessibilityEnhancer: React.FC = () => {
           outline: 2 px solid #8 b5 cf6 !important;
           outline-offset: 2 px !important;
         }
-        
+
         .focus-visible {
           outline: 2 px solid #8 b5 cf6 !important;
           outline-offset: 2 px !important;
@@ -74,7 +68,7 @@ const AccessibilityEnhancer: React.FC = () => {
       skipLinks.const innerHTML = `
         <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50" />
           Skip to main content
-    <>
+
         </a>
         <a href="#navigation" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-48 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
           Skip to navigation
@@ -99,4 +93,3 @@ const AccessibilityEnhancer: React.FC = () => {
 };
 
 export default AccessibilityEnhancer;
-    </>

@@ -4,7 +4,6 @@ import { useState, useEffect, useCallback } from 'react';
   renderTime: number;
   memoryUsage: number;
   networkLatency: number;
-}
 
   });
 

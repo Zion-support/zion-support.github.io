@@ -1,7 +1,7 @@
   const [currentCost, setCurrentCost] = useState(100000);
   const [efficiencyGain, setEfficiencyGain] = useState(70);
   const [timeframe, setTimeframe] = useState(12);
-  
+
     const annualSavings = (currentCost * efficiencyGain) / 100;
     const totalSavings = annualSavings * (timeframe / 12);
     const roi = ((totalSavings - currentCost) / currentCost) * 100;
@@ -20,7 +20,7 @@
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
                   Current Annual Cost ($)
                 </label>
-                
+
                   onChange={e => setCurrentCost(Number(e.target.value))}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
                 />
@@ -29,7 +29,7 @@
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
                   Expected Efficiency Gain (%)
                 </label>
-                
+
                   onChange={e => setEfficiencyGain(Number(e.target.value))}
                   className='w-full'
                 />
@@ -40,10 +40,9 @@
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
                   Implementation Timeframe (months)
                 </label>
-                
+
                   onChange={e => setTimeframe(Number(e.target.value))}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-                >
                   <option value={6}>6 months</option>
                   <option value={12}>12 months</option>
                   <option value={18}>18 months</option>

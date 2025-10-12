@@ -16,7 +16,7 @@ const STATIC_ASSETS = [
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
   console.log('Service Worker installing...')
-  
+
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
@@ -36,7 +36,7 @@ self.addEventListener('install', (event) => {
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   console.log('Service Worker activating...')
-  
+
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
@@ -60,17 +60,17 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const { request } = event
   const url = new URL(request.url)
-  
+
   // Skip non-GET requests
   if (request.method !== 'GET') {
     return
   }
-  
+
   // Skip chrome-extension and other non-http requests
   if (!url.protocol.startsWith('http')) {
     return
   }
-  
+
   event.respondWith(
     caches.match(request)
       .then((cachedResponse) => {
@@ -79,7 +79,7 @@ self.addEventListener('fetch', (event) => {
           console.log('Serving from cache:', request.url)
           return cachedResponse
         }
-        
+
         // Otherwise fetch from network
         return fetch(request)
           .then((response) => {
@@ -87,10 +87,10 @@ self.addEventListener('fetch', (event) => {
             if (!response || response.status !== 200 || response.type !== 'basic') {
               return response
             }
-            
+
             // Clone the response
             const responseToCache = response.clone()
-            
+
             // Cache dynamic content
             caches.open(DYNAMIC_CACHE)
               .then((cache) => {
@@ -99,17 +99,17 @@ self.addEventListener('fetch', (event) => {
               .catch((error) => {
                 console.error('Failed to cache dynamic content:', error)
               })
-            
+
             return response
           })
           .catch((error) => {
             console.error('Fetch failed:', error)
-            
+
             // Return offline page for navigation requests
             if (request.destination === 'document') {
               return caches.match('/offline.html')
             }
-            
+
             throw error
           })
       })
@@ -130,7 +130,7 @@ self.addEventListener('sync', (event) => {
 self.addEventListener('push', (event) => {
   if (event.data) {
     const data = event.data.json()
-    
+
     const options = {
       body: data.body,
       icon: '/icon-192x192.png',
@@ -153,7 +153,7 @@ self.addEventListener('push', (event) => {
         }
       ]
     }
-    
+
     event.waitUntil(
       self.registration.showNotification(data.title, options)
     )
@@ -163,7 +163,7 @@ self.addEventListener('push', (event) => {
 // Notification click
 self.addEventListener('notificationclick', (event) => {
   event.notification.close()
-  
+
   if (event.action === 'explore') {
     event.waitUntil(
       clients.openWindow('/')

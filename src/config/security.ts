@@ -3,7 +3,6 @@
  * Defines security headers and policies for the application
  */
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
-  }
 };
 /**
  * Rate limiting configuration
@@ -46,7 +45,7 @@
   const array = new Uint8Array(length);
     window.crypto.getRandomValues(array);
     // Fallback for non-browser environments
-    for (let i = 0; i 
+    for (let i = 0; i
   return Array.from(array, (byte: number) => byte.toString(16).padStart(2, '0')).join('');
 }
   generateSecureToken

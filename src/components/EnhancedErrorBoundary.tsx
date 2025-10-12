@@ -3,13 +3,11 @@
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   enableErrorReporting?: boolean;
   maxRetries?: number;
-}
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
   errorId?: string;
   retryCount: number;
-}
   private maxRetries: number;
     super(props);
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
@@ -32,7 +30,7 @@
     }
   }
     // Enhanced error reporting logic
-    
+
     };
     // Log to console in development
       console.group('🚨 Error Boundary Caught Error');
@@ -43,7 +41,7 @@
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
       console.log('Error report prepared:', errorReport);
-       
+
       // Example: Send to error reporting service
       //   body: JSON.stringify(errorReport)
       // });
@@ -65,7 +63,7 @@
   };
     window.location.href = '/';
   };
-    
+
     };
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
         // Show success message
@@ -83,7 +81,7 @@
         return this.props.fallback;
       }
       const { retryCount, error } = this.state;
-      
+
       );
     }
     return this.props.children;

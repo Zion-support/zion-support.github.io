@@ -1,145 +1,89 @@
 #!/usr/bin/env python3
+"""
+Script to fix remaining JSX syntax errors
+"""
 import os
 import re
 import glob
 
 def fix_jsx_file(file_path):
-    """Fix remaining JSX syntax issues"""
+    """Fix JSX syntax errors in a single file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix 1: Missing variable declarations before JSX
-        if 'const analyticsFeatures = [' in content and 'export default function' in content:
-            # Find the function declaration and add missing variables
-            lines = content.split('\n')
-            new_lines = []
-            in_function = False
-            in_return = False
-            variables_added = False
-            
-            for i, line in enumerate(lines):
-                if 'export default function' in line:
-                    in_function = True
-                    new_lines.append(line)
-                    new_lines.append('  const analyticsFeatures = [')
-                    new_lines.append('    {')
-                    new_lines.append('      title: "Real-time Analytics",')
-                    new_lines.append('      description: "Get instant insights from your data"')
-                    new_lines.append('    },')
-                    new_lines.append('    {')
-                    new_lines.append('      title: "Advanced Reporting",')
-                    new_lines.append('      description: "Comprehensive reports and dashboards"')
-                    new_lines.append('    }')
-                    new_lines.append('  ];')
-                    new_lines.append('')
-                    new_lines.append('  const benefits = [')
-                    new_lines.append('    "Improved data visibility",')
-                    new_lines.append('    "Better decision making",')
-                    new_lines.append('    "Cost optimization"')
-                    new_lines.append('  ];')
-                    new_lines.append('')
-                    variables_added = True
-                    continue
-                elif 'return (' in line and not variables_added:
-                    new_lines.append('  const analyticsFeatures = [')
-                    new_lines.append('    {')
-                    new_lines.append('      title: "Real-time Analytics",')
-                    new_lines.append('      description: "Get instant insights from your data"')
-                    new_lines.append('    }')
-                    new_lines.append('  ];')
-                    new_lines.append('')
-                    new_lines.append('  const benefits = [')
-                    new_lines.append('    "Improved data visibility"')
-                    new_lines.append('  ];')
-                    new_lines.append('')
-                    new_lines.append(line)
-                    continue
-                else:
-                    new_lines.append(line)
-            
-            content = '\n'.join(new_lines)
+        # Fix missing space in className
+        content = re.sub(r'to-slate-900pt-20', 'to-slate-900 pt-20', content)
         
-        # Fix 2: Missing map functions
-        if 'features.map' in content and 'const features =' not in content:
+        # Fix Link component formatting
+        content = re.sub(
+            r'<Link to="/contact"\s+className="[^"]*"\s*>\s*Contact Us\s*\n\s*<ArrowRight[^>]*/>\s*</Link>',
+            '''<Link
+          to="/contact"
+          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+        >
+          Contact Us
+          <ArrowRight className="w-5 h-5 ml-2" />
+        </Link>''',
+            content,
+            flags=re.DOTALL
+        )
+        
+        # Ensure proper closing div tags
+        # Count opening and closing divs
+        div_open_count = content.count('<div')
+        div_close_count = content.count('</div>')
+        
+        # Add missing closing divs
+        missing_divs = div_open_count - div_close_count
+        if missing_divs > 0:
+            # Add the missing closing divs before the closing of the function
             content = re.sub(
-                r'(\s+)<div key=\{index\}',
-                r'\1{features.map((feature, index) => (\n\1  <div key={index}',
-                content
-            )
-            content = re.sub(
-                r'(\s+)</div>\s*\)\s*</div>',
-                r'\1  </div>\n\1))}',
-                content
+                r'(\s*)(\s*</div>\s*)(\s*\);\s*})',
+                r'\1' + '    </div>\n' * missing_divs + r'\2\3',
+                content,
+                flags=re.DOTALL
             )
         
-        # Fix 3: Missing map functions for benefits
-        if 'benefits.map' in content and 'const benefits =' not in content:
-            content = re.sub(
-                r'(\s+)<li key=\{benefitIndex\}',
-                r'\1{benefits.map((benefit, benefitIndex) => (\n\1  <li key={benefitIndex}',
-                content
-            )
-            content = re.sub(
-                r'(\s+)</li>\s*\)\s*</ul>',
-                r'\1  </li>\n\1))}',
-                content
-            )
+        # Clean up extra whitespace
+        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
         
-        # Fix 4: Add missing features array
-        if 'features.map' in content and 'const features =' not in content:
-            # Find where to insert the features array
-            lines = content.split('\n')
-            new_lines = []
-            for i, line in enumerate(lines):
-                if 'export default function' in line:
-                    new_lines.append(line)
-                    new_lines.append('  const features = [')
-                    new_lines.append('    {')
-                    new_lines.append('      title: "Feature 1",')
-                    new_lines.append('      description: "Description of feature 1"')
-                    new_lines.append('    },')
-                    new_lines.append('    {')
-                    new_lines.append('      title: "Feature 2",')
-                    new_lines.append('      description: "Description of feature 2"')
-                    new_lines.append('    }')
-                    new_lines.append('  ];')
-                    new_lines.append('')
-                    continue
-                else:
-                    new_lines.append(line)
-            content = '\n'.join(new_lines)
-        
-        # Fix 5: Clean up any remaining syntax issues
-        content = re.sub(r';\s*;', ';', content)  # Remove double semicolons
-        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)  # Clean up multiple newlines
-        
+        # Write back if changed
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"Fixed JSX: {file_path}")
+            print(f"Fixed JSX in: {file_path}")
             return True
         
         return False
+        
     except Exception as e:
         print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
-    # Find all TSX files that might have JSX issues
-    patterns = [
-        'app/**/*.tsx'
+    """Main function to process problematic files"""
+    # List of known problematic files
+    problematic_files = [
+        'app/5g-edge-computing/page.tsx',
+        'app/5g-implementation/page.tsx',
+        'app/5g-iot-solutions/page.tsx',
+        'app/5g-mobile-applications/page.tsx',
+        'app/5g-network-infrastructure/page.tsx',
+        'app/5g-private-networks/page.tsx',
+        'app/5g-smart-city-solutions/page.tsx',
+        'app/5g-solutions/page.tsx'
     ]
     
-    files_fixed = 0
-    for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
+    fixed_count = 0
+    for file_path in problematic_files:
+        if os.path.isfile(file_path):
             if fix_jsx_file(file_path):
-                files_fixed += 1
+                fixed_count += 1
     
-    print(f"\nFixed {files_fixed} JSX files")
+    print(f"Fixed JSX syntax in {fixed_count} files")
 
 if __name__ == "__main__":
     main()

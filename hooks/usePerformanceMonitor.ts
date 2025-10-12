@@ -9,7 +9,7 @@ export const usePerformanceMonitor = () => {
           setTimeout(() => {
             const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
             const paint = performance.getEntriesByType('paint');
-            
+
             // Log performance metrics
             console.log('Page Load Performance:', {
               domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
@@ -36,9 +36,9 @@ export const usePerformanceMonitor = () => {
             }
           });
         });
-        
+
         observer.observe({ entryTypes: ['resource'] });
-        
+
         return () => observer.disconnect();
       }
     };

@@ -59,16 +59,14 @@ import { Phone, Mail, MapPin, Brain, Zap, ArrowRight } from 'lucide-react';
             </h3>
             <ul className="space-y-2">
                 <li key={service.name}>
-                  
-                  >
+
                     <span>{service.name}</span>
                     <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
                   </a>
                 </li>
               ))}
             </ul>
-            
-            >
+
               View All Micro SAAS →
             </a>
           </div>
@@ -84,8 +82,7 @@ import { Phone, Mail, MapPin, Brain, Zap, ArrowRight } from 'lucide-react';
                 <h4 className="text-white font-medium mb-2">AI Services</h4>
                 <ul className="space-y-1">
                     <li key={service.name}>
-                      
-                      >
+
                         {service.name}
                       </a>
                     </li>
@@ -96,16 +93,14 @@ import { Phone, Mail, MapPin, Brain, Zap, ArrowRight } from 'lucide-react';
                 <h4 className="text-white font-medium mb-2">IT Services</h4>
                 <ul className="space-y-1">
                     <li key={service.name}>
-                      
-                      >
+
                         {service.name}
                       </a>
                     </li>
                   ))}
                 </ul>
               </div>
-            
-            >
+
               View All Services →
             </a>
           </div>
@@ -118,8 +113,7 @@ import { Phone, Mail, MapPin, Brain, Zap, ArrowRight } from 'lucide-react';
             </h3>
             <ul className="space-y-2">
                 <li key={service.name}>
-                  
-                  >
+
                     <span>{service.name}</span>
                     <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
@@ -136,8 +130,7 @@ import { Phone, Mail, MapPin, Brain, Zap, ArrowRight } from 'lucide-react';
                 <h4 className="text-white font-medium mb-2">Company</h4>
                 <ul className="space-y-1">
                     <li key={link.name}>
-                      
-                      >
+
                         {link.name}
                       </a>
                     </li>
@@ -148,8 +141,7 @@ import { Phone, Mail, MapPin, Brain, Zap, ArrowRight } from 'lucide-react';
                 <h4 className="text-white font-medium mb-2">Support</h4>
                 <ul className="space-y-1">
                     <li key={link.name}>
-                      
-                      >
+
                         {link.name}
                       </a>
                     </li>
@@ -165,8 +157,7 @@ import { Phone, Mail, MapPin, Brain, Zap, ArrowRight } from 'lucide-react';
               © 2024 Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6">
-                
-                >
+
                   {link.name}
                 </a>
               ))}

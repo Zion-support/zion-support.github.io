@@ -20,21 +20,19 @@ export default function AICybersecuritySuitePage() {
               AI Cybersecurity Suite
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive AI-powered cybersecurity solutions with advanced threat detection, 
+              Comprehensive AI-powered cybersecurity solutions with advanced threat detection,
               zero trust security, and automated incident response capabilities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/pricing"
                 className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
                 View Pricing
               </Link>
             </div>
@@ -145,14 +143,12 @@ export default function AICybersecuritySuitePage() {
             <Link
               to="/contact"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-            >
               Get Started
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link
               to="/pricing"
               className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
               View Pricing
             </Link>
       </div>

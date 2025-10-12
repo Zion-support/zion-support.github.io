@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, Star, Shield, Cloud, MessageCircle } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
-<<<<<<< HEAD
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,7 +15,6 @@ const ContactPage: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-<<<<<<< HEAD
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -27,10 +25,10 @@ const ContactPage: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
+
     setIsSubmitted(true);
     setIsLoading(false);
   };
@@ -88,7 +86,7 @@ const ContactPage: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <>
+
         <Helmet>
           <title>Thank You - Zion Tech Group | Message Received</title>
           <meta name="description" content="Thank you for contacting Zion Tech Group. We have received your message and will get back to you within 2 hours." />
@@ -103,32 +101,20 @@ const ContactPage: React.FC = () => {
               Thank You!
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              We've received your message and will get back to you within 2 hours. 
+              We've received your message and will get back to you within 2 hours.
               Our team is excited to work with you!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
                 Return Home
               </a>
               <a
                 href="tel:+13024640950"
                 className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
-              >
                 Call Us Now
               </a>
-=======
-=======
-  return (
-    <>
-      <Helmet>
-        <title>Contact - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations and support." />
-      </Helmet>
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7-xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
           <div className="text-center">
@@ -138,7 +124,6 @@ const ContactPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3-xl mx-auto">
               Ready to transform your business? Get in touch with our team of experts.
             </p>
-<<<<<<< HEAD
             <div className="max-w-md mx-auto">
               <form className="space-y-4">
                 <input
@@ -159,7 +144,6 @@ const ContactPage: React.FC = () => {
                 <button
                   type="submit"
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600  hover:to-purple-700 transition-all duration-300"
-                >
                   Send Message
                 </button>
               </form>
@@ -167,12 +151,19 @@ const ContactPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </>
-    );
+
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+);
   }
 
   return (
-    <>
+
       <Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch for AI & IT Solutions</title>
         <meta name="description" content="Contact Zion Tech Group for AI solutions, cloud infrastructure, cybersecurity, and custom software development. Call +1 302 464 0950 or email kleber@ziontechgroup.com" />
@@ -185,22 +176,22 @@ const ContactPage: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.4)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.4)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          
+
           <div className="relative max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-cyan-400/30">
               <MessageCircle className="w-4 h-4" />
               <span>Get in Touch</span>
             </div>
-            
+
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Let's Build Something{' '}
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Amazing Together
               </span>
             </h1>
-            
+
             <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Ready to transform your business with cutting-edge AI and IT solutions? 
+              Ready to transform your business with cutting-edge AI and IT solutions?
               Get in touch with our expert team and let's discuss your project.
             </p>
           </div>
@@ -221,23 +212,6 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div className="text-gray-300 text-sm">
                     {stat.label}
-=======
-            <div className="max-w-2xl mx-auto">
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-6">Get In Touch</h2>
-                <p className="text-gray-300 mb-6">
-                  Contact us for consultations, support, or to learn more about our services.
-                </p>
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                    />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -261,7 +235,6 @@ const ContactPage: React.FC = () => {
                     Send Message
                   </button>
                 </div>
-<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -349,7 +322,6 @@ const ContactPage: React.FC = () => {
                       value={formData.service}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    >
                       <option value="">Select a service</option>
                       {services.map((service, index) => (
                         <option key={index} value={service} className="bg-slate-800">
@@ -379,17 +351,16 @@ const ContactPage: React.FC = () => {
                     type="submit"
                     disabled={isLoading}
                     className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
-                  >
                     {isLoading ? (
-                      <>
+
                         <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                         <span>Sending...</span>
-                      </>
+
                     ) : (
-                      <>
+
                         <Send className="w-5 h-5" />
                         <span>Send Message</span>
-                      </>
+
                     )}
                   </button>
                 </form>
@@ -400,7 +371,7 @@ const ContactPage: React.FC = () => {
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
                   <p className="text-gray-300 mb-8 leading-relaxed">
-                    Ready to start your project? We're here to help! Reach out to us through any of the channels below, 
+                    Ready to start your project? We're here to help! Reach out to us through any of the channels below,
                     and our team will get back to you within 2 hours.
                   </p>
                 </div>
@@ -411,7 +382,6 @@ const ContactPage: React.FC = () => {
                       key={index}
                       href={contact.href}
                       className="flex items-start space-x-4 p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300 group"
-                    >
                       <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         {contact.icon}
                       </div>
@@ -447,15 +417,20 @@ const ContactPage: React.FC = () => {
                     </li>
                   </ul>
                 </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               </div>
             </div>
           </div>
         </section>
       </div>
-    </>
-  );
+
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+);
 };
 
 export default ContactPage;

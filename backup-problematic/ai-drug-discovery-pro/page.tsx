@@ -27,14 +27,12 @@ export default function AiDrugDiscoveryProPage() {
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-              >
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
-              >
                 Request Demo
               </Link>
             </div>
@@ -102,13 +100,11 @@ export default function AiDrugDiscoveryProPage() {
               <Link
                 to="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
-              >
                 Contact Our Experts
               </Link>
               <Link
                 to="/ai-services"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
-              >
                 View All AI Services
               </Link>
             </div>
@@ -135,14 +131,12 @@ export default function AiDrugDiscoveryProPage() {
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-              >
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
-              >
                 Request Demo
               </Link>
             </div>
@@ -210,13 +204,11 @@ export default function AiDrugDiscoveryProPage() {
               <Link
                 to="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
-              >
                 Contact Our Experts
               </Link>
               <Link
                 to="/ai-services"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
-              >
                 View All AI Services
               </Link>
             </div>

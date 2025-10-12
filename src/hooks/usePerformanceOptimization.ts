@@ -4,10 +4,8 @@ import { useEffect, useCallback } from 'react';
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
-}
       return null;
-    }
-    
+
     )[0] as PerformanceNavigationTiming;
     const paintEntries = performance.getEntriesByType('paint');
       loadTime: navigation
@@ -17,7 +15,7 @@ import { useEffect, useCallback } from 'react';
       firstInputDelay: 0
     };
     // Measure LCP
-    
+
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
         metrics.largestContentfulPaint = lastEntry.startTime;
@@ -26,7 +24,7 @@ import { useEffect, useCallback } from 'react';
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
     // Measure CLS
     let clsValue = 0;
-    
+
           hadRecentInput?: boolean;
           value?: number;
         };
@@ -37,7 +35,7 @@ import { useEffect, useCallback } from 'react';
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
     // Measure FID
-    
+
           processingStart?: number;
         };
           (fidEntry.processingStart || 0) - entry.startTime;
@@ -51,9 +49,9 @@ import { useEffect, useCallback } from 'react';
     }, 10000);
     return metrics;
   }, []);
-  
+
     const images = document.querySelectorAll('img[data-src]');
-    
+
           const img = entry.target as HTMLImageElement;
           img.src = img.dataset.src || '';
           img.classList.remove('lazy');
@@ -63,7 +61,7 @@ import { useEffect, useCallback } from 'react';
     });
     images.forEach(img => imageObserver.observe(img));
   }, []);
-  
+
     const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
       const link = document.createElement('link');
       link.rel = 'preload';
@@ -75,13 +73,13 @@ import { useEffect, useCallback } from 'react';
     });
   }, []);
     // Measure performance after page load
-    
+
       const metrics = measurePerformance();
         // Send metrics to analytics in production
           // Track metrics in production
         }
             console.log('Performance metrics:', metrics);
-          } 
+          }
         }
       }
     }, 1000);

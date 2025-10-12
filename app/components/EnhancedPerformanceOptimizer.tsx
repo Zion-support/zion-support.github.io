@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 import { useEffect } from 'react';
-=======
-'use client';
-import { useEffect } from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
     // Preload critical resources

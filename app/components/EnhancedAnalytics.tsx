@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-=======
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { createContext, useContext, useEffect} from 'react';
 import { createContext, useContext, useEffect } from 'react';
 
 interface AnalyticsContextType {
-    <>
+
   track: (event: string, properties?: Record<string, any />) => void;
   identify: (userId: string, traits?: Record<string, any />) => void;
   page: (name: string, properties?: Record<string, any />) => void;
@@ -52,7 +48,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps /> = ({ children
       if (window.gtag) {
         window.gtag('event', event, properties);
       }
-      
+
       // Custom analytics
       console.log('Analytics Event: ', event, properties);
     }
@@ -67,7 +63,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps /> = ({ children
           custom_map: traits
         });
       }
-      
+
       // Custom analytics
       console.log('Analytics Identify: ', userId, traits);
     }
@@ -83,7 +79,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps /> = ({ children
           ...properties
         });
       }
-      
+
       // Custom analytics
       console.log('Analytics Page: ', name, properties);
     }
@@ -108,4 +104,3 @@ declare global {
   gtag: (...args: any[]) => void;
   }
 }
-    </>

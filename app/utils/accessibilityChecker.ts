@@ -7,14 +7,12 @@
   message: string;
   severity: 'error' | 'warning' | 'info';
   element?: HTMLElement;
-}
 
   totalChecks: number;
   passedChecks: number;
   failedChecks: number;
   warnings: number;
   results: AccessibilityCheckResult[];
-}
 
   private results: AccessibilityCheckResult[] = [];
 

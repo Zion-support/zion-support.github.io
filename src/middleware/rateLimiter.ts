@@ -8,10 +8,8 @@
   message?: string; // Custom error message
   skipSuccessfulRequests?: boolean;
   skipFailedRequests?: boolean;
-}
   count: number;
   resetTime: number;
-}
 /**
  * Simple in-memory rate limiter
  * For production, use Redis or similar distributed storage
@@ -36,7 +34,7 @@
       return { allowed: true, remaining: this.config.max - 1, resetTime };
     }
     // Increment count
-    if (record.count 
+    if (record.count
         this.requests.delete(key);
       }
     }

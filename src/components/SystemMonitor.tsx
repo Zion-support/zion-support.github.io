@@ -64,7 +64,7 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
   // Update metrics
-  
+
       const performanceMetrics = performanceOptimizer.getMetrics();
       const performanceScore = calculatePerformanceScore();
       const errorStats = errorHandler.getErrorStatistics();
@@ -85,7 +85,7 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
     }
   }, []);
   // Initialize monitoring
-    
+
       setIsMonitoring(true);
       updateMetrics();
     };
@@ -100,7 +100,7 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
     return () => clearInterval(interval);
   }, [isMonitoring, refreshInterval, updateMetrics]);
   // Get memory information
-  
+
       const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       const used = memory.usedJSHeapSize / 1024 / 1024; // MB
       const total = memory.totalJSHeapSize / 1024 / 1024; // MB
@@ -111,7 +111,7 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
     return { used: 0, total: 0, limit: 0, percentage: 0 };
   };
   // Get network information
-  
+
       const nav = navigator as NavigatorWithConnection;
       const connection = nav.connection;
         saveData: connection?.saveData || false
@@ -121,11 +121,11 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
     };
   };
   // Export data
-  
+
     if (!metrics) return;
-    
+
     };
-    
+
     });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -137,13 +137,13 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
     URL.revokeObjectURL(url);
   };
   // Get performance score color
-  
+
     if (score >= 90) return 'text-green-600';
     if (score >= 70) return 'text-yellow-600';
     return 'text-red-600';
   };
   // Get severity color
-  
+
       case 'critical': return 'text-red-600 bg-red-100';
       case 'high': return 'text-red-500 bg-red-50';
       case 'medium': return 'text-yellow-600 bg-yellow-100';
@@ -168,8 +168,7 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
               {isMonitoring ? 'Monitoring' : 'Stopped'}
             </span>
           </div>
-            
-            >
+
               Export Data
             </button>
           )}
@@ -278,7 +277,7 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
                 <span>{metrics.memory.limit.toFixed(2)} MB</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2">
-                
+
                     metrics.memory.percentage > 80 ? 'bg-red-500' :
                     metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'
                   }`}

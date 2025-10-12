@@ -23,7 +23,7 @@ export default ${componentName};`;
 // Fix components
 componentsToFix.forEach(componentName => {
   const componentFile = path.join('/workspace/app/components', `${componentName}.tsx`);
-  
+
   // Check if file exists and doesn't have default export
   if (fs.existsSync(componentFile)) {
     const content = fs.readFileSync(componentFile, 'utf8');
@@ -31,7 +31,7 @@ componentsToFix.forEach(componentName => {
       // Add default export if missing
       const lines = content.split('\n');
       const lastLine = lines[lines.length - 1];
-      
+
       if (lastLine.trim() === '}') {
         lines[lines.length - 1] = '}';
         lines.push('');
@@ -44,7 +44,6 @@ componentsToFix.forEach(componentName => {
     // Create component if it doesn't exist
     fs.writeFileSync(componentFile, componentTemplate(componentName));
     console.log(`Created: ${componentFile}`);
-  }
 });
 
 console.log('Component fixes completed!');

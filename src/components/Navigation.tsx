@@ -48,12 +48,11 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <div className="relative group">
-              
-              >
+
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              
+
                 <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6">
                   <div className="grid grid-cols-3 gap-6">
                     <div>
@@ -62,8 +61,7 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
                         Micro SAAS
                       </h3>
                       <div className="space-y-2">
-                          
-                          >
+
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
                           </a>
@@ -75,8 +73,7 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
                         AI Services
                       </h3>
                       <div className="space-y-2">
-                          
-                          >
+
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
                           </a>
@@ -88,8 +85,7 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
                         IT Services
                       </h3>
                       <div className="space-y-2">
-                          
-                          >
+
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
                           </Link>
@@ -98,13 +94,11 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
                   </div>
                   <div className="mt-4 pt-4 border-t border-gray-700">
                     <div className="grid grid-cols-2 gap-4">
-                      
-                      >
+
                         <span>View All Services</span>
                         <ArrowRight className="w-4 h-4" />
                       </Link>
-                      
-                      >
+
                         <span>Specialized Solutions</span>
                         <ArrowRight className="w-4 h-4" />
                       </Link>
@@ -128,22 +122,19 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
             <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
               Contact
             </a>
-            
+
             <div className="flex items-center space-x-4">
-              
-              >
+
                 <Phone className="w-4 h-4" />
                 <span className="hidden sm:inline">+1 302 464 0950</span>
               </a>
-              
-              >
+
                 Get Started
               </a>
             </div>
 
           {/* Mobile Menu Button */}
-          
-          >
+
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -152,18 +143,16 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
           <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
             <div className="px-4 py-6 space-y-4">
               <div>
-                
-                >
+
                   <span>Services</span>
                   <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
-                
+
                   <div className="mt-4 pl-4 space-y-3">
                     <div>
                       <h4 className="text-cyan-400 font-semibold mb-2">Micro SAAS</h4>
                       <div className="space-y-2">
-                          
-                          >
+
                             {service.name}
                           </a>
                         ))}
@@ -171,14 +160,12 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
                     <div>
                       <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
                       <div className="space-y-2">
-                          
-                          >
+
                             {service.name}
                           </a>
                         ))}
                       </div>
-                    
-                    >
+
                       View All Services →
                     </a>
                   </div>
@@ -200,15 +187,13 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
               <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Contact
               </a>
-              
+
               <div className="pt-4 border-t border-gray-700">
-                
-                >
+
                   <Phone className="w-4 h-4" />
                   <span>+1 302 464 0950</span>
                 </a>
-                
-                >
+
                   Get Started
                 </a>
               </div>

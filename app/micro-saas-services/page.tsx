@@ -1,32 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { 
-<<<<<<< HEAD
+import {
 >>>>>>> cursor/website-audit-and-update-with-deployment-6024
-=======
-import { Zap, BarChart, MessageSquare, Shield, Cloud, CheckCircle, ArrowRight, Users, Award, Star } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { BarChart, MessageSquare, Shield, Cloud, CheckCircle, ArrowRight, Users } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
 
 const MicroSaasServicesPage: React.FC = () => {
   const services = [
@@ -110,17 +89,9 @@ const MicroSaasServicesPage: React.FC = () => {
   ];
 
   return (
-    <>
-    <>
+
       <Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
         <title>Micro SaaS Services - Zion Tech Group</title>
         <meta name="description" content="Powerful micro SaaS solutions including analytics, chatbots, security, cloud backup, workflow automation, and CRM intelligence for modern businesses." />
         <meta name="keywords" content="micro SaaS, business software, analytics, chatbots, security, cloud backup, workflow automation, CRM" />
@@ -135,20 +106,18 @@ const MicroSaasServicesPage: React.FC = () => {
                 Micro <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">SaaS Services</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Powerful, purpose-built software solutions designed to solve specific business challenges. 
+                Powerful, purpose-built software solutions designed to solve specific business challenges.
                 Get enterprise-grade functionality without the complexity.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link
                   to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-                >
                   Start Free Trial
                 </Link>
-                <Link 
+                <Link
                   to="/ai-services"
                   className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
-                >
                   View AI Services
                 </Link>
               </div>
@@ -170,18 +139,17 @@ const MicroSaasServicesPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <div 
+                <div
                   key={index}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
-                >
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  
+
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                     {service.title}
                   </h3>
-                  
+
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {service.description}
                   </p>
@@ -197,10 +165,9 @@ const MicroSaasServicesPage: React.FC = () => {
 
                   <div className="flex items-center justify-between mb-6">
                     <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                    <Link 
+                    <Link
                       to={service.link}
                       className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 inline-flex items-center"
-                    >
                       Learn More <ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
                   </div>
@@ -266,10 +233,9 @@ const MicroSaasServicesPage: React.FC = () => {
                     Standard features
                   </li>
                 </ul>
-                <Link 
+                <Link
                   to="/contact"
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 block"
-                >
                   Get Started
                 </Link>
               </div>
@@ -300,10 +266,9 @@ const MicroSaasServicesPage: React.FC = () => {
                     Custom integrations
                   </li>
                 </ul>
-                <Link 
+                <Link
                   to="/contact"
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 block"
-                >
                   Get Started
                 </Link>
               </div>
@@ -329,10 +294,9 @@ const MicroSaasServicesPage: React.FC = () => {
                     Custom development
                   </li>
                 </ul>
-                <Link 
+                <Link
                   to="/contact"
                   className="w-full border border-cyan-500 text-cyan-400 px-6 py-3 rounded-lg font-semibold text-center hover:bg-cyan-500/10 transition-all duration-300 block"
-                >
                   Contact Sales
                 </Link>
               </div>
@@ -351,16 +315,14 @@ const MicroSaasServicesPage: React.FC = () => {
                 Start your free trial today and experience the power of our Micro SaaS solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link
                   to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-                >
                   Start Free Trial
                 </Link>
-                <Link 
+                <Link
                   to="/about"
                   className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
-                >
                   Learn More About Us
                 </Link>
               </div>
@@ -368,21 +330,9 @@ const MicroSaasServicesPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+
   );
 };
 
 export default MicroSaasServicesPage;
-<<<<<<< HEAD
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
-=======
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb

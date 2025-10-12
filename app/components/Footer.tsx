@@ -1,16 +1,11 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Globe, Database, Sparkles, Star } from 'lucide-react';
-=======
-import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Users, ArrowRight, Shield, Database, Workflow, Link as LinkIcon, Linkedin, Twitter, Github } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  
+
   const aiServices = [
     { name: 'AI Analytics & BI', url: '/ai-analytics', description: 'Business intelligence' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' },
@@ -71,7 +66,6 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
-<<<<<<< HEAD
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
@@ -95,7 +89,6 @@ const Footer: React.FC = () => {
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors duration-300"
                   aria-label={social.name}
-                >
                   {social.icon}
                 </a>
               ))}
@@ -114,7 +107,6 @@ const Footer: React.FC = () => {
                   <Link
                     to={service.url}
                     className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
-                  >
                     <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <span className="text-sm">{service.name}</span>
                   </Link>
@@ -124,7 +116,6 @@ const Footer: React.FC = () => {
             <Link
               to="/ai-services"
               className="text-blue-400 hover:text-blue-300 text-sm font-medium mt-4 inline-flex items-center gap-1"
-            >
               View All AI Services <ArrowRight className="w-3 h-3" />
             </Link>
           </div>
@@ -141,7 +132,6 @@ const Footer: React.FC = () => {
                   <Link
                     to={service.url}
                     className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
-                  >
                     <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <span className="text-sm">{service.name}</span>
                   </Link>
@@ -151,7 +141,6 @@ const Footer: React.FC = () => {
             <Link
               to="/it-services"
               className="text-green-400 hover:text-green-300 text-sm font-medium mt-4 inline-flex items-center gap-1"
-            >
               View All IT Services <ArrowRight className="w-3 h-3" />
             </Link>
           </div>
@@ -168,7 +157,6 @@ const Footer: React.FC = () => {
                   <Link
                     to={item.url}
                     className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
-                  >
                     <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <span className="text-sm">{item.name}</span>
                   </Link>
@@ -189,7 +177,6 @@ const Footer: React.FC = () => {
                   <Link
                     to={item.url}
                     className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
-                  >
                     <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <span className="text-sm">{item.name}</span>
                   </Link>
@@ -281,31 +268,13 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-=======
-      <div className="max-w-7-xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center">
-          <h3 className="text-2-xl font-bold mb-4">Zion Tech Group</h3>
-=======
-
-const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center">
-          <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
           <p className="text-gray-400 mb-4">
             Advanced AI & IT Solutions
           </p>
           <p className="text-gray-500 text-sm">
             © {currentYear} Zion Tech Group. All rights reserved.
           </p>
-<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-bff1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
         </div>
       </div>
     </footer>

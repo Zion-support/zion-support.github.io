@@ -9,7 +9,6 @@ import { analytics } from '../utils/enhancedAnalytics';
   trackErrors?: boolean;
   trackPerformance?: boolean;
   trackAnalytics?: boolean;
-}
     trackAnalytics = true
   } = _options;
   const mountTimeRef = useRef<number>(0);
@@ -38,17 +37,17 @@ import { analytics } from '../utils/enhancedAnalytics';
       );
     }
   });
-  
+
         });
       }
     [component, trackErrors]
   );
-  
+
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
       }
     [component, trackAnalytics]
   );
-  
+
       const startTime = performance.now();
           const duration = performance.now() - startTime;
               duration > 1000 ? 'slow' : 'fast'

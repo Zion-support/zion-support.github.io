@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { Menu, X, ChevronDown, Zap, Cloud, Globe, Code, Smartphone, Brain, Wifi } from 'lucide-react';
-=======
-import { ChevronDown, Phone, Mail, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, Database, Smartphone, Settings, CheckSquare, FileText, MessageCircle, Link as LinkIcon, Mic, Eye } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
 
 const Navigation: React.FC = () => {
-<<<<<<< HEAD
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -70,26 +61,23 @@ const Navigation: React.FC = () => {
             <Link
               to="/"
               className="text-gray-300 hover:text-white transition-colors duration-300"
-            >
               Home
             </Link>
             <Link
               to="/about"
               className="text-gray-300 hover:text-white transition-colors duration-300"
-            >
               About
             </Link>
-            
+
             {/* Services Dropdown */}
             <div className="relative">
               <button
                 onClick={toggleServices}
                 className="flex items-center gap-1 text-gray-300 hover:text-white transition-colors duration-300"
-              >
                 Services
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              
+
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50">
                   <div className="px-6 py-2">
@@ -104,13 +92,12 @@ const Navigation: React.FC = () => {
                           to={service.url}
                           className="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200"
                           onClick={() => setServicesOpen(false)}
-                        >
                           {service.icon}
                           {service.name}
                         </Link>
                       ))}
                     </div>
-                    
+
                     <h3 className="text-sm font-semibold text-gray-900 mb-3 flex items-center gap-2">
                       <Cloud className="w-4 h-4 text-green-500" />
                       IT Services
@@ -122,7 +109,6 @@ const Navigation: React.FC = () => {
                           to={service.url}
                           className="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200"
                           onClick={() => setServicesOpen(false)}
-                        >
                           {service.icon}
                           {service.name}
                         </Link>
@@ -136,13 +122,11 @@ const Navigation: React.FC = () => {
             <Link
               to="/contact"
               className="text-gray-300 hover:text-white transition-colors duration-300"
-            >
               Contact
             </Link>
             <Link
               to="/news"
               className="text-gray-300 hover:text-white transition-colors duration-300"
-            >
               News
             </Link>
           </div>
@@ -152,7 +136,6 @@ const Navigation: React.FC = () => {
             <Link
               to="/contact"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-            >
               Get Started
             </Link>
           </div>
@@ -162,7 +145,6 @@ const Navigation: React.FC = () => {
             <button
               onClick={toggleMenu}
               className="text-gray-300 hover:text-white transition-colors duration-300"
-            >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -176,34 +158,15 @@ const Navigation: React.FC = () => {
                 to="/"
                 className="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300"
                 onClick={() => setIsOpen(false)}
-=======
-  return (
-    <nav className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold">
-              Zion Tech Group
-            </Link>
-          </div>
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              <Link
-                to="/"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              >
                 Home
               </Link>
               <Link
                 to="/about"
-<<<<<<< HEAD
                 className="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300"
                 onClick={() => setIsOpen(false)}
-              >
                 About
               </Link>
-              
+
               {/* Mobile Services */}
               <div className="px-3 py-2">
                 <div className="text-gray-300 font-medium mb-2">AI Services</div>
@@ -214,13 +177,12 @@ const Navigation: React.FC = () => {
                       to={service.url}
                       className="block px-3 py-1 text-sm text-gray-400 hover:text-white transition-colors duration-300"
                       onClick={() => setIsOpen(false)}
-                    >
                       {service.name}
                     </Link>
                   ))}
                 </div>
               </div>
-              
+
               <div className="px-3 py-2">
                 <div className="text-gray-300 font-medium mb-2">IT Services</div>
                 <div className="ml-4 space-y-1">
@@ -230,7 +192,6 @@ const Navigation: React.FC = () => {
                       to={service.url}
                       className="block px-3 py-1 text-sm text-gray-400 hover:text-white transition-colors duration-300"
                       onClick={() => setIsOpen(false)}
-                    >
                       {service.name}
                     </Link>
                   ))}
@@ -241,38 +202,23 @@ const Navigation: React.FC = () => {
                 to="/contact"
                 className="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300"
                 onClick={() => setIsOpen(false)}
-              >
                 Contact
               </Link>
               <Link
                 to="/news"
                 className="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300"
                 onClick={() => setIsOpen(false)}
-              >
                 News
               </Link>
-              
+
               <div className="px-3 py-2">
                 <Link
                   to="/contact"
                   className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-medium text-center hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                   onClick={() => setIsOpen(false)}
-                >
                   Get Started
                 </Link>
               </div>
-=======
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                About
-              </Link>
-              <Link
-                to="/contact"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Contact
-              </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             </div>
           </div>
         )}

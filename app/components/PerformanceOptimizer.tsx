@@ -115,7 +115,7 @@ const PerformanceOptimizer: React.FC = () => {
               Discover the powerful features that make our performance optimizer solutions stand out.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-gray-800/50 backdrop-blur-xl rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300">

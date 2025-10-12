@@ -8,9 +8,9 @@ interface LoadingOptimizerProps {
   fallback?: React.ReactNode;
 }
 
-const LoadingOptimizer: React.FC<LoadingOptimizerProps> = ({ 
-  children, 
-  fallback = <DefaultLoadingSpinner /> 
+const LoadingOptimizer: React.FC<LoadingOptimizerProps> = ({
+  children,
+  fallback = <DefaultLoadingSpinner />
 }) => {
   return (
     <Suspense fallback={fallback}>

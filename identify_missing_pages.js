@@ -7,7 +7,7 @@ const existingPages = fs.readFileSync('/workspace/existing_pages.txt', 'utf8').s
 const navigationLinks = [
   '/ai-services',
   '/ai-content-generator',
-  '/ai-chatbot-enterprise', 
+  '/ai-chatbot-enterprise',
   '/ai-analytics-dashboard',
   '/ai-3d-generation',
   '/ai-drug-discovery-pro',

@@ -59,7 +59,7 @@ function analyzeBundle() {
     const stats = fs.statSync(filePath);
     const size = stats.size;
     const relativePath = path.relative(DIST_DIR, filePath);
-    
+
     analysis.totalSize += size;
     analysis.files.push({
       path: relativePath,
@@ -84,7 +84,7 @@ function analyzeBundle() {
   console.log('📊 Bundle Analysis Complete!\n');
   console.log(`Total files: ${analysis.totalFiles}`);
   console.log(`Total size: ${formatBytes(analysis.totalSize)}\n`);
-  
+
   console.log('📁 Largest files:');
   analysis.files.slice(0, 10).forEach(file => {
     console.log(`  ${file.path}: ${file.sizeFormatted}`);
@@ -241,7 +241,7 @@ function generateHTMLReport(analysis) {
 <body>
     <div class="container">
         <h1>📊 Bundle Analysis Report</h1>
-        
+
         <div class="stats">
             <div class="stat-card">
                 <div class="stat-value">${analysis.totalFiles}</div>

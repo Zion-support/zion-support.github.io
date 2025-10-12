@@ -51,7 +51,7 @@ function handler(req, res) {
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
+    res.end(JSON.stringify({
       success: true,
       id: newRequest.id
     }));

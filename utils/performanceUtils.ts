@@ -37,7 +37,7 @@ export function createIntersectionObserver(
   if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
     return null;
   }
-  
+
   return new IntersectionObserver(callback, {
     rootMargin: '50px',
     threshold: 0.1,
@@ -55,7 +55,7 @@ export function measurePerformance(name: string, fn: () => void): void {
   const start = performance.now();
   fn();
   const end = performance.now();
-  
+
   if (process.env.NODE_ENV === 'development') {
     console.log(`${name} took ${end - start} milliseconds`);
   }
@@ -66,20 +66,20 @@ export function getMemoryUsage(): any {
   if (typeof window === 'undefined' || !('memory' in performance)) {
     return null;
   }
-  
+
   return (performance as any).memory;
 }
 
 // Bundle size optimization - preload critical resources
 export function preloadCriticalResources(): void {
   if (typeof window === 'undefined') return;
-  
+
   const criticalResources = [
     '/fonts/inter.woff2',
     '/images/logo.png',
     '/images/og-image.jpg'
   ];
-  
+
   criticalResources.forEach(resource => {
     const link = document.createElement('link');
     link.rel = 'preload';
@@ -123,13 +123,13 @@ export function createLazyImageObserver(): IntersectionObserver | null {
 // Performance budget monitoring
 export function checkPerformanceBudget(): void {
   if (typeof window === 'undefined') return;
-  
+
   const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
   if (!navigation) return;
-  
+
   const loadTime = navigation.loadEventEnd - navigation.fetchStart;
   const budget = 3000; // 3 seconds
-  
+
   if (loadTime > budget) {
     console.warn(`Performance budget exceeded: ${loadTime}ms > ${budget}ms`);
   }
@@ -138,14 +138,14 @@ export function checkPerformanceBudget(): void {
 // Resource hints for better performance
 export function addResourceHints(): void {
   if (typeof window === 'undefined') return;
-  
+
   const hints = [
     { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
     { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
     { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
   ];
-  
+
   hints.forEach(hint => {
     const link = document.createElement('link');
     Object.assign(link, hint);

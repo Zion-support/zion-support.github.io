@@ -1,22 +1,15 @@
-<<<<<<< HEAD
 import React  from 'react';
 import { motion } from 'framer-motion';
-=======
-'use client';
-import React from 'react';
-import { motion } from 'framer-motion';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface FuturisticLoaderProps {
   size?: 'sm' | 'md' | 'lg';
   color?: 'cyan' | 'purple' | 'pink' | 'green';
   text?: string;
 }
 
-export default function FuturisticLoader({ 
-  const size = 'md', 
+export default function FuturisticLoader({
+  const size = 'md',
   color = 'cyan',
-  text = 'Loading...' 
+  text = 'Loading...'
 }: FuturisticLoaderProps) {
   const getSizeClasses = () => {
     switch (size) {
@@ -36,20 +29,13 @@ export default function FuturisticLoader({
   };
 
   return (
-<<<<<<< HEAD
     <div className="flex flex-col items-centerjustify-centerspace-y-4">
       <div className="relative">
-=======
-    <>
-    <div className="flex flex-col items-centerjustify-centerspace-y-4">
-        </div>
-      <div className="relative" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
         {/* Outer rotating ring */}
         <motion.div
           className="{`"
-            ${getSizeClasses()} 
-            border-4 border-transparent 
+            ${getSizeClasses()}
+            border-4 border-transparent
             border-t-4 ${getColorClasses().split(' ')[1]}
             rounded-full
           `}
@@ -59,8 +45,8 @@ export default function FuturisticLoader({
         {/* Inner pulsing ring */}
         <motion.div
           className="{`"
-            absolute inset-2 
-            border-2 border-transparent 
+            absolute inset-2
+            border-2 border-transparent
             border-r-2 ${getColorClasses().split(' ')[1]}
             rounded-full
           `}
@@ -70,50 +56,50 @@ export default function FuturisticLoader({
         {/* Center pulsing dot */}
         <motion.div
           className="{`"
-            absolute top-1/2 left-1/2 w-2 h-2 
-            ${getColorClasses().split(' ')[1]} 
+            absolute top-1/2 left-1/2 w-2 h-2
+            ${getColorClasses().split(' ')[1]}
             rounded-full
             transform -translate-x-1/2 -translate-y-1/2
           `}
-          animate="{{" 
+          animate="{{"
             scale: [1, 1.5, 1],
             opacity: [0.5, 1, 0.5]
           }}
-          transition="{{" 
-            duration: 1, 
-            repeat: Infinity, 
-            ease: 'easeInOut' 
+          transition="{{"
+            duration: 1,
+            repeat: Infinity,
+            ease: 'easeInOut'
           }}
         / />
         {/* Glow effect */}
         <motion.div
           className="{`"
-            absolute inset-0 
-            ${getColorClasses().split(' ')[1]} 
+            absolute inset-0
+            ${getColorClasses().split(' ')[1]}
             rounded-full
             blur-md
             opacity-30
           `}
-          animate="{{" 
+          animate="{{"
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3]
           }}
-          transition="{{" 
-            duration: 2, 
-            repeat: Infinity, 
-            ease: 'easeInOut' 
+          transition="{{"
+            duration: 2,
+            repeat: Infinity,
+            ease: 'easeInOut'
           }}
         / />
       </div>
-      
+
       {text && (
         <motion.p
           className="{`text-sm" ${getColorClasses().split(' ')[1]} font-medium`}
           animate="{{" opacity: [0.5, 1, 0.5] }}
-          transition="{{" 
-            duration: 1.5, 
-            repeat: Infinity, 
-            ease: 'easeInOut' 
+          transition="{{"
+            duration: 1.5,
+            repeat: Infinity,
+            ease: 'easeInOut'
           }} />
           {text}
         </motion.p>
@@ -121,4 +107,3 @@ export default function FuturisticLoader({
     </div>
   );
 }
-    </>

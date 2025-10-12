@@ -4,50 +4,49 @@
   className?: string;
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
   fullScreen?: boolean;
-}
     fullScreen = false
     // Note: fullScreen parameter is used in containerClasses calculation below
-    
+
     );
-    
+
     );
-    
+
     );
-    
+
     );
 
     );
 
           );
         case 'pulse':
-            
+
             />
           );
         case 'skeleton':
             <div className='space-y-2' role='status' aria-label='Loading'>
-              
+
               />
-              
+
               />
-              
+
               />
             </div>
   );
         case 'bars':
             <div className='flex space-x-1' role='status' aria-label='Loading'>
-                
+
                 />
               ))}
             </div>
   );
         case 'spinner':
         default:
-            
+
             />
           );
       }
     }, [size, variant, color, sizeClasses, colorClasses, baseClasses]);
-    
+
       return `${baseClasses} ${fullScreen ? fullScreenClasses : ''} ${className}`;
     }, [baseClasses, fullScreen, fullScreenClasses, className]);
       <div className={containerClasses}>

@@ -5,18 +5,18 @@ import path from 'path';
 function findPageFiles(dir) {
   const files = [];
   const items = fs.readdirSync(dir);
-  
+
   for (const item of items) {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
-    
+
     if (stat.isDirectory()) {
       files.push(...findPageFiles(fullPath));
     } else if (item === 'page.tsx') {
       files.push(fullPath);
     }
   }
-  
+
   return files;
 }
 
@@ -24,7 +24,7 @@ function findPageFiles(dir) {
 function isBrokenPage(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    
+
     // Check for common issues
     if (content.includes('export default function') && content.includes('return (')) {
       return true; // Mixed function declaration and return
@@ -38,7 +38,7 @@ function isBrokenPage(filePath) {
     if (content.includes('import Layout from \'../../layout\'')) {
       return true; // Wrong import path
     }
-    
+
     return false;
   } catch (error) {
     return true;
@@ -56,7 +56,6 @@ const ${pageName}Page: React.FC = () => {
       title="${title} - Zion Tech Group"
       description="${description}"
       keywords="${keywords}"
-    >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -122,10 +121,10 @@ export default ${pageName}Page`;
 function generatePageConfig(filePath) {
   const relativePath = filePath.replace('/workspace/app/', '').replace('/page.tsx', '');
   const pageName = relativePath.split('/').pop();
-  const title = pageName.split('-').map(word => 
+  const title = pageName.split('-').map(word =>
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join(' ');
-  
+
   return {
     title,
     description: `Professional ${title.toLowerCase()} services and solutions by Zion Tech Group.`,
@@ -144,7 +143,7 @@ for (const file of pageFiles) {
       const config = generatePageConfig(file);
       const componentName = config.title.replace(/\s+/g, '');
       const content = pageTemplate(componentName, config.title, config.description, config.keywords);
-      
+
       fs.writeFileSync(file, content);
       console.log(`Fixed broken page: ${file}`);
       fixedCount++;

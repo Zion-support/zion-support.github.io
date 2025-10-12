@@ -2,19 +2,17 @@
   renderTime: number;
   memoryUsage: number;
   fps: number;
-}
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
   fps: number;
   [key: string]: number;
-}
     fps: 0
   });
   const [isVisible, setIsVisible] = useState(false);
-    
+
       )[0] as PerformanceNavigationTiming;
-      
+
         : 0;
       // Measure render time
       const renderStart = performance.now();
@@ -28,7 +26,7 @@
       let fps = 0;
         let lastTime = performance.now();
         let frameCount = 0;
-        
+
           frameCount++;
             fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
             frameCount = 0;
@@ -46,10 +44,9 @@
     const interval = setInterval(updateMetrics, 5000);
     return () => clearInterval(interval);
   }, []);
-      
+
         onClick={() => setIsVisible(true)}
         className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
-      >
         Show Performance
       </button>
     );
@@ -57,10 +54,9 @@
     <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
-        
+
           onClick={() => setIsVisible(false)}
           className="text-gray-500 hover:text-gray-700"
-        >
           ×
         </button>
       </div>
