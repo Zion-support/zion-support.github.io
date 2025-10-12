@@ -40,8 +40,4 @@ global.ResizeObserver = class ResizeObserver {
 global.gtag = jest.fn();
 
 // Mock window.dataLayer
-<<<<<<< HEAD
 global.dataLayer = [];
-=======
-global.dataLayer = [];
->>>>>>> cursor/fix-errors-and-merge-to-main-d941

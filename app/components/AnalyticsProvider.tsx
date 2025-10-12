@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 const AnalyticsContext = createContext<AnalyticsContextType | undefined />(undefined);
   const context = useContext(AnalyticsContext);
   if (!context) {
@@ -16,7 +14,6 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined />(undef
     }
   };
 
-
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: pageName,
@@ -28,14 +25,6 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined />(undef
     trackEvent,
     trackPageView,
   };
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function ComponentsPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-d941
   return (
     <>
       <Helmet>

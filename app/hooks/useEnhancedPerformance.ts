@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
-import { useState, useEffect, useCallback } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d941
+
 
 interface PerformanceMetrics {
   loadTime: number;

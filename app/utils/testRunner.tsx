@@ -1,7 +1,6 @@
 import React from 'react';
 
-<<<<<<< HEAD
-    try {}
+try {}
       await hook()}
     } catch (error) {}
       throw error}
@@ -290,16 +289,5 @@ import React from 'react';
   generateTestReport() {/* TODO: Fix JSX expression */}
 // React hook for testing;
 ;
-=======
-// Test Runner Utility Component
-export const TestRunner: React.FC = () => {
-  return (
-    <div className="test-runner">
-      <h2>Test Runner</h2>
-      <p>Test runner utility component</p>
-    </div>
-  );
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-d941
 
 export default TestRunner;

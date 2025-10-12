@@ -8,11 +8,7 @@ export default function AiSocialMediaSchedulerPage() {
     <>
       <Helmet>
         <title>Ai Social Media Scheduler - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Advanced Ai Social Media Scheduler solutions powered by AI." />
-=======
-        <meta name="description" content="Professional ai social media scheduler services by Zion Tech Group. Transform your business with our expert solutions." />
->>>>>>> cursor/fix-errors-and-merge-to-main-d941
+<meta name="description" content="Advanced Ai Social Media Scheduler solutions powered by AI." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">

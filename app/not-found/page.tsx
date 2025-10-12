@@ -7,13 +7,8 @@ export default function NotFoundPage() {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-        <title>Page Not Found - Zion Tech Group</title>
+<title>Page Not Found - Zion Tech Group</title>
         <meta name="description" content="The page you are looking for does not exist." />
-=======
-        <title>Not Found - Zion Tech Group</title>
-        <meta name="description" content="Professional not found services by Zion Tech Group. Transform your business with our expert solutions." />
->>>>>>> cursor/fix-errors-and-merge-to-main-d941
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
