@@ -1,11 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Shield, Zap, Cpu, Wifi } from 'lucide-react'
-=======
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Cpu } from 'lucide-react'
 import NewsletterSignup from './NewsletterSignup'
->>>>>>> cursor/analyze-improve-and-deploy-application-1d94
 
 export default function Footer() {
   const aiServices = [

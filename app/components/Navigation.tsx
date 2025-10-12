@@ -1,13 +1,9 @@
 'use client';
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Code, Smartphone, Brain, Cpu, Server, Wifi, BarChart3 } from 'lucide-react'
-=======
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Smartphone, Brain, Cpu, Server, Wifi, BarChart3, Settings, Search } from 'lucide-react'
 import SearchModal from './SearchModal'
 import ThemeToggle from './ThemeToggle'
->>>>>>> cursor/analyze-improve-and-deploy-application-1d94
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
