@@ -55,21 +55,20 @@ const ContactForm: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
-        <div className="flex items-center">
-          <MessageSquare className="w-5 h-5 mr-2" />
-          <span>Thank you! Your message has been sent successfully.</span>
-        </div>
+      <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center">
+        <MessageSquare className="w-8 h-8 mx-auto mb-2" />
+        <h3 className="text-lg font-semibold mb-2">Thank you!</h3>
+        <p>Your message has been sent successfully. We'll get back to you soon.</p>
       </div>
     );
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-            Name *
+            Full Name *
           </label>
           <input
             type="text"
@@ -78,12 +77,13 @@ const ContactForm: React.FC = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
         </div>
+        
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-            Email *
+            Email Address *
           </label>
           <input
             type="email"
@@ -92,15 +92,15 @@ const ContactForm: React.FC = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-            Phone
+            Phone Number
           </label>
           <input
             type="tel"
@@ -108,9 +108,10 @@ const ContactForm: React.FC = () => {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
         </div>
+        
         <div>
           <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
             Company
@@ -121,7 +122,7 @@ const ContactForm: React.FC = () => {
             name="company"
             value={formData.company}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
         </div>
       </div>
@@ -135,14 +136,14 @@ const ContactForm: React.FC = () => {
           name="service"
           value={formData.service}
           onChange={handleChange}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
         >
           <option value="">Select a service</option>
-          <option value="ai-development">AI Development</option>
-          <option value="cloud-solutions">Cloud Solutions</option>
-          <option value="web-development">Web Development</option>
-          <option value="mobile-development">Mobile Development</option>
+          <option value="ai-solutions">AI Solutions</option>
+          <option value="it-services">IT Services</option>
+          <option value="micro-saas">Micro SAAS</option>
           <option value="consulting">Consulting</option>
+          <option value="other">Other</option>
         </select>
       </div>
 
@@ -157,14 +158,15 @@ const ContactForm: React.FC = () => {
           onChange={handleChange}
           required
           rows={5}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+          placeholder="Tell us about your project or requirements..."
         />
       </div>
 
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isSubmitting ? 'Sending...' : 'Send Message'}
       </button>

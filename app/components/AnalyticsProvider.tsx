@@ -2,7 +2,7 @@ import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
+    gtag: (...args: unknown[]) => void;
   }
 }
 
@@ -27,6 +27,7 @@ interface AnalyticsProviderProps {
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
+<<<<<<< HEAD
     if (typeof window !== 'undefined') {
       // Google Analytics
       if (process.env.NODE_ENV === 'production') {
@@ -42,6 +43,14 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         window.gtag('js', new Date());
         window.gtag('config', process.env.REACT_APP_GA_MEASUREMENT_ID || '');
       }
+=======
+    // Initialize analytics
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: document.title,
+        page_location: window.location.href,
+      });
+>>>>>>> cursor/fix-errors-and-merge-to-main-0823
     }
   }, []);
 
@@ -53,7 +62,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
   const trackPageView = (pageName: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', process.env.REACT_APP_GA_MEASUREMENT_ID || '', {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: pageName,
         page_location: window.location.href,
       });

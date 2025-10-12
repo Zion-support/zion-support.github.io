@@ -3,10 +3,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Truck, Package, TrendingUp, Shield, Target, Globe, Clock, CheckCircle } from 'lucide-react';
 =======
 import { Truck, Package, TrendingUp, Shield, CheckCircle } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-9c1a
+=======
+import { Truck, Package, TrendingUp, Shield } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-0823
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -65,7 +69,11 @@ export default function AISupplyChainOptimizerPage() {
         'Real-time optimization',
         'Priority support',
         'Custom integrations',
+<<<<<<< HEAD
         'Advanced analytics'
+=======
+        'API access'
+>>>>>>> cursor/fix-errors-and-merge-to-main-0823
       ],
       popular: true
     },
@@ -77,10 +85,17 @@ export default function AISupplyChainOptimizerPage() {
       features: [
         'Unlimited warehouses',
         'Custom AI models',
+<<<<<<< HEAD
         'Dedicated support',
         'White-label options',
         'API access',
         'Custom reporting'
+=======
+        '24/7 dedicated support',
+        'White-label solution',
+        'Advanced analytics',
+        'On-premise deployment'
+>>>>>>> cursor/fix-errors-and-merge-to-main-0823
       ],
       popular: false
     }
@@ -89,23 +104,41 @@ export default function AISupplyChainOptimizerPage() {
   const testimonials = [
     {
       name: 'Sarah Johnson',
+<<<<<<< HEAD
       company: 'TechCorp Industries',
       role: 'Supply Chain Director',
       content: 'The AI optimization reduced our logistics costs by 35% and improved delivery times significantly.',
+=======
+      role: 'Supply Chain Director',
+      company: 'TechCorp Industries',
+      content: 'The AI optimization reduced our logistics costs by 40% and improved delivery times by 25%. Incredible results!',
+>>>>>>> cursor/fix-errors-and-merge-to-main-0823
       rating: 5
     },
     {
       name: 'Michael Chen',
+<<<<<<< HEAD
       company: 'Global Logistics Ltd',
       role: 'Operations Manager',
       content: 'Outstanding predictive capabilities. We can now anticipate demand fluctuations with incredible accuracy.',
+=======
+      role: 'Operations Manager',
+      company: 'Global Logistics Co.',
+      content: 'The predictive forecasting has been spot-on. We\'ve eliminated stockouts and reduced excess inventory significantly.',
+>>>>>>> cursor/fix-errors-and-merge-to-main-0823
       rating: 5
     },
     {
       name: 'Emily Rodriguez',
+<<<<<<< HEAD
       company: 'Manufacturing Solutions',
       role: 'VP of Operations',
       content: 'The automated inventory management has eliminated stockouts while reducing excess inventory by 40%.',
+=======
+      role: 'VP of Operations',
+      company: 'RetailMax',
+      content: 'Implementation was seamless and the ROI was immediate. Our supply chain is now truly intelligent.',
+>>>>>>> cursor/fix-errors-and-merge-to-main-0823
       rating: 5
     }
   ];
@@ -135,6 +168,7 @@ export default function AISupplyChainOptimizerPage() {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+<<<<<<< HEAD
                 Transform your supply chain with intelligent AI solutions that predict demand, optimize routes, 
                 and automate inventory management for maximum efficiency and cost savings.
               </p>
@@ -143,10 +177,29 @@ export default function AISupplyChainOptimizerPage() {
                   Start Free Trial
                 </FuturisticButton>
                 <FuturisticButton variant="secondary" size="lg">
+=======
+                Revolutionize your supply chain with AI-powered demand forecasting, route optimization, 
+                and intelligent inventory management. Reduce costs by 35% and improve efficiency by 40%.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <FuturisticButton
+                  variant="primary"
+                  size="lg"
+                  onClick={() => window.open('/contact', '_blank')}
+                >
+                  Start Free Trial
+                </FuturisticButton>
+                <FuturisticButton
+                  variant="secondary"
+                  size="lg"
+                  onClick={() => window.open('/contact', '_blank')}
+                >
+>>>>>>> cursor/fix-errors-and-merge-to-main-0823
                   Schedule Demo
                 </FuturisticButton>
               </div>
             </div>
+<<<<<<< HEAD
           </section>
 
           {/* Features Section */}
@@ -172,6 +225,29 @@ export default function AISupplyChainOptimizerPage() {
                       {feature.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+=======
+
+            {/* Features Section */}
+            <div className="mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center">
+                Advanced Supply Chain Intelligence
+              </h2>
+              <p className="text-gray-300 text-center mb-12">
+                Cutting-edge artificial intelligence meets supply chain expertise to optimize your operations
+              </p>
+              <div className="grid md:grid-cols-2 gap-8">
+                {features.map((feature, index) => (
+                  <FuturisticCard key={index}>
+                    <div className="flex items-start mb-4">
+                      {feature.icon}
+                      <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
+                    </div>
+                    <p className="text-gray-300 mb-6">{feature.description}</p>
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="text-gray-300 flex items-center">
+                          <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-0823
                           {benefit}
                         </li>
                       ))}
@@ -180,6 +256,7 @@ export default function AISupplyChainOptimizerPage() {
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
           </section>
 
           {/* Pricing Section */}
@@ -250,11 +327,29 @@ export default function AISupplyChainOptimizerPage() {
                     {plan.popular && (
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                         <span className="bg-cyan-400 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold">
+=======
+
+            {/* Pricing Section */}
+            <div className="mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center">
+                Choose Your Plan
+              </h2>
+              <p className="text-gray-300 text-center mb-12">
+                Scalable pricing options to match your supply chain needs
+              </p>
+              <div className="grid md:grid-cols-3 gap-8">
+                {pricingPlans.map((plan, index) => (
+                  <FuturisticCard key={index} className={`${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                    {plan.popular && (
+                      <div className="text-center mb-4">
+                        <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+>>>>>>> cursor/fix-errors-and-merge-to-main-0823
                           Most Popular
                         </span>
                       </div>
                     )}
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+<<<<<<< HEAD
                     <p className="text-gray-300 mb-6">{plan.description}</p>
                     <div className="mb-6">
                       <span className="text-4xl font-bold text-white">{plan.price}</span>
@@ -265,15 +360,33 @@ export default function AISupplyChainOptimizerPage() {
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+=======
+                    <div className="mb-4">
+                      <span className="text-4xl font-bold text-white">{plan.price}</span>
+                      <span className="text-gray-400 ml-1">{plan.period}</span>
+                    </div>
+                    <p className="text-gray-300 text-sm mb-6">{plan.description}</p>
+                    <ul className="space-y-3 mb-8">
+                      {plan.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="text-gray-300 flex items-center">
+                          <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-0823
                           {feature}
                         </li>
                       ))}
                     </ul>
+<<<<<<< HEAD
                     <FuturisticButton 
                       variant={plan.popular ? "primary" : "secondary"} 
                       href="/contact" 
                       variant={plan.popular ? 'primary' : 'secondary'}
                       className="w-full"
+=======
+                    <FuturisticButton
+                      variant={plan.popular ? "primary" : "ghost"}
+                      className="w-full"
+                      onClick={() => window.open('/contact', '_blank')}
+>>>>>>> cursor/fix-errors-and-merge-to-main-0823
                     >
                       Get Started
                     </FuturisticButton>
@@ -281,6 +394,7 @@ export default function AISupplyChainOptimizerPage() {
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
           </section>
 
           {/* Testimonials */}
@@ -302,19 +416,43 @@ export default function AISupplyChainOptimizerPage() {
               <div className="grid md:grid-cols-3 gap-8">
                 {testimonials.map((testimonial, index) => (
                   <FuturisticCard key={index} className="p-6">
+=======
+
+            {/* Testimonials Section */}
+            <div className="mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center">
+                What Our Clients Say
+              </h2>
+              <p className="text-gray-300 text-center mb-12">
+                Join hundreds of companies optimizing their supply chains
+              </p>
+              <div className="grid md:grid-cols-3 gap-8">
+                {testimonials.map((testimonial, index) => (
+                  <FuturisticCard key={index}>
+>>>>>>> cursor/fix-errors-and-merge-to-main-0823
                     <div className="flex mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <span key={i} className="text-yellow-400">★</span>
                       ))}
                     </div>
+<<<<<<< HEAD
                     <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-gray-400">{testimonial.role}</div>
                     <div className="text-sm text-gray-500">{testimonial.company}</div>
+=======
+                    <blockquote className="text-gray-300 mb-6 italic">"{testimonial.content}"</blockquote>
+                    <div>
+                      <p className="font-semibold text-white">{testimonial.name}</p>
+                      <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                      <p className="text-gray-500 text-sm">{testimonial.company}</p>
+                    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-0823
                   </FuturisticCard>
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
           </section>
 
           {/* CTA Section */}
@@ -340,6 +478,35 @@ export default function AISupplyChainOptimizerPage() {
               </div>
             </div>
           </section>
+=======
+
+            {/* CTA Section */}
+            <div className="text-center">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Optimize Your Supply Chain?
+              </h2>
+              <p className="text-gray-300 mb-8">
+                Start your free 14-day trial today. No credit card required. Join 500+ companies optimizing their supply chains.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <FuturisticButton
+                  variant="primary"
+                  size="lg"
+                  onClick={() => window.open('/contact', '_blank')}
+                >
+                  Start Free Trial
+                </FuturisticButton>
+                <FuturisticButton
+                  variant="secondary"
+                  size="lg"
+                  onClick={() => window.open('/contact', '_blank')}
+                >
+                  Contact Sales
+                </FuturisticButton>
+              </div>
+            </div>
+          </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-0823
         </div>
       </FuturisticBackground>
     </>

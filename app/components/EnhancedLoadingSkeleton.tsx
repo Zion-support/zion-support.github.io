@@ -1,144 +1,114 @@
 import React from 'react';
 
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
-    };
-  ];
-const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success';
-  ];
+interface SkeletonProps {
+  width?: string | number;
+  height?: string | number;
+  className?: string;
+  rounded?: boolean;
+  animated?: boolean;
+}
+
+const Skeleton: React.FC<SkeletonProps> = ({
+  width = '100%',
+  height = '1rem',
+  className = '',
+  rounded = true,
+  animated = true
+}) => {
+  const style = {
+    width: typeof width === 'number' ? `${width}px` : width,
+    height: typeof height === 'number' ? `${height}px` : height
+  };
+
   return (
-    <div>Content</div>
+    <div
+      className={`bg-gray-700 ${rounded ? 'rounded' : ''} ${animated ? 'animate-pulse' : ''} ${className}`}
+      style={style}
+    />
   );
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <Helmet></Helmet>
-        <title>EnhancedLoadingSkeleton | Zion Tech Group</title>
-        <meta name="description" content="Professional EnhancedLoadingSkeleton services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
-        <meta name="keywords" content="EnhancedLoadingSkeleton, AI solutions, IT services, Zion Tech Group, enhancedloadingskeleton" /></meta>
-      </Helmet>
-      {/* Hero Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" /></h1>;
-              <span className="w-5h-5ml-2" />EnhancedLoadingSkeleton;
-              </span>
-              <br /></br>
-              <span className = "text-white"  >Solutions</span>
-            </h1>
-            <p className="w-5h-5ml-2">Transform your business with our advanced enhancedloadingskeleton solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
-              <button className="w-5h-5ml-2">Get Started;
-              </button>
-              <button className="w-5h-5ml-2">Learn More;
-              </button>
+};
+
+interface EnhancedLoadingSkeletonProps {
+  type?: 'card' | 'list' | 'text' | 'image' | 'button';
+  count?: number;
+  className?: string;
+}
+
+const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
+  type = 'card',
+  count = 1,
+  className = ''
+}) => {
+  const renderSkeleton = () => {
+    switch (type) {
+      case 'card':
+        return (
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <Skeleton width={60} height={20} className="mb-4" />
+            <Skeleton width="100%" height={24} className="mb-2" />
+            <Skeleton width="80%" height={16} className="mb-4" />
+            <div className="space-y-2">
+              <Skeleton width="100%" height={12} />
+              <Skeleton width="90%" height={12} />
+              <Skeleton width="75%" height={12} />
             </div>
-        </div>
-      </section>
-      {/* Features Section */}
-      <section className = "w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" />Why Choose Our EnhancedLoadingSkeleton Solutions?
-            </h2>
-            <p className="w-5h-5ml-2">Our comprehensive approach ensures maximum efficiency and results for your business.
-            </p>
+            <div className="flex gap-2 mt-6">
+              <Skeleton width={80} height={32} rounded />
+              <Skeleton width={100} height={32} rounded />
+            </div>
           </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-all duration-300" /></div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <feature.icon className="h-8w-8tex t-purple-400mr-3"  /></feature>
-                  <h3 className="text-xlfont-semibold text-white"  >{feature.title}</h3>
+        );
+
+      case 'list':
+        return (
+          <div className="space-y-4">
+            {Array.from({ length: count }).map((_, index) => (
+              <div key={index} className="flex items-center space-x-4">
+                <Skeleton width={40} height={40} rounded />
+                <div className="flex-1 space-y-2">
+                  <Skeleton width="60%" height={16} />
+                  <Skeleton width="40%" height={12} />
                 </div>
-                <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
-            <h2 className="w-5h-5ml-2" />Key Benefits;
-            </h2>
-            <p className = "w-5h-5ml-2">Discover the advantages of our enhancedloadingskeleton solutions.
-            </p>
+        );
+
+      case 'text':
+        return (
+          <div className="space-y-2">
+            <Skeleton width="100%" height={20} />
+            <Skeleton width="95%" height={16} />
+            <Skeleton width="90%" height={16} />
+            <Skeleton width="85%" height={16} />
+            <Skeleton width="80%" height={16} />
           </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flexitems-startspace-x-3" /></div>
-                <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
-                <p className="text-gray-300">{benefit}</p>
-              </div>
-            ))}
-          </div>
-      </section>
-      {/* CTA Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <h2 className="w-5h-5ml-2" />Ready to Get Started?
-          </h2>
-          <p className="w-5h-5ml-2">Join thousands of satisfied customers who trust our enhancedloadingskeleton solutions.
-          </p>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <button className="w-5h-5ml-2" /></button>;
-              Get Started Now;
-              <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
-            </button>;
-            <button className="w-5h-5ml-2">Contact Sales;
-            </button>
-          </div>
-      </section>
-    </div>
-  )
+        );
+
+      case 'image':
+        return (
+          <Skeleton width="100%" height={200} rounded />
+        );
+
+      case 'button':
+        return (
+          <Skeleton width={120} height={40} rounded />
+        );
+
+      default:
+        return <Skeleton width="100%" height={100} />;
+    }
+  };
 
   return (
-    <div>Content</div>
-  );
-    <div>Component content</div>
-  );
-}
-  return (
-    <div>Content</div>
-  );
-    <>
-
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+    <div className={className}>
+      {Array.from({ length: count }).map((_, index) => (
+        <div key={index} className={count > 1 ? 'mb-4' : ''}>
+          {renderSkeleton()}
         </div>
-      </div>
-    </>;
+      ))}
+    </div>
   );
-}
+};
 
+export default EnhancedLoadingSkeleton;
