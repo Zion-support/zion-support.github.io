@@ -1,3 +1,4 @@
+export default UltimateBusinessIntelligence2025Banner;
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible] = useState(true);
   
@@ -8,23 +9,20 @@
     }, 5000);
  clearInterval(timer);
   }, [content.length]);
-  // Removed unused handleClose function
+  // Removed unused handleClose function;
   if (!isVisible) return null;
       {/* Animated Background Effects */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-        
         ></div>
-        
         ></div>
         {/* Header */}
             <span className="text-2xl">🚀</span>
-              BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025
+              BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025;
             <span className='text-2xl'>⚡</span>
             {currentContent.title}
             {currentContent.description}
-              Get Started Today
-
-              Schedule Consultation
+              Get Started Today;
+              Schedule Consultation;
           {/* Key Benefits Grid */}
 
             {/* Metrics Grid */}
@@ -38,7 +36,6 @@
                 <span className="text-xl">📖</span>
                 <span>Read {currentContent.type}</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
-              
                 <span className="text-xl">📞</span>
                 <span>Call +1 302 464 0950</span>
           {/* Slide Indicators */}
@@ -55,4 +52,3 @@
           ))}
   );
 };
-export default UltimateBusinessIntelligence2025Banner;

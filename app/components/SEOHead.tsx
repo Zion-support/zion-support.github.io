@@ -1,7 +1,11 @@
-
-
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default SEOHead;
+
+
+>>>>>>> origin/main
 
   return (
 
@@ -61,4 +65,8 @@ const SEOHead: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-b918
   );
 };
+<<<<<<< HEAD
 export default SEOHead;
+=======
+
+>>>>>>> origin/main

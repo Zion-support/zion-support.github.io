@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 // Optimized icon system to reduce bundle size
 // Only import icons that are actually used
 // Core icons used across the application
+=======
+>>>>>>> origin/main
 export {
+export const IconRegistry = {
+export type IconName = keyof typeof IconRegistry;
+// Optimized icon system to reduce bundle size;
+// Only import icons that are actually used;
+// Core icons used across the application;
   ArrowRight,
   Zap,
   Shield,
@@ -114,8 +122,9 @@ export {
   ChevronDown,
   Twitter,
   Linkedin,
-  Github
+  Github;
 } from 'lucide-react'
+<<<<<<< HEAD
 // Create a centralized icon registry for better tree-shaking
 export const IconRegistry = {
   // Navigation
@@ -127,6 +136,21 @@ export const IconRegistry = {
   Linkedin,
   Github,
   // Core Business
+=======
+
+// Create a centralized icon registry for better tree-shaking;
+  // Navigation;
+  Menu,
+  X,
+  ChevronDown,
+  
+  // Social;
+  Twitter,
+  Linkedin,
+  Github,
+  
+  // Core Business;
+>>>>>>> origin/main
   ArrowRight,
   Zap,
   Shield,
@@ -233,7 +257,12 @@ export const IconRegistry = {
   Kiss,
   Tongue,
   FileText,
+<<<<<<< HEAD
   Package
 } as const;
 ;
 export type IconName = keyof typeof IconRegistry
+=======
+  Package;
+} as const;
+>>>>>>> origin/main

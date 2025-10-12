@@ -1,11 +1,17 @@
+import React from 'react';
+export default SEOHead;
 
 
 'use client';
 
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+=======
+'use client';
+>>>>>>> origin/main
 
 <<<<<<< HEAD
 interface SEOHeadProps {
@@ -26,7 +32,7 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
   ogImage = 'https: //ziontechgroup.com/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  structuredData
+  structuredData;
   const defaultStructuredData = {
     "@context": "https: //schema.org",
     "@type": "Organization",
@@ -108,7 +114,6 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
   );
 };
 
-export default SEOHead;
 
 =======
 export default function SEOHead() {

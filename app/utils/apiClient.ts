@@ -1,6 +1,9 @@
+export const apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api');
+export type { RequestConfig, APIResponse };
+export { APIError };
 /**
- * API Client Utility
- * Provides a centralized API client with error handling and caching
+ * API Client Utility;
+ * Provides a centralized API client with error handling and caching;
  */
 
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
@@ -8,11 +11,13 @@
   body?: unknown;
   cache?: boolean;
   cacheTTL?: number;
+}
 
   data: T;
   status: number;
   statusText: string;
   headers: Record<string, string>;
+}
 
   status?: number;
   code?: string;
@@ -21,10 +26,18 @@
     this.name = 'APIError';
     this.status = status;
     this.code = code;
+  }
+}
 
   private baseURL: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+  private defaultHeaders: Record<string, string>;
+  private cache: Map<string, { data: unknown; timestamp: number; ttl: number }> = new Map();
+    <></>
+>>>>>>> origin/main
   private defaultHeaders: Record<string, string />;
   private cache: Map<string, { data: unknown; timestamp: number; ttl: number } /> = new Map();
 =======
@@ -33,22 +46,25 @@
 >>>>>>> cursor/fix-errors-and-merge-to-main-b918
 
     this.baseURL = baseURL;
-      ...defaultHeaders
+      ...defaultHeaders;
     };
+  }
 
   /**
-   * Make an API request
+   * Make an API request;
    */
     config: RequestConfig = {}
-      cacheTTL = 300000 // 5 minutes default
+      cacheTTL = 300000 // 5 minutes default;
     } = config;
 
     const url = `${this.baseURL}${endpoint}`;
     const cacheKey = `${method}:${url}:${JSON.stringify(body || {})}`;
 
-    // Check cache first
+    // Check cache first;
       const cached = this.getFromCache(cacheKey);
         return cached;
+      }
+    }
 
       });
 
@@ -57,44 +73,54 @@
         headers: this.parseHeaders(response.headers)
       };
 
-      // Cache successful GET requests
+      // Cache successful GET requests;
         this.setCache(cacheKey, apiResponse, cacheTTL);
+      }
 
-          code: data.code
+          code: data.code;
         });
+      }
 
       return apiResponse;
         throw error;
+      }
         code: 'NETWORK_ERROR'
       });
+    }
+  }
 
   /**
-   * GET request
+   * GET request;
    */
     return this.request<T>(endpoint, { ...config, method: 'GET' });
+  }
 
   /**
-   * POST request
+   * POST request;
    */
     return this.request<T>(endpoint, { ...config, method: 'POST', body });
+  }
 
   /**
-   * PUT request
+   * PUT request;
    */
     return this.request<T>(endpoint, { ...config, method: 'PUT', body });
+  }
 
   /**
-   * DELETE request
+   * DELETE request;
    */
     return this.request<T>(endpoint, { ...config, method: 'DELETE' });
+  }
 
   /**
-   * PATCH request
+   * PATCH request;
    */
     return this.request<T>(endpoint, { ...config, method: 'PATCH', body });
+  }
 
   /**
-   * Get data from cache
+   * Get data from cache;
    */
     const cached = this.cache.get(key);
     if (!cached) return null;
@@ -102,42 +128,48 @@
     const now = Date.now();
       this.cache.delete(key);
       return null;
+    }
 
     return cached.data;
+  }
 
   /**
-   * Set data in cache
+   * Set data in cache;
    */
-      ttl
+      ttl;
     });
+  }
 
   /**
-   * Parse response headers
+   * Parse response headers;
    */
     const result: Record<string, string> = {};
       result[key] = value;
     });
     return result;
+  }
 
   /**
-   * Clear cache
+   * Clear cache;
    */
     this.cache.clear();
+  }
 
   /**
-   * Clear cache for specific endpoint
+   * Clear cache for specific endpoint;
    */
     const keysToDelete: string[] = [];
         keysToDelete.push(key);
+      }
     });
- this.cache.delete(key));
+    keysToDelete.forEach(key => this.cache.delete(key));
+  }
+}
 
-// Export utility functions
+// Export utility functions;
   new APIClient(baseURL, headers);
 
-// Default API client instance
-export const apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api');
+// Default API client instance;
 
-// Export types and classes
-export type { RequestConfig, APIResponse };
-export { APIError };
+// Export types and classes;
+    </>

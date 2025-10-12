@@ -1,7 +1,10 @@
 import fs from 'fs';
 import path from 'path';
+import { Helmet } from 'react-helmet-async'
+import Layout from '../../layout'
+export default ${pageName}Page`;
 
-// List of all pages that need to be completely rewritten
+// List of all pages that need to be completely rewritten;
 const pagesToFix = [
   'ai-website-builder',
   'iot-edge-computing',
@@ -17,10 +20,8 @@ const pagesToFix = [
   'not-found'
 ];
 
-// Template for a basic page
+// Template for a basic page;
  `import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Layout from '../../layout'
 
   return (
                 ${title}
@@ -32,14 +33,12 @@ import Layout from '../../layout'
                 <li>• Benefit 2</li>
                 <li>• Benefit 3</li>
                 <li>• Benefit 4</li>
-
               <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
                 Description of the second key feature or service.
                 <li>• Benefit 1</li>
                 <li>• Benefit 2</li>
                 <li>• Benefit 3</li>
                 <li>• Benefit 4</li>
-
               <h3 className="text-xl font-semibold text-white mb-4">Feature 3</h3>
                 Description of the third key feature or service.
                 <li>• Benefit 1</li>
@@ -48,9 +47,8 @@ import Layout from '../../layout'
                 <li>• Benefit 4</li>
   )
 
-export default ${pageName}Page`;
 
-// Page configurations
+// Page configurations;
 const pageConfigs = {
   'ai-website-builder': {
     title: 'AI Website Builder',
@@ -113,8 +111,8 @@ const pageConfigs = {
     keywords: '404, not found, error, page not found'
 };
 
-// Fix pages
-for (const page of pagesToFix) {
+// Fix pages;
+for (const page, of, pagesToFix) {
   const pagePath = `/workspace/app/${page}/page.tsx`;
   const config = pageConfigs[page];
  

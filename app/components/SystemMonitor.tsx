@@ -1,6 +1,5 @@
-
-
 import React from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -12,64 +11,89 @@ import { ArrowRight } from 'lucide-react';
 <<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 
-  ];
-    
-              <span const className = "text-white">Solutions</span>
-              Transform your business with our advanced systemmonitor solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-    
-                Get Started
-    
-                Learn More
+=======
+export default SystemMonitorPage;
+'use client'
 
+>>>>>>> origin/main
+  ];
+              </span>
+              <br /></br>
+              <span const className = "text-white"  >Solutions</span>
+            </h1>
+            <p className="w-5h-5ml-2">Transform your business with our advanced systemmonitor solutions.
+              Powered by cutting-edge AI technology and industry expertise.
+            </p>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <button className="w-5h-5ml-2" /></button>
+                Get Started;
+                <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
+              </button>
+              <button className="w-5h-5ml-2" /></button>
+                Learn More;
+  </
+            </div>
+    </div>
   )}
-export default SystemMonitorPage
+  </button>
+}
 
 interface SystemMonitorProps {
- void
-  className?: string
+  onAlert?: (alert: string) => void;
+  className?: string;
+}
 
 const SystemMonitor: React.FC<SystemMonitorProps /> = ({
   onAlert,
   className = ''
+}) => {
   const [metrics, setMetrics] = useState<SystemMetrics />({
     cpu: 0,
     memory: 0,
     disk: 0,
     network: 0,
     battery: 100,
-    uptime: 0
+    uptime: 0;
   })
   const [isMonitoring, setIsMonitoring] = useState(false)
 
-    // Simulate system metrics
+  const updateMetrics = useCallback(() => {
+    // Simulate system metrics;
     const newMetrics = {
       cpu: Math.random() * 100,
       memory: Math.random() * 100,
       disk: Math.random() * 100,
       network: Math.random() * 100,
       battery: Math.random() * 100,
-      uptime: Date.now() - performance.timing.navigationStart
+      uptime: Date.now() - performance.timing.navigationStart;
+    }
 
     setMetrics(newMetrics)
 
-    // Check for alerts
- 90) {
+    // Check for alerts;
+    if (newMetrics.cpu > 90) {
       onAlert?.('High CPU usage detected')
- 90) {
+    }
+    if (newMetrics.memory > 90) {
       onAlert?.('High memory usage detected')
- 90) {
+    }
+    if (newMetrics.disk > 90) {
       onAlert?.('High disk usage detected')
+    }
   }, [onAlert])
 
+  useEffect(() => {
     if (isMonitoring) {
       const interval = setInterval(updateMetrics, 1000)
- clearInterval(interval)
+      return () => clearInterval(interval)
+    }
   }, [isMonitoring, updateMetrics])
 
+  const toggleMonitoring = () => {
     setIsMonitoring(!isMonitoring)
     if (!isMonitoring) {
       updateMetrics()
+<<<<<<< HEAD
 
   };
 
@@ -98,3 +122,7 @@ export default function SystemMonitor() {
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-b918
+=======
+    }
+  };
+>>>>>>> origin/main

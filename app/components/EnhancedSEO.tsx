@@ -1,23 +1,26 @@
-
-
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+=======
+export default EnhancedSEO;
+
+
+>>>>>>> origin/main
 
 <<<<<<< HEAD
 interface SEOProps {
-  title?: string
-  description?: string
-  keywords?: string
-  canonical?: string
-  ogImage?: string
-  ogType?: string
-  twitterCard?: string
-  structuredData?: object
-  noindex?: boolean
-  nofollow?: boolean
-
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: object;
+  noindex?: boolean;
+  nofollow?: boolean;
 const EnhancedSEO: React.FC<SEOProps /> = ({
   const title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered solutions, IT services, 5 G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
@@ -28,7 +31,7 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
   twitterCard = 'summary_large_image',
   structuredData,
   noindex = false,
-  nofollow = false
+  nofollow = false;
   const defaultStructuredData = {
     "@context": "https: //schema.org",
     "@type": "Organization",
@@ -67,7 +70,7 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
       "highPrice": "2999",
       "priceCurrency": "USD"
 
-  const finalStructuredData = structuredData || defaultStructuredData
+  const finalStructuredData = structuredData || defaultStructuredData;
   const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
 
   return (
@@ -91,7 +94,6 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
 
   )
 
-export default EnhancedSEO;
 
 =======
 export default function EnhancedSEO() {

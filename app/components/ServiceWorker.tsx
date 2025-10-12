@@ -1,20 +1,30 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 'use client';
+=======
+>>>>>>> origin/main
 import React, { useEffect } from 'react';
-import { useEffect } from 'react';
+export default ServiceWorker;
+'use client';
 
+const ServiceWorker: React.FC = () => {
+  useEffect(() => {
     if ('serviceWorker' in, navigator) {
       navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
           console.log('SW registered: ', registration);
         })
+        .catch((registrationError) => {
           console.log('SW registration failed: ', registrationError);
         });
+    }
   }, []);
 
   return null;
 };
 
+<<<<<<< HEAD
 export default ServiceWorker;
 =======
 import React from 'react';
@@ -46,3 +56,5 @@ export default function ServiceWorker() {
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-b918
+=======
+>>>>>>> origin/main

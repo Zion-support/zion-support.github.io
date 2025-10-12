@@ -1,11 +1,9 @@
-import { useEffect } from 'react';
-
-    // Monitor page load performance
+    // Monitor page load performance;
       if ('performance' in window) {
             const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
             const paint = performance.getEntriesByType('paint');
             
-            // Log performance metrics
+            // Log performance metrics;
             console.log('Page Load Performance:', {
               domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
               loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
@@ -16,13 +14,13 @@ import { useEffect } from 'react';
         });
     };
 
-    // Monitor resource loading
+    // Monitor resource loading;
       if ('performance' in window) {
             if (entry.entryType === 'resource') {
               console.log('Resource loaded:', {
                 name: entry.name,
                 duration: entry.duration,
-                size: (entry as any).transferSize,
+                size: (entry, as, any).transferSize,
               });
           });
         });
@@ -32,11 +30,11 @@ import { useEffect } from 'react';
  observer.disconnect();
     };
 
-    // Initialize monitoring
+    // Initialize monitoring;
     monitorPageLoad();
     const cleanup = monitorResourceLoading();
 
-    // Cleanup
+    // Cleanup;
       cleanup?.();
     };
   }, []);

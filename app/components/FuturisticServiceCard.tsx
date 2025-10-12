@@ -1,12 +1,14 @@
-import { ArrowRight } from 'lucide-react';
 'use client'
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 import { ArrowRight, Brain } from 'lucide-react';
 
 =======
 import { ArrowRight } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-b918
+=======
+>>>>>>> origin/main
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -18,47 +20,75 @@ import { ArrowRight } from 'lucide-react';
     'Proven track record of success'
   ];
   const features = [
+    {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency',
     },
+    {
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results',
     },
+    {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards',
     },
+    {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
+    }
   ];
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <title>5G Data Analytics - Zion Tech Group</title>
         <title>Futuristic Service Card | Zion Tech Group</title>
 
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <Helmet></Helmet>
+        <title />Futuristic Service Card | Zion Tech Group</title>
+        <meta name="description" content="Professional futuristic service card solutions by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
+        <meta name="keywords" content="futuristic service card, AI solutions, IT services, Zion Tech Group" /></meta>
+      </Helmet>
+>>>>>>> origin/main
       {/* Hero Section */}
-    
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent">FuturisticServiceCard
-
-              <span className="text-white">Solutions</span>
-              Transform your business with our advanced futuristic service card solutions.
+      <section className="w-5h-5ml-2" /></section>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <h1 className="w-5h-5ml-2" /></h1>
+              <span className="w-5h-5ml-2" />FuturisticServiceCard;
+              </span>
+              <br /></br>
+              <span className="w-5h-5ml-2" />Solutions</span>
+            </h1>
+            <p className="w-5h-5ml-2">Transform your business with our advanced futuristic service card solutions.
               Powered by cutting-edge AI technology and industry expertise.
-    
-                Get Started
-    
-              <button className="border border-gray-300 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300">Learn More
-
+            </p>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <button className="w-5h-5ml-2" /></button>
+                Get Started;
+                <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
+              </button>
+              <button className="w-5h-5ml-2">Learn More;
+              </button>
+            </div>
+        </div>
+      </section>
       {/* Features Section */}
-    
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Our Features
-
-              Discover the powerful features that make our futuristic service card solutions stand out.
-    
+      <section className="w-5h-5ml-2" /></section>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <h2 className="w-5h-5ml-2" />Our Features;
+            </h2>
+            <p className="w-5h-5ml-2">Discover the powerful features that make our futuristic service card solutions stand out.
+            </p>
           </div>;
+<<<<<<< HEAD
         </div></section>)};export default FuturisticServiceCardPage
 
 =======
@@ -107,3 +137,7 @@ import { ArrowRight } from 'lucide-react';
         </div></section>)};export default FuturisticServiceCardPage
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-b918
+=======
+        </div></section>)};export default FuturisticServiceCardPage;
+}
+>>>>>>> origin/main

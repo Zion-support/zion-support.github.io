@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -17,15 +18,29 @@ export default function FaqPage() {
     
         <title>Faq - Zion Tech Group</title>
 <<<<<<< HEAD
+=======
+export default FaqPage;
+'use client';
+
+const FaqPage: React.FC = () => {
+  return (
+<<<<<<< HEAD
+
+        <>
+      <title>Faq - Zion Tech Group</title>
+>>>>>>> origin/main
 
             <h1 className="text-4xl font-bold text-white mb-6">Faq</h1>
             <p className="text-lg text-gray-300 mb-8">Professional faq services coming soon.</p>
             
               Contact Us
 
+      </>
   );
+}
 
 =======
+<<<<<<< HEAD
         <meta name="description" content="Professional faq by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -45,3 +60,34 @@ export default function FaqPage() {
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-b918
+=======
+    <></>
+      <Helmet></Helmet>
+        <title>Faq - Zion Tech Group</title>
+        <meta name="description" content="Faq services by Zion Tech Group. Professional AI and IT solutions." /></meta>
+        <meta name="keywords" content="faq, AI solutions, IT services" /></meta>
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <h1 className="w-5h-5ml-2" /></h1>
+              <span className="w-5h-5ml-2" />Faq;
+              </span>
+            </h1>
+            <p className="w-5h-5ml-2">Professional faq services by Zion Tech Group.
+            </p>
+          </div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
+            <p className="w-5h-5ml-2">We're working on bringing you comprehensive faq solutions. 
+              Contact us to learn more about our services.
+            </p>
+            <button className="w-5h-5ml-2">Contact Us;
+            </button>
+          </div>
+      </div>
+    </>
+  );
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
+>>>>>>> origin/main
