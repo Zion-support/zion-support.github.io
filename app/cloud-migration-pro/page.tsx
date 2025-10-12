@@ -3,24 +3,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Cloud, Shield, Zap, CheckCircle } from 'lucide-react';
-
-export default function CloudMigrationPro() {
-import { Cloud, Shield, Zap, Database, Users } from 'lucide-react';
+import { Cloud, Shield, Zap, CheckCircle, Database, Users } from 'lucide-react';
 import Layout from '../layout';
 
-export default function CloudMigrationProPage() {
+export default function CloudMigrationPro() {
   const features = [
     {
       icon: <Cloud className="w-6 h-6 text-cyan-400" />,
       title: 'Seamless Migration',
-      description: 'Zero-downtime migration with automated testing and rollback capabilities'
       description: 'Zero-downtime migration to cloud platforms with minimal business disruption'
     },
     {
       icon: <Shield className="w-6 h-6 text-purple-400" />,
       title: 'Security First',
-      description: 'Enterprise-grade security with compliance validation and data protection'
       description: 'Enterprise-grade security protocols throughout the migration process'
     },
     {
@@ -100,14 +95,6 @@ export default function CloudMigrationProPage() {
         'White-label solution'
       ],
       popular: false
-      icon: <Database className="w-6 h-6 text-green-400" />,
-      title: 'Data Migration',
-      description: 'Safe and secure migration of databases and data warehouses'
-    },
-    {
-      icon: <Users className="w-6 h-6 text-orange-400" />,
-      title: 'Team Training',
-      description: 'Comprehensive training for your team on new cloud technologies'
     }
   ];
 
@@ -280,6 +267,10 @@ export default function CloudMigrationPro() {
                   <div className="text-4xl font-bold text-cyan-400 mb-4">{step.step}</div>
                   <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
                   <p className="text-gray-300">{step.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Features Section */}
@@ -328,6 +319,14 @@ export default function CloudMigrationPro() {
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="text-gray-300 flex items-center">
                         <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Migration Steps */}

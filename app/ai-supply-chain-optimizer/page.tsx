@@ -2,10 +2,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Truck, Package, TrendingUp, Shield, Target, Globe, Clock } from 'lucide-react';
-import { Truck, Package, TrendingUp, Shield, CheckCircle } from 'lucide-react';
-
-import { Truck, Package, TrendingUp, Shield } from 'lucide-react';
+import { Truck, Package, TrendingUp, Shield, Target, Globe, Clock, CheckCircle } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -138,8 +135,6 @@ export default function AISupplyChainOptimizerPage() {
     <>
       <Helmet>
         <title>AI Supply Chain Optimizer - Zion Tech Group</title>
-        <meta name="description" content="Revolutionize your supply chain with AI-powered demand forecasting, route optimization, and intelligent inventory management." />
-        <meta name="description" content="Revolutionize your supply chain with AI-powered optimization, predictive analytics, and automated inventory management." />
         <meta name="description" content="Revolutionize your supply chain with AI-powered optimization, predictive analytics, and automated inventory management." />
       </Helmet>
       
@@ -168,26 +163,14 @@ export default function AISupplyChainOptimizerPage() {
                   size="lg"
                   onClick={() => window.open('#demo', '_blank')}
                 >
-          <div className="pt-20 pb-16 px-4">
-            <div className="max-w-6xl mx-auto text-center">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-                AI Supply Chain Optimizer
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your supply chain with intelligent AI that predicts demand, optimizes routes, 
-                and automates inventory management for maximum efficiency and cost savings.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <FuturisticButton variant="primary" size="lg">
-                  Start Free Trial
-                </FuturisticButton>
-                <FuturisticButton variant="secondary" size="lg">
                   Watch Demo
                 </FuturisticButton>
               </div>
             </div>
+            </div>
+          </div>
 
-            {/* Stats */}
+          {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
               {stats.map((stat, index) => (
                 <FuturisticCard key={index} className="text-center">
@@ -320,7 +303,8 @@ export default function AISupplyChainOptimizerPage() {
                   onClick={() => window.open('/contact', '_blank')}
                 >
                   Contact Sales
-          </div>
+                </FuturisticButton>
+              </div>
 
           {/* Features Section */}
           <div className="py-20 px-4">
@@ -374,8 +358,6 @@ export default function AISupplyChainOptimizerPage() {
                     <p className="text-gray-300 mb-4">{feature.description}</p>
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="text-sm text-cyan-400 flex items-center">
-                          <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
@@ -386,7 +368,7 @@ export default function AISupplyChainOptimizerPage() {
                 ))}
               </div>
             </div>
-          </div>
+          </section>
 
           {/* Pricing Section */}
           <div className="py-20 px-4">
@@ -403,25 +385,6 @@ export default function AISupplyChainOptimizerPage() {
                     {plan.popular && (
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                         <span className="bg-cyan-400 text-black px-4 py-1 rounded-full text-sm font-semibold">
-          </section>
-
-          {/* Pricing Section */}
-          <section className="py-20">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-white mb-4">
-                  Flexible Pricing Plans
-                </h2>
-                <p className="text-gray-300 text-lg">
-                  Choose the plan that scales with your business
-                </p>
-              </div>
-              <div className="grid md:grid-cols-3 gap-8">
-                {pricingPlans.map((plan, index) => (
-                  <FuturisticCard key={index} className={`p-8 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-                    {plan.popular && (
-                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <span className="bg-cyan-400 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold">
                           Most Popular
                         </span>
                       </div>
@@ -444,7 +407,6 @@ export default function AISupplyChainOptimizerPage() {
                     <FuturisticButton 
                       variant={plan.popular ? "primary" : "secondary"} 
                       href="/contact" 
-                      variant={plan.popular ? 'primary' : 'secondary'}
                       className="w-full"
                     >
                       Get Started
@@ -464,34 +426,20 @@ export default function AISupplyChainOptimizerPage() {
               <p className="text-gray-300 text-center mb-12">
                 See how companies are transforming their supply chains
               </p>
-          </section>
-
-          {/* Testimonials */}
-          <section className="py-20">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-white mb-4">
-                  Trusted by Industry Leaders
-                </h2>
-                <p className="text-gray-300 text-lg">
-                  See how companies are transforming their supply chains
-                </p>
-              </div>
               <div className="grid md:grid-cols-3 gap-8">
                 {testimonials.map((testimonial, index) => (
-                  <FuturisticCard key={index} className="p-6">
-                    <div className="flex mb-4">
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                    <div className="flex items-center mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <span key={i} className="text-yellow-400">★</span>
-                        <CheckCircle key={i} className="w-5 h-5 text-yellow-400" />
                       ))}
                     </div>
                     <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.company}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}</div>
-                    <div className="text-sm text-gray-500">{testimonial.company}</div>
-                  </FuturisticCard>
+                    <div>
+                      <div className="font-semibold text-white">{testimonial.name}</div>
+                      <div className="text-cyan-400">{testimonial.company}</div>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -516,7 +464,6 @@ export default function AISupplyChainOptimizerPage() {
               </div>
             </div>
           </div>
-          </section>
 
           {/* CTA Section */}
           <section className="py-20">

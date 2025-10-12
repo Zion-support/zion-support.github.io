@@ -1,14 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Cloud, Shield, TrendingUp, Server } from 'lucide-react';
-import Layout from '../layout';
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Cloud, Shield, TrendingUp, Server, Zap, BarChart3 } from 'lucide-react'
-import Layout from '../layout'
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Cloud, Shield, TrendingUp, Server, CheckCircle } from 'lucide-react';
+import { Cloud, Shield, TrendingUp, Server, Zap, BarChart3, CheckCircle } from 'lucide-react';
 import Layout from '../layout';
 
 export default function CloudInfrastructureManagement() {
@@ -53,24 +45,6 @@ export default function CloudInfrastructureManagement() {
       items: ['24/7 Support', 'Proactive Monitoring', 'Incident Response', 'Performance Tuning', 'Capacity Planning', 'Health Checks']
     }
   ];
-      title: 'Auto-Scaling',
-      description: 'Automatically scale resources based on demand to ensure optimal performance and cost efficiency'
-    },
-    {
-      icon: <Zap className="w-6 h-6 text-orange-400" />,
-      title: 'Performance Monitoring',
-      description: 'Real-time monitoring and alerting with comprehensive dashboards and automated incident response'
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6 text-pink-400" />,
-      title: 'Analytics & Insights',
-      description: 'Advanced analytics to optimize infrastructure performance and make data-driven decisions'
-    }
-  ]
-      title: 'Automated Scaling',
-      description: 'Auto-scale resources based on demand to ensure optimal performance and cost efficiency'
-    }
-  ];
 
   const services = [
     {
@@ -106,7 +80,7 @@ export default function CloudInfrastructureManagement() {
         'Basic monitoring',
         'Email support',
         'Standard integrations',
-        'Cost optimization reports'
+        'Cost optimization reports',
         'Standard templates',
         'Monthly reports'
       ],
@@ -116,7 +90,6 @@ export default function CloudInfrastructureManagement() {
       name: 'Professional',
       price: '$799',
       period: '/month',
-      description: 'Ideal for growing enterprises',
       description: 'Ideal for growing companies',
       features: [
         'Up to 50 cloud accounts',
@@ -124,7 +97,7 @@ export default function CloudInfrastructureManagement() {
         'Priority support',
         'Custom integrations',
         'Automated scaling',
-        'Security compliance'
+        'Security compliance',
         'Custom configurations',
         'Weekly reports',
         'API access'
@@ -166,17 +139,6 @@ export default function CloudInfrastructureManagement() {
       company: 'Healthcare Provider',
       content: 'HIPAA compliance was seamless with their security framework. Our auditors were very impressed.',
       rating: 5
-    }
-  ];
-  ]
-        'Unlimited servers',
-        'Custom monitoring',
-        'Dedicated support',
-        'White-label options',
-        'Real-time reports',
-        'Custom integrations'
-      ],
-      popular: false
     }
   ];
 
@@ -224,13 +186,6 @@ export default function CloudInfrastructureManagement() {
             <Link to="#demo" className="bg-cyan-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">
               Get Started
             </Link>
-            Optimize your cloud infrastructure with intelligent management, automated scaling, 
-            and cost optimization across all major cloud platforms.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all">
-              Start Free Trial
-            </button>
             <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
               Watch Demo
             </Link>

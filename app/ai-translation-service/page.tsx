@@ -1,14 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Languages, Brain, FileText, Clock, Target } from 'lucide-react';
-import Layout from '../layout';
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Brain, FileText, Clock, Target, Languages } from 'lucide-react'
-import Layout from '../layout'
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Brain, FileText, Clock, Target, CheckCircle } from 'lucide-react';
+import { Languages, Brain, FileText, Clock, Target, CheckCircle } from 'lucide-react';
 import Layout from '../layout';
 
 export default function AITranslationService() {
@@ -34,8 +26,6 @@ export default function AITranslationService() {
       description: 'Specialized translation models for legal, medical, technical, and business content'
     }
   ];
-  ]
-  ];
 
   const translationFeatures = [
     {
@@ -55,22 +45,19 @@ export default function AITranslationService() {
       items: ['API Access', 'CMS Integration', 'Website Widgets', 'Mobile Apps', 'Desktop Software', 'Cloud Storage']
     }
   ];
-  ]
-  ];
 
   const pricingPlans = [
     {
       name: 'Starter',
       price: '$49',
       period: '/month',
-      description: 'Perfect for small businesses and individuals',
       description: 'Perfect for individuals and small projects',
       features: [
         'Up to 10,000 words/month',
         '50+ languages',
         'Basic document translation',
         'Email support',
-        'API access'
+        'API access',
         'Web interface'
       ],
       popular: false
@@ -86,11 +73,10 @@ export default function AITranslationService() {
         'Advanced document processing',
         'Priority support',
         'Custom terminology',
-        'Quality assurance'
+        'Quality assurance',
         'Advanced document translation',
         'API access',
-        'Priority support',
-        'Custom terminology'
+        'Priority support'
       ],
       popular: true
     },
@@ -109,17 +95,10 @@ export default function AITranslationService() {
       ],
       popular: false
     }
-        'White-label options',
-        'Dedicated support',
-        'Advanced security'
-      ],
-      popular: false
-    }
   ];
 
   const testimonials = [
     {
-      name: 'Maria Santos',
       name: 'Sarah Johnson',
       company: 'Global Marketing Agency',
       content: 'The AI translation service has revolutionized our international campaigns. The quality is incredible and saves us weeks of work.',
@@ -135,19 +114,6 @@ export default function AITranslationService() {
       name: 'Lisa Chen',
       company: 'Legal Firm',
       content: 'The legal translation accuracy is impressive. Our international clients are very satisfied with the service.',
-      rating: 5
-    }
-  ];
-  ]
-      name: 'Dr. Michael Chen',
-      company: 'Medical Research Institute',
-      content: 'Translating complex medical documents has never been easier. The specialized terminology handling is outstanding.',
-      rating: 5
-    },
-    {
-      name: 'Elena Rodriguez',
-      company: 'E-commerce Platform',
-      content: 'Our product descriptions are now available in 20+ languages with perfect accuracy. Customer engagement has increased significantly.',
       rating: 5
     }
   ];
