@@ -1,10 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
 interface ServicePageProps {
   title: string,
   description: string,
