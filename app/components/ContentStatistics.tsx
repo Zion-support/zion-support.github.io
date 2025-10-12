@@ -1,7 +1,6 @@
 import { useState, useEffect} from 'react';
 'use client';
 
-
 interface StatItem {
   id: string;,
   value: number;,

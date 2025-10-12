@@ -150,9 +150,6 @@ const AIEmailAssistantPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default AIEmailAssistantPage;
-=======
 export default AIEmailAssistantPage;
 
 import React from 'react';
@@ -174,4 +171,4 @@ export default function AiEmailAssistant() {
       </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-48fd
+

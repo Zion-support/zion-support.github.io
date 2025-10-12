@@ -31,18 +31,6 @@ export default function InfrastructureManagementPage() {
           </div>
       </section>
 
-<<<<<<< HEAD
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <h2 className="w-5h-5ml-2" />Coming Soon</h2>
-          <p className="w-5h-5ml-2">We're developing comprehensive infrastructure management services. Contact us to discuss your infrastructure needs.
-          </p>
-          <Link to="/contact" className="bg-gradient-to-rfrom-purple-600to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700transition-all duration-300">Contact Us
-          </Link>
-        </div>
-      </section>
-    </div>
-=======
         <>
       <title>5G Data Analytics - Zion Tech Group</title>
         <title>Infrastructure Management Services - Zion Tech Group</title>
@@ -59,6 +47,3 @@ export default function InfrastructureManagementPage() {
     
           <Link to="/contact" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700transition-allduration-300">Contact Us
       </>
->>>>>>> cursor/fix-errors-and-merge-to-main-48fd
-  );
-}

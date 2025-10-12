@@ -2,7 +2,6 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 'use client'
 
-
 const EnhancedLoadingSkeletonPage: React.FC = () => {
   const features = [
     {

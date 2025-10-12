@@ -1,7 +1,6 @@
 import { useState, useEffect} from 'react';
 'use client';
 
-
 interface AnimatedCounterProps {
   end: number;
   duration?: number;

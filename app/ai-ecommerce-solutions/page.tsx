@@ -3,47 +3,11 @@ import React from 'react';
 
 const AiEcommerceSolutionsPage: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <>
-      <Helmet>
-        <title>Ai Ecommerce Solutions - Zion Tech Group</title>
-        <meta name="description" content="Ai Ecommerce Solutions services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="ai-ecommerce-solutions, AI solutions, IT services" />
-      </Helmet>
-=======
-    
+
         <>
       <title>AiEcommerceSolutions - Zion Tech Group</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-48fd
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5h-5ml-2" />
-              <span className="w-5h-5ml-2" />Ai Ecommerce Solutions
-              </span>
-            </h1>
-            <p className="w-5h-5ml-2">Professional ai ecommerce solutions services by Zion Tech Group.
-            </p>
-          </div>
 
-<<<<<<< HEAD
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
-            <p className="w-5h-5ml-2">We're working on bringing you comprehensive ai ecommerce solutions solutions. 
-              Contact us to learn more about our services.
-            </p>
-            <button className="w-5h-5ml-2">Contact Us
-            </button>
-          </div>
-      </div>
-    </>
-  );
-};
-
-export default AiEcommerceSolutionsPage;
-=======
       </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-48fd
+

@@ -1,7 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 'use client'
 
-
   const features = [
     {
       title: "Feature 1",

@@ -156,31 +156,7 @@ export default function AICustomerSupportChatbot() {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5ml-2" />Ready to Get Started?
-              </h2>
-              <p className="w-5h-5ml-2">Contact us to learn more about our solutions and how we can help your business.
-              </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Link to="/contact" className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25">Contact Us
-                </Link>
-                <Link to="/services" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All Services
-                </Link>
-              </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-};
 
-export default AiCustomerSupportChatbotPage;
-export default AiCustomerSupportChatbotPage;
-}
-=======
               <h2 className="w-5 h-5ml-2" />Ready to Get Started?
               <p className="w-5 h-5ml-2">Contact us to learn more about our solutions and how we can help your business.
                 <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25">Contact Us
@@ -200,4 +176,4 @@ export default function AiCustomerSupportChatbot() {
       </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-48fd
+

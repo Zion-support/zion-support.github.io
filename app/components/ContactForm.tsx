@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { MessageSquare } from 'lucide-react';
 'use client';
 
-
 interface FormData {
   name: string;,
   email: string;,

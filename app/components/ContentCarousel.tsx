@@ -2,7 +2,6 @@ import { useState, useEffect} from 'react';
 import { ChevronLeft, ChevronRight} from 'lucide-react';
 'use client';
 
-
 interface Slide {
   id: number;,
   title: string;,

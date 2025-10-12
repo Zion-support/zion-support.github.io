@@ -2,7 +2,6 @@ import { useState, useEffect} from 'react';
 import { ArrowRight, ChevronLeft, ChevronRight} from 'lucide-react';
 'use client';
 
-
 interface ContentItem {
   id: string;,
   title: string;,
