@@ -1,13 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, Eye, MessageSquare, BarChart3 } from 'lucide-react';
-=======
 import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
-=======
 import { CheckCircle, ArrowRight, Brain, Zap, Database, Code, Smartphone, Cpu, MessageCircle, Calendar, Users } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -16,7 +10,6 @@ export default function AIServicesPage() {
     {
       icon: <Brain className="w-8 h-8 text-blue-500" />,
       title: 'AI Content Generator',
-<<<<<<< HEAD
       description: 'Generate high-quality content for blogs, social media, marketing materials, and more using advanced AI models.',
       features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content templates'],
       pricing: 'Starting at $29/month',
@@ -49,7 +42,6 @@ export default function AIServicesPage() {
       pricing: 'Starting at $39/month',
       link: '/ai-analytics',
       popular: false
-<<<<<<< HEAD
     },
     {
       icon: <Brain className="w-8 h-8 text-orange-500" />,
@@ -86,7 +78,6 @@ export default function AIServicesPage() {
       pricing: 'Starting at $149/month',
       link: '/predictive-analytics',
       popular: false
-=======
       description: 'Generate high-quality content for blogs, social media, marketing materials, and more using advanced AI technology.',
       features: ['Blog posts and articles', 'Social media content', 'Marketing copy', 'Product descriptions'],
       price: 'Starting at $29/month',
@@ -131,13 +122,11 @@ export default function AIServicesPage() {
       features: ['Workflow automation', 'Task scheduling', 'Data processing', 'Integration management'],
       price: 'Starting at $79/month',
       link: '/ai-automation'
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
     }
   ];
 
   const benefits = [
     {
-<<<<<<< HEAD
       title: 'Cost Savings',
       description: 'Reduce operational costs by up to 60% through intelligent automation',
       icon: <DollarSign className="w-6 h-6 text-green-500" />
@@ -178,7 +167,6 @@ export default function AIServicesPage() {
       content: 'The predictive analytics dashboard gives us insights we never had before. Game-changing technology.',
       rating: 5
     }
-=======
     }
   ];
 
@@ -187,8 +175,6 @@ export default function AIServicesPage() {
     { number: '99.9%', label: 'Accuracy' },
     { number: '24/7', label: 'Support' },
     { number: '50+', label: 'Languages' }
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
-=======
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
       title: 'Increased Efficiency',
       description: 'Automate repetitive tasks and streamline workflows to boost productivity by up to 300%.'
@@ -231,25 +217,19 @@ export default function AIServicesPage() {
       title: 'Optimization',
       description: 'Continuously monitor and optimize AI performance for maximum ROI.'
     }
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
   ];
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta name="description" content="Discover our comprehensive AI services including content generation, chatbots, analytics, and more. Transform your business with cutting-edge artificial intelligence solutions." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, chatbot, analytics, automation" />
-=======
         <meta name="description" content="Advanced AI services including content generation, automation, cybersecurity, and analytics solutions." />
         <meta name="keywords" content="AI services, artificial intelligence, content generation, automation, cybersecurity, analytics" />
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
       </Helmet>
 
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -275,7 +255,6 @@ export default function AIServicesPage() {
             >
               Explore Services
             </Link>
-=======
       <section className="pt-20 px-4 py-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -284,7 +263,6 @@ export default function AIServicesPage() {
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Harness the power of artificial intelligence to transform your business with our cutting-edge AI solutions.
-=======
         <meta name="description" content="Transform your business with our comprehensive AI services including content generation, chatbots, analytics, and automation solutions." />
       </Helmet>
       
@@ -297,7 +275,6 @@ export default function AIServicesPage() {
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your business with cutting-edge artificial intelligence solutions designed to automate, optimize, and accelerate your operations.
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -307,20 +284,16 @@ export default function AIServicesPage() {
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-<<<<<<< HEAD
               <Link 
                 to="/about" 
-=======
               <Link
                 to="/about"
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
                 Learn More
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
 
           {/* Stats Section */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
@@ -330,16 +303,11 @@ export default function AIServicesPage() {
                 <div className="text-gray-300 text-sm">{stat.label}</div>
               </div>
             ))}
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
           </div>
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
         </div>
       </section>
 
       {/* Services Grid */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -392,7 +360,6 @@ export default function AIServicesPage() {
                   <ArrowRight className="w-4 h-4 inline-block ml-2" />
                 </Link>
               </div>
-=======
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
@@ -424,14 +391,12 @@ export default function AIServicesPage() {
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -482,7 +447,6 @@ export default function AIServicesPage() {
                   <p className="font-semibold text-white">{testimonial.name}</p>
                   <p className="text-gray-400 text-sm">{testimonial.company}</p>
                 </div>
-=======
       <section className="py-12 sm:py-16 lg:py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
@@ -526,7 +490,6 @@ export default function AIServicesPage() {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">{step.title}</h3>
                 <p className="text-gray-600">{step.description}</p>
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
               </div>
             ))}
           </div>
@@ -534,7 +497,6 @@ export default function AIServicesPage() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-12">
@@ -557,7 +519,6 @@ export default function AIServicesPage() {
               >
                 View All Services
               </Link>
-=======
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -628,9 +589,7 @@ export default function AIServicesPage() {
                   Learn More
                 </Link>
               </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
             </div>
-=======
       <section className="py-12 sm:py-16 lg:py-20 px-4 bg-gradient-to-r from-purple-600 to-pink-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
@@ -653,20 +612,13 @@ export default function AIServicesPage() {
             >
               Explore IT Services
             </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
           </div>
         </div>
       </section>
     </div>
   );
-<<<<<<< HEAD
 };
 
-<<<<<<< HEAD
 export default AIServicesPage;
-=======
 export default AIServicesPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
-=======
 }
->>>>>>> cursor/website-audit-and-update-with-deployment-e118

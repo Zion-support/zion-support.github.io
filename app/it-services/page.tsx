@@ -1,21 +1,13 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Cloud, Shield, Code, Database, Smartphone, DollarSign, Clock, Users, Server, Network, Settings } from 'lucide-react';
-=======
 import { CheckCircle, ArrowRight, Server, Shield, Cloud, Database, Network, Settings, Users, Clock, DollarSign } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
-=======
 import { CheckCircle, ArrowRight, Cloud, Shield, Server, Database, Smartphone, Globe, MessageCircle } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 export default function ITServicesPage() {
   const services = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: <Cloud className="w-8 h-8 text-blue-500" />,
       title: 'Cloud Migration',
       description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime and enhanced security.',
@@ -24,29 +16,23 @@ export default function ITServicesPage() {
       link: '/cloud-migration',
       popular: true,
       duration: '2-4 weeks'
-=======
       icon: <Server className="w-8 h-8 text-blue-500" />,
       title: 'Infrastructure Management',
       description: 'Complete IT infrastructure setup, monitoring, and maintenance services.',
       features: ['Server setup & configuration', 'Network monitoring', 'Performance optimization', '24/7 support', 'Disaster recovery'],
       pricing: 'Starting at $299/month',
       category: 'Infrastructure'
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
-=======
       icon: <Cloud className="w-8 h-8 text-blue-500" />,
       title: 'Cloud Migration',
       description: 'Seamlessly migrate your infrastructure to the cloud with our expert cloud migration services.',
       features: ['AWS, Azure, GCP expertise', 'Zero-downtime migration', 'Cost optimization', 'Security compliance'],
       price: 'Starting at $2,500',
       link: '/cloud-migration'
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
     },
     {
       icon: <Shield className="w-8 h-8 text-red-500" />,
       title: 'Cybersecurity Solutions',
-<<<<<<< HEAD
       description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
-<<<<<<< HEAD
       features: ['Security audit', 'Penetration testing', 'Compliance management', '24/7 monitoring'],
       pricing: 'Starting at $1,500/month',
       link: '/cybersecurity-solutions',
@@ -92,7 +78,6 @@ export default function ITServicesPage() {
       link: '/infrastructure-management',
       popular: false,
       duration: 'Ongoing'
-=======
       description: 'Protect your business with comprehensive cybersecurity services and threat monitoring.',
       features: ['24/7 threat monitoring', 'Penetration testing', 'Security audits', 'Incident response'],
       price: 'Starting at $1,500/month',
@@ -129,13 +114,11 @@ export default function ITServicesPage() {
       features: ['Smart contracts', 'DApp development', 'Tokenization', 'Blockchain consulting'],
       price: 'Starting at $10,000',
       link: '/blockchain'
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
     }
   ];
 
   const benefits = [
     {
-<<<<<<< HEAD
       title: 'Cost Efficiency',
       description: 'Reduce IT costs by up to 40% through optimized solutions and automation',
       icon: <DollarSign className="w-6 h-6 text-green-500" />
@@ -178,7 +161,6 @@ export default function ITServicesPage() {
     }
   ];
 
-=======
       features: ['Security audit', 'Penetration testing', 'Compliance management', '24/7 monitoring', 'Incident response'],
       pricing: 'Starting at $499/month',
       category: 'Security'
@@ -245,7 +227,6 @@ export default function ITServicesPage() {
       description: 'Competitive pricing with flexible payment options',
       icon: <DollarSign className="w-6 h-6 text-orange-500" />
     }
-=======
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
       title: 'Scalable Infrastructure',
       description: 'Build robust, scalable IT infrastructure that grows with your business needs.'
@@ -280,26 +261,19 @@ export default function ITServicesPage() {
     { name: 'Redis', category: 'Database' },
     { name: 'Terraform', category: 'Infrastructure' },
     { name: 'Ansible', category: 'Automation' }
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
   ];
 
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>IT Services - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Professional IT services including cloud migration, cybersecurity, DevOps, and infrastructure management. Transform your technology infrastructure with Zion Tech Group." />
         <meta name="keywords" content="IT services, cloud migration, cybersecurity, DevOps, infrastructure management, Zion Tech Group" />
-=======
         <meta name="description" content="Comprehensive IT services including infrastructure management, cybersecurity, cloud solutions, and more." />
         <meta name="keywords" content="IT services, infrastructure, cybersecurity, cloud, database, network, system administration" />
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
       </Helmet>
 
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -325,7 +299,6 @@ export default function ITServicesPage() {
             >
               View Services
             </Link>
-=======
       <section className="pt-20 px-4 py-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -334,7 +307,6 @@ export default function ITServicesPage() {
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Comprehensive IT solutions to keep your business running smoothly and securely. From infrastructure to cybersecurity, we've got you covered.
-=======
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>IT Services - Zion Tech Group</title>
@@ -350,7 +322,6 @@ export default function ITServicesPage() {
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Comprehensive IT solutions to modernize your infrastructure, enhance security, and drive digital transformation.
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -360,13 +331,10 @@ export default function ITServicesPage() {
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-<<<<<<< HEAD
               <Link 
                 to="/about" 
-=======
               <Link
                 to="/about"
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
                 Learn More
@@ -376,7 +344,6 @@ export default function ITServicesPage() {
         </div>
       </section>
 
-<<<<<<< HEAD
           {/* Stats Section */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
             {stats.map((stat, index) => (
@@ -385,7 +352,6 @@ export default function ITServicesPage() {
                 <div className="text-gray-300 text-sm">{stat.label}</div>
               </div>
             ))}
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
           </div>
         </div>
       </section>
@@ -401,7 +367,6 @@ export default function ITServicesPage() {
               Comprehensive IT solutions designed to modernize your infrastructure and drive business growth
             </p>
           </div>
-<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {itServices.map((service, index) => (
@@ -459,7 +424,6 @@ export default function ITServicesPage() {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the benefits of professional IT services tailored to your business needs
-=======
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {itServices.map((service, index) => (
@@ -476,7 +440,6 @@ export default function ITServicesPage() {
                   <div className="text-2xl font-bold text-white mb-2">{service.pricing}</div>
                 </div>
                 <ul className="space-y-2 mb-8">
-=======
       {/* Services Grid */}
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -496,7 +459,6 @@ export default function ITServicesPage() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <ul className="space-y-2 mb-4">
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
@@ -504,7 +466,6 @@ export default function ITServicesPage() {
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
                 <Link 
                   to="/contact"
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
@@ -525,13 +486,11 @@ export default function ITServicesPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our IT Services?</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               We deliver reliable, secure, and scalable IT solutions
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-<<<<<<< HEAD
               <div key={index} className="text-center">
                 <div className="bg-gradient-to-r from-blue-500 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   {benefit.icon}
@@ -539,20 +498,17 @@ export default function ITServicesPage() {
                 <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-300">{benefit.description}</p>
               </div>
-=======
                 <div className="text-blue-600 font-semibold mb-4">{service.price}</div>
                 <div className="flex items-center text-blue-600 group-hover:text-blue-700 transition-colors">
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -580,12 +536,10 @@ export default function ITServicesPage() {
                 </div>
               </div>
             ))}
-=======
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
                 <div className="mb-4 flex justify-center">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
-=======
       {/* Benefits Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -627,17 +581,13 @@ export default function ITServicesPage() {
               <div key={index} className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow text-center">
                 <div className="text-sm font-medium text-gray-900 mb-1">{tech.name}</div>
                 <div className="text-xs text-gray-500">{tech.category}</div>
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
               </div>
             ))}
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl p-12">
@@ -660,7 +610,6 @@ export default function ITServicesPage() {
               >
                 View All Services
               </Link>
-=======
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -683,9 +632,7 @@ export default function ITServicesPage() {
                   Learn More
                 </Link>
               </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
             </div>
-=======
       <section className="py-12 sm:py-16 lg:py-20 px-4 bg-gradient-to-r from-purple-600 to-pink-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
@@ -708,20 +655,13 @@ export default function ITServicesPage() {
             >
               Explore AI Services
             </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
           </div>
         </div>
       </section>
     </div>
   );
-<<<<<<< HEAD
 };
 
-<<<<<<< HEAD
 export default ItServicesPage;
-=======
 export default ItServicesPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
-=======
 }
->>>>>>> cursor/website-audit-and-update-with-deployment-e118

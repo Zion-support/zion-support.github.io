@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-'use client'
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
-import ContactForm from '../components/ContactForm'
-
-const ContactPage: React.FC = () => {
-=======
 import React, { useState } from 'react';
 import { CheckCircle, Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -53,37 +44,28 @@ export default function ContactPage() {
     }, 2000);
   };
 
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6 text-blue-500" />,
       title: 'Email Us',
-<<<<<<< HEAD
       details: 'info@ziontechgroup.com',
-=======
       details: 'contact@ziontechgroup.com',
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
       description: 'Send us an email anytime'
     },
     {
       icon: <Phone className="w-6 h-6 text-green-500" />,
       title: 'Call Us',
       details: '+1 (555) 123-4567',
-<<<<<<< HEAD
       description: 'Mon-Fri from 8am to 6pm'
-=======
       description: 'Mon-Fri from 9am to 6pm'
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
     },
     {
       icon: <MapPin className="w-6 h-6 text-red-500" />,
       title: 'Visit Us',
-<<<<<<< HEAD
       details: 'San Francisco, CA',
       description: 'Come say hello at our office'
     }
   ]
-=======
       details: '123 Tech Street, Innovation City, IC 12345',
       description: 'Come say hello at our office'
     },
@@ -104,13 +86,11 @@ export default function ContactPage() {
     'Digital Transformation',
     'Other'
   ];
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Contact Us - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Get in touch with Zion Tech Group. We're here to help with your AI and IT solutions needs. Contact us today for a consultation." />
         <meta name="keywords" content="contact, Zion Tech Group, AI solutions, IT services, consultation" />
       </Helmet>
@@ -170,7 +150,6 @@ export default function ContactPage() {
                     Custom solutions for your business
                   </li>
                 </ul>
-=======
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, and inquiries." />
       </Helmet>
       
@@ -298,11 +277,9 @@ export default function ContactPage() {
                     <option key={index} value={service}>{service}</option>
                   ))}
                 </select>
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
               </div>
             </div>
 
-<<<<<<< HEAD
             {/* Contact Form */}
             <div>
               <h2 className="text-3xl font-bold text-white mb-8">Send us a Message</h2>
@@ -342,7 +319,6 @@ export default function ContactPage() {
 }
 
 export default ContactPage
-=======
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message *
@@ -427,4 +403,3 @@ export default ContactPage
     </div>
   );
 }
->>>>>>> cursor/website-audit-and-update-with-deployment-e118

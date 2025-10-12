@@ -1,43 +1,25 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
-
-export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
-=======
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
   
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
 
-<<<<<<< HEAD
-  const toggleServices = () => {
-    setIsServicesOpen(!isServicesOpen)
-=======
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
   }
 
   const services = [
     {
       title: 'AI Services',
       href: '/ai-services',
-<<<<<<< HEAD
-      icon: <Zap className="w-4 h-4" />,
-      description: 'AI-powered solutions for your business'
-=======
-      icon: Brain,
+      icon: <Brain className="w-4 h-4" />,
       description: 'Artificial Intelligence Solutions'
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
     },
     {
       title: 'IT Services',
@@ -60,19 +42,14 @@ export default function Navigation() {
     {
       title: '5G Implementation',
       href: '/5g-implementation',
-<<<<<<< HEAD
-      icon: <Globe className="w-4 h-4" />,
-      description: 'Next-generation 5G solutions'
+      icon: <Wifi className="w-4 h-4" />,
+      description: '5G Network Implementation'
     },
     {
       title: 'Digital Transformation',
       href: '/digital-transformation',
       icon: <Code className="w-4 h-4" />,
       description: 'Transform your digital presence'
-    }
-=======
-      icon: Wifi,
-      description: '5G Network Implementation'
     }
   ]
 
@@ -101,7 +78,6 @@ export default function Navigation() {
     { name: 'AI Invoice Generator', path: '/ai-invoice-generator', icon: <Code className="w-4 h-4" /> },
     { name: 'AI Health Tracker', path: '/ai-health-tracker', icon: <Smartphone className="w-4 h-4" /> },
     { name: 'AI Smart Calendar', path: '/ai-smart-calendar', icon: <Globe className="w-4 h-4" /> }
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
   ]
 
   return (
@@ -115,7 +91,6 @@ export default function Navigation() {
           </div>
 
           {/* Desktop Navigation */}
-<<<<<<< HEAD
           <div className="hidden md:flex items-center space-x-8">
             <Link
               to="/"
@@ -127,31 +102,25 @@ export default function Navigation() {
               to="/about"
               className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
             >
-=======
           <div className="hidden md:flex items-center space-x-1">
             <Link to="/" className="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
               Home
             </Link>
             <Link to="/about" className="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
               About
             </Link>
             
             {/* AI Services Dropdown */}
             <div className="relative">
               <button
-<<<<<<< HEAD
                 onClick={toggleServices}
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
-=======
                 onClick={() => toggleDropdown('ai')}
                 className="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
               >
                 AI Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
-<<<<<<< HEAD
               
               {isServicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg z-50">
@@ -175,26 +144,26 @@ export default function Navigation() {
                       ))}
                     </div>
                   </div>
-=======
-              {activeDropdown === 'ai' && (
-                <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                  <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 font-semibold">All AI Services</Link>
-                  {aiServices.map((service, index) => (
-                    <Link key={index} to={service.path} className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">
-                      {service.icon}
-                      <span className="ml-3">{service.name}</span>
-                    </Link>
-                  ))}
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
+                  {activeDropdown === 'ai' && (
+                    <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                      <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 font-semibold">All AI Services</Link>
+                      {aiServices.map((service, index) => (
+                        <Link key={index} to={service.path} className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">
+                          {service.icon}
+                          <span className="ml-3">{service.name}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
 
-<<<<<<< HEAD
             <Link
               to="/contact"
               className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-=======
+            >
+              Contact
+            </Link>
+
             {/* IT Services Dropdown */}
             <div className="relative">
               <button
@@ -250,7 +219,6 @@ export default function Navigation() {
             <Link 
               to="/contact" 
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
             >
               Contact
             </Link>
@@ -260,11 +228,8 @@ export default function Navigation() {
           <div className="md:hidden flex items-center">
             <button
               onClick={toggleMenu}
-<<<<<<< HEAD
               className="text-gray-300 hover:text-white p-2 rounded-md"
-=======
               className="text-gray-900 hover:text-purple-600 p-2 rounded-md transition-colors"
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -274,7 +239,6 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-<<<<<<< HEAD
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 rounded-lg mt-2">
               <Link
                 to="/"
@@ -309,7 +273,6 @@ export default function Navigation() {
                         <p className="font-medium">{service.title}</p>
                         <p className="text-xs text-gray-400">{service.description}</p>
                       </div>
-=======
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
               <Link to="/" className="text-gray-900 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">
                 Home
@@ -326,13 +289,11 @@ export default function Navigation() {
                   {aiServices.slice(0, 4).map((service, index) => (
                     <Link key={index} to={service.path} className="text-gray-600 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>
                       {service.name}
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
                     </Link>
                   ))}
                 </div>
               </div>
 
-<<<<<<< HEAD
               <Link
                 to="/contact"
                 className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
@@ -340,7 +301,6 @@ export default function Navigation() {
               >
                 Contact
               </Link>
-=======
               {/* IT Services Mobile */}
               <div className="px-3 py-2">
                 <div className="text-gray-900 font-medium mb-2">IT Services</div>
@@ -381,7 +341,6 @@ export default function Navigation() {
               >
                 Get Started
               </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
             </div>
           </div>
         )}
