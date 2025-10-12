@@ -13,8 +13,7 @@ const ThemeToggle: React.FC = () => {
     } else {
       setIsDark(true);
       document.documentElement.classList.add('dark');
-    }
-  }, []);
+    } }, []);
 
   const toggleTheme = () => {
     const newTheme = !isDark;
@@ -26,20 +25,17 @@ const ThemeToggle: React.FC = () => {
     } else {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
-    }
-  };
+    } };
 
   return (
     <button;
-      const onClick = {toggleTheme}
-      className="p-2rou nded-lg bg-slate-700/50 hover:bg-slate-700 text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+      const onClick = {toggleTheme} className="p-2rou nded-lg bg-slate-700/50 hover:bg-slate-700 text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
       aria-label="{`Switch" to ${isDark ? 'light' : 'dark'} mode`}
      /></button>
       {isDark ? (
         <Sun className="w-5h-5ml-2" /></Sun>
       ) : (
         <Moon className="w-5h-5ml-2" /></Moon>
-      )}
-    </button>
+      )}  </button>
   );
 };

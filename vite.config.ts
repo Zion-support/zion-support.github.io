@@ -9,8 +9,7 @@ export default defineConfig({
       // Enable React Fast Refresh;
       fastRefresh: true,
       // Enable JSX runtime;
-      jsxRuntime: 'automatic',
-    })
+      jsxRuntime: 'automatic'} )
   ],
   resolve: {
     alias: {
@@ -22,9 +21,7 @@ export default defineConfig({
       '@/hooks': resolve(__dirname, './hooks'),
       '@/config': resolve(__dirname, './config'),
       '@/data': resolve(__dirname, './data'),
-      '@/content': resolve(__dirname, './content'),
-    },
-  },
+      '@/content': resolve(__dirname, './content')} },
   build: {
     outDir: 'dist',
     sourcemap: false,
@@ -38,79 +35,61 @@ export default defineConfig({
           // Core React libraries;
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
-          }
-          // Router;
+          } // Router;
           if (id.includes('react-router')) {
             return 'router'
-          }
-          // UI libraries;
+          } // UI libraries;
           if (id.includes('framer-motion')) {
             return 'animations'
-          }
-          if (id.includes('lucide-react')) {
+          } if (id.includes('lucide-react')) {
             return 'icons'
-          }
-          // SEO and meta;
+          } // SEO and meta;
           if (id.includes('react-helmet')) {
             return 'seo'
-          }
-          // Charts and data visualization;
+          } // Charts and data visualization;
           if (id.includes('recharts')) {
             return 'charts'
-          }
-          // Utility libraries;
+          } // Utility libraries;
           if (id.includes('clsx') || id.includes('tailwind-merge')) {
             return 'utils'
-          }
-          // Performance monitoring;
+          } // Performance monitoring;
           if (id.includes('web-vitals')) {
             return 'performance'
-          }
-          // AI service pages;
+          } // AI service pages;
           if (id.includes('/app/ai-') && id.includes('/page.tsx')) {
             return 'ai-pages'
-          }
-          // IT service pages;
+          } // IT service pages;
           if (id.includes('/app/') && (id.includes('cloud-') || id.includes('cybersecurity-') || id.includes('web-development') || id.includes('mobile-development')) && id.includes('/page.tsx')) {
             return 'it-pages'
-          }
-          // Micro SAAS pages;
+          } // Micro SAAS pages;
           if (id.includes('/app/zion-') && id.includes('/page.tsx')) {
             return 'saas-pages'
-          }
-          // Other pages;
+          } // Other pages;
           if (id.includes('/app/') && id.includes('/page.tsx')) {
             return 'pages'
-          }
-          // Default chunk for other modules;
+          } // Default chunk for other modules;
           return 'vendor'
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]',
-      },
-    },
+        assetFileNames: 'assets/[name]-[hash].[ext]'}},
     // Optimize bundle size;
     chunkSizeWarningLimit: 1000,
     // Enable tree shaking;
     treeshake: true,
     // Enable compression;
-    reportCompressedSize: true,
-  },
+    reportCompressedSize: true},
   server: {
     port: 3000,
     open: true,
     host: true,
     // Enable HMR;
     hmr: {
-      overlay: true,
-    },
-  },
+      overlay: true} },
   preview: {
     port: 4173,
     open: true,
-    host: true,
-  },
+    host: true} ,
   // Optimize dependencies;
   optimizeDeps: {
     include: [
@@ -120,10 +99,7 @@ export default defineConfig({
       'react-helmet-async',
       'framer-motion',
       'lucide-react',
-    ],
-  },
+    ]} ,
   // CSS optimization;
   css: {
-    devSourcemap: true,
-  },
-})
+    devSourcemap: true} })

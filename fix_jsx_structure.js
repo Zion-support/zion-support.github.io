@@ -5,13 +5,13 @@ import path from 'path';
 // Function to fix JSX structure issues;
 function fixJSXStructure(content) {
   // Fix the specific pattern where div has className="$2" and is self-closing;
-  content = content.replace(/<div className="\$2" \/>/g, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">');
+  content = content.replace(/<div className="\$2" \/>/g, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di>');
   
   // Fix the pattern where Helmet is self-closing;
-  content = content.replace(/<Helmet \/>/g, '<Helmet>');
+  content = content.replace(/<Helmet \/>/g, '<Helmet></Helme>');
   
   // Fix the pattern where div has className="$2" and is self-closing (for, inner, div)
-  content = content.replace(/<div className="\$2" \/>/g, '<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">');
+  content = content.replace(/<div className="\$2" \/>/g, '<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></di>');
   
   // Fix malformed className attributes with spaces;
   content = content.replace(/className="t e xt-4xl/g, 'className="text-4xl');
@@ -26,20 +26,20 @@ function fixJSXStructure(content) {
   content = content.replace(/<\/div>/g, '</div>');
   
   // Fix the specific structure issue where we have:
-  // <div></div>
-  //   <Helmet></Helmet>
+  // <div></di></div>
+  //   <Helmet></Helme></Helmet>
   //     ...
   //   </Helmet>
-  //   <div></div>
+  //   <div></di></div>
   //     ...
   //   </div>
   // </div>
   // This should be:
-  // <div></div>
-  //   <Helmet></Helmet>
+  // <div></di></div>
+  //   <Helmet></Helme></Helmet>
   //     ...
   //   </Helmet>
-  //   <div></div>
+  //   <div></di></div>
   //     ...
   //   </div>
   // </div>
@@ -53,11 +53,11 @@ function processFile(filePath) {
     
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed JSX structure: ${filePath}`);
+      console.log(`Fixed JSX structure: ${filePath} `);
       return true;
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath} :`, error.message);
     return false;
 
 // Function to recursively find and process TSX files;

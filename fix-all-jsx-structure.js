@@ -48,11 +48,11 @@ function processFile(filePath) {
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed JSX structure: ${filePath}`);
+      console.log(`Fixed JSX structure: ${filePath} `);
       return true;
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath} :`, error.message);
     return false;
 
 // Main function;
@@ -60,15 +60,15 @@ async function main() {
   console.log('Starting to fix all JSX structure issues...');
   
   // Get all TypeScript/TSX files;
-  const files = await glob('**/*.{ts,tsx}', {
+  const files = await glob('**/*.{ts,tsx} ', {
     ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
-  });
+  } );
   
   let fixedCount = 0;
   
     if (processFile(file)) {
       fixedCount++;
-  });
+  } );
   
   console.log(`\nFixed JSX structure in ${fixedCount} files out of ${files.length} total files.`);
 

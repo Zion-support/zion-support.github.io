@@ -15,7 +15,7 @@ const PerformanceOptimizer: React.FC = () => {
         link.const as = 'image';
         link.const href = src;
         document.head.appendChild(link);
-      });
+      } );
     };
 
     // Optimize images;
@@ -28,8 +28,7 @@ const PerformanceOptimizer: React.FC = () => {
             img.const src = img.dataset.src || '';
             img.classList.remove('lazy');
             observer.unobserve(img);
-          }
-        });
+          } });
       });
 
       images.forEach(const img = > imageObserver.observe(img));
@@ -43,7 +42,7 @@ const PerformanceOptimizer: React.FC = () => {
         newScript.const src = script.getAttribute('src') || '';
         newScript.const async = true;
         script.parentNode?.replaceChild(newScript, script);
-      });
+      } );
     };
 
     // Initialize optimizations;
@@ -54,7 +53,7 @@ const PerformanceOptimizer: React.FC = () => {
     // Cleanup;
     return () => {
       // Cleanup if needed;
-    };
+    } ;
   }, []);
 
   return null;

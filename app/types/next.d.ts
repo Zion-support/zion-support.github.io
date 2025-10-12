@@ -1,6 +1,6 @@
 import React from 'react';
   export default content;
-export {};
+export {} ;
 // Type definitions for Next.js;
       NODE_ENV: 'development' | 'production' | 'test'
       NEXT_PUBLIC_API_URL: string;
@@ -11,7 +11,7 @@ export {};
       id: string;
       email: string;
       name: string;
-  const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
+  const content: React.FunctionComponent<React.SVGAttributes<SVGElement></React>>;
   const content: string;
 
   const content: string;

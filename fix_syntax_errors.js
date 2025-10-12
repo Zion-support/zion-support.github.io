@@ -10,7 +10,7 @@ function fixSyntaxErrors(content) {
   // Fix malformed JSX elements with missing spaces in className;
     // Add space between concatenated class names;
     return prefix + char1 + ' ' + char2;
-  });
+  } );
   
   // Fix malformed JSX closing tags;
 ');
@@ -22,7 +22,7 @@ function fixSyntaxErrors(content) {
   content = content.replace(/<([a-zA-Z][a-zA-Z0-9]*)\s+className="[^"]*"\s*\/\s*>/g, '<$1 className="$2" />');
   
   // Fix specific patterns found in the files;
-    return `className="${prefix}${char1} ${char2}`;
+    return `className="${prefix} ${char1} ${char2} `;
   });
   
   // Fix specific malformed patterns;
@@ -63,11 +63,11 @@ function processFile(filePath) {
     
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed: ${filePath} `);
       return true;
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath} :`, error.message);
     return false;
 
 // Function to recursively find and process TSX files;

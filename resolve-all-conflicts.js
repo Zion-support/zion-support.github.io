@@ -14,8 +14,8 @@ console.log('🔧 Resolving all merge conflicts...')
     
     // Write the resolved content;
     writeFileSync(filePath, resolvedLines.join('\n'))
-    console.log(`✅ Resolved conflicts in ${filePath}`)
-    console.log(`❌ Error resolving ${filePath}: ${error.message}`)
+    console.log(`✅ Resolved conflicts in ${filePath} `)
+    console.log(`❌ Error resolving ${filePath} : ${error.message} `)
     return false}
 
   // Get list of files with conflicts;

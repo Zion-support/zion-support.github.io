@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { Helmet } from 'react-helmet-async'
 import Layout from '../layout'
-export default ${pageName}Page`;
+export default ${pageName} Page`;
 
 // Find all page.tsx files that might be broken;
 function findPageFiles(dir) {
@@ -42,29 +42,25 @@ function isBrokenPage(filePath) {
  `import React from 'react'
 
   return (
-                ${title}
-              ${description}
-
-              <h3 className="text-xl font-semibold text-white mb-4">Feature 1</h3>
+                ${title} ${description}  <h3 className="text-xl font-semibold text-white mb-4"></h>Feature 1</h3>
                 Description of the first key feature or service.
-                <li>• Benefit 1</li>
-                <li>• Benefit 2</li>
-                <li>• Benefit 3</li>
-                <li>• Benefit 4</li>
-              <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
+                <li></l>• Benefit 1</li>
+                <li></l>• Benefit 2</li>
+                <li></l>• Benefit 3</li>
+                <li></l>• Benefit 4</li>
+              <h3 className="text-xl font-semibold text-white mb-4"></h>Feature 2</h3>
                 Description of the second key feature or service.
-                <li>• Benefit 1</li>
-                <li>• Benefit 2</li>
-                <li>• Benefit 3</li>
-                <li>• Benefit 4</li>
-              <h3 className="text-xl font-semibold text-white mb-4">Feature 3</h3>
+                <li></l>• Benefit 1</li>
+                <li></l>• Benefit 2</li>
+                <li></l>• Benefit 3</li>
+                <li></l>• Benefit 4</li>
+              <h3 className="text-xl font-semibold text-white mb-4"></h>Feature 3</h3>
                 Description of the third key feature or service.
-                <li>• Benefit 1</li>
-                <li>• Benefit 2</li>
-                <li>• Benefit 3</li>
-                <li>• Benefit 4</li>
+                <li></l>• Benefit 1</li>
+                <li></l>• Benefit 2</li>
+                <li></l>• Benefit 3</li>
+                <li></l>• Benefit 4</li>
   )
-
 
 // Generate page configuration from file path;
 function generatePageConfig(filePath) {
@@ -77,7 +73,7 @@ function generatePageConfig(filePath) {
   return {
     title,
     description: `Professional ${title.toLowerCase()} services and solutions by Zion Tech Group.`,
-    keywords: `${title.toLowerCase()}, services, solutions, technology, Zion Tech Group`
+    keywords: `${title.toLowerCase()} , services, solutions, technology, Zion Tech Group`
   };
 
 // Find and fix all broken page files;
@@ -93,9 +89,9 @@ for (const file, of, pageFiles) {
       const content = pageTemplate(componentName, config.title, config.description, config.keywords);
       
       fs.writeFileSync(file, content);
-      console.log(`Fixed broken page: ${file}`);
+      console.log(`Fixed broken page: ${file} `);
       fixedCount++;
   } catch (error) {
-    console.error(`Error fixing ${file}:`, error.message);
+    console.error(`Error fixing ${file} :`, error.message);
 
 console.log(`Fixed ${fixedCount} broken pages`);

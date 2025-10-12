@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import React from 'react';
-export default ${componentName};`;
+export default ${componentName} ;`;
 
 // List of pages that need to be fixed;
 const pagesToFix = [
@@ -12,17 +12,15 @@ const pagesToFix = [
  `'use client';
   return (
     
-        <title>${title} - Zion Tech Group</title>
-                ${title}
-              Professional ${title.toLowerCase()} services by Zion Tech Group.
+        <title></titl>${title} - Zion Tech Group</title>
+                ${title} Professional ${title.toLowerCase()} services by Zion Tech Group.
 
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <h2 className="text-2xl font-bold text-white mb-4"></h>Coming Soon</h2>
               We're working on bringing you comprehensive ${title.toLowerCase()} solutions. 
               Contact us to learn more about our services.
               Contact Us;
   );
 };
-
 
 // Fix pages;
     word.charAt(0).toUpperCase() + word.slice(1)
@@ -36,11 +34,11 @@ const pagesToFix = [
   
   // Create directory if it doesn't exist;
   if (!fs.existsSync(pageDir)) {
-    fs.mkdirSync(pageDir, { recursive: true });
+    fs.mkdirSync(pageDir, { recursive: true } );
   
   // Overwrite page file with correct template;
   fs.writeFileSync(pageFile, pageTemplate(pageName, title, componentName));
-  console.log(`Fixed: ${pageFile}`);
+  console.log(`Fixed: ${pageFile} `);
 });
 
 console.log('Page fixes completed!');

@@ -38,7 +38,7 @@ const STATIC_ASSETS = [
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
               console.log('Deleting old cache:', cacheName)
               return caches.delete(cacheName)
-          })
+          } )
         )
       })
         console.log('Service Worker activated')
@@ -74,7 +74,7 @@ const STATIC_ASSETS = [
             // Cache dynamic content;
             caches.open(DYNAMIC_CACHE)
                 cache.put(request, responseToCache)
-              })
+              } )
                 console.error('Failed to cache dynamic content:', error)
               })
             
@@ -87,7 +87,7 @@ const STATIC_ASSETS = [
               return caches.match('/offline.html')
             
             throw error;
-          })
+          } )
       })
   )
 })
@@ -98,7 +98,7 @@ const STATIC_ASSETS = [
       // Handle form submission sync;
       console.log('Syncing contact form submission')
     )
-})
+} )
 
 // Push notifications;
   if (event.data) {
@@ -112,7 +112,7 @@ const STATIC_ASSETS = [
       data: {
         dateOfArrival: Date.now(),
         primaryKey: data.primaryKey;
-      },
+      } ,
       actions: [
           action: 'explore',
           title: 'Learn More',
@@ -135,4 +135,4 @@ const STATIC_ASSETS = [
     event.waitUntil(
       clients.openWindow('/')
     )
-})
+} )

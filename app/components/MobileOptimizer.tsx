@@ -10,7 +10,7 @@ export default MobileOptimizer;
       const buttons = document.querySelectorAll('button, a, [role="button"]')
         if (!button.classList.contains('touch-manipulation')) {
           button.classList.add('touch-manipulation')
-      })
+      } )
 
     // Optimize images for mobile;
       const images = document.querySelectorAll('img')
@@ -19,7 +19,7 @@ export default MobileOptimizer;
           imageElement.loading = 'lazy'
         if (!imageElement.decoding) {
           imageElement.decoding = 'async'
-      })
+      } )
 
     // Add mobile-specific event listeners;
       // Prevent double-tap zoom;
@@ -33,7 +33,7 @@ export default MobileOptimizer;
       // Add haptic feedback for supported devices;
           if ('vibrate' in navigator) {
             navigator.vibrate(10) // Short vibration;
-        })
+        } )
 
       const interactiveElements = document.querySelectorAll('button, a, [role="button"]')
       interactiveElements.forEach(addHapticFeedback)
@@ -45,7 +45,7 @@ export default MobileOptimizer;
         if (!ticking) {
           requestAnimationFrame(updateScrollPosition)
           ticking = true;
-      window.addEventListener('scroll', requestTick, { passive: true })
+      window.addEventListener('scroll', requestTick, { passive: true } )
 
     // Initialize mobile optimizations;
     preventZoom()
@@ -55,8 +55,8 @@ export default MobileOptimizer;
     optimizeScrollPerformance()
 
     // Cleanup;
- {})
- {})
+ {} )
+ {} )
   }, [])
 
   return null;

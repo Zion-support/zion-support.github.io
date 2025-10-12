@@ -1,121 +1,121 @@
 #!/usr/bin/env python3
+"""
+Fix page files with malformed JSX syntax.
+"""
+
 import os
 import re
 import glob
 
 def fix_page_file(file_path):
-    """Fix common page file issues"""
+    """Fix a single page file with proper JSX syntax."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Check if file needs fixing
-        if 'export default function' in content or 'export default' in content:
-            return False
+        original_content = content
         
-        # Pattern 1: Missing function declaration
-        if content.strip().startswith('import') and '];' in content and '<div className="min-h-screen' in content:
-            # Extract the page name from the path
-            page_name = os.path.basename(os.path.dirname(file_path)).replace('-', ' ').title()
-            
-            # Find where the imports end and the content begins
-            lines = content.split('\n')
-            import_end = 0
-            content_start = 0
-            
-            for i, line in enumerate(lines):
-                if line.strip().startswith('import'):
-                    import_end = i
-                elif line.strip() == '];' and content_start == 0:
-                    content_start = i + 1
-                    break
-            
-            if content_start > 0:
-                # Reconstruct the file
-                imports = '\n'.join(lines[:import_end + 1])
-                content_part = '\n'.join(lines[content_start:])
-                
-                # Create a proper function
-                function_name = page_name.replace(' ', '') + 'Page'
-                
-                new_content = f"""{imports}
-
-export default function {function_name}() {{
-  return (
-{content_part}
-  );
-}}"""
-                
-                with open(file_path, 'w', encoding='utf-8') as f:
-                    f.write(new_content)
-                
-                print(f"Fixed page file: {file_path}")
-                return True
+        # Fix common JSX issues
+        # Fix malformed closing tags like </d></di></div>
+        content = re.sub(r'</d></di></div>', '</div>', content)
+        content = re.sub(r'</foot></foote>', '</footer>', content)
+        content = re.sub(r'</h></h1>', '</h1>', content)
+        content = re.sub(r'</Li></Lin>', '</Link>', content)
+        content = re.sub(r'</sp></spa>', '</span>', content)
+        content = re.sub(r'</Rou></Rout>', '</Route>', content)
+        content = re.sub(r'</Suspen></Suspens>', '</Suspense>', content)
+        content = re.sub(r'</HelmetProvid></HelmetProvide>', '</HelmetProvider>', content)
+        content = re.sub(r'</ErrorBoundar>', '</ErrorBoundary>', content)
         
-        # Pattern 2: Completely malformed files
-        if content.strip() in ['ursor/website-audit-and-update-with-deployment-a178', '']:
-            page_name = os.path.basename(os.path.dirname(file_path)).replace('-', ' ').title()
-            function_name = page_name.replace(' ', '') + 'Page'
-            
-            new_content = f"""import React from 'react';
-import {{ Helmet }} from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-export default function {function_name}() {{
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>{page_name} - Zion Tech Group</title>
-        <meta name="description" content="Professional {page_name.lower()} services and solutions." />
-        <meta name="keywords" content="{page_name.lower()}, services, solutions, technology" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-              {page_name}
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional {page_name.lower()} services and solutions for your business.
-            </p>
-          </div>
-        </div>
-      </main>
-      
-      <Footer />
-    </div>
-  );
-}}"""
-            
+        # Fix malformed opening tags
+        content = re.sub(r'<d></d></di>', '<div>', content)
+        content = re.sub(r'<foot></foote>', '<footer>', content)
+        content = re.sub(r'<h></h1>', '<h1>', content)
+        content = re.sub(r'<Li></Lin>', '<Link>', content)
+        content = re.sub(r'<sp></spa>', '<span>', content)
+        content = re.sub(r'<Rou></Rout>', '<Route>', content)
+        content = re.sub(r'<Suspen></Suspens>', '<Suspense>', content)
+        content = re.sub(r'<HelmetProvid></HelmetProvide>', '<HelmetProvider>', content)
+        content = re.sub(r'<ErrorBoundar>', '<ErrorBoundary>', content)
+        
+        # Fix malformed JSX attributes
+        content = re.sub(r'className="([^"]*?)"></d></di>', r'className="\1">', content)
+        content = re.sub(r'className="([^"]*?)"></foot></foote>', r'className="\1">', content)
+        content = re.sub(r'className="([^"]*?)"></h></h1>', r'className="\1">', content)
+        
+        # Fix broken JSX expressions
+        content = re.sub(r'<([^>]+) /&gt;}', r'<\1 />', content)
+        content = re.sub(r'<([^>]+) /&gt;}', r'<\1 />', content)
+        
+        # Fix missing closing tags for common elements
+        content = re.sub(r'<div([^>]*)>(?!.*</div>)', r'<div\1></div>', content, flags=re.DOTALL)
+        content = re.sub(r'<h1([^>]*)>(?!.*</h1>)', r'<h1\1></h1>', content, flags=re.DOTALL)
+        content = re.sub(r'<h2([^>]*)>(?!.*</h2>)', r'<h2\1></h2>', content, flags=re.DOTALL)
+        content = re.sub(r'<h3([^>]*)>(?!.*</h3>)', r'<h3\1></h3>', content, flags=re.DOTALL)
+        content = re.sub(r'<p([^>]*)>(?!.*</p>)', r'<p\1></p>', content, flags=re.DOTALL)
+        content = re.sub(r'<span([^>]*)>(?!.*</span>)', r'<span\1></span>', content, flags=re.DOTALL)
+        content = re.sub(r'<Link([^>]*)>(?!.*</Link>)', r'<Link\1></Link>', content, flags=re.DOTALL)
+        
+        # Fix broken Helmet tags
+        content = re.sub(r'<Helmet([^>]*)>(?!.*</Helmet>)', r'<Helmet\1></Helmet>', content, flags=re.DOTALL)
+        content = re.sub(r'<title([^>]*)>(?!.*</title>)', r'<title\1></title>', content, flags=re.DOTALL)
+        
+        # Fix malformed function declarations
+        content = re.sub(r'export default ([^;]+);\s*$', r'export default \1;', content, flags=re.MULTILINE)
+        
+        # Fix broken JSX structure - wrap multiple root elements in fragments
+        lines = content.split('\n')
+        in_jsx = False
+        jsx_start = 0
+        jsx_lines = []
+        
+        for i, line in enumerate(lines):
+            if 'return (' in line:
+                in_jsx = True
+                jsx_start = i
+                jsx_lines = [line]
+            elif in_jsx:
+                jsx_lines.append(line)
+                if line.strip() == ');' or line.strip() == '};':
+                    # Check if we have multiple root elements
+                    jsx_content = '\n'.join(jsx_lines)
+                    if jsx_content.count('<') > jsx_content.count('</') + 1:
+                        # Wrap in fragment
+                        jsx_content = jsx_content.replace('return (', 'return (\n    <>')
+                        jsx_content = jsx_content.replace(');', '\n    </>\n  );')
+                        lines[jsx_start:i+1] = jsx_content.split('\n')
+                    in_jsx = False
+        
+        content = '\n'.join(lines)
+        
+        # Clean up any remaining malformed tags
+        content = re.sub(r'<([a-zA-Z][a-zA-Z0-9]*)([^>]*?)></\1>', r'<\1\2 />', content)
+        
+        if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(new_content)
-            
-            print(f"Created new page file: {file_path}")
+                f.write(content)
             return True
         
         return False
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    # Find all page files
-    patterns = [
-        'app/**/page.tsx',
-        'app/**/page.ts'
-    ]
+    """Fix all page files."""
+    # Get all page files
+    page_files = glob.glob('app/**/page.tsx', recursive=True)
+    page_files.extend(glob.glob('app/**/page.ts', recursive=True))
     
-    files_fixed = 0
-    for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            if fix_page_file(file_path):
-                files_fixed += 1
+    print(f"Found {len(page_files)} page files to process")
     
-    print(f"\nFixed {files_fixed} page files")
+    fixed_count = 0
+    for file_path in page_files:
+        if fix_page_file(file_path):
+            fixed_count += 1
+            print(f"Fixed: {file_path}")
+    
+    print(f"Successfully fixed {fixed_count} page files")
 
 if __name__ == "__main__":
     main()

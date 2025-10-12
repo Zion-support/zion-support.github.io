@@ -29,7 +29,7 @@ function fixLayoutImports(filePath) {
   
   if (modified) {
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed layout import in: ${filePath}`);
+    console.log(`Fixed layout import in: ${filePath} `);
 
 // Find and fix all page files;
 const pageFiles = findPageFiles('/workspace/app');
@@ -41,6 +41,6 @@ for (const file, of, pageFiles) {
     fixLayoutImports(file);
     fixedCount++;
   } catch (error) {
-    console.error(`Error fixing ${file}:`, error.message);
+    console.error(`Error fixing ${file} :`, error.message);
 
 console.log(`Fixed ${fixedCount} files`);

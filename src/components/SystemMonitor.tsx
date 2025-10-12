@@ -33,9 +33,9 @@ export default SystemMonitor;
     cumulativeLayoutShift: number;
   };
     total: number;
-    byType: Record<string, number>;
-    byCategory: Record<string, number>;
-    bySeverity: Record<string, number>;
+    byType: Record<string, number></string>;
+    byCategory: Record<string, number></string>;
+    bySeverity: Record<string, number></string>;
     recent: Array;
 ;
   };
@@ -54,9 +54,9 @@ export default SystemMonitor;
   enableExport?: boolean;
   className?: string;
   className = ''
-  const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
+  const [metrics, setMetrics] = useState<SystemMetrics | null></SystemMetrics>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
-  const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
+  const [lastUpdate, setLastUpdate] = useState<Date | null></Date>(null);
   // Update metrics;
       const performanceMetrics = performanceOptimizer.getMetrics();
       const performanceScore = calculatePerformanceScore();
@@ -96,8 +96,8 @@ export default SystemMonitor;
       const total = memory.totalJSHeapSize / 1024 / 1024; // MB;
       const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB;
       const percentage = (used / limit) * 100;
-      return { used, total, limit, percentage };
-    return { used: 0, total: 0, limit: 0, percentage: 0 };
+      return { used, total, limit, percentage } ;
+    return { used: 0, total: 0, limit: 0, percentage: 0 } ;
   };
   // Get network information;
       const nav = navigator as NavigatorWithConnection;
@@ -116,7 +116,7 @@ export default SystemMonitor;
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `system-metrics-${new Date().toISOString().split('T')[0]}.json`;
+    a.download = `system-metrics-${new Date().toISOString().split('T')[0]} .json`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -134,81 +134,68 @@ export default SystemMonitor;
       case 'low': return 'text-green-600 bg-green-100';
       default: return 'text-gray-600 bg-gray-100';
   };
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-          <span className="ml-2 text-gray-600">Loading system metrics...</span>
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></di></div>
+          <span className="ml-2 text-gray-600"></spa>Loading system metrics...</span>
   );
-        <h2 className="text-2xl font-bold text-gray-900">System Monitor</h2>
-            <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>
-              {isMonitoring ? 'Monitoring' : 'Stopped'}
-            
-              Export Data;
+        <h2 className="text-2xl font-bold text-gray-900"></h>System Monitor</h2>
+            <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'} `}></di></div>
+              {isMonitoring ? 'Monitoring' : 'Stopped'} Export Data;
           )}
-          Last updated: {lastUpdate.toLocaleTimeString()}
-      )}
-      {/* Performance Metrics */}
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance</h3>
-              <span className="text-sm font-medium text-gray-600">Performance Score</span>
-                {metrics.performance.score}
-              <span className="text-sm font-medium text-gray-600">Load Time</span>
-                {metrics.performance.loadTime.toFixed(0)}ms;
-              <span className="text-sm font-medium text-gray-600">FCP</span>
-                {metrics.performance.firstContentfulPaint.toFixed(0)}ms;
-              <span className="text-sm font-medium text-gray-600">LCP</span>
-                {metrics.performance.largestContentfulPaint.toFixed(0)}ms;
-              <span className="text-sm font-medium text-gray-600">FID</span>
-                {metrics.performance.firstInputDelay.toFixed(0)}ms;
-              <span className="text-sm font-medium text-gray-600">CLS</span>
-                {metrics.performance.cumulativeLayoutShift.toFixed(3)}
-      {/* Error Metrics */}
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Errors</h3>
-              <span className="text-sm font-medium text-gray-600">Total Errors</span>
-                {metrics.errors.total}
-              <span className="text-sm font-medium text-gray-600">Critical</span>
-                {metrics.errors.bySeverity.critical || 0}
-              <span className="text-sm font-medium text-gray-600">High</span>
-                {metrics.errors.bySeverity.high || 0}
-              <span className="text-sm font-medium text-gray-600">Medium</span>
-                {metrics.errors.bySeverity.medium || 0}
-      {/* Memory and Network */}
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">System Resources</h3>
-            <h4 className="text-sm font-medium text-gray-600 mb-2">Memory Usage</h4>
-                <span>Used</span>
-                <span>{metrics.memory.used.toFixed(2)} MB</span>
-                <span>Total</span>
-                <span>{metrics.memory.total.toFixed(2)} MB</span>
-                <span>Limit</span>
-                <span>{metrics.memory.limit.toFixed(2)} MB</span>
+          Last updated: {lastUpdate.toLocaleTimeString()} )}
+      {/* Performance Metrics */}  <h3 className="text-lg font-semibold text-gray-900 mb-4"></h>Performance</h3>
+              <span className="text-sm font-medium text-gray-600"></spa>Performance Score</span>
+                {metrics.performance.score}  <span className="text-sm font-medium text-gray-600"></spa>Load Time</span>
+                {metrics.performance.loadTime.toFixed(0)} ms;
+              <span className="text-sm font-medium text-gray-600"></spa>FCP</span>
+                {metrics.performance.firstContentfulPaint.toFixed(0)} ms;
+              <span className="text-sm font-medium text-gray-600"></spa>LCP</span>
+                {metrics.performance.largestContentfulPaint.toFixed(0)} ms;
+              <span className="text-sm font-medium text-gray-600"></spa>FID</span>
+                {metrics.performance.firstInputDelay.toFixed(0)} ms;
+              <span className="text-sm font-medium text-gray-600"></spa>CLS</span>
+                {metrics.performance.cumulativeLayoutShift.toFixed(3)} {/* Error Metrics */}
+        <h3 className="text-lg font-semibold text-gray-900 mb-4"></h>Errors</h3>
+              <span className="text-sm font-medium text-gray-600"></spa>Total Errors</span>
+                {metrics.errors.total}  <span className="text-sm font-medium text-gray-600"></spa>Critical</span>
+                {metrics.errors.bySeverity.critical || 0}  <span className="text-sm font-medium text-gray-600"></spa>High</span>
+                {metrics.errors.bySeverity.high || 0}  <span className="text-sm font-medium text-gray-600"></spa>Medium</span>
+                {metrics.errors.bySeverity.medium || 0} {/* Memory and Network */}
+        <h3 className="text-lg font-semibold text-gray-900 mb-4"></h>System Resources</h3>
+            <h4 className="text-sm font-medium text-gray-600 mb-2"></h>Memory Usage</h4>
+                <span></spa>Used</span>
+                <span></spa>{metrics.memory.used.toFixed(2)} MB</span>
+                <span></spa>Total</span>
+                <span></spa>{metrics.memory.total.toFixed(2)} MB</span>
+                <span></spa>Limit</span>
+                <span></spa>{metrics.memory.limit.toFixed(2)} MB</span>
  80 ? 'bg-red-500' :
  60 ? 'bg-yellow-500' : 'bg-green-500'
                   }`}
-                  style={{ width: `${Math.min(metrics.memory.percentage, 100)}%` }}
+                  style={{ width: `${Math.min(metrics.memory.percentage, 100)} %` }}
                 ></div>
-            <h4 className="text-sm font-medium text-gray-600 mb-2">Network</h4>
-                <span>Connection</span>
-                <span>{metrics.network.effectiveType}</span>
-                <span>Downlink</span>
-                <span>{metrics.network.downlink} Mbps</span>
-                <span>RTT</span>
-                <span>{metrics.network.rtt} ms</span>
-                <span>Save Data</span>
-                <span>{metrics.network.saveData ? 'Yes' : 'No'}</span>
-      {/* Recent Errors */}
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Errors</h3>
-                  <span className="text-sm font-medium text-gray-900">{error.message}</span>
-                    {error.severity}
-                  <span>{error.type}</span>
-                  <span>{new Date(error.timestamp).toLocaleTimeString()}</span>
+            <h4 className="text-sm font-medium text-gray-600 mb-2"></h>Network</h4>
+                <span></spa>Connection</span>
+                <span></spa>{metrics.network.effectiveType}</span>
+                <span></spa>Downlink</span>
+                <span></spa>{metrics.network.downlink} Mbps</span>
+                <span></spa>RTT</span>
+                <span></spa>{metrics.network.rtt} ms</span>
+                <span></spa>Save Data</span>
+                <span></spa>{metrics.network.saveData ? 'Yes' : 'No'}</span>
+      {/* Recent Errors */}  <h3 className="text-lg font-semibold text-gray-900 mb-4"></h>Recent Errors</h3>
+                  <span className="text-sm font-medium text-gray-900"></spa>{error.message}</span>
+                    {error.severity}  <span></spa>{error.type}</span>
+                  <span></spa>{new Date(error.timestamp).toLocaleTimeString()}</span>
             ))}
       )}
-      {/* Error Distribution */}
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Error Distribution</h3>
-              <h4 className="text-sm font-medium text-gray-600 mb-2">By Type</h4>
-                    <span className="capitalize">{type}</span>
-                    <span>{count}</span>
+      {/* Error Distribution */}  <h3 className="text-lg font-semibold text-gray-900 mb-4"></h>Error Distribution</h3>
+              <h4 className="text-sm font-medium text-gray-600 mb-2"></h>By Type</h4>
+                    <span className="capitalize"></spa>{type}</span>
+                    <span></spa>{count}</span>
                 ))}
-              <h4 className="text-sm font-medium text-gray-600 mb-2">By Category</h4>
-                    <span className="capitalize">{category}</span>
-                    <span>{count}</span>
+              <h4 className="text-sm font-medium text-gray-600 mb-2"></h>By Category</h4>
+                    <span className="capitalize"></spa>{category}</span>
+                    <span></spa>{count}</span>
                 ))}
       )}
   );

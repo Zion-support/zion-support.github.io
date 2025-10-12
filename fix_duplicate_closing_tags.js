@@ -28,11 +28,11 @@ function processFile(filePath) {
     
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed duplicate closing tags: ${filePath}`);
+      console.log(`Fixed duplicate closing tags: ${filePath} `);
       return true;
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath} :`, error.message);
     return false;
 
 // Function to recursively find and process TSX files;

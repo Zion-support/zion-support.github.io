@@ -9,13 +9,13 @@ function fixAppTsx() {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Fix malformed JSX syntax;
-    content = content.replace(/element="\{<([^"]+)" \/ \/&gt;}/g, 'element={<$1 /&gt;}');
-    content = content.replace(/element="\{<([^"]+)" \/&gt;}/g, 'element={<$1 /&gt;}');
-    content = content.replace(/element="\{<([^"]+)" \/ \/&gt;}/g, 'element={<$1 /&gt;}');
+    content = content.replace(/element="\{<([^"]+)" \/ \/&gt;} /g, 'element={<$1 /&gt;} ');
+    content = content.replace(/element="\{<([^"]+)" \/&gt;} /g, 'element={<$1 /&gt;} ');
+    content = content.replace(/element="\{<([^"]+)" \/ \/&gt;} /g, 'element={<$1 /&gt;} ');
     
     // Fix malformed JSX attributes;
-    content = content.replace(/fallback="\{<([^"]+)" \/ \/&gt;}/g, 'fallback={<$1 /&gt;}');
-    content = content.replace(/fallback="\{<([^"]+)" \/&gt;}/g, 'fallback={<$1 /&gt;}');
+    content = content.replace(/fallback="\{<([^"]+)" \/ \/&gt;} /g, 'fallback={<$1 /&gt;} ');
+    content = content.replace(/fallback="\{<([^"]+)" \/&gt;} /g, 'fallback={<$1 /&gt;} ');
     
     // Fix malformed self-closing tags;
     content = content.replace(/<([^>]+) \/ \/>/g, '<$1 />');
@@ -25,10 +25,10 @@ function fixAppTsx() {
     content = content.replace(/<\/ ([^>]+)>/g, '</$1>');
     
     // Fix specific patterns;
-    content = content.replace(/<Routes \/>/g, '<Routes>');
-    content = content.replace(/<BrowserRouter \/>/g, '<BrowserRouter>');
-    content = content.replace(/<HelmetProvider \/>/g, '<HelmetProvider>');
-    content = content.replace(/<ErrorBoundary \/>/g, '<ErrorBoundary>');
+    content = content.replace(/<Routes \/>/g, '<Routes></Routes>');
+    content = content.replace(/<BrowserRouter \/>/g, '<BrowserRouter></BrowserRoute>');
+    content = content.replace(/<HelmetProvider \/>/g, '<HelmetProvider></HelmetProvide>');
+    content = content.replace(/<ErrorBoundary \/>/g, '<ErrorBoundary></ErrorBoundar>');
     
     // Add missing closing tags at the end;
     content = content.replace(/(\s*)<\/Suspense>\s*<\/div>\s*<\/BrowserRouter>\s*<\/HelmetProvider>\s*<\/ErrorBoundary>\s*\);/g, 

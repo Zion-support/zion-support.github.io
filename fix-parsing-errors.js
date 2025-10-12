@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-export { fixFileContent, processFile };
+export { fixFileContent, processFile } ;
 #!/usr/bin/env node;
 // Function to fix common parsing errors;
 function fixFileContent(content) {
@@ -21,7 +21,7 @@ function fixFileContent(content) {
         match.includes('xl:') || match.includes('2xl:')) {
       return p1 + ' ' + p2 + p3;
     return match;
-  });
+  } );
   
   // Fix specific common patterns;
   fixed = fixed.replace(/from-slate-900pt-20/g, 'from-slate-900 pt-20');
@@ -37,19 +37,19 @@ function fixFileContent(content) {
   // Fix malformed JSX - add missing opening tags;
   fixed = fixed.replace(/<div className="[^"]*" \/>/g, (match) => {
     const className = match.match(/className="([^"]*)"/)[1];
-    return `<div className="${className}">`;
+    return `<div className="${className} "></div>`;
   });
   
   // Fix self-closing divs that should be opening tags;
-  fixed = fixed.replace(/<div className="([^"]*)" \/>\s*<([^>]+)>/g, '<div className="$1">\n        <$2>');
+  fixed = fixed.replace(/<div className="([^"]*)" \/>\s*<([^>]+)>/g, '<div className="$1"></div>\n        <$2>');
   
   // Remove invalid 'use client' directive (this is a Vite project, not Next.js)
   fixed = fixed.replace(/'use client';\s*\n/g, '');
   
   // Fix JSX expressions that need parent elements;
-  fixed = fixed.replace(/<Helmet \/>\s*<title>/g, '<Helmet>\n        <title>');
-  fixed = fixed.replace(/<\/title>\s*<meta/g, '</title>\n        <meta');
-  fixed = fixed.replace(/<\/meta>\s*<\/Helmet>/g, '</meta>\n      </Helmet>');
+  fixed = fixed.replace(/<Helmet \/>\s*<title></titl>/g, '<Helmet></Helme>\n        <title></titl>');
+  fixed = fixed.replace(/<\/title>\s*<meta/g, '</title></met>\n        <meta');
+  fixed = fixed.replace(/<\/meta></met>\s*<\/Helmet>/g, '</meta>\n      </Helmet>');
   
   return fixed;
 
@@ -61,11 +61,11 @@ function processFile(filePath) {
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed: ${filePath} `);
       return true;
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath} :`, error.message);
     return false;
 
 // Main function;
@@ -73,15 +73,15 @@ async function main() {
   console.log('Starting to fix parsing errors...');
   
   // Get all TypeScript/TSX files;
-  const files = await glob('**/*.{ts,tsx}', {
+  const files = await glob('**/*.{ts,tsx} ', {
     ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
-  });
+  } );
   
   let fixedCount = 0;
   
     if (processFile(file)) {
       fixedCount++;
-  });
+  } );
   
   console.log(`\nFixed ${fixedCount} files out of ${files.length} total files.`);
 

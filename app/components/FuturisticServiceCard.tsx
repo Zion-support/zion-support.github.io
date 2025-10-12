@@ -14,35 +14,29 @@
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
-    },
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'} ,
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-    },
+      description: 'Lightning-fast processing and real-time analytics for optimal results'} ,
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-    },
+      description: 'Bank-level security with encryption and compliance standards'} ,
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
-    }
-  ];
+      description: 'Worldwide deployment and support for international businesses'} ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <Helmet></Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
+      <Helmet></Helme></Helmet>
         <title />Futuristic Service Card | Zion Tech Group</title>
         <meta name="description" content="Professional futuristic service card solutions by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
         <meta name="keywords" content="futuristic service card, AI solutions, IT services, Zion Tech Group" /></meta>
       </Helmet>
-      {/* Hero Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      {/* Hero Section */}  <section className="w-5h-5ml-2" /></section>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
             <h1 className="w-5h-5ml-2" /></h1>
               <span className="w-5h-5ml-2" />FuturisticServiceCard;
               </span>
@@ -52,20 +46,19 @@
             <p className="w-5h-5ml-2">Transform your business with our advanced futuristic service card solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
               <button className="w-5h-5ml-2" /></button>
                 Get Started;
                 <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
               </button>
-              <button className="w-5h-5ml-2">Learn More;
+              <button className="w-5h-5ml-2"></butto>Learn More;
               </button>
             </div>
         </div>
       </section>
-      {/* Features Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      {/* Features Section */}  <section className="w-5h-5ml-2" /></section>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
             <h2 className="w-5h-5ml-2" />Our Features;
             </h2>
             <p className="w-5h-5ml-2">Discover the powerful features that make our futuristic service card solutions stand out.

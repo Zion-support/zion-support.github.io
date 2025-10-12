@@ -1,19 +1,13 @@
 import React from 'react';
 export default SEOHead;
 
-
-
   return (
 
-        <title>5G Data Analytics - Zion Tech Group</title>
-      <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-      {/* Open Graph Meta Tags */}
+        <title></titl>5G Data Analytics - Zion Tech Group</title>
+      <title></titl>Zion Tech Group - Advanced AI and IT Solutions</title>
+      {/* Open Graph Meta Tags */} {/* Twitter Card Meta Tags */}
     
-      {/* Twitter Card Meta Tags */}
-    
-      {/* Additional SEO Meta Tags */}
-
-      {/* Structured Data */}
+      {/* Additional SEO Meta Tags */} {/* Structured Data */}
       <script type="application/ld+json"  />{JSON.stringify({
           "@context": "https: //schema.org",
           "@type": "Organization",
@@ -26,7 +20,7 @@ export default SEOHead;
             "telephone": "+1-302-464-0950",
             "contactType": "customer service",
             "email": "kleber@ziontechgroup.com"
-          },
+          } ,
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "364 E Main St STE 1008",
@@ -34,7 +28,7 @@ export default SEOHead;
             "addressRegion": "DE",
             "postalCode": "19709",
             "addressCountry": "US"
-          },
+          } ,
           "sameAs": [
             "https: //github.com/ziontechgroup",
             "https: //linkedin.com/company/ziontechgroup",

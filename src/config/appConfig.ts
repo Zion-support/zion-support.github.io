@@ -38,8 +38,8 @@ export default config;
  */
   const keys = keyPath.split('.');
   let value: unknown = config;
-      value = (value as Record<string, unknown>)[key];
-      throw new Error(`Configuration key "${keyPath}" not found`);
+      value = (value as Record<string, unknown></string>)[key];
+      throw new Error(`Configuration key "${keyPath} " not found`);
   return value as T;
 /**
  * Check if a feature is enabled;

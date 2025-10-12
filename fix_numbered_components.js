@@ -33,16 +33,16 @@ function fixNumberedComponents(filePath) {
         const oldName = numberMatch[1];
           const numberWords = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
           return numberWords[parseInt(num)] || num;
-        });
+        } );
         
         // Replace component name;
-        content = content.replace(new RegExp(`const ${oldName}Page`, 'g'), `const ${newName}Page`);
-        content = content.replace(new RegExp(`export default ${oldName}Page`, 'g'), `export default ${newName}Page`);
+        content = content.replace(new RegExp(`const ${oldName} Page`, 'g'), `const ${newName} Page`);
+        content = content.replace(new RegExp(`export default ${oldName} Page`, 'g'), `export default ${newName} Page`);
         modified = true;
   
   if (modified) {
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed numbered component in: ${filePath}`);
+    console.log(`Fixed numbered component in: ${filePath} `);
 
 // Find and fix all page files;
 const pageFiles = findPageFiles('/workspace/app');
@@ -54,6 +54,6 @@ for (const file, of, pageFiles) {
     fixNumberedComponents(file);
     fixedCount++;
   } catch (error) {
-    console.error(`Error fixing ${file}:`, error.message);
+    console.error(`Error fixing ${file} :`, error.message);
 
 console.log(`Fixed ${fixedCount} files`);

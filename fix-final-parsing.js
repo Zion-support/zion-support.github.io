@@ -26,11 +26,11 @@ function fixFinalParsing(content) {
   fixed = fixed.replace(/<meta name="keywords" content="([^"]*)" \/ \/>/g, '<meta name="keywords" content="$1" />');
   
   // Fix malformed title tags;
-  fixed = fixed.replace(/<title>Ai 3 d Generation/g, '<title>AI 3D Generation');
+  fixed = fixed.replace(/<title></titl>Ai 3 d Generation/g, '<title></titl>AI 3D Generation');
   
   // Fix malformed Helmet tags;
-  fixed = fixed.replace(/<Helmet>\s*<title>([^<]*)<\/title>\s*<meta name="description" content="([^"]*)" \/ \/>/g, 
-    '<Helmet>\n        <title>$1</title>\n        <meta name="description" content="$2" />');
+  fixed = fixed.replace(/<Helmet></Helmet>\s*<title></titl>([^<]*)<\/title>\s*<meta name="description" content="([^"]*)" \/ \/>/g, 
+    '<Helmet></Helmet>\n        <title></titl>$1</title>\n        <meta name="description" content="$2" />');
   
   return fixed;
 
@@ -42,11 +42,11 @@ function processFile(filePath) {
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed final parsing: ${filePath}`);
+      console.log(`Fixed final parsing: ${filePath} `);
       return true;
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath} :`, error.message);
     return false;
 
 // Main function;
@@ -54,15 +54,15 @@ async function main() {
   console.log('Starting to fix final parsing issues...');
   
   // Get all TypeScript/TSX files;
-  const files = await glob('**/*.{ts,tsx}', {
+  const files = await glob('**/*.{ts,tsx} ', {
     ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
-  });
+  } );
   
   let fixedCount = 0;
   
     if (processFile(file)) {
       fixedCount++;
-  });
+  } );
   
   console.log(`\nFixed final parsing issues in ${fixedCount} files out of ${files.length} total files.`);
 

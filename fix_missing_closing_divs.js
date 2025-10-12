@@ -8,8 +8,7 @@ function fixMissingClosingDivs(content) {
   // </Link>
   // </div>
   // );
-  // }
-  // But missing the outer div closing tag;
+  // } // But missing the outer div closing tag;
   content = content.replace(
     /(\s*<\/Link>\s*<\/div>\s*\);\s*})/g,
     '$1'
@@ -30,7 +29,7 @@ function fixMissingClosingDivs(content) {
   
   // Alternative approach - fix the specific pattern we see;
   content = content.replace(
-    /(\s*<\/Link>\s*<\/div>\s*\);\s*})/g,
+    /(\s*<\/Link>\s*<\/div>\s*\);\s*} )/g,
     '\n        </Link>\n      </div>\n    </div>\n  );\n}'
   );
   
@@ -44,11 +43,11 @@ function processFile(filePath) {
     
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed missing closing divs: ${filePath}`);
+      console.log(`Fixed missing closing divs: ${filePath} `);
       return true;
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath} :`, error.message);
     return false;
 
 // Function to recursively find and process TSX files;

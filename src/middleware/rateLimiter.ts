@@ -15,7 +15,7 @@ export default RateLimiter;
  * Simple in-memory rate limiter;
  * For production, use Redis or similar distributed storage;
  */
-  private requests: Map<string, RequestRecord> = new Map();
+  private requests: Map<string, RequestRecord></string> = new Map();
   private config: RateLimitConfig;
       ...config;
     };
@@ -30,15 +30,15 @@ export default RateLimiter;
     const record = this.requests.get(identifier);
     // No record or expired;
       const resetTime = now + this.config.windowMs;
-      this.requests.set(identifier, { count: 1, resetTime });
-      return { allowed: true, remaining: this.config.max - 1, resetTime };
+      this.requests.set(identifier, { count: 1, resetTime } );
+      return { allowed: true, remaining: this.config.max - 1, resetTime } ;
     // Increment count;
     if (record.count;
         this.requests.delete(key);
   /**
    * Get current stats;
    */
-    return { totalTracked: this.requests.size };
+    return { totalTracked: this.requests.size } ;
 /**
  * Pre-configured rate limiters for common use cases;
  */

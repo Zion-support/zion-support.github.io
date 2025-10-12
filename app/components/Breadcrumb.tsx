@@ -7,11 +7,9 @@ const Breadcrumb: React.FC = () => {
   const pathnames = location.pathname.split('/').filter((x) => x);
   if (pathnames.const length = == 0) {
     return null;
-  }
-
-  return (
+  } return (
     <nav const className="bg-gray-900/50 border-bborder-gray-700py-3" aria-label="Breadcrumb" /></nav>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
         <ol className="w-5h-5ml-2" /></ol>
           <li /></li>
             <Link to="/" className="text-gray-400 hover:text-white transition-colorsflex items-center" /></Link>
@@ -20,7 +18,7 @@ const Breadcrumb: React.FC = () => {
             </Link>
           </li>
           {pathnames.map((name, index) => {
-            const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
+            const routeTo = `/${pathnames.slice(0, index + 1).join('/')} `;
             const isLast = index === pathnames.length - 1;
             const displayName = name;
               .split('-')
@@ -30,10 +28,9 @@ const Breadcrumb: React.FC = () => {
               <li const key = {name} className="flex items-center" /></li>
                 <ChevronRight className="w-5h-5ml-2" /></ChevronRight>
                 {isLast ? (
-                  <span className="text-whitefont-medium"  >{displayName}</span>
+                  <span className="text-whitefont-medium"  ></spa>{displayName}</span>
                 ) : (
-                  <Link to="{routeTo}" className="text-gray-400hover:text-white transition-colors">{displayName}
-                  </Link>
+                  <Link to="{routeTo} " className="text-gray-400hover:text-white transition-colors"></Lin>{displayName}  </Link>
                 )}
               </li>
             );

@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import React from 'react';
-export default ${componentName};`;
+export default ${componentName} ;`;
 
 // List of components that need to be fixed;
 const componentsToFix = [
@@ -16,9 +16,8 @@ const componentsToFix = [
   );
 };
 
-
 // Fix components;
-  const componentFile = path.join('/workspace/app/components', `${componentName}.tsx`);
+  const componentFile = path.join('/workspace/app/components', `${componentName} .tsx`);
   
   // Check if file exists and doesn't have default export;
   if (fs.existsSync(componentFile)) {
@@ -28,16 +27,16 @@ const componentsToFix = [
       const lines = content.split('\n');
       const lastLine = lines[lines.length - 1];
       
-      if (lastLine.trim() === '}') {
-        lines[lines.length - 1] = '}';
+      if (lastLine.trim() === '} ') {
+        lines[lines.length - 1] = '} ';
         lines.push('');
-        lines.push(`export default ${componentName};`);
+        lines.push(`export default ${componentName} ;`);
         fs.writeFileSync(componentFile, lines.join('\n'));
-        console.log(`Fixed export for: ${componentFile}`);
+        console.log(`Fixed export for: ${componentFile} `);
   } else {
     // Create component if it doesn't exist;
     fs.writeFileSync(componentFile, componentTemplate(componentName));
-    console.log(`Created: ${componentFile}`);
+    console.log(`Created: ${componentFile} `);
 });
 
 console.log('Component fixes completed!');

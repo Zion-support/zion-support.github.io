@@ -4,14 +4,11 @@ interface PerformanceMetrics {
   renderTime: number;
   memoryUsage: number;
   networkLatency: number;
-}
-
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+} const [metrics, setMetrics] = useState<PerformanceMetrics></PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
-    networkLatency: 0,
-  });
+    networkLatency: 0} );
 
   const [isOptimized, setIsOptimized] = useState(false);
 
@@ -21,7 +18,7 @@ interface PerformanceMetrics {
     // Measure load time;
     const measureLoadTime = () => {
       const loadTime = performance.now();
-      setMetrics(prev => ({ ...prev, loadTime }));
+      setMetrics(prev => ({ ...prev, loadTime } ));
     };
 
     // Measure render time;
@@ -29,7 +26,7 @@ interface PerformanceMetrics {
       const renderStart = performance.now();
       requestAnimationFrame(() => {
         const renderTime = performance.now() - renderStart;
-        setMetrics(prev => ({ ...prev, renderTime }));
+        setMetrics(prev => ({ ...prev, renderTime } ));
       });
     };
 
@@ -38,21 +35,21 @@ interface PerformanceMetrics {
       if ('memory' in performance) {
         const memory = (performance, as, any).memory;
         const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB;
-        setMetrics(prev => ({ ...prev, memoryUsage }));
+        setMetrics(prev => ({ ...prev, memoryUsage } ));
       }
     };
 
     // Measure network latency;
     const measureNetworkLatency = () => {
       const start = performance.now();
-      fetch('/api/ping', { method: 'HEAD' })
+      fetch('/api/ping', { method: 'HEAD' } )
         .then(() => {
           const latency = performance.now() - start;
-          setMetrics(prev => ({ ...prev, networkLatency: latency }));
+          setMetrics(prev => ({ ...prev, networkLatency: latency } ));
         })
         .catch(() => {
           // Fallback if ping endpoint doesn't exist;
-          setMetrics(prev => ({ ...prev, networkLatency: 0 }));
+          setMetrics(prev => ({ ...prev, networkLatency: 0 } ));
         });
     };
 
@@ -70,7 +67,7 @@ interface PerformanceMetrics {
         metrics.memoryUsage < 100 && // Memory usage under 100MB;
         metrics.networkLatency < 200; // Network latency under 200ms;
       setIsOptimized(isOptimized);
-    };
+    } ;
 
     // Check optimization after metrics are updated;
     const timeoutId = setTimeout(checkOptimization, 1000);
@@ -93,8 +90,7 @@ interface PerformanceMetrics {
       link.as = resource.endsWith('.woff2') ? 'font' : 'image';
       if (resource.endsWith('.woff2')) {
         link.crossOrigin = 'anonymous';
-      }
-      document.head.appendChild(link);
+      } document.head.appendChild(link);
     });
 
     // Optimize images;
@@ -106,8 +102,7 @@ interface PerformanceMetrics {
           img.src = img.dataset.src || '';
           img.classList.remove('lazy');
           imageObserver.unobserve(img);
-        }
-      });
+        } });
     });
 
     images.forEach((img) => imageObserver.observe(img));
@@ -122,12 +117,12 @@ interface PerformanceMetrics {
         requestAnimationFrame(() => {
           // Update scroll position;
           ticking = false;
-        });
+        } );
         ticking = true;
       }
     };
 
-    window.addEventListener('scroll', updateScrollPosition, { passive: true });
+    window.addEventListener('scroll', updateScrollPosition, { passive: true } );
 
     return () => window.removeEventListener('scroll', updateScrollPosition);
   };
@@ -135,6 +130,5 @@ interface PerformanceMetrics {
   return {
     metrics,
     isOptimized,
-    optimizePerformance,
-  };
+    optimizePerformance} ;
 };

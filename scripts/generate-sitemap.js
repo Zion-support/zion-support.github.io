@@ -33,17 +33,17 @@ function generateSitemap() {
   
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
  `
-    <loc>${baseUrl}${route}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc></lo>${baseUrl} ${route}</loc>
+    <lastmod></lastmo>${new Date().toISOString()}</lastmod>
+    <changefreq></changefre>weekly</changefreq>
+    <priority></priorit>0.8</priority>
   </url>`).join('')}
 </urlset>`
   
   // Write to public directory;
   const publicDir = path.join(__dirname, '../public')
   if (!fs.existsSync(publicDir)) {
-    fs.mkdirSync(publicDir, { recursive: true })
+    fs.mkdirSync(publicDir, { recursive: true } )
   
   fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap)
   console.log('Sitemap generated successfully!')

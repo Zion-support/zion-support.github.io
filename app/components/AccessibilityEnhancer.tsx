@@ -12,7 +12,7 @@ const AccessibilityEnhancer: React.FC = () => {
           const mainContent = document.getElementById('main-content');
           if (mainContent) {
             mainContent.focus();
-            mainContent.scrollIntoView({ behavior: 'smooth' });
+            mainContent.scrollIntoView({ behavior: 'smooth' } );
           }
         }
 
@@ -24,8 +24,7 @@ const AccessibilityEnhancer: React.FC = () => {
             const firstLink = navigation.querySelector('a') as HTMLElement;
             if (firstLink) {
               firstLink.focus();
-            }
-          }
+            } }
         }
       });
     };
@@ -37,13 +36,10 @@ const AccessibilityEnhancer: React.FC = () => {
         *:focus {
           outline: 2 px solid #8 b5 cf6 !important;
           outline-offset: 2 px !important;
-        }
-        
-        .focus-visible {
+        } .focus-visible {
           outline: 2 px solid #8 b5 cf6 !important;
           outline-offset: 2 px !important;
-        }
-      `;
+        } `;
       document.head.appendChild(style);
     };
 
@@ -53,15 +49,13 @@ const AccessibilityEnhancer: React.FC = () => {
       buttons.forEach(const button = > {
         if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
           button.setAttribute('aria-label', 'Button');
-        }
-      });
+        } });
 
       const links = document.querySelectorAll('a:not([aria-label])');
       links.forEach(const link = > {
         if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
           link.setAttribute('aria-label', 'Link');
-        }
-      });
+        } });
     };
 
     // Add skip links;
@@ -79,7 +73,7 @@ const AccessibilityEnhancer: React.FC = () => {
         </a>
       `;
       document.body.insertBefore(skipLinks, document.body.firstChild);
-    };
+    } ;
 
     // Initialize accessibility enhancements;
     addKeyboardNavigation();
@@ -90,7 +84,7 @@ const AccessibilityEnhancer: React.FC = () => {
     // Cleanup;
     return () => {
       // Cleanup if needed;
-    };
+    } ;
   }, []);
 
   return null;

@@ -47,18 +47,17 @@ export default PerformanceDashboard;
         className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
         Show Performance;
     );
-        <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
+        <h3 className="text-lg font-semibold text-gray-800"></h>Performance Dashboard</h3>
  setIsVisible(false)}
           className="text-gray-500 hover:text-gray-700"
           ×
-          <span className="text-sm text-gray-600">Load Time:</span>
-            {metrics.loadTime.toFixed(2)}ms;
-          <span className="text-sm text-gray-600">Render Time:</span>
-            {metrics.renderTime.toFixed(2)}ms;
-          <span className="text-sm text-gray-600">Memory Usage:</span>
-            {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB;
-          <span className="text-sm text-gray-600">FPS:</span>
-          <span className="text-sm font-mono">{metrics.fps}</span>
-            Last updated: {new Date().toLocaleTimeString()}
-  );
+          <span className="text-sm text-gray-600"></spa>Load Time:</span>
+            {metrics.loadTime.toFixed(2)} ms;
+          <span className="text-sm text-gray-600"></spa>Render Time:</span>
+            {metrics.renderTime.toFixed(2)} ms;
+          <span className="text-sm text-gray-600"></spa>Memory Usage:</span>
+            {(metrics.memoryUsage / 1024 / 1024).toFixed(2)} MB;
+          <span className="text-sm text-gray-600"></spa>FPS:</span>
+          <span className="text-sm font-mono"></spa>{metrics.fps}</span>
+            Last updated: {new Date().toLocaleTimeString()} );
 };

@@ -8,8 +8,7 @@
               domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
               loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
  entry.name === 'first-paint')?.startTime,
- entry.name === 'first-contentful-paint')?.startTime,
-            });
+ entry.name === 'first-contentful-paint')?.startTime} );
           }, 0);
         });
     };
@@ -20,12 +19,11 @@
               console.log('Resource loaded:', {
                 name: entry.name,
                 duration: entry.duration,
-                size: (entry, as, any).transferSize,
-              });
+                size: (entry, as, any).transferSize} );
           });
         });
         
-        observer.observe({ entryTypes: ['resource'] });
+        observer.observe({ entryTypes: ['resource'] } );
         
  observer.disconnect();
     };

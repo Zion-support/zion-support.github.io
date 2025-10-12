@@ -6,23 +6,19 @@ const SEOEnhancer: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered SEO',
-      description: 'Advanced AI technology to optimize your website for search engines',
-    },
+      description: 'Advanced AI technology to optimize your website for search engines'} ,
     {
       icon: Zap,
       title: 'Real-time Analysis',
-      description: 'Lightning-fast SEO analysis and optimization with instant recommendations',
-    },
+      description: 'Lightning-fast SEO analysis and optimization with instant recommendations'} ,
     {
       icon: Shield,
       title: 'White-Hat Techniques',
-      description: 'Ethical SEO practices with long-term sustainable results and compliance',
-    },
+      description: 'Ethical SEO practices with long-term sustainable results and compliance'} ,
     {
       icon: Globe,
       title: 'Global Optimization',
-      description: 'Worldwide SEO optimization and support for international businesses',
-    },
+      description: 'Worldwide SEO optimization and support for international businesses'} ,
   ];
 
   const benefits = [
@@ -37,107 +33,100 @@ const SEOEnhancer: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>
-        <title>SEO Enhancer | Zion Tech Group</title>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></di></div>
+      <Helmet></Helme></Helmet>
+        <title></titl>SEO Enhancer | Zion Tech Group</title>
         <meta name="description" content="Professional SEO Enhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
         <meta name="keywords" content="SEO Enhancer, AI solutions, IT services, Zion Tech Group, search engine optimization" /></meta>
       </Helmet>
-      {/* Hero Section */}
-      <section className="relativepy-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xlmd:text-6xl font-bold text-white mb-6"></h1>
-              <span className="bg-gradient-to-rfrom-purple-400 to-blue-400 bg-clip-text text-transparent"></span>
+      {/* Hero Section */}  <section className="relativepy-20 px-4 sm:px-6 lg:px-8"></sectio></section>
+        <div className="max-w-7xl mx-auto"></di></div>
+          <div className="text-center"></di></div>
+            <h1 className="text-4xlmd:text-6xl font-bold text-white mb-6"></h></h1>
+              <span className="bg-gradient-to-rfrom-purple-400 to-blue-400 bg-clip-text text-transparent"></spa></span>
                 SEO;
               </span>
               <br /></br>
-              <span className="text-white">Enhancer</span>
+              <span className="text-white"></spa>Enhancer</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Transform your website's search engine visibility with our advanced SEO enhancement solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flexflex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"></button>
+            <div className="flexflex-col sm:flex-row gap-4 justify-center"></di></div>
+              <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"></butto></button>
                 Get Started;
                 <ArrowRight className="ml-2h-5w-5" /></ArrowRight>
               </button>
-              <button className="borderborder-gray-300 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"></button>
+              <button className="borderborder-gray-300 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"></butto></button>
                 Learn More;
               </button>
             </div>
           </div>
         </div>
       </section>
-      {/* Features Section */}
-      <section className="py-20px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-centermb-16"></div>
-            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4"></h2>
+      {/* Features Section */}  <section className="py-20px-4 sm:px-6 lg:px-8"></sectio></section>
+        <div className="max-w-7xl mx-auto"></di></div>
+          <div className="text-centermb-16"></di></div>
+            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4"></h></h2>
               Our Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Discover the powerful features that make our SEO enhancer solutions stand out.
             </p>
           </div>
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></di></div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20"></div>
-                <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4"></div>
+              <div key={index} className="bg-white/10backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20"></di></div>
+                <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4"></di></div>
                   <feature.icon className="w-6 h-6text-white" /></feature>
                 </div>
-                <h3 className="text-xlfont-bold text-white mb-2"></h3>
-                  {feature.title}
-                </h3>
+                <h3 className="text-xlfont-bold text-white mb-2"></h></h3>
+                  {feature.title}  </h3>
                 <p className="text-gray-300"></p>
-                  {feature.description}
-                </p>
+                  {feature.description}  </p>
               </div>
             ))}
           </div>
         </div>
       </section>
-      {/* Benefits Section */}
-      <section className="py-20px-4 sm:px-6 lg:px-8 bg-white/5"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-centermb-16"></div>
-            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4"></h2>
+      {/* Benefits Section */}  <section className="py-20px-4 sm:px-6 lg:px-8 bg-white/5"></sectio></section>
+        <div className="max-w-7xl mx-auto"></di></div>
+          <div className="text-centermb-16"></di></div>
+            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4"></h></h2>
               Why Choose Our Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Experience the benefits of working with our cutting-edge SEO enhancer solutions.
             </p>
           </div>
-          <div className="gridgrid-cols-1 md:grid-cols-2 gap-8"></div>
+          <div className="gridgrid-cols-1 md:grid-cols-2 gap-8"></di></div>
             {benefits.map((benefit, index) => (
-              <div key={index} className="flexitems-start space-x-4"></div>
-                <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1"></div>
+              <div key={index} className="flexitems-start space-x-4"></di></div>
+                <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1"></di></div>
                   <CheckCircle className="w-5h-5text-white" /></CheckCircle>
                 </div>
                 <p className="text-gray-300text-lg"></p>
-                  {benefit}
-                </p>
+                  {benefit}  </p>
               </div>
             ))}
           </div>
         </div>
       </section>
-      {/* Contact Section */}
-      <section className="py-20px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="bg-white/10backdrop-blur-sm rounded-3xl p-12 border border-white/20 text-center"></div>
-            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-6"></h2>
+      {/* Contact Section */}  <section className="py-20px-4 sm:px-6 lg:px-8"></sectio></section>
+        <div className="max-w-7xl mx-auto"></di></div>
+          <div className="bg-white/10backdrop-blur-sm rounded-3xl p-12 border border-white/20 text-center"></di></div>
+            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-6"></h></h2>
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
               Contact us today to learn more about our SEO enhancement solutions and how they can benefit your business.
             </p>
-            <div className="flexflex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300"></button>
+            <div className="flexflex-col sm:flex-row gap-4 justify-center"></di></div>
+              <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300"></butto></button>
                 Contact Us;
               </button>
-              <button className="borderborder-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"></button>
+              <button className="borderborder-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"></butto></button>
                 Schedule Demo;
               </button>
             </div>

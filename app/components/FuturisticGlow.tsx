@@ -6,9 +6,7 @@ interface FuturisticGlowProps {
   intensity?: 'low' | 'medium' | 'high';
   color?: string;
   className?: string;
-}
-
-  children, 
+} children, 
   const intensity = 'medium', 
   color = 'cyan',
   className = '' 
@@ -23,8 +21,7 @@ interface FuturisticGlowProps {
         case 'low': return '0.3';
         case 'high': return '0.8';
         default: return '0.5';
-      }
-    };
+      } };
 
     const getColorValue = () => {
       switch (color) {
@@ -35,20 +32,18 @@ interface FuturisticGlowProps {
         case 'blue': return '59, 130, 246';
         case 'red': return '239, 68, 68';
         default: return '0, 255, 255';
-      }
-    };
+      } };
 
     const rgb = getColorValue();
     const opacity = getIntensityValue();
     // Apply CSS custom properties for dynamic glow;
-    container.style.setProperty('--glow-color', `rgba(${rgb}, ${opacity})`);
-    container.style.setProperty('--glow-color-strong', `rgba(${rgb}, ${parseFloat(opacity) + 0.3})`);
+    container.style.setProperty('--glow-color', `rgba(${rgb} , ${opacity} )`);
+    container.style.setProperty('--glow-color-strong', `rgba(${rgb} , ${parseFloat(opacity) + 0.3} )`);
   }, [intensity, color]);
 
   return (
     <div;
-      const ref = {containerRef}
-      className="{`"
+      const ref = {containerRef} className="{`"
         relative;
         before: absolute,
   before:inset-0 before:rounded-inherit,
@@ -62,8 +57,6 @@ interface FuturisticGlowProps {
   after: opacity-0 after:transition-opacity after:duration-500,
   hover: afte,
   r:opacity-100;
-        ${className}
-      `}>{children}
-    </div>
+        ${className} `}></di>{children}  </div>
   );
 }

@@ -7,7 +7,7 @@ interface ContentNewsletterSignupProps {
   placeholder?: string;
   buttonText?: string;
   features?: Array<{
-    icon: React.ComponentType<{ className?: string }>
+    icon: React.ComponentType<{ className?: string } >
     text: string;
   }>
   onSubscribe?: (email: string) => void;
@@ -19,11 +19,10 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
   placeholder = "Enter your email address",
   buttonText = "Subscribe",
   features = [
-    { icon: Star, text: "Exclusive content" },
-    { icon: Users, text: "Industry insights" },
-    { icon: Globe, text: "Global updates" },
-    { icon: Zap, text: "Early access" }
-  ],
+    { icon: Star, text: "Exclusive content" } ,
+    { icon: Users, text: "Industry insights" } ,
+    { icon: Globe, text: "Global updates" } ,
+    { icon: Zap, text: "Early access" } ],
   onSubscribe;
 }) => {
   const [email, setEmail] = useState('')
@@ -39,22 +38,20 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
       await new Promise(resolve => setTimeout(resolve, 1000))
       if (onSubscribe) {
         onSubscribe(email)
-      }
-      setIsSubscribed(true)
+      } setIsSubscribed(true)
       setEmail('')
     } catch (error) {
       console.error('Subscription error: ', error)
     } finally {
       setIsSubmitting(false)
-    }
-  }
+    } }
 
   if (isSubscribed) {
     return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
               <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
             </div>
             <h2 className="w-5h-5ml-2" />Thank You for Subscribing!
@@ -62,8 +59,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
             <p className="w-5h-5ml-2">You'll receive our latest insights and updates soon.
             </p>
             <button;
-              onClick="{()" =  />setIsSubscribed(false)}
-              className="text-blue-400hover:text-blue-300 transition-colors"
+              onClick="{()" =  />setIsSubscribed(false)} className="text-blue-400hover:text-blue-300 transition-colors"
             >
               Subscribe another email;
             </button>
@@ -73,50 +69,47 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" />{title}
-            </h2>
-            <p className="w-5h-5ml-2">{subtitle}
-            </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
+            <h2 className="w-5h-5ml-2" />{title}  </h2>
+            <p className="w-5h-5ml-2">{subtitle}  </p>
           </div>
-          <form onSubmit="{handleSubmit}" className="max-w-mdmx-automb-12" /></form>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <form onSubmit="{handleSubmit} " className="max-w-mdmx-automb-12" /></form>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
                 <input;
                   type="email"
-                  value="{email}"
-                  onChange="{(e)" = /> setEmail(e.target.value)}
-                  placeholder="{placeholder}"
+                  value="{email} "
+                  onChange="{(e)" = /> setEmail(e.target.value)} placeholder="{placeholder} "
                   required;
                   className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent"
                 />
               </div>
               <button;
                 type="submit"
-                disabled="{isSubmitting}"
+                disabled="{isSubmitting} "
                 className="bg-gradient-to-rfrom-blue-600to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2min-w-[140,px]" /></button>
                 {isSubmitting ? (
                   <></>
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <span  >Subscribing...</span>
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
+                    <span  ></spa>Subscribing...</span>
                   </>
                 ) : (
                   <></>
-                    <span  >{buttonText}</span>
+                    <span  ></spa>{buttonText}</span>
                     <ArrowRight className="w-5h-5ml-2" />    </ArrowRight>
 </>
                 )}
               </button>
             </div>
           </form>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
             {features.map((feature, index) => (
 
                 <div key={index} className="text-center" /></div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
                   <feature.icon className="h-6w-6text-white"  /></feature>
                 </div>
                 <p className="text-gray-300text-sm">{feature.text}</p>

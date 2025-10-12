@@ -2,7 +2,7 @@
   title: string;
   description: string;
   keywords: string[];
-  authors: Array<{ name: string }>;
+  authors: Array<{ name: string } >;
   creator: string;
   publisher: string;
     email: boolean;

@@ -24,29 +24,29 @@ function fixRemainingJSX(content) {
   
   // Fix malformed Link components - single line format;
   fixed = fixed.replace(/<Link\s+to="([^"]+)"\s+className="([^"]+)"\s*\/>\s*([^<]+)\s*<([^>]+)\s*\/>/g, 
-    '<Link to="$1" className="$2">\n          $3\n          <$4 />\n        </Link>');
+    '<Link to="$1" className="$2"></Lin>\n          $3\n          <$4 />\n        </Link>');
   
   // Fix malformed Link components - multi-line format;
-  fixed = fixed.replace(/<Link\s+to="([^"]+)"\s+className="([^"]+)"\s*>\s*([^<]+)\s*<([^>]+)\s*\/>\s*<\/Link>\s*<\/Link>/g,
-    '<Link to="$1" className="$2">\n          $3\n          <$4 />\n        </Link>');
+  fixed = fixed.replace(/<Link\s+to="([^"]+)"\s+className="([^"]+)"\s*></Lin>\s*([^<]+)\s*<([^>]+)\s*\/>\s*<\/Link>\s*<\/Link>/g,
+    '<Link to="$1" className="$2"></Lin>\n          $3\n          <$4 />\n        </Link>');
   
   // Fix Link components with extra spaces and malformed structure;
-  fixed = fixed.replace(/<Link\s+to="([^"]+)"\s+className="([^"]+)"\s*>\s*([^<]+)\s*<([^>]+)\s*\/>\s*<\/Link>\s*<\/Link>/g,
-    '<Link to="$1" className="$2">\n          $3\n          <$4 />\n        </Link>');
+  fixed = fixed.replace(/<Link\s+to="([^"]+)"\s+className="([^"]+)"\s*></Lin>\s*([^<]+)\s*<([^>]+)\s*\/>\s*<\/Link>\s*<\/Link>/g,
+    '<Link to="$1" className="$2"></Lin>\n          $3\n          <$4 />\n        </Link>');
   
   // Fix specific patterns for 5G pages;
-  fixed = fixed.replace(/<Link\s+to="\/contact"\s+className="([^"]+)"\s*\/>\s*Contact Us\s*<ArrowRight[^>]*\/>/g,
-    '<Link to="/contact" className="$1">\n          Contact Us\n          <ArrowRight className="w-5 h-5 ml-2" />\n        </Link>');
+  fixed = fixed.replace(/<Link\s+to="\/contact"\s+className="([^"]+)"\s*\/>\s*Contact Us\s*<ArrowRight[^></ArrowRight>]*\/>/g,
+    '<Link to="/contact" className="$1"></Lin>\n          Contact Us\n          <ArrowRight className="w-5 h-5 ml-2" />\n        </Link>');
   
   // Fix malformed p tags;
   fixed = fixed.replace(/<p className="([^"]*)" \/>\s*([^<]+)\s*<\/p>/g, '<p className="$1">\n              $2\n            </p>');
   
   // Fix self-closing divs that should be opening tags;
-  fixed = fixed.replace(/<div \/>\s*<h4/g, '<div>\n            <h4');
-  fixed = fixed.replace(/<div \/>\s*<h3/g, '<div>\n            <h3');
+  fixed = fixed.replace(/<div \/>\s*<h4/g, '<div></h4>\n            <h4');
+  fixed = fixed.replace(/<div \/>\s*<h3/g, '<div></h3>\n            <h3');
   
   // Fix ul tags;
-  fixed = fixed.replace(/<ul className="([^"]*)" \/>\s*<li/g, '<ul className="$1">\n              <li');
+  fixed = fixed.replace(/<ul className="([^"]*)" \/>\s*<li/g, '<ul className="$1"></li>\n              <li');
   
   return fixed;
 
@@ -58,11 +58,11 @@ function processFile(filePath) {
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed remaining JSX: ${filePath}`);
+      console.log(`Fixed remaining JSX: ${filePath} `);
       return true;
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath} :`, error.message);
     return false;
 
 // Main function;
@@ -70,15 +70,15 @@ async function main() {
   console.log('Starting to fix remaining JSX issues...');
   
   // Get all TypeScript/TSX files;
-  const files = await glob('**/*.{ts,tsx}', {
+  const files = await glob('**/*.{ts,tsx} ', {
     ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
-  });
+  } );
   
   let fixedCount = 0;
   
     if (processFile(file)) {
       fixedCount++;
-  });
+  } );
   
   console.log(`\nFixed remaining JSX issues in ${fixedCount} files out of ${files.length} total files.`);
 

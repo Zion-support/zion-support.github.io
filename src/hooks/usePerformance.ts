@@ -4,7 +4,7 @@
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null></PerformanceMetrics>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
     if (typeof window === 'undefined' || !('performance' in window)) return;
     
@@ -17,15 +17,15 @@
       // Measure CLS (Cumulative, Layout, Shift)
       let cumulativeLayoutShift = 0;
         
-              cumulativeLayoutShift += (entry as unknown as { value: number }).value;
+              cumulativeLayoutShift += (entry as unknown as { value: number } ).value;
         });
-        observer.observe({ entryTypes: ['layout-shift'] });
+        observer.observe({ entryTypes: ['layout-shift'] } );
       // Measure FID (First, Input, Delay)
       let firstInputDelay = 0;
         
-                (entry as unknown as { processingStart: number }).processingStart - entry.startTime;
+                (entry as unknown as { processingStart: number } ).processingStart - entry.startTime;
         });
-        observer.observe({ entryTypes: ['first-input'] });
+        observer.observe({ entryTypes: ['first-input'] } );
         domContentLoaded:
         firstInputDelay;
       };
@@ -50,5 +50,5 @@
       window.removeEventListener('load', measurePerformance);
     };
   }, []);
-  return { metrics, isMonitoring };
+  return { metrics, isMonitoring } ;
 };

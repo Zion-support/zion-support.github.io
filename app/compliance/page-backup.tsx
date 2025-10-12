@@ -9,42 +9,36 @@ const PageBackupPage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Analysis',
       description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'],
-  },
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']} ,
     {
     icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'],
-  },
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']} ,
     {
     icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'],
-  },
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ,
     {
     icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
-  }
-    ]
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']} ]
 return (
     <></>
-      <Helmet  > </Helmet><title>Page Backup - Zion Tech Group</title>
+      <Helmet  ></Helme> </Helmet><title></titl>Page Backup - Zion Tech Group</title>
         <meta /></meta>
       </Helmet>
       <Navigation /></Navigation>
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        {/* Hero Section */}
-        <section className="py-20px-4"  > </section><div className="</div><divclassName="text-center mb-16"  > </div><h2 className="text-4xl font-bold text-white mb-4"  >Section Title</h2>
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
+        {/* Hero Section */}  <section className="py-20px-4"  ></sectio> </section><div className="</div></di><divclassName="text-center mb-16"  ></divclassName> </div><h2 className="text-4xl font-bold text-white mb-4"  ></h>Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }}  /></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
+          <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' } }  /></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
             <h1 />Page Backup;
             </h1>
             <p></p>
@@ -60,17 +54,16 @@ return (
             </div>
         </section>
         <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }}  /></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
+          <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' } }  /></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
             <h1 className="w-5h-5ml-2" />Page Backup;
             <p className="w-5h-5ml-2" /></p>
               Advanced page backup solutions powered by AI technology.
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
               <button className="w-5h-5ml-2" />Get Started;
               <button className="w-5h-5ml-2" />Learn More;
-        {/* Features Section */}
-        <section className="py-20px-4"  > </section><div className="</div><divclassName="text-center mb-16"  > </div><h2 className="text-4xl font-bold text-white mb-4"  >Section Title</h2>
+        {/* Features Section */}  <section className="py-20px-4"  ></sectio> </section><div className="</div></di><divclassName="text-center mb-16"  ></divclassName> </div><h2 className="text-4xl font-bold text-white mb-4"  ></h>Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </section>
@@ -83,20 +76,18 @@ return (
                 Powerful AI technology that drives results;
               </p>
             </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5backdrop-blur-sm rounded-2 xl p-8 hover:bg-white/10 transition-all duration-300group" /></div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
                     <feature /></feature>
-                  <h3 className="text-xlfont-bold text-white mb-4"  >{feature.title}</h3>
+                  <h3 className="text-xlfont-bold text-white mb-4"  ></h>{feature.title}</h3>
                   <p className="text-gray-300mb-4">{feature.description}</p>
                   {
     feature.benefits && (;
                     <ul />{feature.benefits.map((benefit, idx) => (
-  }
-                        </ul><li  > </li><CheckCircle /></CheckCircle>
-                          {benefit}
-                        </li>
+  }  </ul><li  ></l> </li><CheckCircle /></CheckCircle>
+                          {benefit}  </li>
                       ))}
                     </ul>
                   )}
@@ -105,28 +96,24 @@ return (
 
             </div>
         </section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
               <h2 className="w-5h-5ml-2" />Key Features;
               <p className="text-xltext-gray-300 max-w-3xl mx-auto">Powerful AI technology that drives results;
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5backdrop-blur-sm rounded-2 xl p-8 hover:bg-white/10 transition-all duration-300group" /></div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
                     <feature.icon className="w-8 h-8text-white"  /></feature>
-                  <h3 className="w-5h-5ml-2" />{feature.title}
-                  <p className="text-gray-300mb-4">{feature.description}
-                  {feature.benefits && (
+                  <h3 className="w-5h-5ml-2" />{feature.title}  <p className="text-gray-300mb-4">{feature.description} {feature.benefits && (
                     <ul className="w-5h-5ml-2" /></ul>
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-centertext-sm text-gray-400" /></li>
                           <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
-                          {benefit}
-                      ))}
+                          {benefit} ))}
                   )}
               ))}
-        {/* CTA Section */}
-        <section className="py-20px-4"  > </section><div className="</div><divclassName="text-center mb-16"  > </div><h2 className="text-4xl font-bold text-white mb-4"  >Section Title</h2>
+        {/* CTA Section */}  <section className="py-20px-4"  ></sectio> </section><div className="</div></di><divclassName="text-center mb-16"  ></divclassName> </div><h2 className="text-4xl font-bold text-white mb-4"  ></h>Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </section>
@@ -151,5 +138,4 @@ return (
       </div>
       <Footer />    </Footer>
 </>
-  ),
-};
+  )};

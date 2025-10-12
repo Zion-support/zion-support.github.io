@@ -5,7 +5,7 @@ interface UserExperienceEnhancerProps {
 
   children: React.ReactNode;
   className?: string;
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
+const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps></UserExperienceEnhancerProps> = ({
   children,
   className = ''
 
@@ -16,8 +16,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
 
     rating: 0,
     comment: '',
-    submitted: false,
-  });
+    submitted: false} );
 
     // UX enhancement logic;
       // Add smooth scrolling;
@@ -31,5 +30,4 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
         });
       });
 
-interface UserExperienceEnhancerProps {children: React.ReactNode}
-
+interface UserExperienceEnhancerProps {children: React.ReactNode} 

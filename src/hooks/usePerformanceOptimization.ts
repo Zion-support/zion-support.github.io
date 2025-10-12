@@ -18,7 +18,7 @@
       const lastEntry = entries[entries.length - 1];
         metrics.largestContentfulPaint = lastEntry.startTime;
     });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] } );
     // Measure CLS;
     let clsValue = 0;
     
@@ -28,13 +28,13 @@
           clsValue += layoutShiftEntry.value || 0;
       metrics.cumulativeLayoutShift = clsValue;
     });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
+    clsObserver.observe({ entryTypes: ['layout-shift'] } );
     // Measure FID;
           processingStart?: number;
         };
           (fidEntry.processingStart || 0) - entry.startTime;
     });
-    fidObserver.observe({ entryTypes: ['first-input'] });
+    fidObserver.observe({ entryTypes: ['first-input'] } );
     // Cleanup observers after a delay;
       lcpObserver.disconnect();
       clsObserver.disconnect();

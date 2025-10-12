@@ -5,19 +5,16 @@ export default LazyWrapper;
 interface LazyWrapperProps {
   children: React.ReactNode;
   fallback?: React.ReactNode;
-}
-
-const DefaultFallback = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+} const DefaultFallback = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
 )
 
   children, 
   fallback = <DefaultFallback /&gt;</DefaultFallback&gt;
-}) => {
+}) =></DefaultFallback> {
   return (
-    <Suspense fallback="{fallback}"  />{children}
-    </Suspense>
+    <Suspense fallback="{fallback} "  />{children}  </Suspense>
   )
 }
 
@@ -25,11 +22,11 @@ const DefaultFallback = () => (
   Component: ComponentType<P />,
   fallback?: React.ReactNode;
 ) => {
-  const LazyComponent = lazy(() => Promise.resolve({ default: Component }))
+  const LazyComponent = lazy(() => Promise.resolve({ default: Component } ))
   
   return (props: P) => (
-    <LazyWrapper fallback="{fallback}" /></LazyWrapper>
-      <LazyComponent {...props}  /></LazyComponent>
+    <LazyWrapper fallback="{fallback} " /></LazyWrapper>
+      <LazyComponent {...props} /></LazyComponent>
     </LazyWrapper>
   )
 }
@@ -41,6 +38,5 @@ const DefaultFallback = () => (
       requestIdleCallback(() => importFn())
     } else {
       setTimeout(() => importFn(), 0)
-    }
-  }
+    } }
 }

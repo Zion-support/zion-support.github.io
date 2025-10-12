@@ -15,7 +15,7 @@ import path from 'path';
       files.push(fullPath);
   
   return files;
-};
+} ;
 
 // Fix unused imports in a file;
   try {
@@ -23,7 +23,7 @@ import path from 'path';
     let modified = false;
     
     // Find all import statements;
-    const importRegex = /import\s+{([^}]+)}\s+from\s+['"]([^'"]+)['"]/g;
+    const importRegex = /import\s+{([^} ]+)}\s+from\s+['"]([^'"]+)['"]/g;
     const imports = [];
     let match;
     
@@ -38,7 +38,7 @@ import path from 'path';
         end: match.index + match[0].length,
         importedItems,
         source;
-      });
+      } );
     
     // Check which imports are actually used;
     for (const importInfo, of, imports) {
@@ -52,14 +52,14 @@ import path from 'path';
         
         // Simple check - look for the item name in JSX or as a variable;
         const itemName = item.replace(/\s+as\s+\w+/, '').trim();
-        const usageRegex = new RegExp(`\\b${itemName}\\b`, 'g');
+        const usageRegex = new RegExp(`\\b${itemName} \\b`, 'g');
         
         if (usageRegex.test(contentWithoutImport)) {
           usedItems.push(item);
       
       // If some items are used but not all, replace the import;
       if (usedItems.length > 0 && usedItems.length < importInfo.importedItems.length) {
-        const newImport = `import { ${usedItems.join(', ')} } from '${importInfo.source}'`;
+        const newImport = `import { ${usedItems.join(', ')} } from '${importInfo.source} '`;
         content = content.replace(importInfo.fullMatch, newImport);
         modified = true;
       } else if (usedItems.length === 0) {
@@ -68,19 +68,19 @@ import path from 'path';
         modified = true;
     
     // Remove unused Helmet imports specifically;
-    if (content.includes("import { Helmet } from 'react-helmet-async'") && !content.includes('<Helmet>')) {
+    if (content.includes("import { Helmet } from 'react-helmet-async'") && !content.includes('<Helmet></Helmet>')) {
       content = content.replace(/import { Helmet } from 'react-helmet-async'\n?/g, '');
       modified = true;
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed unused imports in: ${filePath}`);
+      console.log(`Fixed unused imports in: ${filePath} `);
       return true;
     
     return false;
     
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath} :`, error.message);
     return false;
 };
 
@@ -96,6 +96,6 @@ for (const file, of, files) {
     if (fixUnusedImports(file)) {
       fixedCount++;
   } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
+    console.error(`Error processing ${file} :`, error.message);
 
 console.log(`Fixed unused imports in ${fixedCount} files`);

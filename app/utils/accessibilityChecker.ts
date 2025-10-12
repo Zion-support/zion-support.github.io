@@ -42,7 +42,7 @@ export const accessibilityChecker = new AccessibilityChecker();
         element;
       };
 
-      const label = document.querySelector(`label[for="${id}"]`);
+      const label = document.querySelector(`label[for="${id} "]`);
           element;
         };
 
@@ -145,16 +145,11 @@ export const accessibilityChecker = new AccessibilityChecker();
 
     return `
 Accessibility Report;
-Score: ${score}%
-Total Checks: ${report.totalChecks}
-Passed: ${report.passedChecks}
-Failed: ${report.failedChecks}
-Warnings: ${report.warnings}
-
-Issues Found:
+Score: ${score} %
+Total Checks: ${report.totalChecks} Passed: ${report.passedChecks} Failed: ${report.failedChecks} Warnings: ${report.warnings} Issues Found:
 ${report.results;
  !r.passed)
- `- ${r.severity.toUpperCase()}: ${r.message}`)
+ `- ${r.severity.toUpperCase()} : ${r.message} `)
   .join('\n')}
     `.trim();
 

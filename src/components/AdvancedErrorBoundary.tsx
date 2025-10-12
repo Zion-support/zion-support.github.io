@@ -28,7 +28,7 @@ class AdvancedErrorBoundary extends Component;
     super(props);
       errorId: null;
     };
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      errorId: `error_${Date.now()} _${Math.random().toString(36).substr(2, 9)} `
     };
       errorInfo;
     });
@@ -50,12 +50,12 @@ class AdvancedErrorBoundary extends Component;
   };
     // Generate or retrieve session ID;
       let sessionId = sessionStorage.getItem('sessionId');
-        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        sessionId = `session_${Date.now()} _${Math.random().toString(36).substr(2, 9)} `;
         sessionStorage.setItem('sessionId', sessionId);
       return sessionId;
-      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      return `session_${Date.now()} _${Math.random().toString(36).substr(2, 9)} `;
   };
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    return `error_${Date.now()} _${Math.random().toString(36).substr(2, 9)} `;
   };
       // Send to your error reporting service;
           'Content-Type': 'application/json'
@@ -76,13 +76,9 @@ class AdvancedErrorBoundary extends Component;
                   We&apos;re sorry, but something unexpected happened. Our team;
                   has been notified.
                     Error Details:
-                      <strong>Error ID:</strong> {this.state.errorId}
-                      <strong>Message:</strong> {this.state.error?.message}
-                        Stack Trace;
-                        {this.state.error?.stack}
-                        Component Stack;
-                        {this.state.errorInfo?.componentStack}
-              )}
+                      <strong></stron>Error ID:</strong> {this.state.errorId}  <strong></stron>Message:</strong> {this.state.error?.message} Stack Trace;
+                        {this.state.error?.stack} Component Stack;
+                        {this.state.errorInfo?.componentStack} )}
                 {this.props.enableRetry &&
                   this.retryCount;
                       Try Again ({this.maxRetries - this.retryCount} attempts;

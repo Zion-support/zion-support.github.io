@@ -1,5 +1,5 @@
-export function debounce<T extends (...args: any[]) => any>(
-export function throttle<T extends (...args: any[]) => any>(
+export function debounce<T extends (...args: any[]) =></T> any>(
+export function throttle<T extends (...args: any[]) =></T> any>(
 export function createIntersectionObserver(
 export function getMemoryUsage(): any {
 export function preloadCriticalResources(): void {
@@ -14,24 +14,24 @@ export function addResourceHints(): void {
 // Debounce function for performance optimization;
   func: T,
   wait: number;
-): (...args: Parameters<T>) => void {
+): (...args: Parameters<T></T>) => void {
   let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
+  return (...args: Parameters<T></T>) => {
     clearTimeout(timeout);
  func(...args), wait);
-  };
+  } ;
 
 // Throttle function for performance optimization;
   func: T,
   limit: number;
-): (...args: Parameters<T>) => void {
+): (...args: Parameters<T></T>) => void {
   let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
+  return (...args: Parameters<T></T>) => {
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
  (inThrottle = false), limit);
-  };
+  } ;
 
 // Intersection Observer for lazy loading;
   callback: IntersectionObserverCallback,
@@ -43,8 +43,7 @@ export function addResourceHints(): void {
   return new IntersectionObserver(callback, {
     rootMargin: '50px',
     threshold: 0.1,
-    ...options,
-  });
+    ...options} );
 
 // Performance monitoring utilities;
  void): void {
@@ -81,7 +80,7 @@ export function addResourceHints(): void {
     if (resource.endsWith('.woff2')) {
       link.crossOrigin = 'anonymous';
     document.head.appendChild(link);
-  });
+  } );
 
 // Image optimization utility;
   // Add image optimization parameters if needed;
@@ -100,7 +99,7 @@ export function addResourceHints(): void {
           img.src = src;
           img.classList.remove('lazy');
           img.classList.add('loaded');
-    });
+    } );
   });
 
 // Performance budget monitoring;
@@ -112,16 +111,16 @@ export function addResourceHints(): void {
   const loadTime = navigation.loadEventEnd - navigation.fetchStart;
   const budget = 3000; // 3 seconds;
  budget) {
- ${budget}ms`);
+ ${budget} ms`);
 
 // Resource hints for better performance;
   if (typeof window === 'undefined') return;
   
   const hints = [
-    { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
-    { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
-    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
+    { rel: 'dns-prefetch', href: '//fonts.googleapis.com' } ,
+    { rel: 'dns-prefetch', href: '//fonts.gstatic.com' } ,
+    { rel: 'preconnect', href: 'https://fonts.googleapis.com' } ,
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' } ,
   ];
   
     const link = document.createElement('link');

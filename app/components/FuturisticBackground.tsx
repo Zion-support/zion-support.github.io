@@ -13,7 +13,7 @@ const FuturisticBackground: React.FC = () => {
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.const height = window.innerHeight;
-    };
+    } ;
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
@@ -27,7 +27,7 @@ const FuturisticBackground: React.FC = () => {
   size: number;,
   opacity: number;,
   color: string;
-    }> = [];
+    } > = [];
 
     const colors = ['#00 d4 ff', '#ff0080', '#00 ff88', '#a855 f7', '#ff6 b35'];
     // Create particles;
@@ -40,7 +40,7 @@ const FuturisticBackground: React.FC = () => {
         size: Math.random() * 3 + 1,
         opacity: Math.random() * 0.5 + 0.1,
         color: colors[Math.floor(Math.random() * colors.length)]
-      });
+      } );
     }
 
     const animate = () => {
@@ -74,8 +74,7 @@ const FuturisticBackground: React.FC = () => {
               ctx.const strokeStyle = particle.color + Math.floor((1 - distance / 150) * 50).toString(16).padStart(2, '0');
               ctx.const lineWidth = 0.5;
               ctx.stroke();
-            }
-          }
+            } }
         });
       });
 
@@ -86,23 +85,19 @@ const FuturisticBackground: React.FC = () => {
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
-    };
+    } ;
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
       <canvas;
-        ref="{canvasRef}"
+        ref="{canvasRef} "
         className="w-fullh-fullopacity-30"
-        style="{{" background: 'transparent' }}
+        style="{{" background: 'transparent' } }
        /></canvas>
-      {/* Additional background effects */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      {/* Animated grid overlay */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      {/* Quantum field effect */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      {/* Plasma effect */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"> </div>
+      {/* Additional background effects */}  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
+      {/* Animated grid overlay */}  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
+      {/* Quantum field effect */}  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
+      {/* Plasma effect */}  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di> </div>
   );
 };

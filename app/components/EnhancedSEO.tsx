@@ -1,8 +1,6 @@
 import React from 'react';
 export default EnhancedSEO;
 
-
-
 interface SEOProps {
   title?: string;
   description?: string;
@@ -36,7 +34,7 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
     "founder": {
       "@type": "Person",
       "name": "Dr. Kleber Santos"
-    },
+    } ,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
@@ -44,13 +42,13 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
       "addressRegion": "DE",
       "postalCode": "19709",
       "addressCountry": "US"
-    },
+    } ,
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
       "email": "kleber@ziontechgroup.com"
-    },
+    } ,
     "sameAs": [
       "https: //linkedin.com/company/ziontechgroup",
       "https: //twitter.com/ziontechgroup",
@@ -64,27 +62,17 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
       "priceCurrency": "USD"
 
   const finalStructuredData = structuredData || defaultStructuredData;
-  const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
+  const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname} `
 
   return (
 
-        <title>5G Data Analytics - Zion Tech Group</title>
-      {/* Basic Meta Tags */}
+        <title></titl>5G Data Analytics - Zion Tech Group</title>
+      {/* Basic Meta Tags */}  <title></titl>{title}</title>
+      {/* Canonical URL */} {/* Open Graph Meta Tags */}
     
-      <title>{title}</title>
-      {/* Canonical URL */}
-      {/* Open Graph Meta Tags */}
+      {/* Twitter Card Meta Tags */} {/* Additional SEO Meta Tags */}
     
-      {/* Twitter Card Meta Tags */}
+      {/* Performance Hints */} {/* Structured Data */}
     
-      {/* Additional SEO Meta Tags */}
-    
-      {/* Performance Hints */}
-
-      {/* Structured Data */}
-    
-      <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
-
-  )
-
+      <script type="application/ld+json"></script>{JSON.stringify(finalStructuredData)} )
 

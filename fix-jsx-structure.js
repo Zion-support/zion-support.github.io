@@ -20,21 +20,21 @@ function fixJSXStructure(content) {
   fixed = fixed.replace(/py-16text-center/g, 'py-16 text-center');
   
   // Fix self-closing divs that should be opening tags;
-  fixed = fixed.replace(/<div className="([^"]*)" \/>\s*<([^>]+)>/g, '<div className="$1">\n        <$2>');
-  fixed = fixed.replace(/<footer className="([^"]*)" \/>\s*<div/g, '<footer className="$1">\n      <div');
-  fixed = fixed.replace(/<ul className="([^"]*)" \/>\s*<li/g, '<ul className="$1">\n              <li');
+  fixed = fixed.replace(/<div className="([^"]*)" \/>\s*<([^>]+)>/g, '<div className="$1"></div>\n        <$2>');
+  fixed = fixed.replace(/<footer className="([^"]*)" \/>\s*<div/g, '<footer className="$1"></div>\n      <div');
+  fixed = fixed.replace(/<ul className="([^"]*)" \/>\s*<li/g, '<ul className="$1"></li>\n              <li');
   fixed = fixed.replace(/<p className="([^"]*)" \/>\s*([^<]+)/g, '<p className="$1">\n              $2');
   
   // Fix missing closing tags;
-  fixed = fixed.replace(/<div \/>\s*<h4/g, '<div>\n            <h4');
-  fixed = fixed.replace(/<div \/>\s*<h4/g, '<div>\n            <h4');
+  fixed = fixed.replace(/<div \/>\s*<h4/g, '<div></h4>\n            <h4');
+  fixed = fixed.replace(/<div \/>\s*<h4/g, '<div></h4>\n            <h4');
   
   // Fix Link components that should be self-closing;
-  fixed = fixed.replace(/<Link\s+([^>]+)\s*\/>\s*([^<]+)\s*<([^>]+)\s*\/>/g, '<Link $1>\n          $2\n          <$3 />\n        </Link>');
+  fixed = fixed.replace(/<Link\s+([^></h4>]+)\s*\/>\s*([^<]+)\s*<([^>]+)\s*\/>/g, '<Link $1></Lin>\n          $2\n          <$3 />\n        </Link>');
   
   // Fix specific patterns;
-  fixed = fixed.replace(/<Link\s+to="\/contact"\s+className="[^"]*"\s*\/>\s*Contact Us\s*<ArrowRight[^>]*\/>/g, 
-    '<Link\n          to="/contact"\n          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"\n        >\n          Contact Us\n          <ArrowRight className="w-5 h-5 ml-2" />\n        </Link>');
+  fixed = fixed.replace(/<Link\s+to="\/contact"\s+className="[^"]*"\s*\/>\s*Contact Us\s*<ArrowRight[^></ArrowRight>]*\/>/g, 
+    '<Link\n          to="/contact"\n          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"\n        ></Lin>\n          Contact Us\n          <ArrowRight className="w-5 h-5 ml-2" />\n        </Link>');
   
   // Fix malformed p tags;
   fixed = fixed.replace(/<p className="([^"]*)" \/>\s*([^<]+)\s*<\/p>/g, '<p className="$1">\n              $2\n            </p>');
@@ -49,11 +49,11 @@ function processFile(filePath) {
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed JSX structure: ${filePath}`);
+      console.log(`Fixed JSX structure: ${filePath} `);
       return true;
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath} :`, error.message);
     return false;
 
 // Main function;
@@ -61,15 +61,15 @@ async function main() {
   console.log('Starting to fix JSX structure issues...');
   
   // Get all TypeScript/TSX files;
-  const files = await glob('**/*.{ts,tsx}', {
+  const files = await glob('**/*.{ts,tsx} ', {
     ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
-  });
+  } );
   
   let fixedCount = 0;
   
     if (processFile(file)) {
       fixedCount++;
-  });
+  } );
   
   console.log(`\nFixed JSX structure in ${fixedCount} files out of ${files.length} total files.`);
 

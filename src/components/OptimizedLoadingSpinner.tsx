@@ -34,10 +34,9 @@ export default OptimizedLoadingSpinner;
           );
     }, [size, variant, color, sizeClasses, colorClasses, baseClasses]);
     
-      return `${baseClasses} ${fullScreen ? fullScreenClasses : ''} ${className}`;
+      return `${baseClasses} ${fullScreen ? fullScreenClasses : ''} ${className} `;
     }, [baseClasses, fullScreen, fullScreenClasses, className]);
-          {renderSpinner}
-              {text}
+          {renderSpinner} {text}
           )}
   );
 );

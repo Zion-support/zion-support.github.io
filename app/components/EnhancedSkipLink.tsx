@@ -7,7 +7,7 @@ const EnhancedSkipLink: React.FC = () => {
     const mainContent = document.getElementById('main-content');
     if (mainContent) {
       mainContent.focus();
-      mainContent.scrollIntoView({ behavior: 'smooth' });
+      mainContent.scrollIntoView({ behavior: 'smooth' } );
     }
   };
 
@@ -17,21 +17,21 @@ const EnhancedSkipLink: React.FC = () => {
       const firstLink = navigation.querySelector('a');
       if (firstLink) {
         firstLink.focus();
-        firstLink.scrollIntoView({ behavior: 'smooth' });
+        firstLink.scrollIntoView({ behavior: 'smooth' } );
       }
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></di></div>
       <button;
-        onClick="{handleSkipToMain}"
+        onClick="{handleSkipToMain} "
         className="skip-link"
         aria-label="Skip to main content"
         />Skip to main content;
       </button>
       <button;
-        onClick="{handleSkipToNavigation}"
+        onClick="{handleSkipToNavigation} "
         className="skip-link"
         aria-label="Skip to navigation"
         />Skip to navigation;
@@ -42,9 +42,7 @@ const EnhancedSkipLink: React.FC = () => {
   top: -100 px;,
   left: 0;
           z-index: 1000;
-        }
-        
-        .skip-link {
+        } .skip-link {
           position: absolute;,
   top: -100 px;,
   left: 0;,
@@ -57,18 +55,13 @@ const EnhancedSkipLink: React.FC = () => {
           font-weight: bold;,
   transition: top 0.3 s;
           z-index: 1001;
-        }
-        
-        .skip-link: focus {,
+        } .skip-link: focus {,
   top: 10 px;,
   left: 10 px;
-        }
-        
-        .skip-link: hover {,
+        } .skip-link: hover {,
   background: #00 ffff;,
   color: #000;
-        }
-      `}</style>
+        } `}</style>
     </div>
   );
 };

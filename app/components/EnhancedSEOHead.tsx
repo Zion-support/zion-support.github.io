@@ -1,7 +1,6 @@
 import React from 'react';
 export default SEOHead;
 
-
 'use client';
 
 'use client';
@@ -37,7 +36,7 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
       "email": "kleber@ziontechgroup.com"
-    },
+    } ,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
@@ -45,7 +44,7 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
       "addressRegion": "DE",
       "postalCode": "19709",
       "addressCountry": "US"
-    },
+    } ,
     "sameAs": [
       "https: //linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup"
@@ -65,28 +64,17 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
   const finalStructuredData = structuredData || defaultStructuredData;
   return (
 
-        <title>5G Data Analytics - Zion Tech Group</title>
-      {/* Basic Meta Tags */}
+        <title></titl>5G Data Analytics - Zion Tech Group</title>
+      {/* Basic Meta Tags */}  <title></titl>{title}</title>
+      {/* Canonical URL */} {/* Open Graph Meta Tags */}
     
-      <title>{title}</title>
-      {/* Canonical URL */}
-      {/* Open Graph Meta Tags */}
+      {/* Twitter Card Meta Tags */} {/* Additional Meta Tags */}
     
-      {/* Twitter Card Meta Tags */}
+      {/* Favicon and Icons */} {/* Preconnect to external domains */}
     
-      {/* Additional Meta Tags */}
+      {/* DNS Prefetch */} {/* Structured Data */}
     
-      {/* Favicon and Icons */}
-
-      {/* Preconnect to external domains */}
-    
-      {/* DNS Prefetch */}
-    
-      {/* Structured Data */}
-    
-      <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
-
-      {/* Additional SEO Scripts */}
+      <script type="application/ld+json"></script>{JSON.stringify(finalStructuredData)} {/* Additional SEO Scripts */}
       <script type="application/ld+json"  />{JSON.stringify({
           "@context": "https: //schema.org",
           "@type": "WebSite",
@@ -94,16 +82,13 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
           "url": "https: //ziontechgroup.com",
           "potentialAction": {
             "@type": "SearchAction",
-            "target": "https: //ziontechgroup.com/search?q={search_term_string}",
+            "target": "https: //ziontechgroup.com/search?q={search_term_string} ",
             "query-input": "required name=search_term_string"
         })}
       
-      {/* Performance Hints */}
-
-      {/* Security Headers */}
+      {/* Performance Hints */} {/* Security Headers */}
     
       <meta httpEquiv="X-Frame-Options" content="DENY" / / />;
   );
 };
-
 

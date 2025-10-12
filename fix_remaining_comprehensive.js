@@ -9,7 +9,7 @@ function fixRemainingComprehensive(content) {
   content = content.replace(/<meta name="([^"]*)" content="([^"]*)" \/>/g, '<meta name="$1" content="$2" />');
   
   // Fix malformed className attributes with spaces;
-    return `className="${part1}${part2}"`;
+    return `className="${part1} ${part2} "`;
   });
   
   // Fix specific patterns;
@@ -38,21 +38,21 @@ function fixRemainingComprehensive(content) {
   content = content.replace(/className="hover:text-cyan-400"/g, 'className="hover:text-cyan-400"');
   
   // Fix malformed JSX structure - fix self-closing divs that should be opening tags;
-  content = content.replace(/<div className="([^"]*)"\s*\/>/g, '<div className="$1">');
+  content = content.replace(/<div className="([^"]*)"\s*\/>/g, '<div className="$1"></div>');
   
   // Fix malformed JSX structure - fix self-closing Helmet that should be opening tag;
-  content = content.replace(/<Helmet\s*\/>/g, '<Helmet>');
+  content = content.replace(/<Helmet\s*\/>/g, '<Helmet></Helmet>');
   
   // Fix malformed JSX structure - fix self-closing Link elements that should contain text;
-  content = content.replace(/<Link\s+to="([^"]*)"\s+className="([^"]*)"\s*\/>\s*([^<]+)\s*<ArrowRight[^>]*\/>/g, '<Link\n          to="$1"\n          className="$2"\n        >\n          $3\n          <ArrowRight className="w-5 h-5 ml-2" />\n        </Link>');
+  content = content.replace(/<Link\s+to="([^"]*)"\s+className="([^"]*)"\s*\/>\s*([^<]+)\s*<ArrowRight[^></ArrowRight>]*\/>/g, '<Link\n          to="$1"\n          className="$2"\n        ></Lin>\n          $3\n          <ArrowRight className="w-5 h-5 ml-2" />\n        </Link>');
   
   // Fix any remaining malformed JSX structure;
-  content = content.replace(/<div className="([^"]*)"\s*\/>/g, '<div className="$1">');
+  content = content.replace(/<div className="([^"]*)"\s*\/>/g, '<div className="$1"></div>');
   
   // Fix any remaining self-closing elements that should contain text;
-  content = content.replace(/<h1 className="([^"]*)"\s*\/>\s*([^<]+)\s*<\/h1>/g, '<h1 className="$1">$2</h1>');
+  content = content.replace(/<h1 className="([^"]*)"\s*\/>\s*([^<]+)\s*<\/h1>/g, '<h1 className="$1"></h>$2</h1>');
   content = content.replace(/<p className="([^"]*)"\s*\/>\s*([^<]+)\s*<\/p>/g, '<p className="$1">$2</p>');
-  content = content.replace(/<button className="([^"]*)"\s*\/>\s*([^<]+)\s*<\/button>/g, '<button className="$1">$2</button>');
+  content = content.replace(/<button className="([^"]*)"\s*\/>\s*([^<]+)\s*<\/button>/g, '<button className="$1"></butto>$2</button>');
   
   return content;
 
@@ -64,11 +64,11 @@ function processFile(filePath) {
     
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed comprehensive issues: ${filePath}`);
+      console.log(`Fixed comprehensive issues: ${filePath} `);
       return true;
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath} :`, error.message);
     return false;
 
 // Function to recursively find and process TSX files;

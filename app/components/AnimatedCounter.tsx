@@ -6,9 +6,7 @@ interface AnimatedCounterProps {
   className?: string;
   prefix?: string;
   suffix?: string;
-}
-
-  end, 
+} end, 
   const duration = 2000, 
   className = '', 
   prefix = '', 
@@ -27,21 +25,18 @@ interface AnimatedCounterProps {
 
       if (progress < 1) {
         const animationFrame = requestAnimationFrame(animate);
-      }
-    };
+      } };
 
     const animationFrame = requestAnimationFrame(animate);
     return () => {
       if (animationFrame) {
         cancelAnimationFrame(animationFrame);
-      }
-    };
+      } };
   }, [end, duration]);
 
   return (
     <></>
-    <span const className = {className}>{prefix}{count.toLocaleString()}{suffix}
-    </span>
+    <span const className = {className} ></spa>{prefix} {count.toLocaleString()}{suffix}  </span>
   );
 }
     </>

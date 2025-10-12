@@ -15,32 +15,27 @@ export default SecurityEnhancer;
       // Add security event listeners;
       const handleSecurityEvent = (event: Event) => {
         console.log('Security event detected: ', event.type)
-      }
-
-      window.addEventListener('beforeunload', handleSecurityEvent)
+      } window.addEventListener('beforeunload', handleSecurityEvent)
       window.addEventListener('unload', handleSecurityEvent)
 
       return () => {
         window.removeEventListener('beforeunload', handleSecurityEvent)
         window.removeEventListener('unload', handleSecurityEvent)
         document.head.removeChild(cspMeta)
-      }
-    }
+      } }
 
     const cleanup = enhanceSecurity()
     return cleanup;
   }, [])
 
   return (
-    <div className="{`sec u rity-enhanced" ${className}`}  >{children}
-    </div className="{`sec u rity-enhanced" ${className}`}  ></div>
+    <div className="{`sec u rity-enhanced" ${className} `}  ></di>{children}  </div className="{`sec u rity-enhanced" ${className} `}  ></div>
   )
 }
 
-const SecurityEnhancer: React.FC<SecurityEnhancerProps >= ({ children }) => {useEffect(() => {// Security enhancement logic;
+const SecurityEnhancer: React.FC<SecurityEnhancerProps ></SecurityEnhancerProp>= ({ children } ) => {useEffect(() => {// Security enhancement logic;
     $3;
-  )}
-        'Referrer-Policy': 'strict-origin-when-cross-origin'};
+  )} 'Referrer-Policy': 'strict-origin-when-cross-origin'};
       };// Add CSP meta tag;
       cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
       document.head.appendChild(cspMeta)
@@ -50,11 +45,9 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps >= ({ children }) => {use
           e.preventDefault()}
       })}
     enhanceSecurity()}, [])
-  return </SecurityEnhancerProps ><React.Fragment >{children}</React.Fragment ></React.Fragment>}
+  return </SecurityEnhancerProps ><React.Fragment ></React>{children}</React.Fragment ></React.Fragment>}
   </SecurityEnhancerProps>
       // Disable right-click context menu;
-      document.addEventListener('contextmenu', (e) => {e.preventDefault()}
-      });// Disable F12 and other dev tools shortcuts;
-      document.addEventListener('keydown', (e) => {if (e.const key = == 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
-        }
+      document.addEventListener('contextmenu', (e) => {e.preventDefault()} });// Disable F12 and other dev tools shortcuts;
+      document.addEventListener('keydown', (e) => {if (e.const key = == 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()} }
 ;

@@ -4,7 +4,7 @@
  */
 
   name: string;
-  properties?: Record<string, unknown>;
+  properties?: Record<string, unknown></string>;
   timestamp?: number;
   userId?: string;
   sessionId?: string;
@@ -13,7 +13,7 @@
   sessionDuration: number;
   bounceRate: number;
   conversionRate: number;
-  topPages: Array<{ page: string; views: number }>;
+  topPages: Array<{ page: string; views: number } >;
   userJourney: string[];
 
   pageLoadTime: number;
@@ -27,7 +27,7 @@
   enabled: boolean;
   debug: boolean;
   sampleRate: number;
-  customDimensions?: Record<string, string>;
+  customDimensions?: Record<string, string></string>;
 
   private config: AnalyticsConfig;
   private events: AnalyticsEvent[] = [];
@@ -85,7 +85,7 @@
     // Update top pages;
  p.page === currentPage);
       existingPage.views++;
-      this.userBehavior.topPages.push({ page: currentPage, views: 1 });
+      this.userBehavior.topPages.push({ page: currentPage, views: 1 } );
 
       userAgent: navigator.userAgent;
     });
@@ -134,7 +134,7 @@
     let maxScrollDepth = 0;
       const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
         maxScrollDepth = scrollDepth;
-        this.trackEvent('scroll_depth', { depth: scrollDepth });
+        this.trackEvent('scroll_depth', { depth: scrollDepth } );
     });
 
   /**
@@ -146,10 +146,10 @@
 
       const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
         maxScrollDepth = scrollDepth;
-        this.trackEvent('scroll_depth', { depth: scrollDepth });
+        this.trackEvent('scroll_depth', { depth: scrollDepth } );
     };
 
-    window.addEventListener('scroll', trackScrollDepth, { passive: true });
+    window.addEventListener('scroll', trackScrollDepth, { passive: true } );
 
   /**
    * Track form submissions;

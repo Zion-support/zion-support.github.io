@@ -11,7 +11,7 @@ export default EnhancedErrorBoundary;
   retryCount: number;
   private maxRetries: number;
     super(props);
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      errorId: `error_${Date.now()} _${Math.random().toString(36).substr(2, 9)} `
     };
     this.maxRetries = props.maxRetries || 3;
       retryCount: 0;
@@ -44,11 +44,11 @@ export default EnhancedErrorBoundary;
     return localStorage.getItem('userId') || null;
   };
     let sessionId = sessionStorage.getItem('sessionId');
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      sessionId = `session_${Date.now()} _${Math.random().toString(36).substr(2, 9)} `;
       sessionStorage.setItem('sessionId', sessionId);
     return sessionId;
   };
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined } );
   };
     window.location.reload();
   };

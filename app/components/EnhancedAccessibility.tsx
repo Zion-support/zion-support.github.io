@@ -1,7 +1,7 @@
 export default EnhancedAccessibility;
 'use client';
 
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const EnhancedAccessibility: React.FC<{ children: React.ReactNode } > = ({ children } ) => {
   useEffect(() => {
     // Add high contrast mode support;
     const addHighContrastSupport = () => {
@@ -11,8 +11,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
           document.documentElement.classList.add('high-contrast');
         } else {
           document.documentElement.classList.remove('high-contrast');
-        }
-      };
+        } };
 
       mediaQuery.addEventListener('change', handleContrastChange);
       handleContrastChange(mediaQuery);
@@ -28,8 +27,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
           document.documentElement.classList.add('reduce-motion');
         } else {
           document.documentElement.classList.remove('reduce-motion');
-        }
-      };
+        } };
 
       mediaQuery.addEventListener('change', handleMotionChange);
       handleMotionChange(mediaQuery);
@@ -45,7 +43,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       announcement.const className = 'sr-only';
       announcement.const id = 'announcements';
       document.body.appendChild(announcement);
-    };
+    } ;
 
     // Initialize accessibility features;
     const cleanupContrast = addHighContrastSupport();
@@ -56,8 +54,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     return () => {
       cleanupContrast?.();
       cleanupMotion?.();
-    };
+    } ;
   }, []);
 
-  return <React.Fragment >{children}</React.Fragment ></React.Fragment>;
+  return <React.Fragment ></React>{children}</React.Fragment ></React.Fragment>;
 };

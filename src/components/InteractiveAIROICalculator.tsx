@@ -20,17 +20,17 @@ export default InteractiveAIROICalculator;
  setEfficiencyGain(Number(e.target.value))}
                   className='w-full'
 
-                  {efficiencyGain}%
+                  {efficiencyGain} %
                   Implementation Timeframe (months)
                 
  setTimeframe(Number(e.target.value))}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-                  <option value={6}>6 months</option>
-                  <option value={12}>12 months</option>
-                  <option value={18}>18 months</option>
-                  <option value={24}>24 months</option>
+                  <option value={6} ></optio>6 months</option>
+                  <option value={12} ></optio>12 months</option>
+                  <option value={18} ></optio>18 months</option>
+                  <option value={24} ></optio>24 months</option>
                 Your ROI Projection;
-                  {roi.toFixed(0)}%
+                  {roi.toFixed(0)} %
                   Expected return on investment over {timeframe} months;
   );
 };

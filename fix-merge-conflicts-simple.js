@@ -14,9 +14,9 @@ import path from 'path';
     
     // Write the cleaned content back;
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed merge conflicts in: ${filePath}`);
+    console.log(`Fixed merge conflicts in: ${filePath} `);
     return true;
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath} :`, error.message);
     return false;
 
 // Function to find all files with merge conflicts;

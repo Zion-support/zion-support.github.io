@@ -3,7 +3,7 @@ import path from 'path';
 // Get list of files with linting errors;
 function getFilesWithErrors() {
   try {
-&1', { encoding: 'utf8' });
+&1', { encoding: 'utf8' } );
     const lines = output.split('\n');
     const files = new Set();
     
@@ -11,7 +11,7 @@ function getFilesWithErrors() {
         const match = line.match(/^\/workspace\/([^:]+):/);
         if (match) {
           files.add(match[1]);
-    });
+    } );
     
     return Array.from(files);
   } catch (error) {
@@ -56,12 +56,12 @@ function fixUnusedImports(filePath) {
       // Check for icon usage;
         if (lineLower.includes(pattern)) {
           hasUsedImport = true;
-      });
+      } );
       
       // Check for JSX usage;
         if (line.includes(pattern)) {
           hasUsedImport = true;
-      });
+      } );
       
       // Check for direct variable usage;
       if (line.includes('Helmet') || line.includes('Link') || line.includes('ArrowRight')) {
@@ -71,7 +71,7 @@ function fixUnusedImports(filePath) {
         newLines.push(line);
       } else {
         newLines.push(line);
-    });
+    } );
     
     // Now process import lines and remove unused ones;
     const finalLines = [];
@@ -91,7 +91,7 @@ function fixUnusedImports(filePath) {
           inImportBlock = false;
           importLines = [];
         finalLines.push(line);
-    });
+    } );
     
     // Handle any remaining import lines;
     if (inImportBlock) {
@@ -101,10 +101,10 @@ function fixUnusedImports(filePath) {
     const newContent = finalLines.join('\n');
     if (newContent !== content) {
       fs.writeFileSync(filePath, newContent);
-      console.log(`Fixed unused imports in ${filePath}`);
+      console.log(`Fixed unused imports in ${filePath} `);
     
   } catch (error) {
-    console.log(`Error fixing ${filePath}:`, error.message);
+    console.log(`Error fixing ${filePath} :`, error.message);
 
 function processImportLines(importLines, fullContent) {
   const result = [];
@@ -116,7 +116,7 @@ function processImportLines(importLines, fullContent) {
       return;
     
     const moduleName = importMatch[1];
-    const isDefaultImport = line.includes('import React') || line.includes('import { Helmet }') || line.includes('import { Link }');
+    const isDefaultImport = line.includes('import React') || line.includes('import { Helmet } ') || line.includes('import { Link } ');
     
     if (isDefaultImport) {
       // For default imports, check if they're used;
@@ -125,22 +125,22 @@ function processImportLines(importLines, fullContent) {
         result.push(line);
     } else {
       // For named imports, extract the names and check usage;
-      const namedImportsMatch = line.match(/import\s*{\s*([^}]+)\s*}/);
+      const namedImportsMatch = line.match(/import\s*{\s*([^} ]+)\s*}/);
       if (namedImportsMatch) {
  imp.trim());
           const cleanName = imp.replace(/\s+as\s+\w+/, '').trim();
           return fullContent.includes(cleanName);
-        });
+        } );
         
  0) {
           if (usedImports.length === imports.length) {
             result.push(line);
           } else {
-            const newLine = line.replace(/\{[^}]+\}/, `{ ${usedImports.join(', ')} }`);
+            const newLine = line.replace(/\{[^} ]+\}/, `{ ${usedImports.join(', ')} }`);
             result.push(newLine);
       } else {
         result.push(line);
-  });
+  } );
   
   return result;
 
@@ -151,6 +151,6 @@ console.log(`Found ${files.length} files with unused import errors`);
   const fullPath = path.join('/workspace', file);
   if (fs.existsSync(fullPath)) {
     fixUnusedImports(fullPath);
-});
+} );
 
 console.log('Finished fixing unused imports');
