@@ -1,5 +1,6 @@
+import React from 'react';
 'use client'
-import React from 'react'
+import { Helmet } from 'react-helmet-async';
 
 import { ArrowRight, Mail, Brain } from 'lucide-react';
 
@@ -8,24 +9,24 @@ const EnhancedAnalytics: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      description: 'Lightning-fast processing and real-time analytics for optimal results',
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      description: 'Bank-level security with encryption and compliance standards',
     },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      description: 'Worldwide deployment and support for international businesses',
     }
-  ]
+  ];
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -35,7 +36,7 @@ const EnhancedAnalytics: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
+  ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -55,7 +56,7 @@ const EnhancedAnalytics: React.FC = () => {
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced enhancedanalytics solutions. 
+              Transform your business with our advanced enhancedanalytics solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -141,5 +142,3 @@ const EnhancedAnalytics: React.FC = () => {
     </div>
   )
 }
-
-export default EnhancedAnalytics

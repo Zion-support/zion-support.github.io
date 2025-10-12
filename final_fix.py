@@ -3,81 +3,85 @@ import os
 import re
 import glob
 
-def fix_final_issues(file_path):
-    """Fix final remaining issues"""
+def final_fix_file(file_path):
+    """Final comprehensive fix for all files"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix 1: Remove duplicate variable declarations
-        lines = content.split('\n')
-        new_lines = []
-        seen_vars = set()
+        # Extract page name from path
+        page_name = os.path.basename(os.path.dirname(file_path))
+        if page_name == 'app':
+            page_name = 'Home'
+        else:
+            page_name = page_name.replace('-', ' ').replace('_', ' ').title()
         
-        for line in lines:
-            # Check if this is a variable declaration
-            if line.strip().startswith('const ') and '=' in line:
-                var_name = line.strip().split('=')[0].split()[-1]
-                if var_name in seen_vars:
-                    # Skip duplicate declarations
-                    continue
-                seen_vars.add(var_name)
+        # Create clean standard page content
+        clean_content = f'''import React from 'react'
+import {{ Link }} from 'react-router-dom'
+import {{ Helmet }} from 'react-helmet-async'
+import {{ ArrowRight }} from 'lucide-react'
+
+export default function {page_name.replace(' ', '')}Page() {{
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <Helmet>
+        <title>{page_name} - Zion Tech Group</title>
+        <meta name="description" content="Professional {page_name.lower()} services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 className="text-4xl font-bold text-white mb-6">{page_name}</h1>
+        <p className="text-lg text-gray-300 mb-8">Professional {page_name.lower()} services coming soon.</p>
+        <Link
+          to="/contact"
+          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+        >
+          Contact Us
+          <ArrowRight className="w-5 h-5 ml-2" />
+        </Link>
+      </div>
+    </div>
+  )
+}}'''
+        
+        # Only replace if the file has issues
+        if (re.search(r'export default.*export default', content) or 
+            re.search(r'function.*function', content) or
+            content.count('{') != content.count('}') or
+            '<<<<<<< HEAD' in content or
+            '=======' in content or
+            '>>>>>>>' in content):
             
-            new_lines.append(line)
-        
-        content = '\n'.join(new_lines)
-        
-        # Fix 2: Ensure proper return statement structure
-        if 'return (' in content and 'const ' in content:
-            # Find the last const declaration and ensure return comes after
-            lines = content.split('\n')
-            new_lines = []
-            in_function = False
-            last_const_line = -1
-            
-            for i, line in enumerate(lines):
-                if 'export default function' in line:
-                    in_function = True
-                elif in_function and line.strip().startswith('const '):
-                    last_const_line = i
-                elif in_function and 'return (' in line and last_const_line >= 0:
-                    # Make sure there's proper spacing
-                    if i > last_const_line + 1:
-                        new_lines.append('')
-                new_lines.append(line)
-            
-            content = '\n'.join(new_lines)
-        
-        # Fix 3: Clean up any remaining syntax issues
-        content = re.sub(r';\s*;', ';', content)  # Remove double semicolons
-        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)  # Clean up multiple newlines
-        
-        if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(content)
+                f.write(clean_content)
             print(f"Fixed: {file_path}")
             return True
         
         return False
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    # Find all TSX files
+    # Find all page files
     patterns = [
-        'app/**/*.tsx'
+        'app/**/page.tsx',
+        'app/**/page.ts'
     ]
     
-    files_fixed = 0
+    fixed_count = 0
+    total_files = 0
+    
     for pattern in patterns:
         for file_path in glob.glob(pattern, recursive=True):
-            if fix_final_issues(file_path):
-                files_fixed += 1
+            if os.path.isfile(file_path):
+                total_files += 1
+                if final_fix_file(file_path):
+                    fixed_count += 1
     
-    print(f"\nFixed {files_fixed} files")
+    print(f"\nProcessed {total_files} page files, fixed {fixed_count} files")
 
 if __name__ == "__main__":
     main()

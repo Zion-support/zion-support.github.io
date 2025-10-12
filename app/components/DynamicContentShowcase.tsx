@@ -94,7 +94,7 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
           >
             <ChevronLeft className="w-5 h-5 text-white" />
           </button>
-          
+
           <button
             onClick={togglePlayPause}
             className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
@@ -106,7 +106,7 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
               <Play className="w-5 h-5 text-white" />
             )}
           </button>
-          
+
           <button
             onClick={nextItem}
             className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
@@ -115,7 +115,7 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
             <ChevronRight className="w-5 h-5 text-white" />
           </button>
         </div>
-        
+
         <div className="flex items-center gap-2">
           {items.map((_, index) => (
             <button
@@ -138,7 +138,7 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
               <IconComponent className="w-8 h-8 text-white" />
             </div>
           </div>
-          
+
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-2">
               <span className="text-sm text-cyan-400 font-medium">{currentItem.category}</span>
@@ -148,10 +148,10 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
                 ))}
               </div>
             </div>
-            
+
             <h3 className="text-2xl font-bold text-white mb-3">{currentItem.title}</h3>
             <p className="text-gray-300 mb-4">{currentItem.description}</p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-6">
               {currentItem.features.map((feature, index) => (
                 <div key={index} className="flex items-center text-sm text-gray-300">
@@ -160,14 +160,14 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
                 </div>
               ))}
             </div>
-            
+
             <div className="flex items-center justify-between">
               {currentItem.price && (
                 <div className="text-cyan-400 font-semibold text-lg">
                   {currentItem.price}
                 </div>
               )}
-              
+
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center gap-2">
                 Learn More
                 <ArrowRight className="w-4 h-4" />

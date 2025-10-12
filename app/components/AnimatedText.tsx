@@ -45,7 +45,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
 
   const getAnimationClasses = () => {
     const baseClasses = 'transition-all duration-1000';
-    
+
     switch (type) {
       case 'fade':
         return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'}`;
