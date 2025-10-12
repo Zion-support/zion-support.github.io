@@ -1,18 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
-export default function AiCybersecurityMonitorProPage() {
-'use client';
->>>>>>> origin/main
 
-<<<<<<< HEAD
 export default function AiCybersecurityMonitorProPage() {
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
 
   const features = [
     {
@@ -220,7 +210,6 @@ export default function AiCybersecurityMonitorProPage() {
     { name: 'IoT Attacks', icon: <Smartphone className="w-5h-5ml-2" />, category: 'Device Vulnerabilities' }
   ];
   return (
-<<<<<<< HEAD
 
         <>
       <title>AiCybersecurityMonitorPro - Zion Tech Group</title>
@@ -230,39 +219,8 @@ export default function AiCybersecurityMonitorProPage() {
             
               Contact Us
 
-<<<<<<< HEAD
   );
-=======
-import { ArrowRight } from 'lucide-react';
-
-export default function AiCybersecurityMonitorProPage() {
-  return (
-    <>
-      <Helmet>
-        <title>Ai Cybersecurity Monitor Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional ai cybersecurity monitor pro by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Service</h1>
-          <p className="text-lg text-gray-300 mb-8">Protect your business with AI-powered threat detection, 24/7 monitoring, 
-            and automated response. Enterprise-grade security powered by artificial intelligence.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
       </>
-=======
     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
         <title>Service - Zion Tech Group</title>
@@ -481,5 +439,3 @@ export default function AiCybersecurityMonitorProPage() {
         </section>
       </div>  );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main

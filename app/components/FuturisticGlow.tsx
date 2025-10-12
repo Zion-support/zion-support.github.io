@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-export default function FuturisticGlow({ 
->>>>>>> origin/main
 'use client';
 
 interface FuturisticGlowProps {
@@ -49,21 +44,14 @@ interface FuturisticGlowProps {
     container.style.setProperty('--glow-color', `rgba(${rgb}, ${opacity})`);
     container.style.setProperty('--glow-color-strong', `rgba(${rgb}, ${parseFloat(opacity) + 0.3})`);
   }, [intensity, color]);
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 
 export default function FuturisticGlow() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     
-=======
-    <div;
->>>>>>> origin/main
       const ref = {containerRef}
       className="{`"
         relative;
@@ -80,35 +68,9 @@ export default function FuturisticGlow() {
   hover: afte,
   r:opacity-100;
         ${className}
-<<<<<<< HEAD
 {children}
   );
-=======
-    <>
-      <Helmet>
-        <title>Futuristic Glow - Zion Tech Group</title>
-        <meta name="description" content="Professional futuristic glow by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Futuristic Glow</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional futuristic glow coming soon.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
       `}>{children}
     </div>
   );
 }
->>>>>>> origin/main

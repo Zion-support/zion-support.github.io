@@ -65,7 +65,6 @@ function isBrokenPage(filePath) {
                 <li>• Benefit 4</li>
   )
 
-
 // Generate page configuration from file path;
 function generatePageConfig(filePath) {
   const relativePath = filePath.replace('/workspace/app/', '').replace('/page.tsx', '');

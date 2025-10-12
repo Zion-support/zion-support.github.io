@@ -1,21 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Bot, Code, Search, GitBranch, Database, Shield, CheckCircle, Zap, Brain, BarChart, Users } from 'lucide-react';
 
 const AICodeAssistantProPage: React.FC = () => {
-=======
 import React from 'react'
 import { Link } from 'react-router-dom'
 export default function AICodeAssistantProPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
   const features = [
     {
       icon: <Bot className="w-6 h-6" />,
@@ -122,13 +114,8 @@ export default function AICodeAssistantProPage() {
     }
   ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function AICodeAssistantPro() {
-=======
->>>>>>> origin/main
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title>AI Code Assistant Pro - Zion Tech Group</title>
@@ -136,7 +123,6 @@ export default function AICodeAssistantPro() {
         <meta name="keywords" content="AI code assistant, code generation, programming AI, developer tools, code completion" />
       </Helmet>
 
-<<<<<<< HEAD
         <>
       <title>AI Code Assistant Pro - Zion Tech Group</title>
       
@@ -145,37 +131,8 @@ export default function AICodeAssistantPro() {
             
               Contact Us
 
-<<<<<<< HEAD
   );
-=======
-export default function AICodeAssistantProPage() {
-  return (
-    <>
-      <Helmet>
-        <title>A I Code Assistant Pro - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered code assistant with intelligent generation, debugging, and analysis. Increase development speed by 300%. Starting at $29/month." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">A I Code Assistant Pro</h1>
-          <p className="text-lg text-gray-300 mb-8">Transform your development workflow with AI-powered code generation, intelligent debugging, and analysis. 
-            Increase development speed by 300% while reducing bugs by 80%.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
       </>
-=======
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -311,7 +268,6 @@ export default function AICodeAssistantProPage() {
                   }`}
                 >
                   Get Started
-=======
     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
         <title>AI Code Assistant Pro - Zion Tech Group | Intelligent Code Generation</title>
@@ -498,12 +454,10 @@ export default function AICodeAssistantProPage() {
                       : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
                   }`}
                   />Get Started;
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
                 </Link>
               </div>
             ))}
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -538,69 +492,3 @@ export default function AICodeAssistantProPage() {
 };
 
 export default AICodeAssistantProPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
-=======
-      </section>
-      {/* Testimonials Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" /></h2>
-              Trusted by <span className="w-5h-5ml-2" />25,000+</span> Developers;
-            </h2>
-            <p className="w-5h-5ml-2">See what our customers are saying about their success with our AI code assistant.
-            </p>
-          </div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20transition-all duration-300" /></div>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
-                  </div>
-                  <div /></div>
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}</div>
-                </div>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5h-5tex t-yellow-400fill-current"  /></Star>
-                  ))}
-                </div>
-                <p className="w-5h-5ml-2">"{testimonial.content}"</p>
-              </div>
-            ))}
-          </div>
-      </section>
-      {/* CTA Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <h2 className="w-5h-5ml-2" /></h2>
-                  Ready to Transform Your <span className="w-5h-5ml-2" />Development Workflow?</span>
-                </h2>
-                <p className="w-5h-5ml-2">Join thousands of developers already coding 300% faster with our AI-powered code assistant. 
-                  Start your free trial today and experience the future of software development.
-                </p>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <Link to="/contact" className="groupbg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" /></Link>
-                    <span />Start Free Trial</span>
-                    <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-                  </Link>
-                  <Link to="#pricing" className="groupborder-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" /></Link>
-                    <span />View All Plans</span>
-                    <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-                  </Link>
-                </div>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <p />✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
-                </div>
-            </div>
-        </div>
-      </section>
-    </div>  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main

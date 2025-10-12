@@ -1,20 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
-import FuturisticBackground from '../components/FuturisticBackground';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-export default function AIDevOpsAutomationPage() {
-'use client';
->>>>>>> origin/main
 
-<<<<<<< HEAD
 export default function AIDevOpsAutomationPage() {
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
   const features = [
     {
       title: 'Intelligent CI/CD Pipeline',
@@ -117,7 +104,6 @@ export default function AIDevOpsAutomationPage() {
     { number: '40%', label: 'Cost Reduction', icon: <TrendingUp className="w-5h-5ml-2" /&gt; }</TrendingUp></TrendingUp>
   ];
   return (
-<<<<<<< HEAD
 
         <>
       <title>AI DevOps Automation - Zion Tech Group</title>
@@ -127,40 +113,8 @@ export default function AIDevOpsAutomationPage() {
             
               Contact Us
 
-<<<<<<< HEAD
   );
-=======
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function AIDevOpsAutomationPage() {
-  return (
-    <>
-      <Helmet>
-        <title>A I Dev Ops Automation - Zion Tech Group</title>
-        <meta name="description" content="Professional a i dev ops automation services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">AI DevOps Automation</h1>
-          <p className="text-lg text-gray-300 mb-8">Revolutionize your DevOps with AI-powered CI/CD pipelines, predictive monitoring, 
-                and intelligent resource management. Deploy 80% faster with 95% fewer issues.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
       </>
-=======
     <></>
       <Helmet></Helmet>
         <title>AI DevOps Automation - Smart CI/CD & Infrastructure Management | Zion Tech Group</title>
@@ -345,5 +299,3 @@ export default function AIDevOpsAutomationPage() {
           </FuturisticBackground>
 </>  );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main

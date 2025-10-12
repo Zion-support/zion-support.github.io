@@ -39,7 +39,6 @@ const pagesToRewrite = [
                 <li>• Benefit 4</li>
   )
 
-
 // Page configurations;
 const pageConfigs = {
   'enterprise-security': {

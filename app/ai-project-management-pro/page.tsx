@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 'use client';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3 } from 'lucide-react';
 
@@ -77,9 +72,6 @@ import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud,
     
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Clock, Target, BarChart3 } from 'lucide-react';
 
-=======
-import React from 'react';
->>>>>>> origin/main
 export default function AIProjectManagementPro() {
 export default Page;
 'use client';
@@ -120,7 +112,6 @@ const Page: React.FC = () => {
         'Custom workflows',
         '24/7 dedicated support',
         'Custom integrations',
-<<<<<<< HEAD
         'Advanced security',
         'SLA guarantee'
       ],
@@ -143,24 +134,15 @@ const Page: React.FC = () => {
       content: 'Our team collaboration and project visibility have improved dramatically since using this platform.',
       rating: 5
   ]
-=======
-import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
         'White-label options'
       ]
     }
   ];
->>>>>>> origin/main
 
 export default function Page() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     
         <title>AI Project Management Pro - Zion Tech Group</title>
-=======
->>>>>>> origin/main
 
         <>
       <title>AI Project Management Pro - Zion Tech Group</title>
@@ -168,7 +150,6 @@ export default function Page() {
       </>
   );
 
-=======
     <></>
       <Helmet></Helmet>
         <title>AI Project Management Pro - Zion Tech Group</title>
@@ -386,34 +367,7 @@ export default function Page() {
   );
 };
 
-<<<<<<< HEAD
-=======
-    <>
-      <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content="Professional  by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6"></h1>
-          <p className="text-lg text-gray-300 mb-8">Professional  coming soon.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 ;
 }
 
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main
