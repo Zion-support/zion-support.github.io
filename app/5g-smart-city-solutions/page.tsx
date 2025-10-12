@@ -1,32 +1,32 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { Arrow Right } from 'lucide-react';
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { Wifi, ArrowRight, CheckCircle, Brain, Star, Building, Users } from 'lucide-react';
+import { Wifi, Arrow Right, Check Circle, Brain, Star, Building, Users } from 'lucide-react';
 import Layout from '../layout'
 
-export default function Five G Smart City Solutions() {
+export default function Five GSmart City Solutions() {
   const features = [
     {
-      icon: <W ifi class Name="w-6 h-6 t ext-cyan-400" />,
+      icon: <W ificlass Name="w-6 h-6 t e xt-c y an-400" />,
       title: 'Ultra-Fast Connectivity',
-      description: '5 G networks providing 10x faster speeds and ultra-low latency for smart city applications'
+      description: '5G networks providing 10x faster speeds and ultra-low latency for smart city applications'
     },
     {
-      icon: <B uilding class Name="w-6 h-6 t ext-purple-400" />,
+      icon: <B uildingclass Name="w-6 h-6 t e xt-p u rple-400" />,
       title: 'Smart Infrastructure',
       description: 'Intelligent traffic management, energy optimization, and environmental monitoring systems'
     },
     {
-      icon: <B rain class Name="w-6 h-6 t ext-yellow-400" />,
+      icon: <B rainclass Name="w-6 h-6 t e xt-y e llow-400" />,
       title: 'A I-Powered Analytics',
       description: 'Machine learning algorithms analyze city data to optimize services and improve quality of life'
     },
     {
-      icon: <U sers class Name="w-6 h-6 t ext-green-400" />,
+      icon: <U sersclass Name="w-6 h-6 t e xt-g r een-400" />,
       title: 'Citizen Engagement',
       description: 'Digital platforms connecting citizens with city services and enabling participatory governance'
     }
@@ -58,7 +58,7 @@ export default function Five G Smart City Solutions() {
       period: 'one-time',
       description: 'Perfect for small cities starting their smart city journey',
       features: [
-        'Basic 5 G infrastructure',
+        'Basic 5G infrastructure',
         'Core smart modules',
         'Citizen engagement platform',
         '6-month implementation',
@@ -72,7 +72,7 @@ export default function Five G Smart City Solutions() {
       period: 'one-time',
       description: 'Comprehensive solution for medium-sized cities',
       features: [
-        'Full 5 G network deployment',
+        'Full 5G network deployment',
         'Complete smart city suite',
         'Advanced A I analytics',
         '12-month implementation',
@@ -87,7 +87,7 @@ export default function Five G Smart City Solutions() {
       period: 'pricing',
       description: 'Enterprise solution for large metropolitan areas',
       features: [
-        'City-wide 5 G coverage',
+        'City-wide 5G coverage',
         'Custom smart city modules',
         'White-label platform',
         'Multi-year implementation',
@@ -102,7 +102,7 @@ export default function Five G Smart City Solutions() {
     {
       name: 'Mayor Sarah Johnson',
       company: 'Tech Valley City',
-      content: '5 G Smart City Solutions transformed our city. Traffic congestion reduced by 30% and citizen satisfaction increased significantly.',
+      content: '5G Smart City Solutions transformed our city. Traffic congestion reduced by 30% and citizen satisfaction increased significantly.',
       rating: 5
     },
     {
@@ -119,26 +119,26 @@ export default function Five G Smart City Solutions() {
     }
   ]
 
-export default function Five G Smart City Solutions Page() {
+export default function Five GSmart City Solutions Page() {
   return (
-    <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <d iv class Name="m in-h-s c reen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         </d iv>
       <H elmet>
-        <t itle>5 G Data Analytics - Zion Tech Group</t itle>
-        <m eta name="description" content="Professional 5 G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <t itle>5G Data Analytics - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
       </H elmet>
-        <t itle>5 G Smart City Solutions - Zion Tech Group</t itle>
-        <m eta name="description" content="Professional 5 G smart city solutions by Zion Tech Group. Transform your business with our expert solutions." />
+        <t itle>5G Smart City Solutions - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional 5G smart city solutions by Zion Tech Group. Transform your business with our expert solutions." />
       </H elmet>
-      <d iv class Name="m ax-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16text-center">
+      <d iv class Name="m ax-w-7xl mx-a u to px-4 sm:px-6 lg:px-8 py-16 text-center">
         </d iv>
-        <h1 c lass Name="t ext-4xl font-bold text-whitemb-6">5 G Smart City Solutions</h1>
-        <p c lass Name="t ext-lg text-gray-300mb-8">Professional 5 G smart city solutions by Zion Tech Group. Transform your business with our expert solutions.</p>
+        <h1 c lass Name="t e x t-4xl font-bold text-white mb-6">5G Smart City Solutions</h1>
+        <p c lass Name="t e x t-lg text-gray-300 mb-8">Professional 5G smart city solutions by Zion Tech Group. Transform your business with our expert solutions.</p>
         <L ink
           to="/contact"
-          class Name="b g-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-autow-fit" />
+          class Name="b g-g r a dient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-autow-fit" />
           Contact Us
-          <A rrow Right class Name="w-5 h-5m l-2" />
+          <A rrow Rightclass Name="w-5 h-5m l-2" />
         </L ink>
       </d iv>
   );

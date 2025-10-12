@@ -2,50 +2,50 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 export default function Ai Cybersecurity Monitor Pro Page() {
-import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network, Clock } from 'lucide-react';
+import { Shield, Eye, Lock, Zap, Check Circle, Arrow Right, Brain, Target, Network, Clock } from 'lucide-react';
 
   const features = [
     {
-      icon: <B rain class Name="w-8h-8t ext-cyan-400" />,
+      icon: <B rainclass Name="w-8h-8t e xt-c y an-400" />,
       title: 'A I Threat Detection',
       description: 'Advanced machine learning algorithms detect and prevent cyber threats in real-time',
       benefits: ['Behavioral analysis', 'Anomaly detection', 'Threat prediction', 'Zero-day protection']
     },
     {
-      icon: <S hield class Name="w-8h-8t ext-green-400" />,
+      icon: <S hieldclass Name="w-8h-8t e xt-g r een-400" />,
       title: '24/7 Monitoring',
       description: 'Continuous security monitoring with instant threat response and automated remediation',
       benefits: ['Real-time alerts', 'Automated response', 'Incident management', 'Threat hunting']
     },
     {
-      icon: <E ye class Name="w-8h-8t ext-purple-400" />,
+      icon: <E yeclass Name="w-8h-8t e xt-p u rple-400" />,
       title: 'Network Visibility',
       description: 'Complete visibility into your network infrastructure with advanced traffic analysis',
       benefits: ['Network mapping', 'Traffic analysis', 'Device discovery', 'Vulnerability scanning']
     },
     {
-      icon: <L ock class Name="w-8h-8t ext-orange-400" />,
+      icon: <L ockclass Name="w-8h-8t e xt-o r ange-400" />,
       title: 'Compliance Management',
-      description: 'Automated compliance monitoring for G DP R, H IP AA, S OX, and other regulatory standards',
+      description: 'Automated compliance monitoring for G D P R, H I P A A, S O X, and other regulatory standards',
       benefits: ['Regulatory compliance', 'Audit trails', 'Policy enforcement', 'Risk assessment']
     },
     {
-      icon: <Z ap class Name="w-8h-8t ext-red-400" />,
+      icon: <Z apclass Name="w-8h-8t e xt-r e d-400" />,
       title: 'Automated Response',
       description: 'Intelligent incident response with automated threat containment and remediation',
       benefits: ['Auto-quarantine', 'Threat isolation', 'System restoration', 'Forensic analysis']
     },
     {
-      icon: <G lobe class Name="w-8h-8t ext-blue-400" />,
+      icon: <G lobeclass Name="w-8h-8t e xt-b l ue-400" />,
       title: 'Global Threat Intelligence',
       description: 'Access to global threat intelligence feeds and security research databases',
-      benefits: ['Threat intelligence', 'I OC feeds', 'Malware analysis', 'Attack patterns']
+      benefits: ['Threat intelligence', 'I O C feeds', 'Malware analysis', 'Attack patterns']
     }
   ];
   const security Capabilities = [
     {
       category: 'Threat Detection',
-      icon: <A lert Triangle class Name="w-6h-6t ext-red-400" />,
+      icon: <A lert Triangleclass Name="w-6h-6t e xt-r e d-400" />,
       items: [
         'Malware detection',
         'Phishing prevention',
@@ -56,29 +56,29 @@ import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network
     },
     {
       category: 'Network Security',
-      icon: <N etwork class Name="w-6h-6t ext-blue-400" />,
+      icon: <N etworkclass Name="w-6h-6t e xt-b l ue-400" />,
       items: [
         'Firewall management',
         'Intrusion detection',
         'Network segmentation',
-        'V PN monitoring',
+        'V P N monitoring',
         'Wireless security'
       ]
     },
     {
       category: 'Endpoint Protection',
-      icon: <M onitor class Name="w-6h-6t ext-green-400" />,
+      icon: <M onitorclass Name="w-6h-6t e xt-g r een-400" />,
       items: [
         'Device monitoring',
         'Application control',
-        'U SB protection',
+        'U S B protection',
         'Mobile device security',
         'Patch management'
       ]
     },
     {
       category: 'Data Protection',
-      icon: <D atabase class Name="w-6h-6t ext-purple-400" />,
+      icon: <D atabaseclass Name="w-6h-6t e xt-p u rple-400" />,
       items: [
         'Data encryption',
         'Access controls',
@@ -89,7 +89,7 @@ import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network
     },
     {
       category: 'Incident Response',
-      icon: <A lert Circle class Name="w-6h-6t ext-orange-400" />,
+      icon: <A lert Circleclass Name="w-6h-6t e xt-o r ange-400" />,
       items: [
         'Automated response',
         'Incident tracking',
@@ -100,7 +100,7 @@ import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network
     },
     {
       category: 'Security Analytics',
-      icon: <B ar Chart3 class Name="w-6h-6t ext-cyan-400" />,
+      icon: <B ar Chart3 class Name="w-6h-6t e xt-c y an-400" />,
       items: [
         'Security dashboards',
         'Risk assessment',
@@ -156,7 +156,7 @@ import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network
         'Dedicated support',
         'White-label options',
         'Unlimited storage',
-        'A PI access',
+        'A P I access',
         'On-premise deployment',
         'Custom integrations'
       ],
@@ -168,7 +168,7 @@ import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network
     {
       name: 'Michael Torres',
       company: 'Secure Tech Solutions',
-      role: 'C IS O',
+      role: 'C I S O',
       content: 'A I Cybersecurity Monitor Pro has revolutionized our security posture. The A I detection capabilities have prevented multiple sophisticated attacks that traditional tools missed.',
       rating: 5,
       avatar: 'M T',
@@ -187,7 +187,7 @@ import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network
       name: 'David Rodriguez',
       company: 'Healthcare Systems',
       role: 'I T Security Manager',
-      content: 'The compliance management features have made our H IP AA audits seamless. We maintain continuous compliance with automated monitoring and reporting.',
+      content: 'The compliance management features have made our H I P A A audits seamless. We maintain continuous compliance with automated monitoring and reporting.',
       rating: 5,
       avatar: 'D R',
       results: '100% compliance score'
@@ -195,29 +195,29 @@ import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network
   ];
   const stats = [
 
-    { number: '1 M+', label: 'Threats Blocked', icon: <S hield class Name="w-6h-6" / /> },
+    { number: '1 M+', label: 'Threats Blocked', icon: <S hieldclass Name="w-6h-6" / /> },
     { number: '500+', label: 'Enterprise Clients', icon: <B uilding2 class Name="w-6h-6" / /> },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: <A ctivity class Name="w-6h-6" / /> },
-    { number: '24/7', label: 'Security Monitoring', icon: <E ye class Name="w-6h-6" / /> }
+    { number: '99.9%', label: 'Uptime Guarantee', icon: <A ctivityclass Name="w-6h-6" / /> },
+    { number: '24/7', label: 'Security Monitoring', icon: <E yeclass Name="w-6h-6" / /> }
   ];
   const threat Types = [
 
-    { name: 'Malware', icon: <B ug class Name="w-6h-6" / />, category: 'Malicious Software' },
-    { name: 'Phishing', icon: <T arget class Name="w-6h-6" / />, category: 'Social Engineering' },
-    { name: 'Ransomware', icon: <L ock class Name="w-6h-6" / />, category: 'Data Encryption' },
-    { name: 'D Do S', icon: <N etwork class Name="w-6h-6" / />, category: 'Network Attacks' },
-    { name: 'Insider Threats', icon: <U sers class Name="w-6h-6" / />, category: 'Internal Risks' },
-    { name: 'Zero-Day', icon: <A lert Circle class Name="w-6h-6" / />, category: 'Unknown Vulnerabilities' },
-    { name: 'A PTs', icon: <S earch class Name="w-6h-6" / />, category: 'Advanced Persistent Threats' },
-    { name: 'Io T Attacks', icon: <S martphone class Name="w-6h-6" / />, category: 'Device Vulnerabilities' }
+    { name: 'Malware', icon: <B ugclass Name="w-6h-6" / />, category: 'Malicious Software' },
+    { name: 'Phishing', icon: <T argetclass Name="w-6h-6" / />, category: 'Social Engineering' },
+    { name: 'Ransomware', icon: <L ockclass Name="w-6h-6" / />, category: 'Data Encryption' },
+    { name: 'D Do S', icon: <N etworkclass Name="w-6h-6" / />, category: 'Network Attacks' },
+    { name: 'Insider Threats', icon: <U sersclass Name="w-6h-6" / />, category: 'Internal Risks' },
+    { name: 'Zero-Day', icon: <A lert Circleclass Name="w-6h-6" / />, category: 'Unknown Vulnerabilities' },
+    { name: 'A P Ts', icon: <S earchclass Name="w-6h-6" / />, category: 'Advanced Persistent Threats' },
+    { name: 'Io T Attacks', icon: <S martphoneclass Name="w-6h-6" / />, category: 'Device Vulnerabilities' }
   ];
   return (
 
-    <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900 pt-20">
+    <d iv class Name="m in-h-s c reen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900 pt-20">
         </d iv>
       <H elmet>
-        <t itle>5 G Data Analytics - Zion Tech Group</t itle>
-        <m eta name="description" content="Professional 5 G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <t itle>5G Data Analytics - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
       </H elmet>
         <t itle>A I Cybersecurity Monitor Pro - Zion Tech Group | Advanced Security Intelligence Platform</t itle>
         <m eta name="description" content="Protect your business with A I Cybersecurity Monitor Pro. Advanced threat detection, 24/7 monitoring, and automated response for enterprise-grade security. Start your free trial today." / / />
@@ -228,12 +228,12 @@ import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network
         <m eta name="theme-color" content="#8 b5 cf6" / / />
         {/* Open Graph Meta Tags */}
 
-        <m eta property="og:title" content="A I Cybersecurity Monitor Pro - Advanced Security Intelligence Platform" / / />
-        <m eta property="og: description" content="Protect your business with A I-powered threat detection, 24/7 monitoring, and automated response for enterprise-grade security." / / />
-        <m eta property="og:type" content="website" / / />
-        <m eta property="og:url" content="https://ziontechgroup.com/ai-cybersecurity-monitor-pro" / / />
-        <m eta property="og:image" content="https://ziontechgroup.com/og-ai-cybersecurity.jpg" / / />
-        <m eta property="og:site_name" content="Zion Tech Group" / / />
+        <m etaproperty="og:title" content="A I Cybersecurity Monitor Pro - Advanced Security Intelligence Platform" / / />
+        <m etaproperty="og: description" content="Protect your business with A I-powered threat detection, 24/7 monitoring, and automated response for enterprise-grade security." / / />
+        <m etaproperty="og:type" content="website" / / />
+        <m etaproperty="og:url" content="https://ziontechgroup.com/ai-cybersecurity-monitor-pro" / / />
+        <m etaproperty="og:image" content="https://ziontechgroup.com/og-ai-cybersecurity.jpg" / / />
+        <m etaproperty="og:site_name" content="Zion Tech Group" / / />
         {/* Twitter Card Meta Tags */}
 
         <m eta name="twitter:card" content="summary_large_image" / / />
@@ -242,23 +242,23 @@ import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network
         <m eta name="twitter:image" content="https://ziontechgroup.com/twitter-ai-cybersecurity.jpg" / / />
         <m eta name="twitter:site" content="@ziontechgroup" / / />
         {/* Structured Data */}
-        <s cript type="application/ld+json"  />{J SO N.stringify({
+        <s cripttype="application/ld+json"  />{J S O N.stringify({
             "@context": "https: //schema.org",
             "@type": "Software Application",
             "name": "A I Cybersecurity Monitor Pro",
             "description": "Advanced A I-powered cybersecurity platform with threat detection, 24/7 monitoring, and automated response for enterprise-grade security.",
             "url": "https: //ziontechgroup.com/ai-cybersecurity-monitor-pro",
             "application Category": "Security Application",
-            "operating System": "Web, i OS, Android",
+            "operating System": "Web, i O S, Android",
             "offers": {
               "@type": "Offer",
               "price": "299",
-              "price Currency": "U SD",
+              "price Currency": "U S D",
               "price Specification": {
                 "@type": "Price Specification",
                 "price": "299",
-                "price Currency": "U SD",
-                "unit Text": "M ON TH"
+                "price Currency": "U S D",
+                "unit Text": "M O N T H"
               }
             },
             "provider": {
@@ -271,52 +271,52 @@ import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network
         </s cript>
       </H elmet>
 
-      <d iv class Name="m ax-w-7 xl mx-auto px-4 sm:px-6lg:px-8py-16">
+      <d iv class Name="m a x-w-7 xl mx-a u to px-4 sm:px-6lg:px-8py-16">
         </d iv>
         {/* Hero Section */}
 
-        <d iv class Name="t ext-centermb-16">
+        <d iv class Name="t e x t-centermb-16">
         </d iv>
-          <h1 c lass Name="t ext-4 xl sm:text-5 xl md:text-6 xl font-boldtext-whitemb-6" />
+          <h1 c lass Name="t e xt-4 xl sm:t e xt-5 xl md:text-6 xl font-boldtext-white mb-6" />
             A I Cybersecurity Monitor{' '}
 
-            <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-500bg-clip-texttext-transparent">Pro
+            <s pan class Name="b g-g r a dient-to-r from-cyan-400 to-purple-500bg-clip-texttext-transparent">Pro
             </s pan>
           </h1>
-          <p c lass Name="t ext-lg sm:text-xl text-gray-300 max-w-4 xlmx-automb-8">
+          <p c lass Name="t e x t-lg sm:text-xl text-gray-300 max-w-4 xlmx-automb-8">
               Protect your business with A I-powered threat detection, 24/7 monitoring, 
             and automated response. Enterprise-grade security powered by artificial intelligence.
 
           </p>
-          <d iv class Name="f lex flex-col sm:flex-row gap-4justify-centermb-8">
+          <d iv class Name="f l ex f l ex-col sm:flex-row gap-4justify-centermb-8">
         </d iv>
-            <L ink to="/contact" class Name="b g-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flexitems-centerjustify-center" />
+            <L ink to="/contact" class Name="b g-g r a dient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flexitems-centerjustify-center" />
               Start Free Trial
 
-              <A rrow Right class Name="w-5h-5m l-2" />
+              <A rrow Rightclass Name="w-5h-5m l-2" />
             </L ink>
-            <L ink to="/ai-services" class Name="b order-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flexitems-centerjustify-center">View All A I Services
+            <L ink to="/ai-services" class Name="b o r d er-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flexitems-centerjustify-center">View All A I Services
             </L ink>
           </d iv>
-          <d iv class Name="t ext-smtext-gray-400">✓ 14-day free trial • ✓ No setup fees • ✓ 24/7 security monitoring
+          <d iv class Name="t e xt-s m text-gray-400">✓ 14-day free trial • ✓ No setup fees • ✓ 24/7 security monitoring
           </d iv>
 
         {/* Stats Section */}
 
-        <s ection class Name="p y-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xlmb-16" />
-          <d iv class Name="m ax-w-7xlmx-auto">
+        <s ection class Name="p y-16 p x-4 sm:px-6 lg:px-8 bg-w h ite/5 backdrop-blur-sm rounded-2xlmb-16" />
+          <d iv class Name="m ax-w-7x l mx-auto">
         </d iv>
-            <d iv class Name="g rid grid-cols-2md:grid-cols-4gap-8">
+            <d iv class Name="g r id g r id-cols-2md:grid-cols-4gap-8">
         </d iv>
               {stats.map((stat, index) => (
 
-                <d iv key="{index}" class Name="t ext-center" />
-                  <d iv class Name="f lex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-fullmx-automb-4">
+                <d ivkey="{index}" class Name="t e x t-center" />
+                  <d iv class Name="f l ex i t ems-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-fullmx-automb-4">
         </d iv>
-                    <s tat.icon class Name="h-8w-8t ext-white" / />
+                    <s tat.icon class Name="h-8w-8t e xt-w h ite" / />
                   </d iv>
-                  <d iv class Name="t ext-3 xl md: text-4 xl font-boldtext-whitemb-2">{stat.number}</d iv>
-                  <d iv class Name="t ext-gray-300">{stat.label}</d iv>
+                  <d iv class Name="t e xt-3 xl md: t e xt-4 xl font-boldtext-whitemb-2">{stat.number}</d iv>
+                  <d iv class Name="t e xt-g r ay-300">{stat.label}</d iv>
               ))}
 
             </d iv>
@@ -325,32 +325,32 @@ import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network
         {/* Features Section */}
 
         <s ection class Name="m b-16" />
-          <d iv class Name="t ext-centermb-12">
+          <d iv class Name="t e x t-centermb-12">
         </d iv>
-            <h2 c lass Name="t ext-3 xl font-boldtext-whitemb-4">Advanced Security Features</h2>
-            <p c lass Name="t ext-lg text-gray-300 max-w-3xlmx-auto" />
+            <h2 c lass Name="t e xt-3 xl f o nt-boldtext-whitemb-4">Advanced Security Features</h2>
+            <p c lass Name="t e x t-lg text-gray-300 max-w-3xlmx-auto" />
               Our A I Cybersecurity Monitor Pro leverages cutting-edge artificial intelligence 
               to provide comprehensive protection against evolving cyber threats.
 
             </p>
           </d iv>
           
-          <d iv class Name="g rid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
+          <d iv class Name="g r id g r id-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
         </d iv>
             {features.map((feature, index) => (
 
-              <d iv key="{index}" class Name="b g-slate-800/50 rounded-2 xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-allduration-300group" />
+              <d ivkey="{index}" class Name="b g-s l a te-800/50 rounded-2 xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-allduration-300group" />
                 <d iv class Name="m b-6">
         </d iv>
-                  <d iv class Name="f lex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl mx-auto mb-4group-hover:scale-110transition-transform">{feature.icon}
+                  <d iv class Name="f l ex i t ems-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl mx-auto mb-4group-hover:scale-110transition-transform">{feature.icon}
                   </d iv>
-                  <h3 c lass Name="t ext-xl font-semibold text-whitemb-3text-center">{feature.title}</h3>
-                  <p c lass Name="t ext-gray-300mb-4text-center">{feature.description}</p>
-                  <u l class Name="s pace-y-2" />
+                  <h3 c lass Name="t e xt-xl f o nt-semibold text-whitemb-3text-center">{feature.title}</h3>
+                  <p c lass Name="t e xt-g r ay-300mb-4text-center">{feature.description}</p>
+                  <u lclass Name="s p a c e-y-2" />
                     {feature.benefits.map((benefit, benefit Index) => (
 
-                      <l i key="{benefit Index}" class Name="f lex items-centertext-smtext-gray-300" />
-                        <C heck Circle class Name="w-4 h-4 t ext-green-400mr-2flex-shrink-0" />
+                      <l ikey="{benefit Index}" class Name="f l ex i t ems-centertext-smtext-gray-300" />
+                        <C heck Circleclass Name="w-4 h-4 t e xt-g r een-400mr-2flex-shrink-0" />
                         {benefit}
                       </l i>
                     ))}
@@ -365,31 +365,31 @@ import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network
         {/* Security Capabilities Section */}
 
         <s ection class Name="m b-16" />
-          <d iv class Name="t ext-centermb-12">
+          <d iv class Name="t e x t-centermb-12">
         </d iv>
-            <h2 c lass Name="t ext-3 xl font-boldtext-whitemb-4">Comprehensive Security Coverage</h2>
-            <p c lass Name="t ext-lg text-gray-300 max-w-3xlmx-auto" />
+            <h2 c lass Name="t e xt-3 xl f o nt-boldtext-whitemb-4">Comprehensive Security Coverage</h2>
+            <p c lass Name="t e x t-lg text-gray-300 max-w-3xlmx-auto" />
               Protect every aspect of your digital infrastructure with our comprehensive security capabilities.
 
             </p>
           </d iv>
           
-          <d iv class Name="g rid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-6">
+          <d iv class Name="g r id g r id-cols-1 md:grid-cols-2lg:grid-cols-3gap-6">
         </d iv>
             {security Capabilities.map((capability, index) => (
 
-              <d iv key="{index}" class Name="b g-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30transition-allduration-300" />
-                <d iv class Name="f lexitems-centermb-4">
+              <d ivkey="{index}" class Name="b g-s l a te-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30transition-allduration-300" />
+                <d iv class Name="f l e x items-centermb-4">
         </d iv>
                   {capability.icon}
 
-                  <h3 c lass Name="t ext-lg font-semiboldtext-whiteml-3">{capability.category}</h3>
+                  <h3 c lass Name="t e x t-lg font-semiboldtext-whiteml-3">{capability.category}</h3>
                 </d iv>
-                <u l class Name="s pace-y-2" />
+                <u lclass Name="s p a c e-y-2" />
                   {capability.items.map((item, item Index) => (
 
-                    <l i key="{item Index}" class Name="f lex items-centertext-smtext-gray-300" />
-                      <C heck Circle class Name="w-4 h-4 t ext-green-400mr-2flex-shrink-0" />
+                    <l ikey="{item Index}" class Name="f l ex i t ems-centertext-smtext-gray-300" />
+                      <C heck Circleclass Name="w-4 h-4 t e xt-g r een-400mr-2flex-shrink-0" />
                       {item}
                     </l i>
                   ))}
@@ -404,24 +404,24 @@ import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network
         {/* Threat Types Section */}
 
         <s ection class Name="m b-16" />
-          <d iv class Name="t ext-centermb-12">
+          <d iv class Name="t e x t-centermb-12">
         </d iv>
-            <h2 c lass Name="t ext-3 xl font-boldtext-whitemb-4">Threat Protection</h2>
-            <p c lass Name="t ext-lg text-gray-300 max-w-3xlmx-auto" />
+            <h2 c lass Name="t e xt-3 xl f o nt-boldtext-whitemb-4">Threat Protection</h2>
+            <p c lass Name="t e x t-lg text-gray-300 max-w-3xlmx-auto" />
               Advanced A I detection and prevention for all types of cyber threats and attacks.
 
             </p>
           </d iv>
           
-          <d iv class Name="g rid grid-cols-2md:grid-cols-4gap-6">
+          <d iv class Name="g r id g r id-cols-2md:grid-cols-4gap-6">
         </d iv>
             {threat Types.map((threat, index) => (
 
-              <d iv key="{index}" class Name="b g-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300text-centergroup" />
-                <d iv class Name="f lex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mx-auto mb-3group-hover:scale-110transition-transform">{threat.icon}
+              <d ivkey="{index}" class Name="b g-s l a te-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300text-centergroup" />
+                <d iv class Name="f l ex i t ems-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mx-auto mb-3group-hover:scale-110transition-transform">{threat.icon}
                 </d iv>
-                <h3 c lass Name="t ext-whitefont-semiboldmb-1">{threat.name}</h3>
-                <p c lass Name="t ext-gray-400text-sm">{threat.category}</p>
+                <h3 c lass Name="t e xt-w h itefont-semiboldmb-1">{threat.name}</h3>
+                <p c lass Name="t e xt-g r ay-400text-sm">{threat.category}</p>
               </d iv>
             ))}
 
@@ -431,60 +431,60 @@ import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network
         {/* Pricing Section */}
 
         <s ection class Name="m b-16" />
-          <d iv class Name="t ext-centermb-12">
+          <d iv class Name="t e x t-centermb-12">
         </d iv>
-            <h2 c lass Name="t ext-3 xl font-boldtext-whitemb-4">Choose Your Security Plan</h2>
-            <p c lass Name="t ext-lg text-gray-300 max-w-2xlmx-auto" />
+            <h2 c lass Name="t e xt-3 xl f o nt-boldtext-whitemb-4">Choose Your Security Plan</h2>
+            <p c lass Name="t e x t-lg text-gray-300 max-w-2xlmx-auto" />
               Flexible pricing plans designed to protect businesses of all sizes.
 
             </p>
           </d iv>
           
-          <d iv class Name="g rid grid-cols-1md:grid-cols-3gap-8">
+          <d iv class Name="g r id g r id-cols-1md:grid-cols-3gap-8">
         </d iv>
             {pricing Plans.map((plan, index) => (
-              <d iv key="{index}" class Name="{`b g-slate-800/50" rounded-2 xl p-8 border transition-all duration-300 relative ${
+              <d ivkey="{index}" class Name="{`b g-s l a te-800/50" rounded-2 xl p-8 border transition-all duration-300 relative ${
                 plan.popular ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' : 'border-slate-700 hover: border-cyan-500/30'
               }`} />
                 {plan.popular && (
 
-                  <d iv class Name="a bsolute -top-3 left-1/2transform-translate-x-1/2">
+                  <d iv class Name="a b s o lute -top-3 left-1/2transform-translate-x-1/2">
         </d iv>
-                    <s pan class Name="b g-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold">Most Popular
+                    <s pan class Name="b g-g r a dient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold">Most Popular
                     </s pan>
                   </d iv>
                 )}
 
-                <d iv class Name="t ext-centermb-6">
+                <d iv class Name="t e x t-centermb-6">
         </d iv>
-                  <h3 c lass Name="t ext-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                  <d iv class Name="f lex items-baselinejustify-centermb-2">
+                  <h3 c lass Name="t e xt-2 xl f o nt-boldtext-whitemb-2">{plan.name}</h3>
+                  <d iv class Name="f l ex i t ems-baselinejustify-centermb-2">
         </d iv>
-                    <s pan class Name="t ext-4 xlfont-boldtext-cyan-400">{plan.price}</s pan>
-                    <s pan class Name="t ext-gray-400ml-1">{plan.period}</s pan>
+                    <s pan class Name="t e xt-4 x l font-boldtext-cyan-400">{plan.price}</s pan>
+                    <s pan class Name="t e xt-g r ay-400ml-1">{plan.period}</s pan>
                   </d iv>
-                  <p c lass Name="t ext-gray-300">{plan.description}</p>
+                  <p c lass Name="t e xt-g r ay-300">{plan.description}</p>
                 </d iv>
                 
-                <u l class Name="s pace-y-3mb-8" />
+                <u lclass Name="s p a c e-y-3mb-8" />
                   {plan.features.map((feature, feature Index) => (
 
-                    <l i key="{feature Index}" class Name="f lexitems-centertext-gray-300" />
-                      <C heck Circle class Name="w-5 h-5 t ext-green-400mr-3flex-shrink-0" / />
+                    <l ikey="{feature Index}" class Name="f l e x items-centertext-gray-300" />
+                      <C heck Circleclass Name="w-5 h-5 t e xt-g r een-400mr-3flex-shrink-0" / />
                       {feature}
                     </l i>
                   ))}
                 </u l>
                 
                 <L ink to="/contact"
-                  class Name="{`w-f ull" py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
+                  class Name="{`w-f u ll" py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                       : 'border-2 border-cyan-500 text-cyan-400 hover: bg-cyan-500 hover:text-white'
                   }`} />
                   {plan.cta}
 
-                  <A rrow Right class Name="w-4h-4m l-2" />
+                  <A rrow Rightclass Name="w-4h-4m l-2" />
                 </L ink>
               </d iv>
             ))}
@@ -494,73 +494,73 @@ import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network
 
         {/* Testimonials */}
 
-        <s ection class Name="p y-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xlmb-16" />
-          <d iv class Name="m ax-w-7xlmx-auto">
+        <s ection class Name="p y-16 p x-4 sm:px-6 lg:px-8 bg-w h ite/5 backdrop-blur-sm rounded-2xlmb-16" />
+          <d iv class Name="m ax-w-7x l mx-auto">
         </d iv>
-            <d iv class Name="t ext-centermb-12">
+            <d iv class Name="t e x t-centermb-12">
         </d iv>
-              <h2 c lass Name="t ext-3 xl font-boldtext-whitemb-4">What Our Customers Say</h2>
-              <p c lass Name="t ext-lg text-gray-300 max-w-2xlmx-auto" />
+              <h2 c lass Name="t e xt-3 xl f o nt-boldtext-whitemb-4">What Our Customers Say</h2>
+              <p c lass Name="t e x t-lg text-gray-300 max-w-2xlmx-auto" />
                 Join hundreds of security professionals who trust A I Cybersecurity Monitor Pro.
 
               </p>
             </d iv>
             
-            <d iv class Name="g rid grid-cols-1md:grid-cols-3gap-8">
+            <d iv class Name="g r id g r id-cols-1md:grid-cols-3gap-8">
         </d iv>
               {testimonials.map((testimonial, index) => (
 
-                <d iv key="{index}" class Name="b g-slate-800/50 rounded-xl p-6borderborder-slate-700" />
-                  <d iv class Name="f lexitems-centermb-4">
+                <d ivkey="{index}" class Name="b g-s l a te-800/50 rounded-xl p-6borderborder-slate-700" />
+                  <d iv class Name="f l e x items-centermb-4">
         </d iv>
-                    <d iv class Name="w-12 h-12 b g-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4">{testimonial.avatar}
+                    <d iv class Name="w-12 h-12 b g-g r a dient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4">{testimonial.avatar}
                     </d iv>
                     <d iv />
-                      <h4 c lass Name="t ext-whitefont-semibold">{testimonial.name}</h4>
-                      <p c lass Name="t ext-gray-400text-sm">{testimonial.role}</p>
-                      <p c lass Name="t ext-cyan-400text-smfont-semibold">{testimonial.company}</p>
+                      <h4 c lass Name="t e xt-w h itefont-semibold">{testimonial.name}</h4>
+                      <p c lass Name="t e xt-g r ay-400text-sm">{testimonial.role}</p>
+                      <p c lass Name="t e xt-c y an-400text-smfont-semibold">{testimonial.company}</p>
                     </d iv>
-                  <d iv class Name="f lexitems-centermb-3">
+                  <d iv class Name="f l e x items-centermb-3">
         </d iv>
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <S tar key="{i}" class Name="w-4 h-4t ext-yellow-400fill-current" />
+                      <S tarkey="{i}" class Name="w-4 h-4t e xt-y e llow-400fill-current" />
                     ))}
 
                   </d iv>
-                  <p c lass Name="t ext-gray-300italicmb-3">"{testimonial.content}"</p>
-                  <d iv class Name="t ext-cyan-400font-semiboldtext-sm">Result: {testimonial.results}
+                  <p c lass Name="t e xt-g r ay-300italicmb-3">"{testimonial.content}"</p>
+                  <d iv class Name="t e xt-c y an-400font-semiboldtext-sm">Result: {testimonial.results}
                   </d iv>
               ))}
 
             </d iv>
         </s ection>
 
-        {/* C TA Section */}
+        {/* C T A Section */}
 
-        <s ection class Name="t ext-center" />
-          <d iv class Name="b g-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2 xl p-12borderborder-cyan-500/30">
+        <s ection class Name="t e x t-center" />
+          <d iv class Name="b g-g r a dient-to-r from-cyan-500/20 to-purple-500/20 rounded-2 xl p-12borderborder-cyan-500/30">
         </d iv>
-            <h2 c lass Name="t ext-3 xl font-boldtext-whitemb-4">Ready to Secure Your Business?
+            <h2 c lass Name="t e xt-3 xl f o nt-boldtext-whitemb-4">Ready to Secure Your Business?
             </h2>
-            <p c lass Name="t ext-lg text-gray-300 mb-8 max-w-3xlmx-auto">
+            <p c lass Name="t e x t-lg text-gray-300 mb-8 max-w-3xlmx-auto">
               Start your free trial today and experience enterprise-grade security powered by A I. 
               Join hundreds of organizations already protected by our advanced threat detection.
 
             </p>
-            <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+            <d iv class Name="f l ex f l ex-col sm:flex-rowgap-4justify-center">
         </d iv>
-              <L ink to="/contact" class Name="b g-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flexitems-centerjustify-center" />
+              <L ink to="/contact" class Name="b g-g r a dient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flexitems-centerjustify-center" />
                 Start Free Trial
 
-                <S parkles class Name="w-5h-5m l-2" / />
+                <S parklesclass Name="w-5h-5m l-2" / />
               </L ink>
-              <L ink to="/about" class Name="b order-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flexitems-centerjustify-center" />
+              <L ink to="/about" class Name="b o r d er-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flexitems-centerjustify-center" />
                 Learn More
 
-                <S hield class Name="w-5h-5m l-2" / />
+                <S hieldclass Name="w-5h-5m l-2" / />
               </L ink>
             </d iv>
-            <d iv class Name="m t-8text-white/80text-sm">
+            <d iv class Name="m t-8t e x t-white/80text-sm">
         </d iv>
               <p>✓ 14-day free trial • ✓ No setup fees • ✓ 24/7 monitoring • ✓ Cancel anytime</p>
             </d iv>

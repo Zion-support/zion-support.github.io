@@ -2,15 +2,15 @@
 import { use State, use Effect} from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 
+  Arrow Right, Check Circle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 
   Bar Chart, File Text, Message Circle, Target, Check Square, Dollar Sign, Box, 
-  Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package, 
+  Settings, Heart, Eye, Mic, Workflow, Link as Link Icon, Wifi, Package, 
   Trending Up, Calendar, Shopping Cart, Sparkles, Cpu, Globe, Database, 
-  Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock
+  Smartphone, Lock, Monitor, Server, Mail, Phone, Map Pin, Clock
 } from 'lucide-react';
-import { ArrowRight, Shopping Cart } from 'lucide-react';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Cloud, Code, Bar Chart, File Text, Message Circle, Target, Check Square, Dollar Sign, Box, Settings, Link as LinkIcon, Package, Trending Up, Calendar, Globe, Database, Monitor, Mail } from 'lucide-react';
-import { ArrowRight, CheckCircle, Star, Users, Shield, Cloud, Bar Chart, File Text, Message Circle, Target, Check Square, Dollar Sign, Box, Link as LinkIcon, Database, Mail } from 'lucide-react';
+import { Arrow Right, Shopping Cart } from 'lucide-react';
+import { Arrow Right, Check Circle, Star, Users, Zap, Shield, Cloud, Code, Bar Chart, File Text, Message Circle, Target, Check Square, Dollar Sign, Box, Settings, Link as Link Icon, Package, Trending Up, Calendar, Globe, Database, Monitor, Mail } from 'lucide-react';
+import { Arrow Right, Check Circle, Star, Users, Shield, Cloud, Bar Chart, File Text, Message Circle, Target, Check Square, Dollar Sign, Box, Link as Link Icon, Database, Mail } from 'lucide-react';
 
 const Micro Saas Page: React.F C = () => {
 
@@ -30,7 +30,7 @@ const Micro Saas Page: React.F C = () => {
         'A I-powered predictive insights',
         'Custom report generation',
         'Team collaboration tools',
-        'A PI integrations',
+        'A P I integrations',
         'Mobile app access',
         'Data visualization tools',
         'Export to multiple formats'
@@ -54,7 +54,7 @@ const Micro Saas Page: React.F C = () => {
         'Escalation management',
         'Performance analytics',
         'Custom training',
-        'Integration A PIs',
+        'Integration A P Is',
         'Live chat handoff',
         'Knowledge base management'
       ],
@@ -122,7 +122,7 @@ const Micro Saas Page: React.F C = () => {
         'Multi-platform publishing',
         'Brand voice training',
         'Content calendar',
-        'S EO optimization',
+        'S E O optimization',
         'Image generation',
         'Video creation tools',
         'Performance tracking'
@@ -136,7 +136,7 @@ const Micro Saas Page: React.F C = () => {
     },
     {
       id: 'zion-crm-intelligence',
-      title: 'Zion C RM Intelligence',
+      title: 'Zion C R M Intelligence',
       description: 'Smart customer relationship management with A I insights and automated workflows',
       price: '$89/month',
       original Price: '$129/month',
@@ -148,11 +148,11 @@ const Micro Saas Page: React.F C = () => {
         'Email marketing',
         'Pipeline management',
         'Team collaboration',
-        'Mobile C RM access'
+        'Mobile C R M access'
       ],
       icon: Users,
       color: 'from-indigo-500 to-purple-500',
-      category: 'C RM',
+      category: 'C R M',
       rating: 4.8,
       reviews: 142,
       popular: true
@@ -170,7 +170,7 @@ const Micro Saas Page: React.F C = () => {
         'Error handling',
         'Scheduled syncs',
         'Data validation',
-        'A PI integrations',
+        'A P I integrations',
         'Monitoring dashboard'
       ],
       icon: Database,
@@ -192,7 +192,7 @@ const Micro Saas Page: React.F C = () => {
         'Lead scoring',
         'A/B testing',
         'Analytics dashboard',
-        'C RM integration',
+        'C R M integration',
         'Form builder',
         'Social media integration'
       ],
@@ -240,7 +240,7 @@ const Micro Saas Page: React.F C = () => {
         'Analytics tracking',
         'List management',
         'Drip campaigns',
-        'Integration A PIs'
+        'Integration A P Is'
       ],
       icon: Mail,
       color: 'from-pink-500 to-rose-500',
@@ -331,7 +331,7 @@ const Micro Saas Page: React.F C = () => {
         'Real-time translation',
         'Document translation',
         'Voice translation',
-        'A PI integration',
+        'A P I integration',
         'Quality scoring'
       ],
       icon: Globe,
@@ -435,8 +435,8 @@ const Micro Saas Page: React.F C = () => {
     },
     {
       id: 'zion-ai-seo-optimizer',
-      title: 'Zion A I S EO Optimizer',
-      description: 'A I-powered S EO optimization with content analysis, keyword research, and ranking predictions',
+      title: 'Zion A I S E O Optimizer',
+      description: 'A I-powered S E O optimization with content analysis, keyword research, and ranking predictions',
       price: '$99/month',
       original Price: '$149/month',
       features: [
@@ -444,7 +444,7 @@ const Micro Saas Page: React.F C = () => {
         'Keyword research',
         'Ranking predictions',
         'Competitor analysis',
-        'Technical S EO audit',
+        'Technical S E O audit',
         'Link building suggestions',
         'Performance tracking',
         'Automated reports'
@@ -470,7 +470,7 @@ const Micro Saas Page: React.F C = () => {
         'Format standardization',
         'Missing data imputation',
         'Quality scoring',
-        'A PI integration'
+        'A P I integration'
       ],
       icon: Database,
       color: 'from-gray-500 to-slate-500',
@@ -585,7 +585,7 @@ const Micro Saas Page: React.F C = () => {
         'Video moderation',
         'Real-time processing',
         'Custom rules',
-        'A PI integration'
+        'A P I integration'
       ],
       icon: Shield,
       color: 'from-red-500 to-orange-500',
@@ -676,7 +676,7 @@ const Micro Saas Page: React.F C = () => {
         'Transaction analysis',
         'Alert system',
         'Machine learning models',
-        'A PI integration',
+        'A P I integration',
         'Compliance reporting'
       ],
       icon: Shield,
@@ -735,18 +735,18 @@ const Micro Saas Page: React.F C = () => {
     {
       id: 'zion-ai-document-ai',
       title: 'Zion A I Document A I',
-      description: 'Advanced document processing with O CR, data extraction, and intelligent document analysis',
+      description: 'Advanced document processing with O C R, data extraction, and intelligent document analysis',
       price: '$119/month',
       original Price: '$159/month',
       features: [
-        'O CR technology',
+        'O C R technology',
         'Data extraction',
         'Document classification',
         'Form processing',
         'Text analysis',
         'Version control',
         'Search capabilities',
-        'A PI integration'
+        'A P I integration'
       ],
       icon: File Text,
       color: 'from-gray-500 to-slate-500',
@@ -756,7 +756,7 @@ const Micro Saas Page: React.F C = () => {
       popular: false
     }
   ];
-  const categories = ['All', 'Analytics', 'Customer Support', 'Security', 'Backup & Recovery', 'Content Creation', 'C RM', 'Data Management', 'Marketing', 'Project Management', 'Email Marketing', 'Inventory', 'Finance', 'Video Production', 'Translation', 'Development', 'Productivity', 'Research', 'H R', 'Io T', 'Sustainability', 'Supply Chain', 'Legal', 'Document Management'];
+  const categories = ['All', 'Analytics', 'Customer Support', 'Security', 'Backup & Recovery', 'Content Creation', 'C R M', 'Data Management', 'Marketing', 'Project Management', 'Email Marketing', 'Inventory', 'Finance', 'Video Production', 'Translation', 'Development', 'Productivity', 'Research', 'H R', 'Io T', 'Sustainability', 'Supply Chain', 'Legal', 'Document Management'];
   const [selected Category, set Selected Category] = use State('All');
 
   const filtered Products = selected Category === 'All' 
@@ -765,47 +765,47 @@ const Micro Saas Page: React.F C = () => {
   return (
 
       <H elmet>
-        <t itle>5 G Data Analytics - Zion Tech Group</t itle>
-        <m eta name="description" content="Professional 5 G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <t itle>5G Data Analytics - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
       </H elmet>
-        <t itle>Micro S AA S Products - Zion Tech Group | A I-Powered Business Solutions</t itle>
-        <m eta const name = "description" content="Discover our comprehensive suite of micro S AA S products designed to solve specific business challenges. From A I analytics to cybersecurity, we have the tools you need to succeed." / / />
-        <m eta name="keywords" content="micro saas, business software, A I tools, analytics, C RM, project management, cybersecurity, automation" / / />
+        <t itle>Micro S A A S Products - Zion Tech Group | A I-Powered Business Solutions</t itle>
+        <m etaconstname = "description" content="Discover our comprehensive suite of micro S A A S products designed to solve specific business challenges. From A I analytics to cybersecurity, we have the tools you need to succeed." / / />
+        <m eta name="keywords" content="micro saas, business software, A I tools, analytics, C R M, project management, cybersecurity, automation" / / />
       </H elmet>
 
-      <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+      <d iv class Name="m in-h-s c reen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
         </d iv>
         {/* Hero Section */}
 
-        <s ection class Name="r elative overflow-hiddenpt-20pb-16" />
-          <d iv class Name="a bsoluteinset-0opacity-20" / />
-          <d iv class Name="r elative max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
+        <s ection class Name="r e l a tive overflow-hiddenpt-20pb-16" />
+          <d iv class Name="a b s o luteinset-0opacity-20" / />
+          <d iv class Name="r e l a tive max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
         </d iv>
-            <d iv class Name="t ext-center" />
-              <h1 c lass Name="{`t ext-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${is Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+            <d iv class Name="t e x t-center" />
+              <h1 c lass Name="{`t e xt-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${is Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
 
-                Micro S AA S
+                Micro S A A S
 
-                <s pan class Name="b lock bg-gradient-to-r from-purple-400 to-pink-400bg-clip-texttext-transparent">Business Solutions
+                <s pan class Name="b l o c k bg-gradient-to-r from-purple-400 to-pink-400bg-clip-texttext-transparent">Business Solutions
                 </s pan>
               </h1>
-              <p c lass Name="{`t ext-xl" text-gray-300 mb-8 max-w-3 xl mx-auto transition-all duration-1000 delay-300 ${is Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+              <p c lass Name="{`t e xt-xl" text-gray-300 mb-8 max-w-3 xl mx-auto transition-all duration-1000 delay-300 ${is Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
 
                 Powerful, ready-to-use software solutions designed to solve specific business challenges. 
                 No complex setup, no lengthy implementations - just instant value.
 
               </p>
-              <d iv class Name="{`f lex" flex-col sm: flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${is Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-                <L ink to="/contact" class Name="i nline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
+              <d iv class Name="{`f l ex" flex-col sm: flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${is Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+                <L ink to="/contact" class Name="i n l i ne-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
 
                   Start Free Trial
 
-                  <A rrow Right class Name="m l-2h-5w-5" />
+                  <A rrow Rightclass Name="m l-2h-5w-5" />
                 </L ink>
 
                 <a
-                  h ref="tel:+13024640950"
-                  class Name="i nline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" />
+                  h r ef="tel:+13024640950"
+                  class Name="i n l i ne-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" />
                   Call +1 302 464 0950
 
                 </a>
@@ -815,10 +815,10 @@ const Micro Saas Page: React.F C = () => {
 
         {/* Category Filter */}
 
-        <s ection class Name="p y-8bg-gray-900/50" />
-          <d iv class Name="m ax-w-7 xl mx-auto px-4sm:px-6lg:px-8">
+        <s ection class Name="p y-8b g-g r ay-900/50" />
+          <d iv class Name="m a x-w-7 xl mx-a u to px-4sm:px-6lg:px-8">
         </d iv>
-            <d iv class Name="f lex flex-wrapjustify-centergap-4">
+            <d iv class Name="f l ex f l ex-wrapjustify-centergap-4">
         </d iv>
 
               {categories.map((category) => (
@@ -841,37 +841,37 @@ const Micro Saas Page: React.F C = () => {
         {/* Products Grid */}
 
         <s ection class Name="p y-16" />
-          <d iv class Name="m ax-w-7 xl mx-auto px-4sm:px-6lg:px-8">
+          <d iv class Name="m a x-w-7 xl mx-a u to px-4sm:px-6lg:px-8">
         </d iv>
-            <d iv class Name="g rid grid-cols-1 md:grid-cols-2 lg:grid-cols-3xl:grid-cols-4gap-8">
+            <d iv class Name="g r id g r id-cols-1 md:grid-cols-2 lg:grid-cols-3xl:grid-cols-4gap-8">
         </d iv>
 
               {filtered Products.map((product, index) => (
                 <d iv
                   key="{product.id}"
-                  class Name="{`g roup" relative bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:border-purple-500 ${
+                  class Name="{`g r o u p" relative bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:border-purple-500 ${
                     product.popular ? 'ring-2 ring-purple-500' : ''
                   }`} />
                   {product.popular && (
 
-                    <d iv class Name="a bsolute -top-3 left-1/2transform-translate-x-1/2">
+                    <d iv class Name="a b s o lute -top-3 left-1/2transform-translate-x-1/2">
         </d iv>
-                      <s pan class Name="b g-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold">Most Popular
+                      <s pan class Name="b g-g r a dient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold">Most Popular
                       </s pan>
                     </d iv>
 
                   )}
 
-                  <d iv class Name="t ext-centermb-6">
+                  <d iv class Name="t e x t-centermb-6">
         </d iv>
-                    <d iv class Name="{`i nline-flex" items-center justify-center w-16 h-16 bg-gradient-to-r ${product.color} rounded-xl mb-4`} />
-                      <p roduct.icon class Name="h-8w-8t ext-white" />
+                    <d iv class Name="{`i n l i ne-flex" items-center justify-center w-16 h-16 bg-gradient-to-r ${product.color} rounded-xl mb-4`} />
+                      <p roduct.icon class Name="h-8w-8t e xt-w h ite" />
                     </d iv>
-                    <h3 c lass Name="t ext-xl font-boldtext-whitemb-2">{product.title}</h3>
-                    <p c lass Name="t ext-gray-300text-smmb-4">{product.description}</p>
-                    <d iv class Name="f lex items-center justify-centerspace-x-2mb-4">
+                    <h3 c lass Name="t e xt-xl f o nt-boldtext-whitemb-2">{product.title}</h3>
+                    <p c lass Name="t e xt-g r ay-300text-smmb-4">{product.description}</p>
+                    <d iv class Name="f l ex i t ems-center justify-centerspace-x-2mb-4">
         </d iv>
-                      <d iv class Name="f lexitems-center" />
+                      <d iv class Name="f l e x items-center" />
 
                         {[...Array(5)].map((_, i) => (
                           <S tar
@@ -883,47 +883,47 @@ const Micro Saas Page: React.F C = () => {
                         ))}
 
                       </d iv>
-                      <s pan class Name="t ext-smtext-gray-400">({product.reviews} reviews)</s pan>
+                      <s pan class Name="t e xt-s m text-gray-400">({product.reviews} reviews)</s pan>
                     </d iv>
 
-                  <d iv class Name="t ext-centermb-6">
+                  <d iv class Name="t e x t-centermb-6">
         </d iv>
-                    <d iv class Name="f lex items-center justify-centerspace-x-2mb-2">
+                    <d iv class Name="f l ex i t ems-center justify-centerspace-x-2mb-2">
         </d iv>
-                      <s pan class Name="t ext-3 xlfont-boldtext-white">{product.price}</s pan>
-                      <s pan class Name="t ext-lgtext-gray-400line-through">{product.original Price}</s pan>
+                      <s pan class Name="t e xt-3 x l font-boldtext-white">{product.price}</s pan>
+                      <s pan class Name="t e x t-lgtext-gray-400line-through">{product.original Price}</s pan>
                     </d iv>
-                    <s pan class Name="t ext-smtext-green-400font-semibold">Save {Math.round((1 - parse Int(product.price.replace('$', '')) / parse Int(product.original Price.replace('$', ''))) * 100)}%
+                    <s pan class Name="t e xt-s m text-green-400font-semibold">Save {Math.round((1 - parse Int(product.price.replace('$', '')) / parse Int(product.original Price.replace('$', ''))) * 100)}%
                     </s pan>
                   </d iv>
 
-                  <d iv class Name="s pace-y-3mb-6">
+                  <d iv class Name="s p a c e-y-3mb-6">
         </d iv>
                     {product.features.slice(0, 4).map((feature, idx) => (
 
-                      <d iv key="{idx}" class Name="f lex items-centertext-smtext-gray-300" />
-                        <C heck Circle class Name="h-4 w-4 t ext-green-400mr-3flex-shrink-0" / />
+                      <d ivkey="{idx}" class Name="f l ex i t ems-centertext-smtext-gray-300" />
+                        <C heck Circleclass Name="h-4 w-4 t e xt-g r een-400mr-3flex-shrink-0" / />
                         <s pan>{feature}</s pan>
                       </d iv>
 
                     ))}
                     {product.features.length > 4 && (
 
-                      <d iv class Name="t ext-smtext-gray-400text-center">+{product.features.length - 4} more features
+                      <d iv class Name="t e xt-s m text-gray-400text-center">+{product.features.length - 4} more features
                       </d iv>
 
                     )}
                   </d iv>
 
-                  <d iv class Name="s pace-y-3">
+                  <d iv class Name="s p a c e-y-3">
         </d iv>
-                    <L ink to="{`/${product.id}`}" class Name="w-f ull inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" />
+                    <L ink to="{`/${product.id}`}" class Name="w-f u ll i n line-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" />
 
                       View Details
 
-                      <A rrow Right class Name="m l-2h-4w-4" />
+                      <A rrow Rightclass Name="m l-2h-4w-4" />
                     </L ink>
-                    <L ink to="/contact" class Name="w-f ull inline-flex items-center justify-center px-4 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-whitetransition-allduration-300">Start Free Trial
+                    <L ink to="/contact" class Name="w-f u ll i n line-flex items-center justify-center px-4 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-whitetransition-allduration-300">Start Free Trial
                     </L ink>
                   </d iv>
 
@@ -932,39 +932,39 @@ const Micro Saas Page: React.F C = () => {
             </d iv>
         </s ection>
 
-        {/* C TA Section */}
+        {/* C T A Section */}
 
-        <s ection class Name="p y-20 bg-gradient-to-brfrom-gray-900to-purple-900" />
-          <d iv class Name="m ax-w-7 xl mx-auto px-4 sm:px-6lg:px-8text-center">
+        <s ection class Name="p y-20 b g-g r adient-to-brfrom-gray-900to-purple-900" />
+          <d iv class Name="m a x-w-7 xl mx-a u to px-4 sm:px-6lg:px-8text-center">
         </d iv>
-            <h2 c lass Name="t ext-3 xl md:text-4 xl font-boldtext-whitemb-4">Ready to Transform Your Business?
+            <h2 c lass Name="t e xt-3 xl md:t e xt-4 xl font-boldtext-whitemb-4">Ready to Transform Your Business?
             </h2>
-            <p c lass Name="t ext-xl text-gray-300 mb-8 max-w-3xlmx-auto" />
+            <p c lass Name="t e xt-xl t e xt-gray-300 mb-8 max-w-3xlmx-auto" />
 
-              Join thousands of businesses already using our micro S AA S solutions to streamline operations, 
+              Join thousands of businesses already using our micro S A A S solutions to streamline operations, 
               increase productivity, and drive growth.
 
             </p>
-            <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+            <d iv class Name="f l ex f l ex-col sm:flex-rowgap-4justify-center">
         </d iv>
-              <L ink to="/contact" class Name="i nline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
+              <L ink to="/contact" class Name="i n l i ne-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
 
                 Get Started Today
 
-                <A rrow Right class Name="m l-2h-5w-5" />
+                <A rrow Rightclass Name="m l-2h-5w-5" />
               </L ink>
 
               <a
-                h ref="tel:+13024640950"
-                class Name="i nline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" />
+                h r ef="tel:+13024640950"
+                class Name="i n l i ne-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" />
                 Call +1 302 464 0950
 
               </a>
             </d iv>
-            <d iv class Name="m t-8text-gray-400">
+            <d iv class Name="m t-8t e x t-gray-400">
         </d iv>
               <p>Email: kleber@ziontechgroup.com</p>
-              <p>Address: 364 E Main St S TE 1008, Middletown D E 19709</p>
+              <p>Address: 364 E Main St S T E 1008, Middletown D E 19709</p>
             </d iv>
         </s ection>
       </d iv>
