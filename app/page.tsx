@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-'use client';
 import React, { useState, useEffect } from 'react';
-=======
-import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Cloud, Database } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code } from 'lucide-react';
@@ -105,7 +99,7 @@ const HomePage: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Link 
-                  to="/services"
+                  to="/ai-services"
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center group"
                 >
                   Explore Our Solutions
@@ -163,7 +157,7 @@ const HomePage: React.FC = () => {
                     {feature.description}
                   </p>
                   <Link 
-                    to="/services"
+                    to="/ai-services"
                     className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 inline-block"
                   >
                     Learn More →
@@ -215,82 +209,6 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 leading-relaxed">
                   Certified professionals with years of experience in AI, cloud, and enterprise solutions.
                 </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                What Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Clients Say</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Don't just take our word for it - hear from our satisfied clients
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-4 italic">
-                  "Zion Tech Group transformed our business with their AI solutions. The results exceeded our expectations and our efficiency increased by 300%."
-                </p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                    JS
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold">John Smith</div>
-                    <div className="text-gray-400 text-sm">CEO, TechCorp</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-4 italic">
-                  "Their cloud infrastructure solutions are top-notch. We've never had such reliable and scalable systems before."
-                </p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                    MJ
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold">Maria Johnson</div>
-                    <div className="text-gray-400 text-sm">CTO, InnovateLabs</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-4 italic">
-                  "The cybersecurity implementation was flawless. Our data has never been more secure, and compliance is now effortless."
-                </p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                    DR
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold">David Rodriguez</div>
-                    <div className="text-gray-400 text-sm">Security Director, SecureCorp</div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
