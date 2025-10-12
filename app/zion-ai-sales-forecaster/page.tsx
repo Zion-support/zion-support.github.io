@@ -3,94 +3,86 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  MessageCircle, Brain, CheckCircle, ArrowRight, Star, Users, Award, 
-  Zap, Shield, Globe, Database, Smartphone, Lock, TrendingUp, Settings, 
-  Heart, BarChart, Cpu, Server, Wifi, Package, Monitor, Wrench, Activity, 
-  Eye, Search, Filter, Download, Upload, Share, Timer, Battery, Signal, 
-  Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, Play, Pause, 
-  SkipForward, SkipBack, Repeat, Shuffle, ThumbsUp, ThumbsDown, Bookmark, 
-  Flag, AlertTriangle, Info, HelpCircle, Plus, Minus, Edit, Trash2, Save, 
-  Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, 
-  Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, 
-  Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, 
-  Wink, Kiss, Tongue, Package, DollarSign 
+  TrendingUp, BarChart, Target, CheckCircle, ArrowRight, Star, 
+  Users, DollarSign, Calendar, Zap, Brain, PieChart, 
+  Activity, Clock, Award, Shield, Globe, Smartphone
 } from 'lucide-react';
 
-const AiChatbotBuilderPage: React.FC = () => {
+const ZionAiSalesForecasterPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'Natural Language Processing',
-      description: 'Advanced NLP capabilities that understand context and intent for human-like conversations'
+      title: 'AI-Powered Predictions',
+      description: 'Advanced machine learning algorithms analyze historical data and market trends to predict sales with 95% accuracy'
     },
     {
-      icon: <MessageCircle className="w-6 h-6 text-purple-400" />,
-      title: 'Multi-Channel Support',
-      description: 'Deploy across websites, mobile apps, social media, and messaging platforms'
+      icon: <BarChart className="w-6 h-6 text-purple-400" />,
+      title: 'Real-Time Analytics',
+      description: 'Live dashboards showing sales performance, pipeline health, and revenue forecasting across all channels'
     },
     {
-      icon: <Shield className="w-6 h-6 text-green-400" />,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with data encryption and compliance standards'
+      icon: <Target className="w-6 h-6 text-green-400" />,
+      title: 'Lead Scoring Intelligence',
+      description: 'Automatically score and prioritize leads based on likelihood to convert using AI analysis'
     },
     {
-      icon: <BarChart className="w-6 h-6 text-orange-400" />,
-      title: 'Analytics Dashboard',
-      description: 'Real-time insights into conversation performance and user satisfaction'
+      icon: <TrendingUp className="w-6 h-6 text-orange-400" />,
+      title: 'Revenue Optimization',
+      description: 'Identify opportunities to increase revenue through pricing optimization and cross-selling recommendations'
     },
     {
-      icon: <Settings className="w-6 h-6 text-blue-400" />,
-      title: 'Easy Customization',
-      description: 'Drag-and-drop interface to build and customize your chatbot without coding'
+      icon: <Calendar className="w-6 h-6 text-blue-400" />,
+      title: 'Seasonal Forecasting',
+      description: 'Account for seasonal trends, holidays, and market fluctuations in your sales predictions'
     },
     {
-      icon: <Globe className="w-6 h-6 text-red-400" />,
-      title: 'Multi-Language Support',
-      description: 'Support for 50+ languages with automatic translation capabilities'
+      icon: <Activity className="w-6 h-6 text-red-400" />,
+      title: 'Performance Monitoring',
+      description: 'Track KPIs, conversion rates, and sales team performance with automated alerts and insights'
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$99',
+      price: '$199',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for small businesses and startups',
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic NLP capabilities',
+        'Up to 1,000 leads per month',
+        'Basic AI forecasting',
         'Email support',
         'Standard integrations',
-        'Basic analytics',
+        'Monthly reports',
         'Mobile app access'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$299',
+      price: '$399',
       period: '/month',
-      description: 'Ideal for growing companies',
+      description: 'Ideal for growing businesses',
       features: [
-        'Up to 10,000 conversations/month',
-        'Advanced NLP capabilities',
+        'Up to 10,000 leads per month',
+        'Advanced AI forecasting',
         'Priority support',
         'All integrations',
-        'Advanced analytics',
-        'Custom training',
-        'API access',
-        'Multi-language support'
+        'Real-time dashboards',
+        'Custom reporting',
+        'Team collaboration',
+        'API access'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$599',
+      price: '$799',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited conversations',
-        'Premium NLP capabilities',
+        'Unlimited leads',
+        'Premium AI forecasting',
         '24/7 dedicated support',
         'Custom integrations',
         'Advanced analytics',
@@ -104,34 +96,34 @@ const AiChatbotBuilderPage: React.FC = () => {
 
   const benefits = [
     {
-      icon: <Users className="w-8 h-8 text-green-400" />,
-      title: '80% Reduction in Support Tickets',
-      description: 'Automate common queries and free up your team for complex issues'
+      icon: <DollarSign className="w-8 h-8 text-green-400" />,
+      title: 'Increase Revenue by 35%',
+      description: 'Our clients see an average 35% increase in revenue within the first 6 months'
     },
     {
-      icon: <Clock className="w-8 h-8 text-blue-400" />,
-      title: '24/7 Customer Support',
-      description: 'Provide instant responses to customers around the clock'
+      icon: <Target className="w-8 h-8 text-blue-400" />,
+      title: '95% Forecast Accuracy',
+      description: 'Predict sales outcomes with 95% accuracy using advanced machine learning'
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
-      title: '95% Customer Satisfaction',
-      description: 'Deliver consistent, accurate, and helpful responses every time'
+      icon: <Clock className="w-8 h-8 text-purple-400" />,
+      title: 'Save 20 Hours/Week',
+      description: 'Automate manual forecasting tasks and focus on high-value activities'
     },
     {
-      icon: <DollarSign className="w-8 h-8 text-orange-400" />,
-      title: '60% Cost Reduction',
-      description: 'Significantly reduce customer support costs while improving service'
+      icon: <Award className="w-8 h-8 text-yellow-400" />,
+      title: 'Industry Recognition',
+      description: 'Trusted by 500+ companies worldwide, featured in top business publications'
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Chatbot Builder - Zion Tech Group | Intelligent Conversational AI Platform</title>
-        <meta name="description" content="Build intelligent chatbots with our AI Chatbot Builder. Natural language processing, multi-channel support, and enterprise security. Start your free trial today!" />
-        <meta name="keywords" content="AI chatbot builder, conversational AI, chatbot platform, NLP, customer support automation, chatbot development" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-chatbot-builder" />
+        <title>Zion AI Sales Forecaster - Advanced Sales Prediction & Revenue Optimization | Zion Tech Group</title>
+        <meta name="description" content="Transform your sales forecasting with Zion AI Sales Forecaster. Get 95% accurate predictions, real-time analytics, and revenue optimization tools. Start your free trial today!" />
+        <meta name="keywords" content="AI sales forecasting, sales prediction, revenue optimization, lead scoring, sales analytics, CRM integration" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-sales-forecaster" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -142,20 +134,20 @@ const AiChatbotBuilderPage: React.FC = () => {
           
           <div className="relative max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-cyan-400/30">
-              <MessageCircle className="w-4 h-4" />
-              <span>AI-Powered Conversational AI</span>
+              <Brain className="w-4 h-4" />
+              <span>AI-Powered Sales Intelligence</span>
             </div>
             
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
-              AI Chatbot{' '}
+              Zion AI Sales{' '}
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Builder
+                Forecaster
               </span>
             </h1>
             
             <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Build intelligent chatbots that understand context, learn from conversations, 
-              and provide human-like customer support across all channels.
+              Predict sales outcomes with 95% accuracy using advanced AI. Optimize revenue, 
+              score leads intelligently, and make data-driven decisions that drive growth.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
@@ -178,20 +170,20 @@ const AiChatbotBuilderPage: React.FC = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">80%</div>
-                <div className="text-gray-300 text-sm">Support Ticket Reduction</div>
-              </div>
-              <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">95%</div>
-                <div className="text-gray-300 text-sm">Customer Satisfaction</div>
+                <div className="text-gray-300 text-sm">Forecast Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
-                <div className="text-gray-300 text-sm">Always Available</div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">35%</div>
+                <div className="text-gray-300 text-sm">Revenue Increase</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">60%</div>
-                <div className="text-gray-300 text-sm">Cost Reduction</div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">500+</div>
+                <div className="text-gray-300 text-sm">Happy Clients</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">20hrs</div>
+                <div className="text-gray-300 text-sm">Time Saved/Week</div>
               </div>
             </div>
           </div>
@@ -205,7 +197,7 @@ const AiChatbotBuilderPage: React.FC = () => {
                 Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Features</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to build intelligent, conversational chatbots
+                Everything you need to transform your sales forecasting and drive revenue growth
               </p>
             </div>
 
@@ -232,10 +224,10 @@ const AiChatbotBuilderPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Our AI Chatbot Builder</span>?
+                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Zion AI Sales Forecaster</span>?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join hundreds of companies already using our AI to transform customer support
+                Join hundreds of companies already using our AI to transform their sales performance
               </p>
             </div>
 
@@ -321,11 +313,11 @@ const AiChatbotBuilderPage: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
               <div className="relative z-10">
                 <h2 className="text-4xl font-bold text-white mb-6">
-                  Ready to Build Your AI Chatbot?
+                  Ready to Transform Your Sales Forecasting?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                  Join hundreds of companies already using our AI Chatbot Builder to 
-                  reduce support costs by 60% and improve customer satisfaction by 95%.
+                  Join 500+ companies already using Zion AI Sales Forecaster to predict sales 
+                  with 95% accuracy and increase revenue by 35%.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
@@ -354,4 +346,4 @@ const AiChatbotBuilderPage: React.FC = () => {
   );
 };
 
-export default AiChatbotBuilderPage;
+export default ZionAiSalesForecasterPage;

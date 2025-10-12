@@ -3,96 +3,88 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  MessageCircle, Brain, CheckCircle, ArrowRight, Star, Users, Award, 
-  Zap, Shield, Globe, Database, Smartphone, Lock, TrendingUp, Settings, 
-  Heart, BarChart, Cpu, Server, Wifi, Package, Monitor, Wrench, Activity, 
-  Eye, Search, Filter, Download, Upload, Share, Timer, Battery, Signal, 
-  Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, Play, Pause, 
-  SkipForward, SkipBack, Repeat, Shuffle, ThumbsUp, ThumbsDown, Bookmark, 
-  Flag, AlertTriangle, Info, HelpCircle, Plus, Minus, Edit, Trash2, Save, 
-  Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, 
-  Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, 
-  Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, 
-  Wink, Kiss, Tongue, Package, DollarSign 
+  FileText, Image, Video, Mic, Globe, CheckCircle, ArrowRight, Star, 
+  BarChart, TrendingUp, Target, Zap, Brain, PieChart, 
+  Activity, Clock, Award, Shield, Users, Smartphone, Mail, Palette
 } from 'lucide-react';
 
-const AiChatbotBuilderPage: React.FC = () => {
+const ZionAiContentStudioProPage: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'Natural Language Processing',
-      description: 'Advanced NLP capabilities that understand context and intent for human-like conversations'
+      icon: <FileText className="w-6 h-6 text-cyan-400" />,
+      title: 'AI Blog Writing',
+      description: 'Generate high-quality blog posts, articles, and long-form content with SEO optimization and brand voice consistency'
     },
     {
-      icon: <MessageCircle className="w-6 h-6 text-purple-400" />,
-      title: 'Multi-Channel Support',
-      description: 'Deploy across websites, mobile apps, social media, and messaging platforms'
+      icon: <Image className="w-6 h-6 text-purple-400" />,
+      title: 'AI Image Generation',
+      description: 'Create stunning visuals, graphics, and social media images using advanced AI image generation technology'
     },
     {
-      icon: <Shield className="w-6 h-6 text-green-400" />,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with data encryption and compliance standards'
+      icon: <Video className="w-6 h-6 text-red-400" />,
+      title: 'AI Video Creation',
+      description: 'Produce engaging video content with AI-generated scripts, voiceovers, and automated editing'
     },
     {
-      icon: <BarChart className="w-6 h-6 text-orange-400" />,
-      title: 'Analytics Dashboard',
-      description: 'Real-time insights into conversation performance and user satisfaction'
+      icon: <Mic className="w-6 h-6 text-green-400" />,
+      title: 'AI Voice Synthesis',
+      description: 'Convert text to natural-sounding speech in multiple languages and voices for podcasts and videos'
     },
     {
-      icon: <Settings className="w-6 h-6 text-blue-400" />,
-      title: 'Easy Customization',
-      description: 'Drag-and-drop interface to build and customize your chatbot without coding'
-    },
-    {
-      icon: <Globe className="w-6 h-6 text-red-400" />,
+      icon: <Globe className="w-6 h-6 text-blue-400" />,
       title: 'Multi-Language Support',
-      description: 'Support for 50+ languages with automatic translation capabilities'
+      description: 'Create content in 50+ languages with accurate translations and cultural adaptations'
+    },
+    {
+      icon: <Palette className="w-6 h-6 text-orange-400" />,
+      title: 'Brand Consistency',
+      description: 'Maintain consistent brand voice, tone, and visual style across all content types'
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$99',
+      name: 'Creator',
+      price: '$79',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for individual creators',
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic NLP capabilities',
+        'Up to 100 content pieces/month',
+        'Basic AI writing tools',
+        'Standard image generation',
         'Email support',
-        'Standard integrations',
-        'Basic analytics',
+        'Basic templates',
         'Mobile app access'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$299',
+      price: '$149',
       period: '/month',
-      description: 'Ideal for growing companies',
+      description: 'Ideal for small teams',
       features: [
-        'Up to 10,000 conversations/month',
-        'Advanced NLP capabilities',
+        'Up to 500 content pieces/month',
+        'Advanced AI writing tools',
+        'Premium image generation',
         'Priority support',
-        'All integrations',
-        'Advanced analytics',
-        'Custom training',
-        'API access',
-        'Multi-language support'
+        'All templates',
+        'Team collaboration',
+        'Brand voice training',
+        'API access'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$599',
+      price: '$299',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited conversations',
-        'Premium NLP capabilities',
+        'Unlimited content pieces',
+        'Premium AI tools',
         '24/7 dedicated support',
-        'Custom integrations',
+        'Custom templates',
         'Advanced analytics',
         'White-label options',
         'Custom training',
@@ -104,34 +96,67 @@ const AiChatbotBuilderPage: React.FC = () => {
 
   const benefits = [
     {
-      icon: <Users className="w-8 h-8 text-green-400" />,
-      title: '80% Reduction in Support Tickets',
-      description: 'Automate common queries and free up your team for complex issues'
+      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      title: '10x Content Production',
+      description: 'Create content 10x faster than traditional methods while maintaining high quality'
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8 text-green-400" />,
+      title: 'Increase Engagement by 65%',
+      description: 'AI-optimized content drives higher engagement rates and better performance'
     },
     {
       icon: <Clock className="w-8 h-8 text-blue-400" />,
-      title: '24/7 Customer Support',
-      description: 'Provide instant responses to customers around the clock'
+      title: 'Save 25 Hours/Week',
+      description: 'Automate content creation tasks and focus on strategy and creativity'
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
-      title: '95% Customer Satisfaction',
-      description: 'Deliver consistent, accurate, and helpful responses every time'
+      icon: <Award className="w-8 h-8 text-purple-400" />,
+      title: 'Industry Recognition',
+      description: 'Trusted by 1,000+ content creators and marketers worldwide'
+    }
+  ];
+
+  const contentTypes = [
+    {
+      title: 'Blog Posts & Articles',
+      description: 'Long-form content optimized for SEO with engaging headlines and compelling narratives',
+      icon: <FileText className="w-8 h-8 text-blue-400" />
     },
     {
-      icon: <DollarSign className="w-8 h-8 text-orange-400" />,
-      title: '60% Cost Reduction',
-      description: 'Significantly reduce customer support costs while improving service'
+      title: 'Social Media Content',
+      description: 'Platform-specific posts for Instagram, Twitter, LinkedIn, and Facebook with hashtags',
+      icon: <Smartphone className="w-8 h-8 text-green-400" />
+    },
+    {
+      title: 'Email Marketing',
+      description: 'Newsletters, promotional emails, and drip campaigns with personalization',
+      icon: <Mail className="w-8 h-8 text-red-400" />
+    },
+    {
+      title: 'Video Scripts',
+      description: 'YouTube scripts, TikTok content, and video marketing materials',
+      icon: <Video className="w-8 h-8 text-purple-400" />
+    },
+    {
+      title: 'Product Descriptions',
+      description: 'E-commerce product descriptions, features, and benefits copy',
+      icon: <Target className="w-8 h-8 text-orange-400" />
+    },
+    {
+      title: 'Ad Copy & Landing Pages',
+      description: 'High-converting ad copy and landing page content for all platforms',
+      icon: <BarChart className="w-8 h-8 text-cyan-400" />
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Chatbot Builder - Zion Tech Group | Intelligent Conversational AI Platform</title>
-        <meta name="description" content="Build intelligent chatbots with our AI Chatbot Builder. Natural language processing, multi-channel support, and enterprise security. Start your free trial today!" />
-        <meta name="keywords" content="AI chatbot builder, conversational AI, chatbot platform, NLP, customer support automation, chatbot development" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-chatbot-builder" />
+        <title>Zion AI Content Studio Pro - Advanced AI Content Creation Platform | Zion Tech Group</title>
+        <meta name="description" content="Create stunning content 10x faster with Zion AI Content Studio Pro. AI-powered writing, images, videos, and more. Start your free trial today!" />
+        <meta name="keywords" content="AI content creation, content writing, AI image generation, video creation, content marketing, social media content" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-content-studio-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -142,20 +167,20 @@ const AiChatbotBuilderPage: React.FC = () => {
           
           <div className="relative max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-cyan-400/30">
-              <MessageCircle className="w-4 h-4" />
-              <span>AI-Powered Conversational AI</span>
+              <FileText className="w-4 h-4" />
+              <span>AI-Powered Content Creation</span>
             </div>
             
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
-              AI Chatbot{' '}
+              Zion AI Content{' '}
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Builder
+                Studio Pro
               </span>
             </h1>
             
             <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Build intelligent chatbots that understand context, learn from conversations, 
-              and provide human-like customer support across all channels.
+              Create stunning content 10x faster with AI. Generate blogs, images, videos, and social media 
+              content that engages your audience and drives results.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
@@ -178,20 +203,20 @@ const AiChatbotBuilderPage: React.FC = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">80%</div>
-                <div className="text-gray-300 text-sm">Support Ticket Reduction</div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">10x</div>
+                <div className="text-gray-300 text-sm">Faster Creation</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">95%</div>
-                <div className="text-gray-300 text-sm">Customer Satisfaction</div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">65%</div>
+                <div className="text-gray-300 text-sm">Higher Engagement</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
-                <div className="text-gray-300 text-sm">Always Available</div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">1,000+</div>
+                <div className="text-gray-300 text-sm">Happy Creators</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">60%</div>
-                <div className="text-gray-300 text-sm">Cost Reduction</div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">25hrs</div>
+                <div className="text-gray-300 text-sm">Time Saved/Week</div>
               </div>
             </div>
           </div>
@@ -205,7 +230,7 @@ const AiChatbotBuilderPage: React.FC = () => {
                 Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Features</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to build intelligent, conversational chatbots
+                Everything you need to create professional content at scale
               </p>
             </div>
 
@@ -227,15 +252,47 @@ const AiChatbotBuilderPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Content Types Section */}
+        <section className="py-20 px-4 relative">
+          <div className="relative max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Create Any <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Content Type</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                From blog posts to videos, we support all your content creation needs
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {contentTypes.map((contentType, index) => (
+                <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mr-6 group-hover:scale-110 transition-transform duration-300">
+                      {contentType.icon}
+                    </div>
+                    <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                      {contentType.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-300 leading-relaxed">
+                    {contentType.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Benefits Section */}
         <section className="py-20 px-4 relative">
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Our AI Chatbot Builder</span>?
+                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Zion AI Content Studio Pro</span>?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join hundreds of companies already using our AI to transform customer support
+                Join thousands of creators already using our AI to transform their content strategy
               </p>
             </div>
 
@@ -261,7 +318,7 @@ const AiChatbotBuilderPage: React.FC = () => {
                 Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your business needs. All plans include a 14-day free trial.
+                Choose the plan that fits your content creation needs. All plans include a 14-day free trial.
               </p>
             </div>
 
@@ -321,11 +378,11 @@ const AiChatbotBuilderPage: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
               <div className="relative z-10">
                 <h2 className="text-4xl font-bold text-white mb-6">
-                  Ready to Build Your AI Chatbot?
+                  Ready to Transform Your Content Creation?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                  Join hundreds of companies already using our AI Chatbot Builder to 
-                  reduce support costs by 60% and improve customer satisfaction by 95%.
+                  Join 1,000+ creators already using Zion AI Content Studio Pro to create 
+                  content 10x faster and increase engagement by 65%.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
@@ -354,4 +411,4 @@ const AiChatbotBuilderPage: React.FC = () => {
   );
 };
 
-export default AiChatbotBuilderPage;
+export default ZionAiContentStudioProPage;

@@ -293,10 +293,79 @@ const MicroSaasPage: React.FC = () => {
       rating: 4.8,
       reviews: 156,
       popular: true
+    },
+    {
+      id: 'zion-ai-sales-forecaster',
+      title: 'Zion AI Sales Forecaster',
+      description: 'Advanced AI-powered sales prediction and revenue optimization with 95% accuracy',
+      price: '$199/month',
+      originalPrice: '$299/month',
+      features: [
+        'AI-powered predictions',
+        'Real-time analytics',
+        'Lead scoring intelligence',
+        'Revenue optimization',
+        'Seasonal forecasting',
+        'Performance monitoring',
+        'Custom dashboards',
+        'API integrations'
+      ],
+      icon: TrendingUp,
+      color: 'from-cyan-500 to-blue-500',
+      category: 'Sales & Analytics',
+      rating: 4.9,
+      reviews: 89,
+      popular: true
+    },
+    {
+      id: 'zion-ai-customer-insights-pro',
+      title: 'Zion AI Customer Insights Pro',
+      description: 'Deep customer analytics and personalization with AI-powered sentiment analysis',
+      price: '$149/month',
+      originalPrice: '$199/month',
+      features: [
+        'AI customer segmentation',
+        'Sentiment analysis',
+        'Predictive analytics',
+        'Conversation intelligence',
+        'Personalization engine',
+        'Real-time dashboards',
+        'Multi-channel insights',
+        'Custom reporting'
+      ],
+      icon: Users,
+      color: 'from-purple-500 to-pink-500',
+      category: 'Customer Analytics',
+      rating: 4.8,
+      reviews: 124,
+      popular: false
+    },
+    {
+      id: 'zion-ai-content-studio-pro',
+      title: 'Zion AI Content Studio Pro',
+      description: 'Advanced AI content creation platform for blogs, images, videos, and social media',
+      price: '$79/month',
+      originalPrice: '$119/month',
+      features: [
+        'AI blog writing',
+        'Image generation',
+        'Video creation',
+        'Voice synthesis',
+        'Multi-language support',
+        'Brand consistency',
+        'Content optimization',
+        'Team collaboration'
+      ],
+      icon: FileText,
+      color: 'from-orange-500 to-red-500',
+      category: 'Content Creation',
+      rating: 4.7,
+      reviews: 203,
+      popular: true
     }
   ];
 
-  const categories = ['All', 'Analytics', 'Customer Support', 'Security', 'Backup & Recovery', 'Content Creation', 'CRM', 'Data Management', 'Marketing', 'Project Management', 'Email Marketing', 'Inventory', 'Finance'];
+  const categories = ['All', 'Analytics', 'Customer Support', 'Security', 'Backup & Recovery', 'Content Creation', 'CRM', 'Data Management', 'Marketing', 'Project Management', 'Email Marketing', 'Inventory', 'Finance', 'Sales & Analytics', 'Customer Analytics'];
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const filteredProducts = selectedCategory === 'All' 
