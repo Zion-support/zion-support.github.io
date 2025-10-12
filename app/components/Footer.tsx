@@ -28,13 +28,15 @@ export default function Footer() {
   ];
 
   const microSaasServices = [
-    { name: 'AI Task Manager', path: '/ai-task-manager' },
+    { name: 'AI Task Manager Pro', path: '/ai-task-manager' },
     { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
     { name: 'AI Password Manager', path: '/ai-password-manager' },
     { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
     { name: 'AI Health Tracker', path: '/ai-health-tracker' },
     { name: 'AI Smart Calendar', path: '/ai-smart-calendar' },
-    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' }
+    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' },
+    { name: 'AI Meeting Assistant', path: '/ai-meeting-assistant' },
+    { name: 'AI Project Manager', path: '/ai-project-manager' }
   ];
 
   const fiveGServices = [

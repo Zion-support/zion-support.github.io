@@ -54,13 +54,15 @@ export default function Navigation() {
   ];
 
   const microSaasServices = [
-    { name: 'AI Task Manager', path: '/ai-task-manager' },
+    { name: 'AI Task Manager Pro', path: '/ai-task-manager' },
     { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
     { name: 'AI Password Manager', path: '/ai-password-manager' },
     { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
     { name: 'AI Health Tracker', path: '/ai-health-tracker' },
     { name: 'AI Smart Calendar', path: '/ai-smart-calendar' },
-    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' }
+    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' },
+    { name: 'AI Meeting Assistant', path: '/ai-meeting-assistant' },
+    { name: 'AI Project Manager', path: '/ai-project-manager' }
   ];
 
   return (
@@ -209,7 +211,7 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 rounded-lg mt-2">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-lg rounded-lg mt-2 border border-cyan-500/20">
               <Link to="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
                 Home
               </Link>
