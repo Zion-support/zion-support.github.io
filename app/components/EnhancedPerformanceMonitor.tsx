@@ -1,168 +1,111 @@
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'}
-  ]
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
-  return (
-        </div>
-      </section>
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our EnhancedPerformanceMonitor?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our enhancedperformancemonitor solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our enhancedperformancemonitor solutions for your business.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your enhancedperformancemonitor needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-  </
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-  </
-            </div>
-          </div>
-        </div>
-  )}
-export default EnhancedPerformanceMonitorPage
-  </button>
-  </button>
-  </section>
-  </h2>
+import React, { useState, useEffect } from 'react'
+import { Activity, Zap, TrendingUp, Clock } from 'lucide-react'
+
+interface PerformanceMetrics {
+  loadTime: number
+  renderTime: number
+  memoryUsage: number
+  cpuUsage: number
 }
-  ];const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];return (</div>
-      </section>
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our EnhancedPerformanceMonitor?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our enhancedperformancemonitor solutions deliver unmatched performance, security, and scalability.
-            </p>
+
+const EnhancedPerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    cpuUsage: 0
+  })
+
+  const [isMonitoring, setIsMonitoring] = useState(false)
+
+  useEffect(() => {
+    if (isMonitoring) {
+      const interval = setInterval(() => {
+        // Simulate performance monitoring
+        setMetrics({
+          loadTime: Math.random() * 1000 + 500,
+          renderTime: Math.random() * 100 + 50,
+          memoryUsage: Math.random() * 100,
+          cpuUsage: Math.random() * 100
+        })
+      }, 1000)
+
+      return () => clearInterval(interval)
+    }
+  }, [isMonitoring])
+
+  const toggleMonitoring = () => {
+    setIsMonitoring(!isMonitoring)
+  }
+
+  return (
+    <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+      <div className="flex items-center justify-between mb-6">
+        <h3 className="text-2xl font-bold text-white">Performance Monitor</h3>
+        <button
+          onClick={toggleMonitoring}
+          className={`px-4 py-2 rounded-lg font-semibold transition-colors ${
+            isMonitoring
+              ? 'bg-red-600 text-white hover:bg-red-700'
+              : 'bg-green-600 text-white hover:bg-green-700'
+          }`}
+        >
+          {isMonitoring ? 'Stop' : 'Start'} Monitoring
+        </button>
+      </div>
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="bg-white/5 rounded-lg p-4">
+          <div className="flex items-center mb-2">
+            <Clock className="w-5 h-5 text-blue-400 mr-2" />
+            <span className="text-sm text-gray-300">Load Time</span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {features.map((feature, index) => (}
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>))}
+          <div className="text-2xl font-bold text-white">
+            {Math.round(metrics.loadTime)}ms
           </div>
         </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our enhancedperformancemonitor solutions for your business.
-            </p>
+
+        <div className="bg-white/5 rounded-lg p-4">
+          <div className="flex items-center mb-2">
+            <Zap className="w-5 h-5 text-yellow-400 mr-2" />
+            <span className="text-sm text-gray-300">Render Time</span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-            {benefits.map((benefit, index) => (}
-              <div key={index} className="flex items-start space-x-3"></div>
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>))}
+          <div className="text-2xl font-bold text-white">
+            {Math.round(metrics.renderTime)}ms
           </div>
         </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your enhancedperformancemonitor needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
+
+        <div className="bg-white/5 rounded-lg p-4">
+          <div className="flex items-center mb-2">
+            <Activity className="w-5 h-5 text-green-400 mr-2" />
+            <span className="text-sm text-gray-300">Memory</span>
           </div>
-        </div>)};export default EnhancedPerformanceMonitorPage
+          <div className="text-2xl font-bold text-white">
+            {Math.round(metrics.memoryUsage)}%
+          </div>
+        </div>
+
+        <div className="bg-white/5 rounded-lg p-4">
+          <div className="flex items-center mb-2">
+            <TrendingUp className="w-5 h-5 text-purple-400 mr-2" />
+            <span className="text-sm text-gray-300">CPU</span>
+          </div>
+          <div className="text-2xl font-bold text-white">
+            {Math.round(metrics.cpuUsage)}%
+          </div>
+        </div>
+      </div>
+
+      {isMonitoring && (
+        <div className="mt-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg">
+          <p className="text-green-400 text-sm">
+            Performance monitoring is active. Metrics are updated every second.
+          </p>
+        </div>
+      )}
+    </div>
+  )
+}
+
+export default EnhancedPerformanceMonitor
