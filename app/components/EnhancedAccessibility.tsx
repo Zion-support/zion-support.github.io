@@ -15,7 +15,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       };
 
       mediaQuery.addEventListener('change', handleContrastChange);
-      handleContrastChange(mediaQuery);
+      handleContrastChange({ matches: mediaQuery.matches } as MediaQueryListEvent);
 
       return () => mediaQuery.removeEventListener('change', handleContrastChange);
     };
@@ -32,7 +32,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       };
 
       mediaQuery.addEventListener('change', handleMotionChange);
-      handleMotionChange(mediaQuery);
+      handleMotionChange({ matches: mediaQuery.matches } as MediaQueryListEvent);
 
       return () => mediaQuery.removeEventListener('change', handleMotionChange);
     };
