@@ -13,7 +13,7 @@ import {
   Hexagon, Octagon, Pentagon, Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, 
   Surprised, Confused, Wink, Kiss, Tongue, FileText, Package, DollarSign, CheckCircle, 
   Star, Clock, TrendingUp 
-} from './Icons'
+} from 'lucide-react'
 
 const Footer = () => {
   const aiServices = [
