@@ -1,5 +1,6 @@
 import React from 'react';
 import { AlertTriangle, RefreshCw } from 'lucide-react';
+;
 
 interface ErrorFallbackProps {
   error: Error;

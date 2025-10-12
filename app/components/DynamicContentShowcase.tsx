@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
+;
 
 interface ContentItem {
   id: string;
@@ -112,7 +113,7 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
                   alt={currentItem.title}
                   className="w-full h-64 object-cover rounded-lg"
                 />
-                {currentItem.featured && (
+                {currentItem.featured &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; (
                   <div className="absolute top-4 right-4 bg-yellow-500 text-yellow-900 px-2 py-1 rounded text-sm font-semibold">
                     Featured
                   </div>

@@ -5,7 +5,7 @@ export const Formvalidation = {
     console.log('Formvalidation initialized');
   },
   
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
   

@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Cloud, Shield, Zap, CheckCircle, ArrowRight, Star } from 'lucide-react';
+;
 
 const CloudMigrationProPage = () => {
   const features = [
@@ -164,7 +165,7 @@ const CloudMigrationProPage = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 relative ${plan.popular ? 'border-cyan-400' : ''}`}>
-                {plan.popular && (
+                {plan.popular &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-cyan-400 text-black px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular

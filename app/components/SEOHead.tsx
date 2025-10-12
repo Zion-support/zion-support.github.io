@@ -10,7 +10,7 @@ interface SEOHeadProps {
 }
 
 export default function SEOHead({
-  title = 'Zion Tech Group - AI & IT Solutions',
+  title = 'Zion Tech Group - AI &amp; IT Solutions',
   description = 'Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.',
   keywords = 'AI solutions, IT services, digital transformation, artificial intelligence, technology consulting',
   image = 'https://ziontechgroup.com/logo.png',

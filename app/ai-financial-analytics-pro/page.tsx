@@ -2,6 +2,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { Brain, Shield, CheckCircle, Star, Target, BarChart3, BarChart } from 'lucide-react';
+;
+
 
 
 export default function AiFinancialAnalyticsProPage() {
@@ -42,12 +45,12 @@ export default function AiFinancialAnalyticsProPage() {
       items: ['Revenue Forecasting', 'Expense Prediction', 'Market Analysis', 'Customer Behavior', 'Risk Assessment', 'Trend Analysis']
     },
     {
-      category: 'Reporting & Visualization',
+      category: 'Reporting &amp; Visualization',
       items: ['Custom Reports', 'Interactive Dashboards', 'Data Visualization', 'Export Options', 'Scheduled Reports', 'Real-time Updates']
     },
     {
-      category: 'Integration & Security',
-      items: ['API Integration', 'Data Security', 'Compliance Tools', 'Audit Logs', 'User Management', 'Backup & Recovery']
+      category: 'Integration &amp; Security',
+      items: ['API Integration', 'Data Security', 'Compliance Tools', 'Audit Logs', 'User Management', 'Backup &amp; Recovery']
     }
   ];
 
@@ -92,7 +95,7 @@ export default function AiFinancialAnalyticsProPage() {
         'Custom features',
         'On-premise deployment',
         '24/7 support',
-        'Training & consulting',
+        'Training &amp; consulting',
         'Custom integrations',
         'SLA guarantee'
       ],
@@ -202,7 +205,7 @@ export default function AiFinancialAnalyticsProPage() {
             <div className="grid md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
-                  {plan.popular && (
+                  {plan.popular &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
                     </div>

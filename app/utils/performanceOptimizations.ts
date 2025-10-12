@@ -5,7 +5,7 @@ export const Performanceoptimizations = {
     console.log('Performanceoptimizations initialized');
   },
   
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
   

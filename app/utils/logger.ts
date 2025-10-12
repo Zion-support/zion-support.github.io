@@ -5,7 +5,7 @@ export const Logger = {
     console.log('Logger initialized');
   },
   
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
   

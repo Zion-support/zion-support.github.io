@@ -8,6 +8,7 @@ import { ErrorFallback } from './components/ErrorFallback';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+;
 
 interface LayoutProps {
   children: React.ReactNode;

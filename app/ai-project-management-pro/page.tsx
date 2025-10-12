@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Star, Brain, Clock, Target, BarChart3 } from 'lucide-react';
+import { CheckCircle, Star, Brain, Clock, Target, BarChart3, BarChart } from 'lucide-react';
+;
 
 export default function AIProjectManagementPro() {
   const features = [
@@ -23,7 +24,7 @@ export default function AIProjectManagementPro() {
     },
     {
       icon: <BarChart3 className="w-6 h-6 text-green-400" />,
-      title: 'Analytics & Insights',
+      title: 'Analytics &amp; Insights',
       description: 'Comprehensive reporting and analytics to optimize project performance'
     }
   ];
@@ -88,7 +89,7 @@ export default function AIProjectManagementPro() {
         'Custom features',
         'On-premise deployment',
         '24/7 support',
-        'Training & consulting',
+        'Training &amp; consulting',
         'White-label solution',
         'SLA guarantee'
       ],
@@ -190,7 +191,7 @@ export default function AIProjectManagementPro() {
             <div className="grid md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
-                  {plan.popular && (
+                  {plan.popular &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
                     </div>

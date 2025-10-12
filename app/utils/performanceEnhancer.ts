@@ -5,7 +5,7 @@ export const Performanceenhancer = {
     console.log('Performanceenhancer initialized');
   },
   
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
   

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Phone, Mail, CheckCircle, Star } from 'lucide-react';
+;
 
 interface GenericServicePageProps {
   title: string;
@@ -10,7 +11,6 @@ interface GenericServicePageProps {
   benefits: string[];
   pricing?: string;
   category: 'AI' | 'IT' | 'MicroSAAS' | 'Emerging';
-  color: string;
 }
 
 const GenericServicePage: React.FC<GenericServicePageProps> = ({
@@ -50,7 +50,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
             </div>
             <h1 className="text-5xl font-bold text-white mb-6">{title}</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{description}</p>
-            {pricing && (
+            {pricing &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; (
               <div className="text-2xl font-semibold text-cyan-400 mb-8">
                 Starting at {pricing}
               </div>

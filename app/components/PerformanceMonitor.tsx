@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
-    if (typeof window !== 'undefined' && 'performance' in window) {
+    if (typeof window !== 'undefined' &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; 'performance' in window) {
       // Monitor Largest Contentful Paint (LCP)
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
@@ -30,8 +30,8 @@ const PerformanceMonitor: React.FC = () => {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
+          if (!(entry as PerformanceEntry &amp; { hadRecentInput?: boolean }).hadRecentInput) {
+            clsValue += (entry as PerformanceEntry &amp; { value: number }).value;
           }
         }
         console.log('CLS:', clsValue);

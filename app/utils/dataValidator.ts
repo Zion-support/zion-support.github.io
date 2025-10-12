@@ -5,7 +5,7 @@ export const Datavalidator = {
     console.log('Datavalidator initialized');
   },
   
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
   

@@ -2,9 +2,72 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { Brain, Clock, Target, BarChart3 } from 'lucide-react';
+;
+
 
 
 export default function AICustomerSupportChatbot() {
+  const chatbotFeatures = [
+    {
+      category: 'Core AI Features',
+      items: ['Natural Language Understanding', 'Context Awareness', 'Multi-language Support', 'Sentiment Analysis']
+    },
+    {
+      category: 'Integration Capabilities',
+      items: ['CRM Integration', 'Knowledge Base Sync', 'API Connectivity', 'Webhook Support']
+    },
+    {
+      category: 'Analytics &amp; Insights',
+      items: ['Conversation Analytics', 'Performance Metrics', 'Customer Satisfaction Tracking', 'ROI Reporting']
+    },
+    {
+      category: 'Customization Options',
+      items: ['Brand Customization', 'Response Templates', 'Workflow Automation', 'Custom Training']
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: 'Starter',
+      price: '$299',
+      period: '/month',
+      features: ['Up to 1,000 conversations', 'Basic AI responses', 'Email support', 'Standard integrations'],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$599',
+      period: '/month',
+      features: ['Up to 10,000 conversations', 'Advanced AI features', 'Priority support', 'Custom integrations', 'Analytics dashboard'],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      features: ['Unlimited conversations', 'Full AI customization', '24/7 dedicated support', 'White-label options', 'Advanced security'],
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      company: 'TechCorp Solutions',
+      role: 'Customer Success Manager',
+      content: 'Our customer satisfaction increased by 40% since implementing the AI chatbot. The response time is incredible!',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      company: 'E-commerce Plus',
+      role: 'Operations Director',
+      content: 'The chatbot handles 80% of our customer inquiries automatically. It&apos;s like having a team of support agents working 24/7.',
+      rating: 5
+    }
+  ];
+
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
@@ -23,7 +86,7 @@ export default function AICustomerSupportChatbot() {
     },
     {
       icon: <BarChart3 className="w-6 h-6 text-green-400" />,
-      title: 'Analytics & Insights',
+      title: 'Analytics &amp; Insights',
       description: 'Track customer satisfaction, response times, and identify improvement opportunities'
     }
   ];

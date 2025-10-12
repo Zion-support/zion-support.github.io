@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+;
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +29,7 @@ export default function Navigation() {
           </button>
         </div>
         
-        {isOpen && (
+        {isOpen &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; (
           <div className="md:hidden py-4">
             <div className="flex flex-col space-y-4">
               <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>

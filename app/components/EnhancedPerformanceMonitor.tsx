@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Activity, Zap, Clock, TrendingUp } from 'lucide-react';
+;
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -123,7 +124,7 @@ const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({
         </div>
       </div>
 
-      {showDetails && (
+      {showDetails &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; (
         <div className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div>
@@ -149,7 +150,7 @@ const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({
         </div>
       )}
 
-      {isMonitoring && (
+      {isMonitoring &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; (
         <div className="mt-4 p-3 bg-green-500/20 border border-green-500/30 rounded-lg">
           <div className="flex items-center text-green-400 text-sm">
             <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>

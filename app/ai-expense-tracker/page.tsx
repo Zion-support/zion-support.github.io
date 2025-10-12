@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {Receipt, Bot} from 'lucide-react';
+import { Receipt, Bot, Brain, Shield, CheckCircle, Star, BarChart3, TrendingUp, DollarSign, BarChart } from 'lucide-react';
+;
 
 export default function AIExpenseTracker() {
   const features = [
@@ -18,7 +19,7 @@ export default function AIExpenseTracker() {
     },
     {
       icon: <Shield className="w-12 h-12 text-green-400" />,
-      title: "Secure & Private",
+      title: "Secure &amp; Private",
       description: "Bank-level security ensures your financial data is protected and private."
     },
     {
@@ -191,7 +192,7 @@ export default function AIExpenseTracker() {
             <div className="grid md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
-                  {plan.popular && (
+                  {plan.popular &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
                     </div>

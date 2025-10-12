@@ -1,6 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Home, RefreshCw, AlertTriangle } from 'lucide-react';
+;
 import { Link } from 'react-router-dom';
+import { Home, RefreshCw, AlertTriangle } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -59,13 +60,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
             </p>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV === 'development' &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; this.state.error &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; (
               <div className="bg-red-900/50 border border-red-500 rounded-lg p-4 mb-6 text-left">
                 <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
                 <pre className="text-red-300 text-sm overflow-auto">
                   {this.state.error.toString()}
                 </pre>
-                {this.state.errorInfo && (
+                {this.state.errorInfo &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; (
                   <pre className="text-red-300 text-sm mt-2 overflow-auto">
                     {this.state.errorInfo.componentStack}
                   </pre>

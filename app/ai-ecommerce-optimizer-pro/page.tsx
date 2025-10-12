@@ -2,6 +2,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { Brain, Zap, CheckCircle, Star, BarChart3, TrendingUp, BarChart } from 'lucide-react';
+;
+
 
 
 export default function AIEcommerceOptimizerPro() {
@@ -31,7 +34,7 @@ export default function AIEcommerceOptimizerPro() {
   const optimizationFeatures = [
     {
       category: 'Product Optimization',
-      items: ['Smart Product Recommendations', 'Dynamic Pricing', 'Inventory Management', 'Product Search Optimization', 'Cross-selling & Upselling', 'Product Image Enhancement']
+      items: ['Smart Product Recommendations', 'Dynamic Pricing', 'Inventory Management', 'Product Search Optimization', 'Cross-selling &amp; Upselling', 'Product Image Enhancement']
     },
     {
       category: 'Customer Experience',
@@ -42,7 +45,7 @@ export default function AIEcommerceOptimizerPro() {
       items: ['Email Campaign Optimization', 'Social Media Integration', 'Retargeting Campaigns', 'SEO Enhancement', 'Content Personalization', 'Customer Segmentation']
     },
     {
-      category: 'Analytics & Reporting',
+      category: 'Analytics &amp; Reporting',
       items: ['Sales Performance Tracking', 'Customer Behavior Analysis', 'Revenue Optimization', 'ROI Measurement', 'Predictive Analytics', 'Custom Dashboards']
     }
   ];
@@ -112,7 +115,7 @@ export default function AIEcommerceOptimizerPro() {
     },
     {
       name: 'Sarah Johnson',
-      company: 'Home & Garden Store',
+      company: 'Home &amp; Garden Store',
       content: 'Our customers love the personalized shopping experience. Sales have increased dramatically since implementation.',
       rating: 5
     }

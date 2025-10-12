@@ -2,9 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
-import { Helmet } from 'react-helmet-async';
-
-interface SEOProps {
   title?: string;
   description?: string;
   keywords?: string;
@@ -13,26 +10,15 @@ interface SEOProps {
   ogType?: string;
   twitterCard?: string;
   structuredData?: object;
-}
-
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Advanced AI & IT Solutions',
-  description = 'Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.',
-  keywords = 'AI solutions, cloud computing, cybersecurity, software development, IT services, business automation, data analytics, machine learning, artificial intelligence',
-  canonical = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData
   noindex?: boolean;
   nofollow?: boolean;
 }
 
-const EnhancedSEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
-  keywords = 'AI solutions, artificial intelligence, IT services, 5G implementation, micro SAAS, cloud migration, cybersecurity, mobile development, machine learning, enterprise technology, digital transformation, Zion Tech Group, Delaware technology company',
-  canonical,
+const SEOHead: React.FC<SEOHeadProps> = ({
+  title = 'Zion Tech Group - Advanced AI &amp; IT Solutions',
+  description = 'Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.',
+  keywords = 'AI solutions, cloud computing, cybersecurity, software development, IT services, business automation, data analytics, machine learning, artificial intelligence',
+  canonical = 'https://ziontechgroup.com',
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
@@ -65,14 +51,9 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      {canonical && <link rel="canonical" href={canonical} />}
+      <link rel="canonical" href={canonical} />
       
       {/* Open Graph */}
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={canonical} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
@@ -84,17 +65,16 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
+      
       {/* SEO */}
-      {noindex && <meta name="robots" content="noindex" />}
-      {nofollow && <meta name="robots" content="nofollow" />}
+      {noindex &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; <meta name="robots" content="noindex" />}
+      {nofollow &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; <meta name="robots" content="nofollow" />}
       
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
+      
       <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
@@ -112,8 +92,3 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 };
 
 export default SEOHead;
-    </Helmet>
-  );
-};
-
-export default EnhancedSEO;

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Zap, Globe, Lock, ArrowRight } from 'lucide-react';
+;
 import Layout from '../layout';
+import { Shield, Zap, Globe, Lock, ArrowRight } from 'lucide-react';
 
 export default function BlockchainWeb3() {
   const features = [
@@ -33,12 +34,12 @@ export default function BlockchainWeb3() {
       items: ['Smart Contract Development', 'DApp Development', 'Token Creation', 'DeFi Protocols', 'NFT Marketplaces', 'Cross-Chain Solutions']
     },
     {
-      category: 'Security & Audit',
+      category: 'Security &amp; Audit',
       items: ['Smart Contract Audits', 'Security Testing', 'Penetration Testing', 'Code Review', 'Vulnerability Assessment', 'Compliance Check']
     },
     {
       category: 'Consulting',
-      items: ['Blockchain Strategy', 'Technology Selection', 'Architecture Design', 'Implementation Planning', 'Training & Support', 'Maintenance']
+      items: ['Blockchain Strategy', 'Technology Selection', 'Architecture Design', 'Implementation Planning', 'Training &amp; Support', 'Maintenance']
     }
   ];
 
@@ -48,7 +49,7 @@ export default function BlockchainWeb3() {
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Blockchain & Web3 Solutions
+              Blockchain &amp; Web3 Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with cutting-edge blockchain technology and Web3 solutions

@@ -1,6 +1,7 @@
 import React from 'react';
-import { Brain, Zap, Shield, Globe, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
+;
 import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
 
 interface FuturisticServiceCardProps {
   title: string;
@@ -10,7 +11,6 @@ interface FuturisticServiceCardProps {
   benefits: string[];
   pricing?: string;
   category: 'AI' | 'IT' | 'MicroSAAS' | 'Emerging';
-  color: string;
 }
 
 const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
@@ -50,7 +50,7 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
             </div>
             <h1 className="text-5xl font-bold text-white mb-6">{title}</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{description}</p>
-            {pricing && (
+            {pricing &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; (
               <div className="text-2xl font-semibold text-cyan-400 mb-8">
                 Starting at {pricing}
               </div>

@@ -51,7 +51,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      {canonical && <link rel="canonical" href={canonical} />}
+      {canonical &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; <link rel="canonical" href={canonical} />}
       
       {/* Open Graph */}
       <meta property="og:title" content={title} />
@@ -67,8 +67,8 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="twitter:image" content={ogImage} />
       
       {/* SEO */}
-      {noindex && <meta name="robots" content="noindex" />}
-      {nofollow && <meta name="robots" content="nofollow" />}
+      {noindex &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; <meta name="robots" content="noindex" />}
+      {nofollow &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; <meta name="robots" content="nofollow" />}
       
       {/* Structured Data */}
       <script type="application/ld+json">

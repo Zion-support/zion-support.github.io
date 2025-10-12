@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {MessageSquare} from 'lucide-react';
+import { MessageSquare, Brain, Zap, Shield, Star, Mail, BarChart3, Settings, Users, User, BarChart } from 'lucide-react';
+;
 
 export default function AIEmailAssistant() {
   const features = [
@@ -191,7 +192,7 @@ export default function AIEmailAssistant() {
             <div className="grid md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
-                  {plan.popular && (
+                  {plan.popular &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
                     </div>

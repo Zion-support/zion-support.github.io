@@ -5,7 +5,7 @@ export const Accessibilitychecker = {
     console.log('Accessibilitychecker initialized');
   },
   
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
   

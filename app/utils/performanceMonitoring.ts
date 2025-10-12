@@ -5,7 +5,7 @@ export const Performancemonitoring = {
     console.log('Performancemonitoring initialized');
   },
   
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
   

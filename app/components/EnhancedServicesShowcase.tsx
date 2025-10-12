@@ -1,8 +1,21 @@
 import React from 'react';
-import { Brain, Cloud, Shield, BarChart, Zap, Globe, CheckCircle, ArrowRight } from 'lucide-react';
+;
 import { Link } from 'react-router-dom';
+import { Brain, Cloud, Shield, BarChart, Zap, Globe, CheckCircle, ArrowRight } from 'lucide-react';
 
-const EnhancedServicesShowcase: React.FC = () => {
+interface EnhancedServicesShowcaseProps {
+  children?: React.ReactNode;
+  className?: string;
+  title?: string;
+  description?: string;
+}
+
+const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = ({
+  children,
+  className = '',
+  title,
+  description
+}) => {
   const services = [
     {
       icon: Brain,
@@ -26,17 +39,17 @@ const EnhancedServicesShowcase: React.FC = () => {
       icon: Globe,
       title: 'Digital Transformation',
       description: 'Complete digital transformation services to modernize your business and stay competitive.',
-      features: ['Strategy Development', 'Technology Integration', 'Change Management', 'Training & Support']
+      features: ['Strategy Development', 'Technology Integration', 'Change Management', 'Training &amp; Support']
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20 ${className}`}>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Our Core Services</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">{title || 'Our Core Services'}</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive AI and IT solutions designed to transform your business and drive innovation
+            {description || 'Comprehensive AI and IT solutions designed to transform your business and drive innovation'}
           </p>
         </div>
         
@@ -59,29 +72,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                   ))}
                 </ul>
               </div>
-interface EnhancedServicesShowcaseProps {
-  children?: React.ReactNode;
-  className?: string;
-  title?: string;
-  description?: string;
-}
-
-const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = ({
-  children,
-  className = '',
-  title,
-  description
-}) => {
-  return (
-    <div className={`enhanced-component ${className}`}>
-      {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>}
-      {description && <p className="text-gray-600 mb-4">{description}</p>}
-      {children}
-    </div>
-  );
-};
-
-export default EnhancedServicesShowcase;
               <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                 Learn More
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -99,6 +89,8 @@ export default EnhancedServicesShowcase;
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
+        
+        {children}
       </div>
     </div>
   );

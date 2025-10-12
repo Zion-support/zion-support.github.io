@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Cloud, Shield, TrendingUp, Server, Zap, BarChart3, ArrowRight } from 'lucide-react';
+;
 import Layout from '../layout';
+import { Cloud, Shield, TrendingUp, Server, Zap, BarChart3, ArrowRight, BarChart } from 'lucide-react';
 
 export default function CloudInfrastructureManagement() {
   const features = [
@@ -12,7 +13,7 @@ export default function CloudInfrastructureManagement() {
     },
     {
       icon: <Shield className="w-6 h-6 text-purple-400" />,
-      title: 'Security & Compliance',
+      title: 'Security &amp; Compliance',
       description: 'Enterprise-grade security with automated compliance monitoring and threat detection'
     },
     {
@@ -32,7 +33,7 @@ export default function CloudInfrastructureManagement() {
     },
     {
       icon: <BarChart3 className="w-6 h-6 text-pink-400" />,
-      title: 'Analytics & Insights',
+      title: 'Analytics &amp; Insights',
       description: 'Advanced analytics to optimize infrastructure performance and make data-driven decisions'
     }
   ];
@@ -40,10 +41,10 @@ export default function CloudInfrastructureManagement() {
   const managementFeatures = [
     {
       category: 'Infrastructure Management',
-      items: ['Server Provisioning', 'Load Balancing', 'Auto Scaling', 'Resource Monitoring', 'Backup & Recovery', 'Disaster Recovery']
+      items: ['Server Provisioning', 'Load Balancing', 'Auto Scaling', 'Resource Monitoring', 'Backup &amp; Recovery', 'Disaster Recovery']
     },
     {
-      category: 'Security & Compliance',
+      category: 'Security &amp; Compliance',
       items: ['Identity Management', 'Access Control', 'Encryption', 'Vulnerability Scanning', 'Compliance Auditing', 'Security Monitoring']
     },
     {
@@ -51,7 +52,7 @@ export default function CloudInfrastructureManagement() {
       items: ['Cost Analysis', 'Resource Optimization', 'Budget Alerts', 'Usage Tracking', 'Cost Forecasting', 'Right-sizing Recommendations']
     },
     {
-      category: 'Support & Maintenance',
+      category: 'Support &amp; Maintenance',
       items: ['24/7 Support', 'Proactive Monitoring', 'Incident Response', 'Performance Tuning', 'Capacity Planning', 'Health Checks']
     }
   ];

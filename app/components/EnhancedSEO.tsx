@@ -28,7 +28,6 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 }) => {
   const defaultStructuredData = {
     "@context": "https://schema.org",
-    "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
@@ -57,26 +56,13 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   const canonicalUrl = canonical || `https://ziontechgroup.com${typeof window !== 'undefined' ? window.location.pathname : ''}`;
 
   return (
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup"
-    ]
-  };
-
-  const finalStructuredData = structuredData || defaultStructuredData;
-
-  return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      {canonical && <link rel="canonical" href={canonical} />}
-      
-      {/* Open Graph */}
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={canonicalUrl} />
+      
+      {/* Open Graph */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
@@ -88,17 +74,15 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
+      
       {/* SEO */}
-      {noindex && <meta name="robots" content="noindex" />}
-      {nofollow && <meta name="robots" content="nofollow" />}
+      {noindex &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; <meta name="robots" content="noindex" />}
+      {nofollow &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; <meta name="robots" content="nofollow" />}
       
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
-      {noindex && <meta name="robots" content="noindex" />}
-      {nofollow && <meta name="robots" content="nofollow" />}
-      <script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
     </Helmet>
   );
 };

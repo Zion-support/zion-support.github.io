@@ -1,6 +1,7 @@
 import React from 'react';
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
+;
 import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 
 interface EnhancedHeroProps {
   title?: string;
@@ -67,7 +68,7 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
     <div className={`relative min-h-screen flex items-center justify-center overflow-hidden ${className}`}>
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {backgroundImage && (
+        {backgroundImage &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; (
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
             style={{ backgroundImage: `url(${backgroundImage})` }}

@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 // Simple wrapper function to replace withSentry
 function handler(req, res) {
@@ -62,4 +62,4 @@ function handler(req, res) {
   }
 }
 
-module.exports = handler;
+export default handler;

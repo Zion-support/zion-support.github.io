@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+;
 
 interface NeonButtonProps {
   children?: React.ReactNode;
@@ -38,9 +39,9 @@ const NeonButton: React.FC<NeonButtonProps> = ({
 
   const content = (
     <>
-      {icon && <span className="mr-2">{icon}</span>}
+      {icon &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; <span className="mr-2">{icon}</span>}
       {children}
-      {!icon && <ArrowRight className="w-5 h-5 ml-2" />}
+      {!icon &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; <ArrowRight className="w-5 h-5 ml-2" />}
     </>
   );
 

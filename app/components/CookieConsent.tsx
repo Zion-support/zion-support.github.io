@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Cookie, Settings } from 'lucide-react';
+;
 
 const CookieConsent: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -43,7 +44,7 @@ const CookieConsent: React.FC = () => {
                 and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
               </p>
               
-              {showSettings && (
+              {showSettings &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; (
                 <div className="bg-gray-800 rounded-lg p-4 mb-4">
                   <h4 className="text-white font-semibold mb-3">Cookie Preferences</h4>
                   <div className="space-y-3">

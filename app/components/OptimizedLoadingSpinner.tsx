@@ -2,6 +2,7 @@ import React, { memo, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+;
 
 interface OptimizedLoadingSpinnerProps {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
@@ -126,7 +127,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
         </Helmet>
         <div className={`${containerClasses} ${className}`}>
           {renderSpinner()}
-          {text && (
+          {text &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; (
             <p className={`${textSizeClasses[size]} ${colorClasses[color]} mt-2`}>
               {text}
             </p>

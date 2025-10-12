@@ -5,7 +5,7 @@ export const Advancedcaching = {
     console.log('Advancedcaching initialized');
   },
   
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
   

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Loader2 } from 'lucide-react';
+;
 
 interface LoadingProps {
   size?: 'sm' | 'md' | 'lg';
@@ -33,7 +34,7 @@ const EnhancedLoading: React.FC<LoadingProps> = ({
   const spinner = (
     <div className={`flex flex-col items-center justify-center ${className}`}>
       <Loader2 className={`${sizeClasses[size]} ${colorClasses[color as keyof typeof colorClasses]} animate-spin`} />
-      {text && (
+      {text &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; (
         <p className={`mt-2 text-sm ${colorClasses[color as keyof typeof colorClasses]}`}>
           {text}
         </p>

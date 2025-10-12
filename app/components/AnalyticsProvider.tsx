@@ -46,13 +46,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   }, []);
 
   const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
+    if (typeof window !== 'undefined' &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; window.gtag) {
       window.gtag('event', eventName, parameters);
     }
   };
 
   const trackPageView = (pageName: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
+    if (typeof window !== 'undefined' &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: pageName,
         page_location: window.location.href,

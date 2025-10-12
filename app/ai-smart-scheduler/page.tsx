@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, Users, Zap, Globe, Clock, CheckCircle } from 'lucide-react';
+;
 import Layout from '../layout';
+import { Brain, Users, Zap, Globe, Clock, CheckCircle, User } from 'lucide-react';
 
 export default function AISmartScheduler() {
   const features = [
@@ -165,7 +166,7 @@ export default function AISmartScheduler() {
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-gray-900 p-8 rounded-lg relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-                {plan.popular && (
+                {plan.popular &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-cyan-400 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular

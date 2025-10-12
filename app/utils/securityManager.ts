@@ -5,7 +5,7 @@ export const Securitymanager = {
     console.log('Securitymanager initialized');
   },
   
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
   

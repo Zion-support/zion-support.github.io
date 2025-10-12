@@ -7,7 +7,7 @@ export default function AccessibilityEnhancer() {
     const addKeyboardNavigation = () => {
       document.addEventListener('keydown', (e) => {
         // Skip to main content with Alt + M
-        if (e.altKey && e.key === 'm') {
+        if (e.altKey &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; e.key === 'm') {
           e.preventDefault();
           const mainContent = document.getElementById('main-content');
           if (mainContent) {
@@ -17,7 +17,7 @@ export default function AccessibilityEnhancer() {
         }
 
         // Skip to navigation with Alt + N
-        if (e.altKey && e.key === 'n') {
+        if (e.altKey &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; e.key === 'n') {
           e.preventDefault();
           const navigation = document.querySelector('nav');
           if (navigation) {
@@ -51,14 +51,14 @@ export default function AccessibilityEnhancer() {
     const addAriaLabels = () => {
       const buttons = document.querySelectorAll('button:not([aria-label])');
       buttons.forEach((button) => {
-        if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
+        if (!button.getAttribute('aria-label') &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; !button.textContent?.trim()) {
           button.setAttribute('aria-label', 'Button');
         }
       });
 
       const links = document.querySelectorAll('a:not([aria-label])');
       links.forEach((link) => {
-        if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
+        if (!link.getAttribute('aria-label') &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; !link.textContent?.trim()) {
           link.setAttribute('aria-label', 'Link');
         }
       });

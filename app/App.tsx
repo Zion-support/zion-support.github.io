@@ -8,6 +8,7 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
 
+
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
