@@ -49,7 +49,6 @@ const AIAutomationPage: React.FC = () => {
       icon: CheckCircle
     }
   ];
-<<<<<<< HEAD
 
   const benefits = [
     'Reduce operational costs by up to 70%',
@@ -59,13 +58,10 @@ const AIAutomationPage: React.FC = () => {
     'Scalable and adaptable solutions',
     'ROI within 3-6 months'
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-<<<<<<< HEAD
         <title>AI Automation Services - Zion Tech Group</title>
         <meta name="description" content="Transform your business with our AI automation services. Automate workflows, processes, and operations for maximum efficiency and productivity." />
         <meta name="keywords" content="ai automation, workflow automation, business process automation, intelligent automation, ai solutions" />
@@ -93,7 +89,6 @@ const AIAutomationPage: React.FC = () => {
             >
               View Demo
             </Link>
-=======
         <title>AI Automation - Zion Tech Group</title>
         <meta name="description" content="Transform your business with AI automation solutions. Workflow automation, intelligent decision making, and custom integrations for improved efficiency." />
         <meta name="keywords" content="AI automation, workflow automation, business process automation, intelligent automation, AI solutions" />
@@ -124,12 +119,10 @@ const AIAutomationPage: React.FC = () => {
                 View Demo
               </Link>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -210,7 +203,6 @@ const AIAutomationPage: React.FC = () => {
                   <div className="text-4xl font-bold text-white mb-2">24/7</div>
                   <div className="text-gray-300">Automated Operations</div>
                 </div>
-=======
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -314,14 +306,12 @@ const AIAutomationPage: React.FC = () => {
                     <div className="text-gray-300">Average savings achieved by our clients</div>
                   </div>
                 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
               </div>
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -342,7 +332,6 @@ const AIAutomationPage: React.FC = () => {
             >
               View Pricing
             </Link>
-=======
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -366,7 +355,6 @@ const AIAutomationPage: React.FC = () => {
                 </Link>
               </div>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
           </div>
         </div>
       </section>

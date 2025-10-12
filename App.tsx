@@ -1,40 +1,22 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 'use client';
 import React, { Suspense } from 'react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-e082
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './app/page';
 
-<<<<<<< HEAD
-const App: React.FC = () => {
-  return (
-    <HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="*" element={
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-                <div className="text-center">
-                  <h1 className="text-6xl font-bold text-white mb-4">404</h1>
-                  <p className="text-xl text-gray-300 mb-8">Page not found</p>
-                  <a 
-                    href="/" 
-                    className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-                  >
-                    Go Home
-                  </a>
-                </div>
-              </div>
-            } />
-          </Routes>
-        </div>
-      </Router>
-    </HelmetProvider>
-=======
+// Import components
+import ErrorBoundary from './app/components/ErrorBoundary';
+import SEOHead from './app/components/SEOHead';
+import AnalyticsProvider from './app/components/AnalyticsProvider';
+import PerformanceOptimizer from './app/components/PerformanceOptimizer';
+import EnhancedAccessibility from './app/components/EnhancedAccessibility';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
+import FuturisticBackground from './app/components/FuturisticBackground';
+import Navigation from './app/components/Navigation';
+import Breadcrumb from './app/components/Breadcrumb';
+import Loading from './app/components/Loading';
+import Footer from './app/components/Footer';
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
@@ -191,9 +173,8 @@ const ApiDocsPage = React.lazy(() => import('./app/api-docs/page'));
 const CommunityPage = React.lazy(() => import('./app/community/page'));
 const CompliancePage = React.lazy(() => import('./app/compliance/page'));
 
-// Performance monitoring hook
+// Performance monitoring wrapper
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  usePerformanceMonitor();
   return <React.Fragment>{children}</React.Fragment>
 };
 
@@ -215,7 +196,7 @@ const App: React.FC = () => {
                       <Navigation />
                       <Breadcrumb />
                       <main id="main-content" className="flex-1" tabIndex={-1}>
-                        <Suspense fallback={<PageLoader />}>
+                        <Suspense fallback={<Loading />}>
                           <Routes>
                             <Route path="/" element={<HomePage />} />
                             <Route path="/about" element={<AboutPage />} />
@@ -401,7 +382,6 @@ const App: React.FC = () => {
         </Router>
       </HelmetProvider>
     </ErrorBoundary>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-e082
   );
 };
 

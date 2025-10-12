@@ -49,13 +49,10 @@ const AiChatbotBuilderPage: React.FC = () => {
       color: 'from-orange-500 to-red-500'
     },
     {
-<<<<<<< HEAD
       title: 'AI Training',
       description: 'Train your chatbot with your own data and knowledge base for personalized responses',
-=======
       title: 'AI-Powered Responses',
       description: 'Natural language processing and machine learning for intelligent, contextual conversations',
->>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
       icon: Brain,
       color: 'from-yellow-500 to-orange-500'
     }
@@ -88,8 +85,6 @@ const AiChatbotBuilderPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-=======
   const useCases = [
     {
       title: 'Customer Support',
@@ -117,13 +112,11 @@ const AiChatbotBuilderPage: React.FC = () => {
     }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
   const pricingPlans = [
     {
       name: 'Starter',
       price: '$29',
       period: '/month',
-<<<<<<< HEAD
       description: 'Perfect for small businesses',
       features: [
         'Up to 1,000 conversations/month',
@@ -131,7 +124,6 @@ const AiChatbotBuilderPage: React.FC = () => {
         'Email support',
         'Standard integrations',
         'Basic analytics'
-=======
       description: 'Perfect for small businesses getting started',
       features: [
         'Up to 1,000 conversations/month',
@@ -139,7 +131,6 @@ const AiChatbotBuilderPage: React.FC = () => {
         'Email support',
         '5 chatbot templates',
         'Web integration'
->>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
       ],
       popular: false
     },
@@ -150,20 +141,17 @@ const AiChatbotBuilderPage: React.FC = () => {
       description: 'Ideal for growing businesses',
       features: [
         'Up to 10,000 conversations/month',
-<<<<<<< HEAD
         'Advanced chatbot builder',
         'Priority support',
         'All integrations',
         'Advanced analytics',
         'Custom branding',
         'API access'
-=======
         'Advanced analytics',
         'Priority support',
         'Unlimited templates',
         'Multi-channel deployment',
         'Custom integrations'
->>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
       ],
       popular: true
     },
@@ -171,7 +159,6 @@ const AiChatbotBuilderPage: React.FC = () => {
       name: 'Enterprise',
       price: 'Custom',
       period: '',
-<<<<<<< HEAD
       description: 'For large organizations',
       features: [
         'Unlimited conversations',
@@ -223,7 +210,6 @@ const AiChatbotBuilderPage: React.FC = () => {
             >
               Try Demo
             </Link>
-=======
       description: 'For large organizations with complex needs',
       features: [
         'Unlimited conversations',
@@ -270,12 +256,10 @@ const AiChatbotBuilderPage: React.FC = () => {
                 Try Demo
               </Link>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -284,7 +268,6 @@ const AiChatbotBuilderPage: React.FC = () => {
               <div key={index} className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-4">
                   <stat.icon className="w-8 h-8 text-white" />
-=======
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -302,14 +285,12 @@ const AiChatbotBuilderPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300">{stat.label}</div>
               </div>
             ))}
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -447,7 +428,6 @@ const AiChatbotBuilderPage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
         </section>
 
         {/* Use Cases Section */}
@@ -566,7 +546,6 @@ const AiChatbotBuilderPage: React.FC = () => {
           </div>
         </section>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
     </div>
   );
 };

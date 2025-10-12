@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -24,29 +19,22 @@ import {
 
 const ContactPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-<<<<<<< HEAD
-=======
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
-=======
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Send, CheckCircle } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
 >>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
-<<<<<<< HEAD
     phone: '',
     service: '',
     message: ''
@@ -74,12 +62,8 @@ const ContactPage: React.FC = () => {
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitStatus('success');
-<<<<<<< HEAD
-=======
-=======
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-=======
     service: '',
     message: ''
   });
@@ -92,7 +76,6 @@ const ContactPage: React.FC = () => {
     setTimeout(() => setIsSubmitted(false), 3000);
   };
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -100,7 +83,6 @@ const ContactPage: React.FC = () => {
     });
   };
 
-<<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
@@ -109,7 +91,6 @@ const ContactPage: React.FC = () => {
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 >>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
       setFormData({
         name: '',
@@ -168,9 +149,6 @@ const ContactPage: React.FC = () => {
         <title>Contact Us - Zion Tech Group | Get In Touch</title>
         <meta name="description" content="Contact Zion Tech Group for AI solutions, cloud infrastructure, cybersecurity, and custom software development. Call +1 302 464 0950 or email kleber@ziontechgroup.com" />
         <meta name="keywords" content="contact us, get in touch, AI solutions, cloud computing, cybersecurity, software development, IT services" />
-<<<<<<< HEAD
-=======
-=======
     }, 3000);
   };
 
@@ -218,16 +196,12 @@ const ContactPage: React.FC = () => {
     );
   }
 
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
   return (
     <>
       <Helmet>
         <title>Contact Us - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for a free consultation and project discussion." />
         <meta name="keywords" content="contact zion tech group, AI consultation, IT services contact, business inquiry" />
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 >>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
       </Helmet>
 
@@ -505,9 +479,6 @@ const ContactPage: React.FC = () => {
                       </div>
                     </div>
                   </div>
-<<<<<<< HEAD
-=======
-=======
         {/* Contact Form and Info */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -631,7 +602,6 @@ const ContactPage: React.FC = () => {
                   <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                     We're here to help you transform your business with cutting-edge AI and IT solutions. 
                     Reach out to us for a free consultation and let's discuss your project.
-=======
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for free consultation." />
         <meta name="keywords" content="contact, consultation, AI services, IT services, Zion Tech Group" />
       </Helmet>
@@ -765,13 +735,11 @@ const ContactPage: React.FC = () => {
                   <p className="text-gray-300 text-lg leading-relaxed mb-8">
                     Ready to transform your business with cutting-edge AI and IT solutions? 
                     Our team of experts is here to help you succeed.
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
                   </p>
                 </div>
 
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-<<<<<<< HEAD
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Phone className="w-6 h-6 text-cyan-400" />
                     </div>
@@ -779,7 +747,6 @@ const ContactPage: React.FC = () => {
                       <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
                       <p className="text-gray-300">+1-302-464-0950</p>
                       <p className="text-sm text-gray-400">Mon-Fri 9AM-6PM EST</p>
-=======
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Phone className="w-6 h-6 text-white" />
                     </div>
@@ -788,12 +755,10 @@ const ContactPage: React.FC = () => {
                       <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                         (302) 464-0950
                       </a>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
-<<<<<<< HEAD
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Mail className="w-6 h-6 text-purple-400" />
                     </div>
@@ -801,7 +766,6 @@ const ContactPage: React.FC = () => {
                       <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
                       <p className="text-gray-300">kleber@ziontechgroup.com</p>
                       <p className="text-sm text-gray-400">We'll respond within 24 hours</p>
-=======
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Mail className="w-6 h-6 text-white" />
                     </div>
@@ -810,12 +774,10 @@ const ContactPage: React.FC = () => {
                       <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                         kleber@ziontechgroup.com
                       </a>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
-<<<<<<< HEAD
                     <div className="w-12 h-12 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-6 h-6 text-green-400" />
                     </div>
@@ -824,7 +786,6 @@ const ContactPage: React.FC = () => {
                       <p className="text-gray-300">364 E Main St STE 1008</p>
                       <p className="text-gray-300">Middletown, DE 19709</p>
                       <p className="text-sm text-gray-400">United States</p>
-=======
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
@@ -834,18 +795,14 @@ const ContactPage: React.FC = () => {
                         364 E Main St STE 1008<br />
                         Middletown DE 19709
                       </p>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
                     </div>
                   </div>
                 </div>
 
-<<<<<<< HEAD
                 <div className="bg-gradient-to-r from-cyan-900/30 to-purple-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6">
                   <h3 className="text-xl font-bold text-white mb-3">Why Choose Us?</h3>
-=======
                 <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6">
                   <h3 className="text-xl font-semibold text-white mb-4">Why choose us?</h3>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
                   <ul className="space-y-2 text-gray-300">
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
@@ -853,29 +810,22 @@ const ContactPage: React.FC = () => {
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-<<<<<<< HEAD
                       Custom solutions tailored to your needs
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       Expert team with proven track record
-=======
                       Expert team with years of experience
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       Custom solutions tailored to your needs
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       24/7 support and maintenance
                     </li>
                   </ul>
-<<<<<<< HEAD
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
 >>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
                 </div>
               </div>
@@ -888,12 +838,5 @@ const ContactPage: React.FC = () => {
 };
 
 export default ContactPage;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 export default ContactPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
 >>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc

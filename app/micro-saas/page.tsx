@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { 
   ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 
   BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, 
@@ -763,7 +762,6 @@ const MicroSaasPage: React.FC = () => {
   const filteredProducts = selectedCategory === 'All' 
     ? microSaasProducts 
     : microSaasProducts.filter(product => product.category === selectedCategory);
-=======
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, Database, Smartphone, Globe, Settings, Monitor, Package, Lock, Calendar, Link as LinkIcon, ShoppingCart, TrendingUp, CheckSquare, Cpu, Wifi, MessageSquare, FileText, Heart, DollarSign, Box, Eye, Mic, Workflow, MessageCircle } from 'lucide-react';
 
 const MicroSaasPage: React.FC = () => {
@@ -818,12 +816,10 @@ const MicroSaasPage: React.FC = () => {
     { number: '99.9%', label: 'Uptime', icon: Star },
     { number: '24/7', label: 'Support', icon: Award },
   ];
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Micro SAAS Products - Zion Tech Group | AI-Powered Business Solutions</title>
         <meta name="description" content="Discover our comprehensive suite of micro SAAS products designed to solve specific business challenges. From AI analytics to cybersecurity, we have the tools you need to succeed." />
         <meta name="keywords" content="micro saas, business software, AI tools, analytics, CRM, project management, cybersecurity, automation" />
@@ -860,7 +856,6 @@ const MicroSaasPage: React.FC = () => {
                   Call +1 302 464 0950
                 </a>
               </div>
-=======
         <title>Micro SAAS - Zion Tech Group</title>
         <meta name="description" content="Ready-to-use micro SAAS solutions for businesses. AI-powered tools for analytics, security, content, and more." />
         <meta name="keywords" content="micro saas, business tools, AI solutions, analytics, security, content management, CRM" />
@@ -911,12 +906,10 @@ const MicroSaasPage: React.FC = () => {
                   <div className="text-gray-400 text-sm">{stat.label}</div>
                 </div>
               ))}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Category Filter */}
         <section className="py-8 bg-gray-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1017,7 +1010,6 @@ const MicroSaasPage: React.FC = () => {
                       Start Free Trial
                     </Link>
                   </div>
-=======
         {/* Services Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -1062,7 +1054,6 @@ const MicroSaasPage: React.FC = () => {
                   >
                     Start Free Trial →
                   </Link>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
                 </div>
               ))}
             </div>
@@ -1070,7 +1061,6 @@ const MicroSaasPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-br from-gray-900 to-purple-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1098,7 +1088,6 @@ const MicroSaasPage: React.FC = () => {
             <div className="mt-8 text-gray-400">
               <p>Email: kleber@ziontechgroup.com</p>
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-=======
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12">
@@ -1122,7 +1111,6 @@ const MicroSaasPage: React.FC = () => {
                   Learn More About Us
                 </Link>
               </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
             </div>
           </div>
         </section>
