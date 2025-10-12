@@ -4,172 +4,160 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  BarChart3, 
+  Share2, 
   TrendingUp, 
-  Target, 
+  Users, 
   Zap, 
   ArrowRight, 
   CheckCircle, 
   Brain,
-  Database,
+  BarChart3,
+  Target,
   Clock,
-  Users,
-  Shield,
-  Globe
+  Heart,
+  MessageCircle
 } from 'lucide-react';
 
-export default function AIPredictiveAnalyticsPage() {
+export default function AISocialMediaOptimizerPage() {
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-purple-500" />,
-      title: 'Advanced Machine Learning',
-      description: 'Leverage cutting-edge ML algorithms to predict future trends and behaviors with 95%+ accuracy.'
+      title: 'AI Content Optimization',
+      description: 'Automatically optimize your posts for maximum engagement using advanced AI algorithms.'
     },
     {
       icon: <TrendingUp className="w-8 h-8 text-green-500" />,
-      title: 'Real-time Predictions',
-      description: 'Get instant predictions and insights as your data changes with real-time processing capabilities.'
+      title: 'Performance Analytics',
+      description: 'Track and analyze your social media performance with detailed insights and recommendations.'
     },
     {
       icon: <Target className="w-8 h-8 text-blue-500" />,
-      title: 'Custom Models',
-      description: 'Build and train custom predictive models tailored to your specific business needs and data.'
+      title: 'Audience Targeting',
+      description: 'Identify and target your ideal audience with AI-powered demographic and interest analysis.'
     },
     {
-      icon: <Database className="w-8 h-8 text-yellow-500" />,
-      title: 'Data Integration',
-      description: 'Seamlessly integrate with any data source - databases, APIs, files, and cloud platforms.'
+      icon: <Clock className="w-8 h-8 text-yellow-500" />,
+      title: 'Optimal Timing',
+      description: 'Post at the perfect times when your audience is most active and engaged.'
     },
     {
       icon: <Zap className="w-8 h-8 text-red-500" />,
-      title: 'Automated Insights',
-      description: 'AI automatically identifies patterns, anomalies, and opportunities in your data without manual analysis.'
+      title: 'Auto-Scheduling',
+      description: 'Automatically schedule posts across all platforms for maximum reach and engagement.'
     },
     {
-      icon: <Shield className="w-8 h-8 text-cyan-500" />,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption, access controls, and compliance with industry standards.'
+      icon: <BarChart3 className="w-8 h-8 text-cyan-500" />,
+      title: 'ROI Tracking',
+      description: 'Measure the return on investment of your social media campaigns with detailed metrics.'
     }
   ];
 
-  const useCases = [
+  const platforms = [
     {
-      title: 'Sales Forecasting',
-      description: 'Predict sales performance, identify high-value prospects, and optimize revenue strategies.',
-      icon: <TrendingUp className="w-6 h-6 text-green-500" />
+      name: 'Facebook',
+      icon: <Share2 className="w-6 h-6 text-blue-500" />,
+      features: ['Post optimization', 'Ad targeting', 'Engagement tracking']
     },
     {
-      title: 'Customer Churn Prevention',
-      description: 'Identify at-risk customers and implement retention strategies before they leave.',
-      icon: <Users className="w-6 h-6 text-blue-500" />
+      name: 'Instagram',
+      icon: <Heart className="w-6 h-6 text-pink-500" />,
+      features: ['Story optimization', 'Hashtag research', 'Visual content analysis']
     },
     {
-      title: 'Demand Planning',
-      description: 'Optimize inventory and supply chain with accurate demand predictions.',
-      icon: <BarChart3 className="w-6 h-6 text-purple-500" />
+      name: 'Twitter',
+      icon: <MessageCircle className="w-6 h-6 text-cyan-500" />,
+      features: ['Tweet optimization', 'Trend analysis', 'Engagement boosting']
     },
     {
-      title: 'Risk Assessment',
-      description: 'Evaluate financial, operational, and market risks with predictive risk models.',
-      icon: <Shield className="w-6 h-6 text-red-500" />
-    },
-    {
-      title: 'Market Analysis',
-      description: 'Predict market trends, competitor behavior, and investment opportunities.',
-      icon: <Globe className="w-6 h-6 text-orange-500" />
-    },
-    {
-      title: 'Operational Optimization',
-      description: 'Optimize processes, reduce costs, and improve efficiency with predictive insights.',
-      icon: <Zap className="w-6 h-6 text-cyan-500" />
+      name: 'LinkedIn',
+      icon: <Users className="w-6 h-6 text-blue-600" />,
+      features: ['Professional content', 'B2B targeting', 'Lead generation']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$199/month',
+      price: '$29/month',
       description: 'Perfect for small businesses',
       features: [
-        'Up to 1M data points',
-        'Basic ML models',
-        'Standard integrations',
+        'Up to 3 social accounts',
+        'Basic AI optimization',
+        'Monthly analytics report',
         'Email support',
-        'Basic dashboards',
-        'Monthly reports'
+        'Standard templates'
       ]
     },
     {
       name: 'Professional',
-      price: '$499/month',
+      price: '$79/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 10M data points',
-        'Advanced ML models',
-        'Custom model training',
+        'Up to 10 social accounts',
+        'Advanced AI optimization',
+        'Real-time analytics',
         'Priority support',
-        'Advanced dashboards',
-        'Real-time predictions',
-        'API access',
-        'A/B testing'
+        'Custom templates',
+        'A/B testing',
+        'Competitor analysis'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,999/month',
+      price: '$199/month',
       description: 'Built for large organizations',
       features: [
-        'Unlimited data points',
+        'Unlimited social accounts',
         'Custom AI models',
         'White-label solution',
         'Dedicated support',
+        'API access',
         'Advanced security',
         'Custom integrations',
-        'SLA guarantee',
-        'On-premise deployment'
+        'SLA guarantee'
       ]
     }
   ];
 
   const benefits = [
-    'Increase revenue by up to 40%',
-    'Reduce costs by 25%',
-    'Improve decision accuracy by 90%',
-    'Save 20+ hours per week on analysis',
-    'Reduce risks by 60%',
-    'Boost operational efficiency by 50%'
+    'Increase engagement by up to 300%',
+    'Save 10+ hours per week on social media',
+    'Boost follower growth by 250%',
+    'Improve post reach by 400%',
+    'Generate 5x more leads',
+    'Reduce social media management costs'
   ];
 
-  const industries = [
+  const useCases = [
     {
-      name: 'E-commerce',
-      description: 'Predict customer behavior, optimize pricing, and forecast demand.',
+      title: 'E-commerce Brands',
+      description: 'Drive sales and increase brand awareness with optimized product posts and targeted campaigns.',
       icon: <Target className="w-6 h-6 text-green-500" />
     },
     {
-      name: 'Finance',
-      description: 'Risk assessment, fraud detection, and investment optimization.',
-      icon: <Shield className="w-6 h-6 text-blue-500" />
+      title: 'Content Creators',
+      description: 'Maximize reach and engagement with AI-optimized content and perfect timing.',
+      icon: <TrendingUp className="w-6 h-6 text-purple-500" />
     },
     {
-      name: 'Healthcare',
-      description: 'Patient outcomes, treatment optimization, and resource planning.',
-      icon: <Users className="w-6 h-6 text-red-500" />
+      title: 'B2B Companies',
+      description: 'Generate leads and build professional presence with LinkedIn optimization.',
+      icon: <Users className="w-6 h-6 text-blue-500" />
     },
     {
-      name: 'Manufacturing',
-      description: 'Predictive maintenance, quality control, and supply chain optimization.',
-      icon: <Zap className="w-6 h-6 text-purple-500" />
+      title: 'Agencies',
+      description: 'Manage multiple client accounts efficiently with white-label solutions.',
+      icon: <BarChart3 className="w-6 h-6 text-orange-500" />
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-        <title>AI Predictive Analytics - Zion Tech Group | Future-Ready Business Intelligence</title>
-        <meta name="description" content="Transform your business with AI Predictive Analytics. Get accurate forecasts, optimize decisions, and stay ahead of the competition with advanced machine learning." />
-        <meta name="keywords" content="AI predictive analytics, machine learning, business intelligence, forecasting, data science, Zion Tech Group" />
+        <title>AI Social Media Optimizer - Zion Tech Group | Boost Your Social Presence</title>
+        <meta name="description" content="Maximize your social media impact with AI Social Media Optimizer. Increase engagement, grow followers, and boost ROI with intelligent content optimization." />
+        <meta name="keywords" content="AI social media, social media optimization, content optimization, social media analytics, engagement boost, Zion Tech Group" />
       </Helmet>
 
       {/* Hero Section */}
@@ -177,18 +165,18 @@ export default function AIPredictiveAnalyticsPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Predictive Analytics
+              AI Social Media Optimizer
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Predict the future of your business with AI-powered analytics. Make data-driven decisions, 
-              optimize operations, and stay ahead of the competition with advanced machine learning.
+              Transform your social media presence with AI-powered optimization. Increase engagement, 
+              grow your audience, and maximize ROI across all platforms.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
               >
-                Get Started
+                Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
@@ -207,10 +195,10 @@ export default function AIPredictiveAnalyticsPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Predictive Capabilities
+              Powerful Optimization Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to predict and optimize your business future.
+              Everything you need to dominate social media with AI-powered intelligence.
             </p>
           </div>
           
@@ -226,48 +214,54 @@ export default function AIPredictiveAnalyticsPage() {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Platforms Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Use Cases
+              Optimize Across All Platforms
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how predictive analytics can transform your business operations.
+              Manage and optimize your presence on every major social media platform.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500/30 transition-all duration-300">
-                <div className="mb-4">{useCase.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {platforms.map((platform, index) => (
+              <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500/30 transition-all duration-300 text-center">
+                <div className="mb-4 flex justify-center">{platform.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-4">{platform.name}</h3>
+                <ul className="space-y-2">
+                  {platform.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="text-gray-300 text-sm">
+                      • {feature}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Industries Section */}
+      {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry Solutions
+              Perfect For Every Business
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Tailored predictive analytics solutions for every industry.
+              Whether you're a startup or enterprise, our AI optimization works for you.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {industries.map((industry, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-green-500/30 transition-all duration-300 text-center">
-                <div className="mb-4 flex justify-center">{industry.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{industry.name}</h3>
-                <p className="text-gray-300 text-sm">{industry.description}</p>
+            {useCases.map((useCase, index) => (
+              <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-green-500/30 transition-all duration-300">
+                <div className="mb-4">{useCase.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-300">{useCase.description}</p>
               </div>
             ))}
           </div>
@@ -279,10 +273,10 @@ export default function AIPredictiveAnalyticsPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Proven Business Impact
+              Proven Results
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See the measurable results of AI-powered predictive analytics.
+              See the measurable impact of AI-powered social media optimization.
             </p>
           </div>
           
@@ -305,7 +299,7 @@ export default function AIPredictiveAnalyticsPage() {
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Start predicting your business future today with our flexible pricing.
+              Start optimizing your social media today with our flexible pricing.
             </p>
           </div>
           
@@ -353,10 +347,10 @@ export default function AIPredictiveAnalyticsPage() {
         <div className="max-w-7xl mx-auto">
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Predict Your Future?
+              Ready to Dominate Social Media?
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join industry leaders using AI Predictive Analytics to make smarter decisions and stay ahead of the competition.
+              Join thousands of businesses using AI Social Media Optimizer to boost their online presence and drive real results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

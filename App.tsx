@@ -53,6 +53,10 @@ const AISmartInvoicePage = React.lazy(() => import('./app/ai-smart-invoice/page'
 const AIHealthTrackerPage = React.lazy(() => import('./app/ai-health-tracker/page'))
 const AISmartCalendarPage = React.lazy(() => import('./app/ai-smart-calendar/page'))
 const AIClimateSolutionsProPage = React.lazy(() => import('./app/ai-climate-solutions-pro/page'))
+const AISmartSchedulerPage = React.lazy(() => import('./app/ai-smart-scheduler/page'))
+const AISocialMediaOptimizerPage = React.lazy(() => import('./app/ai-social-media-optimizer/page'))
+const AIEmailOptimizerPage = React.lazy(() => import('./app/ai-email-optimizer/page'))
+const AIPredictiveAnalyticsPage = React.lazy(() => import('./app/ai-predictive-analytics/page'))
 
 // Additional AI Services Pages
 const AIMeetingAssistantPage = React.lazy(() => import('./app/ai-meeting-assistant/page'))
@@ -61,6 +65,7 @@ const AIProjectManagerPage = React.lazy(() => import('./app/ai-project-manager/p
 // Additional IT Services Pages
 const BlockchainPage = React.lazy(() => import('./app/blockchain/page'))
 const QuantumComputingSolutionsPage = React.lazy(() => import('./app/quantum-computing-solutions/page'))
+const CloudMigrationPage = React.lazy(() => import('./app/cloud-migration/page'))
 
 // Additional 5G Services Pages
 const FiveGDataAnalyticsPage = React.lazy(() => import('./app/5g-data-analytics/page'))
@@ -146,6 +151,10 @@ function App() {
                   <Route path="/ai-health-tracker" element={<AIHealthTrackerPage />} />
                   <Route path="/ai-smart-calendar" element={<AISmartCalendarPage />} />
                   <Route path="/ai-climate-solutions-pro" element={<AIClimateSolutionsProPage />} />
+                  <Route path="/ai-smart-scheduler" element={<AISmartSchedulerPage />} />
+                  <Route path="/ai-social-media-optimizer" element={<AISocialMediaOptimizerPage />} />
+                  <Route path="/ai-email-optimizer" element={<AIEmailOptimizerPage />} />
+                  <Route path="/ai-predictive-analytics" element={<AIPredictiveAnalyticsPage />} />
                   
                   {/* Additional AI Services Routes */}
                   <Route path="/ai-meeting-assistant" element={<AIMeetingAssistantPage />} />
@@ -154,6 +163,7 @@ function App() {
                   {/* Additional IT Services Routes */}
                   <Route path="/blockchain" element={<BlockchainPage />} />
                   <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
+                  <Route path="/cloud-migration" element={<CloudMigrationPage />} />
                   
                   {/* Additional 5G Services Routes */}
                   <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />

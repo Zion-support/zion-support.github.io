@@ -43,7 +43,7 @@ export default function Navigation() {
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
     { name: 'AI Email Assistant', path: '/ai-email-assistant' },
     { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-    { name: 'AI Meeting Transcriber', path: '/ai-meeting-transcriber' },
+    { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics' },
     { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
     { name: 'AI Email Marketing', path: '/ai-email-marketing-automation' },
     { name: 'AI Business Intelligence Pro', path: '/ai-business-intelligence-pro' },
@@ -59,6 +59,7 @@ export default function Navigation() {
     { name: 'DevOps', path: '/devops', icon: <Server className="w-4 h-4" /> },
     { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'Cloud Services', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'Cloud Migration', path: '/cloud-migration', icon: <Cloud className="w-4 h-4" /> },
     { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> }
   ];
 
@@ -79,9 +80,9 @@ export default function Navigation() {
     { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
     { name: 'AI Smart Invoice', path: '/ai-smart-invoice' },
     { name: 'AI Health Tracker', path: '/ai-health-tracker' },
-    { name: 'AI Meeting Transcriber', path: '/ai-meeting-transcriber' },
-    { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
-    { name: 'AI Email Marketing', path: '/ai-email-marketing-automation' },
+    { name: 'AI Smart Scheduler', path: '/ai-smart-scheduler' },
+    { name: 'AI Social Media Optimizer', path: '/ai-social-media-optimizer' },
+    { name: 'AI Email Optimizer', path: '/ai-email-optimizer' },
     { name: 'AI Smart Calendar', path: '/ai-smart-calendar' },
     { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' }
   ];

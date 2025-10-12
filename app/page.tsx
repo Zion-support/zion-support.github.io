@@ -15,7 +15,8 @@ import {
   Users,
   TrendingUp,
   BarChart3,
-  MessageSquare
+  MessageSquare,
+  Clock
 } from 'lucide-react';
 import FuturisticBackground from './components/FuturisticBackground';
 import FuturisticCard from './components/FuturisticCard';
@@ -45,28 +46,36 @@ export default function HomePage() {
       price: 'Starting at $99/month'
     },
     {
-      title: 'IT Services & Solutions',
-      description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
-      icon: <Shield className="w-8 h-8 text-green-500" />,
-      link: '/it-services',
-      features: ['Cloud Migration', 'Cybersecurity', 'Mobile Development', 'Data Analytics'],
-      price: 'Starting at $2,500/project'
+      title: 'AI Smart Scheduler',
+      description: 'Revolutionize your scheduling with AI-powered time management and team coordination.',
+      icon: <Clock className="w-8 h-8 text-purple-400" />,
+      link: '/ai-smart-scheduler',
+      features: ['AI-powered scheduling', 'Team coordination', 'Timezone intelligence'],
+      price: 'Starting at $19/month'
     },
     {
-      title: 'Cloud Services',
-      description: 'Scalable, secure, and reliable cloud infrastructure solutions for your business.',
-      icon: <Cloud className="w-8 h-8 text-blue-400" />,
-      link: '/cloud-services',
-      features: ['Scalable infrastructure', '99.9% uptime', 'Global CDN'],
+      title: 'AI Predictive Analytics',
+      description: 'Predict the future of your business with advanced machine learning and data science.',
+      icon: <TrendingUp className="w-8 h-8 text-green-400" />,
+      link: '/ai-predictive-analytics',
+      features: ['Sales forecasting', 'Customer churn prevention', 'Risk assessment'],
       price: 'Starting at $199/month'
     },
     {
-      title: 'Cybersecurity Solutions',
-      description: 'Protect your business with our comprehensive cybersecurity services and monitoring.',
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-      link: '/cybersecurity',
-      features: ['Threat detection', 'Security audits', 'Compliance management'],
-      price: 'Starting at $499/month'
+      title: 'Cloud Migration',
+      description: 'Seamlessly migrate your infrastructure to the cloud with zero-downtime deployment.',
+      icon: <Cloud className="w-8 h-8 text-blue-400" />,
+      link: '/cloud-migration',
+      features: ['Zero-downtime migration', 'Multi-cloud strategy', 'Security-first approach'],
+      price: 'Starting at $2,500'
+    },
+    {
+      title: 'AI Social Media Optimizer',
+      description: 'Maximize your social media impact with AI-powered content optimization and analytics.',
+      icon: <MessageSquare className="w-8 h-8 text-pink-400" />,
+      link: '/ai-social-media-optimizer',
+      features: ['Content optimization', 'Performance analytics', 'Audience targeting'],
+      price: 'Starting at $29/month'
     },
     {
       title: '5G Implementation',
@@ -75,14 +84,6 @@ export default function HomePage() {
       link: '/5g-implementation',
       features: ['Ultra-fast speeds', 'IoT connectivity', 'Edge computing'],
       price: 'Starting at $5,000/project'
-    },
-    {
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with our advanced analytics platform.',
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
-      link: '/data-analytics',
-      features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards'],
-      price: 'Starting at $299/month'
     }
   ];
 
