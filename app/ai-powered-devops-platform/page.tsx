@@ -4,30 +4,30 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Users, TrendingUp, BarChart, Brain, Target, Zap, Shield, Globe, Database, Smartphone, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle as CheckCircleIcon, ShoppingCart, Award, Clock, Settings, Calendar, CheckSquare, Lock, TrendingUp as TrendingUpIcon, Cpu, Target as TargetIcon, Globe as GlobeIcon, Database as DatabaseIcon, Smartphone as SmartphoneIcon, Lock as LockIcon, TrendingUp as TrendingUpIcon2, Settings as SettingsIcon, Calendar as CalendarIcon, CheckSquare as CheckSquareIcon, FileText as FileTextIcon, MessageCircle as MessageCircleIcon, Heart as HeartIcon, DollarSign as DollarSignIcon, Box as BoxIcon, Monitor as MonitorIcon, Link as LinkIcon2, Server as ServerIcon, Package as PackageIcon, Mic as MicIcon, Workflow as WorkflowIcon, Eye as EyeIcon, Wifi as WifiIcon, MessageSquare as MessageSquareIcon, CheckCircle as CheckCircleIcon2, ShoppingCart as ShoppingCartIcon } from 'lucide-react';
 
-const ZionAiSupplyChainOptimizerPage: React.FC = () => {
+const AiPoweredDevopsPlatformPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Demand Forecasting',
-      description: 'Predict demand patterns with 95% accuracy using machine learning algorithms and historical data analysis.',
+      title: 'AI-Powered Code Analysis',
+      description: 'Automatically detect code quality issues, security vulnerabilities, and performance bottlenecks using machine learning.',
       color: 'from-purple-500 to-pink-500'
     },
     {
       icon: Workflow,
-      title: 'Automated Inventory Optimization',
-      description: 'Maintain optimal inventory levels across all locations with AI-driven reorder points and safety stock calculations.',
+      title: 'Intelligent CI/CD Pipelines',
+      description: 'Build, test, and deploy applications with AI-optimized pipelines that adapt to your codebase patterns.',
       color: 'from-cyan-500 to-blue-500'
     },
     {
-      icon: Globe,
-      title: 'Route Optimization',
-      description: 'Minimize transportation costs and delivery times with intelligent route planning and logistics optimization.',
+      icon: Shield,
+      title: 'Automated Security Scanning',
+      description: 'Continuously scan for security vulnerabilities and automatically apply patches and updates.',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Shield,
-      title: 'Risk Management',
-      description: 'Identify and mitigate supply chain risks with predictive analytics and real-time monitoring.',
+      icon: BarChart,
+      title: 'Predictive Monitoring',
+      description: 'Predict and prevent system failures before they occur with AI-driven monitoring and alerting.',
       color: 'from-orange-500 to-red-500'
     }
   ];
@@ -35,42 +35,42 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$299',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for small teams',
       features: [
-        'Up to 5 locations',
-        'Basic forecasting',
-        'Inventory tracking',
+        'Up to 5 repositories',
+        'Basic AI analysis',
+        'Standard CI/CD',
         'Email support',
-        'Standard reports'
+        'Basic monitoring'
       ],
       color: 'from-gray-500 to-gray-600',
       popular: false
     },
     {
       name: 'Professional',
-      price: '$499',
+      price: '$799',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for growing teams',
       features: [
-        'Up to 25 locations',
-        'Advanced AI forecasting',
-        'Route optimization',
+        'Up to 25 repositories',
+        'Advanced AI features',
+        'Custom pipelines',
         'Priority support',
-        'Custom integrations',
-        'Real-time analytics'
+        'Advanced monitoring',
+        'Security scanning'
       ],
       color: 'from-purple-500 to-pink-500',
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,299',
+      price: '$1,999',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited locations',
+        'Unlimited repositories',
         'Custom AI models',
         'Advanced analytics',
         '24/7 dedicated support',
@@ -82,47 +82,47 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
     }
   ];
 
-  const optimizationAreas = [
+  const capabilities = [
     {
-      title: 'Inventory Management',
-      description: 'Optimize stock levels, reduce carrying costs, and prevent stockouts with AI-driven inventory management.',
-      icon: Package,
+      title: 'Automated Testing',
+      description: 'Generate and execute comprehensive test suites automatically using AI.',
+      icon: CheckSquare,
       color: 'from-blue-500 to-purple-500',
-      benefits: ['30% reduction in carrying costs', '95% stockout prevention', 'Automated reorder points']
+      benefits: ['95% test coverage', 'Automated test generation', 'Performance testing']
     },
     {
-      title: 'Demand Planning',
-      description: 'Accurate demand forecasting helps you plan production and procurement more effectively.',
-      icon: BarChart,
+      title: 'Infrastructure as Code',
+      description: 'Manage infrastructure with AI-optimized Terraform and CloudFormation templates.',
+      icon: Server,
       color: 'from-green-500 to-teal-500',
-      benefits: ['95% forecast accuracy', 'Reduced overstock', 'Better production planning']
+      benefits: ['Cost optimization', 'Security hardening', 'Auto-scaling']
     },
     {
-      title: 'Logistics Optimization',
-      description: 'Minimize transportation costs and improve delivery performance with route optimization.',
-      icon: Globe,
+      title: 'Monitoring & Observability',
+      description: 'Comprehensive monitoring with AI-powered anomaly detection and root cause analysis.',
+      icon: Eye,
       color: 'from-yellow-500 to-orange-500',
-      benefits: ['25% cost reduction', 'Faster deliveries', 'Reduced carbon footprint']
+      benefits: ['Real-time alerts', 'Anomaly detection', 'Root cause analysis']
     },
     {
-      title: 'Supplier Management',
-      description: 'Monitor supplier performance and manage relationships with AI-powered insights.',
-      icon: Users,
+      title: 'Deployment Automation',
+      description: 'Deploy applications safely with AI-driven rollback strategies and canary deployments.',
+      icon: Zap,
       color: 'from-red-500 to-pink-500',
-      benefits: ['Supplier scorecards', 'Risk assessment', 'Performance tracking']
+      benefits: ['Zero-downtime deployments', 'Automated rollbacks', 'Canary releases']
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Supply Chain Optimizer - Advanced Supply Chain Management | Zion Tech Group</title>
-        <meta name="description" content="Optimize your supply chain with Zion AI Supply Chain Optimizer. AI-powered forecasting, inventory optimization, and logistics management for maximum efficiency." />
-        <meta name="keywords" content="supply chain optimization, inventory management, demand forecasting, logistics optimization, supply chain AI, procurement automation" />
-        <meta property="og:title" content="Zion AI Supply Chain Optimizer - Advanced Supply Chain Management" />
-        <meta property="og:description" content="Optimize your supply chain with AI-powered forecasting and inventory management." />
+        <title>AI-Powered DevOps Platform - Advanced Development Operations | Zion Tech Group</title>
+        <meta name="description" content="Transform your DevOps with our AI-powered platform. Automated testing, intelligent CI/CD, security scanning, and predictive monitoring for modern development teams." />
+        <meta name="keywords" content="AI DevOps, automated testing, CI/CD, infrastructure as code, monitoring, deployment automation, security scanning" />
+        <meta property="og:title" content="AI-Powered DevOps Platform - Advanced Development Operations" />
+        <meta property="og:description" content="Transform your DevOps with AI-powered automation and intelligent monitoring." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/zion-ai-supply-chain-optimizer" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-powered-devops-platform" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -134,14 +134,14 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Zion AI Supply Chain Optimizer
+                AI-Powered DevOps Platform
                 <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Advanced Supply Chain Management
+                  Advanced Development Operations
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your supply chain with AI-powered forecasting, inventory optimization, and logistics management 
-                that reduces costs and improves efficiency.
+                Transform your development operations with AI-powered automation, intelligent monitoring, 
+                and predictive analytics that accelerate delivery and improve reliability.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -167,10 +167,10 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                AI-Powered Supply Chain Features
+                AI-Powered DevOps Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage artificial intelligence to optimize every aspect of your supply chain operations.
+                Leverage artificial intelligence to automate, optimize, and enhance your development operations.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -189,28 +189,28 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Optimization Areas Section */}
+        {/* Capabilities Section */}
         <section className="py-20 bg-gradient-to-br from-purple-900 to-slate-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Comprehensive Supply Chain Optimization
+                Comprehensive DevOps Capabilities
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Optimize every aspect of your supply chain with AI-driven insights and automation.
+                End-to-end DevOps automation with AI-powered intelligence and optimization.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {optimizationAreas.map((area, index) => (
+              {capabilities.map((capability, index) => (
                 <div key={index} className="group">
                   <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${area.color} rounded-lg mb-4`}>
-                      <area.icon className="h-6 w-6 text-white" />
+                    <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${capability.color} rounded-lg mb-4`}>
+                      <capability.icon className="h-6 w-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{area.title}</h3>
-                    <p className="text-gray-300 mb-4">{area.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-3">{capability.title}</h3>
+                    <p className="text-gray-300 mb-4">{capability.description}</p>
                     <ul className="space-y-2">
-                      {area.benefits.map((benefit, idx) => (
+                      {capability.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                           {benefit}
@@ -232,7 +232,7 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing options to fit your business needs and scale with your growth.
+                Flexible pricing options to fit your team size and development needs.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -279,10 +279,10 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Optimize Your Supply Chain?
+                Ready to Transform Your DevOps?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join industry leaders using Zion AI Supply Chain Optimizer to reduce costs and improve efficiency.
+                Join leading development teams using our AI-powered DevOps platform to accelerate delivery and improve reliability.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -311,4 +311,4 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
   );
 };
 
-export default ZionAiSupplyChainOptimizerPage;
+export default AiPoweredDevopsPlatformPage;

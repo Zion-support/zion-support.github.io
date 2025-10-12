@@ -4,9 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code } from 'lucide-react';
 
-<<<<<<< HEAD
-const Page: React.FC = () => {
-=======
 export default function AIEmailMarketingAutomation() {
   const features = [
     {
@@ -121,10 +118,6 @@ export default function AIEmailMarketingAutomation() {
     }
   ]
 
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-6024
   return (
     <>
       <Helmet>
@@ -195,16 +188,6 @@ export default function AIEmailMarketingAutomation() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </>
-  );
-};
-
-export default Page;
+}
 =======
 }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
-=======
-}
->>>>>>> cursor/website-audit-and-update-with-deployment-6024

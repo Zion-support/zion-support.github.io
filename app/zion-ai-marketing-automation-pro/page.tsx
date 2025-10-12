@@ -4,30 +4,30 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Users, TrendingUp, BarChart, Brain, Target, Zap, Shield, Globe, Database, Smartphone, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle as CheckCircleIcon, ShoppingCart, Award, Clock, Settings, Calendar, CheckSquare, Lock, TrendingUp as TrendingUpIcon, Cpu, Target as TargetIcon, Globe as GlobeIcon, Database as DatabaseIcon, Smartphone as SmartphoneIcon, Lock as LockIcon, TrendingUp as TrendingUpIcon2, Settings as SettingsIcon, Calendar as CalendarIcon, CheckSquare as CheckSquareIcon, FileText as FileTextIcon, MessageCircle as MessageCircleIcon, Heart as HeartIcon, DollarSign as DollarSignIcon, Box as BoxIcon, Monitor as MonitorIcon, Link as LinkIcon2, Server as ServerIcon, Package as PackageIcon, Mic as MicIcon, Workflow as WorkflowIcon, Eye as EyeIcon, Wifi as WifiIcon, MessageSquare as MessageSquareIcon, CheckCircle as CheckCircleIcon2, ShoppingCart as ShoppingCartIcon } from 'lucide-react';
 
-const ZionAiSupplyChainOptimizerPage: React.FC = () => {
+const ZionAiMarketingAutomationProPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Demand Forecasting',
-      description: 'Predict demand patterns with 95% accuracy using machine learning algorithms and historical data analysis.',
+      title: 'AI-Powered Campaign Optimization',
+      description: 'Automatically optimize email subject lines, send times, and content for maximum engagement and conversion rates.',
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: Workflow,
-      title: 'Automated Inventory Optimization',
-      description: 'Maintain optimal inventory levels across all locations with AI-driven reorder points and safety stock calculations.',
+      icon: Target,
+      title: 'Smart Audience Segmentation',
+      description: 'Create dynamic customer segments based on behavior, preferences, and engagement patterns using machine learning.',
       color: 'from-cyan-500 to-blue-500'
     },
     {
-      icon: Globe,
-      title: 'Route Optimization',
-      description: 'Minimize transportation costs and delivery times with intelligent route planning and logistics optimization.',
+      icon: Workflow,
+      title: 'Advanced Workflow Automation',
+      description: 'Build complex multi-channel marketing workflows with conditional logic and AI-driven decision making.',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Shield,
-      title: 'Risk Management',
-      description: 'Identify and mitigate supply chain risks with predictive analytics and real-time monitoring.',
+      icon: BarChart,
+      title: 'Predictive Analytics',
+      description: 'Predict customer behavior, lifetime value, and churn probability to optimize marketing spend and ROI.',
       color: 'from-orange-500 to-red-500'
     }
   ];
@@ -35,42 +35,42 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$149',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-        'Up to 5 locations',
-        'Basic forecasting',
-        'Inventory tracking',
+        'Up to 5,000 contacts',
+        'Basic email automation',
+        'Simple workflows',
         'Email support',
-        'Standard reports'
+        'Standard templates'
       ],
       color: 'from-gray-500 to-gray-600',
       popular: false
     },
     {
       name: 'Professional',
-      price: '$499',
+      price: '$399',
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 25 locations',
-        'Advanced AI forecasting',
-        'Route optimization',
+        'Up to 25,000 contacts',
+        'Advanced AI optimization',
+        'Multi-channel campaigns',
         'Priority support',
         'Custom integrations',
-        'Real-time analytics'
+        'A/B testing tools'
       ],
       color: 'from-purple-500 to-pink-500',
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,299',
+      price: '$999',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited locations',
+        'Unlimited contacts',
         'Custom AI models',
         'Advanced analytics',
         '24/7 dedicated support',
@@ -82,47 +82,47 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
     }
   ];
 
-  const optimizationAreas = [
+  const automationTypes = [
     {
-      title: 'Inventory Management',
-      description: 'Optimize stock levels, reduce carrying costs, and prevent stockouts with AI-driven inventory management.',
-      icon: Package,
+      title: 'Email Marketing',
+      description: 'Send personalized emails at scale with AI-optimized content and timing.',
+      icon: Mail,
       color: 'from-blue-500 to-purple-500',
-      benefits: ['30% reduction in carrying costs', '95% stockout prevention', 'Automated reorder points']
+      features: ['Smart subject lines', 'Send time optimization', 'Content personalization', 'A/B testing']
     },
     {
-      title: 'Demand Planning',
-      description: 'Accurate demand forecasting helps you plan production and procurement more effectively.',
-      icon: BarChart,
+      title: 'Social Media',
+      description: 'Automate social media posting and engagement across all platforms.',
+      icon: MessageSquare,
       color: 'from-green-500 to-teal-500',
-      benefits: ['95% forecast accuracy', 'Reduced overstock', 'Better production planning']
+      features: ['Auto-posting', 'Engagement tracking', 'Hashtag optimization', 'Content scheduling']
     },
     {
-      title: 'Logistics Optimization',
-      description: 'Minimize transportation costs and improve delivery performance with route optimization.',
-      icon: Globe,
+      title: 'SMS Marketing',
+      description: 'Reach customers instantly with personalized SMS campaigns.',
+      icon: Smartphone,
       color: 'from-yellow-500 to-orange-500',
-      benefits: ['25% cost reduction', 'Faster deliveries', 'Reduced carbon footprint']
+      features: ['Bulk SMS', 'Personalization', 'Delivery tracking', 'Compliance tools']
     },
     {
-      title: 'Supplier Management',
-      description: 'Monitor supplier performance and manage relationships with AI-powered insights.',
-      icon: Users,
+      title: 'Lead Nurturing',
+      description: 'Convert leads into customers with automated nurturing sequences.',
+      icon: Target,
       color: 'from-red-500 to-pink-500',
-      benefits: ['Supplier scorecards', 'Risk assessment', 'Performance tracking']
+      features: ['Lead scoring', 'Drip campaigns', 'Behavioral triggers', 'Conversion tracking']
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Supply Chain Optimizer - Advanced Supply Chain Management | Zion Tech Group</title>
-        <meta name="description" content="Optimize your supply chain with Zion AI Supply Chain Optimizer. AI-powered forecasting, inventory optimization, and logistics management for maximum efficiency." />
-        <meta name="keywords" content="supply chain optimization, inventory management, demand forecasting, logistics optimization, supply chain AI, procurement automation" />
-        <meta property="og:title" content="Zion AI Supply Chain Optimizer - Advanced Supply Chain Management" />
-        <meta property="og:description" content="Optimize your supply chain with AI-powered forecasting and inventory management." />
+        <title>Zion AI Marketing Automation Pro - Advanced Marketing Platform | Zion Tech Group</title>
+        <meta name="description" content="Transform your marketing with Zion AI Marketing Automation Pro. AI-powered campaigns, smart segmentation, and automated workflows that drive results." />
+        <meta name="keywords" content="marketing automation, AI marketing, email automation, social media automation, lead nurturing, campaign optimization" />
+        <meta property="og:title" content="Zion AI Marketing Automation Pro - Advanced Marketing Platform" />
+        <meta property="og:description" content="Transform your marketing with AI-powered automation and optimization tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/zion-ai-supply-chain-optimizer" />
+        <meta property="og:url" content="https://ziontechgroup.com/zion-ai-marketing-automation-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -134,14 +134,14 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Zion AI Supply Chain Optimizer
+                Zion AI Marketing Automation Pro
                 <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Advanced Supply Chain Management
+                  Advanced Marketing Platform
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your supply chain with AI-powered forecasting, inventory optimization, and logistics management 
-                that reduces costs and improves efficiency.
+                Automate your marketing with AI-powered campaigns, smart segmentation, and intelligent workflows 
+                that deliver personalized experiences at scale.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -167,10 +167,10 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                AI-Powered Supply Chain Features
+                AI-Powered Marketing Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage artificial intelligence to optimize every aspect of your supply chain operations.
+                Leverage artificial intelligence to create, optimize, and automate your marketing campaigns.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -189,31 +189,31 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Optimization Areas Section */}
+        {/* Automation Types Section */}
         <section className="py-20 bg-gradient-to-br from-purple-900 to-slate-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Comprehensive Supply Chain Optimization
+                Multi-Channel Automation
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Optimize every aspect of your supply chain with AI-driven insights and automation.
+                Automate your marketing across all channels with intelligent, AI-driven campaigns.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {optimizationAreas.map((area, index) => (
+              {automationTypes.map((type, index) => (
                 <div key={index} className="group">
                   <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${area.color} rounded-lg mb-4`}>
-                      <area.icon className="h-6 w-6 text-white" />
+                    <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${type.color} rounded-lg mb-4`}>
+                      <type.icon className="h-6 w-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{area.title}</h3>
-                    <p className="text-gray-300 mb-4">{area.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-3">{type.title}</h3>
+                    <p className="text-gray-300 mb-4">{type.description}</p>
                     <ul className="space-y-2">
-                      {area.benefits.map((benefit, idx) => (
+                      {type.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                          {benefit}
+                          {feature}
                         </li>
                       ))}
                     </ul>
@@ -279,10 +279,10 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Optimize Your Supply Chain?
+                Ready to Automate Your Marketing?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join industry leaders using Zion AI Supply Chain Optimizer to reduce costs and improve efficiency.
+                Join thousands of businesses using Zion AI Marketing Automation Pro to scale their marketing and drive growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -311,4 +311,4 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
   );
 };
 
-export default ZionAiSupplyChainOptimizerPage;
+export default ZionAiMarketingAutomationProPage;
