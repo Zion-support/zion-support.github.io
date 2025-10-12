@@ -1,97 +1,97 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { Mail, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Users, BarChart3, Star, Sparkles, TrendingUp, Target, Send, Clock } from 'lucide-react'
+import { Cloud, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Users, BarChart3, Star, Sparkles, TrendingUp, Target, Server, Shield } from 'lucide-react'
 import Layout from '../layout'
 
-export default function AIEmailMarketingAutomation() {
+export default function CloudInfrastructureManagement() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'AI Content Generation',
-      description: 'Create compelling email campaigns with AI-powered subject lines, content, and CTAs'
+      icon: <Cloud className="w-6 h-6 text-cyan-400" />,
+      title: 'Multi-Cloud Management',
+      description: 'Seamlessly manage infrastructure across AWS, Azure, Google Cloud, and private clouds'
     },
     {
-      icon: <Target className="w-6 h-6 text-purple-400" />,
-      title: 'Smart Segmentation',
-      description: 'Automatically segment your audience based on behavior, preferences, and engagement'
+      icon: <Shield className="w-6 h-6 text-purple-400" />,
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security with automated compliance monitoring and threat detection'
     },
     {
-      icon: <Clock className="w-6 h-6 text-yellow-400" />,
-      title: 'Automated Workflows',
-      description: 'Set up complex email sequences that trigger based on user actions and behaviors'
+      icon: <TrendingUp className="w-6 h-6 text-yellow-400" />,
+      title: 'Cost Optimization',
+      description: 'Reduce cloud costs by up to 40% with intelligent resource optimization and right-sizing'
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-green-400" />,
-      title: 'Advanced Analytics',
-      description: 'Track open rates, click-through rates, conversions, and ROI with detailed insights'
+      icon: <Server className="w-6 h-6 text-green-400" />,
+      title: '24/7 Monitoring',
+      description: 'Proactive monitoring with automated scaling, performance optimization, and incident response'
     }
   ]
 
-  const automationFeatures = [
+  const managementFeatures = [
     {
-      category: 'Email Creation',
-      items: ['AI Subject Line Generator', 'Content Templates', 'Personalization Engine', 'A/B Testing', 'Mobile Optimization', 'Spam Score Checker']
+      category: 'Infrastructure Management',
+      items: ['Server Provisioning', 'Load Balancing', 'Auto Scaling', 'Resource Monitoring', 'Backup & Recovery', 'Disaster Recovery']
     },
     {
-      category: 'Automation',
-      items: ['Welcome Series', 'Abandoned Cart Recovery', 'Birthday Campaigns', 'Re-engagement Sequences', 'Lead Nurturing', 'Post-Purchase Follow-up']
+      category: 'Security & Compliance',
+      items: ['Identity Management', 'Access Control', 'Encryption', 'Vulnerability Scanning', 'Compliance Auditing', 'Security Monitoring']
     },
     {
-      category: 'Segmentation',
-      items: ['Behavioral Triggers', 'Demographic Filters', 'Engagement Levels', 'Purchase History', 'Custom Fields', 'Dynamic Lists']
+      category: 'Cost Management',
+      items: ['Cost Analysis', 'Resource Optimization', 'Budget Alerts', 'Usage Tracking', 'Cost Forecasting', 'Right-sizing Recommendations']
     },
     {
-      category: 'Analytics',
-      items: ['Real-time Dashboard', 'Campaign Performance', 'Revenue Tracking', 'Subscriber Growth', 'Unsubscribe Analysis', 'ROI Reports']
+      category: 'Support & Maintenance',
+      items: ['24/7 Support', 'Proactive Monitoring', 'Incident Response', 'Performance Tuning', 'Capacity Planning', 'Health Checks']
     }
   ]
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$39',
+      price: '$299',
       period: '/month',
-      description: 'Perfect for small businesses and startups',
+      description: 'Perfect for small businesses',
       features: [
-        'Up to 1,000 subscribers',
-        'Basic AI features',
-        'Email templates',
-        'Basic automation',
-        'Standard analytics',
-        'Email support'
+        'Up to 10 servers',
+        'Basic monitoring',
+        'Email support',
+        'Standard security',
+        'Monthly reports',
+        'Basic backup'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$79',
+      price: '$799',
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 10,000 subscribers',
-        'Advanced AI features',
-        'Custom templates',
-        'Advanced automation',
-        'Detailed analytics',
+        'Up to 50 servers',
+        'Advanced monitoring',
         'Priority support',
-        'A/B testing'
+        'Enhanced security',
+        'Weekly reports',
+        'Advanced backup',
+        'Cost optimization'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$199',
+      price: '$1,999',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited subscribers',
-        'Custom AI training',
-        'White-label solution',
-        'Advanced automation',
-        'Custom analytics',
+        'Unlimited servers',
+        'Comprehensive monitoring',
         'Dedicated support',
-        'API access'
+        'Enterprise security',
+        'Real-time reports',
+        'Disaster recovery',
+        'Custom solutions'
       ],
       popular: false
     }
@@ -99,64 +99,60 @@ export default function AIEmailMarketingAutomation() {
 
   const testimonials = [
     {
-      name: 'Jennifer Lee',
-      company: 'E-commerce Store',
-      content: 'AI Email Marketing Automation increased our email revenue by 200% and reduced our workload by 60%.',
+      name: 'Robert Kim',
+      company: 'Financial Services',
+      content: 'Cloud Infrastructure Management reduced our operational costs by 35% while improving performance and security.',
       rating: 5
     },
     {
-      name: 'David Park',
-      company: 'SaaS Company',
-      content: 'The automated workflows are incredible. Our lead nurturing process is now completely hands-off.',
+      name: 'Lisa Martinez',
+      company: 'E-commerce Platform',
+      content: 'The automated scaling and monitoring saved us from multiple outages. Our uptime is now 99.99%.',
       rating: 5
     },
     {
-      name: 'Maria Santos',
-      company: 'Marketing Agency',
-      content: 'Managing multiple client email campaigns is now effortless. The AI content generation saves hours.',
+      name: 'David Wilson',
+      company: 'Healthcare Provider',
+      content: 'HIPAA compliance was seamless with their security framework. Our auditors were very impressed.',
       rating: 5
     }
   ]
 
-<<<<<<< HEAD
-export default function AiemailmarketingautomationPage() {
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
   return (
     <Layout
-      title="AI Email Marketing Automation - Smart Email Campaigns | Zion Tech Group"
-      description="Transform your email marketing with AI-powered automation, smart segmentation, and advanced analytics. Increase engagement and revenue with intelligent email campaigns. Start your free trial today."
-      keywords="email marketing automation, AI email campaigns, email segmentation, email analytics, marketing automation, email templates"
+      title="Cloud Infrastructure Management - Enterprise Cloud Solutions | Zion Tech Group"
+      description="Optimize your cloud infrastructure with comprehensive management, security, and cost optimization. Multi-cloud support, 24/7 monitoring, and enterprise-grade security. Get your free assessment today."
+      keywords="cloud infrastructure management, cloud optimization, multi-cloud, cloud security, cloud monitoring, cloud cost optimization"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
-                <Mail className="w-4 h-4 mr-2" />
-                AI-Powered Email Marketing
+              <div className="inline-flex items-center px-4 py-2 bg-sky-500/20 rounded-full text-sky-400 text-sm font-medium mb-6">
+                <Cloud className="w-4 h-4 mr-2" />
+                Enterprise Cloud Management
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-                AI Email Marketing Automation
+                Cloud Infrastructure Management
               </h1>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your email marketing with AI-powered automation, smart segmentation, 
-                and advanced analytics. Increase engagement and revenue with intelligent email campaigns.
+                Optimize your cloud infrastructure with comprehensive management, security, and cost optimization. 
+                Multi-cloud support, 24/7 monitoring, and enterprise-grade security.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                  className="bg-gradient-to-r from-sky-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-sky-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
-                  Start Free Trial
+                  Get Free Assessment
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   to="#demo"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-                  Watch Demo
+                  View Demo
                 </Link>
               </div>
             </div>
@@ -168,16 +164,16 @@ export default function AiemailmarketingautomationPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Intelligent Email Marketing
+                Comprehensive Cloud Management
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                AI-powered features that transform your email marketing strategy
+                Enterprise-grade features that optimize your cloud infrastructure performance and costs
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300">
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-sky-500/20 hover:border-sky-400/40 transition-all duration-300">
                   <div className="flex items-center mb-4">
                     {feature.icon}
                     <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
@@ -189,26 +185,26 @@ export default function AiemailmarketingautomationPage() {
           </div>
         </section>
 
-        {/* Automation Features */}
+        {/* Management Features */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-purple-900/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Complete Email Marketing Suite
+                Complete Infrastructure Solution
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Everything you need to create, automate, and optimize your email campaigns
+                Everything you need to manage, secure, and optimize your cloud infrastructure
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {automationFeatures.map((feature, index) => (
+              {managementFeatures.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.category}</h3>
                   <ul className="space-y-2">
                     {feature.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
+                        <CheckCircle className="w-4 h-4 text-sky-400 mr-2" />
                         {item}
                       </li>
                     ))}
@@ -224,10 +220,10 @@ export default function AiemailmarketingautomationPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Flexible Pricing Plans
+                Transparent Pricing Plans
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Choose the plan that scales with your email marketing needs
+                Choose the plan that fits your infrastructure needs
               </p>
             </div>
             
@@ -235,11 +231,11 @@ export default function AiemailmarketingautomationPage() {
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
                   plan.popular 
-                    ? 'border-blue-400/40 scale-105 shadow-2xl shadow-blue-500/20' 
-                    : 'border-blue-500/20 hover:border-blue-400/40'
+                    ? 'border-sky-400/40 scale-105 shadow-2xl shadow-sky-500/20' 
+                    : 'border-sky-500/20 hover:border-sky-400/40'
                 }`}>
                   {plan.popular && (
-                    <div className="inline-flex items-center px-3 py-1 bg-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-4">
+                    <div className="inline-flex items-center px-3 py-1 bg-sky-500/20 rounded-full text-sky-400 text-sm font-medium mb-4">
                       <Star className="w-4 h-4 mr-1" />
                       Most Popular
                     </div>
@@ -253,7 +249,7 @@ export default function AiemailmarketingautomationPage() {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
+                        <CheckCircle className="w-5 h-5 text-sky-400 mr-3" />
                         {feature}
                       </li>
                     ))}
@@ -262,8 +258,8 @@ export default function AiemailmarketingautomationPage() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
-                        : 'border-2 border-blue-400 text-blue-400 hover:bg-blue-400/10'
+                        ? 'bg-gradient-to-r from-sky-500 to-purple-600 text-white hover:from-sky-600 hover:to-purple-700'
+                        : 'border-2 border-sky-400 text-sky-400 hover:bg-sky-400/10'
                     }`}
                   >
                     Get Started
@@ -279,10 +275,10 @@ export default function AiemailmarketingautomationPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Success Stories
+                Trusted by Industry Leaders
               </h2>
               <p className="text-gray-300">
-                See how our AI Email Marketing Automation transforms businesses
+                See how our Cloud Infrastructure Management transforms businesses
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -307,19 +303,19 @@ export default function AiemailmarketingautomationPage() {
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl p-8 border border-blue-500/30">
+            <div className="bg-gradient-to-r from-sky-500/20 to-purple-500/20 rounded-2xl p-8 border border-sky-500/30">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Boost Your Email Marketing Today
+                Optimize Your Cloud Infrastructure Today
               </h2>
               <p className="text-lg text-gray-300 mb-8">
-                Join thousands of businesses using AI Email Marketing Automation to grow their revenue
+                Join thousands of businesses using our Cloud Infrastructure Management to reduce costs and improve performance
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
+                  className="bg-gradient-to-r from-sky-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-sky-600 hover:to-purple-700 transition-all duration-300"
                 >
-                  Start Your Free Trial
+                  Get Your Free Assessment
                 </Link>
                 <Link
                   to="/about"
@@ -332,11 +328,6 @@ export default function AiemailmarketingautomationPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </div>
-  );
-=======
     </Layout>
   )
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 }

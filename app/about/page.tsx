@@ -1,7 +1,11 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
+<<<<<<< HEAD
 import { ArrowRight, Users, Award, Target, Lightbulb, Shield, Globe, Zap, Brain, Cpu, Rocket, CheckCircle, Star, Clock, TrendingUp, MessageCircle, Mail, Phone, MapPin, Calendar, Timer, Battery, Wifi2, Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, VolumeX, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, Heart, ThumbsUp, ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, Plus, Minus, Edit, Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, Wink2, Kiss2, Tongue2, Wink3, Kiss3, Tongue3, Wink4, Kiss4, Tongue4, Wink5, Kiss5, Tongue5, Wink6, Kiss6, Tongue6, Wink7, Kiss7, Tongue7, Wink8, Kiss8, Tongue8, Wink9, Kiss9, Tongue9, Wink10, Kiss10, Tongue10, FileText, Package, DollarSign } from 'lucide-react'
+=======
+import { Users, Target, Award, Globe, Zap, Shield, Database, Brain, Cpu, Cloud } from 'lucide-react'
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 
 export default function AboutPage() {
   const values = [
@@ -21,14 +25,21 @@ export default function AboutPage() {
       description: 'We put our clients at the center of everything we do, ensuring their success is our primary focus.'
     },
     {
+<<<<<<< HEAD
       icon: <Target className="w-8 h-8 text-orange-400" />,
       title: 'Results-Driven',
       description: 'We measure our success by the tangible results and ROI we deliver to our clients.'
+=======
+      icon: <Database className="w-8 h-8 text-orange-500" />,
+      title: 'Excellence',
+      description: 'We strive for excellence in every project, delivering high-quality solutions that exceed expectations.'
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
     }
   ]
 
   const team = [
     {
+<<<<<<< HEAD
       name: 'Dr. Kleber Santos',
       role: 'Founder & CEO',
       description: 'AI and Technology Visionary with 15+ years of experience in enterprise solutions.',
@@ -51,10 +62,35 @@ export default function AboutPage() {
       role: 'Head of Cybersecurity',
       description: 'Cybersecurity Expert with certifications in ethical hacking and compliance.',
       image: '/team/emily-rodriguez.jpg'
+=======
+      name: 'Sarah Johnson',
+      role: 'CEO & Founder',
+      description: 'Visionary leader with 15+ years in AI and technology innovation.',
+      image: '/api/placeholder/150/150'
+    },
+    {
+      name: 'Michael Chen',
+      role: 'CTO',
+      description: 'Expert in cloud architecture and scalable system design.',
+      image: '/api/placeholder/150/150'
+    },
+    {
+      name: 'Emily Rodriguez',
+      role: 'Head of AI Research',
+      description: 'Leading researcher in machine learning and neural networks.',
+      image: '/api/placeholder/150/150'
+    },
+    {
+      name: 'David Kim',
+      role: 'Head of Security',
+      description: 'Cybersecurity expert with extensive experience in enterprise security.',
+      image: '/api/placeholder/150/150'
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
     }
   ]
 
   const stats = [
+<<<<<<< HEAD
     { number: '1,200+', label: 'Projects Completed', icon: <Rocket className="w-6 h-6 text-cyan-400" /> },
     { number: '99.8%', label: 'Client Satisfaction', icon: <Star className="w-6 h-6 text-emerald-400" /> },
     { number: '24/7', label: 'Support Available', icon: <Clock className="w-6 h-6 text-blue-400" /> },
@@ -89,11 +125,18 @@ export default function AboutPage() {
       title: 'Global Expansion',
       description: 'Opened offices in 5 countries and served clients across 50+ nations worldwide.'
     }
+=======
+    { number: '500+', label: 'Projects Completed' },
+    { number: '99.9%', label: 'Client Satisfaction' },
+    { number: '50+', label: 'Countries Served' },
+    { number: '24/7', label: 'Support Available' }
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
   ]
 
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>About Zion Tech Group - Leading AI and IT Solutions Company</title>
         <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI solutions, IT services, and digital transformation. Founded in 2020, we've helped 1,200+ companies achieve 300% average ROI." />
         <meta name="keywords" content="about zion tech group, AI company, IT services company, technology solutions, digital transformation, company history, team, leadership" />
@@ -149,10 +192,16 @@ export default function AboutPage() {
             }
           })}
         </script>
+=======
+        <title>About Us - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team. We're leading the future of AI and IT solutions." />
+        <meta name="keywords" content="about us, team, mission, values, AI company, IT services" />
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4 relative">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.4)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.4)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -161,6 +210,51 @@ export default function AboutPage() {
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-cyan-400/30">
               <Zap className="w-4 h-4" />
               <span>About Zion Tech Group</span>
+=======
+        <div className="text-center mb-16">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+            About{' '}
+            <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+              Zion Tech Group
+            </span>
+          </h1>
+          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
+            We are a leading technology company specializing in AI, cloud services, cybersecurity, and 5G solutions. 
+            Our mission is to transform businesses through innovative technology.
+          </p>
+        </div>
+
+        {/* Mission Section */}
+        <div className="mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
+              <p className="text-lg text-gray-300 mb-6">
+                To empower businesses with cutting-edge AI and IT solutions that drive growth, 
+                enhance security, and create sustainable competitive advantages in the digital age.
+              </p>
+              <p className="text-lg text-gray-300 mb-8">
+                We believe technology should be accessible, secure, and transformative. 
+                Our solutions are designed to help businesses of all sizes leverage the power 
+                of artificial intelligence and modern IT infrastructure.
+              </p>
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
+              >
+                Get in Touch
+              </Link>
+            </div>
+            <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
+              <div className="grid grid-cols-2 gap-6">
+                {stats.map((stat, index) => (
+                  <div key={index} className="text-center">
+                    <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
+                    <div className="text-gray-300 text-sm">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
             </div>
             
             <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
@@ -180,6 +274,7 @@ export default function AboutPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Stats Section */}
         <section className="py-20 px-4 relative">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5" />
@@ -245,6 +340,8 @@ export default function AboutPage() {
           </div>
         </section>
 
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
         {/* Values Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50 to-purple-900/50 relative">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(6,182,212,0.1)_0%,transparent_50%)]" />
@@ -277,6 +374,7 @@ export default function AboutPage() {
         </section>
 
         {/* Team Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4 relative">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/50 to-pink-900/50" />
           <div className="relative max-w-7xl mx-auto">
@@ -350,4 +448,56 @@ export default function AboutPage() {
       </div>
     </>
   );
+=======
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Meet Our Team</h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Our diverse team of experts brings together decades of experience in AI, 
+              cloud computing, cybersecurity, and emerging technologies.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {team.map((member, index) => (
+              <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500/30 transition-all duration-300 text-center">
+                <div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Users className="w-12 h-12 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
+                <p className="text-cyan-400 mb-3">{member.role}</p>
+                <p className="text-gray-300 text-sm">{member.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Work With Us?
+            </h2>
+            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+              Let's discuss how our team can help transform your business with innovative technology solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
+                Start a Project
+              </Link>
+              <Link
+                to="/careers"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              >
+                Join Our Team
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 }

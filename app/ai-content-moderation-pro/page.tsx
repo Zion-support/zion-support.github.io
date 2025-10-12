@@ -1,97 +1,94 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { Mail, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Users, BarChart3, Star, Sparkles, TrendingUp, Target, Send, Clock } from 'lucide-react'
+import { Shield, Eye, Zap, CheckCircle, ArrowRight, Brain, Smartphone, Globe, AlertTriangle, BarChart3, Star, Sparkles, Lock } from 'lucide-react'
 import Layout from '../layout'
 
-export default function AIEmailMarketingAutomation() {
+export default function AIContentModerationPro() {
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'AI Content Generation',
-      description: 'Create compelling email campaigns with AI-powered subject lines, content, and CTAs'
+      title: 'AI-Powered Detection',
+      description: 'Advanced machine learning models detect harmful content with 99.7% accuracy'
     },
     {
-      icon: <Target className="w-6 h-6 text-purple-400" />,
-      title: 'Smart Segmentation',
-      description: 'Automatically segment your audience based on behavior, preferences, and engagement'
+      icon: <Shield className="w-6 h-6 text-purple-400" />,
+      title: 'Real-time Protection',
+      description: 'Instant content analysis and moderation to keep your platform safe'
     },
     {
-      icon: <Clock className="w-6 h-6 text-yellow-400" />,
-      title: 'Automated Workflows',
-      description: 'Set up complex email sequences that trigger based on user actions and behaviors'
+      icon: <Eye className="w-6 h-6 text-yellow-400" />,
+      title: 'Multi-format Support',
+      description: 'Text, images, videos, and audio content moderation in one platform'
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-green-400" />,
-      title: 'Advanced Analytics',
-      description: 'Track open rates, click-through rates, conversions, and ROI with detailed insights'
+      icon: <Globe className="w-6 h-6 text-green-400" />,
+      title: 'Global Compliance',
+      description: 'Meets international content standards and regulatory requirements'
     }
   ]
 
-  const automationFeatures = [
+  const capabilities = [
     {
-      category: 'Email Creation',
-      items: ['AI Subject Line Generator', 'Content Templates', 'Personalization Engine', 'A/B Testing', 'Mobile Optimization', 'Spam Score Checker']
+      category: 'Content Types',
+      items: ['Text & Comments', 'Images & Videos', 'Audio & Voice', 'Live Streams', 'User Profiles', 'Chat Messages']
     },
     {
-      category: 'Automation',
-      items: ['Welcome Series', 'Abandoned Cart Recovery', 'Birthday Campaigns', 'Re-engagement Sequences', 'Lead Nurturing', 'Post-Purchase Follow-up']
+      category: 'Detection Categories',
+      items: ['Hate Speech', 'Spam & Scam', 'Violence', 'Adult Content', 'Terrorism', 'Self-Harm']
     },
     {
-      category: 'Segmentation',
-      items: ['Behavioral Triggers', 'Demographic Filters', 'Engagement Levels', 'Purchase History', 'Custom Fields', 'Dynamic Lists']
+      category: 'Languages',
+      items: ['English', 'Spanish', 'French', 'German', 'Chinese', '50+ More Languages']
     },
     {
-      category: 'Analytics',
-      items: ['Real-time Dashboard', 'Campaign Performance', 'Revenue Tracking', 'Subscriber Growth', 'Unsubscribe Analysis', 'ROI Reports']
+      category: 'Platforms',
+      items: ['Social Media', 'E-commerce', 'Forums', 'Gaming', 'Streaming', 'Custom APIs']
     }
   ]
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$39',
+      price: '$99',
       period: '/month',
-      description: 'Perfect for small businesses and startups',
+      description: 'Perfect for small platforms',
       features: [
-        'Up to 1,000 subscribers',
-        'Basic AI features',
-        'Email templates',
-        'Basic automation',
-        'Standard analytics',
-        'Email support'
+        'Up to 10,000 content checks/month',
+        'Basic AI moderation',
+        'Text & image analysis',
+        'Email support',
+        'Standard response time'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$79',
+      price: '$299',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for growing platforms',
       features: [
-        'Up to 10,000 subscribers',
-        'Advanced AI features',
-        'Custom templates',
-        'Advanced automation',
-        'Detailed analytics',
+        'Up to 100,000 content checks/month',
+        'Advanced AI models',
+        'All content types',
         'Priority support',
-        'A/B testing'
+        'Custom rules engine',
+        'Analytics dashboard'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$199',
+      price: '$999',
       period: '/month',
-      description: 'For large organizations',
+      description: 'For large-scale platforms',
       features: [
-        'Unlimited subscribers',
+        'Unlimited content checks',
         'Custom AI training',
         'White-label solution',
-        'Advanced automation',
-        'Custom analytics',
         'Dedicated support',
-        'API access'
+        'Compliance reporting',
+        'SLA guarantee'
       ],
       popular: false
     }
@@ -99,55 +96,51 @@ export default function AIEmailMarketingAutomation() {
 
   const testimonials = [
     {
-      name: 'Jennifer Lee',
-      company: 'E-commerce Store',
-      content: 'AI Email Marketing Automation increased our email revenue by 200% and reduced our workload by 60%.',
+      name: 'David Kim',
+      company: 'SocialFlow Platform',
+      content: 'AI Content Moderation Pro reduced our moderation workload by 85% while improving accuracy significantly.',
       rating: 5
     },
     {
-      name: 'David Park',
-      company: 'SaaS Company',
-      content: 'The automated workflows are incredible. Our lead nurturing process is now completely hands-off.',
+      name: 'Lisa Martinez',
+      company: 'E-commerce Plus',
+      content: 'The real-time detection saved us from multiple PR disasters. Essential for any growing platform.',
       rating: 5
     },
     {
-      name: 'Maria Santos',
-      company: 'Marketing Agency',
-      content: 'Managing multiple client email campaigns is now effortless. The AI content generation saves hours.',
+      name: 'James Wilson',
+      company: 'Gaming Community Hub',
+      content: 'Multi-language support is incredible. We can now moderate content in 15+ languages automatically.',
       rating: 5
     }
   ]
 
-<<<<<<< HEAD
-export default function AiemailmarketingautomationPage() {
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
   return (
     <Layout
-      title="AI Email Marketing Automation - Smart Email Campaigns | Zion Tech Group"
-      description="Transform your email marketing with AI-powered automation, smart segmentation, and advanced analytics. Increase engagement and revenue with intelligent email campaigns. Start your free trial today."
-      keywords="email marketing automation, AI email campaigns, email segmentation, email analytics, marketing automation, email templates"
+      title="AI Content Moderation Pro - Advanced Content Safety Platform | Zion Tech Group"
+      description="Protect your platform with AI-powered content moderation. Real-time detection, multi-format support, and 99.7% accuracy. Start your free trial today."
+      keywords="AI content moderation, content safety, platform protection, automated moderation, content filtering"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
-                <Mail className="w-4 h-4 mr-2" />
-                AI-Powered Email Marketing
+              <div className="inline-flex items-center px-4 py-2 bg-red-500/20 rounded-full text-red-400 text-sm font-medium mb-6">
+                <Shield className="w-4 h-4 mr-2" />
+                Advanced Content Safety
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-                AI Email Marketing Automation
+                AI Content Moderation Pro
               </h1>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your email marketing with AI-powered automation, smart segmentation, 
-                and advanced analytics. Increase engagement and revenue with intelligent email campaigns.
+                Protect your platform with industry-leading AI content moderation. Real-time detection, 
+                multi-format support, and 99.7% accuracy to keep your community safe and compliant.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                  className="bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -168,16 +161,16 @@ export default function AiemailmarketingautomationPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Intelligent Email Marketing
+                Advanced Content Safety Features
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                AI-powered features that transform your email marketing strategy
+                Comprehensive AI-powered protection for all your content needs
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300">
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-red-500/20 hover:border-red-400/40 transition-all duration-300">
                   <div className="flex items-center mb-4">
                     {feature.icon}
                     <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
@@ -189,26 +182,26 @@ export default function AiemailmarketingautomationPage() {
           </div>
         </section>
 
-        {/* Automation Features */}
+        {/* Capabilities Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-purple-900/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Complete Email Marketing Suite
+                Comprehensive Moderation Capabilities
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Everything you need to create, automate, and optimize your email campaigns
+                Handle any content type, language, or platform with our advanced AI
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {automationFeatures.map((feature, index) => (
+              {capabilities.map((capability, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.category}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-4">{capability.category}</h3>
                   <ul className="space-y-2">
-                    {feature.items.map((item, itemIndex) => (
+                    {capability.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {item}
                       </li>
                     ))}
@@ -227,7 +220,7 @@ export default function AiemailmarketingautomationPage() {
                 Flexible Pricing Plans
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Choose the plan that scales with your email marketing needs
+                Choose the plan that scales with your platform
               </p>
             </div>
             
@@ -235,11 +228,11 @@ export default function AiemailmarketingautomationPage() {
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
                   plan.popular 
-                    ? 'border-blue-400/40 scale-105 shadow-2xl shadow-blue-500/20' 
-                    : 'border-blue-500/20 hover:border-blue-400/40'
+                    ? 'border-red-400/40 scale-105 shadow-2xl shadow-red-500/20' 
+                    : 'border-red-500/20 hover:border-red-400/40'
                 }`}>
                   {plan.popular && (
-                    <div className="inline-flex items-center px-3 py-1 bg-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-4">
+                    <div className="inline-flex items-center px-3 py-1 bg-red-500/20 rounded-full text-red-400 text-sm font-medium mb-4">
                       <Star className="w-4 h-4 mr-1" />
                       Most Popular
                     </div>
@@ -253,7 +246,7 @@ export default function AiemailmarketingautomationPage() {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                         {feature}
                       </li>
                     ))}
@@ -262,8 +255,8 @@ export default function AiemailmarketingautomationPage() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
-                        : 'border-2 border-blue-400 text-blue-400 hover:bg-blue-400/10'
+                        ? 'bg-gradient-to-r from-red-500 to-purple-600 text-white hover:from-red-600 hover:to-purple-700'
+                        : 'border-2 border-red-400 text-red-400 hover:bg-red-400/10'
                     }`}
                   >
                     Get Started
@@ -279,10 +272,10 @@ export default function AiemailmarketingautomationPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Success Stories
+                Trusted by Leading Platforms
               </h2>
               <p className="text-gray-300">
-                See how our AI Email Marketing Automation transforms businesses
+                See how our AI content moderation protects platforms worldwide
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -307,17 +300,17 @@ export default function AiemailmarketingautomationPage() {
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl p-8 border border-blue-500/30">
+            <div className="bg-gradient-to-r from-red-500/20 to-purple-500/20 rounded-2xl p-8 border border-red-500/30">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Boost Your Email Marketing Today
+                Protect Your Platform Today
               </h2>
               <p className="text-lg text-gray-300 mb-8">
-                Join thousands of businesses using AI Email Marketing Automation to grow their revenue
+                Join thousands of platforms using AI Content Moderation Pro to keep their communities safe
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
+                  className="bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300"
                 >
                   Start Your Free Trial
                 </Link>
@@ -332,11 +325,6 @@ export default function AiemailmarketingautomationPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </div>
-  );
-=======
     </Layout>
   )
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 }

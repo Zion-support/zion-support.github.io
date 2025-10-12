@@ -1,97 +1,94 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { Mail, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Users, BarChart3, Star, Sparkles, TrendingUp, Target, Send, Clock } from 'lucide-react'
+import { BarChart3, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Shield, Database, Star, Sparkles, TrendingUp, Users, Target } from 'lucide-react'
 import Layout from '../layout'
 
-export default function AIEmailMarketingAutomation() {
+export default function AIAnalyticsDashboardPro() {
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'AI Content Generation',
-      description: 'Create compelling email campaigns with AI-powered subject lines, content, and CTAs'
+      title: 'AI-Powered Insights',
+      description: 'Advanced machine learning algorithms provide actionable business insights'
     },
     {
-      icon: <Target className="w-6 h-6 text-purple-400" />,
-      title: 'Smart Segmentation',
-      description: 'Automatically segment your audience based on behavior, preferences, and engagement'
+      icon: <BarChart3 className="w-6 h-6 text-purple-400" />,
+      title: 'Real-time Analytics',
+      description: 'Live data visualization with instant updates and interactive dashboards'
     },
     {
-      icon: <Clock className="w-6 h-6 text-yellow-400" />,
-      title: 'Automated Workflows',
-      description: 'Set up complex email sequences that trigger based on user actions and behaviors'
+      icon: <Target className="w-6 h-6 text-yellow-400" />,
+      title: 'Predictive Analytics',
+      description: 'Forecast trends and make data-driven decisions with confidence'
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-green-400" />,
-      title: 'Advanced Analytics',
-      description: 'Track open rates, click-through rates, conversions, and ROI with detailed insights'
+      icon: <Globe className="w-6 h-6 text-green-400" />,
+      title: 'Multi-Platform Integration',
+      description: 'Connect all your data sources in one unified dashboard'
     }
   ]
 
-  const automationFeatures = [
+  const dashboardFeatures = [
     {
-      category: 'Email Creation',
-      items: ['AI Subject Line Generator', 'Content Templates', 'Personalization Engine', 'A/B Testing', 'Mobile Optimization', 'Spam Score Checker']
+      category: 'Data Sources',
+      items: ['Google Analytics', 'Facebook Ads', 'Salesforce CRM', 'Shopify', 'Stripe', 'Custom APIs']
     },
     {
-      category: 'Automation',
-      items: ['Welcome Series', 'Abandoned Cart Recovery', 'Birthday Campaigns', 'Re-engagement Sequences', 'Lead Nurturing', 'Post-Purchase Follow-up']
+      category: 'Visualizations',
+      items: ['Interactive Charts', 'Heat Maps', 'Funnel Analysis', 'Cohort Analysis', 'Custom Reports', 'Real-time Alerts']
     },
     {
-      category: 'Segmentation',
-      items: ['Behavioral Triggers', 'Demographic Filters', 'Engagement Levels', 'Purchase History', 'Custom Fields', 'Dynamic Lists']
+      category: 'AI Features',
+      items: ['Anomaly Detection', 'Trend Prediction', 'Customer Segmentation', 'Churn Analysis', 'ROI Optimization', 'Smart Alerts']
     },
     {
-      category: 'Analytics',
-      items: ['Real-time Dashboard', 'Campaign Performance', 'Revenue Tracking', 'Subscriber Growth', 'Unsubscribe Analysis', 'ROI Reports']
+      category: 'Collaboration',
+      items: ['Team Dashboards', 'Custom Permissions', 'Scheduled Reports', 'Export Options', 'API Access', 'White-label']
     }
   ]
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$39',
+      price: '$49',
       period: '/month',
-      description: 'Perfect for small businesses and startups',
+      description: 'Perfect for small businesses',
       features: [
-        'Up to 1,000 subscribers',
-        'Basic AI features',
-        'Email templates',
-        'Basic automation',
-        'Standard analytics',
-        'Email support'
+        'Up to 5 data sources',
+        'Basic AI insights',
+        'Standard visualizations',
+        'Email support',
+        'Monthly reports'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$79',
+      price: '$149',
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 10,000 subscribers',
-        'Advanced AI features',
-        'Custom templates',
-        'Advanced automation',
-        'Detailed analytics',
+        'Up to 20 data sources',
+        'Advanced AI analytics',
+        'Custom dashboards',
         'Priority support',
-        'A/B testing'
+        'Real-time alerts',
+        'API access'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$199',
+      price: '$399',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited subscribers',
-        'Custom AI training',
+        'Unlimited data sources',
+        'Custom AI models',
         'White-label solution',
-        'Advanced automation',
-        'Custom analytics',
         'Dedicated support',
-        'API access'
+        'Custom integrations',
+        'SLA guarantee'
       ],
       popular: false
     }
@@ -99,55 +96,51 @@ export default function AIEmailMarketingAutomation() {
 
   const testimonials = [
     {
-      name: 'Jennifer Lee',
-      company: 'E-commerce Store',
-      content: 'AI Email Marketing Automation increased our email revenue by 200% and reduced our workload by 60%.',
+      name: 'Alex Thompson',
+      company: 'E-commerce Plus',
+      content: 'AI Analytics Dashboard Pro transformed our decision-making process. ROI increased by 60% in just 3 months.',
       rating: 5
     },
     {
-      name: 'David Park',
-      company: 'SaaS Company',
-      content: 'The automated workflows are incredible. Our lead nurturing process is now completely hands-off.',
+      name: 'Sarah Kim',
+      company: 'Marketing Agency Pro',
+      content: 'The predictive analytics helped us optimize campaigns before problems occurred. Game-changer for our clients.',
       rating: 5
     },
     {
-      name: 'Maria Santos',
-      company: 'Marketing Agency',
-      content: 'Managing multiple client email campaigns is now effortless. The AI content generation saves hours.',
+      name: 'Michael Davis',
+      company: 'SaaS Startup',
+      content: 'Real-time insights and AI recommendations saved us countless hours of manual analysis. Highly recommended.',
       rating: 5
     }
   ]
 
-<<<<<<< HEAD
-export default function AiemailmarketingautomationPage() {
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
   return (
     <Layout
-      title="AI Email Marketing Automation - Smart Email Campaigns | Zion Tech Group"
-      description="Transform your email marketing with AI-powered automation, smart segmentation, and advanced analytics. Increase engagement and revenue with intelligent email campaigns. Start your free trial today."
-      keywords="email marketing automation, AI email campaigns, email segmentation, email analytics, marketing automation, email templates"
+      title="AI Analytics Dashboard Pro - Advanced Business Intelligence | Zion Tech Group"
+      description="Transform your data into actionable insights with AI-powered analytics dashboard. Real-time visualization, predictive analytics, and custom reporting. Start your free trial today."
+      keywords="AI analytics, business intelligence, data visualization, predictive analytics, dashboard, reporting"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
-                <Mail className="w-4 h-4 mr-2" />
-                AI-Powered Email Marketing
+              <div className="inline-flex items-center px-4 py-2 bg-green-500/20 rounded-full text-green-400 text-sm font-medium mb-6">
+                <BarChart3 className="w-4 h-4 mr-2" />
+                Advanced Analytics
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-                AI Email Marketing Automation
+                AI Analytics Dashboard Pro
               </h1>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your email marketing with AI-powered automation, smart segmentation, 
-                and advanced analytics. Increase engagement and revenue with intelligent email campaigns.
+                Transform your data into powerful insights with our AI-powered analytics platform. 
+                Real-time visualization, predictive analytics, and intelligent recommendations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                  className="bg-gradient-to-r from-green-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -156,7 +149,7 @@ export default function AiemailmarketingautomationPage() {
                   to="#demo"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-                  Watch Demo
+                  View Demo
                 </Link>
               </div>
             </div>
@@ -168,16 +161,16 @@ export default function AiemailmarketingautomationPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Intelligent Email Marketing
+                Powerful Analytics Features
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                AI-powered features that transform your email marketing strategy
+                Everything you need to make data-driven decisions
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300">
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-green-500/20 hover:border-green-400/40 transition-all duration-300">
                   <div className="flex items-center mb-4">
                     {feature.icon}
                     <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
@@ -189,26 +182,26 @@ export default function AiemailmarketingautomationPage() {
           </div>
         </section>
 
-        {/* Automation Features */}
+        {/* Dashboard Features */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-purple-900/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Complete Email Marketing Suite
+                Comprehensive Dashboard Capabilities
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Everything you need to create, automate, and optimize your email campaigns
+                Connect, analyze, and visualize all your data in one place
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {automationFeatures.map((feature, index) => (
+              {dashboardFeatures.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.category}</h3>
                   <ul className="space-y-2">
                     {feature.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {item}
                       </li>
                     ))}
@@ -227,7 +220,7 @@ export default function AiemailmarketingautomationPage() {
                 Flexible Pricing Plans
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Choose the plan that scales with your email marketing needs
+                Choose the plan that fits your analytics needs
               </p>
             </div>
             
@@ -235,11 +228,11 @@ export default function AiemailmarketingautomationPage() {
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
                   plan.popular 
-                    ? 'border-blue-400/40 scale-105 shadow-2xl shadow-blue-500/20' 
-                    : 'border-blue-500/20 hover:border-blue-400/40'
+                    ? 'border-green-400/40 scale-105 shadow-2xl shadow-green-500/20' 
+                    : 'border-green-500/20 hover:border-green-400/40'
                 }`}>
                   {plan.popular && (
-                    <div className="inline-flex items-center px-3 py-1 bg-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-4">
+                    <div className="inline-flex items-center px-3 py-1 bg-green-500/20 rounded-full text-green-400 text-sm font-medium mb-4">
                       <Star className="w-4 h-4 mr-1" />
                       Most Popular
                     </div>
@@ -253,7 +246,7 @@ export default function AiemailmarketingautomationPage() {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                         {feature}
                       </li>
                     ))}
@@ -262,8 +255,8 @@ export default function AiemailmarketingautomationPage() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
-                        : 'border-2 border-blue-400 text-blue-400 hover:bg-blue-400/10'
+                        ? 'bg-gradient-to-r from-green-500 to-purple-600 text-white hover:from-green-600 hover:to-purple-700'
+                        : 'border-2 border-green-400 text-green-400 hover:bg-green-400/10'
                     }`}
                   >
                     Get Started
@@ -279,10 +272,10 @@ export default function AiemailmarketingautomationPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Success Stories
+                Trusted by Data-Driven Companies
               </h2>
               <p className="text-gray-300">
-                See how our AI Email Marketing Automation transforms businesses
+                See how our analytics platform transforms business decisions
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -307,17 +300,17 @@ export default function AiemailmarketingautomationPage() {
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl p-8 border border-blue-500/30">
+            <div className="bg-gradient-to-r from-green-500/20 to-purple-500/20 rounded-2xl p-8 border border-green-500/30">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Boost Your Email Marketing Today
+                Start Making Data-Driven Decisions Today
               </h2>
               <p className="text-lg text-gray-300 mb-8">
-                Join thousands of businesses using AI Email Marketing Automation to grow their revenue
+                Join thousands of businesses using AI Analytics Dashboard Pro to unlock their data potential
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
+                  className="bg-gradient-to-r from-green-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-purple-700 transition-all duration-300"
                 >
                   Start Your Free Trial
                 </Link>
@@ -332,11 +325,6 @@ export default function AiemailmarketingautomationPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </div>
-  );
-=======
     </Layout>
   )
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 }

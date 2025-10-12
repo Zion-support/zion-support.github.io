@@ -1,97 +1,94 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { Mail, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Users, BarChart3, Star, Sparkles, TrendingUp, Target, Send, Clock } from 'lucide-react'
+import { Wifi, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Shield, BarChart3, Star, Sparkles, Building, Users, Target, Cpu } from 'lucide-react'
 import Layout from '../layout'
 
-export default function AIEmailMarketingAutomation() {
+export default function FiveGSmartCitySolutions() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'AI Content Generation',
-      description: 'Create compelling email campaigns with AI-powered subject lines, content, and CTAs'
+      icon: <Wifi className="w-6 h-6 text-cyan-400" />,
+      title: 'Ultra-Fast Connectivity',
+      description: '5G networks providing 10x faster speeds and ultra-low latency for smart city applications'
     },
     {
-      icon: <Target className="w-6 h-6 text-purple-400" />,
-      title: 'Smart Segmentation',
-      description: 'Automatically segment your audience based on behavior, preferences, and engagement'
+      icon: <Building className="w-6 h-6 text-purple-400" />,
+      title: 'Smart Infrastructure',
+      description: 'Intelligent traffic management, energy optimization, and environmental monitoring systems'
     },
     {
-      icon: <Clock className="w-6 h-6 text-yellow-400" />,
-      title: 'Automated Workflows',
-      description: 'Set up complex email sequences that trigger based on user actions and behaviors'
+      icon: <Brain className="w-6 h-6 text-yellow-400" />,
+      title: 'AI-Powered Analytics',
+      description: 'Machine learning algorithms analyze city data to optimize services and improve quality of life'
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-green-400" />,
-      title: 'Advanced Analytics',
-      description: 'Track open rates, click-through rates, conversions, and ROI with detailed insights'
+      icon: <Users className="w-6 h-6 text-green-400" />,
+      title: 'Citizen Engagement',
+      description: 'Digital platforms connecting citizens with city services and enabling participatory governance'
     }
   ]
 
-  const automationFeatures = [
+  const smartCityModules = [
     {
-      category: 'Email Creation',
-      items: ['AI Subject Line Generator', 'Content Templates', 'Personalization Engine', 'A/B Testing', 'Mobile Optimization', 'Spam Score Checker']
+      category: 'Transportation',
+      items: ['Smart Traffic Lights', 'Autonomous Vehicle Support', 'Public Transit Optimization', 'Parking Management', 'Traffic Analytics', 'Emergency Response']
     },
     {
-      category: 'Automation',
-      items: ['Welcome Series', 'Abandoned Cart Recovery', 'Birthday Campaigns', 'Re-engagement Sequences', 'Lead Nurturing', 'Post-Purchase Follow-up']
+      category: 'Energy & Environment',
+      items: ['Smart Grid Management', 'Air Quality Monitoring', 'Waste Management', 'Water Systems', 'Renewable Energy', 'Carbon Footprint Tracking']
     },
     {
-      category: 'Segmentation',
-      items: ['Behavioral Triggers', 'Demographic Filters', 'Engagement Levels', 'Purchase History', 'Custom Fields', 'Dynamic Lists']
+      category: 'Public Safety',
+      items: ['Video Surveillance', 'Emergency Alerts', 'Crime Prevention', 'Disaster Response', 'Crowd Management', 'Health Monitoring']
     },
     {
-      category: 'Analytics',
-      items: ['Real-time Dashboard', 'Campaign Performance', 'Revenue Tracking', 'Subscriber Growth', 'Unsubscribe Analysis', 'ROI Reports']
+      category: 'Digital Services',
+      items: ['Citizen Portal', 'Mobile Apps', 'Digital Payments', 'Service Requests', 'Open Data Platform', 'E-Government']
     }
   ]
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$39',
-      period: '/month',
-      description: 'Perfect for small businesses and startups',
+      name: 'Pilot Program',
+      price: '$50,000',
+      period: 'one-time',
+      description: 'Perfect for small cities starting their smart city journey',
       features: [
-        'Up to 1,000 subscribers',
-        'Basic AI features',
-        'Email templates',
-        'Basic automation',
-        'Standard analytics',
-        'Email support'
+        'Basic 5G infrastructure',
+        'Core smart modules',
+        'Citizen engagement platform',
+        '6-month implementation',
+        'Training and support'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$79',
-      period: '/month',
-      description: 'Ideal for growing businesses',
+      name: 'Smart City Pro',
+      price: '$250,000',
+      period: 'one-time',
+      description: 'Comprehensive solution for medium-sized cities',
       features: [
-        'Up to 10,000 subscribers',
-        'Advanced AI features',
-        'Custom templates',
-        'Advanced automation',
-        'Detailed analytics',
-        'Priority support',
-        'A/B testing'
+        'Full 5G network deployment',
+        'Complete smart city suite',
+        'Advanced AI analytics',
+        '12-month implementation',
+        'Dedicated support team',
+        'Custom integrations'
       ],
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: '$199',
-      period: '/month',
-      description: 'For large organizations',
+      name: 'Mega City',
+      price: 'Custom',
+      period: 'pricing',
+      description: 'Enterprise solution for large metropolitan areas',
       features: [
-        'Unlimited subscribers',
-        'Custom AI training',
-        'White-label solution',
-        'Advanced automation',
-        'Custom analytics',
-        'Dedicated support',
-        'API access'
+        'City-wide 5G coverage',
+        'Custom smart city modules',
+        'White-label platform',
+        'Multi-year implementation',
+        '24/7 support team',
+        'SLA guarantee'
       ],
       popular: false
     }
@@ -99,34 +96,30 @@ export default function AIEmailMarketingAutomation() {
 
   const testimonials = [
     {
-      name: 'Jennifer Lee',
-      company: 'E-commerce Store',
-      content: 'AI Email Marketing Automation increased our email revenue by 200% and reduced our workload by 60%.',
+      name: 'Mayor Sarah Johnson',
+      company: 'Tech Valley City',
+      content: '5G Smart City Solutions transformed our city. Traffic congestion reduced by 30% and citizen satisfaction increased significantly.',
       rating: 5
     },
     {
-      name: 'David Park',
-      company: 'SaaS Company',
-      content: 'The automated workflows are incredible. Our lead nurturing process is now completely hands-off.',
+      name: 'David Chen',
+      company: 'Metro Planning Department',
+      content: 'The AI-powered analytics help us make data-driven decisions. Our energy efficiency improved by 25% in the first year.',
       rating: 5
     },
     {
-      name: 'Maria Santos',
-      company: 'Marketing Agency',
-      content: 'Managing multiple client email campaigns is now effortless. The AI content generation saves hours.',
+      name: 'Lisa Rodriguez',
+      company: 'Urban Development Corp',
+      content: 'Citizen engagement platform is incredible. Residents can now access city services 24/7 through their smartphones.',
       rating: 5
     }
   ]
 
-<<<<<<< HEAD
-export default function AiemailmarketingautomationPage() {
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
   return (
     <Layout
-      title="AI Email Marketing Automation - Smart Email Campaigns | Zion Tech Group"
-      description="Transform your email marketing with AI-powered automation, smart segmentation, and advanced analytics. Increase engagement and revenue with intelligent email campaigns. Start your free trial today."
-      keywords="email marketing automation, AI email campaigns, email segmentation, email analytics, marketing automation, email templates"
+      title="5G Smart City Solutions - Future-Ready Urban Infrastructure | Zion Tech Group"
+      description="Transform your city with 5G-powered smart infrastructure. AI analytics, citizen engagement, and sustainable solutions. Get your free smart city assessment today."
+      keywords="5G smart city, urban infrastructure, smart transportation, citizen engagement, sustainable cities, IoT solutions"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -134,29 +127,29 @@ export default function AiemailmarketingautomationPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
-                <Mail className="w-4 h-4 mr-2" />
-                AI-Powered Email Marketing
+                <Wifi className="w-4 h-4 mr-2" />
+                5G-Powered Smart Cities
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-                AI Email Marketing Automation
+                5G Smart City Solutions
               </h1>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your email marketing with AI-powered automation, smart segmentation, 
-                and advanced analytics. Increase engagement and revenue with intelligent email campaigns.
+                Transform your city into a smart, sustainable, and connected urban environment with our 
+                5G-powered infrastructure solutions and AI-driven analytics.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
-                  Start Free Trial
+                  Get Free Assessment
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   to="#demo"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-                  Watch Demo
+                  View Demo
                 </Link>
               </div>
             </div>
@@ -168,10 +161,10 @@ export default function AiemailmarketingautomationPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Intelligent Email Marketing
+                Smart City Capabilities
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                AI-powered features that transform your email marketing strategy
+                Comprehensive solutions for modern urban challenges
               </p>
             </div>
             
@@ -189,24 +182,24 @@ export default function AiemailmarketingautomationPage() {
           </div>
         </section>
 
-        {/* Automation Features */}
+        {/* Smart City Modules */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-purple-900/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Complete Email Marketing Suite
+                Complete Smart City Suite
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Everything you need to create, automate, and optimize your email campaigns
+                Modular solutions that scale with your city's needs
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {automationFeatures.map((feature, index) => (
+              {smartCityModules.map((module, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.category}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-4">{module.category}</h3>
                   <ul className="space-y-2">
-                    {feature.items.map((item, itemIndex) => (
+                    {module.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
                         {item}
@@ -224,10 +217,10 @@ export default function AiemailmarketingautomationPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Flexible Pricing Plans
+                Smart City Investment Plans
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Choose the plan that scales with your email marketing needs
+                Transform your city with our comprehensive 5G smart city solutions
               </p>
             </div>
             
@@ -248,7 +241,7 @@ export default function AiemailmarketingautomationPage() {
                   <p className="text-gray-300 mb-6">{plan.description}</p>
                   <div className="mb-6">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400">{plan.period}</span>
+                    <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
@@ -282,7 +275,7 @@ export default function AiemailmarketingautomationPage() {
                 Success Stories
               </h2>
               <p className="text-gray-300">
-                See how our AI Email Marketing Automation transforms businesses
+                See how cities worldwide are transforming with our solutions
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -309,17 +302,17 @@ export default function AiemailmarketingautomationPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl p-8 border border-blue-500/30">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Boost Your Email Marketing Today
+                Build the Future of Your City
               </h2>
               <p className="text-lg text-gray-300 mb-8">
-                Join thousands of businesses using AI Email Marketing Automation to grow their revenue
+                Join the smart city revolution with 5G-powered infrastructure and AI-driven solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
                 >
-                  Start Your Free Trial
+                  Get Free Smart City Assessment
                 </Link>
                 <Link
                   to="/about"
@@ -332,11 +325,6 @@ export default function AiemailmarketingautomationPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </div>
-  );
-=======
     </Layout>
   )
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 }

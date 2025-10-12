@@ -1,97 +1,95 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { Mail, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Users, BarChart3, Star, Sparkles, TrendingUp, Target, Send, Clock } from 'lucide-react'
+import { Shield, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Users, BarChart3, Star, Sparkles, TrendingUp, Target, Lock, Eye } from 'lucide-react'
 import Layout from '../layout'
 
-export default function AIEmailMarketingAutomation() {
+export default function CybersecurityConsulting() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'AI Content Generation',
-      description: 'Create compelling email campaigns with AI-powered subject lines, content, and CTAs'
+      icon: <Shield className="w-6 h-6 text-cyan-400" />,
+      title: 'Security Assessment',
+      description: 'Comprehensive security audits to identify vulnerabilities and assess your current security posture'
     },
     {
-      icon: <Target className="w-6 h-6 text-purple-400" />,
-      title: 'Smart Segmentation',
-      description: 'Automatically segment your audience based on behavior, preferences, and engagement'
+      icon: <Lock className="w-6 h-6 text-purple-400" />,
+      title: 'Compliance Management',
+      description: 'Ensure compliance with GDPR, HIPAA, SOX, PCI-DSS, and other regulatory requirements'
     },
     {
-      icon: <Clock className="w-6 h-6 text-yellow-400" />,
-      title: 'Automated Workflows',
-      description: 'Set up complex email sequences that trigger based on user actions and behaviors'
+      icon: <Eye className="w-6 h-6 text-yellow-400" />,
+      title: 'Threat Intelligence',
+      description: 'Advanced threat detection and response with 24/7 monitoring and incident management'
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-green-400" />,
-      title: 'Advanced Analytics',
-      description: 'Track open rates, click-through rates, conversions, and ROI with detailed insights'
+      icon: <Brain className="w-6 h-6 text-green-400" />,
+      title: 'Security Training',
+      description: 'Comprehensive security awareness training for your team to prevent human error attacks'
     }
   ]
 
-  const automationFeatures = [
+  const consultingFeatures = [
     {
-      category: 'Email Creation',
-      items: ['AI Subject Line Generator', 'Content Templates', 'Personalization Engine', 'A/B Testing', 'Mobile Optimization', 'Spam Score Checker']
+      category: 'Security Assessment',
+      items: ['Vulnerability Scanning', 'Penetration Testing', 'Risk Assessment', 'Security Audits', 'Compliance Reviews', 'Gap Analysis']
     },
     {
-      category: 'Automation',
-      items: ['Welcome Series', 'Abandoned Cart Recovery', 'Birthday Campaigns', 'Re-engagement Sequences', 'Lead Nurturing', 'Post-Purchase Follow-up']
+      category: 'Implementation',
+      items: ['Security Architecture', 'Policy Development', 'Tool Implementation', 'Process Design', 'Training Programs', 'Change Management']
     },
     {
-      category: 'Segmentation',
-      items: ['Behavioral Triggers', 'Demographic Filters', 'Engagement Levels', 'Purchase History', 'Custom Fields', 'Dynamic Lists']
+      category: 'Monitoring & Response',
+      items: ['24/7 SOC Services', 'Incident Response', 'Threat Hunting', 'Forensic Analysis', 'Security Monitoring', 'Alert Management']
     },
     {
-      category: 'Analytics',
-      items: ['Real-time Dashboard', 'Campaign Performance', 'Revenue Tracking', 'Subscriber Growth', 'Unsubscribe Analysis', 'ROI Reports']
+      category: 'Compliance',
+      items: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'PCI-DSS Compliance', 'ISO 27001', 'NIST Framework']
     }
   ]
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$39',
-      period: '/month',
-      description: 'Perfect for small businesses and startups',
+      name: 'Assessment',
+      price: '$2,999',
+      period: '/project',
+      description: 'Comprehensive security assessment',
       features: [
-        'Up to 1,000 subscribers',
-        'Basic AI features',
-        'Email templates',
-        'Basic automation',
-        'Standard analytics',
-        'Email support'
+        'Security audit',
+        'Vulnerability assessment',
+        'Risk analysis',
+        'Compliance review',
+        'Detailed report',
+        'Recommendations'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$79',
-      period: '/month',
-      description: 'Ideal for growing businesses',
+      name: 'Implementation',
+      price: '$9,999',
+      period: '/project',
+      description: 'Complete security implementation',
       features: [
-        'Up to 10,000 subscribers',
-        'Advanced AI features',
-        'Custom templates',
-        'Advanced automation',
-        'Detailed analytics',
-        'Priority support',
-        'A/B testing'
+        'Security assessment',
+        'Tool implementation',
+        'Policy development',
+        'Team training',
+        '3 months support',
+        'Compliance guidance'
       ],
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: '$199',
+      name: 'Ongoing',
+      price: '$4,999',
       period: '/month',
-      description: 'For large organizations',
+      description: 'Continuous security management',
       features: [
-        'Unlimited subscribers',
-        'Custom AI training',
-        'White-label solution',
-        'Advanced automation',
-        'Custom analytics',
-        'Dedicated support',
-        'API access'
+        '24/7 monitoring',
+        'Incident response',
+        'Regular assessments',
+        'Compliance management',
+        'Security updates',
+        'Dedicated support'
       ],
       popular: false
     }
@@ -100,63 +98,59 @@ export default function AIEmailMarketingAutomation() {
   const testimonials = [
     {
       name: 'Jennifer Lee',
-      company: 'E-commerce Store',
-      content: 'AI Email Marketing Automation increased our email revenue by 200% and reduced our workload by 60%.',
+      company: 'Healthcare Provider',
+      content: 'Cybersecurity Consulting helped us achieve HIPAA compliance and significantly improve our security posture.',
       rating: 5
     },
     {
-      name: 'David Park',
-      company: 'SaaS Company',
-      content: 'The automated workflows are incredible. Our lead nurturing process is now completely hands-off.',
+      name: 'Michael Rodriguez',
+      company: 'Financial Services',
+      content: 'Their threat intelligence and incident response capabilities prevented a major security breach. Highly recommended.',
       rating: 5
     },
     {
-      name: 'Maria Santos',
-      company: 'Marketing Agency',
-      content: 'Managing multiple client email campaigns is now effortless. The AI content generation saves hours.',
+      name: 'Sarah Johnson',
+      company: 'E-commerce Platform',
+      content: 'The security training program transformed our team\'s awareness. We\'ve seen a 90% reduction in security incidents.',
       rating: 5
     }
   ]
 
-<<<<<<< HEAD
-export default function AiemailmarketingautomationPage() {
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
   return (
     <Layout
-      title="AI Email Marketing Automation - Smart Email Campaigns | Zion Tech Group"
-      description="Transform your email marketing with AI-powered automation, smart segmentation, and advanced analytics. Increase engagement and revenue with intelligent email campaigns. Start your free trial today."
-      keywords="email marketing automation, AI email campaigns, email segmentation, email analytics, marketing automation, email templates"
+      title="Cybersecurity Consulting - Expert Security Solutions | Zion Tech Group"
+      description="Protect your business with expert cybersecurity consulting. Security assessments, compliance management, threat intelligence, and 24/7 monitoring. Get your free security audit today."
+      keywords="cybersecurity consulting, security assessment, compliance management, threat intelligence, security training, penetration testing"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
-                <Mail className="w-4 h-4 mr-2" />
-                AI-Powered Email Marketing
+              <div className="inline-flex items-center px-4 py-2 bg-red-500/20 rounded-full text-red-400 text-sm font-medium mb-6">
+                <Shield className="w-4 h-4 mr-2" />
+                Expert Cybersecurity Consulting
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-                AI Email Marketing Automation
+                Cybersecurity Consulting
               </h1>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your email marketing with AI-powered automation, smart segmentation, 
-                and advanced analytics. Increase engagement and revenue with intelligent email campaigns.
+                Protect your business with expert cybersecurity consulting. Security assessments, compliance management, 
+                threat intelligence, and 24/7 monitoring to keep your data secure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                  className="bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
-                  Start Free Trial
+                  Get Free Security Audit
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   to="#demo"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-                  Watch Demo
+                  View Case Studies
                 </Link>
               </div>
             </div>
@@ -168,16 +162,16 @@ export default function AiemailmarketingautomationPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Intelligent Email Marketing
+                Comprehensive Security Solutions
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                AI-powered features that transform your email marketing strategy
+                Expert cybersecurity services that protect your business from evolving threats
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300">
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-red-500/20 hover:border-red-400/40 transition-all duration-300">
                   <div className="flex items-center mb-4">
                     {feature.icon}
                     <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
@@ -189,26 +183,26 @@ export default function AiemailmarketingautomationPage() {
           </div>
         </section>
 
-        {/* Automation Features */}
+        {/* Consulting Features */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-purple-900/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Complete Email Marketing Suite
+                Complete Security Consulting
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Everything you need to create, automate, and optimize your email campaigns
+                End-to-end cybersecurity services to protect your organization
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {automationFeatures.map((feature, index) => (
+              {consultingFeatures.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.category}</h3>
                   <ul className="space-y-2">
                     {feature.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
+                        <CheckCircle className="w-4 h-4 text-red-400 mr-2" />
                         {item}
                       </li>
                     ))}
@@ -224,10 +218,10 @@ export default function AiemailmarketingautomationPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Flexible Pricing Plans
+                Flexible Consulting Packages
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Choose the plan that scales with your email marketing needs
+                Choose the security consulting package that fits your needs
               </p>
             </div>
             
@@ -235,11 +229,11 @@ export default function AiemailmarketingautomationPage() {
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
                   plan.popular 
-                    ? 'border-blue-400/40 scale-105 shadow-2xl shadow-blue-500/20' 
-                    : 'border-blue-500/20 hover:border-blue-400/40'
+                    ? 'border-red-400/40 scale-105 shadow-2xl shadow-red-500/20' 
+                    : 'border-red-500/20 hover:border-red-400/40'
                 }`}>
                   {plan.popular && (
-                    <div className="inline-flex items-center px-3 py-1 bg-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-4">
+                    <div className="inline-flex items-center px-3 py-1 bg-red-500/20 rounded-full text-red-400 text-sm font-medium mb-4">
                       <Star className="w-4 h-4 mr-1" />
                       Most Popular
                     </div>
@@ -253,7 +247,7 @@ export default function AiemailmarketingautomationPage() {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
+                        <CheckCircle className="w-5 h-5 text-red-400 mr-3" />
                         {feature}
                       </li>
                     ))}
@@ -262,8 +256,8 @@ export default function AiemailmarketingautomationPage() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
-                        : 'border-2 border-blue-400 text-blue-400 hover:bg-blue-400/10'
+                        ? 'bg-gradient-to-r from-red-500 to-purple-600 text-white hover:from-red-600 hover:to-purple-700'
+                        : 'border-2 border-red-400 text-red-400 hover:bg-red-400/10'
                     }`}
                   >
                     Get Started
@@ -279,10 +273,10 @@ export default function AiemailmarketingautomationPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Success Stories
+                Trusted by Industry Leaders
               </h2>
               <p className="text-gray-300">
-                See how our AI Email Marketing Automation transforms businesses
+                See how our Cybersecurity Consulting protects organizations worldwide
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -307,19 +301,19 @@ export default function AiemailmarketingautomationPage() {
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl p-8 border border-blue-500/30">
+            <div className="bg-gradient-to-r from-red-500/20 to-purple-500/20 rounded-2xl p-8 border border-red-500/30">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Boost Your Email Marketing Today
+                Secure Your Business Today
               </h2>
               <p className="text-lg text-gray-300 mb-8">
-                Join thousands of businesses using AI Email Marketing Automation to grow their revenue
+                Don't wait for a security breach. Get expert cybersecurity consulting to protect your organization
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
+                  className="bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300"
                 >
-                  Start Your Free Trial
+                  Get Your Free Security Audit
                 </Link>
                 <Link
                   to="/about"
@@ -332,11 +326,6 @@ export default function AiemailmarketingautomationPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </div>
-  );
-=======
     </Layout>
   )
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 }
