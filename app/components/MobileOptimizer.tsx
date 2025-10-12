@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect } from 'react'
 
 const MobileOptimizer: React.FC = () => {
   useEffect(() => {
@@ -6,7 +6,7 @@ const MobileOptimizer: React.FC = () => {
     const preventZoom = () => {
       const viewport = document.querySelector('meta[name="viewport"]')
       if (viewport) {
-        viewport.setAttribute('content', 'width="device-width," initial-scale="1.0," maximum-scale="1.0," user-scalable="no')"
+        viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
       }
     }
 
@@ -49,7 +49,7 @@ const MobileOptimizer: React.FC = () => {
       // Add haptic feedback for supported devices
       const addHapticFeedback = (element: Element) => {
         element.addEventListener('touchstart', () => {
-          if ('vibrate' in, navigator) {
+          if ('vibrate' in navigator) {
             navigator.vibrate(10) // Short vibration
           }
         })
@@ -94,4 +94,4 @@ const MobileOptimizer: React.FC = () => {
   return null
 }
 
-export default MobileOptimizer;
+export default MobileOptimizer

@@ -240,4 +240,4 @@ export const IconRegistry = {
   Package
 } as const
 
-export type IconName = keyof typeof IconRegistry;
+export type IconName = keyof typeof IconRegistry
