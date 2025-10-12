@@ -1,5 +1,7 @@
+'use client';
 import React from 'react';
-'use client'
+import { Helmet } from 'react-helmet-async';
+import { Brain, Zap, Shield, Globe, ArrowRight, CheckCircle } from 'lucide-react';
 
 const FuturisticHeroPage: React.FC = () => {
   const features = [
@@ -139,5 +141,7 @@ const FuturisticHeroPage: React.FC = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
+
+export default FuturisticHeroPage;

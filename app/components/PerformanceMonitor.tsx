@@ -1,27 +1,23 @@
 'use client';
 import React, { useEffect } from 'react';
-=======
-import { useEffect } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-1443
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
     const monitorCoreWebVitals = () => {
-      if ('web-vitals' in window) {
-import { getCLS, getFID, getFCP, getLCP, getTTFB } 
-          getCLS(console.log);
-          getFID(console.log);
-          getFCP(console.log);
-          getLCP(console.log);
-          getTTFB(console.log);
-        });
+      if (typeof window !== 'undefined') {
+        getCLS(console.log);
+        getFID(console.log);
+        getFCP(console.log);
+        getLCP(console.log);
+        getTTFB(console.log);
       }
     };
 
     // Monitor performance metrics
     const monitorPerformance = () => {
-      if ('performance' in window) {
+      if (typeof window !== 'undefined' && 'performance' in window) {
         window.addEventListener('load', () => {
           setTimeout(() => {
             const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -40,7 +36,7 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB }
 
     // Monitor memory usage
     const monitorMemory = () => {
-      if ('memory' in performance) {
+      if (typeof window !== 'undefined' && 'memory' in performance) {
         setInterval(() => {
           const memory = (performance as any).memory;
           console.log('Memory Usage:', {

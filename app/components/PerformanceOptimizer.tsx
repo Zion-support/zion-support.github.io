@@ -1,5 +1,12 @@
-import { useEffect, useState } from 'react'
+'use client';
+import React, { useEffect, useState } from 'react';
 
+interface PerformanceMetrics {
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  fcp: number | null;
+  ttfb: number | null;
 }
 
 const PerformanceOptimizer: React.FC = () => {
@@ -65,35 +72,46 @@ const PerformanceOptimizer: React.FC = () => {
 
     // Monitor Core Web Vitals
     const monitorWebVitals = () => {
-import { onCLS, onFID, onFCP, onLCP, onTTFB } 
-        onCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
-        onFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))
-        onFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })))
-        onLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })))
-        onTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })))
+      import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
+        onCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })));
+        onFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })));
+        onFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })));
+        onLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })));
+        onTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
       }).catch(() => {
         // Silently fail if web-vitals is not available
-      })
-    }
+      });
+    };
 
-      }
+    // Optimize scroll performance
+    const optimizeScroll = () => {
+      let ticking = false;
+      const updateScrollPosition = () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            // Update scroll position
+            ticking = false;
+          });
+          ticking = true;
+        }
+      };
 
-      window.addEventListener('scroll', updateScrollPosition, { passive: true })
+      window.addEventListener('scroll', updateScrollPosition, { passive: true });
       
-      return () => window.removeEventListener('scroll', updateScrollPosition)
-    }
+      return () => window.removeEventListener('scroll', updateScrollPosition);
+    };
 
     // Initialize optimizations
-    preloadCriticalResources()
-    optimizeImages()
-    lazyLoadComponents()
-    monitorWebVitals()
-    const cleanupScroll = optimizeScroll()
+    preloadCriticalResources();
+    optimizeImages();
+    lazyLoadComponents();
+    monitorWebVitals();
+    const cleanupScroll = optimizeScroll();
 
     // Cleanup
     return () => {
-      cleanupScroll()
-    }
+      cleanupScroll();
+    };
   }, [])
 
   // Log performance metrics in development

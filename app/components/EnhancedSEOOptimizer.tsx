@@ -1,10 +1,15 @@
-ursor/
-      description: 'Advanced AI technology to automatically optimize your website for search engines',
-      description: 'Advanced AI technology to optimize your website for search engines and improve rankings',
-    },
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Brain, Zap, Shield, Globe, ArrowRight, CheckCircle } from 'lucide-react';
+
+const EnhancedSEOOptimizerPage = () => {
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered SEO Optimization',
+      description: 'Advanced AI technology to automatically optimize your website for search engines',
+    },
+    {
       icon: Zap,
       title: 'Real-time Analysis',
       description: 'Lightning-fast SEO analysis and optimization with instant recommendations',
@@ -46,15 +51,10 @@ ursor/
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Enhanced SEO
                 Enhanced SEO Optimizer
               </span>
-              <br />
-              <span className="text-white">Optimizer</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced SEO optimization solutions.
-              Powered by cutting-edge AI technology and industry expertise.
               Optimize your website for search engines with our advanced AI-powered SEO optimization solutions.
               Improve rankings and drive more organic traffic.
             </p>

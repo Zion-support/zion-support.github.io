@@ -1,14 +1,30 @@
-'use client'
-import React from 'react'
-
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
-  ];
+
+const SystemMonitorPage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>System Monitor | Zion Tech Group</title>
+        <meta name="description" content="Professional System Monitor services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="System monitor, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                System Monitor
               </span>
               <br />
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced systemmonitor solutions.
+              Transform your business with our advanced system monitor solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -18,69 +34,35 @@ import { ArrowRight } from 'lucide-react';
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
-  </
+              </button>
             </div>
+          </div>
         </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Contact us today to learn more about our system monitor solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
+                Contact Us
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Schedule Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-  )}
-export default SystemMonitorPage
-  </button>
-}
+  );
+};
 
-interface SystemMonitorProps {
-  onAlert?: (alert: string) => void
-  className?: string
-}
-
-const SystemMonitor: React.FC<SystemMonitorProps> = ({
-  onAlert,
-  className = ''
-}) => {
-  const [metrics, setMetrics] = useState<SystemMetrics>({
-    cpu: 0,
-    memory: 0,
-    disk: 0,
-    network: 0,
-    battery: 100,
-    uptime: 0
-  })
-  const [isMonitoring, setIsMonitoring] = useState(false)
-
-  const updateMetrics = useCallback(() => {
-    // Simulate system metrics
-    const newMetrics = {
-      cpu: Math.random() * 100,
-      memory: Math.random() * 100,
-      disk: Math.random() * 100,
-      network: Math.random() * 100,
-      battery: Math.random() * 100,
-      uptime: Date.now() - performance.timing.navigationStart
-    }
-
-    setMetrics(newMetrics)
-
-    // Check for alerts
-    if (newMetrics.cpu > 90) {
-      onAlert?.('High CPU usage detected')
-    }
-    if (newMetrics.memory > 90) {
-      onAlert?.('High memory usage detected')
-    }
-    if (newMetrics.disk > 90) {
-      onAlert?.('High disk usage detected')
-    }
-  }, [onAlert])
-
-  useEffect(() => {
-    if (isMonitoring) {
-      const interval = setInterval(updateMetrics, 1000)
-      return () => clearInterval(interval)
-    }
-  }, [isMonitoring, updateMetrics])
-
-  const toggleMonitoring = () => {
-    setIsMonitoring(!isMonitoring)
-    if (!isMonitoring) {
-      updateMetrics()
-    }
-  }
+export default SystemMonitorPage;
