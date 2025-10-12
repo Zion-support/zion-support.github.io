@@ -1,4 +1,7 @@
-<<<<<<< HEAD
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Brain, Volume2, Clock, Shield, Zap, Users, ArrowRight, CheckCircle, Star, Award, Mic, Headphones, Speaker, MessageCircle, Settings, Globe, Lock, TrendingUp, BarChart, Cpu, Target, Lightbulb, Rocket, Heart, DollarSign, Package, Monitor, Link as LinkIcon, Server, Database, Smartphone, Wifi, Workflow, Eye, MessageSquare, ShoppingCart } from 'lucide-react';
 
 export default function AIVoiceAssistant() {
   const features = [
@@ -327,5 +330,3 @@ export default function AIVoiceAssistant() {
     </Layout>
   )
 }
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-6024

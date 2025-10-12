@@ -236,6 +236,12 @@ const Navigation: React.FC = () => {
             <Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">
               Pricing
             </Link>
+            <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">
+              Blog
+            </Link>
+            <Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">
+              Case Studies
+            </Link>
             <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
               Contact
             </Link>
@@ -308,6 +314,20 @@ const Navigation: React.FC = () => {
                 onClick={() => setIsOpen(false)}
               >
                 Pricing
+              </Link>
+              <Link
+                to="/blog"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+                onClick={() => setIsOpen(false)}
+              >
+                Blog
+              </Link>
+              <Link
+                to="/case-studies"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+                onClick={() => setIsOpen(false)}
+              >
+                Case Studies
               </Link>
               <Link
                 to="/contact"
