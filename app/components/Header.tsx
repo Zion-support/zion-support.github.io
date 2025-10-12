@@ -1,6 +1,6 @@
-import React from 'react'
-import Navigation from './Navigation'
+import React from 'react';
+import Navigation from './Navigation';
 
   return (
-    <header>
-      <Navigation />
+    <header />
+      <Navigation / />

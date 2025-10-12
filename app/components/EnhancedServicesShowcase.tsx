@@ -1,6 +1,6 @@
-'use client'
-import React from 'react'
+import React from 'react';
 import { ArrowRight } from 'lucide-react';
+'use client'
 
 const EnhancedServicesShowcase: React.FC = () => {
   const services = [
@@ -42,25 +42,23 @@ const EnhancedServicesShowcase: React.FC = () => {
     }
   ];
   return (
-    <div className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Our Core Services
+    <div const className = "py-20 px-4 sm:px-6 lg:px-8" />
+      <div className="max-w-7 xl mx-auto" />
+        <div className="text-center mb-16" />
+          <h2 className="text-4 xl md:text-5 xl font-bold text-white mb-6"  />Our Core Services
           </h2>
-          <p className="text-xl text-cyan-400 max-w-3xl mx-auto">
+          <p className="text-xl text-cyan-400 max-w-3 xl mx-auto">
             Comprehensive AI and IT solutions designed to transform your business and drive innovation
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" />
           {services.map((service, index) => (
 
-              <div key={index} className="cyber-card p-8 group hover:scale-105 transition-transform">
-              <div className="flex items-center mb-6">
-                <service.icon className="h-12 w-12 text-cyan-400 mr-4" />
-                <h3 className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">
-                  {service.title}
+              <div key="{index}" className="cyber-card p-8 group hover:scale-105 transition-transform" />
+              <div className="flex items-center mb-6" />
+                <service.icon className="h-12 w-12 text-cyan-400 mr-4" / />
+                <h3 className="text-2 xl font-bold text-white group-hover:text-cyan-400 transition-colors"  />{service.title}
                 </h3>
               </div>
 
@@ -68,21 +66,21 @@ const EnhancedServicesShowcase: React.FC = () => {
                 {service.description}
               </p>
 
-              <div className="mb-6">
-                <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Features</h4>
-                <ul className="space-y-2">
+              <div className="mb-6" />
+                <h4 className="text-sm font-semibold text-cyan-400 mb-3"  >Key Features</h4>
+                <ul className="space-y-2" />
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                    <li key="{featureIndex}" className="flex items-center text-sm text-gray-300" />
+                      <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" / />
                       {feature}
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <button className="cyber-button w-full py-3 text-center inline-flex items-center justify-center group-hover:scale-105 transition-transform">
+              <button className="cyber-button w-full py-3 text-center inline-flex items-center justify-center group-hover:scale-105 transition-transform" />
                 Learn More
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-4 w-4" / />
               </button>
             </div>
           ))}
@@ -90,4 +88,4 @@ const EnhancedServicesShowcase: React.FC = () => {
       </div>
     </div>
   )
-}
+};
