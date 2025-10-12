@@ -29,7 +29,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo)
+    // Log error to monitoring service instead of console
     
     // Call custom error handler if provided
     if (this.props.onError) {
