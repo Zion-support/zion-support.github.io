@@ -1,19 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
-
-export default function Footer() {
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight } from 'lucide-react'
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star } from 'lucide-react'
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star } from 'lucide-react'
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Cpu } from 'lucide-react'
 
 export default function Footer() {
   const aiServices = [
-    { name: 'AI Content Generator', path: '/ai-content-generation' },
+    { name: 'AI Content Generator', path: '/ai-content-generator' },
     { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
     { name: 'AI Email Assistant', path: '/ai-email-assistant' },
@@ -26,11 +17,12 @@ export default function Footer() {
   ];
 
   const itServices = [
-    { name: 'Cloud Migration', path: '/cloud-migration' },
-    { name: 'DevOps Solutions', path: '/devops-solutions' },
-    { name: 'Cybersecurity', path: '/cybersecurity' },
-    { name: 'Data Analytics', path: '/data-analytics' },
+    { name: 'Web Development', path: '/web-development' },
     { name: 'Mobile Development', path: '/mobile-development' },
+    { name: 'DevOps', path: '/devops' },
+    { name: 'Data Analytics', path: '/data-analytics' },
+    { name: 'Cloud Services', path: '/cloud-services' },
+    { name: 'Cybersecurity', path: '/cybersecurity' },
     { name: 'Blockchain Solutions', path: '/blockchain' },
     { name: 'Quantum Computing', path: '/quantum-computing-solutions' }
   ];
@@ -45,73 +37,36 @@ export default function Footer() {
     { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' }
   ];
 
-  const quickLinks = [
-    { name: 'Mobile App Development', path: '/mobile-development' },
-    { name: 'AI Automation', path: '/ai-automation' },
-    { name: 'AI Computer Vision', path: '/ai-computer-vision' },
-    { name: 'AI Data Analytics', path: '/ai-data-analytics' }
-  ]
-
-  const itServices = [
-    { name: 'Web Development', path: '/web-development' },
-    { name: 'Mobile Development', path: '/mobile-development' },
-    { name: 'DevOps', path: '/devops' },
-    { name: 'Data Analytics', path: '/data-analytics' },
-    { name: 'Cloud Services', path: '/cloud-services' },
-    { name: 'Cybersecurity', path: '/cybersecurity' }
-  ]
+  const fiveGServices = [
+    { name: '5G Implementation', path: '/5g-implementation' },
+    { name: '5G Network Infrastructure', path: '/5g-network-infrastructure' },
+    { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
+    { name: '5G Edge Computing', path: '/5g-edge-computing' },
+    { name: '5G Private Networks', path: '/5g-private-networks' },
+    { name: '5G Mobile Applications', path: '/5g-mobile-applications' },
+    { name: '5G Data Analytics', path: '/5g-data-analytics' }
+  ];
 
   const companyLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'IT Services', path: '/it-services' },
-    { name: 'Micro SAAS', path: '/micro-saas-services' },
-    { name: '5G Solutions', path: '/5g-implementation' },
-    { name: 'Contact', path: '/contact' }
-  ];
-
-  const legalPages = [
+    { name: 'Contact', path: '/contact' },
     { name: 'Privacy Policy', path: '/privacy' },
     { name: 'Terms of Service', path: '/terms' }
   ];
 
-  return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-400 mb-4">
-              Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.
-            </p>
-            <div className="space-y-3">
-              <div className="flex items-center text-gray-300">
-                <Mail className="w-4 h-4 mr-3" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center text-gray-300">
-                <Phone className="w-4 h-4 mr-3" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center text-gray-300">
-                <MapPin className="w-4 h-4 mr-3" />
-                <span>364 E Main St STE 1008 Middletown DE 19709</span>
-              </div>
-
   const supportLinks = [
-    { name: 'Contact Us', path: '/contact' },
     { name: 'Help Center', path: '/help' },
     { name: 'Documentation', path: '/docs' },
     { name: 'Support', path: '/support' },
     { name: 'Status', path: '/status' },
     { name: 'SLA', path: '/sla' }
-  ]
+  ];
 
   return (
     <footer className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
@@ -127,13 +82,13 @@ export default function Footer() {
               Transform your business with cutting-edge technology.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
+              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
             </div>
@@ -141,8 +96,8 @@ export default function Footer() {
 
           {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <Brain className="w-5 h-5 mr-2 text-cyan-400" />
               AI Services
             </h3>
             <ul className="space-y-3">
@@ -162,12 +117,33 @@ export default function Footer() {
 
           {/* IT Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">IT Services</h3>
-            <ul className="space-y-2">
+            <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <Shield className="w-5 h-5 mr-2 text-green-400" />
               IT Services
             </h3>
             <ul className="space-y-3">
               {itServices.map((service, index) => (
+                <li key={index}>
+                  <Link
+                    to={service.path}
+                    className="text-gray-300 hover:text-green-400 transition-colors flex items-center"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Micro SAAS Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <Cpu className="w-5 h-5 mr-2 text-purple-400" />
+              Micro SAAS
+            </h3>
+            <ul className="space-y-3">
+              {microSaasServices.map((service, index) => (
                 <li key={index}>
                   <Link
                     to={service.path}
@@ -181,70 +157,21 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Micro SAAS Services */}
+          {/* 5G Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <Globe className="w-5 h-5 mr-2 text-green-400" />
-              Company
+            <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <Wifi className="w-5 h-5 mr-2 text-yellow-400" />
+              5G Solutions
             </h3>
             <ul className="space-y-3">
-              {companyLinks.map((link, index) => (
+              {fiveGServices.map((service, index) => (
                 <li key={index}>
                   <Link
-                    to={link.path}
-                    className="text-gray-300 hover:text-green-400 transition-colors flex items-center"
+                    to={service.path}
+                    className="text-gray-300 hover:text-yellow-400 transition-colors flex items-center"
                   >
                     <ArrowRight className="w-3 h-3 mr-2" />
                     {service.name}
-          {/* Company & Support */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2 mb-6">
-              {companyLinks.map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    to={link.path} 
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2 mb-6">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    to={link.path} 
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <h3 className="text-lg font-semibold mb-4">Legal</h3>
-            <ul className="space-y-2">
-              {legalPages.map((page) => (
-                <li key={page.name}>
-            <h3 className="text-lg font-semibold mb-6 mt-8 flex items-center">
-              <Shield className="w-5 h-5 mr-2 text-red-400" />
-              Support
-            </h3>
-            <ul className="space-y-3">
-              {supportLinks.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    to={link.path}
-                    className="text-gray-300 hover:text-red-400 transition-colors flex items-center"
-                  >
-                    <ArrowRight className="w-3 h-3 mr-2" />
-                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -253,7 +180,7 @@ export default function Footer() {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
+        <div className="border-t border-white/10 mt-12 pt-8">
           <div className="max-w-md mx-auto text-center">
             <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
             <p className="text-gray-300 mb-4">
@@ -271,20 +198,6 @@ export default function Footer() {
               </button>
             </div>
           </div>
-        </div>
-
-        {/* Bottom Footer */}
-        <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
-              <p className="text-gray-400 text-sm">
-                © 2024 Zion Tech Group. All rights reserved.
-              </p>
-            </div>
-            <div className="mt-4 md:mt-0">
-              <p className="text-gray-500 text-xs">
-                Built with ❤️ by Zion Tech Group
-              </p>
         </div>
 
         {/* Company & Support Links */}
@@ -321,13 +234,6 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-              <div className="flex space-x-6">
-                {legal.map((item, index) => (
-                  <Link key={index} to={item.path} className="text-gray-400 hover:text-white transition-colors text-sm">
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
           </div>
         </div>
 
@@ -338,22 +244,21 @@ export default function Footer() {
               <Mail className="w-5 h-5 text-cyan-400 mr-3" />
               <div>
                 <p className="text-sm text-gray-400">Email</p>
-                <p className="text-white">contact@ziontechgroup.com</p>
+                <p className="text-white">kleber@ziontechgroup.com</p>
               </div>
             </div>
             <div className="flex items-center">
               <Phone className="w-5 h-5 text-purple-400 mr-3" />
               <div>
                 <p className="text-sm text-gray-400">Phone</p>
-                <p className="text-white">+1 (555) 123-4567</p>
+                <p className="text-white">+1 (302) 464-0950</p>
               </div>
             </div>
             <div className="flex items-center">
               <MapPin className="w-5 h-5 text-green-400 mr-3" />
-              <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
               <div>
                 <p className="text-sm text-gray-400">Location</p>
-                <p className="text-white">San Francisco, CA</p>
+                <p className="text-white">364 E Main St STE 1008, Middletown DE 19709</p>
               </div>
             </div>
           </div>
@@ -379,9 +284,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
-};
-  )
-}
-  )
 }

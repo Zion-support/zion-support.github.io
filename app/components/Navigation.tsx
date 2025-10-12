@@ -20,68 +20,20 @@ export default function Navigation() {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
   }
 
-  const services = [
-    {
-      title: 'AI Services',
-      href: '/ai-services',
-      icon: <Brain className="w-4 h-4" />,
-      description: 'Advanced AI solutions',
-      submenu: [
-        { title: 'AI Content Generator', href: '/ai-content-generator' },
-        { title: 'AI Chatbot Builder', href: '/ai-chatbot-builder' },
-        { title: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
-        { title: 'AI Email Assistant', href: '/ai-email-assistant' },
-        { title: 'AI Voice Assistant', href: '/ai-voice-assistant' },
-        { title: 'AI Automation', href: '/ai-automation' },
-        { title: 'AI 3D Generation', href: '/ai-3d-generation' },
-        { title: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' }
-      ]
-    },
-    {
-      title: 'IT Services',
-      href: '/it-services',
-      icon: <Code className="w-4 h-4" />,
-      description: 'Comprehensive IT solutions',
-      submenu: [
-        { title: 'Cloud Migration', href: '/cloud-migration' },
-        { title: 'Cybersecurity Solutions', href: '/cybersecurity-solutions' },
-        { title: 'DevOps & CI/CD', href: '/devops-cicd' },
-        { title: 'Data Analytics', href: '/data-analytics' },
-        { title: 'Mobile Development', href: '/mobile-development' },
-        { title: 'Web Development', href: '/web-development' },
-        { title: 'Quantum Computing', href: '/quantum-computing-solutions' }
-      ]
-    },
-    {
-      title: 'Micro SAAS',
-      href: '/micro-saas-services',
-      icon: <Cpu className="w-4 h-4" />,
-      description: 'Specialized micro services',
-      submenu: [
-        { title: 'AI Task Manager', href: '/ai-task-manager' },
-        { title: 'AI Expense Tracker', href: '/ai-expense-tracker' },
-        { title: 'AI Password Manager', href: '/ai-password-manager' },
-        { title: 'AI Invoice Generator', href: '/ai-invoice-generator' },
-        { title: 'AI Health Tracker', href: '/ai-health-tracker' },
-        { title: 'AI Smart Calendar', href: '/ai-smart-calendar' },
-        { title: 'AI Climate Solutions', href: '/ai-climate-solutions-pro' }
-      ]
-    },
-    {
-      title: '5G Solutions',
-      href: '/5g-implementation',
-      icon: <Wifi className="w-4 h-4" />,
-      description: 'Next-gen connectivity',
-      submenu: [
-        { title: '5G Network Infrastructure', href: '/5g-network-infrastructure' },
-        { title: '5G Private Networks', href: '/5g-private-networks' },
-        { title: '5G IoT Solutions', href: '/5g-iot-solutions' },
-        { title: '5G Edge Computing', href: '/5g-edge-computing' },
-        { title: '5G Mobile Applications', href: '/5g-mobile-applications' },
-        { title: '5G Data Analytics', href: '/5g-data-analytics' }
-      ]
-    }
-  ]
+  const closeDropdown = () => {
+    setActiveDropdown(null)
+  }
+
+  const aiServices = [
+    { name: 'AI Content Generator', path: '/ai-content-generator' },
+    { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
+    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
+    { name: 'AI Email Assistant', path: '/ai-email-assistant' },
+    { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
+    { name: 'AI Automation', path: '/ai-automation' },
+    { name: 'AI 3D Generation', path: '/ai-3d-generation' },
+    { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' }
+  ];
 
   const itServices = [
     { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
@@ -90,7 +42,7 @@ export default function Navigation() {
     { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'Cloud Services', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> },
     { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> }
-  ]
+  ];
 
   const fiveGServices = [
     { name: '5G Implementation', path: '/5g-implementation', icon: <Wifi className="w-4 h-4" /> },
@@ -99,7 +51,17 @@ export default function Navigation() {
     { name: '5G Edge Computing', path: '/5g-edge-computing', icon: <Cpu className="w-4 h-4" /> },
     { name: '5G Private Networks', path: '/5g-private-networks', icon: <Shield className="w-4 h-4" /> },
     { name: '5G Mobile Applications', path: '/5g-mobile-applications', icon: <Smartphone className="w-4 h-4" /> }
-  ]
+  ];
+
+  const microSaasServices = [
+    { name: 'AI Task Manager', path: '/ai-task-manager' },
+    { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
+    { name: 'AI Password Manager', path: '/ai-password-manager' },
+    { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
+    { name: 'AI Health Tracker', path: '/ai-health-tracker' },
+    { name: 'AI Smart Calendar', path: '/ai-smart-calendar' },
+    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' }
+  ];
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -142,8 +104,8 @@ export default function Navigation() {
                       onClick={closeDropdown}
                       className="flex items-center px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
                     >
-                      {service.icon}
-                      <span className="ml-3">{service.name}</span>
+                      <Brain className="w-4 h-4 mr-3" />
+                      <span>{service.name}</span>
                     </Link>
                   ))}
                 </div>
@@ -170,6 +132,32 @@ export default function Navigation() {
                     >
                       {service.icon}
                       <span className="ml-3">{service.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Micro SAAS Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('saas')}
+                className="flex items-center text-white hover:text-cyan-400 transition-colors"
+              >
+                Micro SAAS
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              {activeDropdown === 'saas' && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
+                  {microSaasServices.map((service, index) => (
+                    <Link
+                      key={index}
+                      to={service.path}
+                      onClick={closeDropdown}
+                      className="flex items-center px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
+                    >
+                      <Cpu className="w-4 h-4 mr-3" />
+                      <span>{service.name}</span>
                     </Link>
                   ))}
                 </div>
@@ -212,30 +200,6 @@ export default function Navigation() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white p-2"
-                </div>
-              ))}
-              
-              {quickLinks.map((link) => (
-                <Link
-                  key={link.title}
-                  to={link.href}
-                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                >
-                  {link.title}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="lg:hidden">
-            <button
-              onClick={toggleMenu}
-              className="text-gray-300 hover:text-white p-2 rounded-md transition-colors"
-              className="text-gray-900 hover:text-purple-600 p-2 rounded-md transition-colors"
-              className="text-white hover:text-neon-cyan p-2 rounded-md transition-all duration-300 hover:bg-neon-cyan/10"
-              className="text-gray-300 hover:text-cyan-400 p-2 rounded-md transition-colors"
-              className="text-white hover:text-cyan-400 transition-colors"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -244,61 +208,144 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden">
+          <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 rounded-lg mt-2">
-              {services.map((service) => (
-                <div key={service.title}>
-                  <button
-                    onClick={() => toggleDropdown(service.title)}
-                    className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between"
-                  >
-                    <div className="flex items-center">
-                      {service.icon}
-                      <span className="ml-2">{service.title}</span>
-                    </div>
-                    <ChevronDown className="w-4 h-4" />
-                  </button>
-                  
-                  {activeDropdown === service.title && (
-                    <div className="pl-6 space-y-1">
-                      {service.submenu.map((item) => (
-                        <Link
-                          key={item.title}
-                          to={item.href}
-                          className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm transition-colors"
-                          onClick={() => {
-                            setActiveDropdown(null)
-                            setIsOpen(false)
-                          }}
-                        >
-                          {item.title}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
+              <Link to="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
+                Home
+              </Link>
+              <Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
+                About
+              </Link>
               
-              {quickLinks.map((link) => (
-                <Link
-                  key={link.title}
-                  to={link.href}
-                  className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors"
-                  onClick={() => setIsOpen(false)}
+              {/* AI Services Mobile */}
+              <div>
+                <button
+                  onClick={() => toggleDropdown('ai-mobile')}
+                  className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between"
                 >
-                  {link.title}
-                </Link>
-              ))}
-                      {service.name}
-                    </Link>
-                  ))}
-                </div>
+                  <div className="flex items-center">
+                    <Brain className="w-4 h-4 mr-2" />
+                    <span>AI Services</span>
+                  </div>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+                
+                {activeDropdown === 'ai-mobile' && (
+                  <div className="pl-6 space-y-1">
+                    {aiServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.path}
+                        className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm transition-colors"
+                        onClick={() => {
+                          setActiveDropdown(null)
+                          setIsOpen(false)
+                        }}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
 
-              <Link to="/5g-implementation" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors">
-                5G Solutions
-              </Link>
-              <Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors">
+              {/* IT Services Mobile */}
+              <div>
+                <button
+                  onClick={() => toggleDropdown('it-mobile')}
+                  className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between"
+                >
+                  <div className="flex items-center">
+                    <Code className="w-4 h-4 mr-2" />
+                    <span>IT Services</span>
+                  </div>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+                
+                {activeDropdown === 'it-mobile' && (
+                  <div className="pl-6 space-y-1">
+                    {itServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.path}
+                        className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm transition-colors"
+                        onClick={() => {
+                          setActiveDropdown(null)
+                          setIsOpen(false)
+                        }}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Micro SAAS Mobile */}
+              <div>
+                <button
+                  onClick={() => toggleDropdown('saas-mobile')}
+                  className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between"
+                >
+                  <div className="flex items-center">
+                    <Cpu className="w-4 h-4 mr-2" />
+                    <span>Micro SAAS</span>
+                  </div>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+                
+                {activeDropdown === 'saas-mobile' && (
+                  <div className="pl-6 space-y-1">
+                    {microSaasServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.path}
+                        className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm transition-colors"
+                        onClick={() => {
+                          setActiveDropdown(null)
+                          setIsOpen(false)
+                        }}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* 5G Services Mobile */}
+              <div>
+                <button
+                  onClick={() => toggleDropdown('5g-mobile')}
+                  className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between"
+                >
+                  <div className="flex items-center">
+                    <Wifi className="w-4 h-4 mr-2" />
+                    <span>5G Solutions</span>
+                  </div>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+                
+                {activeDropdown === '5g-mobile' && (
+                  <div className="pl-6 space-y-1">
+                    {fiveGServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.path}
+                        className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm transition-colors"
+                        onClick={() => {
+                          setActiveDropdown(null)
+                          setIsOpen(false)
+                        }}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
                 Contact
               </Link>
               
@@ -306,17 +353,6 @@ export default function Navigation() {
                 to="/contact" 
                 className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-2 rounded-lg text-base font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center mt-4"
                 onClick={() => setIsOpen(false)}
-              <Link
-                to="/contact"
-                className="text-gray-900 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition-colors"
-                onClick={toggleMenu}
-              >
-                Contact
-              </Link>
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center mt-4 transition-all duration-300"
-                onClick={toggleMenu}
               >
                 Get Started
               </Link>
