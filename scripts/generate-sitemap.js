@@ -1,10 +1,10 @@
-const fs = require('fs')
-const path = require('path')
+import fs from 'fs'
+import path from 'path'
 
 // Get all page routes
 function getAllRoutes() {
   const routes = []
-  const appDir = path.join(__dirname, '../app')
+  const appDir = path.join(process.cwd(), 'app')
   
   function scanDirectory(dir, basePath = '') {
     const items = fs.readdirSync(dir)
@@ -60,7 +60,7 @@ function generateSitemap() {
   sitemap += `</urlset>`
   
   // Write to public directory
-  const publicDir = path.join(__dirname, '../public')
+  const publicDir = path.join(process.cwd(), 'public')
   if (!fs.existsSync(publicDir)) {
     fs.mkdirSync(publicDir, { recursive: true })
   }
@@ -82,7 +82,7 @@ Disallow: /private/
 Disallow: /api/
 `
   
-  const publicDir = path.join(__dirname, '../public')
+  const publicDir = path.join(process.cwd(), 'public')
   if (!fs.existsSync(publicDir)) {
     fs.mkdirSync(publicDir, { recursive: true })
   }
