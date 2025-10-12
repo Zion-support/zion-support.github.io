@@ -1,88 +1,118 @@
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import { ShoppingCart, Zap, Globe, Target, TrendingUp, Users, Clock, DollarSign, Star, CheckCircle, ArrowRight } from 'lucide-react'
+import AIServicePage from '../components/AIServicePage'
 
-const PagePage: React.FC = () => {
+const AIEcommerceSolutionsPage: React.FC = () => {
   const features = [
+    'AI-powered product recommendations',
+    'Dynamic pricing optimization',
+    'Inventory management',
+    'Customer behavior analysis',
+    'Automated customer service',
+    'Personalized shopping experiences',
+    'Fraud detection and prevention',
+    'Sales forecasting'
+  ]
+
+  const benefits = [
     {
-      title: 'Page',
-      description: 'Professional page services for modern businesses.',
-      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
+      title: 'Increased Sales',
+      description: 'Boost sales by up to 35% with personalized recommendations',
+      icon: <TrendingUp className="w-6 h-6 text-blue-500" />
     },
     {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
+      title: 'Better Customer Experience',
+      description: 'Provide personalized shopping experiences that convert',
+      icon: <Users className="w-6 h-6 text-green-500" />
     },
     {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+      title: 'Cost Optimization',
+      description: 'Reduce operational costs by 40% with intelligent automation',
+      icon: <DollarSign className="w-6 h-6 text-purple-500" />
+    },
+    {
+      title: 'Real-time Insights',
+      description: 'Get real-time insights into customer behavior and preferences',
+      icon: <Target className="w-6 h-6 text-yellow-500" />
     }
-  ];
+  ]
+
+  const useCases = [
+    {
+      title: 'Product Recommendations',
+      description: 'Show customers products they\'re most likely to buy',
+      icon: '🎯'
+    },
+    {
+      title: 'Dynamic Pricing',
+      description: 'Optimize prices based on demand, competition, and inventory',
+      icon: '💰'
+    },
+    {
+      title: 'Inventory Management',
+      description: 'Predict demand and optimize inventory levels automatically',
+      icon: '📦'
+    },
+    {
+      title: 'Customer Service',
+      description: 'Provide 24/7 AI-powered customer support and assistance',
+      icon: '🎧'
+    },
+    {
+      title: 'Personalization',
+      description: 'Create personalized shopping experiences for each customer',
+      icon: '✨'
+    },
+    {
+      title: 'Fraud Prevention',
+      description: 'Detect and prevent fraudulent transactions in real-time',
+      icon: '🛡️'
+    }
+  ]
+
+  const stats = [
+    { number: '35%', label: 'Sales Increase' },
+    { number: '40%', label: 'Cost Reduction' },
+    { number: '95%', label: 'Customer Satisfaction' },
+    { number: '24/7', label: 'AI Support' }
+  ]
+
+  const testimonials = [
+    {
+      name: 'Lisa Park',
+      company: 'E-commerce Manager',
+      content: 'Our conversion rate increased by 40% with AI recommendations. Revenue is up significantly.',
+      rating: 5
+    },
+    {
+      name: 'Tom Anderson',
+      company: 'Online Store Owner',
+      content: 'Dynamic pricing has maximized our profits. The AI adjusts prices perfectly based on demand.',
+      rating: 5
+    },
+    {
+      name: 'Rachel Green',
+      company: 'Marketing Director',
+      content: 'Customer personalization has transformed our shopping experience. Engagement is through the roof.',
+      rating: 5
+    }
+  ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services and solutions." />
-        <meta name="keywords" content="page, services, solutions, technology" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services to help your business succeed and grow.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our page services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Contact Us
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      
-      <Footer />
-    </div>
-  );
-};
+    <AIServicePage
+      title="AI E-commerce Solutions"
+      description="Transform your e-commerce business with AI-powered solutions. Boost sales with personalized recommendations, optimize pricing, manage inventory, and provide exceptional customer experiences."
+      icon={<ShoppingCart className="w-10 h-10 text-white" />}
+      features={features}
+      pricing="Starting at $199/month"
+      benefits={benefits}
+      useCases={useCases}
+      stats={stats}
+      testimonials={testimonials}
+      category="E-commerce"
+      popular={true}
+    />
+  )
+}
 
-export default PagePage;
+export default AIEcommerceSolutionsPage

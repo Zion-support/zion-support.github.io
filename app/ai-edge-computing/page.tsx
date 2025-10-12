@@ -1,88 +1,118 @@
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import { Cpu, Zap, Globe, Target, TrendingUp, Users, Clock, DollarSign, Star, CheckCircle, ArrowRight } from 'lucide-react'
+import AIServicePage from '../components/AIServicePage'
 
-const PagePage: React.FC = () => {
+const AIEdgeComputingPage: React.FC = () => {
   const features = [
+    'Edge AI model deployment',
+    'Real-time data processing',
+    'Low-latency inference',
+    'Distributed computing',
+    'Edge device management',
+    'Data synchronization',
+    'Offline capability',
+    'Edge security and compliance'
+  ]
+
+  const benefits = [
     {
-      title: 'Page',
-      description: 'Professional page services for modern businesses.',
-      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
+      title: 'Ultra-Low Latency',
+      description: 'Achieve sub-millisecond response times with edge processing',
+      icon: <Zap className="w-6 h-6 text-blue-500" />
     },
     {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
+      title: 'Cost Efficiency',
+      description: 'Reduce cloud costs by processing data at the edge',
+      icon: <DollarSign className="w-6 h-6 text-green-500" />
     },
     {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+      title: 'Reliability',
+      description: 'Ensure continuous operation even with network issues',
+      icon: <CheckCircle className="w-6 h-6 text-purple-500" />
+    },
+    {
+      title: 'Scalability',
+      description: 'Scale AI processing across distributed edge devices',
+      icon: <TrendingUp className="w-6 h-6 text-yellow-500" />
     }
-  ];
+  ]
+
+  const useCases = [
+    {
+      title: 'Autonomous Vehicles',
+      description: 'Enable real-time decision making for self-driving cars',
+      icon: '🚗'
+    },
+    {
+      title: 'Industrial IoT',
+      description: 'Process sensor data in manufacturing and industrial settings',
+      icon: '🏭'
+    },
+    {
+      title: 'Smart Cities',
+      description: 'Implement intelligent traffic and infrastructure management',
+      icon: '🏙️'
+    },
+    {
+      title: 'Healthcare',
+      description: 'Enable real-time medical monitoring and diagnosis',
+      icon: '🏥'
+    },
+    {
+      title: 'Retail',
+      description: 'Provide personalized shopping experiences in stores',
+      icon: '🛍️'
+    },
+    {
+      title: 'Security',
+      description: 'Implement real-time surveillance and threat detection',
+      icon: '🔒'
+    }
+  ]
+
+  const stats = [
+    { number: '< 1ms', label: 'Latency' },
+    { number: '50%', label: 'Cost Reduction' },
+    { number: '99.9%', label: 'Uptime' },
+    { number: '24/7', label: 'Processing' }
+  ]
+
+  const testimonials = [
+    {
+      name: 'David Chen',
+      company: 'IoT Director',
+      content: 'Edge computing has transformed our IoT operations. Response times are incredible.',
+      rating: 5
+    },
+    {
+      name: 'Maria Rodriguez',
+      company: 'Smart City Manager',
+      content: 'Traffic management is now real-time and highly efficient. The AI edge processing is amazing.',
+      rating: 5
+    },
+    {
+      name: 'John Smith',
+      company: 'Manufacturing CTO',
+      content: 'Industrial automation has never been more responsive. Edge AI is game-changing.',
+      rating: 5
+    }
+  ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services and solutions." />
-        <meta name="keywords" content="page, services, solutions, technology" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services to help your business succeed and grow.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our page services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Contact Us
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      
-      <Footer />
-    </div>
-  );
-};
+    <AIServicePage
+      title="AI Edge Computing"
+      description="Deploy AI at the edge for ultra-low latency processing. Enable real-time decision making, reduce cloud costs, and ensure reliable operation with intelligent edge computing solutions."
+      icon={<Cpu className="w-10 h-10 text-white" />}
+      features={features}
+      pricing="Starting at $399/month"
+      benefits={benefits}
+      useCases={useCases}
+      stats={stats}
+      testimonials={testimonials}
+      category="Edge Computing"
+      popular={true}
+    />
+  )
+}
 
-export default PagePage;
+export default AIEdgeComputingPage

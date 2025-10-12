@@ -1,88 +1,118 @@
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import { BarChart3, Zap, Globe, Target, TrendingUp, Users, Clock, DollarSign, Star, CheckCircle, ArrowRight } from 'lucide-react'
+import AIServicePage from '../components/AIServicePage'
 
-const PagePage: React.FC = () => {
+const AIAnalyticsDashboardPage: React.FC = () => {
   const features = [
+    'Real-time data visualization',
+    'Predictive analytics',
+    'Custom dashboard creation',
+    'Automated reporting',
+    'Data integration from multiple sources',
+    'AI-powered insights',
+    'Interactive charts and graphs',
+    'Mobile-responsive design'
+  ]
+
+  const benefits = [
     {
-      title: 'Page',
-      description: 'Professional page services for modern businesses.',
-      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
+      title: 'Data-Driven Decisions',
+      description: 'Make informed decisions with real-time insights and predictions',
+      icon: <Target className="w-6 h-6 text-blue-500" />
     },
     {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
+      title: 'Time Savings',
+      description: 'Automate reporting and analysis, saving hours every week',
+      icon: <Clock className="w-6 h-6 text-green-500" />
     },
     {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+      title: 'Predictive Insights',
+      description: 'Forecast trends and identify opportunities before they happen',
+      icon: <TrendingUp className="w-6 h-6 text-purple-500" />
+    },
+    {
+      title: 'Easy Integration',
+      description: 'Connect with your existing tools and data sources seamlessly',
+      icon: <Globe className="w-6 h-6 text-yellow-500" />
     }
-  ];
+  ]
+
+  const useCases = [
+    {
+      title: 'Business Intelligence',
+      description: 'Track KPIs and business performance metrics in real-time',
+      icon: '📊'
+    },
+    {
+      title: 'Sales Analytics',
+      description: 'Monitor sales performance and identify growth opportunities',
+      icon: '💰'
+    },
+    {
+      title: 'Marketing ROI',
+      description: 'Measure marketing campaign effectiveness and ROI',
+      icon: '📈'
+    },
+    {
+      title: 'Customer Insights',
+      description: 'Understand customer behavior and preferences',
+      icon: '👥'
+    },
+    {
+      title: 'Financial Reporting',
+      description: 'Track financial metrics and generate automated reports',
+      icon: '💼'
+    },
+    {
+      title: 'Operational Efficiency',
+      description: 'Monitor operational metrics and optimize processes',
+      icon: '⚙️'
+    }
+  ]
+
+  const stats = [
+    { number: '200+', label: 'Dashboards Created' },
+    { number: '99.9%', label: 'Uptime' },
+    { number: '50%', label: 'Time Saved' },
+    { number: '24/7', label: 'Monitoring' }
+  ]
+
+  const testimonials = [
+    {
+      name: 'Jennifer Walsh',
+      company: 'DataCorp Solutions',
+      content: 'The predictive analytics have helped us identify market trends months in advance. Incredible insights!',
+      rating: 5
+    },
+    {
+      name: 'Robert Kim',
+      company: 'Marketing Pro',
+      content: 'Our reporting time has been reduced from days to minutes. The automated insights are spot-on.',
+      rating: 5
+    },
+    {
+      name: 'Amanda Foster',
+      company: 'Finance First',
+      content: 'The dashboard integration was seamless. We now have a complete view of our business performance.',
+      rating: 5
+    }
+  ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services and solutions." />
-        <meta name="keywords" content="page, services, solutions, technology" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services to help your business succeed and grow.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our page services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Contact Us
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      
-      <Footer />
-    </div>
-  );
-};
+    <AIServicePage
+      title="AI Analytics Dashboard"
+      description="Transform your data into actionable insights with our AI-powered analytics dashboard. Get real-time visualizations, predictive analytics, and automated reporting for better business decisions."
+      icon={<BarChart3 className="w-10 h-10 text-white" />}
+      features={features}
+      pricing="Starting at $79/month"
+      benefits={benefits}
+      useCases={useCases}
+      stats={stats}
+      testimonials={testimonials}
+      category="Data Analytics"
+      popular={true}
+    />
+  )
+}
 
-export default PagePage;
+export default AIAnalyticsDashboardPage

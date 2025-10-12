@@ -1,88 +1,118 @@
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import { DollarSign, Zap, Globe, Target, TrendingUp, Users, Clock, Star, CheckCircle, ArrowRight } from 'lucide-react'
+import AIServicePage from '../components/AIServicePage'
 
-const PagePage: React.FC = () => {
+const AIExpenseTrackerPage: React.FC = () => {
   const features = [
+    'Automated expense categorization',
+    'Receipt scanning and OCR',
+    'Budget tracking and alerts',
+    'Expense reporting and analytics',
+    'Multi-currency support',
+    'Integration with accounting software',
+    'Tax preparation assistance',
+    'Mobile app for on-the-go tracking'
+  ]
+
+  const benefits = [
     {
-      title: 'Page',
-      description: 'Professional page services for modern businesses.',
-      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
+      title: 'Time Savings',
+      description: 'Save 5+ hours per week with automated expense tracking',
+      icon: <Clock className="w-6 h-6 text-blue-500" />
     },
     {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
+      title: 'Accuracy',
+      description: 'Achieve 99%+ accuracy in expense categorization and data entry',
+      icon: <Target className="w-6 h-6 text-green-500" />
     },
     {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+      title: 'Cost Control',
+      description: 'Better control over spending with real-time budget monitoring',
+      icon: <DollarSign className="w-6 h-6 text-purple-500" />
+    },
+    {
+      title: 'Tax Compliance',
+      description: 'Ensure tax compliance with automated expense documentation',
+      icon: <CheckCircle className="w-6 h-6 text-yellow-500" />
     }
-  ];
+  ]
+
+  const useCases = [
+    {
+      title: 'Business Expenses',
+      description: 'Track and manage business expenses for tax deductions',
+      icon: '💼'
+    },
+    {
+      title: 'Travel Expenses',
+      description: 'Automatically track travel expenses and mileage',
+      icon: '✈️'
+    },
+    {
+      title: 'Receipt Management',
+      description: 'Scan and store receipts digitally with OCR extraction',
+      icon: '🧾'
+    },
+    {
+      title: 'Budget Planning',
+      description: 'Create and monitor budgets with AI-powered insights',
+      icon: '📊'
+    },
+    {
+      title: 'Expense Reporting',
+      description: 'Generate detailed expense reports for management',
+      icon: '📈'
+    },
+    {
+      title: 'Tax Preparation',
+      description: 'Prepare tax documents with categorized expense data',
+      icon: '📋'
+    }
+  ]
+
+  const stats = [
+    { number: '10,000+', label: 'Expenses Tracked' },
+    { number: '99%', label: 'Accuracy Rate' },
+    { number: '5+', label: 'Hours Saved Weekly' },
+    { number: '24/7', label: 'Expense Tracking' }
+  ]
+
+  const testimonials = [
+    {
+      name: 'Mike Chen',
+      company: 'Small Business Owner',
+      content: 'Expense tracking is now effortless. The AI categorization is incredibly accurate.',
+      rating: 5
+    },
+    {
+      name: 'Sarah Johnson',
+      company: 'Freelance Consultant',
+      content: 'Tax preparation has never been easier. All expenses are perfectly categorized.',
+      rating: 5
+    },
+    {
+      name: 'Emily Rodriguez',
+      company: 'Sales Manager',
+      content: 'Travel expense tracking is now automated. Saves me hours every week.',
+      rating: 5
+    }
+  ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services and solutions." />
-        <meta name="keywords" content="page, services, solutions, technology" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services to help your business succeed and grow.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our page services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Contact Us
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      
-      <Footer />
-    </div>
-  );
-};
+    <AIServicePage
+      title="AI Expense Tracker"
+      description="Streamline expense management with AI-powered tracking and categorization. Automate receipt processing, budget monitoring, and tax preparation with intelligent expense management solutions."
+      icon={<DollarSign className="w-10 h-10 text-white" />}
+      features={features}
+      pricing="Starting at $15/month"
+      benefits={benefits}
+      useCases={useCases}
+      stats={stats}
+      testimonials={testimonials}
+      category="Finance & Accounting"
+      popular={true}
+    />
+  )
+}
 
-export default PagePage;
+export default AIExpenseTrackerPage

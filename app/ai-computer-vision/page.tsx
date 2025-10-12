@@ -1,88 +1,118 @@
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import { Eye, Zap, Globe, Target, TrendingUp, Users, Clock, DollarSign, Star, CheckCircle, ArrowRight } from 'lucide-react'
+import AIServicePage from '../components/AIServicePage'
 
-const PagePage: React.FC = () => {
+const AIComputerVisionPage: React.FC = () => {
   const features = [
+    'Image recognition and classification',
+    'Object detection and tracking',
+    'Facial recognition and analysis',
+    'OCR and text extraction',
+    'Video analysis and processing',
+    'Quality inspection automation',
+    'Medical image analysis',
+    'Real-time video processing'
+  ]
+
+  const benefits = [
     {
-      title: 'Page',
-      description: 'Professional page services for modern businesses.',
-      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
+      title: 'Automation',
+      description: 'Automate visual tasks that previously required human intervention',
+      icon: <Zap className="w-6 h-6 text-blue-500" />
     },
     {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
+      title: 'Accuracy',
+      description: 'Achieve 99%+ accuracy in image recognition and analysis',
+      icon: <Target className="w-6 h-6 text-green-500" />
     },
     {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+      title: 'Speed',
+      description: 'Process images and videos 100x faster than manual methods',
+      icon: <Clock className="w-6 h-6 text-purple-500" />
+    },
+    {
+      title: 'Cost Efficiency',
+      description: 'Reduce visual inspection costs by up to 80%',
+      icon: <DollarSign className="w-6 h-6 text-yellow-500" />
     }
-  ];
+  ]
+
+  const useCases = [
+    {
+      title: 'Quality Control',
+      description: 'Automate product quality inspection in manufacturing',
+      icon: '🔍'
+    },
+    {
+      title: 'Security Systems',
+      description: 'Implement facial recognition and surveillance systems',
+      icon: '🔒'
+    },
+    {
+      title: 'Medical Imaging',
+      description: 'Analyze medical images for diagnosis and treatment',
+      icon: '🏥'
+    },
+    {
+      title: 'Autonomous Vehicles',
+      description: 'Enable computer vision for self-driving cars',
+      icon: '🚗'
+    },
+    {
+      title: 'Retail Analytics',
+      description: 'Analyze customer behavior and store layouts',
+      icon: '🛍️'
+    },
+    {
+      title: 'Document Processing',
+      description: 'Extract text and data from images and documents',
+      icon: '📄'
+    }
+  ]
+
+  const stats = [
+    { number: '99%', label: 'Accuracy Rate' },
+    { number: '100x', label: 'Faster Processing' },
+    { number: '80%', label: 'Cost Reduction' },
+    { number: '24/7', label: 'Processing' }
+  ]
+
+  const testimonials = [
+    {
+      name: 'David Chen',
+      company: 'Manufacturing Director',
+      content: 'Quality control is now fully automated. Defect detection has improved by 95%.',
+      rating: 5
+    },
+    {
+      name: 'Maria Rodriguez',
+      company: 'Security Manager',
+      content: 'Facial recognition system is incredibly accurate. Security has never been better.',
+      rating: 5
+    },
+    {
+      name: 'John Smith',
+      company: 'Medical Director',
+      content: 'Medical image analysis has improved diagnosis accuracy significantly.',
+      rating: 5
+    }
+  ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services and solutions." />
-        <meta name="keywords" content="page, services, solutions, technology" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services to help your business succeed and grow.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our page services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Contact Us
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      
-      <Footer />
-    </div>
-  );
-};
+    <AIServicePage
+      title="AI Computer Vision"
+      description="Extract insights from images and videos with AI-powered computer vision. Automate quality control, enable facial recognition, and process visual data with intelligent computer vision solutions."
+      icon={<Eye className="w-10 h-10 text-white" />}
+      features={features}
+      pricing="Starting at $299/month"
+      benefits={benefits}
+      useCases={useCases}
+      stats={stats}
+      testimonials={testimonials}
+      category="Computer Vision"
+      popular={true}
+    />
+  )
+}
 
-export default PagePage;
+export default AIComputerVisionPage

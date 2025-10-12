@@ -1,88 +1,118 @@
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import { BarChart3, Zap, Globe, Target, TrendingUp, Users, Clock, DollarSign, Star, CheckCircle, ArrowRight } from 'lucide-react'
+import AIServicePage from '../components/AIServicePage'
 
-const PagePage: React.FC = () => {
+const AIBusinessIntelligencePage: React.FC = () => {
   const features = [
+    'Advanced data visualization',
+    'Predictive analytics and forecasting',
+    'Automated report generation',
+    'Real-time dashboard creation',
+    'Data integration from multiple sources',
+    'Natural language query processing',
+    'Anomaly detection and alerting',
+    'Custom KPI tracking and monitoring'
+  ]
+
+  const benefits = [
     {
-      title: 'Page',
-      description: 'Professional page services for modern businesses.',
-      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
+      title: 'Data-Driven Decisions',
+      description: 'Make informed decisions with comprehensive business insights',
+      icon: <Target className="w-6 h-6 text-blue-500" />
     },
     {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
+      title: 'Predictive Power',
+      description: 'Forecast trends and identify opportunities before they happen',
+      icon: <TrendingUp className="w-6 h-6 text-green-500" />
     },
     {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+      title: 'Time Efficiency',
+      description: 'Reduce analysis time from days to minutes with automation',
+      icon: <Clock className="w-6 h-6 text-purple-500" />
+    },
+    {
+      title: 'Cost Savings',
+      description: 'Reduce BI costs by 60% while improving accuracy and speed',
+      icon: <DollarSign className="w-6 h-6 text-yellow-500" />
     }
-  ];
+  ]
+
+  const useCases = [
+    {
+      title: 'Sales Analytics',
+      description: 'Track sales performance and identify growth opportunities',
+      icon: '💰'
+    },
+    {
+      title: 'Customer Insights',
+      description: 'Analyze customer behavior and preferences for better targeting',
+      icon: '👥'
+    },
+    {
+      title: 'Operational Efficiency',
+      description: 'Monitor and optimize business operations and processes',
+      icon: '⚙️'
+    },
+    {
+      title: 'Financial Reporting',
+      description: 'Generate comprehensive financial reports and analysis',
+      icon: '📊'
+    },
+    {
+      title: 'Market Research',
+      description: 'Conduct market analysis and competitive intelligence',
+      icon: '🔍'
+    },
+    {
+      title: 'Risk Assessment',
+      description: 'Identify and assess business risks using data analysis',
+      icon: '⚠️'
+    }
+  ]
+
+  const stats = [
+    { number: '500+', label: 'Dashboards Created' },
+    { number: '60%', label: 'Cost Reduction' },
+    { number: '90%', label: 'Accuracy Rate' },
+    { number: '24/7', label: 'Analytics' }
+  ]
+
+  const testimonials = [
+    {
+      name: 'Jennifer Walsh',
+      company: 'Business Intelligence Director',
+      content: 'Our decision-making process has been revolutionized. Insights are incredibly accurate.',
+      rating: 5
+    },
+    {
+      name: 'Michael Torres',
+      company: 'Sales Manager',
+      content: 'Sales forecasting is now spot-on. We can plan better and close more deals.',
+      rating: 5
+    },
+    {
+      name: 'Sarah Lee',
+      company: 'Operations Director',
+      content: 'Operational insights have improved efficiency by 40%. The AI analysis is incredible.',
+      rating: 5
+    }
+  ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services and solutions." />
-        <meta name="keywords" content="page, services, solutions, technology" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services to help your business succeed and grow.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our page services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Contact Us
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      
-      <Footer />
-    </div>
-  );
-};
+    <AIServicePage
+      title="AI Business Intelligence"
+      description="Transform your business with AI-powered business intelligence. Get comprehensive insights, predictive analytics, and automated reporting to make data-driven decisions and drive growth."
+      icon={<BarChart3 className="w-10 h-10 text-white" />}
+      features={features}
+      pricing="Starting at $199/month"
+      benefits={benefits}
+      useCases={useCases}
+      stats={stats}
+      testimonials={testimonials}
+      category="Business Intelligence"
+      popular={true}
+    />
+  )
+}
 
-export default PagePage;
+export default AIBusinessIntelligencePage

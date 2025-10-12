@@ -1,88 +1,118 @@
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import { GraduationCap, Zap, Globe, Target, TrendingUp, Users, Clock, DollarSign, Star, CheckCircle, ArrowRight } from 'lucide-react'
+import AIServicePage from '../components/AIServicePage'
 
-const PagePage: React.FC = () => {
+const AIEducationPage: React.FC = () => {
   const features = [
+    'Personalized learning paths',
+    'Adaptive content delivery',
+    'Intelligent tutoring systems',
+    'Automated assessment and grading',
+    'Learning analytics and insights',
+    'Multi-language support',
+    'Interactive learning modules',
+    'Progress tracking and reporting'
+  ]
+
+  const benefits = [
     {
-      title: 'Page',
-      description: 'Professional page services for modern businesses.',
-      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
+      title: 'Personalized Learning',
+      description: 'Adapt content and pace to each student\'s learning style',
+      icon: <Users className="w-6 h-6 text-blue-500" />
     },
     {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
+      title: 'Improved Outcomes',
+      description: 'Increase learning effectiveness by up to 40%',
+      icon: <TrendingUp className="w-6 h-6 text-green-500" />
     },
     {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+      title: 'Time Efficiency',
+      description: 'Reduce teaching preparation time by 60%',
+      icon: <Clock className="w-6 h-6 text-purple-500" />
+    },
+    {
+      title: 'Cost Effective',
+      description: 'Reduce education costs while improving quality',
+      icon: <DollarSign className="w-6 h-6 text-yellow-500" />
     }
-  ];
+  ]
+
+  const useCases = [
+    {
+      title: 'Online Learning',
+      description: 'Create engaging online courses with AI assistance',
+      icon: '💻'
+    },
+    {
+      title: 'Student Assessment',
+      description: 'Automatically grade assignments and provide feedback',
+      icon: '📝'
+    },
+    {
+      title: 'Tutoring Systems',
+      description: 'Provide personalized tutoring and support',
+      icon: '👨‍🏫'
+    },
+    {
+      title: 'Language Learning',
+      description: 'Help students learn new languages with AI assistance',
+      icon: '🌍'
+    },
+    {
+      title: 'Skill Development',
+      description: 'Develop specific skills through targeted learning paths',
+      icon: '🎯'
+    },
+    {
+      title: 'Learning Analytics',
+      description: 'Track student progress and identify areas for improvement',
+      icon: '📊'
+    }
+  ]
+
+  const stats = [
+    { number: '50,000+', label: 'Students Served' },
+    { number: '40%', label: 'Learning Improvement' },
+    { number: '60%', label: 'Time Saved' },
+    { number: '24/7', label: 'Learning Support' }
+  ]
+
+  const testimonials = [
+    {
+      name: 'Dr. Jennifer Walsh',
+      company: 'Education Director',
+      content: 'Student engagement has increased dramatically. The personalized learning paths are game-changing.',
+      rating: 5
+    },
+    {
+      name: 'Michael Torres',
+      company: 'Online Learning Manager',
+      content: 'Course creation is now 5x faster. The AI helps us create engaging content automatically.',
+      rating: 5
+    },
+    {
+      name: 'Sarah Lee',
+      company: 'Language Teacher',
+      content: 'Language learning has never been more effective. Students progress much faster with AI assistance.',
+      rating: 5
+    }
+  ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services and solutions." />
-        <meta name="keywords" content="page, services, solutions, technology" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services to help your business succeed and grow.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our page services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Contact Us
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      
-      <Footer />
-    </div>
-  );
-};
+    <AIServicePage
+      title="AI Education"
+      description="Transform education with AI-powered learning solutions. Create personalized learning experiences, automate assessments, and enhance student outcomes with intelligent educational technology."
+      icon={<GraduationCap className="w-10 h-10 text-white" />}
+      features={features}
+      pricing="Starting at $149/month"
+      benefits={benefits}
+      useCases={useCases}
+      stats={stats}
+      testimonials={testimonials}
+      category="Education"
+      popular={false}
+    />
+  )
+}
 
-export default PagePage;
+export default AIEducationPage
