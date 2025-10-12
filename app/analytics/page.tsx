@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import SEOHead from '../components/SEOHead'
-import { ArrowRight, BarChart3, TrendingUp, PieChart, Activity, Database, Zap, CheckCircle, Star, Globe, Users, DollarSign } from 'lucide-react'
+import { ArrowRight, BarChart3, TrendingUp, PieChart, Activity, Database, Zap, CheckCircle, Globe, Users } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 export default function AnalyticsPage() {

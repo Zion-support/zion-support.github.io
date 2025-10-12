@@ -1,5 +1,6 @@
 ursor/analyze-improve-and-deploy-application-edcb
 'use client'
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
@@ -113,39 +114,92 @@ export default OptimizedImagePage
   </h2>
   </button>
   </span>
+=======
+import React, { useState, useRef, useEffect } from 'react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-4e07
 
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
-        <title>OptimizedImage | Zion Tech Group</title>
-        <meta name="description" content="Professional OptimizedImage services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="OptimizedImage, AI solutions, IT services, Zion Tech Group, optimizedimage" />
-      </Helmet>
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                OptimizedImage
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced optimizedimage solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
+interface OptimizedImageProps {
+  src: string
+  alt: string
+  className?: string
+  width?: number
+  height?: number
+  quality?: number
+  priority?: boolean
+  placeholder?: 'blur' | 'empty'
+  blurDataURL?: string
+  onLoad?: () => void
+  onError?: () => void
+}
+
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  src,
+  alt,
+  className = '',
+  width,
+  height,
+  priority = false,
+  placeholder = 'empty',
+  blurDataURL,
+  onLoad,
+  onError
+}) => {
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [isInView, setIsInView] = useState(priority)
+  const [hasError, setHasError] = useState(false)
+  const imgRef = useRef<HTMLImageElement>(null)
+
+  useEffect(() => {
+    if (priority) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [priority])
+
+  const handleLoad = () => {
+    setIsLoaded(true)
+    onLoad?.()
+  }
+
+  const handleError = () => {
+    setHasError(true)
+    onError?.()
+  }
+
+  const imageStyle = {
+    width: width ? `${width}px` : '100%',
+    height: height ? `${height}px` : 'auto',
+    objectFit: 'cover' as const
+  }
+
+  return (
+    <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
+      {!isLoaded && !hasError && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+          {placeholder === 'blur' && blurDataURL ? (
+            <img
+              src={blurDataURL}
+              alt=""
+              className="w-full h-full object-cover filter blur-sm"
+            />
+          ) : (
+            <div className="w-8 h-8 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
+          )}
         </div>
+<<<<<<< HEAD
       </section>
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
@@ -216,3 +270,25 @@ export default OptimizedImagePage
     </div>)};export default OptimizedImagePage
 }
 'use client'
+=======
+      )}
+      
+      {isInView && (
+        <img
+          src={src}
+          alt={alt}
+          style={imageStyle}
+          onLoad={handleLoad}
+          onError={handleError}
+          className={`transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+          loading={priority ? 'eager' : 'lazy'}
+        />
+      )}
+    </div>
+  )
+}
+
+export default OptimizedImage
+>>>>>>> cursor/fix-errors-and-merge-to-main-4e07
