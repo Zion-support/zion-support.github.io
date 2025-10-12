@@ -1,4 +1,14 @@
+import React, { useEffect } from 'react';
 
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
+
+const Analytics: React.FC = () => {
+  useEffect(() => {
+    const initAnalytics = () => {
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('config', 'GA_MEASUREMENT_ID', {
           page_title: document.title,
@@ -8,10 +18,10 @@
     };
     initAnalytics();
   }, []);
+
   return (
-    <div>Content</div>
+    <div>Analytics Component</div>
   );
-    <>
-      }
+};
 
-
+export default Analytics;
