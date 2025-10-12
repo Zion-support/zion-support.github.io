@@ -49,8 +49,7 @@ const ServicesPage: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Services
-  </
-              <br />
+  
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -146,7 +145,6 @@ export default ServicesPage
   </button>
   </span>
 
-const ServicesPage: React.FC = () => {const features = [
     {icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'}

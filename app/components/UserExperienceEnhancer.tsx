@@ -1,48 +1,61 @@
 'use client'
-import React from 'react'
-'use client'
 import React, { useEffect, useState } from 'react'
+import { Heart, Star, ThumbsUp, MessageCircle } from 'lucide-react'
+
 interface UserExperienceEnhancerProps {
-  children: React.ReactNode}
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {
+  children: React.ReactNode
+  className?: string
+}
+
+const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ 
+  children, 
+  className = '' 
+}) => {
   const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({})
+  const [feedback, setFeedback] = useState<{
+    rating: number
+    comment: string
+    submitted: boolean
+  }>({
+    rating: 0,
+    comment: '',
+    submitted: false
+  })
+
   useEffect(() => {
     // UX enhancement logic
     const enhanceUX = () => {
       // Add smooth scrolling
       document.documentElement.style.scrollBehavior = 'smooth'
+      
       // Add loading states for interactive elements
 
 interface UserExperienceEnhancerProps {children: React.ReactNode}
 }
 
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {}
-  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});useEffect(() => {// UX enhancement logic
-    const enhanceUX = (// Add smooth scrolling
       document.documentElement.style.scrollBehavior = 'smooth';// Add loading states for interactive elements
       const interactiveElements = document.querySelectorAll('button, a, input')
-      interactiveElements.forEach((element, index) => {) => {
-  return (
-    $3
-  )}
-        element.addEventListener('click', () => {}
+      interactiveElements.forEach((element, index) => {
+        element.addEventListener('click', () => {
           setLoadingStates(prev => ({ ...prev, [index]: true }))
-          setTimeout(() => {}
-            setLoadingStates(prev => ({ ...prev, [index]: false }))}, 1000)})})
-      // Add focus indicators
+          setTimeout(() => {
+            setLoadingStates(prev => ({ ...prev, [index]: false }))
+          }, 1000)
+        })
+      })
 
       // Add focus indicators
       const style = document.createElement('style')
       style.textContent = `
-        *:focus {outline: 2px solid #06b6d4
-          outline-offset: 2px,}
+        *:focus {
+          outline: 2px solid #3B82F6;
+          outline-offset: 2px;
+        }
+        .smooth-transition {
+          transition: all 0.3s ease-in-out;
         }
       `
-      document.head.appendChild(style)}
-    enhanceUX()}, [])
-  return <React.Fragment>{children}</React.Fragment>}
-export default UserExperienceEnhancer
-  </UserExperienceEnhancerProps>
+      document.head.appendChild(style)
 
     enhanceUX()}, []);return <>{children}</>};export default UserExperienceEnhancer
 }

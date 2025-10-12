@@ -1,82 +1,31 @@
-<<<<<<< HEAD
-ursor/website-audit-and-update-with-deployment-a178
-=======
-'use client'
-import React, { useState, useEffect } from 'react'
-import { ArrowRight, Zap, Shield, Brain, Globe, BarChart3, Clock, TrendingUp } from 'lucide-react'
-
-interface PerformanceMetrics {
-  loadTime: number
-  renderTime: number
-  memoryUsage: number
-  cpuUsage: number
-  networkLatency: number
-}
-
-const EnhancedPerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    cpuUsage: 0,
-    networkLatency: 0
-  })
-
-  const [isMonitoring, setIsMonitoring] = useState(false)
-
-  useEffect(() => {
-    if (isMonitoring) {
-      const interval = setInterval(() => {
-        updateMetrics()
-      }, 1000)
-
-      return () => clearInterval(interval)
-    }
-  }, [isMonitoring])
-
-  const updateMetrics = () => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory
-
-      setMetrics({
-        loadTime: navigation ? Math.round(navigation.loadEventEnd - navigation.loadEventStart) : 0,
-        renderTime: navigation ? Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart) : 0,
-        memoryUsage: memory ? Math.round(memory.usedJSHeapSize / 1024 / 1024) : 0,
-        cpuUsage: Math.round(Math.random() * 100), // Simulated CPU usage
-        networkLatency: Math.round(Math.random() * 100) // Simulated network latency
-      })
-    }
-  }
-
-  const features = [
-    {
-      icon: <BarChart3 className="w-8 h-8 text-blue-500" />,
-      title: 'Real-time Monitoring',
-      description: 'Monitor your application performance in real-time with detailed metrics and analytics.'
-    },
-    {
-<<<<<<< HEAD
-=======
+ursor/
+      icon: Zap,
+      title: 'Real-time Analytics',
+      description: 'Lightning-fast performance monitoring with instant alerts and insights'
       icon: <Clock className="w-8 h-8 text-green-500" />,
       title: 'Performance Tracking',
       description: 'Track load times, render performance, and user experience metrics.'
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-purple-500" />,
-      title: 'Optimization Insights',
-      description: 'Get actionable insights to optimize your application performance.'
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards for monitoring data'
     },
     {
-      icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: 'Error Tracking',
-      description: 'Monitor and track errors to ensure application stability.'
->>>>>>> cursor/fix-errors-and-merge-to-main-5945
+      icon: Globe,
+      title: 'Global Monitoring',
+      description: 'Worldwide performance monitoring and support for international businesses'
     }
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Enhanced Performance Monitor | Zion Tech Group</title>
+        <meta name="description" content="Professional performance monitoring services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="performance monitoring, AI solutions, IT services, Zion Tech Group, system monitoring" />
+      </Helmet>
+      
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -104,15 +53,12 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       {/* Metrics Display */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-=======
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Performance Metrics
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Real-time performance data and analytics
->>>>>>> cursor/fix-errors-and-merge-to-main-5945
             </p>
           </div>
           
@@ -164,11 +110,10 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-<<<<<<< HEAD
-=======
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Performance Monitoring?
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Key Features
->>>>>>> cursor/fix-errors-and-merge-to-main-5945
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive performance monitoring and optimization tools
@@ -181,17 +126,18 @@ const EnhancedPerformanceMonitor: React.FC = () => {
                 <div className="flex items-center mb-4">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-bold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-072b
-=======
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -209,7 +155,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
               Contact Us
             </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-5945
           </div>
         </div>
       </section>

@@ -1,13 +1,9 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-072b
-=======
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-5945
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const FuturisticHeroPage: React.FC = () => {
   const features = [
@@ -52,11 +48,6 @@ const FuturisticHeroPage: React.FC = () => {
         <meta name="keywords" content="futuristic hero, AI solutions, IT services, Zion Tech Group, hero solutions" />
       </Helmet>
       
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-072b
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5945
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -70,11 +61,6 @@ const FuturisticHeroPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced futuristic hero solutions. 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-072b
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5945
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -108,11 +94,6 @@ const FuturisticHeroPage: React.FC = () => {
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-072b
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5945
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
@@ -131,11 +112,6 @@ const FuturisticHeroPage: React.FC = () => {
               Experience the power of our futuristic hero solutions for your business.
             </p>
           </div>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-072b
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5945
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
@@ -165,15 +141,6 @@ const FuturisticHeroPage: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-fabc
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-072b
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7720
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5945
           </div>
         </div>
       </section>

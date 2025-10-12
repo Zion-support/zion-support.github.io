@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ursor/analyze-improve-and-deploy-application-c354
 
       // Measure Time to First Byte (TTFB)
@@ -48,7 +47,6 @@ ursor/analyze-improve-and-deploy-application-c354
 }
 
 export default PerformanceMonitor
-=======
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -131,4 +129,3 @@ const PerformanceMonitor: React.FC = () => {
 };
 
 export default PerformanceMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-5945

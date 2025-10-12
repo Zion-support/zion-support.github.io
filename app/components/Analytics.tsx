@@ -1,42 +1,7 @@
-<<<<<<< HEAD
-ursor/website-audit-and-update-with-deployment-a178
-=======
-'use client'
-import React, { useEffect } from 'react'
-
-interface AnalyticsProps {
-  enableGoogleAnalytics?: boolean
-  enablePerformanceMonitoring?: boolean
-  enableErrorTracking?: boolean
-  enableUserBehaviorTracking?: boolean
-}
-
-const Analytics: React.FC<AnalyticsProps> = ({
-  enableGoogleAnalytics = true,
-  enablePerformanceMonitoring = true,
-  enableErrorTracking = true,
-  enableUserBehaviorTracking = true
-}) => {
-  useEffect(() => {
-    if (enableGoogleAnalytics) {
-      initializeGoogleAnalytics()
-    }
-    if (enablePerformanceMonitoring) {
-      initializePerformanceMonitoring()
-    }
-    if (enableErrorTracking) {
-      initializeErrorTracking()
-    }
-    if (enableUserBehaviorTracking) {
-      initializeUserBehaviorTracking()
-    }
-  }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking])
-
-  const initializeGoogleAnalytics = () => {
-<<<<<<< HEAD
-=======
+ursor/
+    // Load Google Analytics
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'GA_MEASUREMENT_ID', {
+      window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
         page_title: document.title,
         page_location: window.location.href
       })
@@ -44,53 +9,54 @@ const Analytics: React.FC<AnalyticsProps> = ({
   }
 
   const initializePerformanceMonitoring = () => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'navigation') {
-            console.log('Navigation timing:', entry)
-          } else if (entry.entryType === 'paint') {
-            console.log('Paint timing:', entry)
-          }
-        }
+    // Initialize performance monitoring
+    if (typeof window !== 'undefined') {
+      // Monitor Core Web Vitals
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+        getCLS(console.log)
+        getFID(console.log)
+        getFCP(console.log)
+        getLCP(console.log)
+        getTTFB(console.log)
       })
-      
-      observer.observe({ entryTypes: ['navigation', 'paint'] })
     }
   }
 
   const initializeErrorTracking = () => {
     if (typeof window !== 'undefined') {
       window.addEventListener('error', (event) => {
-        console.error('JavaScript error:', event.error)
-        // Send error to analytics service
+        console.error('JavaScript Error:', {
+          message: event.message,
+          filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno,
+          error: event.error
+        })
       })
-      
+
+  const initializeGoogleAnalytics = () => {
       window.addEventListener('unhandledrejection', (event) => {
-        console.error('Unhandled promise rejection:', event.reason)
-        // Send error to analytics service
->>>>>>> cursor/fix-errors-and-merge-to-main-5945
+        console.error('Unhandled Promise Rejection:', event.reason)
+        // Send to error tracking service
       })
     }
   }
 
   const initializeUserBehaviorTracking = () => {
+    // Initialize user behavior tracking
     if (typeof window !== 'undefined') {
       // Track page views
       const trackPageView = () => {
-        if (window.gtag) {
-          window.gtag('event', 'page_view', {
-            page_title: document.title,
-            page_location: window.location.href
-          })
-        }
+        console.log('Page View:', {
+          url: window.location.href,
+          title: document.title,
+          timestamp: new Date().toISOString()
+        })
       }
 
       // Track clicks
       const trackClick = (event: Event) => {
         const target = event.target as HTMLElement
-<<<<<<< HEAD
-=======
         if (target.tagName === 'A' || target.tagName === 'BUTTON') {
           if (window.gtag) {
             window.gtag('event', 'click', {
@@ -98,13 +64,25 @@ const Analytics: React.FC<AnalyticsProps> = ({
               event_label: target.textContent || target.getAttribute('aria-label') || 'unknown'
             })
           }
->>>>>>> cursor/fix-errors-and-merge-to-main-5945
         }
       }
 
       // Track scroll depth
-<<<<<<< HEAD
-=======
+            })
+          }
+        }
+      }
+
+      // Track scroll depth
+      let maxScrollDepth = 0
+      const trackScroll = () => {
+        const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
+        if (scrollPercent > maxScroll) {
+          maxScroll = scrollPercent
+          if (window.gtag) {
+            window.gtag('event', 'scroll', {
+              event_category: 'engagement',
+              event_label: `${scrollPercent}%`
       let maxScrollDepth = 0
       const trackScrollDepth = () => {
         const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
@@ -114,21 +92,18 @@ const Analytics: React.FC<AnalyticsProps> = ({
             window.gtag('event', 'scroll', {
               event_category: 'engagement',
               event_label: `${scrollDepth}%`
->>>>>>> cursor/fix-errors-and-merge-to-main-5945
             })
           }
         }
       }
 
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-072b
-=======
+      // Add event listeners
       // Initialize tracking
       trackPageView()
       document.addEventListener('click', trackClick)
-      window.addEventListener('scroll', trackScrollDepth)
+      window.addEventListener('scroll', trackScroll)
+      trackPageView()
 
->>>>>>> cursor/fix-errors-and-merge-to-main-5945
       // Cleanup
       return () => {
         document.removeEventListener('click', trackClick)

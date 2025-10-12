@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 ursor/analyze-improve-and-deploy-application-c354
-=======
 'use client'
 import React, { useEffect, useState } from 'react'
 
@@ -111,4 +109,3 @@ const AccessibilityEnhancer: React.FC = () => {
 }
 
 export default AccessibilityEnhancer
->>>>>>> cursor/fix-errors-and-merge-to-main-5945

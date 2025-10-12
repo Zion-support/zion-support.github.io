@@ -1,6 +1,5 @@
 'use client';
 
-
   fcp: number | null;
   lcp: number | null;
   fid: number | null;
@@ -38,7 +37,6 @@
 
     // Measure First Input Delay (FID)
         
-          const entries = list.getEntries();
               entry.entryType === 'first-input' &&
               'processingStart' in entry &&
               'startTime' in entry
@@ -56,7 +54,6 @@
     // Measure Cumulative Layout Shift (CLS)
         let clsValue = 0;
         
-          const entries = list.getEntries();
               entry.entryType === 'layout-shift' &&
               'hadRecentInput' in entry &&
               'value' in entry

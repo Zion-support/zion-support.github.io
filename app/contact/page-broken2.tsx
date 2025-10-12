@@ -11,7 +11,6 @@ import { Helmet } from 'react-helmet-async'
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   
   });const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
     setSubmitStatus('idle');try {// Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 1000))
       setSubmitStatus('success')

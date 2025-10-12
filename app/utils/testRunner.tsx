@@ -226,12 +226,10 @@
   async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageMetrics }> {}
     // This would typically use Istanbul or similar
     // For now, we'll just return a placeholder
-    const coverage: CoverageMetrics = {}
       lines: 85}
     }
     
     results: Array<{ name: string; type: string; passed: boolean; error?: string }>}> {}
-    const results: Array<{ name: string; type: string; passed: boolean; error?: string }> = []
     for (const test of tests) {let result
       switch (test.type) {case 'component':
           result = await this.runComponentTest(}
@@ -312,10 +310,8 @@
       results.push({/* TODO: Fix JSX expression */})
   e: test.type })}
     
-    const mockData: Array<{ id: number; name: string; description: string; createdAt: string; updatedAt: string }> = []
     for (let i = 0; i 
   createMockData: (type: string, count: number = 10) => {}
-    const mockData: Array<{ id: number; name: string; description: string; createdAt: string; updatedAt: string }> = []
     for (let i = 0; i 
     return new Promise((resolve, reject) => {// Wait for element to appear}
   waitForElement: (selector: string, timeout: number = 5000) => {}
