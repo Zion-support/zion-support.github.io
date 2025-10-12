@@ -8,13 +8,6 @@ interface AnimatedCounterProps {
   suffix?: string;
 }
 
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
-  end,
-  duration = 2000,
-  className = '',
-  prefix = '',
-  suffix = ''
-}) => {
 export default function AnimatedCounter({ 
   end, 
   duration = 2000, 

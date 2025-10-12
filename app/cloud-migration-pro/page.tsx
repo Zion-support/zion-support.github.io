@@ -3,10 +3,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Cloud, Shield, Zap, CheckCircle } from 'lucide-react';
-
-export default function CloudMigrationPro() {
-import { Cloud, Shield, Zap, Database, Users } from 'lucide-react';
+import { Cloud, Shield, Zap, CheckCircle, Database, Users } from 'lucide-react';
 import Layout from '../layout';
 
 export default function CloudMigrationProPage() {
@@ -283,9 +280,12 @@ export default function CloudMigrationPro() {
                   <div className="text-4xl font-bold text-cyan-400 mb-4">{step.step}</div>
                   <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
                   <p className="text-gray-300">{step.description}</p>
-        </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
-        {/* Features Section */}
+          {/* Features Section */}
         <div className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -331,7 +331,15 @@ export default function CloudMigrationPro() {
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="text-gray-300 flex items-center">
                         <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
-        </div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Migration Steps */}
         <div className="py-20 bg-gray-900/50">

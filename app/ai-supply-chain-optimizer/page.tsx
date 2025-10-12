@@ -2,10 +2,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Truck, Package, TrendingUp, Shield, Target, Globe, Clock } from 'lucide-react';
-import { Truck, Package, TrendingUp, Shield, CheckCircle } from 'lucide-react';
-
-import { Truck, Package, TrendingUp, Shield } from 'lucide-react';
+import { Truck, Package, TrendingUp, Shield, Target, Globe, Clock, CheckCircle } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -139,8 +136,6 @@ export default function AISupplyChainOptimizerPage() {
       <Helmet>
         <title>AI Supply Chain Optimizer - Zion Tech Group</title>
         <meta name="description" content="Revolutionize your supply chain with AI-powered demand forecasting, route optimization, and intelligent inventory management." />
-        <meta name="description" content="Revolutionize your supply chain with AI-powered optimization, predictive analytics, and automated inventory management." />
-        <meta name="description" content="Revolutionize your supply chain with AI-powered optimization, predictive analytics, and automated inventory management." />
       </Helmet>
       
       <FuturisticBackground>
@@ -270,8 +265,9 @@ export default function AISupplyChainOptimizerPage() {
                 ))}
               </div>
             </div>
+          </div>
 
-            {/* Testimonials Section */}
+          {/* Testimonials Section */}
             <div className="mb-16">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center">
                 What Our Clients Say
@@ -385,7 +381,7 @@ export default function AISupplyChainOptimizerPage() {
                 ))}
               </div>
             </div>
-          </div>
+          </section>
 
           {/* Pricing Section */}
           <div className="py-20 px-4">
@@ -491,59 +487,24 @@ export default function AISupplyChainOptimizerPage() {
               <p className="text-gray-300 text-center mb-12">
                 See how companies are transforming their supply chains
               </p>
-          </section>
-
-          {/* Testimonials */}
-          <section className="py-20">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-white mb-4">
-                  Trusted by Industry Leaders
-                </h2>
-                <p className="text-gray-300 text-lg">
-                  See how companies are transforming their supply chains
-                </p>
-              </div>
-              <div className="grid md:grid-cols-3 gap-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {testimonials.map((testimonial, index) => (
-                  <FuturisticCard key={index} className="p-6">
-                    <div className="flex mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <span key={i} className="text-yellow-400">★</span>
-                        <CheckCircle key={i} className="w-5 h-5 text-yellow-400" />
-                      ))}
+                  <div key={index} className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg border border-gray-700">
+                    <div className="flex items-center mb-4">
+                      <div className="flex text-yellow-400">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <span key={i}>★</span>
+                        ))}
+                      </div>
                     </div>
                     <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.company}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}</div>
-                    <div className="text-sm text-gray-500">{testimonial.company}</div>
-                  </FuturisticCard>
+                    <div className="text-white font-semibold">{testimonial.name}</div>
+                    <div className="text-gray-400 text-sm">{testimonial.company}</div>
+                  </div>
                 ))}
               </div>
             </div>
           </div>
-
-          {/* CTA Section */}
-          <div className="py-20 px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Ready to Optimize Your Supply Chain?
-              </h2>
-              <p className="text-gray-300 mb-8">
-                Join industry leaders who are already transforming their supply chains with AI
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <FuturisticButton variant="primary" size="lg">
-                  Start Your Free Trial
-                </FuturisticButton>
-                <FuturisticButton variant="secondary" size="lg">
-                  Schedule Demo
-                </FuturisticButton>
-              </div>
-            </div>
-          </div>
-          </section>
 
           {/* CTA Section */}
           <section className="py-20">
@@ -552,13 +513,23 @@ export default function AISupplyChainOptimizerPage() {
                 Ready to Optimize Your Supply Chain?
               </h2>
               <p className="text-gray-300 text-lg mb-8">
-                Join industry leaders who are already transforming their supply chains with AI
+                Join thousands of companies using AI to optimize their supply chains
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <FuturisticButton href="/contact" variant="primary">
-                  Start Your Free Trial
+                <FuturisticButton
+                  variant="primary"
+                  size="lg"
+                  onClick={() => window.open('/contact', '_blank')}
+                  className="px-8 py-4"
+                >
+                  Get Started Today
                 </FuturisticButton>
-                <FuturisticButton href="/about" variant="secondary">
+                <FuturisticButton
+                  variant="secondary"
+                  size="lg"
+                  onClick={() => window.open('/about', '_blank')}
+                  className="px-8 py-4"
+                >
                   Learn More
                 </FuturisticButton>
               </div>

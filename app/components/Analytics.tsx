@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { TrendingUp, Users, Eye, MousePointer } from 'lucide-react';
 
 declare global {
   interface Window {
@@ -6,7 +7,7 @@ declare global {
   }
 }
 
-const Analytics: React.FC = () => {
+export default function Analytics() {
   useEffect(() => {
     const initAnalytics = () => {
       if (typeof window !== 'undefined' && window.gtag) {
@@ -19,54 +20,43 @@ const Analytics: React.FC = () => {
     initAnalytics();
   }, []);
 
-  return null; // Analytics component doesn't render anything
-};
-
-export default Analytics;
-import React from 'react';
-import { BarChart3, TrendingUp, Users, DollarSign } from 'lucide-react';
-
-interface AnalyticsProps {
-  className?: string;
-}
-
-export default function Analytics({ className = '' }: AnalyticsProps) {
   const stats = [
     {
-      icon: <Users className="w-8 h-8 text-cyan-400" />,
-      label: 'Active Users',
-      value: '12,345',
+      icon: <TrendingUp className="w-6 h-6 text-cyan-400" />,
+      value: '12.5K',
+      label: 'Page Views',
       change: '+12%',
       changeType: 'positive' as const
     },
     {
-      icon: <DollarSign className="w-8 h-8 text-green-400" />,
-      label: 'Revenue',
-      value: '$45,678',
+      icon: <Users className="w-6 h-6 text-purple-400" />,
+      value: '3.2K',
+      label: 'Unique Visitors',
       change: '+8%',
       changeType: 'positive' as const
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
-      label: 'Growth Rate',
-      value: '23.5%',
-      change: '+2.1%',
+      icon: <Eye className="w-6 h-6 text-yellow-400" />,
+      value: '2.1K',
+      label: 'Sessions',
+      change: '+15%',
       changeType: 'positive' as const
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-yellow-400" />,
-      label: 'Conversion',
-      value: '3.2%',
-      change: '-0.5%',
-      changeType: 'negative' as const
+      icon: <MousePointer className="w-6 h-6 text-green-400" />,
+      value: '4.2%',
+      label: 'Conversion Rate',
+      change: '+3%',
+      changeType: 'positive' as const
     }
   ];
 
   return (
-    <div className={`analytics-dashboard ${className}`}>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="bg-gray-900/50 backdrop-blur-sm rounded-lg p-6">
+      <h3 className="text-xl font-semibold text-white mb-6">Analytics Overview</h3>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {stats.map((stat, index) => (
-          <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-cyan-400 transition-colors">
+          <div key={index} className="bg-gray-800/50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-4">
               {stat.icon}
               <span className={`text-sm font-medium ${
@@ -83,9 +73,3 @@ export default function Analytics({ className = '' }: AnalyticsProps) {
     </div>
   );
 }
-  return (
-    <div>Analytics Component</div>
-  );
-};
-
-export default Analytics;
