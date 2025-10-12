@@ -25,6 +25,8 @@ const AIVoiceAssistantPage = React.lazy(() => import('./app/ai-voice-assistant/p
 const AIAutomationPage = React.lazy(() => import('./app/ai-automation/page'))
 const AI3DGenerationPage = React.lazy(() => import('./app/ai-3d-generation/page'))
 const AIDrugDiscoveryProPage = React.lazy(() => import('./app/ai-drug-discovery-pro/page'))
+const AIBusinessIntelligenceProPage = React.lazy(() => import('./app/ai-business-intelligence-pro/page'))
+const AICybersecuritySuitePage = React.lazy(() => import('./app/ai-cybersecurity-suite/page'))
 
 // IT Services Pages
 const WebDevelopmentPage = React.lazy(() => import('./app/web-development/page'))
@@ -44,8 +46,10 @@ const FiveGMobileApplicationsPage = React.lazy(() => import('./app/5g-mobile-app
 // Micro SAAS Pages
 const AITaskManagerPage = React.lazy(() => import('./app/ai-task-manager/page'))
 const AIExpenseTrackerPage = React.lazy(() => import('./app/ai-expense-tracker/page'))
+const AIExpenseTrackerProPage = React.lazy(() => import('./app/ai-expense-tracker-pro/page'))
 const AIPasswordManagerPage = React.lazy(() => import('./app/ai-password-manager/page'))
 const AIInvoiceGeneratorPage = React.lazy(() => import('./app/ai-invoice-generator/page'))
+const AISmartInvoicePage = React.lazy(() => import('./app/ai-smart-invoice/page'))
 const AIHealthTrackerPage = React.lazy(() => import('./app/ai-health-tracker/page'))
 const AISmartCalendarPage = React.lazy(() => import('./app/ai-smart-calendar/page'))
 const AIClimateSolutionsProPage = React.lazy(() => import('./app/ai-climate-solutions-pro/page'))
@@ -112,6 +116,8 @@ function App() {
                   <Route path="/ai-automation" element={<AIAutomationPage />} />
                   <Route path="/ai-3d-generation" element={<AI3DGenerationPage />} />
                   <Route path="/ai-drug-discovery-pro" element={<AIDrugDiscoveryProPage />} />
+                  <Route path="/ai-business-intelligence-pro" element={<AIBusinessIntelligenceProPage />} />
+                  <Route path="/ai-cybersecurity-suite" element={<AICybersecuritySuitePage />} />
                   
                   {/* IT Services Routes */}
                   <Route path="/it-services" element={<ITServicesPage />} />
@@ -133,8 +139,10 @@ function App() {
                   {/* Micro SAAS Routes */}
                   <Route path="/ai-task-manager" element={<AITaskManagerPage />} />
                   <Route path="/ai-expense-tracker" element={<AIExpenseTrackerPage />} />
+                  <Route path="/ai-expense-tracker-pro" element={<AIExpenseTrackerProPage />} />
                   <Route path="/ai-password-manager" element={<AIPasswordManagerPage />} />
                   <Route path="/ai-invoice-generator" element={<AIInvoiceGeneratorPage />} />
+                  <Route path="/ai-smart-invoice" element={<AISmartInvoicePage />} />
                   <Route path="/ai-health-tracker" element={<AIHealthTrackerPage />} />
                   <Route path="/ai-smart-calendar" element={<AISmartCalendarPage />} />
                   <Route path="/ai-climate-solutions-pro" element={<AIClimateSolutionsProPage />} />
