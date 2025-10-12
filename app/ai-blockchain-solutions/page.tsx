@@ -1,34 +1,40 @@
 import React from 'react';
-'use client';
+import { Helmet } from 'react-helmet-async';
 
 const AiBlockchainSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Ai Blockchain Solutions - Zion Tech Group</title>
-        <meta name="description" content="Ai Blockchain Solutions services by Zion Tech Group. Professional AI and IT solutions." />
+        <title>AI Blockchain Solutions - Zion Tech Group</title>
+        <meta name="description" content="AI Blockchain Solutions services by Zion Tech Group. Professional AI and IT solutions." />
         <meta name="keywords" content="ai-blockchain-solutions, AI solutions, IT services" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5 h-5ml-2" />
-              <span className="w-5 h-5ml-2" />Ai Blockchain Solutions
-              </span>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              AI Blockchain Solutions
             </h1>
-            <p className="w-5 h-5ml-2">Professional ai blockchain solutions services by Zion Tech Group.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional AI blockchain solutions services by Zion Tech Group.
             </p>
           </div>
 
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="text-2 xl font-boldtext-white mb-4"  >Coming Soon</h2>
-            <p className="w-5 h-5ml-2">We're working on bringing you comprehensive ai blockchain solutions solutions. 
+          <div className="text-center mt-16">
+            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <p className="text-lg text-gray-300 mb-8">
+              We're working on bringing you comprehensive AI blockchain solutions. 
               Contact us to learn more about our services.
             </p>
-            <button className="w-5 h-5ml-2">Contact Us
-            </button>
+            <a 
+              href="/contact" 
+              className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300"
+            >
+              Contact Us
+            </a>
           </div>
+        </div>
       </div>
     </>
   );

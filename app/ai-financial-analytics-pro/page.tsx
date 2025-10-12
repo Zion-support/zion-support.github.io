@@ -1,449 +1,322 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Calculator, Building2, Wallet} from 'lucide-react';
-'use client';
-
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { ArrowRight, Calculator, Building2, Wallet, Brain, BarChart3, Shield, Target, Zap, Globe, CheckCircle, Star } from 'lucide-react';
+import Layout from '../layout';
 
 export default function AiFinancialAnalyticsProPage() {
-
   const features = [
     {
-      icon: <Brain className="w-5 h-5ml-2" />,
+      icon: <Brain className="w-5 h-5 ml-2" />,
       title: 'AI-Powered Insights',
       description: 'Advanced machine learning algorithms analyze your financial data to provide actionable insights',
       benefits: ['Predictive analytics', 'Risk assessment', 'Trend identification', 'Anomaly detection']
     },
     {
-      icon: <BarChart3 className="w-5 h-5ml-2" />,
+      icon: <BarChart3 className="w-5 h-5 ml-2" />,
       title: 'Real-Time Analytics',
       description: 'Monitor your financial performance with live dashboards and instant reporting',
       benefits: ['Live data feeds', 'Instant alerts', 'Real-time KPIs', 'Dynamic reporting']
     },
     {
-      icon: <Shield className="w-5 h-5ml-2" />,
+      icon: <Shield className="w-5 h-5 ml-2" />,
       title: 'Enterprise Security',
       description: 'Bank-grade security with end-to-end encryption and compliance standards',
       benefits: ['256-bit encryption', 'SOC 2 compliance', 'GDPR ready', 'Audit trails']
     },
     {
-      icon: <Target className="w-5 h-5ml-2" />,
+      icon: <Target className="w-5 h-5 ml-2" />,
       title: 'Custom Dashboards',
       description: 'Create personalized financial dashboards tailored to your business needs',
       benefits: ['Drag-and-drop builder', 'Custom widgets', 'Role-based views', 'Mobile optimization']
     },
     {
-      icon: <Zap className="w-5 h-5ml-2" />,
+      icon: <Zap className="w-5 h-5 ml-2" />,
       title: 'Automated Reporting',
       description: 'Generate comprehensive financial reports automatically with AI-driven insights',
       benefits: ['Scheduled reports', 'Custom templates', 'Multi-format export', 'Email delivery']
     },
     {
-      icon: <Globe className="w-5 h-5ml-2" />,
+      icon: <Globe className="w-5 h-5 ml-2" />,
       title: 'Multi-Currency Support',
       description: 'Handle multiple currencies and global financial operations seamlessly',
       benefits: ['Real-time exchange rates', 'Currency conversion', 'Global compliance', 'Tax calculations']
     }
   ];
+
   const analyticsTypes = [
     {
       category: 'Revenue Analytics',
-      icon: <DollarSign className="w-5 h-5ml-2" />,
-      items: [
-        'Revenue forecasting',
-        'Sales performance tracking',
-        'Customer lifetime value',
-        'Revenue optimization',
-        'Market share analysis'
-      ]
+      items: ['Revenue forecasting', 'Sales performance', 'Customer lifetime value', 'Pricing optimization', 'Market analysis', 'Growth metrics']
     },
     {
-      category: 'Expense Management',
-      icon: <Calculator className="w-5 h-5ml-2" />,
-      items: [
-        'Cost center analysis',
-        'Budget variance tracking',
-        'Expense categorization',
-        'Spend optimization',
-        'Vendor performance'
-      ]
+      category: 'Cost Management',
+      items: ['Expense tracking', 'Cost optimization', 'Budget planning', 'Vendor analysis', 'ROI calculations', 'Cost center reporting']
     },
     {
       category: 'Cash Flow Analysis',
-      icon: <Activity className="w-5 h-5ml-2" />,
-      items: [
-        'Cash flow forecasting',
-        'Working capital analysis',
-        'Liquidity management',
-        'Payment optimization',
-        'Credit risk assessment'
-      ]
+      items: ['Cash flow forecasting', 'Working capital analysis', 'Liquidity management', 'Payment tracking', 'Receivables analysis', 'Payables optimization']
     },
     {
-      category: 'Investment Analytics',
-      icon: <TrendingUp className="w-5 h-5ml-2" />,
-      items: [
-        'Portfolio performance',
-        'Risk-return analysis',
-        'Asset allocation',
-        'Investment tracking',
-        'ROI calculations'
-      ]
-    },
-    {
-      category: 'Compliance & Audit',
-      icon: <Lock className="w-5 h-5ml-2" />,
-      items: [
-        'Regulatory compliance',
-        'Audit trail management',
-        'Financial controls',
-        'Risk monitoring',
-        'Documentation'
-      ]
-    },
-    {
-      category: 'Predictive Modeling',
-      icon: <Brain className="w-5 h-5ml-2" />,
-      items: [
-        'Financial forecasting',
-        'Scenario planning',
-        'Risk modeling',
-        'Market predictions',
-        'Trend analysis'
-      ]
+      category: 'Risk Assessment',
+      items: ['Credit risk analysis', 'Market risk evaluation', 'Operational risk assessment', 'Compliance monitoring', 'Fraud detection', 'Stress testing']
     }
   ];
+
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$199',
+      name: 'Professional',
+      price: '$299',
       period: '/month',
-      description: 'Perfect for small businesses and startups',
+      description: 'Perfect for growing businesses',
       features: [
         'Up to 5 data sources',
-        'Basic analytics dashboard',
-        'Monthly reports',
+        'Basic AI analytics',
+        'Standard dashboards',
         'Email support',
-        'Standard integrations',
-        '1 GB data storage'
+        'Monthly reports'
       ],
-      popular: false,
-      cta: 'Start Free Trial'
-    },
-    {
-      name: 'Professional',
-      price: '$499',
-      period: '/month',
-      description: 'Ideal for growing businesses and finance teams',
-      features: [
-        'Unlimited data sources',
-        'Advanced analytics suite',
-        'Real-time dashboards',
-        'Priority support',
-        'Custom integrations',
-        '10 GB data storage',
-        'AI-powered insights',
-        'Custom reporting'
-      ],
-      popular: true,
-      cta: 'Get Started'
+      popular: false
     },
     {
       name: 'Enterprise',
-      price: '$1,299',
+      price: '$799',
       period: '/month',
-      description: 'For large organizations with complex financial needs',
+      description: 'Ideal for large organizations',
       features: [
-        'Everything in Professional',
-        'Custom AI models',
-        'White-label options',
-        'Dedicated support',
-        'Unlimited storage',
-        'API access',
-        'On-premise deployment',
-        'Custom compliance'
+        'Unlimited data sources',
+        'Advanced AI features',
+        'Custom dashboards',
+        'Priority support',
+        'Real-time analytics',
+        'API access'
       ],
-      popular: false,
-      cta: 'Contact Sales'
+      popular: true
+    },
+    {
+      name: 'Custom',
+      price: 'Contact Us',
+      period: '',
+      description: 'Tailored solutions',
+      features: [
+        'Custom AI models',
+        'White-label solution',
+        'Dedicated support',
+        'On-premise deployment',
+        'Custom integrations',
+        'SLA guarantee'
+      ],
+      popular: false
     }
   ];
+
   const testimonials = [
     {
-      name: 'Jennifer Walsh',
-      company: 'FinTech Solutions',
-      role: 'CFO',
-      content: 'AI Financial Analytics Pro has transformed our financial reporting. The AI insights help us make data-driven decisions and identify opportunities we would have missed.',
-      rating: 5,
-      avatar: 'JW',
-      results: '35% faster financial reporting'
+      name: 'Sarah Johnson',
+      company: 'Financial Services Corp',
+      content: 'AI Financial Analytics Pro transformed our financial reporting. The AI insights helped us identify cost savings of $2M annually.',
+      rating: 5
     },
     {
-      name: 'Robert Kim',
-      company: 'Global Investments',
-      role: 'Financial Director',
-      content: 'The predictive analytics are incredibly accurate. We can now forecast revenue with 95% accuracy, helping us plan better and reduce financial risks.',
-      rating: 5,
-      avatar: 'RK',
-      results: '95% forecast accuracy'
+      name: 'Michael Chen',
+      company: 'Investment Firm',
+      content: 'The predictive analytics feature is incredibly accurate. We can now forecast market trends with 95% confidence.',
+      rating: 5
     },
     {
-      name: 'Lisa Thompson',
-      company: 'Enterprise Corp',
-      role: 'VP Finance',
-      content: 'The automated reporting saves us 20+ hours per week. Our team can now focus on strategic analysis instead of manual data processing.',
-      rating: 5,
-      avatar: 'LT',
-      results: '20+ hours saved weekly'
+      name: 'Emily Rodriguez',
+      company: 'Manufacturing Co',
+      content: 'The real-time dashboards give us instant visibility into our financial health. Decision-making has never been easier.',
+      rating: 5
     }
   ];
-  const stats = [
-    { number: '500+', label: 'Financial Institutions', icon: <Building2 className="w-5 h-5ml-2" /> },
-    { number: '1 M+', label: 'Transactions Analyzed', icon: <Database className="w-5 h-5ml-2" /> },
-    { number: '99.9%', label: 'Data Accuracy', icon: <Shield className="w-5 h-5ml-2" /> },
-    { number: '50%', label: 'Faster Reporting', icon: <Zap className="w-5 h-5ml-2" /> }
-  ];
-  const integrations = [
-    { name: 'QuickBooks', icon: <Calculator className="w-5 h-5ml-2" />, category: 'Accounting' },
-    { name: 'Xero', icon: <FileText className="w-5 h-5ml-2" />, category: 'Accounting' },
-    { name: 'SAP', icon: <Database className="w-5 h-5ml-2" />, category: 'ERP' },
-    { name: 'Oracle', icon: <Building2 className="w-5 h-5ml-2" />, category: 'ERP' },
-    { name: 'Salesforce', icon: <TrendingUp className="w-5 h-5ml-2" />, category: 'CRM' },
-    { name: 'HubSpot', icon: <Target className="w-5 h-5ml-2" />, category: 'CRM' },
-    { name: 'Stripe', icon: <CreditCard className="w-5 h-5ml-2" />, category: 'Payments' },
-    { name: 'PayPal', icon: <Wallet className="w-5 h-5ml-2" />, category: 'Payments' }
-  ];
-  return (
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
-        <title>Service - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="max-w-7xl mx-autopx-4 sm:px-6 lg:px-8 py-16 text-center">
-        {/* Hero Section */}
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <h1 className="w-5 h-5ml-2" />
-            AI Financial Analytics{' '}
-            <span className="w-5 h-5ml-2" />Pro
-            </span>
-          </h1>
-          <p className="w-5 h-5ml-2">Transform your financial analysis with AI-powered insights, real-time analytics, 
-            and predictive modeling. Make smarter financial decisions with advanced intelligence.
-          </p>
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flexitems-center justify-center"
-        >
-          Start Free Trial
-              
-          <ArrowRight className="w-5 h-5ml-2" />
-        </Link>
-            <Link to="/ai-services" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flexitems-center justify-center">View All AI Services
-            </Link>
-          </div>
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">✓ 14-day free trial • ✓ No credit card required • ✓ Bank-grade security
-          </div>
 
-        {/* Stats Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              {stats.map((stat, index) => (
-                <div key="{index}" className="text-center" />
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <stat.icon className="h-8w-8text-white"  />
-                  </div>
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{stat.number}</div>
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{stat.label}</div>
-              ))}
+  return (
+    <Layout
+      title="AI Financial Analytics Pro - Advanced Financial Intelligence | Zion Tech Group"
+      description="Transform your financial analysis with AI-powered insights. Real-time analytics, predictive modeling, and automated reporting. Get started today."
+      keywords="AI financial analytics, financial intelligence, predictive analytics, real-time reporting, financial dashboards"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        {/* Hero Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <div className="flex items-center justify-center mb-6">
+              <Calculator className="w-8 h-8 text-green-400 mr-3" />
+              <span className="text-green-400 font-semibold">AI-Powered Financial Intelligence</span>
             </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              AI Financial Analytics Pro
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your financial analysis with AI-powered insights. Get real-time analytics, 
+              predictive modeling, and automated reporting in one powerful platform.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+              >
+                Get Free Demo
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link to="#features" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                Explore Features
+              </Link>
+            </div>
+          </div>
         </section>
 
         {/* Features Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />Advanced AI Features</h2>
-            <p className="w-5 h-5ml-2">Our AI Financial Analytics Pro leverages cutting-edge machine learning 
-              to provide unprecedented insights into your financial data.
-            </p>
-          </div>
-          
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            {features.map((feature, index) => (
-              <div key="{index}" className="bg-slate-800/50 rounded-2 xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-allduration-300group" />
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
+        <section id="features" className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Advanced Financial Features</h2>
+              <p className="text-xl text-gray-300">Everything you need to make informed financial decisions</p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-green-500/20 hover:border-green-400/40 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    {feature.icon}
+                    <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
                   </div>
-                  <h3 className="w-5 h-5ml-2" />{feature.title}</h3>
-                  <p className="w-5 h-5ml-2">{feature.description}</p>
-                  <ul className="w-5 h-5ml-2" />
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key="{benefitIndex}" className="flex items-centertext-sm text-gray-300" />
-                        <CheckCircle className="w-5 h-5ml-2" />
+                      <li key={benefitIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {benefit}
                       </li>
                     ))}
                   </ul>
                 </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* Analytics Types Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />Comprehensive Analytics</h2>
-            <p className="w-5 h-5ml-2">Cover every aspect of your financial operations with our comprehensive analytics suite.
-            </p>
-          </div>
-          
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            {analyticsTypes.map((type, index) => (
-              <div key="{index}" className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30transition-allduration-300" />
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  {type.icon}
-                  <h3 className="w-5 h-5ml-2" />{type.category}</h3>
+        {/* Analytics Types */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Financial Analytics</h2>
+              <p className="text-xl text-gray-300">Cover every aspect of your financial operations</p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {analyticsTypes.map((type, index) => (
+                <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+                  <h3 className="text-xl font-semibold text-white mb-4">{type.category}</h3>
+                  <ul className="space-y-2">
+                    {type.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <ul className="w-5 h-5ml-2" />
-                  {type.items.map((item, itemIndex) => (
-                    <li key="{itemIndex}" className="flex items-centertext-sm text-gray-300" />
-                      <CheckCircle className="w-5 h-5ml-2" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Integrations Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />Seamless Integrations</h2>
-            <p className="w-5 h-5ml-2">Connect with your existing financial systems and tools for a unified analytics experience.
-            </p>
-          </div>
-          
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            {integrations.map((integration, index) => (
-              <div key="{index}" className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300text-centergroup" />
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{integration.icon}
-                </div>
-                <h3 className="w-5 h-5ml-2" />{integration.name}</h3>
-                <p className="w-5 h-5ml-2">{integration.category}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Pricing Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />Choose Your Plan</h2>
-            <p className="w-5 h-5ml-2">Flexible pricing plans designed to meet your financial analytics needs at any scale.
-            </p>
-          </div>
-          
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            {pricingPlans.map((plan, index) => (
-              <div key="{index}" className="{`bg-slate-800/50" rounded-2 xl p-8 border transition-all duration-300 relative ${
-                plan.popular ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' : 'border-slate-700 hover: border-cyan-500/30'
-              }`} />
-                {plan.popular && (
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <span className="w-5 h-5ml-2" />Most Popular
-                    </span>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Choose Your Plan</h2>
+              <p className="text-xl text-gray-300">Flexible pricing for businesses of all sizes</p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
+                  plan.popular 
+                    ? 'border-green-400/40 scale-105 shadow-2xl shadow-green-500/20' 
+                    : 'border-green-500/20 hover:border-green-400/40'
+                }`}>
+                  {plan.popular && (
+                    <div className="flex items-center justify-center mb-4 text-green-400">
+                      <Star className="w-5 h-5 mr-2" />
+                      Most Popular
+                    </div>
+                  )}
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-gray-300 mb-4">{plan.description}</p>
+                  <div className="mb-6">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-300">{plan.period}</span>
                   </div>
-                )}
-                
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <span className="w-5 h-5ml-2" />{plan.price}</span>
-                    <span className="w-5 h-5ml-2" />{plan.period}</span>
-                  </div>
-                  <p className="w-5 h-5ml-2">{plan.description}</p>
+                  <ul className="space-y-2 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    to="/contact"
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover:from-green-600 hover:to-blue-700'
+                        : 'border-2 border-green-400 text-green-400 hover:bg-green-400/10'
+                    }`}
+                  >
+                    Get Started
+                  </Link>
                 </div>
-                
-                <ul className="w-5 h-5ml-2" />
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key="{featureIndex}" className="flex items-center text-gray-300" />
-                      <CheckCircle className="w-5 h-5ml-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                
-                <Link
-                  to="/contact"
-                  className="{`w-full" py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                      : 'border-2 border-cyan-500 text-cyan-400 hover: bg-cyan-500 hover:text-white'
-                  }`} />
-                  {plan.cta}
-                  <ArrowRight className="w-5 h-5ml-2" />
-                </Link>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Testimonials */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />What Our Customers Say</h2>
-              <p className="w-5 h-5ml-2">Join hundreds of finance professionals who trust AI Financial Analytics Pro.
-              </p>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Trusted by Financial Leaders</h2>
+              <p className="text-xl text-gray-300">See how AI Financial Analytics Pro transforms financial operations</p>
             </div>
-            
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="grid md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
-                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
-                    </div>
-                    <div />
-                      <h4 className="w-5 h-5ml-2" />{testimonial.name}</h4>
-                      <p className="w-5 h-5ml-2">{testimonial.role}</p>
-                      <p className="w-5 h-5ml-2">{testimonial.company}</p>
-                    </div>
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+                  <div className="flex mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-4h-4te xt-yellow-400fill-current"  />
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="w-5 h-5ml-2">"{testimonial.content}"</p>
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Result: {testimonial.results}
+                  <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
+                  <div>
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-gray-400">{testimonial.company}</div>
                   </div>
+                </div>
               ))}
             </div>
+          </div>
         </section>
 
         {/* CTA Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />Ready to Transform Your Financial Analysis?
-            </h2>
-            <p className="w-5 h-5ml-2">Start your free trial today and experience the power of AI-driven financial analytics. 
-              Join hundreds of finance professionals making smarter decisions with data.
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Financial Analysis?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses who are already using AI Financial Analytics Pro to make better financial decisions.
             </p>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flexitems-center justify-center" />
-                Start Free Trial
-                <Sparkles className="w-5 h-5ml-2" />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact" className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300">
+                Get Free Demo
               </Link>
-              <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flexitems-center justify-center" />
+              <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
                 Learn More
-                <PieChart className="w-5 h-5ml-2" />
               </Link>
             </div>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <p />✓ 14-day free trial • ✓ Bank-grade security • ✓ 24/7 support • ✓ Cancel anytime</p>
-            </div>
+          </div>
         </section>
       </div>
-  );
+    </Layout>
+  )
 }
