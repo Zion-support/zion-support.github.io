@@ -53,42 +53,48 @@ export default function HomePage() {
       description: 'Transform your content strategy with our advanced AI-powered content generation tools.',
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       link: '/ai-content-generation',
-      features: ['Automated content creation', 'SEO optimization', 'Multi-language support']
+      features: ['Automated content creation', 'SEO optimization', 'Multi-language support'],
+      price: 'Starting at $99/month'
     },
     {
       title: 'IT Services & Solutions',
       description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
       icon: <Shield className="w-8 h-8 text-green-500" />,
       link: '/it-services',
-      features: ['Cloud Migration', 'Cybersecurity', 'Mobile Development', 'Data Analytics']
+      features: ['Cloud Migration', 'Cybersecurity', 'Mobile Development', 'Data Analytics'],
+      price: 'Starting at $2,500/project'
     },
     {
       title: 'Cloud Services',
       description: 'Scalable, secure, and reliable cloud infrastructure solutions for your business.',
       icon: <Cloud className="w-8 h-8 text-blue-400" />,
       link: '/cloud-services',
-      features: ['Scalable infrastructure', '99.9% uptime', 'Global CDN']
+      features: ['Scalable infrastructure', '99.9% uptime', 'Global CDN'],
+      price: 'Starting at $199/month'
     },
     {
       title: 'Cybersecurity Solutions',
       description: 'Protect your business with our comprehensive cybersecurity services and monitoring.',
       icon: <Shield className="w-8 h-8 text-red-400" />,
       link: '/cybersecurity',
-      features: ['Threat detection', 'Security audits', 'Compliance management']
+      features: ['Threat detection', 'Security audits', 'Compliance management'],
+      price: 'Starting at $499/month'
     },
     {
       title: '5G Implementation',
       description: 'Leverage the power of 5G technology for ultra-fast connectivity and IoT solutions.',
       icon: <Zap className="w-8 h-8 text-yellow-400" />,
       link: '/5g-implementation',
-      features: ['Ultra-fast speeds', 'IoT connectivity', 'Edge computing']
+      features: ['Ultra-fast speeds', 'IoT connectivity', 'Edge computing'],
+      price: 'Starting at $5,000/project'
     },
     {
       title: 'Data Analytics',
       description: 'Transform your data into actionable insights with our advanced analytics platform.',
       icon: <BarChart3 className="w-8 h-8 text-green-400" />,
       link: '/data-analytics',
-      features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards']
+      features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards'],
+      price: 'Starting at $299/month'
     }
   ];
 
@@ -300,7 +306,10 @@ export default function HomePage() {
                   >
                     <div className="mb-4 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">{service.icon}</div>
                     <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-purple-300 transition-colors">{service.title}</h3>
-                    <p className="text-gray-300 mb-6">{service.description}</p>
+                    <p className="text-gray-300 mb-4">{service.description}</p>
+                    <div className="text-cyan-400 font-semibold mb-4 text-sm">
+                      {service.price}
+                    </div>
                     <ul className="space-y-2 mb-6" role="list">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-300">
