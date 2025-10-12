@@ -1,6 +1,5 @@
 import { useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import {;
 'use client';
   ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 

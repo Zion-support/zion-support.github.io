@@ -1,19 +1,11 @@
-<<<<<<< HEAD
 import React from \'react\';
 import { Helmet } from 'react-helmet-async';
 import { Truck, Package, TrendingUp, Shield, Clock, CheckCircle, ArrowRight, Star, Globe, Target } from 'lucide-react';
 import { Truck, ArrowRight} from 'lucide-react';
-=======
-'use client';
-
-import React from 'react';
-import { Truck, ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-7b79
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 'use client';
-
 
 export default function AISupplyChainOptimizerPage() {
   const features = [

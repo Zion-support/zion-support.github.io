@@ -7,7 +7,6 @@ import { Helmet } from 'react-helmet-async';
 export default function AIVoiceAssistantPage() {
   const features = [
     {
-<<<<<<< HEAD
       icon: <Brain className="w-6 h-6text-cyan-400" />,
       title: 'Natural Language Understanding',
       description: 'Advanced AI processes complex voice commands and maintains context across conversations'
@@ -26,26 +25,6 @@ export default function AIVoiceAssistantPage() {
       icon: <Target className="w-6 h-6text-green-400" />,
       title: 'Multi-platform Integration',
       description: 'Seamlessly integrate with mobile apps, websites, smart devices, and IoT systems'
-=======
-      icon: Mic,
-      title: 'Natural Speech Recognition',
-      description: 'Advanced AI understands natural language with 99% accuracy across multiple languages and accents.'
-    },
-    {
-      icon: Brain,
-      title: 'Intelligent Processing',
-      description: 'Context-aware AI that learns from interactions and provides personalized responses.'
-    },
-    {
-      icon: Zap,
-      title: 'Real-time Response',
-      description: 'Lightning-fast processing with sub-second response times for seamless conversations.'
-    },
-    {
-      icon: Shield,
-      title: 'Secure & Private',
-      description: 'Enterprise-grade security with end-to-end encryption and privacy protection.'
->>>>>>> cursor/fix-errors-and-merge-to-main-7b79
     }
   ];
 
@@ -73,26 +52,11 @@ export default function AIVoiceAssistantPage() {
   ];
 
   return (
-<<<<<<< HEAD
     <Layout
       title="AI Voice Assistant - Intelligent Voice Solutions | Zion Tech Group"
       description="Transform user interaction with AI-powered voice assistants. Natural language processing, human-like voice synthesis, and seamless integration. Start your free trial today."
       keywords="AI voice assistant, voice AI, speech recognition, voice synthesis, conversational AI, voice automation" />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900" />
-=======
-    <>
-      <Helmet>
-        <title>AI Voice Assistant - Zion Tech Group</title>
-        <meta name="description" content="Professional AI voice assistant services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta name="keywords" content="AI voice assistant, speech recognition, IT services, Zion Tech Group" />
-        <meta property="og:title" content="AI Voice Assistant - Zion Tech Group" />
-        <meta property="og:description" content="Professional AI voice assistant services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-voice-assistant" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/fix-errors-and-merge-to-main-7b79
         {/* Hero Section */}
         <section className="pt-32pb-20" />
           <div className="container mx-autopx-4" />
@@ -293,10 +257,6 @@ export default function AIVoiceAssistantPage() {
       </div>
     </>
   );
-<<<<<<< HEAD
 };
 
 export default AIVoiceAssistantPage;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-7b79

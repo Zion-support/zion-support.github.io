@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Receipt, ArrowRight, Bot, RotateCcw, RotateCw } from 'lucide-react'
 import { Link } from 'react-router-dom'
@@ -28,13 +27,6 @@ const Page: React.FC = () => {
       description: "Bank-level security ensures your financial data is protected and private."
     }
   ];
-=======
-'use client';
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-7b79
 
 export default function AIExpenseTrackerPage() {
   return (
@@ -73,7 +65,6 @@ export default function AIExpenseTrackerPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20" />
           <div className="containermx-autopx-4" />

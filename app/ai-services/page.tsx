@@ -1,200 +1,14 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import {;
 'use client';
   Brain, Zap, Shield, BarChart, MessageCircle, Eye, Mic, 
-=======
-import { 
-  Brain, Shield, BarChart, MessageCircle, Eye, Mic, 
->>>>>>> cursor/fix-errors-and-merge-to-main-7b79
   FileText, Users, Heart, DollarSign, Target, Settings, 
   CheckCircle, ArrowRight, Star, TrendingUp,
   Cpu
 } from 'lucide-react';
-<<<<<<< HEAD
 import { Brain, Zap, Shield, BarChart, MessageCircle, Eye, Mic, FileText, Users, Target, Settings, CheckCircle, ArrowRight, Clock, TrendingUp, Workflow } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-7b79
-
-const AiServicesPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('overview');
-  const aiServices = [
-    {
-      icon: <Brain className="w-8h-8text-cyan-400" / />,
-      title: 'AI Analytics & Business Intelligence',
-      description: 'Transform your data into actionable insights with advanced AI-powered analytics.',
-      price: 'Starting at $2,999/month',
-      features: ['Real-time dashboards', 'Predictive analytics', 'Custom ML models', 'Data visualization'],
-      benefits: ['40% increase in decision speed', '25% cost reduction', '99.9% accuracy'],
-      link: '/ai-analytics',
-      category: 'analytics'
-    },
-    {
-      icon: <MessageCircle className="w-8h-8text-purple-400" / />,
-      title: 'AI Chatbot & Conversational AI',
-      description: 'Intelligent chatbots that understand context and provide human-like interactions.',
-      price: 'Starting at $1,499/month',
-      features: ['Natural language processing', 'Multi-language support', 'Voice integration', '24/7 availability'],
-      benefits: ['80% reduction in support tickets', '60% faster response time', '95% customer satisfaction'],
-      link: '/ai-chatbot-builder',
-      category: 'conversational'
-    },
-    {
-      icon: <Shield className="w-8h-8text-red-400" / />,
-      title: 'AI Cybersecurity Solutions',
-      description: 'Advanced threat detection and prevention using machine learning algorithms.',
-      price: 'Starting at $3,999/month',
-      features: ['Threat detection', 'Anomaly detection', 'Automated response', 'Compliance monitoring'],
-      benefits: ['99.8% threat detection rate', '50% faster incident response', 'Zero false positives'],
-      link: '/ai-cybersecurity',
-      category: 'security'
-    },
-    {
-      icon: <Eye className="w-8h-8text-green-400" />,
-      title: 'Computer Vision & Image Recognition',
-      description: 'Advanced image analysis and recognition capabilities for various industries.',
-      price: 'Starting at $2,499/month',
-      features: ['Object detection', 'Facial recognition', 'Quality inspection', 'Medical imaging'],
-      benefits: ['90% accuracy improvement', '70% faster processing', '24/7 monitoring'],
-      link: '/computer-vision',
-      category: 'vision'
-    },
-    {
-      icon: <Mic className="w-8h-8text-orange-400" />,
-      title: 'AI Voice & Speech Processing',
-      description: 'Convert speech to text, analyze sentiment, and create voice assistants.',
-      price: 'Starting at $1,999/month',
-      features: ['Speech-to-text', 'Voice synthesis', 'Sentiment analysis', 'Multi-language support'],
-      benefits: ['95% accuracy rate', 'Real-time processing', 'Custom voice models'],
-      link: '/ai-voice-assistant',
-      category: 'voice'
-    },
-    {
-      icon: <FileText className="w-8h-8text-blue-400" / />,
-      title: 'AI Content Generation',
-      description: 'Automated content creation for blogs, social media, and marketing materials.',
-      price: 'Starting at $999/month',
-      features: ['Blog writing', 'Social media posts', 'Email campaigns', 'Product descriptions'],
-      benefits: ['80% time savings', 'Consistent quality', 'SEO optimized'],
-      link: '/ai-content-generator',
-      category: 'content'
-    },
-    {
-      icon: <Users className="w-8h-8text-pink-400" / />,
-      title: 'AI Customer Service',
-      description: 'Intelligent customer support with automated ticket routing and resolution.',
-      price: 'Starting at $1,799/month',
-      features: ['Ticket automation', 'Sentiment analysis', 'Escalation management', 'Performance analytics'],
-      benefits: ['75% faster resolution', '90% customer satisfaction', '24/7 availability'],
-      link: '/ai-customer-service',
-      category: 'customer'
-    },
-    {
-      icon: <Heart className="w-8h-8text-red-400" />,
-      title: 'AI Healthcare Solutions',
-      description: 'Medical diagnosis assistance, drug discovery, and patient monitoring systems.',
-      price: 'Starting at $4,999/month',
-      features: ['Medical imaging analysis', 'Drug discovery', 'Patient monitoring', 'Diagnostic assistance'],
-      benefits: ['95% diagnostic accuracy', '30% faster diagnosis', 'FDA compliant'],
-      link: '/ai-healthcare',
-      category: 'healthcare'
-    },
-    {
-      icon: <DollarSign className="w-8h-8text-green-400" />,
-      title: 'AI Financial Services',
-      description: 'Fraud detection, algorithmic trading, and risk assessment solutions.',
-      price: 'Starting at $3,499/month',
-      features: ['Fraud detection', 'Algorithmic trading', 'Risk assessment', 'Credit scoring'],
-      benefits: ['99.5% fraud detection', '25% risk reduction', 'Real-time monitoring'],
-      link: '/ai-financial',
-      category: 'finance'
-    },
-    {
-      icon: <Target className="w-8h-8text-yellow-400" />,
-      title: 'AI Marketing Automation',
-      description: 'Personalized marketing campaigns and customer segmentation using AI.',
-      price: 'Starting at $2,199/month',
-      features: ['Customer segmentation', 'Personalized campaigns', 'A/B testing', 'ROI optimization'],
-      benefits: ['40% higher conversion', '60% cost reduction', 'Real-time optimization'],
-      link: '/ai-marketing',
-      category: 'marketing'
-    },
-    {
-      icon: <Settings className="w-8h-8text-gray-400" />,
-      title: 'AI Process Automation',
-      description: 'Automate repetitive tasks and optimize business processes with AI.',
-      price: 'Starting at $1,299/month',
-      features: ['Workflow automation', 'Document processing', 'Data entry automation', 'Process optimization'],
-      benefits: ['70% time savings', '90% accuracy improvement', 'Cost reduction'],
-      link: '/ai-automation',
-      category: 'automation'
-    },
-    {
-      icon: <Cpu className="w-8h-8text-indigo-400" />,
-      title: 'Custom AI Development',
-      description: 'Bespoke AI solutions tailored to your specific business requirements.',
-      price: 'Custom pricing',
-      features: ['Custom ML models', 'API development', 'Integration services', 'Ongoing support'],
-      benefits: ['100% tailored solution', 'Competitive advantage', 'Scalable architecture'],
-      link: '/custom-ai-development',
-      category: 'custom'
-    }
-  ];
-  const categories = [
-    { id: 'overview', name: 'Overview', icon: <BarChart className="w-5h-5" / /> },
-    { id: 'analytics', name: 'Analytics', icon: <TrendingUp className="w-5h-5" / /> },
-    { id: 'conversational', name: 'Conversational', icon: <MessageCircle className="w-5h-5" / /> },
-    { id: 'security', name: 'Security', icon: <Shield className="w-5h-5" / /> },
-    { id: 'vision', name: 'Computer Vision', icon: <Eye className="w-5h-5" / /> },
-    { id: 'voice', name: 'Voice AI', icon: <Mic className="w-5h-5" / /> },
-    { id: 'content', name: 'Content', icon: <FileText className="w-5h-5" / /> },
-    { id: 'customer', name: 'Customer Service', icon: <Users className="w-5h-5" / /> },
-    { id: 'automation', name: 'Automation', icon: <Workflow className="w-5h-5" / /> }
-  ];
-  const stats = [
-    { number: '500+', label: 'AI Models Deployed', icon: <Brain className="w-6h-6text-cyan-400" / /> },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6h-6text-green-400" / /> },
-    { number: '24/7', label: 'AI Monitoring', icon: <Clock className="w-6h-6text-blue-400" / /> },
-    { number: '150+', label: 'AI Experts', icon: <Users className="w-6h-6text-purple-400" / /> }
-  ];
-  const filteredServices = activeTab === 'overview' 
-    ? aiServices 
-    : aiServices.filter(service => service.category === activeTab);
-  return (
-<<<<<<< HEAD
-    <>
-      <Helmet />
-        <title   />AI Services - Zion Tech Group | Advanced Artificial Intelligence Solutions</title>
-        <meta const name = "description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and automation. Transform your business with cutting-edge AI technology." / / />
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, NLP, computer vision, AI automation, AI consulting" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-services" / />
-        <script type="application/ld+json"  />{JSON.stringify({
-            "@context": "https: //schema.org",
-            "@type": "Service",
-            "name": "AI Services",
-            "description": "Advanced artificial intelligence solutions for businesses",
-            "provider": {
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": "https: //ziontechgroup.com"
-            },
-            "offers": {
-              "@type": "Offer",
-              "price": "999",
-              "priceCurrency": "USD",
-              "availability": "https: //schema.org/InStock"
-            }
-          })}
-        </script>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <Helmet>
-        <title>AI Services - Zion Tech Group | Advanced AI Solutions</title>
-        <meta name="description" content="Discover our comprehensive AI services including analytics, chatbots, cybersecurity, computer vision, and custom AI development solutions." />
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, chatbot, analytics, cybersecurity, computer vision" />
->>>>>>> cursor/fix-errors-and-merge-to-main-7b79
       </Helmet>
 
       {/* Hero Section */}
@@ -211,7 +25,6 @@ const AiServicesPage: React.FC = () => {
               <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flexitems-centergap-2" />
                 Get Started <ArrowRight className="w-5h-5" />
               </Link>
-<<<<<<< HEAD
               <Link to="/about" className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300" />
       <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900" />
         {/* Hero Section */}
@@ -243,20 +56,12 @@ const AiServicesPage: React.FC = () => {
               <Link to="/demo" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
                 <span   />View AI Demo</span>
                 <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-=======
-              <Link 
-                to="/about" 
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
-              >
-                Learn More
->>>>>>> cursor/fix-errors-and-merge-to-main-7b79
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
         <meta name="description" content="Transform your business with cutting-edge AI services including machine learning, natural language processing, computer vision, and automation. Expert AI solutions for enterprises." / / />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, NLP, computer vision, AI automation, business intelligence, AI consulting" / / />
         <meta property="og:title" content="AI Services - Zion Tech Group" / / />
@@ -304,31 +109,10 @@ const AiServicesPage: React.FC = () => {
                 </div>
               ))}
             </div>
-=======
-      {/* Category Tabs */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8 bg-black/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-2">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setActiveTab(category.id)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                  activeTab === category.id
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                }`}
-              >
-                {category.icon}
-                {category.name}
-              </button>
-            ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-7b79
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
               </p>
             </div>
 
@@ -349,24 +133,6 @@ const AiServicesPage: React.FC = () => {
                   </p>
 
                   <ul className="space-y-2mb-6" />
-=======
-      {/* Services Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-center gap-4 mb-4">
-                  {service.icon}
-                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                </div>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                <div className="text-blue-400 font-semibold mb-4">{service.price}</div>
-                
-                <div className="mb-4">
-                  <h4 className="text-white font-medium mb-2">Key Features:</h4>
-                  <ul className="text-sm text-gray-300 space-y-1">
->>>>>>> cursor/fix-errors-and-merge-to-main-7b79
                     {service.features.map((feature, featureIndex) => (
                       <li key="{featureIndex}" className="flex items-centertext-smtext-gray-300" />
                         <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" / />
@@ -391,7 +157,6 @@ const AiServicesPage: React.FC = () => {
                   <div className="text-3 xl font-boldtext-whitemb-2"   />{stat.number}</div>
                   <div className="text-gray-400"   />{stat.label}</div>
                 </div>
-<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -601,17 +366,6 @@ const AiServicesPage: React.FC = () => {
               <p />Email: kleber@ziontechgroup.com</p>
               <p />Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
-=======
-
-                <Link
-                  to={service.link}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2"
-                >
-                  Learn More <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-7b79
           </div>
         </div>
       </section>

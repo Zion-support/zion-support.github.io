@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { Target, TrendingUp, BarChart3, Zap, CheckCircle, ArrowRight, Star, Award, Brain, Shield, DollarSign } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import React from \'react\';
 import { ArrowRight, Bot, RotateCcw, RotateCw, Receipt } from 'lucide-react';
 import { Link } from 'react-router-dom';
-=======
-import React from 'react'
-import { ArrowRight, Brain, BarChart3, Shield, Zap, CheckCircle, Star } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet-async'
->>>>>>> cursor/fix-errors-and-merge-to-main-7b79
 
 const AILeadScoringPage: React.FC = () => {
   const features = [

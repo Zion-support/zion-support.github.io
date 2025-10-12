@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 import React from \'react\';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Phone, Mail } from 'lucide-react';
 'use client';
-=======
-'use client';
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-7b79
 
 interface GenericServicePageProps {
   title: string;,
