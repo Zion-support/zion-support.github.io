@@ -320,7 +320,8 @@ export default function AISupplyChainOptimizerPage() {
                   onClick={() => window.open('/contact', '_blank')}
                 >
                   Contact Sales
-          </div>
+                </FuturisticButton>
+              </div>
 
           {/* Features Section */}
           <div className="py-20 px-4">
@@ -374,8 +375,6 @@ export default function AISupplyChainOptimizerPage() {
                     <p className="text-gray-300 mb-4">{feature.description}</p>
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="text-sm text-cyan-400 flex items-center">
-                          <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
@@ -403,6 +402,34 @@ export default function AISupplyChainOptimizerPage() {
                     {plan.popular && (
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                         <span className="bg-cyan-400 text-black px-4 py-1 rounded-full text-sm font-semibold">
+                          Most Popular
+                        </span>
+                      </div>
+                    )}
+                    <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
+                    <div className="text-4xl font-bold text-cyan-400 mb-2">
+                      {plan.price}<span className="text-lg text-gray-400">{plan.period}</span>
+                    </div>
+                    <p className="text-gray-300 mb-6">{plan.description}</p>
+                    <ul className="space-y-3 mb-8">
+                      {plan.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    <FuturisticButton 
+                      href="/contact" 
+                      variant={plan.popular ? "primary" : "secondary"}
+                      className="w-full"
+                    >
+                      Get Started
+                    </FuturisticButton>
+                  </FuturisticCard>
+                ))}
+              </div>
+            </div>
           </section>
 
           {/* Pricing Section */}

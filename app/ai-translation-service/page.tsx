@@ -34,8 +34,6 @@ export default function AITranslationService() {
       description: 'Specialized translation models for legal, medical, technical, and business content'
     }
   ];
-  ]
-  ];
 
   const translationFeatures = [
     {
@@ -54,8 +52,6 @@ export default function AITranslationService() {
       category: 'Integration',
       items: ['API Access', 'CMS Integration', 'Website Widgets', 'Mobile Apps', 'Desktop Software', 'Cloud Storage']
     }
-  ];
-  ]
   ];
 
   const pricingPlans = [

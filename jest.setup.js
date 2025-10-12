@@ -6,7 +6,7 @@ global.TextDecoder = TextDecoder;
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
-  value: jest.fn().mockImplementation(query = > ({
+  value: jest.fn().mockImplementation(query => ({
     matches: false,
     media: query,
     onchange: null,
@@ -15,27 +15,23 @@ Object.defineProperty(window, 'matchMedia', {
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
-  })),;
+  })),
 });
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
-  unobserve() {};
+  unobserve() {}
 };
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
   observe() {}
-  unobserve() {};
+  unobserve() {}
 };
 // Mock window.gtag
 global.gtag = jest.fn();
 // Mock window.dataLayer
-<<<<<<< HEAD
 global.dataLayer = [];
-=======
-global.dataLayer = [];
->>>>>>> cursor/fix-errors-and-merge-to-main-d941
