@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Mail, Brain, Zap, CheckCircle, ArrowRight, Users, Award, Star, Globe, Settings } from 'lucide-react';
+import { Mail, Brain, Zap, CheckCircle, Users, Award, Star, Globe, Settings } from 'lucide-react';
 
 const AIEmailAssistantPage: React.FC = () => {
   const features = [
@@ -54,7 +49,6 @@ const AIEmailAssistantPage: React.FC = () => {
       icon: Globe
     }
   ];
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 
   return (
     <>

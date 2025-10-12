@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Zap, Workflow, CheckCircle, ArrowRight, Star, Users, Award, Brain, BarChart, Target, Settings, Smartphone, Globe, Database, Server, Mail, Phone, MapPin, Clock, TrendingUp, Shield, Code, Eye, Mic, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Wifi, Package, ShoppingCart, Sparkles, Cpu } from 'lucide-react';
+import { Zap, Workflow, CheckCircle, ArrowRight, Brain, Settings, Clock, TrendingUp, Shield, Link as LinkIcon } from 'lucide-react';
 
 const AiAutomationPage: React.FC = () => {
   const features = [

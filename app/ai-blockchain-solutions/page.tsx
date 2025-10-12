@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Link as LinkIcon, Shield, Zap, CheckCircle, ArrowRight, Star, Users, Award, Brain, BarChart, Target, Settings, Smartphone, Globe, Database, Server, Mail, Phone, MapPin, Coins, Lock, Key, Activity, TrendingUp, FileText, Clock, DollarSign } from 'lucide-react';
+import { Link as LinkIcon, Shield, Zap, CheckCircle, ArrowRight, Coins, Lock, Activity } from 'lucide-react';
 
 const AiBlockchainSolutionsPage: React.FC = () => {
   const features = [

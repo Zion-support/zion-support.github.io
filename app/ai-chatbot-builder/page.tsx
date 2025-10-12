@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Brain, CheckCircle, ArrowRight, Star, Users, Award, Zap, Shield, BarChart, Target, Settings, Smartphone, Globe, Database, Server, Mail, Phone, MapPin, Clock, TrendingUp, Code, Eye, Mic, FileText, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Wifi, Package, ShoppingCart, Sparkles, Cpu, Workflow } from 'lucide-react';
+import { MessageCircle, Brain, CheckCircle, ArrowRight, Star, Zap, BarChart, Clock, Link as LinkIcon } from 'lucide-react';
 
 const AiChatbotBuilderPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

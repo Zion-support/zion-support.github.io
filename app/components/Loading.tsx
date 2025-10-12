@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, Brain } from 'lucide-react';
+
 
 const Loading: React.FC = () => {
   return (

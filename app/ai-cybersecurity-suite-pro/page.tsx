@@ -1,16 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { 
-  ArrowRight, Shield, BarChart3, Zap, CheckCircle, 
-  Clock, Target, TrendingUp, PieChart, Smartphone, Lock, 
-  RefreshCw, Settings, Bot, FileText, AlertTriangle,
-  CheckSquare, Star, Globe, Monitor, Smartphone as Mobile,
-  Send, Eye, MousePointer, Calendar, Hash, AtSign, Headphones,
-  Phone, Mail, HelpCircle, ThumbsUp, ThumbsDown, Cpu, Database,
-  GitBranch, Terminal, Layers, Wrench, Search, Filter, Key,
-  Lock as LockIcon, AlertTriangle as Alert, Activity, Network
-} from 'lucide-react'
+import { ArrowRight, Shield, CheckCircle, Clock, Target, Smartphone, Lock, Bot, AlertTriangle, Star, Smartphone as Mobile, Key, Lock as LockIcon, AlertTriangle as Alert, Activity, Network } from 'lucide-react';
 
 export default function AICybersecuritySuiteProPage() {
   const features = [

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { Calendar, Clock, Users, Zap, CheckCircle, ArrowRight, Brain, Smartphone, Globe, Shield, BarChart3, Star, Sparkles } from 'lucide-react'
+import { Calendar, Users, Zap, CheckCircle, ArrowRight, Brain, Globe, Star, Sparkles } from 'lucide-react';
 import Layout from '../layout'
 
 export default function AISmartScheduler() {

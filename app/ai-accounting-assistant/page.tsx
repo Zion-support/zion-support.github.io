@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Calculator, FileText, TrendingUp, Shield, Clock, CheckCircle, ArrowRight, Star, Users, Award, Zap, Brain, BarChart, DollarSign, PieChart, Receipt, CreditCard, Banknote, Target, Settings, Smartphone, Globe, Lock, Mail, Phone, MapPin } from 'lucide-react';
+import { Calculator, FileText, TrendingUp, Shield, Clock, CheckCircle, ArrowRight, Users, Target } from 'lucide-react';
 
 const AiAccountingAssistantPage: React.FC = () => {
   const features = [

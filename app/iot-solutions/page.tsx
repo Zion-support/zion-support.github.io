@@ -1,20 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { 
-  ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network, 
-  BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock, TrendingUp, 
-  Sparkles, Layers, Target, Award, Lightbulb, Monitor, Server, CircuitBoard, Atom, 
-  Satellite, Wrench, BarChart, PieChart, LineChart, Activity, Eye, Search, Filter, 
-  Download, Upload, Share, MessageCircle, Mail, Phone, MapPin, Calendar, Timer, 
-  Battery, Wifi2, Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, 
-  VolumeX, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, Heart, ThumbsUp, 
-  ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, Plus, Minus, Edit, 
-  Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, 
-  Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2, 
-  Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, 
-  FileText, Package 
-} from 'lucide-react'
+import { ArrowRight, Zap, Shield, Globe, Database, Cloud, Cpu, Rocket, Network, BarChart3, CheckCircle, DollarSign, TrendingUp, Wrench, Heart } from 'lucide-react';
 
 export default function IoTSolutionsPage() {
   const iotServices = [

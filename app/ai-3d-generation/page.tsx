@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Box, Palette, Zap, CheckCircle, ArrowRight, Star, Users, Award, Brain, BarChart, Target, Settings, Smartphone, Globe, Database, Server, Mail, Phone, MapPin, Camera, Image, Video, Layers, RotateCcw, Download, Upload, Eye, Lightbulb, Sparkles } from 'lucide-react';
+import { Box, Palette, Zap, CheckCircle, ArrowRight, Star, Brain, Layers } from 'lucide-react';
 
 const Ai3DGenerationPage: React.FC = () => {
   const features = [

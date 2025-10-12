@@ -2,13 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 
-  BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, 
-  Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package, 
-  TrendingUp, Calendar, ShoppingCart, Sparkles, Cpu, Globe, Database, 
-  Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock
-} from 'lucide-react';
+import { ArrowRight, CheckCircle, Users, Shield, Cloud, Code, Settings, Link as LinkIcon, Database, Smartphone } from 'lucide-react';
 
 const ItServicesPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

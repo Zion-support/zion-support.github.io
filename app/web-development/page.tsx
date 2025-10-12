@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Code, CheckCircle, ArrowRight, Star, Users, Award, Zap, Shield, Brain, BarChart, Target, Settings, Smartphone, Globe, Database, Server, Mail, Phone, MapPin, Clock, TrendingUp, FileText, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Wifi, Package, ShoppingCart, Sparkles, Cpu, Workflow, MessageCircle, Eye, Mic } from 'lucide-react';
+import { Code, CheckCircle, ArrowRight, Star, Zap, Shield, Smartphone, Database, Clock, Link as LinkIcon } from 'lucide-react';
 
 const WebDevelopmentPage: React.FC = () => {
   const features = [

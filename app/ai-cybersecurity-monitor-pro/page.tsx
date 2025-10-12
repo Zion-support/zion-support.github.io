@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Shield, Eye, AlertTriangle, Lock, Zap, CheckCircle, ArrowRight, Star, Users, Award, Brain, BarChart, Target, Settings, Smartphone, Globe, Database, Server, Mail, Phone, MapPin, Activity, ShieldCheck, Bug, Network, FileText, Clock, TrendingUp } from 'lucide-react';
+import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network, Clock } from 'lucide-react';
 
 const AiCybersecurityMonitorProPage: React.FC = () => {
   const features = [

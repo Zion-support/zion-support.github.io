@@ -2,12 +2,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, Zap, Shield, BarChart, MessageCircle, Eye, Mic, 
-  FileText, Users, Heart, DollarSign, Target, Settings, 
-  CheckCircle, ArrowRight, Star, Clock, Award, TrendingUp,
-  Cpu, Database, Globe, Smartphone, Lock, Workflow, Sparkles
-} from 'lucide-react';
+import { Brain, Shield, BarChart, MessageCircle, Eye, Mic, FileText, Users, CheckCircle, ArrowRight, Clock, TrendingUp, Workflow } from 'lucide-react';
 
 const AiServicesPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');

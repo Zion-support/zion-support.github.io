@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Box, Users, Zap, CheckCircle, ArrowRight, Star, Award, Brain, BarChart, Target, Settings, Smartphone, Globe, Database, Server, Mail, Phone, MapPin, Eye, Layers, Monitor, Camera, Video, Mic, Headphones, Wifi, Bluetooth, Battery, Cpu, MemoryStick, HardDrive } from 'lucide-react';
+import { Box, Users, Zap, CheckCircle, ArrowRight, Star, Brain, Eye } from 'lucide-react';
 
 const AiHolographicWorkspacePage: React.FC = () => {
   const features = [
