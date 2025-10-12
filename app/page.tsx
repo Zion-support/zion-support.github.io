@@ -1,20 +1,7 @@
 import React from 'react'
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
-=======
-import SEOHead from './components/SEOHead'
-import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, CheckCircle, Star, Sparkles, Rocket, Cpu, Wifi, Smartphone } from 'lucide-react'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
 import { Link } from 'react-router-dom'
-import { ArrowRight, CheckCircle, Brain, Zap, Shield, Cloud, Smartphone, Cpu, Database } from 'lucide-react'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-=======
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react'
-import { Link } from 'react-router-dom'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-386b
+import { ArrowRight, CheckCircle, Zap, Shield, Cloud, Database, Smartphone, Star, Sparkles, Rocket, Cpu, Wifi, Globe } from 'lucide-react'
 
 export default function HomePage() {
   const features = [
