@@ -1,131 +1,167 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart, Target, TrendingUp } from 'lucide-react';
 
-const Page: React.FC = () => {
+const AiEcommerceOptimizerProPage: React.FC = () => {
+  const features = [
+    {
+      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      title: 'AI-Powered Product Recommendations',
+      description: 'Increase sales with intelligent product suggestions based on customer behavior and preferences.'
+    },
+    {
+      icon: <BarChart className="w-8 h-8 text-purple-400" />,
+      title: 'Advanced Analytics Dashboard',
+      description: 'Get deep insights into customer behavior, sales patterns, and conversion optimization opportunities.'
+    },
+    {
+      icon: <Target className="w-8 h-8 text-green-400" />,
+      title: 'Dynamic Pricing Optimization',
+      description: 'Automatically adjust prices based on demand, competition, and market conditions.'
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      title: 'Real-time Inventory Management',
+      description: 'Prevent stockouts and overstocking with AI-driven inventory predictions.'
+    },
+    {
+      icon: <Users className="w-8 h-8 text-blue-400" />,
+      title: 'Customer Segmentation',
+      description: 'Identify and target customer segments with personalized marketing campaigns.'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      title: 'Fraud Detection',
+      description: 'Protect your business with advanced AI-powered fraud detection and prevention.'
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: <TrendingUp className="w-6 h-6 text-green-400" />,
+      title: 'Increase Revenue',
+      description: 'Boost sales by up to 35% with optimized product recommendations and pricing'
+    },
+    {
+      icon: <CheckCircle className="w-6 h-6 text-blue-400" />,
+      title: 'Reduce Cart Abandonment',
+      description: 'Decrease cart abandonment rates by 25% with personalized checkout experiences'
+    },
+    {
+      icon: <Award className="w-6 h-6 text-purple-400" />,
+      title: 'Improve Customer Experience',
+      description: 'Deliver personalized shopping experiences that keep customers coming back'
+    },
+    {
+      icon: <Code className="w-6 h-6 text-cyan-400" />,
+      title: 'Easy Integration',
+      description: 'Seamlessly integrate with your existing e-commerce platform and tools'
+    }
+  ];
+
   return (
-    <>
-      <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta name="keywords" content="AI solutions, IT services, Zion Tech Group" />
-        <meta property="og:title" content=" - Zion Tech Group" />
-        <meta property="og:description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-ecommerce-optimizer-pro" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        {/* Hero Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                
-              </span>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI E-commerce <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Optimizer Pro</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional  services by Zion Tech Group. Expert solutions tailored to your business needs.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Transform your e-commerce business with AI-powered optimization tools that increase sales, improve customer experience, and maximize revenue.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link 
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
                 to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center group"
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
               >
                 Get Started
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link 
-                to="/contact"
-                className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
               >
-                Learn More
+                View Demo
               </Link>
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-6024
-
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      period: '/month',
-      description: 'Ideal for growing e-commerce businesses',
-      features: [
-        'Up to 10,000 products',
-                </div>
-              ))}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Powerful AI Features</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI e-commerce optimizer includes everything you need to maximize your online store's performance.
+            </p>
           </div>
-        </section>
-
-        {/* Pricing Section */}
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700">
+                <div className="flex justify-center mb-4">
+                  {feature.icon}
                 </div>
-              ))}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Contact us to learn more about our solutions and how we can help your business.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-                >
-                  Contact Us
-                </Link>
-                <Link
-                  to="/services"
-                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
-                >
-                  View All Services
-                </Link>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-6024
-            </div>
+            ))}
           </div>
-        </section>
-      </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Why Choose Our AI Optimizer?</h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="flex justify-center mb-4">
+                  {benefit.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Optimize Your E-commerce Store?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of successful online stores using our AI optimization platform.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Start Free Trial
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
+            >
+              Schedule Demo
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
-export default Page;
-=======
-}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
-=======
-}
->>>>>>> cursor/website-audit-and-update-with-deployment-6024
+export default AiEcommerceOptimizerProPage;

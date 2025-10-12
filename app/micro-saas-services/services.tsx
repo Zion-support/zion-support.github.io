@@ -1,6 +1,5 @@
 import React from 'react';
 'use client'
-import { Helmet } from 'react-helmet-async';
 
 import { ArrowRight, Mail, Brain } from 'lucide-react';
 const ServicesPage: React.FC = () => {

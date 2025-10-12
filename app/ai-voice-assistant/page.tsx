@@ -123,7 +123,6 @@ export default function AIVoiceAssistant() {
     >
 =======
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Mic, Brain, Zap, CheckCircle, ArrowRight, Users, Award, Star, Globe, Settings } from 'lucide-react';
 

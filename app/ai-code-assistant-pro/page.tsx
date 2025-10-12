@@ -2,8 +2,8 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { 
-  ArrowRight, Code, BarChart3, Zap, CheckCircle, 
-  Clock, Target, TrendingUp, PieChart, Smartphone, Shield, 
+  ArrowRight, Code, CheckCircle, 
+  Clock, Target, TrendingUp, Shield, 
   Lock, RefreshCw, Settings, Bot, FileText, AlertTriangle,
   CheckSquare, Star, Globe, Monitor, Smartphone as Mobile,
   Send, Eye, MousePointer, Calendar, Hash, AtSign, Headphones,

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Activity, Zap, Clock, Wifi, Cpu, HardDrive } from 'lucide-react';
 
 interface PerformanceMetrics {
@@ -29,8 +29,7 @@ const PerformanceDashboard: React.FC = () => {
     ttfb: 0,
     fcp: 0,
   });
-  const [isVisible, setIsVisible] = useState(false);
-
+  
   useEffect(() => {
     // Only show in development or if user has enabled debug mode
     const shouldShow = process.env.NODE_ENV === 'development' || 

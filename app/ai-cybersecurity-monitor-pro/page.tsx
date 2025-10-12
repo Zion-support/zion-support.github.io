@@ -1,7 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -35,8 +34,7 @@ import {
 } from 'lucide-react';
 
 export default function AiCybersecurityMonitorProPage() {
-  const [selectedPlan, setSelectedPlan] = useState('pro');
-
+  
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,

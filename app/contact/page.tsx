@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, Mail, Phone, MapPin, Clock, MessageCircle, Send, CheckCircle, 
@@ -19,10 +17,8 @@ import {
 } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-=======
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+  =======
+import React from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
@@ -39,10 +35,7 @@ const ContactPage: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
+  
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({

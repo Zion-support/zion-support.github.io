@@ -1,6 +1,5 @@
 'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle, ArrowRight, Star, Zap, Shield, Cloud, 

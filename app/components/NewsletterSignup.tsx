@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import { Mail, AlertCircle, Send } from 'lucide-react';
 
 interface NewsletterSignupProps {

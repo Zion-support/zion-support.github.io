@@ -2,11 +2,9 @@ import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { 
-  ArrowRight, Zap, Brain, FileText, CheckCircle, Star, Clock, Users, 
-  BarChart3, Sparkles, Target, Award, Lightbulb, Globe, Shield, 
-  MessageCircle, Mail, Phone, MapPin, Play, Pause, Download, Upload,
-  Edit, Copy, Share, Bookmark, Heart, ThumbsUp, RefreshCw, Settings,
-  Palette, Type, Image, Video, Music, Code, Database, Cloud, Lock
+  ArrowRight, Brain, FileText, CheckCircle, Star, Clock, 
+  BarChart3, Sparkles, Target, Globe, Shield, 
+  MessageCircle, Mail, Phone, MapPin, Play, Share, Palette
 } from 'lucide-react'
 
 export default function AIContentGeneratorPage() {

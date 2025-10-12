@@ -1,7 +1,6 @@
 <<<<<<< HEAD
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 
@@ -12,12 +11,8 @@ import {
 } from 'lucide-react';
 
 const ItServicesPage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
+  
+  
   const itServices = [
     {
       title: 'Cloud Infrastructure',
@@ -52,7 +47,6 @@ const ItServicesPage: React.FC = () => {
       category: 'Security'
 =======
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Cloud, Shield, Code, Smartphone, Database, Server, CheckCircle, ArrowRight, Zap, Users, Award } from 'lucide-react';
 

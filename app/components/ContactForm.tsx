@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Mail, MessageSquare, Send } from 'lucide-react';
 
 interface FormData {
