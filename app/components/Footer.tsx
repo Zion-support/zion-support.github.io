@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Smartphone, Cpu } from 'lucide-react'
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react';
-import NewsletterSignup from './NewsletterSignup';
->>>>>>> cursor/analyze-improve-and-deploy-application-04ca
 
 export default function Footer() {
   const aiServices = [
