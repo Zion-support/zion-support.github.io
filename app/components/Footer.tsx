@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h3 className="text-lg font-semibold mb-4">AI Services</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors">
@@ -37,18 +37,59 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/ai-marketing" className="text-gray-400 hover:text-white transition-colors">
+                  AI Marketing
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-automation" className="text-gray-400 hover:text-white transition-colors">
+                  AI Automation
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-healthcare" className="text-gray-400 hover:text-white transition-colors">
+                  AI Healthcare
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-fintech" className="text-gray-400 hover:text-white transition-colors">
+                  AI Fintech
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-content-generation" className="text-gray-400 hover:text-white transition-colors">
+                  Content Generation
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">IT Services</h3>
+            <ul className="space-y-2">
+              <li>
                 <Link to="/it-services" className="text-gray-400 hover:text-white transition-colors">
                   IT Services
                 </Link>
               </li>
               <li>
-                <Link to="/micro-saas-services" className="text-gray-400 hover:text-white transition-colors">
-                  Micro SaaS
+                <Link to="/it-infrastructure" className="text-gray-400 hover:text-white transition-colors">
+                  IT Infrastructure
                 </Link>
               </li>
               <li>
                 <Link to="/cloud-services" className="text-gray-400 hover:text-white transition-colors">
                   Cloud Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/cybersecurity" className="text-gray-400 hover:text-white transition-colors">
+                  Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link to="/micro-saas-services" className="text-gray-400 hover:text-white transition-colors">
+                  Micro SaaS
                 </Link>
               </li>
               <li>
@@ -68,19 +109,29 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
-                  Contact
+                <Link to="/team" className="text-gray-400 hover:text-white transition-colors">
+                  Team
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/careers" className="text-gray-400 hover:text-white transition-colors">
                   Careers
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/blog" className="text-gray-400 hover:text-white transition-colors">
                   Blog
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link to="/case-studies" className="text-gray-400 hover:text-white transition-colors">
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>
@@ -110,12 +161,15 @@ export default function Footer() {
               © 2024 Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              </Link>
+              <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Terms of Service
-              </a>
+              </Link>
+              <Link to="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Cookie Policy
+              </Link>
             </div>
           </div>
         </div>

@@ -1,88 +1,111 @@
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+'use client';
 
-const PagePage: React.FC = () => {
-  const features = [
+import React from 'react';
+import { Linkedin, Twitter, Github, Mail } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+
+const TeamPage: React.FC = () => {
+  const teamMembers = [
     {
-      title: 'Page',
-      description: 'Professional page services for modern businesses.',
-      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
+      name: 'Sarah Johnson',
+      role: 'CEO & Founder',
+      bio: 'Visionary leader with 15+ years in AI and technology innovation.',
+      image: '/api/placeholder/300/300',
+      social: {
+        linkedin: '#',
+        twitter: '#',
+        github: '#'
+      }
     },
     {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
+      name: 'Michael Chen',
+      role: 'CTO',
+      bio: 'Technology expert specializing in cloud architecture and AI systems.',
+      image: '/api/placeholder/300/300',
+      social: {
+        linkedin: '#',
+        twitter: '#',
+        github: '#'
+      }
     },
     {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+      name: 'Emily Rodriguez',
+      role: 'Head of AI Research',
+      bio: 'Leading AI researcher with expertise in machine learning and neural networks.',
+      image: '/api/placeholder/300/300',
+      social: {
+        linkedin: '#',
+        twitter: '#',
+        github: '#'
+      }
+    },
+    {
+      name: 'David Kim',
+      role: 'Head of Cybersecurity',
+      bio: 'Security expert with extensive experience in enterprise cybersecurity solutions.',
+      image: '/api/placeholder/300/300',
+      social: {
+        linkedin: '#',
+        twitter: '#',
+        github: '#'
+      }
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services and solutions." />
-        <meta name="keywords" content="page, services, solutions, technology" />
+        <title>Our Team | Zion Tech Group</title>
+        <meta name="description" content="Meet the talented team behind Zion Tech Group - experts in AI, cybersecurity, cloud computing, and technology innovation." />
       </Helmet>
       
-      <Navigation />
-      
-      <main className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Page
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Meet Our
+              <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                Team
+              </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services to help your business succeed and grow.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              The brilliant minds behind our innovative solutions and cutting-edge technology.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our page services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Contact Us
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Learn More
-                </button>
-              </div>
+        </section>
+
+        <section className="py-12 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {teamMembers.map((member, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+                  />
+                  <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
+                  <p className="text-blue-400 mb-3">{member.role}</p>
+                  <p className="text-gray-300 text-sm mb-4">{member.bio}</p>
+                  <div className="flex justify-center space-x-4">
+                    <a href={member.social.linkedin} className="text-gray-400 hover:text-blue-400 transition-colors">
+                      <Linkedin className="w-5 h-5" />
+                    </a>
+                    <a href={member.social.twitter} className="text-gray-400 hover:text-blue-400 transition-colors">
+                      <Twitter className="w-5 h-5" />
+                    </a>
+                    <a href={member.social.github} className="text-gray-400 hover:text-blue-400 transition-colors">
+                      <Github className="w-5 h-5" />
+                    </a>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </main>
-      
-      <Footer />
-    </div>
+        </section>
+      </div>
+    </>
   );
 };
 
-export default PagePage;
+export default TeamPage;

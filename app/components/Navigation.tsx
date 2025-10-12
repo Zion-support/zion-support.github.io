@@ -19,31 +19,50 @@ export default function Navigation() {
       title: 'AI Services',
       href: '/ai-services',
       icon: <Zap className="w-4 h-4" />,
-      description: 'AI-powered solutions for your business'
+      description: 'AI-powered solutions for your business',
+      submenu: [
+        { title: 'AI Marketing', href: '/ai-marketing' },
+        { title: 'AI Automation', href: '/ai-automation' },
+        { title: 'AI Healthcare', href: '/ai-healthcare' },
+        { title: 'AI Fintech', href: '/ai-fintech' },
+        { title: 'Content Generation', href: '/ai-content-generation' },
+        { title: 'Data Analytics', href: '/ai-data-analytics' },
+        { title: 'Cybersecurity', href: '/ai-cybersecurity' },
+        { title: 'Customer Support', href: '/ai-customer-support' }
+      ]
     },
     {
       title: 'IT Services',
       href: '/it-services',
       icon: <Database className="w-4 h-4" />,
-      description: 'Comprehensive IT infrastructure services'
+      description: 'Comprehensive IT infrastructure services',
+      submenu: [
+        { title: 'IT Infrastructure', href: '/it-infrastructure' },
+        { title: 'IT Support', href: '/it-support' },
+        { title: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
+        { title: 'Cybersecurity', href: '/cybersecurity' },
+        { title: 'Cloud Services', href: '/cloud-services' }
+      ]
+    },
+    {
+      title: 'Emerging Tech',
+      href: '/blockchain',
+      icon: <Globe className="w-4 h-4" />,
+      description: 'Cutting-edge technology solutions',
+      submenu: [
+        { title: 'Blockchain', href: '/blockchain' },
+        { title: 'Quantum Computing', href: '/quantum-computing' },
+        { title: 'IoT & Edge Computing', href: '/iot-edge-computing' },
+        { title: 'AR/VR Solutions', href: '/ar-vr-solutions' },
+        { title: 'Autonomous Systems', href: '/autonomous-systems' },
+        { title: '5G Implementation', href: '/5g-implementation' }
+      ]
     },
     {
       title: 'Micro SaaS',
       href: '/micro-saas-services',
       icon: <Smartphone className="w-4 h-4" />,
       description: 'Powerful micro SaaS tools'
-    },
-    {
-      title: 'Cloud Services',
-      href: '/cloud-services',
-      icon: <Cloud className="w-4 h-4" />,
-      description: 'Cloud migration and management'
-    },
-    {
-      title: '5G Implementation',
-      href: '/5g-implementation',
-      icon: <Globe className="w-4 h-4" />,
-      description: 'Next-generation 5G solutions'
     },
     {
       title: 'Digital Transformation',
@@ -77,6 +96,12 @@ export default function Navigation() {
             >
               About
             </Link>
+            <Link
+              to="/services"
+              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+            >
+              Services
+            </Link>
             
             {/* Services Dropdown */}
             <div className="relative">
@@ -84,29 +109,44 @@ export default function Navigation() {
                 onClick={toggleServices}
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
               >
-                Services
+                Solutions
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg z-50">
-                  <div className="p-4">
-                    <div className="grid grid-cols-1 gap-2">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-lg z-50">
+                  <div className="p-6">
+                    <div className="grid grid-cols-1 gap-4">
                       {services.map((service, index) => (
-                        <Link
-                          key={index}
-                          to={service.href}
-                          className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"
-                          onClick={() => setIsServicesOpen(false)}
-                        >
-                          <div className="flex-shrink-0 text-blue-600">
-                            {service.icon}
-                          </div>
-                          <div className="ml-3">
-                            <p className="text-sm font-medium text-gray-900">{service.title}</p>
-                            <p className="text-xs text-gray-500">{service.description}</p>
-                          </div>
-                        </Link>
+                        <div key={index} className="border-b border-gray-200 pb-4 last:border-b-0 last:pb-0">
+                          <Link
+                            to={service.href}
+                            className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors mb-2"
+                            onClick={() => setIsServicesOpen(false)}
+                          >
+                            <div className="flex-shrink-0 text-blue-600">
+                              {service.icon}
+                            </div>
+                            <div className="ml-3">
+                              <p className="text-sm font-medium text-gray-900">{service.title}</p>
+                              <p className="text-xs text-gray-500">{service.description}</p>
+                            </div>
+                          </Link>
+                          {service.submenu && (
+                            <div className="ml-8 space-y-1">
+                              {service.submenu.map((subItem, subIndex) => (
+                                <Link
+                                  key={subIndex}
+                                  to={subItem.href}
+                                  className="block text-xs text-gray-600 hover:text-blue-600 transition-colors py-1"
+                                  onClick={() => setIsServicesOpen(false)}
+                                >
+                                  {subItem.title}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -114,6 +154,24 @@ export default function Navigation() {
               )}
             </div>
 
+            <Link
+              to="/pricing"
+              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+            >
+              Pricing
+            </Link>
+            <Link
+              to="/case-studies"
+              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+            >
+              Case Studies
+            </Link>
+            <Link
+              to="/blog"
+              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+            >
+              Blog
+            </Link>
             <Link
               to="/contact"
               className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
@@ -151,26 +209,69 @@ export default function Navigation() {
               >
                 About
               </Link>
+              <Link
+                to="/services"
+                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                onClick={toggleMenu}
+              >
+                Services
+              </Link>
+              <Link
+                to="/pricing"
+                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                onClick={toggleMenu}
+              >
+                Pricing
+              </Link>
+              <Link
+                to="/case-studies"
+                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                onClick={toggleMenu}
+              >
+                Case Studies
+              </Link>
+              <Link
+                to="/blog"
+                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                onClick={toggleMenu}
+              >
+                Blog
+              </Link>
               
               {/* Mobile Services */}
               <div className="px-3 py-2">
-                <p className="text-gray-400 text-sm font-medium mb-2">Services</p>
+                <p className="text-gray-400 text-sm font-medium mb-2">Solutions</p>
                 <div className="space-y-1">
                   {services.map((service, index) => (
-                    <Link
-                      key={index}
-                      to={service.href}
-                      className="flex items-center text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm"
-                      onClick={toggleMenu}
-                    >
-                      <div className="flex-shrink-0 text-blue-400 mr-3">
-                        {service.icon}
-                      </div>
-                      <div>
-                        <p className="font-medium">{service.title}</p>
-                        <p className="text-xs text-gray-400">{service.description}</p>
-                      </div>
-                    </Link>
+                    <div key={index}>
+                      <Link
+                        to={service.href}
+                        className="flex items-center text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm"
+                        onClick={toggleMenu}
+                      >
+                        <div className="flex-shrink-0 text-blue-400 mr-3">
+                          {service.icon}
+                        </div>
+                        <div>
+                          <p className="font-medium">{service.title}</p>
+                          <p className="text-xs text-gray-400">{service.description}</p>
+                        </div>
+                      </Link>
+                      {service.submenu && (
+                        <div className="ml-8 space-y-1">
+                          {service.submenu.map((subItem, subIndex) => (
+                            <Link
+                              key={subIndex}
+                              to={subItem.href}
+                              className="block text-xs text-gray-400 hover:text-white px-3 py-1 rounded"
+                              onClick={toggleMenu}
+                            >
+                              {subItem.title}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   ))}
                 </div>
               </div>
