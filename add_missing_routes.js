@@ -1,43 +1,46 @@
 import fs from 'fs';
 
-// Read the broken links (pages that exist but have, no, routes)
+// Read the broken links (pages that exist but have no routes)
 const brokenLinks = fs.readFileSync('/workspace/broken_links.txt', 'utf8').split('\n').filter(Boolean);
 
-// Read the current App.tsx;
+// Read the current App.tsx
 let appContent = fs.readFileSync('/workspace/App.tsx', 'utf8');
 
-// Generate import statements for all missing pages;
+// Generate import statements for all missing pages
+const importStatements = brokenLinks.map(page => {
+  const componentName = page.split('/').pop().split('-').map(word => 
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join('') + 'Page';
   return `import ${componentName} from './app/${page}/page'`;
 }).join('\n');
 
-// Generate route statements;
+// Generate route statements
+const routeStatements = brokenLinks.map(page => {
+  const componentName = page.split('/').pop().split('-').map(word => 
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join('') + 'Page';
-  return `                  <Route path="/${page}" element={<${componentName} />} />`;
+  return `            <Route path="/${page}" element={<${componentName} />} />`;
 }).join('\n');
 
-// Add imports after the last import;
-const lastImportIndex = appContent.lastIndexOf('import');
-const lastImportLineEnd = appContent.indexOf('\n', lastImportIndex) + 1;
-const beforeImports = appContent.substring(0, lastImportLineEnd);
-const afterImports = appContent.substring(lastImportLineEnd);
+// Find the position to insert imports (after existing imports)
+const lastImportIndex = appContent.lastIndexOf('import ');
+const importInsertPosition = lastImportIndex + appContent.substring(lastImportIndex).indexOf('\n') + 1;
 
-const newImports = beforeImports + '\n' + imports + '\n';
+// Find the position to insert routes (inside Routes component)
+const routesStartIndex = appContent.indexOf('<Routes>');
+const routesInsertPosition = routesStartIndex + 8;
 
-// Add routes before the 404 route;
-const routeInsertionPoint = appContent.indexOf('{/* 404 Page */}');
-const beforeRoutes = appContent.substring(0, routeInsertionPoint);
-const afterRoutes = appContent.substring(routeInsertionPoint);
+// Insert imports
+const newAppContent = appContent.substring(0, importInsertPosition) + 
+  '\n' + importStatements + '\n' + 
+  appContent.substring(importInsertPosition);
 
-const newRoutes = beforeRoutes + '\n                  {/* Auto-generated routes for existing pages */}\n' + routes + '\n\n                  ' + afterRoutes;
+// Insert routes
+const finalAppContent = newAppContent.substring(0, routesInsertPosition) + 
+  '\n' + routeStatements + '\n' + 
+  newAppContent.substring(routesInsertPosition);
 
-// Combine everything;
-const newAppContent = newImports + afterImports.replace(appContent.substring(lastImportLineEnd, routeInsertionPoint), newRoutes.substring(lastImportLineEnd, routeInsertionPoint));
+// Write the updated App.tsx
+fs.writeFileSync('/workspace/App.tsx', finalAppContent);
 
-// Write the updated App.tsx;
-fs.writeFileSync('/workspace/App.tsx', newAppContent);
-
-console.log(`Added ${brokenLinks.length} routes to App.tsx`);
-console.log('Routes added for:', brokenLinks.slice(0, 10).join(', '), '... and more');
+console.log('Routes added successfully!');
