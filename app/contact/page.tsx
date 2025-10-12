@@ -15,13 +15,13 @@ const ContactPage: React.FC = () => {
     {
       icon: <Phone className="w-6 h-6 text-green-500" />,
       title: 'Call Us',
-      details: '+1 (555) 123-4567',
+      details: '+1 (302) 464-0950',
       description: 'Mon-Fri from 8am to 6pm'
     },
     {
       icon: <MapPin className="w-6 h-6 text-red-500" />,
       title: 'Visit Us',
-      details: 'San Francisco, CA',
+      details: '364 E Main St STE 1008<br />Middletown, DE 19709',
       description: 'Come say hello at our office'
     }
   ]
@@ -118,7 +118,7 @@ const ContactPage: React.FC = () => {
               Email Us Now
             </a>
             <a
-              href="tel:+15551234567"
+              href="tel:+13024640950"
               className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
             >
               Call Us Today

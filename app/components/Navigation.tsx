@@ -120,6 +120,18 @@ export default function Navigation() {
             >
               Contact
             </Link>
+            <Link
+              to="/careers"
+              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+            >
+              Careers
+            </Link>
+            <Link
+              to="/blog"
+              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+            >
+              Blog
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -181,6 +193,20 @@ export default function Navigation() {
                 onClick={toggleMenu}
               >
                 Contact
+              </Link>
+              <Link
+                to="/careers"
+                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                onClick={toggleMenu}
+              >
+                Careers
+              </Link>
+              <Link
+                to="/blog"
+                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                onClick={toggleMenu}
+              >
+                Blog
               </Link>
             </div>
           </div>
