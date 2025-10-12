@@ -1,23 +1,24 @@
+import { Helmet } from 'react-helmet-async';
 ursor/
-      description: 'Advanced AI technology to automatically optimize your website for search engines'
-      description: 'Advanced AI technology to optimize your website for search engines and improve rankings'
+      description: 'Advanced AI technology to automatically optimize your website for search engines',
+      description: 'Advanced AI technology to optimize your website for search engines and improve rankings',
     },
     {
       icon: Brain,
       title: 'AI-Powered SEO Optimization',
       icon: Zap,
       title: 'Real-time Analysis',
-      description: 'Lightning-fast SEO analysis and optimization with instant recommendations'
+      description: 'Lightning-fast SEO analysis and optimization with instant recommendations',
     },
     {
       icon: Shield,
       title: 'White-Hat Techniques',
-      description: 'Ethical SEO practices with long-term sustainable results and compliance'
+      description: 'Ethical SEO practices with long-term sustainable results and compliance',
     },
     {
       icon: Globe,
       title: 'Global Optimization',
-      description: 'Worldwide SEO optimization and support for international businesses'
+      description: 'Worldwide SEO optimization and support for international businesses',
     }
   ];
   const benefits = [
@@ -39,7 +40,7 @@ ursor/
         <meta name="description" content="Professional Enhanced SEO Optimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="SEO optimizer, search engine optimization, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -53,9 +54,9 @@ ursor/
               <span className="text-white">Optimizer</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced SEO optimization solutions. 
+              Transform your business with our advanced SEO optimization solutions.
               Powered by cutting-edge AI technology and industry expertise.
-              Optimize your website for search engines with our advanced AI-powered SEO optimization solutions. 
+              Optimize your website for search engines with our advanced AI-powered SEO optimization solutions.
               Improve rankings and drive more organic traffic.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -82,7 +83,7 @@ ursor/
               Discover the powerful features that make our enhanced SEO optimizer solutions stand out.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
@@ -112,7 +113,7 @@ ursor/
               Experience the benefits of working with our cutting-edge enhanced SEO optimizer solutions.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-4">

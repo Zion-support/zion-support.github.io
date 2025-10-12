@@ -23,15 +23,15 @@
    */
     const hasAlt = element.hasAttribute('alt');
     const altText = element.getAttribute('alt') || '';
-    
+
         element
       };
     }
-    
+
         element
       };
     }
-    
+
       element
     };
   }
@@ -42,17 +42,17 @@
     const id = element.getAttribute('id');
     const ariaLabel = element.getAttribute('aria-label');
     const ariaLabelledBy = element.getAttribute('aria-labelledby');
-    
+
         element
       };
     }
-    
+
       const label = document.querySelector(`label[for="${id}"]`);
           element
         };
       }
     }
-    
+
       element
     };
   }
@@ -63,20 +63,20 @@
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     const results: AccessibilityCheckResult[] = [];
     let previousLevel = 0;
-    
+
       const level = parseInt(heading.tagName.charAt(1));
-      
+
           element: heading as HTMLElement
         });
       }
-      
+
           element: heading as HTMLElement
         });
       }
-      
+
       previousLevel = level;
     });
-    
+
     return results;
   }
 
@@ -86,12 +86,12 @@
     const styles = window.getComputedStyle(element);
     const color = styles.color;
     const backgroundColor = styles.backgroundColor;
-    
+
     // you would calculate the actual contrast ratio
         element
       };
     }
-    
+
       element
     };
   }
@@ -101,11 +101,11 @@
    */
     const tabIndex = element.getAttribute('tabindex');
     const isInteractive = ['button', 'a', 'input', 'select', 'textarea'].includes(element.tagName.toLowerCase());
-    
+
         element
       };
     }
-    
+
       element
     };
   }
@@ -114,35 +114,35 @@
    * Run all accessibility checks on the page
    */
     this.results = [];
-    
+
     // Check images
     const images = document.querySelectorAll('img');
       this.results.push(this.checkImageAltText(img));
     });
-    
+
     // Check form elements
     const formElements = document.querySelectorAll('input, select, textarea');
       this.results.push(this.checkFormLabels(element as HTMLInputElement));
     });
-    
+
     // Check heading structure
     this.results.push(...this.checkHeadingStructure());
-    
+
     // Check color contrast for text elements
     const textElements = document.querySelectorAll('p, span, div, h1, h2, h3, h4, h5, h6');
       this.results.push(this.checkColorContrast(element as HTMLElement));
     });
-    
+
     // Check keyboard accessibility
     const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
       this.results.push(this.checkKeyboardAccessibility(element as HTMLElement));
     });
-    
+
     const totalChecks = this.results.length;
     const passedChecks = this.results.filter(r => r.passed).length;
     const failedChecks = this.results.filter(r => !r.passed).length;
     const warnings = this.results.filter(r => r.severity === 'warning').length;
-    
+
       results: this.results
     };
   }
@@ -159,7 +159,7 @@
    */
     const report = this.runAllChecks();
     const score = this.getAccessibilityScore();
-    
+
     return `
 Accessibility Report
 Score: ${score}%

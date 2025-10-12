@@ -1,5 +1,6 @@
+import React from 'react';
 'use client'
-import React from 'react'
+import { Helmet } from 'react-helmet-async';
 
 import { ArrowRight, Brain } from 'lucide-react';
 
@@ -8,22 +9,22 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      description: 'Lightning-fast processing and real-time analytics for optimal results',
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      description: 'Bank-level security with encryption and compliance standards',
     },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      description: 'Worldwide deployment and support for international businesses',
     }
   ];
   const benefits = [
@@ -43,7 +44,7 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
         <meta name="description" content="Professional EnhancedLoadingSkeleton services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="EnhancedLoadingSkeleton, AI solutions, IT services, Zion Tech Group, enhancedloadingskeleton" />
       </Helmet>
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -56,7 +57,7 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced enhancedloadingskeleton solutions. 
+              Transform your business with our advanced enhancedloadingskeleton solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -82,7 +83,7 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
               Our comprehensive approach ensures maximum efficiency and results for your business.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -108,7 +109,7 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
               Discover the advantages of our enhancedloadingskeleton solutions.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">

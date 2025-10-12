@@ -1,7 +1,7 @@
+import React from 'react';
 'use client';
-import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { X, ArrowRight, Brain } from 'lucide-react';
-
 
 interface SearchResult {
   title: string;
@@ -33,7 +33,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
     { title: 'AI Automation', description: 'Automate business processes with AI', path: '/ai-automation', category: 'AI Services', icon: <Brain className="w-4 h-4" /> },
     { title: 'AI 3D Generation', description: 'Create 3D models with AI', path: '/ai-3d-generation', category: 'AI Services', icon: <Brain className="w-4 h-4" /> },
     { title: 'AI Drug Discovery Pro', description: 'Advanced AI for pharmaceutical research', path: '/ai-drug-discovery-pro', category: 'AI Services', icon: <Brain className="w-4 h-4" /> },
-    
+
     // IT Services
     { title: 'Web Development', description: 'Custom web applications and websites', path: '/web-development', category: 'IT Services', icon: <Shield className="w-4 h-4" /> },
     { title: 'Mobile Development', description: 'iOS and Android app development', path: '/mobile-development', category: 'IT Services', icon: <Shield className="w-4 h-4" /> },
@@ -41,13 +41,13 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
     { title: 'Data Analytics', description: 'Transform data into actionable insights', path: '/data-analytics', category: 'IT Services', icon: <Shield className="w-4 h-4" /> },
     { title: 'Cloud Services', description: 'Scalable cloud infrastructure solutions', path: '/cloud-services', category: 'IT Services', icon: <Cloud className="w-4 h-4" /> },
     { title: 'Cybersecurity', description: 'Protect your business from cyber threats', path: '/cybersecurity', category: 'IT Services', icon: <Shield className="w-4 h-4" /> },
-    
+
     // 5G Services
     { title: '5G Implementation', description: 'Deploy 5G networks and solutions', path: '/5g-implementation', category: '5G Solutions', icon: <Zap className="w-4 h-4" /> },
     { title: '5G Network Infrastructure', description: 'Build robust 5G network infrastructure', path: '/5g-network-infrastructure', category: '5G Solutions', icon: <Zap className="w-4 h-4" /> },
     { title: '5G IoT Solutions', description: 'Connect devices with 5G IoT', path: '/5g-iot-solutions', category: '5G Solutions', icon: <Zap className="w-4 h-4" /> },
     { title: '5G Edge Computing', description: 'Edge computing powered by 5G', path: '/5g-edge-computing', category: '5G Solutions', icon: <Zap className="w-4 h-4" /> },
-    
+
     // Micro SAAS
     { title: 'AI Task Manager', description: 'Intelligent task management system', path: '/ai-task-manager', category: 'Micro SAAS', icon: <Cpu className="w-4 h-4" /> },
     { title: 'AI Expense Tracker', description: 'Smart expense tracking and analysis', path: '/ai-expense-tracker', category: 'Micro SAAS', icon: <Cpu className="w-4 h-4" /> },
@@ -55,7 +55,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
     { title: 'AI Invoice Generator', description: 'Automated invoice generation', path: '/ai-invoice-generator', category: 'Micro SAAS', icon: <Cpu className="w-4 h-4" /> },
     { title: 'AI Health Tracker', description: 'Personal health monitoring with AI', path: '/ai-health-tracker', category: 'Micro SAAS', icon: <Cpu className="w-4 h-4" /> },
     { title: 'AI Smart Calendar', description: 'Intelligent calendar management', path: '/ai-smart-calendar', category: 'Micro SAAS', icon: <Cpu className="w-4 h-4" /> },
-    
+
     // Company Pages
     { title: 'About Us', description: 'Learn about Zion Tech Group', path: '/about', category: 'Company', icon: <Shield className="w-4 h-4" /> },
     { title: 'Contact', description: 'Get in touch with our team', path: '/contact', category: 'Company', icon: <Shield className="w-4 h-4" /> },
@@ -99,11 +99,11 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
     <div className="fixed inset-0 z-50 overflow-y-auto">
       <div className="flex min-h-screen items-start justify-center px-4 pt-16 pb-20 text-center sm:block sm:p-0">
         {/* Backdrop */}
-        <div 
+        <div
           className="fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity"
           onClick={onClose}
         />
-        
+
         {/* Modal */}
         <div className="relative inline-block w-full max-w-2xl transform overflow-hidden rounded-2xl bg-slate-800 text-left align-bottom shadow-xl transition-all sm:my-8 sm:align-middle">
           {/* Header */}
@@ -190,7 +190,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
         </div>
       </div>
     </div>
-  );
+  </div>);
 };
 
 export default SearchModal;

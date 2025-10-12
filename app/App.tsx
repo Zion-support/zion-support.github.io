@@ -86,7 +86,7 @@ function App() {
                 <Route path="/privacy" element={<PrivacyPage />} />
                 <Route path="/terms" element={<TermsPage />} />
                 <Route path="/cookies" element={<CookiesPage />} />
-                
+
                 {/* AI Services */}
                 <Route path="/ai-services" element={<AiServicesPage />} />
                 <Route path="/ai-marketing" element={<AiMarketingPage />} />
@@ -100,21 +100,21 @@ function App() {
                 <Route path="/ai-customer-support" element={<AiCustomerSupportPage />} />
                 <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                 <Route path="/ai-data-visualization" element={<AiDataVisualizationPage />} />
-                
+
                 {/* IT Services */}
                 <Route path="/it-services" element={<ItServicesPage />} />
                 <Route path="/it-infrastructure" element={<ItInfrastructurePage />} />
                 <Route path="/it-support" element={<ItSupportPage />} />
                 <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                 <Route path="/cybersecurity" element={<CybersecurityPage />} />
-                
+
                 {/* Emerging Technologies */}
                 <Route path="/blockchain" element={<BlockchainPage />} />
                 <Route path="/quantum-computing" element={<QuantumComputingPage />} />
                 <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
                 <Route path="/ar-vr-solutions" element={<ARVRSolutionsPage />} />
                 <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
-                
+
                 {/* Micro SaaS */}
                 <Route path="/micro-saas" element={<MicroSaasPage />} />
                 <Route path="/micro-saas/ai-content-writer-pro" element={<AIContentWriterProPage />} />
