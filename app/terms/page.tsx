@@ -3,6 +3,7 @@ import React from 'react';
 
 const TermsPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Terms - Zion Tech Group</title>
@@ -35,3 +36,17 @@ const TermsPage: React.FC = () => {
 };
 
 export default TermsPage;
+=======
+    
+        <>
+      <title>Terms - Zion Tech Group</title>
+
+            <h1 className="text-4xl font-bold text-white mb-6">Terms</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional terms services coming soon.</p>
+            
+              Contact Us
+
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

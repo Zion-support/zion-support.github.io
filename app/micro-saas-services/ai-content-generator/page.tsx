@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react'
 
 export default function AicontentgeneratorPage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title>Service - Zion Tech Group</title>
@@ -22,5 +23,16 @@ export default function AicontentgeneratorPage() {
         </Link>
       </div>
     </div>
+=======
+
+        <>
+      <title>5G Data Analytics - Zion Tech Group</title>
+        <title>Ai Content Generator - Zion Tech Group</title>
+        <h1 className="text-4xl font-boldtext-whitemb-6">Ai Content Generator</h1>
+        <p className="text-lgtext-gray-300mb-8">Professional ai content generator services coming soon.</p>
+          Contact Us
+    
+      </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
   );
 }

@@ -137,6 +137,7 @@ export default function AIExpenseTrackerPage() {
   ]
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title />AI Expense Tracker - Zion Tech Group | Smart Financial Management</title>
@@ -145,6 +146,12 @@ export default function AIExpenseTrackerPage() {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/ai-expense-tracker"  />
       </Helmet>
+=======
+
+        <>
+      <title>5G Data Analytics - Zion Tech Group</title>
+        <title>AI Expense Tracker - Zion Tech Group | Smart Financial Management</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
 
       {/* Hero Section */}
       <section className="w-5h-5ml-2" />
@@ -346,6 +353,7 @@ export default function AIExpenseTrackerPage() {
                 
                 <p className="w-5h-5ml-2">Join thousands of users already saving time and money with our AI-powered expense tracker. 
                   Start your free trial today and experience the future of financial management.
+<<<<<<< HEAD
                 </p>
                 
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -368,3 +376,13 @@ export default function AIExpenseTrackerPage() {
     </div>
   );
 }
+=======
+
+                    <span>Start Free Trial</span>
+                    <span>View All Plans</span>
+
+                  <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
+
+      </>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

@@ -106,6 +106,7 @@ export default function IoTSolutionsPage() {
   ]
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title />IoT Solutions - Zion Tech Group | Smart Device Management & Analytics</title>
@@ -113,6 +114,12 @@ export default function IoTSolutionsPage() {
         <meta name="keywords" content="IoT solutions, internet of things, smart devices, IoT analytics, device management, edge computing, IoT security, connected devices" />
         <meta name="robots" content="index, follow, max-image-preview: large, max-snippet: -1, max-video-preview:-1" />
         <meta name="author" content="Zion Tech Group" />
+=======
+
+        <>
+      <title>5G Data Analytics - Zion Tech Group</title>
+        <title>IoT Solutions - Zion Tech Group | Smart Device Management & Analytics</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="IoT Solutions - Zion Tech Group | Smart Device Management & Analytics" /  />
         <meta property="og: description" content="Comprehensive IoT solutions including device management, data analytics, security, and cloud platforms. Transform your business with smart connected devices." /  />
@@ -276,6 +283,7 @@ export default function IoTSolutionsPage() {
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="w-5h-5ml-2" />
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -306,3 +314,15 @@ export default function IoTSolutionsPage() {
     </>
   );
 }
+=======
+    
+                    Ready to Connect Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent">World?</span>
+
+                    Transform your business with our comprehensive IoT solutions. Get started today and unlock the power of connected devices.
+
+                      <span>Get Started</span>
+                      <span>View Pricing</span>
+
+      </>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

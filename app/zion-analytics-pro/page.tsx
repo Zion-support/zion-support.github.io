@@ -125,6 +125,7 @@ const ZionAnalyticsProPage: React.FC = () => {
     }
   ];
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title />Zion Analytics Pro - AI-Powered Business Intelligence Platform</title>
@@ -343,3 +344,17 @@ const ZionAnalyticsProPage: React.FC = () => {
 };
 
 export default ZionAnalyticsProPage;
+=======
+    
+        <>
+      <title>ZionAnalyticsPro - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">ZionAnalyticsPro</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional zionanalyticspro services coming soon.</p>
+            
+              Contact Us
+
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

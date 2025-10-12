@@ -425,6 +425,7 @@ const ITServicesPage: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title />IT Services - Zion Tech Group | Comprehensive IT Solutions</title>
@@ -696,4 +697,17 @@ export default ItServicesPage;
 export default ITServicesPage;
 export default ITServicesPage;
 
+=======
+    
+        <>
+      <title>ItServices - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">ItServices</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional itservices services coming soon.</p>
+            
+              Contact Us
+
+      </>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
 }

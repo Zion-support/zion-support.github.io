@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react';
 
 const AiBlockchainAnalyticsPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title>AI Blockchain Analytics - Zion Tech Group</title>
@@ -26,3 +27,17 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
 };
 
 export default AiBlockchainAnalyticsPage;
+=======
+    
+        <>
+      <title>AiBlockchainAnalytics - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">AiBlockchainAnalytics</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional aiblockchainanalytics services coming soon.</p>
+            
+              Contact Us
+
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

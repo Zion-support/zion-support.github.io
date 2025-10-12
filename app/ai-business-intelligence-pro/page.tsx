@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function AibusinessintelligenceproPage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title>Service - Zion Tech Group</title>
@@ -21,5 +22,17 @@ export default function AibusinessintelligenceproPage() {
         </Link>
       </div>
     </div>
+=======
+
+        <>
+      <title>AI Business Intelligence Pro - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">AI Business Intelligence Pro</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional AI business intelligence pro services coming soon.</p>
+            
+              Contact Us
+
+      </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
   );
 }

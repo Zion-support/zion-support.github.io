@@ -213,6 +213,7 @@ export default function AiCybersecurityMonitorProPage() {
     { name: 'IoT Attacks', icon: <Smartphone className="w-5h-5ml-2" />, category: 'Device Vulnerabilities' }
   ];
   return (
+<<<<<<< HEAD
     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title>Service - Zion Tech Group</title>
@@ -445,5 +446,17 @@ export default function AiCybersecurityMonitorProPage() {
             </div>
         </section>
       </div>
+=======
+    
+        <>
+      <title>AiCybersecurityMonitorPro - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">AiCybersecurityMonitorPro</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional aicybersecuritymonitorpro services coming soon.</p>
+            
+              Contact Us
+
+      </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
   );
 }

@@ -84,6 +84,7 @@ const EmployeeDirectoryPage: React.FC = () => {
   ]
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title />AI Employee Directory - Smart Team Management | Zion Tech Group</title>
@@ -101,6 +102,14 @@ const EmployeeDirectoryPage: React.FC = () => {
               <Users className="w-5h-5ml-2" />
               <span />Employee Directory</span>
             </div>
+=======
+    
+        <>
+      <title>EmployeeDirectory - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">EmployeeDirectory</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional employeedirectory services coming soon.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
             
             <h1 className="w-5h-5ml-2" />
               Smart <span className="w-5h-5ml-2" />Employee Directory</span>
@@ -122,6 +131,7 @@ const EmployeeDirectoryPage: React.FC = () => {
             </div>
         </section>
 
+<<<<<<< HEAD
         {/* Features Section */}
         <section className="w-5h-5ml-2" />
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -234,3 +244,8 @@ const EmployeeDirectoryPage: React.FC = () => {
 }
 
 export default EmployeeDirectoryPage;
+=======
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

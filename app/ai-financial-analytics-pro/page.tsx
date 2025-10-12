@@ -212,12 +212,49 @@ export default function AiFinancialAnalyticsProPage() {
     { name: 'PayPal', icon: <Wallet className="w-5h-5ml-2" />, category: 'Payments' }
   ];
   return (
+<<<<<<< HEAD
     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title>Service - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="max-w-7xlmx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+=======
+    
+        <>
+      <title>5G Data Analytics - Zion Tech Group</title>
+        <title>AI Financial Analytics Pro - Zion Tech Group | Advanced Financial Intelligence Platform</title>
+
+        {/* Open Graph Meta Tags */}
+    
+        {/* Twitter Card Meta Tags */}
+    
+        {/* Structured Data */}
+        <script type="application/ld+json"  />{JSON.stringify({
+            "@context": "https: //schema.org",
+            "@type": "SoftwareApplication",
+            "name": "AI Financial Analytics Pro",
+            "description": "Advanced AI-powered financial analytics platform with machine learning insights, real-time reporting, and predictive modeling for smarter financial decisions.",
+            "url": "https: //ziontechgroup.com/ai-financial-analytics-pro",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web, iOS, Android",
+            "offers": {
+              "@type": "Offer",
+              "price": "199",
+              "priceCurrency": "USD",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": "199",
+                "priceCurrency": "USD",
+                "unitText": "MONTH"
+            },
+            "provider": {
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "url": "https: //ziontechgroup.com"
+          })}
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
         {/* Hero Section */}
         <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <h1 className="w-5h-5ml-2" />
@@ -436,6 +473,7 @@ export default function AiFinancialAnalyticsProPage() {
               </Link>
               <Link to="/about" className="border-2border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center" />
                 Learn More
+<<<<<<< HEAD
                 <PieChart className="w-5h-5ml-2" />
               </Link>
             </div>
@@ -446,3 +484,10 @@ export default function AiFinancialAnalyticsProPage() {
       </div>
   );
 }
+=======
+    
+              <p>✓ 14-day free trial • ✓ Bank-grade security • ✓ 24/7 support • ✓ Cancel anytime</p>
+
+      </>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

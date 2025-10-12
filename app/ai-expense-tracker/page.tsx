@@ -60,6 +60,7 @@ export default function AIExpenseTracker() {
   ];
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI Expense Tracker - Zion Tech Group</title>
@@ -70,6 +71,11 @@ export default function AIExpenseTracker() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-expense-tracker" />
       </Helmet>
+=======
+    
+        <>
+      <title>AI Expense Tracker - Zion Tech Group</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
 
       <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         {/* Hero Section */}
@@ -184,6 +190,7 @@ export default function AIExpenseTracker() {
                 </Link>
                 <Link to="/services" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
                   View All Services
+<<<<<<< HEAD
                 </Link>
               </div>
         <section className="py-20">
@@ -210,3 +217,22 @@ export default function AIExpenseTracker() {
 
 export default Page;
 }
+=======
+
+  );
+
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Shield, Zap, CheckCircle, ArrowRight, Star, Users, Award, Brain, Cloud } from 'lucide-react';
+import { Link } from 'react-router-dom'
+
+export default function AIExpenseTracker() {
+  return (
+        <title>AI Expense Tracker - Zion Tech Group</title>
+        <h1 className="text-4xl font-bold text-white mb-6">AI Expense Tracker</h1>
+        <p className="text-lg text-gray-300 mb-8">Professional AI expense tracking services coming soon.</p>
+          Contact Us
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

@@ -90,12 +90,18 @@ const ServicesPage: React.FC = () => {
     }
   ];
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Our Services - Zion Tech Group</title>
         <meta const name = "description" content="Explore our comprehensive range of AI and IT services. From AI solutions to cloud computing, cybersecurity, and custom development - we have you covered." /  />
         <meta name="keywords" content="AI services, IT services, cloud computing, cybersecurity, custom development, data analytics, mobile development" />
       </Helmet>
+=======
+    
+        <>
+      <title>Services - Zion Tech Group</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         {/* Hero Section */}
@@ -111,6 +117,7 @@ const ServicesPage: React.FC = () => {
             </div>
         </section>
 
+<<<<<<< HEAD
         {/* Main Services Section */}
         <section className="w-5h-5ml-2" />
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -235,3 +242,8 @@ const ServicesPage: React.FC = () => {
 };
 
 export default ServicesPage;
+=======
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

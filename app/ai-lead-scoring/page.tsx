@@ -124,6 +124,7 @@ const AILeadScoringPage: React.FC = () => {
   ]
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI Lead Scoring - Smart Sales Intelligence | Zion Tech Group</title>
@@ -331,3 +332,17 @@ const AILeadScoringPage: React.FC = () => {
 }
 
 export default AILeadScoringPage;
+=======
+    
+        <>
+      <title>AiLeadScoring - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">AiLeadScoring</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional aileadscoring services coming soon.</p>
+            
+              Contact Us
+
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

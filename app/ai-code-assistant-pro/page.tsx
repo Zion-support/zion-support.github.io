@@ -165,6 +165,7 @@ export default function AICodeAssistantProPage() {
         <link rel="canonical" href="https://ziontechgroup.com/ai-code-assistant-pro"  />
       </Helmet>
 
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="w-5h-5ml-2" />
         <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -430,5 +431,16 @@ export default function AICodeAssistantProPage() {
         </div>
       </section>
     </div>
+=======
+        <>
+      <title>AI Code Assistant Pro - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">AI Code Assistant Pro</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional AI code assistant pro services coming soon.</p>
+            
+              Contact Us
+
+      </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
   );
 }

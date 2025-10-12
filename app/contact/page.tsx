@@ -3,11 +3,17 @@ import { Helmet } from 'react-helmet-async';
 
 const ContactPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Contact - Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations and support." />
       </Helmet>
+=======
+    
+        <>
+      <title>Contact - Zion Tech Group</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
 
       <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xlmx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
@@ -48,4 +54,10 @@ const ContactPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default ContactPage;
+=======
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

@@ -115,6 +115,7 @@ export default function AIContentModerationPro() {
   ]
 
   return (
+<<<<<<< HEAD
     <Layout
       title="AI Content Moderation Pro - Advanced Content Safety Platform | Zion Tech Group"
       description="Protect your platform with AI-powered content moderation. Real-time detection, multi-format support, and 99.7% accuracy. Start your free trial today."
@@ -157,6 +158,14 @@ export default function AIContentModerationPro() {
               <p className="w-5h-5ml-2">Comprehensive AI-powered protection for all your content needs
               </p>
             </div>
+=======
+    
+        <>
+      <title>AI Content Moderation Pro - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">AI Content Moderation Pro</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional AI content moderation pro services coming soon.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
             
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {features.map((feature, index) => (
@@ -171,6 +180,7 @@ export default function AIContentModerationPro() {
             </div>
         </section>
 
+<<<<<<< HEAD
         {/* Capabilities Section */}
         <section className="w-5h-5ml-2" />
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -295,3 +305,8 @@ export default function AIContentModerationPro() {
     </Layout>
   )
 };
+=======
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

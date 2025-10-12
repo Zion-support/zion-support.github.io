@@ -3,6 +3,7 @@ import React from 'react';
 
 const DocsPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Docs - Zion Tech Group</title>
@@ -35,3 +36,17 @@ const DocsPage: React.FC = () => {
 };
 
 export default DocsPage;
+=======
+    
+        <>
+      <title>Docs - Zion Tech Group</title>
+
+            <h1 className="text-4xl font-bold text-white mb-6">Docs</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional docs services coming soon.</p>
+            
+              Contact Us
+
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

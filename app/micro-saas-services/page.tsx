@@ -89,6 +89,7 @@ const MicroSaasServicesPage: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <>
     <>
       <Helmet>
@@ -97,6 +98,11 @@ const MicroSaasServicesPage: React.FC = () => {
         <meta name="description" content="Powerful micro SaaS solutions including analytics, chatbots, security, cloud backup, workflow automation, and CRM intelligence for modern businesses." />
         <meta name="keywords" content="micro SaaS, business software, analytics, chatbots, security, cloud backup, workflow automation, CRM" />
       </Helmet>
+=======
+    
+        <>
+      <title>Micro SaaS Services - Zion Tech Group</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -346,7 +352,20 @@ const MicroSaasServicesPage: React.FC = () => {
 
 export default MicroSaasServicesPage;
         <title>5G Data Analytics - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
     </>
 }
+=======
+
+        <title>MicroSaasServices - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">MicroSaasServices</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional microsaasservices services coming soon.</p>
+            
+              Contact Us
+
+      </>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

@@ -111,8 +111,14 @@ export default function AISupplyChainOptimizerPage() {
     { number: '40%', label: 'Delivery Improvement', icon: <Clock className="w-5h-5ml-2" /> }
   ];
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
+=======
+
+        <>
+      <title>5G Data Analytics - Zion Tech Group</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
         <title>AI Supply Chain Optimizer - Smart Logistics & Inventory Management | Zion Tech Group</title>
         <meta const name = "description" content="Optimize your supply chain with AI-powered demand forecasting, route optimization, and inventory management. Reduce costs by 35% and improve delivery times by 40%." /  />
         <meta name="keywords" content="AI supply chain, logistics optimization, inventory management, demand forecasting, supply chain AI, logistics technology" />
@@ -295,6 +301,7 @@ export default function AISupplyChainOptimizerPage() {
                   onClick="{()" =  />window.open('/contact', '_blank')}
                 >
                   Schedule Demo
+<<<<<<< HEAD
                 </FuturisticButton>
               </div>
               <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -307,3 +314,10 @@ export default function AISupplyChainOptimizerPage() {
     </>
   );
 }
+=======
+
+                <p>✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
+
+      </>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

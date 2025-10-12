@@ -3,12 +3,18 @@ import React from 'react';
 
 const AiDocumentProcessingPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Ai Document Processing - Zion Tech Group</title>
         <meta name="description" content="Ai Document Processing services by Zion Tech Group. Professional AI and IT solutions." />
         <meta name="keywords" content="ai-document-processing, AI solutions, IT services" />
       </Helmet>
+=======
+    
+        <>
+      <title>AiDocumentProcessing - Zion Tech Group</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -21,6 +27,7 @@ const AiDocumentProcessingPage: React.FC = () => {
             </p>
           </div>
 
+<<<<<<< HEAD
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
             <p className="w-5h-5ml-2">We're working on bringing you comprehensive ai document processing solutions. 
@@ -35,3 +42,8 @@ const AiDocumentProcessingPage: React.FC = () => {
 };
 
 export default AiDocumentProcessingPage;
+=======
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

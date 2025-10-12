@@ -128,6 +128,7 @@ const AiChatbotBuilderPage: React.FC = () => {
         <meta name="keywords" content="AI chatbot builder, no-code chatbot, conversational AI, customer support automation" />
       </Helmet>
 
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="w-5h-5ml-2" />
         <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -291,3 +292,16 @@ const AiChatbotBuilderPage: React.FC = () => {
 };
 
 export default AiChatbotBuilderPage;
+=======
+        <>
+      <title>AiChatbotBuilder - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">AiChatbotBuilder</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional aichatbotbuilder services coming soon.</p>
+            
+              Contact Us
+
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

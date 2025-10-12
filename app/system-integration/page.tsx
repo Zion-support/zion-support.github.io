@@ -35,7 +35,14 @@ const Page: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup.com/system-integration" />
       </Helmet>
 
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+=======
+        <>
+      <title>5G Data Analytics - Zion Tech Group</title>
+        <title>System Integration - Zion Tech Group</title>
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
         {/* Hero Section */}
         <section className="w-5h-5ml-2" />
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -109,4 +116,23 @@ const Page: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Page;
+=======
+export default Page;
+
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
+
+export default function SystemIntegrationPage() {
+  return (
+        <title>System Integration - Zion Tech Group</title>
+        <h1 className="text-4xl font-bold text-white mb-6">System Integration</h1>
+        <p className="text-lg text-gray-300 mb-8">Professional system integration services coming soon.</p>
+          Contact Us
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
