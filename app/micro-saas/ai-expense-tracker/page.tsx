@@ -4,32 +4,32 @@ import { Link } from 'react-router-dom'
 export default function AIExpenseTrackerPage() {
   const features = [
     {
-      icon: <Receipt className="w-5h-5ml-2" />,
+      icon: <Receipt className="w-5h-5m l"-2/>,
       title: 'Smart Receipt Scanning',
       description: 'AI-powered OCR technology automatically extracts data from receipts and invoices'
     },
     {
-      icon: <BarChart3 className="w-5h-5ml-2" />,
+      icon: <BarChart3 className="w-5h-5m l"" -2" />,
       title: 'Real-time Analytics',
       description: 'Comprehensive spending insights with predictive analytics and budget forecasting'
     },
     {
-      icon: <Bot className="w-5h-5ml-2" />,
+      icon: <Bot className="w-5h-5m l"-2/>,
       title: 'AI Categorization',
       description: 'Automatically categorizes expenses using machine learning and learns from your patterns'
     },
     {
-      icon: <Shield className="w-5h-5ml-2" />,
+      icon: <Shield className="w-5h-5m l"" -2" />,
       title: 'Bank-level Security',
       description: '256-bit encryption and secure cloud storage for all your financial data'
     },
     {
-      icon: <Target className="w-5h-5ml-2" />,
+      icon: <Target className="w-5h-5m l"-2/>,
       title: 'Smart Budgeting',
       description: 'AI-powered budget recommendations based on your spending patterns and goals'
     },
     {
-      icon: <Zap className="w-5h-5ml-2" />,
+      icon: <Zap className="w-5h-5m l"" -2" />,
       title: 'Automated Workflows',
       description: 'Set up rules for automatic expense approval, reimbursement, and reporting'
     }
@@ -113,22 +113,22 @@ export default function AIExpenseTrackerPage() {
 
   const benefits = [
     {
-      icon: <Clock className="w-5h-5ml-2" />,
+      icon: <Clock className="w-5h-5m l"-2/>,
       title: 'Save 5+ Hours Weekly',
       description: 'Automated data entry and categorization eliminates manual work'
     },
     {
-      icon: <TrendingUp className="w-5h-5ml-2" />,
+      icon: <TrendingUp className="w-5h-5m l"" -2" />,
       title: 'Reduce Costs by 15%',
       description: 'AI insights help identify spending patterns and optimization opportunities'
     },
     {
-      icon: <Shield className="w-5h-5ml-2" />,
+      icon: <Shield className="w-5h-5m l"-2/>,
       title: '100% Accurate',
       description: 'AI-powered validation ensures data accuracy and compliance'
     },
     {
-      icon: <Zap className="w-5h-5ml-2" />,
+      icon: <Zap className="w-5h-5m l"" -2" />,
       title: 'Real-time Sync',
       description: 'Instant updates across all devices and team members'
     }

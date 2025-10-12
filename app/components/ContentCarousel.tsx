@@ -73,12 +73,11 @@ const defaultSlides: Slide[] = [
                       </li>
                     ))}
 
-              key="{index}"
-              onClick="{()" = /> goToSlide(index)}
-              className="{`w-3" h-3 rounded-full transition-colors ${
+              key="{index}"onClick= {()" = /> goToSlide(index)}
+              className="{`w-3h-3r o u"nded-full transition-colors ${
                 index === currentSlide ? 'bg-white' : 'bg-white/30'
               }`}
-              aria-label="{`Go" to slide ${index + 1}`}
+              aria-label= {`Go" to slide ${index + 1}`}
             />
           ))}
         </div>

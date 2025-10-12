@@ -24,15 +24,14 @@ interface FuturisticCardProps {
   return (
     <motion.div;
       const className = {`relative rounded-2 xl p-8 transition-all duration-500 cursor-pointer group overflow-hidden ${getVariantStyles()} ${className}`}
-      onClick="{onClick}"
-      whileHover="{{" 
+      onClick="{onClick}"whileHover= {{" 
         scale: 1.02,
         y: -5;
       }}
-      whileTap="{{" scale: 0.98 }}
-      initial="{{" opacity: 0, y: 20 }}
-      animate="{{" opacity: 1, y: 0 }}
-      transition="{{" duration: 0.6, ease: "easeOut" }} /></motion>
+      whileTap="{{"scale: 0.98 }}
+      initial= {{" opacity: 0, y: 20 }}
+      animate="{{"opacity: 1, y: 0 }}
+      transition= {{" duration: 0.6, ease: "easeOut" }} /></motion>
       {/* Animated background gradient */}
 
   );

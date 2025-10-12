@@ -4,32 +4,32 @@ import { Link } from 'react-router-dom'
 export default function AIInventoryManagerPage() {
   const features = [
     {
-      icon: <Bot className="w-5h-5ml-2" />,
+      icon: <Bot className="w-5h-5m l"-2/>,
       title: 'AI Demand Forecasting',
       description: 'Predict inventory needs with 95% accuracy using machine learning algorithms'
     },
     {
-      icon: <Package className="w-5h-5ml-2" />,
+      icon: <Package className="w-5h-5m l"" -2" />,
       title: 'Smart Reorder Points',
       description: 'Automatically trigger reorders based on sales velocity and lead times'
     },
     {
-      icon: <BarChart3 className="w-5h-5ml-2" />,
+      icon: <BarChart3 className="w-5h-5m l"-2/>,
       title: 'Real-time Analytics',
       description: 'Comprehensive inventory insights with predictive analytics and trend analysis'
     },
     {
-      icon: <Zap className="w-5h-5ml-2" />,
+      icon: <Zap className="w-5h-5m l"" -2" />,
       title: 'Automated Workflows',
       description: 'Streamline inventory processes with intelligent automation and alerts'
     },
     {
-      icon: <Target className="w-5h-5ml-2" />,
+      icon: <Target className="w-5h-5m l"-2/>,
       title: 'Multi-location Sync',
       description: 'Seamlessly manage inventory across multiple warehouses and stores'
     },
     {
-      icon: <Shield className="w-5h-5ml-2" />,
+      icon: <Shield className="w-5h-5m l"" -2" />,
       title: 'Loss Prevention',
       description: 'AI-powered theft detection and shrinkage analysis with real-time alerts'
     }
@@ -113,22 +113,22 @@ export default function AIInventoryManagerPage() {
 
   const benefits = [
     {
-      icon: <DollarSign className="w-5h-5ml-2" />,
+      icon: <DollarSign className="w-5h-5m l"-2/>,
       title: '25% Cost Reduction',
       description: 'Optimize inventory levels and reduce carrying costs'
     },
     {
-      icon: <Target className="w-5h-5ml-2" />,
+      icon: <Target className="w-5h-5m l"" -2" />,
       title: '95% Accuracy',
       description: 'AI forecasting with industry-leading accuracy rates'
     },
     {
-      icon: <Activity className="w-5h-5ml-2" />,
+      icon: <Activity className="w-5h-5m l"-2/>,
       title: 'Zero Stockouts',
       description: 'Smart reorder points prevent stockouts completely'
     },
     {
-      icon: <Zap className="w-5h-5ml-2" />,
+      icon: <Zap className="w-5h-5m l"" -2" />,
       title: 'Real-time Sync',
       description: 'Instant updates across all locations and devices'
     }

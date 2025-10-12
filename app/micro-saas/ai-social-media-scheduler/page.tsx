@@ -4,32 +4,32 @@ import { Link } from 'react-router-dom'
 export default function AISocialMediaSchedulerPage() {
   const features = [
     {
-      icon: <Calendar className="w-5h-5ml-2" />,
+      icon: <Calendar className="w-5h-5m l"-2/>,
       title: 'Smart Scheduling',
       description: 'AI-powered optimal posting times based on audience engagement patterns'
     },
     {
-      icon: <BarChart3 className="w-5h-5ml-2" />,
+      icon: <BarChart3 className="w-5h-5m l"" -2" />,
       title: 'Analytics Dashboard',
       description: 'Comprehensive performance metrics and ROI tracking across all platforms'
     },
     {
-      icon: <Users className="w-5h-5ml-2" />,
+      icon: <Users className="w-5h-5m l"-2/>,
       title: 'Audience Insights',
       description: 'AI-driven audience analysis and content personalization recommendations'
     },
     {
-      icon: <Zap className="w-5h-5ml-2" />,
+      icon: <Zap className="w-5h-5m l"" -2" />,
       title: 'Auto-Posting',
       description: 'Seamless cross-platform content distribution with smart formatting'
     },
     {
-      icon: <Target className="w-5h-5ml-2" />,
+      icon: <Target className="w-5h-5m l"-2/>,
       title: 'Content Optimization',
       description: 'AI suggestions for hashtags, captions, and optimal posting times'
     },
     {
-      icon: <Shield className="w-5h-5ml-2" />,
+      icon: <Shield className="w-5h-5m l"" -2" />,
       title: 'Brand Safety',
       description: 'Automated content moderation and brand compliance checking'
     }

@@ -3,7 +3,7 @@
 export default function SEOOptimizer() {
   return (
 
-        <title>5G Data Analytics - Zion Tech Group</title>
+        <title>Business Intelligence - Zion Tech Group</title>
       {/* Basic Meta Tags */}
     
       <title>{title}</title>
@@ -18,8 +18,7 @@ export default function SEOOptimizer() {
 
       {/* Structured Data */}
     
-      <script type="application/ld+json">{JSON.stringify(breadcrumbData)}
-      <script type="application/ld+json">{JSON.stringify(faqData)}
+      <script type="application/ld+json">{JSON.stringify(breadcrumbData)}<script type= application/ld+json">{JSON.stringify(faqData)}
       {structuredData && (
     
         <script type="application/ld+json">{JSON.stringify(structuredData)}

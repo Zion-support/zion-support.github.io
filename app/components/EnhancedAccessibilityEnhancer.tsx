@@ -8,7 +8,7 @@ ursor/
             </p>
             return (
 
-                <p className="text-gray-300">{feature.description}</p>
+                <p className="t e"xt-gray-300">{feature.description}</p>
               </div>
             ))}
 

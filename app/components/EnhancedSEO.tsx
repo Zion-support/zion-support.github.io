@@ -26,49 +26,44 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
   noindex = false,
   nofollow = false;
   const defaultStructuredData = {
-    "@context": "https: //schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https: //ziontechgroup.com",
-    "logo": "https: //ziontechgroup.com/logo.png",
-    "description": description,
-    "foundingDate": "2020",
-    "founder": {
-      "@type": "Person",
-      "name": "Dr. Kleber Santos"
+    "@context": https: //schema.org",
+    "@type": Organization",
+    "name": Zion Tech Group",
+    "url": https: //ziontechgroup.com",
+    "logo": https: //ziontechgroup.com/logo.png",
+    "description":description,
+     foundingDate": "2020", founder": {
+      "@type": Person",
+      "name": Dr. Kleber Santos"
     },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
+    "address":{
+       @type": "PostalAddress", streetAddress": "364E Main St STE 1008 ,
+      "addressLocality": Middletown",
+      "addressRegion": DE",
+      "postalCode": 19709",
+      "addressCountry": US"
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
+    "contactPoint":{
+       @type": "ContactPoint", telephone": "+1-302-464-0950", contactType": "customerservice ,
+      "email": kleber@ziontechgroup.com"
     },
-    "sameAs": [
-      "https: //linkedin.com/company/ziontechgroup",
-      "https: //twitter.com/ziontechgroup",
-      "https://github.com/ziontechgroup"
-    ],
-    "offers": {
-      "@type": "AggregateOffer",
-      "offerCount": "50+",
-      "lowPrice": "99",
-      "highPrice": "2999",
-      "priceCurrency": "USD"
+    "sameAs":[
+       https: //linkedin.com/company/ziontechgroup",
+      "https://twitter.com/ziontechgroup ,
+      "https://github.com/ziontechgroup"],
+     offers": {
+      "@type": AggregateOffer",
+      "offerCount": 50+",
+      "lowPrice": 99",
+      "highPrice": 2999",
+      "priceCurrency": USD"
 
   const finalStructuredData = structuredData || defaultStructuredData;
   const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
 
   return (
 
-        <title>5G Data Analytics - Zion Tech Group</title>
+        <title>Business Intelligence - Zion Tech Group</title>
       {/* Basic Meta Tags */}
     
       <title>{title}</title>

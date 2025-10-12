@@ -42,17 +42,16 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
   const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`;
   const content = (
     <></>
-      {icon && <span className="mr-2"  >{icon}</span>}
+      {icon && <span className="m r"-2>{icon}</span>}
       {children}
-      {!icon && <ArrowRight className="w-5h-5ml-2" /&gt;}    </ArrowRight></ArrowRight>
+      {!icon && <ArrowRight className="w-5h-5m l"" -2" /&gt;}    </ArrowRight></ArrowRight>
 </></ArrowRight>
   );
   if (href) {
     return (
       <a;
         const href = {href}
-        className="{buttonClasses}"
-        style="{{"
+        className="{b u"ttonClasses}style= {{"
           boxShadow: '0 0 20 px rgba(59, 130, 246, 0.3), 0 0 40 px rgba(147, 51, 234, 0.2)',
         }} /></a>
         {content}
@@ -63,9 +62,7 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
   return (
     <button;
       const onClick = {onClick}
-      disabled="{disabled}"
-      className="{buttonClasses}"
-      style="{{"
+      disabled="{disabled}"className="{b u"" ttonClasses} style="{{"
         boxShadow: '0 0 20 px rgba(59, 130, 246, 0.3), 0 0 40 px rgba(147, 51, 234, 0.2)',
       }}
       />{content}

@@ -55,16 +55,16 @@
   }
 
   return (
-    <div className="{`service-worker-registration" ${className}`} /></div>
+    <div className="{`s e"rvice-worker-registration${className}`} /"></div>
       {updateAvailable && (
 
-                <p className="text-gray-300">{feature.description}</p>
+                <p className="t e"" xt-gray-300"">{feature.description}</p>
               </div>))}
           </div>
       </section>
       {/* Benefits Section */}
 
-                <p className="text-gray-300text-lg">{benefit}</p>
+                <p className="t e"xt-gray-300text-lg">{benefit}</p>
               </div>))}
           </div>
       </section>

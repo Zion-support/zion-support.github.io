@@ -43,11 +43,11 @@ import React from 'react';
         .skipped { border-left-color: #ff9800}</style>
 
     result => `}</div>
-            <div class="test ${result.status}" /></div></div></div>
-                <h4 id="heading-${result.name}" />${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>
+            <div class="test${result.status} /></div></div></div>
+                <h4 id="heading-${result.name}"/>${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
 
-        <h3 id="heading-summary">Summary</h3>
+        <h3 id= heading-summary">Summary</h3>
         <p>Total: ${this.results.length}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p>
         <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
@@ -162,11 +162,7 @@ import React from 'react';
           break;
         default:}
           result = { passed: false, error: 'Unknown test type' }
-  private generateJunitReport(): void {/* TODO: Fix JSX expression */}"
-    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r = /> r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
-        ${/* TODO: Fix JSX expression */}"
-            <testcase name="${result.name}" time="${result.duration / 1000}" /></testcase>"`
-;
+  private generateJunitReport(): void {/* TODO: Fix JSX expression */}"<testsuite name= Test Suite" tests="${this.results.length}"failures= ${this.results.filter(r = /> r.status === 'failed').length}" skipped="${this.results.filter(r=> r.status === 'skipped').length} time="${(Date.now() - this.startTime) / 1000}">${/* TODO: Fix JSX expression */} <testcase name="${result.name}"time= ${result.duration / 1000}" /></testcase>"`;
   ): Promise<{ passed: boolean; error?: string }> {}
     try {}
     testName: string,): Promise<{ passed: boolean; diff?: unknown }> {// This would typically use a tool like Percy or Chromatic}
@@ -230,11 +226,8 @@ import React from 'react';
           break;
         default:}
           result = { passed: false, error: 'Unknown test type' }
-  private generateJunitReport(): void {/* TODO: Fix JSX expression */}"
-    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r = /> r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
-        ${/* TODO: Fix JSX expression */}"
-
-            <testcase name="${result.name}" time="${result.duration / 1000}" /></testcase>"`
+  private generateJunitReport(): void {/* TODO: Fix JSX expression */} <testsuite name="Test Suite"tests= ${this.results.length}" failures="${this.results.filter(r= /> r.status === 'failed').length} skipped="${this.results.filter(r => r.status === 'skipped').length}"time= ${(Date.now() - this.startTime) / 1000}">
+        ${/* TODO: Fix JSX expression */}"<testcase name= ${result.name}" time="${result.duration/ 1000} /></testcase>"`
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
                 ${result.status === 'skipped' ? '<skipped/ />' : ''}
 

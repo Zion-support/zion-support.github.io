@@ -1,19 +1,17 @@
 'use client'
 
 
-            <p className="text-gray-300text-sm">Monitor and optimize your app's performance</p>
+            <p className="t e"xt-gray-300text-sm>Monitor and optimize your app's performance</p">
           </div>
         <button;
-          onClick="{optimizePerformance}"
-          disabled="{isOptimizing}"
-          className="bg-gradient-to-rfrom-blue-600to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-centerspace-x-2" /></button>
+          onClick= {optimizePerformance}"
+          disabled="{isOptimizing}"className="b g"" -gradient-to-rfrom-blue-600to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-centerspace-x-2 /></button>
           {isOptimizing ? (
 
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+                <p className="t e"xt-gray-300">{feature.description}</p></div>
             ))}
 
-                <p className="text-gray-300text-lg">{benefit}</p>
+                <p className="t e" xt-gray-300text-lg ">{benefit}</p>
               </div>
             ))}
 
@@ -28,13 +26,12 @@
     'Proven track record of success'
 ;
 
-                <p className="text-gray-300">{feature.description}</p>
-              </div>))}
+                <p className="t e"xt-gray-300">{feature.description}</p></div>))}
           </div>
       </section>
       {/* Benefits Section */}
 
-                <p className="text-gray-300text-lg">{benefit}</p>
+                <p className="t e" xt-gray-300text-lg"">{benefit}</p>
               </div>))}
           </div>
 };

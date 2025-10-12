@@ -29,9 +29,9 @@ export default getErrorBoundaryConfig;
  * Default error messages;
  */
 
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+    <div className="m i"n-h-screenflexitems-center justify-centerbg-gray-50px-4 "></div>
+      <div className=mi n-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20""></div>
+        <div className="m i"n-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20 "></div>
           >
 
 
@@ -52,10 +52,10 @@ export default getErrorBoundaryConfig;
     </div>)}
 /**
  * Network error fallback component*/;
-function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            viewBox="0 0 24 24">
+function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {return (<div className=mi n-h-screen flex items-center justify-centerbg-gray-50px-4""></div>
+      <div className="m i"n-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20 "></div>
+        <div className=mi n-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20""></div>
+            viewBox="00 24 24 >
 
 
   )}
@@ -68,7 +68,7 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
  * Get error type from error object;
  */
     return 'network'
-            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700 transition-colors">
+            className="w-f u"ll bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700 transition-colors">
             Retry Connection;
           </button>
         </div>

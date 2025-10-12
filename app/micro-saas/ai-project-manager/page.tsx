@@ -4,32 +4,32 @@ import { Link } from 'react-router-dom'
 export default function AIProjectManagerPage() {
   const features = [
     {
-      icon: <Bot className="w-5h-5ml-2" />,
+      icon: <Bot className="w-5h-5m l"-2/>,
       title: 'AI Task Prioritization',
       description: 'Intelligent task ranking based on deadlines, dependencies, and team capacity'
     },
     {
-      icon: <BarChart3 className="w-5h-5ml-2" />,
+      icon: <BarChart3 className="w-5h-5m l"" -2" />,
       title: 'Predictive Analytics',
       description: 'AI-powered project forecasting and risk assessment with 95% accuracy'
     },
     {
-      icon: <Users className="w-5h-5ml-2" />,
+      icon: <Users className="w-5h-5m l"-2/>,
       title: 'Smart Team Matching',
       description: 'AI algorithms match tasks to team members based on skills and availability'
     },
     {
-      icon: <Zap className="w-5h-5ml-2" />,
+      icon: <Zap className="w-5h-5m l"" -2" />,
       title: 'Automated Workflows',
       description: 'Set up intelligent workflows that adapt and optimize based on project patterns'
     },
     {
-      icon: <Target className="w-5h-5ml-2" />,
+      icon: <Target className="w-5h-5m l"-2/>,
       title: 'Resource Optimization',
       description: 'AI-driven resource allocation and capacity planning for maximum efficiency'
     },
     {
-      icon: <Shield className="w-5h-5ml-2" />,
+      icon: <Shield className="w-5h-5m l"" -2" />,
       title: 'Risk Management',
       description: 'Proactive risk identification and mitigation strategies powered by machine learning'
     }
@@ -113,22 +113,22 @@ export default function AIProjectManagerPage() {
 
   const benefits = [
     {
-      icon: <TrendingUp className="w-5h-5ml-2" />,
+      icon: <TrendingUp className="w-5h-5m l"-2/>,
       title: '40% Faster Delivery',
       description: 'AI optimization reduces project completion time significantly'
     },
     {
-      icon: <Target className="w-5h-5ml-2" />,
+      icon: <Target className="w-5h-5m l"" -2" />,
       title: '95% Accuracy',
       description: 'Predictive analytics with industry-leading accuracy rates'
     },
     {
-      icon: <Users className="w-5h-5ml-2" />,
+      icon: <Users className="w-5h-5m l"-2/>,
       title: 'Team Productivity +60%',
       description: 'Smart task allocation maximizes team efficiency'
     },
     {
-      icon: <Shield className="w-5h-5ml-2" />,
+      icon: <Shield className="w-5h-5m l"" -2" />,
       title: 'Risk Reduction 80%',
       description: 'Proactive risk management prevents project failures'
     }

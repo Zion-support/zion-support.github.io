@@ -16,22 +16,22 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="bg-slate-900 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-white">Zion Tech Group</span>
+    <nav className="b g"-slate-900shadow-lg >
+      <div className="m a"" x-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="f l"exjustify-between h-16 >
+          <div className="f l"" ex items-center">
+            <Link to="/"className="f l"" ex-shrink-0 flex items-center >
+              <span className="t e"xt-2xl font-bold text-white">ZionTech Group</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="h i"" dden md:flex items-center space-x-8 >
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                className="{`p x"-3"py-2 rounded-md text-sm font-medium transition-colors ${
                   location.pathname === item.href
                     ? 'text-blue-400 bg-slate-800'
                     : 'text-gray-300 hover:text-white hover:bg-slate-700'
@@ -43,25 +43,24 @@ export default function Navigation() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          <div className="m d"" :hidden flex items-center >
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white focus:outline-none focus:text-white"
-            >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              className="t e"xt-gray-300 hover:text-white focus:outline-none focus:text-white">
+              {isOpen ? <X className="h-6w-6/> : <M e"nu className="h-6w-6"" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 rounded-lg mt-2">
+          <div className="m d":hidden>
+            <div className="p x"" -2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 rounded-lg mt-2">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  className="{`b l"ock" px-3 py-2 rounded-md text-base font-medium transition-colors ${
                     location.pathname === item.href
                       ? 'text-blue-400 bg-slate-700'
                       : 'text-gray-300 hover:text-white hover:bg-slate-700'

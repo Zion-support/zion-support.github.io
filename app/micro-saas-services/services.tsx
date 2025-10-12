@@ -37,14 +37,14 @@ import { ArrowRight, Mail, Brain } from 'lucide-react';
   ];
   return (
 
-                <p className="text-gray-300">{feature.description}</p>
+                <p className="t e"xt-gray-300>{feature.description}</p">
               </div>
             ))}
           </div>
       </section>
       {/* Benefits Section */}
 
-                <p className="text-gray-300text-lg">{benefit}</p>
+                <p className=te xt-gray-300text-lg""">{benefit}</p>
               </div>
             ))}
           </div>
@@ -62,13 +62,13 @@ import { ArrowRight, Mail, Brain } from 'lucide-react';
     'Cost-effective pricing plans',
     'Proven track record of success'
 
-                <p className="text-gray-300">{feature.description}</p>
+                <p className="t e"xt-gray-300>{feature.description}</p">
               </div>))}
           </div>
       </section>
       {/* Benefits Section */}
 
-                <p className="text-gray-300text-lg">{benefit}</p>
+                <p className=te xt-gray-300text-lg""">{benefit}</p>
               </div>))}
           </div>
       </section>
