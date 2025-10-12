@@ -22,12 +22,6 @@ const routeStatements = brokenLinks.map(page => {
   return `                  <Route path="/${page}" element={<${componentName} />} />`;
 }).join('\n');
 
-<<<<<<< HEAD
-console.log('Import statements:');
-console.log(importStatements);
-console.log('\nRoute statements:');
-console.log(routeStatements);
-=======
 // Find the position to insert imports (after existing imports)
 const importInsertPosition = appContent.lastIndexOf('import FuturisticBackground from');
 
@@ -50,4 +44,3 @@ fs.writeFileSync('/workspace/App.tsx', appContent);
 console.log('Successfully added missing routes to App.tsx');
 console.log('Added imports:', importStatements.split('\n').length);
 console.log('Added routes:', routeStatements.split('\n').length);
->>>>>>> cursor/fix-errors-and-merge-to-main-9874

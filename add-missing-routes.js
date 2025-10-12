@@ -3,13 +3,6 @@ import path from 'path';
 
 // Read the current App.tsx
 const appContent = fs.readFileSync('/workspace/App.tsx', 'utf8');
-
-<<<<<<< HEAD
-=======
-// Read the current App.tsx
-const appContent = fs.readFileSync('/workspace/src/App.tsx', 'utf8');
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9874
 // Read the missing pages from the analysis
 const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8'));
 const missingPages = analysisData.missingPagesList;
@@ -27,20 +20,7 @@ const generateRouteStatement = (route) => {
   const componentName = route.split('-').map(word => 
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join('') + 'Page';
-<<<<<<< HEAD
-  return `            <Route path="/${route}" element={<${componentName} />} />`;
-};
-
-// Generate the new content
-const importStatements = missingPages.map(generateImportStatement).join('\n');
-const routeStatements = missingPages.map(generateRouteStatement).join('\n');
-
-console.log('Import statements:');
-console.log(importStatements);
-console.log('\nRoute statements:');
-console.log(routeStatements);
-=======
-  return `                <Route path="/${route}" element={<${componentName} />} />`;
+return `                <Route path="/${route}" element={<${componentName} />} />`;
 };
 
 // Generate all import statements
@@ -71,4 +51,3 @@ fs.writeFileSync('/workspace/src/App.tsx', finalAppContent);
 console.log('Successfully added missing routes to App.tsx');
 console.log('Added imports:', importStatements.split('\n').length);
 console.log('Added routes:', routeStatements.split('\n').length);
->>>>>>> cursor/fix-errors-and-merge-to-main-9874

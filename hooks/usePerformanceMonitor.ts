@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-    // Monitor page load performance;
-      if ('performance' in window) {
-            const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-            const paint = performance.getEntriesByType('paint');
-            
-            // Log performance metrics;
-            console.log('Page Load Performance:', {
-              domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-              loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
- entry.name === 'first-paint')?.startTime,
- entry.name === 'first-contentful-paint')?.startTime,
-            });
-          }, 0);
-        });
-    };
-
-    // Monitor resource loading;
-=======
 import { useEffect } from 'react';
 
 export const usePerformanceMonitor = () => {
@@ -41,7 +22,6 @@ export const usePerformanceMonitor = () => {
 
     // Monitor resource loading
     const monitorResourceLoading = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-9874
       if ('performance' in window) {
         const observer = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry) => {
@@ -61,16 +41,12 @@ export const usePerformanceMonitor = () => {
       }
     };
 
-    // Initialize monitoring;
+    // Initialize monitoring
     monitorPageLoad();
     const cleanup = monitorResourceLoading();
 
-<<<<<<< HEAD
-    // Cleanup;
-=======
     // Cleanup
     return () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-9874
       cleanup?.();
     };
   }, []);

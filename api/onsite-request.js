@@ -2,16 +2,12 @@ const fs = require('fs');
 const path = require('path');
 
 // Simple wrapper function to replace withSentry
-<<<<<<< HEAD
 function withSentry(handler) {
   return handler;
 }
 
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9874
 function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -69,14 +65,10 @@ function handler(req, res) {
     console.error('Error writing request:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-<<<<<<< HEAD
     res.end(JSON.stringify({ 
       success: false, 
       error: 'Failed to save request' 
     }));
-=======
-    res.end(JSON.stringify({ error: 'Failed to save request' }));
->>>>>>> cursor/fix-errors-and-merge-to-main-9874
   }
 }
 

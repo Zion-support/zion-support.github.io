@@ -34,10 +34,7 @@ export default defineConfig({
     
     rollupOptions: {
       output: {
-<<<<<<< HEAD
         chunkFileNames: 'assets/[name]-[hash].js',
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9874
         manualChunks: (id) => {
           // Core React libraries
           if (id.includes('react') || id.includes('react-dom')) {

@@ -3,20 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './app/styles/futuristic.css';
 import './app/styles/futuristic-enhanced.css';
 import HomePage from './app/page';
-<<<<<<< HEAD
-import PageLoader from './app/components/LoadingStates';
-=======
 import { PageLoader } from './app/components/LoadingStates';
-import ErrorBoundary from './app/components/ErrorBoundary';
-import Breadcrumb from './app/components/Breadcrumb';
-import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import { usePerformanceMonitor } from './hooks/usePerformanceMonitor';
-import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-import FuturisticBackground from './app/components/FuturisticBackground';
->>>>>>> cursor/fix-errors-and-merge-to-main-9874
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
@@ -27,11 +14,8 @@ const BlogPage = React.lazy(() => import('./app/blog/page'));
 const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
 const CareersPage = React.lazy(() => import('./app/careers/page'));
 const AIServicesPage = React.lazy(() => import('./app/ai-services/page'));
-<<<<<<< HEAD
-=======
 const ITServicesPage = React.lazy(() => import('./app/it-services/page'));
 const MicroSAASPage = React.lazy(() => import('./app/micro-saas/page'));
->>>>>>> cursor/fix-errors-and-merge-to-main-9874
 const TutorialsPage = React.lazy(() => import('./app/tutorials/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
@@ -41,8 +25,6 @@ const TermsPage = React.lazy(() => import('./app/terms/page'));
 const CookiesPage = React.lazy(() => import('./app/cookies/page'));
 const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
 
-<<<<<<< HEAD
-=======
 // AI Service Pages
 const AIAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'));
 const AIAutomationPage = React.lazy(() => import('./app/ai-automation/page'));
@@ -164,7 +146,6 @@ const FiveGPrivateNetworksPage = React.lazy(() => import('./app/5g-private-netwo
 const FiveGSmartCitySolutionsPage = React.lazy(() => import('./app/5g-smart-city-solutions/page'));
 const FiveGSolutionsPage = React.lazy(() => import('./app/5g-solutions/page'));
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9874
 // Main App Component
 function App() {
   return (
