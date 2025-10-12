@@ -1,120 +1,112 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, CheckCircle, Building, Users, Shield, BarChart3, Zap, Globe, Clock, TrendingUp } from 'lucide-react'
+import { ArrowRight, CheckCircle, Building, Wifi, BarChart3, Shield, Users, Zap, Globe } from 'lucide-react'
 
-export default function EnterprisePage() {
+export default function SmartCityInfrastructurePage() {
   const features = [
     {
       icon: <Building className="w-8 h-8 text-blue-500" />,
-      title: 'Enterprise Architecture',
-      description: 'Scalable and robust enterprise architecture designed for large-scale operations and growth.'
+      title: 'Smart Building Management',
+      description: 'Intelligent building systems for energy efficiency, security, and automated facility management.'
     },
     {
-      icon: <Users className="w-8 h-8 text-green-500" />,
-      title: 'Multi-User Management',
-      description: 'Advanced user management and role-based access control for enterprise environments.'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: 'Enterprise Security',
-      description: 'Comprehensive security solutions including SSO, encryption, and compliance management.'
+      icon: <Wifi className="w-8 h-8 text-green-500" />,
+      title: 'IoT Network Infrastructure',
+      description: 'Comprehensive IoT connectivity solutions for city-wide sensor networks and data collection.'
     },
     {
       icon: <BarChart3 className="w-8 h-8 text-purple-500" />,
-      title: 'Advanced Analytics',
-      description: 'Enterprise-grade analytics and reporting for data-driven decision making.'
+      title: 'Data Analytics Platform',
+      description: 'Advanced analytics and AI-powered insights for urban planning and decision-making.'
     },
     {
-      icon: <Zap className="w-8 h-8 text-yellow-500" />,
-      title: 'High Performance',
-      description: 'Optimized for high-volume transactions and enterprise-level performance requirements.'
+      icon: <Shield className="w-8 h-8 text-red-500" />,
+      title: 'Cybersecurity Framework',
+      description: 'Robust security measures to protect critical city infrastructure and citizen data.'
     },
     {
-      icon: <Globe className="w-8 h-8 text-indigo-500" />,
-      title: 'Global Deployment',
-      description: 'Worldwide deployment capabilities with multi-region support and localization.'
+      icon: <Users className="w-8 h-8 text-yellow-500" />,
+      title: 'Citizen Engagement Platform',
+      description: 'Digital platforms for citizen services, feedback, and community engagement.'
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-indigo-500" />,
+      title: 'Energy Management',
+      description: 'Smart grid solutions and renewable energy integration for sustainable urban development.'
     }
-  ]
-
-  const stats = [
-    { number: '500+', label: 'Enterprise Clients', icon: Building },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
-    { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
-    { number: '24/7', label: 'Support Available', icon: Clock }
   ]
 
   const pricingPlans = [
     {
-      name: 'Enterprise Starter',
-      price: '$10,000',
-      period: '/month',
-      description: 'Perfect for mid-size enterprises',
+      name: 'Pilot Program',
+      price: '$50,000',
+      period: 'one-time',
+      description: 'Small-scale smart city pilot implementation',
       features: [
-        'Up to 500 users',
-        'Basic enterprise features',
-        'Standard support',
+        'Single district implementation',
+        'Basic IoT sensors',
+        'Data collection platform',
         'Basic analytics',
-        'Email support',
-        'Monthly reports',
-        'Standard security'
+        '6-month support',
+        'Performance monitoring',
+        'Citizen feedback system'
       ],
       popular: false
     },
     {
-      name: 'Enterprise Professional',
-      price: '$25,000',
-      period: '/month',
-      description: 'Ideal for large enterprises',
+      name: 'City-Wide Implementation',
+      price: '$500,000',
+      period: 'one-time',
+      description: 'Complete smart city infrastructure deployment',
       features: [
-        'Up to 2,000 users',
-        'Advanced enterprise features',
-        'Priority support',
-        'Advanced analytics',
-        'Phone & email support',
-        'Weekly reports',
-        'Advanced security',
+        'Full city coverage',
+        'Advanced IoT network',
+        'AI-powered analytics',
+        'Citizen engagement platform',
+        '2-year support',
+        'Real-time monitoring',
+        'Scalable architecture',
         'Custom integrations'
       ],
       popular: true
     },
     {
-      name: 'Enterprise Ultimate',
-      price: '$50,000',
-      period: '/month',
-      description: 'For Fortune 500 companies',
+      name: 'Enterprise Solution',
+      price: 'Contact Us',
+      period: '',
+      description: 'Custom smart city solutions for large metropolitan areas',
       features: [
-        'Unlimited users',
-        'Full enterprise suite',
-        'Dedicated support',
-        'Premium analytics',
-        '24/7 phone support',
-        'Real-time monitoring',
-        'Maximum security',
+        'Multi-city deployment',
         'Custom development',
-        'On-site support'
+        'Advanced AI systems',
+        'Dedicated support team',
+        'Ongoing maintenance',
+        'Performance optimization',
+        'Compliance management',
+        'White-label options'
       ],
       popular: false
     }
   ]
 
-  const enterpriseServices = [
-    'Enterprise Software Development',
-    'System Integration',
-    'Cloud Migration',
-    'Data Management',
-    'Security Implementation',
-    'Performance Optimization',
-    'Compliance Management',
-    'Training & Support'
+  const smartCityServices = [
+    'Traffic Management Systems',
+    'Environmental Monitoring',
+    'Public Safety Solutions',
+    'Waste Management',
+    'Water Quality Monitoring',
+    'Air Quality Control',
+    'Parking Management',
+    'Emergency Response'
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Enterprise Solutions - Zion Tech Group | Large-Scale Business Solutions</title>
-        <meta name="description" content="Comprehensive enterprise-grade solutions for large-scale business operations. Scalable, secure, and reliable technology solutions." />
-        <meta name="keywords" content="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions" />
+        <title>Smart City Infrastructure - Zion Tech Group | Urban Technology Solutions</title>
+        <meta name="description" content="Transform your city with smart infrastructure solutions. IoT networks, data analytics, and citizen engagement platforms for modern urban development." />
+        <meta name="keywords" content="smart city, urban infrastructure, IoT solutions, city analytics, smart buildings, citizen engagement" />
       </Helmet>
       
       {/* Hero Section */}
@@ -122,44 +114,27 @@ export default function EnterprisePage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-              Enterprise Solutions
+              Smart City Infrastructure
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Comprehensive enterprise-grade solutions designed for large-scale business operations. 
-              Scalable, secure, and reliable technology solutions that grow with your business.
+              Transform your city with cutting-edge smart infrastructure solutions. 
+              Enhance citizen services, optimize resource management, and create sustainable urban environments.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
               >
-                Get Enterprise Quote
+                Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
-                Schedule Demo
+                View Case Studies
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-2">
-                  <stat.icon className="w-8 h-8 text-purple-400" />
-                </div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300">{stat.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -169,10 +144,10 @@ export default function EnterprisePage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Enterprise-Grade Features
+              Smart City Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built for scale, security, and performance to meet enterprise requirements
+              Comprehensive technology solutions for modern urban infrastructure
             </p>
           </div>
           
@@ -193,10 +168,10 @@ export default function EnterprisePage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Enterprise Pricing Plans
+              Smart City Implementation Packages
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Flexible enterprise solutions tailored to your organization's needs
+              Choose the smart city solution that fits your urban development goals
             </p>
           </div>
           
@@ -236,7 +211,7 @@ export default function EnterprisePage() {
                       : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
                   }`}
                 >
-                  Get Started
+                  {plan.name === 'Enterprise Solution' ? 'Contact Us' : 'Get Started'}
                 </Link>
               </div>
             ))}
@@ -250,15 +225,15 @@ export default function EnterprisePage() {
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 lg:p-12 border border-white/20">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Enterprise Services
+                Smart City Services
               </h2>
               <p className="text-xl text-gray-300">
-                Comprehensive enterprise solutions for all your business needs
+                Comprehensive solutions for all aspects of smart city development
               </p>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {enterpriseServices.map((service, index) => (
+              {smartCityServices.map((service, index) => (
                 <div key={index} className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                   <span className="text-sm">{service}</span>
@@ -274,17 +249,17 @@ export default function EnterprisePage() {
         <div className="max-w-7xl mx-auto">
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Scale Your Enterprise?
+              Ready to Build Your Smart City?
             </h2>
             <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Let our enterprise solutions help you scale your business operations efficiently and securely.
+              Transform your urban environment with our comprehensive smart city infrastructure solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
               >
-                Get Enterprise Quote
+                Get Started Today
               </Link>
               <Link
                 to="/it-services"

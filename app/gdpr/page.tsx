@@ -1,120 +1,111 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, CheckCircle, Building, Users, Shield, BarChart3, Zap, Globe, Clock, TrendingUp } from 'lucide-react'
+import { ArrowRight, CheckCircle, Shield, FileText, Users, Lock, AlertTriangle, Eye } from 'lucide-react'
 
-export default function EnterprisePage() {
+export default function GDPRPage() {
   const features = [
     {
-      icon: <Building className="w-8 h-8 text-blue-500" />,
-      title: 'Enterprise Architecture',
-      description: 'Scalable and robust enterprise architecture designed for large-scale operations and growth.'
+      icon: <Shield className="w-8 h-8 text-blue-500" />,
+      title: 'GDPR Compliance Assessment',
+      description: 'Comprehensive assessment of your current data protection practices and GDPR compliance status.'
     },
     {
-      icon: <Users className="w-8 h-8 text-green-500" />,
-      title: 'Multi-User Management',
-      description: 'Advanced user management and role-based access control for enterprise environments.'
+      icon: <FileText className="w-8 h-8 text-green-500" />,
+      title: 'Privacy Policy & Documentation',
+      description: 'Create and maintain GDPR-compliant privacy policies, terms of service, and data processing agreements.'
     },
     {
-      icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: 'Enterprise Security',
-      description: 'Comprehensive security solutions including SSO, encryption, and compliance management.'
+      icon: <Users className="w-8 h-8 text-purple-500" />,
+      title: 'Data Subject Rights Management',
+      description: 'Implement systems to handle data subject requests including access, rectification, and deletion.'
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-purple-500" />,
-      title: 'Advanced Analytics',
-      description: 'Enterprise-grade analytics and reporting for data-driven decision making.'
+      icon: <Lock className="w-8 h-8 text-red-500" />,
+      title: 'Data Protection by Design',
+      description: 'Integrate privacy and data protection measures into your systems and processes from the ground up.'
     },
     {
-      icon: <Zap className="w-8 h-8 text-yellow-500" />,
-      title: 'High Performance',
-      description: 'Optimized for high-volume transactions and enterprise-level performance requirements.'
+      icon: <AlertTriangle className="w-8 h-8 text-yellow-500" />,
+      title: 'Breach Response Planning',
+      description: 'Develop and implement data breach response procedures to ensure timely notification and compliance.'
     },
     {
-      icon: <Globe className="w-8 h-8 text-indigo-500" />,
-      title: 'Global Deployment',
-      description: 'Worldwide deployment capabilities with multi-region support and localization.'
+      icon: <Eye className="w-8 h-8 text-indigo-500" />,
+      title: 'Privacy Impact Assessments',
+      description: 'Conduct Data Protection Impact Assessments (DPIAs) for high-risk data processing activities.'
     }
-  ]
-
-  const stats = [
-    { number: '500+', label: 'Enterprise Clients', icon: Building },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
-    { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
-    { number: '24/7', label: 'Support Available', icon: Clock }
   ]
 
   const pricingPlans = [
     {
-      name: 'Enterprise Starter',
-      price: '$10,000',
-      period: '/month',
-      description: 'Perfect for mid-size enterprises',
+      name: 'Assessment',
+      price: '$2,500',
+      period: 'one-time',
+      description: 'GDPR compliance assessment and gap analysis',
       features: [
-        'Up to 500 users',
-        'Basic enterprise features',
-        'Standard support',
-        'Basic analytics',
-        'Email support',
-        'Monthly reports',
-        'Standard security'
+        'Current state assessment',
+        'Gap analysis report',
+        'Compliance roadmap',
+        'Risk assessment',
+        'Recommendations',
+        '30-day support'
       ],
       popular: false
     },
     {
-      name: 'Enterprise Professional',
-      price: '$25,000',
-      period: '/month',
-      description: 'Ideal for large enterprises',
+      name: 'Implementation',
+      price: '$7,500',
+      period: 'one-time',
+      description: 'Complete GDPR implementation package',
       features: [
-        'Up to 2,000 users',
-        'Advanced enterprise features',
-        'Priority support',
-        'Advanced analytics',
-        'Phone & email support',
-        'Weekly reports',
-        'Advanced security',
-        'Custom integrations'
+        'Full compliance assessment',
+        'Policy documentation',
+        'Process implementation',
+        'Staff training',
+        '3-month support',
+        'Compliance monitoring',
+        'Data mapping',
+        'Consent management'
       ],
       popular: true
     },
     {
-      name: 'Enterprise Ultimate',
-      price: '$50,000',
+      name: 'Ongoing Support',
+      price: '$1,500',
       period: '/month',
-      description: 'For Fortune 500 companies',
+      description: 'Continuous GDPR compliance monitoring',
       features: [
-        'Unlimited users',
-        'Full enterprise suite',
-        'Dedicated support',
-        'Premium analytics',
-        '24/7 phone support',
-        'Real-time monitoring',
-        'Maximum security',
-        'Custom development',
-        'On-site support'
+        'Monthly compliance reviews',
+        'Policy updates',
+        'Staff training',
+        'Incident response',
+        'Regular audits',
+        'Documentation maintenance',
+        'Legal updates',
+        '24/7 support'
       ],
       popular: false
     }
   ]
 
-  const enterpriseServices = [
-    'Enterprise Software Development',
-    'System Integration',
-    'Cloud Migration',
-    'Data Management',
-    'Security Implementation',
-    'Performance Optimization',
-    'Compliance Management',
-    'Training & Support'
+  const complianceAreas = [
+    'Data Mapping & Inventory',
+    'Privacy Policy Creation',
+    'Consent Management',
+    'Data Subject Rights',
+    'Breach Response Procedures',
+    'Staff Training Programs',
+    'Vendor Management',
+    'Regular Audits'
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Enterprise Solutions - Zion Tech Group | Large-Scale Business Solutions</title>
-        <meta name="description" content="Comprehensive enterprise-grade solutions for large-scale business operations. Scalable, secure, and reliable technology solutions." />
-        <meta name="keywords" content="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions" />
+        <title>GDPR Compliance Services - Zion Tech Group | Data Protection Solutions</title>
+        <meta name="description" content="Expert GDPR compliance services to help your business meet data protection requirements. Assessment, implementation, and ongoing support." />
+        <meta name="keywords" content="GDPR compliance, data protection, privacy policy, GDPR implementation, data protection officer, GDPR consulting" />
       </Helmet>
       
       {/* Hero Section */}
@@ -122,44 +113,27 @@ export default function EnterprisePage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-              Enterprise Solutions
+              GDPR Compliance Services
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Comprehensive enterprise-grade solutions designed for large-scale business operations. 
-              Scalable, secure, and reliable technology solutions that grow with your business.
+              Ensure your business meets GDPR requirements with our comprehensive data protection 
+              and privacy compliance services. Protect your customers and avoid costly penalties.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
               >
-                Get Enterprise Quote
+                Get Compliance Assessment
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
-                Schedule Demo
+                Free Consultation
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-2">
-                  <stat.icon className="w-8 h-8 text-purple-400" />
-                </div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300">{stat.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -169,10 +143,10 @@ export default function EnterprisePage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Enterprise-Grade Features
+              Comprehensive GDPR Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built for scale, security, and performance to meet enterprise requirements
+              Expert guidance and implementation services to ensure full GDPR compliance
             </p>
           </div>
           
@@ -193,10 +167,10 @@ export default function EnterprisePage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Enterprise Pricing Plans
+              GDPR Service Packages
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Flexible enterprise solutions tailored to your organization's needs
+              Choose the GDPR compliance package that fits your business needs
             </p>
           </div>
           
@@ -244,24 +218,24 @@ export default function EnterprisePage() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Compliance Areas Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 lg:p-12 border border-white/20">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Enterprise Services
+                GDPR Compliance Areas
               </h2>
               <p className="text-xl text-gray-300">
-                Comprehensive enterprise solutions for all your business needs
+                Comprehensive coverage of all GDPR requirements and obligations
               </p>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {enterpriseServices.map((service, index) => (
+              {complianceAreas.map((area, index) => (
                 <div key={index} className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-sm">{service}</span>
+                  <span className="text-sm">{area}</span>
                 </div>
               ))}
             </div>
@@ -274,17 +248,17 @@ export default function EnterprisePage() {
         <div className="max-w-7xl mx-auto">
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Scale Your Enterprise?
+              Ready to Ensure GDPR Compliance?
             </h2>
             <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Let our enterprise solutions help you scale your business operations efficiently and securely.
+              Protect your business and customers with our expert GDPR compliance services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
               >
-                Get Enterprise Quote
+                Get Started Today
               </Link>
               <Link
                 to="/it-services"
