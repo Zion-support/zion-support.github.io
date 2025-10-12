@@ -1,20 +1,12 @@
-<<<<<<< HEAD
 import React  from 'react';
-=======
-'use client';
-import React from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
+interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   text?: string;
 }
-
 const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({ 
   const size = 'md', 
   color = 'primary', 
-  text 
+  text;
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
@@ -27,37 +19,26 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({
     white: 'text-white'
   };
   return (
-<<<<<<< HEAD
-    <div className="flex flex-col items-centerjustify-centerspace-y-4">
-=======
-    <>
-    <div className="flex flex-col items-centerjustify-centerspace-y-4">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-      <div className="{`${sizeClasses[size]}" ${colorClasses[color]} animate-spin`} />
-        <svg
-          className="w-fullh-full"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
+    <>div className="flex flex-col items-centerjustify-centerspace-y-4" ></div><div className="{`${sizeClasses[size]}" ${colorClasses[color]} animate-spin`} /></div></>
+        <svg;
+          className="w-fullh-full" xmlns="http://www.w3.org/2000/svg"></svg>
+          fill="none"></svg>
           viewBox="0 0 24 24" />
-          <circle
-            className="opacity-25"
-            cx="12"
+          <circle;
+            className="opacity-25" cx="12"
             cy="12"
             r="10"
-            stroke="currentColor"
-            strokeWidth="4"
+            stroke="currentColor"></circle>
+            strokeWidth="4"></circle>
           / />
-          <path
-            className="opacity-75"
-            fill="currentColor"
-            d="M4 12 a8 8 0 018-8 V0 C5.373 0 0 5.373 0 12 h4 zm2 5.291 A7.962 7.962 0 014 12 H0 c0 3.042 1.135 5.824 3 7.938 l3-2.647 z"
+          <path;
+            className="opacity-75" fill="currentColor"></path>
+            d="M4 12 a8 8 0 018-8 V0 C5.373 0 0 5.373 0 12 h4 zm2 5.291 A7.962 7.962 0 014 12 H0 c0 3.042 1.135 5.824 3 7.938 l3-2.647 z"></path>
           / />
-    <>
-        </svg>
+    <>/svg>
       </div>
       {text && (
-        <p className="text-gray-400text-smanimate-pulse">{text}</p>
+        <p className="text-gray-400text-smanimate-pulse" >{text}</p>
       )}
     </div>
   );
@@ -65,3 +46,4 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({
 
 export default LoadingSpinner;
     </>
+</p>

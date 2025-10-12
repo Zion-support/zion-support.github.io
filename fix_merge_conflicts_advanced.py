@@ -1,10 +1,7 @@
 #!/usr/bin/env python3
 """
-Script to automatically resolve merge conflicts in the codebase.
-This script will:
-1. Find all files with merge conflict markers
-2. Resolve conflicts by choosing the appropriate version
-3. Clean up the files
+Advanced script to resolve merge conflicts in the codebase.
+This script handles more complex merge conflict patterns.
 """
 
 import os
@@ -13,7 +10,7 @@ import glob
 from pathlib import Path
 
 def fix_merge_conflicts_in_file(file_path):
-    """Fix merge conflicts in a single file"""
+    """Fix merge conflicts in a single file with advanced patterns"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -24,29 +21,39 @@ def fix_merge_conflicts_in_file(file_path):
         
         print(f"Fixing merge conflicts in: {file_path}")
         
-        # Split content by merge conflict markers
-        parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+', content, flags=re.DOTALL)
+        # More aggressive approach - remove all conflict markers and choose HEAD
+        lines = content.split('\n')
+        new_lines = []
+        in_conflict = False
+        conflict_depth = 0
         
-        if len(parts) < 2:
-            # Try alternative pattern
-            parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> .*', content, flags=re.DOTALL)
+        for line in lines:
+            if line.strip().startswith('<<<<<<< HEAD'):
+                in_conflict = True
+                conflict_depth += 1
+                continue
+            elif line.strip().startswith('======='):
+                # Skip the other version
+                continue
+            elif line.strip().startswith('>>>>>>>'):
+                in_conflict = False
+                conflict_depth -= 1
+                continue
+            elif not in_conflict:
+                new_lines.append(line)
+            elif in_conflict and conflict_depth == 1:
+                # This is the HEAD version, keep it
+                new_lines.append(line)
         
-        if len(parts) < 2:
-            print(f"  Warning: Could not parse merge conflicts in {file_path}")
-            return False
+        new_content = '\n'.join(new_lines)
         
-        # Reconstruct content by choosing the HEAD version (first part)
-        new_content = parts[0]
-        for i in range(1, len(parts), 3):
-            if i + 1 < len(parts):
-                # Choose HEAD version (parts[i]) over the other version (parts[i+1])
-                new_content += parts[i]
-                if i + 2 < len(parts):
-                    new_content += parts[i + 2]
-        
-        # Clean up any remaining conflict markers
+        # Additional cleanup - remove any remaining conflict markers
         new_content = re.sub(r'<<<<<<< HEAD.*?>>>>>>> [^\n]+', '', new_content, flags=re.DOTALL)
         new_content = re.sub(r'=======.*?>>>>>>> [^\n]+', '', new_content, flags=re.DOTALL)
+        new_content = re.sub(r'<<<<<<< HEAD.*?=======', '', new_content, flags=re.DOTALL)
+        
+        # Clean up multiple empty lines
+        new_content = re.sub(r'\n\s*\n\s*\n', '\n\n', new_content)
         
         # Write the cleaned content back
         with open(file_path, 'w', encoding='utf-8') as f:
@@ -84,7 +91,7 @@ def find_files_with_conflicts():
 
 def main():
     """Main function to fix all merge conflicts"""
-    print("Starting merge conflict resolution...")
+    print("Starting advanced merge conflict resolution...")
     
     # Find all files with conflicts
     conflict_files = find_files_with_conflicts()

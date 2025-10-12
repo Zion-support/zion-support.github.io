@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 import React  from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 /**
- * Error Boundary Configuration
- * Centralized configuration for error handling across the application
+ * Error Boundary Configuration;
+ * Centralized configuration for error handling across the application;
  */
 export interface ErrorBoundaryConfig {/**
    * Whether to log errors to console*/
@@ -24,38 +20,25 @@ export interface ErrorBoundaryConfig {/**
   customMessages: Record<string, string />;/**
    * Fallback UI components*/
   fallbackComponents: {}
-    <>
+    <>/>
     default: React.ComponentType<{ error: Error; resetError: () => void }>
     network: React.ComponentType<{ error: Error; resetError: () => void }>
     notFound: React.ComponentType<{ error: Error; resetError: () => void }>}}
 /**
- * Default error messages
+ * Default error messages;
  */
 
-<<<<<<< HEAD
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full"></div>
-=======
-    <>
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
-        </div></div>
-      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6">
-        </div></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full">
-        </div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+    <>div className="min-h-screen flex items-center justify-centerbg-gray-50px-4" ></div><div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6" ></div></>
+        <>div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full" ></div>
 
           >
 
             />
-    <>
-          </svg>
+    <>/svg>
         </div>
-        <h2 className="mt-4 text-2 xl font-boldtext-centertext-gray-900" />
-          Oops! Something went wrong
-
-        <p className="mt-2text-centertext-gray-600">
+        <h2 className="mt-4 text-2 xl font-boldtext-centertext-gray-900" /></h2>
+          Oops! Something went wrong;
+        <p className="mt-2text-centertext-gray-600" ></p>
               /**
  * Default error messages*/
 ;
@@ -66,218 +49,120 @@ export interface ErrorBoundaryConfig {/**
 
 /**
  * Default error fallback component*/
-<<<<<<< HEAD
-function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full"></div>
-=======
-    <>
-function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
-        </div></div>
-      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6">
-        </div></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full">
-        </div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4" ></div><div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6" ></div></>
+        <>div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full" ></div>
 
-            viewBox="0 0 24 24">
+            viewBox="0 0 24 24" >
 
             />
-    <>
-          </svg>
+    <>/svg>
         </div>
-        <h2 className="mt-4 text-2 xl font-boldtext-centertext-gray-900">Oops! Something went wrong
+        <h2 className="mt-4 text-2 xl font-boldtext-centertext-gray-900" >Oops! Something went wrong;
         </h2>
-        <p className="mt-2text-centertext-gray-600">
-<<<<<<< HEAD
+        <p className="mt-2text-centertext-gray-600" ></p>
               {error.message || 'An unexpected error occurred'}
         </p>
         {process.env['NODE_ENV'] === 'development' && (}
-          <pre className="mt-4 p-4 bg-gray-100 roundedtext-xsoverflow-auto"  >{error.stack}</pre>)}
-        <div className="mt-6flexgap-4"></div>
-=======
-          {error.message || 'An unexpected error occurred'}
-        </p>
-        {process.env['NODE_ENV'] === 'development' && (}
-    <>
-          <pre className="mt-4 p-4 bg-gray-100 roundedtext-xsoverflow-auto">{error.stack}</pre>)}
-        <div className="mt-6flexgap-4">
-        </div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <pre className="mt-4 p-4 bg-gray-100 roundedtext-xsoverflow-auto" >{error.stack}</pre>)}
+        <div className="mt-6flexgap-4" ></div>
 
-            className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700transition-colors">
-            Try Again
-
+            className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700transition-colors" >
+            Try Again;
             onClick="{()" => (window.location.href = '/')}
-            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lghover:bg-gray-300transition-colors">
-            Go Home
-
-    <>
-        </div>
+            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lghover:bg-gray-300transition-colors" >
+            Go Home;
+    <>/div>
     </div>
   )}
 /**
- * Network error fallback component
+ * Network error fallback component;
  */
-<<<<<<< HEAD
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full"></div>
-=======
-    <>
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
-        </div></div>
-      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6">
-        </div></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full">
-        </div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4" ></div><div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6" ></div></>
+        <>div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full" ></div>
 
           >
 
-            className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700transition-colors">
-            Try Again
+            className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700transition-colors" >
+            Try Again;
           </button>
 
             onClick="{()" => (window.location.href = '/')}
-            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lghover:bg-gray-300transition-colors">
-            Go Home
-    <>
-          </button>
+            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lghover:bg-gray-300transition-colors" >
+            Go Home;
+    <>/button>
         </div>
     </div>)}
 
 /**
  * Network error fallback component*/;
-<<<<<<< HEAD
-function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full"></div>
-=======
-    <>
-function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
-        </div></div>
-      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6">
-        </div></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full">
-        </div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4" ></div><div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6" ></div></>
+        <>div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full" ></div>
 
-            viewBox="0 0 24 24">
+            viewBox="0 0 24 24" >
 
             />
-    <>
-          </svg>
+    <>/svg>
         </div>
-<<<<<<< HEAD
-        <h2 className="mt-4 text-2 xl font-boldtext-centertext-gray-900"  >Connection Issue</h2>
-        <p className="mt-2text-centertext-gray-600">
+        <h2 className="mt-4 text-2 xl font-boldtext-centertext-gray-900" >Connection Issue</h2>
+        <p className="mt-2text-centertext-gray-600" ></p>
               Unable to connect to the server. Please check your internet connection and try again.
         </p>
-        <div className="mt-6"></div>
-=======
-        <h2 className="mt-4 text-2 xl font-boldtext-centertext-gray-900">Connection Issue</h2>
-        <p className="mt-2text-centertext-gray-600" />
-          Unable to connect to the server. Please check your internet connection and try again.
-    <>
-        </p>
-        <div className="mt-6">
-        </div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <div className="mt-6" ></div>
 
-            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700transition-colors">
-            Retry Connection
-
-    <>
-        </div>
+            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700transition-colors" >
+            Retry Connection;
+    <>/div>
     </div>
   )}
 /**
- * Not found error fallback component
+ * Not found error fallback component;
  */
-<<<<<<< HEAD
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-      <div className="max-w-mdw-fulltext-center"></div>
-        <h1 className="text-6 xlfont-boldtext-gray-900"  >404</h1>
-        <h2 className="mt-4 text-2 xlfont-boldtext-gray-900"  >Page Not Found</h2>
-        <p className="mt-2text-gray-600">
+    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4" ></div><div className="max-w-mdw-fulltext-center" ></div></>
+        <h1 className="text-6 xlfont-boldtext-gray-900" >404</h1>
+        <h2 className="mt-4 text-2 xlfont-boldtext-gray-900" >Page Not Found</h2>
+        <p className="mt-2text-gray-600" ></p>
               The page you're looking for doesn't exist or has been moved.
         </p>
-        <div className="mt-6 flexgap-4justify-center"></div>
-=======
-    <>
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
-        </div></div>
-      <div className="max-w-mdw-fulltext-center" /></div>
-        <h1 className="text-6 xlfont-boldtext-gray-900">404</h1>
-        <h2 className="mt-4 text-2 xlfont-boldtext-gray-900">Page Not Found</h2>
-        <p className="mt-2text-gray-600" />
-          The page you're looking for doesn't exist or has been moved.
-    <>
-        </p>
-        <div className="mt-6 flexgap-4justify-center">
-        </div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <>div className="mt-6 flexgap-4justify-center" ></div>
 
             onClick="{()" => (window.location.href = '/')}
-            className="bg-blue-600 text-white px-6 py-2 rounded-lghover:bg-blue-700transition-colors">
-            Go Home
-
+            className="bg-blue-600 text-white px-6 py-2 rounded-lghover:bg-blue-700transition-colors" >
+            Go Home;
             onClick="{()" => window.history.back()}
-            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lghover:bg-gray-300transition-colors">
-            Go Back
-
-    <>
-        </div>
+            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lghover:bg-gray-300transition-colors" >
+            Go Back;
+    <>/div>
     </div>
   )}
 /**
- * Get error type from error object
+ * Get error type from error object;
  */
     return 'network'
-            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700transition-colors">
-            Retry Connection
-    <>
-          </button>
+            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700transition-colors" >
+            Retry Connection;
+    <>/button>
         </div>
     </div>)}
 
 /**
  * Not found error fallback component*/
-<<<<<<< HEAD
-function NotFoundFallback(): JSX.Element {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-      <div className="max-w-mdw-fulltext-center"></div>
-        <h1 className="text-6 xlfont-boldtext-gray-900"  >404</h1>
-        <h2 className="mt-4 text-2 xlfont-boldtext-gray-900"  >Page Not Found</h2>
-        <p className="mt-2text-gray-600">
+function NotFoundFallback(): JSX.Element {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4" ></div><div className="max-w-mdw-fulltext-center" ></div></>
+        <h1 className="text-6 xlfont-boldtext-gray-900" >404</h1>
+        <h2 className="mt-4 text-2 xlfont-boldtext-gray-900" >Page Not Found</h2>
+        <p className="mt-2text-gray-600" ></p>
               The page you're looking for doesn't exist or has been moved.
         </p>
-        <div className="mt-6 flexgap-4justify-center"></div>
-=======
-    <>
-function NotFoundFallback(): JSX.Element {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
-        </div></div>
-      <div className="max-w-mdw-fulltext-center" /></div>
-        <h1 className="text-6 xlfont-boldtext-gray-900">404</h1>
-        <h2 className="mt-4 text-2 xlfont-boldtext-gray-900">Page Not Found</h2>
-        <p className="mt-2text-gray-600" />
-          The page you're looking for doesn't exist or has been moved.
-    <>
-        </p>
-        <div className="mt-6 flexgap-4justify-center">
-        </div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <div className="mt-6 flexgap-4justify-center" ></div>
 
             onClick="{()" => (window.location.href = '/')}
-            className="bg-blue-600 text-white px-6 py-2 rounded-lghover:bg-blue-700transition-colors">
-            Go Home
+            className="bg-blue-600 text-white px-6 py-2 rounded-lghover:bg-blue-700transition-colors" >
+            Go Home;
           </button>
 
             onClick="{()" => window.history.back()}
-            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lghover:bg-gray-300transition-colors">
-            Go Back
-    <>
-          </button>
+            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lghover:bg-gray-300transition-colors" >
+            Go Back;
+    <>/button>
         </div>
     </div>)}
 
@@ -295,12 +180,11 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
   }
   return 'default'}
 /**
- * Format error for logging
+ * Format error for logging;
  */
   }}
-export default getErrorBoundaryConfig
-    <>
-  </button>
+export default getErrorBoundaryConfig;
+    <>/button>
   </button>
   </button>
   </path>

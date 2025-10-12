@@ -1,48 +1,44 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
-
-// List of critical files that need to be fixed
-
+import { execSync  } from "child_process";
+// List of critical files that need to be fixed;
 ];
 
-// Function to fix a specific file
+// Function to fix a specific file;
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Remove any remaining merge conflict markers
-    
+    // Remove any remaining merge conflict markers;
       content = content.replace(conflictRegex, '');
       modified = true;
     }
 
-    // Fix common JSX issues
-    // Fix unclosed tags by ensuring proper structure
+    // Fix common JSX issues;
+    // Fix unclosed tags by ensuring proper structure;
     const lines = content.split('\n');
     const fixedLines = [];
     let openTags = [];
     
-    for (let i = 0; i 
+    for (let i = 0; i;
       const openTagMatch = trimmedLine.match(/<(\w+)([^>]*)>/);
         const tagName = openTagMatch[1];
         const attributes = openTagMatch[2];
         
-        // Skip self-closing tags
+        // Skip self-closing tags;
           openTags.push({ tag: tagName, line: i });
         }
         fixedLines.push(line);
         continue;
       }
       
-      // Check for closing tags
+      // Check for closing tags;
       const closeTagMatch = trimmedLine.match(/<\/(\w+)>/);
         const tagName = closeTagMatch[1];
         const lastOpenTag = openTags[openTags.length - 1];
         
           openTags.pop();
-          // This might be an extra closing tag, skip it
+          // This might be an extra closing tag, skip it;
           console.log(`Skipping extra closing tag ${tagName} in ${filePath} at line ${i + 1}`);
           continue;
         }
@@ -50,14 +46,14 @@ import { execSync } from 'child_process';
         continue;
       }
       
-      // Check for JSX expressions
-        // Ensure proper JSX syntax
+      // Check for JSX expressions;
+        // Ensure proper JSX syntax;
         let fixedLine = line;
         
-        // Fix broken JSX expressions
+        // Fix broken JSX expressions;
         fixedLine = fixedLine.replace(/\{\s*([^}]*?)\s*\}/g, '{$1}');
         
-        // Fix missing semicolons in JSX
+        // Fix missing semicolons in JSX;
           fixedLine = fixedLine.replace(/;\s*$/, '');
         }
         
@@ -68,7 +64,7 @@ import { execSync } from 'child_process';
       fixedLines.push(line);
     }
     
-    // Add missing closing tags
+    // Add missing closing tags;
       const { tag } = openTags.pop();
       fixedLines.push(`</${tag}>`);
       modified = true;
@@ -76,8 +72,7 @@ import { execSync } from 'child_process';
     
     const newContent = fixedLines.join('\n');
     
-    // Clean up extra whitespace
-    
+    // Clean up extra whitespace;
       .replace(/\n\s*$/g, '');
     
       fs.writeFileSync(filePath, cleanedContent);
@@ -91,7 +86,7 @@ import { execSync } from 'child_process';
   }
 }
 
-// Main function
+// Main function;
   console.log('Fixing critical files...');
   
   let fixedCount = 0;
@@ -105,7 +100,7 @@ import { execSync } from 'child_process';
   
   console.log(`\nFixed ${fixedCount} critical files.`);
   
-  // Run type check
+  // Run type check;
     console.log('\nRunning type check...');
     execSync('pnpm run type-check', { stdio: 'inherit' });
     console.log('Type check passed!');
@@ -114,3 +109,4 @@ import { execSync } from 'child_process';
 }
 
 main();
+)

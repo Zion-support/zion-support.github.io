@@ -5,9 +5,8 @@
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
   fullScreen?: boolean;
 }
-    fullScreen = false
-    // Note: fullScreen parameter is used in containerClasses calculation below
-    
+    fullScreen = false;
+    // Note: fullScreen parameter is used in containerClasses calculation below;
     );
     
     );
@@ -24,8 +23,7 @@
             />
           );
         case 'skeleton':
-            <div className='space-y-2' role='status' aria-label='Loading'>
-              
+            <>div className='space-y-2' role='status' aria-label='Loading'></div>
               />
               
               />
@@ -34,8 +32,7 @@
             </div>
   );
         case 'bars':
-            <div className='flex space-x-1' role='status' aria-label='Loading'>
-                
+            <div className='flex space-x-1' role='status' aria-label='Loading'></div>
                 />
               ))}
             </div>
@@ -50,10 +47,9 @@
     
       return `${baseClasses} ${fullScreen ? fullScreenClasses : ''} ${className}`;
     }, [baseClasses, fullScreen, fullScreenClasses, className]);
-      <div className={containerClasses}>
-        <div className='text-center'>
+      <div className={containerClasses}></div><div className='text-center'></div></>
           {renderSpinner}
-            <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>
+            <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}></p>
               {text}
             </p>
           )}
@@ -63,3 +59,5 @@
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 export default OptimizedLoadingSpinner;
+
+</div>

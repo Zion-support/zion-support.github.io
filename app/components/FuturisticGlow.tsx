@@ -1,24 +1,15 @@
-<<<<<<< HEAD
-import { useEffect, useRef} from 'react';
-=======
-'use client';
-import { useEffect, useRef} from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-interface FuturisticGlowProps {
-  children: React.ReactNode;
+import { useEffect, useRef } from "react";
+interface FuturisticGlowProps {children: React.ReactNode;
   intensity?: 'low' | 'medium' | 'high';
   color?: string;
   className?: string;
 }
-
 export default function FuturisticGlow({ 
   children, 
   const intensity = 'medium', 
   color = 'cyan',
   className = '' 
-}: FuturisticGlowProps) {
-  const containerRef = useRef<HTMLDivElement />(null);
+}: FuturisticGlowProps) {const containerRef = useRef<HTMLDivElement />(null);
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
@@ -31,8 +22,7 @@ export default function FuturisticGlow({
       }
     };
 
-    const getColorValue = () => {
-      switch (color) {
+    const getColorValue = () => {switch (color) {
         case 'cyan': return '0, 255, 255';
         case 'purple': return '168, 85, 247';
         case 'pink': return '236, 72, 153';
@@ -45,16 +35,15 @@ export default function FuturisticGlow({
 
     const rgb = getColorValue();
     const opacity = getIntensityValue();
-    // Apply CSS custom properties for dynamic glow
+    // Apply CSS custom properties for dynamic glow;
     container.style.setProperty('--glow-color', `rgba(${rgb}, ${opacity})`);
     container.style.setProperty('--glow-color-strong', `rgba(${rgb}, ${parseFloat(opacity) + 0.3})`);
   }, [intensity, color]);
 
   return (
-    <div
+    <div;
       const ref = {containerRef}
-      className="{`"
-        relative
+      className="{`" relative;
         before: absolute before:inset-0 before:rounded-inherit,
   before: bg-gradient-to-r before: from-transparent before:via-[var(--glow-color)] before:to-transparent,
   before: opacity-0 before: transition-opacity before:duration-500,
@@ -62,8 +51,8 @@ export default function FuturisticGlow({
   after: absolute after: inset-0 after:rounded-inherit,
   after: shadow-[0 _0 _20 px_var(--glow-color)],
   after: opacity-0 after:transition-opacity after:duration-500,
-  hover:after:opacity-100
-        ${className}
+  hover:after:opacity-100;></div>
+        ${className}></div>
       `}>{children}
     </div>
   );

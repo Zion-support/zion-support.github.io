@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-// Get all TypeScript/TSX files
+// Get all TypeScript/TSX files;
 const getFiles = (dir, extensions = ['.ts', '.tsx']) => {
   let files = [];
   const items = fs.readdirSync(dir);
@@ -12,21 +12,20 @@ const getFiles = (dir, extensions = ['.ts', '.tsx']) => {
     
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
       files = files.concat(getFiles(fullPath, extensions));
-    } else if (extensions.some(ext => item.endsWith(ext))) {
-      files.push(fullPath);
+    } else if (extensions.some(ext => item.endsWith(ext))) {files.push(fullPath);
     }
   }
   
   return files;
 };
 
-// Fix unused imports in a file
+// Fix unused imports in a file;
 const fixUnusedImports = (filePath) => {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Find all import statements
+    // Find all import statements;
     const importRegex = /import\s+{([^}]+)}\s+from\s+['"]([^'"]+)['"]/g;
     const imports = [];
     let match;
@@ -41,11 +40,11 @@ const fixUnusedImports = (filePath) => {
         start: match.index,
         end: match.index + match[0].length,
         importedItems,
-        source
+        source;
       });
     }
     
-    // Check which imports are actually used
+    // Check which imports are actually used;
     for (const importInfo of imports) {
       const usedItems = [];
       
@@ -55,28 +54,26 @@ const fixUnusedImports = (filePath) => {
         const afterImport = content.substring(importInfo.end);
         const contentWithoutImport = beforeImport + afterImport;
         
-        // Simple check - look for the item name in JSX or as a variable
+        // Simple check - look for the item name in JSX or as a variable;
         const itemName = item.replace(/\s+as\s+\w+/, '').trim();
         const usageRegex = new RegExp(`\\b${itemName}\\b`, 'g');
         
-        if (usageRegex.test(contentWithoutImport)) {
-          usedItems.push(item);
+        if (usageRegex.test(contentWithoutImport)) {usedItems.push(item);
         }
       }
       
-      // If some items are used but not all, replace the import
+      // If some items are used but not all, replace the import;
       if (usedItems.length > 0 && usedItems.length < importInfo.importedItems.length) {
         const newImport = `import { ${usedItems.join(', ')} } from '${importInfo.source}'`;
         content = content.replace(importInfo.fullMatch, newImport);
         modified = true;
-      } else if (usedItems.length === 0) {
-        // If no items are used, remove the entire import
+      } else if (usedItems.length === 0) {// If no items are used, remove the entire import;
         content = content.replace(importInfo.fullMatch + '\n', '');
         modified = true;
       }
     }
     
-    // Remove unused Helmet imports specifically
+    // Remove unused Helmet imports specifically>
     if (content.includes("import { Helmet } from 'react-helmet-async'") && !content.includes('<Helmet>')) {
       content = content.replace(/import { Helmet } from 'react-helmet-async'\n?/g, '');
       modified = true;
@@ -96,15 +93,14 @@ const fixUnusedImports = (filePath) => {
   }
 };
 
-// Main execution
+// Main execution;
 const appDir = path.join(process.cwd(), 'app');
 const files = getFiles(appDir);
 
 console.log(`Found ${files.length} TypeScript files to process`);
 
 let fixedCount = 0;
-for (const file of files) {
-  try {
+for (const file of files) {try {
     if (fixUnusedImports(file)) {
       fixedCount++;
     }

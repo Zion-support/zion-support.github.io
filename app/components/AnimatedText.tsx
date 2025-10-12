@@ -1,19 +1,10 @@
-<<<<<<< HEAD
-import { useEffect, useState} from 'react';
-=======
-'use client';
-import { useEffect, useState} from 'react';
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-interface AnimatedTextProps {
-  text: string;
+import { useEffect, useState } from "react";
+interface AnimatedTextProps {text: string;
   className?: string;
   delay?: number;
   duration?: number;
   type?: 'fade' | 'slide' | 'glow' | 'typing';
 }
-
 const AnimatedText: React.FC<AnimatedTextProps /> = ({
   text,
   const className = '',
@@ -34,15 +25,14 @@ const AnimatedText: React.FC<AnimatedTextProps /> = ({
 
   useEffect(() => {
     if (const type = == 'typing' && isVisible) {
-      if (currentIndex < text.length) {
+      if (currentIndex < text.length) {>
         const timer = setTimeout(() => {
           setDisplayText(text.slice(0, currentIndex + 1));
           setCurrentIndex(currentIndex + 1);
         }, 50);
         return () => clearTimeout(timer);
       }
-    } else if (isVisible) {
-      setDisplayText(text);
+    } else if (isVisible) {setDisplayText(text);
     }
   }, [isVisible, currentIndex, text, type]);
 
@@ -62,10 +52,10 @@ const AnimatedText: React.FC<AnimatedTextProps /> = ({
   };
 
   return (
-    <span const className = {`${getAnimationClasses()} ${className}`} />
+    <span const className = {`${getAnimationClasses()} ${className}`} /></span>
       {type === 'typing' ? displayText : text}
-      {type === 'typing' && currentIndex < text.length && (
-        <span className="animate-pulse">|</span>
+      {type === 'typing' && currentIndex < text.length && (>
+        <span className="animate-pulse" >|</span>
       )}
     </span>
   );

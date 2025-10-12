@@ -1,25 +1,22 @@
-import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
-import { Server, Shield, Zap, BarChart3, CheckCircle, ArrowRight, Clock, Users, Database } from 'lucide-react'
-=======
-import { Server, Shield, Zap, BarChart3, CheckCircle, ArrowRight, Clock, Users, Database } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-import { Link } from 'react-router-dom'
-<<<<<<< HEAD
+import { Helmet  } from "react-helmet-async";
+import { Server, Shield, Zap, BarChart3, CheckCircle, ArrowRight, Clock, Users, Database  } from "lucide-react";
+import { Link  } from "react-router-dom";
 import React  from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+import { ArrowRight  } from "lucide-react";
+import { Link  } from "react-router-dom";
 const ServerManagementPage: React.FC = () => {
+  return (
+  return (
   const features = [
     {
-      icon: <Server className="w-6h-6text-cyan-400" />,
+      icon: <><Server className="w-6h-6text-cyan-400" />,
       title: '24/7 Server Monitoring',
       description: 'Continuous monitoring of server performance, uptime, and health with instant alerts.'
-    },
+    
+  );
+
+  );
+},
     {
       icon: <Shield className="w-6h-6text-emerald-400" />,
       title: 'Advanced Security',
@@ -40,8 +37,7 @@ const ServerManagementPage: React.FC = () => {
       title: 'Automated Backups',
       description: 'Regular automated backups with point-in-time recovery and disaster recovery planning.'
     },
-    {
-      icon: <Users className="w-6h-6text-blue-400" />,
+    {icon: <Users className="w-6h-6text-blue-400" />,
       title: 'Expert Support',
       description: '24/7 expert support from certified server administrators and engineers.'
     }
@@ -66,8 +62,7 @@ const ServerManagementPage: React.FC = () => {
       description: 'Real-time monitoring and optimization of server performance and resource usage.',
       features: ['CPU monitoring', 'Memory tracking', 'Disk usage', 'Network analysis']
     },
-    {
-      icon: <Database className="w-8h-8text-orange-400" />,
+    {icon: <Database className="w-8h-8text-orange-400" />,
       title: 'Database Management',
       description: 'Expert database administration, optimization, and maintenance services.',
       features: ['Database optimization', 'Query tuning', 'Backup management', 'Replication setup']
@@ -86,7 +81,7 @@ const ServerManagementPage: React.FC = () => {
         'Email support',
         'Monthly reports'
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
@@ -100,10 +95,9 @@ const ServerManagementPage: React.FC = () => {
         'Weekly reports',
         'Security management'
       ],
-      popular: true
+      popular: true;
     },
-    {
-      name: 'Enterprise',
+    {name: 'Enterprise',
       price: '$999',
       period: '/month',
       description: 'For large organizations',
@@ -114,407 +108,104 @@ const ServerManagementPage: React.FC = () => {
         'Custom solutions',
         'SLA guarantee'
       ],
-      popular: false
+      popular: false;
     }
   ]
 
   return (
-    <>
-    <>
-      <Helmet>
+    <>>
+      <Helmet></Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." /></meta>
       </Helmet>
         <title>Server Management - Professional Server Administration | Zion Tech Group</title>
-        <meta name="description" content="Professional server management services including monitoring, security, optimization, and 24/7 support. Keep your servers running at peak performance." / / />
-        <meta name="keywords" content="server management, server administration, server monitoring, server security, IT infrastructure, server optimization" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/server-management" />
-      </Helmet>
-    </>
+        <meta name="description" content="Professional server management services including monitoring, security, optimization, and 24/7 support. Keep your servers running at peak performance." / / /></meta>
+        <meta name="keywords" content="server management, server administration, server monitoring, server security, IT infrastructure, server optimization" / / /></meta>
+        <link rel="canonical" href="https://ziontechgroup.com/server-management" /></link>
+      </Helmet></>
 
-      <div className="min-h-screenbg-gray-900text-white">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <>div className="min-h-screenbg-gray-900text-white" ></div>
         {/* Hero Section */}
-    <>
-        <section className="relative py-20px-4overflow-hidden" />
-<<<<<<< HEAD
-          <div className="absolute inset-0 bg-gradient-to-rfrom-cyan-500/10to-purple-500/10" />
-          <div className="relative max-w-7xlmx-autotext-center">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-              <Server className="w-4h-4" />
-              <span   />Server Management</span>
-=======
-          <div className="absolute inset-0 bg-gradient-to-rfrom-cyan-500/10to-purple-500/10" / />
-          <div className="relative max-w-7 xlmx-autotext-center">
-        </div>
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-        </div>
-              <Server className="w-4h-4" / />
-              <span>Server Management</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </div>
-    </>
-            
-<<<<<<< HEAD
-            <h1 className="text-4xl sm:text-6 xl md:text-7 xl font-bold text-white mb-8leading-tight" />
-              Professional <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Server Management</span>
-=======
-    <>
-            <h1 className="text-4 xl sm:text-6 xl md:text-7 xl font-bold text-whitemb-8leading-tight" />
-              Professional <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Server Management</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h1>
-    </>
-            
-            <p className="text-lg sm:text-xl md:text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
-              Keep your servers running at peak performance with our comprehensive management services. 
-              Monitoring, security, optimization, and 24/7 expert support.
-            </p>
-            
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-              <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" >
-           
-          <span    />
-        </Link>Get Started</span>
-                <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-              </Link>
-              <Link to="/demo" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
-          <span    />
-        </Link>View Demo</span>
-=======
-    <>
-            <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-        </div>
-              <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
-                <span>Get Started</span>
-                <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-              </Link>
-              <Link to="/demo" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-                <span>View Demo</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-              </Link>
-            </div>
-        </section>
-    </>
+    <>section className="relative py-20px-4overflow-hidden" />
 
-        {/* Features Section */}
-    <>
-        <section className="py-20px-4relative" />
-<<<<<<< HEAD
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5via-cyan-500/5to-pink-500/5" />
-          <div className="relative max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Comprehensive <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Server Management</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              Everything you need to keep your servers secure, optimized, and running smoothly.
-=======
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5via-cyan-500/5to-pink-500/5" / />
-          <div className="relative max-w-7xlmx-auto">
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Comprehensive <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Server Management</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
-                Everything you need to keep your servers secure, optimized, and running smoothly.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-    </>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               {features.map((feature, index) => (
-    <>
-                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
+    <>div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300" >{feature.icon}
                   </div>
-<<<<<<< HEAD
-                  <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400 transition-colors"  />{feature.title}
-                  </h3>
-                  <p className="text-gray-300leading-relaxed">
-              {feature.description}
-=======
-                  <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{feature.title}
-                  </h3>
-                  <p className="text-gray-300leading-relaxed" />
-    </>
-                    {feature.description}
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </p>
-                </div>
-    </>
-              ))}
-    <>
-            </div>
-        </section>
-    </>
 
-        {/* Services Section */}
-    <>
-        <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50to-purple-900/50relative" />
-          <div className="relative max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Services</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              Professional server management services tailored to your business needs.
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Services</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
-                Professional server management services tailored to your business needs.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-    </>
-            
-            <div className="grid grid-cols-1md:grid-cols-2gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               {services.map((service, index) => (
-    <>
-                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
-                  <div className="flex items-centerspace-x-4mb-6">
-<<<<<<< HEAD
-                    <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl group-hover:scale-110transition-transformduration-300"  />{service.icon}
-                    </div>
-                    <h3 className="text-2 xl font-bold text-whitegroup-hover:text-cyan-400 transition-colors"  />{service.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-300 mb-6leading-relaxed">
-              {service.description}
-                  </p>
-                  <div className="space-y-2">
-=======
-        </div>
-                    <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl group-hover:scale-110transition-transformduration-300">{service.icon}
-                    </div>
-                    <h3 className="text-2 xl font-bold text-whitegroup-hover:text-cyan-400transition-colors">{service.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-300mb-6leading-relaxed" />
-    </>
-                    {service.description}
-    <>
-                  </p>
-                  <div className="space-y-2">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    {service.features.map((feature, featureIndex) => (
-    <>
-                      <div key="{featureIndex}" className="flex items-center space-x-2text-gray-400text-sm" />
-<<<<<<< HEAD
-                        <CheckCircle className="w-4h-4text-green-400" />
-                        <span   />{feature}</span>
-=======
-                        <CheckCircle className="w-4h-4text-green-400" / />
-                        <span>{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                      </div>
-    </>
-                    ))}
-    <>
-                  </div>
-<<<<<<< HEAD
-=======
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+    <>div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
+                  <div className="flex items-centerspace-x-4mb-6" ></div>
               ))}
-    <>
-            </div>
-        </section>
-    </>
+    <>/div>
+        </section></>
 
         {/* Pricing Section */}
-    <>
-        <section className="py-20px-4relative" />
-          <div className="relative max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Flexible <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Pricing</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Choose the plan that fits your server infrastructure needs. All plans include 24/7 support.
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Flexible <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Pricing</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-    </>
-                Choose the plan that fits your server infrastructure needs. All plans include 24/7 support.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-    </>
-            
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+    <>section className="py-20px-4relative" />
+          <div className="relative max-w-7xlmx-auto" ></div>
               {pricingPlans.map((plan, index) => (
                 <div key="{index}" className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
-                  plan.popular 
-                    ? 'border-cyan-400/50 shadow-2 xl shadow-cyan-500/20' 
-                    : 'border-white/20 hover: border-cyan-400/30'
+                  plan.popular;
+                    ? 'border-cyan-400/50 shadow-2 xl shadow-cyan-500/20' ></div>
+                    : 'border-white/20 hover: border-cyan-400/30'></div>
                 }`} />
                   {plan.popular && (
-<<<<<<< HEAD
-                    <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-                      <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold"  />Most Popular
-                      </div>
+                    <div className="absolute -top-4 left-1/2transform-translate-x-1/2" ></div><div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold" />Most Popular;
+                      </div></>
                   )}
-                  
-                  <div className="text-centermb-8">
-                    <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">
+                  <>div className="text-centermb-8" ></div>
+                    <h3 className="text-2 xl font-bold text-white mb-2" />{plan.name}</h3>
+                    <p className="text-gray-300 mb-4" ></p>
               {plan.description}</p>
-                    <div className="flex items-baselinejustify-center">
-                      <span className="text-5 xlfont-bold text-white"   />{plan.price}</span>
-                      <span className="text-gray-400ml-2"   />{plan.period}</span>
+                    <div className="flex items-baselinejustify-center" ></div>
+                      <span className="text-5 xlfont-bold text-white" />{plan.price}</span>
+                      <span className="text-gray-400ml-2" />{plan.period}</span>
                     </div>
                   
-                  <ul className="space-y-4mb-8" />
+                  <ul className="space-y-4mb-8" /></ul>
                     {plan.features.map((feature, featureIndex) => (
-                      <li key="{featureIndex}" className="flex items-centerspace-x-3" />
-                        <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" />
-                        <span className="text-gray-300"   />{feature}</span>
-=======
-    <>
-                    <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-        </div>
-                      <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold">Most Popular
-                      </div>
-    </>
-                  )}
-                  
-    <>
-                  <div className="text-centermb-8">
-        </div>
-                    <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                    <p className="text-gray-300mb-4">{plan.description}</p>
-                    <div className="flexitems-baselinejustify-center" />
-                      <span className="text-5 xlfont-boldtext-white">{plan.price}</span>
-                      <span className="text-gray-400ml-2">{plan.period}</span>
-                    </div>
-    </>
-                  
-                  <ul className="space-y-4mb-8" />
-                    {plan.features.map((feature, featureIndex) => (
-    <>
-                      <li key="{featureIndex}" className="flexitems-centerspace-x-3" />
-                        <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" / />
-                        <span className="text-gray-300">{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                      </li>
-    </>
+                      <li key="{featureIndex}" className="flex items-centerspace-x-3" /></li>
+                        <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" /></CheckCircle>
+                        <span className="text-gray-300" />{feature}</span>
+                      </li></>
                     ))}
                   </ul>
                   
-                  <Link 
-                    to="/contact" 
-                    className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
-                      plan.popular
+                  <Link;
+                    to="/contact" className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
+                      plan.popular;
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
-                    }`}
-                    />Get Started
-    <>
-                  </Link>
-                </div>
-    </>
+                        : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'></Link>
+                    }`}></Link>
+                    />Get Started;
+    <>/Link>
+                </div></>
               ))}
-    <>
-            </div>
-        </section>
-    </>
+    <>/div>
+        </section></>
 
         {/* CTA Section */}
-    <>
-        <section className="py-20px-4relative" />
-<<<<<<< HEAD
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" />
-          <div className="relative max-w-7xlmx-autotext-center">
-            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8sm:p-12lg:p-16">
-              <h2 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6leading-tight" />
-                Ready to Optimize Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent"   />Server Infrastructure?</span>
-=======
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" / />
-          <div className="relative max-w-7 xlmx-autotext-center">
-        </div>
-            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8sm:p-12lg:p-16">
-        </div>
-              <h2 className="text-4 xl sm:text-5 xl md:text-6 xl font-bold text-whitemb-6leading-tight" />
-                Ready to Optimize Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent">Server Infrastructure?</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </h2>
-    </>
+    <>section className="py-20px-4relative" />
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" /></div><div className="relative max-w-7xlmx-autotext-center" ></div></>
+            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8sm:p-12lg:p-16" ></div>
+              <h2 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6leading-tight" /></h2>
+                Ready to Optimize Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent" />Server Infrastructure?</span>
+              </h2></>
               
-              <p className="text-xl sm:text-2 xl text-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">
-<<<<<<< HEAD
+              <p className="text-xl sm:text-2 xl text-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed" ></p>
               Let our expert team manage your servers so you can focus on your business. 
                 Get started with our professional server management services today.
               </p>
               
-              <div className="flex flex-col sm:flex-rowgap-6justify-center">
-                <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" >
-           
-          <span    />
+              <div className="flex flex-col sm:flex-rowgap-6justify-center" ></div>
+                <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" ></Link>
+          <span    /></span>
         </Link>Get Started</span>
-                  <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-                </Link>
-                <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
-          <span    />
+                  <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" /></ArrowRight>
+                </Link><Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" ></Link></>
+          <span    /></span>
         </Link>View Pricing</span>
-=======
-                Let our expert team manage your servers so you can focus on your business. 
-                Get started with our professional server management services today.
-              </p>
-              
-    <>
-              <div className="flex flex-col sm:flex-rowgap-6justify-center">
-        </div>
-                <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
-                  <span>Get Started</span>
-                  <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-                </Link>
-                <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-                  <span>View Pricing</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+                  <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" /></ArrowRight>
                 </Link>
               </div>
           </div>
@@ -532,10 +223,10 @@ const ServerManagementPage: React.FC = () => {
       </div>
         </div>
       </div>
-      </div>
-    </>
+      </div></>
   )
 }
 
 export default ServerManagementPage;
     </>
+}))

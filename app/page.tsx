@@ -1,26 +1,19 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart } from 'lucide-react';
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-=======
-import { ArrowRight, CheckCircle, Star, Users, Award, Shield, Brain, Cloud, Code, Smartphone, FileText, MessageCircle, Link as LinkIcon, Workflow, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-
+import { Helmet  } from "react-helmet-async";
+import { Link  } from "react-router-dom";
 const HomePage: React.FC = () => {
+  return (
+  return (
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  
+  );
+
+  );
+}, []);
 
   const stats = [
     { number: '500+', label: 'Projects Completed', icon: CheckCircle },
@@ -48,8 +41,7 @@ const HomePage: React.FC = () => {
       description: 'Comprehensive security solutions to protect your digital assets',
       color: 'from-red-500 to-orange-500'
     },
-    {
-      icon: Code,
+    {icon: Code,
       title: 'Custom Development',
       description: 'Tailored software solutions built with modern technologies',
       color: 'from-green-500 to-emerald-500'
@@ -81,8 +73,7 @@ const HomePage: React.FC = () => {
       icon: MessageCircle,
       color: 'from-green-500 to-emerald-500'
     },
-    {
-      title: 'AI Workflow Automation',
+    {title: 'AI Workflow Automation',
       description: 'Streamline business processes with intelligent automation',
       price: '$249/month',
       features: ['Process mapping', 'Automated workflows', 'Integration APIs', 'Performance monitoring'],
@@ -116,8 +107,7 @@ const HomePage: React.FC = () => {
       icon: Code,
       color: 'from-green-500 to-emerald-500'
     },
-    {
-      title: 'Mobile App Development',
+    {title: 'Mobile App Development',
       description: 'Native and cross-platform mobile applications',
       price: 'Starting at $12,000',
       features: ['iOS & Android', 'Cross-platform', 'App store optimization', 'Push notifications'],
@@ -151,8 +141,7 @@ const HomePage: React.FC = () => {
       icon: FileText,
       color: 'from-green-500 to-teal-500'
     },
-    {
-      title: 'Zion CRM Intelligence',
+    {title: 'Zion CRM Intelligence',
       description: 'Smart customer relationship management with AI insights',
       price: '$129/month',
       features: ['Lead scoring', 'Sales forecasting', 'Customer insights', 'Automation workflows'],
@@ -162,52 +151,46 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <>Helmet>
         <title>Zion Tech Group - Advanced AI & IT Solutions | Leading Technology Company</title>
-        <meta name="description" content="Zion Tech Group provides cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development. Transform your business with our innovative technology services." />
-        <meta name="keywords" content="AI solutions, cloud computing, cybersecurity, software development, IT services, business automation, data analytics" />
-        <meta property="og:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
-        <meta property="og:description" content="Leading technology company providing AI solutions, cloud infrastructure, and cybersecurity services." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
-        <meta name="twitter:description" content="Transform your business with cutting-edge AI and IT solutions." />
+        <meta name="description" content="Zion Tech Group provides cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development. Transform your business with our innovative technology services." /></meta>
+        <meta name="keywords" content="AI solutions, cloud computing, cybersecurity, software development, IT services, business automation, data analytics" /></meta>
+        <meta property="og:title" content="Zion Tech Group - Advanced AI & IT Solutions" /></meta>
+        <meta property="og:description" content="Leading technology company providing AI solutions, cloud infrastructure, and cybersecurity services." /></meta>
+        <meta property="og:type" content="website" /></meta>
+        <meta property="og:url" content="https://ziontechgroup.com" /></meta>
+        <meta name="twitter:card" content="summary_large_image" /></meta>
+        <meta name="twitter:title" content="Zion Tech Group - Advanced AI & IT Solutions" /></meta>
+        <meta name="twitter:description" content="Transform your business with cutting-edge AI and IT solutions." /></meta>
       </Helmet>
-<<<<<<< HEAD
 
-      <div className="min-h-screen">
+      <>div className="min-h-screen" ></div>
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="absolute inset-0 opacity-20" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }}></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-            <div className="text-center">
-              <h1 className={`text-4xl md:text-6xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                Transform Your Business with
-                <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Advanced AI & IT Solutions
+        <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" ></section>
+          <div className="absolute inset-0 opacity-20" style={{></div>
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`></div>
+          }}></div><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16" ></div></>
+            <>div className="text-center" ></div>
+              <h1 className={`text-4xl md:text-6xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}></h1>
+                Transform Your Business with;
+                <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent" ></span>
+                  Advanced AI & IT Solutions;
                 </span>
               </h1>
-              <p className={`text-xl text-gray-300 mb-8 max-w-3xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <p className={`text-xl text-gray-300 mb-8 max-w-3xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}></p>
                 Leading technology company providing cutting-edge artificial intelligence, cloud infrastructure, 
                 cybersecurity, and custom software development services to businesses worldwide.
               </p>
-              <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}></div>
+                <><Link;></Link>
+                  to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl" ></Link>
                 >
-                  Get Started Today
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-                <Link
-                  to="/demo"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105"
+                  Get Started Today;
+                  <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
+                </Link><Link;></Link></>
+                  to="/demo" className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105" ></Link>
                 >
-                  View Demo
+                  View Demo;
                 </Link>
               </div>
             </div>
@@ -215,16 +198,13 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Stats Section */}
-        <section className="py-16 bg-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <section className="py-16 bg-gray-900" ></section>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ></div><div className="grid grid-cols-2 md:grid-cols-4 gap-8" ></div></>
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4">
-                    <stat.icon className="h-8 w-8 text-white" />
+                <>div key={index} className="text-center" ></div><div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4" ></div></>
+                    <stat.icon className="h-8 w-8 text-white" /></stat>
                   </div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-400">{stat.label}</div>
+                  <>div className="text-3xl font-bold text-white mb-2" >{stat.number}</div><div className="text-gray-400" >{stat.label}</div></>
                 </div>
               ))}
             </div>
@@ -232,25 +212,23 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 bg-gradient-to-br from-slate-900 to-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <section className="py-20 bg-gradient-to-br from-slate-900 to-gray-900" ></section>
+          <>div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ></div><div className="text-center mb-16" ></div></>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" ></h2>
                 Why Choose Zion Tech Group?
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto" ></p>
                 We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <>div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" ></div>
               {features.map((feature, index) => (
-                <div key={index} className="group">
-                  <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
-                      <feature.icon className="h-6 w-6 text-white" />
+                <div key={index} className="group" ></div><div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105" ></div></>
+                    <>div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}></div>
+                      <feature.icon className="h-6 w-6 text-white" /></feature>
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                    <p className="text-gray-300">{feature.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-3" >{feature.title}</h3>
+                    <p className="text-gray-300" >{feature.description}</p>
                   </div>
                 </div>
               ))}
@@ -259,40 +237,37 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* AI Services Section */}
-        <section className="py-20 bg-gradient-to-br from-purple-900 to-slate-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                AI-Powered Solutions
+        <section className="py-20 bg-gradient-to-br from-purple-900 to-slate-900" ></section>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ></div><div className="text-center mb-16" ></div></>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" ></h2>
+                AI-Powered Solutions;
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto" ></p>
                 Harness the power of artificial intelligence to transform your business operations and drive growth.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <>div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" ></div>
               {aiServices.map((service, index) => (
-                <div key={index} className="group">
-                  <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg mb-4`}>
-                      <service.icon className="h-6 w-6 text-white" />
+                <div key={index} className="group" ></div><div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700" ></div></>
+                    <>div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg mb-4`}></div>
+                      <service.icon className="h-6 w-6 text-white" /></service>
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                    <p className="text-gray-300 mb-4">{service.description}</p>
-                    <div className="text-2xl font-bold text-purple-400 mb-4">{service.price}</div>
-                    <ul className="space-y-2 mb-6">
+                    <h3 className="text-xl font-semibold text-white mb-3" >{service.title}</h3>
+                    <p className="text-gray-300 mb-4" >{service.description}</p>
+                    <div className="text-2xl font-bold text-purple-400 mb-4" >{service.price}</div>
+                    <ul className="space-y-2 mb-6" ></ul>
                       {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        <li key={idx} className="flex items-center text-sm text-gray-300" ></li>
+                          <CheckCircle className="h-4 w-4 text-green-400 mr-2" /></CheckCircle>
                           {feature}
                         </li>
                       ))}
                     </ul>
-                    <Link
-                      to="/contact"
-                      className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
+                    <Link;></Link>
+                      to="/contact" className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300" ></Link>
                     >
-                      Get Started
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      Get Started;
+                      <ArrowRight className="ml-2 h-4 w-4" /></ArrowRight>
                     </Link>
                   </div>
                 </div>
@@ -302,40 +277,37 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* IT Services Section */}
-        <section className="py-20 bg-gradient-to-br from-slate-900 to-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                IT Infrastructure & Development
+        <section className="py-20 bg-gradient-to-br from-slate-900 to-gray-900" ></section>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ></div><div className="text-center mb-16" ></div></>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" ></h2>
+                IT Infrastructure & Development;
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto" ></p>
                 Comprehensive IT services to build, secure, and optimize your technology infrastructure.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <>div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" ></div>
               {itServices.map((service, index) => (
-                <div key={index} className="group">
-                  <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg mb-4`}>
-                      <service.icon className="h-6 w-6 text-white" />
+                <div key={index} className="group" ></div><div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700" ></div></>
+                    <>div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg mb-4`}></div>
+                      <service.icon className="h-6 w-6 text-white" /></service>
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                    <p className="text-gray-300 mb-4">{service.description}</p>
-                    <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
-                    <ul className="space-y-2 mb-6">
+                    <h3 className="text-xl font-semibold text-white mb-3" >{service.title}</h3>
+                    <p className="text-gray-300 mb-4" >{service.description}</p>
+                    <div className="text-2xl font-bold text-cyan-400 mb-4" >{service.price}</div>
+                    <ul className="space-y-2 mb-6" ></ul>
                       {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        <li key={idx} className="flex items-center text-sm text-gray-300" ></li>
+                          <CheckCircle className="h-4 w-4 text-green-400 mr-2" /></CheckCircle>
                           {feature}
                         </li>
                       ))}
                     </ul>
-                    <Link
-                      to="/contact"
-                      className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300"
+                    <Link;></Link>
+                      to="/contact" className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300" ></Link>
                     >
-                      Get Quote
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      Get Quote;
+                      <ArrowRight className="ml-2 h-4 w-4" /></ArrowRight>
                     </Link>
                   </div>
                 </div>
@@ -345,40 +317,37 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Micro SAAS Products Section */}
-        <section className="py-20 bg-gradient-to-br from-gray-900 to-purple-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Micro SAAS Products
+        <section className="py-20 bg-gradient-to-br from-gray-900 to-purple-900" ></section>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ></div><div className="text-center mb-16" ></div></>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" ></h2>
+                Micro SAAS Products;
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto" ></p>
                 Ready-to-use software solutions designed to solve specific business challenges with minimal setup.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <>div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" ></div>
               {microSaasProducts.map((product, index) => (
-                <div key={index} className="group">
-                  <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${product.color} rounded-lg mb-4`}>
-                      <product.icon className="h-6 w-6 text-white" />
+                <div key={index} className="group" ></div><div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700" ></div></>
+                    <>div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${product.color} rounded-lg mb-4`}></div>
+                      <product.icon className="h-6 w-6 text-white" /></product>
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{product.title}</h3>
-                    <p className="text-gray-300 mb-4">{product.description}</p>
-                    <div className="text-2xl font-bold text-green-400 mb-4">{product.price}</div>
-                    <ul className="space-y-2 mb-6">
+                    <h3 className="text-xl font-semibold text-white mb-3" >{product.title}</h3>
+                    <p className="text-gray-300 mb-4" >{product.description}</p>
+                    <div className="text-2xl font-bold text-green-400 mb-4" >{product.price}</div>
+                    <ul className="space-y-2 mb-6" ></ul>
                       {product.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        <li key={idx} className="flex items-center text-sm text-gray-300" ></li>
+                          <CheckCircle className="h-4 w-4 text-green-400 mr-2" /></CheckCircle>
                           {feature}
                         </li>
                       ))}
                     </ul>
-                    <Link
-                      to="/contact"
-                      className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300"
+                    <Link;></Link>
+                      to="/contact" className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300" ></Link>
                     >
-                      Start Free Trial
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      Start Free Trial;
+                      <ArrowRight className="ml-2 h-4 w-4" /></ArrowRight>
                     </Link>
                   </div>
                 </div>
@@ -388,69 +357,34 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 bg-gradient-to-br from-slate-900 to-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <section className="py-20 bg-gradient-to-br from-slate-900 to-gray-900" ></section>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ></div><div className="text-center" ></div></>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" ></h2>
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" ></p>
                 Contact us today to discuss your project and discover how our AI and IT solutions can drive your success.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              <>div className="flex flex-col sm:flex-row gap-4 justify-center" ></div>
+                <Link;></Link>
+                  to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl" ></Link>
                 >
-                  Contact Us Now
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  Contact Us Now;
+                  <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
                 </Link>
-                <a
-                  href="tel:+13024640950"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105"
+                <a;></a>
+                  href="tel:+13024640950" className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105" ></a>
                 >
-                  Call +1 302 464 0950
+                  Call +1 302 464 0950;
                 </a>
-              </div>
-              <div className="mt-8 text-gray-400">
+              </div><div className="mt-8 text-gray-400" ></div></>
                 <p>Email: kleber@ziontechgroup.com</p>
                 <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
               </div>
             </div>
           </div>
         </section>
-=======
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Advanced AI & IT Solutions
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with cutting-edge artificial intelligence, cloud infrastructure, 
-              and cybersecurity solutions tailored to your needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/about"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-      </div>
-    </>
+      </div></>
   );
 };
 

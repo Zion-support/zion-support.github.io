@@ -1,18 +1,20 @@
 'use client'
 import React from 'react'
 
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-=======
-import { Brain } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
+import { ArrowRight  } from "lucide-react";
 const SEOEnhancer: React.FC = () => {
+  return (
+  return (
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
+    
+  );
+
+  );
+},
     {
       icon: Zap,
       title: 'High Performance',
@@ -23,8 +25,7 @@ const SEOEnhancer: React.FC = () => {
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
     },
-    {
-      icon: Globe,
+    {icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
@@ -40,3 +41,7 @@ const SEOEnhancer: React.FC = () => {
     'Proven track record of success'
   ];
   return (
+
+})
+
+export default SEOEnhancer;

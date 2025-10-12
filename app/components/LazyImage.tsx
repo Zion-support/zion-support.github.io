@@ -1,24 +1,20 @@
-import { useState, useRef, useEffect} from 'react';
-import { Loader2 } from 'lucide-react';
-
-interface LazyImageProps {
-  src: string,
-  alt: string
-  className?: string
-  placeholder?: string
-  onLoad?: () => void
-  onError?: () => void
+import { useState, useRef, useEffect } from "react";
+import { Loader2  } from "lucide-react";
+interface LazyImageProps {src: string,
+  alt: string;
+  className?: string;
+  placeholder?: string;
+  onLoad?: () => void;
+  onError?: () => void;
 }
-
 const LazyImage: React.FC<LazyImageProps /> = ({
   src,
   alt,
   const className = '',
   placeholder,
   onLoad,
-  onError
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false)
+  onError;
+}) => {const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(false)
   const [hasError, setHasError] = useState(false)
   const imgRef = useRef<HTMLImageElement />(null)
@@ -31,81 +27,46 @@ const LazyImage: React.FC<LazyImageProps /> = ({
           observer.disconnect()
         }
       },
-      { threshold: 0.1 }
+      {threshold: 0.1 }
     )
 
-    if (imgRef.current) {
-      observer.observe(imgRef.current)
+    if (imgRef.current) {observer.observe(imgRef.current)
     }
-
     return () => observer.disconnect()
   }, [])
 
-  const handleLoad = () => {
-    setIsLoaded(true)
+  const handleLoad = () => {setIsLoaded(true)
     onLoad?.()
   }
-
-  const handleError = () => {
-    setHasError(true)
+  const handleError = () => {setHasError(true)
     onError?.()
   }
-
   return (
-    <div ref="{imgRef}" className="{`relative" overflow-hidden ${className}`} />
+    <>div ref="{imgRef}" className="{`relative" overflow-hidden ${className}`} /></div>
       {!isInView && (
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gray-800 animate-pulse flex items-centerjustify-center">
-          <Loader2 className="w-8 h-8text-gray-400animate-spin" />
-=======
-    <>
-        <div className="absolute inset-0 bg-gray-800 animate-pulse flexitems-centerjustify-center">
-        </div>
-          <Loader2 className="w-8 h-8text-gray-400animate-spin" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <><div className="absolute inset-0 bg-gray-800 animate-pulse flex items-centerjustify-center" ></div><Loader2 className="w-8 h-8text-gray-400animate-spin" /></></Loader2>
         </div>
       )}
-      
       {isInView && !isLoaded && !hasError && (
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gray-800 flex items-centerjustify-center">
-          <Loader2 className="w-8 h-8text-gray-400animate-spin" />
-=======
-    <>
-        <div className="absolute inset-0 bg-gray-800 flexitems-centerjustify-center">
-        </div>
-          <Loader2 className="w-8 h-8text-gray-400animate-spin" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <><div className="absolute inset-0 bg-gray-800 flex items-centerjustify-center" ></div><Loader2 className="w-8 h-8text-gray-400animate-spin" /></></Loader2>
         </div>
       )}
-      
       {isInView && (
-        <img
-          src="{src}"
-          alt="{alt}"
+        <img;
+          src="{src}" alt="{alt}"
           onLoad="{handleLoad}"
           onError="{handleError}"
           className="{`w-full" h-full object-cover transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
-          loading="lazy"
+          }`}></img>
+          loading="lazy"></img>
         / />
       )}
       
       {hasError && (
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gray-800 flex items-centerjustify-center">
-          <div className="text-centertext-gray-400">
-            <div className="w-8 h-8mx-automb-2"  >📷</div>
-=======
-    <>
-        <div className="absolute inset-0 bg-gray-800 flexitems-centerjustify-center">
-        </div>
-          <div className="text-centertext-gray-400">
-        </div>
-            <div className="w-8 h-8mx-automb-2">📷</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            <p className="text-sm">Image failed to load</p>
+        <div className="absolute inset-0 bg-gray-800 flex items-centerjustify-center" ></div><div className="text-centertext-gray-400" ></div></>
+            <div className="w-8 h-8mx-automb-2" >📷</div>
+            <p className="text-sm" >Image failed to load</p>
           </div>
       )}
     </div>
@@ -114,3 +75,4 @@ const LazyImage: React.FC<LazyImageProps /> = ({
 
 export default LazyImage;
     </>
+</div>

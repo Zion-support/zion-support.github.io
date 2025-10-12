@@ -1,29 +1,17 @@
 'use client';
-import { useState, useEffect} from 'react';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {;
-=======
-import { 
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
-  ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 
-  BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, 
-  Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package, 
-  TrendingUp, Calendar, ShoppingCart, Sparkles, Cpu, Globe, Database, 
-  Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock
-} from 'lucide-react';
-import { ArrowRight, ShoppingCart } from 'lucide-react';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Cloud, Code, BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Settings, Link as LinkIcon, Package, TrendingUp, Calendar, Globe, Database, Monitor, Mail } from 'lucide-react';
-=======
-import { ArrowRight, CheckCircle, Star, Users, Shield, Cloud, BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Link as LinkIcon, Database, Mail } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-
+import { useState, useEffect } from "react";
+import { Link  } from "react-router-dom";
 const MicroSaasPage: React.FC = () => {
+  return (
+  return (
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  
+  );
+
+  );
+}, []);
 
   const microSaasProducts = [
     {
@@ -47,7 +35,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Analytics',
       rating: 4.9,
       reviews: 127,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-chat-ai',
@@ -70,7 +58,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Customer Support',
       rating: 4.8,
       reviews: 89,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-security-shield',
@@ -93,7 +81,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Security',
       rating: 4.9,
       reviews: 156,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-cloud-vault',
@@ -116,7 +104,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Backup & Recovery',
       rating: 4.7,
       reviews: 203,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-content-studio',
@@ -139,7 +127,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Content Creation',
       rating: 4.6,
       reviews: 94,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-crm-intelligence',
@@ -162,7 +150,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'CRM',
       rating: 4.8,
       reviews: 142,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-data-sync',
@@ -185,7 +173,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Data Management',
       rating: 4.5,
       reviews: 67,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-lead-magnet',
@@ -208,7 +196,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Marketing',
       rating: 4.7,
       reviews: 118,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-project-master',
@@ -231,7 +219,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Project Management',
       rating: 4.8,
       reviews: 175,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-email-automation',
@@ -254,7 +242,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Email Marketing',
       rating: 4.6,
       reviews: 89,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-inventory-smart',
@@ -277,7 +265,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Inventory',
       rating: 4.7,
       reviews: 134,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-invoice-genius',
@@ -300,7 +288,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Finance',
       rating: 4.8,
       reviews: 156,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-ai-video-editor',
@@ -323,7 +311,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Video Production',
       rating: 4.7,
       reviews: 98,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-ai-translator-pro',
@@ -346,7 +334,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Translation',
       rating: 4.6,
       reviews: 134,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-ai-code-reviewer',
@@ -369,7 +357,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Development',
       rating: 4.8,
       reviews: 187,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-customer-insights',
@@ -392,7 +380,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Analytics',
       rating: 4.7,
       reviews: 145,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-ai-email-assistant',
@@ -415,7 +403,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Productivity',
       rating: 4.5,
       reviews: 112,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-ai-meeting-assistant',
@@ -438,7 +426,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Productivity',
       rating: 4.6,
       reviews: 98,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-ai-seo-optimizer',
@@ -461,7 +449,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Marketing',
       rating: 4.7,
       reviews: 167,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-ai-data-cleaner',
@@ -484,7 +472,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Data Management',
       rating: 4.6,
       reviews: 89,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-ai-contract-analyzer',
@@ -507,7 +495,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Legal',
       rating: 4.8,
       reviews: 76,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-ai-survey-builder',
@@ -530,7 +518,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Research',
       rating: 4.5,
       reviews: 123,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-ai-accounting-assistant',
@@ -553,7 +541,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Finance',
       rating: 4.7,
       reviews: 156,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-ai-recruitment-pro',
@@ -576,7 +564,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'HR',
       rating: 4.8,
       reviews: 134,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-ai-content-moderation',
@@ -599,7 +587,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Security',
       rating: 4.6,
       reviews: 98,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-ai-predictive-maintenance',
@@ -622,7 +610,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'IoT',
       rating: 4.7,
       reviews: 67,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-ai-energy-manager',
@@ -645,7 +633,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Sustainability',
       rating: 4.5,
       reviews: 89,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-ai-supply-chain-optimizer',
@@ -668,7 +656,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Supply Chain',
       rating: 4.8,
       reviews: 112,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-ai-fraud-detector',
@@ -691,7 +679,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Security',
       rating: 4.9,
       reviews: 198,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-ai-customer-service-pro',
@@ -714,7 +702,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Customer Support',
       rating: 4.7,
       reviews: 167,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-ai-marketing-automation',
@@ -737,10 +725,9 @@ const MicroSaasPage: React.FC = () => {
       category: 'Marketing',
       rating: 4.6,
       reviews: 145,
-      popular: false
+      popular: false;
     },
-    {
-      id: 'zion-ai-document-ai',
+    {id: 'zion-ai-document-ai',
       title: 'Zion AI Document AI',
       description: 'Advanced document processing with OCR, data extraction, and intelligent document analysis',
       price: '$119/month',
@@ -760,320 +747,73 @@ const MicroSaasPage: React.FC = () => {
       category: 'Document Management',
       rating: 4.7,
       reviews: 123,
-      popular: false
+      popular: false;
     }
   ];
   const categories = ['All', 'Analytics', 'Customer Support', 'Security', 'Backup & Recovery', 'Content Creation', 'CRM', 'Data Management', 'Marketing', 'Project Management', 'Email Marketing', 'Inventory', 'Finance', 'Video Production', 'Translation', 'Development', 'Productivity', 'Research', 'HR', 'IoT', 'Sustainability', 'Supply Chain', 'Legal', 'Document Management'];
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const filteredProducts = selectedCategory === 'All' 
-    ? microSaasProducts 
+    ? microSaasProducts;
     : microSaasProducts.filter(product => product.category === selectedCategory);
   return (
-    <>
-    <>
-      <Helmet>
+    <>>
+      <><Helmet></Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." /></meta>
       </Helmet>
         <title>Micro SAAS Products - Zion Tech Group | AI-Powered Business Solutions</title>
-        <meta const name = "description" content="Discover our comprehensive suite of micro SAAS products designed to solve specific business challenges. From AI analytics to cybersecurity, we have the tools you need to succeed." / / />
-        <meta name="keywords" content="micro saas, business software, AI tools, analytics, CRM, project management, cybersecurity, automation" / / />
-      </Helmet>
-    </>
+        <meta const name = "description" content="Discover our comprehensive suite of micro SAAS products designed to solve specific business challenges. From AI analytics to cybersecurity, we have the tools you need to succeed." / / /></meta>
+        <meta name="keywords" content="micro saas, business software, AI tools, analytics, CRM, project management, cybersecurity, automation" / / /></meta>
+      </Helmet></>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <>div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900" ></div>
         {/* Hero Section */}
-    <>
-        <section className="relative overflow-hiddenpt-20pb-16" />
-<<<<<<< HEAD
-          <div className="absoluteinset-0opacity-20" />
-          <div className="relative max-w-7xl mx-auto px-4sm:px-6lg:px-8">
-            <div className="text-center">
-=======
-          <div className="absoluteinset-0opacity-20" / />
-          <div className="relative max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
-        </div>
-            <div className="text-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <h1 className="{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-    </>
-                Micro SAAS
-    <>
-                <span className="block bg-gradient-to-r from-purple-400 to-pink-400bg-clip-texttext-transparent">Business Solutions
-                </span>
-              </h1>
-              <p className="{`text-xl" text-gray-300 mb-8 max-w-3 xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-    </>
-                Powerful, ready-to-use software solutions designed to solve specific business challenges. 
-                No complex setup, no lengthy implementations - just instant value.
-    <>
-              </p>
-              <div className="{`flex" flex-col sm: flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-<<<<<<< HEAD
-                <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" >
-          Start Free Trial
-                  
-          <ArrowRight className="ml-2h-5w-5"  />
-        </Link>
-=======
-                <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
-    </>
-                  Start Free Trial
-    <>
-                  <ArrowRight className="ml-2h-5w-5" />
-                </Link>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <a
-                  href="tel:+13024640950"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" />
-                  Call +1 302 464 0950
-    <>
-                </a>
-              </div>
-          </div>
-        </section>
-    </>
+    <>section className="relative overflow-hiddenpt-20pb-16" />
 
-        {/* Category Filter */}
-    <>
-        <section className="py-8bg-gray-900/50" />
-<<<<<<< HEAD
-          <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8">
-            <div className="flex flex-wrapjustify-centergap-4">
-=======
-          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
-        </div>
-            <div className="flex flex-wrapjustify-centergap-4">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {categories.map((category) => (
-                <button
-                  key="{category}"
-                  onClick="{()" =>setSelectedCategory(category)}
-                  className="{`px-6" py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    selectedCategory === category
-                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                      : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-    <>
-            </div>
-        </section>
-    </>
-
-        {/* Products Grid */}
-    <>
-        <section className="py-16" />
-<<<<<<< HEAD
-          <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3xl:grid-cols-4gap-8">
-=======
-          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
-        </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3xl:grid-cols-4gap-8">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {filteredProducts.map((product, index) => (
-                <div
-                  key="{product.id}"
-                  className="{`group" relative bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:border-purple-500 ${
-                    product.popular ? 'ring-2 ring-purple-500' : ''
-                  }`} />
-                  {product.popular && (
-<<<<<<< HEAD
-                    <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
-                      <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold"  />Most Popular
-=======
-    <>
-                    <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
-        </div>
-                      <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold">Most Popular
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                      </span>
-                    </div>
-    </>
-                  )}
-                  
-<<<<<<< HEAD
-                  <div className="text-centermb-6">
-=======
-    <>
-                  <div className="text-centermb-6">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    <div className="{`inline-flex" items-center justify-center w-16 h-16 bg-gradient-to-r ${product.color} rounded-xl mb-4`} />
-                      <product.icon className="h-8w-8text-white" />
-                    </div>
-<<<<<<< HEAD
-                    <h3 className="text-xl font-bold text-white mb-2"   />{product.title}</h3>
-                    <p className="text-gray-300text-smmb-4">
-              {product.description}</p>
-                    <div className="flex items-center justify-centerspace-x-2mb-4">
-                      <div className="flex items-center">
-=======
-                    <h3 className="text-xl font-boldtext-whitemb-2">{product.title}</h3>
-                    <p className="text-gray-300text-smmb-4">{product.description}</p>
-                    <div className="flex items-center justify-centerspace-x-2mb-4">
-        </div>
-                      <div className="flexitems-center" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                        {[...Array(5)].map((_, i) => (
-                          <Star
-                            key="{i}"
-                            className="{`h-4" w-4 ${
-                              i < Math.floor(product.rating) ? 'text-yellow-400 fill-current' : 'text-gray-600'
-                            }`}
-                          / />
-                        ))}
-    <>
-                      </div>
-                      <span className="text-smtext-gray-400">({product.reviews} reviews)</span>
-                    </div>
-<<<<<<< HEAD
-
-                  <div className="text-centermb-6">
-                    <div className="flex items-center justify-centerspace-x-2mb-2">
-                      <span className="text-3 xlfont-bold text-white"   />{product.price}</span>
-                      <span className="text-lgtext-gray-400line-through"   />{product.originalPrice}</span>
-=======
-    </>
-
-    <>
-                  <div className="text-centermb-6">
-        </div>
-                    <div className="flex items-center justify-centerspace-x-2mb-2">
-        </div>
-                      <span className="text-3 xlfont-boldtext-white">{product.price}</span>
-                      <span className="text-lgtext-gray-400line-through">{product.originalPrice}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    </div>
-                    <span className="text-smtext-green-400font-semibold">Save {Math.round((1 - parseInt(product.price.replace('$', '')) / parseInt(product.originalPrice.replace('$', ''))) * 100)}%
-                    </span>
-                  </div>
-    </>
-
-                  <div className="space-y-3mb-6">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                     {product.features.slice(0, 4).map((feature, idx) => (
-    <>
-                      <div key="{idx}" className="flex items-centertext-smtext-gray-300" />
-<<<<<<< HEAD
-                        <CheckCircle className="h-4 w-4 text-green-400mr-3flex-shrink-0" />
+    <>div key="{idx}" className="flex items-centertext-smtext-gray-300" />
+                        <CheckCircle className="h-4 w-4 text-green-400mr-3flex-shrink-0" /></CheckCircle>
                         <span   />{feature}</span>
-=======
-                        <CheckCircle className="h-4 w-4 text-green-400mr-3flex-shrink-0" / />
-                        <span>{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                      </div>
-    </>
+                      </div></>
                     ))}
                     {product.features.length > 4 && (
-    <>
-                      <div className="text-smtext-gray-400text-center">+{product.features.length - 4} more features
-                      </div>
-    </>
+    <>div className="text-smtext-gray-400text-center" >+{product.features.length - 4} more features;
+                      </div></>
                     )}
+                  </div><div className="space-y-3" ></div></>
+                    <Link to="{`/${product.id}`}" className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" ></Link>
+          View Details;
+          <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
+        </Link><Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-whitetransition-allduration-300" >Start Free Trial;
+                    </Link></>
                   </div>
-
-<<<<<<< HEAD
-                  <div className="space-y-3">
-                    <Link to="{`/${product.id}`}" className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" >
-          View Details
-                      
-          <ArrowRight className="ml-2h-4w-4"  />
-        </Link>
-                    <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-whitetransition-allduration-300">Start Free Trial
-                    </Link>
-                  </div>
-=======
-    <>
-                  <div className="space-y-3">
-        </div>
-                    <Link to="{`/${product.id}`}" className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" />
-    </>
-                      View Details
-    <>
-                      <ArrowRight className="ml-2h-4w-4" />
-                    </Link>
-                    <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-whitetransition-allduration-300">Start Free Trial
-                    </Link>
-                  </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               ))}
-    <>
-            </div>
-        </section>
-    </>
+    <>/div>
+        </section></>
 
         {/* CTA Section */}
-    <>
-        <section className="py-20 bg-gradient-to-brfrom-gray-900to-purple-900" />
-<<<<<<< HEAD
-          <div className="max-w-7xl mx-auto px-4 sm:px-6lg:px-8text-center">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Ready to Transform Your Business?
+    <>section className="py-20 bg-gradient-to-brfrom-gray-900to-purple-900" />
+          <>div className="max-w-7xl mx-auto px-4 sm:px-6lg:px-8text-center" ></div>
+            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4" />Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
-=======
-          <div className="max-w-7 xl mx-auto px-4 sm:px-6lg:px-8text-center">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto" ></p>
               Join thousands of businesses already using our micro SAAS solutions to streamline operations, 
               increase productivity, and drive growth.
-    <>
-            </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" >
-          Get Started Today
-                
-          <ArrowRight className="ml-2h-5w-5"  />
+    <>/p>
+            <div className="flex flex-col sm:flex-rowgap-4justify-center" ></div>
+              <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" ></Link>
+          Get Started Today;
+          <ArrowRight className="ml-2h-5w-5" /></ArrowRight>
         </Link>
-=======
-        </div>
-              <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
-    </>
-                Get Started Today
-    <>
-                <ArrowRight className="ml-2h-5w-5" />
-              </Link>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <a
-                href="tel:+13024640950"
+              <a;></a>
+                href="tel:+13024640950" ></a>
                 className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" />
-                Call +1 302 464 0950
-    <>
-              </a>
-            </div>
-            <div className="mt-8text-gray-400">
-<<<<<<< HEAD
+                Call +1 302 464 0950;
+    <>/a>
+            </div><div className="mt-8text-gray-400" ></div></>
               <p />Email: kleber@ziontechgroup.com</p>
               <p />Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-=======
-        </div>
-              <p>Email: kleber@ziontechgroup.com</p>
-              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             </div>
         </section>
       </div>
@@ -1089,14 +829,8 @@ const MicroSaasPage: React.FC = () => {
       </div>
         </div>
       </div>
-      </div>
-    </>
+      </div></>
   );
 };
 
-<<<<<<< HEAD
 export default MicroSaasPage;
-=======
-export default MicroSaasPage;
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f

@@ -1,13 +1,11 @@
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
-
+import { fileURLToPath  } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Get all page routes
-function getAllRoutes() {
-  const routes = []
+// Get all page routes;
+function getAllRoutes() {const routes = []
   const appDir = path.join(__dirname, '../app')
   
   function scanDirectory(dir, basePath = '') {
@@ -18,12 +16,11 @@ function getAllRoutes() {
       const stat = fs.statSync(fullPath)
       
       if (stat.isDirectory()) {
-        // Skip node_modules and other non-page directories
+        // Skip node_modules and other non-page directories;
         if (!['node_modules', '.git', 'components', 'utils', 'types'].includes(item)) {
           scanDirectory(fullPath, basePath + '/' + item)
         }
-      } else if (item === 'page.tsx') {
-        // Found a page
+      } else if (item === 'page.tsx') {// Found a page;
         const route = basePath || '/'
         routes.push(route)
       }
@@ -31,18 +28,18 @@ function getAllRoutes() {
   }
   
   scanDirectory(appDir)
-  return routes
+  return routes;
 }
 
-// Generate sitemap
+// Generate sitemap;
 function generateSitemap() {
   const routes = getAllRoutes()
   const baseUrl = 'https://ziontechgroup.com'
   
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" ></urlset>
   ${routes.map(route => `
-  <url>
+  <url></url>
     <loc>${baseUrl}${route}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
@@ -50,7 +47,7 @@ function generateSitemap() {
   </url>`).join('')}
 </urlset>`
   
-  // Write to public directory
+  // Write to public directory;
   const publicDir = path.join(__dirname, '../public')
   if (!fs.existsSync(publicDir)) {
     fs.mkdirSync(publicDir, { recursive: true })

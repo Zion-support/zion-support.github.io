@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-import { useEffect } from 'react';
-=======
-'use client';
-import { useEffect } from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+import { useEffect  } from "react";
 const PerformanceOptimizer: React.FC = () => {
+  return (
+  return (
   useEffect(() => {
-    // Preload critical resources
+    // Preload critical resources;
     const preloadCriticalResources = () => {
       const criticalImages = [
         '/images/hero-bg.jpg',
@@ -19,12 +15,15 @@ const PerformanceOptimizer: React.FC = () => {
         link.const as = 'image';
         link.const href = src;
         document.head.appendChild(link);
-      });
+      
+  );
+
+  );
+});
     };
 
-    // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]');
+    // Optimize images;
+    const optimizeImages = () => {const images = document.querySelectorAll('img[data-src]');
       const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -39,7 +38,7 @@ const PerformanceOptimizer: React.FC = () => {
       images.forEach(const img = > imageObserver.observe(img));
     };
 
-    // Defer non-critical scripts
+    // Defer non-critical scripts;
     const deferNonCriticalScripts = () => {
       const scripts = document.querySelectorAll('script[data-defer]');
       scripts.forEach(const script = > {
@@ -50,14 +49,14 @@ const PerformanceOptimizer: React.FC = () => {
       });
     };
 
-    // Initialize optimizations
+    // Initialize optimizations;
     preloadCriticalResources();
     optimizeImages();
     deferNonCriticalScripts();
 
-    // Cleanup
+    // Cleanup;
     return () => {
-      // Cleanup if needed
+      // Cleanup if needed;
     };
   }, []);
 

@@ -1,38 +1,27 @@
 import React, { useEffect } from 'react';
-<<<<<<< HEAD
 import { getCLS, getFID, getFCP, getLCP, getTTFB };
-<<<<<<< HEAD
-=======
-'use client';
-=======
-import { onCLS, onFCP, onLCP, onTTFB, onINP } from 'web-vitals';
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const PerformanceMonitor: React.FC = () => {
+  return (
+  return (
   useEffect(() => {
-    // Monitor Core Web Vitals
+    // Monitor Core Web Vitals;
     const monitorCoreWebVitals = () => {
-<<<<<<< HEAD
       if ('web-vitals' in, window) {
           getCLS(console.log);
           getFID(console.log);
           getFCP(console.log);
           getLCP(console.log);
           getTTFB(console.log);
-        });
-=======
-      if ('web-vitals' in window) {
-        onCLS(console.log);
-        onINP(console.log);
-        onFCP(console.log);
-        onLCP(console.log);
-        onTTFB(console.log);
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
+        
+  );
+
+  );
+});
       }
     };
 
-    // Monitor performance metrics
+    // Monitor performance metrics;
     const monitorPerformance = () => {
       if ('performance' in, window) {
         window.addEventListener('load', () => {
@@ -50,7 +39,7 @@ const PerformanceMonitor: React.FC = () => {
       }
     };
 
-    // Monitor memory usage
+    // Monitor memory usage;
     const monitorMemory = () => {
       if ('memory' in, performance) {
         setInterval(() => {
@@ -60,18 +49,18 @@ const PerformanceMonitor: React.FC = () => {
             total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
             limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
           });
-        }, 30000); // Check every 30 seconds
+        }, 30000); // Check every 30 seconds;
       }
     };
 
-    // Initialize monitoring
+    // Initialize monitoring;
     monitorCoreWebVitals();
     monitorPerformance();
     monitorMemory();
 
-    // Cleanup
+    // Cleanup;
     return () => {
-      // Cleanup if needed
+      // Cleanup if needed;
     };
   }, []);
 

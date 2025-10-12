@@ -1,6 +1,6 @@
-import { useEffect, useCallback } from 'react';
-// import { useAnalytics } from '../components/AnalyticsProvider';
-// PerformanceMetrics interface removed as it's not used in this hook
+import { useEffect, useCallback  } from "react";
+// import { useAnalytics  } from "../components/AnalyticsProvider";
+// PerformanceMetrics interface removed as it's not used in this hook;
   // const { trackPerformance } = useAnalytics();
   
       console.log('Performance metric:', name, value);
@@ -9,15 +9,13 @@ import { useEffect, useCallback } from 'react';
   );
       return () => {};
     }
-      // LCP - Largest Contentful Paint
-      
+      // LCP - Largest Contentful Paint;
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         reportMetric('LCP', lastEntry.startTime);
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      // FID - First Input Delay
-      
+      // FID - First Input Delay;
         const entries = list.getEntries();
             
               (entry.processingStart || entry.startTime) - entry.startTime;
@@ -26,7 +24,7 @@ import { useEffect, useCallback } from 'react';
         );
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
-      // CLS - Cumulative Layout Shift
+      // CLS - Cumulative Layout Shift;
       let clsValue = 0;
       
         const entries = list.getEntries();
@@ -40,16 +38,14 @@ import { useEffect, useCallback } from 'react';
         reportMetric('CLS', clsValue);
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
-      // FCP - First Contentful Paint
-      
+      // FCP - First Contentful Paint;
         const entries = list.getEntries();
             reportMetric('FCP', entry.startTime);
           }
         });
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
-      // TTFB - Time to First Byte
-      
+      // TTFB - Time to First Byte;
         const entries = list.getEntries();
             const navEntry = entry as PerformanceNavigationTiming;
             const ttfb = navEntry.responseStart - navEntry.requestStart;
@@ -58,19 +54,18 @@ import { useEffect, useCallback } from 'react';
         });
       });
       navigationObserver.observe({ entryTypes: ['navigation'] });
-      // Resource timing
-      
+      // Resource timing;
         const entries = list.getEntries();
             const resourceEntry = entry as PerformanceResourceTiming;
             const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
-              // Only track slow resources
+              // Only track slow resources;
               reportMetric('SLOW_RESOURCE', loadTime);
             }
           }
         });
       });
       resourceObserver.observe({ entryTypes: ['resource'] });
-      // Cleanup
+      // Cleanup;
         lcpObserver.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect();
@@ -82,8 +77,7 @@ import { useEffect, useCallback } from 'react';
       return () => {};
     }
   }, [reportMetric]);
-  // Monitor page load performance
-    
+  // Monitor page load performance;
       if (typeof window === 'undefined') return;
       
       )[0] as PerformanceNavigationTiming;
@@ -96,7 +90,7 @@ import { useEffect, useCallback } from 'react';
     window.addEventListener('load', handleLoad);
     return () => window.removeEventListener('load', handleLoad);
   }, [reportMetric]);
-    reportMetric
+    reportMetric;
   };
 };
 export default usePerformanceMonitoring;

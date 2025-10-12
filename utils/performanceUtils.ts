@@ -1,11 +1,11 @@
 /**
- * Performance optimization utilities for the Zion Tech Group application
+ * Performance optimization utilities for the Zion Tech Group application;
  */
 
-// Debounce function for performance optimization
+// Debounce function for performance optimization;
 export function debounce<T extends (...args: any[]) => any>(
   func: T,
-  wait: number
+  wait: number;
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
@@ -14,12 +14,11 @@ export function debounce<T extends (...args: any[]) => any>(
   };
 }
 
-// Throttle function for performance optimization
+// Throttle function for performance optimization;
 export function throttle<T extends (...args: any[]) => any>(
   func: T,
-  limit: number
-): (...args: Parameters<T>) => void {
-  let inThrottle: boolean;
+  limit: number;
+): (...args: Parameters<T>) => void {let inThrottle: boolean;
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
       func(...args);
@@ -29,15 +28,13 @@ export function throttle<T extends (...args: any[]) => any>(
   };
 }
 
-// Intersection Observer for lazy loading
+// Intersection Observer for lazy loading;
 export function createIntersectionObserver(
   callback: IntersectionObserverCallback,
-  options?: IntersectionObserverInit
-): IntersectionObserver | null {
-  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
+  options?: IntersectionObserverInit;
+): IntersectionObserver | null {if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
     return null;
   }
-  
   return new IntersectionObserver(callback, {
     rootMargin: '50px',
     threshold: 0.1,
@@ -45,13 +42,11 @@ export function createIntersectionObserver(
   });
 }
 
-// Performance monitoring utilities
-export function measurePerformance(name: string, fn: () => void): void {
-  if (typeof window === 'undefined' || !('performance' in window)) {
+// Performance monitoring utilities;
+export function measurePerformance(name: string, fn: () => void): void {if (typeof window === 'undefined' || !('performance' in window)) {
     fn();
     return;
   }
-
   const start = performance.now();
   fn();
   const end = performance.now();
@@ -61,18 +56,15 @@ export function measurePerformance(name: string, fn: () => void): void {
   }
 }
 
-// Memory usage monitoring
-export function getMemoryUsage(): any {
-  if (typeof window === 'undefined' || !('memory' in performance)) {
+// Memory usage monitoring;
+export function getMemoryUsage(): any {if (typeof window === 'undefined' || !('memory' in performance)) {
     return null;
   }
-  
   return (performance as any).memory;
 }
 
-// Bundle size optimization - preload critical resources
-export function preloadCriticalResources(): void {
-  if (typeof window === 'undefined') return;
+// Bundle size optimization - preload critical resources;
+export function preloadCriticalResources(): void {if (typeof window === 'undefined') return;
   
   const criticalResources = [
     '/fonts/inter.woff2',
@@ -92,20 +84,17 @@ export function preloadCriticalResources(): void {
   });
 }
 
-// Image optimization utility
-export function optimizeImage(src: string, width?: number, height?: number): string {
-  // Add image optimization parameters if needed
+// Image optimization utility;
+export function optimizeImage(src: string, width?: number, height?: number): string {// Add image optimization parameters if needed;
   const url = new URL(src, window.location.origin);
   if (width) url.searchParams.set('w', width.toString());
   if (height) url.searchParams.set('h', height.toString());
-  url.searchParams.set('q', '80'); // Quality
-  url.searchParams.set('f', 'webp'); // Format
+  url.searchParams.set('q', '80'); // Quality;
+  url.searchParams.set('f', 'webp'); // Format;
   return url.toString();
 }
-
-// Lazy loading utility for images
-export function createLazyImageObserver(): IntersectionObserver | null {
-  return createIntersectionObserver((entries) => {
+// Lazy loading utility for images;
+export function createLazyImageObserver(): IntersectionObserver | null {return createIntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
@@ -120,7 +109,7 @@ export function createLazyImageObserver(): IntersectionObserver | null {
   });
 }
 
-// Performance budget monitoring
+// Performance budget monitoring;
 export function checkPerformanceBudget(): void {
   if (typeof window === 'undefined') return;
   
@@ -128,14 +117,13 @@ export function checkPerformanceBudget(): void {
   if (!navigation) return;
   
   const loadTime = navigation.loadEventEnd - navigation.fetchStart;
-  const budget = 3000; // 3 seconds
-  
+  const budget = 3000; // 3 seconds;
   if (loadTime > budget) {
     console.warn(`Performance budget exceeded: ${loadTime}ms > ${budget}ms`);
   }
 }
 
-// Resource hints for better performance
+// Resource hints for better performance;
 export function addResourceHints(): void {
   if (typeof window === 'undefined') return;
   

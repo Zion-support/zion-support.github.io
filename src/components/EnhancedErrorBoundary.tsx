@@ -16,41 +16,40 @@
     };
     this.maxRetries = props.maxRetries || 3;
   }
-      retryCount: 0
+      retryCount: 0;
     };
   }
-      errorInfo
+      errorInfo;
     });
-    // Log error to console in development
+    // Log error to console in development;
       console.error('Error caught by boundary:', error, errorInfo);
     }
-    // Call custom error handler if provided
+    // Call custom error handler if provided;
       this.props.onError(error, errorInfo);
     }
-    // Enhanced error reporting
+    // Enhanced error reporting;
       this.reportError(error, errorInfo);
     }
   }
-    // Enhanced error reporting logic
-    
+    // Enhanced error reporting logic;
     };
-    // Log to console in development
+    // Log to console in development;
       console.group('🚨 Error Boundary Caught Error');
       console.error('Error Report:', errorReport);
       console.groupEnd();
     }
     // Send to error reporting service (implement as needed)
-      // In a real app, you would send this to your error reporting service
-      // For now, we'll just log it
+      // In a real app, you would send this to your error reporting service;
+      // For now, we'll just log it;
       console.log('Error report prepared:', errorReport);
        
-      // Example: Send to error reporting service
+      // Example: Send to error reporting service;
       //   body: JSON.stringify(errorReport)
       // });
       console.error('Failed to report error:', reportingError);
     }
   };
-    // Get user ID from localStorage, cookies, or context
+    // Get user ID from localStorage, cookies, or context;
     return localStorage.getItem('userId') || null;
   };
     let sessionId = sessionStorage.getItem('sessionId');
@@ -68,7 +67,7 @@
     
     };
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
-        // Show success message
+        // Show success message;
         const button = document.getElementById('copy-error-details');
           const originalText = button.textContent;
           button.textContent = 'Copied!';
@@ -79,7 +78,7 @@
         console.error('Failed to copy error details:', error);
       });
   };
-      // Custom fallback UI
+      // Custom fallback UI;
         return this.props.fallback;
       }
       const { retryCount, error } = this.state;

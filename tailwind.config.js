@@ -66,8 +66,7 @@ export default {
           800: '#075985',
           900: '#0c4a6e',
         },
-        futuristic: {
-          dark: '#0a0a0a',
+        futuristic: {dark: '#0a0a0a',
           darker: '#050505',
           light: '#1a1a2e',
           accent: '#16213e',

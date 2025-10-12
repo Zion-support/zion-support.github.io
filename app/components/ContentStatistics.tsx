@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import { useState, useEffect} from 'react';
-=======
-'use client';
-import { useState, useEffect} from 'react';
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+import { useState, useEffect } from "react";
 interface StatItem {
   id: string;,
   value: number;,
@@ -15,12 +8,10 @@ interface StatItem {
   prefix?: string;
 }
 
-interface ContentStatisticsProps {
-  stats?: StatItem[];
+interface ContentStatisticsProps {stats?: StatItem[];
   animationDuration?: number;
   className?: string;
 }
-
 const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
   const stats = [
     {
@@ -44,8 +35,7 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
       icon: CheckCircle,
       suffix: '%'
     },
-    {
-      id: 'performance',
+    {id: 'performance',
       value: 300,
       label: 'Performance Boost',
       icon: Zap,
@@ -62,53 +52,39 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
       const animate = (currentTime: number) => {
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
-        // Easing function
+        // Easing function;
         const easeOutCubic = 1 - Math.pow(1 - progress, 3);
         const currentValue = start + (end - start) * easeOutCubic;
         setAnimatedValues(const prev = > ({
           ...prev,
-          [key]: currentValue
+          [key]: currentValue;
         }));
-        if (progress < 1) {
-          requestAnimationFrame(animate);
+        if (progress < 1) {requestAnimationFrame(animate);
         }
       };
 
       requestAnimationFrame(animate);
-    };
-
+    };>
+>
     stats.forEach(const stat = > {
       animateValue(0, stat.value, animationDuration, stat.id);
     });
   }, [stats, animationDuration]);
 
   return (
-    <div const className = {`grid grid-cols-2 lg: grid-cols-4 gap-6 ${className}`} />
+    <>div const className = {`grid grid-cols-2 lg: grid-cols-4 gap-6 ${className}`} /></div>
       {stats.map((stat) => {
         const animatedValue = animatedValues[stat.id] || 0;
         const IconComponent = stat.icon;
         return (
-    <div
-            const key = {stat.id}
+    <div;></div>
+            const key = {stat.id}></div>
             className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20transition-allduration-300" />
-<<<<<<< HEAD
-            <div className="flexjustify-centermb-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-centerjustify-center">
-                <IconComponent className="w-6h-6text-white" />
+            <div className="flexjustify-centermb-4" ></div><div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-centerjustify-center" ></div></>
+                <IconComponent className="w-6h-6text-white" /></IconComponent>
               </div>
 
-            <div className="text-3 xl font-bold text-white mb-2"  />{stat.prefix}
-=======
-    <>
-            <div className="flexjustify-centermb-4">
-        </div>
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flexitems-centerjustify-center">
-        </div>
-                <IconComponent className="w-6h-6text-white" / />
-              </div>
-
-            <div className="text-3 xl font-boldtext-whitemb-2">{stat.prefix}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <div className="text-3 xl font-bold text-white mb-2" />{stat.prefix}
               {stat.suffix === '%'
                 ? animatedValue.toFixed(1)
                 : Math.floor(animatedValue).toLocaleString()
@@ -116,14 +92,9 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
               {stat.suffix}
             </div>
 
-    <>
-            <div className="text-gray-300text-sm">{stat.label}
+    <>div className="text-gray-300text-sm" >{stat.label}
             </div>
-<<<<<<< HEAD
   );
-=======
-        );
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
       })}
     </div>
   );
@@ -131,3 +102,4 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
 
 export default ContentStatistics;
     </>
+</div>

@@ -1,16 +1,16 @@
-<<<<<<< HEAD
 import React  from 'react';
-=======
-'use client';
-import React from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const EnhancedSkipLink: React.FC = () => {
+  return (
+  return (
   const handleSkipToMain = () => {
     const mainContent = document.getElementById('main-content');
     if (mainContent) {
       mainContent.focus();
-      mainContent.scrollIntoView({ behavior: 'smooth' });
+      mainContent.scrollIntoView({ behavior: 'smooth' 
+  );
+
+  );
+});
     }
   };
 
@@ -26,19 +26,15 @@ const EnhancedSkipLink: React.FC = () => {
   };
 
   return (
-    <div className="skip-links">
-      <button
-        onClick="{handleSkipToMain}"
-        className="skip-link"
-        aria-label="Skip to main content">Skip to main content
+    <div className="skip-links" ></div>
+      <button;></button>
+        onClick="{handleSkipToMain}" className="skip-link" ></button>
+        aria-label="Skip to main content" >Skip to main content;
       </button>
-      <button
-        onClick="{handleSkipToNavigation}"
-        className="skip-link"
-        aria-label="Skip to navigation"
-        />Skip to navigation
-    <>
-      </button>
+      <button;></button>
+        onClick="{handleSkipToNavigation}" className="skip-link" aria-label="Skip to navigation"></button>
+        />Skip to navigation;
+    <>/button>
       <style jsx  />{`
         .skip-links {;
           position: absolute;,
@@ -46,9 +42,7 @@ const EnhancedSkipLink: React.FC = () => {
   left: 0;
           z-index: 1000;
         }
-        
-        .skip-link {
-          position: absolute;,
+        .skip-link {position: absolute;,
   top: -100 px;,
   left: 0;,
   background: #000;,
@@ -61,17 +55,15 @@ const EnhancedSkipLink: React.FC = () => {
   transition: top 0.3 s;
           z-index: 1001;
         }
-        
         .skip-link: focus {,
   top: 10 px;,
   left: 10 px;
         }
-        
         .skip-link: hover {,
   background: #00 ffff;,
   color: #000;
         }
-    <>
+    <>/>
       `}</style>
     </div>
   );

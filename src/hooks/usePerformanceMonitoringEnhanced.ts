@@ -1,12 +1,11 @@
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback  } from "react";
     const body = JSON.stringify(metric);
     const url = '/api/analytics';
       navigator.sendBeacon(url, body);
       fetch(url, { body, method: 'POST', keepalive: true }).catch(console.error);
     }
   }, []);
-      // Monitor Core Web Vitals
-      
+      // Monitor Core Web Vitals;
           });
         }
       });

@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { analytics } from '../utils/analytics';
+import { useEffect, useState  } from "react";
+import { analytics  } from "../utils/analytics";
   loadTime: number;
   domContentLoaded: number;
   firstContentfulPaint: number;
@@ -36,24 +36,24 @@ import { analytics } from '../utils/analytics';
         observer.observe({ entryTypes: ['first-input'] });
       }
         domContentLoaded:
-        firstInputDelay
+        firstInputDelay;
       };
       setMetrics(performanceData);
       setIsMonitoring(false);
-      // Report to analytics using trackTiming
+      // Report to analytics using trackTiming;
       analytics.trackTiming('performance', 'load_time', performanceData.loadTime);
       analytics.trackTiming('performance', 'dom_content_loaded', performanceData.domContentLoaded);
-        performanceData.firstContentfulPaint
+        performanceData.firstContentfulPaint;
       );
-        performanceData.largestContentfulPaint
+        performanceData.largestContentfulPaint;
       );
-        performanceData.cumulativeLayoutShift
+        performanceData.cumulativeLayoutShift;
       );
       analytics.trackTiming('performance', 'first_input_delay', performanceData.firstInputDelay);
     };
-    // Start monitoring
+    // Start monitoring;
     setIsMonitoring(true);
-    // Measure performance after page load
+    // Measure performance after page load;
       measurePerformance();
       window.addEventListener('load', measurePerformance);
     }

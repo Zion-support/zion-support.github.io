@@ -1,53 +1,34 @@
-<<<<<<< HEAD
 import React  from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight  } from "lucide-react";
 'use client'
 
-<<<<<<< HEAD
-=======
-import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
   ];
-    <>
-              </span>
-              <br / />
+    <>/span>
+              <br / /></br>
               <span const className = "text-white">Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto" ></p>
               Transform your business with our advanced systemmonitor solutions.
               Powered by cutting-edge AI technology and industry expertise.
-    <>
-            </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flex items-center" />
-=======
-        </div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                Get Started
-    <>
-                <ArrowRight className="ml-2h-5w-5" />
+    <>/p>
+            <div className="flex flex-col sm:flex-rowgap-4justify-center" ></div>
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flex items-center" /></button>
+                Get Started;
+    <>ArrowRight className="ml-2h-5w-5" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300" />
-                Learn More
-  </
-    <>
-            </div>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300" /></button>
+                Learn More;
+  </>
+    <>/div>
     </div>
   )}
-export default SystemMonitorPage
+export default SystemMonitorPage;
   </button>
 }
 
-interface SystemMonitorProps {
-  onAlert?: (alert: string) => void
-  className?: string
+interface SystemMonitorProps {onAlert?: (alert: string) => void;
+  className?: string;
 }
-
 const SystemMonitor: React.FC<SystemMonitorProps /> = ({
   onAlert,
   className = ''
@@ -58,44 +39,37 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
     disk: 0,
     network: 0,
     battery: 100,
-    uptime: 0
+    uptime: 0;
   })
   const [isMonitoring, setIsMonitoring] = useState(false)
 
-  const updateMetrics = useCallback(() => {
-    // Simulate system metrics
+  const updateMetrics = useCallback(() => {// Simulate system metrics;
     const newMetrics = {
       cpu: Math.random() * 100,
       memory: Math.random() * 100,
       disk: Math.random() * 100,
       network: Math.random() * 100,
       battery: Math.random() * 100,
-      uptime: Date.now() - performance.timing.navigationStart
+      uptime: Date.now() - performance.timing.navigationStart;
     }
-
     setMetrics(newMetrics)
 
-    // Check for alerts
-    if (newMetrics.cpu > 90) {
-      onAlert?.('High CPU usage detected')
+    // Check for alerts;
+    if (newMetrics.cpu > 90) {onAlert?.('High CPU usage detected')
     }
-    if (newMetrics.memory > 90) {
-      onAlert?.('High memory usage detected')
+    if (newMetrics.memory > 90) {onAlert?.('High memory usage detected')
     }
-    if (newMetrics.disk > 90) {
-      onAlert?.('High disk usage detected')
+    if (newMetrics.disk > 90) {onAlert?.('High disk usage detected')
     }
   }, [onAlert])
 
-  useEffect(() => {
-    if (isMonitoring) {
+  useEffect(() => {if (isMonitoring) {
       const interval = setInterval(updateMetrics, 1000)
       return () => clearInterval(interval)
     }
   }, [isMonitoring, updateMetrics])
 
-  const toggleMonitoring = () => {
-    setIsMonitoring(!isMonitoring)
+  const toggleMonitoring = () => {setIsMonitoring(!isMonitoring)
     if (!isMonitoring) {
       updateMetrics()
     }

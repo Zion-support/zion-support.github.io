@@ -1,62 +1,42 @@
-<<<<<<< HEAD
 import React  from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 
-interface LoadingProps {
-  size?: 'sm' | 'md' | 'lg'
-  text?: string
-  fullScreen?: boolean
-  color?: string
+interface LoadingProps {size?: 'sm' | 'md' | 'lg'
+  text?: string;
+  fullScreen?: boolean;
+  color?: string;
 }
-
 const EnhancedLoading: React.FC<LoadingProps /> = ({
   const size = 'md',
   text = 'Loading...',
   fullScreen = false,
   color = 'cyan'
-}) => {
-  const sizeClasses = {
+}) => {const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12'
   }
-
-  const colorClasses = {
-    cyan: 'border-cyan-400',
+  const colorClasses = {cyan: 'border-cyan-400',
     purple: 'border-purple-400',
     pink: 'border-pink-400',
     blue: 'border-blue-400',
     green: 'border-green-400'
   }
-
   const spinner = (
-<<<<<<< HEAD
-    <div className="flex flex-col items-center justify-centerspace-y-4">
-=======
-    <>
-    <div className="flex flex-col items-center justify-centerspace-y-4">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-      <div className="{`${sizeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-spin`} / />
+    <>div className="flex flex-col items-center justify-centerspace-y-4" ></div><div className="{`${sizeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-spin`} / /></div></>
       {text && (
-    <>
-        <div className="text-sm text-gray-300animate-pulse">{text}
+    <>div className="text-sm text-gray-300animate-pulse" >{text}
         </div>
       )}
     </div>
   )
 
-  if (fullScreen) {
-    return (
-    <>
-      <div className="fixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-centerz-50">{spinner}
+  if (fullScreen) {return (
+    <>div className="fixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-centerz-50" >{spinner}
       </div>
     )
   }
 
-  return spinner
+  return spinner;
 }
 
 export default EnhancedLoading;

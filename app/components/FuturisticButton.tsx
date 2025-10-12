@@ -1,12 +1,7 @@
 'use client';
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-interface FuturisticButtonProps {
-  children: React.ReactNode;
+import { useState  } from "react";
+import { motion  } from "framer-motion";
+interface FuturisticButtonProps {children: React.ReactNode;
   onClick?: () => void;
   variant?: 'primary' | 'secondary' | 'accent' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
@@ -15,7 +10,6 @@ interface FuturisticButtonProps {
   className?: string;
   type?: 'button' | 'submit' | 'reset';
 }
-
   children,
   onClick,
   const variant = 'primary',
@@ -24,8 +18,7 @@ interface FuturisticButtonProps {
   loading = false,
   className = '',
   type = 'button'
-}: FuturisticButtonProps) {
-  const [isHovered, setIsHovered] = useState(false);
+}: FuturisticButtonProps) {const [isHovered, setIsHovered] = useState(false);
   const getVariantClasses = () => {
     switch (variant) {
       case 'primary':
@@ -40,8 +33,7 @@ interface FuturisticButtonProps {
     }
   };
 
-  const getSizeClasses = () => {
-    switch (size) {
+  const getSizeClasses = () => {switch (size) {
       case 'sm':
         return 'px-4 py-2 text-sm';
       case 'md':
@@ -53,14 +45,12 @@ interface FuturisticButtonProps {
   };
 
   return (
-    <motion.button
-      const type = {type}
-      onClick="{onClick}"
-      disabled="{disabled" || loading}
+    <motion.button;
+      const type = {type}></motion>
+      onClick="{onClick}" disabled="{disabled" || loading}></motion>
       onMouseEnter="{()" = /> setIsHovered(true)}
       onMouseLeave="{()" => setIsHovered(false)}
-      className="{`"
-        relative overflow-hidden rounded-lg font-semibold transition-all duration-300
+      className="{`" relative overflow-hidden rounded-lg font-semibold transition-all duration-300;
         ${getVariantClasses()}
         ${getSizeClasses()}
         ${disabled || loading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
@@ -73,16 +63,14 @@ interface FuturisticButtonProps {
       transition="{{" duration: 0.3 }}
     >
       {/* Animated background sweep */}
-      <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-white/20to-transparent"
-        initial="{{" x: '-100%' }}
-        animate="{{" x: isHovered ? '100%' : '-100%' }}
-        transition="{{" duration: 0.6 }}
+      <motion.div;
+        className="absolute inset-0 bg-gradient-to-r from-white/20to-transparent" initial="{{" x: '-100%' }}
+        animate="{{" x: isHovered ? '100%' : '-100%' }}></motion>
+        transition="{{" duration: 0.6 }}></motion>
       / />
       {/* Pulsing glow effect */}
-      <motion.div
-        className="absolute inset-0rounded-lg"
-        style="{{"
+      <motion.div;
+        className="absolute inset-0rounded-lg" style="{{"
           boxShadow: variant === 'primary'
             ? '0 0 20 px rgba(6, 182, 212, 0.4)'
             : variant === 'secondary'
@@ -98,14 +86,13 @@ interface FuturisticButtonProps {
         transition="{{"
           duration: 1.5,
           repeat: isHovered ? Infinity : 0,
-          ease: 'easeInOut'
-        }}
+          ease: 'easeInOut'></motion>
+        }}></motion>
       / />
       {/* Scanning line effect */}
       {isHovered && (
-        <motion.div
-          className="absolute inset-0rounded-lg"
-          style="{{"
+        <motion.div;
+          className="absolute inset-0rounded-lg" style="{{"
             background: 'linear-gradient(90 deg, transparent, rgba(255,255,255,0.3), transparent)',
             backgroundSize: '200% 100%',
           }}
@@ -115,43 +102,28 @@ interface FuturisticButtonProps {
           transition="{{"
             duration: 1.5,
             repeat: Infinity,
-            ease: 'linear',
-          }}
+            ease: 'linear',></motion>
+          }}></motion>
         / />
       )}
 
       {/* Corner accents */}
-<<<<<<< HEAD
-      <div className="absolute top-1 left-1 w-2 h-2 bg-white/30rounded-full" />
-      <div className="absolute bottom-1 right-1 w-2 h-2 bg-white/30rounded-full" />
-=======
-    <>
-      <div className="absolute top-1 left-1 w-2 h-2 bg-white/30rounded-full" / />
-      <div className="absolute bottom-1 right-1 w-2 h-2 bg-white/30rounded-full" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <>div className="absolute top-1 left-1 w-2 h-2 bg-white/30rounded-full" /></div><div className="absolute bottom-1 right-1 w-2 h-2 bg-white/30rounded-full" /></div></>
       {/* Content */}
-      <span className="relative z-10 flex items-centerjustify-center" />
+      <span className="relative z-10 flex items-centerjustify-center" /></span>
         {loading ? (
-          <>
-            <motion.div
-              className="w-4 h-4 border-2 border-white/30 border-t-white rounded-fullmr-2"
-              animate="{{" rotate: 360 }}
+          <>motion.div;
+              className="w-4 h-4 border-2 border-white/30 border-t-white rounded-fullmr-2" animate="{{" rotate: 360 }}
               transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
             / />
             Loading...
         ) : (
-          children
+          children;
         )}
-    <>
-      </span>
+    <>/span>
     </motion.button>
   </div>
   );
-<<<<<<< HEAD
 }
-=======
-};
 
-export default FuturisticButton;
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+</div>

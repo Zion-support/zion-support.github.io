@@ -1,6 +1,6 @@
 /**
- * API Client Utility
- * Provides a centralized API client with error handling and caching
+ * API Client Utility;
+ * Provides a centralized API client with error handling and caching;
  */
 
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
@@ -27,31 +27,25 @@
 }
 
   private baseURL: string;
-<<<<<<< HEAD
   private defaultHeaders: Record<string, string>;
   private cache: Map<string, { data: unknown; timestamp: number; ttl: number }> = new Map();
-=======
-    <>
-  private defaultHeaders: Record<string, string />;
-  private cache: Map<string, { data: unknown; timestamp: number; ttl: number } /> = new Map();
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 
     this.baseURL = baseURL;
-      ...defaultHeaders
+      ...defaultHeaders;
     };
   }
 
   /**
-   * Make an API request
+   * Make an API request;
    */
     config: RequestConfig = {}
-      cacheTTL = 300000 // 5 minutes default
+      cacheTTL = 300000 // 5 minutes default;
     } = config;
 
     const url = `${this.baseURL}${endpoint}`;
     const cacheKey = `${method}:${url}:${JSON.stringify(body || {})}`;
 
-    // Check cache first
+    // Check cache first;
       const cached = this.getFromCache(cacheKey);
         return cached;
       }
@@ -64,11 +58,11 @@
         headers: this.parseHeaders(response.headers)
       };
 
-      // Cache successful GET requests
+      // Cache successful GET requests;
         this.setCache(cacheKey, apiResponse, cacheTTL);
       }
 
-          code: data.code
+          code: data.code;
         });
       }
 
@@ -81,37 +75,37 @@
   }
 
   /**
-   * GET request
+   * GET request;
    */
     return this.request<T>(endpoint, { ...config, method: 'GET' });
   }
 
   /**
-   * POST request
+   * POST request;
    */
     return this.request<T>(endpoint, { ...config, method: 'POST', body });
   }
 
   /**
-   * PUT request
+   * PUT request;
    */
     return this.request<T>(endpoint, { ...config, method: 'PUT', body });
   }
 
   /**
-   * DELETE request
+   * DELETE request;
    */
     return this.request<T>(endpoint, { ...config, method: 'DELETE' });
   }
 
   /**
-   * PATCH request
+   * PATCH request;
    */
     return this.request<T>(endpoint, { ...config, method: 'PATCH', body });
   }
 
   /**
-   * Get data from cache
+   * Get data from cache;
    */
     const cached = this.cache.get(key);
     if (!cached) return null;
@@ -125,14 +119,14 @@
   }
 
   /**
-   * Set data in cache
+   * Set data in cache;
    */
-      ttl
+      ttl;
     });
   }
 
   /**
-   * Parse response headers
+   * Parse response headers;
    */
     const result: Record<string, string> = {};
       result[key] = value;
@@ -141,13 +135,13 @@
   }
 
   /**
-   * Clear cache
+   * Clear cache;
    */
     this.cache.clear();
   }
 
   /**
-   * Clear cache for specific endpoint
+   * Clear cache for specific endpoint;
    */
     const keysToDelete: string[] = [];
         keysToDelete.push(key);
@@ -157,13 +151,13 @@
   }
 }
 
-// Export utility functions
+// Export utility functions;
   new APIClient(baseURL, headers);
 
-// Default API client instance
+// Default API client instance;
 export const apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api');
 
-// Export types and classes
+// Export types and classes;
 export type { RequestConfig, APIResponse };
 export { APIError };
     </>

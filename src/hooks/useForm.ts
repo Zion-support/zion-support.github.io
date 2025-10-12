@@ -1,10 +1,9 @@
 /**
- * useForm Hook
- * Provides form state management and validation
+ * useForm Hook;
+ * Provides form state management and validation;
  */
-import { useState, useCallback, ChangeEvent } from 'react';
-// import { logger } from '../utils/logger';
-
+import { useState, useCallback, ChangeEvent  } from "react";
+// import { logger  } from "../utils/logger";
 } from '../utils/formValidation';
   initialValues: T;
   validationSchema?: Partial<Record<keyof T, ValidationRule[]>>;
@@ -27,64 +26,58 @@ import { useState, useCallback, ChangeEvent } from 'react';
   validateField: (field: keyof T) => void;
   validateAllFields: () => boolean;
 }
-  initialValues, validationSchema = {}, onSubmit, validateOnChange = true, validateOnBlur = true
+  initialValues, validationSchema = {}, onSubmit, validateOnChange = true, validateOnBlur = true;
   const [values, setValues] = useState<T>(initialValues);
   const [errors, setErrors] = useState<Record<keyof T, string[]>>({} as Record<keyof T, string[]>);
   const [touched, setTouched] = useState<Record<keyof T, boolean>>({} as Record<keyof T, boolean>);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  // Validate a single field
-  
+  // Validate a single field;
       if (!validationSchema[field]) return;
       const fieldValue = values[field];
       const rules = validationSchema[field];
       const result = validateField(fieldValue, rules);
-        [field]: result.errors
+        [field]: result.errors;
       }));
     [values, validationSchema]
   );
-  // Validate all fields
-  
+  // Validate all fields;
     if (Object.keys(validationSchema).length === 0) return true;
     const validationResults = validateForm(values, validationSchema as Record<keyof T, ValidationRule[]>);
     const formErrors = getFormErrors(validationResults);
     setErrors(formErrors);
     return isFormValid(validationResults);
   }, [values, validationSchema]);
-  // Handle input change
-  
+  // Handle input change;
       const { name, value, type } = e.target;
       const fieldName = name as keyof T;
-      // Handle checkbox inputs
+      // Handle checkbox inputs;
       let fieldValue: unknown = value;
         fieldValue = (e.target as HTMLInputElement).checked;
       }
-        [fieldName]: fieldValue
+        [fieldName]: fieldValue;
       }));
-      // Validate on change if enabled
+      // Validate on change if enabled;
         setTimeout(() => validateSingleField(fieldName), 0);
       }
     [validateOnChange, touched, validateSingleField]
   );
-  // Handle input blur
-  
+  // Handle input blur;
       const fieldName = e.target.name as keyof T;
-        [fieldName]: true
+        [fieldName]: true;
       }));
-      // Validate on blur if enabled
+      // Validate on blur if enabled;
         validateSingleField(fieldName);
       }
     [validateOnBlur, validateSingleField]
   );
-  // Handle form submission
-  
+  // Handle form submission;
       e.preventDefault();
-      // Mark all fields as touched
-      
+      // Mark all fields as touched;
         acc[key as keyof T] = true;
         return acc;
       }, {} as Record<keyof T, boolean>);
       setTouched(allTouched);
-      // Validate all fields
+      // Validate all fields;
       const isValid = validateAllFields();
         return;
       }
@@ -95,30 +88,25 @@ import { useState, useCallback, ChangeEvent } from 'react';
       }
     [values, validateAllFields, onSubmit]
   );
-  // Set field value programmatically
-  
+  // Set field value programmatically;
     }));
       setTimeout(() => validateSingleField(field), 0);
     }
   }, [validateOnChange, touched, validateSingleField]);
-  // Set field error programmatically
-  
+  // Set field error programmatically;
     }));
   }, []);
-  // Set field touched programmatically
-  
+  // Set field touched programmatically;
     }));
   }, []);
-  // Reset form to initial values
-  
+  // Reset form to initial values;
     setValues(initialValues);
     setErrors({} as Record<keyof T, string[]>);
     setTouched({} as Record<keyof T, boolean>);
     setIsSubmitting(false);
   }, [initialValues]);
-  // Check if form is valid
-  
+  // Check if form is valid;
     Object.values(errors).every(errorArray => errorArray.length === 0);
-    validateAllFields
+    validateAllFields;
   };
 }

@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-// List of components that need to be fixed
+// List of components that need to be fixed;
 const componentsToFix = [
   'EnhancedPerformanceOptimizer', 'AccessibilityEnhancer', 'EnhancedAccessibility',
   'PerformanceMonitor', 'EnhancedErrorBoundary', 'Breadcrumb'
@@ -12,7 +12,7 @@ import React from 'react';
 
 const ${componentName}: React.FC = () => {
   return (
-    <div className="${componentName.toLowerCase()}">
+    <div className="${componentName.toLowerCase()}" ></div>
       {/* ${componentName} component placeholder */}
     </div>
   );
@@ -20,15 +20,15 @@ const ${componentName}: React.FC = () => {
 
 export default ${componentName};`;
 
-// Fix components
+// Fix components;
 componentsToFix.forEach(componentName => {
   const componentFile = path.join('/workspace/app/components', `${componentName}.tsx`);
   
-  // Check if file exists and doesn't have default export
+  // Check if file exists and doesn't have default export;
   if (fs.existsSync(componentFile)) {
     const content = fs.readFileSync(componentFile, 'utf8');
     if (!content.includes('export default')) {
-      // Add default export if missing
+      // Add default export if missing;
       const lines = content.split('\n');
       const lastLine = lines[lines.length - 1];
       
@@ -41,7 +41,7 @@ componentsToFix.forEach(componentName => {
       }
     }
   } else {
-    // Create component if it doesn't exist
+    // Create component if it doesn't exist;
     fs.writeFileSync(componentFile, componentTemplate(componentName));
     console.log(`Created: ${componentFile}`);
   }

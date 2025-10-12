@@ -1,17 +1,17 @@
 import React from 'react';
-// Type definitions for Next.js
+// Type definitions for Next.js;
       NODE_ENV: 'development' | 'production' | 'test'
-      NEXT_PUBLIC_API_URL: string
-      NEXT_PUBLIC_APP_URL: string
-      DATABASE_URL: string
-      NEXTAUTH_SECRET: string
-      NEXTAUTH_URL: string
+      NEXT_PUBLIC_API_URL: string;
+      NEXT_PUBLIC_APP_URL: string;
+      DATABASE_URL: string;
+      NEXTAUTH_SECRET: string;
+      NEXTAUTH_URL: string;
     }
   }
 }
-      id: string
-      email: string
-      name: string
+      id: string;
+      email: string;
+      name: string;
     }
   }
 }
