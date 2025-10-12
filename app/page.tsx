@@ -1,17 +1,8 @@
 'use client'
 import React from 'react'
-<<<<<<< HEAD
-<<<<<<< HEAD
 import SEOHead from './components/SEOHead'
-import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud } from 'lucide-react'
-=======
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, CheckCircle } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-93a1
-import { Link } from 'react-router-dom'
-=======
 import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react'
->>>>>>> cursor/analyze-improve-and-deploy-application-04ca
+import { Link } from 'react-router-dom'
 
 export default function HomePage() {
   const stats = [

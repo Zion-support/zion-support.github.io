@@ -1,153 +1,12 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, Eye, MessageSquare, BarChart3 } from 'lucide-react';
-=======
-import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
-=======
-import { CheckCircle, ArrowRight, Brain, Zap, Eye, MessageCircle, BarChart, Shield, Users, Clock, DollarSign, Star } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-bee6
-=======
-import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-04ca
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
+'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Zap, Brain, Database, Smartphone, Shield, MessageCircle } from 'lucide-react'
+import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, Eye, MessageCircle, BarChart } from 'lucide-react'
 import { Link } from 'react-router-dom'
->>>>>>> cursor/fix-errors-and-merge-to-main-93a1
 
 export default function AIServicesPage() {
   const services = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: <Brain className="w-8 h-8 text-blue-500" />,
-<<<<<<< HEAD
-      title: 'AI Content Generator',
-      description: 'Generate high-quality content for blogs, social media, marketing materials, and more using advanced AI models.',
-      features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content templates'],
-      pricing: 'Starting at $29/month',
-      link: '/ai-content-generator',
-      popular: true
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-purple-500" />,
-      title: 'AI Automation',
-      description: 'Automate repetitive tasks and workflows with intelligent AI-powered automation solutions.',
-      features: ['Workflow automation', 'Process optimization', 'Custom integrations', 'Real-time monitoring'],
-      pricing: 'Starting at $49/month',
-      link: '/ai-automation',
-      popular: true
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: 'AI Cybersecurity',
-      description: 'Advanced AI-powered security solutions to protect your digital assets and detect threats.',
-      features: ['Threat detection', 'Anomaly monitoring', 'Automated response', 'Compliance reporting'],
-      pricing: 'Starting at $99/month',
-      link: '/ai-cybersecurity',
-      popular: false
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-green-500" />,
-      title: 'AI Analytics',
-      description: 'Transform your data into actionable insights with powerful AI-driven analytics tools.',
-      features: ['Predictive analytics', 'Data visualization', 'Custom dashboards', 'Real-time insights'],
-      pricing: 'Starting at $39/month',
-      link: '/ai-analytics',
-      popular: false
-<<<<<<< HEAD
-    },
-    {
-      icon: <Brain className="w-8 h-8 text-orange-500" />,
-      title: 'Machine Learning',
-      description: 'Build intelligent systems that learn and adapt to your business needs.',
-      features: ['Predictive Modeling', 'Pattern Recognition', 'Automated Learning', 'Real-time Adaptation'],
-      pricing: 'Starting at $99/month',
-      link: '/machine-learning',
-      popular: true
-    },
-    {
-      icon: <MessageSquare className="w-8 h-8 text-green-500" />,
-      title: 'Natural Language Processing',
-      description: 'Transform text and speech into actionable insights and automated responses.',
-      features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'],
-      pricing: 'Starting at $89/month',
-      link: '/nlp',
-      popular: false
-    },
-    {
-      icon: <Eye className="w-8 h-8 text-purple-500" />,
-      title: 'Computer Vision',
-      description: 'Extract meaningful information from images and videos for business automation.',
-      features: ['Image Recognition', 'Object Detection', 'Facial Recognition', 'Video Analysis'],
-      pricing: 'Starting at $119/month',
-      link: '/computer-vision',
-      popular: true
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-yellow-500" />,
-      title: 'Predictive Analytics',
-      description: 'Forecast future trends and behaviors to make data-driven business decisions.',
-      features: ['Trend Analysis', 'Risk Assessment', 'Performance Prediction', 'Scenario Planning'],
-      pricing: 'Starting at $149/month',
-      link: '/predictive-analytics',
-      popular: false
-=======
-      icon: <Brain className="w-12 h-12 text-blue-500" />,
-      title: 'AI Content Generation',
-      description: 'Automated content creation for blogs, social media, and marketing materials using advanced AI models.',
-      features: ['Blog posts and articles', 'Social media content', 'Marketing copy', 'Product descriptions'],
-      pricing: 'Starting at $500/month',
-      link: '/ai-services/content-generation'
-    },
-    {
-      icon: <MessageCircle className="w-12 h-12 text-green-500" />,
-      title: 'AI Chatbot Development',
-      description: 'Intelligent chatbots that understand context and provide personalized customer support.',
-      features: ['24/7 customer support', 'Multi-language support', 'Integration with existing systems', 'Analytics and insights'],
-      pricing: 'Starting at $1,200 setup',
-      link: '/ai-services/chatbot'
-    },
-    {
-      icon: <Database className="w-12 h-12 text-purple-500" />,
-      title: 'AI Analytics Dashboard',
-      description: 'Advanced analytics powered by AI to help you make data-driven business decisions.',
-      features: ['Real-time data processing', 'Predictive analytics', 'Custom dashboards', 'Automated reporting'],
-      pricing: 'Starting at $800/month',
-      link: '/ai-services/analytics'
-    },
-    {
-      icon: <Zap className="w-12 h-12 text-yellow-500" />,
-      title: 'AI Process Automation',
-      description: 'Streamline your business processes with intelligent automation solutions.',
-      features: ['Workflow automation', 'Document processing', 'Email automation', 'Task scheduling'],
-      pricing: 'Starting at $2,000/month',
-      link: '/ai-services/automation'
-    },
-    {
-      icon: <Smartphone className="w-12 h-12 text-red-500" />,
-      title: 'AI Mobile Applications',
-      description: 'Mobile apps enhanced with AI capabilities for better user experience and functionality.',
-      features: ['Voice recognition', 'Image processing', 'Personalized recommendations', 'Offline AI processing'],
-      pricing: 'Starting at $5,000',
-      link: '/ai-services/mobile'
-    },
-    {
-      icon: <Shield className="w-12 h-12 text-indigo-500" />,
-      title: 'AI Security Solutions',
-      description: 'Advanced security systems powered by AI to protect your business from threats.',
-      features: ['Threat detection', 'Anomaly monitoring', 'Automated response', 'Compliance reporting'],
-      pricing: 'Starting at $1,500/month',
-      link: '/ai-services/security'
->>>>>>> cursor/fix-errors-and-merge-to-main-93a1
-=======
       icon: <Brain className="w-12 h-12 text-blue-500" />,
       title: 'AI Content Generator Pro',
       description: 'Advanced AI-powered content creation tool that generates high-quality articles, blogs, social media posts, and marketing copy.',
@@ -210,142 +69,43 @@ export default function AIServicesPage() {
       pricing: '$79/month',
       popular: true,
       link: '/ai-analytics-dashboard'
->>>>>>> cursor/analyze-improve-and-deploy-application-04ca
+    },
+    {
+      icon: <Eye className="w-12 h-12 text-red-500" />,
+      title: 'AI Computer Vision',
+      description: 'Advanced image and video analysis solutions for quality control, object detection, and visual intelligence.',
+      features: [
+        'Object detection and recognition',
+        'Quality control automation',
+        'Facial recognition',
+        'Video analysis',
+        'Custom model training',
+        'Real-time processing'
+      ],
+      pricing: '$119/month',
+      popular: false,
+      link: '/ai-computer-vision'
+    },
+    {
+      icon: <MessageCircle className="w-12 h-12 text-cyan-500" />,
+      title: 'AI Conversational AI',
+      description: 'Build sophisticated conversational AI systems with natural language understanding and generation capabilities.',
+      features: [
+        'Natural language processing',
+        'Intent recognition',
+        'Multi-language support',
+        'Voice integration',
+        'Context awareness',
+        'Custom training'
+      ],
+      pricing: '$89/month',
+      popular: false,
+      link: '/ai-conversational-ai'
     }
   ]
 
-<<<<<<< HEAD
   const benefits = [
     {
-<<<<<<< HEAD
-      title: 'Cost Savings',
-      description: 'Reduce operational costs by up to 60% through intelligent automation',
-      icon: <DollarSign className="w-6 h-6 text-green-500" />
-    },
-    {
-      title: '24/7 Availability',
-      description: 'AI services work around the clock without breaks or downtime',
-      icon: <Globe className="w-6 h-6 text-blue-500" />
-    },
-    {
-      title: 'Scalability',
-      description: 'Easily scale your AI solutions as your business grows',
-      icon: <Zap className="w-6 h-6 text-purple-500" />
-    },
-    {
-      title: 'Accuracy',
-      description: 'Achieve 95%+ accuracy in AI-powered tasks and predictions',
-      icon: <Star className="w-6 h-6 text-yellow-500" />
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Inc.',
-      content: 'The AI content generator has revolutionized our marketing strategy. We\'ve seen a 300% increase in content output.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      company: 'DataFlow Solutions',
-      content: 'Our chatbot handles 80% of customer inquiries automatically, freeing up our team for complex issues.',
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'Analytics Pro',
-      content: 'The predictive analytics dashboard gives us insights we never had before. Game-changing technology.',
-      rating: 5
-    }
-=======
-=======
-      title: 'AI Content Generation',
-      description: 'Advanced AI-powered content creation with SEO optimization and brand voice customization.',
-      features: ['SEO-optimized content', 'Brand voice training', 'Multi-language support', 'Content scheduling', 'Plagiarism detection'],
-      pricing: '$299/month',
-      popular: true,
-      category: 'Content'
-    },
-    {
-      icon: <Eye className="w-8 h-8 text-green-500" />,
-      title: 'Computer Vision',
-      description: 'Image recognition, object detection, and visual analysis solutions for various industries.',
-      features: ['Image recognition', 'Object detection', 'Facial recognition', 'Quality inspection', 'Visual search'],
-      pricing: '$499/month',
-      popular: false,
-      category: 'Vision'
-    },
-    {
-      icon: <MessageCircle className="w-8 h-8 text-purple-500" />,
-      title: 'Conversational AI',
-      description: 'Intelligent chatbots and virtual assistants for customer service and support.',
-      features: ['Natural language processing', 'Multi-channel support', 'Sentiment analysis', 'Intent recognition', 'Integration APIs'],
-      pricing: '$399/month',
-      popular: true,
-      category: 'Conversation'
-    },
-    {
-      icon: <BarChart className="w-8 h-8 text-orange-500" />,
-      title: 'Predictive Analytics',
-      description: 'Machine learning models for forecasting, trend analysis, and business intelligence.',
-      features: ['Predictive modeling', 'Trend analysis', 'Risk assessment', 'Demand forecasting', 'Performance optimization'],
-      pricing: '$599/month',
-      popular: false,
-      category: 'Analytics'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: 'AI Security Solutions',
-      description: 'Intelligent threat detection and cybersecurity solutions powered by AI.',
-      features: ['Threat detection', 'Anomaly detection', 'Fraud prevention', 'Security monitoring', 'Incident response'],
-      pricing: '$799/month',
-      popular: false,
-      category: 'Security'
-    },
-    {
-      icon: <Users className="w-8 h-8 text-yellow-500" />,
-      title: 'AI for HR & Recruitment',
-      description: 'Automated resume screening, candidate matching, and HR process optimization.',
-      features: ['Resume screening', 'Candidate matching', 'Interview scheduling', 'Bias detection', 'Performance analysis'],
-      pricing: '$349/month',
-      popular: false,
-      category: 'HR'
-    }
-  ];
-
-  const aiCapabilities = [
-    {
-      icon: <Brain className="w-12 h-12 text-blue-500" />,
-      title: 'Machine Learning',
-      description: 'Custom ML models tailored to your specific business needs and data patterns.'
-    },
-    {
-      icon: <MessageCircle className="w-12 h-12 text-green-500" />,
-      title: 'Natural Language Processing',
-      description: 'Advanced text analysis, sentiment detection, and language understanding capabilities.'
-    },
-    {
-      icon: <Eye className="w-12 h-12 text-purple-500" />,
-      title: 'Computer Vision',
-      description: 'Image and video analysis, object recognition, and visual intelligence solutions.'
-    },
-    {
-      icon: <BarChart className="w-12 h-12 text-orange-500" />,
-      title: 'Predictive Analytics',
-      description: 'Data-driven insights and forecasting to help you make informed business decisions.'
-    },
-    {
-      icon: <Zap className="w-12 h-12 text-red-500" />,
-      title: 'Process Automation',
-      description: 'Intelligent automation of repetitive tasks and business processes.'
-    },
-    {
-      icon: <Shield className="w-12 h-12 text-yellow-500" />,
-      title: 'AI Ethics & Governance',
-      description: 'Responsible AI implementation with bias detection and ethical guidelines.'
->>>>>>> cursor/website-audit-and-update-with-deployment-bee6
-=======
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
       title: 'Increased Efficiency',
       description: 'Automate repetitive tasks and focus on strategic initiatives'
@@ -364,94 +124,22 @@ export default function AIServicesPage() {
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
       title: 'Scalable Solutions',
       description: 'AI solutions that grow with your business needs'
->>>>>>> cursor/fix-errors-and-merge-to-main-93a1
     }
   ]
 
   const stats = [
-<<<<<<< HEAD
-    { number: '1000+', label: 'AI Models' },
-    { number: '99.9%', label: 'Accuracy' },
-    { number: '24/7', label: 'Support' },
-    { number: '50+', label: 'Languages' }
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
-  ];
-=======
     { number: '95%', label: 'Accuracy Rate' },
     { number: '60%', label: 'Cost Reduction' },
     { number: '24/7', label: 'Availability' },
     { number: '10x', label: 'Faster Processing' }
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-93a1
 
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-04ca
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <meta name="description" content="Discover our comprehensive AI services including content generation, chatbots, analytics, and more. Transform your business with cutting-edge artificial intelligence solutions." />
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, chatbot, analytics, automation" />
-=======
-        <meta name="description" content="Advanced AI services including content generation, automation, cybersecurity, and analytics solutions." />
-        <meta name="keywords" content="AI services, artificial intelligence, content generation, automation, cybersecurity, analytics" />
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
-      </Helmet>
-
-      {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Services That
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Transform</span>
-            <br />
-            Your Business
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Leverage the power of artificial intelligence to automate processes, gain insights, and drive growth. 
-            Our comprehensive AI solutions are designed to meet your specific business needs.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Get Started Today
-            </Link>
-            <Link
-              to="/ai-services#services"
-              className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
-            >
-              Explore Services
-            </Link>
-=======
-      <section className="pt-20 px-4 py-20">
-=======
-        <meta name="description" content="Transform your business with cutting-edge AI services including machine learning, NLP, computer vision, and predictive analytics from Zion Tech Group." />
-        <meta name="keywords" content="AI services, machine learning, natural language processing, computer vision, predictive analytics, AI automation, artificial intelligence" />
-=======
-        <meta name="description" content="Comprehensive AI services including content generation, chatbots, cybersecurity, and analytics solutions." />
+        <meta name="description" content="Transform your business with cutting-edge AI services including content generation, chatbots, cybersecurity, and analytics solutions." />
         <meta name="keywords" content="AI services, artificial intelligence, content generation, chatbots, cybersecurity, analytics" />
->>>>>>> cursor/analyze-improve-and-deploy-application-04ca
-      </Helmet>
-      
-      <main className="pt-20 px-4 py-20">
->>>>>>> cursor/website-audit-and-update-with-deployment-bee6
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-<<<<<<< HEAD
-              Advanced AI Services
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Harness the power of artificial intelligence to transform your business with our cutting-edge AI solutions.
-=======
-        <meta name="description" content="Transform your business with our comprehensive AI services including content generation, chatbots, analytics, and automation solutions." />
       </Helmet>
 
       {/* Hero Section */}
@@ -463,7 +151,6 @@ export default function AIServicesPage() {
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your business with cutting-edge artificial intelligence solutions designed to drive growth and efficiency.
->>>>>>> cursor/fix-errors-and-merge-to-main-93a1
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -473,19 +160,11 @@ export default function AIServicesPage() {
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-<<<<<<< HEAD
-              <Link 
-                to="/about" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-              >
-                Learn More
-=======
               <Link
                 to="/micro-saas-services"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
                 View Micro SAAS
->>>>>>> cursor/fix-errors-and-merge-to-main-93a1
               </Link>
             </div>
           </div>
