@@ -7,6 +7,8 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import React from 'react';
 import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, MessageSquare, BarChart3, Clock, TrendingUp } from 'lucide-react';
+import React from 'react';
+import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, MessageSquare, BarChart3, Clock, TrendingUp } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -100,6 +102,9 @@ const AIServicesPage: React.FC = () => {
 
   const categories = ['All', 'Content & Marketing', 'Data & Analytics', 'Customer Service', 'Automation']
 
+      description: 'Generate high-quality content for blogs, social media, marketing materials, and more using advanced AI models.',
+      features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content templates'],
+      pricing: 'Starting at $29/month',
       description: 'Generate high-quality content for blogs, social media, marketing materials, and more using advanced AI models.',
       features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content templates'],
       pricing: 'Starting at $29/month',
@@ -272,6 +277,7 @@ const AIServicesPage: React.FC = () => {
       title: 'Optimization',
       description: 'Continuous monitoring and optimization for maximum performance.'
     }
+  ];
   ];
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -578,6 +584,12 @@ export default function AIServicesPage() {
               <div key={index} className="text-center px-2">
                 <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-xs sm:text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
               </div>
             ))}
           </div>
@@ -902,5 +914,7 @@ export default AIServicesPage
         </div>
       </section>
     </div>
+  );
+}
   );
 }

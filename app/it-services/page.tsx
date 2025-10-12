@@ -34,6 +34,22 @@ const ITServicesPage: React.FC = () => {
       features: ['Server setup & configuration', 'Network monitoring', 'Performance optimization', '24/7 support', 'Disaster recovery'],
       pricing: 'Starting at $299/month',
       category: 'Infrastructure'
+import React from 'react';
+import { CheckCircle, ArrowRight, Cloud, Shield, Server, Database, Smartphone, Globe, MessageCircle, Code, Network, Settings, Users, Clock, DollarSign } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
+const ITServicesPage: React.FC = () => {
+  const services = [
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { CheckCircle, ArrowRight, Cloud, Shield, Code, Smartphone, Database, Cpu, Wifi, Server, Users, Globe, Zap, Star, Clock } from 'lucide-react'
+
+export default function ITServicesPage() {
+  const [activeTab, setActiveTab] = useState('services')
+
+  const itServices = [
     {
       icon: <Cloud className="w-8 h-8 text-blue-500" />,
       title: 'Cloud Migration',
@@ -193,7 +209,6 @@ export default function ITServicesPage() {
       popular: false
     },
     {
-      id: 'database-management',
       icon: <Database className="w-8 h-8 text-purple-500" />,
       title: 'Database Management',
       description: 'Protect your business with comprehensive cybersecurity services and threat monitoring.',
@@ -918,10 +933,37 @@ const ITServicesPage: React.FC = () => {
                   <div className="text-2xl sm:text-3xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">{stat.number}</div>
                   <div className="text-gray-300 text-sm group-hover:text-white transition-colors">{stat.label}</div>
                 </div>
+              >
+                Why Choose Us
+              </button>
+            </div>
+          </div>
+
+          {/* Stats Section */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16 lg:mb-20 mt-12">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center px-2">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">{stat.number}</div>
+                <div className="text-gray-300 text-xs sm:text-sm">{stat.label}</div>
+              </div>
+            ))}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
+                  <div className="flex justify-center mb-3">
+                    <div className="p-3 rounded-full bg-gradient-to-r from-cyan-400/20 to-purple-400/20 group-hover:from-cyan-400/30 group-hover:to-purple-400/30 transition-all duration-300">
+                      {stat.icon}
+                    </div>
+                  </div>
+                  <div className="text-2xl sm:text-3xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">{stat.number}</div>
+                  <div className="text-gray-300 text-sm group-hover:text-white transition-colors">{stat.label}</div>
+                </div>
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
         </section>
 

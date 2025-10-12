@@ -52,6 +52,85 @@ export default function AIChatbotBuilderPage() {
     'Order tracking',
     'Technical support',
     'Sales consultation'
+    }
+  ]
+
+  const pricingPlans = [
+    {
+      name: 'Starter',
+      price: '$99/month',
+      description: 'Perfect for small businesses getting started',
+      features: [
+        'Up to 1,000 conversations/month',
+        'Basic AI responses',
+        'Email support',
+        'Standard integrations',
+        'Analytics dashboard'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$299/month',
+      description: 'Ideal for growing businesses',
+      features: [
+        'Up to 10,000 conversations/month',
+        'Advanced AI with learning',
+        'Priority support',
+        'Custom integrations',
+        'Advanced analytics',
+        'Multi-language support',
+        'Lead qualification'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      description: 'For large organizations with complex needs',
+      features: [
+        'Unlimited conversations',
+        'Custom AI training',
+        'Dedicated support',
+        'White-label options',
+        'Custom integrations',
+        'Advanced security',
+        'SLA guarantee'
+      ],
+      popular: false
+    }
+  ]
+
+  const useCases = [
+    {
+      title: 'E-commerce Support',
+      description: 'Help customers with product questions, order tracking, and returns.',
+      icon: <Target className="w-6 h-6 text-blue-500" />
+    },
+    {
+      title: 'Lead Generation',
+      description: 'Capture and qualify leads automatically with smart conversation flows.',
+      icon: <Users className="w-6 h-6 text-green-500" />
+    },
+    {
+      title: 'Technical Support',
+      description: 'Provide instant technical assistance and troubleshooting guidance.',
+      icon: <Zap className="w-6 h-6 text-purple-500" />
+    },
+    {
+      title: 'Appointment Booking',
+      description: 'Automate appointment scheduling and calendar management.',
+      icon: <Clock className="w-6 h-6 text-orange-500" />
+    }
+  ]
+
+  const benefits = [
+    'Reduce support costs by up to 60%',
+    'Increase customer satisfaction',
+    'Qualify leads 24/7',
+    'Scale support without scaling staff',
+    'Gather valuable customer insights',
+    'Integrate with existing tools'
   ]
 
   return (

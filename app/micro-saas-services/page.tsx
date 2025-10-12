@@ -15,9 +15,13 @@ import React from 'react';
 import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield, Brain, Globe, Settings } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import React from 'react';
+import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield, Brain, Globe, Settings } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const MicroSAASServicesPage: React.FC = () => {
-  const microSAASServices = [
+  const microSAAS = [
     {
       icon: <Brain className="w-12 h-12 text-blue-500" />,
       title: 'AI Task Manager Pro',
@@ -330,6 +334,11 @@ export default function MicroSAASServicesPage() {
       icon: <DollarSign className="w-6 h-6 text-green-500" />
     },
     {
+      title: 'Cost Effective',
+      description: 'Affordable solutions that deliver maximum value for your investment',
+      icon: <DollarSign className="w-6 h-6 text-green-500" />
+    },
+    {
       title: 'Easy Integration',
       description: 'Seamlessly integrate with your existing tools and workflows',
       icon: <Settings className="w-6 h-6 text-blue-500" />
@@ -340,7 +349,6 @@ export default function MicroSAASServicesPage() {
       icon: <Zap className="w-6 h-6 text-purple-500" />
     },
     {
-      icon: <Users className="w-6 h-6 text-purple-500" />,
       title: '24/7 Support',
       description: 'Round-the-clock support from our expert team'
     },
@@ -780,6 +788,8 @@ const MicroSaasServicesPage: React.FC = () => {
   ]
 
   return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Micro SaaS Services - Zion Tech Group</title>
@@ -1223,6 +1233,9 @@ const MicroSaasServicesPage: React.FC = () => {
               </div>
             </div>
       {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">

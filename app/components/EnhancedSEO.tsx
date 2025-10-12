@@ -19,14 +19,24 @@ const EnhancedSEOPage: React.FC = () => {
       icon: Shield,
       title: 'White-Hat Techniques',
       description: 'Ethical SEO practices with long-term sustainable results'
+      description: 'Get instant SEO insights and recommendations for better search performance'
+    },
+    {
+      icon: Shield,
+      title: 'Technical SEO',
+      description: 'Comprehensive technical SEO audits and optimization for better search visibility'
     },
     {
       icon: Globe,
       title: 'Global SEO',
       description: 'Worldwide SEO optimization and support for international businesses'
+      description: 'Optimize your website for international markets and multiple languages'
     }
   ]
 
+import { CheckCircle, ArrowRight } from 'lucide-react'
+
+const EnhancedSEOPage: React.FC = () => {
   const benefits = [
     'AI-powered SEO optimization',
     'Real-time ranking analysis',
@@ -44,6 +54,9 @@ const EnhancedSEOPage: React.FC = () => {
         <title>Enhanced SEO Solutions | Zion Tech Group</title>
         <meta name="description" content="Professional SEO services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="SEO optimization, AI solutions, IT services, Zion Tech Group, search engine optimization" />
+        <title>Enhanced SEO | Zion Tech Group</title>
+        <meta name="description" content="Professional Enhanced SEO services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="SEO, search engine optimization, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
       
       {/* Hero Section */}
@@ -60,6 +73,8 @@ const EnhancedSEOPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced SEO optimization solutions. 
               Powered by cutting-edge AI technology and industry expertise.
+              Optimize your website for search engines with our advanced AI-powered SEO solutions. 
+              Improve rankings and drive more organic traffic.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
@@ -83,8 +98,10 @@ const EnhancedSEOPage: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our SEO optimization solutions deliver unmatched performance, security, and scalability.
+              Our SEO solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -108,13 +125,17 @@ const EnhancedSEOPage: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our SEO optimization solutions for your business.
+              Experience the power of our SEO solutions for your business.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
+                <div className="flex items-center mb-4">
+                  <CheckCircle className="w-6 h-6 text-green-400 mr-3" />
+                  <h3 className="text-lg font-semibold text-white">Feature {index + 1}</h3>
+                </div>
+                <p className="text-gray-300">{benefit}</p>
               </div>
             ))}
           </div>

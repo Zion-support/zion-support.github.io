@@ -1,4 +1,13 @@
 'use client'
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import ContactForm from '../components/ContactForm';
+
+const ContactPage: React.FC = () => {
+import { CheckCircle, Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, Mail, Phone, MapPin, Send } from 'lucide-react'
@@ -52,18 +61,87 @@ const ContactPage: React.FC = () => {
       title: 'Email Us',
       description: 'info@ziontechgroup.com',
       value: 'info@ziontechgroup.com'
+      details: 'contact@ziontech.com',
+      details: 'kleber@ziontechgroup.com',
+      description: 'Send us an email anytime'
     },
     {
       icon: <Phone className="w-6 h-6 text-green-500" />,
       title: 'Call Us',
       description: '+1 (555) 123-4567',
       value: '+1 (555) 123-4567'
+      details: '+1 (555) 123-4567',
+      description: 'Mon-Fri from 8am to 6pm'
+      details: '+1 (302) 464-0950',
+      description: 'Mon-Fri from 8am to 6pm EST'
     },
     {
       icon: <MapPin className="w-6 h-6 text-red-500" />,
       title: 'Visit Us',
       description: 'San Francisco, CA',
       value: 'San Francisco, CA'
+      details: 'San Francisco, CA',
+      description: 'Come say hello at our office'
+    }
+  ];
+
+  const faqs = [
+    {
+      question: 'How quickly can you start a project?',
+      answer: 'We can typically begin new projects within 1-2 weeks of contract signing, depending on our current workload and project complexity.'
+    },
+    {
+      question: 'Do you offer ongoing support?',
+      answer: 'Yes, we provide comprehensive support and maintenance packages for all our solutions to ensure continued success.'
+    },
+    {
+      question: 'What technologies do you work with?',
+      answer: 'We work with a wide range of modern technologies including React, Node.js, Python, AWS, Azure, and many others.'
+    },
+    {
+      question: 'Do you work with small businesses?',
+      answer: 'Absolutely! We work with businesses of all sizes, from startups to large enterprises, tailoring our solutions to fit your needs and budget.'
+    }
+      details: '364 E Main St STE 1008',
+      description: 'Middletown DE 19709'
+    },
+    {
+      icon: <Clock className="w-6 h-6 text-purple-500" />,
+      title: 'Business Hours',
+      details: '9:00 AM - 6:00 PM',
+      description: 'Monday to Friday EST'
+    }
+  ];
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    
+    setIsSubmitting(false)
+    setIsSubmitted(true)
+  }
+
+  const contactInfo = [
+    {
+      icon: <Phone className="w-6 h-6" />,
+      title: 'Phone',
+      details: '+1 (302) 464-0950',
+      description: 'Call us for immediate assistance'
+    },
+    {
+      icon: <Mail className="w-6 h-6" />,
+      title: 'Email',
+      details: 'kleber@ziontechgroup.com',
+      description: 'Send us an email anytime'
+    },
+    {
+      icon: <MapPin className="w-6 h-6" />,
+      title: 'Address',
+      details: '364 E Main St STE 1008',
+      description: 'Middletown, DE 19709'
+    },
+    {
+      icon: <Clock className="w-6 h-6" />,
+      title: 'Business Hours',
+      details: 'Mon - Fri: 9:00 AM - 6:00 PM',
+      description: '24/7 Support Available'
     }
   ]
 
@@ -261,6 +339,49 @@ const ContactPage: React.FC = () => {
       </section>
 
       <Footer />
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of businesses already using our solutions to drive growth and innovation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="mailto:kleber@ziontechgroup.com"
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
+            >
+              Email Us Now
+              <Send className="w-5 h-5 ml-2" />
+            </a>
+            <a 
+              href="tel:+13024640950"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+            >
+              Call Us
+            </a>
+          </div>
+        </div>
+      </section>
+
+              <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 rounded-2xl p-6 border border-purple-500/30">
+                <h3 className="text-xl font-bold text-white mb-4 flex items-center">
+                  <Star className="w-6 h-6 text-yellow-400 mr-2" />
+                  Ready to Get Started?
+                </h3>
+                <p className="text-gray-300 mb-4">
+                  Our team is ready to help you transform your business with cutting-edge technology solutions.
+                </p>
+                <div className="flex items-center text-cyan-400 font-medium">
+                  <Clock className="w-4 h-4 mr-2" />
+                  <span>Response time: Within 24 hours</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

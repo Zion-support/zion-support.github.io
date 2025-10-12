@@ -104,12 +104,23 @@ const Analytics: React.FC<AnalyticsProps> = ({
             window.gtag('event', 'scroll', {
               event_category: 'engagement',
               event_label: `${scrollPercent}%`
+      let maxScrollDepth = 0
+      const trackScrollDepth = () => {
+        const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
+        if (scrollDepth > maxScrollDepth) {
+          maxScrollDepth = scrollDepth
+          if (window.gtag) {
+            window.gtag('event', 'scroll', {
+              event_category: 'engagement',
+              event_label: `${scrollDepth}%`
             })
           }
         }
       }
 
       // Add event listeners
+      // Initialize tracking
+      trackPageView()
       document.addEventListener('click', trackClick)
       window.addEventListener('scroll', trackScroll)
       trackPageView()

@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const LoadingPage: React.FC = () => {
   return (
