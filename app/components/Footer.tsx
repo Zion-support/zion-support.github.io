@@ -1,87 +1,81 @@
-<<<<<<< HEAD
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users, Cpu, ArrowRight } from 'lucide-react';
-=======
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star } from 'lucide-react'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
+import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users, Cpu, ArrowRight, Github, Linkedin, Twitter, Shield, Globe, Database, Smartphone, Sparkles, Star } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
-<<<<<<< HEAD
-    { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' },
-    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'Automated content' },
-    { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Business intelligence' },
-    { name: 'AI Computer Vision', url: '/ai-computer-vision', description: 'Image analysis' },
-    { name: 'AI Voice Solutions', url: '/ai-voice-solutions', description: 'Speech recognition' },
-    { name: 'AI Workflow Automation', url: '/ai-automation', description: 'Process automation' },
-    { name: 'AI Healthcare Solutions', url: '/ai-healthcare', description: 'Medical AI' },
-    { name: 'AI Financial Services', url: '/ai-financial-services', description: 'Fintech AI' },
-    { name: 'AI Document Processing', url: '/ai-document-processing', description: 'Document analysis' },
-    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', description: 'Business forecasting' },
-    { name: 'AI HR Solutions', url: '/ai-hr-solutions', description: 'Human resources AI' },
-    { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'Distributed AI processing' }
+    { name: 'AI Content Generator', path: '/ai-content-generation' },
+    { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
+    { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro' },
+    { name: 'AI Smart Scheduler', path: '/ai-smart-scheduler' },
+    { name: 'AI Content Moderation Pro', path: '/ai-content-moderation-pro' },
+    { name: 'AI Computer Vision', path: '/ai-computer-vision' },
+    { name: 'AI Data Analytics', path: '/ai-data-analytics' },
+    { name: 'AI Automation', path: '/ai-automation' }
   ];
 
   const itServices = [
-    { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'AWS, Azure, GCP' },
-    { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Automation pipelines' },
-    { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', description: 'Security solutions' },
-    { name: 'Web Development', url: '/web-development', description: 'Modern web apps' },
-    { name: 'Mobile Development', url: '/mobile-development', description: 'iOS & Android' },
-    { name: 'API Development', url: '/api-development', description: 'API solutions' },
-    { name: 'IT Support', url: '/it-support', description: '24/7 technical support' },
-    { name: 'Data Analytics & BI', url: '/data-analytics-bi', description: 'Business intelligence' },
-    { name: 'Custom Software', url: '/custom-software', description: 'Tailored solutions' },
-    { name: 'Database Management', url: '/database-management', description: 'Database optimization' },
-    { name: 'Network Infrastructure', url: '/network-infrastructure', description: 'Network setup' },
-    { name: 'IT Asset Management', url: '/it-asset-management', description: 'Asset lifecycle' }
+    { name: 'Web Development', path: '/web-development' },
+    { name: 'Mobile Development', path: '/mobile-development' },
+    { name: 'Cloud Migration Pro', path: '/cloud-migration-pro' },
+    { name: 'DevOps', path: '/devops' },
+    { name: 'Data Analytics', path: '/data-analytics' },
+    { name: 'Cloud Services', path: '/cloud-services' },
+    { name: 'Cybersecurity', path: '/cybersecurity' }
   ];
 
   const microSaasServices = [
-    { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', description: 'Business intelligence platform' },
-    { name: 'Zion Chat AI', url: '/zion-chat-ai', description: 'AI customer support' },
-    { name: 'Zion Security Shield', url: '/zion-security-shield', description: 'Cybersecurity monitoring' },
-    { name: 'Zion Cloud Vault', url: '/zion-cloud-vault', description: 'Cloud backup & recovery' },
-    { name: 'Zion Content Studio', url: '/zion-content-studio', description: 'AI content creation' },
-    { name: 'Zion CRM Intelligence', url: '/zion-crm-intelligence', description: 'AI-enhanced CRM' }
+    { name: 'AI E-commerce Optimizer Pro', path: '/ai-ecommerce-optimizer-pro' },
+    { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
+    { name: 'AI Email Marketing Automation', path: '/ai-email-marketing-automation' },
+    { name: 'AI Project Management Pro', path: '/ai-project-management-pro' },
+    { name: 'AI Customer Support Chatbot', path: '/ai-customer-support-chatbot' },
+    { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
+    { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
+    { name: 'AI Video Editor', path: '/ai-video-editor' },
+    { name: 'Advanced Security Suite', path: '/advanced-security-suite' },
+    { name: 'AI Smart Scheduler', path: '/ai-smart-scheduler' },
+    { name: 'AI Content Moderation Pro', path: '/ai-content-moderation-pro' },
+    { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro' },
+    { name: 'Cloud Migration Pro', path: '/cloud-migration-pro' }
+  ];
+
+  const fiveGServices = [
+    { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions' },
+    { name: '5G Implementation', path: '/5g-implementation' },
+    { name: '5G Network Infrastructure', path: '/5g-network-infrastructure' },
+    { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
+    { name: '5G Edge Computing', path: '/5g-edge-computing' },
+    { name: '5G Private Networks', path: '/5g-private-networks' }
   ];
 
   const companyLinks = [
-    { name: 'About Us', url: '/about' },
-    { name: 'Our Team', url: '/team' },
-    { name: 'Case Studies', url: '/case-studies' },
-    { name: 'Blog', url: '/blog' },
-    { name: 'Careers', url: '/careers' },
-    { name: 'Partners', url: '/partners' },
-    { name: 'Support', url: '/support' },
-    { name: 'Status', url: '/status' }
+    { name: 'About Us', path: '/about' },
+    { name: 'Our Team', path: '/team' },
+    { name: 'Careers', path: '/careers' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Case Studies', path: '/case-studies' },
+    { name: 'Partners', path: '/partners' }
   ];
 
-  const resourcesLinks = [
-    { name: 'Pricing', url: '/pricing' },
-    { name: 'FAQ', url: '/faq' },
-    { name: 'Documentation', url: '/docs' },
-    { name: 'API Reference', url: '/api-docs' },
-    { name: 'Tutorials', url: '/tutorials' },
-    { name: 'Community', url: '/community' },
-    { name: 'Demo', url: '/demo' },
-    { name: 'Compliance', url: '/compliance' }
+  const supportLinks = [
+    { name: 'Contact Us', path: '/contact' },
+    { name: 'Help Center', path: '/help' },
+    { name: 'Documentation', path: '/docs' },
+    { name: 'API Reference', path: '/api-docs' },
+    { name: 'Status Page', path: '/status' },
+    { name: 'Contact Support', path: '/contact' },
+    { name: 'Community', path: '/community' }
   ];
 
-  const enterpriseLinks = [
-    { name: 'Enterprise Solutions', url: '/enterprise' },
-    { name: 'Digital Transformation', url: '/digital-transformation' },
-    { name: 'Business Intelligence', url: '/business-intelligence' },
-    { name: 'Edge Computing', url: '/edge-computing' },
-    { name: 'Consultation', url: '/consultation' },
-    { name: 'Custom Development', url: '/custom-software' }
+  const legalPages = [
+    { name: 'Privacy Policy', path: '/privacy' },
+    { name: 'Terms of Service', path: '/terms' }
   ];
+
 
   return (
     <footer className="relative bg-slate-900 text-gray-300 overflow-hidden">
