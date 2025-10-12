@@ -135,28 +135,6 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Why Choose Zion Tech?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We deliver exceptional results through innovation, expertise, and dedication
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-4">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-=======
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
@@ -167,25 +145,26 @@ export default function HomePage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
-            {features.map((feature, index) => (
-              <Link key={index} to={feature.link} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
-                <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-purple-300 transition-colors">{feature.title}</h3>
-                <p className="text-gray-300 mb-6">{feature.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
+            {services.map((service, index) => (
+              <Link key={index} to={service.link} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
+                <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-purple-300 transition-colors">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                {service.benefits && (
+                  <ul className="space-y-2 mb-6">
+                    {service.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                )}
                 <div className="mt-6 flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
             ))}
           </div>
         </div>
@@ -194,20 +173,6 @@ export default function HomePage() {
       {/* Testimonials Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              What Our Clients Say
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Real results from real businesses
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-=======
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">What Our Clients Say</h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
@@ -218,7 +183,6 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 sm:p-8 border border-white/20">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <span key={i} className="text-yellow-400">★</span>
@@ -236,30 +200,6 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join thousands of businesses already using our solutions to drive growth and innovation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
-            >
-              Start Your Journey
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
-              to="/ai-services" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-            >
-              Explore AI Services
-            </Link>
-=======
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -284,32 +224,9 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
           </div>
         </div>
       </section>
     </div>
-=======
-  return (
-    <>
-      <Helmet>
-        <title>Home - Zion Tech Group</title>
-        <meta name="description" content="Welcome to Zion Tech Group - Advanced AI and IT Solutions" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Home</h1>
-          <p className="text-xl text-gray-300 mb-8">Welcome to Zion Tech Group - Advanced AI and IT Solutions</p>
-          <a
-            href="/"
-            className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-          >
-            Go Home
-          </a>
-        </div>
-      </div>
-    </>
->>>>>>> main
   );
 }
