@@ -29,6 +29,7 @@ function handler(req, res) {
     // Log error for debugging in development
     console.error('Error reading existing requests:', error);
     existing = [];
+  }
 
   const newRequest = {
     id: Date.now().toString(),
