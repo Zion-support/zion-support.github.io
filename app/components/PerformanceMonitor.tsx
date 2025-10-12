@@ -11,7 +11,7 @@ const PerformanceMonitor: React.FC = () => {
           getFCP(console.log);
           getLCP(console.log);
           getTTFB(console.log);
-        });
+        }
       }
     };
 
@@ -25,7 +25,7 @@ const PerformanceMonitor: React.FC = () => {
             console.log('Performance Metrics: ', {
               domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
               loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-              firstPaint: paint.find(const entry = > entry.name === 'first-paint')?.startTime,
+              firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime,
               firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
             });
           }, 0);

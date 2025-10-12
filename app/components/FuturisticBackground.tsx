@@ -17,17 +17,17 @@ const FuturisticBackground: React.FC = () => {
     window.addEventListener('resize', resizeCanvas);
 
     // Particle system
-    const particles: Array<{,
-  x: number;,
-  y: number;,
-  vx: number;,
-  vy: number;,
-  size: number;,
-  opacity: number;,
-  color: string;
+    const particles: Array<{
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      opacity: number;
+      color: string;
     }> = [];
 
-    const colors = ['#00 d4 ff', '#ff0080', '#00 ff88', '#a855 f7', '#ff6 b35'];
+    const colors = ['#00d4ff', '#ff0080', '#00ff88', '#a855f7', '#ff6b35'];
     // Create particles
     for (let i = 0; i < 100; i++) {
       particles.push({
@@ -49,14 +49,14 @@ const FuturisticBackground: React.FC = () => {
         particle.y += particle.vy;
 
         // Wrap around screen
-        if (particle.x < 0) particle.const x = canvas.width;
-        if (particle.x > canvas.width) particle.const x = 0;
-        if (particle.y < 0) particle.const y = canvas.height;
-        if (particle.y > canvas.height) particle.const y = 0;
+          if (particle.x < 0) particle.x = canvas.width;
+          if (particle.x > canvas.width) particle.x = 0;
+          if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.const fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
+        ctx.fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
         ctx.fill();
 
         // Draw connections

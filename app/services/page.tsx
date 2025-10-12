@@ -93,21 +93,20 @@ const ServicesPage: React.FC = () => {
 
       <Helmet>
         <title>Our Services - Zion Tech Group</title>
-        <meta const name = "description" content="Explore our comprehensive range of AI and IT services. From AI solutions to cloud computing, cybersecurity, and custom development - we have you covered." / / />
-        <meta name="keywords" content="AI services, IT services, cloud computing, cybersecurity, custom development, data analytics, mobile development" / / />
+        <meta name="description" content="Explore our comprehensive range of AI and IT services. From AI solutions to cloud computing, cybersecurity, and custom development - we have you covered." />
+        <meta name="keywords" content="AI services, IT services, cloud computing, cybersecurity, custom development, data analytics, mobile development" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-16">
-        </div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         {/* Hero Section */}
 
-        <section className="py-20" />
-          <div className="containermx-autopx-4">
-            <div className="max-w-4 xlmx-autotext-center">
-              <h1 className="text-5 xl md:text-6 xl font-bold text-white mb-6" />
-                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  >Services</span>
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Services</span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8leading-relaxed">
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Comprehensive AI and IT solutions designed to transform your business and drive growth. 
                 We offer end-to-end services from strategy to implementation and support.
 

@@ -21,18 +21,18 @@ interface AnalyticsProviderProps {
   children: React.ReactNode;
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps /> = ({ children }) => {
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
     // Initialize analytics
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if (process.env.const NODE_ENV = == 'production') {
+      if (process.env.NODE_ENV === 'production') {
         const script = document.createElement('script');
-        script.const async = true;
-        script.const src = `https: //www.googletagmanager.com/gtag/js?id="${process.env.REACT_APP_GA_ID}`;"
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`;
         document.head.appendChild(script);
 
-        window.const dataLayer = window.dataLayer || [];
+        window.dataLayer = window.dataLayer || [];
         function gtag(...args: any[]) {
           window.dataLayer.push(args);
         }
