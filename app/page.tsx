@@ -9,32 +9,38 @@ export default function HomePage() {
     {
       icon: <Zap className="w-8 h-8 text-blue-500" />,
       title: 'AI-Powered Solutions',
-      description: 'Transform your business with our comprehensive AI services including content generation, chatbots, and automation.'
+      description: 'Transform your business with our comprehensive AI services including content generation, chatbots, and automation.',
+      link: '/ai-services'
     },
     {
       icon: <Shield className="w-8 h-8 text-green-500" />,
       title: 'Cybersecurity',
-      description: 'Protect your digital assets with our advanced security solutions and compliance management.'
+      description: 'Protect your digital assets with our advanced security solutions and compliance management.',
+      link: '/cybersecurity'
     },
     {
       icon: <Cloud className="w-8 h-8 text-purple-500" />,
       title: 'Cloud Migration',
-      description: 'Seamlessly migrate to the cloud with zero downtime and enhanced performance.'
+      description: 'Seamlessly migrate to the cloud with zero downtime and enhanced performance.',
+      link: '/cloud-services'
     },
     {
       icon: <Database className="w-8 h-8 text-orange-500" />,
-      title: 'Data Analytics',
-      description: 'Unlock insights from your data with our advanced analytics and visualization tools.'
+      title: 'Blockchain Solutions',
+      description: 'Build decentralized applications with our smart contracts and Web3 development services.',
+      link: '/blockchain-solutions'
     },
     {
       icon: <Code className="w-8 h-8 text-red-500" />,
-      title: 'DevOps & CI/CD',
-      description: 'Streamline your development process with automated deployment and continuous integration.'
+      title: 'Micro SaaS Tools',
+      description: 'Powerful micro SaaS applications designed to boost productivity and streamline operations.',
+      link: '/micro-saas-services'
     },
     {
       icon: <Globe className="w-8 h-8 text-cyan-500" />,
-      title: 'Global Reach',
-      description: 'Scale your business worldwide with our international deployment and support services.'
+      title: '5G Implementation',
+      description: 'Next-generation 5G solutions for ultra-fast connectivity and IoT applications.',
+      link: '/5g-implementation'
     }
   ]
 
@@ -121,8 +127,8 @@ export default function HomePage() {
                 <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 mb-6">{feature.description}</p>
                 <Link
-                  to="/contact"
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors group-hover:translate-x-1"
+                  to={feature.link}
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-all duration-300 group-hover:translate-x-1 group-hover:text-cyan-400"
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2" />

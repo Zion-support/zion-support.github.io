@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navigation from './app/components/Navigation'
 import Footer from './app/components/Footer'
+import FuturisticBackground from './app/components/FuturisticBackground'
 import HomePage from './app/page'
 import AboutPage from './app/about/page'
 import ContactPage from './app/contact/page'
@@ -11,13 +12,16 @@ import MicroSAASServicesPage from './app/micro-saas-services/page'
 import FiveGImplementationPage from './app/5g-implementation/page'
 import CloudServicesPage from './app/cloud-services/page'
 import DigitalTransformationPage from './app/digital-transformation/page'
+import CybersecurityPage from './app/cybersecurity/page'
+import BlockchainSolutionsPage from './app/blockchain-solutions/page'
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-900">
+      <div className="min-h-screen bg-gray-900 relative">
+        <FuturisticBackground />
         <Navigation />
-        <main>
+        <main className="relative z-10">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
@@ -28,6 +32,8 @@ function App() {
             <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
             <Route path="/cloud-services" element={<CloudServicesPage />} />
             <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+            <Route path="/cybersecurity" element={<CybersecurityPage />} />
+            <Route path="/blockchain-solutions" element={<BlockchainSolutionsPage />} />
           </Routes>
         </main>
         <Footer />
