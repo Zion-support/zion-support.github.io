@@ -20,31 +20,79 @@ export default function Navigation() {
       title: 'AI Services',
       href: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
-      description: 'Advanced AI solutions'
+      description: 'Advanced AI solutions',
+      subServices: [
+        'AI Content Generator Pro',
+        'AI Chatbot Builder Enterprise',
+        'AI Analytics Dashboard Pro',
+        'AI Computer Vision Platform',
+        'AI Customer Support Suite'
+      ]
     },
     {
       title: 'IT Services',
       href: '/it-services',
       icon: <Code className="w-4 h-4" />,
-      description: 'Comprehensive IT solutions'
+      description: 'Comprehensive IT solutions',
+      subServices: [
+        'Cloud Migration & Management',
+        'Enterprise Cybersecurity Suite',
+        'DevOps & CI/CD Automation',
+        'Advanced Data Analytics Platform',
+        'Infrastructure Management Pro'
+      ]
     },
     {
       title: 'Micro SaaS',
       href: '/micro-saas-services',
       icon: <Smartphone className="w-4 h-4" />,
-      description: 'Specialized software solutions'
+      description: 'Specialized software solutions',
+      subServices: [
+        'AI Analytics Dashboard Pro',
+        'AI-Powered CRM Suite',
+        'Marketing Automation Hub',
+        'Financial Analytics Suite',
+        'HR Management Pro'
+      ]
     },
     {
       title: '5G Implementation',
       href: '/5g-implementation',
       icon: <Wifi className="w-4 h-4" />,
-      description: 'Next-generation connectivity'
+      description: 'Next-generation connectivity',
+      subServices: [
+        '5G Network Infrastructure',
+        '5G Edge Computing',
+        '5G IoT Solutions',
+        '5G Mobile Applications',
+        '5G Private Networks'
+      ]
     },
     {
       title: 'Cloud Services',
       href: '/cloud-services',
       icon: <Cloud className="w-4 h-4" />,
-      description: 'Professional cloud solutions'
+      description: 'Professional cloud solutions',
+      subServices: [
+        'Cloud Migration',
+        'Cloud Security',
+        'Cloud Optimization',
+        'Multi-Cloud Strategy',
+        'Cloud Monitoring'
+      ]
+    },
+    {
+      title: 'Digital Transformation',
+      href: '/digital-transformation',
+      icon: <Cpu className="w-4 h-4" />,
+      description: 'Transform your business',
+      subServices: [
+        'Process Automation',
+        'Digital Workforce',
+        'Customer Experience',
+        'Data Strategy',
+        'Change Management'
+      ]
     }
   ]
 
@@ -86,21 +134,36 @@ export default function Navigation() {
               </button>
               
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white/10 backdrop-blur-lg rounded-lg border border-white/20 shadow-lg z-50">
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white/10 backdrop-blur-lg rounded-lg border border-white/20 shadow-lg z-50">
                   <div className="py-2">
                     {services.map((service, index) => (
-                      <Link
-                        key={index}
-                        to={service.href}
-                        className="flex items-center px-4 py-3 text-white hover:bg-white/10 transition-colors"
-                        onClick={() => setIsServicesOpen(false)}
-                      >
-                        <div className="mr-3">{service.icon}</div>
-                        <div>
-                          <div className="font-medium">{service.title}</div>
-                          <div className="text-sm text-gray-300">{service.description}</div>
-                        </div>
-                      </Link>
+                      <div key={index} className="px-4 py-3 hover:bg-white/5 transition-colors">
+                        <Link
+                          to={service.href}
+                          className="flex items-center text-white hover:text-purple-300 transition-colors"
+                          onClick={() => setIsServicesOpen(false)}
+                        >
+                          <div className="mr-3">{service.icon}</div>
+                          <div className="flex-1">
+                            <div className="font-medium">{service.title}</div>
+                            <div className="text-sm text-gray-300">{service.description}</div>
+                          </div>
+                        </Link>
+                        {service.subServices && (
+                          <div className="ml-8 mt-2 space-y-1">
+                            {service.subServices.slice(0, 3).map((subService, subIndex) => (
+                              <div key={subIndex} className="text-xs text-gray-400">
+                                • {subService}
+                              </div>
+                            ))}
+                            {service.subServices.length > 3 && (
+                              <div className="text-xs text-purple-300">
+                                +{service.subServices.length - 3} more...
+                              </div>
+                            )}
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -154,17 +217,30 @@ export default function Navigation() {
               {/* Mobile Services */}
               <div className="px-3 py-2">
                 <div className="text-white font-medium mb-2">Services</div>
-                <div className="space-y-1 ml-4">
+                <div className="space-y-2 ml-4">
                   {services.map((service, index) => (
-                    <Link
-                      key={index}
-                      to={service.href}
-                      className="flex items-center text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <div className="mr-2">{service.icon}</div>
-                      {service.title}
-                    </Link>
+                    <div key={index}>
+                      <Link
+                        to={service.href}
+                        className="flex items-center text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <div className="mr-2">{service.icon}</div>
+                        <div>
+                          <div className="font-medium">{service.title}</div>
+                          <div className="text-xs text-gray-400">{service.description}</div>
+                        </div>
+                      </Link>
+                      {service.subServices && (
+                        <div className="ml-6 space-y-1">
+                          {service.subServices.slice(0, 2).map((subService, subIndex) => (
+                            <div key={subIndex} className="text-xs text-gray-500">
+                              • {subService}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   ))}
                 </div>
               </div>

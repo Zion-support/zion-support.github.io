@@ -102,7 +102,9 @@ export default function ContactPage() {
                 <Mail className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-              <p className="text-gray-300">contact@ziontechgroup.com</p>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
+                kleber@ziontechgroup.com
+              </a>
             </div>
             
             <div className="text-center">
@@ -110,7 +112,9 @@ export default function ContactPage() {
                 <Phone className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-              <p className="text-gray-300">+1 (555) 123-4567</p>
+              <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
+                +1 302 464 0950
+              </a>
             </div>
             
             <div className="text-center">
@@ -118,7 +122,10 @@ export default function ContactPage() {
                 <MapPin className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-              <p className="text-gray-300">123 Tech Street, Innovation City, IC 12345</p>
+              <p className="text-gray-300">
+                364 E Main St STE 1008<br />
+                Middletown, DE 19709
+              </p>
             </div>
           </div>
         </div>

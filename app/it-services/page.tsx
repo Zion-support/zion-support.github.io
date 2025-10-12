@@ -9,99 +9,183 @@ export default function ITServicesPage() {
   const itServices = [
     {
       icon: <Cloud className="w-12 h-12 text-blue-500" />,
-      title: 'Cloud Migration',
-      description: 'Seamlessly migrate your infrastructure to the cloud with our expert cloud migration services.',
+      title: 'Cloud Migration & Management',
+      description: 'Complete cloud transformation services with seamless migration, optimization, and ongoing management across all major cloud platforms.',
       features: [
         'AWS, Azure, GCP expertise',
         'Zero-downtime migration',
-        'Cost optimization',
-        'Security compliance',
-        '24/7 monitoring',
-        'Disaster recovery'
+        'Cost optimization (up to 40% savings)',
+        'Security compliance (SOC 2, ISO 27001)',
+        '24/7 monitoring & support',
+        'Disaster recovery planning',
+        'Multi-cloud strategies',
+        'Cloud-native architecture'
       ],
-      pricing: 'Starting at $2,500/month',
+      pricing: 'Starting at $3,500/month',
       popular: true,
       link: '/cloud-migration'
     },
     {
       icon: <Shield className="w-12 h-12 text-green-500" />,
-      title: 'Cybersecurity Solutions',
-      description: 'Protect your business with comprehensive cybersecurity solutions and threat monitoring.',
+      title: 'Enterprise Cybersecurity Suite',
+      description: 'Comprehensive cybersecurity solutions including threat detection, incident response, compliance management, and security training.',
       features: [
-        'Security assessment',
-        'Threat detection',
-        'Incident response',
-        'Compliance management',
-        'Security training',
-        'Penetration testing'
+        'Security assessment & auditing',
+        'Advanced threat detection',
+        '24/7 SOC monitoring',
+        'Incident response team',
+        'Compliance management (GDPR, HIPAA)',
+        'Security awareness training',
+        'Penetration testing',
+        'Vulnerability management'
       ],
-      pricing: 'Starting at $1,800/month',
-      popular: false,
+      pricing: 'Starting at $2,800/month',
+      popular: true,
       link: '/cybersecurity-solutions'
     },
     {
       icon: <Code className="w-12 h-12 text-purple-500" />,
-      title: 'DevOps & CI/CD',
-      description: 'Streamline your development process with automated DevOps and continuous integration.',
+      title: 'DevOps & CI/CD Automation',
+      description: 'Complete DevOps transformation with automated CI/CD pipelines, container orchestration, and infrastructure automation.',
       features: [
         'CI/CD pipeline setup',
-        'Container orchestration',
-        'Infrastructure as Code',
-        'Automated testing',
-        'Deployment automation',
-        'Performance monitoring'
+        'Kubernetes orchestration',
+        'Infrastructure as Code (Terraform)',
+        'Automated testing & deployment',
+        'GitOps workflows',
+        'Performance monitoring',
+        'Security scanning integration',
+        'Blue-green deployments'
       ],
-      pricing: 'Starting at $2,200/month',
+      pricing: 'Starting at $3,200/month',
       popular: true,
       link: '/devops-cicd'
     },
     {
       icon: <Database className="w-12 h-12 text-orange-500" />,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with our advanced analytics solutions.',
+      title: 'Advanced Data Analytics Platform',
+      description: 'Enterprise-grade data analytics platform with real-time processing, machine learning integration, and advanced visualization.',
       features: [
-        'Data warehousing',
-        'Business intelligence',
+        'Data warehousing & lakes',
+        'Real-time analytics',
+        'Machine learning integration',
+        'Advanced dashboards',
+        'Data visualization tools',
         'Predictive analytics',
-        'Real-time dashboards',
-        'Data visualization',
-        'Machine learning integration'
+        'Data governance',
+        'Self-service analytics'
       ],
-      pricing: 'Starting at $1,500/month',
+      pricing: 'Starting at $2,500/month',
       popular: false,
       link: '/data-analytics'
     },
     {
       icon: <Smartphone className="w-12 h-12 text-red-500" />,
-      title: 'Mobile Development',
-      description: 'Build powerful mobile applications for iOS and Android with our expert development team.',
+      title: 'Mobile & Web Development',
+      description: 'Full-stack mobile and web application development with modern frameworks, cloud integration, and performance optimization.',
       features: [
-        'Native app development',
-        'Cross-platform solutions',
-        'UI/UX design',
+        'Native iOS & Android apps',
+        'React Native & Flutter',
+        'Progressive Web Apps',
+        'UI/UX design services',
+        'API development & integration',
         'App store optimization',
         'Performance optimization',
         'Maintenance & support'
       ],
-      pricing: 'Starting at $3,000/month',
+      pricing: 'Starting at $4,500/month',
       popular: false,
       link: '/mobile-development'
     },
     {
       icon: <Server className="w-12 h-12 text-yellow-500" />,
-      title: 'Infrastructure Management',
-      description: 'Comprehensive infrastructure management and optimization for your IT environment.',
+      title: 'Infrastructure Management Pro',
+      description: 'Complete infrastructure management including server administration, network optimization, backup solutions, and disaster recovery.',
       features: [
-        'Server management',
-        'Network optimization',
-        'Backup solutions',
-        'Disaster recovery',
-        'Performance tuning',
-        '24/7 support'
+        'Server administration',
+        'Network design & optimization',
+        'Backup & disaster recovery',
+        'Performance monitoring',
+        'Capacity planning',
+        'Security hardening',
+        'Patch management',
+        '24/7 NOC support'
       ],
-      pricing: 'Starting at $1,200/month',
+      pricing: 'Starting at $2,200/month',
       popular: true,
       link: '/infrastructure-management'
+    },
+    {
+      icon: <Wifi className="w-12 h-12 text-indigo-500" />,
+      title: 'Network Security & Monitoring',
+      description: 'Advanced network security solutions with real-time monitoring, threat detection, and automated response capabilities.',
+      features: [
+        'Network security assessment',
+        'Firewall management',
+        'Intrusion detection systems',
+        'Network monitoring & alerting',
+        'VPN solutions',
+        'Wireless security',
+        'Network segmentation',
+        'Compliance reporting'
+      ],
+      pricing: 'Starting at $1,800/month',
+      popular: false,
+      link: '/network-security'
+    },
+    {
+      icon: <Cpu className="w-12 h-12 text-cyan-500" />,
+      title: 'IT Consulting & Strategy',
+      description: 'Strategic IT consulting services to help align technology with business goals and drive digital transformation.',
+      features: [
+        'IT strategy development',
+        'Technology roadmapping',
+        'Digital transformation planning',
+        'Vendor management',
+        'IT governance',
+        'Cost optimization analysis',
+        'Technology assessment',
+        'Change management'
+      ],
+      pricing: 'Starting at $2,000/month',
+      popular: false,
+      link: '/it-consulting'
+    },
+    {
+      icon: <Database className="w-12 h-12 text-emerald-500" />,
+      title: 'Database Management & Optimization',
+      description: 'Comprehensive database services including design, optimization, migration, and ongoing management for all major database platforms.',
+      features: [
+        'Database design & architecture',
+        'Performance optimization',
+        'Database migration',
+        'Backup & recovery planning',
+        'Security hardening',
+        'Monitoring & alerting',
+        'Query optimization',
+        'High availability setup'
+      ],
+      pricing: 'Starting at $1,500/month',
+      popular: false,
+      link: '/database-management'
+    },
+    {
+      icon: <Shield className="w-12 h-12 text-rose-500" />,
+      title: 'Compliance & Risk Management',
+      description: 'Comprehensive compliance management services to ensure adherence to industry regulations and standards.',
+      features: [
+        'Compliance assessment',
+        'Risk management framework',
+        'Audit preparation',
+        'Policy development',
+        'Training & awareness',
+        'Incident management',
+        'Regulatory reporting',
+        'Continuous monitoring'
+      ],
+      pricing: 'Starting at $2,300/month',
+      popular: false,
+      link: '/compliance-management'
     }
   ]
 

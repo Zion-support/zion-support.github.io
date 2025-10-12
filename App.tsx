@@ -7,7 +7,7 @@ import AboutPage from './app/about/page'
 import ContactPage from './app/contact/page'
 import AIServicesPage from './app/ai-services/page'
 import ITServicesPage from './app/it-services/page'
-import MicroSaasServicesPage from './app/micro-saas-services/page'
+import MicroSaasServicesPage from './app/micro-saas/page'
 import FiveGImplementationPage from './app/5g-implementation/page'
 import CloudServicesPage from './app/cloud-services/page'
 import DigitalTransformationPage from './app/digital-transformation/page'
@@ -24,6 +24,7 @@ function App() {
           <Route path="/ai-services" element={<AIServicesPage />} />
           <Route path="/it-services" element={<ITServicesPage />} />
           <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
+          <Route path="/micro-saas" element={<MicroSaasServicesPage />} />
           <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
           <Route path="/cloud-services" element={<CloudServicesPage />} />
           <Route path="/digital-transformation" element={<DigitalTransformationPage />} />

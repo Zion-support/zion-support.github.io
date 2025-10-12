@@ -22,43 +22,43 @@ const MicroSaasPage: React.FC = () => {
     {
       id: '1',
       icon: BarChart3,
-      title: 'AI Analytics Dashboard',
-      description: 'Real-time business intelligence and predictive analytics for small to medium businesses',
-      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Mobile app', 'API integration'],
-      price: '$99/month',
-      users: 'Up to 50 users',
+      title: 'AI Analytics Dashboard Pro',
+      description: 'Advanced business intelligence with real-time analytics, predictive modeling, and automated insights for data-driven decision making',
+      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Mobile app', 'API integration', 'Machine learning insights', 'Custom alerts', 'Data visualization'],
+      price: '$149/month',
+      users: 'Up to 100 users',
       popular: true,
       category: 'Analytics'
     },
     {
       id: '2',
       icon: Users,
-      title: 'AI-Powered CRM',
-      description: 'Intelligent customer relationship management with automated lead scoring and personalized interactions',
-      features: ['Lead management', 'Email automation', 'Sales forecasting', 'Integration APIs', 'Custom fields'],
-      price: '$149/month',
-      users: 'Up to 100 users',
-      popular: false,
+      title: 'AI-Powered CRM Suite',
+      description: 'Complete customer relationship management with AI-driven lead scoring, automated follow-ups, and personalized customer journeys',
+      features: ['Lead management', 'Email automation', 'Sales forecasting', 'Integration APIs', 'Custom fields', 'Pipeline management', 'Customer segmentation', 'Performance analytics'],
+      price: '$199/month',
+      users: 'Up to 200 users',
+      popular: true,
       category: 'CRM'
     },
     {
       id: '3',
       icon: Shield,
-      title: 'Security Monitor',
-      description: 'Comprehensive security monitoring and threat detection for small businesses',
-      features: ['Threat detection', 'Vulnerability scanning', 'Compliance reporting', 'Real-time alerts', 'Incident response'],
-      price: '$79/month',
-      users: 'Up to 25 users',
+      title: 'Enterprise Security Monitor',
+      description: 'Comprehensive cybersecurity monitoring with threat detection, vulnerability assessment, and automated incident response',
+      features: ['Threat detection', 'Vulnerability scanning', 'Compliance reporting', 'Real-time alerts', 'Incident response', 'Security analytics', 'Penetration testing', 'Security training'],
+      price: '$299/month',
+      users: 'Up to 50 users',
       popular: false,
       category: 'Security'
     },
     {
       id: '4',
       icon: Cloud,
-      title: 'Cloud Backup Pro',
-      description: 'Automated cloud backup and disaster recovery solution with AI-powered optimization',
-      features: ['Automated backups', 'Disaster recovery', 'Version control', 'Cross-platform sync', 'Encryption'],
-      price: '$59/month',
+      title: 'Cloud Backup Enterprise',
+      description: 'Enterprise-grade cloud backup and disaster recovery with AI-powered optimization and cross-platform synchronization',
+      features: ['Automated backups', 'Disaster recovery', 'Version control', 'Cross-platform sync', 'Encryption', 'Compliance tools', 'Bandwidth optimization', 'Recovery testing'],
+      price: '$179/month',
       users: 'Unlimited',
       popular: true,
       category: 'Backup'
@@ -66,28 +66,94 @@ const MicroSaasPage: React.FC = () => {
     {
       id: '5',
       icon: MessageSquare,
-      title: 'AI Chat Support',
-      description: 'Intelligent customer support chatbot with natural language processing and human handoff',
-      features: ['AI chatbot', 'Multi-language support', 'Human handoff', 'Analytics dashboard', 'Custom training'],
-      price: '$89/month',
-      users: 'Up to 200 conversations',
+      title: 'AI Customer Support Pro',
+      description: 'Advanced customer support platform with AI chatbots, sentiment analysis, and seamless human handoff capabilities',
+      features: ['AI chatbot', 'Multi-language support', 'Human handoff', 'Analytics dashboard', 'Custom training', 'Sentiment analysis', 'Knowledge base', 'Live chat integration'],
+      price: '$129/month',
+      users: 'Up to 500 conversations',
       popular: false,
       category: 'Support'
     },
     {
       id: '6',
       icon: TrendingUp,
-      title: 'Marketing Automation',
-      description: 'AI-driven marketing automation platform for email campaigns and social media management',
-      features: ['Email campaigns', 'Social media scheduling', 'Lead nurturing', 'A/B testing', 'ROI tracking'],
-      price: '$129/month',
-      users: 'Up to 75 users',
+      title: 'Marketing Automation Hub',
+      description: 'Complete marketing automation platform with AI-driven campaigns, social media management, and advanced analytics',
+      features: ['Email campaigns', 'Social media scheduling', 'Lead nurturing', 'A/B testing', 'ROI tracking', 'Customer journey mapping', 'Personalization engine', 'Attribution modeling'],
+      price: '$249/month',
+      users: 'Up to 150 users',
       popular: true,
       category: 'Marketing'
+    },
+    {
+      id: '7',
+      icon: BarChart3,
+      title: 'Financial Analytics Suite',
+      description: 'Comprehensive financial management and analytics platform with AI-powered forecasting and automated reporting',
+      features: ['Financial dashboards', 'Cash flow forecasting', 'Budget tracking', 'Expense categorization', 'Tax preparation', 'Investment analysis', 'Risk assessment', 'Compliance reporting'],
+      price: '$189/month',
+      users: 'Up to 75 users',
+      popular: false,
+      category: 'Finance'
+    },
+    {
+      id: '8',
+      icon: Users,
+      title: 'HR Management Pro',
+      description: 'Complete human resources management system with AI-powered recruitment, performance tracking, and employee analytics',
+      features: ['Employee database', 'Recruitment tools', 'Performance tracking', 'Payroll integration', 'Time tracking', 'Training management', 'Benefits administration', 'Analytics dashboard'],
+      price: '$219/month',
+      users: 'Up to 300 employees',
+      popular: true,
+      category: 'HR'
+    },
+    {
+      id: '9',
+      icon: Cloud,
+      title: 'Project Management Hub',
+      description: 'Advanced project management platform with AI-powered resource allocation, timeline optimization, and team collaboration tools',
+      features: ['Project planning', 'Task management', 'Resource allocation', 'Timeline tracking', 'Team collaboration', 'Budget management', 'Risk assessment', 'Progress reporting'],
+      price: '$159/month',
+      users: 'Up to 100 users',
+      popular: false,
+      category: 'Project Management'
+    },
+    {
+      id: '10',
+      icon: MessageSquare,
+      title: 'E-commerce Analytics Pro',
+      description: 'Specialized e-commerce analytics platform with AI-driven insights, conversion optimization, and customer behavior analysis',
+      features: ['Sales analytics', 'Customer behavior tracking', 'Conversion optimization', 'Inventory management', 'Pricing optimization', 'Market analysis', 'Competitor tracking', 'ROI analysis'],
+      price: '$279/month',
+      users: 'Up to 25 stores',
+      popular: true,
+      category: 'E-commerce'
+    },
+    {
+      id: '11',
+      icon: Shield,
+      title: 'Compliance Management Suite',
+      description: 'Comprehensive compliance management platform with automated monitoring, reporting, and regulatory updates',
+      features: ['Compliance monitoring', 'Regulatory updates', 'Audit trails', 'Risk assessment', 'Document management', 'Training modules', 'Reporting tools', 'Alert system'],
+      price: '$349/month',
+      users: 'Up to 100 users',
+      popular: false,
+      category: 'Compliance'
+    },
+    {
+      id: '12',
+      icon: TrendingUp,
+      title: 'Sales Intelligence Platform',
+      description: 'AI-powered sales intelligence platform with lead generation, prospect research, and sales performance optimization',
+      features: ['Lead generation', 'Prospect research', 'Sales forecasting', 'Territory management', 'Pipeline analysis', 'Competitive intelligence', 'Sales coaching', 'Performance metrics'],
+      price: '$199/month',
+      users: 'Up to 50 sales reps',
+      popular: true,
+      category: 'Sales'
     }
   ];
 
-  const categories = ['All', 'Analytics', 'CRM', 'Security', 'Backup', 'Support', 'Marketing'];
+  const categories = ['All', 'Analytics', 'CRM', 'Security', 'Backup', 'Support', 'Marketing', 'Finance', 'HR', 'Project Management', 'E-commerce', 'Compliance', 'Sales'];
 
   const benefits = [
     {

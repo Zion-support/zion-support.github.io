@@ -10,98 +10,218 @@ const AIServicesPage: React.FC = () => {
     {
       icon: <Brain className="w-12 h-12 text-blue-500" />,
       title: 'AI Content Generator Pro',
-      description: 'Advanced AI-powered content creation tool that generates high-quality articles, blogs, social media posts, and marketing copy.',
+      description: 'Advanced AI-powered content creation tool that generates high-quality articles, blogs, social media posts, and marketing copy with human-like quality.',
       features: [
-        'Generate 10,000+ words daily',
-        '50+ content templates',
+        'Generate 50,000+ words daily',
+        '100+ content templates',
         'SEO optimization',
-        'Multi-language support',
+        'Multi-language support (50+ languages)',
         'Brand voice customization',
-        'Plagiarism detection'
+        'Plagiarism detection',
+        'Content scheduling',
+        'Performance analytics'
       ],
-      pricing: '$29/month',
+      pricing: '$199/month',
       popular: true,
       link: '/ai-content-generator'
     },
     {
       icon: <Zap className="w-12 h-12 text-green-500" />,
       title: 'AI Chatbot Builder Enterprise',
-      description: 'Create intelligent chatbots for customer service, sales, and support with advanced NLP and machine learning capabilities.',
+      description: 'Create intelligent chatbots for customer service, sales, and support with advanced NLP, machine learning, and sentiment analysis capabilities.',
       features: [
         'Visual chatbot builder',
         'Multi-channel deployment',
         'Advanced analytics',
         'Custom integrations',
         '24/7 monitoring',
-        'A/B testing tools'
+        'A/B testing tools',
+        'Sentiment analysis',
+        'Human handoff'
       ],
-      pricing: '$49/month',
-      popular: false,
+      pricing: '$299/month',
+      popular: true,
       link: '/ai-chatbot-builder'
     },
     {
       icon: <Database className="w-12 h-12 text-purple-500" />,
-      title: 'AI Analytics Dashboard',
-      description: 'Comprehensive business intelligence platform with AI-powered insights, predictive analytics, and automated reporting.',
+      title: 'AI Analytics Dashboard Pro',
+      description: 'Comprehensive business intelligence platform with AI-powered insights, predictive analytics, automated reporting, and real-time decision support.',
       features: [
         'Real-time data visualization',
         'Predictive analytics',
         'Automated reports',
         'Custom dashboards',
         'Data integration',
-        'Mobile app included'
+        'Mobile app included',
+        'Machine learning insights',
+        'Anomaly detection'
       ],
-      pricing: '$79/month',
+      pricing: '$399/month',
       popular: true,
       link: '/ai-analytics-dashboard'
     },
     {
       icon: <Code className="w-12 h-12 text-orange-500" />,
-      title: 'AI Email Assistant',
-      description: 'Smart email management tool that drafts, schedules, and optimizes emails using AI to improve open rates and engagement.',
+      title: 'AI Email Marketing Suite',
+      description: 'Smart email marketing platform that drafts, schedules, and optimizes emails using AI to improve open rates, engagement, and conversions.',
       features: [
         'Smart email drafting',
         'Send time optimization',
         'Subject line testing',
         'Email templates',
         'Performance analytics',
-        'CRM integration'
+        'CRM integration',
+        'Segmentation AI',
+        'Personalization engine'
       ],
-      pricing: '$39/month',
+      pricing: '$149/month',
       popular: false,
       link: '/ai-email-assistant'
     },
     {
       icon: <Smartphone className="w-12 h-12 text-red-500" />,
-      title: 'AI Voice Assistant',
-      description: 'Custom voice assistant for businesses with natural language processing, voice commands, and integration capabilities.',
+      title: 'AI Voice Assistant Pro',
+      description: 'Custom voice assistant for businesses with natural language processing, voice commands, and advanced integration capabilities.',
       features: [
         'Natural voice recognition',
         'Custom voice training',
         'Multi-language support',
         'API integrations',
         'Voice analytics',
-        'Custom wake words'
+        'Custom wake words',
+        'Voice cloning',
+        'Conversation memory'
       ],
-      pricing: '$59/month',
+      pricing: '$249/month',
       popular: false,
       link: '/ai-voice-assistant'
     },
     {
       icon: <Cpu className="w-12 h-12 text-yellow-500" />,
-      title: 'AI Automation Suite',
-      description: 'Complete workflow automation platform that uses AI to streamline business processes and reduce manual work.',
+      title: 'AI Automation Suite Pro',
+      description: 'Complete workflow automation platform that uses AI to streamline business processes, reduce manual work, and optimize operations.',
       features: [
         'Workflow automation',
         'Process optimization',
         'Task scheduling',
         'Integration hub',
         'Performance monitoring',
-        'Custom triggers'
+        'Custom triggers',
+        'RPA capabilities',
+        'Process mining'
       ],
-      pricing: '$99/month',
+      pricing: '$399/month',
       popular: true,
       link: '/ai-automation'
+    },
+    {
+      icon: <Eye className="w-12 h-12 text-indigo-500" />,
+      title: 'AI Computer Vision Platform',
+      description: 'Advanced computer vision platform for image recognition, object detection, and visual analytics with real-time processing capabilities.',
+      features: [
+        'Image recognition',
+        'Object detection',
+        'Facial recognition',
+        'OCR capabilities',
+        'Video analysis',
+        'Real-time processing',
+        'Custom model training',
+        'API integration'
+      ],
+      pricing: '$349/month',
+      popular: false,
+      link: '/ai-computer-vision'
+    },
+    {
+      icon: <MessageSquare className="w-12 h-12 text-pink-500" />,
+      title: 'AI Customer Support Suite',
+      description: 'Comprehensive customer support platform with AI-powered ticket routing, sentiment analysis, and automated response generation.',
+      features: [
+        'Intelligent ticket routing',
+        'Sentiment analysis',
+        'Automated responses',
+        'Knowledge base AI',
+        'Multi-channel support',
+        'Performance analytics',
+        'Escalation management',
+        'Customer satisfaction tracking'
+      ],
+      pricing: '$279/month',
+      popular: true,
+      link: '/ai-customer-support'
+    },
+    {
+      icon: <BarChart3 className="w-12 h-12 text-cyan-500" />,
+      title: 'AI Predictive Analytics Engine',
+      description: 'Advanced predictive analytics platform that uses machine learning to forecast trends, predict outcomes, and optimize business decisions.',
+      features: [
+        'Trend forecasting',
+        'Outcome prediction',
+        'Risk assessment',
+        'Demand forecasting',
+        'Customer lifetime value',
+        'Churn prediction',
+        'Price optimization',
+        'Market analysis'
+      ],
+      pricing: '$449/month',
+      popular: false,
+      link: '/ai-predictive-analytics'
+    },
+    {
+      icon: <Database className="w-12 h-12 text-emerald-500" />,
+      title: 'AI Data Processing Platform',
+      description: 'Intelligent data processing platform that cleans, transforms, and analyzes large datasets using AI-powered algorithms and machine learning.',
+      features: [
+        'Data cleaning',
+        'Data transformation',
+        'Pattern recognition',
+        'Anomaly detection',
+        'Data quality scoring',
+        'Automated insights',
+        'Real-time processing',
+        'Scalable architecture'
+      ],
+      pricing: '$329/month',
+      popular: false,
+      link: '/ai-data-processing'
+    },
+    {
+      icon: <Brain className="w-12 h-12 text-rose-500" />,
+      title: 'AI Document Intelligence',
+      description: 'Advanced document processing platform that extracts, analyzes, and understands content from various document types using AI and NLP.',
+      features: [
+        'Document extraction',
+        'Content analysis',
+        'Text summarization',
+        'Entity recognition',
+        'Document classification',
+        'Automated workflows',
+        'Multi-format support',
+        'Accuracy validation'
+      ],
+      pricing: '$199/month',
+      popular: true,
+      link: '/ai-document-intelligence'
+    },
+    {
+      icon: <Zap className="w-12 h-12 text-amber-500" />,
+      title: 'AI Code Assistant Pro',
+      description: 'Intelligent code generation and assistance platform that helps developers write better code faster with AI-powered suggestions and automation.',
+      features: [
+        'Code generation',
+        'Bug detection',
+        'Code optimization',
+        'Documentation generation',
+        'Test case creation',
+        'Code review assistance',
+        'Multi-language support',
+        'IDE integration'
+      ],
+      pricing: '$179/month',
+      popular: false,
+      link: '/ai-code-assistant'
     }
   ];
 
