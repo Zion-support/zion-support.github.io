@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
-=======
-import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Cloud, Database } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3, MessageSquare, FileText, Phone, Mail, MapPin } from 'lucide-react';
 
 const HomePage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -89,7 +84,7 @@ const HomePage: React.FC = () => {
         </script>
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-bg circuit-pattern">
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
@@ -101,7 +96,7 @@ const HomePage: React.FC = () => {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Pioneering the future of AI and IT solutions with cutting-edge technology and expert consulting
+                Pioneering the future of AI and IT solutions with cutting-edge technology, real micro SAAS services, and expert consulting. Transform your business with our innovative software solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Link 
@@ -170,6 +165,88 @@ const HomePage: React.FC = () => {
                   </Link>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Micro SAAS Services Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  Our Micro SAAS Solutions
+                </span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful, affordable software solutions designed to transform your business operations
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              <div className="cyber-card group hover:scale-105 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <BarChart3 className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  Zion Analytics Pro
+                </h3>
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                  Advanced business intelligence with real-time dashboards and predictive analytics.
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-white">$29/month</div>
+                  <Link to="/zion-analytics-pro" className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 inline-block">
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+
+              <div className="cyber-card group hover:scale-105 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <MessageSquare className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  Zion Chat AI
+                </h3>
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                  Intelligent chatbot platform with natural language processing and multi-channel support.
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-white">$19/month</div>
+                  <Link to="/zion-chat-ai" className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 inline-block">
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+
+              <div className="cyber-card group hover:scale-105 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <FileText className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  Zion Content Studio
+                </h3>
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                  AI-powered content creation platform with templates and SEO optimization.
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-white">$25/month</div>
+                  <Link to="/zion-content-studio" className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 inline-block">
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <Link 
+                to="/micro-saas"
+                className="cyber-button group"
+              >
+                View All Solutions
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
           </div>
         </section>
@@ -308,6 +385,20 @@ const HomePage: React.FC = () => {
                 <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                   Let's discuss how our AI and IT solutions can drive innovation and growth for your organization.
                 </p>
+                <div className="flex flex-wrap justify-center gap-8 mb-8 text-sm text-gray-400">
+                  <div className="flex items-center gap-2">
+                    <Phone className="w-4 h-4 text-cyan-400" />
+                    <span>+1 302 464 0950</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Mail className="w-4 h-4 text-cyan-400" />
+                    <span>kleber@ziontechgroup.com</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <MapPin className="w-4 h-4 text-cyan-400" />
+                    <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                  </div>
+                </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
                     to="/contact"
