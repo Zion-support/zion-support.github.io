@@ -5,7 +5,7 @@
 
 export interface AnalyticsEvent {
   name: string;
-  properties?: Record<string, any>;
+  properties?: Record<string, unknown>;
   timestamp?: number;
   userId?: string;
   sessionId?: string;
@@ -80,7 +80,7 @@ export class AdvancedAnalytics {
   /**
    * Track a custom event
    */
-  trackEvent(eventName: string, properties?: Record<string, any>): void {
+  trackEvent(eventName: string, properties?: Record<string, unknown>): void {
     if (!this.config.enabled) return;
 
     const event: AnalyticsEvent = {
@@ -133,7 +133,7 @@ export class AdvancedAnalytics {
   /**
    * Track user click events
    */
-  trackClick(element: HTMLElement, properties?: Record<string, any>): void {
+  trackClick(element: HTMLElement, properties?: Record<string, unknown>): void {
     this.trackEvent('click', {
       element: element.tagName.toLowerCase(),
       id: element.id,
@@ -146,7 +146,7 @@ export class AdvancedAnalytics {
   /**
    * Track form submissions
    */
-  trackFormSubmission(form: HTMLFormElement, properties?: Record<string, any>): void {
+  trackFormSubmission(form: HTMLFormElement, properties?: Record<string, unknown>): void {
     this.trackEvent('form_submit', {
       formId: form.id,
       formAction: form.action,
@@ -312,7 +312,7 @@ export class AdvancedAnalytics {
 // Export utility functions
 export const createAnalytics = (config: AnalyticsConfig) => new AdvancedAnalytics(config);
 
-export const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+export const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
   // This would be implemented with a global analytics instance
   console.log('Track event:', eventName, properties);
 };

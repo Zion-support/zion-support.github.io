@@ -4,7 +4,6 @@ const urlsToCache = [
   '/',
   '/static/js/bundle.js',
   '/static/css/main.css',
-  '/manifest.json'
   '/manifest.json',
   '/favicon.ico'
 ]
@@ -25,7 +24,8 @@ self.addEventListener('fetch', (event) => {
         return fetch(event.request)}
     )
         // Return cached version or fetch from network
-        return response || fetch(event.request)})
+        return response || fetch(event.request);
+      })
   )})
 // Activate event
 self.addEventListener('activate', (event) => {

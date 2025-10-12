@@ -32,7 +32,7 @@ export interface AppError {
   severity: ErrorSeverity
   message: string
   code?: string
-  details?: Record<string, any>
+  details?: Record<string, unknown>
   timestamp: Date
   stack?: string
   userId?: string
@@ -47,7 +47,7 @@ export interface ErrorContext {
   sessionId?: string
   url?: string
   userAgent?: string
-  additionalData?: Record<string, any>
+  additionalData?: Record<string, unknown>
 }
 
 // Error handler class
@@ -162,7 +162,7 @@ export class ErrorHandler {
     }
   }
 
-  private reportError(error: AppError): void {
+  private reportError(_error: AppError): void {
     // In a real application, you would send this to an error reporting service
     // like Sentry, LogRocket, or Bugsnag
     if (process.env.NODE_ENV === 'production') {
@@ -217,7 +217,7 @@ export class ErrorBoundary extends React.Component<
   },
   { hasError: boolean; error: AppError | null }
 > {
-  constructor(props: any) {
+  constructor(props: { children: React.ReactNode; fallback?: React.ComponentType<{ error: AppError; resetError: () => void }>; onError?: (error: AppError) => void }) {
     super(props)
     this.state = { hasError: false, error: null }
   }

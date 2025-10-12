@@ -9,6 +9,7 @@ interface AnalyticsContextType {
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
+// useAnalytics hook
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
   if (!context) {

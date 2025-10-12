@@ -6,12 +6,12 @@
 interface RequestConfig {
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   headers?: Record<string, string>;
-  body?: any;
+  body?: unknown;
   cache?: boolean;
   cacheTTL?: number;
 }
 
-interface APIResponse<T = any> {
+interface APIResponse<T = unknown> {
   data: T;
   status: number;
   statusText: string;
@@ -33,7 +33,7 @@ class APIError extends Error {
 export class APIClient {
   private baseURL: string;
   private defaultHeaders: Record<string, string>;
-  private cache: Map<string, { data: any; timestamp: number; ttl: number }> = new Map();
+  private cache: Map<string, { data: unknown; timestamp: number; ttl: number }> = new Map();
 
   constructor(baseURL: string, defaultHeaders: Record<string, string> = {}) {
     this.baseURL = baseURL;
@@ -116,35 +116,35 @@ export class APIClient {
   /**
    * GET request
    */
-  async get<T = any>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+  async get<T = unknown>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
     return this.request<T>(endpoint, { ...config, method: 'GET' });
   }
 
   /**
    * POST request
    */
-  async post<T = any>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+  async post<T = unknown>(endpoint: string, body?: unknown, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
     return this.request<T>(endpoint, { ...config, method: 'POST', body });
   }
 
   /**
    * PUT request
    */
-  async put<T = any>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+  async put<T = unknown>(endpoint: string, body?: unknown, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
     return this.request<T>(endpoint, { ...config, method: 'PUT', body });
   }
 
   /**
    * DELETE request
    */
-  async delete<T = any>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+  async delete<T = unknown>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
     return this.request<T>(endpoint, { ...config, method: 'DELETE' });
   }
 
   /**
    * PATCH request
    */
-  async patch<T = any>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+  async patch<T = unknown>(endpoint: string, body?: unknown, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
     return this.request<T>(endpoint, { ...config, method: 'PATCH', body });
   }
 

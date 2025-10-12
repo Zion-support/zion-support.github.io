@@ -129,7 +129,7 @@ export const ResponsiveImage: React.FC<ImageProps & {
   breakpoints?: { [key: string]: string }
   defaultSrc: string
 }> = ({ breakpoints = {}, defaultSrc, ...props }) => {
-  const [currentBreakpoint, setCurrentBreakpoint] = useState('default')
+  const [currentBreakpoint] = useState('default')
 
   // Generate srcset for responsive images
   const generateSrcSet = useCallback((baseSrc: string) => {

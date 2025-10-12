@@ -14,7 +14,10 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     fontSize: 'normal',
     focusVisible: false
   })
-  const { trackEvent } = useAnalytics()
+  // const { trackEvent } = useAnalytics()
+  const trackEvent = useCallback((event: string, properties?: Record<string, unknown>) => {
+    console.log('Track event:', event, properties);
+  }, []);
   useEffect(() => {
     // Add ARIA landmarks
     const addLandmarks = () => {
@@ -125,7 +128,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       motionQuery.removeEventListener('change', handleMotionChange)
       contrastQuery.removeEventListener('change', handleContrastChange)
     }
-  }, [settings, setupFocusManagement])
+  }, [settings, setupFocusManagement, trackEvent])
 
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement
@@ -211,16 +214,17 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
         category: 'accessibility',
         label: (e.target as HTMLElement).tagName
       })});
-  }, []);
+  }, [trackEvent]);
 
-  const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
+  const updateSettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {
     const updatedSettings = { ...settings, ...newSettings }
     setSettings(updatedSettings)
     applyAccessibilitySettings(updatedSettings)
     trackEvent('accessibility_setting_changed', {
       category: 'accessibility',
       label: Object.keys(newSettings)[0]
-    })}
+    })
+  }, [settings, trackEvent])
   // Provide accessibility context
   useEffect(() => {
     const context = {
