@@ -8,11 +8,11 @@ import {
   Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package, 
   TrendingUp, Calendar, ShoppingCart, Sparkles, Cpu, Globe, Database, 
   Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock, 
-  Megaphone, Share2, MousePointer, Palette, Layers, Filter, Send, 
-  Play, Pause, RotateCcw, Download, Upload, Maximize, Minimize
+  UserCheck, UserPlus, UserX, Briefcase, GraduationCap, ClipboardList,
+  PieChart, Activity, RefreshCw, Download, Upload, Maximize, Minimize
 } from 'lucide-react';
 
-const ZionAiMarketingAutomationPage: React.FC = () => {
+const ZionAiHrAssistantPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   React.useEffect(() => {
@@ -22,112 +22,111 @@ const ZionAiMarketingAutomationPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: 'AI Content Generation',
-      description: 'Generate high-quality marketing content including emails, social media posts, blog articles, and ad copy using advanced AI.',
-      benefits: ['10x content production', 'SEO-optimized content', 'Brand voice consistency', 'Multi-language support']
+      title: 'AI Resume Screening',
+      description: 'Automatically screen and rank resumes using AI to identify the best candidates based on job requirements and cultural fit.',
+      benefits: ['95% screening accuracy', '50% faster hiring', 'Bias reduction', 'Cultural fit analysis']
     },
     {
-      icon: <Target className="w-8 h-8 text-green-400" />,
-      title: 'Smart Audience Segmentation',
-      description: 'AI-powered audience segmentation that automatically categorizes customers based on behavior, preferences, and engagement patterns.',
-      benefits: ['95% segmentation accuracy', 'Dynamic audience updates', 'Personalized campaigns', 'Higher conversion rates']
+      icon: <UserCheck className="w-8 h-8 text-green-400" />,
+      title: 'Smart Candidate Matching',
+      description: 'AI-powered candidate matching that analyzes skills, experience, and personality to find the perfect fit for your roles.',
+      benefits: ['Intelligent matching', 'Skills gap analysis', 'Personality assessment', 'Retention prediction']
     },
     {
-      icon: <Zap className="w-8 h-8 text-purple-400" />,
-      title: 'Automated Campaign Workflows',
-      description: 'Create complex marketing automation workflows with triggers, conditions, and actions that run automatically based on customer behavior.',
-      benefits: ['No-code workflow builder', 'Multi-channel campaigns', 'Real-time triggers', 'A/B testing automation']
+      icon: <MessageCircle className="w-8 h-8 text-purple-400" />,
+      title: 'AI Interview Assistant',
+      description: 'Conduct intelligent interviews with AI-generated questions, real-time analysis, and automated follow-up recommendations.',
+      benefits: ['Dynamic questions', 'Real-time analysis', 'Consistent evaluation', 'Automated scoring']
     },
     {
       icon: <BarChart className="w-8 h-8 text-orange-400" />,
-      title: 'Predictive Analytics',
-      description: 'Advanced analytics that predict customer behavior, campaign performance, and optimal send times for maximum engagement.',
-      benefits: ['Predictive insights', 'Optimal timing predictions', 'Performance forecasting', 'ROI optimization']
+      title: 'HR Analytics Dashboard',
+      description: 'Comprehensive analytics on employee performance, engagement, turnover prediction, and workforce planning insights.',
+      benefits: ['Performance insights', 'Engagement tracking', 'Turnover prediction', 'Workforce planning']
     },
     {
-      icon: <MessageCircle className="w-8 h-8 text-blue-400" />,
-      title: 'Multi-Channel Messaging',
-      description: 'Send personalized messages across email, SMS, push notifications, and social media from a single platform.',
-      benefits: ['Unified messaging', 'Cross-channel consistency', 'Real-time delivery', 'Engagement tracking']
+      icon: <GraduationCap className="w-8 h-8 text-blue-400" />,
+      title: 'Learning & Development',
+      description: 'AI-powered learning recommendations, skill gap analysis, and personalized training paths for employee development.',
+      benefits: ['Personalized learning', 'Skill gap analysis', 'Progress tracking', 'Certification management']
     },
     {
-      icon: <Palette className="w-8 h-8 text-pink-400" />,
-      title: 'Dynamic Personalization',
-      description: 'Create highly personalized experiences with dynamic content, product recommendations, and tailored messaging for each customer.',
-      benefits: ['Real-time personalization', 'Dynamic content blocks', 'Product recommendations', 'Behavioral triggers']
+      icon: <ClipboardList className="w-8 h-8 text-pink-400" />,
+      title: 'Performance Management',
+      description: 'Automated performance reviews, goal tracking, feedback collection, and development planning with AI insights.',
+      benefits: ['Automated reviews', 'Goal tracking', '360 feedback', 'Development planning']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$79',
+      price: '$89',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for small teams',
       features: [
-        'Up to 1,000 contacts',
-        'Basic AI content generation',
-        'Email marketing automation',
-        'Simple workflows',
-        'Basic analytics',
+        'Up to 50 employees',
+        'Basic AI screening',
+        'Simple analytics',
         'Email support',
-        'Mobile app access'
+        'Mobile app access',
+        'Basic integrations',
+        'Standard templates'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$149',
+      price: '$179',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for growing companies',
       features: [
-        'Up to 10,000 contacts',
-        'Advanced AI content generation',
-        'Multi-channel messaging',
-        'Advanced workflows',
-        'Predictive analytics',
+        'Up to 200 employees',
+        'Advanced AI features',
+        'Interview assistant',
         'Priority support',
-        'A/B testing',
+        'Advanced analytics',
         'Custom integrations',
-        'Team collaboration'
+        'Team collaboration',
+        'Learning management',
+        'Performance tracking'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$299',
+      price: '$349',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited contacts',
+        'Unlimited employees',
         'Premium AI features',
-        'All channels included',
-        'Complex workflows',
-        'Advanced analytics',
-        'Dedicated support',
         'Custom AI models',
+        'Dedicated support',
+        'Advanced reporting',
         'API access',
         'White-label options',
-        'Custom reporting'
+        'Custom workflows',
+        'Multi-location support'
       ],
       popular: false
     }
   ];
 
   const stats = [
-    { number: '500+', label: 'Businesses Using', icon: <Users className="w-6 h-6 text-cyan-400" /> },
-    { number: '60%', label: 'Average Engagement Increase', icon: <TrendingUp className="w-6 h-6 text-green-400" /> },
-    { number: '10x', label: 'Content Production Speed', icon: <Zap className="w-6 h-6 text-purple-400" /> },
-    { number: '95%', label: 'Segmentation Accuracy', icon: <Target className="w-6 h-6 text-orange-400" /> }
+    { number: '200+', label: 'Companies Using', icon: <Users className="w-6 h-6 text-cyan-400" /> },
+    { number: '50%', label: 'Faster Hiring Process', icon: <TrendingUp className="w-6 h-6 text-green-400" /> },
+    { number: '95%', label: 'Screening Accuracy', icon: <Target className="w-6 h-6 text-purple-400" /> },
+    { number: '30%', label: 'Reduced Turnover', icon: <UserCheck className="w-6 h-6 text-orange-400" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Marketing Automation - AI-Powered Marketing Platform | Zion Tech Group</title>
-        <meta name="description" content="Transform your marketing with Zion AI Marketing Automation. AI content generation, smart segmentation, automated workflows, and predictive analytics to boost engagement by 60%." />
-        <meta name="keywords" content="AI marketing automation, content generation, audience segmentation, marketing workflows, predictive analytics, multi-channel marketing" />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-marketing-automation" />
+        <title>Zion AI HR Assistant - AI-Powered Human Resources Platform | Zion Tech Group</title>
+        <meta name="description" content="Transform your HR with Zion AI HR Assistant. AI resume screening, smart candidate matching, interview assistance, and performance management to streamline your HR processes." />
+        <meta name="keywords" content="AI HR assistant, resume screening, candidate matching, interview automation, HR analytics, performance management, learning development" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-hr-assistant" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -137,14 +136,14 @@ const ZionAiMarketingAutomationPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className={`text-4xl md:text-6xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                Zion AI Marketing
+                Zion AI HR
                 <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  Automation
+                  Assistant
                 </span>
               </h1>
               <p className={`text-xl text-gray-300 mb-8 max-w-3xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                Revolutionize your marketing with AI-powered content generation, smart audience segmentation, 
-                and automated workflows. Boost engagement by up to 60% with intelligent marketing automation.
+                Revolutionize your human resources with AI-powered resume screening, smart candidate matching, 
+                and automated performance management. Streamline HR processes and hire better talent faster.
               </p>
               <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <Link
@@ -187,10 +186,10 @@ const ZionAiMarketingAutomationPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                AI-Powered Marketing Intelligence
+                AI-Powered HR Intelligence
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage cutting-edge artificial intelligence to optimize every aspect of your marketing campaigns
+                Leverage cutting-edge artificial intelligence to optimize every aspect of your human resources operations
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -225,7 +224,7 @@ const ZionAiMarketingAutomationPage: React.FC = () => {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing options to fit your marketing needs and budget
+                Flexible pricing options to fit your organization size and HR needs
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -280,10 +279,10 @@ const ZionAiMarketingAutomationPage: React.FC = () => {
         <section className="py-20 bg-gradient-to-br from-gray-900 to-purple-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Transform Your Marketing?
+              Ready to Transform Your HR?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join hundreds of businesses already using Zion AI Marketing Automation to boost their engagement and drive more conversions.
+              Join hundreds of companies already using Zion AI HR Assistant to streamline their HR processes and hire better talent.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -311,4 +310,4 @@ const ZionAiMarketingAutomationPage: React.FC = () => {
   );
 };
 
-export default ZionAiMarketingAutomationPage;
+export default ZionAiHrAssistantPage;

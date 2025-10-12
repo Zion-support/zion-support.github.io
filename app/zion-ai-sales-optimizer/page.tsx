@@ -8,11 +8,10 @@ import {
   Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package, 
   TrendingUp, Calendar, ShoppingCart, Sparkles, Cpu, Globe, Database, 
   Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock, 
-  Megaphone, Share2, MousePointer, Palette, Layers, Filter, Send, 
-  Play, Pause, RotateCcw, Download, Upload, Maximize, Minimize
+  TrendingDown, Percent, PieChart, Activity, RefreshCw, Zap as ZapIcon
 } from 'lucide-react';
 
-const ZionAiMarketingAutomationPage: React.FC = () => {
+const ZionAiSalesOptimizerPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   React.useEffect(() => {
@@ -22,112 +21,109 @@ const ZionAiMarketingAutomationPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: 'AI Content Generation',
-      description: 'Generate high-quality marketing content including emails, social media posts, blog articles, and ad copy using advanced AI.',
-      benefits: ['10x content production', 'SEO-optimized content', 'Brand voice consistency', 'Multi-language support']
+      title: 'AI-Powered Lead Scoring',
+      description: 'Advanced machine learning algorithms analyze customer behavior and engagement patterns to score leads with 95% accuracy.',
+      benefits: ['95% lead scoring accuracy', '40% increase in conversion rates', 'Real-time lead prioritization']
     },
     {
-      icon: <Target className="w-8 h-8 text-green-400" />,
-      title: 'Smart Audience Segmentation',
-      description: 'AI-powered audience segmentation that automatically categorizes customers based on behavior, preferences, and engagement patterns.',
-      benefits: ['95% segmentation accuracy', 'Dynamic audience updates', 'Personalized campaigns', 'Higher conversion rates']
+      icon: <TrendingUp className="w-8 h-8 text-green-400" />,
+      title: 'Sales Forecasting',
+      description: 'Predict future sales performance with AI-driven forecasting models that analyze historical data and market trends.',
+      benefits: ['90% forecast accuracy', 'Predict 3-6 months ahead', 'Risk assessment included']
     },
     {
-      icon: <Zap className="w-8 h-8 text-purple-400" />,
-      title: 'Automated Campaign Workflows',
-      description: 'Create complex marketing automation workflows with triggers, conditions, and actions that run automatically based on customer behavior.',
-      benefits: ['No-code workflow builder', 'Multi-channel campaigns', 'Real-time triggers', 'A/B testing automation']
+      icon: <Target className="w-8 h-8 text-purple-400" />,
+      title: 'Personalized Recommendations',
+      description: 'AI generates personalized product recommendations and sales strategies for each customer based on their profile and behavior.',
+      benefits: ['Personalized approach', 'Higher customer satisfaction', 'Increased average order value']
     },
     {
-      icon: <BarChart className="w-8 h-8 text-orange-400" />,
-      title: 'Predictive Analytics',
-      description: 'Advanced analytics that predict customer behavior, campaign performance, and optimal send times for maximum engagement.',
-      benefits: ['Predictive insights', 'Optimal timing predictions', 'Performance forecasting', 'ROI optimization']
+      icon: <Activity className="w-8 h-8 text-orange-400" />,
+      title: 'Real-time Analytics',
+      description: 'Comprehensive dashboard with real-time sales metrics, performance indicators, and actionable insights.',
+      benefits: ['Real-time monitoring', 'Performance tracking', 'Data-driven decisions']
     },
     {
       icon: <MessageCircle className="w-8 h-8 text-blue-400" />,
-      title: 'Multi-Channel Messaging',
-      description: 'Send personalized messages across email, SMS, push notifications, and social media from a single platform.',
-      benefits: ['Unified messaging', 'Cross-channel consistency', 'Real-time delivery', 'Engagement tracking']
+      title: 'AI Sales Assistant',
+      description: 'Intelligent sales assistant that provides conversation suggestions, objection handling, and follow-up recommendations.',
+      benefits: ['Improved sales conversations', 'Better objection handling', 'Consistent follow-ups']
     },
     {
-      icon: <Palette className="w-8 h-8 text-pink-400" />,
-      title: 'Dynamic Personalization',
-      description: 'Create highly personalized experiences with dynamic content, product recommendations, and tailored messaging for each customer.',
-      benefits: ['Real-time personalization', 'Dynamic content blocks', 'Product recommendations', 'Behavioral triggers']
+      icon: <RefreshCw className="w-8 h-8 text-indigo-400" />,
+      title: 'Automated Workflows',
+      description: 'Streamline sales processes with automated workflows for lead nurturing, follow-ups, and customer onboarding.',
+      benefits: ['Reduced manual work', 'Consistent processes', 'Higher efficiency']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$79',
+      price: '$99',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for small sales teams',
       features: [
-        'Up to 1,000 contacts',
-        'Basic AI content generation',
-        'Email marketing automation',
-        'Simple workflows',
-        'Basic analytics',
+        'Up to 1,000 leads/month',
+        'Basic AI lead scoring',
+        'Sales forecasting (1 month)',
         'Email support',
+        'Standard analytics dashboard',
         'Mobile app access'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$149',
+      price: '$199',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for growing sales teams',
       features: [
-        'Up to 10,000 contacts',
-        'Advanced AI content generation',
-        'Multi-channel messaging',
-        'Advanced workflows',
-        'Predictive analytics',
+        'Up to 5,000 leads/month',
+        'Advanced AI lead scoring',
+        'Sales forecasting (3 months)',
+        'AI sales assistant',
         'Priority support',
-        'A/B testing',
+        'Advanced analytics',
         'Custom integrations',
-        'Team collaboration'
+        'Team collaboration tools'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$299',
+      price: '$399',
       period: '/month',
-      description: 'For large organizations',
+      description: 'For large sales organizations',
       features: [
-        'Unlimited contacts',
+        'Unlimited leads',
         'Premium AI features',
-        'All channels included',
-        'Complex workflows',
-        'Advanced analytics',
-        'Dedicated support',
+        'Sales forecasting (6 months)',
         'Custom AI models',
+        'Dedicated support',
+        'Advanced reporting',
         'API access',
-        'White-label options',
-        'Custom reporting'
+        'Custom workflows',
+        'White-label options'
       ],
       popular: false
     }
   ];
 
   const stats = [
-    { number: '500+', label: 'Businesses Using', icon: <Users className="w-6 h-6 text-cyan-400" /> },
-    { number: '60%', label: 'Average Engagement Increase', icon: <TrendingUp className="w-6 h-6 text-green-400" /> },
-    { number: '10x', label: 'Content Production Speed', icon: <Zap className="w-6 h-6 text-purple-400" /> },
-    { number: '95%', label: 'Segmentation Accuracy', icon: <Target className="w-6 h-6 text-orange-400" /> }
+    { number: '150+', label: 'Sales Teams Using', icon: <Users className="w-6 h-6 text-cyan-400" /> },
+    { number: '40%', label: 'Average Sales Increase', icon: <TrendingUp className="w-6 h-6 text-green-400" /> },
+    { number: '95%', label: 'Lead Scoring Accuracy', icon: <Target className="w-6 h-6 text-purple-400" /> },
+    { number: '24/7', label: 'AI Support Available', icon: <Clock className="w-6 h-6 text-blue-400" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Marketing Automation - AI-Powered Marketing Platform | Zion Tech Group</title>
-        <meta name="description" content="Transform your marketing with Zion AI Marketing Automation. AI content generation, smart segmentation, automated workflows, and predictive analytics to boost engagement by 60%." />
-        <meta name="keywords" content="AI marketing automation, content generation, audience segmentation, marketing workflows, predictive analytics, multi-channel marketing" />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-marketing-automation" />
+        <title>Zion AI Sales Optimizer - AI-Powered Sales Intelligence Platform | Zion Tech Group</title>
+        <meta name="description" content="Transform your sales performance with Zion AI Sales Optimizer. Advanced AI lead scoring, sales forecasting, personalized recommendations, and automated workflows to boost your sales by 40%." />
+        <meta name="keywords" content="AI sales optimizer, lead scoring, sales forecasting, sales automation, CRM AI, sales intelligence, sales analytics" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-sales-optimizer" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -137,14 +133,14 @@ const ZionAiMarketingAutomationPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className={`text-4xl md:text-6xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                Zion AI Marketing
+                Zion AI Sales
                 <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  Automation
+                  Optimizer
                 </span>
               </h1>
               <p className={`text-xl text-gray-300 mb-8 max-w-3xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                Revolutionize your marketing with AI-powered content generation, smart audience segmentation, 
-                and automated workflows. Boost engagement by up to 60% with intelligent marketing automation.
+                Transform your sales performance with AI-powered lead scoring, sales forecasting, 
+                and personalized recommendations. Boost your sales by up to 40% with intelligent automation.
               </p>
               <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <Link
@@ -187,10 +183,10 @@ const ZionAiMarketingAutomationPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                AI-Powered Marketing Intelligence
+                AI-Powered Sales Intelligence
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage cutting-edge artificial intelligence to optimize every aspect of your marketing campaigns
+                Leverage cutting-edge artificial intelligence to optimize every aspect of your sales process
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -225,7 +221,7 @@ const ZionAiMarketingAutomationPage: React.FC = () => {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing options to fit your marketing needs and budget
+                Flexible pricing options to fit your sales team size and needs
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -280,10 +276,10 @@ const ZionAiMarketingAutomationPage: React.FC = () => {
         <section className="py-20 bg-gradient-to-br from-gray-900 to-purple-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Transform Your Marketing?
+              Ready to Transform Your Sales Performance?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join hundreds of businesses already using Zion AI Marketing Automation to boost their engagement and drive more conversions.
+              Join hundreds of sales teams already using Zion AI Sales Optimizer to boost their performance and close more deals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -311,4 +307,4 @@ const ZionAiMarketingAutomationPage: React.FC = () => {
   );
 };
 
-export default ZionAiMarketingAutomationPage;
+export default ZionAiSalesOptimizerPage;
