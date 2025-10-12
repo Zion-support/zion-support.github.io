@@ -29,5 +29,9 @@ export default function CareersPage() {
   );
 };
 
+<<<<<<< HEAD
 export default CareersPage;
 >>>>>>> cursor/website-audit-and-update-with-deployment-713e
+=======
+export default CareersPage;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
