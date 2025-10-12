@@ -18,7 +18,10 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'Document analysis' },
     { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', description: 'Business forecasting' },
     { name: 'AI HR Solutions', url: '/ai-hr-solutions', description: 'Human resources AI' },
-    { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'Distributed AI processing' }
+    { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'Distributed AI processing' },
+    { name: 'AI Quantum Computing', url: '/ai-quantum-computing', description: 'Quantum AI solutions' },
+    { name: 'AI Neural Interface', url: '/ai-neural-interface', description: 'Brain-computer interface' },
+    { name: 'AI Space Technology', url: '/ai-space-technology', description: 'Space AI systems' }
   ];
 
   const itServices = [
@@ -33,7 +36,8 @@ const Footer: React.FC = memo(() => {
     { name: 'Custom Software', url: '/custom-software', description: 'Tailored solutions' },
     { name: 'Database Management', url: '/database-management', description: 'Database optimization' },
     { name: 'Network Infrastructure', url: '/network-infrastructure', description: 'Network setup' },
-    { name: 'IT Asset Management', url: '/it-asset-management', description: 'Asset lifecycle' }
+    { name: 'IT Asset Management', url: '/it-asset-management', description: 'Asset lifecycle' },
+    { name: 'Blockchain Development', url: '/blockchain-development', description: 'Blockchain solutions' }
   ];
 
   const microSaasServices = [
@@ -48,7 +52,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Zion Project Master', url: '/zion-project-master', description: 'Project management' },
     { name: 'Zion Email Automation', url: '/zion-email-automation', description: 'Email marketing' },
     { name: 'Zion Inventory Smart', url: '/zion-inventory-smart', description: 'Inventory management' },
-    { name: 'Zion Invoice Genius', url: '/zion-invoice-genius', description: 'Invoice automation' }
+    { name: 'Zion Invoice Genius', url: '/zion-invoice-genius', description: 'Invoice automation' },
+    { name: 'Zion AI Voice Studio', url: '/zion-ai-voice-studio', description: 'AI voice cloning & synthesis' },
+    { name: 'Zion AI Video Generator', url: '/zion-ai-video-generator', description: 'AI video creation platform' }
   ];
 
   const companyLinks = [

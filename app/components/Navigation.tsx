@@ -75,7 +75,10 @@ const Navigation: React.FC = () => {
     { name: 'AI Computer Vision', url: '/ai-computer-vision', icon: Eye },
     { name: 'AI Voice Solutions', url: '/ai-voice-solutions', icon: Mic },
     { name: 'AI Workflow Automation', url: '/ai-workflow-automation', icon: Settings },
-    { name: 'AI Document Processing', url: '/ai-document-processing', icon: FileText }
+    { name: 'AI Document Processing', url: '/ai-document-processing', icon: FileText },
+    { name: 'AI Quantum Computing', url: '/ai-quantum-computing', icon: Cpu },
+    { name: 'AI Neural Interface', url: '/ai-neural-interface', icon: Brain },
+    { name: 'AI Space Technology', url: '/ai-space-technology', icon: Globe }
   ];
 
   const itServices = [
@@ -90,7 +93,8 @@ const Navigation: React.FC = () => {
     { name: 'Data Analytics & BI', url: '/data-analytics-bi', icon: BarChart },
     { name: 'Custom Software', url: '/custom-software', icon: Code },
     { name: 'Network Infrastructure', url: '/network-infrastructure', icon: Wifi },
-    { name: 'IT Asset Management', url: '/it-asset-management', icon: Package }
+    { name: 'IT Asset Management', url: '/it-asset-management', icon: Package },
+    { name: 'Blockchain Development', url: '/blockchain-development', icon: Link2 }
   ];
 
   const microSaasServices = [
@@ -105,7 +109,9 @@ const Navigation: React.FC = () => {
     { name: 'Zion Project Master', url: '/zion-project-master', icon: CheckSquare },
     { name: 'Zion Email Automation', url: '/zion-email-automation', icon: Mail },
     { name: 'Zion Inventory Smart', url: '/zion-inventory-smart', icon: Box },
-    { name: 'Zion Invoice Genius', url: '/zion-invoice-genius', icon: DollarSign }
+    { name: 'Zion Invoice Genius', url: '/zion-invoice-genius', icon: DollarSign },
+    { name: 'Zion AI Voice Studio', url: '/zion-ai-voice-studio', icon: Mic },
+    { name: 'Zion AI Video Generator', url: '/zion-ai-video-generator', icon: Monitor }
   ];
 
   return (
