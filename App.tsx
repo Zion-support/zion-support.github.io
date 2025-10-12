@@ -70,6 +70,20 @@ import CookiePolicyPage from './app/cookie-policy/page'
 import GDPRCompliancePage from './app/gdpr-compliance/page'
 import ResourcesPage from './app/resources/page'
 
+// 5G Solutions
+import FiveGSolutionsPage from './app/5g-solutions/page'
+
+// AI Services
+import AITranslationServicesPage from './app/ai-translation-services/page'
+
+// IT Services
+import ServerManagementPage from './app/server-management/page'
+
+// Micro SaaS Services
+import ContractManagerPage from './app/micro-saas/contract-manager/page'
+import EmailSignaturePage from './app/micro-saas/email-signature/page'
+import EmployeeDirectoryPage from './app/micro-saas/employee-directory/page'
+
 const App: React.FC = () => {
   return (
     <HelmetProvider>
@@ -142,6 +156,20 @@ const App: React.FC = () => {
                 <Route path="/cookie-policy" element={<CookiePolicyPage />} />
                 <Route path="/gdpr-compliance" element={<GDPRCompliancePage />} />
                 <Route path="/resources" element={<ResourcesPage />} />
+                
+                {/* 5G Solutions */}
+                <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                
+                {/* AI Services */}
+                <Route path="/ai-translation-services" element={<AITranslationServicesPage />} />
+                
+                {/* IT Services */}
+                <Route path="/server-management" element={<ServerManagementPage />} />
+                
+                {/* Micro SaaS Services */}
+                <Route path="/micro-saas/contract-manager" element={<ContractManagerPage />} />
+                <Route path="/micro-saas/email-signature" element={<EmailSignaturePage />} />
+                <Route path="/micro-saas/employee-directory" element={<EmployeeDirectoryPage />} />
                 
                 {/* 404 Page */}
                 <Route path="*" element={<NotFoundPage />} />

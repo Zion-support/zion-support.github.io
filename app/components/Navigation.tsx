@@ -50,8 +50,8 @@ export default function Navigation() {
         { name: 'Network Infrastructure', path: '/network-infrastructure' },
         { name: 'DevOps Solutions', path: '/devops' },
         { name: 'Data Analytics', path: '/data-analytics' },
-        { name: 'Server Management', path: '/server-management' },
         { name: 'API Development', path: '/api-development' },
+        { name: 'Server Management', path: '/server-management' },
         { name: 'IT Security Audit', path: '/it-security-audit' },
         { name: 'IT Support & Maintenance', path: '/it-support' }
       ]

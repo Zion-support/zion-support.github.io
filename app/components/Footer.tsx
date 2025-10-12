@@ -28,7 +28,7 @@ const Footer = () => {
     { name: 'AI Data Processing', path: '/ai-document-processing' },
     { name: 'AI Business Intelligence', path: '/ai-business-intelligence' },
     { name: 'AI Project Management', path: '/ai-project-management' },
-    { name: 'AI HR Assistant', path: '/ai-hr-assistant' }
+    { name: 'AI Translation Services', path: '/ai-translation-services' }
   ];
 
   const itServices = [
@@ -38,10 +38,10 @@ const Footer = () => {
     { name: 'Cybersecurity', path: '/cybersecurity' },
     { name: 'Database Management', path: '/database-management' },
     { name: 'Network Infrastructure', path: '/network-infrastructure' },
-    { name: 'DevOps Solutions', path: '/devops' },
-    { name: 'Data Analytics', path: '/data-analytics' },
     { name: 'Server Management', path: '/server-management' },
     { name: 'API Development', path: '/api-development' },
+    { name: 'DevOps Solutions', path: '/devops' },
+    { name: 'Data Analytics', path: '/data-analytics' },
     { name: 'IT Security Audit', path: '/it-security-audit' },
     { name: 'IT Support & Maintenance', path: '/it-support' }
   ];
@@ -49,9 +49,9 @@ const Footer = () => {
   const microSaasServices = [
     { name: 'AI Customer Insights', path: '/ai-customer-insights' },
     { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
-    { name: 'Smart Appointment Scheduler', path: '/micro-saas/appointment-scheduler' },
-    { name: 'AI Chat Analytics', path: '/micro-saas/chat-analytics' },
-    { name: 'AI Content Generator', path: '/micro-saas/content-generator' },
+    { name: 'Contract Manager', path: '/micro-saas/contract-manager' },
+    { name: 'Email Signature Manager', path: '/micro-saas/email-signature' },
+    { name: 'Employee Directory', path: '/micro-saas/employee-directory' },
     { name: 'Document Processor', path: '/micro-saas/document-processor' },
     { name: 'AI Email Marketing', path: '/micro-saas/email-marketing' },
     { name: 'Expense Tracker Pro', path: '/micro-saas/expense-tracker' },
