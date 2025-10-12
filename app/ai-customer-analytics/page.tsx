@@ -1,107 +1,107 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, DollarSign, TrendingUp, Shield, PieChart, Target, Zap, Calculator, BarChart3 } from 'lucide-react';
+import { CheckCircle, ArrowRight, BarChart3, Users, TrendingUp, Target, Zap, Shield, Globe, DollarSign } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-const AIFinancialPlannerPage: React.FC = () => {
+const AICustomerAnalyticsPage: React.FC = () => {
   const features = [
     {
-      icon: <Calculator className="w-6 h-6 text-blue-500" />,
-      title: 'Smart Budgeting',
-      description: 'AI-powered budget creation and management that adapts to your spending patterns and financial goals.'
+      icon: <BarChart3 className="w-6 h-6 text-blue-500" />,
+      title: 'Real-time Analytics',
+      description: 'Monitor customer behavior, engagement, and satisfaction in real-time with advanced AI-powered dashboards.'
     },
     {
-      icon: <TrendingUp className="w-6 h-6 text-green-500" />,
-      title: 'Investment Analysis',
-      description: 'Advanced portfolio analysis and investment recommendations based on your risk tolerance and goals.'
+      icon: <Users className="w-6 h-6 text-green-500" />,
+      title: 'Customer Segmentation',
+      description: 'Automatically segment customers based on behavior, preferences, and value using machine learning algorithms.'
     },
     {
-      icon: <Target className="w-6 h-6 text-purple-500" />,
-      title: 'Goal Tracking',
-      description: 'Set and track financial goals with AI-powered progress monitoring and milestone suggestions.'
+      icon: <TrendingUp className="w-6 h-6 text-purple-500" />,
+      title: 'Predictive Insights',
+      description: 'Forecast customer lifetime value, churn probability, and purchase likelihood with 95% accuracy.'
     },
     {
-      icon: <PieChart className="w-6 h-6 text-orange-500" />,
-      title: 'Expense Categorization',
-      description: 'Automatically categorize and analyze your expenses with intelligent pattern recognition.'
+      icon: <Target className="w-6 h-6 text-orange-500" />,
+      title: 'Personalization Engine',
+      description: 'Create hyper-personalized experiences and recommendations based on individual customer profiles.'
     },
     {
-      icon: <Shield className="w-6 h-6 text-red-500" />,
-      title: 'Risk Assessment',
-      description: 'Comprehensive risk analysis and recommendations to protect and grow your wealth safely.'
+      icon: <Zap className="w-6 h-6 text-red-500" />,
+      title: 'Automated Reporting',
+      description: 'Generate comprehensive reports and insights automatically, saving hours of manual analysis.'
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-cyan-500" />,
-      title: 'Financial Forecasting',
-      description: 'Predict future financial scenarios and plan accordingly with advanced modeling algorithms.'
+      icon: <Shield className="w-6 h-6 text-cyan-500" />,
+      title: 'Data Privacy',
+      description: 'Enterprise-grade security and privacy protection with GDPR and CCPA compliance built-in.'
     }
   ];
 
-  const benefits = [
+  const useCases = [
     {
-      title: 'Save More Money',
-      description: 'Users save an average of $2,400 more per year with our AI-powered budgeting recommendations.',
+      title: 'E-commerce Optimization',
+      description: 'Increase conversion rates by 25% with personalized product recommendations and targeted marketing campaigns.',
       icon: <DollarSign className="w-8 h-8 text-green-500" />
     },
     {
-      title: 'Better Investments',
-      description: 'Portfolio performance improves by 23% on average with our AI investment analysis.',
-      icon: <TrendingUp className="w-8 h-8 text-blue-500" />
+      title: 'Customer Retention',
+      description: 'Reduce churn by 40% with early warning systems and proactive customer engagement strategies.',
+      icon: <Users className="w-8 h-8 text-blue-500" />
     },
     {
-      title: 'Reach Goals Faster',
-      description: 'Achieve financial goals 40% faster with personalized strategies and tracking.',
+      title: 'Marketing ROI',
+      description: 'Improve marketing ROI by 60% with precise targeting and automated campaign optimization.',
       icon: <Target className="w-8 h-8 text-purple-500" />
     },
     {
-      title: 'Reduce Stress',
-      description: 'Automated financial management reduces money-related stress by 60%.',
-      icon: <Zap className="w-8 h-8 text-orange-500" />
+      title: 'Sales Forecasting',
+      description: 'Predict sales trends with 90% accuracy to optimize inventory and resource planning.',
+      icon: <TrendingUp className="w-8 h-8 text-orange-500" />
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Basic',
-      price: '$9',
+      name: 'Starter',
+      price: '$29',
       period: '/month',
-      description: 'Perfect for individuals starting their financial journey',
+      description: 'Perfect for small businesses',
       features: [
-        'Basic budgeting tools',
-        'Expense tracking',
-        'Goal setting',
-        'Monthly reports',
-        'Email support'
+        'Up to 10,000 customers',
+        'Basic analytics dashboard',
+        'Customer segmentation',
+        'Email support',
+        'Standard reports'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$19',
+      price: '$79',
       period: '/month',
-      description: 'Ideal for serious financial planning',
+      description: 'Ideal for growing businesses',
       features: [
-        'Advanced AI features',
-        'Investment analysis',
-        'Tax optimization',
-        'Custom reports',
+        'Up to 100,000 customers',
+        'Advanced AI insights',
+        'Predictive analytics',
+        'Custom dashboards',
         'Priority support',
-        'Bank integration'
+        'API access'
       ],
       popular: true
     },
     {
-      name: 'Premium',
-      price: '$39',
+      name: 'Enterprise',
+      price: '$199',
       period: '/month',
-      description: 'For comprehensive wealth management',
+      description: 'For large organizations',
       features: [
+        'Unlimited customers',
         'Full AI suite',
-        'Portfolio management',
-        'Financial advisor access',
-        'Advanced forecasting',
+        'Custom models',
+        'White-label options',
         'Dedicated support',
-        'Family accounts'
+        'Advanced integrations'
       ],
       popular: false
     }
@@ -109,57 +109,57 @@ const AIFinancialPlannerPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Robert Johnson',
-      company: 'Software Engineer',
-      content: 'AI Financial Planner helped me save $3,000 in my first year. The budgeting recommendations are spot-on.',
+      name: 'Jennifer Walsh',
+      company: 'Retail Chain',
+      content: 'AI Customer Analytics helped us increase our conversion rate by 28% in just 3 months. The insights are incredibly actionable.',
       rating: 5
     },
     {
-      name: 'Sarah Williams',
-      company: 'Marketing Manager',
-      content: 'I finally understand my finances! The investment analysis helped me optimize my portfolio and increase returns.',
+      name: 'Michael Torres',
+      company: 'SaaS Company',
+      content: 'The predictive churn analysis saved us thousands of customers. We can now intervene before customers leave.',
       rating: 5
     },
     {
-      name: 'David Chen',
-      company: 'Small Business Owner',
-      content: 'The goal tracking feature is incredible. I reached my emergency fund goal 6 months ahead of schedule.',
+      name: 'Lisa Park',
+      company: 'E-commerce Store',
+      content: 'Personalization has never been easier. Our customers love the tailored experience and our sales have skyrocketed.',
       rating: 5
     }
   ];
 
   const stats = [
-    { number: '$2,400', label: 'Average Annual Savings' },
-    { number: '23%', label: 'Portfolio Improvement' },
-    { number: '40%', label: 'Faster Goal Achievement' },
-    { number: '60%', label: 'Stress Reduction' }
+    { number: '25%', label: 'Average Conversion Increase' },
+    { number: '40%', label: 'Churn Reduction' },
+    { number: '60%', label: 'Marketing ROI Improvement' },
+    { number: '95%', label: 'Prediction Accuracy' }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Financial Planner - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered financial planning tool with smart budgeting, investment analysis, and goal tracking. Save $2,400 more per year on average." />
-        <meta name="keywords" content="financial planning, AI budgeting, investment analysis, personal finance, wealth management, financial goals" />
+        <title>AI Customer Analytics - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered customer analytics platform with predictive insights, personalization, and real-time segmentation. Boost conversion rates by 25%." />
+        <meta name="keywords" content="customer analytics, AI insights, customer segmentation, predictive analytics, personalization, marketing automation" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Financial
-            <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent"> Planner</span>
+            AI Customer
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Analytics</span>
             <br />
-            Pro
+            Platform
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Take control of your finances with AI-powered budgeting, investment analysis, and goal tracking. 
-            Save an average of $2,400 more per year with personalized financial strategies.
+            Unlock the power of your customer data with AI-driven insights, predictive analytics, 
+            and personalized experiences that drive growth and retention.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
             >
               Start Free Trial
             </Link>
@@ -167,7 +167,7 @@ const AIFinancialPlannerPage: React.FC = () => {
               to="#features"
               className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
             >
-              Learn More
+              Explore Features
             </Link>
           </div>
         </div>
@@ -192,10 +192,10 @@ const AIFinancialPlannerPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Financial Tools
+              Powerful AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to manage your finances intelligently and achieve your financial goals
+              Harness advanced artificial intelligence to understand and engage your customers like never before
             </p>
           </div>
 
@@ -216,26 +216,33 @@ const AIFinancialPlannerPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Proven Results
+              Real Business Impact
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join thousands of users who have transformed their financial lives
+              See how AI Customer Analytics transforms businesses across industries
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-gradient-to-r from-green-500 to-emerald-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  {benefit.icon}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+              >
+                <div className="flex items-start mb-4">
+                  <div className="flex-shrink-0 mr-4">
+                    {useCase.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
+                    <p className="text-gray-300">{useCase.description}</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -247,10 +254,10 @@ const AIFinancialPlannerPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple Pricing
+              Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your financial planning needs
+              Start with a free trial and scale as your business grows
             </p>
           </div>
 
@@ -259,12 +266,12 @@ const AIFinancialPlannerPage: React.FC = () => {
               <div
                 key={index}
                 className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 relative ${
-                  plan.popular ? 'ring-2 ring-green-500' : ''
+                  plan.popular ? 'ring-2 ring-purple-500' : ''
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -289,7 +296,7 @@ const AIFinancialPlannerPage: React.FC = () => {
                   to="/contact"
                   className={`w-full py-3 rounded-lg font-semibold text-center block transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700'
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700'
                       : 'bg-white/20 text-white hover:bg-white/30'
                   }`}
                 >
@@ -309,7 +316,7 @@ const AIFinancialPlannerPage: React.FC = () => {
               Success Stories
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how AI Financial Planner is transforming lives
+              See how businesses are transforming with AI Customer Analytics
             </p>
           </div>
 
@@ -335,23 +342,23 @@ const AIFinancialPlannerPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-12">
+          <div className="bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Transform Your Finances?
+              Ready to Unlock Your Customer Data?
             </h2>
-            <p className="text-xl text-green-100 mb-8">
-              Start your free 30-day trial and see how much you can save
+            <p className="text-xl text-purple-100 mb-8">
+              Start your free 14-day trial and see the power of AI Customer Analytics
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
               </Link>
               <Link
                 to="/micro-saas-services"
-                className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-300"
+                className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
               >
                 View All Tools
               </Link>
@@ -363,4 +370,4 @@ const AIFinancialPlannerPage: React.FC = () => {
   );
 };
 
-export default AIFinancialPlannerPage;
+export default AICustomerAnalyticsPage;

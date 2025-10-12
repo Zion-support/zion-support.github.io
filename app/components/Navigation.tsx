@@ -53,6 +53,27 @@ export default function Navigation() {
     }
   ]
 
+  const microSaasTools = [
+    {
+      title: 'AI Project Manager',
+      href: '/ai-project-manager',
+      icon: <Zap className="w-4 h-4" />,
+      description: 'AI-powered project management'
+    },
+    {
+      title: 'AI Customer Analytics',
+      href: '/ai-customer-analytics',
+      icon: <Database className="w-4 h-4" />,
+      description: 'Advanced customer insights'
+    },
+    {
+      title: 'AI Financial Planner',
+      href: '/ai-financial-planner',
+      icon: <Smartphone className="w-4 h-4" />,
+      description: 'Smart financial planning'
+    }
+  ]
+
   return (
     <nav className="bg-gray-900 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

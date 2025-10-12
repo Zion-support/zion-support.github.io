@@ -60,6 +60,37 @@ export default function Footer() {
           </div>
 
           <div>
+            <h3 className="text-lg font-semibold mb-4">Micro SaaS Tools</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/ai-project-manager" className="text-gray-400 hover:text-white transition-colors">
+                  AI Project Manager
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-customer-analytics" className="text-gray-400 hover:text-white transition-colors">
+                  AI Customer Analytics
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-financial-planner" className="text-gray-400 hover:text-white transition-colors">
+                  AI Financial Planner
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-content-generator" className="text-gray-400 hover:text-white transition-colors">
+                  AI Content Generator
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-expense-tracker" className="text-gray-400 hover:text-white transition-colors">
+                  AI Expense Tracker
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               <li>
@@ -90,15 +121,15 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center">
                 <Mail className="w-4 h-4 text-gray-400 mr-3" />
-                <span className="text-gray-400">info@ziontechgroup.com</span>
+                <span className="text-gray-400">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center">
                 <Phone className="w-4 h-4 text-gray-400 mr-3" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <span className="text-gray-400">+1 302 464 0950</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 text-gray-400 mr-3" />
-                <span className="text-gray-400">San Francisco, CA</span>
+                <span className="text-gray-400">364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
           </div>
