@@ -27,15 +27,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   nofollow = false
 }) => {
   const defaultStructuredData = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "@context": "https: //schema.org",
-=======
     "@context": "https://schema.org",
->>>>>>> cursor/fix-errors-and-merge-to-main-c493
-=======
-    "@context": "https://schema.org",
->>>>>>> cursor/fix-errors-and-merge-to-main-09f3
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
@@ -47,121 +39,66 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       "addressRegion": "Delaware"
     },
     "sameAs": [
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "https: //linkedin.com/company/ziontechgroup",
-      "https: //twitter.com/ziontechgroup",
-=======
       "https://linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup",
->>>>>>> cursor/fix-errors-and-merge-to-main-09f3
-      "https://github.com/ziontechgroup"
+      "https://facebook.com/ziontechgroup"
     ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-555-0123",
+      "contactType": "customer service",
+      "availableLanguage": "English"
+    },
     "offers": {
-      "@type": "AggregateOffer",
-      "offerCount": "50+",
-      "lowPrice": "99",
-      "highPrice": "2999",
-      "priceCurrency": "USD"
+      "@type": "Offer",
+      "description": "AI and IT solutions",
+      "category": "Technology Services"
     }
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
-  const canonicalUrl = canonical || `https://ziontechgroup.com${typeof window !== 'undefined' ? window.location.pathname : ''}`;
 
   return (
-<<<<<<< HEAD
-    <>
+    <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
+      <link rel="canonical" href={canonical} />
       
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      {/* Robots Meta */}
+      {noindex && <meta name="robots" content="noindex" />}
+      {nofollow && <meta name="robots" content="nofollow" />}
       
       {/* Open Graph Meta Tags */}
-=======
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup"
-    ]
-  };
-
-  const finalStructuredData = structuredData || defaultStructuredData;
-
-  return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      {canonical && <link rel="canonical" href={canonical} />}
-      
-      {/* Open Graph */}
->>>>>>> cursor/fix-errors-and-merge-to-main-c493
-=======
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={canonicalUrl} />
->>>>>>> cursor/fix-errors-and-merge-to-main-09f3
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:url" content={canonical} />
       <meta property="og:type" content={ogType} />
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:site_name" content="Zion Tech Group" />
       
       {/* Twitter Card Meta Tags */}
-=======
-      <meta property="og:url" content={canonical || 'https://ziontechgroup.com'} />
-      
-      {/* Twitter Card */}
->>>>>>> cursor/fix-errors-and-merge-to-main-c493
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-09f3
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-<<<<<<< HEAD
       
-<<<<<<< HEAD
       {/* Additional SEO Meta Tags */}
-      {noindex && <meta name="robots" content="noindex" />}
-      {nofollow && <meta name="robots" content="nofollow" />}
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="language" content="English" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="distribution" content="global" />
+      <meta name="rating" content="general" />
       
-      {/* Performance Hints */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
-=======
-      {/* SEO */}
-      {noindex && <meta name="robots" content="noindex" />}
-      {nofollow && <meta name="robots" content="nofollow" />}
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-c493
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
-<<<<<<< HEAD
-    </>
-  );
-};
-=======
-=======
-      {noindex && <meta name="robots" content="noindex" />}
-      {nofollow && <meta name="robots" content="nofollow" />}
-      <script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
->>>>>>> cursor/fix-errors-and-merge-to-main-09f3
     </Helmet>
   );
 };
 
 export default EnhancedSEO;
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-c493
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-09f3
