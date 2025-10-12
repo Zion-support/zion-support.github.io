@@ -47,7 +47,7 @@ export default function OptimizedLoading() {
         <Loader2 className="{`${sizeClasses[size]}" text-cyan-500 animate-spin`}  /></Loader2>
 >>>>>>> origin/main
         {text && (
-          <p className="w-5h-5ml-2">{text}
+          <p className="w-5 h-5 ml-2">{text}
           </p>
         )}
       </div>
