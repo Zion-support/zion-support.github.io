@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -50,7 +49,6 @@ const ItServicesPage: React.FC = () => {
       icon: Shield,
       color: 'from-red-500 to-orange-500',
       category: 'Security'
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -75,12 +73,10 @@ const ITServicesPage: React.FC = () => {
       price: 'Starting at $1,500',
       color: 'from-red-500 to-orange-500',
       link: '/cybersecurity-solutions'
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
     },
     {
       icon: Code,
       title: 'Web Development',
-<<<<<<< HEAD
       description: 'Modern, responsive web applications built to scale',
       price: 'Starting at $8,000',
       features: [
@@ -407,7 +403,6 @@ const ITServicesPage: React.FC = () => {
   const filteredServices = selectedCategory === 'All' 
     ? itServices 
     : itServices.filter(service => service.category === selectedCategory);
-=======
       description: 'Modern, responsive web applications built with the latest technologies and best practices.',
       features: ['React/Next.js', 'Node.js Backend', 'Database Design', 'API Development'],
       price: 'Starting at $3,000',
@@ -470,12 +465,10 @@ const ITServicesPage: React.FC = () => {
       description: 'We deploy your solution and provide ongoing support and maintenance.'
     }
   ];
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>IT Services - Zion Tech Group | Comprehensive IT Solutions</title>
         <meta name="description" content="Professional IT services including cloud infrastructure, cybersecurity, web development, mobile apps, and DevOps. Transform your business with our expert IT solutions." />
         <meta name="keywords" content="IT services, cloud computing, cybersecurity, web development, mobile development, DevOps, database management, IT support" />
@@ -616,7 +609,6 @@ const ITServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-=======
         <title>IT Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT services including cloud migration, cybersecurity, web development, mobile apps, data analytics, and DevOps solutions." />
         <meta name="keywords" content="IT services, cloud migration, cybersecurity, web development, mobile development, data analytics, DevOps" />
@@ -805,14 +797,10 @@ const ITServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
       </div>
     </>
   );
 };
 
-<<<<<<< HEAD
 export default ItServicesPage;
-=======
 export default ITServicesPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b

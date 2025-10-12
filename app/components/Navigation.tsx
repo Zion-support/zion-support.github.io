@@ -1,295 +1,67 @@
-import React, { useState, useEffect } from 'react';
+'use client';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart } from 'lucide-react';
-=======
-import { Menu, X, ChevronDown, Zap, Cloud, Globe, Code, Smartphone, Brain, Wifi } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
+import { Menu, X, ChevronDown, Brain, Cloud, Code, Zap, ArrowRight } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-
-  // Handle scroll effect
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-<<<<<<< HEAD
-  // Close mobile menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (isOpen && !(event.target as Element).closest('.mobile-menu')) {
-        setIsOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [isOpen]);
-
-  const toggleMenu = useCallback(() => {
-=======
-  const toggleMenu = () => {
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
-    setIsOpen(!isOpen);
-  };
-
-  const toggleServices = () => {
-    setServicesOpen(!servicesOpen);
-  };
-
-<<<<<<< HEAD
-  const toggleAiServices = useCallback(() => {
-    setAiServicesOpen(!aiServicesOpen);
-    setServicesOpen(false);
-    setItServicesOpen(false);
-    setMicroSaasOpen(false);
-  }, [aiServicesOpen]);
-
-  const toggleItServices = useCallback(() => {
-    setItServicesOpen(!itServicesOpen);
-    setServicesOpen(false);
-    setAiServicesOpen(false);
-    setMicroSaasOpen(false);
-  }, [itServicesOpen]);
-
-  const toggleMicroSaas = useCallback(() => {
-    setMicroSaasOpen(!microSaasOpen);
-    setServicesOpen(false);
-    setAiServicesOpen(false);
-    setItServicesOpen(false);
-  }, [microSaasOpen]);
+  const [microSaasOpen, setMicroSaasOpen] = useState(false);
 
   const aiServices = [
-    { name: 'AI Analytics', url: '/ai-analytics', icon: BarChart },
-    { name: 'AI Automation', url: '/ai-automation', icon: Workflow },
-    { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', icon: MessageCircle },
-    { name: 'AI Content Generation', url: '/ai-content-generation', icon: FileText },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', icon: Shield },
-    { name: 'AI CRM', url: '/ai-crm', icon: Users },
-    { name: 'AI Data Analytics', url: '/ai-data-analytics', icon: Database },
-    { name: 'AI Healthcare', url: '/ai-healthcare', icon: Heart },
-    { name: 'AI Computer Vision', url: '/ai-computer-vision', icon: Eye },
-    { name: 'AI Voice Solutions', url: '/ai-voice-solutions', icon: Mic },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', icon: Settings },
-    { name: 'AI Document Processing', url: '/ai-document-processing', icon: FileText },
-    { name: 'AI Financial Services', url: '/ai-financial-services', icon: DollarSign },
-    { name: 'AI HR Solutions', url: '/ai-hr-solutions', icon: Users },
-    { name: 'AI E-commerce Solutions', url: '/ai-ecommerce-solutions', icon: ShoppingCart },
-    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', icon: TrendingUp },
-    { name: 'AI Edge Computing', url: '/ai-edge-computing', icon: Cpu },
-    { name: 'AI Video Analysis', url: '/ai-video-analysis', icon: Monitor },
-    { name: 'AI Speech Synthesis', url: '/ai-speech-synthesis', icon: Mic },
-    { name: 'AI Recommendation Engine', url: '/ai-recommendation-engine', icon: Target }
+    { name: 'AI Content Generator', url: '/ai-content-generator', icon: Brain },
+    { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', icon: Brain },
+    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', icon: Brain },
+    { name: 'AI Email Assistant', url: '/ai-email-assistant', icon: Brain },
+    { name: 'AI Voice Assistant', url: '/ai-voice-assistant', icon: Brain },
+    { name: 'AI Automation', url: '/ai-automation', icon: Brain }
   ];
 
   const itServices = [
-    { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', icon: Cloud },
-    { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', icon: Shield },
-    { name: 'Web Development', url: '/web-development', icon: Code },
-    { name: 'Mobile Development', url: '/mobile-development', icon: Smartphone },
-    { name: 'API Development', url: '/api-development', icon: LinkIcon },
-    { name: 'Database Management', url: '/database-management', icon: Database },
-    { name: 'DevOps & CI/CD', url: '/devops-cicd', icon: Settings },
-    { name: 'IT Support', url: '/it-support', icon: Users },
-    { name: 'Data Analytics & BI', url: '/data-analytics-bi', icon: BarChart },
-    { name: 'Custom Software', url: '/custom-software', icon: Code },
-    { name: 'Network Infrastructure', url: '/network-infrastructure', icon: Wifi },
-    { name: 'IT Asset Management', url: '/it-asset-management', icon: Package },
-    { name: 'Blockchain Development', url: '/blockchain-development', icon: LinkIcon },
-    { name: 'IoT Development', url: '/iot-development', icon: Wifi },
-    { name: 'E-commerce Development', url: '/e-commerce-development', icon: ShoppingCart },
-    { name: 'Data Engineering', url: '/data-engineering', icon: Database },
-    { name: 'Machine Learning Ops', url: '/machine-learning-ops', icon: Cpu },
-    { name: 'Enterprise Integration', url: '/enterprise-integration', icon: LinkIcon },
-    { name: 'Performance Optimization', url: '/performance-optimization', icon: TrendingUp },
-    { name: 'Disaster Recovery', url: '/disaster-recovery-advanced', icon: Shield }
+    { name: 'Cloud Migration', url: '/cloud-migration', icon: Cloud },
+    { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', icon: Code },
+    { name: 'DevOps & CI/CD', url: '/devops-cicd', icon: Code },
+    { name: 'Data Analytics', url: '/data-analytics', icon: Code },
+    { name: 'Mobile Development', url: '/mobile-development', icon: Code },
+    { name: 'Web Development', url: '/web-development', icon: Code }
   ];
 
   const microSaasServices = [
-    { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', icon: BarChart },
-    { name: 'Zion Chat AI', url: '/zion-chat-ai', icon: MessageCircle },
-    { name: 'Zion Security Shield', url: '/zion-security-shield', icon: Shield },
-    { name: 'Zion Cloud Vault', url: '/zion-cloud-vault', icon: Cloud },
-    { name: 'Zion Content Studio', url: '/zion-content-studio', icon: FileText },
-    { name: 'Zion CRM Intelligence', url: '/zion-crm-intelligence', icon: Users },
-    { name: 'Zion Data Sync', url: '/zion-data-sync', icon: Database },
-    { name: 'Zion Lead Magnet', url: '/zion-lead-magnet', icon: Target },
-    { name: 'Zion Project Master', url: '/zion-project-master', icon: CheckSquare },
-    { name: 'Zion Email Automation', url: '/zion-email-automation', icon: Mail },
-    { name: 'Zion Inventory Smart', url: '/zion-inventory-smart', icon: Box },
-    { name: 'Zion Invoice Genius', url: '/zion-invoice-genius', icon: DollarSign },
-    { name: 'Zion AI Video Editor', url: '/zion-ai-video-editor', icon: Monitor },
-    { name: 'Zion AI Translator Pro', url: '/zion-ai-translator-pro', icon: Globe },
-    { name: 'Zion AI Code Reviewer', url: '/zion-ai-code-reviewer', icon: Code },
-    { name: 'Zion Customer Insights', url: '/zion-customer-insights', icon: Users },
-    { name: 'Zion AI Email Assistant', url: '/zion-ai-email-assistant', icon: Mail },
-    { name: 'Zion AI Meeting Assistant', url: '/zion-ai-meeting-assistant', icon: Calendar },
-    { name: 'Zion AI SEO Optimizer', url: '/zion-ai-seo-optimizer', icon: TrendingUp },
-    { name: 'Zion AI Fraud Detector', url: '/zion-ai-fraud-detector', icon: Shield }
+    { name: 'Zion AI Video Editor', url: '/zion-ai-video-editor', icon: Zap },
+    { name: 'Zion AI Translator Pro', url: '/zion-ai-translator-pro', icon: Zap },
+    { name: 'Zion AI Code Reviewer', url: '/zion-ai-code-reviewer', icon: Zap },
+    { name: 'Zion Customer Insights', url: '/zion-customer-insights', icon: Zap },
+    { name: 'Zion AI Email Assistant', url: '/zion-ai-email-assistant', icon: Zap },
+    { name: 'Zion AI SEO Optimizer', url: '/zion-ai-seo-optimizer', icon: Zap }
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-    }`}>
+    <nav className="bg-slate-900/95 backdrop-blur-md border-b border-gray-700/50 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-              <Brain className="h-5 w-5 text-white" />
-            </div>
-            <span className="text-xl font-bold text-white">Zion Tech Group</span>
-=======
-  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-md border-b border-gray-700/50' 
-        : 'bg-transparent'
-    }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <Zap className="w-6 h-6 text-white" />
-            </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Zion Tech Group
-            </span>
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
-          </Link>
+          <div className="flex items-center">
+            <Link to="/" className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <Brain className="w-5 h-5 text-white" />
+              </div>
+              <span className="text-xl font-bold text-white">Zion Tech Group</span>
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-<<<<<<< HEAD
             <Link to="/" className="text-gray-300 hover:text-white transition-colors">
               Home
             </Link>
             <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-=======
-            <Link 
-              to="/" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-            >
-              Home
-            </Link>
-            <Link 
-              to="/about" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-            >
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
               About
             </Link>
             
             {/* Services Dropdown */}
-            <div className="relative group">
-<<<<<<< HEAD
+            <div className="relative">
               <button
-                onClick={toggleServices}
-                className="flex items-center text-gray-300 hover:text-white transition-colors"
-              >
-                Services
-                <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
-              {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-gray-800 rounded-lg shadow-xl border border-gray-700 py-2">
-                  <Link to="/ai-services" className="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white">
-                    <Brain className="h-4 w-4 mr-3" />
-                    AI Services
-                  </Link>
-                  <Link to="/it-services" className="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white">
-                    <Code className="h-4 w-4 mr-3" />
-                    IT Services
-                  </Link>
-                  <Link to="/micro-saas" className="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white">
-                    <Zap className="h-4 w-4 mr-3" />
-                    Micro SAAS
-                  </Link>
-                </div>
-              )}
-            </div>
-
-            {/* AI Services Dropdown */}
-            <div className="relative group">
-              <button
-                onClick={toggleAiServices}
-                className="flex items-center text-gray-300 hover:text-white transition-colors"
-              >
-                AI Solutions
-                <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
-              {aiServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-gray-800 rounded-lg shadow-xl border border-gray-700 py-2 max-h-96 overflow-y-auto">
-                  {aiServices.map((service, index) => (
-                    <Link
-                      key={index}
-                      to={service.url}
-                      className="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >
-                      <service.icon className="h-4 w-4 mr-3" />
-                      {service.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* IT Services Dropdown */}
-            <div className="relative group">
-              <button
-                onClick={toggleItServices}
-                className="flex items-center text-gray-300 hover:text-white transition-colors"
-              >
-                IT Solutions
-                <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
-              {itServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-gray-800 rounded-lg shadow-xl border border-gray-700 py-2 max-h-96 overflow-y-auto">
-                  {itServices.map((service, index) => (
-                    <Link
-                      key={index}
-                      to={service.url}
-                      className="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >
-                      <service.icon className="h-4 w-4 mr-3" />
-                      {service.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Micro SAAS Dropdown */}
-            <div className="relative group">
-              <button
-                onClick={toggleMicroSaas}
-                className="flex items-center text-gray-300 hover:text-white transition-colors"
-              >
-                Micro SAAS
-                <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
-              {microSaasOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-gray-800 rounded-lg shadow-xl border border-gray-700 py-2 max-h-96 overflow-y-auto">
-                  {microSaasServices.map((service, index) => (
-                    <Link
-                      key={index}
-                      to={service.url}
-                      className="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >
-                      <service.icon className="h-4 w-4 mr-3" />
-                      {service.name}
-                    </Link>
-                  ))}
-=======
-              <button 
-                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+                className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors"
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
@@ -311,36 +83,16 @@ const Navigation: React.FC = () => {
                         AI Services
                       </h3>
                       <ul className="space-y-3">
-                        <li>
-                          <Link to="/ai-content-generator" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
-                            AI Content Generator
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/ai-chatbot-builder" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
-                            AI Chatbot Builder
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/ai-analytics-dashboard" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
-                            AI Analytics Dashboard
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/ai-email-assistant" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
-                            AI Email Assistant
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/ai-voice-assistant" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
-                            AI Voice Assistant
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/ai-automation" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
-                            AI Automation
-                          </Link>
-                        </li>
+                        {aiServices.map((service, index) => (
+                          <li key={index}>
+                            <Link 
+                              to={service.url} 
+                              className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
+                            >
+                              {service.name}
+                            </Link>
+                          </li>
+                        ))}
                       </ul>
                     </div>
 
@@ -351,45 +103,60 @@ const Navigation: React.FC = () => {
                         IT Services
                       </h3>
                       <ul className="space-y-3">
-                        <li>
-                          <Link to="/cloud-migration" className="text-gray-300 hover:text-purple-400 transition-colors text-sm">
-                            Cloud Migration
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/cybersecurity-solutions" className="text-gray-300 hover:text-purple-400 transition-colors text-sm">
-                            Cybersecurity Solutions
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/devops-cicd" className="text-gray-300 hover:text-purple-400 transition-colors text-sm">
-                            DevOps & CI/CD
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/data-analytics" className="text-gray-300 hover:text-purple-400 transition-colors text-sm">
-                            Data Analytics
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/mobile-development" className="text-gray-300 hover:text-purple-400 transition-colors text-sm">
-                            Mobile Development
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/web-development" className="text-gray-300 hover:text-purple-400 transition-colors text-sm">
-                            Web Development
-                          </Link>
-                        </li>
+                        {itServices.map((service, index) => (
+                          <li key={index}>
+                            <Link 
+                              to={service.url} 
+                              className="text-gray-300 hover:text-purple-400 transition-colors text-sm"
+                            >
+                              {service.name}
+                            </Link>
+                          </li>
+                        ))}
                       </ul>
                     </div>
                   </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
                 </div>
               )}
             </div>
 
-<<<<<<< HEAD
+            {/* Micro SAAS Dropdown */}
+            <div className="relative">
+              <button
+                className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors"
+                onMouseEnter={() => setMicroSaasOpen(true)}
+                onMouseLeave={() => setMicroSaasOpen(false)}
+              >
+                <span>Micro SAAS</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              
+              {microSaasOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md border border-gray-700/50 rounded-xl shadow-2xl p-6"
+                  onMouseEnter={() => setMicroSaasOpen(true)}
+                  onMouseLeave={() => setMicroSaasOpen(false)}
+                >
+                  <h3 className="text-lg font-semibold text-yellow-400 mb-4 flex items-center">
+                    <Zap className="w-5 h-5 mr-2" />
+                    Micro SAAS Products
+                  </h3>
+                  <ul className="space-y-3">
+                    {microSaasServices.map((service, index) => (
+                      <li key={index}>
+                        <Link 
+                          to={service.url} 
+                          className="text-gray-300 hover:text-yellow-400 transition-colors text-sm"
+                        >
+                          {service.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+
             <Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">
               Pricing
             </Link>
@@ -411,78 +178,39 @@ const Navigation: React.FC = () => {
               className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
             >
               Get Started
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </div>
 
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
-              onClick={toggleMenu}
-              className="text-gray-300 hover:text-white focus:outline-none focus:text-white"
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-300 hover:text-white transition-colors"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
-=======
-            <Link 
-              to="/contact" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-            >
-              Contact
-            </Link>
-            
-            <Link 
-              to="/contact" 
-              className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-            >
-              Get Started
-            </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-<<<<<<< HEAD
           <div className="lg:hidden mobile-menu">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900 rounded-lg mt-2">
               <Link
                 to="/"
                 className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
-=======
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-gray-700/50">
-            <div className="px-4 py-6 space-y-4">
-              <Link 
-                to="/" 
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
                 onClick={() => setIsOpen(false)}
               >
                 Home
               </Link>
-<<<<<<< HEAD
               <Link
                 to="/about"
                 className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
-=======
-              <Link 
-                to="/about" 
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
                 onClick={() => setIsOpen(false)}
               >
                 About
               </Link>
-<<<<<<< HEAD
               <Link
                 to="/ai-services"
                 className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
@@ -512,149 +240,12 @@ const Navigation: React.FC = () => {
                 Pricing
               </Link>
               <Link
-                to="/blog"
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
-                onClick={() => setIsOpen(false)}
-              >
-                Blog
-              </Link>
-              <Link
-                to="/case-studies"
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
-                onClick={() => setIsOpen(false)}
-              >
-                Case Studies
-              </Link>
-              <Link
                 to="/contact"
                 className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
-=======
-              
-              {/* Mobile Services */}
-              <div className="space-y-2">
-                <div className="text-white font-medium py-2">AI Services</div>
-                <div className="pl-4 space-y-2">
-                  <Link 
-                    to="/ai-content-generator" 
-                    className="block text-gray-300 hover:text-cyan-400 transition-colors text-sm py-1"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    AI Content Generator
-                  </Link>
-                  <Link 
-                    to="/ai-chatbot-builder" 
-                    className="block text-gray-300 hover:text-cyan-400 transition-colors text-sm py-1"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    AI Chatbot Builder
-                  </Link>
-                  <Link 
-                    to="/ai-analytics-dashboard" 
-                    className="block text-gray-300 hover:text-cyan-400 transition-colors text-sm py-1"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    AI Analytics Dashboard
-                  </Link>
-                  <Link 
-                    to="/ai-email-assistant" 
-                    className="block text-gray-300 hover:text-cyan-400 transition-colors text-sm py-1"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    AI Email Assistant
-                  </Link>
-                  <Link 
-                    to="/ai-voice-assistant" 
-                    className="block text-gray-300 hover:text-cyan-400 transition-colors text-sm py-1"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    AI Voice Assistant
-                  </Link>
-                  <Link 
-                    to="/ai-automation" 
-                    className="block text-gray-300 hover:text-cyan-400 transition-colors text-sm py-1"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    AI Automation
-                  </Link>
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <div className="text-white font-medium py-2">IT Services</div>
-                <div className="pl-4 space-y-2">
-                  <Link 
-                    to="/cloud-migration" 
-                    className="block text-gray-300 hover:text-purple-400 transition-colors text-sm py-1"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Cloud Migration
-                  </Link>
-                  <Link 
-                    to="/cybersecurity-solutions" 
-                    className="block text-gray-300 hover:text-purple-400 transition-colors text-sm py-1"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Cybersecurity Solutions
-                  </Link>
-                  <Link 
-                    to="/devops-cicd" 
-                    className="block text-gray-300 hover:text-purple-400 transition-colors text-sm py-1"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    DevOps & CI/CD
-                  </Link>
-                  <Link 
-                    to="/data-analytics" 
-                    className="block text-gray-300 hover:text-purple-400 transition-colors text-sm py-1"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Data Analytics
-                  </Link>
-                  <Link 
-                    to="/mobile-development" 
-                    className="block text-gray-300 hover:text-purple-400 transition-colors text-sm py-1"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Mobile Development
-                  </Link>
-                  <Link 
-                    to="/web-development" 
-                    className="block text-gray-300 hover:text-purple-400 transition-colors text-sm py-1"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Web Development
-                  </Link>
-                </div>
-              </div>
-
-              <Link 
-                to="/contact" 
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
                 onClick={() => setIsOpen(false)}
               >
                 Contact
               </Link>
-<<<<<<< HEAD
-              <div className="pt-4">
-                <Link
-                  to="/contact"
-                  className="block w-full text-center px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Get Started
-                </Link>
-              </div>
-=======
-              
-              <Link 
-                to="/contact" 
-                className="block bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
-                onClick={() => setIsOpen(false)}
-              >
-                Get Started
-              </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
             </div>
           </div>
         )}
@@ -663,8 +254,4 @@ const Navigation: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Navigation;
-=======
-export default Navigation;
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
