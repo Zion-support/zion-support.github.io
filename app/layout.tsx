@@ -49,12 +49,12 @@ const Layout: React.FC<LayoutProps> = ({
       {
         "@type": "Offer",
         "name": "AI Services",
-        "description": "Comprehensive AI solutions including content generation, chatbots, and automation",
-        "price": "500",
+        "description": "Comprehensive AI solutions including content generation, chatbots, automation, quantum computing, and climate intelligence",
+        "price": "999",
         "priceCurrency": "USD",
         "priceSpecification": {
           "@type": "PriceSpecification",
-          "price": "500",
+          "price": "999",
           "priceCurrency": "USD",
           "unitText": "MONTH"
         }
@@ -62,14 +62,27 @@ const Layout: React.FC<LayoutProps> = ({
       {
         "@type": "Offer",
         "name": "IT Services",
-        "description": "Complete IT infrastructure services including cloud migration, cybersecurity, and mobile development",
-        "price": "2500",
+        "description": "Complete IT infrastructure services including cloud migration, cybersecurity, 5G implementation, quantum computing, and space technology",
+        "price": "5000",
         "priceCurrency": "USD",
         "priceSpecification": {
           "@type": "PriceSpecification",
-          "price": "2500",
+          "price": "5000",
           "priceCurrency": "USD",
           "unitText": "PROJECT"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Micro SAAS Products",
+        "description": "Ready-to-use software solutions including AI assistants, blockchain managers, quantum calculators, and climate engines",
+        "price": "99",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "99",
+          "priceCurrency": "USD",
+          "unitText": "MONTH"
         }
       }
     ];

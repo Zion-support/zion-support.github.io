@@ -205,14 +205,14 @@ const HomePage: React.FC = () => {
         {/* Stats Section */}
         <section className="py-16 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4">
-                    <stat.icon className="h-8 w-8 text-white" />
+                <div key={index} className="text-center p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-all duration-300">
+                  <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4">
+                    <stat.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                   </div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-400">{stat.label}</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-sm sm:text-base text-gray-400">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -230,15 +230,15 @@ const HomePage: React.FC = () => {
                 We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="group">
-                  <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
-                      <feature.icon className="h-6 w-6 text-white" />
+                  <div className="bg-gray-800 rounded-xl p-4 sm:p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">
+                    <div className={`inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
+                      <feature.icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                    <p className="text-gray-300">{feature.description}</p>
+                    <h3 className="text-lg sm:text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                    <p className="text-sm sm:text-base text-gray-300">{feature.description}</p>
                   </div>
                 </div>
               ))}
@@ -257,30 +257,35 @@ const HomePage: React.FC = () => {
                 Harness the power of artificial intelligence to transform your business operations and drive growth.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
               {aiServices.map((service, index) => (
                 <div key={index} className="group">
-                  <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg mb-4`}>
-                      <service.icon className="h-6 w-6 text-white" />
+                  <div className="bg-gray-800 rounded-xl p-4 sm:p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700">
+                    <div className={`inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${service.color} rounded-lg mb-4`}>
+                      <service.icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                    <p className="text-gray-300 mb-4">{service.description}</p>
-                    <div className="text-2xl font-bold text-purple-400 mb-4">{service.price}</div>
+                    <h3 className="text-lg sm:text-xl font-semibold text-white mb-3">{service.title}</h3>
+                    <p className="text-sm sm:text-base text-gray-300 mb-4">{service.description}</p>
+                    <div className="text-xl sm:text-2xl font-bold text-purple-400 mb-4">{service.price}</div>
                     <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                          {feature}
+                      {service.features.slice(0, 3).map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-xs sm:text-sm text-gray-300">
+                          <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-400 mr-2 flex-shrink-0" />
+                          <span className="truncate">{feature}</span>
                         </li>
                       ))}
+                      {service.features.length > 3 && (
+                        <li className="text-xs sm:text-sm text-gray-400">
+                          +{service.features.length - 3} more features
+                        </li>
+                      )}
                     </ul>
                     <Link
                       to="/contact"
-                      className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
+                      className="w-full inline-flex items-center justify-center px-3 sm:px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-sm sm:text-base"
                     >
                       Get Started
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      <ArrowRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
                     </Link>
                   </div>
                 </div>
@@ -300,30 +305,35 @@ const HomePage: React.FC = () => {
                 Comprehensive IT services to build, secure, and optimize your technology infrastructure.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
               {itServices.map((service, index) => (
                 <div key={index} className="group">
-                  <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg mb-4`}>
-                      <service.icon className="h-6 w-6 text-white" />
+                  <div className="bg-gray-800 rounded-xl p-4 sm:p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700">
+                    <div className={`inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${service.color} rounded-lg mb-4`}>
+                      <service.icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                    <p className="text-gray-300 mb-4">{service.description}</p>
-                    <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
+                    <h3 className="text-lg sm:text-xl font-semibold text-white mb-3">{service.title}</h3>
+                    <p className="text-sm sm:text-base text-gray-300 mb-4">{service.description}</p>
+                    <div className="text-xl sm:text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
                     <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                          {feature}
+                      {service.features.slice(0, 3).map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-xs sm:text-sm text-gray-300">
+                          <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-400 mr-2 flex-shrink-0" />
+                          <span className="truncate">{feature}</span>
                         </li>
                       ))}
+                      {service.features.length > 3 && (
+                        <li className="text-xs sm:text-sm text-gray-400">
+                          +{service.features.length - 3} more features
+                        </li>
+                      )}
                     </ul>
                     <Link
                       to="/contact"
-                      className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300"
+                      className="w-full inline-flex items-center justify-center px-3 sm:px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 text-sm sm:text-base"
                     >
                       Get Quote
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      <ArrowRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
                     </Link>
                   </div>
                 </div>
@@ -343,30 +353,35 @@ const HomePage: React.FC = () => {
                 Ready-to-use software solutions designed to solve specific business challenges with minimal setup.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
               {microSaasProducts.map((product, index) => (
                 <div key={index} className="group">
-                  <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${product.color} rounded-lg mb-4`}>
-                      <product.icon className="h-6 w-6 text-white" />
+                  <div className="bg-gray-800 rounded-xl p-4 sm:p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700">
+                    <div className={`inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${product.color} rounded-lg mb-4`}>
+                      <product.icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{product.title}</h3>
-                    <p className="text-gray-300 mb-4">{product.description}</p>
-                    <div className="text-2xl font-bold text-green-400 mb-4">{product.price}</div>
+                    <h3 className="text-lg sm:text-xl font-semibold text-white mb-3">{product.title}</h3>
+                    <p className="text-sm sm:text-base text-gray-300 mb-4">{product.description}</p>
+                    <div className="text-xl sm:text-2xl font-bold text-green-400 mb-4">{product.price}</div>
                     <ul className="space-y-2 mb-6">
-                      {product.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                          {feature}
+                      {product.features.slice(0, 3).map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-xs sm:text-sm text-gray-300">
+                          <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-400 mr-2 flex-shrink-0" />
+                          <span className="truncate">{feature}</span>
                         </li>
                       ))}
+                      {product.features.length > 3 && (
+                        <li className="text-xs sm:text-sm text-gray-400">
+                          +{product.features.length - 3} more features
+                        </li>
+                      )}
                     </ul>
                     <Link
                       to="/contact"
-                      className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300"
+                      className="w-full inline-flex items-center justify-center px-3 sm:px-4 py-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 text-sm sm:text-base"
                     >
                       Start Free Trial
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      <ArrowRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
                     </Link>
                   </div>
                 </div>

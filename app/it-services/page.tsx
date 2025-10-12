@@ -99,6 +99,150 @@ const ItServicesPage: React.FC = () => {
       category: 'Development'
     },
     {
+      title: '5G Network Implementation',
+      description: 'Next-generation 5G network infrastructure and optimization',
+      price: 'Starting at $25,000',
+      features: [
+        '5G network design',
+        'Infrastructure deployment',
+        'Performance optimization',
+        'IoT integration',
+        'Edge computing setup',
+        'Network monitoring'
+      ],
+      icon: Wifi,
+      color: 'from-blue-600 to-indigo-600',
+      category: '5G Technology'
+    },
+    {
+      title: 'Quantum Computing Infrastructure',
+      description: 'Quantum computing setup and integration for advanced problem solving',
+      price: 'Starting at $50,000',
+      features: [
+        'Quantum hardware setup',
+        'Quantum algorithm development',
+        'Hybrid classical-quantum systems',
+        'Quantum security protocols',
+        'Research collaboration',
+        'Performance optimization'
+      ],
+      icon: Cpu,
+      color: 'from-purple-600 to-violet-600',
+      category: 'Quantum Computing'
+    },
+    {
+      title: 'Blockchain Infrastructure',
+      description: 'Enterprise blockchain solutions and smart contract development',
+      price: 'Starting at $15,000',
+      features: [
+        'Blockchain network setup',
+        'Smart contract development',
+        'DeFi integration',
+        'NFT marketplace',
+        'Security auditing',
+        'Compliance management'
+      ],
+      icon: Lock,
+      color: 'from-yellow-500 to-orange-500',
+      category: 'Blockchain'
+    },
+    {
+      title: 'IoT Edge Computing',
+      description: 'Internet of Things edge computing solutions for real-time processing',
+      price: 'Starting at $8,000',
+      features: [
+        'Edge device deployment',
+        'Real-time data processing',
+        'Local AI inference',
+        'Network optimization',
+        'Security protocols',
+        'Scalable architecture'
+      ],
+      icon: Settings,
+      color: 'from-cyan-500 to-teal-500',
+      category: 'IoT'
+    },
+    {
+      title: 'AR/VR Development',
+      description: 'Augmented and Virtual Reality applications and experiences',
+      price: 'Starting at $20,000',
+      features: [
+        'AR/VR app development',
+        '3D content creation',
+        'Immersive experiences',
+        'Cross-platform support',
+        'Performance optimization',
+        'User experience design'
+      ],
+      icon: Eye,
+      color: 'from-pink-500 to-rose-500',
+      category: 'AR/VR'
+    },
+    {
+      title: 'Robotics Integration',
+      description: 'Robotic process automation and autonomous systems integration',
+      price: 'Starting at $30,000',
+      features: [
+        'RPA implementation',
+        'Robot programming',
+        'Sensor integration',
+        'Fleet management',
+        'Safety protocols',
+        'Maintenance systems'
+      ],
+      icon: Settings,
+      color: 'from-gray-500 to-slate-500',
+      category: 'Robotics'
+    },
+    {
+      title: 'Space Technology Solutions',
+      description: 'Satellite communication and space-based technology integration',
+      price: 'Starting at $100,000',
+      features: [
+        'Satellite communication setup',
+        'Ground station development',
+        'Data processing systems',
+        'Mission control software',
+        'Space weather monitoring',
+        'Research collaboration'
+      ],
+      icon: Globe,
+      color: 'from-blue-800 to-indigo-800',
+      category: 'Space Technology'
+    },
+    {
+      title: 'Biotech IT Infrastructure',
+      description: 'Specialized IT solutions for biotechnology and pharmaceutical companies',
+      price: 'Starting at $40,000',
+      features: [
+        'Laboratory information systems',
+        'Data management platforms',
+        'Compliance monitoring',
+        'Research collaboration tools',
+        'Security protocols',
+        'Regulatory reporting'
+      ],
+      icon: Heart,
+      color: 'from-green-500 to-emerald-500',
+      category: 'Biotech'
+    },
+    {
+      title: 'Climate Tech Solutions',
+      description: 'Environmental monitoring and sustainability technology infrastructure',
+      price: 'Starting at $12,000',
+      features: [
+        'Environmental sensors',
+        'Data collection systems',
+        'Carbon tracking',
+        'Sustainability reporting',
+        'Green energy integration',
+        'Compliance monitoring'
+      ],
+      icon: TrendingUp,
+      color: 'from-green-400 to-teal-400',
+      category: 'Climate Technology'
+    },
+    {
       title: 'Database Management',
       description: 'Database design, optimization, and maintenance',
       price: 'Starting at $2,500',

@@ -127,6 +127,17 @@ function App() {
                 <Route path="/micro-saas/expense-tracker" element={<MicroSaasPage />} />
                 <Route path="/micro-saas/inventory-management" element={<MicroSaasPage />} />
                 
+                {/* New Micro SaaS Services */}
+                <Route path="/zion-ai-assistant-pro" element={<MicroSaasPage />} />
+                <Route path="/zion-blockchain-manager" element={<MicroSaasPage />} />
+                <Route path="/zion-quantum-calculator" element={<MicroSaasPage />} />
+                <Route path="/zion-iot-hub" element={<MicroSaasPage />} />
+                <Route path="/zion-ar-vr-studio" element={<MicroSaasPage />} />
+                <Route path="/zion-robotics-controller" element={<MicroSaasPage />} />
+                <Route path="/zion-space-analytics" element={<MicroSaasPage />} />
+                <Route path="/zion-biotech-lab" element={<MicroSaasPage />} />
+                <Route path="/zion-climate-engine" element={<MicroSaasPage />} />
+                
                 {/* AI Services Dropdown */}
                 <Route path="/ai-content-generator" element={<AiContentGenerationPage />} />
                 <Route path="/ai-chatbot-builder" element={<AiServicesPage />} />
@@ -145,6 +156,14 @@ function App() {
                 <Route path="/ai-password-manager" element={<AiServicesPage />} />
                 <Route path="/ai-task-manager" element={<AiServicesPage />} />
                 
+                {/* New AI Services */}
+                <Route path="/ai-quantum-computing" element={<AiServicesPage />} />
+                <Route path="/ai-climate-intelligence" element={<AiServicesPage />} />
+                <Route path="/ai-financial-trading" element={<AiServicesPage />} />
+                <Route path="/ai-blockchain-analytics" element={<AiServicesPage />} />
+                <Route path="/ai-mobile-intelligence" element={<AiServicesPage />} />
+                <Route path="/ai-autonomous-systems" element={<AiServicesPage />} />
+                
                 {/* IT Services Dropdown */}
                 <Route path="/web-development" element={<ItServicesPage />} />
                 <Route path="/mobile-development" element={<ItServicesPage />} />
@@ -159,6 +178,11 @@ function App() {
                 <Route path="/data-analytics" element={<ItServicesPage />} />
                 <Route path="/iot-solutions" element={<ItServicesPage />} />
                 <Route path="/blockchain-development" element={<ItServicesPage />} />
+                
+                {/* New IT Services */}
+                <Route path="/space-technology" element={<ItServicesPage />} />
+                <Route path="/biotech-it" element={<ItServicesPage />} />
+                <Route path="/climate-tech" element={<ItServicesPage />} />
                 
                 {/* 5G Services */}
                 <Route path="/5g-network-infrastructure" element={<ItServicesPage />} />

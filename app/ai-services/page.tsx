@@ -92,6 +92,76 @@ const AiServicesPage: React.FC = () => {
       benefits: ['75% process efficiency', '90% error reduction', 'Scalable automation'],
       link: '/ai-workflow-automation',
       category: 'automation'
+    },
+    {
+      icon: <Cpu className="w-8 h-8 text-cyan-400" />,
+      title: 'AI Quantum Computing',
+      description: 'Quantum machine learning and optimization using quantum computing principles.',
+      price: 'Starting at $9,999/month',
+      features: ['Quantum algorithms', 'Optimization problems', 'Cryptographic analysis', 'Research tools'],
+      benefits: ['Exponential speedup', 'Complex problem solving', 'Future-proof technology'],
+      link: '/ai-quantum-computing',
+      category: 'quantum'
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-emerald-400" />,
+      title: 'AI Climate Intelligence',
+      description: 'Climate change analysis and environmental impact prediction using AI.',
+      price: 'Starting at $3,499/month',
+      features: ['Climate modeling', 'Carbon tracking', 'Weather prediction', 'Sustainability analytics'],
+      benefits: ['Accurate predictions', 'Environmental compliance', 'Cost optimization'],
+      link: '/ai-climate-intelligence',
+      category: 'climate'
+    },
+    {
+      icon: <Heart className="w-8 h-8 text-red-400" />,
+      title: 'AI Healthcare Diagnostics',
+      description: 'Medical image analysis and diagnostic assistance for healthcare professionals.',
+      price: 'Starting at $4,999/month',
+      features: ['Medical imaging', 'Diagnostic assistance', 'Drug discovery', 'Patient monitoring'],
+      benefits: ['95% diagnostic accuracy', 'Faster diagnosis', 'Reduced costs'],
+      link: '/ai-healthcare-diagnostics',
+      category: 'healthcare'
+    },
+    {
+      icon: <DollarSign className="w-8 h-8 text-green-400" />,
+      title: 'AI Financial Trading',
+      description: 'Algorithmic trading and financial market analysis using advanced AI.',
+      price: 'Starting at $5,999/month',
+      features: ['Algorithmic trading', 'Market analysis', 'Risk assessment', 'Portfolio optimization'],
+      benefits: ['Higher returns', 'Risk reduction', '24/7 trading'],
+      link: '/ai-financial-trading',
+      category: 'finance'
+    },
+    {
+      icon: <Lock className="w-8 h-8 text-purple-400" />,
+      title: 'AI Blockchain Analytics',
+      description: 'Blockchain transaction analysis and cryptocurrency market intelligence.',
+      price: 'Starting at $2,999/month',
+      features: ['Transaction analysis', 'Fraud detection', 'Market intelligence', 'Compliance monitoring'],
+      benefits: ['Enhanced security', 'Fraud prevention', 'Regulatory compliance'],
+      link: '/ai-blockchain-analytics',
+      category: 'blockchain'
+    },
+    {
+      icon: <Smartphone className="w-8 h-8 text-blue-400" />,
+      title: 'AI Mobile Intelligence',
+      description: 'Mobile app optimization and user behavior analysis using AI.',
+      price: 'Starting at $1,799/month',
+      features: ['App optimization', 'User analytics', 'Performance monitoring', 'Personalization'],
+      benefits: ['Better user experience', 'Higher engagement', 'Increased retention'],
+      link: '/ai-mobile-intelligence',
+      category: 'mobile'
+    },
+    {
+      icon: <Settings className="w-8 h-8 text-orange-400" />,
+      title: 'AI Autonomous Systems',
+      description: 'Self-driving vehicles and autonomous robotics control systems.',
+      price: 'Starting at $7,999/month',
+      features: ['Autonomous navigation', 'Object detection', 'Path planning', 'Safety protocols'],
+      benefits: ['Improved safety', 'Cost reduction', '24/7 operation'],
+      link: '/ai-autonomous-systems',
+      category: 'autonomous'
     }
   ];
 

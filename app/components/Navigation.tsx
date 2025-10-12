@@ -75,7 +75,13 @@ const Navigation: React.FC = () => {
     { name: 'AI Computer Vision', url: '/ai-computer-vision', icon: Eye },
     { name: 'AI Voice Solutions', url: '/ai-voice-solutions', icon: Mic },
     { name: 'AI Workflow Automation', url: '/ai-workflow-automation', icon: Settings },
-    { name: 'AI Document Processing', url: '/ai-document-processing', icon: FileText }
+    { name: 'AI Document Processing', url: '/ai-document-processing', icon: FileText },
+    { name: 'AI Quantum Computing', url: '/ai-quantum-computing', icon: Cpu },
+    { name: 'AI Climate Intelligence', url: '/ai-climate-intelligence', icon: Globe },
+    { name: 'AI Financial Trading', url: '/ai-financial-trading', icon: DollarSign },
+    { name: 'AI Blockchain Analytics', url: '/ai-blockchain-analytics', icon: Lock },
+    { name: 'AI Mobile Intelligence', url: '/ai-mobile-intelligence', icon: Smartphone },
+    { name: 'AI Autonomous Systems', url: '/ai-autonomous-systems', icon: Settings }
   ];
 
   const itServices = [
@@ -90,7 +96,16 @@ const Navigation: React.FC = () => {
     { name: 'Data Analytics & BI', url: '/data-analytics-bi', icon: BarChart },
     { name: 'Custom Software', url: '/custom-software', icon: Code },
     { name: 'Network Infrastructure', url: '/network-infrastructure', icon: Wifi },
-    { name: 'IT Asset Management', url: '/it-asset-management', icon: Package }
+    { name: 'IT Asset Management', url: '/it-asset-management', icon: Package },
+    { name: '5G Network Implementation', url: '/5g-network-infrastructure', icon: Wifi },
+    { name: 'Quantum Computing Infrastructure', url: '/quantum-computing', icon: Cpu },
+    { name: 'Blockchain Infrastructure', url: '/blockchain', icon: Lock },
+    { name: 'IoT Edge Computing', url: '/iot-edge-computing', icon: Settings },
+    { name: 'AR/VR Development', url: '/ar-vr-solutions', icon: Eye },
+    { name: 'Robotics Integration', url: '/autonomous-systems', icon: Settings },
+    { name: 'Space Technology Solutions', url: '/space-technology', icon: Globe },
+    { name: 'Biotech IT Infrastructure', url: '/biotech-it', icon: Heart },
+    { name: 'Climate Tech Solutions', url: '/climate-tech', icon: TrendingUp }
   ];
 
   const microSaasServices = [
@@ -105,7 +120,16 @@ const Navigation: React.FC = () => {
     { name: 'Zion Project Master', url: '/zion-project-master', icon: CheckSquare },
     { name: 'Zion Email Automation', url: '/zion-email-automation', icon: Mail },
     { name: 'Zion Inventory Smart', url: '/zion-inventory-smart', icon: Box },
-    { name: 'Zion Invoice Genius', url: '/zion-invoice-genius', icon: DollarSign }
+    { name: 'Zion Invoice Genius', url: '/zion-invoice-genius', icon: DollarSign },
+    { name: 'Zion AI Assistant Pro', url: '/zion-ai-assistant-pro', icon: Brain },
+    { name: 'Zion Blockchain Manager', url: '/zion-blockchain-manager', icon: Lock },
+    { name: 'Zion Quantum Calculator', url: '/zion-quantum-calculator', icon: Cpu },
+    { name: 'Zion IoT Hub', url: '/zion-iot-hub', icon: Wifi },
+    { name: 'Zion AR/VR Studio', url: '/zion-ar-vr-studio', icon: Eye },
+    { name: 'Zion Robotics Controller', url: '/zion-robotics-controller', icon: Settings },
+    { name: 'Zion Space Analytics', url: '/zion-space-analytics', icon: Globe },
+    { name: 'Zion Biotech Lab', url: '/zion-biotech-lab', icon: Heart },
+    { name: 'Zion Climate Engine', url: '/zion-climate-engine', icon: TrendingUp }
   ];
 
   return (
@@ -236,6 +260,12 @@ const Navigation: React.FC = () => {
             <Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">
               Pricing
             </Link>
+            <Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">
+              Case Studies
+            </Link>
+            <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">
+              Blog
+            </Link>
             <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
               Contact
             </Link>
@@ -308,6 +338,20 @@ const Navigation: React.FC = () => {
                 onClick={() => setIsOpen(false)}
               >
                 Pricing
+              </Link>
+              <Link
+                to="/case-studies"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+                onClick={() => setIsOpen(false)}
+              >
+                Case Studies
+              </Link>
+              <Link
+                to="/blog"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+                onClick={() => setIsOpen(false)}
+              >
+                Blog
               </Link>
               <Link
                 to="/contact"

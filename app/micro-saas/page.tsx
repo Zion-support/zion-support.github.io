@@ -42,6 +42,213 @@ const MicroSaasPage: React.FC = () => {
       popular: true
     },
     {
+      id: 'zion-ai-assistant-pro',
+      title: 'Zion AI Assistant Pro',
+      description: 'Advanced AI-powered virtual assistant for business automation and productivity enhancement',
+      price: '$79/month',
+      originalPrice: '$119/month',
+      features: [
+        'Natural language processing',
+        'Task automation',
+        'Calendar management',
+        'Email composition',
+        'Document generation',
+        'Voice commands',
+        'Multi-language support',
+        'Integration with 100+ apps'
+      ],
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+      category: 'AI Assistant',
+      rating: 4.8,
+      reviews: 203,
+      popular: true
+    },
+    {
+      id: 'zion-blockchain-manager',
+      title: 'Zion Blockchain Manager',
+      description: 'Comprehensive blockchain management platform for crypto transactions and smart contracts',
+      price: '$199/month',
+      originalPrice: '$299/month',
+      features: [
+        'Multi-wallet management',
+        'Smart contract deployment',
+        'DeFi integration',
+        'NFT marketplace',
+        'Transaction monitoring',
+        'Security auditing',
+        'Portfolio tracking',
+        'Tax reporting'
+      ],
+      icon: Lock,
+      color: 'from-yellow-500 to-orange-500',
+      category: 'Blockchain',
+      rating: 4.7,
+      reviews: 89,
+      popular: false
+    },
+    {
+      id: 'zion-quantum-calculator',
+      title: 'Zion Quantum Calculator',
+      description: 'Quantum computing simulation platform for complex calculations and optimization problems',
+      price: '$299/month',
+      originalPrice: '$499/month',
+      features: [
+        'Quantum algorithm simulation',
+        'Optimization problems',
+        'Machine learning models',
+        'Cryptographic analysis',
+        'Research tools',
+        'API access',
+        'Cloud computing',
+        'Academic licensing'
+      ],
+      icon: Cpu,
+      color: 'from-indigo-500 to-purple-500',
+      category: 'Quantum Computing',
+      rating: 4.9,
+      reviews: 45,
+      popular: false
+    },
+    {
+      id: 'zion-iot-hub',
+      title: 'Zion IoT Hub',
+      description: 'Internet of Things management platform for connected devices and smart automation',
+      price: '$89/month',
+      originalPrice: '$139/month',
+      features: [
+        'Device management',
+        'Real-time monitoring',
+        'Data analytics',
+        'Automation rules',
+        'Security protocols',
+        'Mobile app',
+        'API integrations',
+        'Scalable infrastructure'
+      ],
+      icon: Wifi,
+      color: 'from-cyan-500 to-blue-500',
+      category: 'IoT',
+      rating: 4.6,
+      reviews: 156,
+      popular: false
+    },
+    {
+      id: 'zion-ar-vr-studio',
+      title: 'Zion AR/VR Studio',
+      description: 'Augmented and Virtual Reality content creation platform for immersive experiences',
+      price: '$149/month',
+      originalPrice: '$229/month',
+      features: [
+        '3D content creation',
+        'AR/VR development tools',
+        'Asset library',
+        'Collaboration features',
+        'Publishing platform',
+        'Analytics dashboard',
+        'Multi-platform support',
+        'Cloud rendering'
+      ],
+      icon: Eye,
+      color: 'from-pink-500 to-rose-500',
+      category: 'AR/VR',
+      rating: 4.8,
+      reviews: 78,
+      popular: false
+    },
+    {
+      id: 'zion-robotics-controller',
+      title: 'Zion Robotics Controller',
+      description: 'AI-powered robotics control system for autonomous machines and automation',
+      price: '$399/month',
+      originalPrice: '$599/month',
+      features: [
+        'Robot programming',
+        'Motion planning',
+        'Computer vision',
+        'Sensor integration',
+        'Fleet management',
+        'Predictive maintenance',
+        'Safety protocols',
+        'Remote monitoring'
+      ],
+      icon: Settings,
+      color: 'from-gray-500 to-slate-500',
+      category: 'Robotics',
+      rating: 4.9,
+      reviews: 34,
+      popular: false
+    },
+    {
+      id: 'zion-space-analytics',
+      title: 'Zion Space Analytics',
+      description: 'Satellite data analysis platform for space industry and earth observation',
+      price: '$499/month',
+      originalPrice: '$799/month',
+      features: [
+        'Satellite imagery analysis',
+        'Weather prediction',
+        'Environmental monitoring',
+        'Crop analysis',
+        'Urban planning',
+        'Disaster response',
+        'API access',
+        'Custom algorithms'
+      ],
+      icon: Globe,
+      color: 'from-blue-600 to-indigo-600',
+      category: 'Space Tech',
+      rating: 4.8,
+      reviews: 23,
+      popular: false
+    },
+    {
+      id: 'zion-biotech-lab',
+      title: 'Zion Biotech Lab',
+      description: 'AI-powered biotechnology research platform for drug discovery and genetic analysis',
+      price: '$599/month',
+      originalPrice: '$999/month',
+      features: [
+        'Drug discovery algorithms',
+        'Genetic analysis tools',
+        'Protein modeling',
+        'Clinical trial management',
+        'Data visualization',
+        'Research collaboration',
+        'Compliance tools',
+        'Publication support'
+      ],
+      icon: Heart,
+      color: 'from-green-500 to-emerald-500',
+      category: 'Biotech',
+      rating: 4.9,
+      reviews: 67,
+      popular: false
+    },
+    {
+      id: 'zion-climate-engine',
+      title: 'Zion Climate Engine',
+      description: 'Climate change analysis and carbon footprint tracking platform',
+      price: '$129/month',
+      originalPrice: '$199/month',
+      features: [
+        'Carbon footprint tracking',
+        'Climate impact analysis',
+        'Sustainability reporting',
+        'Green energy optimization',
+        'Environmental compliance',
+        'Data visualization',
+        'API integrations',
+        'Mobile monitoring'
+      ],
+      icon: TrendingUp,
+      color: 'from-green-400 to-teal-400',
+      category: 'Climate Tech',
+      rating: 4.7,
+      reviews: 134,
+      popular: false
+    },
+    {
       id: 'zion-chat-ai',
       title: 'Zion Chat AI',
       description: 'Intelligent customer support chatbot with natural language processing and multi-channel support',
@@ -296,7 +503,7 @@ const MicroSaasPage: React.FC = () => {
     }
   ];
 
-  const categories = ['All', 'Analytics', 'Customer Support', 'Security', 'Backup & Recovery', 'Content Creation', 'CRM', 'Data Management', 'Marketing', 'Project Management', 'Email Marketing', 'Inventory', 'Finance'];
+  const categories = ['All', 'Analytics', 'AI Assistant', 'Blockchain', 'Quantum Computing', 'IoT', 'AR/VR', 'Robotics', 'Space Tech', 'Biotech', 'Climate Tech', 'Customer Support', 'Security', 'Backup & Recovery', 'Content Creation', 'CRM', 'Data Management', 'Marketing', 'Project Management', 'Email Marketing', 'Inventory', 'Finance'];
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const filteredProducts = selectedCategory === 'All' 

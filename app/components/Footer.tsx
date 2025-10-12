@@ -14,11 +14,11 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Voice Solutions', url: '/ai-voice-solutions', description: 'Speech recognition' },
     { name: 'AI Workflow Automation', url: '/ai-automation', description: 'Process automation' },
     { name: 'AI Healthcare Solutions', url: '/ai-healthcare', description: 'Medical AI' },
-    { name: 'AI Financial Services', url: '/ai-financial-services', description: 'Fintech AI' },
-    { name: 'AI Document Processing', url: '/ai-document-processing', description: 'Document analysis' },
-    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', description: 'Business forecasting' },
-    { name: 'AI HR Solutions', url: '/ai-hr-solutions', description: 'Human resources AI' },
-    { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'Distributed AI processing' }
+    { name: 'AI Financial Trading', url: '/ai-financial-trading', description: 'Algorithmic trading' },
+    { name: 'AI Quantum Computing', url: '/ai-quantum-computing', description: 'Quantum AI' },
+    { name: 'AI Climate Intelligence', url: '/ai-climate-intelligence', description: 'Environmental AI' },
+    { name: 'AI Blockchain Analytics', url: '/ai-blockchain-analytics', description: 'Crypto AI' },
+    { name: 'AI Autonomous Systems', url: '/ai-autonomous-systems', description: 'Self-driving AI' }
   ];
 
   const itServices = [
@@ -28,12 +28,12 @@ const Footer: React.FC = memo(() => {
     { name: 'Web Development', url: '/web-development', description: 'Modern web apps' },
     { name: 'Mobile Development', url: '/mobile-development', description: 'iOS & Android' },
     { name: 'API Development', url: '/api-development', description: 'API solutions' },
-    { name: 'IT Support', url: '/it-support', description: '24/7 technical support' },
-    { name: 'Data Analytics & BI', url: '/data-analytics-bi', description: 'Business intelligence' },
-    { name: 'Custom Software', url: '/custom-software', description: 'Tailored solutions' },
-    { name: 'Database Management', url: '/database-management', description: 'Database optimization' },
-    { name: 'Network Infrastructure', url: '/network-infrastructure', description: 'Network setup' },
-    { name: 'IT Asset Management', url: '/it-asset-management', description: 'Asset lifecycle' }
+    { name: '5G Network Implementation', url: '/5g-network-infrastructure', description: 'Next-gen networks' },
+    { name: 'Quantum Computing Infrastructure', url: '/quantum-computing', description: 'Quantum systems' },
+    { name: 'Blockchain Infrastructure', url: '/blockchain', description: 'Distributed systems' },
+    { name: 'IoT Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
+    { name: 'AR/VR Development', url: '/ar-vr-solutions', description: 'Immersive experiences' },
+    { name: 'Space Technology Solutions', url: '/space-technology', description: 'Satellite systems' }
   ];
 
   const microSaasServices = [
@@ -43,12 +43,12 @@ const Footer: React.FC = memo(() => {
     { name: 'Zion Cloud Vault', url: '/zion-cloud-vault', description: 'Cloud backup & recovery' },
     { name: 'Zion Content Studio', url: '/zion-content-studio', description: 'Content creation platform' },
     { name: 'Zion CRM Intelligence', url: '/zion-crm-intelligence', description: 'Smart CRM solution' },
-    { name: 'Zion Data Sync', url: '/zion-data-sync', description: 'Data synchronization' },
-    { name: 'Zion Lead Magnet', url: '/zion-lead-magnet', description: 'Lead generation tool' },
-    { name: 'Zion Project Master', url: '/zion-project-master', description: 'Project management' },
-    { name: 'Zion Email Automation', url: '/zion-email-automation', description: 'Email marketing' },
-    { name: 'Zion Inventory Smart', url: '/zion-inventory-smart', description: 'Inventory management' },
-    { name: 'Zion Invoice Genius', url: '/zion-invoice-genius', description: 'Invoice automation' }
+    { name: 'Zion AI Assistant Pro', url: '/zion-ai-assistant-pro', description: 'AI virtual assistant' },
+    { name: 'Zion Blockchain Manager', url: '/zion-blockchain-manager', description: 'Crypto management' },
+    { name: 'Zion Quantum Calculator', url: '/zion-quantum-calculator', description: 'Quantum computing' },
+    { name: 'Zion IoT Hub', url: '/zion-iot-hub', description: 'IoT management' },
+    { name: 'Zion AR/VR Studio', url: '/zion-ar-vr-studio', description: 'Immersive content' },
+    { name: 'Zion Climate Engine', url: '/zion-climate-engine', description: 'Environmental tracking' }
   ];
 
   const companyLinks = [

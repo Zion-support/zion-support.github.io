@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export default function AIVoiceAssistant() {
   const features = [
@@ -327,5 +326,3 @@ export default function AIVoiceAssistant() {
     </Layout>
   )
 }
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-6024
