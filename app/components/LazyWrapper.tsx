@@ -6,8 +6,13 @@ interface LazyWrapperProps {
 }
 
 const DefaultFallback = () => (
+<<<<<<< HEAD
   <div className="flex items-center justify-center min-h-screen">
     <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400"></div>
+=======
+  <div className="flex items-center justify-centermin-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2-border-cyan-400"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
   </div>
 )
 

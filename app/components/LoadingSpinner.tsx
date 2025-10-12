@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
 'use client';
 import React from 'react';
 
@@ -25,8 +29,13 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   return (
+<<<<<<< HEAD
     <div className="flex flex-col items-center justify-center space-y-4">
       <div className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}>
+=======
+    <div className="flex flex-col items-centerjustify-centerspace-y-4">
+      <div className="{`${size-Classes[size]}" ${colorClasses[color]} animate-spin`} />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
         <svg
           className="w-full h-full"
           xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +58,11 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         </svg>
       </div>
       {text && (
+<<<<<<< HEAD
         <p className="text-gray-400 text-sm animate-pulse">{text}</p>
+=======
+        <p className="text-gray-400-text-smanimate-pulse">{text}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
       )}
     </div>
   );

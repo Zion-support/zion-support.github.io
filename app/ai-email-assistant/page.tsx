@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
@@ -7,6 +8,18 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Mail, Brain, Zap, CheckCircle, ArrowRight, Users, Award, Star, Globe, Settings } from 'lucide-react';
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings } from 'lucide-react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Star, Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings} from 'lucide-react';
+'use client';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
 
 const AIEmailAssistantPage: React.FC = () => {
   const features = [
@@ -58,6 +71,7 @@ const AIEmailAssistantPage: React.FC = () => {
 
   return (
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>AI Email Assistant - Zion Tech Group</title>
         <meta name="description" content="Transform your email management with our AI Email Assistant. Smart classification, auto-responses, sentiment analysis, and automated workflows." />
@@ -91,10 +105,38 @@ const AIEmailAssistantPage: React.FC = () => {
                 </Link>
               </div>
             </div>
+=======
+      <Helmet />
+        <title   />AI Email Assistant - Zion Tech Group</title>
+        <meta const name = "description" content="Transform your email management with our AI Email Assistant. Smart classification, auto-responses, sentiment analysis, and automated workflows." / / />
+        <meta name="keywords" content="AI email assistant, email automation, smart email management, auto-responses, email classification" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900-via-purple-900to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-32-pb-20" />
+          <div className="containermx-autopx-4">
+            <div className="text-center max-w-4-xlmx-auto">
+              <h1 className="text-5 xl md:text-6 xl font-boldtext-white mb-6" />
+                AI <span className="bg-gradient-to-r from-cyan-400 to-purple-400-bg-clip-texttext-transparent"   />Email Assistant</span>
+              </h1>
+              <p className="text-xl text-gray-300-mb-8leading-relaxed" />
+                Transform your email management with intelligent automation, smart classification, 
+                and AI-powered responses that save time and improve productivity.
+              </p>
+              <div className="flex flex-col sm:flex-rowgap-4-justify-center">
+                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600  hover:to-purple-600 transition-all duration-300-transformhover:scale-105">Start Building
+                </Link>
+                <Link to="/ai-services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300-transformhover:scale-105">View All AI Services
+                        </Link>
+      </div>
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
           </div>
         </section>
 
         {/* Features Section */}
+<<<<<<< HEAD
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -102,10 +144,20 @@ const AIEmailAssistantPage: React.FC = () => {
                 Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Features</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+=======
+        <section className="py-20" />
+          <div className="containermx-autopx-4">
+            <div className="text-centermb-16">
+              <h2 className="text-4 xl font-boldtext-white mb-6" />
+                Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400-bg-clip-texttext-transparent"   />Features</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3-xlmx-auto" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
                 Everything you need to automate and optimize your email management
               </p>
             </div>
 
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="text-center group">
@@ -114,6 +166,16 @@ const AIEmailAssistantPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2-lg:grid-cols-4gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-centergroup" />
+                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110-transition-transformduration-300">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-boldtext-white mb-4"   />{feature.title}</h3>
+                  <p className="text-gray-300-leading-relaxed" />{feature.description}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
                 </div>
               ))}
             </div>
@@ -121,6 +183,7 @@ const AIEmailAssistantPage: React.FC = () => {
         </section>
 
         {/* Use Cases Section */}
+<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -128,10 +191,20 @@ const AIEmailAssistantPage: React.FC = () => {
                 Use <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Cases</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+=======
+        <section className="py-20 bg-gradient-to-rfrom-slate-800/30-to-slate-900/30" />
+          <div className="containermx-autopx-4">
+            <div className="text-centermb-16">
+              <h2 className="text-4 xl font-boldtext-white mb-6" />
+                Use <span className="bg-gradient-to-r from-cyan-400 to-purple-400-bg-clip-texttext-transparent"   />Cases</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3-xlmx-auto" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
                 Discover how our AI email assistant can transform your communication workflows
               </p>
             </div>
 
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {useCases.map((useCase, index) => (
                 <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105">
@@ -142,6 +215,17 @@ const AIEmailAssistantPage: React.FC = () => {
                     {useCase.title}
                   </h3>
                   <p className="text-gray-300 text-sm leading-relaxed">
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2-lg:grid-cols-4gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 grouphover:transformhover:scale-105" />
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110-transition-transformduration-300">
+                    {useCase.icon}
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-3-group-hover:text-cyan-400transition-colors"  />{useCase.title}
+                  </h3>
+                  <p className="text-gray-300-text-smleading-relaxed" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
                     {useCase.description}
                   </p>
                 </div>
@@ -150,6 +234,7 @@ const AIEmailAssistantPage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Pricing Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -291,6 +376,24 @@ const AIEmailAssistantPage: React.FC = () => {
                 </Link>
               </div>
             </div>
+=======
+        {/* CTA Section */}
+        <section className="py-20" />
+          <div className="containermx-autopx-4">
+            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12 text-center">
+              <h2 className="text-4 xl font-boldtext-white mb-6"  />Ready to Transform Your Email Management?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2-xlmx-auto" />
+                Start automating your email workflows and boost productivity with AI-powered assistance.
+              </p>
+              <div className="flex flex-col sm:flex-rowgap-4-justify-center">
+                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600  hover:to-purple-600 transition-all duration-300-transformhover:scale-105">Start Building Now
+                </Link>
+                <Link to="/about" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300-transformhover:scale-105">Learn More About Us
+                        </Link>
+      </div>
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
           </div>
         </section>
       </div>

@@ -1,6 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
 import ErrorBoundary from './components/ErrorBoundary';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -76,6 +79,7 @@ const Layout: React.FC<LayoutProps> = ({
   };
 
   return (
+<<<<<<< HEAD
     <ErrorBoundary>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Helmet>
@@ -83,6 +87,14 @@ const Layout: React.FC<LayoutProps> = ({
           <meta name="description" content={description} />
           <meta name="keywords" content={keywords} />
 
+=======
+    <ErrorBoundary />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900-via-purple-900to-slate-900">
+        <Helmet />
+          <title>{title}</title>
+          <meta name="description" content="{description}" />
+          <meta name="keywords" content="{keywords}" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
           {/* Open Graph Meta Tags */}
           <meta property="og:title" content={title} />
           <meta property="og:description" content={description} />
@@ -93,6 +105,7 @@ const Layout: React.FC<LayoutProps> = ({
 
           {/* Twitter Card Meta Tags */}
           <meta name="twitter:card" content="summary_large_image" />
+<<<<<<< HEAD
           <meta name="twitter:title" content={title} />
           <meta name="twitter:description" content={description} />
           <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
@@ -104,6 +117,17 @@ const Layout: React.FC<LayoutProps> = ({
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <meta name="theme-color" content="#8b5cf6" />
 
+=======
+          <meta name="twitter: title" content="{title}" />
+          <meta name="twitter: description" content="{description}" />
+          <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
+          <meta name="twitter:site" content="@ziontechgroup" />
+          {/* Additional SEO Meta Tags */}
+          <meta name="robots" content="index, follow" />
+          <meta name="author" content="Zion Tech Group" />
+          <meta name="viewport" content="width="device-width," initial-scale=1.0" / / />
+          <meta name="theme-color" content="#8 b5 cf6" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
           {/* Structured Data */}
           <script type="application/ld+json">
             {JSON.stringify(structuredData)}
@@ -119,8 +143,13 @@ const Layout: React.FC<LayoutProps> = ({
         <Footer />
 
         {/* Theme Toggle - Fixed Position */}
+<<<<<<< HEAD
         <div className="fixed bottom-6 right-6 z-50">
           <ThemeToggle />
+=======
+        <div className="fixed bottom-6-right-6z-50">
+          <ThemeToggle / />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
         </div>
       </div>
     </ErrorBoundary>

@@ -39,24 +39,39 @@ const FuturisticServiceCard: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Futuristic Service Card | Zion Tech Group</title>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900-via-purple-900to-slate-900">
+      <Helmet />
+        <title   />Futuristic Service Card | Zion Tech Group</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
         <meta name="description" content="Professional futuristic service card solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="futuristic service card, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
 
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Futuristic Service Card
+=======
+      <section className="relative py-20 px-4-sm:px-6 lg:px-8" />
+        <div className="max-w-7-xlmx-auto">
+          <div className="text-center">
+            <h1 className="text-4 xl md:text-6 xl font-boldtext-white mb-6" />
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400-bg-clip-texttext-transparent"  />FuturisticServiceCard
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
               </span>
               <br />
               <span className="text-white">Solutions</span>
             </h1>
+<<<<<<< HEAD
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced futuristic service card solutions.
               Powered by cutting-edge AI technology and industry expertise.
@@ -68,6 +83,18 @@ const FuturisticServiceCard: React.FC = () => {
               </button>
               <button className="border border-gray-300 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
+=======
+            <p className="text-xl text-gray-300 mb-8 max-w-3-xlmx-auto" />
+              Transform your business with our advanced futuristic service card solutions.
+              Powered by cutting-edge AI technology and industry expertise.
+            </p>
+            <div className="flex flex-col sm:flex-rowgap-4-justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600  hover:to-blue-700 transition-all duration-300-flex items-center" />
+                Get Started
+                <ArrowRight className="ml-2-h-5w-5" />
+              </button>
+              <button className="border border-gray-300 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900-transition-all duration-300"  />Learn More
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
               </button>
             </div>
           </div>
@@ -75,6 +102,7 @@ const FuturisticServiceCard: React.FC = () => {
       </section>
 
       {/* Features Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -82,6 +110,14 @@ const FuturisticServiceCard: React.FC = () => {
               Our Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+=======
+      <section className="py-20 px-4-sm:px-6 lg:px-8" />
+        <div className="max-w-7-xlmx-auto">
+          <div className="text-centermb-16">
+            <h2 className="text-3 xl md:text-4 xl font-boldtext-white mb-4"  />Our Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3-xlmx-auto" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
               Discover the powerful features that make our futuristic service card solutions stand out.
             </p>
           </div>

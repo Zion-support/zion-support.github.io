@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react'
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
 
 interface SEOProps {
   title?: string
@@ -72,6 +76,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
+<<<<<<< HEAD
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}, max-image-preview:large, max-snippet:-1, max-video-preview:-1`} />
@@ -82,6 +87,17 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="format-detection" content="telephone=no,address=no,email=no" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       
+=======
+      <meta name="description" content="{description}" />
+      <meta name="keywords" content="{keywords}" />
+      <meta name="robots" content="{`${noindex" ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}, max-image-preview: large, max-snippet: -1, max-video-preview: -1`} / / />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width="device-width," initial-scale="1.0," viewport-fit=cover" / / />
+      <meta name="theme-color" content="#8 b5 cf6" />
+      <meta name="color-scheme" content="dark light" />
+      <meta name="format-detection" content="telephone=no,address=no,email=no" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" / / />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
       {/* Canonical URL */}
       <link rel="canonical" href={canonicalUrl} />
       
@@ -100,21 +116,35 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
+<<<<<<< HEAD
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:image:alt" content={title} />
+=======
+      <meta name="twitter: card" content="{twitterCard}" />
+      <meta name="twitter: title" content="{title}" />
+      <meta name="twitter: description" content="{description}" />
+      <meta name="twitter: image" content="{ogImage}" />
+      <meta name="twitter: image:alt" content="{title}" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
       <meta name="twitter:image:width" content="1200" />
       <meta name="twitter:image:height" content="630" />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
+<<<<<<< HEAD
       
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
       {/* Additional SEO Meta Tags */}
       <meta name="google-site-verification" content="your-google-verification-code" />
       <meta name="msvalidate.01" content="your-bing-verification-code" />
       <meta name="yandex-verification" content="your-yandex-verification-code" />
+<<<<<<< HEAD
       
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
       {/* Performance Hints */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />

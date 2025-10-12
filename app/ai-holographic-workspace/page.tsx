@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -68,6 +72,7 @@ const AiHolographicWorkspacePage: React.FC = () => {
 
   return (
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>AI Holographic Workspace - Zion Tech Group | Immersive 3D Collaboration Platform</title>
         <meta name="description" content="Revolutionize your workspace with AI-powered holographic technology. 3D displays, virtual collaboration, mixed reality integration, and immersive productivity tools." />
@@ -97,6 +102,23 @@ const AiHolographicWorkspacePage: React.FC = () => {
             <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
               Step into the future of work with AI-powered holographic workspaces. Immersive 3D collaboration, 
               virtual meetings, and mixed reality integration that transforms how teams work together.
+=======
+      <Helmet />
+        <title>Ai Holographic Workspace - Zion Tech Group</title>
+        <meta name="description" content="Ai Holographic Workspace services by Zion Tech Group. Professional AI and IT solutions." />
+        <meta name="keywords" content="ai-holographic-workspace, AI solutions, IT services" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900-via-purple-900to-slate-900">
+        <div className="container mx-autopx-4-py-16">
+          <div className="text-centermb-16">
+            <h1 className="text-4 xl md:text-6 xl font-boldtext-white mb-6" />
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400-bg-clip-texttext-transparent"  />Ai Holographic Workspace
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3-xlmx-auto" />
+              Professional ai holographic workspace services by Zion Tech Group.
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -118,6 +140,7 @@ const AiHolographicWorkspacePage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Stats Section */}
         <section className="py-20 px-4 relative">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/5 to-purple-500/5" />
@@ -137,6 +160,16 @@ const AiHolographicWorkspacePage: React.FC = () => {
                 </div>
               ))}
             </div>
+=======
+          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8 text-center">
+            <h2 className="text-2 xl font-boldtext-white mb-4"  >Coming Soon</h2>
+            <p className="text-gray-300 mb-6" />
+              We're working on bringing you comprehensive ai holographic workspace solutions. 
+              Contact us to learn more about our services.
+            </p>
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600  hover:to-purple-600-transition-all duration-300"  />Contact Us
+            </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
           </div>
         </section>
 

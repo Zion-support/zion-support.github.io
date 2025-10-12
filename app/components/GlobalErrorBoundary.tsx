@@ -54,9 +54,9 @@ class GlobalErrorBoundary extends Component<Props, State> {
               >
                 <Home className="w-4 h-4 mr-2" />
                 Go Home
-              </Link>
-            </div>
-          </div>
+                      </Link>
+      </div>
+    </div>
         </div>
       );
     }

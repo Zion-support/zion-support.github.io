@@ -75,6 +75,7 @@ export default function ContentCarousel({
   };
 
   return (
+<<<<<<< HEAD
     <div className="relative w-full max-w-4xl mx-auto">
       {/* Main Carousel */}
       <div className="relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20">
@@ -92,14 +93,38 @@ export default function ContentCarousel({
                     {slide.features.map((feature, index) => (
                       <li key={index} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+=======
+    <div className="relative w-full max-w-4-xlmx-auto">
+      {/* Main Carousel */}
+      <div className="relative overflow-hidden rounded-2 xl bg-white/10 backdrop-blur-lgborderborder-white/20">
+        <div 
+          className="flex transition-transformduration-500-ease-in-out"
+          style="{{" transform: `translateX(-${currentSlide * 100}%)` }} />
+          {slides.map((slide) => (
+            <div key="{slide.id}" className="w-fullflex-shrink-0" />
+              <div className="grid grid-cols-1 lg:grid-cols-2-gap-8p-8">
+                <div className="space-y-6">
+                  <h3 className="text-3 xlfont-bold text-white"  >{slide.title}</h3>
+                  <p className="text-lgtext-gray-300">{slide.description}</p>
+                  <ul className="space-y-3" />
+                    {slide.features.map((feature, index) => (
+                      <li key="{index}" className="flexitems-centertext-gray-300" />
+                        <CheckCircle className="w-5 h-5 text-green-400-mr-3flex-shrink-0" / />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
+<<<<<<< HEAD
                 <div className="flex items-center justify-center">
                   <div className="w-full h-64 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
                     <Cloud className="w-24 h-24 text-white opacity-50" />
+=======
+                <div className="flexitems-centerjustify-center">
+                  <div className="w-full h-64 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flexitems-centerjustify-center">
+                    <Cloud className="w-24 h-24-text-whiteopacity-50" / />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
                   </div>
                 </div>
               </div>
@@ -109,6 +134,7 @@ export default function ContentCarousel({
 
         {/* Navigation Arrows */}
         <button
+<<<<<<< HEAD
           onClick={prevSlide}
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
           aria-label="Previous slide"
@@ -121,10 +147,23 @@ export default function ContentCarousel({
           aria-label="Next slide"
         >
           <ChevronRight className="w-6 h-6" />
+=======
+          onClick="{prevSlide}"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2-rounded-fulltransition-colors"
+          aria-label="Previous slide" />
+          <ChevronLeft className="w-6-h-6" / />
+        </button>
+        <button
+          onClick="{nextSlide}"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2-rounded-fulltransition-colors"
+          aria-label="Next slide" />
+          <ChevronRight className="w-6-h-6" / />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
         </button>
       </div>
 
       {/* Controls */}
+<<<<<<< HEAD
       <div className="flex items-center justify-center mt-6 space-x-4">
         <button
           onClick={togglePlayPause}
@@ -136,6 +175,18 @@ export default function ContentCarousel({
 
         {/* Slide Indicators */}
         <div className="flex space-x-2">
+=======
+      <div className="flex items-center justify-centermt-6-space-x-4">
+        <button
+          onClick="{togglePlayPause}"
+          className="bg-white/20 hover:bg-white/30 text-white p-2-rounded-fulltransition-colors"
+          aria-label="{isPlaying" ? 'Pause' : 'Play'} />
+          {isPlaying ? <Pause className="w-5-h-5" / /> : <Play className="w-5-h-5" / />}
+        </button>
+
+        {/* Slide Indicators */}
+        <div className="flexspace-x-2">
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
           {slides.map((_, index) => (
             <button
               key={index}

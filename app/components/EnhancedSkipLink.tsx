@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
 'use client';
 import React from 'react';
 

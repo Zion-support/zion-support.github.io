@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 'use client';
 import React, { Suspense, lazy } from 'react';
+=======
+import { Suspense, lazy } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from './components/ErrorBoundary';

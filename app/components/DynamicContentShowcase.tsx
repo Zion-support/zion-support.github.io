@@ -85,6 +85,7 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
   return (
     <div className={`relative ${className}`}>
       {/* Controls */}
+<<<<<<< HEAD
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-4">
           <button
@@ -104,10 +105,30 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
               <Pause className="w-5 h-5 text-white" />
             ) : (
               <Play className="w-5 h-5 text-white" />
+=======
+      <div className="flex items-centerjustify-between mb-6">
+        <div className="flexitems-centergap-4">
+          <button
+            onClick="{prevItem}"
+            className="p-2 rounded-full bg-white/10-hover:bg-white/20transition-colors"
+            aria-label="Previous item" />
+            <ChevronLeft className="w-5-h-5text-white" / />
+          </button>
+
+          <button
+            onClick="{togglePlayPause}"
+            className="p-2 rounded-full bg-white/10-hover:bg-white/20transition-colors"
+            aria-label="{isPlaying" ? 'Pause' : 'Play'} />
+            {isPlaying ? (
+              <Pause className="w-5-h-5text-white" / />
+            ) : (
+              <Play className="w-5-h-5text-white" / />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
             )}
           </button>
 
           <button
+<<<<<<< HEAD
             onClick={nextItem}
             className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
             aria-label="Next item"
@@ -117,6 +138,16 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
         </div>
 
         <div className="flex items-center gap-2">
+=======
+            onClick="{nextItem}"
+            className="p-2 rounded-full bg-white/10-hover:bg-white/20transition-colors"
+            aria-label="Next item" />
+            <ChevronRight className="w-5-h-5text-white" / />
+          </button>
+        </div>
+
+        <div className="flexitems-centergap-2">
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
           {items.map((_, index) => (
             <button
               key={index}
@@ -131,24 +162,41 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
       </div>
 
       {/* Content Card */}
+<<<<<<< HEAD
       <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/30 transition-all duration-300">
         <div className="flex items-start gap-6">
           <div className="flex-shrink-0">
             <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">
               <IconComponent className="w-8 h-8 text-white" />
+=======
+      <div className="bg-white/5 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:border-white/30-transition-all duration-300">
+        <div className="flexitems-startgap-6">
+          <div className="flex-shrink-0">
+            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flexitems-centerjustify-center">
+              <IconComponent className="w-8-h-8text-white" / />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
             </div>
           </div>
 
           <div className="flex-1">
+<<<<<<< HEAD
             <div className="flex items-center gap-2 mb-2">
               <span className="text-sm text-cyan-400 font-medium">{currentItem.category}</span>
               <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+=======
+            <div className="flex items-centergap-2-mb-2">
+              <span className="text-smtext-cyan-400-font-medium"  >{currentItem.category}</span>
+              <div className="flexitems-centergap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key="{i}" className="w-4 h-4-text-yellow-400fill-current" / />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
                 ))}
               </div>
             </div>
 
+<<<<<<< HEAD
             <h3 className="text-2xl font-bold text-white mb-3">{currentItem.title}</h3>
             <p className="text-gray-300 mb-4">{currentItem.description}</p>
 
@@ -157,10 +205,21 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
                 <div key={index} className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                   <span>{feature}</span>
+=======
+            <h3 className="text-2 xl font-boldtext-white mb-3"  >{currentItem.title}</h3>
+            <p className="text-gray-300-mb-4">{currentItem.description}</p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2-gap-2 mb-6">
+              {currentItem.features.map((feature, index) => (
+                <div key="{index}" className="flex items-centertext-smtext-gray-300" />
+                  <CheckCircle className="w-4 h-4 text-green-400-mr-2flex-shrink-0" / />
+                  <span  >{feature}</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
                 </div>
               ))}
             </div>
 
+<<<<<<< HEAD
             <div className="flex items-center justify-between">
               {currentItem.price && (
                 <div className="text-cyan-400 font-semibold text-lg">
@@ -171,6 +230,17 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center gap-2">
                 Learn More
                 <ArrowRight className="w-4 h-4" />
+=======
+            <div className="flexitems-centerjustify-between">
+              {currentItem.price && (
+                <div className="text-cyan-400-font-semiboldtext-lg"  />{currentItem.price}
+                </div>
+              )}
+
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600  hover:to-purple-700 transition-all duration-300 flexitems-centergap-2" />
+                Learn More
+                <ArrowRight className="w-4-h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
               </button>
             </div>
           </div>

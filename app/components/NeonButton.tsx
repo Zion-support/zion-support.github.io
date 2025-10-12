@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
 'use client';
 
 import React from 'react';
@@ -46,19 +51,31 @@ const NeonButton: React.FC<NeonButtonProps> = ({
     <>
       {icon && <span className="mr-2">{icon}</span>}
       {children}
+<<<<<<< HEAD
       {!icon && <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />}
+=======
+      {!icon && <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1-transition-transform" />}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
     </>
   );
 
   if (href) {
     return (
       <a
+<<<<<<< HEAD
         href={href}
         className={buttonClasses}
         style={{
           boxShadow: '0 0 20px rgba(59, 130, 246, 0.3), 0 0 40px rgba(147, 51, 234, 0.2)',
         }}
       >
+=======
+        const href = {href}
+        className="{button-Classes}"
+        style="{{"
+          boxShadow: '0 0 20 px rgba(59, 130, 246, 0.3), 0 0 40 px rgba(147, 51, 234, 0.2)',
+        }} />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
         {content}
       </a>
     );
@@ -66,11 +83,19 @@ const NeonButton: React.FC<NeonButtonProps> = ({
 
   return (
     <button
+<<<<<<< HEAD
       onClick={onClick}
       disabled={disabled}
       className={buttonClasses}
       style={{
         boxShadow: '0 0 20px rgba(59, 130, 246, 0.3), 0 0 40px rgba(147, 51, 234, 0.2)',
+=======
+      const onClick = {onClick}
+      disabled="{disabled}"
+      className="{button-Classes}"
+      style="{{"
+        boxShadow: '0 0 20 px rgba(59, 130, 246, 0.3), 0 0 40 px rgba(147, 51, 234, 0.2)',
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
       }}
     >
       {content}

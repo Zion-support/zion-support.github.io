@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { Shield, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Lock, BarChart3, Star, Sparkles, AlertTriangle, Users, Target, Eye } from 'lucide-react'
 import Layout from '../layout'
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Shield, Brain, Eye, Lock } from 'lucide-react';
+import Layout from '../layout';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
 
 export default function AdvancedSecuritySuite() {
   const features = [
@@ -26,94 +33,7 @@ export default function AdvancedSecuritySuite() {
       title: 'Compliance Ready',
       description: 'Meet GDPR, HIPAA, SOX, and other regulatory requirements with built-in compliance tools'
     }
-  ]
-
-  const securityModules = [
-    {
-      category: 'Endpoint Security',
-      items: ['Antivirus & Anti-malware', 'Device Encryption', 'USB Protection', 'Application Control', 'Patch Management', 'Mobile Security']
-    },
-    {
-      category: 'Network Security',
-      items: ['Firewall Management', 'Intrusion Detection', 'VPN Solutions', 'Network Segmentation', 'DDoS Protection', 'Traffic Analysis']
-    },
-    {
-      category: 'Cloud Security',
-      items: ['Cloud Access Control', 'Data Loss Prevention', 'Cloud Monitoring', 'Identity Management', 'API Security', 'Container Security']
-    },
-    {
-      category: 'Threat Intelligence',
-      items: ['Threat Hunting', 'Vulnerability Scanning', 'Penetration Testing', 'Security Analytics', 'Incident Response', 'Forensics']
-    }
-  ]
-
-  const pricingPlans = [
-    {
-      name: 'Essential',
-      price: '$199',
-      period: '/month',
-      description: 'Perfect for small businesses',
-      features: [
-        'Up to 25 endpoints',
-        'Basic threat protection',
-        'Email security',
-        '24/7 monitoring',
-        'Standard support'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$499',
-      period: '/month',
-      description: 'Ideal for growing companies',
-      features: [
-        'Up to 100 endpoints',
-        'Advanced AI protection',
-        'Full security suite',
-        'Priority support',
-        'Compliance tools',
-        'Custom policies'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,299',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited endpoints',
-        'Custom AI models',
-        'White-label solution',
-        'Dedicated support',
-        'Full compliance suite',
-        'SLA guarantee'
-      ],
-      popular: false
-    }
-  ]
-
-  const testimonials = [
-    {
-      name: 'Robert Chen',
-      company: 'Financial Services Corp',
-      content: 'Advanced Security Suite protected us from 3 major cyber attacks this year. The AI detection is incredibly accurate.',
-      rating: 5
-    },
-    {
-      name: 'Lisa Martinez',
-      company: 'Healthcare Plus',
-      content: 'HIPAA compliance was seamless with this suite. Our auditors were impressed with the security measures.',
-      rating: 5
-    },
-    {
-      name: 'James Wilson',
-      company: 'Tech Manufacturing Inc',
-      content: 'The 24/7 monitoring gives us peace of mind. We sleep better knowing our systems are protected.',
-      rating: 5
-    }
-  ]
+  ];
 
   return (
     <Layout
@@ -124,20 +44,32 @@ export default function AdvancedSecuritySuite() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
           <div className="max-w-7xl mx-auto">
+=======
+          <div className="max-w-7-xl mx-auto">
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 bg-red-500/20 rounded-full text-red-400 text-sm font-medium mb-6">
                 <Shield className="w-4 h-4 mr-2" />
                 Enterprise Cybersecurity
               </div>
+<<<<<<< HEAD
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
                 Advanced Security Suite
               </h1>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+=======
+              <h1 className="text-4-xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+                Advanced Security Suite
+              </h1>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3-xl mx-auto mb-8">
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
                 Protect your business with our comprehensive cybersecurity solution. AI-powered threat detection, 
                 24/7 monitoring, and compliance tools to keep your data and systems secure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
                 <Link
                   to="/contact"
                   className="bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
@@ -149,6 +81,13 @@ export default function AdvancedSecuritySuite() {
                   to="#demo"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
+=======
+                <Link to="/contact" className="bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600  hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                  Get Free Assessment
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+                <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
                   View Demo
                 </Link>
               </div>
@@ -158,12 +97,21 @@ export default function AdvancedSecuritySuite() {
 
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
                 Comprehensive Security Features
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+=======
+          <div className="max-w-7-xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3-xl sm:text-4xl font-bold text-white mb-4">
+                Comprehensive Security Features
+              </h2>
+              <p className="text-lg text-gray-300 max-w-2-xl mx-auto">
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
                 Advanced protection against the latest cyber threats
               </p>
             </div>
@@ -173,6 +121,7 @@ export default function AdvancedSecuritySuite() {
                 <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-red-500/20 hover:border-red-400/40 transition-all duration-300">
                   <div className="flex items-center mb-4">
                     {feature.icon}
+<<<<<<< HEAD
                     <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
                   </div>
                   <p className="text-gray-300">{feature.description}</p>
@@ -290,7 +239,15 @@ export default function AdvancedSecuritySuite() {
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-gray-400">{testimonial.company}</div>
+=======
+                    <h3 className="text-xl font-semibold text-white ml-3">
+                      {feature.title}
+                    </h3>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
                   </div>
+                  <p className="text-gray-300">
+                    {feature.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -299,6 +256,7 @@ export default function AdvancedSecuritySuite() {
 
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-red-500/20 to-purple-500/20 rounded-2xl p-8 border border-red-500/30">
               <h2 className="text-3xl font-bold text-white mb-4">
@@ -321,10 +279,31 @@ export default function AdvancedSecuritySuite() {
                   Learn More
                 </Link>
               </div>
+=======
+          <div className="max-w-4-xl mx-auto text-center">
+            <h2 className="text-3-xl font-bold text-white mb-4">
+              Secure Your Business Today
+            </h2>
+            <p className="text-lg text-gray-300 mb-8">
+              Don't wait for a cyber attack. Get comprehensive protection with Advanced Security Suite
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact" className="bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600  hover:to-purple-700 transition-all duration-300">
+                Get Free Security Assessment
+              </Link>
+              <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                Learn More
+              </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
             </div>
           </div>
         </section>
       </div>
     </Layout>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1

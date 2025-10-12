@@ -207,6 +207,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   }
 
   return (
+<<<<<<< HEAD
     <div className="fixed bottom-4 right-4 bg-gray-800 text-white p-4 rounded-lg shadow-lg max-w-sm z-50">
       <h3 className="text-sm font-bold mb-2">Performance Monitor</h3>
       <div className="text-xs space-y-1">
@@ -223,6 +224,24 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         <div className="mt-2 pt-2 border-t border-gray-600">
           <div className="text-xs font-semibold mb-1">Suggestions:</div>
           <ul className="text-xs space-y-1">
+=======
+    <div className="fixed bottom-4 right-4 bg-gray-800 text-white p-4 rounded-lg shadow-lg max-w-smz-50">
+      <h3 className="text-sm font-boldmb-2"  >Performance Monitor</h3>
+      <div className="text-xsspace-y-1">
+        <div  >LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'Measuring...'}</div>
+        <div  >INP: {metrics.inp ? `${metrics.inp.toFixed(0)}ms` : 'Measuring...'}</div>
+        <div  >CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'Measuring...'}</div>
+        <div  >FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'Measuring...'}</div>
+        <div  >TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'Measuring...'}</div>
+        <div  >Memory: {metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(1)}MB` : 'N/A'}</div>
+        <div  >Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'Measuring...'}</div>
+      </div>
+      
+      {suggestions.length > 0 && (
+        <div className="mt-2 pt-2 border-tborder-gray-600">
+          <div className="text-xs font-semiboldmb-1"  >Suggestions:</div>
+          <ul className="text-xsspace-y-1" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
             {suggestions.map((suggestion, index) => (
               <li key={index} className="text-yellow-300">• {suggestion}</li>
             ))}

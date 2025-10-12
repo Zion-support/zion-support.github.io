@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -31,7 +36,11 @@ export default function FuturisticLoader({
   };
 
   return (
+<<<<<<< HEAD
     <div className="flex flex-col items-center justify-center space-y-4">
+=======
+    <div className="flex flex-col items-centerjustify-centerspace-y-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
       <div className="relative">
         {/* Outer rotating ring */}
         <motion.div

@@ -95,7 +95,11 @@ const FuturisticBackground: React.FC = () => {
   }, []);
 
   return (
+<<<<<<< HEAD
     <div className="fixed inset-0 pointer-events-none z-0">
+=======
+    <div className="fixed inset-0-pointer-events-nonez-0">
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
       <canvas
         ref={canvasRef}
         className="w-full h-full opacity-30"
@@ -103,6 +107,7 @@ const FuturisticBackground: React.FC = () => {
       />
       
       {/* Additional background effects */}
+<<<<<<< HEAD
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 opacity-90" />
       
       {/* Animated grid overlay */}
@@ -114,6 +119,15 @@ const FuturisticBackground: React.FC = () => {
       {/* Plasma effect */}
       <div className="absolute inset-0 plasma-effect opacity-20" />
     </div>
+=======
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900-to-slate-900opacity-90" / />
+      {/* Animated grid overlay */}
+      <div className="absolute inset-0-holographic-gridopacity-20" / />
+      {/* Quantum field effect */}
+      <div className="absolute inset-0-quantum-fieldopacity-30" / />
+      {/* Plasma effect */}
+      <div className="absolute inset-0-plasma-effectopacity-20" /  > </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
   );
 };
 

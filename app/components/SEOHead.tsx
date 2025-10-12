@@ -5,10 +5,16 @@ const SEOHead: React.FC = () => {
     <Helmet>
       <title>Zion Tech Group - Advanced AI and IT Solutions</title>
       <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
+<<<<<<< HEAD
       <meta name="keywords" content="AI solutions, IT services, cloud computing, digital transformation, 5G implementation" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#8b5cf6" />
       
+=======
+      <meta name="keywords" content="AI solutions, IT services, cloud computing, digital transformation, 5 G implementation" />
+      <meta name="viewport" content="width="device-width," initial-scale=1.0" / / />
+      <meta name="theme-color" content="#8 b5 cf6" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
       <meta property="og:description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
@@ -20,6 +26,7 @@ const SEOHead: React.FC = () => {
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+<<<<<<< HEAD
       <meta name="twitter:description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
       <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
       <meta name="twitter:site" content="@ziontechgroup" />
@@ -28,6 +35,14 @@ const SEOHead: React.FC = () => {
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
       
+=======
+      <meta name="twitter: description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
+      <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      {/* Additional SEO Meta Tags */}
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({

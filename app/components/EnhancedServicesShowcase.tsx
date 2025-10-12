@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
 'use client'
 import React from 'react'
 import { ArrowRight } from 'lucide-react';
@@ -42,6 +47,7 @@ const EnhancedServicesShowcase: React.FC = () => {
     }
   ];
   return (
+<<<<<<< HEAD
     <div className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
@@ -49,10 +55,19 @@ const EnhancedServicesShowcase: React.FC = () => {
             Our Core Services
           </h2>
           <p className="text-xl text-cyan-400 max-w-3xl mx-auto">
+=======
+    <div className="py-20 px-4-sm:px-6 lg:px-8">
+      <div className="max-w-7-xlmx-auto">
+        <div className="text-centermb-16">
+          <h2 className="text-4 xl md:text-5 xl font-boldtext-white mb-6"  />Our Core Services
+          </h2>
+          <p className="text-xl text-cyan-400 max-w-3-xlmx-auto" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
             Comprehensive AI and IT solutions designed to transform your business and drive innovation
           </p>
         </div>
 
+<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
 
@@ -65,24 +80,51 @@ const EnhancedServicesShowcase: React.FC = () => {
               </div>
 
               <p className="text-gray-300 mb-6 leading-relaxed">
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2-lg:grid-cols-3gap-8">
+          {services.map((service, index) => (
+
+              <div key="{index}" className="cyber-card p-8 grouphover:scale-105-transition-transform" />
+              <div className="flexitems-center mb-6">
+                <service.icon className="h-12 w-12-text-cyan-400mr-4" / />
+                <h3 className="text-2 xl font-bold text-whitegroup-hover:text-cyan-400-transition-colors"  />{service.title}
+                </h3>
+              </div>
+
+              <p className="text-gray-300-mb-6leading-relaxed" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
                 {service.description}
               </p>
 
               <div className="mb-6">
+<<<<<<< HEAD
                 <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Features</h4>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+=======
+                <h4 className="text-sm font-semiboldtext-cyan-400-mb-3"  >Key Features</h4>
+                <ul className="space-y-2" />
+                  {service.features.map((feature, featureIndex) => (
+                    <li key="{featureIndex}" className="flex items-centertext-smtext-gray-300" />
+                      <CheckCircle className="h-4 w-4 text-green-400-mr-2flex-shrink-0" / />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
                       {feature}
                     </li>
                   ))}
                 </ul>
               </div>
 
+<<<<<<< HEAD
               <button className="cyber-button w-full py-3 text-center inline-flex items-center justify-center group-hover:scale-105 transition-transform">
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4" />
+=======
+              <button className="cyber-button w-full py-3 text-center inline-flex items-center justify-centergroup-hover:scale-105-transition-transform" />
+                Learn More
+                <ArrowRight className="ml-2-h-4w-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
               </button>
             </div>
           ))}

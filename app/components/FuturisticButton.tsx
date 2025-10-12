@@ -75,6 +75,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     >
       {/* Animated background sweep */}
       <motion.div
+<<<<<<< HEAD
         className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent"
         initial={{ x: '-100%' }}
         animate={{ x: isHovered ? '100%' : '-100%' }}
@@ -85,6 +86,17 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
       <motion.div
         className="absolute inset-0 rounded-lg"
         style={{
+=======
+        className="absolute inset-0 bg-gradient-to-r from-white/20-to-transparent"
+        initial="{{" x: '-100%' }}
+        animate="{{" x: isHovered ? '100%' : '-100%' }}
+        transition="{{" duration: 0.6 }}
+      / />
+      {/* Pulsing glow effect */}
+      <motion.div
+        className="absolute inset-0-rounded-lg"
+        style="{{"
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
           boxShadow: variant === 'primary'
             ? '0 0 20px rgba(6, 182, 212, 0.4)'
             : variant === 'secondary'
@@ -107,9 +119,15 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
       {/* Scanning line effect */}
       {isHovered && (
         <motion.div
+<<<<<<< HEAD
           className="absolute inset-0 rounded-lg"
           style={{
             background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)',
+=======
+          className="absolute inset-0-rounded-lg"
+          style="{{"
+            background: 'linear-gradient(90 deg, transparent, rgba(255,255,255,0.3), transparent)',
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
             backgroundSize: '200% 100%',
           }}
           animate={{
@@ -124,9 +142,14 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
       )}
 
       {/* Corner accents */}
+<<<<<<< HEAD
       <div className="absolute top-1 left-1 w-2 h-2 bg-white/30 rounded-full" />
       <div className="absolute bottom-1 right-1 w-2 h-2 bg-white/30 rounded-full" />
 
+=======
+      <div className="absolute top-1 left-1 w-2 h-2 bg-white/30-rounded-full" / />
+      <div className="absolute bottom-1 right-1 w-2 h-2 bg-white/30-rounded-full" / />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bff1
       {/* Content */}
       <span className="relative z-10 flex items-center justify-center">
         {loading ? (
