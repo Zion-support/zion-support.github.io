@@ -19,7 +19,8 @@ const PerformanceMonitor: React.FC = () => {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
+            const fidEntry = entry as any;
+            console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
           }
         }
       });
@@ -45,6 +46,7 @@ const PerformanceMonitor: React.FC = () => {
         clsObserver.disconnect();
       };
     }
+    return undefined;
   }, []);
 
   return null;
