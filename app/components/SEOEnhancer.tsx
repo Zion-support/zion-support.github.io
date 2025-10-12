@@ -148,7 +148,7 @@ return (
             </p>
             <div className="flexflex-colsm:flex-rowgap-4justify-center">
               <button className="bg-gradient-to-rfrom-purple-500to-blue-600text-whitepx-8py-3rounded-lgfont-semiboldhover:from-purple-600hover:to-blue-700transition-allduration-300">
-                Contact Us;
+                Contact Us
               </button>
               <button className="borderborder-whitetext-whitepx-8py-3rounded-lgfont-semiboldhover:bg-whitehover:text-gray-900transition-allduration-300">
                 Schedule Demo;

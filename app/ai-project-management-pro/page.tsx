@@ -54,14 +54,14 @@ return (
               Streamline workflows, boost productivi t y, and deliver projects on time and within budget.;
             </p>
             <div className="flexflex-colsm:flex-rowgap-4justify-center">
-              <Link;
-                to="/contact";
+              <Link
+                to="/contact"
                 className="bg-gradient-to-rfrom-cyan-500to-purple-600text-whitepx-8py-4rounded-lgfont-semiboldhover:from-cyan-600hover:to-purple-700transition-allduration-300flexitems-centerjustify-center"
               >
                 Get Started;
                 <ArrowRight className="w-5h-5ml-2" />
               </Link>
-              <Link;
+              <Link
                 to="/services";
                 className="borderborder-cyan-400text-cyan-400px-8py-4rounded-lgfont-semiboldhover:bg-cyan-400hover:text-whitetransition-allduration-300flexitems-centerjustify-center"
               >
@@ -102,8 +102,8 @@ return (
             <p className="text-xltext-gray-300mb-8max-w-2xlmx-auto">
               Join thousands of teams already using our AI-poweredprojectmanagement solutions to achieve better results.;
             </p>
-            <Link;
-              to="/contact";
+            <Link
+              to="/contact"
               className="bg-gradient-to-rfrom-cyan-500to-purple-600text-whitepx-8py-4rounded-lgfont-semiboldhover:from-cyan-600hover:to-purple-700transition-allduration-300inline-flexitems-center"
             >
               Contact Us Today;

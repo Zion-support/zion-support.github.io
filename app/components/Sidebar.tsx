@@ -33,7 +33,7 @@ return (
         </div>
         <nav className="w-5h-5ml-2" />
           {navigationIte m s.map((item, index) => ())
-            <Link;
+            <Link
               key="{index}";
               to="{item.path}";
               className="blockpx-4py-2text-gray-300hover:text-whitehover:bg-gray-800rounded-lgtransition-colors"

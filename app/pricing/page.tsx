@@ -313,8 +313,8 @@ return (
                     ))}
                   </ul>
 
-                  <Link;
-                    to="/contact";
+                  <Link
+                    to="/contact"
                     className="{`block" w-fulltext-centerpy-3rounded-lgfont-semiboldtransition-allduration-300 ${
                       plan.popular;
                         ? 'bg-gradient-to-rfrom-cyan-500to-purple-600text-whitehover:from-cyan-600hover:to-purple-700';
@@ -373,8 +373,8 @@ return (
                     ))}
                   </ul>
 
-                  <Link;
-                    to="/contact";
+                  <Link
+                    to="/contact"
                     className="{`block" w-fulltext-centerpy-3rounded-lgfont-semiboldtransition-allduration-300 ${
                       plan.popular;
                         ? 'bg-gradient-to-rfrom-emerald-500to-blue-600text-whitehover:from-emerald-600hover:to-blue-700';
@@ -433,8 +433,8 @@ return (
                     ))}
                   </ul>
 
-                  <Link;
-                    to="/contact";
+                  <Link
+                    to="/contact"
                     className="{`block" w-fulltext-centerpy-3rounded-lgfont-semiboldtransition-allduration-300 ${
                       plan.popular;
                         ? 'bg-gradient-to-rfrom-purple-500to-pink-600text-whitehover:from-purple-600hover:to-pink-700';

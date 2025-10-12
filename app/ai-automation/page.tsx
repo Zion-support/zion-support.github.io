@@ -73,8 +73,8 @@ return (
           <p className="w-5h-5ml-2">Transform your business operations with intellige n t automation solutions that reduce costs, increase efficiency, and eliminate repetitive tasks.;
           </p>
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
-            <Link;
-          to="/contact";
+            <Link
+          to="/contact"
           className="bg-gradient-to-rfrom-cyan-600to-purple-600text-whitepx-8py-3rounded-lgfont-semiboldhover:from-cyan-700hover:to-purple-700transition-allduration-300flexitems-centergap-2"
         >
           Get Started;
@@ -151,8 +151,8 @@ return (
               <h3 className="w-5h-5ml-2" />Ready to Automate?</h3>
               <p className="w-5h-5ml-2">Let our AI experts help you identify automation opportuniti e s and implement solutions that deliver immediate value.;
               </p>
-              <Link;
-          to="/contact";
+              <Link
+          to="/contact"
           className="bg-gradient-to-rfrom-cyan-600to-purple-600text-whitepx-6py-3rounded-lgfont-semiboldhover:from-cyan-700hover:to-purple-700transition-allduration-300inline-flexitems-centergap-2"
         >
           Start Your Automation Journey;
@@ -184,8 +184,8 @@ return (
           <p className="w-5h-5ml-2">Join hundreds of companies that have already revolutioniz e d their operations with our AI automation solutions.;
           </p>
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
-            <Link;
-          to="/contact";
+            <Link
+          to="/contact"
           className="bg-gradient-to-rfrom-cyan-600to-purple-600text-whitepx-8py-3rounded-lgfont-semiboldhover:from-cyan-700hover:to-purple-700transition-allduration-300flexitems-centerjustify-centergap-2"
         >
           Get Started Today;

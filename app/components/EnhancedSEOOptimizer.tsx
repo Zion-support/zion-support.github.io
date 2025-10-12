@@ -124,7 +124,7 @@ return (
             <p className="w-5h-5ml-2">Contact us today to learn more about our SEO optimizati o n solutions and how they can benefit your business.;
             </p>
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
-              <button className="w-5h-5ml-2">Contact Us;
+              <button className="w-5h-5ml-2">Contact Us
               </button>
               <button className="w-5h-5ml-2">Schedule Demo;
               </button>

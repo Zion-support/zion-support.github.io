@@ -13,20 +13,20 @@ return (
           </div>
           <div className="hiddenmd:block">
             <div className="ml-10flexitems-baselinespace-x-4">
-              <Link;
+              <Link
                 to="/";
                 className="text-gray-300hover:text-whitepx-3py-2rounded-mdtext-smfont-medium"
               >
                 Home;
               </Link>
-              <Link;
+              <Link
                 to="/about";
                 className="text-gray-300hover:text-whitepx-3py-2rounded-mdtext-smfont-medium"
               >
                 About;
               </Link>
-              <Link;
-                to="/contact";
+              <Link
+                to="/contact"
                 className="text-gray-300hover:text-whitepx-3py-2rounded-mdtext-smfont-medium"
               >
                 Contact;

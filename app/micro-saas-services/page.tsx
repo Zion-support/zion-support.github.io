@@ -122,13 +122,13 @@ return (
                 Get enterprise-gradefunctionalit y without the complexity.;
               </p>
               <div className="flexflex-colsm:flex-rowgap-4justify-center">
-                <Link;
-                  to="/contact";
+                <Link
+                  to="/contact"
                   className="bg-gradient-to-rfrom-cyan-500to-purple-500text-whitepx-8py-4rounded-lgfont-semiboldtext-lghover:from-cyan-600hover:to-purple-600transition-allduration-300transformhover:scale-105"
                 >
                   Start Free Trial;
                 </Link>
-                <Link;
+                <Link
                   to="/ai-services";
                   className="borderborder-cyan-500text-cyan-400px-8py-4rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10transition-allduration-300transformhover:scale-105"
                 >
@@ -180,7 +180,7 @@ return (
 
                   <div className="flexitems-centerjustify-betweenmb-6">
                     <span className="text-2xlfont-boldtext-cyan-400">{service.price}</span>
-                    <Link;
+                    <Link
                       to={service.link}
                       className="text-cyan-400hover:text-cyan-300transition-colorstext-smfont-mediumgroup-hover:translate-x-1inline-flexitems-center"
                     >
@@ -249,8 +249,8 @@ return (
                     Standard features;
                   </li>
                 </ul>
-                <Link;
-                  to="/contact";
+                <Link
+                  to="/contact"
                   className="w-fullbg-gradient-to-rfrom-cyan-500to-purple-500text-whitepx-6py-3rounded-lgfont-semiboldtext-centerhover:from-cyan-600hover:to-purple-600transition-allduration-300block"
                 >
                   Get Started;
@@ -283,8 +283,8 @@ return (
                     Custom integratio n s;
                   </li>
                 </ul>
-                <Link;
-                  to="/contact";
+                <Link
+                  to="/contact"
                   className="w-fullbg-gradient-to-rfrom-cyan-500to-purple-500text-whitepx-6py-3rounded-lgfont-semiboldtext-centerhover:from-cyan-600hover:to-purple-600transition-allduration-300block"
                 >
                   Get Started;
@@ -312,8 +312,8 @@ return (
                     Custom developme n t;
                   </li>
                 </ul>
-                <Link;
-                  to="/contact";
+                <Link
+                  to="/contact"
                   className="w-fullborderborder-cyan-500text-cyan-400px-6py-3rounded-lgfont-semiboldtext-centerhover:bg-cyan-500/10transition-allduration-300block"
                 >
                   Contact Sales;
@@ -334,13 +334,13 @@ return (
                 Start your free trial today and experience the power of our Micro SaaS solutions.;
               </p>
               <div className="flexflex-colsm:flex-rowgap-4justify-center">
-                <Link;
-                  to="/contact";
+                <Link
+                  to="/contact"
                   className="bg-gradient-to-rfrom-cyan-500to-purple-500text-whitepx-8py-4rounded-lgfont-semiboldtext-lghover:from-cyan-600hover:to-purple-600transition-allduration-300transformhover:scale-105"
                 >
                   Start Free Trial;
                 </Link>
-                <Link;
+                <Link
                   to="/about";
                   className="borderborder-cyan-500text-cyan-400px-8py-4rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10transition-allduration-300transformhover:scale-105"
                 >

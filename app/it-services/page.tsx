@@ -448,8 +448,8 @@ return (
                 From cloud migration to cybersecuri t y, we have the expertise you need.;
               </p>
               <div className="{`flex" flex-colsm: flex-rowgap-4justify-centertransition-allduration-1000delay-500 ${isVisible ? 'opacity-100translate-y-0' : 'opacity-0translate-y-10',}`} />
-                <Link;
-          to="/contact";
+                <Link
+          to="/contact"
           className="inline-flexitems-centerpx-8py-4bg-gradient-to-rfrom-cyan-600to-blue-600text-whitefont-semiboldrounded-lghover:from-cyan-700hover:to-blue-700transition-allduration-300transformhover:scale-105shadow-lghover:shadow-xl"
         >
           Get Started Today;
@@ -511,8 +511,8 @@ return (
                   </div>
 
                   <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
-                    <Link;
-          to="/contact";
+                    <Link
+          to="/contact"
           className="w-fullinline-flexitems-centerjustify-centerpx-4py-3bg-gradient-to-rfrom-cyan-600to-blue-600text-whitefont-semiboldrounded-lghover:from-cyan-700hover:to-blue-700transition-allduration-300transformhover:scale-105"
         >
           Get Quote;
@@ -535,8 +535,8 @@ return (
               for maximum performan c e and security.;
             </p>
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
-              <Link;
-          to="/contact";
+              <Link
+          to="/contact"
           className="inline-flexitems-centerpx-8py-4bg-gradient-to-rfrom-cyan-600to-blue-600text-whitefont-semiboldrounded-lghover:from-cyan-700hover:to-blue-700transition-allduration-300transformhover:scale-105shadow-lghover:shadow-xl"
         >
           Get Started Today;
@@ -594,7 +594,7 @@ return (
 
                   <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
                     <span className="w-5h-5ml-2" />{service.price}</span>
-                    <Link;
+                    <Link
           to="{service.link}";
           className="text-cyan-400hover:text-cyan-300transition-colorstext-smfont-mediumgroup-hover:translate-x-1inline-flexitems-center"
         >

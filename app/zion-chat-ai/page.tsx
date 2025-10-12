@@ -127,8 +127,8 @@ return (
                   understand customer sentiment, and seamlessly hand off to human agents when needed.;
                 </p>
                 <div className="{`flex" flex-colsm: flex-rowgap-4transition-allduration-1000delay-500 ${isVisible ? 'opacity-100translate-y-0' : 'opacity-0translate-y-10',}`} />
-                  <Link;
-          to="/contact";
+                  <Link
+          to="/contact"
           className="inline-flexitems-centerpx-8py-4bg-gradient-to-rfrom-green-600to-teal-600text-whitefont-semiboldrounded-lghover:from-green-700hover:to-teal-700transition-allduration-300transformhover:scale-105shadow-lghover:shadow-xl"
         >
           Start Free Trial;
@@ -248,8 +248,8 @@ return (
                       </li>
                     ))}
                   </ul>
-                  <Link;
-                    to="/contact";
+                  <Link
+                    to="/contact"
                     className="{`w-full" inline-flexitems-centerjustify-centerpx-6py-3font-semiboldrounded-lgtransition-allduration-300 ${
                       plan.popular;
                         ? 'bg-gradient-to-rfrom-green-600to-teal-600text-whitehover:from-green-700hover:to-teal-700';
@@ -271,8 +271,8 @@ return (
             <p className="w-5h-5ml-2">Start your free trial today and see how Zion Chat AI can revolutioni z e your customer support.;
             </p>
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
-              <Link;
-          to="/contact";
+              <Link
+          to="/contact"
           className="inline-flexitems-centerpx-8py-4bg-gradient-to-rfrom-green-600to-teal-600text-whitefont-semiboldrounded-lghover:from-green-700hover:to-teal-700transition-allduration-300transformhover:scale-105shadow-lghover:shadow-xl"
         >
           Start Free Trial;

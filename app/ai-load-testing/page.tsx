@@ -12,11 +12,11 @@ return (
       <div className="max-w-7xl mx-autopx-4sm:px-6lg:px-8py-16tex t-center">
         <h1 className="text-4xl font-boldtext-whitemb-6"  >Ai Load Testing</h1>
         <p className="text-lg text-gray-300 mb-8">Professional ai load testing services coming soon.</p>
-        <Link;
-          to="/contact";
+        <Link
+          to="/contact"
           className="bg-gradient-to-rfrom-cyan-500to-purple-600text-whitepx-8py-4rounded-lgfont-semiboldhover:from-cyan-600hover:to-purple-700transition-allduration-300flexitems-centerjustify-centermx-autow-fit"
         >
-          Contact Us;
+          Contact Us
           <ArrowRight className="w-5h-5ml-2" />
         </Link>
       </div>

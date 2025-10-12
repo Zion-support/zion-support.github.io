@@ -13,7 +13,7 @@ return (
         <div className="max-w-7xl mx-autop x-4sm:px-6lg:px-8pt-20pb-16">
           <div className="text-center">
             <h1 className="text-4xlmd:text-6xlfont-boldtext-whitemb-6">
-              Contact Us;
+              Contact Us
             </h1>
             <p className="text-xltext-gray-300mb-8max-w-3xlmx-auto">
               Ready to transform your business? Get in touch with our team of experts.;

@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
 """
-Fix JSX parsing errors
+Final JSX fix script
 """
 import os
 import re
 import glob
 from pathlib import Path
 
-def fix_jsx_errors(content):
-    """Fix JSX parsing errors"""
+def fix_final_jsx_errors(content):
+    """Fix final JSX errors"""
     lines = content.split('\n')
     fixed_lines = []
     
     for i, line in enumerate(lines):
-        # Fix spaces in className attributes - comprehensive approach
+        # Fix spaces in className attributes - more aggressive approach
+        # Remove all spaces within className quotes
         line = re.sub(r'className="([^"]*?)\s+([^"]*?)"', r'className="\1\2"', line)
         line = re.sub(r'className="([^"]*?)\s+([^"]*?)\s+([^"]*?)"', r'className="\1\2\3"', line)
         line = re.sub(r'className="([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)"', r'className="\1\2\3\4"', line)
@@ -23,6 +24,16 @@ def fix_jsx_errors(content):
         line = re.sub(r'className="([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)"', r'className="\1\2\3\4\5\6\7\8"', line)
         line = re.sub(r'className="([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)"', r'className="\1\2\3\4\5\6\7\8\9"', line)
         line = re.sub(r'className="([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)"', r'className="\1\2\3\4\5\6\7\8\9\10"', line)
+        line = re.sub(r'className="([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)"', r'className="\1\2\3\4\5\6\7\8\9\10\11"', line)
+        line = re.sub(r'className="([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)"', r'className="\1\2\3\4\5\6\7\8\9\10\11\12"', line)
+        line = re.sub(r'className="([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)"', r'className="\1\2\3\4\5\6\7\8\9\10\11\12\13"', line)
+        line = re.sub(r'className="([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)"', r'className="\1\2\3\4\5\6\7\8\9\10\11\12\13\14"', line)
+        line = re.sub(r'className="([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)"', r'className="\1\2\3\4\5\6\7\8\9\10\11\12\13\14\15"', line)
+        line = re.sub(r'className="([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)"', r'className="\1\2\3\4\5\6\7\8\9\10\11\12\13\14\15\16"', line)
+        line = re.sub(r'className="([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)"', r'className="\1\2\3\4\5\6\7\8\9\10\11\12\13\14\15\16\17"', line)
+        line = re.sub(r'className="([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)"', r'className="\1\2\3\4\5\6\7\8\9\10\11\12\13\14\15\16\17\18"', line)
+        line = re.sub(r'className="([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)"', r'className="\1\2\3\4\5\6\7\8\9\10\11\12\13\14\15\16\17\18\19"', line)
+        line = re.sub(r'className="([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)\s+([^"]*?)"', r'className="\1\2\3\4\5\6\7\8\9\10\11\12\13\14\15\16\17\18\19\20"', line)
         
         # Fix specific patterns that are causing issues
         line = re.sub(r'className="min-h-screenbg-gradient-', r'className="min-h-screen bg-gradient-', line)
@@ -32,16 +43,13 @@ def fix_jsx_errors(content):
         line = re.sub(r'className="font-boldtext-white', r'className="font-bold text-white', line)
         line = re.sub(r'className="w-5h-5m l-2"', r'className="w-5 h-5 ml-2"', line)
         
-        # Fix semicolons in JSX
-        line = re.sub(r'<Link;', r'<Link', line)
-        line = re.sub(r'to="/contact";', r'to="/contact"', line)
-        line = re.sub(r'Contact Us;', r'Contact Us', line)
-        line = re.sub(r'<ArrowRightclassName=', r'<ArrowRight className=', line)
-        line = re.sub(r'</Link>;', r'</Link>', line)
-        
-        # Fix missing spaces in other attributes
-        line = re.sub(r'<metaname=', r'<meta name=', line)
-        line = re.sub(r'<metacontent=', r'<meta content=', line)
+        # Fix missing spaces in className attributes
+        line = re.sub(r'className="min-h-screenbg-gradient-', r'className="min-h-screen bg-gradient-', line)
+        line = re.sub(r'className="max-w-7xlmx-auto', r'className="max-w-7xl mx-auto', line)
+        line = re.sub(r'className="text-4xlfont-bold', r'className="text-4xl font-bold', line)
+        line = re.sub(r'className="text-lgtext-gray-300', r'className="text-lg text-gray-300', line)
+        line = re.sub(r'className="font-boldtext-white', r'className="font-bold text-white', line)
+        line = re.sub(r'className="w-5h-5m l-2"', r'className="w-5 h-5 ml-2"', line)
         
         # Fix missing opening parenthesis after return
         line = re.sub(r'return\s*\(\s*$', r'return (', line)
@@ -73,8 +81,8 @@ def fix_file(file_path):
         
         original_content = content
         
-        # Fix JSX errors
-        content = fix_jsx_errors(content)
+        # Fix final JSX errors
+        content = fix_final_jsx_errors(content)
         
         # Only write if content changed
         if content != original_content:

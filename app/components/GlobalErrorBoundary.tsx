@@ -1,6 +1,6 @@
               </button>
               
-              <Link;
+              <Link
                 constto= "/"
                 className="borderborder-white/30text-whitepx-6py-3rounded-lgfont-semiboldhover:bg-white/10transition-allduration-300flexitems-centerjustify-center"
                />

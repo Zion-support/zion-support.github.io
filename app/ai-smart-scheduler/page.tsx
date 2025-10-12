@@ -118,8 +118,8 @@ return (
                 Optimize meetings, coordinate teams, and maximize productivi t y automatical l y.;
               </p>
               <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
-                <Link;
-          to="/contact";
+                <Link
+          to="/contact"
           className="bg-gradient-to-rfrom-cyan-500to-purple-600text-whitepx-8py-4rounded-lgfont-semiboldhover:from-cyan-600hover:to-purple-700transition-allduration-300flexitems-centerjustify-center"
         >
           Start Free Trial;
@@ -192,8 +192,8 @@ return (
                       </li>
                     ))}
                   </ul>
-                  <Link;
-                    to="/contact";
+                  <Link
+                    to="/contact"
                     className="{`w-full" block text-centerpy-3px-6rounded-lgfont-semiboldtransition-allduration-300 ${
                       plan.popular;
                         ? 'bg-gradient-to-rfrom-cyan-500to-purple-600text-whitehover:from-cyan-600hover:to-purple-700';

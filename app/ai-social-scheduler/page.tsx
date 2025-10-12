@@ -257,8 +257,8 @@ return (
                   ))}
                 </div>
                 
-                <Link;
-                  to="/contact";
+                <Link
+                  to="/contact"
                   className="{`block" w-fulltext-centerpy-3rounded-xlfont-semiboldtransition-allduration-300 ${
                     plan.popular;
                       ? 'bg-gradient-to-rfrom-pink-500to-cyan-600text-whitehover:from-pink-600hover:to-cyan-700shadow-lgshadow-pink-500/25';

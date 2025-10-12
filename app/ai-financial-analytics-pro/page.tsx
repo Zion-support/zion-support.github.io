@@ -230,8 +230,8 @@ return (
             and predictive modeling. Make smarter financial decisions with advanced intelligen c e.;
           </p>
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
-            <Link;
-          to="/contact";
+            <Link
+          to="/contact"
           className="bg-gradient-to-rfrom-cyan-500to-purple-600text-whitepx-8py-4rounded-lgfont-semiboldhover:from-cyan-600hover:to-purple-700transition-allduration-300flexitems-centerjustify-center"
         >
           Start Free Trial;
@@ -375,8 +375,8 @@ return (
                   ))}
                 </ul>
                 
-                <Link;
-                  to="/contact";
+                <Link
+                  to="/contact"
                   className="{`w-full" py-3rounded-lgfont-semiboldtransition-allduration-300flex items-centerjustify-center ${
                     plan.popular;
                       ? 'bg-gradient-to-rfrom-cyan-500to-purple-600text-whitehover:from-cyan-600hover:to-purple-700';

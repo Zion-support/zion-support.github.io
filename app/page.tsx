@@ -24,14 +24,14 @@ return (
               We deliver cutting-edgetechnologysolutions that drive innovation, efficiency, and growth for businesses worldwide.;
             </p>
             <div className="flexflex-colsm:flex-rowgap-4justify-center">
-              <Link;
-                to="/contact";
+              <Link
+                to="/contact"
                 className="bg-gradient-to-rfrom-cyan-500to-purple-600text-whitepx-8py-4rounded-lgfont-semiboldhover:from-cyan-600hover:to-purple-700transition-allduration-300flexitems-centerjustify-center"
               >
                 Get Started;
                 <ArrowRight className="w-5h-5ml-2" />
               </Link>
-              <Link;
+              <Link
                 to="/about";
                 className="borderborder-cyan-400text-cyan-400px-8py-4rounded-lgfont-semiboldhover:bg-cyan-400hover:text-slate-900transition-allduration-300"
               >

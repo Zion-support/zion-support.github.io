@@ -154,7 +154,7 @@ return (
                 </p>
                 <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
                   {results.map((result, index) => ())
-                    <Link;
+                    <Link
                       key="{index}";
                       to="{result.path}";
                       onClick="{onClose}";

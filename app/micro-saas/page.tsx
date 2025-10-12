@@ -785,8 +785,8 @@ return (
                 No complex setup, no lengthy implementatio n s - just instant value.;
               </p>
               <div className="{`flex" flex-colsm: flex-rowgap-4justify-centertransition-allduration-1000delay-500 ${isVisible ? 'opacity-100translate-y-0' : 'opacity-0translate-y-10',}`} />
-                <Link;
-          to="/contact";
+                <Link
+          to="/contact"
           className="inline-flexitems-centerpx-8py-4bg-gradient-to-rfrom-purple-600to-pink-600text-whitefont-semiboldrounded-lghover:from-purple-700hover:to-pink-700transition-allduration-300transformhover:scale-105shadow-lghover:shadow-xl"
         >
           Start Free Trial;
@@ -882,7 +882,7 @@ return (
                   </div>
 
                   <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
-                    <Link;
+                    <Link
           to="{`/${product.id}`}";
           className="w-fullinline-flexitems-centerjustify-centerpx-4py-3bg-gradient-to-rfrom-purple-600to-pink-600text-whitefont-semiboldrounded-lghover:from-purple-700hover:to-pink-700transition-allduration-300transformhover:scale-105"
         >
@@ -906,8 +906,8 @@ return (
               increase productivi t y, and drive growth.;
             </p>
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
-              <Link;
-          to="/contact";
+              <Link
+          to="/contact"
           className="inline-flexitems-centerpx-8py-4bg-gradient-to-rfrom-purple-600to-pink-600text-whitefont-semiboldrounded-lghover:from-purple-700hover:to-pink-700transition-allduration-300transformhover:scale-105shadow-lghover:shadow-xl"
         >
           Get Started Today;

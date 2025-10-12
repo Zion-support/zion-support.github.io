@@ -139,7 +139,7 @@ return (
               </p>
               <div className="flexflex-colsm:flex-rowgap-4justify-center" /  /></div>
                 <button /></button>
-                  Contact Us;
+                  Contact Us
                 </button>
                 <button /></button>
                   Learn More;

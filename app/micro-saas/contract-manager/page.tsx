@@ -189,8 +189,8 @@ return (
                     ))}
                   </ul>
                   
-                  <Link;
-                    to="/contact";
+                  <Link
+                    to="/contact"
                     className="{`block" w-fulltext-centerpy-3rounded-xlfont-semiboldtransition-allduration-300 ${
                       plan.popular;
                         ? 'bg-gradient-to-rfrom-cyan-500to-purple-600text-whitehover:from-cyan-600hover:to-purple-700';

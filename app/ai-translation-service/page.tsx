@@ -140,8 +140,8 @@ return (
                 Professional quality, real-timetranslatio n, and industry-specificsolutions.;
               </p>
               <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
-                <Link;
-          to="/contact";
+                <Link
+          to="/contact"
           className="bg-gradient-to-rfrom-amber-500to-purple-600text-whitepx-8py-4rounded-lgfont-semiboldhover:from-amber-600hover:to-purple-700transition-allduration-300flexitems-centerjustify-center"
         >
           Start Free Trial;
@@ -241,8 +241,8 @@ return (
                       </li>
                     ))}
                   </ul>
-                  <Link;
-                    to="/contact";
+                  <Link
+                    to="/contact"
                     className="{`w-full" block text-centerpy-3px-6rounded-lgfont-semiboldtransition-allduration-300 ${
                       plan.popular;
                         ? 'bg-gradient-to-rfrom-amber-500to-purple-600text-whitehover:from-amber-600hover:to-purple-700';

@@ -26,7 +26,7 @@ return (
             <p className="w-5h-5ml-2">We're working on bringing you comprehensi v e blog solutions.;
               Contact us to learn more about our services.;
             </p>
-            <button className="w-5h-5ml-2">Contact Us;
+            <button className="w-5h-5ml-2">Contact Us
             </button>
           </div>
       </div>

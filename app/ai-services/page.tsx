@@ -191,8 +191,8 @@ return (
             <p className="w-5h-5ml-2">Transform your business with cutting-edgeAIsolutions designed to drive growth, efficiency, and innovation.;
             </p>
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
-              <Link;
-          to="/contact";
+              <Link
+          to="/contact"
           className="bg-gradient-to-rfrom-blue-600to-purple-600text-whitepx-8py-3rounded-lgfont-semiboldhover:from-blue-700hover:to-purple-700transition-allduration-300flexitems-centergap-2"
         >
           Get Started;
@@ -257,8 +257,8 @@ return (
                 to natural language processing, we deliver AI that drives real business value.;
               </p>
               <div className="{`flex" flex-colsm: flex-rowgap-4justify-centertransition-allduration-1000delay-500 ${isVisible ? 'opacity-100translate-y-0' : 'opacity-0translate-y-10',}`} />
-                <Link;
-          to="/contact";
+                <Link
+          to="/contact"
           className="inline-flexitems-centerpx-8py-4bg-gradient-to-rfrom-purple-600to-pink-600text-whitefont-semiboldrounded-lghover:from-purple-700hover:to-pink-700transition-allduration-300transformhover:scale-105shadow-lghover:shadow-xl"
         >
           Get AI Consultati o n;
@@ -315,7 +315,7 @@ return (
 
                   <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
                     <span className="w-5h-5ml-2" />{service.price}</span>
-                    <Link;
+                    <Link
           to="{service.link}";
           className="text-cyan-400hover:text-cyan-300transition-colorstext-smfont-mediumgroup-hover:translate-x-1inline-flexitems-center"
         >
@@ -413,7 +413,7 @@ return (
                   </div>
 
                   <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
-                    <Link;
+                    <Link
           to="{`/${service.id}`}";
           className="w-fullinline-flexitems-centerjustify-centerpx-4py-3bg-gradient-to-rfrom-purple-600to-pink-600text-whitefont-semiboldrounded-lghover:from-purple-700hover:to-pink-700transition-allduration-300transformhover:scale-105"
         >
@@ -509,8 +509,8 @@ return (
               <p className="w-5h-5ml-2">Let's discuss how our AI solutions can automate your processes, enhance customer experienc e s, and drive growth.;
               </p>
               <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
-                <Link;
-          to="/contact";
+                <Link
+          to="/contact"
           className="bg-gradient-to-rfrom-cyan-500to-purple-500text-whitepx-8py-4rounded-lgfont-semiboldtext-lghover:from-cyan-600hover:to-purple-600transition-allduration-300transformhover:scale-105"
         >
           Learn More;
@@ -525,8 +525,8 @@ return (
             <p className="w-5h-5ml-2">Let our AI experts help you identify opportuniti e s, design solutions, and implement AI that drives real business value.;
             </p>
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
-              <Link;
-          to="/contact";
+              <Link
+          to="/contact"
           className="inline-flexitems-centerpx-8py-4bg-gradient-to-rfrom-purple-600to-pink-600text-whitefont-semiboldrounded-lghover:from-purple-700hover:to-pink-700transition-allduration-300transformhover:scale-105shadow-lghover:shadow-xl"
         >
           Start Your AI Journey;
@@ -555,8 +555,8 @@ return (
           <p className="w-5h-5ml-2">Let our AI experts help you choose the perfect solution for your business needs.;
           </p>
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
-            <Link;
-          to="/contact";
+            <Link
+          to="/contact"
           className="bg-gradient-to-rfrom-blue-600to-purple-600text-whitepx-8py-3rounded-lgfont-semiboldhover:from-blue-700hover:to-purple-700transition-allduration-300flexitems-centerjustify-centergap-2"
         >
           Start Your AI Journey;

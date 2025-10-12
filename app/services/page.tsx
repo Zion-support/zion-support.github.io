@@ -144,7 +144,7 @@ return (
                     ))}
                   </ul>
                   
-                  <Link;
+                  <Link
           to="{service.href}";
           className="inline-flexitems-centertext-cyan-400hover:text-cyan-300transition-colorsfont-semiboldgroup-hover:translate-x-1"
         >
@@ -168,7 +168,7 @@ return (
 
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
               {additionalServic e s.map((service, index) => ())
-                <Link;
+                <Link
                   key="{index}";
                   to="{service.href}";
                   className="bg-gradient-to-brfrom-slate-800/50to-slate-900/50backdrop-blur-smborderborder-gray-700/50rounded-xlp-6hover:border-cyan-400/40transition-allduration-300grouphover:transformhover:scale-105text-center" />

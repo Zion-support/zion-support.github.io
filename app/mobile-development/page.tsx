@@ -126,8 +126,8 @@ return (
 
                   <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
                     <span className="text-2xlfont-boldtext-cyan-400"  >{service.price}</span>
-                    <Link;
-          to="/contact";
+                    <Link
+          to="/contact"
           className="text-cyan-400hover:text-cyan-300transition-colorstext-smfont-mediumgroup-hover:translate-x-1inline-flexitems-center"
         >
           Learn More;

@@ -18,8 +18,8 @@ return (
           <p className="w-5h-5ml-2">Complete IT infrastructu r e setup, management, and optimizati o n services.;
           </p>
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
-            <Link;
-          to="/contact";
+            <Link
+          to="/contact"
           className="bg-gradient-to-rfrom-blue-600to-purple-600text-whitepx-8py-4rounded-lgfont-semiboldhover:from-blue-700hover:to-purple-700transition-allduration-300flexitems-centerjustify-center"
         >
           Get Started;
@@ -36,7 +36,7 @@ return (
           <h2 className="w-5h-5ml-2" />Coming Soon</h2>
           <p className="w-5h-5ml-2">We're developing comprehensi v e infrastructu r e management services. Contact us to discuss your infrastructu r e needs.;
           </p>
-          <Linkto="/contact" className="bg-gradient-to-rfrom-purple-600to-pink-600text-whitepx-8py-4rounded-lgfont-semiboldhover:from-purple-700hover:to-pink-700transition-allduration-300">Contact Us;
+          <Linkto="/contact" className="bg-gradient-to-rfrom-purple-600to-pink-600text-whitepx-8py-4rounded-lgfont-semiboldhover:from-purple-700hover:to-pink-700transition-allduration-300">Contact Us
           </Link>
         </div>
       </section>
