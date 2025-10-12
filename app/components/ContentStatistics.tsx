@@ -1,123 +1,27 @@
 'use client';
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { Users, TrendingUp, Award, CheckCircle, Zap, Shield, Cloud, BarChart3 } from 'lucide-react';
+import { Users, Award, CheckCircle, Zap, Cloud3 } from 'lucide-react';
 
-const ContentStatistics: React.FC = () => {
   const [animatedValues, setAnimatedValues] = useState<{ [key: string]: number }>({});
 
-  const statistics = useMemo(() => [
-    {
-      icon: Users,
-      value: 500,
-      suffix: '+',
-      label: 'Happy Clients',
-      description: 'Satisfied customers worldwide',
-      color: 'text-blue-400'
-    },
-    {
-      icon: TrendingUp,
-      value: 99.9,
-      suffix: '%',
-      label: 'Uptime',
-      description: 'Reliable service delivery',
-      color: 'text-green-400'
-    },
-    {
-      icon: Award,
-      value: 4.9,
-      suffix: '/5',
-      label: 'Rating',
-      description: 'Highly rated by clients',
-      color: 'text-yellow-400'
-    },
-    {
-      icon: Zap,
-      value: 300,
-      suffix: '%',
-      label: 'Efficiency Gain',
-      description: 'Average improvement',
-      color: 'text-purple-400'
-    }
   ], []);
 
-  const features = [
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with advanced encryption and compliance standards.',
-      stats: ['SOC 2 Certified', 'GDPR Compliant', 'End-to-End Encryption', '24/7 Monitoring']
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable, secure, and reliable cloud solutions that grow with your business.',
-      stats: ['Auto-scaling', 'High Availability', 'Global CDN', 'Disaster Recovery']
-    },
-    {
-      icon: BarChart3,
-      title: 'Analytics & Insights',
-      description: 'Make data-driven decisions with comprehensive analytics and business intelligence.',
-      stats: ['Real-time Dashboards', 'Custom Reports', 'Predictive Analytics', 'ROI Tracking']
-    },
-    {
-      icon: Zap,
-      title: 'AI-Powered Solutions',
-      description: 'Transform your business with cutting-edge artificial intelligence and automation.',
-      stats: ['Machine Learning', 'Process Automation', 'Predictive Modeling', 'Smart Analytics']
-    }
   ];
 
-  const achievements = [
-    {
-      title: 'Years of Experience',
-      value: '10+',
-      description: 'Delivering innovative solutions'
-    },
-    {
-      title: 'Projects Completed',
-      value: '1000+',
-      description: 'Successful implementations'
-    },
-    {
-      title: 'Countries Served',
-      value: '50+',
-      description: 'Global presence'
-    },
-    {
-      title: 'Team Members',
-      value: '100+',
-      description: 'Expert professionals'
-    }
   ];
 
-  useEffect(() => {
     const timers: NodeJS.Timeout[] = [];
 
-    statistics.forEach((stat) => {
-      const timer = setInterval(() => {
-        setAnimatedValues(prev => {
           const current = prev[stat.label] || 0;
           const target = stat.value;
           const increment = (target - current) / 20;
           
-          if (Math.abs(target - current) < 0.1) {
-            return { ...prev, [stat.label]: target };
-          }
-          
-          return { ...prev, [stat.label]: current + increment };
-        });
-      }, 50);
-      
-      timers.push(timer);
-    });
-
-    return () => {
+          if (Math.abs(target - current) 
       timers.forEach(timer => clearInterval(timer));
     };
   }, [statistics]);
 
-  return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -132,7 +36,6 @@ const ContentStatistics: React.FC = () => {
 
         {/* Statistics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {statistics.map((stat, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center group">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <stat.icon className="w-8 h-8 text-white" />
@@ -156,7 +59,6 @@ const ContentStatistics: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
@@ -166,7 +68,6 @@ const ContentStatistics: React.FC = () => {
                 </h4>
                 <p className="text-gray-300 text-sm mb-4">{feature.description}</p>
                 <div className="space-y-2">
-                  {feature.stats.map((stat, statIndex) => (
                     <div key={statIndex} className="flex items-center text-xs text-gray-400">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {stat}
@@ -188,7 +89,6 @@ const ContentStatistics: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl font-bold text-purple-400 mb-2">
                   {achievement.value}

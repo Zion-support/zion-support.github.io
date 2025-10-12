@@ -3,9 +3,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Star, Users, Cloud3, MessageSquare, Share2, DollarSign, Calendar, Headphones, Package, FileText, Target, Clock } from 'lucide-react';
 
-interface MicroSaasProduct {
   id: string;
   icon: React.ComponentType<any>;
   title: string;
@@ -17,102 +16,26 @@ interface MicroSaasProduct {
   category: string;
 }
 
-const MicroSaasPage: React.FC = () => {
   const microSaasProducts: MicroSaasProduct[] = [
-    {
-      id: '1',
-      icon: BarChart3,
-      title: 'AI Analytics Dashboard',
-      description: 'Real-time business intelligence and predictive analytics for small to medium businesses',
-      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Mobile app', 'API integration'],
-      price: '$99/month',
-      users: 'Up to 50 users',
-      popular: true,
+      category: 'Content Creation'
       category: 'Analytics'
-    },
-    {
-      id: '2',
-      icon: Users,
-      title: 'AI-Powered CRM',
-      description: 'Intelligent customer relationship management with automated lead scoring and personalized interactions',
-      features: ['Lead management', 'Email automation', 'Sales forecasting', 'Integration APIs', 'Custom fields'],
-      price: '$149/month',
-      users: 'Up to 100 users',
-      popular: false,
-      category: 'CRM'
-    },
-    {
-      id: '3',
-      icon: Shield,
-      title: 'Security Monitor',
-      description: 'Comprehensive security monitoring and threat detection for small businesses',
-      features: ['Threat detection', 'Vulnerability scanning', 'Compliance reporting', 'Real-time alerts', 'Incident response'],
-      price: '$79/month',
-      users: 'Up to 25 users',
-      popular: false,
-      category: 'Security'
-    },
-    {
-      id: '4',
-      icon: Cloud,
-      title: 'Cloud Backup Pro',
-      description: 'Automated cloud backup and disaster recovery solution with AI-powered optimization',
-      features: ['Automated backups', 'Disaster recovery', 'Version control', 'Cross-platform sync', 'Encryption'],
-      price: '$59/month',
-      users: 'Unlimited',
-      popular: true,
-      category: 'Backup'
-    },
-    {
-      id: '5',
-      icon: MessageSquare,
-      title: 'AI Chat Support',
-      description: 'Intelligent customer support chatbot with natural language processing and human handoff',
-      features: ['AI chatbot', 'Multi-language support', 'Human handoff', 'Analytics dashboard', 'Custom training'],
-      price: '$89/month',
-      users: 'Up to 200 conversations',
-      popular: false,
-      category: 'Support'
-    },
-    {
-      id: '6',
-      icon: TrendingUp,
-      title: 'Marketing Automation',
-      description: 'AI-driven marketing automation platform for email campaigns and social media management',
-      features: ['Email campaigns', 'Social media scheduling', 'Lead nurturing', 'A/B testing', 'ROI tracking'],
-      price: '$129/month',
-      users: 'Up to 75 users',
-      popular: true,
       category: 'Marketing'
+      category: 'CRM'
+      category: 'Social Media'
+      category: 'Finance'
+      category: 'Project Management'
+      category: 'Customer Support'
+      category: 'Inventory'
+      category: 'Document Management'
+      category: 'Lead Generation'
+      category: 'Scheduling'
     }
   ];
 
-  const categories = ['All', 'Analytics', 'CRM', 'Security', 'Backup', 'Support', 'Marketing'];
+  const categories = ['All', 'Content Creation', 'Analytics', 'Marketing', 'CRM', 'Social Media', 'Finance', 'Project Management', 'Customer Support', 'Inventory', 'Document Management', 'Lead Generation', 'Scheduling'];
 
-  const benefits = [
-    {
-      icon: Zap,
-      title: 'Quick Setup',
-      description: 'Get up and running in minutes with our intuitive setup process'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud-Native',
-      description: 'Built for the cloud with automatic scaling and high availability'
-    },
-    {
-      icon: Users,
-      title: 'User-Friendly',
-      description: 'Designed for non-technical users with intuitive interfaces'
-    }
   ];
 
-  return (
     <>
       <Helmet>
         <title>Micro SaaS Solutions - AI-Powered Tools | Zion Tech Group</title>
@@ -134,16 +57,12 @@ const MicroSaasPage: React.FC = () => {
               Get enterprise-grade tools at affordable prices.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+              
               >
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link
-                to="/pricing"
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+              
               >
                 View Pricing
               </Link>
@@ -158,7 +77,6 @@ const MicroSaasPage: React.FC = () => {
               Why Choose Our Micro SaaS Solutions?
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
                   <div className="flex justify-center mb-4">
                     <benefit.icon className="w-12 h-12 text-purple-400" />
@@ -178,16 +96,8 @@ const MicroSaasPage: React.FC = () => {
               Our Micro SaaS Products
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {microSaasProducts.map((product) => (
-                <div
-                  key={product.id}
-                  className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border ${
-                    product.popular
-                      ? 'border-purple-400 shadow-2xl shadow-purple-500/25'
-                      : 'border-white/20'
-                  }`}
+                
                 >
-                  {product.popular && (
                     <div className="flex items-center mb-4">
                       <Star className="w-4 h-4 text-yellow-400 fill-current mr-2" />
                       <span className="text-yellow-400 text-sm font-medium">Most Popular</span>
@@ -205,7 +115,6 @@ const MicroSaasPage: React.FC = () => {
                   <p className="text-gray-300 mb-4">{product.description}</p>
                   
                   <ul className="space-y-2 mb-6">
-                    {product.features.map((feature, index) => (
                       <li key={index} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
@@ -219,10 +128,7 @@ const MicroSaasPage: React.FC = () => {
                       <div className="text-sm text-gray-400">{product.users}</div>
                     </div>
                   </div>
-                  
-                  <Link
-                    to={`/micro-saas/${product.id}`}
-                    className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -244,16 +150,12 @@ const MicroSaasPage: React.FC = () => {
               All solutions include free trials and expert support.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+              
               >
                 <Zap className="mr-2 h-5 w-5" />
                 Start Free Trial
               </Link>
-              <Link
-                to="/pricing"
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+              
               >
                 View All Pricing
               </Link>
