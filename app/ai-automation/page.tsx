@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Zap, Brain, Settings, Globe, Users, Star, Award, CheckCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const AIAutomationPage: React.FC = () => {
   const features = [
@@ -68,6 +69,29 @@ const AIAutomationPage: React.FC = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              AI-Powered Automation Solutions
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Transform your business with intelligent automation that reduces costs, increases efficiency, and eliminates manual processes.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors flex items-center justify-center group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -80,16 +104,14 @@ const AIAutomationPage: React.FC = () => {
               Automation Capabilities
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our AI automation solutions cover every aspect of your business operations
+              Powerful AI-driven automation tools designed to streamline your business operations.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+              <div key={index} className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
+                <feature.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
             ))}
@@ -102,19 +124,17 @@ const AIAutomationPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Common Use Cases
+              Automation Use Cases
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how AI automation can transform different areas of your business
+            <p className="text-xl text-gray-600">
+              Discover how AI automation can transform different areas of your business.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white rounded-xl p-8 shadow-lg">
-                <div className="flex items-center mb-4">
-                  <useCase.icon className="h-12 w-12 text-blue-600 mr-4" />
-                  <h3 className="text-xl font-semibold text-gray-900">{useCase.title}</h3>
-                </div>
+              <div key={index} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <useCase.icon className="w-10 h-10 text-blue-600 mb-4" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{useCase.title}</h3>
                 <p className="text-gray-600">{useCase.description}</p>
               </div>
             ))}
@@ -123,12 +143,23 @@ const AIAutomationPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose AI Automation?
+            </h2>
+            <p className="text-xl text-gray-600">
+              Experience the transformative benefits of intelligent automation.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center p-4 bg-gray-50 rounded-lg">
+                <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />
+                <span className="text-gray-700">{benefit}</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Optimization</h3>
-              <p className="text-gray-600">
-                Continuously monitor and optimize automation performance
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -143,16 +174,15 @@ const AIAutomationPage: React.FC = () => {
             Let's discuss how AI automation can transform your operations and drive growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+            <Link
+              to="/contact"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
-              Start Automation
-              <ArrowRight className="ml-2 h-5 w-5" />
+              Contact Us
             </Link>
-            <Link 
-              to="/services" 
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
+            <Link
+              to="/services"
+              className="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors"
             >
               Explore Services
             </Link>

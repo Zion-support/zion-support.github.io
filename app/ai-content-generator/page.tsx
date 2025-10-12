@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Palette, Brain, Zap, Users, Award, Lightbulb, Type, Image, Video, Music, Code, Database, Cloud, Lock, Pause, Download, Upload, Edit, Copy, Bookmark, Heart, ThumbsUp, RefreshCw, Settings } from 'lucide-react'
+import { ArrowRight, Palette, Brain } from 'lucide-react'
 
 export default function AIContentGeneratorPage() {
 

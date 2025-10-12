@@ -1,5 +1,5 @@
 import React from 'react'
-import { Share2, ArrowRight, Bot, RotateCcw, RotateCw, Receipt } from 'lucide-react'
+import { Share2, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const AISocialSchedulerPage: React.FC = () => {

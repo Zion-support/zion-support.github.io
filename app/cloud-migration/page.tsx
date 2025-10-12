@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, HardDrive, Laptop, Tablet, Router } from 'lucide-react'
+import { ArrowRight, Router } from 'lucide-react'
 
 export default function CloudMigrationPage() {
 

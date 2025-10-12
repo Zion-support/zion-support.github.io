@@ -1,8 +1,7 @@
 'use client';
 
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, AlertCircle, Calculator, Building2, Wallet, PiggyBank } from 'lucide-react';
+import { ArrowRight, Calculator, Building2, Wallet } from 'lucide-react';
 
 export default function AiFinancialAnalyticsProPage() {
 
