@@ -1,6 +1,5 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight } from 'lucide-react'
 
 export default function FiveGImplementationPage() {
   return (

@@ -1,15 +1,11 @@
-<<<<<<< HEAD
 import React from 'react';
 import { CheckCircle, ArrowRight, BarChart3, FileText, TrendingUp, Clock, Shield, Zap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-a178
 
 const AIAutomatedReportingPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: <BarChart3 className="w-8 h-8 text-blue-500" />,
       title: 'Automated Report Generation',
       description: 'Generate comprehensive reports automatically using AI-powered analytics and data processing.'
@@ -276,6 +272,3 @@ const AIAutomatedReportingPage: React.FC = () => {
 };
 
 export default AIAutomatedReportingPage;
-=======
-      title: 'Automated Reports',
->>>>>>> cursor/website-audit-and-update-with-deployment-a178

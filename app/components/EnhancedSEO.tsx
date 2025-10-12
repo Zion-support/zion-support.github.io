@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const EnhancedSEOPage: React.FC = () => {
@@ -14,31 +13,23 @@ const EnhancedSEOPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Real-time Optimization',
-<<<<<<< HEAD
       description: 'Get instant SEO insights and recommendations for better search performance'
     },
     {
       icon: Shield,
       title: 'Technical SEO',
       description: 'Comprehensive technical SEO audits and optimization for better search visibility'
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-a178
     },
     {
       icon: Globe,
       title: 'Global SEO',
-<<<<<<< HEAD
       description: 'Optimize your website for international markets and multiple languages'
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-a178
     }
   ]
 
-=======
 import { CheckCircle, ArrowRight } from 'lucide-react'
 
 const EnhancedSEOPage: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-edcb
   const benefits = [
     'AI-powered SEO optimization',
     'Real-time ranking analysis',
@@ -53,12 +44,9 @@ const EnhancedSEOPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
         <title>Enhanced SEO | Zion Tech Group</title>
         <meta name="description" content="Professional Enhanced SEO services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="SEO, search engine optimization, AI solutions, IT services, Zion Tech Group" />
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-a178
       </Helmet>
       
       {/* Hero Section */}
@@ -73,11 +61,8 @@ const EnhancedSEOPage: React.FC = () => {
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Optimize your website for search engines with our advanced AI-powered SEO solutions. 
               Improve rankings and drive more organic traffic.
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-a178
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
@@ -97,25 +82,14 @@ const EnhancedSEOPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD
               Why Choose Our SEO Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Our SEO solutions deliver unmatched performance, security, and scalability.
-=======
-              Why Choose Our Enhanced SEO Solutions?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our advanced AI-powered SEO solutions deliver measurable results and drive sustainable growth.
->>>>>>> cursor/analyze-improve-and-deploy-application-edcb
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-a178
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<<<<<<< HEAD
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
@@ -137,15 +111,10 @@ const EnhancedSEOPage: React.FC = () => {
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Experience the power of our SEO solutions for your business.
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-a178
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-edcb
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
                 <div className="flex items-center mb-4">
@@ -159,8 +128,6 @@ const EnhancedSEOPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       {/* Contact Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -179,27 +146,6 @@ const EnhancedSEOPage: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-=======
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Boost Your SEO Performance?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Contact us today to learn how our enhanced SEO solutions can transform your digital presence.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center">
-              Get Started Today
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              Learn More
-            </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-edcb
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-a178
           </div>
         </div>
       </section>

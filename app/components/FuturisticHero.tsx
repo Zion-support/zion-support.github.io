@@ -1,12 +1,7 @@
 'use client'
 import React from 'react'
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-=======
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react'
->>>>>>> cursor/analyze-improve-and-deploy-application-edcb
 
 const FuturisticHeroPage: React.FC = () => {
   const features = [
@@ -46,18 +41,11 @@ const FuturisticHeroPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
         <title>Futuristic Hero Solutions | Zion Tech Group</title>
         <meta name="description" content="Professional futuristic hero services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="futuristic hero, AI solutions, IT services, Zion Tech Group, hero solutions" />
       </Helmet>
       
-=======
-        <title>FuturisticHero - Zion Tech Group</title>
-        <meta name="description" content="Advanced futuristichero solutions powered by AI technology." />
-      </Helmet>
-
->>>>>>> cursor/analyze-improve-and-deploy-application-edcb
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -70,11 +58,7 @@ const FuturisticHeroPage: React.FC = () => {
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Transform your business with our advanced futuristic hero solutions. 
-=======
-              Transform your business with our advanced futuristichero solutions. 
->>>>>>> cursor/analyze-improve-and-deploy-application-edcb
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -95,7 +79,6 @@ const FuturisticHeroPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD
               Why Choose Our Futuristic Hero Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -109,22 +92,6 @@ const FuturisticHeroPage: React.FC = () => {
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-=======
-              Key Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Powerful AI technology that drives results
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
-                <div className="flex items-center mb-4">
-                  <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
-                  <h3 className="text-lg font-semibold text-white">{feature.title}</h3>
-                </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-edcb
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
@@ -137,22 +104,12 @@ const FuturisticHeroPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our futuristic hero solutions for your business.
             </p>
           </div>
-=======
-              Why Choose Our Solutions?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our advanced AI-powered solutions deliver measurable results and drive sustainable growth.
-            </p>
-          </div>
-          
->>>>>>> cursor/analyze-improve-and-deploy-application-edcb
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
@@ -164,7 +121,6 @@ const FuturisticHeroPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Contact Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -183,25 +139,6 @@ const FuturisticHeroPage: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-=======
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Contact us today to learn how our futuristichero solutions can transform your digital presence.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center">
-              Get Started Today
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              Learn More
-            </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-edcb
           </div>
         </div>
       </section>

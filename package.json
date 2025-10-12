@@ -98,7 +98,6 @@
     "generate:sitemap": "node scripts/generate-sitemap.cjs",
     "optimize:performance": "node scripts/performance-optimizer.cjs",
     "lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
-    "optimize:advanced": "node scripts/advanced-performance-optimizer.js",
     "postbuild": "npm run generate:sitemap && npm run optimize:performance && echo \"Build completed successfully\""
   },
   "dependencies": {

@@ -2,22 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 /* Accessibility Enhancements */
 @layer base {
   /* High contrast mode */
-=======
-/* Custom CSS for enhanced accessibility and performance */
-
-/* High contrast mode */
-@media (prefers-contrast: high) {
->>>>>>> cursor/analyze-improve-and-deploy-application-c354
+  @media (prefers-contrast: high) {
   .high-contrast {
     --tw-bg-opacity: 1;
     --tw-text-opacity: 1;
   }
   
-<<<<<<< HEAD
   .high-contrast * {
     background-color: white !important;
     color: black !important;
@@ -148,7 +141,6 @@
   .dark-mode-auto {
     @apply dark:bg-gray-900 dark:text-white;
   }
-=======
   .high-contrast .bg-white\/10 {
     background-color: rgba(255, 255, 255, 0.9);
   }
@@ -258,7 +250,6 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #7c3aed;
->>>>>>> cursor/analyze-improve-and-deploy-application-c354
 }
 
 /* Print styles */
@@ -267,7 +258,6 @@
     display: none !important;
   }
   
-<<<<<<< HEAD
   .print-only {
     display: block !important;
   }
@@ -276,7 +266,6 @@
     background: white !important;
     color: black !important;
   }
-=======
   body {
     background: white !important;
     color: black !important;
@@ -336,5 +325,5 @@ select:focus {
 .success {
   border-color: #10b981;
   box-shadow: 0 0 0 1px #10b981;
->>>>>>> cursor/analyze-improve-and-deploy-application-c354
+}
 }
