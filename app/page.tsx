@@ -37,52 +37,112 @@ export default function HomePage() {
 
   const services = [
     {
-      title: 'AI Content Generation',
-      description: 'Transform your content strategy with our advanced AI-powered content generation tools.',
+      title: 'AI Content Generation Pro',
+      description: 'Advanced AI-powered content creation with GPT-4, Claude, and custom models. Generate blogs, social media, marketing copy, and technical documentation.',
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      link: '/ai-content-generation',
-      features: ['Automated content creation', 'SEO optimization', 'Multi-language support'],
-      price: 'Starting at $99/month'
+      link: '/ai-content-generation-pro',
+      features: ['GPT-4 & Claude integration', 'SEO optimization', 'Multi-language support', 'Brand voice training', 'Content scheduling'],
+      price: 'Starting at $199/month',
+      category: 'AI Services'
     },
     {
-      title: 'IT Services & Solutions',
-      description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
-      icon: <Shield className="w-8 h-8 text-green-500" />,
-      link: '/it-services',
-      features: ['Cloud Migration', 'Cybersecurity', 'Mobile Development', 'Data Analytics'],
-      price: 'Starting at $2,500/project'
-    },
-    {
-      title: 'Cloud Services',
-      description: 'Scalable, secure, and reliable cloud infrastructure solutions for your business.',
-      icon: <Cloud className="w-8 h-8 text-blue-400" />,
-      link: '/cloud-services',
-      features: ['Scalable infrastructure', '99.9% uptime', 'Global CDN'],
-      price: 'Starting at $199/month'
-    },
-    {
-      title: 'Cybersecurity Solutions',
-      description: 'Protect your business with our comprehensive cybersecurity services and monitoring.',
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-      link: '/cybersecurity',
-      features: ['Threat detection', 'Security audits', 'Compliance management'],
-      price: 'Starting at $499/month'
-    },
-    {
-      title: '5G Implementation',
-      description: 'Leverage the power of 5G technology for ultra-fast connectivity and IoT solutions.',
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      link: '/5g-implementation',
-      features: ['Ultra-fast speeds', 'IoT connectivity', 'Edge computing'],
-      price: 'Starting at $5,000/project'
-    },
-    {
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with our advanced analytics platform.',
+      title: 'AI Business Intelligence Suite',
+      description: 'Comprehensive BI platform with predictive analytics, automated reporting, and real-time dashboards for data-driven decision making.',
       icon: <BarChart3 className="w-8 h-8 text-green-400" />,
-      link: '/data-analytics',
-      features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards'],
-      price: 'Starting at $299/month'
+      link: '/ai-business-intelligence-pro',
+      features: ['Predictive analytics', 'Automated reporting', 'Real-time dashboards', 'Custom KPI tracking', 'Data visualization'],
+      price: 'Starting at $399/month',
+      category: 'AI Services'
+    },
+    {
+      title: 'AI Cybersecurity Matrix',
+      description: 'Advanced AI-powered cybersecurity platform with threat detection, automated response, and compliance management.',
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      link: '/ai-cyber-defense-matrix',
+      features: ['AI threat detection', 'Automated response', 'Compliance management', '24/7 monitoring', 'Incident response'],
+      price: 'Starting at $799/month',
+      category: 'AI Services'
+    },
+    {
+      title: 'AI Task Manager Pro',
+      description: 'Intelligent task management with AI scheduling, priority optimization, and team collaboration features.',
+      icon: <Users className="w-8 h-8 text-purple-400" />,
+      link: '/ai-task-manager-pro',
+      features: ['AI scheduling', 'Priority optimization', 'Team collaboration', 'Progress tracking', 'Deadline management'],
+      price: 'Starting at $29/month',
+      category: 'Micro SAAS'
+    },
+    {
+      title: 'AI Expense Tracker Pro',
+      description: 'Smart expense management with receipt scanning, categorization, and financial insights powered by AI.',
+      icon: <TrendingUp className="w-8 h-8 text-green-500" />,
+      link: '/ai-expense-tracker-pro',
+      features: ['Receipt scanning', 'AI categorization', 'Financial insights', 'Budget tracking', 'Tax preparation'],
+      price: 'Starting at $19/month',
+      category: 'Micro SAAS'
+    },
+    {
+      title: 'AI Smart Invoice Generator',
+      description: 'Automated invoice generation with AI-powered pricing, client management, and payment tracking.',
+      icon: <MessageSquare className="w-8 h-8 text-blue-400" />,
+      link: '/ai-smart-invoice',
+      features: ['Automated generation', 'AI pricing', 'Client management', 'Payment tracking', 'Multi-currency'],
+      price: 'Starting at $39/month',
+      category: 'Micro SAAS'
+    },
+    {
+      title: 'Cloud Infrastructure Pro',
+      description: 'Enterprise-grade cloud solutions with auto-scaling, disaster recovery, and 99.99% uptime guarantee.',
+      icon: <Cloud className="w-8 h-8 text-blue-400" />,
+      link: '/cloud-services-pro',
+      features: ['Auto-scaling', 'Disaster recovery', '99.99% uptime', 'Global CDN', '24/7 support'],
+      price: 'Starting at $499/month',
+      category: 'IT Services'
+    },
+    {
+      title: '5G Edge Computing Platform',
+      description: 'Ultra-low latency computing platform for IoT, autonomous vehicles, and real-time applications.',
+      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      link: '/5g-edge-computing',
+      features: ['Ultra-low latency', 'IoT connectivity', 'Edge AI processing', 'Real-time analytics', 'Global deployment'],
+      price: 'Starting at $2,999/month',
+      category: '5G Solutions'
+    },
+    {
+      title: 'AI Health Tracker Pro',
+      description: 'Comprehensive health monitoring with AI insights, medication reminders, and telemedicine integration.',
+      icon: <Users className="w-8 h-8 text-pink-400" />,
+      link: '/ai-health-tracker-pro',
+      features: ['Health monitoring', 'AI insights', 'Medication reminders', 'Telemedicine', 'Wearable integration'],
+      price: 'Starting at $49/month',
+      category: 'Micro SAAS'
+    },
+    {
+      title: 'AI Climate Solutions Pro',
+      description: 'Advanced climate monitoring and prediction platform for environmental management and sustainability.',
+      icon: <Globe className="w-8 h-8 text-emerald-400" />,
+      link: '/ai-climate-solutions-pro',
+      features: ['Climate monitoring', 'Predictive modeling', 'Sustainability tracking', 'Carbon footprint', 'Environmental reports'],
+      price: 'Starting at $299/month',
+      category: 'AI Services'
+    },
+    {
+      title: 'AI Drug Discovery Platform',
+      description: 'Revolutionary AI platform for pharmaceutical research, molecular analysis, and drug development.',
+      icon: <Brain className="w-8 h-8 text-indigo-400" />,
+      link: '/ai-drug-discovery-pro',
+      features: ['Molecular analysis', 'Drug discovery', 'Clinical trials', 'Regulatory compliance', 'Research automation'],
+      price: 'Starting at $9,999/month',
+      category: 'AI Services'
+    },
+    {
+      title: 'AI 3D Generation Studio',
+      description: 'Create stunning 3D models, animations, and virtual environments using advanced AI technology.',
+      icon: <Zap className="w-8 h-8 text-orange-400" />,
+      link: '/ai-3d-generation',
+      features: ['3D model generation', 'Animation creation', 'Virtual environments', 'AR/VR support', 'Real-time rendering'],
+      price: 'Starting at $199/month',
+      category: 'AI Services'
     }
   ];
 
