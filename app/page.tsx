@@ -1,29 +1,10 @@
 'use client'
-<<<<<<< HEAD
 import React from 'react'
 import SEOHead from './components/SEOHead'
-<<<<<<< HEAD
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud } from 'lucide-react'
-=======
 import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network, BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock } from 'lucide-react'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7149
 import { Link } from 'react-router-dom'
-=======
-import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
-=======
-import React, { Suspense, lazy } from 'react'
-import { ArrowRight, Shield, Globe, Database, Code, Cloud, Smartphone, Brain } from 'lucide-react'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-import SEOHead from './components/SEOHead'
-import OptimizedLoading from './components/OptimizedLoading'
->>>>>>> cursor/analyze-improve-and-deploy-application-b46d
 
 export default function HomePage() {
   const stats = [
@@ -35,70 +16,58 @@ export default function HomePage() {
 
   const features = [
     {
-<<<<<<< HEAD
-      icon: <Brain className="w-8 h-8 text-blue-500" />,
-      title: 'AI-Powered Solutions',
-      description: 'Transform your business with our comprehensive AI services including content generation, chatbots, and automation.',
-      benefits: ['AI Content Generator - $29/month', 'AI Chatbot Builder - $49/month', 'AI Analytics Dashboard - $39/month', 'AI Email Assistant - $19/month'],
-      link: '/ai-services'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-green-500" />,
-<<<<<<< HEAD
-<<<<<<< HEAD
-      title: 'Cybersecurity',
-      description: 'Protect your digital assets with our advanced security solutions and compliance management.'
-=======
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption, compliance standards, and advanced threat protection.'
->>>>>>> cursor/analyze-improve-and-deploy-application-b46d
-=======
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       title: 'AI-Powered Solutions',
       description: 'Transform your business with our comprehensive AI services including content generation, chatbots, and automation.',
       gradient: 'from-cyan-500/20 to-blue-500/20',
-      borderColor: 'border-cyan-500/30'
+      borderColor: 'border-cyan-500/30',
+      benefits: ['AI Content Generator - $29/month', 'AI Chatbot Builder - $49/month', 'AI Analytics Dashboard - $39/month', 'AI Email Assistant - $19/month'],
+      link: '/ai-services'
     },
     {
       icon: <Shield className="w-8 h-8 text-green-400" />,
       title: 'Cybersecurity',
       description: 'Protect your digital assets with our advanced security solutions and compliance management.',
       gradient: 'from-green-500/20 to-emerald-500/20',
-      borderColor: 'border-green-500/30'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7149
+      borderColor: 'border-green-500/30',
+      benefits: ['Threat Detection - $1,500/month', 'Compliance Management - $2,000/month', 'Security Audits - $3,500/project', '24/7 Monitoring - $1,200/month'],
+      link: '/cybersecurity'
     },
     {
       icon: <Cloud className="w-8 h-8 text-purple-400" />,
       title: 'Cloud Migration',
       description: 'Seamlessly migrate to the cloud with zero downtime and enhanced performance.',
       gradient: 'from-purple-500/20 to-pink-500/20',
-      borderColor: 'border-purple-500/30'
+      borderColor: 'border-purple-500/30',
+      benefits: ['AWS Migration - Starting at $5,000', 'Azure Setup - Starting at $4,500', 'Google Cloud - Starting at $4,000', 'Multi-cloud Strategy - $8,000'],
+      link: '/cloud-services'
     },
     {
       icon: <Database className="w-8 h-8 text-orange-400" />,
       title: 'Data Analytics',
       description: 'Unlock insights from your data with our advanced analytics and visualization tools.',
       gradient: 'from-orange-500/20 to-red-500/20',
-      borderColor: 'border-orange-500/30'
+      borderColor: 'border-orange-500/30',
+      benefits: ['Business Intelligence - $2,500/month', 'Data Visualization - $1,800/month', 'Predictive Analytics - $3,200/month', 'Real-time Dashboards - $2,000/month'],
+      link: '/analytics'
     },
     {
       icon: <Code className="w-8 h-8 text-red-400" />,
       title: 'DevOps & CI/CD',
       description: 'Streamline your development process with automated deployment and continuous integration.',
       gradient: 'from-red-500/20 to-pink-500/20',
-      borderColor: 'border-red-500/30'
+      borderColor: 'border-red-500/30',
+      benefits: ['CI/CD Pipeline - $2,800/month', 'Infrastructure as Code - $3,500/month', 'Monitoring & Logging - $1,500/month', 'Auto-scaling - $2,200/month'],
+      link: '/it-services'
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: <Globe className="w-8 h-8 text-cyan-500" />,
-=======
       icon: <Globe className="w-8 h-8 text-cyan-400" />,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7149
       title: 'Global Reach',
       description: 'Scale your business worldwide with our international deployment and support services.',
       gradient: 'from-cyan-500/20 to-teal-500/20',
-      borderColor: 'border-cyan-500/30'
+      borderColor: 'border-cyan-500/30',
+      benefits: ['Global CDN - $1,200/month', 'Multi-region Deployment - $4,000/month', '24/7 Global Support - $2,500/month', 'Localization Services - $3,000/month'],
+      link: '/contact'
     }
   ]
 
