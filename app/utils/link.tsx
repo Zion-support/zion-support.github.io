@@ -1,93 +1,52 @@
-interface LinkProps {
-  href: string,
-    children: React.ReactNode
-interface LinkProps {}
-  href: string,
-    children: React.ReactNode
-  className?: string
-  target?: string
-  rel?: string
-  onClick?: () => void
-  'aria-label'?: string}
-}
-export const Link: React.FC<LinkProps>= ({
-export const Link: React.FC<LinkProps> = ({}
-  href,
-  href: string,
+import React from 'react'
+import { Link as RouterLink } from 'react-router-dom'
 
-interface LinkProps {href: string,
-    children: React.ReactNode}
-interface LinkProps {}
+interface LinkProps {
   href: string
   children: React.ReactNode
   className?: string
   target?: string
   rel?: string
   onClick?: () => void
-  'aria-label'?: string}
+  'aria-label'?: string
 }
-export const Link: React.FC<LinkProps>= ({}
-export const Link: React.FC<LinkProps> = ({}
+
+export const Link: React.FC<LinkProps> = ({
   href,
-  href: string,
-  children: React.ReactNode
-  className?: string
-  target?: string
-  rel?: string
-  onClick?: () => void
-  'aria-label'?: string}
-}
-export const Link: React.FC<LinkProps> = ({,
-  href
   children,
-  className,
+  className = '',
   target,
   rel,
   onClick,
-  'aria-label': ariaLabel,}
-  ...props}
-}) => {}
-  const handleClick = useCallback((...args) => {}
-    if (onClick) {}
-      onClick()}
-    }
-    // Handle internal navigation
-    if (href.startsWith('/') && !href.startsWith('//')) {// Handle internal navigation}
-    if (href.startsWith('/') && !href.startsWith('//')) {}
-      e.preventDefault()
-      window.location.href = href}
-    }
-  }</LinkProps>
-  return (<a}
-  return(<a
-import React from 'react'
-interface LinkProps {/* TODO: Fix JSX expression */}
-}
-export const,
-  Link: React.FC<LinkProps> = ({/* TODO: Fix JSX expression */})}) => {/* TODO: Fix JSX expression */}
-    }
-    // Handle internal navigation
-    if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
-    }
+  'aria-label': ariaLabel
+}) => {
+  const isExternal = href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:')
+  
+  if (isExternal) {
+    return (
+      <a
+        href={href}
+        className={className}
+        target={target || '_blank'}
+        rel={rel || 'noopener noreferrer'}
+        onClick={onClick}
+        aria-label={ariaLabel}
+      >
+        {children}
+      </a>
+    )
   }
-  return (<a></a>
-      href={href}
+
+  return (
+    <RouterLink
+      to={href}
       className={className}
-      target={target}
-      rel={rel}
-      onClick={handleClick}
+      onClick={onClick}
       aria-label={ariaLabel}
-      {...props}
-    >{children}</a>
-    </a>
-      aria-label={ariaLabel})
-      {...props})>)
-      {children})
-    </a>))}
-export default Link>
+    >
       {children}
-    </a>))}
+    </RouterLink>
+  )
+}
+
 export default Link
-  </LinkProps>
-  </LinkProps>
-  </LinkProps>
