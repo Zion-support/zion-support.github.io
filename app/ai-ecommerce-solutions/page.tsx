@@ -1,25 +1,21 @@
-import React from 'react'
+'use client';
+import React from 'react';
+import GenericServicePage from '../components/GenericServicePage';
+import { ShoppingCart } from 'lucide-react';
 
-
-import { ArrowRight } from 'lucide-react'
-
+const AiEcommerceSolutionsPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
-        <title>Ai Ecommerce Solutions - Zion Tech Group</title>
-        <meta name="description" content="Professional ai ecommerce solutions services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">Ai Ecommerce Solutions</h1>
-        <p className="text-lg text-gray-300 mb-8">Professional ai ecommerce solutions services coming soon.</p>
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
-    </div>
-  )
-}
+    <GenericServicePage
+      title="AI E-commerce Solutions"
+      description="AI-powered e-commerce optimization including personalized recommendations and automated customer service."
+      icon={ShoppingCart}
+      features={["Personalized Recommendations","Price Optimization","Inventory Management","Customer Service Bots","Visual Search","Demand Forecasting"]}
+      benefits={["Increase Sales by 35%","Better Customer Experience","Optimized Pricing","Reduced Cart Abandonment"]}
+      pricing="$799/month"
+      category="AI"
+      color="from-pink-500 to-rose-600"
+    />
+  );
+};
+
+export default AiEcommerceSolutionsPage;

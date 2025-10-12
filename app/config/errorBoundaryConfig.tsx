@@ -216,4 +216,3 @@ export default getErrorBoundaryConfig
     url: typeof window !== 'undefined' ? window.location.href : 'unknown',}
   }}
 
-export default getErrorBoundaryConfig

@@ -12,8 +12,7 @@ import { ArrowRight, Mail, Brain } from 'lucide-react';
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
-
+  ];
   return (
     <div className={`fixed bottom-4 left-4 right-4 z-50 ${className}`}>
       <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 p-4 shadow-lg">
@@ -62,5 +61,4 @@ import { ArrowRight, Mail, Brain } from 'lucide-react';
         <meta name="keywords" content="PWAInstaller, AI solutions, IT services, Zion Tech Group, pwainstaller" />
       </Helmet>
         </div>
-      </section>};export default PWAInstallerPage
 }

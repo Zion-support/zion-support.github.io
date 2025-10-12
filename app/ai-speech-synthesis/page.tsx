@@ -1,25 +1,21 @@
-import React from 'react'
+'use client';
+import React from 'react';
+import GenericServicePage from '../components/GenericServicePage';
+import { Mic } from 'lucide-react';
 
-
-import { ArrowRight } from 'lucide-react'
-
+const AiSpeechSynthesisPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
-        <title>Ai Speech Synthesis - Zion Tech Group</title>
-        <meta name="description" content="Professional ai speech synthesis services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">Ai Speech Synthesis</h1>
-        <p className="text-lg text-gray-300 mb-8">Professional ai speech synthesis services coming soon.</p>
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
-    </div>
-  )
-}
+    <GenericServicePage
+      title="AI Speech Synthesis"
+      description="Natural-sounding text-to-speech conversion with multiple voices and languages."
+      icon={Mic}
+      features={["Natural Voices","Multiple Languages","Emotion Control","Custom Voices","Real-time Synthesis","API Integration"]}
+      benefits={["Better Accessibility","Consistent Quality","Multilingual Support","Easy Integration"]}
+      pricing="$199/month"
+      category="AI"
+      color="from-amber-500 to-yellow-600"
+    />
+  );
+};
+
+export default AiSpeechSynthesisPage;
