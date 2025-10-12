@@ -1,7 +1,6 @@
 'use client';
 
-import React, { useEffect, useState, useCallback } from 'react';
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
+import React, { useEffect } from 'react';
 
 interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
@@ -92,7 +91,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-      } catch (e) {
+      } catch {
         // Fallback for browsers that don't support these entry types
       }
     }
