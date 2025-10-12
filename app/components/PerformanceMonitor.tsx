@@ -1,93 +1,65 @@
 'use client';
-import React, { useEffect, useState } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-import { useAnalytics } from './EnhancedAnalytics';
-
-interface PerformanceMetrics {
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  fcp: number | null;
-  ttfb: number | null;
-}
+import React, { useEffect } from 'react';
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    lcp: null,
-    fid: null,
-    cls: null,
-    fcp: null,
-    ttfb: null
-  });
-
-  const { trackEvent } = useAnalytics();
-
   useEffect(() => {
-    // Track LCP (Largest Contentful Paint)
-    onLCP((metric) => {
-      setMetrics(prev => ({ ...prev, lcp: metric.value }));
-      trackEvent('performance_metric', {
-        metric: 'lcp',
-        value: metric.value,
-        rating: metric.rating
-      });
-    });
+    // Monitor Core Web Vitals
+    const monitorCoreWebVitals = () => {
+      if ('web-vitals' in window) {
+        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+          getCLS(console.log);
+          getFID(console.log);
+          getFCP(console.log);
+          getLCP(console.log);
+          getTTFB(console.log);
+        });
+      }
+    };
 
-    // Track FID (First Input Delay)
-    onINP((metric) => {
-      setMetrics(prev => ({ ...prev, fid: metric.value }));
-      trackEvent('performance_metric', {
-        metric: 'fid',
-        value: metric.value,
-        rating: metric.rating
-      });
-    });
+    // Monitor performance metrics
+    const monitorPerformance = () => {
+      if ('performance' in window) {
+        window.addEventListener('load', () => {
+          setTimeout(() => {
+            const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+            const paint = performance.getEntriesByType('paint');
+            
+            console.log('Performance Metrics:', {
+              domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+              loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+              firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
+              firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
+            });
+          }, 0);
+        });
+      }
+    };
 
-    // Track CLS (Cumulative Layout Shift)
-    onCLS((metric) => {
-      setMetrics(prev => ({ ...prev, cls: metric.value }));
-      trackEvent('performance_metric', {
-        metric: 'cls',
-        value: metric.value,
-        rating: metric.rating
-      });
-    });
+    // Monitor memory usage
+    const monitorMemory = () => {
+      if ('memory' in performance) {
+        setInterval(() => {
+          const memory = (performance as any).memory;
+          console.log('Memory Usage:', {
+            used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
+            total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
+            limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
+          });
+        }, 30000); // Check every 30 seconds
+      }
+    };
 
-    // Track FCP (First Contentful Paint)
-    onFCP((metric) => {
-      setMetrics(prev => ({ ...prev, fcp: metric.value }));
-      trackEvent('performance_metric', {
-        metric: 'fcp',
-        value: metric.value,
-        rating: metric.rating
-      });
-    });
+    // Initialize monitoring
+    monitorCoreWebVitals();
+    monitorPerformance();
+    monitorMemory();
 
-    // Track TTFB (Time to First Byte)
-    onTTFB((metric) => {
-      setMetrics(prev => ({ ...prev, ttfb: metric.value }));
-      trackEvent('performance_metric', {
-        metric: 'ttfb',
-        value: metric.value,
-        rating: metric.rating
-      });
-    });
-  }, [trackEvent]);
+    // Cleanup
+    return () => {
+      // Cleanup if needed
+    };
+  }, []);
 
-  // Log performance warnings
-  useEffect(() => {
-    if (metrics.lcp && metrics.lcp > 4000) {
-      console.warn('Poor LCP:', metrics.lcp);
-    }
-    if (metrics.fid && metrics.fid > 300) {
-      console.warn('Poor FID:', metrics.fid);
-    }
-    if (metrics.cls && metrics.cls > 0.25) {
-      console.warn('Poor CLS:', metrics.cls);
-    }
-  }, [metrics]);
-
-  // Don't render anything visible
   return null;
 };
 

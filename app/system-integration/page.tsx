@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -76,6 +78,11 @@ const Page: React.FC = () => {
         </section>
       </div>
     </>
+=======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-6024
+    </div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
   );
 };
 

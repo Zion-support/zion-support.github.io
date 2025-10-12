@@ -1,188 +1,138 @@
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Layout from '../layout';
-import { Monitor, Users, Zap, CheckCircle, Star, ArrowRight, Brain, Eye, Globe, Settings, Shield, Clock, BarChart, Target, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Box, Users, Zap, CheckCircle, ArrowRight, Star, Award, Brain, BarChart, Target, Settings, Smartphone, Globe, Database, Server, Mail, Phone, MapPin, Eye, Layers, Monitor, Camera, Video, Mic, Headphones, Wifi, Bluetooth, Battery, Cpu, MemoryStick, HardDrive } from 'lucide-react';
 
-const AIHolographicWorkspace: React.FC = () => {
+const AiHolographicWorkspacePage: React.FC = () => {
   const features = [
     {
-      icon: Monitor,
+      icon: <Box className="w-8 h-8 text-cyan-400" />,
       title: '3D Holographic Displays',
-      description: 'Immersive 3D workspace environments with gesture-based interaction and spatial computing',
-      price: '$0.50/hour'
+      description: 'Immersive 3D holographic interfaces for enhanced productivity and collaboration',
+      benefits: ['360° viewing angles', 'Gesture controls', 'Multi-user support', 'Real-time rendering']
     },
     {
-      icon: Users,
+      icon: <Users className="w-8 h-8 text-purple-400" />,
       title: 'Virtual Collaboration',
-      description: 'Real-time holographic meetings with spatial audio and presence simulation',
-      price: '$0.25/participant/hour'
+      description: 'AI-powered virtual meeting spaces with holographic avatars and shared workspaces',
+      benefits: ['Holographic avatars', 'Shared 3D spaces', 'Real-time interaction', 'Spatial audio']
     },
     {
-      icon: Eye,
-      title: 'Eye Tracking Integration',
-      description: 'Advanced eye tracking for intuitive navigation and attention-based UI adaptation',
-      price: '$0.10/tracking-session'
+      icon: <Zap className="w-8 h-8 text-green-400" />,
+      title: 'AI-Powered Interface',
+      description: 'Intelligent holographic interface that adapts to user behavior and preferences',
+      benefits: ['Adaptive layouts', 'Voice commands', 'Eye tracking', 'Predictive actions']
     },
     {
-      icon: Globe,
-      title: 'Spatial Computing',
-      description: 'AI-powered spatial awareness and object recognition in 3D environments',
-      price: '$0.15/computation'
-    },
-    {
-      icon: Settings,
-      title: 'Gesture Control',
-      description: 'Natural hand and body gesture recognition for seamless interaction',
-      price: '$0.05/gesture'
-    },
-    {
-      icon: Brain,
-      title: 'AI Workspace Assistant',
-      description: 'Intelligent virtual assistant that adapts to your workflow and preferences',
-      price: '$0.20/assistant-hour'
+      icon: <Eye className="w-8 h-8 text-red-400" />,
+      title: 'Mixed Reality Integration',
+      description: 'Seamless integration with AR/VR devices for complete immersive experience',
+      benefits: ['AR overlay', 'VR compatibility', 'Hand tracking', 'Spatial mapping']
     }
   ];
 
-  const pricingTiers = [
+  const workspaceFeatures = [
     {
-      name: 'Individual',
-      price: '$199',
-      period: '/month',
-      description: 'Perfect for professionals',
-      features: [
-        'Personal holographic workspace',
-        'Basic gesture controls',
-        'Eye tracking support',
-        'Email support',
-        'Standard templates'
-      ],
-      popular: false
+      title: 'Holographic Design Studio',
+      description: '3D design and modeling in immersive holographic environment',
+      price: '$2,999/month',
+      features: ['3D modeling tools', 'Holographic preview', 'Collaborative design', 'Real-time rendering']
     },
     {
-      name: 'Team',
-      price: '$599',
-      period: '/month',
-      description: 'Ideal for small teams',
-      features: [
-        'Up to 10 users',
-        'Collaborative workspaces',
-        'Advanced AI assistant',
-        'Priority support',
-        'Custom environments',
-        'API access',
-        'Analytics dashboard'
-      ],
-      popular: true
+      title: 'Virtual Conference Room',
+      description: 'Holographic meeting spaces for remote collaboration',
+      price: '$1,999/month',
+      features: ['Holographic avatars', 'Shared whiteboards', 'Document sharing', 'Recording capabilities']
     },
     {
-      name: 'Enterprise',
-      price: '$1,999',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited users',
-        'All holographic features',
-        'Custom development',
-        'Dedicated support',
-        'White-label solution',
-        'Advanced security',
-        'SLA guarantee',
-        'Custom integrations'
-      ],
-      popular: false
+      title: 'Training Simulator',
+      description: 'Immersive training environments for complex procedures',
+      price: '$3,999/month',
+      features: ['Realistic simulations', 'Haptic feedback', 'Progress tracking', 'Multi-user training']
+    },
+    {
+      title: 'Data Visualization Hub',
+      description: 'Interactive 3D data visualization and analytics',
+      price: '$2,499/month',
+      features: ['3D charts', 'Interactive dashboards', 'Real-time updates', 'Collaborative analysis']
     }
   ];
 
   const stats = [
-    { number: '300%', label: 'Productivity Increase', icon: Zap },
-    { number: '85%', label: 'Faster Collaboration', icon: Users },
-    { number: '99.9%', label: 'Gesture Accuracy', icon: Eye },
-    { number: '24/7', label: 'Virtual Availability', icon: Clock }
+    { number: '500+', label: 'Holographic Workspaces', icon: <Box className="w-6 h-6 text-cyan-400" /> },
+    { number: '95%', label: 'User Satisfaction', icon: <Star className="w-6 h-6 text-green-400" /> },
+    { number: '10x', label: 'Productivity Increase', icon: <Zap className="w-6 h-6 text-purple-400" /> },
+    { number: '24/7', label: 'AI Support', icon: <Brain className="w-6 h-6 text-red-400" /> }
   ];
 
   return (
-    <Layout
-      title="AI Holographic Workspace - Immersive 3D Work Environment"
-      description="Transform your work experience with AI-powered holographic workspaces. Immersive 3D environments, gesture controls, and spatial computing for unprecedented productivity."
-      keywords="holographic workspace, 3D workspace, spatial computing, virtual reality, AR workspace, immersive work environment, gesture control"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-cyan-500/10"></div>
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-6">
-                <Sparkles className="w-5 h-5 text-purple-400 mr-2" />
-                <span className="text-purple-400 font-medium">Next-Generation Workspace</span>
-              </div>
-              
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-                  AI Holographic Workspace
-                </span>
-              </h1>
-              
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Step into the future of work with AI-powered holographic environments. Experience unprecedented 
-                productivity with 3D workspaces, gesture controls, and spatial computing that adapts to your needs.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25 flex items-center justify-center group">
-                  Start Free Trial
-                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                </button>
-                <button className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-500/10 transition-all duration-300 transform hover:scale-105">
-                  Experience Demo
-                </button>
-              </div>
+    <>
+      <Helmet>
+        <title>AI Holographic Workspace - Zion Tech Group | Immersive 3D Collaboration Platform</title>
+        <meta name="description" content="Revolutionize your workspace with AI-powered holographic technology. 3D displays, virtual collaboration, mixed reality integration, and immersive productivity tools." />
+        <meta name="keywords" content="holographic workspace, 3D collaboration, mixed reality, virtual workspace, AI interface, immersive technology" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-holographic-workspace" />
+      </Helmet>
 
-              {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                {stats.map((stat, index) => (
-                  <div key={index} className="text-center group">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <stat.icon className="w-8 h-8 text-purple-400" />
-                    </div>
-                    <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                    <div className="text-gray-400 text-sm">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(99,102,241,0.4)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.4)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          
+          <div className="relative max-w-7xl mx-auto text-center">
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 text-indigo-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-indigo-400/30">
+              <Box className="w-4 h-4" />
+              <span>Holographic Technology</span>
+            </div>
+            
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
+              AI Holographic{' '}
+              <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Workspace
+              </span>
+            </h1>
+            
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+              Step into the future of work with AI-powered holographic workspaces. Immersive 3D collaboration, 
+              virtual meetings, and mixed reality integration that transforms how teams work together.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Link 
+                to="/contact" 
+                className="group bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 transform hover:scale-105"
+              >
+                <span>Experience the Future</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link 
+                to="/demo" 
+                className="group border-2 border-indigo-400 text-indigo-400 px-10 py-4 rounded-xl font-semibold hover:bg-indigo-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
+              >
+                <span>View Holographic Demo</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Immersive <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Features</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Revolutionary holographic technology powered by AI to create the most advanced workspace experience
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div 
-                  key={index}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300 group hover:transform hover:scale-105"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="w-6 h-6 text-white" />
+        {/* Stats Section */}
+        <section className="py-20 px-4 relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/5 to-purple-500/5" />
+          <div className="relative max-w-7xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex justify-center mb-4">
+                    {stat.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                    {feature.description}
-                  </p>
-                  <div className="text-purple-400 font-semibold text-sm">
-                    {feature.price}
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-300 text-sm">
+                    {stat.label}
                   </div>
                 </div>
               ))}
@@ -190,163 +140,82 @@ const AIHolographicWorkspace: React.FC = () => {
           </div>
         </section>
 
-        {/* How It Works Section */}
-        <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
-          <div className="container mx-auto px-4">
+        {/* Features Section */}
+        <section className="py-20 px-4 relative">
+          <div className="relative max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                How It <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Works</span>
+                Immersive <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Features</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the future of work through our advanced holographic technology and AI integration
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <div className="text-center group">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Monitor className="w-10 h-10 text-purple-400" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">1. Immerse</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Step into your personalized holographic workspace with 3D displays and spatial audio.
-                </p>
-              </div>
-
-              <div className="text-center group">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-pink-500/20 to-cyan-500/20 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Brain className="w-10 h-10 text-pink-400" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">2. Interact</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Use natural gestures, eye tracking, and voice commands to interact with your 3D environment.
-                </p>
-              </div>
-
-              <div className="text-center group">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Settings className="w-10 h-10 text-cyan-400" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">3. Optimize</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  AI continuously adapts your workspace to maximize productivity and comfort.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">AI Holographic Workspace</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join the future of work with the most advanced holographic workspace technology available
+                Revolutionary holographic technology that transforms how you work and collaborate
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center group">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="w-8 h-8 text-purple-400" />
+              {features.map((feature, index) => (
+                <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/10">
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-indigo-400 transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {feature.description}
+                  </p>
+                  <div className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <div key={benefitIndex} className="flex items-center space-x-2 text-gray-400 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-400" />
+                        <span>{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">Maximum Productivity</h3>
-                <p className="text-gray-300 text-sm">
-                  Increase productivity by 300% with immersive 3D workspaces and intuitive interactions.
-                </p>
-              </div>
-
-              <div className="text-center group">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-pink-500/20 to-cyan-500/20 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Users className="w-8 h-8 text-pink-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Enhanced Collaboration</h3>
-                <p className="text-gray-300 text-sm">
-                  Collaborate in real-time with spatial presence and natural gesture-based communication.
-                </p>
-              </div>
-
-              <div className="text-center group">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Eye className="w-8 h-8 text-cyan-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Intuitive Interface</h3>
-                <p className="text-gray-300 text-sm">
-                  Natural eye tracking and gesture recognition for seamless, hands-free interaction.
-                </p>
-              </div>
-
-              <div className="text-center group">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Globe className="w-8 h-8 text-purple-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Spatial Computing</h3>
-                <p className="text-gray-300 text-sm">
-                  Advanced spatial awareness and object recognition for true 3D workspace experience.
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
-          <div className="container mx-auto px-4">
+        {/* Workspace Features Section */}
+        <section className="py-20 px-4 relative">
+          <div className="relative max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Future-Ready <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Pricing</span>
+                Holographic <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Workspaces</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the future of work with our cutting-edge holographic workspace technology
+                Specialized holographic environments for different business needs
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricingTiers.map((tier, index) => (
-                <div 
-                  key={index}
-                  className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-xl p-8 hover:transform hover:scale-105 transition-all duration-300 ${
-                    tier.popular 
-                      ? 'border-purple-500/50 shadow-lg shadow-purple-500/25' 
-                      : 'border-gray-700/50'
-                  }`}
-                >
-                  {tier.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </div>
-                    </div>
-                  )}
-                  
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                    <p className="text-gray-400 text-sm mb-4">{tier.description}</p>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-white">{tier.price}</span>
-                      <span className="text-gray-400 ml-1">{tier.period}</span>
-                    </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {workspaceFeatures.map((workspace, index) => (
+                <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/10">
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-indigo-400 transition-colors">
+                    {workspace.title}
+                  </h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {workspace.description}
+                  </p>
+                  <div className="text-3xl font-bold text-indigo-400 mb-6">
+                    {workspace.price}
                   </div>
-
-                  <ul className="space-y-4 mb-8">
-                    {tier.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-                        <span className="text-gray-300 text-sm">{feature}</span>
-                      </li>
+                  <div className="space-y-3 mb-6">
+                    {workspace.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center space-x-2 text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-400" />
+                        <span>{feature}</span>
+                      </div>
                     ))}
-                  </ul>
-
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    tier.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
-                      : 'border border-purple-500 text-purple-400 hover:bg-purple-500/10'
-                  }`}>
-                    {tier.popular ? 'Get Started' : 'Choose Plan'}
-                  </button>
+                  </div>
+                  <Link 
+                    to="/contact"
+                    className="w-full block text-center py-3 px-6 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300"
+                  >
+                    Get Started
+                  </Link>
                 </div>
               ))}
             </div>
@@ -354,32 +223,42 @@ const AIHolographicWorkspace: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-12 text-center relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"></div>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 backdrop-blur-sm border border-indigo-500/20 rounded-2xl p-12 text-center relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/5 to-purple-500/5"></div>
               <div className="relative z-10">
                 <h2 className="text-4xl font-bold text-white mb-6">
-                  Step Into the Future of Work
+                  Ready to Work in the Future?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                  Experience the most advanced holographic workspace technology. Transform how you work, collaborate, and create.
+                  Transform your workspace with cutting-edge holographic technology that revolutionizes collaboration and productivity.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25">
-                    Start Free Trial
-                  </button>
-                  <button className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-500/10 transition-all duration-300 transform hover:scale-105">
-                    Schedule Demo
-                  </button>
+                  <Link 
+                    to="/contact"
+                    className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-indigo-500/25"
+                  >
+                    Experience Holographic Workspace
+                  </Link>
+                  <a
+                    href="tel:+13024640950"
+                    className="border border-indigo-500 text-indigo-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-500/10 transition-all duration-300 transform hover:scale-105"
+                  >
+                    Call +1 302 464 0950
+                  </a>
+                </div>
+                <div className="mt-8 text-gray-400">
+                  <p>Email: kleber@ziontechgroup.com</p>
+                  <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
       </div>
-    </Layout>
+    </>
   );
 };
 
-export default AIHolographicWorkspace;
+export default AiHolographicWorkspacePage;

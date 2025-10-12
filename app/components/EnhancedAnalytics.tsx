@@ -2,14 +2,14 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 interface AnalyticsContextType {
-  trackEvent: (event: string, properties?: Record<string, any>) => void;
-  trackPageView: (page: string) => void;
-  setUser: (userId: string, properties?: Record<string, any>) => void;
+  track: (event: string, properties?: Record<string, any>) => void;
+  identify: (userId: string, traits?: Record<string, any>) => void;
+  page: (name: string, properties?: Record<string, any>) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-export const useAnalytics = (): AnalyticsContextType => {
+export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
@@ -25,44 +25,51 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
-    // Initialize analytics
-    setIsInitialized(true);
+    // Initialize analytics when component mounts
+    const initAnalytics = () => {
+      // Add your analytics initialization code here
+      // Example: Google Analytics, Mixpanel, etc.
+      console.log('Analytics initialized');
+      setIsInitialized(true);
+    };
+
+    initAnalytics();
   }, []);
 
-  const trackEvent = (event: string, properties?: Record<string, any>) => {
+  const track = (event: string, properties?: Record<string, any>) => {
     if (!isInitialized) return;
     
-    // Track event (placeholder for actual analytics implementation)
+    // Track custom events (placeholder for actual analytics implementation)
     console.log('Analytics Event:', event, properties);
     
     // Here you would integrate with your analytics service
     // Example: gtag('event', event, properties);
   };
 
-  const trackPageView = (page: string) => {
+  const identify = (userId: string, traits?: Record<string, any>) => {
     if (!isInitialized) return;
     
-    // Track page view (placeholder for actual analytics implementation)
-    console.log('Analytics Page View:', page);
-    
-    // Here you would integrate with your analytics service
-    // Example: gtag('config', 'GA_MEASUREMENT_ID', { page_path: page });
-  };
-
-  const setUser = (userId: string, properties?: Record<string, any>) => {
-    if (!isInitialized) return;
-    
-    // Set user properties (placeholder for actual analytics implementation)
-    console.log('Analytics Set User:', userId, properties);
+    // Identify user (placeholder for actual analytics implementation)
+    console.log('Analytics Identify:', userId, traits);
     
     // Here you would integrate with your analytics service
     // Example: gtag('config', 'GA_MEASUREMENT_ID', { user_id: userId });
   };
 
+  const page = (name: string, properties?: Record<string, any>) => {
+    if (!isInitialized) return;
+    
+    // Track page view (placeholder for actual analytics implementation)
+    console.log('Analytics Page View:', name, properties);
+    
+    // Here you would integrate with your analytics service
+    // Example: gtag('config', 'GA_MEASUREMENT_ID', { page_path: name });
+  };
+
   const value: AnalyticsContextType = {
-    trackEvent,
-    trackPageView,
-    setUser,
+    track,
+    identify,
+    page,
   };
 
   return (
@@ -71,5 +78,3 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     </AnalyticsContext.Provider>
   );
 };
-
-export default AnalyticsProvider;
