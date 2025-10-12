@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 'use client';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2a00
 import React, { useEffect } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB };
 'use client';
@@ -30,8 +27,8 @@ const PerformanceMonitor: React.FC = () => {
             console.log('Performance Metrics: ', {
               domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
               loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-              firstPaint: paint.find(const entry = > entry.name === 'first-paint')?.startTime,
-              firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
+              firstPaint: paint.find(const entry = > entry.name=== 'first-paint')?.startTime,
+              firstContentfulPaint: paint.find(entry=> entry.name=== 'first-contentful-paint')?.startTime,
             });
           }, 0);
         });

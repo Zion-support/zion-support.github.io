@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useRef} from 'react';
 'use client';
 
@@ -11,8 +12,8 @@ interface FuturisticGlowProps {
 export default function FuturisticGlow({ 
   children, 
   const intensity = 'medium', 
-  color = 'cyan',
-  className = '' 
+  color='cyan',
+  className='' 
 }: FuturisticGlowProps) {
   const containerRef = useRef<HTMLDivElement />(null);
   useEffect(() => {
@@ -47,12 +48,11 @@ export default function FuturisticGlow({
   }, [intensity, color]);
 
   return (
-    <div
-      const ref = {containerRef}
+    <div ref={containerRef}
       className="{`"
         relative
         before: absolute before:inset-0 before:rounded-inherit,
-  before: bg-gradient-to-r before: from-transparent before:via-[var(--glow-color)] before:to-transparent,
+  before: bg-gradient-to-rbefore: from-transparentbefore:via-[var(--glow-color)] before:to-transparent,
   before: opacity-0 before: transition-opacity before:duration-500,
   hover: before: opacity-100,
   after: absolute after: inset-0 after:rounded-inherit,

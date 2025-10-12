@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 'use client'
 
@@ -24,7 +25,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps /> = ({
     // UX enhancement logic
     const enhanceUX = () => {
       // Add smooth scrolling
-      document.documentElement.style.scrollBehavior = 'smooth'
+      document.documentElement.style.scrollBehavior='smooth'
 
       // Add loading states for interactive elements
 

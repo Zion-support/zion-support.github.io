@@ -88,7 +88,7 @@
     this.userBehavior.userJourney.push(currentPage);
 
     // Update top pages
-    const existingPage = this.userBehavior.topPages.find(p => p.page === currentPage);
+    const existingPage = this.userBehavior.topPages.find(p=> p.page=== currentPage);
       existingPage.views++;
       this.userBehavior.topPages.push({ page: currentPage, views: 1 });
     }

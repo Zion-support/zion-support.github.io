@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState} from 'react';
 import { onCLS, onFID, onFCP, onLCP, onTTFB };
 
@@ -21,13 +22,13 @@ const PerformanceOptimizer: React.FC = () => {
         '/images/logo.png'
       ]
 
-      criticalResources.forEach(resource => {
+      criticalResources.forEach(resource=> {
         const link = document.createElement('link')
-        link.rel = 'preload'
-        link.href = resource
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image'
+        link.rel='preload'
+        link.href=resource
+        link.as=resource.endsWith('.woff2') ? 'font' : 'image'
         if (resource.endsWith('.woff2')) {
-          link.crossOrigin = 'anonymous'
+          link.crossOrigin='anonymous'
         }
         document.head.appendChild(link)
       })
@@ -36,10 +37,10 @@ const PerformanceOptimizer: React.FC = () => {
     // Optimize images
     const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]')
-      images.forEach(img => {
+      images.forEach(img=> {
         const imageElement = img as HTMLImageElement
         if (imageElement.dataset.src) {
-          imageElement.src = imageElement.dataset.src
+          imageElement.src=imageElement.dataset.src
           imageElement.removeAttribute('data-src')
         }
       })
@@ -49,7 +50,7 @@ const PerformanceOptimizer: React.FC = () => {
     const lazyLoadComponents = () => {
       const observer = new IntersectionObserver(
         (entries) => {
-          entries.forEach(entry => {
+          entries.forEach(entry=> {
             if (entry.isIntersecting) {
               const element = entry.target as HTMLElement
               element.classList.add('loaded')
@@ -61,16 +62,16 @@ const PerformanceOptimizer: React.FC = () => {
       )
 
       const lazyElements = document.querySelectorAll('[data-lazy]')
-      lazyElements.forEach(el => observer.observe(el))
+      lazyElements.forEach(el=> observer.observe(el))
     }
 
     // Monitor Core Web Vitals
     const monitorWebVitals = () => {
-        onCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
-        onFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))
-        onFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })))
-        onLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })))
-        onTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })))
+        onCLS((metric) => setMetrics(prev=> ({ ...prev, cls: metric.value })))
+        onFID((metric) => setMetrics(prev=> ({ ...prev, fid: metric.value })))
+        onFCP((metric) => setMetrics(prev=> ({ ...prev, fcp: metric.value })))
+        onLCP((metric) => setMetrics(prev=> ({ ...prev, lcp: metric.value })))
+        onTTFB((metric) => setMetrics(prev=> ({ ...prev, ttfb: metric.value })))
       }).catch(() => {
         // Silently fail if web-vitals is not available
       })
@@ -98,7 +99,7 @@ const PerformanceOptimizer: React.FC = () => {
 
   // Log performance metrics in development
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development' && Object.values(metrics).some(val => val !== null)) {
+    if (process.env.NODE_ENV=== 'development' && Object.values(metrics).some(val=> val !== null)) {
       console.log('Performance Metrics: ', metrics)
     }
   }, [metrics])

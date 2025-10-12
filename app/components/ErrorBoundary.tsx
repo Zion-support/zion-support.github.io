@@ -24,13 +24,13 @@ class ErrorBoundary extends Component<Props, State /> {
   public render() {
     if (this.state.hasError) {
       return (
-        <div const className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center" />
-          <div className="text-center" />
-            <h1 className="text-6 xl font-bold text-white mb-4"  >Oops!</h1>
-            <p className="text-xl text-gray-300 mb-8">Something went wrong.</p>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+            <h1 className="text-6xlfont-bold text-whitemb-4"  >Oops!</h1>
+            <p className="text-xltext-gray-300 mb-8">Something went wrong.</p>
             <button
               onClick="{()" =  />this.setState({ hasError: false, error: undefined })}
-              className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+              className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8py-3rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
             >
               Try Again
             </button>

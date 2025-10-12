@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState} from 'react';
 'use client';
 
@@ -13,9 +14,9 @@ interface AnimatedTextProps {
 const AnimatedText: React.FC<AnimatedTextProps /> = ({
   text,
   const className = '',
-  delay = 0,
-  // duration = 1000,
-  type = 'fade'
+  delay=0,
+  // duration=1000,
+  type='fade'
 }) => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -58,12 +59,11 @@ const AnimatedText: React.FC<AnimatedTextProps /> = ({
   };
 
   return (
-    <span const className = {`${getAnimationClasses()} ${className}`} />
-      {type === 'typing' ? displayText : text}
-      {type === 'typing' && currentIndex < text.length && (
+    <span className={`${getAnimationClasses()} ${className}`} />
+      {type=== 'typing' ? displayText : text}
+      {type=== 'typing' && currentIndex < text.length && (
         <span className="animate-pulse"  >|</span>
-      )}
-    </span>
+      )}</span>
   );
 };
 

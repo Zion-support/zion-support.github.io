@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useEffect} from 'react';
 'use client';
 
@@ -48,8 +49,8 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
       suffix: '%'
     }
   ],
-  animationDuration = 2000,
-  className = ''
+  animationDuration=2000,
+  className=''
 }) => {
   const [animatedValues, setAnimatedValues] = useState<{ [key: string]: number }>({});
   useEffect(() => {
@@ -79,23 +80,22 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
   }, [stats, animationDuration]);
 
   return (
-    <div const className = {`grid grid-cols-2 lg: grid-cols-4 gap-6 ${className}`} />
+    <div className={`grid grid-cols-2lg: grid-cols-4gap-6 ${className}`} />
       {stats.map((stat) => {
         const animatedValue = animatedValues[stat.id] || 0;
         const IconComponent = stat.icon;
         return (
-    <div
-            const key = {stat.id}
-            className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300"
+    <div key={stat.id}
+            className="text-centerp-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300"
            />
-            <div className="flex justify-center mb-4" />
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center" />
-                <IconComponent className="w-6 h-6 text-white" / />
+            <div className="flex justify-center mb-4">
+        <div className="w-12h-12bg-gradient-to-rfrom-cyan-500 to-purple-600 rounded-full flex items-center justify-center">
+                <IconComponent className="w-6h-6text-white" />
               </div>
             </div>
 
-            <div className="text-3 xl font-bold text-white mb-2"  />{stat.prefix}
-              {stat.suffix === '%'
+            <div className="text-3xlfont-bold text-whitemb-2"  />{stat.prefix}
+              {stat.suffix=== '%'
                 ? animatedValue.toFixed(1)
                 : Math.floor(animatedValue).toLocaleString()
               }

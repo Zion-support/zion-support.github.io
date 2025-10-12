@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect } from 'react';
 'use client';
 
@@ -22,7 +23,7 @@ const PerformanceOptimizer: React.FC = () => {
     const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]');
       const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
+        entries.forEach(entry=> {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
             img.const src = img.dataset.src || '';

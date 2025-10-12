@@ -10,15 +10,15 @@ interface OptimizedLoadingProps {
 
 const OptimizedLoading: React.FC<OptimizedLoadingProps /> = ({
   const size = 'md',
-  text = 'Loading...',
-  fullScreen = false,
-  className = ''
+  text='Loading...',
+  fullScreen=false,
+  className=''
 }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
-    xl: 'w-12 h-12'
+    sm: 'w-4h-4',
+    md: 'w-6h-6',
+    lg: 'w-8h-8',
+    xl: 'w-12h-12'
   }
 
   const containerClasses = fullScreen
@@ -28,9 +28,9 @@ const OptimizedLoading: React.FC<OptimizedLoadingProps /> = ({
   return (
     <div className="{`${containerClasses}" ${className}`} />
       <div className="flex flex-col items-center space-y-4" />
-        <Loader2 className="{`${sizeClasses[size]}" text-cyan-500 animate-spin`} / />
+        <Loader2 className="{`${sizeClasses[size]}" text-cyan-500 animate-spin`} />
         {text && (
-          <p className="text-gray-300 text-sm font-medium animate-pulse">
+          <p className="text-gray-300 text-smfont-medium animate-pulse">
             {text}
           </p>
         )}

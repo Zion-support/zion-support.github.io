@@ -39,7 +39,7 @@ import React from 'react';
   ): Promise<void /> {}
     return new Promise((resolve, reject) => {}
 
-    <<<<title  >Test</title></<<title  >Results</title> | Zion Tech Group - AI & IT Solutions<style  >}</style></<<<styl  >body</styl></styl> { font-family: Arial, sans-serif; margin: 20 px}
+    <<<<title>Test</title></<<title>Results</title> | Zion Tech Group - AI & IT Solutions<style  >}</style></<<<styl  >body</styl></styl> { font-family: Arial, sans-serif; margin: 20 px}
         .summary { background: #f5 f5 f5; padding: 20 px; border-radius: 5 px; margin-bottom: 20 px}
         .test { margin: 10 px 0; padding: 10 px; border-left: 4 px solid #ccc}
         .passed { border-left-color: #4 CAF50}
@@ -48,43 +48,43 @@ import React from 'react';
     </style>
 </head>
 <body />
-    <h2 const id = "heading-test-results"  >Test Results</h2>
+    <h2 id="heading-test-results"  >Test Results</h2>
     <div class="summary" /></div>
         <h3 id="heading-summary" />Summary<p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests"  >${this.results</div>
+        <p>Passed: ${this.results.filter(r=> r.status=== 'passed').length}<p>Failed: ${this.results.filter(r=> r.status=== 'failed').length}</p>
+        <p>Skipped: ${this.results.filter(r=> r.status=== 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests"  >${this.results</div>
     <div class="summary" /></div>}
         <h3 id="heading-summary"  >Summary</h3><p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests"  >${this.results</div>
+        <p>Passed: ${this.results.filter(r=> r.status=== 'passed').length}</p><p>Failed: ${this.results.filter(r=> r.status=== 'failed').length}</p>
+        <p>Skipped: ${this.results.filter(r=> r.status=== 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests"  >${this.results</div>
           .map()</div>}
-    result => `}</div>
+    result=> `}</div>
             <div class="test ${result.status}" /></div>
                 <h4 id="heading-${result.name}" />${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
             </div>
         <h3 id="heading-summary"  >Summary</h3>
         <p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p>
-        <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
+        <p>Passed: ${this.results.filter(r=> r.status=== 'passed').length}</p>
+        <p>Failed: ${this.results.filter(r=> r.status=== 'failed').length}</p>
+        <p>Skipped: ${this.results.filter(r=> r.status=== 'skipped').length}</p>
         <p>Duration: ${Date.now() - this.startTime}ms</p>
     </div>
     <div class="tests"  />${this.results
             </div>
         <h3 id="heading-summary"  >Summary</h3>
         <p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p>
-        <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
+        <p>Passed: ${this.results.filter(r=> r.status=== 'passed').length}</p>
+        <p>Failed: ${this.results.filter(r=> r.status=== 'failed').length}</p>
+        <p>Skipped: ${this.results.filter(r=> r.status=== 'skipped').length}</p>
         <p>Duration: ${Date.now() - this.startTime}ms</p>
     </div>
     <div class="tests" /></div>
         ${this.results}
-          .map(result => `}
+          .map(result=> `}
         ${this.results}
           .map()
-            result => `}</div>
+            result=> `}</div>
             <div class="test ${result.status}" /></div>
                 <h4 id="heading-${result.name}"  >${result.name}</h4>
                 <p>Status: ${result.status}</p>)
@@ -167,31 +167,31 @@ import React from 'react';
           const result = await this.runComponentTest()
             test.name)
     test.assertions as any
-          result = await this.runComponentTest(test.component)
+          result=await this.runComponentTest(test.component)
             test.name)
             test.assertions as, any)
           break
         case 'integration':
-          result = await this.runIntegrationTest()
+          result=await this.runIntegrationTest()
             test.name)
     test.userInteractions as any
-          result = await this.runIntegrationTest(test.component)
+          result=await this.runIntegrationTest(test.component)
             test.name)
             test.userInteractions as, any)
           break
         case 'performance':
-          result = await this.runPerformanceTest(test.component, test.name)
+          result=await this.runPerformanceTest(test.component, test.name)
           break
         case 'accessibility':
-          result = await this.runAccessibilityTest(test.component, test.name)
+          result=await this.runAccessibilityTest(test.component, test.name)
           break
         case 'visual':
-          result = await this.runVisualRegressionTest(test.component, test.name)
+          result=await this.runVisualRegressionTest(test.component, test.name)
           break
         default:}
-          result = { passed: false, error: 'Unknown test type' }
+          result={ passed: false, error: 'Unknown test type' }
   private generateJunitReport(): void {/* TODO: Fix JSX expression */}"
-    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r = /> r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
+    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r=/> r.status=== 'failed').length}" skipped="${this.results.filter(r=> r.status=== 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
         ${/* TODO: Fix JSX expression */}"
             <testcase name="${result.name}" time="${result.duration / 1000}" /></testcase>"`
 ;
@@ -235,38 +235,38 @@ import React from 'react';
       let result
       switch (test.type) {}
         case 'component':
-          result = await this.runComponentTest()
+          result=await this.runComponentTest()
             test.name)
     test.assertions as any
-          result = await this.runComponentTest(test.component)
+          result=await this.runComponentTest(test.component)
             test.name)
             test.assertions as, any)
           break
         case 'integration':
-          result = await this.runIntegrationTest(result = await this.runIntegrationTest()
+          result=await this.runIntegrationTest(result=await this.runIntegrationTest()
             test.name)
     test.userInteractions as any
-          result = await this.runIntegrationTest(test.component)
+          result=await this.runIntegrationTest(test.component)
             test.name)
             test.userInteractions as, any)
           break
         case 'performance':
-          result = await this.runPerformanceTest(test.component, test.name)
+          result=await this.runPerformanceTest(test.component, test.name)
           break
         case 'accessibility':
-          result = await this.runAccessibilityTest(test.component, test.name)
+          result=await this.runAccessibilityTest(test.component, test.name)
           break
         case 'visual':
-          result = await this.runVisualRegressionTest(test.component, test.name)
+          result=await this.runVisualRegressionTest(test.component, test.name)
           break
         default:}
-          result = { passed: false, error: 'Unknown test type' }
+          result={ passed: false, error: 'Unknown test type' }
   private generateJunitReport(): void {/* TODO: Fix JSX expression */}"
-    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r = /> r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
+    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r=/> r.status=== 'failed').length}" skipped="${this.results.filter(r=> r.status=== 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
         ${/* TODO: Fix JSX expression */}"
             <testcase name="${result.name}" time="${result.duration / 1000}" /></testcase>"`
-                ${result.status === 'failed' ? `<failure message="${result.error?.message}"  >${result.error?.stack}</failure>` : ''}
-                ${result.status === 'skipped' ? '<skipped/ />' : ''}
+                ${result.status=== 'failed' ? `<failure message="${result.error?.message}"  >${result.error?.stack}</failure>` : ''}
+                ${result.status=== 'skipped' ? '<skipped/>' : ''}
             </testcase>`
         `)
           .join('')}
@@ -308,9 +308,9 @@ import React from 'react';
       results.push({/* TODO: Fix JSX expression */})
   e: test.type })}
 
-    for (let i = 0; i
+    for (let i=0; i
   createMockData: (type: string, count: const number = 10) => {};
-    for (let i = 0; i
+    for (let i=0; i
     return new Promise((resolve, reject) => {// Wait for element to appear}
   waitForElement: (selector: string, timeout: const number = 5000) => {}
     return new Promise((resolve, reject) => {}

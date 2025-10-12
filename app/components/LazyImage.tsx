@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useRef, useEffect} from 'react';
 import { Loader2 } from 'lucide-react';
 
@@ -55,13 +56,13 @@ const LazyImage: React.FC<LazyImageProps /> = ({
     <div ref="{imgRef}" className="{`relative" overflow-hidden ${className}`} />
       {!isInView && (
         <div className="absolute inset-0 bg-gray-800 animate-pulse flex items-center justify-center" />
-          <Loader2 className="w-8 h-8 text-gray-400 animate-spin" / />
+          <Loader2 className="w-8h-8text-gray-400 animate-spin" />
         </div>
       )}
       
       {isInView && !isLoaded && !hasError && (
         <div className="absolute inset-0 bg-gray-800 flex items-center justify-center" />
-          <Loader2 className="w-8 h-8 text-gray-400 animate-spin" / />
+          <Loader2 className="w-8h-8text-gray-400 animate-spin" />
         </div>
       )}
       
@@ -75,13 +76,13 @@ const LazyImage: React.FC<LazyImageProps /> = ({
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           loading="lazy"
-        / />
+        />
       )}
       
       {hasError && (
-        <div className="absolute inset-0 bg-gray-800 flex items-center justify-center" />
-          <div className="text-center text-gray-400" />
-            <div className="w-8 h-8 mx-auto mb-2"  >📷</div>
+        <div className="absolute inset-0 bg-gray-800 flex items-center justify-center">
+        <div className="text-centertext-gray-400">
+            <div className="w-8h-8mx-auto mb-2"  >📷</div>
             <p className="text-sm">Image failed to load</p>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useEffect} from 'react';
 import { ChevronLeft, ChevronRight} from 'lucide-react';
 'use client';
@@ -42,8 +43,8 @@ const defaultSlides: Slide[] = [
 ];
 
   const slides = defaultSlides, 
-  autoPlay = true, 
-  interval = 5000 
+  autoPlay=true, 
+  interval=5000 
 }: ContentCarouselProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(autoPlay);
@@ -74,7 +75,7 @@ const defaultSlides: Slide[] = [
   };
 
   return (
-    <div const className = "relative w-full max-w-4 xl mx-auto" />
+    <div className="relative w-full max-w-4xl mx-auto" />
       {/* Main Carousel */}
       <div className="relative overflow-hidden rounded-2 xl bg-white/10 backdrop-blur-lg border border-white/20" />
         <div 
@@ -82,23 +83,23 @@ const defaultSlides: Slide[] = [
           style="{{" transform: `translateX(-${currentSlide * 100}%)` }}
          />
           {slides.map((slide) => (
-            <div key="{slide.id}" className="w-full flex-shrink-0" />
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8" />
-                <div className="space-y-6" />
-                  <h3 className="text-3 xl font-bold text-white"  >{slide.title}</h3>
+            <div key={slide.id} className="w-full flex-shrink-0" />
+              <div className="grid grid-cols-1lg:grid-cols-2gap-8p-8">
+        <div className="space-y-6">
+                  <h3 className="text-3xlfont-bold text-white"  >{slide.title}</h3>
                   <p className="text-lg text-gray-300">{slide.description}</p>
                   <ul className="space-y-3" />
                     {slide.features.map((feature, index) => (
-                      <li key="{index}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" / />
+                      <li key={index} className="flex items-center text-gray-300" />
+                        <CheckCircle className="w-5 h-5text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="flex items-center justify-center" />
-                  <div className="w-full h-64 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center" />
-                    <Cloud className="w-24 h-24 text-white opacity-50" / />
+                <div className="flex items-center justify-center">
+        <div className="w-full h-64bg-gradient-to-brfrom-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                    <Cloud className="w-24h-24text-whiteopacity-50" />
                   </div>
                 </div>
               </div>
@@ -109,17 +110,17 @@ const defaultSlides: Slide[] = [
         {/* Navigation Arrows */}
         <button
           onClick="{prevSlide}"
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-whitep-2 rounded-full transition-colors"
           aria-label="Previous slide"
          />
-          <ChevronLeft className="w-6 h-6" / />
+          <ChevronLeft className="w-6h-6" />
         </button>
         <button
           onClick="{nextSlide}"
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-whitep-2 rounded-full transition-colors"
           aria-label="Next slide"
          />
-          <ChevronRight className="w-6 h-6" / />
+          <ChevronRight className="w-6h-6" />
         </button>
       </div>
 
@@ -127,20 +128,20 @@ const defaultSlides: Slide[] = [
       <div className="flex items-center justify-center mt-6 space-x-4" />
         <button
           onClick="{togglePlayPause}"
-          className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+          className="bg-white/20 hover:bg-white/30 text-whitep-2 rounded-full transition-colors"
           aria-label="{isPlaying" ? 'Pause' : 'Play'}
          />
-          {isPlaying ? <Pause className="w-5 h-5" / /> : <Play className="w-5 h-5" / />}
+          {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
         </button>
 
         {/* Slide Indicators */}
         <div className="flex space-x-2" />
           {slides.map((_, index) => (
             <button
-              key="{index}"
+              key={index}
               onClick="{()" = /> goToSlide(index)}
-              className="{`w-3" h-3 rounded-full transition-colors ${
-                index === currentSlide ? 'bg-white' : 'bg-white/30'
+              className="{`w-3" h-3rounded-full transition-colors ${
+                index=== currentSlide ? 'bg-white' : 'bg-white/30'
               }`}
               aria-label="{`Go" to slide ${index + 1}`}
             />

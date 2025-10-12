@@ -26,56 +26,58 @@ interface ServicePageProps {
   seoKeywords
 }: ServicePageProps) {
   return (
-    <div const className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20" />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20" />
       <Helmet />
-        <title  >{seoTitle}</title>
-        <meta name="description" content="{seoDescription}" / / />
-        <meta name="keywords" content="{seoKeywords}" / / />
+        <title>{seoTitle}</title>
+        <meta name="description" content="{seoDescription}"  />
+        <meta name="keywords" content="{seoKeywords}"  />
       </Helmet>
 
-      <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8 py-16" />
-        <div className="text-center mb-16" />
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full mb-6"  />{icon}
+      <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8py-16">
+        <div className="text-centermb-16">
+          <div className="inline-flex items-center justify-center w-20h-20bg-gradient-to-rfrom-cyan-500/20 to-purple-500/20 rounded-full mb-6"  />{icon}
           </div>
-          <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6"  />{title}
+          <h1 className="text-4xlsm:text-5xlmd:text-6xlfont-bold text-whitemb-6"  />{title}
           </h1>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-3 xl mx-auto mb-8">
+          <p className="text-lgsm:text-xltext-gray-300 max-w-3xl mx-auto mb-8">
             {description}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center" />
+          <div className="flex flex-col sm:flex-row gap-4justify-center" />
             <Link
-              to="/contact"
+          to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-             />
-              Get Started
-              <ArrowRight className="w-5 h-5 ml-2" / />
+             
+        >
+          Get Started
+              
+          <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link
               to="/about"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              className="border-2 border-white text-whitepx-8py-4rounded-lg font-semibold hover:bg-white/10 transition-colors"
               />Learn More
             </Link>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16" />
+        <div className="grid grid-cols-1lg:grid-cols-2gap-12mb-16" />
           <div />
-            <h2 className="text-3 xl font-bold text-white mb-6"  >Key Benefits</h2>
+            <h2 className="text-3xlfont-bold text-whitemb-6"  >Key Benefits</h2>
             <ul className="space-y-4" />
               {benefits.map((benefit, index) => (
-                <li key="{index}" className="flex items-start" />
-                  <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0" / />
+                <li key={index} className="flex items-start" />
+                  <CheckCircle className="w-6h-6text-green-400 mr-3 mt-1 flex-shrink-0" />
                   <span className="text-gray-300"  >{benefit}</span>
                 </li>
               ))}
             </ul>
           </div>
           <div />
-            <h2 className="text-3 xl font-bold text-white mb-6"  >Features</h2>
+            <h2 className="text-3xlfont-bold text-whitemb-6"  >Features</h2>
             <ul className="space-y-4" />
               {features.map((feature, index) => (
-                <li key="{index}" className="flex items-start" />
-                  <CheckCircle className="w-6 h-6 text-cyan-400 mr-3 mt-1 flex-shrink-0" / />
+                <li key={index} className="flex items-start" />
+                  <CheckCircle className="w-6h-6text-cyan-400 mr-3 mt-1 flex-shrink-0" />
                   <span className="text-gray-300"  >{feature}</span>
                 </li>
               ))}
@@ -83,9 +85,9 @@ interface ServicePageProps {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2 xl p-8 border border-cyan-500/30 text-center" />
-          <h2 className="text-3 xl font-bold text-white mb-4"  >Pricing</h2>
-          <p className="text-2 xl font-bold text-cyan-400 mb-6">{pricing}</p>
+        <div className="bg-gradient-to-rfrom-cyan-500/20 to-purple-500/20 rounded-2 xl p-8 border border-cyan-500/30 text-center" />
+          <h2 className="text-3xlfont-bold text-whitemb-4"  >Pricing</h2>
+          <p className="text-2xlfont-bold text-cyan-400 mb-6">{pricing}</p>
           <Link
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"

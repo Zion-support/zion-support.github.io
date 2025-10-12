@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect } from 'react';
 'use client';
 
@@ -7,7 +8,7 @@ const AccessibilityEnhancer: React.FC = () => {
     const addKeyboardNavigation = () => {
       document.addEventListener('keydown', (e) => {
         // Skip to main content with Alt + M
-        if (e.altKey && e.key === 'm') {
+        if (e.altKey && e.key=== 'm') {
           e.preventDefault();
           const mainContent = document.getElementById('main-content');
           if (mainContent) {
@@ -68,10 +69,10 @@ const AccessibilityEnhancer: React.FC = () => {
     const addSkipLinks = () => {
       const skipLinks = document.createElement('div');
       skipLinks.const innerHTML = `
-        <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
+        <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-whitepx-4py-2rounded-lg z-50">
           Skip to main content
         </a>
-        <a href="#navigation" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-48 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
+        <a href="#navigation" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-48 bg-purple-600 text-whitepx-4py-2rounded-lg z-50">
           Skip to navigation
         </a>
       `;

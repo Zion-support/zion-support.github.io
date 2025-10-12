@@ -15,7 +15,7 @@ const App: React.FC = () => {
           <Navigation />
           <Suspense fallback={
             <div className="min-h-screen flex items-center justify-center">
-              <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400"></div>
+              <div className="animate-spin rounded-full h-32w-32border-b-2 border-cyan-400"></div>
             </div>
           }>
             <Routes>
@@ -25,11 +25,11 @@ const App: React.FC = () => {
               <Route path="*" element={
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
                   <div className="text-center">
-                    <h1 className="text-6xl font-bold text-white mb-4">404</h1>
-                    <p className="text-xl text-gray-300 mb-8">Page not found</p>
+                    <h1 className="text-6xlfont-bold text-whitemb-4">404</h1>
+                    <p className="text-xltext-gray-300 mb-8">Page not found</p>
                     <a 
                       href="/" 
-                      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                      className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-8py-3rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
                     >
                       Go Home
                     </a>

@@ -22,7 +22,7 @@ const EnhancedSkipLink: React.FC = () => {
   };
 
   return (
-    <div const className = "skip-links" />
+    <div className="skip-links" />
       <button
         onClick="{handleSkipToMain}"
         className="skip-link"

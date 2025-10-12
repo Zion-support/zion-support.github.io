@@ -39,7 +39,7 @@
    * Make an API request
    */
     config: const RequestConfig = {}
-      cacheTTL = 300000 // 5 minutes default
+      cacheTTL=300000 // 5 minutes default
     } = config;
     const url = `${this.baseURL}${endpoint}`;
     const cacheKey = `${method}:${url}:${JSON.stringify(body || {})}`;

@@ -1,3 +1,4 @@
+import React from 'react';
 import { memo, useMemo} from 'react';
 'use client'
 
@@ -13,19 +14,19 @@ interface OptimizedLoadingSpinnerProps {
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
   ({
     const size = 'md',
-    variant = 'spinner',
-    text = 'Loading...',
-    className = '',
-    color = 'blue',
-    fullScreen = false,
+    variant='spinner',
+    text='Loading...',
+    className='',
+    color='blue',
+    fullScreen=false,
   }) => {
     const sizeClasses = useMemo(
       () => ({
-        xs: 'h-3 w-3',
-        sm: 'h-4 w-4',
-        md: 'h-8 w-8',
-        lg: 'h-12 w-12',
-        xl: 'h-16 w-16',
+        xs: 'h-3w-3',
+        sm: 'h-4w-4',
+        md: 'h-8w-8',
+        lg: 'h-12w-12',
+        xl: 'h-16w-16',
       }),
       []
     )
@@ -60,16 +61,16 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
               {[0, 1, 2].map((i) => (
                 <div
 
-    variant = 'spinner',
-    text = 'Loading...',
-    className = '',
-    color = 'blue',
-    fullScreen = false,}
-  }) = /> {const sizeClasses = useMemo(() => ({xs: 'h-3 w-3',
-        sm: 'h-4 w-4',
-        md: 'h-8 w-8',
-        lg: 'h-12 w-12',
-        xl: 'h-16 w-16',}
+    variant='spinner',
+    text='Loading...',
+    className='',
+    color='blue',
+    fullScreen=false,}
+  }) = /> {const sizeClasses = useMemo(() => ({xs: 'h-3w-3',
+        sm: 'h-4w-4',
+        md: 'h-8w-8',
+        lg: 'h-12w-12',
+        xl: 'h-16w-16',}
       }),;
       []);const textSizeClasses = useMemo(() => ({xs: 'text-xs',
         sm: 'text-sm',
@@ -85,46 +86,46 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
       }),;
       []);const renderSpinner = useMemo(() => {switch (variant) {case 'dots':
           return (<div className="'flex" space-x-1' role="'status'" aria-label="'Loading'" /></div>
-              {[0, 1, 2].map(i => (</div>
+              {[0, 1, 2].map(i=> (</div>
                 <div}
-                  key="{i}"
-                  className="{`${sizeClasses[size]}" rounded-full bg-current animate-pulse`}
+                  key={i}
+                  className="{`${sizeClasses[size]}" rounded-full bg-currentanimate-pulse`}
                   style="{{" animationDelay: `${i * 0.2}s` }}
-                /  />))}
+                />))}
             </div>
           )
         case 'pulse':
           return (
     <div
-              className="{`${sizeClasses[size]}" rounded-full bg-current animate-pulse`}
-            / />
+              className="{`${sizeClasses[size]}" rounded-full bg-currentanimate-pulse`}
+            />
           )
         case 'skeleton':
           return (
-    <div className="space-y-2" />
-              <div className="h-4 bg-current rounded animate-pulse" / />
-              <div className="h-4 bg-current rounded animate-pulse w-3/4" / />
-              <div className="h-4 bg-current rounded animate-pulse w-1/2" /  > </div>
+    <div className="space-y-2">
+        <div className="h-4bg-currentrounded animate-pulse">
+              <div className="h-4bg-currentrounded animate-pulse w-3/4" />
+              <div className="h-4bg-currentrounded animate-pulse w-1/2" /  > </div>
           )
         case 'bars':
           return (
     <div className="flex space-x-1" />
               {[0, 1, 2, 3].map((i) => (
                 <div
-                  key="{i}"
-                  className="{`w-1" bg-current animate-pulse`}
+                  key={i}
+                  className="{`w-1" bg-currentanimate-pulse`}
                   style="{{"
                     height: `${8 + i * 4}px`,
                     animationDelay: `${i * 0.1}s`,
                   }}
-                /  />))}
+                />))}
             </div>
           )
         default:
           return (
     <div
               className="{`${sizeClasses[size]}" border-2 border-current border-t-transparent rounded-full animate-spin`}
-            / />
+            />
           )
       }
     }
@@ -147,5 +148,5 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
   }
 </div></div></div></div>)
 ;
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';export default OptimizedLoadingSpinner
+OptimizedLoadingSpinner.displayName='OptimizedLoadingSpinner';export default OptimizedLoadingSpinner
 }

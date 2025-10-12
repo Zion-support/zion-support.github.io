@@ -3,4 +3,4 @@ import Navigation from './Navigation';
 
   return (
     <header />
-      <Navigation / />
+      <Navigation />

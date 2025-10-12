@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect } from 'react';
 
 const MobileOptimizer: React.FC = () => {
@@ -13,7 +14,7 @@ const MobileOptimizer: React.FC = () => {
     // Add touch-friendly classes
     const addTouchClasses = () => {
       const buttons = document.querySelectorAll('button, a, [role="button"]')
-      buttons.forEach(button => {
+      buttons.forEach(button=> {
         if (!button.classList.contains('touch-manipulation')) {
           button.classList.add('touch-manipulation')
         }
@@ -23,13 +24,13 @@ const MobileOptimizer: React.FC = () => {
     // Optimize images for mobile
     const optimizeImagesForMobile = () => {
       const images = document.querySelectorAll('img')
-      images.forEach(img => {
+      images.forEach(img=> {
         const imageElement = img as HTMLImageElement
         if (!imageElement.loading) {
-          imageElement.loading = 'lazy'
+          imageElement.loading='lazy'
         }
         if (!imageElement.decoding) {
-          imageElement.decoding = 'async'
+          imageElement.decoding='async'
         }
       })
     }
@@ -37,13 +38,13 @@ const MobileOptimizer: React.FC = () => {
     // Add mobile-specific event listeners
     const addMobileEventListeners = () => {
       // Prevent double-tap zoom
-      let lastTouchEnd = 0
+      let lastTouchEnd=0
       document.addEventListener('touchend', (event) => {
         const now = new Date().getTime()
         if (now - lastTouchEnd <= 300) {
           event.preventDefault()
         }
-        lastTouchEnd = now
+        lastTouchEnd=now
       }, false)
 
       // Add haptic feedback for supported devices
@@ -61,16 +62,16 @@ const MobileOptimizer: React.FC = () => {
 
     // Optimize scroll performance
     const optimizeScrollPerformance = () => {
-      let ticking = false
+      let ticking=false
       const updateScrollPosition = () => {
         // Add scroll-based optimizations here
-        ticking = false
+        ticking=false
       }
 
       const requestTick = () => {
         if (!ticking) {
           requestAnimationFrame(updateScrollPosition)
-          ticking = true
+          ticking=true
         }
       }
 

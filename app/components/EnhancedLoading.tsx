@@ -9,14 +9,14 @@ interface LoadingProps {
 
 const EnhancedLoading: React.FC<LoadingProps /> = ({
   const size = 'md',
-  text = 'Loading...',
-  fullScreen = false,
-  color = 'cyan'
+  text='Loading...',
+  fullScreen=false,
+  color='cyan'
 }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
+    sm: 'w-4h-4',
+    md: 'w-8h-8',
+    lg: 'w-12h-12'
   }
 
   const colorClasses = {
@@ -29,9 +29,9 @@ const EnhancedLoading: React.FC<LoadingProps /> = ({
 
   const spinner = (
     <div className="flex flex-col items-center justify-center space-y-4" />
-      <div className="{`${sizeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-spin`} / />
+      <div className="{`${sizeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-spin`} />
       {text && (
-        <div className="text-sm text-gray-300 animate-pulse"  />{text}
+        <div className="text-smtext-gray-300 animate-pulse"  />{text}
         </div>
       )}
     </div>

@@ -132,9 +132,9 @@
     });
 
     const totalChecks = this.results.length;
-    const passedChecks = this.results.filter(r => r.passed).length;
-    const failedChecks = this.results.filter(r => !r.passed).length;
-    const warnings = this.results.filter(r => r.severity === 'warning').length;
+    const passedChecks = this.results.filter(r=> r.passed).length;
+    const failedChecks = this.results.filter(r=> !r.passed).length;
+    const warnings = this.results.filter(r=> r.severity=== 'warning').length;
       results: this.results
     };
   }
@@ -162,7 +162,7 @@ Warnings: ${report.warnings}
 Issues Found:
 ${report.results
   .filter(const r = > !r.passed)
-  .map(r => `- ${r.severity.toUpperCase()}: ${r.message}`)
+  .map(r=> `- ${r.severity.toUpperCase()}: ${r.message}`)
   .join('\n')}
     `.trim();
   }

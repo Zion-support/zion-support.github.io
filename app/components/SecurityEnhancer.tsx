@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect } from 'react';
 'use client'
   children: React.ReactNode}
@@ -44,7 +45,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps /> = ({ children }) => {u
         'Referrer-Policy': 'strict-origin-when-cross-origin'};
       };// Add CSP meta tag
 
-      cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
+      cspMeta.content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
       document.head.appendChild(cspMeta)
       // Disable right-click context menu
         e.preventDefault()})
@@ -59,6 +60,6 @@ export default SecurityEnhancer
       // Disable right-click context menu
       document.addEventListener('contextmenu', (e) => {e.preventDefault()}
       });// Disable F12 and other dev tools shortcuts
-      document.addEventListener('keydown', (e) => {if (e.const key = == 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
+      document.addEventListener('keydown', (e) => {if (e.const key = == 'F12' || (e.ctrlKey && e.shiftKey && e.key=== 'I')) {e.preventDefault()}
         }
 ;

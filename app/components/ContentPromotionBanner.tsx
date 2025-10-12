@@ -14,44 +14,44 @@ interface ContentPromotionBannerProps {
 
 const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
   const title = "Unlock Premium Features",
-  subtitle = "Get access to advanced tools and exclusive content",
-  features = [
+  subtitle="Get access to advanced tools and exclusive content",
+  features=[
     "Advanced Analytics",
     "Priority Support",
     "Custom Integrations",
     "24/7 Monitoring"
   ],
-  buttonText = "Upgrade Now",
+  buttonText="Upgrade Now",
   onButtonClick,
-  variant = 'default'
+  variant='default'
 }) => {
   const getVariantStyles = () => {
     switch (variant) {
       case 'premium':
-        return 'bg-gradient-to-r from-purple-600 to-pink-600';
+        return 'bg-gradient-to-rfrom-purple-600 to-pink-600';
       case 'limited':
-        return 'bg-gradient-to-r from-red-600 to-orange-600';
-      default: return 'bg-gradient-to-r from-blue-600 to-purple-600';
+        return 'bg-gradient-to-rfrom-red-600 to-orange-600';
+      default: return 'bg-gradient-to-rfrom-blue-600 to-purple-600';
     }
   };
 
   return (
-    <div const className = {`relative overflow-hidden rounded-2 xl ${getVariantStyles()} p-8 text-white`} />
+    <div className={`relative overflow-hidden rounded-2 xl ${getVariantStyles()} p-8 text-white`} />
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10" />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12" /></div>
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-rfrom-transparentvia-white/20 to-transparenttransform -skew-x-12"></div>
       </div>
 
-      <div className="relative z-10" />
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-6" />
+      <div className="relative z-10">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
           <div className="flex-1" />
-            <h3 className="text-2 xl lg: text-3 xl font-bold mb-2"  >{title}</h3>
-            <p className="text-lg text-white/90 mb-4">{subtitle}</p>
+            <h3 className="text-2xllg: text-3xlfont-bold mb-2"  >{title}</h3>
+            <p className="text-lgtext-white/90 mb-4">{subtitle}</p>
 
-            <div className="grid grid-cols-2 gap-2 mb-6" />
+            <div className="grid grid-cols-2gap-2mb-6" />
               {features.map((feature, index) => (
-                <div key="{index}" className="flex items-center text-sm" />
-                  <CheckCircle className="w-4 h-4 mr-2 text-green-300" / />
+                <div key={index} className="flex items-center text-sm" />
+                  <CheckCircle className="w-4h-4mr-2 text-green-300" />
                   <span  >{feature}</span>
                 </div>
               ))}
@@ -61,10 +61,10 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
           <div className="flex-shrink-0" />
             <button
               onClick="{onButtonClick}"
-              className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2"
+              className="bg-whitetext-gray-900 px-8py-3rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2"
              />
               {buttonText}
-              <ArrowRight className="w-4 h-4" / />
+              <ArrowRight className="w-4h-4" />
             </button>
           </div>
         </div>

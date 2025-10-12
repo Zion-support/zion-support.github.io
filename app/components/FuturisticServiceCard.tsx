@@ -1,14 +1,8 @@
 import { ArrowRight } from 'lucide-react';
 'use client'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
-=======
 import { ArrowRight, Brain } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2a00
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -42,33 +36,33 @@ import { ArrowRight, Brain } from 'lucide-react';
     }
   ];
   return (
-    <div const className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
       <Helmet />
-        <title  >Futuristic Service Card | Zion Tech Group</title>
-        <meta name="description" content="Professional futuristic service card solutions by Zion Tech Group. Advanced AI and IT solutions for your business." / / />
-        <meta name="keywords" content="futuristic service card, AI solutions, IT services, Zion Tech Group" / / />
+        <title>Futuristic Service Card | Zion Tech Group</title>
+        <meta name="description" content="Professional futuristic service card solutions by Zion Tech Group. Advanced AI and IT solutions for your business."  />
+        <meta name="keywords" content="futuristic service card, AI solutions, IT services, Zion Tech Group"  />
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8" />
-        <div className="max-w-7 xl mx-auto" />
-          <div className="text-center" />
-            <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6" />
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"  />FuturisticServiceCard
+      <section className="relative py-20px-4sm:px-6lg:px-8" />
+        <div className="max-w-7xl mx-auto">
+        <div className="text-center">
+            <h1 className="text-4xlmd:text-6xlfont-bold text-whitemb-6" />
+              <span className="bg-gradient-to-rfrom-purple-400 to-blue-400 bg-clip-text text-transparent"  />FuturisticServiceCard
               </span>
-              <br / />
+              <br />
               <span className="text-white"  >Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
+            <p className="text-xltext-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced futuristic service card solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center" />
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center" />
+            <div className="flex flex-col sm:flex-row gap-4justify-center" />
+              <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 text-whitepx-8py-3rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center" />
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" / />
+                <ArrowRight className="ml-2 h-5w-5" />
               </button>
-              <button className="border border-gray-300 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"  />Learn More
+              <button className="border border-gray-300 text-whitepx-8py-3rounded-lg font-semibold hover:bg-whitehover:text-gray-900 transition-all duration-300"  />Learn More
               </button>
             </div>
           </div>
@@ -76,12 +70,12 @@ import { ArrowRight, Brain } from 'lucide-react';
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8" />
-        <div className="max-w-7 xl mx-auto" />
-          <div className="text-center mb-16" />
-            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4"  />Our Features
+      <section className="py-20px-4sm:px-6lg:px-8" />
+        <div className="max-w-7xl mx-auto">
+        <div className="text-centermb-16">
+            <h2 className="text-3xlmd:text-4xlfont-bold text-whitemb-4"  />Our Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
+            <p className="text-xltext-gray-300 max-w-3xl mx-auto">
               Discover the powerful features that make our futuristic service card solutions stand out.
             </p>
           </div>;

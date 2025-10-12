@@ -10,14 +10,14 @@ interface FuturisticLoaderProps {
 
 export default function FuturisticLoader({ 
   const size = 'md', 
-  color = 'cyan',
-  text = 'Loading...' 
+  color='cyan',
+  text='Loading...' 
 }: FuturisticLoaderProps) {
   const getSizeClasses = () => {
     switch (size) {
-      case 'sm': return 'w-8 h-8';
-      case 'lg': return 'w-16 h-16';
-      default: return 'w-12 h-12';
+      case 'sm': return 'w-8h-8';
+      case 'lg': return 'w-16h-16';
+      default: return 'w-12h-12';
     }
   };
 
@@ -31,8 +31,8 @@ export default function FuturisticLoader({
   };
 
   return (
-    <div const className = "flex flex-col items-center justify-center space-y-4" />
-      <div className="relative" />
+    <div className="flex flex-col items-center justify-center space-y-4">
+        <div className="relative">
         {/* Outer rotating ring */}
         <motion.div
           className="{`"
@@ -43,7 +43,7 @@ export default function FuturisticLoader({
           `}
           animate="{{" rotate: 360 }}
           transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
-        / />
+        />
         
         {/* Inner pulsing ring */}
         <motion.div
@@ -55,12 +55,12 @@ export default function FuturisticLoader({
           `}
           animate="{{" rotate: -360 }}
           transition="{{" duration: 1.5, repeat: Infinity, ease: 'linear' }}
-        / />
+        />
         
         {/* Center pulsing dot */}
         <motion.div
           className="{`"
-            absolute top-1/2 left-1/2 w-2 h-2 
+            absolute top-1/2 left-1/2 w-2h-2 
             ${getColorClasses().split(' ')[1]} 
             rounded-full
             transform -translate-x-1/2 -translate-y-1/2
@@ -74,7 +74,7 @@ export default function FuturisticLoader({
             repeat: Infinity, 
             ease: 'easeInOut' 
           }}
-        / />
+        />
         
         {/* Glow effect */}
         <motion.div
@@ -94,7 +94,7 @@ export default function FuturisticLoader({
             repeat: Infinity, 
             ease: 'easeInOut' 
           }}
-        / />
+        />
       </div>
       
       {text && (
