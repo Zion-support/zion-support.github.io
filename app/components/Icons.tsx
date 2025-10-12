@@ -2,6 +2,7 @@
 // Only import icons that are actually used
 // Core icons used across the application
 
+export {
   ArrowRight,
   Zap,
   Shield,
@@ -107,6 +108,5 @@
   Wink,
   Kiss,
   Tongue,
-  FileText,
-
-
+  FileText
+} from 'lucide-react';
