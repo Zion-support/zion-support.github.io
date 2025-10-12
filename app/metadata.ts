@@ -39,14 +39,7 @@ export interface Metadata {
       'max-snippet': number;
     };
   };
-<<<<<<< HEAD
-}
 
-export const defaultMetadata: Metadata = {
-  title: 'Zion Tech Group',
-  description: 'Advanced AI and IT Solutions',
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
   keywords: [
     'technology consulting',
     'AI solutions',

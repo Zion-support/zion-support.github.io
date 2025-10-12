@@ -1,24 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
-import React from 'react';
-export default SkipLink;
-'use client';
-const SkipLink: React.FC = () => {
-  return (;
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
 
-export default function ComponentsPage() {
-=======
-export default function SkipLink() {
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
+
   return (
     <div>Content</div>
   );
@@ -29,27 +14,7 @@ export default function SkipLink() {
     <div>Content</div>
   );
     <>
-<<<<<<< HEAD
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Professional components services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Components</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional components services coming soon.</p>
-          <Link
-=======
-      <Helmet >
-        <title>Skip Link - Zion Tech Group</title>
-        <meta name = "description" content="Professional skip link by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Skip Link</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional skip link coming soon.</p>
-          <Link >
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
+
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
             Contact Us
@@ -57,21 +22,4 @@ export default function SkipLink() {
           </Link>
         </div>
       </div>
-<<<<<<< HEAD
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-d941
-=======
-    </>;
-  );
-}
-    <a;    ></a>
-      href = "#main-content"
-      className="sr-on l yfocus:not-sr-only focus: absolute,
-  focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500";
-      Skip to main content;
-    </a>
-  );
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
+

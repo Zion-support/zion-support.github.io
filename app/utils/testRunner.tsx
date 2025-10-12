@@ -1,29 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-'use client'
-/**
- * Comprehensive Test Runner and Testing Utilities;
- * Provides advanced testing capabilities, mocking, and test automation;
- */
- {async runPerformanceTest()
-    testName: string}
-  ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {}
-      });`
-      - startTime}ms)`)
-      if (this.config.bail) {/* TODO: Fix JSX expression */}
-  /**
-   * Run a hook*/</void>
-  private async runHook()</void>
-    hook: () => void | Promise<void>,</void>
-    hookName: string</void>): Promise<void />{try {* Run a hook*/
-  private async runHook(hook: () => void | Promise<void></void>
-  private async runHook()
-    hookName: string}
-  ): Promise<void>{}
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
     try {}
       await hook()}
     } catch (error) {}
@@ -34,55 +10,13 @@ import React from 'react';
     fn: () => void | Promise<void>,</void>
     timeout: number</void>): Promise<void />{* Run function with timeout*/
   private async runWithTimeout()
-<<<<<<< HEAD
- {timeout: number}
-  ): Promise<void> {}
 
-    <<<<title>Test</title></<<title>Results</title> | Zion Tech Group - AI & IT Solutions<style  >}</style></<<<styl  >body</styl></styl> { font-family: Arial, sans-serif; margin: 20 px}
-=======
-    return (
-    <div>Content</div>
-  );
-    <>
-        new Promise((resolve, reject) => {timeout: number}
-  ): Promise<void /> {}
-    return new Promise((resolve, reject) => {}
-    <<<<title>Test</title></<<title>Results</title> | Zion Tech Group - AI & IT Solutions<style  >}</style></<<<styl  >body</styl></styl> { font-family: Arial, sans-serif
-    </>
-); margin: 20 px}
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
         .summary { background: #f5 f5 f5; padding: 20 px; border-radius: 5 px; margin-bottom: 20 px}
         .test { margin: 10 px 0; padding: 10 px; border-left: 4 px solid #ccc}
         .passed { border-left-color: #4 CAF50}
         .failed { border-left-color: #f44336}</style>
         .skipped { border-left-color: #ff9800}</style>
-<<<<<<< HEAD
 
-    result => `}</div>
-=======
-    <h2 const id = "heading-test-results">Test Results</h2>
-    <div class="summary" /></div>
-        <h3 id="heading-summary" />Summary<p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>;
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests"  >${this.results</div&gt;
-    <div class="summary" /&gt;</div&gt;}        <h3 id = "heading-summary">Summary</h3><p>Total: ${this.results.length}</p>
-    </style>
-</head>
-<body />
-    <h2 const id = "heading-test-results"  >Test Results</h2>
-    <div class="summary" /></div></div></div>
-        <h3 id="heading-summary" />Summary<p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests"  >${this.results</div></div></div>
-    <div class="summary" /></div></div></div>}
-        <h3 id="heading-summary"  >Summary</h3><p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests"  >${this.results</div></div></div>
-          .map()</div>}
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>;
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests"  >${this.results</div&gt;
-          .map()</div&gt;}    result = > `}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
             <div class="test ${result.status}" /></div></div></div>
                 <h4 id="heading-${result.name}" />${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
@@ -92,38 +26,19 @@ import React from 'react';
         <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
         <p>Duration: ${Date.now() - this.startTime}ms</p>
-<<<<<<< HEAD
 
-=======
-    <div class="tests">${this.results
-        <h3 id="heading-summary">Summary</h3>;
-    <div class="tests">${this.results;
-        <h3 id = "heading-summary">Summary</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
         <p>Total: ${this.results.length}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p>
         <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
         <p>Duration: ${Date.now() - this.startTime}ms</p>
-<<<<<<< HEAD
 
-=======
-    <div class="tests"></div>
-    <div class="tests"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
         ${this.results}
  `}
         ${this.results}
           .map()
             result => `}</div>
-<<<<<<< HEAD
 
-=======
-            <div class="test ${result.status}" /></div>
-                <h4 id="heading-${result.name}">${result.name}</h4>
-            <div class="test ${result.status}" /></div></div></div>
-                <h4 id="heading-${result.name}"  >${result.name}</h4>
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
                 <p>Status: ${result.status}</p>)
                 <p>Duration: ${result.duration}ms</p>)
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''})
@@ -142,10 +57,7 @@ import React from 'react';
     // Basic accessibility checks;
     // Check for missing alt text on, images): Promise<{ passed: boolean; error?: string }> {}
     try {}
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
  {/* TODO: Fix JSX expression */}`
   n: 0,})
       return {/* TODO: Fix JSX expression */}
@@ -253,11 +165,7 @@ import React from 'react';
     // This would typically use Istanbul or similar;
     // For now, we'll just return a placeholder;
       lines: 85}
-<<<<<<< HEAD
 
-=======
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
     results: Array<{ name: string; type: string; passed: boolean; error?: string }>}> {}
     for (const test of, tests) {let result;
       switch (test.type) {case 'component':
@@ -326,19 +234,7 @@ import React from 'react';
   // Coverage test
   // Coverage test
   async runCoverageTest(): Promise
-<<<<<<< HEAD
 
-=======
- {/* TODO: Fix JSX expression */}
- {/* TODO: Fix JSX expression */}
- = []
-    for (const test, of, tests) {/* TODO: Fix JSX expression */}
-  e: CoverageMetrics }> {/* TODO: Fix JSX expression */}
-    }
-  d: boolean; error?: string }>}> {/* TODO: Fix JSX expression */}
-  d: boolean; error?: string }> = []
-    for (const test of, tests) {/* TODO: Fix JSX expression */}
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
   r: 'Unknown test type' }}
   results: unknown[] = []
       results.push({/* TODO: Fix JSX expression */})
@@ -375,21 +271,7 @@ import React from 'react';
   // Generate test report;
   generateTestReport() {/* TODO: Fix JSX expression */}
 // React hook for testing;
-<<<<<<< HEAD
-;
-=======
-// Test Runner Utility Component
-export const TestRunner: React.FC = () => {
-  return (
-    <div className="test-runner">
-      <h2>Test Runner</h2>
-      <p>Test runner utility component</p>
-    </div>
-  );
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-d941
+
 
 export default TestRunner;
-=======
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
+

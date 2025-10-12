@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import { ArrowRight, Bot} from 'lucide-react';
+import {Bot} from 'lucide-react';
 
-import { ArrowRight, Mail, BarChart3, Users, Zap, CheckCircle, Clock, Target, TrendingUp, Smartphone, Shield, Bot, Star, Smartphone as Mobile, Eye } from 'lucide-react';
+import {Smartphone, Bot, Smartphone as Mobile} from 'lucide-react';
 
 export default function AIEmailMarketingAutomationPage() {
   const features = [

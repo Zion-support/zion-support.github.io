@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import { ArrowRight, MessageSquare, Bot} from 'lucide-react';
+import {MessageSquare, Bot} from 'lucide-react';
 
-import { ArrowRight, MessageSquare, BarChart3, Users, Zap, CheckCircle, Clock, Target, TrendingUp, Smartphone, Shield, Bot, Star, Smartphone as Mobile } from 'lucide-react';
+import {MessageSquare, Smartphone, Bot, Smartphone as Mobile} from 'lucide-react';
 
 export default function AICustomerSupportChatbotPage() {
   const features = [

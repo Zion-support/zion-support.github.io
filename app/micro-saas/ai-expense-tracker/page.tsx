@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import { ArrowRight, Receipt, Bot} from 'lucide-react';
+import {Receipt, Bot} from 'lucide-react';
 
-import { ArrowRight, DollarSign, BarChart3, Receipt, CheckCircle, Clock, Target, TrendingUp, Shield, Zap, Bot, CheckSquare } from 'lucide-react';
+import {Receipt, Bot, CheckSquare} from 'lucide-react';
 
 export default function AIExpenseTrackerPage() {
   const features = [

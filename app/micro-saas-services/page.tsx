@@ -5,14 +5,12 @@ import { Link } from 'react-router-dom';
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { 
-
-import { Zap, BarChart, MessageSquare, Shield, Cloud, CheckCircle, ArrowRight, Users, Award, Star } from 'lucide-react';
+import {import { Zap, MessageSquare} from 'lucide-react';
 
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { BarChart, MessageSquare, Shield, Cloud, CheckCircle, ArrowRight, Users } from 'lucide-react';
+import {MessageSquare} from 'lucide-react';
 
   const services = [
       icon: BarChart,
@@ -82,7 +80,7 @@ import { BarChart, MessageSquare, Shield, Cloud, CheckCircle, ArrowRight, Users 
       description: 'Grow with confidence knowing our solutions scale with your business needs.'
   ];
 
-import { ArrowRight } from 'lucide-react';
+
 
 export default function <title>Micro SaaS Services - Zion Tech Group</title>
 

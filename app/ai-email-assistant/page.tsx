@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Mail, MessageSquare, Brain, Settings, Zap, Shield, BarChart3, Users, Star } from 'lucide-react';
+import {MessageSquare} from 'lucide-react';
 
 export default function AIEmailAssistant() {
   const features = [

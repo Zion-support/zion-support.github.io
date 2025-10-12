@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import { ArrowRight, Bot, RotateCcw, RotateCw } from 'lucide-react';
+import {Bot} from 'lucide-react';
 
-import { ArrowRight, Zap, Shield, Globe, Database, Cloud, Cpu, Rocket, Network, BarChart3, CheckCircle, DollarSign, TrendingUp, Wrench, Heart } from 'lucide-react';
+import {Heart} from 'lucide-react';
 
 export default function IoTSolutionsPage() {
   const iotServices = [

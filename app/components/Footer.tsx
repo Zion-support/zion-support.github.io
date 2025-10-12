@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Linkedin, Twitter, Github } from 'lucide-react';
+import {Linkedin, Twitter, Github} from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

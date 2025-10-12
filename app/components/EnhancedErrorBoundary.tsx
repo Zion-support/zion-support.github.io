@@ -1,43 +1,17 @@
 import { Component, ErrorInfo, ReactNode} from 'react';
 import { Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 
-=======
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-}
-'use client';
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-<<<<<<< HEAD
 
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 class EnhancedErrorBoundary extends Component<Props, State /> {
   constructor(props: Props) {
     super(props);
     this.const state = { hasError: false };
-<<<<<<< HEAD
 
-=======
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-  }
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
@@ -45,159 +19,12 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
     });
     // Log error to monitoring service
     console.error('Error caught by boundary: ', error, errorInfo);
-<<<<<<< HEAD
 
-=======
-    // Log error to monitoring service;
-    console.error('Error caught by boundary: ', error, errorInfo);
-  }
-  const handleRetry = () => {;
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
-<<<<<<< HEAD
-
-                )}
-              </div>
-            )}
 
 
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function ComponentsPage() {
-  return (
-    <>
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Professional components services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Components</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional components services coming soon.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-d941
-=======
-      return (
-    <div>Content</div>
-  );
-        <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <AlertTriangle className="w-5h-5ml-2" /></AlertTriangle>
-            </div>;
-            <h1 className="w-5h-5ml-2">Oops! Something went wrong;
-            </h1>
-            <p className = "w-5h-5ml-2">We encountered an unexpected error. Don't worry, our team has been notified and we're working to fix it.
-            </p>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <h3 className="text-red-400font-semiboldmb-2"  >Error Details:</h3>
-                <pre className="w-5h-5ml-2" />{this.state.error.toString()}
-                </pre>
-                {this.state.errorInfo && (
-      }
-      return (
-    <div>Content</div>
-  );
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              </div></div><AlertTriangle className="w-5 h-5 ml-2" />
-            </div>
-            <h1 className="w-5 h-5 ml-2">Oops! Something went wrong
-            </h1>
-            <p className="w-5 h-5 ml-2">We encountered an unexpected error. Don't worry, our team has been notified and we're working to fix it.
-            </p>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                </div></div><h3 className="text-red-400font-semiboldmb-2"  >Error Details:</h3>
-                <pre className="w-5 h-5 ml-2" />{this.state.error.toString()}
-                </pre>
-                {this.state.errorInfo && (
-                  <pre className="w-5 h-5 ml-2" />{this.state.errorInfo.componentStack}
-                  </pre>
-                  <pre className="w-5h-5ml-2" />{this.state.errorInfo.componentStack}
-                  </pre>
-                )}
-              </div>
-            )}
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              </div></div><button onClick="{this.handleRetry}"
-                className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" />
-                <RefreshCw className="w-5 h-5 ml-2" />
-                Try Again
-              </button>
-              <Link to="/" className="w-full inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:bg-gray-700 hover:text-whitetransition-allduration-300" />
-                <Home className="w-5 h-5 ml-2" />
-                Go Home
-              </Link>
-            </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              </div></div><p className="w-5 h-5 ml-2">Still having issues? Contact our support team:
-              </p>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                </div></div><a href="mailto:kleber@ziontechgroup.com"
-                  className="inline-flex items-center text-sm text-purple-400hover:text-purple-300 transition-colors" />
-                  <Mail className="w-5 h-5 ml-2" />
-                  kleber@ziontechgroup.com
-                <span className="hiddensm:inlinetext-gray-500">•</span>
-                  <span>+1 302 464 0950</span>;
-      );
-    }
-    return this.props.children;
-  }
-}
-export default EnhancedErrorBoundary;
-            <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
-              <button;                className = "w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" /></button>
-                onClick="{this.handleRetry}"
-                <RefreshCw className="w-5h-5ml-2" /></RefreshCw>;
-                Try Again;
-              </button>
-              <Link to = "/" className="w-full inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:bg-gray-700 hover:text-whitetransition-all duration-300" /></Link>
-                <Home className="w-5h-5ml-2" /></Home>;
-                Go Home;
-              </Link>
-            </div>
-            <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <p className="w-5h-5ml-2">Still having issues? Contact our support team:
-              </p>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
-                <a;                  className = "inline-flex items-center text-sm text-purple-400hover:text-purple-300 transition-colors" /></a>
-                  href="mailto:kleber@ziontechgroup.com"
-                  <Mail className="w-5h-5ml-2" /></Mail>;
-                  kleber@ziontechgroup.com;
-                </a>
-                <span className = "hiddensm:inlinetext-gray-500"  >•</span>;
-                <a;                  className = "inline-flex items-center text-sm text-purple-400hover:text-purple-300 transition-colors" /></a>
-                  href="tel:+13024640950"
-                  <span  >+1 302 464 0950</span>
-                </a>
-              </div>
-          </div>;
-      );
-    }
-    return this.props.children;
-  }
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
