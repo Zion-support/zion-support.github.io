@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud } from 'lucide-react';
 
-const 5gSmartCitySolutions: React.FC = () => {
+const FiveGSmartCitySolutions: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -72,4 +72,4 @@ const 5gSmartCitySolutions: React.FC = () => {
   );
 };
 
-export default 5gSmartCitySolutions;
+export default FiveGSmartCitySolutions;

@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud } from 'lucide-react';
 
-const 5gIotSolutions: React.FC = () => {
+const FiveGIotSolutions: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -72,4 +72,4 @@ const 5gIotSolutions: React.FC = () => {
   );
 };
 
-export default 5gIotSolutions;
+export default FiveGIotSolutions;
