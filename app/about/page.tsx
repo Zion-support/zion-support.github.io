@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -29,19 +25,16 @@ const AboutPage: React.FC = () => {
     setIsVisible(true);
   }, []);
 
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Users, Award, Zap, Brain, Cloud, Shield, Code, ArrowRight, Star } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
   const values = [
     {
       icon: <Brain className="w-8 h-8 text-purple-400" />,
       title: 'Innovation First',
-<<<<<<< HEAD
       description: 'We stay at the forefront of technology, constantly exploring new AI and IT solutions to deliver cutting-edge results.'
     },
     {
@@ -58,11 +51,6 @@ const AboutPage: React.FC = () => {
       icon: <Globe className="w-8 h-8 text-blue-400" />,
       title: 'Global Reach',
       description: 'Serving clients worldwide with localized expertise and 24/7 support across all time zones.'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
-=======
-      description: 'We stay at the forefront of technology, constantly exploring new AI and IT solutions to solve complex business challenges.'
     },
     {
       icon: Users,
@@ -78,11 +66,6 @@ const AboutPage: React.FC = () => {
       icon: Zap,
       title: 'Agile Delivery',
       description: 'We deliver solutions quickly and efficiently, adapting to your changing needs with flexible development methodologies.'
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-7d13
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
     }
   ];
 
@@ -90,39 +73,23 @@ const AboutPage: React.FC = () => {
     {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       image: '/team/kleber.jpg',
       bio: 'Visionary leader with 15+ years in AI and IT solutions, passionate about transforming businesses through technology.'
-=======
       image: '/images/team/kleber.jpg',
       bio: 'Visionary leader with 15+ years in technology and business transformation.',
       expertise: ['AI Strategy', 'Business Development', 'Technology Leadership']
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
-=======
       description: 'Visionary leader with 15+ years in AI and enterprise technology',
       image: '/team/kleber.jpg'
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
-=======
       image: '/images/team/kleber.jpg',
       bio: 'Visionary leader with 15+ years in technology and business transformation.',
       expertise: ['AI Strategy', 'Business Development', 'Technology Leadership']
->>>>>>> cursor/website-audit-and-update-with-deployment-7d13
-=======
       image: '/images/team/kleber.jpg',
       bio: 'Visionary leader with 15+ years in technology and business transformation.',
       expertise: ['AI Strategy', 'Business Development', 'Technology Leadership']
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
     },
     {
       name: 'Sarah Johnson',
       role: 'CTO',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       image: '/team/sarah.jpg',
       bio: 'Technical expert specializing in AI architecture and cloud infrastructure, leading our development teams.'
     },
@@ -165,11 +132,6 @@ const AboutPage: React.FC = () => {
               Pioneering the future of AI and IT solutions with cutting-edge technology, 
               expert consulting, and unwavering commitment to your success.
             </p>
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-7d13
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
       image: '/images/team/sarah.jpg',
       bio: 'Technical architect specializing in AI and cloud infrastructure solutions.',
       expertise: ['AI Engineering', 'Cloud Architecture', 'System Design']
@@ -230,7 +192,6 @@ const AboutPage: React.FC = () => {
         <title>About Us - Zion Tech Group | Leading AI & IT Solutions Company</title>
         <meta name="description" content="Learn about Zion Tech Group - a leading technology company providing AI solutions, cloud infrastructure, cybersecurity, and custom software development services." />
         <meta name="keywords" content="about us, company, team, AI solutions, technology company, IT services, cloud computing, cybersecurity" />
-=======
       description: 'Expert in cloud architecture and AI system design',
       image: '/team/sarah.jpg'
     },
@@ -248,12 +209,10 @@ const AboutPage: React.FC = () => {
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission to transform businesses through cutting-edge AI and IT solutions. Meet our expert team and discover our values." />
         <meta name="keywords" content="about zion tech group, AI company, IT services team, technology leadership" />
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="relative overflow-hidden pt-20 pb-16">
           <div className="absolute inset-0 opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -315,10 +274,6 @@ const AboutPage: React.FC = () => {
                   We envision a future where every business can leverage the power of AI and 
                   advanced technology to achieve unprecedented growth and success.
                 </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
-=======
         <section className="pt-32 pb-20">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
@@ -394,28 +349,14 @@ const AboutPage: React.FC = () => {
                   <h3 className="text-xl font-bold text-white mb-2">Custom Solutions</h3>
                   <p className="text-gray-400 text-sm">Tailored development</p>
                 </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-7d13
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
               </div>
             </div>
           </div>
         </section>
 
         {/* Values Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
           <div className="container mx-auto px-4">
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-7d13
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
         <section className="py-20 bg-gray-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -423,11 +364,7 @@ const AboutPage: React.FC = () => {
                 Our Core Values
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                 The principles that guide our work and define our culture
-=======
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -436,14 +373,12 @@ const AboutPage: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 The principles that guide everything we do and shape our company culture
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
                 <div key={index} className="text-center group">
-<<<<<<< HEAD
                   <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
                     <value.icon className="w-10 h-10 text-cyan-400" />
                   </div>
@@ -451,11 +386,6 @@ const AboutPage: React.FC = () => {
                   <p className="text-gray-300 leading-relaxed">
                     {value.description}
                   </p>
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-7d13
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
                 The principles that guide everything we do and shape our company culture.
               </p>
             </div>
@@ -467,20 +397,11 @@ const AboutPage: React.FC = () => {
                     <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
                     <p className="text-gray-300">{value.description}</p>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
-=======
                   <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                     <value.icon className="w-10 h-10 text-cyan-400" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{value.title}</h3>
                   <p className="text-gray-300 leading-relaxed">{value.description}</p>
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-7d13
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
                 </div>
               ))}
             </div>
@@ -488,10 +409,6 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* Team Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -523,7 +440,6 @@ const AboutPage: React.FC = () => {
                         </span>
                       ))}
                     </div>
-=======
         <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -540,7 +456,6 @@ const AboutPage: React.FC = () => {
                 <div key={index} className="text-center group">
                   <div className="w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-300">
                     <Users className="w-16 h-16 text-cyan-400" />
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
                   <p className="text-cyan-400 font-semibold mb-3">{member.role}</p>
@@ -551,7 +466,6 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Services Overview */}
         <section className="py-20 bg-gray-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -575,7 +489,6 @@ const AboutPage: React.FC = () => {
                   </div>
                 </div>
               ))}
-=======
         {/* Stats Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -596,23 +509,15 @@ const AboutPage: React.FC = () => {
                 <div className="text-4xl font-bold text-white mb-2">24/7</div>
                 <div className="text-gray-400">Support Available</div>
               </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center">
               <h2 className="text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
                 Ready to Work With Us?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -632,11 +537,6 @@ const AboutPage: React.FC = () => {
                   Explore Our Services
                 </Link>
               </div>
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-7d13
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
         <section className="py-20 bg-gradient-to-br from-gray-900 to-purple-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -663,10 +563,6 @@ const AboutPage: React.FC = () => {
             <div className="mt-8 text-gray-400">
               <p>Email: kleber@ziontechgroup.com</p>
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
-=======
                 Ready to Work Together?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -686,11 +582,6 @@ const AboutPage: React.FC = () => {
                   View Our Services
                 </Link>
               </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-7d13
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
             </div>
           </div>
         </section>
@@ -700,15 +591,4 @@ const AboutPage: React.FC = () => {
 };
 
 export default AboutPage;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export default AboutPage;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-7d13
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
