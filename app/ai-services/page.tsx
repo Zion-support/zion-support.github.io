@@ -20,96 +20,35 @@ import {
   Camera,
   Cpu,
   Users,
-  TrendingUp
+  TrendingUp,
+  Phone,
+  Mail,
+  MapPin,
+  Sparkles,
+  Rocket,
+  Target
 } from 'lucide-react';
+import FuturisticBackground from '../components/FuturisticBackground';
+import { NeonText, NeonButton, NeonCard, PulsingDot, AnimatedGradient } from '../components/NeonEffects';
+import { aiServices } from '../data/services';
 
 export default function AIServicesPage() {
-  const aiServices = [
-    {
-      name: 'AI Content Generator Pro',
-      description: 'Advanced AI-powered content creation with natural language processing',
-      price: '$299/month',
-      features: ['Multi-language support', 'SEO optimization', 'Brand voice training', 'Content analytics'],
-      icon: FileText,
-      path: '/ai-content-generator',
-      popular: true
-    },
-    {
-      name: 'AI Chatbot Enterprise',
-      description: 'Intelligent conversational AI for customer service and support',
-      price: '$499/month',
-      features: ['24/7 availability', 'Multi-channel integration', 'Sentiment analysis', 'Custom training'],
-      icon: MessageSquare,
-      path: '/ai-chatbot-enterprise'
-    },
-    {
-      name: 'AI Analytics Dashboard',
-      description: 'Real-time business intelligence with predictive analytics',
-      price: '$399/month',
-      features: ['Real-time insights', 'Predictive modeling', 'Custom reports', 'API integration'],
-      icon: BarChart3,
-      path: '/ai-analytics-dashboard'
-    },
-    {
-      name: 'AI 3D Generation Studio',
-      description: 'Create stunning 3D models and animations with AI assistance',
-      price: '$799/month',
-      features: ['3D model generation', 'Animation creation', 'Texture mapping', 'VR/AR support'],
-      icon: Camera,
-      path: '/ai-3d-generation'
-    },
-    {
-      name: 'AI Drug Discovery Pro',
-      description: 'Accelerate pharmaceutical research with AI-powered molecular analysis',
-      price: '$2,999/month',
-      features: ['Molecular modeling', 'Drug interaction analysis', 'Clinical trial optimization', 'Regulatory compliance'],
-      icon: Brain,
-      path: '/ai-drug-discovery-pro'
-    },
-    {
-      name: 'AI Cybersecurity Suite',
-      description: 'Advanced threat detection and prevention using machine learning',
-      price: '$1,299/month',
-      features: ['Real-time monitoring', 'Threat intelligence', 'Automated response', 'Compliance reporting'],
-      icon: Shield,
-      path: '/ai-cybersecurity-suite'
-    }
-  ];
-
-  const microSaasServices = [
-    {
-      name: 'AI-Powered CRM',
-      description: 'Intelligent customer relationship management with AI insights',
-      price: '$99/month',
-      features: ['Lead scoring', 'Automated follow-ups', 'Sales forecasting', 'Integration APIs'],
-      icon: Users,
-      path: '/ai-crm'
-    },
-    {
-      name: 'Smart Analytics Platform',
-      description: 'Business intelligence with AI-powered insights and reporting',
-      price: '$149/month',
-      features: ['Custom dashboards', 'Predictive analytics', 'Data visualization', 'Export capabilities'],
-      icon: TrendingUp,
-      path: '/smart-analytics'
-    },
-    {
-      name: 'Automated Testing Suite',
-      description: 'AI-driven automated testing for web and mobile applications',
-      price: '$199/month',
-      features: ['Cross-browser testing', 'Performance testing', 'API testing', 'Test reporting'],
-      icon: Cpu,
-      path: '/ai-automated-testing'
-    },
-    {
-      name: 'Content Management System',
-      description: 'AI-enhanced CMS with intelligent content optimization',
-      price: '$79/month',
-      features: ['SEO optimization', 'Content scheduling', 'Multi-language support', 'Analytics integration'],
-      icon: FileText,
-      path: '/ai-content-management'
-    }
-  ];
+  const iconMap: { [key: string]: React.ReactNode } = {
+    'Brain': <Brain className="w-6 h-6" />,
+    'MessageSquare': <MessageSquare className="w-6 h-6" />,
+    'BarChart3': <BarChart3 className="w-6 h-6" />,
+    'Shield': <Shield className="w-6 h-6" />,
+    'FileText': <FileText className="w-6 h-6" />,
+    'Users': <Users className="w-6 h-6" />,
+    'Mail': <Mail className="w-6 h-6" />,
+    'Cpu': <Cpu className="w-6 h-6" />,
+    'Cloud': <Cloud className="w-6 h-6" />,
+    'Code': <Code className="w-6 h-6" />,
+    'Database': <Database className="w-6 h-6" />,
+    'Smartphone': <Smartphone className="w-6 h-6" />,
+    'Server': <Server className="w-6 h-6" />,
+    'Wifi': <Wifi className="w-6 h-6" />
+  };
 
   const stats = [
     { number: '500+', label: 'AI Models Deployed', icon: Brain },
@@ -119,40 +58,49 @@ export default function AIServicesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <div className="min-h-screen relative overflow-hidden">
+      <FuturisticBackground />
       <Helmet>
         <title>AI Services - Zion Tech Group | Advanced Artificial Intelligence Solutions</title>
         <meta name="description" content="Transform your business with our advanced AI services including content generation, chatbots, analytics, and automation. Enterprise-grade AI solutions from Zion Tech Group." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI chatbots, content generation, AI analytics, automation, Zion Tech Group" />
       </Helmet>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
+          <div className="mb-6">
+            <PulsingDot color="#8b5cf6" size={12} className="inline-block mr-2" />
+            <span className="text-cyan-400 text-sm font-semibold tracking-wider uppercase">Advanced AI Solutions</span>
+            <PulsingDot color="#06b6d4" size={12} className="inline-block ml-2" />
+          </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
             Advanced{' '}
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+            <NeonText className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" intensity="high">
               AI Services
-            </span>
+            </NeonText>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Transform your business with cutting-edge artificial intelligence solutions. 
             From content generation to predictive analytics, we deliver AI that works.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+            <NeonButton 
+              variant="primary" 
+              size="lg"
+              onClick={() => window.location.href = '/contact'}
+              className="group"
             >
               Get Started
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
-              to="/about" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </NeonButton>
+            <NeonButton 
+              variant="secondary" 
+              size="lg"
+              onClick={() => window.location.href = '/about'}
             >
               Learn More
-            </Link>
+            </NeonButton>
           </div>
         </div>
 
@@ -161,13 +109,15 @@ export default function AIServicesPage() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4">
+                <NeonCard key={index} className="text-center group hover:scale-105 transition-all duration-300">
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4 group-hover:scale-110 transition-transform">
                     <stat.icon className="h-8 w-8 text-white" />
                   </div>
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                    <NeonText intensity="medium">{stat.number}</NeonText>
+                  </div>
                   <div className="text-gray-300">{stat.label}</div>
-                </div>
+                </NeonCard>
               ))}
             </div>
           </div>
@@ -176,7 +126,9 @@ export default function AIServicesPage() {
         {/* Enterprise AI Services */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Enterprise AI Solutions</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">
+              <NeonText intensity="medium">Enterprise AI Solutions</NeonText>
+            </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               Powerful AI services designed for enterprise-scale operations and maximum impact.
             </p>
@@ -184,7 +136,7 @@ export default function AIServicesPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (
-              <div key={index} className={`bg-slate-800/50 rounded-2xl p-8 border transition-all duration-300 hover:bg-slate-700/50 group relative ${
+              <NeonCard key={index} className={`group hover:scale-105 transition-all duration-300 relative ${
                 service.popular ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' : 'border-slate-700 hover:border-cyan-500/30'
               }`}>
                 {service.popular && (
@@ -198,17 +150,20 @@ export default function AIServicesPage() {
                 <div className="mb-6">
                   <div className="flex items-center mb-4">
                     <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mr-4 group-hover:scale-110 transition-transform">
-                      <service.icon className="w-6 h-6 text-white" />
+                      {iconMap[service.icon] || <Brain className="w-6 h-6 text-white" />}
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white">{service.name}</h3>
                       <p className="text-2xl font-bold text-cyan-400">{service.price}</p>
+                      {service.marketPrice && (
+                        <p className="text-sm text-gray-400 line-through">{service.marketPrice}</p>
+                      )}
                     </div>
                   </div>
                   <p className="text-gray-300 mb-6">{service.description}</p>
                   
                   <ul className="space-y-3 mb-6">
-                    {service.features.map((feature, featureIndex) => (
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
@@ -217,14 +172,30 @@ export default function AIServicesPage() {
                   </ul>
                 </div>
                 
-                <Link
-                  to={service.path}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
+                <div className="space-y-3">
+                  <Link
+                    to={service.path}
+                    className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  <div className="flex justify-between items-center text-sm">
+                    <a 
+                      href={`tel:${service.contactInfo.phone}`}
+                      className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                    >
+                      📞 Call Now
+                    </a>
+                    <a 
+                      href={`mailto:${service.contactInfo.email}`}
+                      className="text-purple-400 hover:text-purple-300 transition-colors"
+                    >
+                      ✉️ Email
+                    </a>
+                  </div>
+                </div>
+              </NeonCard>
             ))}
           </div>
         </section>

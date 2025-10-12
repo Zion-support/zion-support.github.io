@@ -10,6 +10,8 @@ const HomePage = React.lazy(() => import('./app/page'))
 const AboutPage = React.lazy(() => import('./app/about/page'))
 const ContactPage = React.lazy(() => import('./app/contact/page'))
 const AIServicesPage = React.lazy(() => import('./app/ai-services/page'))
+const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'))
+const ITServicesPage = React.lazy(() => import('./app/it-services/page'))
 const PricingPage = React.lazy(() => import('./app/pricing/page'))
 const BlogPage = React.lazy(() => import('./app/blog/page'))
 const NewsPage = React.lazy(() => import('./app/news/page'))
@@ -44,6 +46,8 @@ function App() {
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/micro-saas" element={<MicroSaasPage />} />
+                  <Route path="/it-services" element={<ITServicesPage />} />
                   <Route path="/pricing" element={<PricingPage />} />
                   <Route path="/blog" element={<BlogPage />} />
                   <Route path="/news" element={<NewsPage />} />
