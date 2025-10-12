@@ -1,48 +1,59 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Mic, Brain, Zap, Users, BarChart3, Shield } from 'lucide-react'
+import { ArrowRight, CheckCircle, Brain, Mic, Zap, Users, BarChart3, Clock, MessageCircle, Volume2, Headphones } from 'lucide-react'
 
 export default function AIVoiceAssistantPage() {
   const features = [
     {
       icon: <Mic className="w-8 h-8 text-blue-500" />,
       title: 'Natural Voice Recognition',
-      description: 'Advanced speech recognition that understands natural language and multiple accents.'
+      description: 'Advanced speech recognition with 99% accuracy in multiple languages and accents.'
     },
     {
-      icon: <Brain className="w-8 h-8 text-purple-500" />,
-      title: 'AI-Powered Intelligence',
-      description: 'Contextual understanding and intelligent responses that feel natural and helpful.'
+      icon: <MessageCircle className="w-8 h-8 text-green-500" />,
+      title: 'Conversational AI',
+      description: 'Intelligent conversational capabilities with context awareness and natural language understanding.'
     },
     {
-      icon: <Zap className="w-8 h-8 text-yellow-500" />,
-      title: 'Real-Time Processing',
-      description: 'Instant voice processing and response generation for seamless conversations.'
+      icon: <Volume2 className="w-8 h-8 text-purple-500" />,
+      title: 'Text-to-Speech',
+      description: 'High-quality voice synthesis with customizable voices and emotional expression.'
     },
     {
-      icon: <Users className="w-8 h-8 text-green-500" />,
+      icon: <Headphones className="w-8 h-8 text-orange-500" />,
       title: 'Multi-Platform Support',
-      description: 'Deploy across mobile apps, websites, smart devices, and IoT platforms.'
+      description: 'Deploy across mobile apps, web applications, smart devices, and IoT platforms.'
     },
     {
       icon: <BarChart3 className="w-8 h-8 text-red-500" />,
       title: 'Analytics & Insights',
-      description: 'Track usage patterns, user satisfaction, and conversation effectiveness.'
+      description: 'Comprehensive analytics on user interactions, performance metrics, and usage patterns.'
     },
     {
-      icon: <Shield className="w-8 h-8 text-indigo-500" />,
-      title: 'Privacy & Security',
-      description: 'Secure voice processing with privacy protection and data encryption.'
+      icon: <Zap className="w-8 h-8 text-yellow-500" />,
+      title: 'Real-time Processing',
+      description: 'Low-latency voice processing for seamless real-time conversations and interactions.'
     }
+  ]
+
+  const useCases = [
+    'Customer service automation',
+    'Virtual assistants',
+    'Smart home control',
+    'Healthcare applications',
+    'Educational tools',
+    'Accessibility solutions',
+    'Call center automation',
+    'Voice-enabled apps'
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Voice Assistant - Zion Tech Group</title>
-        <meta name="description" content="Create intelligent voice assistants with our AI-powered platform. Build natural, conversational voice experiences for your applications." />
-        <meta name="keywords" content="AI voice assistant, voice AI, speech recognition, conversational AI, voice technology" />
+        <meta name="description" content="Advanced AI voice assistant with natural language processing, speech recognition, and conversational AI capabilities." />
+        <meta name="keywords" content="AI voice assistant, speech recognition, text-to-speech, conversational AI, voice automation" />
       </Helmet>
       
       {/* Hero Section */}
@@ -53,8 +64,8 @@ export default function AIVoiceAssistantPage() {
               AI Voice Assistant
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Create intelligent voice assistants that understand and respond naturally. 
-              Build conversational experiences that engage and delight your users.
+              Create intelligent voice assistants with advanced speech recognition, natural language processing, 
+              and conversational AI capabilities for any application.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -80,10 +91,10 @@ export default function AIVoiceAssistantPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Features
+              Voice AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to build intelligent voice experiences.
+              Advanced voice AI capabilities for creating intelligent conversational experiences.
             </p>
           </div>
           
@@ -99,22 +110,47 @@ export default function AIVoiceAssistantPage() {
         </div>
       </section>
 
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 lg:p-12 border border-white/20">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Application Areas
+              </h2>
+              <p className="text-xl text-gray-300">
+                Our AI voice assistant technology powers various applications across industries
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  <span className="text-sm">{useCase}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Build Your Voice Assistant?
+              Ready to Build Voice AI?
             </h2>
             <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Start creating intelligent voice experiences that engage and delight your users.
+              Create intelligent voice assistants with our advanced AI voice technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
               >
-                Get Started Today
+                Start Building
               </Link>
               <Link
                 to="/ai-services"

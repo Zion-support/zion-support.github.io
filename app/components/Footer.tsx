@@ -16,24 +16,24 @@ const Footer: React.FC = () => {
 
   const itServices = [
     { name: 'Cloud Migration', path: '/cloud-migration' },
-    { name: 'DevOps Solutions', path: '/devops-solutions' },
+    { name: 'DevOps Solutions', path: '/devops' },
     { name: 'Cybersecurity', path: '/cybersecurity' },
     { name: 'Mobile Development', path: '/mobile-development' },
-    { name: 'API Development', path: '/api-development' },
-    { name: 'Database Management', path: '/database-management' },
-    { name: 'System Integration', path: '/system-integration' },
-    { name: 'IT Consulting', path: '/it-consulting' }
+    { name: 'Database Services', path: '/database-services' },
+    { name: 'IT Consulting', path: '/it-consulting' },
+    { name: 'Network Infrastructure', path: '/network-infrastructure' },
+    { name: 'Data Center', path: '/data-center' }
   ];
 
   const microSaasServices = [
-    { name: 'AI-Powered CRM', path: '/ai-crm' },
-    { name: 'Smart Analytics', path: '/smart-analytics' },
-    { name: 'Automated Testing', path: '/ai-automated-testing' },
-    { name: 'Content Management', path: '/ai-content-management' },
-    { name: 'Email Marketing', path: '/ai-email-marketing' },
-    { name: 'Social Media Manager', path: '/ai-social-media-manager' },
-    { name: 'Project Management', path: '/ai-project-management' },
-    { name: 'Customer Support', path: '/ai-customer-support' }
+    { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard' },
+    { name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler' },
+    { name: 'Chat Analytics', path: '/micro-saas/chat-analytics' },
+    { name: 'Content Generator', path: '/micro-saas/content-generator' },
+    { name: 'Document Processor', path: '/micro-saas/document-processor' },
+    { name: 'Email Marketing', path: '/micro-saas/email-marketing' },
+    { name: 'Expense Tracker', path: '/micro-saas/expense-tracker' },
+    { name: 'Inventory Management', path: '/micro-saas/inventory-management' }
   ];
 
   const companyLinks = [

@@ -1,59 +1,59 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, CheckCircle, Cloud, Shield, Zap, Users, BarChart3, Database } from 'lucide-react'
+import { ArrowRight, CheckCircle, Cloud, Zap, Users, BarChart3, Clock, Shield, Database, Server, Globe } from 'lucide-react'
 
 export default function CloudMigrationPage() {
   const features = [
     {
       icon: <Cloud className="w-8 h-8 text-blue-500" />,
-      title: 'Seamless Migration',
-      description: 'Migrate your applications and data to the cloud with zero downtime and minimal disruption.'
+      title: 'Multi-Cloud Strategy',
+      description: 'Design and implement comprehensive multi-cloud strategies for optimal performance and cost efficiency.'
     },
     {
-      icon: <Shield className="w-8 h-8 text-purple-500" />,
-      title: 'Security First',
-      description: 'Enterprise-grade security measures throughout the migration process and beyond.'
+      icon: <Server className="w-8 h-8 text-green-500" />,
+      title: 'Infrastructure Migration',
+      description: 'Seamlessly migrate your existing infrastructure to cloud platforms with zero downtime.'
     },
     {
-      icon: <Zap className="w-8 h-8 text-yellow-500" />,
-      title: 'Fast Implementation',
-      description: 'Accelerated migration timelines with our proven methodologies and expert team.'
+      icon: <Database className="w-8 h-8 text-purple-500" />,
+      title: 'Database Migration',
+      description: 'Secure and efficient migration of databases to cloud-native solutions with data integrity assurance.'
     },
     {
-      icon: <Users className="w-8 h-8 text-green-500" />,
-      title: 'Expert Support',
-      description: 'Dedicated migration specialists and 24/7 support throughout your journey.'
+      icon: <Shield className="w-8 h-8 text-orange-500" />,
+      title: 'Security & Compliance',
+      description: 'Ensure security and compliance throughout the migration process with industry best practices.'
     },
     {
       icon: <BarChart3 className="w-8 h-8 text-red-500" />,
-      title: 'Cost Optimization',
-      description: 'Reduce infrastructure costs by up to 40% with optimized cloud architecture.'
+      title: 'Performance Optimization',
+      description: 'Optimize cloud resources for maximum performance and cost-effectiveness post-migration.'
     },
     {
-      icon: <Database className="w-8 h-8 text-indigo-500" />,
-      title: 'Data Integrity',
-      description: 'Ensure complete data integrity and consistency throughout the migration process.'
+      icon: <Globe className="w-8 h-8 text-yellow-500" />,
+      title: 'Global Deployment',
+      description: 'Deploy applications across multiple regions for improved performance and disaster recovery.'
     }
   ]
 
-  const benefits = [
-    'Reduced infrastructure costs',
-    'Improved scalability and flexibility',
-    'Enhanced security and compliance',
-    'Better disaster recovery capabilities',
-    'Increased operational efficiency',
-    'Access to latest cloud technologies',
-    '24/7 monitoring and support',
-    'Future-proof architecture'
+  const services = [
+    'AWS migration',
+    'Azure migration',
+    'Google Cloud migration',
+    'Hybrid cloud solutions',
+    'Container migration',
+    'Serverless migration',
+    'Database migration',
+    'Application modernization'
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Cloud Migration Services - Zion Tech Group</title>
-        <meta name="description" content="Migrate to the cloud with confidence. Our expert cloud migration services ensure seamless transition with zero downtime and enhanced security." />
-        <meta name="keywords" content="cloud migration, AWS migration, Azure migration, cloud services, infrastructure migration" />
+        <meta name="description" content="Professional cloud migration services for AWS, Azure, and Google Cloud. Seamless infrastructure migration with zero downtime." />
+        <meta name="keywords" content="cloud migration, AWS migration, Azure migration, Google Cloud, infrastructure migration, cloud services" />
       </Helmet>
       
       {/* Hero Section */}
@@ -64,8 +64,8 @@ export default function CloudMigrationPage() {
               Cloud Migration Services
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Migrate to the cloud with confidence. Our expert team ensures seamless transition 
-              with zero downtime, enhanced security, and optimized performance.
+              Seamlessly migrate your infrastructure to the cloud with our expert migration services. 
+              Zero downtime, enhanced security, and optimized performance guaranteed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -76,10 +76,10 @@ export default function CloudMigrationPage() {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
-                to="/cloud-services"
+                to="/demo"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
-                View Cloud Services
+                Free Assessment
               </Link>
             </div>
           </div>
@@ -91,10 +91,10 @@ export default function CloudMigrationPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Migration Features
+              Migration Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need for a successful cloud migration.
+              Comprehensive cloud migration solutions tailored to your business needs.
             </p>
           </div>
           
@@ -110,24 +110,24 @@ export default function CloudMigrationPage() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 lg:p-12 border border-white/20">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Migration Benefits
+                Our Cloud Platforms
               </h2>
               <p className="text-xl text-gray-300">
-                Transform your business with cloud migration advantages
+                We specialize in migrating to all major cloud platforms
               </p>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
+              {services.map((service, index) => (
                 <div key={index} className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-sm">{benefit}</span>
+                  <span className="text-sm">{service}</span>
                 </div>
               ))}
             </div>
@@ -140,17 +140,17 @@ export default function CloudMigrationPage() {
         <div className="max-w-7xl mx-auto">
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Migrate to the Cloud?
+              Ready to Move to the Cloud?
             </h2>
             <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Start your cloud migration journey with our expert team and proven methodologies.
+              Get a free cloud migration assessment and discover how we can help you migrate successfully.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
               >
-                Get Started Today
+                Get Free Assessment
               </Link>
               <Link
                 to="/it-services"
