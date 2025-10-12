@@ -1,145 +1,119 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-// Function to fix common syntax errors in TSX files
-function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix malformed function names like "5GDataAnalyticsZionTechGroup"
-    const functionNameMatch = content.match(/export default function (\d+[A-Za-z]+)/);
-    if (functionNameMatch) {
-      const malformedName = functionNameMatch[1];
-      const properName = malformedName.replace(/^\d+/, '') + 'Page';
-      content = content.replace(new RegExp(malformedName, 'g'), properName);
-      modified = true;
-    }
-
-    // Fix malformed className attributes
-    content = content.replace(/className="([^"]*?)\s+([^"]*?)"/g, (match, part1, part2) => {
-      if (part1.includes('text-') && part2.includes('mb-')) {
-        return `className="${part1} ${part2}"`;
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
+  let fixed = content;
+  
+  // Fix duplicate closing brackets
+  fixed = fixed
+    .replace(/;\s*\]\s*\]/g, ']')
+    .replace(/;\s*\}\s*\}/g, '}')
+    .replace(/\]\s*\]/g, ']')
+    .replace(/\}\s*\}/g, '}')
+    .replace(/;\s*\]/g, ']')
+    .replace(/;\s*\}/g, '}');
+  
+  // Fix missing JSX closing tags
+  fixed = fixed
+    .replace(/<p([^>]*)>\s*([^<]+)\s*$/gm, '<p$1>$2</p>')
+    .replace(/<div([^>]*)>\s*$/gm, '<div$1></div>')
+    .replace(/<span([^>]*)>\s*$/gm, '<span$1></span>');
+  
+  // Fix JSX expressions that need parent elements
+  fixed = fixed
+    .replace(/(<[^>]+>\s*)([^<]+)\s*$/gm, (match, tag, content) => {
+      if (content.trim() && !content.includes('<')) {
+        return `${tag}${content}</${tag.match(/<(\w+)/)[1]}>`;
       }
       return match;
     });
-
-    // Fix malformed text content
-    content = content.replace(/text-4 xl font-boldtext-whitemb-6/g, 'text-4xl font-bold text-white mb-6');
-    content = content.replace(/text-lgtext-gray-300mb-8/g, 'text-lg text-gray-300 mb-8');
-
-    // Fix malformed JSX elements
-    content = content.replace(/<title \/>([^<]+)<\/title>/g, '<title>$1</title>');
-    content = content.replace(/<span className="w-5 h-5ml-2" \/>([^<]+)/g, '<h1 className="text-4xl font-bold text-white mb-6">$1</h1>');
-    content = content.replace(/<p className="w-5 h-5ml-2">([^<]+)/g, '<p className="text-lg text-gray-300 mb-8">$1</p>');
-
-    // Fix malformed Link components
-    content = content.replace(/<Link to="([^"]+)" className="([^"]*?)">([^<]+)<\/Link>/g, (match, to, className, text) => {
-      if (className.includes('transformhover:scale-105')) {
-        className = className.replace('transformhover:scale-105', 'transform hover:scale-105');
+  
+  // Fix missing semicolons in object properties
+  fixed = fixed
+    .replace(/(\w+):\s*([^,}\n]+)\s*([,}])/g, (match, key, value, ending) => {
+      if (!value.includes(';') && !value.includes('(') && !value.includes('{') && !value.includes('<')) {
+        return `${key}: ${value}${ending}`;
       }
-      if (className.includes('from-cyan-500to-purple-500')) {
-        className = className.replace('from-cyan-500to-purple-500', 'from-cyan-500 to-purple-500');
-      }
-      if (className.includes('shadow-lghover:shadow-cyan-500/25')) {
-        className = className.replace('shadow-lghover:shadow-cyan-500/25', 'shadow-lg hover:shadow-cyan-500/25');
-      }
-      return `<Link to="${to}" className="${className}">${text}</Link>`;
+      return match;
     });
+  
+  // Fix missing closing tags for FuturisticBackground
+  fixed = fixed
+    .replace(/<FuturisticBackground([^>]*)>\s*$/gm, '<FuturisticBackground$1></FuturisticBackground>');
+  
+  // Fix missing closing tags for FuturisticButton
+  fixed = fixed
+    .replace(/<FuturisticButton([^>]*)>\s*$/gm, '<FuturisticButton$1></FuturisticButton>');
+  
+  // Fix missing closing tags for div elements
+  fixed = fixed
+    .replace(/<div([^>]*)>\s*([^<]+)\s*$/gm, '<div$1>$2</div>');
+  
+  // Clean up extra whitespace
+  fixed = fixed
+    .replace(/\n\s*\n\s*\n/g, '\n\n')
+    .replace(/^\s+$/gm, '');
+  
+  return fixed;
+}
 
-    // Fix missing closing tags and malformed JSX
-    content = content.replace(/<h2 className="w-5 h-5ml-2" \/>([^<]+)/g, '<h2 className="text-3xl font-bold text-white mb-4">$1</h2>');
-    content = content.replace(/<p className="w-5 h-5ml-2">([^<]+)/g, '<p className="text-lg text-gray-300 mb-8">$1</p>');
-
-    // Fix duplicate 'use client' directives
-    content = content.replace(/'use client';\s*'use client';/g, "'use client';");
-
-    // Fix malformed imports
-    content = content.replace(/import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3, Brain, Clock, Target } from 'lucide-react';\s*'use client';/g, 
-      "'use client';\nimport { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3, Clock, Target } from 'lucide-react';");
-
-    // Fix malformed JSX structure
-    content = content.replace(/<title>([^<]+)<\/title>\s*\{[^}]*\}/g, '<title>$1</title>');
-
-    // Fix incomplete function declarations
-    if (content.includes('export default function') && !content.includes('return (')) {
-      const functionMatch = content.match(/export default function ([^(]+)\(\)\s*\{/);
-      if (functionMatch) {
-        const functionName = functionMatch[1].trim();
-        const basicTemplate = `
-  return (
-    <>
-      <Helmet>
-        <title>${functionName} - Zion Tech Group</title>
-        <meta name="description" content="Professional ${functionName.toLowerCase().replace(/([A-Z])/g, ' $1')} services by Zion Tech Group." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">${functionName}</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional ${functionName.toLowerCase().replace(/([A-Z])/g, ' $1')} services coming soon.</p>
-          <Link 
-            to="/contact" 
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}`;
-        
-        content = content.replace(/export default function ([^(]+)\(\)\s*\{[^}]*\}/s, `export default function ${functionName}() {${basicTemplate}`);
-        modified = true;
-      }
-    }
-
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+// Function to process a single file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixSyntaxErrors(content);
+    
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
+      console.log(`✓ Fixed syntax errors in: ${filePath}`);
       return true;
     }
+    
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to recursively find and fix TSX files
-function fixAllTSXFiles(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
-
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-
-    if (stat.isDirectory()) {
-      fixedCount += fixAllTSXFiles(filePath);
-    } else if (file.endsWith('.tsx')) {
-      if (fixSyntaxErrors(filePath)) {
-        fixedCount++;
+// Main function
+function main() {
+  console.log('Starting syntax error fixes...');
+  
+  // Find all TypeScript and JSX files
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'components/**/*.tsx',
+    'components/**/*.ts'
+  ];
+  
+  let totalFiles = 0;
+  let fixedFiles = 0;
+  
+  patterns.forEach(pattern => {
+    const files = glob.sync(pattern, { cwd: process.cwd() });
+    
+    files.forEach(file => {
+      totalFiles++;
+      if (processFile(file)) {
+        fixedFiles++;
       }
-    }
-  }
-
-  return fixedCount;
+    });
+  });
+  
+  console.log(`\nSyntax error fixes complete!`);
+  console.log(`Total files processed: ${totalFiles}`);
+  console.log(`Files with syntax errors fixed: ${fixedFiles}`);
 }
 
-// Main execution
-console.log('Starting syntax error fixes...');
-const appDir = path.join(__dirname, 'app');
-const fixedCount = fixAllTSXFiles(appDir);
-console.log(`Fixed ${fixedCount} files.`);
-
-// Also fix the main App.tsx file
-const appTsxPath = path.join(__dirname, 'App.tsx');
-if (fs.existsSync(appTsxPath)) {
-  if (fixSyntaxErrors(appTsxPath)) {
-    console.log('Fixed: App.tsx');
-  }
+// Run the script
+if (require.main === module) {
+  main();
 }
 
-console.log('Syntax error fixes completed.');
+module.exports = { fixSyntaxErrors, processFile };

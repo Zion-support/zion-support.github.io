@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-10-12T13:38:05.669Z",
-=======
-  "timestamp": "2025-10-12T13:41:14.707Z",
->>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+  "timestamp": "2025-10-12T13:49:59.485Z",
   "optimizations": [
     "Icon imports optimized",
     "Bundle splitting improved",

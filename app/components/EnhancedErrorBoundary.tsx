@@ -7,7 +7,7 @@ interface State {
   error?: Error;
   errorInfo?: ErrorInfo;
 
-class EnhancedErrorBoundary extends Component<Props, State /> {
+class EnhancedErrorBoundary extends Component<Props, State />{
   constructor(props: Props) {
     super(props);
     this.const state = { hasError: false };
@@ -15,16 +15,14 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo;
-    });
+      errorInfo});
     // Log error to monitoring service
     console.error('Error caught by boundary: ', error, errorInfo);
 
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined })};
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
-
-
+</Props>
+</Props>

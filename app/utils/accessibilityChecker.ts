@@ -40,13 +40,11 @@ const ariaLabel = element.getAttribute('aria-label');
 
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
-      this.results.push(this.checkImageAltText(img as HTMLImageElement));
-    });
+      this.results.push(this.checkImageAltText(img as HTMLImageElement))});
 
     const formElements = document.querySelectorAll('input, select, textarea');
     formElements.forEach((element) => {
-      this.results.push(this.checkFormLabels(element as HTMLInputElement));
-    });
+      this.results.push(this.checkFormLabels(element as HTMLInputElement))});
 
   /**
    * Get accessibility score as percentage
@@ -54,4 +52,3 @@ const ariaLabel = element.getAttribute('aria-label');
   getAccessibilityScore(): number {
     const report = this.runAllChecks();
     return Math.round((report.passedChecks / report.totalChecks) * 100);
-

@@ -9,15 +9,13 @@ export default function PerformanceOptimizer() {
         '/images/hero-bg.jpg',
         '/images/logo.png'
       ];
-      
+
       criticalImages.forEach((src) => {
         const link = document.createElement('link');
         link.rel = 'preload';
         link.as = 'image';
         link.href = src;
-        document.head.appendChild(link);
-      });
-    };
+        document.head.appendChild(link)})};
 
     // Optimize images
     const optimizeImages = () => {
@@ -43,9 +41,7 @@ export default function PerformanceOptimizer() {
         const newScript = document.createElement('script');
         newScript.src = script.getAttribute('src') || '';
         newScript.async = true;
-        script.parentNode?.replaceChild(newScript, script);
-      });
-    };
+        script.parentNode?.replaceChild(newScript, script)})};
 
     // Initialize optimizations
     preloadCriticalResources();
@@ -55,8 +51,6 @@ export default function PerformanceOptimizer() {
     // Cleanup
     return () => {
       // Cleanup if needed
-    };
-  }, []);
+    }}, []);
 
-  return null;
-}
+  return null}

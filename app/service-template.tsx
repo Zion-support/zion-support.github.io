@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
 interface ServicePageProps {
   title: string,
   description: string,
@@ -21,8 +20,5 @@ interface ServicePageProps {
   pricing,
   seoTitle,
   seoDescription,
-  seoKeywords;
-}: ServicePageProps) {
+  seoKeywords}: ServicePageProps) {
   return (
-
-

@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;
   }
-}
 
 const Analytics: React.FC = () => {
   useEffect(() => {
@@ -15,8 +13,7 @@ const Analytics: React.FC = () => {
           page_title: document.title,
           page_location: window.location.href,
         });
-      }
-    };
+      };
     initAnalytics();
   }, []);
 
@@ -24,7 +21,6 @@ const Analytics: React.FC = () => {
 };
 
 export default Analytics;
-=======
 import React from 'react';
 import { BarChart3, TrendingUp, Users, DollarSign } from 'lucide-react';
 
@@ -65,24 +61,21 @@ export default function Analytics({ className = '' }: AnalyticsProps) {
   ];
 
   return (
-    <div className={`analytics-dashboard ${className}`}>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className={`analytics-dashboard ${className}`}></div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
         {stats.map((stat, index) => (
-          <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-cyan-400 transition-colors">
-            <div className="flex items-center justify-between mb-4">
+          <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-cyan-400 transition-colors"></div>
+            <div className="flex items-center justify-between mb-4"></div>
               {stat.icon}
               <span className={`text-sm font-medium ${
                 stat.changeType === 'positive' ? 'text-green-400' : 'text-red-400'
-              }`}>
+              }`}></span>
                 {stat.change}
               </span>
             </div>
             <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
             <div className="text-gray-400 text-sm">{stat.label}</div>
-          </div>
         ))}
       </div>
-    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-01e6

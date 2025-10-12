@@ -1,16 +1,13 @@
-<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;
   }
-}
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
   trackPageView: (pageName: string) => void;
-=======
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 interface AnalyticsData {
@@ -27,7 +24,6 @@ interface AnalyticsContextType {
   error: string | null;
   trackEvent: (event: string, properties?: Record<string, unknown>) => void;
   trackPageView: (page: string) => void;
->>>>>>> cursor/fix-errors-and-merge-to-main-01e6
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
@@ -41,7 +37,6 @@ export const useAnalytics = () => {
 };
 
 interface AnalyticsProviderProps {
-<<<<<<< HEAD
   children: ReactNode;
 }
 
@@ -53,14 +48,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         page_title: document.title,
         page_location: window.location.href,
       });
-    }
-  }, []);
+    }, []);
 
   const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', eventName, parameters);
-    }
-  };
+    };
 
   const trackPageView = (pageName: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
@@ -68,13 +61,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         page_title: pageName,
         page_location: window.location.href,
       });
-    }
-  };
+    };
 
   const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
-=======
   children: React.ReactNode;
 }
 
@@ -96,7 +87,7 @@ export default function AnalyticsProvider({ children }: AnalyticsProviderProps) 
         setLoading(true);
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1000));
-        
+
         setData({
           pageViews: 12345,
           uniqueVisitors: 8765,
@@ -108,8 +99,7 @@ export default function AnalyticsProvider({ children }: AnalyticsProviderProps) 
         setError('Failed to load analytics data');
       } finally {
         setLoading(false);
-      }
-    };
+      };
 
     loadAnalytics();
   }, []);
@@ -133,7 +123,6 @@ export default function AnalyticsProvider({ children }: AnalyticsProviderProps) 
     error,
     trackEvent,
     trackPageView
->>>>>>> cursor/fix-errors-and-merge-to-main-01e6
   };
 
   return (

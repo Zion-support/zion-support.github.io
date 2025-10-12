@@ -3,31 +3,26 @@
   headers?: Record<string, string>;
   body?: unknown;
   cache?: boolean;
-  cacheTTL?: number;
-}
+  cacheTTL?: number}
 
   data: T;
-  status: number;
-  statusText: string;
-  headers: Record<string, string>;
-}
+  status: number;</string>
+  statusText: string;</string>
+  headers: Record<string, string>}
 
     super(message);
     this.name = 'APIError';
     this.status = status;
-    this.code = code;
-  }
-}
-
-
-  constructor(baseURL: string, defaultHeaders: Record<string, string> = {}) {
+    this.code = code}
+</string>
+</string>
+  constructor(baseURL: string, defaultHeaders: Record<string, string>= {}) {
 
     this.baseURL = baseURL;
     this.defaultHeaders = {
       'Content-Type': 'application/json',
       ...defaultHeaders
-    };
-  }
+    }}
   /**
    * Make an API request
    */
@@ -35,58 +30,43 @@
     } = config;
     const url = `${this.baseURL}${endpoint}`;
 
-      const cached = this.getFromCache(cacheKey);
-      if (cached) {
-        return cached as APIResponse<T>;
-      }
-    }
-
-      });
-      const data = await response.json();
-
-      }
-      return apiResponse;
-    } catch (error) {
+      const cached = this.getFromCache(cacheKey);</string>
+      if (cached) {</string>
+        return cached as APIResponse<T>});
+      const data = await response.json()}
+      return apiResponse} catch (error) {
       if (error instanceof APIError) {
-        throw error;
-      }
+        throw error}
       throw new APIError(
         'Network error occurred',
         0,
         'NETWORK_ERROR'
-      );
-    }
-  }
+      )}
   /**
-   * GET request
-   */
-  async get<T = unknown>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}) {
-    return this.request<T>(endpoint, { ...config, method: 'GET' });
-  }
+   * GET request</T>
+   */</T>
+  async get<T = unknown>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}) {</RequestConfig>
+    return this.request<T>(endpoint, { ...config, method: 'GET' })}
   /**
-   * POST request
-   */
-  async post<T = unknown>(endpoint: string, body?: unknown, config: Omit<RequestConfig, 'method' | 'body'> = {}) {
-    return this.request<T>(endpoint, { ...config, method: 'POST', body });
-  }
+   * POST request</T>
+   */</T>
+  async post<T = unknown>(endpoint: string, body?: unknown, config: Omit<RequestConfig, 'method' | 'body'> = {}) {</RequestConfig>
+    return this.request<T>(endpoint, { ...config, method: 'POST', body })}
   /**
-   * PUT request
-   */
-  async put<T = unknown>(endpoint: string, body?: unknown, config: Omit<RequestConfig, 'method' | 'body'> = {}) {
-    return this.request<T>(endpoint, { ...config, method: 'PUT', body });
-  }
+   * PUT request</T>
+   */</T>
+  async put<T = unknown>(endpoint: string, body?: unknown, config: Omit<RequestConfig, 'method' | 'body'> = {}) {</RequestConfig>
+    return this.request<T>(endpoint, { ...config, method: 'PUT', body })}
   /**
-   * DELETE request
-   */
-  async delete<T = unknown>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}) {
-    return this.request<T>(endpoint, { ...config, method: 'DELETE' });
-  }
+   * DELETE request</T>
+   */</T>
+  async delete<T = unknown>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}) {</RequestConfig>
+    return this.request<T>(endpoint, { ...config, method: 'DELETE' })}
   /**
-   * PATCH request
-   */
-  async patch<T = unknown>(endpoint: string, body?: unknown, config: Omit<RequestConfig, 'method' | 'body'> = {}) {
-    return this.request<T>(endpoint, { ...config, method: 'PATCH', body });
-  }
+   * PATCH request</T>
+   */</T>
+  async patch<T = unknown>(endpoint: string, body?: unknown, config: Omit<RequestConfig, 'method' | 'body'> = {}) {</RequestConfig>
+    return this.request<T>(endpoint, { ...config, method: 'PATCH', body })}
   /**
    * Get data from cache
    */
@@ -96,10 +76,8 @@
     const now = Date.now();
     if (now - cached.timestamp > cached.ttl) {
       this.cache.delete(key);
-      return null;
-    }
-    return cached.data;
-  }
+      return null}
+    return cached.data}
   /**
    * Set data in cache
    */
@@ -108,24 +86,20 @@
       data,
       timestamp: Date.now(),
       ttl
-    });
-  }
+    })}
   /**
-   * Parse response headers
-   */
-  private parseHeaders(headers: Headers): Record<string, string> {
-    const result: Record<string, string> = {};
+   * Parse response headers</T>
+   */</T>
+  private parseHeaders(headers: Headers): Record<string, string> {</string>
+    const result: Record<string, string>= {};
     headers.forEach((value, key) => {
-      result[key] = value;
-    });
-    return result;
-  }
+      result[key] = value});
+    return result}
   /**
    * Clear cache
    */
   clearCache(): void {
-    this.cache.clear();
-  }
+    this.cache.clear()}
   /**
    * Clear cache for specific endpoint
    */
@@ -133,10 +107,7 @@
     const keysToDelete: string[] = [];
     this.cache.forEach((_, key) => {
       if (key.includes(endpoint)) {
-        keysToDelete.push(key);
-      }
-    });
-    keysToDelete.forEach(key => this.cache.delete(key));
-  }
-}
-
+        keysToDelete.push(key)});
+    keysToDelete.forEach(key => this.cache.delete(key))}
+</string>
+</string>

@@ -31,5 +31,5 @@ import React from 'react';
             "https://twitter.com/ziontechgroup"
           ]
         })}
-
-
+</script>
+</script>
