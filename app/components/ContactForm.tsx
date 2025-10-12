@@ -10,11 +10,8 @@ interface FormData {
   service: string;
 }
 
-<<<<<<< HEAD
 const ContactForm: React.FC = () => {
-=======
 export default function ContactForm() {
->>>>>>> cursor/fix-errors-and-merge-to-main-01e6
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -24,10 +21,7 @@ export default function ContactForm() {
     service: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
   const [isSubmitted, setIsSubmitted] = useState(false);
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-01e6
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -41,7 +35,6 @@ export default function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
     
-<<<<<<< HEAD
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -177,7 +170,6 @@ export default function ContactForm() {
         {isSubmitting ? 'Sending...' : 'Send Message'}
       </button>
     </form>
-=======
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
     
@@ -316,7 +308,6 @@ export default function ContactForm() {
         </button>
       </form>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-01e6
   );
 };
 

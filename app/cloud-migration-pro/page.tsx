@@ -3,35 +3,25 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Cloud, Shield, Zap, CheckCircle } from 'lucide-react';
 
 export default function CloudMigrationPro() {
-=======
 import { Cloud, Shield, Zap, Database, Users } from 'lucide-react';
 import Layout from '../layout';
 
 export default function CloudMigrationProPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-01e6
   const features = [
     {
       icon: <Cloud className="w-6 h-6 text-cyan-400" />,
       title: 'Seamless Migration',
-<<<<<<< HEAD
       description: 'Zero-downtime migration with automated testing and rollback capabilities'
-=======
       description: 'Zero-downtime migration to cloud platforms with minimal business disruption'
->>>>>>> cursor/fix-errors-and-merge-to-main-01e6
     },
     {
       icon: <Shield className="w-6 h-6 text-purple-400" />,
       title: 'Security First',
-<<<<<<< HEAD
       description: 'Enterprise-grade security with compliance validation and data protection'
-=======
       description: 'Enterprise-grade security protocols throughout the migration process'
->>>>>>> cursor/fix-errors-and-merge-to-main-01e6
     },
     {
       icon: <Zap className="w-6 h-6 text-yellow-400" />,
@@ -39,7 +29,6 @@ export default function CloudMigrationProPage() {
       description: 'Optimize applications for cloud-native performance and scalability'
     },
     {
-<<<<<<< HEAD
       icon: <CheckCircle className="w-6 h-6 text-green-400" />,
       title: 'Quality Assurance',
       description: 'Comprehensive testing and validation to ensure migration success'
@@ -111,7 +100,6 @@ export default function CloudMigrationProPage() {
         'White-label solution'
       ],
       popular: false
-=======
       icon: <Database className="w-6 h-6 text-green-400" />,
       title: 'Data Migration',
       description: 'Safe and secure migration of databases and data warehouses'
@@ -188,11 +176,9 @@ export default function CloudMigrationProPage() {
       company: 'StartupScale Inc',
       content: 'The team training was excellent. Our staff was fully prepared for the new cloud environment.',
       rating: 5
->>>>>>> cursor/fix-errors-and-merge-to-main-01e6
     }
   ];
 
-=======
 import { Cloud, Shield, Zap, CheckCircle } from 'lucide-react';
 
 export default function CloudMigrationPro() {
@@ -237,17 +223,12 @@ export default function CloudMigrationPro() {
     }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
   return (
     <>
       <Helmet>
         <title>Cloud Migration Pro - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta name="description" content="Professional cloud migration services by Zion Tech Group. Seamless, secure, and optimized cloud transitions." />
-=======
         <meta name="description" content="Professional cloud migration services by Zion Tech Group. Seamless, secure, and optimized cloud migration solutions." />
->>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
@@ -258,11 +239,8 @@ export default function CloudMigrationPro() {
               Cloud Migration Pro
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Professional cloud migration services by Zion Tech Group. Seamless, secure, and optimized cloud transitions.
-=======
               Professional cloud migration services by Zion Tech Group. Seamless, secure, and optimized cloud migration solutions.
->>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -279,7 +257,6 @@ export default function CloudMigrationPro() {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
 
           {/* Features Section */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -303,7 +280,6 @@ export default function CloudMigrationPro() {
                   <div className="text-4xl font-bold text-cyan-400 mb-4">{step.step}</div>
                   <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
                   <p className="text-gray-300">{step.description}</p>
-=======
         </div>
 
         {/* Features Section */}
@@ -325,12 +301,10 @@ export default function CloudMigrationPro() {
                     <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
                   </div>
                   <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
 
           {/* Pricing Section */}
           <div className="mb-16">
@@ -354,7 +328,6 @@ export default function CloudMigrationPro() {
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="text-gray-300 flex items-center">
                         <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
-=======
         </div>
 
         {/* Migration Steps */}
@@ -378,12 +351,10 @@ export default function CloudMigrationPro() {
                     {step.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
                         {feature}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
                   <Link 
                     to="/contact" 
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${
@@ -394,13 +365,10 @@ export default function CloudMigrationPro() {
                   >
                     Get Started
                   </Link>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
 
           {/* CTA Section */}
           <div className="text-center">
@@ -410,7 +378,6 @@ export default function CloudMigrationPro() {
               <Link 
                 to="/contact" 
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-=======
         </div>
 
         {/* CTA Section */}
@@ -426,17 +393,14 @@ export default function CloudMigrationPro() {
               <Link 
                 to="/contact" 
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
->>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
               >
                 Start Migration
               </Link>
               <Link 
-<<<<<<< HEAD
                 to="/services" 
                 className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
               >
                 View All Services
-=======
         <meta name="description" content="Professional cloud migration services with zero downtime and enhanced security." />
       </Helmet>
       
@@ -457,13 +421,10 @@ export default function CloudMigrationPro() {
               </button>
               <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
                 View Case Studies
->>>>>>> cursor/fix-errors-and-merge-to-main-01e6
-=======
                 to="/about" 
                 className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
               >
                 Learn More
->>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
               </Link>
             </div>
           </div>

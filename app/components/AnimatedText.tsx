@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
 interface AnimatedTextProps {
@@ -36,7 +35,6 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
 };
 
 export default AnimatedText;
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -68,4 +66,3 @@ export default function AnimatedText({ text, className = '', delay = 0 }: Animat
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-01e6

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 
 declare global {
@@ -11,7 +9,6 @@ declare global {
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
   trackPageView: (pageName: string) => void;
-=======
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 interface AnalyticsData {
@@ -28,15 +25,12 @@ interface AnalyticsContextType {
   error: string | null;
   trackEvent: (event: string, properties?: Record<string, unknown>) => void;
   trackPageView: (page: string) => void;
->>>>>>> cursor/fix-errors-and-merge-to-main-01e6
-=======
 import React, { createContext, useContext, useEffect } from 'react';
 
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;
   identify: (userId: string, traits?: Record<string, any>) => void;
   page: (name: string, properties?: Record<string, any>) => void;
->>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
@@ -50,24 +44,18 @@ export const useAnalytics = () => {
 };
 
 interface AnalyticsProviderProps {
-<<<<<<< HEAD
-<<<<<<< HEAD
   children: ReactNode;
-=======
   children: React.ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
     // Initialize analytics
-<<<<<<< HEAD
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: document.title,
         page_location: window.location.href,
       });
-=======
     if (typeof window !== 'undefined') {
       // Google Analytics
       if (process.env.NODE_ENV === 'production') {
@@ -83,7 +71,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         window.gtag('js', new Date());
         window.gtag('config', process.env.REACT_APP_GA_MEASUREMENT_ID || '');
       }
->>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
     }
   }, []);
 
@@ -93,11 +80,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   };
 
-<<<<<<< HEAD
   const trackPageView = (pageName: string) => {
-=======
   const trackPage = (pageName: string) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', process.env.REACT_APP_GA_MEASUREMENT_ID || '', {
         page_title: pageName,
@@ -106,11 +90,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   };
 
-<<<<<<< HEAD
   const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
-=======
   children: React.ReactNode;
 }
 
@@ -169,8 +151,6 @@ export default function AnalyticsProvider({ children }: AnalyticsProviderProps) 
     error,
     trackEvent,
     trackPageView
->>>>>>> cursor/fix-errors-and-merge-to-main-01e6
-=======
   const identifyUser = (userId: string, traits?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', process.env.REACT_APP_GA_MEASUREMENT_ID || '', {
@@ -184,7 +164,6 @@ export default function AnalyticsProvider({ children }: AnalyticsProviderProps) 
     track: trackEvent,
     identify: identifyUser,
     page: trackPage,
->>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
   };
 
   return (
@@ -194,12 +173,9 @@ export default function AnalyticsProvider({ children }: AnalyticsProviderProps) 
   );
 };
 
-<<<<<<< HEAD
 export default AnalyticsProvider;
-=======
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;
   }
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
