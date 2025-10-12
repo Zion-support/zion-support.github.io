@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navigation from './app/components/Navigation'
 import Footer from './app/components/Footer'
+import FuturisticBackground from './app/components/FuturisticBackground'
 import HomePage from './app/page'
 import AboutPage from './app/about/page'
 import ContactPage from './app/contact/page'
@@ -15,7 +16,8 @@ import DigitalTransformationPage from './app/digital-transformation/page'
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-futuristic-dark relative overflow-hidden">
+        <FuturisticBackground />
         <Navigation />
         <Routes>
           <Route path="/" element={<HomePage />} />
