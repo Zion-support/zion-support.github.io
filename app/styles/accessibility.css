@@ -1,32 +1,84 @@
-/* Accessibility and Performance Enhancements */
-
-/* Focus management */
-.using-mouse *:focus {
-  outline: none;
-}
-
-.using-mouse *:focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-}
+/* Accessibility Enhancements */
 
 /* High contrast mode */
 .high-contrast {
-  filter: contrast(150%);
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
 }
 
-.high-contrast * {
-  border-color: currentColor !important;
+.high-contrast body {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+.high-contrast .bg-gray-800 {
+  background-color: #000000 !important;
+  border: 2px solid #ffffff !important;
+}
+
+.high-contrast .text-gray-300 {
+  color: #ffffff !important;
+}
+
+.high-contrast .text-gray-400 {
+  color: #cccccc !important;
+}
+
+.high-contrast .border-gray-700 {
+  border-color: #ffffff !important;
 }
 
 /* Reduced motion */
-.reduce-motion *,
-.reduce-motion *::before,
-.reduce-motion *::after {
+.reduced-motion * {
   animation-duration: 0.01ms !important;
   animation-iteration-count: 1 !important;
   transition-duration: 0.01ms !important;
   scroll-behavior: auto !important;
+}
+
+.reduced-motion .animate-pulse,
+.reduced-motion .animate-spin,
+.reduced-motion .animate-bounce {
+  animation: none !important;
+}
+
+/* Font size variations */
+.font-small {
+  font-size: 0.875rem;
+}
+
+.font-small h1 { font-size: 1.5rem; }
+.font-small h2 { font-size: 1.25rem; }
+.font-small h3 { font-size: 1.125rem; }
+.font-small h4 { font-size: 1rem; }
+.font-small h5 { font-size: 0.875rem; }
+.font-small h6 { font-size: 0.75rem; }
+
+.font-large {
+  font-size: 1.125rem;
+}
+
+.font-large h1 { font-size: 3rem; }
+.font-large h2 { font-size: 2.25rem; }
+.font-large h3 { font-size: 1.875rem; }
+.font-large h4 { font-size: 1.5rem; }
+.font-large h5 { font-size: 1.25rem; }
+.font-large h6 { font-size: 1.125rem; }
+
+/* Focus visible improvements */
+.focus-visible *:focus {
+  outline: 3px solid #8b5cf6 !important;
+  outline-offset: 2px !important;
+}
+
+.focus-visible button:focus,
+.focus-visible a:focus,
+.focus-visible input:focus,
+.focus-visible textarea:focus,
+.focus-visible select:focus {
+  outline: 3px solid #8b5cf6 !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.3) !important;
 }
 
 /* Screen reader only content */
@@ -46,21 +98,25 @@
   position: static;
   width: auto;
   height: auto;
-  padding: inherit;
-  margin: inherit;
+  padding: 0.5rem 1rem;
+  margin: 0;
   overflow: visible;
   clip: auto;
   white-space: normal;
+  z-index: 1000;
+  background: #8b5cf6;
+  color: white;
+  border-radius: 0.5rem;
 }
 
-/* Skip link */
+/* Skip links */
 .skip-link {
   position: absolute;
   top: -40px;
   left: 6px;
-  background: #2563eb;
+  background: #8b5cf6;
   color: white;
-  padding: 8px 16px;
+  padding: 8px;
   text-decoration: none;
   border-radius: 4px;
   z-index: 1000;
@@ -71,147 +127,160 @@
   top: 6px;
 }
 
-/* Loading states */
-.loading {
-  position: relative;
-  pointer-events: none;
+/* High contrast button styles */
+.high-contrast .bg-purple-600 {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
 }
 
-.loading::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  margin: -10px 0 0 -10px;
-  border: 2px solid #f3f3f3;
-  border-top: 2px solid #3498db;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+.high-contrast .bg-purple-600:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+/* Improved contrast for text */
+.high-contrast .text-gray-300 {
+  color: #ffffff !important;
 }
 
-/* Enhanced focus indicators */
+.high-contrast .text-gray-400 {
+  color: #e5e7eb !important;
+}
+
+.high-contrast .text-gray-500 {
+  color: #d1d5db !important;
+}
+
+/* Focus indicators for interactive elements */
 button:focus-visible,
 a:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
-select:focus-visible {
-  outline: 2px solid #3b82f6;
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #8b5cf6;
   outline-offset: 2px;
   border-radius: 4px;
 }
 
-/* Improved contrast for interactive elements */
-button:not(:disabled):hover,
-a:hover {
-  opacity: 0.9;
+/* Ensure sufficient color contrast */
+.text-gray-300 {
+  color: #d1d5db; /* Improved contrast */
 }
 
-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+.text-gray-400 {
+  color: #9ca3af; /* Improved contrast */
 }
 
-/* Better text contrast */
-.text-low-contrast {
-  color: #6b7280;
-}
-
-/* Responsive typography */
-@media (max-width: 640px) {
-  .text-responsive {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
-/* Performance optimizations */
-.will-change-transform {
-  will-change: transform;
-}
-
-.will-change-opacity {
-  will-change: opacity;
-}
-
-/* Smooth scrolling for anchor links */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Improved form accessibility */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="tel"],
-input[type="url"],
-textarea,
-select {
-  border: 2px solid #e5e7eb;
-  border-radius: 6px;
-  padding: 8px 12px;
-  font-size: 16px; /* Prevents zoom on mobile */
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-}
-
-/* Error states */
-.input-error {
-  border-color: #ef4444;
-}
-
-.input-error:focus {
-  border-color: #ef4444;
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
-}
-
-/* Success states */
-.input-success {
-  border-color: #10b981;
-}
-
-.input-success:focus {
-  border-color: #10b981;
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
-}
-
-/* Loading button states */
-.btn-loading {
-  position: relative;
-  color: transparent;
-}
-
-.btn-loading::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 16px;
-  height: 16px;
-  margin: -8px 0 0 -8px;
-  border: 2px solid transparent;
-  border-top: 2px solid currentColor;
-  border-radius: 50%;
+/* Loading states accessibility */
+.loading-spinner {
   animation: spin 1s linear infinite;
 }
 
-/* Dark mode improvements */
-@media (prefers-color-scheme: dark) {
-  .auto-dark {
-    background-color: #1f2937;
-    color: #f9fafb;
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Ensure loading states are announced to screen readers */
+.loading-spinner[aria-label] {
+  position: relative;
+}
+
+.loading-spinner[aria-label]::after {
+  content: attr(aria-label);
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Error states accessibility */
+.error-message {
+  color: #ef4444;
+  font-weight: 600;
+  border-left: 4px solid #ef4444;
+  padding-left: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+/* Success states accessibility */
+.success-message {
+  color: #10b981;
+  font-weight: 600;
+  border-left: 4px solid #10b981;
+  padding-left: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+/* Form accessibility improvements */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #374151;
+  border-radius: 0.5rem;
+  background-color: #1f2937;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.3);
+}
+
+.form-error {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Table accessibility */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #374151;
+}
+
+.table th {
+  background-color: #1f2937;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.table tbody tr:hover {
+  background-color: #374151;
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+  .font-large {
+    font-size: 1rem;
   }
+  
+  .font-large h1 { font-size: 2rem; }
+  .font-large h2 { font-size: 1.75rem; }
+  .font-large h3 { font-size: 1.5rem; }
 }
 
 /* Print styles */
@@ -220,15 +289,13 @@ select:focus {
     display: none !important;
   }
   
-  .print-only {
-    display: block !important;
+  body {
+    background: white !important;
+    color: black !important;
   }
   
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-  
-  .page-break {
-    page-break-before: always;
+  a {
+    color: black !important;
+    text-decoration: underline !important;
   }
 }

@@ -4,9 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code } from 'lucide-react';
 
-<<<<<<< HEAD
-const Page: React.FC = () => {
-=======
 export default function AIInvoiceGenerator() {
   const features = [
     {
@@ -121,7 +118,6 @@ export default function AIInvoiceGenerator() {
     }
   ]
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
   return (
     <>
       <Helmet>
@@ -192,12 +188,4 @@ export default function AIInvoiceGenerator() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </>
-  );
-};
-
-export default Page;
-=======
 }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
