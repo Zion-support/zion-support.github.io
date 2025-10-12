@@ -1,29 +1,10 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
-=======
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Users } from 'lucide-react'
->>>>>>> cursor/website-audit-and-update-with-deployment-7aba
-
-export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
-=======
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi } from 'lucide-react'
-=======
-import { Menu, X, ChevronDown, Cloud, Code, Smartphone, Brain, Cpu, Wifi } from 'lucide-react'
->>>>>>> cursor/analyze-improve-and-deploy-application-b46d
+import { Menu, X, ChevronDown, Cloud, Code, Smartphone, Brain, Cpu, Wifi, Users, Globe } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-<<<<<<< HEAD
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b46d
   
   const toggleMenu = () => {
     setIsOpen(!isOpen)
