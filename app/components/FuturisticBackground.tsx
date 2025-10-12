@@ -17,15 +17,23 @@ export default function FuturisticBackground({ children, variant = 'default' }: 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+    let animationId: number;
+    let isAnimating = true;
+
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      const dpr = window.devicePixelRatio || 1;
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width * dpr;
+      canvas.height = rect.height * dpr;
+      ctx.scale(dpr, dpr);
+      canvas.style.width = rect.width + 'px';
+      canvas.style.height = rect.height + 'px';
     };
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Particle system
+    // Particle system with reduced count for better performance
     const particles: Array<{
       x: number;
       y: number;
@@ -40,8 +48,8 @@ export default function FuturisticBackground({ children, variant = 'default' }: 
       '#00ffff', '#ff00ff', '#00ff00', '#ffff00', '#ff0080', '#8000ff'
     ];
 
-    // Create particles
-    for (let i = 0; i < 100; i++) {
+    // Create particles (reduced from 100 to 50 for better performance)
+    for (let i = 0; i < 50; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -54,6 +62,8 @@ export default function FuturisticBackground({ children, variant = 'default' }: 
     }
 
     const animate = () => {
+      if (!isAnimating) return;
+      
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw particles
@@ -73,23 +83,22 @@ export default function FuturisticBackground({ children, variant = 'default' }: 
         ctx.fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
         ctx.fill();
 
-        // Draw connections
-        particles.forEach((otherParticle, otherIndex) => {
-          if (index !== otherIndex) {
-            const dx = particle.x - otherParticle.x;
-            const dy = particle.y - otherParticle.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
+        // Draw connections (optimized to reduce calculations)
+        for (let otherIndex = index + 1; otherIndex < particles.length; otherIndex++) {
+          const otherParticle = particles[otherIndex];
+          const dx = particle.x - otherParticle.x;
+          const dy = particle.y - otherParticle.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
 
-            if (distance < 150) {
-              ctx.beginPath();
-              ctx.moveTo(particle.x, particle.y);
-              ctx.lineTo(otherParticle.x, otherParticle.y);
-              ctx.strokeStyle = particle.color + Math.floor((1 - distance / 150) * 80).toString(16).padStart(2, '0');
-              ctx.lineWidth = 1;
-              ctx.stroke();
-            }
+          if (distance < 150) {
+            ctx.beginPath();
+            ctx.moveTo(particle.x, particle.y);
+            ctx.lineTo(otherParticle.x, otherParticle.y);
+            ctx.strokeStyle = particle.color + Math.floor((1 - distance / 150) * 80).toString(16).padStart(2, '0');
+            ctx.lineWidth = 1;
+            ctx.stroke();
           }
-        });
+        }
       });
 
       // Add grid overlay for hero variant
@@ -113,15 +122,16 @@ export default function FuturisticBackground({ children, variant = 'default' }: 
         }
       }
 
-      animationRef.current = requestAnimationFrame(animate);
+      animationId = requestAnimationFrame(animate);
     };
 
     animate();
 
     return () => {
+      isAnimating = false;
       window.removeEventListener('resize', resizeCanvas);
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
+      if (animationId) {
+        cancelAnimationFrame(animationId);
       }
     };
   }, [variant]);

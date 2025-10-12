@@ -65,7 +65,6 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
             // Send to analytics
             if (typeof gtag !== 'undefined') {
               gtag('event', 'web_vitals', {
@@ -83,7 +82,6 @@ const PerformanceMonitor: React.FC = () => {
       // Monitor First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          console.log('FID:', entry.processingStart - entry.startTime);
           if (typeof gtag !== 'undefined') {
             gtag('event', 'web_vitals', {
               name: 'FID',
@@ -104,7 +102,6 @@ const PerformanceMonitor: React.FC = () => {
             clsValue += (entry as any).value;
           }
         }
-        console.log('CLS:', clsValue);
         if (typeof gtag !== 'undefined') {
           gtag('event', 'web_vitals', {
             name: 'CLS',

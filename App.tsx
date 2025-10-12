@@ -4,6 +4,8 @@ import { HelmetProvider } from 'react-helmet-async'
 import Header from './app/components/Header'
 import Footer from './app/components/Footer'
 import ErrorBoundary from './app/components/ErrorBoundary'
+import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary'
+import PerformanceDashboard from './app/components/PerformanceDashboard'
 import Breadcrumb from './app/components/Breadcrumb'
 import CookieConsent from './app/components/CookieConsent'
 
@@ -373,7 +375,7 @@ const PageLoader = () => (
 function App() {
   return (
     <HelmetProvider>
-      <ErrorBoundary>
+      <EnhancedErrorBoundary>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <Header />
@@ -754,9 +756,10 @@ function App() {
             </Suspense>
             <Footer />
             <CookieConsent />
+            <PerformanceDashboard />
           </div>
         </Router>
-      </ErrorBoundary>
+      </EnhancedErrorBoundary>
     </HelmetProvider>
   )
 }
