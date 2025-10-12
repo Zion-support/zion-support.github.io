@@ -1,6 +1,4 @@
 import { useEffect } from 'react';
-'use client';
-
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
     // Add keyboard navigation support

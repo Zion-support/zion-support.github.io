@@ -1,6 +1,4 @@
 import { useEffect } from 'react';
-'use client';
-
 const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
     // Preload critical resources

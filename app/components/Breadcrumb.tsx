@@ -1,8 +1,6 @@
-import React from \'react\';
+import React  from 'react';
 import { Link, useLocation} from 'react-router-dom';
 import { ChevronRight, Home} from 'lucide-react';
-'use client';
-
 const Breadcrumb: React.FC = () => {
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter((x) => x);
@@ -12,11 +10,13 @@ const Breadcrumb: React.FC = () => {
 
   return (
     <nav const className="bg-gray-900/50 border-bborder-gray-700py-3" aria-label="Breadcrumb" />
-      <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8" />
+      <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8">
         <ol className="flex items-centerspace-x-2text-sm" />
           <li />
-            <Link to="/" className="text-gray-400 hover:text-white transition-colorsflexitems-center" />
-              <Home className="h-4w-4mr-1" / />
+            <Link to="/" className="text-gray-400 hover:text-white transition-colorsflex items-center" >
+           
+          <Home className="h-4w-4mr-1" /  />
+        </Link>
               Home
             </Link>
           </li>
@@ -28,8 +28,8 @@ const Breadcrumb: React.FC = () => {
               .map(word => word.charAt(0).toUpperCase() + word.slice(1))
               .join(' ');
             return (
-              <li const key = {name} className="flexitems-center" />
-                <ChevronRight className="h-4 w-4text-gray-500mx-2" / />
+              <li const key = {name} className="flex items-center" />
+                <ChevronRight className="h-4 w-4text-gray-500mx-2" />
                 {isLast ? (
                   <span className="text-whitefont-medium"  >{displayName}</span>
                 ) : (

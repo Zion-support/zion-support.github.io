@@ -1,8 +1,5 @@
-'use client';
 import React, { useEffect } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB };
-'use client';
-
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals

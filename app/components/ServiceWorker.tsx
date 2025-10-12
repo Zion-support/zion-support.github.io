@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import { useEffect } from 'react';
-'use client';
-
 const ServiceWorker: React.FC = () => {
   useEffect(() => {
     if ('serviceWorker' in, navigator) {

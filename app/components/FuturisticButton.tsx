@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-'use client';
-
 interface FuturisticButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
@@ -118,8 +116,8 @@ interface FuturisticButtonProps {
       )}
 
       {/* Corner accents */}
-      <div className="absolute top-1 left-1 w-2 h-2 bg-white/30rounded-full" / />
-      <div className="absolute bottom-1 right-1 w-2 h-2 bg-white/30rounded-full" / />
+      <div className="absolute top-1 left-1 w-2 h-2 bg-white/30rounded-full" />
+      <div className="absolute bottom-1 right-1 w-2 h-2 bg-white/30rounded-full" />
       {/* Content */}
       <span className="relative z-10 flex items-centerjustify-center" />
         {loading ? (
@@ -136,5 +134,6 @@ interface FuturisticButtonProps {
         )}
       </span>
     </motion.button>
-  </div></div>);
+  </div>
+  );
 }

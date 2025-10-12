@@ -1,4 +1,3 @@
-'use client';
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
@@ -92,8 +91,6 @@
           <div className="text-xs text-gray-500">
             Last updated: {new Date().toLocaleTimeString()}
           </div>
-        </div>
-      </div>
     </div>
   );
 };

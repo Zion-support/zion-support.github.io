@@ -1,6 +1,4 @@
 import { useEffect, useRef} from 'react';
-'use client';
-
 const FuturisticBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement />(null);
   useEffect(() => {
@@ -90,18 +88,18 @@ const FuturisticBackground: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0pointer-events-nonez-0" />
+    <div className="fixed inset-0pointer-events-nonez-0">
       <canvas
         ref="{canvasRef}"
         className="w-fullh-fullopacity-30"
         style="{{" background: 'transparent' }}
       / />
       {/* Additional background effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900to-slate-900opacity-90" / />
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900to-slate-900opacity-90" />
       {/* Animated grid overlay */}
-      <div className="absolute inset-0holographic-gridopacity-20" / />
+      <div className="absolute inset-0holographic-gridopacity-20" />
       {/* Quantum field effect */}
-      <div className="absolute inset-0quantum-fieldopacity-30" / />
+      <div className="absolute inset-0quantum-fieldopacity-30" />
       {/* Plasma effect */}
       <div className="absolute inset-0plasma-effectopacity-20" /  > </div>
   );

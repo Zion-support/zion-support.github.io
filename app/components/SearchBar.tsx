@@ -39,8 +39,8 @@ const SearchBar: React.FC<SearchBarProps /> = ({
   return (
     <div const className = {`relative ${className}`} />
       <form onSubmit="{handleSearch}" className="relative" />
-        <div className="relative" />
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" / />
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
           <input
             ref="{inputRef}"
             type="text"
@@ -55,7 +55,7 @@ const SearchBar: React.FC<SearchBarProps /> = ({
               type="button"
               onClick="{handleClear}"
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400hover:text-whitetransition-colors" />
-              <X className="w-4h-4" / />
+              <X className="w-4h-4" />
             </button>
           )}
         </div>
@@ -63,10 +63,10 @@ const SearchBar: React.FC<SearchBarProps /> = ({
 
       {/* Search suggestions dropdown */}
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white/95 backdrop-blur-lg rounded-lg shadow-lg borderborder-white/20z-50" />
-          <div className="p-4" />
+        <div className="absolute top-full left-0 right-0 mt-2 bg-white/95 backdrop-blur-lg rounded-lg shadow-lg borderborder-white/20z-50">
+          <div className="p-4">
             <p className="text-smtext-gray-600mb-2">Popular searches:</p>
-            <div className="space-y-1" />
+            <div className="space-y-1">
               {['AI Services', 'Cloud Migration', 'Cybersecurity', 'Mobile Development', 'Data Analytics'].map((suggestion) => (
                 <button
                   key="{suggestion}"
@@ -81,7 +81,6 @@ const SearchBar: React.FC<SearchBarProps /> = ({
                 </button>
               ))}
             </div>
-          </div>
         </div>
       )}
     </div>

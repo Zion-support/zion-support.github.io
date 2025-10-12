@@ -1,4 +1,3 @@
-'use client';
 /**
  * Enhanced Performance Hook
  * Combines performance monitoring, error tracking, and analytics

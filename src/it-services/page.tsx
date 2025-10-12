@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import { Cloud, Database, Users, Server, HardDrive, Monitor, Printer, Router, ArrowRight, CheckCircle, Star, Award, FileText, Activity, Code, Target, Rocket } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -73,7 +72,6 @@ import Footer from '../components/Footer';
                 </div>
                 <div className="mb-4">
                   <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                </div>
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Technologies:</h4>
                   <div className="flex flex-wrap gap-1">
@@ -82,7 +80,6 @@ import Footer from '../components/Footer';
                       </span>
                     ))}
                   </div>
-                </div>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2 mb-6">
                     <li key={featureIndex} className="flex items-center text-sm text-gray-400">
@@ -98,7 +95,6 @@ import Footer from '../components/Footer';
                     Learn More <ArrowRight className="w-4 h-4 ml-1" />
                   </a>
                 </div>
-              </div>
             ))}
           </div>
         </section>
@@ -114,7 +110,6 @@ import Footer from '../components/Footer';
                 </div>
                 <p className="text-gray-300 text-sm mb-3">{service.description}</p>
                 <div className="text-cyan-400 font-bold text-sm">{service.price}</div>
-              </div>
             ))}
           </div>
         </section>
@@ -197,7 +192,6 @@ import Footer from '../components/Footer';
                 Contact Sales
               </a>
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -217,7 +211,6 @@ import Footer from '../components/Footer';
                 (302) 464-0950
               </a>
             </div>
-          </div>
           </section>
         </main>
         <Footer />

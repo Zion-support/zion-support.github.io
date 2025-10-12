@@ -49,7 +49,6 @@ import { Phone, Mail, MapPin, Brain, Zap, ArrowRight } from 'lucide-react';
                 <MapPin className="w-4 h-4 text-cyan-400" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
-            </div>
           </div>
 
           {/* Micro SAAS Services */}
@@ -105,7 +104,6 @@ import { Phone, Mail, MapPin, Brain, Zap, ArrowRight } from 'lucide-react';
                   ))}
                 </ul>
               </div>
-            </div>
             
             >
               View All Services →
@@ -158,9 +156,7 @@ import { Phone, Mail, MapPin, Brain, Zap, ArrowRight } from 'lucide-react';
                   ))}
                 </ul>
               </div>
-            </div>
           </div>
-        </div>
 
         {/* Bottom Section */}
         <div className="border-t border-gray-700 mt-8 pt-8">
@@ -174,6 +170,7 @@ import { Phone, Mail, MapPin, Brain, Zap, ArrowRight } from 'lucide-react';
                   {link.name}
                 </a>
               ))}
+            </div>
             </div>
           </div>
         </div>

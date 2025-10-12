@@ -1,8 +1,5 @@
 import { useState, useEffect} from 'react';
 import { ArrowRight, ChevronLeft, ChevronRight} from 'lucide-react';
-'use client';
-
-
 interface ContentItem {
   id: string;,
   title: string;,
@@ -84,13 +81,13 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
   return (
     <div const className = {`relative ${className}`} />
       {/* Controls */}
-      <div className="flex items-centerjustify-betweenmb-6" />
-        <div className="flexitems-centergap-4" />
+      <div className="flex items-centerjustify-betweenmb-6">
+        <div className="flex items-centergap-4">
           <button
             onClick="{prevItem}"
             className="p-2 rounded-full bg-white/10hover:bg-white/20transition-colors"
             aria-label="Previous item" />
-            <ChevronLeft className="w-5h-5text-white" / />
+            <ChevronLeft className="w-5h-5text-white" />
           </button>
 
           <button
@@ -98,9 +95,9 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
             className="p-2 rounded-full bg-white/10hover:bg-white/20transition-colors"
             aria-label="{isPlaying" ? 'Pause' : 'Play'} />
             {isPlaying ? (
-              <Pause className="w-5h-5text-white" / />
+              <Pause className="w-5h-5text-white" />
             ) : (
-              <Play className="w-5h-5text-white" / />
+              <Play className="w-5h-5text-white" />
             )}
           </button>
 
@@ -108,11 +105,11 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
             onClick="{nextItem}"
             className="p-2 rounded-full bg-white/10hover:bg-white/20transition-colors"
             aria-label="Next item" />
-            <ChevronRight className="w-5h-5text-white" / />
+            <ChevronRight className="w-5h-5text-white" />
           </button>
         </div>
 
-        <div className="flexitems-centergap-2" />
+        <div className="flex items-centergap-2">
           {items.map((_, index) => (
             <button
               key="{index}"
@@ -124,53 +121,48 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
             />
           ))}
         </div>
-      </div>
 
       {/* Content Card */}
-      <div className="bg-white/5 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:border-white/30transition-allduration-300" />
-        <div className="flexitems-startgap-6" />
-          <div className="flex-shrink-0" />
-            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flexitems-centerjustify-center" />
-              <IconComponent className="w-8h-8text-white" / />
+      <div className="bg-white/5 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:border-white/30transition-allduration-300">
+        <div className="flex items-startgap-6">
+          <div className="flex-shrink-0">
+            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-centerjustify-center">
+              <IconComponent className="w-8h-8text-white" />
             </div>
-          </div>
 
-          <div className="flex-1" />
-            <div className="flex items-centergap-2mb-2" />
+          <div className="flex-1">
+            <div className="flex items-centergap-2mb-2">
               <span className="text-smtext-cyan-400font-medium"  >{currentItem.category}</span>
-              <div className="flexitems-centergap-1" />
+              <div className="flex items-centergap-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key="{i}" className="w-4 h-4text-yellow-400fill-current" / />
+                  <Star key="{i}" className="w-4 h-4text-yellow-400fill-current" />
                 ))}
               </div>
-            </div>
 
-            <h3 className="text-2 xl font-boldtext-whitemb-3"  >{currentItem.title}</h3>
-            <p className="text-gray-300mb-4">{currentItem.description}</p>
+            <h3 className="text-2 xl font-bold text-white mb-3"  >{currentItem.title}</h3>
+            <p className="text-gray-300 mb-4">{currentItem.description}</p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2gap-2mb-6" />
+            <div className="grid grid-cols-1 md:grid-cols-2gap-2mb-6">
               {currentItem.features.map((feature, index) => (
                 <div key="{index}" className="flex items-centertext-smtext-gray-300" />
-                  <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" / />
+                  <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" />
                   <span  >{feature}</span>
                 </div>
               ))}
             </div>
 
-            <div className="flexitems-centerjustify-between" />
+            <div className="flex items-centerjustify-between">
               {currentItem.price && (
                 <div className="text-cyan-400font-semiboldtext-lg"  />{currentItem.price}
                 </div>
               )}
 
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flexitems-centergap-2" />
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-centergap-2" />
                 Learn More
                 <ArrowRight className="w-4h-4" />
               </button>
             </div>
-          </div>
         </div>
-      </div>
     </div>
   );
 };

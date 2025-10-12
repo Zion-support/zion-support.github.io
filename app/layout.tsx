@@ -1,4 +1,4 @@
-import React from \'react\';
+import React  from 'react';
 import ErrorBoundary from './components/ErrorBoundary';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -76,10 +76,10 @@ const Layout: React.FC<LayoutProps /> = ({
 
   return (
     <ErrorBoundary />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900" />
-        <Helmet />
-          <title>{title}</title>
-          <meta name="description" content="{description}" / / />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        <Helmet>
+        <title>{title}</title>
+        <meta name="description" content="{description}" / / />
           <meta name="keywords" content="{keywords}" / / />
           {/* Open Graph Meta Tags */}
           <meta property="og: title" content="{title}" / / />
@@ -110,10 +110,9 @@ const Layout: React.FC<LayoutProps /> = ({
 
         <Footer / />
         {/* Theme Toggle - Fixed Position */}
-        <div className="fixed bottom-6right-6z-50" />
+        <div className="fixed bottom-6right-6z-50">
           <ThemeToggle / />
         </div>
-      </div>
     </ErrorBoundary>
   );
 };

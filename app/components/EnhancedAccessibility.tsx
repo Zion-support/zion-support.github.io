@@ -1,6 +1,4 @@
 import { useEffect } from 'react';
-'use client';
-
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Add high contrast mode support

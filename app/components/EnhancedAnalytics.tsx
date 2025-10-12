@@ -1,5 +1,4 @@
 import { createContext, useContext, useEffect} from 'react';
-'use client';
 import { createContext, useContext, useEffect } from 'react';
 
 interface AnalyticsContextType {

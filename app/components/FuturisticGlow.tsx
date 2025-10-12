@@ -1,6 +1,4 @@
 import { useEffect, useRef} from 'react';
-'use client';
-
 interface FuturisticGlowProps {
   children: React.ReactNode;
   intensity?: 'low' | 'medium' | 'high';

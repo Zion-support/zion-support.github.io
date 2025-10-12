@@ -1,7 +1,5 @@
 import { useState, useEffect} from 'react';
 import { Sun, Moon} from 'lucide-react';
-'use client';
-
 const ThemeToggle: React.FC = () => {
   const [isDark, setIsDark] = useState(true);
   useEffect(() => {
@@ -37,9 +35,9 @@ const ThemeToggle: React.FC = () => {
       aria-label="{`Switch" to ${isDark ? 'light' : 'dark'} mode`}
      />
       {isDark ? (
-        <Sun className="w-5 h-5" / />
+        <Sun className="w-5 h-5" />
       ) : (
-        <Moon className="w-5 h-5" / />
+        <Moon className="w-5 h-5" />
       )}
     </button>
   );

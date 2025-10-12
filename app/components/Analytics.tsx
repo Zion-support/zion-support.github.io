@@ -1,7 +1,4 @@
 import { useEffect } from 'react';
-'use client';
-
-
 interface AnalyticsProps {
   children: React.ReactNode;
 }

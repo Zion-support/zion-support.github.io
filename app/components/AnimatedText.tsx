@@ -1,7 +1,4 @@
 import { useEffect, useState} from 'react';
-'use client';
-
-
 interface AnimatedTextProps {
   text: string;
   className?: string;

@@ -1,10 +1,10 @@
-import React from \'react\';
+import React  from 'react';
 
 const SEOHead: React.FC = () => {
   return (
-    <Helmet />
-      <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-      <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." / / />
+    <Helmet>
+        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+        <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." / / />
       <meta name="keywords" content="AI solutions, IT services, cloud computing, digital transformation, 5 G implementation" / / />
       <meta name="viewport" content="width="device-width," initial-scale=1.0" / / />
       <meta name="theme-color" content="#8 b5 cf6" / / />

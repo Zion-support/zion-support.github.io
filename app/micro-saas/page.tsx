@@ -1,7 +1,6 @@
 import { useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import {;
-'use client';
   ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 
   BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, 
   Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package, 
@@ -769,12 +768,12 @@ const MicroSaasPage: React.FC = () => {
         <meta name="keywords" content="micro saas, business software, AI tools, analytics, CRM, project management, cybersecurity, automation" / / />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900" />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hiddenpt-20pb-16" />
-          <div className="absoluteinset-0opacity-20" / />
-          <div className="relative max-w-7 xl mx-auto px-4sm:px-6lg:px-8" />
-            <div className="text-center" />
+          <div className="absoluteinset-0opacity-20" />
+          <div className="relative max-w-7xl mx-auto px-4sm:px-6lg:px-8">
+            <div className="text-center">
               <h1 className="{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
                 Micro SAAS
                 <span className="block bg-gradient-to-r from-purple-400 to-pink-400bg-clip-texttext-transparent"  />Business Solutions
@@ -785,24 +784,24 @@ const MicroSaasPage: React.FC = () => {
                 No complex setup, no lengthy implementations - just instant value.
               </p>
               <div className="{`flex" flex-col sm: flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-                <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
-                  Start Free Trial
-                  <ArrowRight className="ml-2h-5w-5" />
-                </Link>
+                <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" >
+          Start Free Trial
+                  
+          <ArrowRight className="ml-2h-5w-5"  />
+        </Link>
                 <a
                   href="tel:+13024640950"
                   className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" />
                   Call +1 302 464 0950
                 </a>
               </div>
-            </div>
           </div>
         </section>
 
         {/* Category Filter */}
         <section className="py-8bg-gray-900/50" />
-          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8" />
-            <div className="flex flex-wrapjustify-centergap-4" />
+          <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8">
+            <div className="flex flex-wrapjustify-centergap-4">
               {categories.map((category) => (
                 <button
                   key="{category}"
@@ -817,13 +816,12 @@ const MicroSaasPage: React.FC = () => {
                 </button>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Products Grid */}
         <section className="py-16" />
-          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8" />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3xl:grid-cols-4gap-8" />
+          <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3xl:grid-cols-4gap-8">
               {filteredProducts.map((product, index) => (
                 <div
                   key="{product.id}"
@@ -831,20 +829,21 @@ const MicroSaasPage: React.FC = () => {
                     product.popular ? 'ring-2 ring-purple-500' : ''
                   }`} />
                   {product.popular && (
-                    <div className="absolute -top-3 left-1/2transform-translate-x-1/2" />
+                    <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
                       <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold"  />Most Popular
                       </span>
                     </div>
                   )}
                   
-                  <div className="text-centermb-6" />
+                  <div className="text-centermb-6">
                     <div className="{`inline-flex" items-center justify-center w-16 h-16 bg-gradient-to-r ${product.color} rounded-xl mb-4`} />
-                      <product.icon className="h-8w-8text-white" / />
+                      <product.icon className="h-8w-8text-white" />
                     </div>
-                    <h3 className="text-xl font-boldtext-whitemb-2"   />{product.title}</h3>
-                    <p className="text-gray-300text-smmb-4" />{product.description}</p>
-                    <div className="flex items-center justify-centerspace-x-2mb-4" />
-                      <div className="flexitems-center" />
+                    <h3 className="text-xl font-bold text-white mb-2"   />{product.title}</h3>
+                    <p className="text-gray-300text-smmb-4">
+              {product.description}</p>
+                    <div className="flex items-center justify-centerspace-x-2mb-4">
+                      <div className="flex items-center">
                         {[...Array(5)].map((_, i) => (
                           <Star
                             key="{i}"
@@ -856,21 +855,20 @@ const MicroSaasPage: React.FC = () => {
                       </div>
                       <span className="text-smtext-gray-400"   />({product.reviews} reviews)</span>
                     </div>
-                  </div>
 
-                  <div className="text-centermb-6" />
-                    <div className="flex items-center justify-centerspace-x-2mb-2" />
-                      <span className="text-3 xlfont-boldtext-white"   />{product.price}</span>
+                  <div className="text-centermb-6">
+                    <div className="flex items-center justify-centerspace-x-2mb-2">
+                      <span className="text-3 xlfont-bold text-white"   />{product.price}</span>
                       <span className="text-lgtext-gray-400line-through"   />{product.originalPrice}</span>
                     </div>
                     <span className="text-smtext-green-400font-semibold"  />Save {Math.round((1 - parseInt(product.price.replace('$', '')) / parseInt(product.originalPrice.replace('$', ''))) * 100)}%
                     </span>
                   </div>
 
-                  <div className="space-y-3mb-6" />
+                  <div className="space-y-3mb-6">
                     {product.features.slice(0, 4).map((feature, idx) => (
                       <div key="{idx}" className="flex items-centertext-smtext-gray-300" />
-                        <CheckCircle className="h-4 w-4 text-green-400mr-3flex-shrink-0" / />
+                        <CheckCircle className="h-4 w-4 text-green-400mr-3flex-shrink-0" />
                         <span   />{feature}</span>
                       </div>
                     ))}
@@ -880,46 +878,58 @@ const MicroSaasPage: React.FC = () => {
                     )}
                   </div>
 
-                  <div className="space-y-3" />
-                    <Link to="{`/${product.id}`}" className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" />
-                      View Details
-                      <ArrowRight className="ml-2h-4w-4" />
-                    </Link>
+                  <div className="space-y-3">
+                    <Link to="{`/${product.id}`}" className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" >
+          View Details
+                      
+          <ArrowRight className="ml-2h-4w-4"  />
+        </Link>
                     <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-whitetransition-allduration-300">Start Free Trial
                     </Link>
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-brfrom-gray-900to-purple-900" />
-          <div className="max-w-7 xl mx-auto px-4 sm:px-6lg:px-8text-center" />
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4"  />Ready to Transform Your Business?
+          <div className="max-w-7xl mx-auto px-4 sm:px-6lg:px-8text-center">
+            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto" />
+            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
               Join thousands of businesses already using our micro SAAS solutions to streamline operations, 
               increase productivity, and drive growth.
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center" />
-              <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
-                Get Started Today
-                <ArrowRight className="ml-2h-5w-5" />
-              </Link>
+            <div className="flex flex-col sm:flex-rowgap-4justify-center">
+              <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" >
+          Get Started Today
+                
+          <ArrowRight className="ml-2h-5w-5"  />
+        </Link>
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" />
                 Call +1 302 464 0950
               </a>
             </div>
-            <div className="mt-8text-gray-400" />
+            <div className="mt-8text-gray-400">
               <p />Email: kleber@ziontechgroup.com</p>
               <p />Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
-          </div>
         </section>
+      </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
       </div>
     </>
   );
