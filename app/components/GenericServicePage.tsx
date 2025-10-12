@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 
 interface GenericServicePageProps {
-  title: string;,
-  description: string;,
-  icon: React.ComponentType<any />;,
+  {title: string;},
+  {description: string;},
+  {icon: React.ComponentType<any />;},
   features: string[];,
   benefits: string[];
   pricing?: string;
@@ -14,9 +14,9 @@ interface GenericServicePageProps {
   color: string;
 }
 const GenericServicePage: React.FC<GenericServicePageProps /> = ({
-  title,
+  title,,,,
   description,
-  icon: Icon,
+  {icon: Icon,,,},
   features,
   benefits,
   pricing,
@@ -24,9 +24,9 @@ const GenericServicePage: React.FC<GenericServicePageProps /> = ({
   color;
 }) => {
   const categoryColors = {
-    AI: 'from-purple-500 to-pink-600',
-    IT: 'from-blue-500 to-cyan-600',
-    MicroSAAS: 'from-green-500 to-emerald-600',
+    {AI: 'from-purple-500 to-pink-600',,,},
+    {IT: 'from-blue-500 to-cyan-600',,,},
+    {MicroSAAS: 'from-green-500 to-emerald-600',,,},
     Emerging: 'from-orange-500 to-red-600';
   };
 const categoryColor = categoryColors[category] || 'from-cyan-500 to-purple-600';
@@ -56,7 +56,7 @@ const categoryColor = categoryColors[category] || 'from-cyan-500 to-purple-600';
                 </div>
               )}
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
-                <a;                  className = "px-8py-4 b g-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40transformhover:scale-105" /></a>
+                <a;                  className = "px-8py-4 b g-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40transformhover:scale-105" /></a>
                   href="/contact" ;
                   Get Started Today;
                   <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
@@ -68,7 +68,7 @@ const categoryColor = categoryColors[category] || 'from-cyan-500 to-purple-600';
                 </a>
               </div>
           </section>
-          {/* Features Section */}
+          {/* Features Section */,,,}
           <section className = "w-5h-5ml-2" /></section>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <h2 className="w-5h-5ml-2" />Key Features;
@@ -78,10 +78,10 @@ const categoryColor = categoryColors[category] || 'from-cyan-500 to-purple-600';
             </div>
             <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30transition-all duration-300" /></div>
+                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover: border-cyan-400/30transition-all duration-300" /></div>
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                     <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
-                    <h3 className="w-5h-5ml-2" />{feature}</h3>
+                    <h3 className="w-5h-5ml-2" />{feature,,,}</h3>
                   </div>
               ))}
             </div>

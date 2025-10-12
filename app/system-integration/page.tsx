@@ -9,24 +9,22 @@ import { Link } from 'react-router-dom';
 
   const features = [
 
-      icon: <Cloud className="w-12h-12text-cyan-400" />,
-      title: "Cloud Integration",
-      description: "Seamlessly integrate with all major cloud platforms and services."
-    },
-      icon: <Zap className="w-12h-12text-purple-400" />,
-      title: "Real-time Sync",
-      description: "Keep all your systems synchronized with real-time data updates."
-    },
-      icon: <Shield className="w-12h-12text-green-400" />,
+      {icon: <Cloud className="w-12h-12text-cyan-400" />,,,},
+      {title: "Cloud Integration",,,},
+      {description: "Seamlessly integrate with all major cloud platforms and services.",,},},
+      {icon: <Zap className="w-12h-12text-purple-400" />,,,},
+      {title: "Real-time Sync",,,},
+      {description: "Keep all your systems synchronized with real-time data updates.",,},},
+      {icon: <Shield className="w-12h-12text-green-400" />,,,},
 
-      title: "Secure & Reliable",
+      {title: "Secure & Reliable",,,},
       description: "Enterprise-grade security ensures your data is protected during integration."
   ];
 
   return (
 
         <title>5G Data Analytics - Zion Tech Group</title></h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <p className="text-gray-300">{feature.description,,,}</p>
 
               ))
 
@@ -46,8 +44,8 @@ import { Link } from 'react-router-dom';
 export default Page;
 
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 
 export default function GDataAnalyticsZionTechGroupPage() {

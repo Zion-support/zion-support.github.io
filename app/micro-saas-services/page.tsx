@@ -3,80 +3,73 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import {import { Zap, MessageSquare} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { import { Zap, MessageSquare } from 'lucide-react';
 
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import {MessageSquare} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { MessageSquare } from 'lucide-react';
 
   const services = [
-      icon: BarChart,
-      title: 'Zion Analytics Pro',
-      description: 'Advanced business intelligence platform with real-time analytics and custom dashboards.',
-      features: ['Real-time Analytics', 'Custom Dashboards', 'Data Visualization', 'Export Reports'],
-      price: 'Starting at $99/month',
-      color: 'from-cyan-500 to-blue-500',
-      link: '/zion-analytics-pro'
-    },
-      icon: MessageSquare,
-      title: 'Zion Chat AI',
-      description: 'Intelligent customer support chatbot with natural language processing capabilities.',
-      features: ['24/7 Support', 'Multi-language', 'Integration APIs', 'Analytics Dashboard'],
-      price: 'Starting at $79/month',
-      color: 'from-purple-500 to-pink-500',
-      link: '/zion-chat-ai'
-    },
-      icon: Shield,
-      title: 'Zion Security Shield',
-      description: 'Comprehensive cybersecurity monitoring and threat detection for your business.',
-      features: ['Threat Detection', 'Security Monitoring', 'Compliance Reports', 'Incident Response'],
-      price: 'Starting at $149/month',
-      color: 'from-red-500 to-orange-500',
-      link: '/zion-security-shield'
-    },
-      icon: Cloud,
-      title: 'Zion Cloud Vault',
-      description: 'Secure cloud backup and disaster recovery solution for your critical data.',
-      features: ['Automated Backups', 'Disaster Recovery', 'Data Encryption', 'Version Control'],
-      price: 'Starting at $59/month',
-      color: 'from-green-500 to-emerald-500',
-      link: '/zion-cloud-vault'
-    },
-      icon: Zap,
-      title: 'Zion Workflow Automation',
-      description: 'Streamline your business processes with intelligent workflow automation.',
-      features: ['Process Automation', 'Task Scheduling', 'Integration Tools', 'Performance Analytics'],
-      price: 'Starting at $89/month',
-      color: 'from-yellow-500 to-orange-500',
-      link: '/zion-workflow-automation'
-    },
-      icon: Users,
-      title: 'Zion CRM Intelligence',
-      description: 'AI-powered customer relationship management with predictive analytics.',
-      features: ['Lead Scoring', 'Sales Forecasting', 'Customer Insights', 'Automation Rules'],
-      price: 'Starting at $129/month',
-      color: 'from-indigo-500 to-purple-500',
+      {icon: BarChart,,,},
+      {title: 'Zion Analytics Pro',,,},
+      {description: 'Advanced business intelligence platform with real-time analytics and custom dashboards.',,,},
+      features: ['Real-time Analytics',,,, 'Custom Dashboards', 'Data Visualization', 'Export Reports'],
+      {price: 'Starting at $99/month',,,},
+      {color: 'from-cyan-500 to-blue-500',,,},
+      {link: '/zion-analytics-pro',,},},
+      {icon: MessageSquare,,,},
+      {title: 'Zion Chat AI',,,},
+      {description: 'Intelligent customer support chatbot with natural language processing capabilities.',,,},
+      features: ['24/7 Support',,,, 'Multi-language', 'Integration APIs', 'Analytics Dashboard'],
+      {price: 'Starting at $79/month',,,},
+      {color: 'from-purple-500 to-pink-500',,,},
+      {link: '/zion-chat-ai',,},},
+      {icon: Shield,,,},
+      {title: 'Zion Security Shield',,,},
+      {description: 'Comprehensive cybersecurity monitoring and threat detection for your business.',,,},
+      features: ['Threat Detection',,,, 'Security Monitoring', 'Compliance Reports', 'Incident Response'],
+      {price: 'Starting at $149/month',,,},
+      {color: 'from-red-500 to-orange-500',,,},
+      {link: '/zion-security-shield',,},},
+      {icon: Cloud,,,},
+      {title: 'Zion Cloud Vault',,,},
+      {description: 'Secure cloud backup and disaster recovery solution for your critical data.',,,},
+      features: ['Automated Backups',,,, 'Disaster Recovery', 'Data Encryption', 'Version Control'],
+      {price: 'Starting at $59/month',,,},
+      {color: 'from-green-500 to-emerald-500',,,},
+      {link: '/zion-cloud-vault',,},},
+      {icon: Zap,,,},
+      {title: 'Zion Workflow Automation',,,},
+      {description: 'Streamline your business processes with intelligent workflow automation.',,,},
+      features: ['Process Automation',,,, 'Task Scheduling', 'Integration Tools', 'Performance Analytics'],
+      {price: 'Starting at $89/month',,,},
+      {color: 'from-yellow-500 to-orange-500',,,},
+      {link: '/zion-workflow-automation',,},},
+      {icon: Users,,,},
+      {title: 'Zion CRM Intelligence',,,},
+      {description: 'AI-powered customer relationship management with predictive analytics.',,,},
+      features: ['Lead Scoring',,,, 'Sales Forecasting', 'Customer Insights', 'Automation Rules'],
+      {price: 'Starting at $129/month',,,},
+      {color: 'from-indigo-500 to-purple-500',,,},
       link: '/zion-crm-intelligence'
   ];
 
   const features = [
-      icon: Zap,
-      title: 'Quick Setup',
-      description: 'Get up and running in minutes with our easy-to-use interface and pre-built templates.'
+      icon: Zap,,,,
+      {title: 'Quick Setup',,,},
+      {description: 'Get up and running in minutes with our easy-to-use interface and pre-built templates.',,},},
+      {icon: Shield,,,},
+      {title: 'Enterprise Security',,,},
+      {description: 'Bank-level security with encryption,,,}, compliance, and regular security updates.'
     },
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption, compliance, and regular security updates.'
-    },
-      icon: Users,
-      title: '24/7 Support',
-      description: 'Round-the-clock support from our expert team to ensure your success.'
-    },
-      icon: BarChart,
-      title: 'Scalable Solutions',
+      {icon: Users,,,},
+      {title: '24/7 Support',,,},
+      {description: 'Round-the-clock support from our expert team to ensure your success.',,},},
+      {icon: BarChart,,,},
+      {title: 'Scalable Solutions',,,},
       description: 'Grow with confidence knowing our solutions scale with your business needs.'
   ];
 
@@ -86,7 +79,7 @@ export default function <title>Micro SaaS Services - Zion Tech Group</title>
 
         {/* Hero Section */
                 Micro <span className="bg-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-text text-transparent">SaaS Services</span>
-                Powerful, purpose-built software solutions designed to solve specific business challenges. 
+                Powerful,,,, purpose-built software solutions designed to solve specific business challenges. 
                 Get enterprise-grade functionality without the complexity.
                   Start Free Trial
                   View AI Services
@@ -333,3 +326,4 @@ export default MicroSaasServicesPage;
     </>
   );
 }
+}}}}}}}}}}}}}}

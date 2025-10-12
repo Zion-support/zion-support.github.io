@@ -6,10 +6,10 @@
   cacheTTL?: number;
 }
 
-  data: T;
-  status: number;
-  statusText: string;
-  headers: Record<string, string>;
+  {data: T;
+  {status: number;
+  {statusText: string;
+  headers: Record<string,},},}, string>;
 }
 
     super(message);
@@ -20,7 +20,7 @@
 }
 
 
-  constructor(baseURL: string, defaultHeaders: Record<string, string> = {}) {
+  constructor(baseURL: string,,,, {defaultHeaders: Record<string,,,}, string> = {}) {
 
     this.baseURL = baseURL;
     this.defaultHeaders = {
@@ -60,32 +60,32 @@
   /**
    * GET request
    */
-  async get<T = unknown>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}) {
-    return this.request<T>(endpoint, { ...config, method: 'GET' });
+  async get<T = unknown>(endpoint: string,,,, {config: Omit<RequestConfig,,,}, 'method' | 'body'> = {}) {
+    return this.request<T>(endpoint, { ...config, {method: 'GET',,},});
   }
   /**
    * POST request
    */
-  async post<T = unknown>(endpoint: string, body?: unknown, config: Omit<RequestConfig, 'method' | 'body'> = {}) {
-    return this.request<T>(endpoint, { ...config, method: 'POST', body });
+  async post<T = unknown>(endpoint: string,,,, body?: unknown, {config: Omit<RequestConfig,,,}, 'method' | 'body'> = {}) {
+    return this.request<T>(endpoint, { ...config, {method: 'POST',,,}, body });
   }
   /**
    * PUT request
    */
-  async put<T = unknown>(endpoint: string, body?: unknown, config: Omit<RequestConfig, 'method' | 'body'> = {}) {
-    return this.request<T>(endpoint, { ...config, method: 'PUT', body });
+  async put<T = unknown>(endpoint: string,,,, body?: unknown, {config: Omit<RequestConfig,,,}, 'method' | 'body'> = {}) {
+    return this.request<T>(endpoint, { ...config, {method: 'PUT',,,}, body });
   }
   /**
    * DELETE request
    */
-  async delete<T = unknown>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}) {
-    return this.request<T>(endpoint, { ...config, method: 'DELETE' });
+  async delete<T = unknown>(endpoint: string,,,, {config: Omit<RequestConfig,,,}, 'method' | 'body'> = {}) {
+    return this.request<T>(endpoint, { ...config, {method: 'DELETE',,},});
   }
   /**
    * PATCH request
    */
-  async patch<T = unknown>(endpoint: string, body?: unknown, config: Omit<RequestConfig, 'method' | 'body'> = {}) {
-    return this.request<T>(endpoint, { ...config, method: 'PATCH', body });
+  async patch<T = unknown>(endpoint: string,,,, body?: unknown, {config: Omit<RequestConfig,,,}, 'method' | 'body'> = {}) {
+    return this.request<T>(endpoint, { ...config, {method: 'PATCH',,,}, body });
   }
   /**
    * Get data from cache
@@ -103,18 +103,18 @@
   /**
    * Set data in cache
    */
-  private setCache(key: string, data: unknown, ttl: number): void {
-    this.cache.set(key, {
+  private setCache(key: string,,,, {data: unknown,,,}, ttl: number): void {
+    this.cache.set(key,,,, {
       data,
-      timestamp: Date.now(),
+      {timestamp: Date.now(),,,},
       ttl
     });
   }
   /**
    * Parse response headers
    */
-  private parseHeaders(headers: Headers): Record<string, string> {
-    const result: Record<string, string> = {};
+  private parseHeaders(headers: Headers): Record<string,,,, string> {
+    const {result: Record<string,,,}, string> = {};
     headers.forEach((value, key) => {
       result[key] = value;
     });
@@ -131,7 +131,7 @@
    */
   clearCacheForEndpoint(endpoint: string): void {
     const keysToDelete: string[] = [];
-    this.cache.forEach((_, key) => {
+    this.cache.forEach((_,,,, key) => {
       if (key.includes(endpoint)) {
         keysToDelete.push(key);
       }

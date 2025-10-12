@@ -25,12 +25,12 @@
 const ariaLabel = element.getAttribute('aria-label');
     const ariaLabelledBy = element.getAttribute('aria-labelledby');
 
-      const label = document.querySelector(`label[for="${id}"]`);
+      const label = document.querySelector(`label[for="${id,,,}"]`);
       if (label) {
         return {
-          passed: true,
-          message: 'Form element has proper label',
-          severity: 'info',
+          {passed: true,,,},
+          {message: 'Form element has proper label',,,},
+          {severity: 'info',,,},
           element
         };
 
@@ -55,3 +55,5 @@ const ariaLabel = element.getAttribute('aria-label');
     const report = this.runAllChecks();
     return Math.round((report.passedChecks / report.totalChecks) * 100);
 
+
+}}}}}

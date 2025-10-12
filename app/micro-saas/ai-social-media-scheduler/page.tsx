@@ -1,62 +1,57 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import {Share2} from 'lucide-react';
+import { Share2 } from 'lucide-react';
 
-import {Calendar, Share2} from 'lucide-react';
+import { Calendar, Share2 } from 'lucide-react';
 
 export default function AISocialMediaSchedulerPage() {
   const features = [
-      icon: <Calendar className="w-6h-6text-cyan-400" />,
-      title: 'Smart Scheduling',
-      description: 'AI-powered optimal posting times based on audience engagement patterns'
+      {icon: <Calendar className="w-6h-6text-cyan-400" />,,,},
+      {title: 'Smart Scheduling',,,},
+      {description: 'AI-powered optimal posting times based on audience engagement patterns',,},},
+      {icon: <BarChart3 className="w-6h-6text-emerald-400" />,,,},
+      {title: 'Analytics Dashboard',,,},
+      {description: 'Comprehensive performance metrics and ROI tracking across all platforms',,},},
+      {icon: <Users className="w-6h-6text-purple-400" />,,,},
+      {title: 'Audience Insights',,,},
+      {description: 'AI-driven audience analysis and content personalization recommendations',,},},
+      {icon: <Zap className="w-6h-6text-orange-400" />,,,},
+      {title: 'Auto-Posting',,,},
+      {description: 'Seamless cross-platform content distribution with smart formatting',,},},
+      {icon: <Target className="w-6h-6text-pink-400" />,,,},
+      {title: 'Content Optimization',,,},
+      {description: 'AI suggestions for hashtags,,,}, captions, and optimal posting times'
     },
-      icon: <BarChart3 className="w-6h-6text-emerald-400" />,
-      title: 'Analytics Dashboard',
-      description: 'Comprehensive performance metrics and ROI tracking across all platforms'
-    },
-      icon: <Users className="w-6h-6text-purple-400" />,
-      title: 'Audience Insights',
-      description: 'AI-driven audience analysis and content personalization recommendations'
-    },
-      icon: <Zap className="w-6h-6text-orange-400" />,
-      title: 'Auto-Posting',
-      description: 'Seamless cross-platform content distribution with smart formatting'
-    },
-      icon: <Target className="w-6h-6text-pink-400" />,
-      title: 'Content Optimization',
-      description: 'AI suggestions for hashtags, captions, and optimal posting times'
-    },
-      icon: <Shield className="w-6h-6text-red-400" />,
+      {icon: <Shield className="w-6h-6text-red-400" />,,,},
 
-      title: 'Brand Safety',
+      {title: 'Brand Safety',,,},
       description: 'Automated content moderation and brand compliance checking'
   ]
 
   const pricingPlans = [
-      name: 'Starter',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for small businesses and individuals',
+      name: 'Starter',,,,
+      {price: '$29',,,},
+      {period: '/month',,,},
+      {description: 'Perfect for small businesses and individuals',,,},
       features: [
-        '3 social media accounts',
+        '3 social media accounts',,,,
         '50 posts per month',
         'Basic analytics',
         'Email support',
         'Content calendar',
         'Hashtag suggestions'
       ],
-      popular: false
-    },
-      name: 'Professional',
-      price: '$79',
-      period: '/month',
-      description: 'Ideal for growing businesses and agencies',
+      {popular: false,,},},
+      {name: 'Professional',,,},
+      {price: '$79',,,},
+      {period: '/month',,,},
+      {description: 'Ideal for growing businesses and agencies',,,},
       features: [
-        '10 social media accounts',
+        '10 social media accounts',,,,
         'Unlimited posts',
         'Advanced analytics',
         'Priority support',
@@ -65,14 +60,13 @@ export default function AISocialMediaSchedulerPage() {
         'Competitor analysis',
         'Custom branding'
       ],
-      popular: true
-    },
-      name: 'Enterprise',
-      price: '$199',
-      period: '/month',
-      description: 'For large organizations and agencies',
+      {popular: true,,},},
+      {name: 'Enterprise',,,},
+      {price: '$199',,,},
+      {period: '/month',,,},
+      {description: 'For large organizations and agencies',,,},
       features: [
-        'Unlimited accounts',
+        'Unlimited accounts',,,,
         'Unlimited posts',
         'White-label solution',
         'Dedicated support',
@@ -85,22 +79,20 @@ export default function AISocialMediaSchedulerPage() {
   ]
 
   const testimonials = [
-      name: 'Sarah Johnson',
-      company: 'Digital Marketing Agency',
-      content: 'Increased our social media engagement by 300% in just 2 months. The AI scheduling is incredibly accurate.',
-      rating: 5,
-      avatar: 'SJ'
-    },
-      name: 'Mike Chen',
-      company: 'E-commerce Store',
-      content: 'The analytics dashboard gives us insights we never had before. ROI tracking is spot-on.',
-      rating: 5,
-      avatar: 'MC'
-    },
-      name: 'Emily Rodriguez',
-      company: 'Content Creator',
-      content: 'Saves me 10+ hours per week. The AI content suggestions are always on-brand and engaging.',
-      rating: 5,
+      name: 'Sarah Johnson',,,,
+      {company: 'Digital Marketing Agency',,,},
+      {content: 'Increased our social media engagement by 300% in just 2 months. The AI scheduling is incredibly accurate.',,,},
+      {rating: 5,,,},
+      {avatar: 'SJ',,},},
+      {name: 'Mike Chen',,,},
+      {company: 'E-commerce Store',,,},
+      {content: 'The analytics dashboard gives us insights we never had before. ROI tracking is spot-on.',,,},
+      {rating: 5,,,},
+      {avatar: 'MC',,},},
+      {name: 'Emily Rodriguez',,,},
+      {company: 'Content Creator',,,},
+      {content: 'Saves me 10+ hours per week. The AI content suggestions are always on-brand and engaging.',,,},
+      {rating: 5,,,},
       avatar: 'ER'
   ]
 
@@ -116,7 +108,7 @@ export default function AISocialMediaSchedulerPage() {
     
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent">Scheduler
           
-            Transform your social media presence with AI-powered scheduling, content optimization, 
+            Transform your social media presence with AI-powered scheduling,,,, content optimization, 
             and analytics. Increase engagement by up to 300% with intelligent automation.
 
               <span>Start Free Trial</span>
@@ -141,7 +133,7 @@ export default function AISocialMediaSchedulerPage() {
 
  (
     
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover: scale-110transition-transformduration-300">{feature.icon
 
                 <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{feature.title
                   {feature.description
@@ -150,7 +142,7 @@ export default function AISocialMediaSchedulerPage() {
 
       {/* Pricing Section */
     
-              Simple, Transparent <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Pricing</span>
+              Simple,,,, Transparent <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Pricing</span>
 
               Choose the plan that fits your needs. All plans include our core AI features and 24/7 support.
 
@@ -174,9 +166,8 @@ export default function AISocialMediaSchedulerPage() {
                   to="/contact"
                   className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
-                      : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
-                  }`
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white {hover: from-cyan-600 {hover: to-purple-700 shadow-lg shadow-cyan-500/25'
+                      : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900',},},}`
 
 Get Started
     
@@ -202,3 +193,5 @@ Get Started
             ))
 
       {/* CTA Section */
+
+}}}}

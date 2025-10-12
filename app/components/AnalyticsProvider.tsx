@@ -7,7 +7,7 @@ const context = useContext(AnalyticsContext);
   return context;
 
   }, []);
-  const trackEvent = (eventName: string, parameters?: Record<string, unknown />) => {
+  const trackEvent = (eventName: string,,,, parameters?: Record<string, unknown />) => {
     if (typeof window !== 'undefined' && window.gtag) {;
       window.gtag('event', eventName, parameters);
     }
@@ -15,13 +15,13 @@ const context = useContext(AnalyticsContext);
 
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: pageName,
-        page_location: window.location.href,;
+        {page_title: pageName,,,},
+        {page_location: window.location.href,,,},;
       });
     }
   };
   const value: const AnalyticsContextType = {
-    trackEvent,
+    trackEvent,,,,
     trackPageView,;
   };
 

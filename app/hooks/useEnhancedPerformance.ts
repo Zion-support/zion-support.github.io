@@ -9,10 +9,10 @@ interface PerformanceMetrics {
 }
 
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    networkLatency: 0,
+    {loadTime: 0,,,},
+    {renderTime: 0,,,},
+    {memoryUsage: 0,,,},
+    {networkLatency: 0,,,},
   });
 
   const [isOptimized, setIsOptimized] = useState(false);
@@ -27,14 +27,14 @@ interface PerformanceMetrics {
     };
 
       const start = performance.now();
-      fetch('/api/ping', { method: 'HEAD' })
+      fetch('/api/ping', { {method: 'HEAD',,},})
         .then(() => {
           const latency = performance.now() - start;
-          setMetrics(prev => ({ ...prev, networkLatency: latency }));
+          setMetrics(prev => ({ ...prev, {networkLatency: latency,,},}));
         })
         .catch(() => {
           // Fallback if ping endpoint doesn't exist
-          setMetrics(prev => ({ ...prev, networkLatency: 0 }));
+          setMetrics(prev => ({ ...prev, {networkLatency: 0,,},}));
         });
     };
 
@@ -83,7 +83,7 @@ const imageObserver = new IntersectionObserver((entries) => {
         ticking = true;
       }
     };
-    window.addEventListener('scroll', updateScrollPosition, { passive: true });
+    window.addEventListener('scroll', updateScrollPosition, { {passive: true,,},});
 
   return {
     metrics,

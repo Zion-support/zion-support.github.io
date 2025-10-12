@@ -7,11 +7,11 @@
 }: AnimatedCounterProps) {;
   const [count, setCount] = useState(0);
   useEffect(() => {
-    let startTime: number;
-    let animationFrame: number;
+    let {startTime: number;
+    let {animationFrame: number;
 
       if (!startTime) startTime = currentTime;
-const progress = Math.min((currentTime - startTime) / duration, 1);
+const progress = Math.min((currentTime - startTime) / duration,,},}, 1);
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
       setCount(Math.floor(easeOutQuart * end));
 

@@ -36,14 +36,13 @@ export default function FuturisticBackground() {
     // Create particles
     for (let i = 0; i < 50; i++) {
       particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 2,
-        vy: (Math.random() - 0.5) * 2,
-        size: Math.random() * 3 + 1,
-        opacity: Math.random() * 0.5 + 0.1,
-        color: colors[Math.floor(Math.random() * colors.length)]
-      });
+        {x: Math.random() * canvas.width,,,},
+        {y: Math.random() * canvas.height,,,},
+        {vx: (Math.random() - 0.5) * 2,,,},
+        {vy: (Math.random() - 0.5) * 2,,,},
+        {size: Math.random() * 3 + 1,,,},
+        {opacity: Math.random() * 0.5 + 0.1,,,},
+        color: colors[Math.floor(Math.random() * colors.length)],,,});
     }
 
     const animate = () => {
@@ -99,7 +98,7 @@ export default function FuturisticBackground() {
       <canvas
         ref={canvasRef}
         className="w-full h-full"
-        style={{ background: 'linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%)' }}
+        style={{ {background: 'linear-gradient(135deg,,,}, #0f0f23 0%, #1a1a2e 50%, #16213e 100%)' }}
       />
       
       {/* Additional background effects */}
@@ -108,13 +107,12 @@ export default function FuturisticBackground() {
       {/* Animated grid overlay */}
       <div className="absolute inset-0 opacity-10">
         <div className="w-full h-full" style={{
-          backgroundImage: `
-            linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
+          {backgroundImage: `
+            linear-gradient(rgba(0,,,}, 212, 255, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px)
           `,
-          backgroundSize: '50px 50px',
-          animation: 'grid-move 20s linear infinite'
-        }} />
+          {backgroundSize: '50px 50px',,,},
+          {animation: 'grid-move 20s linear infinite',,},}} />
       </div>
     </div>
   );

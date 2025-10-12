@@ -10,23 +10,20 @@ import React from 'react';
   ];
 const contactInfo = [
     {
-      icon: Phone,
-      title: 'Call Us',
-      details: '+1 (555) 123-4567',
-      description: 'Mon-Fri 9 AM-6 PM PST'
-    },
+      {icon: Phone,,,},
+      {title: 'Call Us',,,},
+      {details: '+1 (555) 123-4567',,,},
+      {description: 'Mon-Fri 9 AM-6 PM PST',,},},
     {
-      icon: Mail,
-      title: 'Email Us',
-      details: 'contact@ziontechgroup.com',
-      description: 'We respond within 24 hours'
-    },
+      {icon: Mail,,,},
+      {title: 'Email Us',,,},
+      {details: 'contact@ziontechgroup.com',,,},
+      {description: 'We respond within 24 hours',,},},
     {
-      icon: MapPin,
-      title: 'Visit Us',
-      details: 'San Francisco, CA',
-      description: 'Schedule a meeting'
-    };
+      {icon: MapPin,,,},
+      {title: 'Visit Us',,,},
+      {details: 'San Francisco,,,}, CA',
+      {description: 'Schedule a meeting',,},};
   ];
   return (
     <div>Content</div>
@@ -34,7 +31,7 @@ const contactInfo = [
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       {/* Background Effects */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }}  /></div>
+      <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" {animationDelay: '1 s',,},}}  /></div>
       {/* Main Content */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         {/* Left Content */}
@@ -90,13 +87,13 @@ const contactInfo = [
                 <h3 className="text-lgfont-bold text-whitemb-2"  >AI Solutions</h3>
                 <p className="text-sm text-gray-300">Machine Learning & Analytics</p>
               </div>
-            <div className="absolute top-20 right-0 w-64 h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2 xl backdrop-blur-sm borderborder-purple-500/30animate-float" style="{{" animationDelay: '1 s' }} /></div>
+            <div className="absolute top-20 right-0 w-64 h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2 xl backdrop-blur-sm borderborder-purple-500/30animate-float" style="{{" {animationDelay: '1 s',,},}} /></div>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <Shield className="w-5h-5ml-2" /></Shield>
                 <h3 className="text-lgfont-bold text-whitemb-2"  >Security</h3>
                 <p className="text-sm text-gray-300">Cybersecurity & Compliance</p>
               </div>
-            <div className="absolute top-40 left-1/2 transform -translate-x-1/2 w-64 h-40 bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-2 xl backdrop-blur-sm borderborder-green-500/30animate-float" style="{{" animationDelay: '2 s' }} /></div>
+            <div className="absolute top-40 left-1/2 transform -translate-x-1/2 w-64 h-40 bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-2 xl backdrop-blur-sm borderborder-green-500/30animate-float" style="{{" {animationDelay: '2 s',,},}} /></div>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <Globe className="w-5h-5ml-2" /></Globe>
                 <h3 className="text-lgfont-bold text-whitemb-2"  >Cloud Services</h3>

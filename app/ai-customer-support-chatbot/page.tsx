@@ -7,69 +7,66 @@ import { Link } from 'react-router-dom';
 export default function AICustomerSupportChatbot() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'Natural Language Processing',
-      description: 'Advanced AI understands context, intent, and provides human-like responses'
+      {icon: <Brain className="w-6 h-6 text-cyan-400" />,,,},
+      {title: 'Natural Language Processing',,,},
+      {description: 'Advanced AI understands context,,,}, intent, and provides human-like responses'
     },
     {
-      icon: <Clock className="w-6 h-6 text-purple-400" />,
-      title: '24/7 Availability',
-      description: 'Provide instant support around the clock without additional staffing costs'
-    },
+      {icon: <Clock className="w-6 h-6 text-purple-400" />,,,},
+      {title: '24/7 Availability',,,},
+      {description: 'Provide instant support around the clock without additional staffing costs',,},},
     {
-      icon: <Target className="w-6 h-6 text-yellow-400" />,
-      title: 'Intelligent Routing',
-      description: 'Automatically route complex queries to the right human agents when needed'
-    },
+      {icon: <Target className="w-6 h-6 text-yellow-400" />,,,},
+      {title: 'Intelligent Routing',,,},
+      {description: 'Automatically route complex queries to the right human agents when needed',,},},
     {
-      icon: <BarChart3 className="w-6 h-6 text-green-400" />,
-      title: 'Analytics & Insights',
-      description: 'Track customer satisfaction, response times, and identify improvement opportunities'
+      {icon: <BarChart3 className="w-6 h-6 text-green-400" />,,,},
+      {title: 'Analytics & Insights',,,},
+      {description: 'Track customer satisfaction,,,}, response times, and identify improvement opportunities'
     }
   ];
 
   const chatbotFeatures = [
     {
-      category: 'Conversation Management',
-      items: ['Multi-language Support', 'Context Awareness', 'Sentiment Analysis', 'Conversation History', 'Quick Responses', 'Escalation Rules']
+      {category: 'Conversation Management',,,},
+      items: ['Multi-language Support',,,, 'Context Awareness', 'Sentiment Analysis', 'Conversation History', 'Quick Responses', 'Escalation Rules']
     },
     {
-      category: 'Integration',
-      items: ['Website Widget', 'Mobile Apps', 'Social Media', 'Email Integration', 'CRM Systems', 'Help Desk Tools']
+      {category: 'Integration',,,},
+      items: ['Website Widget',,,, 'Mobile Apps', 'Social Media', 'Email Integration', 'CRM Systems', 'Help Desk Tools']
     },
     {
-      category: 'Customization',
-      items: ['Brand Styling', 'Custom Responses', 'Knowledge Base', 'FAQ Management', 'Personality Settings', 'Response Templates']
+      {category: 'Customization',,,},
+      items: ['Brand Styling',,,, 'Custom Responses', 'Knowledge Base', 'FAQ Management', 'Personality Settings', 'Response Templates']
     },
     {
-      category: 'Analytics',
-      items: ['Response Metrics', 'Customer Satisfaction', 'Resolution Rates', 'Popular Queries', 'Performance Reports', 'ROI Tracking']
+      {category: 'Analytics',,,},
+      items: ['Response Metrics',,,, 'Customer Satisfaction', 'Resolution Rates', 'Popular Queries', 'Performance Reports', 'ROI Tracking']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for small businesses',
+      {name: 'Starter',,,},
+      {price: '$29',,,},
+      {period: '/month',,,},
+      {description: 'Perfect for small businesses',,,},
       features: [
-        'Up to 1,000 conversations/month',
+        'Up to 1,,,,000 conversations/month',
         'Basic AI features',
         'Standard templates',
         'Email support',
         'Basic analytics',
         'Website integration'
       ],
-      popular: false
-    },
+      {popular: false,,},},
     {
-      name: 'Professional',
-      price: '$79',
-      period: '/month',
-      description: 'Ideal for growing businesses',
+      {name: 'Professional',,,},
+      {price: '$79',,,},
+      {period: '/month',,,},
+      {description: 'Ideal for growing businesses',,,},
       features: [
-        'Up to 10,000 conversations/month',
+        'Up to 10,,,,000 conversations/month',
         'Advanced AI features',
         'Custom branding',
         'Priority support',
@@ -77,15 +74,14 @@ export default function AICustomerSupportChatbot() {
         'Multi-channel support',
         'API access'
       ],
-      popular: true
-    },
+      {popular: true,,},},
     {
-      name: 'Enterprise',
-      price: '$199',
-      period: '/month',
-      description: 'For large organizations',
+      {name: 'Enterprise',,,},
+      {price: '$199',,,},
+      {period: '/month',,,},
+      {description: 'For large organizations',,,},
       features: [
-        'Unlimited conversations',
+        'Unlimited conversations',,,,
         'Custom AI training',
         'White-label solution',
         'Dedicated support',
@@ -93,29 +89,25 @@ export default function AICustomerSupportChatbot() {
         'Advanced analytics',
         'SLA guarantee'
       ],
-      popular: false
-    }
+      {popular: false,,},}
   ];
 
   const testimonials = [
     {
-      name: 'Lisa Chen',
-      company: 'E-commerce Store',
-      content: 'AI Customer Support Chatbot reduced our support tickets by 60% and improved customer satisfaction by 40%.',
-      rating: 5
-    },
+      {name: 'Lisa Chen',,,},
+      {company: 'E-commerce Store',,,},
+      {content: 'AI Customer Support Chatbot reduced our support tickets by 60% and improved customer satisfaction by 40%.',,,},
+      {rating: 5,,},},
     {
-      name: 'John Martinez',
-      company: 'SaaS Company',
-      content: 'The chatbot handles 80% of our support queries automatically. Our team can focus on complex issues.',
-      rating: 5
-    },
+      {name: 'John Martinez',,,},
+      {company: 'SaaS Company',,,},
+      {content: 'The chatbot handles 80% of our support queries automatically. Our team can focus on complex issues.',,,},
+      {rating: 5,,},},
     {
-      name: 'Sarah Johnson',
-      company: 'Service Provider',
-      content: '24/7 support without additional costs. Our customers love the instant responses and availability.',
-      rating: 5
-    }
+      {name: 'Sarah Johnson',,,},
+      {company: 'Service Provider',,,},
+      {content: '24/7 support without additional costs. Our customers love the instant responses and availability.',,,},
+      {rating: 5,,},}
   ];
 
   return (
@@ -135,7 +127,7 @@ export default function AICustomerSupportChatbot() {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
@@ -151,9 +143,9 @@ export default function AICustomerSupportChatbot() {
             </div>
           </div>
 
-          {/* Features Section */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {features.map((feature, index) => (
+          {/* Features Section */,,,}
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {features.map((feature,,,, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
                 <div className="flex justify-center mb-4">
                   {feature.icon}

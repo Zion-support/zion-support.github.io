@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 
 
 interface ServicePageProps {
-  title: string,
-  description: string,
-  icon: React.ReactNode,
-  benefits: string[],
-  features: string[],
-  pricing: string,
-  seoTitle: string,
-  seoDescription: string,
-  seoKeywords: string
+  {title: string,,,},
+  {description: string,,,},
+  {icon: React.ReactNode,,,},
+  benefits: string[],,,,
+  features: string[],,,,
+  {pricing: string,,,},
+  {seoTitle: string,,,},
+  {seoDescription: string,,,},
+  {seoKeywords: string
 
-  title,
+  title,,,},
   description,
   icon,
   benefits,
@@ -26,3 +26,5 @@ interface ServicePageProps {
   return (
 
 
+
+}

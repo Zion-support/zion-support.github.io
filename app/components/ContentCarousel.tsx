@@ -1,11 +1,11 @@
-import { useState, useEffect} from 'react';
-import { ChevronLeft, ChevronRight} from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Slide {
-  id: number;,
-  title: string;,
-  description: string;,
-  image: string;,
+  {id: number;},
+  {title: string;},
+  {description: string;},
+  {image: string;},
   features: string[];
 
 interface ContentCarouselProps {
@@ -15,25 +15,25 @@ interface ContentCarouselProps {
 
 const defaultSlides: Slide[] = [
   {
-    id: 1,
-    title: 'AI-Powered Solutions',
-    description: 'Transform your business with cutting-edge artificial intelligence technologies.',
-    image: '/api/placeholder/600/400',
-    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision']
+    id: 1,,,,
+    {title: 'AI-Powered Solutions',,,},
+    {description: 'Transform your business with cutting-edge artificial intelligence technologies.',,,},
+    {image: '/api/placeholder/600/400',,,},
+    features: ['Machine Learning',,,, 'Natural Language Processing', 'Computer Vision']
   },
   {
-    id: 2,
-    title: 'Cloud Infrastructure',
-    description: 'Scalable and secure cloud solutions for modern businesses.',
-    image: '/api/placeholder/600/400',
-    features: ['Scalable Architecture', '99.9% Uptime', 'Global CDN']
+    {id: 2,,,},
+    {title: 'Cloud Infrastructure',,,},
+    {description: 'Scalable and secure cloud solutions for modern businesses.',,,},
+    {image: '/api/placeholder/600/400',,,},
+    features: ['Scalable Architecture',,,, '99.9% Uptime', 'Global CDN']
   },
   {
-    id: 3,
-    title: 'Cybersecurity',
-    description: 'Protect your business with comprehensive security solutions.',
-    image: '/api/placeholder/600/400',
-    features: ['Threat Detection', 'Security Audits', 'Compliance Management']
+    {id: 3,,,},
+    {title: 'Cybersecurity',,,},
+    {description: 'Protect your business with comprehensive security solutions.',,,},
+    {image: '/api/placeholder/600/400',,,},
+    features: ['Threat Detection',,,, 'Security Audits', 'Compliance Management']
   }
 ];
   const slides = defaultSlides, 
@@ -61,7 +61,7 @@ const defaultSlides: Slide[] = [
   };
 
               key="{index}"
-              className="{`w-3" h-3 rounded-full transition-colors ${
+              className="{` w-3" h-3 rounded-full transition-colors ${
                 index === currentSlide ? 'bg-white' : 'bg-white/30'
               }`}
               aria-label="{`Go" to slide ${index + 1}`}

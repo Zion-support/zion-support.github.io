@@ -12,7 +12,7 @@ export default function AccessibilityEnhancer() {
           const mainContent = document.getElementById('main-content');
           if (mainContent) {
             mainContent.focus();
-            mainContent.scrollIntoView({ behavior: 'smooth' });
+            mainContent.scrollIntoView({ {behavior: 'smooth',,},});
           }
         }
 
@@ -49,17 +49,17 @@ export default function AccessibilityEnhancer() {
 
     // Add ARIA labels to interactive elements
     const addAriaLabels = () => {
-      const buttons = document.querySelectorAll('button:not([aria-label])');
+      const buttons = document.querySelectorAll('button: not([aria-label])');
       buttons.forEach((button) => {
         if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
-          button.setAttribute('aria-label', 'Button');
+          button.setAttribute('aria-label',,,, 'Button');
         }
       });
 
-      const links = document.querySelectorAll('a:not([aria-label])');
+      const links = document.querySelectorAll('a: not([aria-label])');
       links.forEach((link) => {
         if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
-          link.setAttribute('aria-label', 'Link');
+          link.setAttribute('aria-label',,,, 'Link');
         }
       });
     };
@@ -68,14 +68,14 @@ export default function AccessibilityEnhancer() {
     const addSkipLinks = () => {
       const skipLinks = document.createElement('div');
       skipLinks.innerHTML = `
-        <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">
+        <a href="#main-content" class="sr-only {focus: not-sr-only {focus: absolute {focus: top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">
           Skip to main content
         </a>
         <a href="nav" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-32 bg-blue-600 text-white px-4 py-2 rounded z-50">
           Skip to navigation
         </a>
       `;
-      document.body.insertBefore(skipLinks, document.body.firstChild);
+      document.body.insertBefore(skipLinks,},},}, document.body.firstChild);
     };
 
     // Initialize accessibility enhancements

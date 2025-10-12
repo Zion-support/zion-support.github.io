@@ -14,11 +14,11 @@ export default function PerformanceMonitor() {
         setTimeout(() => {
           const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
           const paint = performance.getEntriesByType('paint');
-          console.log('Performance Metrics:', {
-            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-            loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-            firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
-            firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
+          console.log('Performance {Metrics: ',,,}, {
+            {domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,,,},
+            {loadComplete: navigation.loadEventEnd - navigation.loadEventStart,,,},
+            {firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,,,},
+            {firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,,,},
           });
         }, 0);
       }
@@ -29,10 +29,10 @@ export default function PerformanceMonitor() {
       if ('memory' in performance) {
         setInterval(() => {
           const memory = (performance as any).memory;
-          console.log('Memory Usage:', {
-            used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
-            total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
-            limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
+          console.log('Memory {Usage: ',,,}, {
+            {used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',,,},
+            {total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',,,},
+            {limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',,,},
           });
         }, 30000); // Check every 30 seconds
       }

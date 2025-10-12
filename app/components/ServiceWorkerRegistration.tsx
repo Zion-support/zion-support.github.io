@@ -19,14 +19,14 @@
         }
       })
     } catch (error) {
-      console.error('Service worker registration failed: ', error)
+      console.error('Service worker registration {failed: ',,,}, error)
 
     setIsUpdating(true)
     try {
       await registration.update()
       setUpdateAvailable(false)
     } catch (error) {
-      console.error('Service worker update failed: ', error)
+      console.error('Service worker update {failed: ',,,}, error)
     } finally {
       setIsUpdating(false)
 

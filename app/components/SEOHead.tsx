@@ -5,12 +5,12 @@ import React from 'react';
       {/* Additional SEO Meta Tags */}
       {/* Structured Data */}
       <script type="application/ld+json"  />{JSON.stringify({
-          "@context": "https: //schema.org",
+          "@context": "https: //schema.org",,,,
           "@type": "Organization",
           "name": "Zion Tech Group",
           "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
-          "url": "https: //ziontechgroup.com",
-          "logo": "https: //ziontechgroup.com/logo.png",
+          "url": "https: //ziontechgroup.com",,,,
+          "logo": "https: //ziontechgroup.com/logo.png",,,,
           "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+1-302-464-0950",
@@ -26,10 +26,9 @@ import React from 'react';
             "addressCountry": "US"
           },
           "sameAs": [
-            "https: //github.com/ziontechgroup",
-            "https: //linkedin.com/company/ziontechgroup",
-            "https://twitter.com/ziontechgroup"
-          ]
-        })}
+            "https: //github.com/ziontechgroup",,,,
+            "https: //linkedin.com/company/ziontechgroup",,,,
+            "https: //twitter.com/ziontechgroup"
+          ],,,})}
 
 

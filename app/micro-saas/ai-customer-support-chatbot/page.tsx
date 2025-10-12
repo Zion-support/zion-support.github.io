@@ -1,62 +1,59 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import {MessageSquare, Bot} from 'lucide-react';
+import { MessageSquare, Bot } from 'lucide-react';
 
-import {MessageSquare, Smartphone, Bot, Smartphone as Mobile} from 'lucide-react';
+import { MessageSquare, Smartphone, Bot, Smartphone as Mobile } from 'lucide-react';
 
 export default function AICustomerSupportChatbotPage() {
   const features = [
-      icon: <Bot className="w-6h-6text-cyan-400" />,
-      title: 'Natural Language Processing',
-      description: 'Advanced NLP understands context, intent, and sentiment with 98% accuracy'
+      {icon: <Bot className="w-6h-6text-cyan-400" />,,,},
+      {title: 'Natural Language Processing',,,},
+      {description: 'Advanced NLP understands context,,,}, intent, and sentiment with 98% accuracy'
     },
-      icon: <MessageSquare className="w-6h-6text-emerald-400" />,
-      title: 'Multi-Channel Support',
-      description: 'Deploy across website, mobile app, social media, and messaging platforms'
+      {icon: <MessageSquare className="w-6h-6text-emerald-400" />,,,},
+      {title: 'Multi-Channel Support',,,},
+      {description: 'Deploy across website,,,}, mobile app, social media, and messaging platforms'
     },
-      icon: <BarChart3 className="w-6h-6text-purple-400" />,
-      title: 'Real-time Analytics',
-      description: 'Comprehensive insights into customer satisfaction, response times, and resolution rates'
+      {icon: <BarChart3 className="w-6h-6text-purple-400" />,,,},
+      {title: 'Real-time Analytics',,,},
+      {description: 'Comprehensive insights into customer satisfaction,,,}, response times, and resolution rates'
     },
-      icon: <Zap className="w-6h-6text-orange-400" />,
-      title: 'Instant Responses',
-      description: '24/7 availability with sub-second response times for immediate customer assistance'
-    },
-      icon: <Target className="w-6h-6text-pink-400" />,
-      title: 'Smart Escalation',
-      description: 'Intelligently routes complex queries to human agents when needed'
-    },
-      icon: <Shield className="w-6h-6text-red-400" />,
+      {icon: <Zap className="w-6h-6text-orange-400" />,,,},
+      {title: 'Instant Responses',,,},
+      {description: '24/7 availability with sub-second response times for immediate customer assistance',,},},
+      {icon: <Target className="w-6h-6text-pink-400" />,,,},
+      {title: 'Smart Escalation',,,},
+      {description: 'Intelligently routes complex queries to human agents when needed',,},},
+      {icon: <Shield className="w-6h-6text-red-400" />,,,},
 
-      title: 'Secure & Compliant',
-      description: 'Enterprise-grade security with GDPR, HIPAA, and SOC 2 compliance'
+      {title: 'Secure & Compliant',,,},
+      {description: 'Enterprise-grade security with GDPR,,,}, HIPAA, and SOC 2 compliance'
   ]
 
   const pricingPlans = [
-      name: 'Starter',
-      price: '$49',
-      period: '/month',
-      description: 'Perfect for small businesses',
+      {name: 'Starter',,,},
+      {price: '$49',,,},
+      {period: '/month',,,},
+      {description: 'Perfect for small businesses',,,},
       features: [
-        'Up to 1,000 conversations/month',
+        'Up to 1,,,,000 conversations/month',
         'Basic AI features',
         'Website integration',
         'Email support',
         'Basic analytics',
         'Standard templates'
       ],
-      popular: false
-    },
-      name: 'Professional',
-      price: '$149',
-      period: '/month',
-      description: 'Ideal for growing businesses',
+      {popular: false,,},},
+      {name: 'Professional',,,},
+      {price: '$149',,,},
+      {period: '/month',,,},
+      {description: 'Ideal for growing businesses',,,},
       features: [
-        'Up to 10,000 conversations/month',
+        'Up to 10,,,,000 conversations/month',
         'Advanced AI features',
         'Multi-channel support',
         'Priority support',
@@ -65,14 +62,13 @@ export default function AICustomerSupportChatbotPage() {
         'A/B testing',
         'Custom branding'
       ],
-      popular: true
-    },
-      name: 'Enterprise',
-      price: '$399',
-      period: '/month',
-      description: 'For large organizations',
+      {popular: true,,},},
+      {name: 'Enterprise',,,},
+      {price: '$399',,,},
+      {period: '/month',,,},
+      {description: 'For large organizations',,,},
       features: [
-        'Unlimited conversations',
+        'Unlimited conversations',,,,
         'All AI features',
         'Custom integrations',
         'Dedicated support',
@@ -85,87 +81,77 @@ export default function AICustomerSupportChatbotPage() {
   ]
 
   const testimonials = [
-      name: 'Amanda Foster',
-      company: 'E-commerce Store',
-      content: 'Reduced our support tickets by 70% and improved customer satisfaction by 40%. The chatbot handles 80% of queries perfectly.',
-      rating: 5,
-      avatar: 'AF'
-    },
-      name: 'James Rodriguez',
-      company: 'SaaS Company',
-      content: 'Our customers love the instant responses. The AI understands complex technical questions better than expected.',
-      rating: 5,
-      avatar: 'JR'
-    },
-      name: 'Sarah Kim',
-      company: 'Healthcare Provider',
-      content: 'The compliance features are excellent. We can provide 24/7 support while maintaining HIPAA compliance.',
-      rating: 5,
+      name: 'Amanda Foster',,,,
+      {company: 'E-commerce Store',,,},
+      {content: 'Reduced our support tickets by 70% and improved customer satisfaction by 40%. The chatbot handles 80% of queries perfectly.',,,},
+      {rating: 5,,,},
+      {avatar: 'AF',,},},
+      {name: 'James Rodriguez',,,},
+      {company: 'SaaS Company',,,},
+      {content: 'Our customers love the instant responses. The AI understands complex technical questions better than expected.',,,},
+      {rating: 5,,,},
+      {avatar: 'JR',,},},
+      {name: 'Sarah Kim',,,},
+      {company: 'Healthcare Provider',,,},
+      {content: 'The compliance features are excellent. We can provide 24/7 support while maintaining HIPAA compliance.',,,},
+      {rating: 5,,,},
       avatar: 'SK'
   ]
 
   const benefits = [
 
-      icon: <Clock className="w-8h-8text-cyan-400" />,
-      title: '70% Faster Resolution',
-      description: 'Instant responses reduce average resolution time significantly'
-    },
-      icon: <TrendingUp className="w-8h-8text-emerald-400" />,
-      title: '40% Higher Satisfaction',
-      description: 'AI-powered personalization improves customer experience'
-    },
-      icon: <DollarSign className="w-8h-8text-purple-400" />,
-      title: '60% Cost Reduction',
-      description: 'Automated responses reduce support team workload'
-    },
-      icon: <Target className="w-8h-8text-orange-400" />,
+      icon: <Clock className="w-8h-8text-cyan-400" />,,,,
+      {title: '70% Faster Resolution',,,},
+      {description: 'Instant responses reduce average resolution time significantly',,},},
+      {icon: <TrendingUp className="w-8h-8text-emerald-400" />,,,},
+      {title: '40% Higher Satisfaction',,,},
+      {description: 'AI-powered personalization improves customer experience',,},},
+      {icon: <DollarSign className="w-8h-8text-purple-400" />,,,},
+      {title: '60% Cost Reduction',,,},
+      {description: 'Automated responses reduce support team workload',,},},
+      {icon: <Target className="w-8h-8text-orange-400" />,,,},
 
-      title: '98% Accuracy',
+      {title: '98% Accuracy',,,},
       description: 'Advanced NLP ensures accurate understanding and responses'
   ]
 
   const integrations = [
-    { name: 'Slack', icon: '💬' },
-    { name: 'Microsoft Teams', icon: '👥' },
-    { name: 'Zendesk', icon: '🎫' },
-    { name: 'Freshdesk', icon: '🆕' },
-    { name: 'Intercom', icon: '💬' },
-    { name: 'Salesforce', icon: '⚡' },
-    { name: 'HubSpot', icon: '🎯' },
-    { name: 'Shopify', icon: '🛍️' },
-    { name: 'WordPress', icon: '📝' },
-    { name: 'Webflow', icon: '🌐' 
+    { name: 'Slack',,,, {icon: '💬',,},},
+    { {name: 'Microsoft Teams',,,}, {icon: '👥',,},},
+    { {name: 'Zendesk',,,}, {icon: '🎫',,},},
+    { {name: 'Freshdesk',,,}, {icon: '🆕',,},},
+    { {name: 'Intercom',,,}, {icon: '💬',,},},
+    { {name: 'Salesforce',,,}, {icon: '⚡',,},},
+    { {name: 'HubSpot',,,}, {icon: '🎯',,},},
+    { {name: 'Shopify',,,}, {icon: '🛍️',,},},
+    { {name: 'WordPress',,,}, {icon: '📝',,},},
+    { {name: 'Webflow',,,}, icon: '🌐' 
   ]
 
   const useCases = [
-      title: 'FAQ Automation', 
-      description: 'Answer common questions instantly with intelligent responses',
-      icon: '❓',
-      benefit: 'Reduce repetitive queries by 80%'
-    },
-      title: 'Order Support', 
-      description: 'Help customers track orders, process returns, and handle billing',
-      icon: '📦',
-      benefit: 'Handle 90% of order-related queries'
-    },
-      title: 'Technical Support', 
-      description: 'Provide step-by-step troubleshooting and technical guidance',
-      icon: '🔧',
-      benefit: 'Resolve 75% of technical issues automatically'
-    },
-      title: 'Lead Qualification', 
-      description: 'Qualify leads and schedule demos with sales team',
-      icon: '🎯',
-      benefit: 'Increase qualified leads by 50%'
-    },
-      title: 'Appointment Booking', 
-      description: 'Schedule appointments and manage calendar availability',
-      icon: '📅',
-      benefit: 'Reduce no-shows by 30%'
-    },
-      title: 'Complaint Handling', 
-      description: 'De-escalate issues and route to appropriate departments',
-      icon: '😤',
+      title: 'FAQ Automation',,,, 
+      {description: 'Answer common questions instantly with intelligent responses',,,},
+      {icon: '❓',,,},
+      {benefit: 'Reduce repetitive queries by 80%',,},},
+      {title: 'Order Support',,,}, 
+      {description: 'Help customers track orders,,,}, process returns, and handle billing',
+      {icon: '📦',,,},
+      {benefit: 'Handle 90% of order-related queries',,},},
+      {title: 'Technical Support',,,}, 
+      {description: 'Provide step-by-step troubleshooting and technical guidance',,,},
+      {icon: '🔧',,,},
+      {benefit: 'Resolve 75% of technical issues automatically',,},},
+      {title: 'Lead Qualification',,,}, 
+      {description: 'Qualify leads and schedule demos with sales team',,,},
+      {icon: '🎯',,,},
+      {benefit: 'Increase qualified leads by 50%',,},},
+      {title: 'Appointment Booking',,,}, 
+      {description: 'Schedule appointments and manage calendar availability',,,},
+      {icon: '📅',,,},
+      {benefit: 'Reduce no-shows by 30%',,},},
+      {title: 'Complaint Handling',,,}, 
+      {description: 'De-escalate issues and route to appropriate departments',,,},
+      {icon: '😤',,,},
       benefit: 'Improve complaint resolution by 60%'
   ]
 
@@ -181,7 +167,7 @@ export default function AICustomerSupportChatbotPage() {
     
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent">Chatbot
           
-            Transform your customer support with AI-powered chatbots that provide instant, intelligent responses. 
+            Transform your customer support with AI-powered chatbots that provide instant,,,, intelligent responses. 
             Reduce support costs by 60% while improving customer satisfaction by 40%.
 
               <span>Start Free Trial</span>
@@ -206,7 +192,7 @@ export default function AICustomerSupportChatbotPage() {
 
  (
     
-                <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 mx-auto group-hover:scale-110transition-transformduration-300">{benefit.icon
+                <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 mx-auto group-hover: scale-110transition-transformduration-300">{benefit.icon
 
                 <h3 className="text-xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{benefit.title
                   {benefit.description
@@ -221,8 +207,8 @@ export default function AICustomerSupportChatbotPage() {
 
  (
     
-                  <div className="text-4xlmb-4">{useCase.icon}</div>
-                  <h3 className="text-xl font-bold text-whitegroup-hover:text-cyan-400transition-colors">{useCase.title
+                  <div className="text-4xlmb-4">{useCase.icon,,,}</div>
+                  <h3 className="text-xl font-bold text-whitegroup-hover: text-cyan-400transition-colors">{useCase.title
                   {useCase.description
     
                 <div className="text-cyan-400 text-smfont-semiboldtext-center">{useCase.benefit
@@ -251,13 +237,13 @@ export default function AICustomerSupportChatbotPage() {
 
  (
     
-                  <span className="text-3xl">{integration.icon}</span>
-                <div className="text-gray-300group-hover:text-whitetransition-colors">{integration.name
+                  <span className="text-3xl">{integration.icon,,,}</span>
+                <div className="text-gray-300group-hover: text-whitetransition-colors">{integration.name
             ))
 
       {/* Pricing Section */
     
-              Simple, Transparent <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Pricing</span>
+              Simple,,,, Transparent <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Pricing</span>
 
               Choose the plan that fits your conversation volume and support needs. All plans include our core AI features.
 
@@ -281,9 +267,8 @@ export default function AICustomerSupportChatbotPage() {
                   to="/contact"
                   className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
-                      : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
-                  }`
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white {hover: from-cyan-600 {hover: to-purple-700 shadow-lg shadow-cyan-500/25'
+                      : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900',},},}`
 
 Get Started
     
@@ -309,3 +294,5 @@ Get Started
             ))
 
       {/* CTA Section */
+
+}}}}}}}

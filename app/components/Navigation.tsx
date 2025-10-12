@@ -13,7 +13,7 @@ export default function Navigation() {
             Zion Tech Group
           </Link>
           
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md: flex space-x-8">
             <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
             <Link to="/about" className="hover:text-blue-400 transition-colors">About</Link>
             <Link to="/services" className="hover:text-blue-400 transition-colors">Services</Link>
@@ -22,14 +22,14 @@ export default function Navigation() {
           
           <button
             className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => setIsOpen(!isOpen),,,}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
         
         {isOpen && (
-          <div className="md:hidden py-4">
+          <div className="md: hidden py-4">
             <div className="flex flex-col space-y-4">
               <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
               <Link to="/about" className="hover:text-blue-400 transition-colors">About</Link>
@@ -37,7 +37,7 @@ export default function Navigation() {
               <Link to="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
             </div>
           </div>
-        )}
+        ),,,}
       </div>
     </nav>
   );

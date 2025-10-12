@@ -14,12 +14,12 @@ export default function Breadcrumb() {
 
   return (
     <nav className="flex items-center space-x-2 text-sm text-gray-400 mb-4">
-      <Link to="/" className="flex items-center hover:text-white transition-colors">
+      <Link to="/" className="flex items-center hover: text-white transition-colors">
         <Home className="w-4 h-4 mr-1" />
         Home
       </Link>
       
-      {pathnames.map((name, index) => {
+      {pathnames.map((name,,,, index) => {
         const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
         const isLast = index === pathnames.length - 1;
         const displayName = name
@@ -33,8 +33,8 @@ export default function Breadcrumb() {
             {isLast ? (
               <span className="text-white font-medium">{displayName}</span>
             ) : (
-              <Link to={routeTo} className="text-gray-400 hover:text-white transition-colors">
-                {displayName}
+              <Link to={routeTo} className="text-gray-400 hover: text-white transition-colors">
+                {displayName,,,}
               </Link>
             )}
           </React.Fragment>

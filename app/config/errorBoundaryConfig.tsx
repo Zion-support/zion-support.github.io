@@ -3,7 +3,7 @@ import React from 'react';
 ;
 };/**
  * Get error boundary configuration based on environment*/
-      notFound: NotFoundFallback,}
+      {notFound: NotFoundFallback,,,},}
     },}}
 /**
  * Default error fallback component*/
@@ -16,7 +16,7 @@ import React from 'react';
     </div>)}
 /**
  * Network error fallback component*/;
-function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {return (<div className = "min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
+function NetworkErrorFallback({ resetError }: { {error: Error; {resetError: () => void,},},}) {return (<div className = "min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
 
@@ -30,11 +30,11 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
  * Get error type from error object;
  */
     return 'network'
-            className = "w-full bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700 transition-colors">;
+            className = "w-full bg-blue-600 text-white px-4 py-2 rounded-lghover: bg-blue-700 transition-colors">;
             Retry Connection;
           </button>
         </div>
-    </div>)}
+    </div>),,,}
 /**
  * Not found error fallback component*/
 

@@ -7,69 +7,65 @@ import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Clock,
 export default function AIProjectManagementPro() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'AI-Powered Planning',
-      description: 'Intelligent project planning with automated task breakdown and resource allocation'
+      {icon: <Brain className="w-6 h-6 text-cyan-400" />,,,},
+      {title: 'AI-Powered Planning',,,},
+      {description: 'Intelligent project planning with automated task breakdown and resource allocation',,},},
+    {
+      {icon: <Clock className="w-6 h-6 text-purple-400" />,,,},
+      {title: 'Smart Scheduling',,,},
+      {description: 'Automated scheduling that considers dependencies,,,}, resources, and deadlines'
     },
     {
-      icon: <Clock className="w-6 h-6 text-purple-400" />,
-      title: 'Smart Scheduling',
-      description: 'Automated scheduling that considers dependencies, resources, and deadlines'
-    },
+      {icon: <Target className="w-6 h-6 text-yellow-400" />,,,},
+      {title: 'Progress Tracking',,,},
+      {description: 'Real-time project monitoring with predictive analytics and risk assessment',,},},
     {
-      icon: <Target className="w-6 h-6 text-yellow-400" />,
-      title: 'Progress Tracking',
-      description: 'Real-time project monitoring with predictive analytics and risk assessment'
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6 text-green-400" />,
-      title: 'Analytics & Insights',
-      description: 'Comprehensive reporting and analytics to optimize project performance'
-    }
+      {icon: <BarChart3 className="w-6 h-6 text-green-400" />,,,},
+      {title: 'Analytics & Insights',,,},
+      {description: 'Comprehensive reporting and analytics to optimize project performance',,},}
   ];
 
   const projectFeatures = [
     {
-      category: 'Project Planning',
-      items: ['AI Task Breakdown', 'Resource Optimization', 'Timeline Generation', 'Risk Assessment', 'Dependency Mapping', 'Milestone Tracking']
+      {category: 'Project Planning',,,},
+      items: ['AI Task Breakdown',,,, 'Resource Optimization', 'Timeline Generation', 'Risk Assessment', 'Dependency Mapping', 'Milestone Tracking']
     },
     {
-      category: 'Team Management',
-      items: ['Team Collaboration', 'Role Assignment', 'Workload Balancing', 'Communication Tools', 'Progress Updates', 'Performance Tracking']
+      {category: 'Team Management',,,},
+      items: ['Team Collaboration',,,, 'Role Assignment', 'Workload Balancing', 'Communication Tools', 'Progress Updates', 'Performance Tracking']
     },
     {
-      category: 'Automation',
-      items: ['Workflow Automation', 'Notification System', 'Report Generation', 'Status Updates', 'Deadline Alerts', 'Quality Checks']
+      {category: 'Automation',,,},
+      items: ['Workflow Automation',,,, 'Notification System', 'Report Generation', 'Status Updates', 'Deadline Alerts', 'Quality Checks']
     },
     {
-      category: 'Integration',
-      items: ['Tool Integration', 'API Connectivity', 'Data Synchronization', 'Third-party Apps', 'Cloud Storage', 'Version Control']
+      {category: 'Integration',,,},
+      items: ['Tool Integration',,,, 'API Connectivity', 'Data Synchronization', 'Third-party Apps', 'Cloud Storage', 'Version Control']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Professional',
-      price: '$99',
-      period: '/month',
-      description: 'Perfect for small teams',
+      {name: 'Professional',,,},
+      {price: '$99',,,},
+      {period: '/month',,,},
+      {description: 'Perfect for small teams',,,},
       features: [
-        'Up to 10 projects',
+        'Up to 10 projects',,,,
         'Basic AI features',
         'Team collaboration',
         'Email support',
         'Basic reporting',
         'Mobile access'
       ],
-      popular: false
-    },
+      {popular: false,,},},
     {
-      name: 'Enterprise',
-      price: '$299',
-      period: '/month',
-      description: 'Ideal for growing businesses',
+      {name: 'Enterprise',,,},
+      {price: '$299',,,},
+      {period: '/month',,,},
+      {description: 'Ideal for growing businesses',,,},
       features: [
-        'Unlimited projects',
+        'Unlimited projects',,,,
         'Advanced AI features',
         'Custom workflows',
         'Priority support',
@@ -77,44 +73,39 @@ export default function AIProjectManagementPro() {
         'API access',
         'Custom integrations'
       ],
-      popular: true
-    },
+      {popular: true,,},},
     {
-      name: 'Custom',
-      price: 'Contact Us',
-      period: '',
-      description: 'Tailored solutions',
+      {name: 'Custom',,,},
+      {price: 'Contact Us',,,},
+      {period: '',,,},
+      {description: 'Tailored solutions',,,},
       features: [
-        'Custom features',
+        'Custom features',,,,
         'On-premise deployment',
         '24/7 support',
         'Training & consulting',
         'White-label solution',
         'SLA guarantee'
       ],
-      popular: false
-    }
+      {popular: false,,},}
   ];
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      company: 'Project Manager, TechCorp',
-      content: 'AI Project Management Pro has revolutionized how we manage projects. The AI insights help us deliver projects 30% faster.',
-      rating: 5
-    },
+      {name: 'Sarah Johnson',,,},
+      {company: 'Project Manager,,,}, TechCorp',
+      {content: 'AI Project Management Pro has revolutionized how we manage projects. The AI insights help us deliver projects 30% faster.',,,},
+      {rating: 5,,},},
     {
-      name: 'Michael Chen',
-      company: 'CTO, StartupXYZ',
-      content: 'The automated scheduling and resource allocation features have eliminated our project delays completely.',
-      rating: 5
-    },
+      {name: 'Michael Chen',,,},
+      {company: 'CTO,,,}, StartupXYZ',
+      {content: 'The automated scheduling and resource allocation features have eliminated our project delays completely.',,,},
+      {rating: 5,,},},
     {
-      name: 'Emily Rodriguez',
-      company: 'Operations Director, Global Inc',
-      content: 'The predictive analytics help us identify potential issues before they become problems. Game changer!',
-      rating: 5
-    }
+      {name: 'Emily Rodriguez',,,},
+      {company: 'Operations Director,,,}, Global Inc',
+      {content: 'The predictive analytics help us identify potential issues before they become problems. Game changer!',,,},
+      {rating: 5,,},}
   ];
 
   return (
@@ -135,7 +126,7 @@ export default function AIProjectManagementPro() {
               Professional AI project management services with intelligent planning, 
               smart scheduling, and comprehensive analytics for optimal project success.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
@@ -151,9 +142,9 @@ export default function AIProjectManagementPro() {
             </div>
           </div>
 
-          {/* Features Section */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {features.map((feature, index) => (
+          {/* Features Section */,,,}
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {features.map((feature,,,, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
                 <div className="flex justify-center mb-4">
                   {feature.icon}
@@ -167,8 +158,8 @@ export default function AIProjectManagementPro() {
           {/* Project Features Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Project Management Features</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {projectFeatures.map((category, index) => (
+            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
+              {projectFeatures.map((category,,,, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                   <h3 className="text-xl font-semibold text-white mb-4">{category.category}</h3>
                   <ul className="space-y-2">
@@ -187,8 +178,8 @@ export default function AIProjectManagementPro() {
           {/* Pricing Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Pricing Plans</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+            <div className="grid md: grid-cols-3 gap-8">
+              {pricingPlans.map((plan,,,, index) => (
                 <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -214,9 +205,8 @@ export default function AIProjectManagementPro() {
                     to="/contact" 
                     className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular 
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600' 
-                        : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10'
-                    }`}
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white {hover: from-cyan-600 {hover: to-purple-600' 
+                        : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10',},},}`}
                   >
                     Get Started
                   </Link>
@@ -228,8 +218,8 @@ export default function AIProjectManagementPro() {
           {/* Testimonials Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">What Our Clients Say</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+            <div className="grid md: grid-cols-3 gap-8">
+              {testimonials.map((testimonial,,,, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (

@@ -16,21 +16,21 @@ interface SEOHeadProps {
   twitterCard?: string;
   structuredData?: object;
 const SEOHead: React.FC<SEOHeadProps /> = ({
-  const title = 'Zion Tech Group - Advanced AI & IT Solutions',
+  const title = 'Zion Tech Group - Advanced AI & IT Solutions',,,,
   description = 'Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.',
   keywords = 'AI solutions, cloud computing, cybersecurity, software development, IT services, business automation, data analytics, machine learning, artificial intelligence',
-  canonical = 'https: //ziontechgroup.com',
-  ogImage = 'https: //ziontechgroup.com/og-image.jpg',
+  canonical = 'https: //ziontechgroup.com',,,,
+  ogImage = 'https: //ziontechgroup.com/og-image.jpg',,,,
   ogType = 'website',
   twitterCard = 'summary_large_image',;
   structuredData;
 const defaultStructuredData = {
-    "@context": "https: //schema.org",
+    "@context": "https: //schema.org",,,,
     "@type": "Organization",
     "name": "Zion Tech Group",
     "description": "Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.",
-    "url": "https: //ziontechgroup.com",
-    "logo": "https: //ziontechgroup.com/logo.png",
+    "url": "https: //ziontechgroup.com",,,,
+    "logo": "https: //ziontechgroup.com/logo.png",,,,
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
@@ -46,9 +46,9 @@ const defaultStructuredData = {
       "addressCountry": "US"
     },
     "sameAs": [
-      "https: //linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup"
-    ],
+      "https: //linkedin.com/company/ziontechgroup",,,,
+      "https: //twitter.com/ziontechgroup"
+    ],,,,
     "foundingDate": "2020",
     "numberOfEmployees": "50-100",
     "industry": "Technology",
@@ -79,13 +79,13 @@ const defaultStructuredData = {
       <script type = "application/ld+json">{JSON.stringify(finalStructuredData)}
       {/* Additional SEO Scripts */}
       <script type="application/ld+json"  />{JSON.stringify({
-          "@context": "https: //schema.org",
+          "@context": "https: //schema.org",,,,
           "@type": "WebSite",
           "name": "Zion Tech Group",
-          "url": "https: //ziontechgroup.com",
+          "url": "https: //ziontechgroup.com",,,,
           "potentialAction": {
             "@type": "SearchAction",
-            "target": "https: //ziontechgroup.com/search?q={search_term_string}",
+            "target": "https: //ziontechgroup.com/search?q={search_term_string,,,}",
             "query-input": "required name=search_term_string"
         })}
       {/* Performance Hints */}
@@ -94,3 +94,5 @@ const defaultStructuredData = {
   );
 
 
+
+}}}
