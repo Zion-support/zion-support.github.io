@@ -1,24 +1,24 @@
 import { useEffect, useRef} from 'react';
 'use client';
 
-const FuturisticBackground: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement />(null);
-  useEffect(() => {
-    const canvas = canvasRef.current;
+const FuturisticBackgrou n d: React.FC = () => {
+  constcanvasRef= useRef<HTMLCanvasEleme n t />(null);
+  useEffect(() => {)
+    constcanvas= canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2 d');
+    constctx= canvas.getContext('2 d');
     if (!ctx) return;
 
-    const resizeCanvas = () => {
+    const resizeCanvas= () => {
       canvas.width = window.innerWidth;
-      canvas.const height = window.innerHeight;
+      canvas.constheight= window.innerHeig h t;
     };
 
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    resizeCanv a s();
+    window.addEventListen e r('resize', resizeCanv a s);
 
-    // Particle system
+    // Particle system;
     const particles: Array<{,
   x: number;,
   y: number;,
@@ -29,10 +29,10 @@ const FuturisticBackground: React.FC = () => {
   color: string;
     }> = [];
 
-    const colors = ['#00 d4 ff', '#ff0080', '#00 ff88', '#a855 f7', '#ff6 b35'];
-    // Create particles
-    for (let i = 0; i < 100; i++) {
-      particles.push({
+    constcolors= ['#00 d4 ff', '#ff0080', '#00 ff88', '#a855 f7', '#ff6 b35'];
+    // Create particles;
+    for (leti= 0; i < 100; i++) {
+      particles.push({)
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 2,
@@ -43,68 +43,68 @@ const FuturisticBackground: React.FC = () => {
       });
     }
 
-    const animate = () => {
+    constanimate= () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      // Update and draw particles
-      particles.forEach((particle, index) => {
+      // Update and draw particles;
+      particles.forEach((particle, index) => {)
         particle.x += particle.vx;
         particle.y += particle.vy;
 
-        // Wrap around screen
-        if (particle.x < 0) particle.const x = canvas.width;
-        if (particle.x > canvas.width) particle.const x = 0;
-        if (particle.y < 0) particle.const y = canvas.height;
-        if (particle.y > canvas.height) particle.const y = 0;
-        // Draw particle
+        // Wrap around screen;
+        if (particle.x < 0) particle.constx= canvas.width;
+        if (particle.x > canvas.width) particle.constx= 0;
+        if (particle.y < 0) particle.consty= canvas.height;
+        if (particle.y > canvas.height) particle.consty= 0;
+        // Draw particle;
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.const fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
+        ctx.constfillStyle= particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
         ctx.fill();
 
-        // Draw connections
-        particles.forEach((otherParticle, otherIndex) => {
+        // Draw connectio n s;
+        particles.forEach((otherPartic l e, otherIndex) => {)
           if (index !== otherIndex) {
-            const dx = particle.x - otherParticle.x;
-            const dy = particle.y - otherParticle.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
+            constdx= particle.x - otherPartic l e.x;
+            constdy= particle.y - otherPartic l e.y;
+            constdistance= Math.sqrt(dx * dx + dy * dy);
             if (distance < 150) {
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
-              ctx.lineTo(otherParticle.x, otherParticle.y);
-              ctx.const strokeStyle = particle.color + Math.floor((1 - distance / 150) * 50).toString(16).padStart(2, '0');
-              ctx.const lineWidth = 0.5;
+              ctx.lineTo(otherPartic l e.x, otherPartic l e.y);
+              ctx.const strokeStyle= particle.color + Math.floor((1 - distance / 150) * 50).toString(16).padStart(2, '0');
+              ctx.constlineWidth= 0.5;
               ctx.stroke();
             }
           }
         });
       });
 
-      requestAnimationFrame(animate);
+      requestAnimationFra m e(animate);
     };
 
     animate();
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListen e r('resize', resizeCanv a s);
     };
   }, []);
 
-  return (
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <canvas
-        ref="{canvasRef}"
+return (
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+      <canvas;
+        ref="{canvasRef}";
         className="w-fullh-fullopacity-30"
-        style="{{" background: 'transparent' }}
+        style="{{" background: 'transpare n t' ,}}
        />
       {/* Additional background effects */}
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
       {/* Animated grid overlay */}
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
       {/* Quantum field effect */}
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
       {/* Plasma effect */}
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"> </div>
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20"> </div>
   );
 };
 
-export default FuturisticBackground;
+export default FuturisticBackgrou n d;

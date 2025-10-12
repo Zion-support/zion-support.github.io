@@ -1,127 +1,127 @@
 import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
-'use client'
+'use client';
 
-interface ContentNewsletterSignupProps {
-  title?: string
-  subtitle?: string
-  placeholder?: string
-  buttonText?: string
+interface ContentNewsletterSignupPro p s {
+  title?: string;
+  subtitle?: string;
+  placehold e r?: string;
+  buttonText?: string;
   features?: Array<{
-    icon: React.ComponentType<{ className?: string }>
-    text: string
+    icon: React.ComponentTy p e<{ className?: string ,}>
+    text: string;
   }>
-  onSubscribe?: (email: string) => void
+  onSubscri b e?: (email: string) => void;
 }
 
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
-  const title = "Stay Updated with Our Latest Insights",
+const ContentNewsletterSign u p: React.FC<ContentNewsletterSignupPro p s /> = ({)
+  consttitle= "Stay Updated with Our Latest Insights",
   subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
-  placeholder = "Enter your email address",
+  placeholder= "Enter your email address",
   buttonText = "Subscribe",
   features = [
-    { icon: Star, text: "Exclusive content" },
-    { icon: Users, text: "Industry insights" },
-    { icon: Globe, text: "Global updates" },
-    { icon: Zap, text: "Early access" }
+    { icon: Star, text: "Exclusive content" ,},
+    { icon: Users, text: "Industry insights" ,},
+    { icon: Globe, text: "Global updates" ,},
+    { icon: Zap, text: "Early access" ,}
   ],
-  onSubscribe
+  onSubscri b e;
 }) => {
   const [email, setEmail] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubscribed, setIsSubscribed] = useState(false)
+  const [isSubmitti n g, setIsSubmitti n g] = useState(false)
+  const [isSubscrib e d, setIsSubscrib e d] = useState(false)
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!email) return
+  const handleSubmit= async (e: React.FormEvent) => {
+    e.preventDefau l t()
+    if (!email) return;
 
-    setIsSubmitting(true)
+    setIsSubmitti n g(true)
     try {
-      // Simulate API call
+      // Simulate API call;
       await new Promise(resolve => setTimeout(resolve, 1000))
-      if (onSubscribe) {
-        onSubscribe(email)
+      if (onSubscri b e) {
+        onSubscri b e(email)
       }
-      setIsSubscribed(true)
+      setIsSubscrib e d(true)
       setEmail('')
     } catch (error) {
-      console.error('Subscription error: ', error)
+      console.error('Subscripti o n error: ', error)
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitti n g(false)
     }
   }
 
-  if (isSubscribed) {
-    return (
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <CheckCircle className="w-5 h-5ml-2" />
+  if (isSubscrib e d) {
+return (
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <CheckCirc leclassName="w-5h-5ml-2" />
             </div>
-            <h2 className="w-5 h-5ml-2" />Thank You for Subscribing!
+            <h2 className="w-5h-5ml-2" />Thank You for Subscribi n g!;
             </h2>
-            <p className="w-5 h-5ml-2">You'll receive our latest insights and updates soon.
+            <p className="w-5h-5ml-2">You'll receive our latest insights and updates soon.;
             </p>
-            <button
-              onClick="{()" =  />setIsSubscribed(false)}
-              className="text-blue-400hover:text-blue-300 transition-colors"
+            <button;
+              onClick="{()" =  />setIsSubscrib e d(false)}
+              className="text-blue-400hover:text-blue-300transition-colors"
             >
-              Subscribe another email
+              Subscribe another email;
             </button>
           </div>
       </div>
     )
   }
 
-  return (
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />{title}
+return (
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h2 className="w-5h-5ml-2" />{title}
             </h2>
-            <p className="w-5 h-5ml-2">{subtitle}
+            <p className="w-5h-5ml-2">{subtitle}
             </p>
           </div>
 
-          <form onSubmit="{handleSubmit}" className="max-w-mdmx-automb-12" />
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <input
+          <formonSubmit="{handleSubm i t}" className="max-w-mdmx-automb-12" />
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                <input;
                   type="email"
-                  value="{email}"
+                  value="{email}";
                   onChange="{(e)" = /> setEmail(e.target.value)}
-                  placeholder="{placeholder}"
-                  required
-                  className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent"
+                  placeholder="{placehold e r}";
+                  required;
+                  className="w-fullpx-6py-4bg-white/10borderborder-white/20rounded-lgtext-whiteplaceholder-gray-400focus:outline-nonefocus:ring-2focus:ring-blue-500focus:border-transparent"
                 />
               </div>
-              <button
+              <button;
                 type="submit"
-                disabled="{isSubmitting}"
-                className="bg-gradient-to-rfrom-blue-600to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2min-w-[140,px]" />
-                {isSubmitting ? (
+                disabled="{isSubmitti n g}";
+                className="bg-gradient-to-rfrom-blue-600to-purple-600hover:from-blue-700hover:to-purple-700disabled:from-gray-600disabled:to-gray-700text-whitefont-semiboldpx-8py-4rounded-lgtransition-allduration-300flexitems-centerjustify-centerspace-x-2min-w-[140,px]" />
+                {isSubmitti n g ? ()
                   <>
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <span  >Subscribing...</span>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20"></div>
+                    <span  >Subscribi n g...</span>
                   </>
                 ) : (
                   <>
                     <span  >{buttonText}</span>
-                    <ArrowRight className="w-5 h-5ml-2" />
+                    <ArrowRight className="w-5h-5ml-2" />
                   </>
                 )}
               </button>
             </div>
           </form>
 
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            {features.map((feature, index) => (
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            {features.map((feature, index) => ())
 
-                <div key="{index}" className="text-center" />
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <feature.icon className="h-6w-6text-white"  />
+                <divkey="{index}" className="text-center" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                  <feature.iconclassName="h-6w-6text-white"  />
                 </div>
                 <p className="text-gray-300text-sm">{feature.text}</p>
               </div>
@@ -131,4 +131,4 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
   )
 }
 
-export default ContentNewsletterSignup;
+export default ContentNewsletterSign u p;

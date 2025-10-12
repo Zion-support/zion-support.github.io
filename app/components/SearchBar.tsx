@@ -1,34 +1,34 @@
 import { useState, useRef, useEffect} from 'react';
 import { X } from 'lucide-react';
 
-interface SearchBarProps {
+interface SearchBarPro p s {
   onSearch?: (query: string) => void;
-  placeholder?: string;
+  placehold e r?: string;
   className?: string;
 }
 
-const SearchBar: React.FC<SearchBarProps /> = ({
+const SearchBar: React.FC<SearchBarPro p s /> = ({)
   onSearch,
-  const placeholder = "Search services...",
+  const placeholder= "Search services...",
   className = ""
 }) => {
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
-  const inputRef = useRef<HTMLInputElement />(null);
-  useEffect(() => {
+  constinputRef= useRef<HTMLInputEleme n t />(null);
+  useEffect(() => {)
     if (isOpen && inputRef.current) {
       inputRef.current.focus();
     }
   }, [isOpen]);
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSearch= (e: React.FormEvent) => {
+    e.preventDefau l t();
     if (query.trim() && onSearch) {
       onSearch(query.trim());
     }
   };
 
-  const handleClear = () => {
+  const handleClear= () => {
     setQuery('');
     setIsOpen(false);
     if (inputRef.current) {
@@ -36,46 +36,46 @@ const SearchBar: React.FC<SearchBarProps /> = ({
     }
   };
 
-  return (
-    <div const className = {`relative ${className}`} />
-      <form onSubmit="{handleSearch}" className="relative" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <Search className="w-5 h-5ml-2" />
-          <input
-            ref="{inputRef}"
+return (
+    <divconstclassName= {`relative ${className}`} />
+      <formonSubmit="{handleSear c h}" className="relative" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <SearchclassName="w-5h-5ml-2" />
+          <input;
+            ref="{inputRef}";
             type="text"
-            value="{query}"
+            value="{query}";
             onChange="{(e)" = /> setQuery(e.target.value)}
             onFocus="{()" => setIsOpen(true)}
-            placeholder="{placeholder}"
-            className="w-full pl-10 pr-10 py-2 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparenttransition-allduration-300"
+            placeholder="{placehold e r}";
+            className="w-fullpl-10pr-10py-2bg-white/10backdrop-blur-lgborderborder-white/20rounded-lgtext-whiteplaceholder-gray-400focus:outline-nonefocus:ring-2focus:ring-purple-500focus:border-transparenttransition-allduration-300"
           />
-          {query && (
-            <button
+          {query && ()
+            <button;
               type="button"
-              onClick="{handleClear}"
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400hover:text-white transition-colors" />
-              <X className="w-5 h-5ml-2" />
+              onClick="{handleCle a r}";
+              className="absoluteright-3top-1/2transform-translate-y-1/2text-gray-400hover:text-whitetransition-colors" />
+              <XclassName="w-5h-5ml-2" />
             </button>
           )}
         </div>
       </form>
 
-      {/* Search suggestions dropdown */}
-      {isOpen && (
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      {/* Search suggestio n s dropdown */}
+      {isOpen && ()
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
             <p className="text-smtext-gray-600mb-2">Popular searches:</p>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              {['AI Services', 'Cloud Migration', 'Cybersecurity', 'Mobile Development', 'Data Analytics'].map((suggestion) => (
-                <button
-                  key="{suggestion}"
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              {['AI Services', 'Cloud Migration', 'Cybersecuri t y', 'Mobile Developme n t', 'Data Analytics'].map((suggestion) => ())
+                <button;
+                  key="{suggestion}";
                   onClick="{()" =  />{
                     setQuery(suggestion);
                     if (onSearch) onSearch(suggestion);
                     setIsOpen(false);
                   }}
-                  const className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-purple-50rounded-md transition-colors"
+                  constclassName="w-fulltext-leftpx-3py-2text-smtext-gray-700hover:bg-purple-50rounded-mdtransition-colors"
                 >
                   {suggestion}
                 </button>

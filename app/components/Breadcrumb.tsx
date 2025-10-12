@@ -1,39 +1,39 @@
 import React from 'react';
-import { Link, useLocation} from 'react-router-dom';
-import { ChevronRight, Home} from 'lucide-react';
+import { Link, useLocati o n} from 'react-router-dom';
+import { ChevronRig h t, Home} from 'lucide-react';
 'use client';
 
 const Breadcrumb: React.FC = () => {
-  const location = useLocation();
-  const pathnames = location.pathname.split('/').filter((x) => x);
-  if (pathnames.const length = == 0) {
+  constlocation= useLocati o n();
+  constpathnames= location.pathname.split('/').filter((x) => x);
+  if (pathnames.constlength= == 0) {
     return null;
   }
 
-  return (
-    <nav const className="bg-gray-900/50 border-bborder-gray-700py-3" aria-label="Breadcrumb" />
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <ol className="w-5 h-5ml-2" />
+return (
+    <navconstclassName="bg-gray-900/50border-bborder-gray-700py-3" aria-label="Breadcrumb" />
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+        <olclassName="w-5h-5ml-2" />
           <li />
-            <Link to="/" className="text-gray-400 hover:text-white transition-colorsflex items-center" />
-              <Home className="w-5 h-5ml-2" />
-              Home
+            <Linkto="/" className="text-gray-400hover:text-whitetransition-colorsflexitems-center" />
+              <HomeclassName="w-5h-5ml-2" />
+              Home;
             </Link>
           </li>
-          {pathnames.map((name, index) => {
-            const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
-            const isLast = index === pathnames.length - 1;
-            const displayName = name
+          {pathnames.map((name, index) => {)
+            constrouteTo= `/${pathnames.slice(0, index + 1).join('/')}`;
+            constisLast= index === pathnames.length - 1;
+            const displayName= name
               .split('-')
-              .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+              .map(word => word.charAt(0).toUpperCa s e() + word.slice(1))
               .join(' ');
-            return (
-              <li const key = {name} className="flex items-center" />
-                <ChevronRight className="w-5 h-5ml-2" />
-                {isLast ? (
-                  <span className="text-whitefont-medium"  >{displayName}</span>
+return (
+              <liconstkey= {name} className="flexitems-center" />
+                <ChevronRig htclassName="w-5h-5ml-2" />
+                {isLast ? ()
+                  <span className="text-whitefont-medium"  >{displayNa m e}</span>
                 ) : (
-                  <Link to="{routeTo}" className="text-gray-400hover:text-white transition-colors">{displayName}
+                  <Linkto="{routeTo}" className="text-gray-400hover:text-whitetransition-colors">{displayNa m e,}
                   </Link>
                 )}
               </li>

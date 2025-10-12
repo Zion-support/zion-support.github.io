@@ -1,51 +1,51 @@
 import { Helmet } from 'react-helmet-async'
-import { Target, TrendingUp, BarChart3, Zap, CheckCircle, ArrowRight, Star, Award, Brain, Shield, DollarSign } from 'lucide-react'
+import { Target, TrendingUp, BarChart3, Zap, CheckCirc l e, ArrowRight, Star, Award, Brain, Shield, DollarSign } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import React from 'react';
 import { ArrowRight, Bot, RotateCcw, RotateCw, Receipt } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const AILeadScoringPage: React.FC = () => {
-  const features = [
+const AILeadScoringPa g e: React.FC = () => {
+  constfeatures= [
     {
-      icon: <Brain className="w-5 h-5ml-2" />,
+      icon: <BrainclassName="w-5h-5ml-2" />,
       title: 'AI Lead Scoring',
-      description: 'Advanced machine learning algorithms automatically score leads based on behavior, demographics, and engagement patterns.',
-      benefits: ['Behavioral analysis', 'Demographic scoring', 'Engagement tracking', 'Predictive modeling']
+      description: 'Advanced machine learning algorithms automatical l y score leads based on behavior, demographi c s, and engagement patterns.',
+      benefits: ['Behavioral analysis', 'Demograph i c scoring', 'Engagement tracking', 'Predictive modeling']
     },
     {
-      icon: <Target className="w-5 h-5ml-2" />,
+      icon: <TargetclassName="w-5h-5ml-2" />,
       title: 'Intent Detection',
-      description: 'AI identifies buying intent signals and purchase readiness to prioritize high-value prospects.',
+      description: 'AI identifies buying intent signals and purchase readiness to prioritize high-valueprospects.',
       benefits: ['Intent signals', 'Purchase readiness', 'Priority scoring', 'Conversion prediction']
     },
     {
-      icon: <TrendingUp className="w-5 h-5ml-2" />,
+      icon: <TrendingUpclassName="w-5h-5ml-2" />,
       title: 'Conversion Analytics',
-      description: 'Comprehensive analytics with AI insights to optimize lead qualification and improve conversion rates.',
-      benefits: ['Conversion tracking', 'ROI analysis', 'Funnel optimization', 'Performance metrics']
+      description: 'Comprehensi v e analytics with AI insights to optimize lead qualificati o n and improve conversion rates.',
+      benefits: ['Conversion tracking', 'ROI analysis', 'Funnel optimizati o n', 'Performan c e metrics']
     },
     {
-      icon: <Zap className="w-5 h-5ml-2" />,
+      icon: <ZapclassName="w-5h-5ml-2" />,
       title: 'Automated Workflows',
-      description: 'AI-powered lead nurturing workflows that automatically engage prospects based on their score and behavior.',
-      benefits: ['Auto-nurturing', 'Behavioral triggers', 'Personalized content', 'Multi-channel engagement']
+      description: 'AI-poweredleadnurturing workflows that automatical l y engage prospects based on their score and behavior.',
+      benefits: ['Auto-nurturing', 'Behavioral triggers', 'Personaliz e d content', 'Multi-channelengagement']
     },
     {
-      icon: <BarChart3 className="w-5 h-5ml-2" />,
-      title: 'Sales Intelligence',
-      description: 'AI provides sales teams with actionable insights and recommendations for each lead.',
-      benefits: ['Sales insights', 'Action recommendations', 'Lead context', 'Next best actions']
+      icon: <BarChart3className="w-5h-5ml-2" />,
+      title: 'Sales Intelligen c e',
+      description: 'AI provides sales teams with actionable insights and recommendatio n s for each lead.',
+      benefits: ['Sales insights', 'Action recommendatio n s', 'Lead context', 'Next best actions']
     },
     {
-      icon: <Shield className="w-5 h-5ml-2" />,
-      title: 'CRM Integration',
+      icon: <ShieldclassName="w-5h-5ml-2" />,
+      title: 'CRM Integrati o n',
       description: 'Seamlessly integrate with popular CRMs and marketing automation platforms for unified lead management.',
-      benefits: ['CRM sync', 'Data consistency', 'Workflow automation', 'Real-time updates']
+      benefits: ['CRM sync', 'Data consisten c y', 'Workflow automation', 'Real-timeupdates']
     }
   ]
 
-  const pricingPlans = [
+  const pricingPlans= [
     {
       name: 'Starter',
       price: '$79',
@@ -54,11 +54,11 @@ const AILeadScoringPage: React.FC = () => {
       features: [
         'Up to 1,000 leads/month',
         'Basic AI scoring',
-        'Email integration',
+        'Email integrati o n',
         'Standard reports',
-        'Email support'
+        'Email support';
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
@@ -68,145 +68,145 @@ const AILeadScoringPage: React.FC = () => {
       features: [
         'Up to 10,000 leads/month',
         'Advanced AI features',
-        'CRM integration',
+        'CRM integrati o n',
         'Custom workflows',
         'Priority support',
-        'API access'
+        'API access';
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
       price: '$499',
       period: '/month',
-      description: 'For large organizations with high volume needs',
+      description: 'For large organizatio n s with high volume needs',
       features: [
         'Unlimited leads',
         'Full AI suite',
-        'Custom integrations',
+        'Custom integratio n s',
         'Dedicated support',
         'Advanced analytics',
-        'White-label options'
+        'White-labeloptions';
       ],
-      popular: false
+      popular: false;
     }
   ]
 
-  const testimonials = [
+  const testimonials= [
     {
       name: 'Sarah Mitchell',
       company: 'Sales Director',
       content: 'AI Lead Scoring increased our conversion rate by 180%. We now focus on the right prospects at the right time.',
       rating: 5,
-      avatar: 'SM'
+      avatar: 'SM';
     },
     {
       name: 'James Wilson',
       company: 'Marketing Manager',
       content: 'The intent detection feature helped us identify hot leads 3 x faster. Our sales team loves the insights.',
       rating: 5,
-      avatar: 'JW'
+      avatar: 'JW';
     },
     {
       name: 'Lisa Chen',
       company: 'VP of Sales',
-      content: 'ROI increased by 250% in just 3 months. The AI recommendations are incredibly accurate.',
+      content: 'ROI increased by 250% in just 3 months. The AI recommendatio n s are incredibly accurate.',
       rating: 5,
-      avatar: 'LC'
+      avatar: 'LC';
     }
   ]
 
-  const stats = [
-    { number: '180%', label: 'Conversion Increase', icon: <TrendingUp className="w-5 h-5ml-2" /> },
-    { number: '250%', label: 'ROI Improvement', icon: <DollarSign className="w-5 h-5ml-2" /> },
-    { number: '3 x', label: 'Faster Lead Identification', icon: <Target className="w-5 h-5ml-2" /> },
-    { number: '95%', label: 'Scoring Accuracy', icon: <Award className="w-5 h-5ml-2" /> }
+  conststats= [
+    { number: '180%', label: 'Conversion Increase', icon: <TrendingUpclassName="w-5h-5ml-2" /> ,},
+    { number: '250%', label: 'ROI Improveme n t', icon: <DollarSignclassName="w-5h-5ml-2" /> ,},
+    { number: '3 x', label: 'Faster Lead Identificati o n', icon: <TargetclassName="w-5h-5ml-2" /> ,},
+    { number: '95%', label: 'Scoring Accuracy', icon: <AwardclassName="w-5h-5ml-2" /> ,}
   ]
 
-  return (
+return (
     <>
-      <Helmet>
-        <title />AI Lead Scoring - Smart Sales Intelligence | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered lead scoring with intent detection, conversion analytics, and automated workflows. Increase conversion rates by 180% and ROI by 250%." />
-        <meta name="keywords" content="AI lead scoring, sales intelligence, lead qualification, conversion optimization, sales automation, CRM integration" />
+      <Helmet></Helmet>
+        <title />AI Lead Scoring - Smart Sales Intelligen c e | Zion Tech Group</title>
+        <meta name="description" content="Revolutiona r y AI-poweredleadscoring with intent detection, conversion analytics, and automated workflows. Increase conversion rates by 180% and ROI by 250%." />
+        <meta name="keywords" content="AI lead scoring, sales intelligen c e, lead qualificati o n, conversion optimizati o n, sales automation, CRM integrati o n" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-lead-scoring"  />
+        <linkrel="canonical" href="https://ziontechgro u p.com/ai-lead-scoring"  />
       </Helmet>
 
       {/* Hero Section */}
-      <section className="w-5 h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <Target className="w-5 h-5ml-2" />
-            <span />AI-Powered Sales Intelligence</span>
+      <section className="w-5h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <TargetclassName="w-5h-5ml-2" />
+            <span />AI-PoweredSalesIntelligen c e</span>
           </div>
           
-          <h1 className="w-5 h-5ml-2" />
-            AI Lead
+          <h1 className="w-5h-5ml-2" />
+            AI Lead;
             <br />
-            <span className="w-5 h-5ml-2" />Scoring Pro
+            <span className="w-5h-5ml-2" />Scoring Pro;
             </span>
           </h1>
           
-          <p className="w-5 h-5ml-2">Transform your sales process with AI-powered lead scoring, 
-            intent detection, and conversion analytics that increase conversion rates by 180%.
+          <p className="w-5h-5ml-2">Transform your sales process with AI-poweredleadscoring, 
+            intent detection, and conversion analytics that increase conversion rates by 180%.;
           </p>
           
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <Link to="/contact" className="group bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-teal-500/25 hover:shadow-teal-500/40transformhover:scale-105" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <Linkto="/contact" className="groupbg-gradient-to-rfrom-teal-500to-cyan-600text-whitepx-10py-4rounded-xlfont-semiboldhover:from-teal-600hover:to-cyan-700transition-allduration-300flexitems-centerjustify-centerspace-x-2shadow-lgshadow-teal-500/25hover:shadow-teal-500/40transformhover:scale-105" />
               <span />Start Free Trial</span>
-              <ArrowRight className="w-5 h-5ml-2" />
+              <ArrowRight className="w-5h-5ml-2" />
             </Link>
-            <Link to="#demo" className="group border-2 border-teal-400 text-teal-400 px-10 py-4 rounded-xl font-semibold hover:bg-teal-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+            <Linkto="#demo" className="groupborder-2border-teal-400text-teal-400px-10py-4rounded-xlfont-semiboldhover:bg-teal-400hover:text-gray-900transition-allduration-300flexitems-centerjustify-centerspace-x-2backdrop-blur-sm" />
               <span />Watch Demo</span>
-              <ArrowRight className="w-5 h-5ml-2" />
+              <ArrowRight className="w-5h-5ml-2" />
             </Link>
           </div>
       </section>
 
       {/* Stats Section */}
-      <section className="w-5 h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            {stats.map((stat, index) => (
-              <div key="{index}" className="text-center bg-white/5 backdrop-blur-sm rounded-2 xl p-6borderborder-white/10" />
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{stat.icon}
+      <section className="w-5h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            {stats.map((stat, index) => ())
+              <divkey="{index}" className="text-centerbg-white/5backdrop-blur-smrounded-2xlp-6borderborder-white/10" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{stat.icon}>
                 </div>
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{stat.number}
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{stat.number}>
                 </div>
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{stat.label}
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{stat.label}>
                 </div>
             ))}
           </div>
       </section>
 
       {/* Features Section */}
-      <section className="w-5 h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />
-              Advanced <span className="w-5 h-5ml-2" />Features</span>
+      <section className="w-5h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h2 className="w-5h-5ml-2" />
+              Advanced <span className="w-5h-5ml-2" />Features</span>
             </h2>
-            <p className="w-5 h-5ml-2">Our AI-powered lead scoring platform uses machine learning to identify, 
-              score, and prioritize leads that are most likely to convert.
+            <p className="w-5h-5ml-2">Our AI-poweredleadscoring platform uses machine learning to identify, 
+              score, and prioritize leads that are most likely to convert.;
             </p>
           </div>
           
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            {features.map((feature, index) => (
-              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            {features.map((feature, index) => ())
+              <divkey="{index}" className="groupbg-white/10backdrop-blur-lgrounded-2xlp-8borderborder-white/20hover:bg-white/20transition-allduration-300hover:scale-105" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{feature.icon}>
                 </div>
-                <h3 className="w-5 h-5ml-2" />{feature.title}
+                <h3 className="w-5h-5ml-2" />{feature.title}
                 </h3>
-                <p className="w-5 h-5ml-2">{feature.description}
+                <p className="w-5h-5ml-2">{feature.description}
                 </p>
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <div key="{benefitIndex}" className="flex items-center space-x-2text-gray-400text-sm" />
-                      <CheckCircle className="w-5 h-5ml-2" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                  {feature.benefits.map((benefit, benefitInd e x) => ())
+                    <divkey="{benefitInd e x}" className="flexitems-centerspace-x-2text-gray-400text-sm" />
+                      <CheckCirc leclassName="w-5h-5ml-2" />
                       <span />{benefit}</span>
                     </div>
                   ))}
@@ -216,113 +216,113 @@ const AILeadScoringPage: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="w-5 h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />
-              Flexible <span className="w-5 h-5ml-2" />Pricing</span>
+      <section className="w-5h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h2 className="w-5h-5ml-2" />
+              Flexible <span className="w-5h-5ml-2" />Pricing</span>
             </h2>
-            <p className="w-5 h-5ml-2">Choose the perfect plan for your lead scoring needs. All plans include our core AI features 
-              with scalable options for businesses of all sizes.
+            <p className="w-5h-5ml-2">Choose the perfect plan for your lead scoring needs. All plans include our core AI features;
+              with scalable options for businesses of all sizes.;
             </p>
           </div>
           
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            {pricingPlans.map((plan, index) => (
-              <div key="{index}" className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
-                plan.popular 
-                  ? 'border-teal-400/50 shadow-2 xl shadow-teal-500/20' 
-                  : 'border-white/20 hover: border-white/40'
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            {pricingPla n s.map((plan, index) => ())
+              <divkey="{index}" className="{`relative" bg-white/10 backdrop-blur-lgrounded-2xl p-8bordertransition-allduration-300hover:scale-105 ${>
+                plan.popular;
+                  ? 'border-teal-400/50 shadow-2xlshadow-teal-500/20';
+                  : 'border-white/20 hover: border-white/40';
               }`} />
-                {plan.popular && (
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular
+                {plan.popular && ()
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">Most Popular>
                     </div>
                 )}
                 
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
-                  <p className="w-5 h-5ml-2">{plan.description}</p>
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <span className="w-5 h-5ml-2" />{plan.price}</span>
-                    <span className="w-5 h-5ml-2" />{plan.period}</span>
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                  <h3 className="w-5h-5ml-2" />{plan.name}</h3>
+                  <p className="w-5h-5ml-2">{plan.description}</p>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                    <span className="w-5h-5ml-2" />{plan.price}</span>
+                    <span className="w-5h-5ml-2" />{plan.period}</span>
                   </div>
                 
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  {plan.features.map((feature, featureIndex) => (
-                    <div key="{featureIndex}" className="flex items-centerspace-x-3" />
-                      <CheckCircle className="w-5 h-5ml-2" />
-                      <span className="w-5 h-5ml-2" />{feature}</span>
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                  {plan.features.map((feature, featureInd e x) => ())
+                    <divkey="{featureInd e x}" className="flexitems-centerspace-x-3" />
+                      <CheckCirc leclassName="w-5h-5ml-2" />
+                      <span className="w-5h-5ml-2" />{feature}</span>
                     </div>
                   ))}
                 </div>
                 
-                <Link 
-                  to="/contact" 
-                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-teal-500 to-cyan-600 text-white hover:from-teal-600 hover:to-cyan-700 shadow-lg shadow-teal-500/25'
-                      : 'border-2 border-teal-400 text-teal-400 hover: bg-teal-400 hover:text-gray-900'
+                <Link;
+                  to="/contact";
+                  className="{`block" w-fulltext-centerpy-3rounded-xlfont-semiboldtransition-allduration-300 ${
+                    plan.popular;
+                      ? 'bg-gradient-to-rfrom-teal-500to-cyan-600text-whitehover:from-teal-600hover:to-cyan-700shadow-lgshadow-teal-500/25';
+                      : 'border-2border-teal-400text-teal-400hover: bg-teal-400hover:text-gray-900';
                   }`}
-                  />Get Started
+                  />Get Started;
                 </Link>
               </div>
             ))}
           </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="w-5 h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />
-              Trusted by <span className="w-5 h-5ml-2" />Sales Teams</span>
+      {/* Testimonia l s Section */}
+      <section className="w-5h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h2 className="w-5h-5ml-2" />
+              Trusted by <span className="w-5h-5ml-2" />Sales Teams</span>
             </h2>
-            <p className="w-5 h-5ml-2">See how AI Lead Scoring is transforming sales processes for businesses worldwide.
+            <p className="w-5h-5ml-2">See how AI Lead Scoring is transformi n g sales processes for businesses worldwide.;
             </p>
           </div>
           
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            {testimonials.map((testimonial, index) => (
-              <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8borderborder-white/20" />
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            {testimonia l s.map((testimoni a l, index) => ())
+              <divkey="{index}" className="bg-white/10backdrop-blur-lgrounded-2xlp-8borderborder-white/20" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{testimoni a l.avatar}>
                   </div>
                   <div />
-                    <h4 className="w-5 h-5ml-2" />{testimonial.name}</h4>
-                    <p className="w-5 h-5ml-2">{testimonial.company}</p>
+                    <h4 className="w-5h-5ml-2" />{testimoni a l.name}</h4>
+                    <p className="w-5h-5ml-2">{testimoni a l.company}</p>
                   </div>
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key="{i}" className="w-5 h-5te xt-yellow-400fill-current"  />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                  {[...Array(testimoni a l.rating)].map((_, i) => ())
+                    <Starkey="{i}" className="w-5h-5text-yellow-400fill-current"  />
                   ))}
                 </div>
-                <p className="w-5 h-5ml-2">"{testimonial.content}"</p>
+                <p className="w-5h-5ml-2">"{testimoni a l.content}"</p>
               </div>
             ))}
           </div>
       </section>
 
       {/* CTA Section */}
-      <section className="w-5 h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <h2 className="w-5 h-5ml-2" />
-            Ready to Transform Your
+      <section className="w-5h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <h2 className="w-5h-5ml-2" />
+            Ready to Transform Your;
             <br />
-            <span className="w-5 h-5ml-2" />Sales Process?
+            <span className="w-5h-5ml-2" />Sales Process?;
             </span>
           </h2>
-          <p className="w-5 h-5ml-2">Join thousands of sales teams already increasing conversion rates and ROI with AI Lead Scoring. 
-            Start your free trial today - no credit card required.
+          <p className="w-5h-5ml-2">Join thousands of sales teams already increasing conversion rates and ROI with AI Lead Scoring.;
+            Start your free trial today - no credit card required.;
           </p>
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <Link to="/contact" className="group bg-white text-teal-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <Linkto="/contact" className="groupbg-whitetext-teal-600px-10py-4rounded-xlfont-boldtext-lghover:bg-gray-100transition-allduration-300flexitems-centerjustify-centerspace-x-2shadow-lghover:shadow-xltransformhover:scale-105" />
               <span />Start Free Trial</span>
-              <ArrowRight className="w-5 h-5ml-2" />
+              <ArrowRight className="w-5h-5ml-2" />
             </Link>
-            <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+            <Linkto="/pricing" className="groupborder-2border-whitetext-whitepx-10py-4rounded-xlfont-boldtext-lghover:bg-white/10transition-allduration-300flexitems-centerjustify-centerspace-x-2backdrop-blur-sm" />
               <span />View All Plans</span>
-              <ArrowRight className="w-5 h-5ml-2" />
+              <ArrowRight className="w-5h-5ml-2" />
             </Link>
           </div>
       </section>
@@ -330,4 +330,4 @@ const AILeadScoringPage: React.FC = () => {
   )
 }
 
-export default AILeadScoringPage;
+export default AILeadScoringPa g e;

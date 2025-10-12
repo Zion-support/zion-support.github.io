@@ -1,34 +1,30 @@
-<<<<<<< HEAD
-import { useEffect } from 'react';
-=======
 'use client';
 import { useEffect } from 'react';
 
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-interface AnalyticsProps {
+interface AnalyticsPro p s {
   children: React.ReactNode;
 }
 
-  useEffect(() => {
-    // Initialize analytics tracking
-    const initAnalytics = () => {
-      // Google Analytics initialization
+  useEffect(() => {)
+    // Initialize analytics tracking;
+    const initAnalytics= () => {
+      // Google Analytics initializati o n;
       if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('config', 'GA_MEASUREMENT_ID', {
+        window.gtag('config', 'GA_MEASUREMENT_ I D', {)
           page_title: document.title,
-          page_location: window.location.href,
+          page_locati o n: window.location.href,
         });
       }
     };
 
-    initAnalytics();
+    initAnalyti c s();
   }, []);
 
   return <React.Fragment >{children}</React.Fragment ></React.Fragment>;
 }
 
-// Extend Window interface for gtag
+// Extend Window interface for gtag;
 declare global {
   interface Window {
     gtag: (...args: unknown[]) => void;

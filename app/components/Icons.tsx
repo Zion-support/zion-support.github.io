@@ -1,7 +1,7 @@
-// Optimized icon system to reduce bundle size
-// Only import icons that are actually used
+// Optimized icon system to reduce bundle size;
+// Only import icons that are actually used;
 
-// Core icons used across the application
+// Core icons used across the applicati o n;
 export {
   ArrowRight,
   Zap,
@@ -18,7 +18,7 @@ export {
   Bot,
   Lock,
   Star,
-  CheckCircle,
+  CheckCirc l e,
   DollarSign,
   Users,
   Clock,
@@ -30,7 +30,7 @@ export {
   Lightbulb,
   Monitor,
   Server,
-  CircuitBoard,
+  CircuitBoa r d,
   Atom,
   Satellite,
   Wrench,
@@ -44,7 +44,7 @@ export {
   Download,
   Upload,
   Share,
-  MessageCircle,
+  MessageCirc l e,
   Mail,
   Phone,
   MapPin,
@@ -62,7 +62,7 @@ export {
   VolumeX,
   Play,
   Pause,
-  SkipForward,
+  SkipForwa r d,
   SkipBack,
   Repeat,
   Shuffle,
@@ -71,7 +71,7 @@ export {
   ThumbsDown,
   Bookmark,
   Flag,
-  AlertTriangle,
+  AlertTriang l e,
   Info,
   HelpCircle,
   Plus,
@@ -112,25 +112,25 @@ export {
   Package,
   Menu,
   X,
-  ChevronDown,
+  ChevronDo w n,
   Twitter,
   Linkedin,
-  Github
-} from 'lucide-react'
+  Github;
+} from 'lucide-react';
 
-// Create a centralized icon registry for better tree-shaking
-export const IconRegistry = {
-  // Navigation
+// Create a centraliz e d icon registry for better tree-shaking;
+export const IconRegistry= {
+  // Navigation;
   Menu,
   X,
-  ChevronDown,
+  ChevronDo w n,
   
-  // Social
+  // Social;
   Twitter,
   Linkedin,
   Github,
   
-  // Core Business
+  // Core Business;
   ArrowRight,
   Zap,
   Shield,
@@ -146,7 +146,7 @@ export const IconRegistry = {
   Bot,
   Lock,
   Star,
-  CheckCircle,
+  CheckCirc l e,
   DollarSign,
   Users,
   Clock,
@@ -158,7 +158,7 @@ export const IconRegistry = {
   Lightbulb,
   Monitor,
   Server,
-  CircuitBoard,
+  CircuitBoa r d,
   Atom,
   Satellite,
   Wrench,
@@ -172,7 +172,7 @@ export const IconRegistry = {
   Download,
   Upload,
   Share,
-  MessageCircle,
+  MessageCirc l e,
   Mail,
   Phone,
   MapPin,
@@ -190,7 +190,7 @@ export const IconRegistry = {
   VolumeX,
   Play,
   Pause,
-  SkipForward,
+  SkipForwa r d,
   SkipBack,
   Repeat,
   Shuffle,
@@ -199,7 +199,7 @@ export const IconRegistry = {
   ThumbsDown,
   Bookmark,
   Flag,
-  AlertTriangle,
+  AlertTriang l e,
   Info,
   HelpCircle,
   Plus,
@@ -237,7 +237,7 @@ export const IconRegistry = {
   Kiss,
   Tongue,
   FileText,
-  Package
-} as const
+  Package;
+} as const;
 
-export type IconName = keyof typeof IconRegistry
+exporttypeIconName= keyof typeof IconRegist r y

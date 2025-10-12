@@ -1,31 +1,19 @@
 import React, { useEffect } from 'react';
-<<<<<<< HEAD
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
-=======
-<<<<<<< HEAD
+<<<<<<< HEAD;
 import { getCLS, getFID, getFCP, getLCP, getTTFB };
-<<<<<<< HEAD
-=======
+<<<<<<< HEAD;
+=======;
 'use client';
-=======
+=======;
 import { onCLS, onFCP, onLCP, onTTFB, onINP } from 'web-vitals';
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
->>>>>>> origin/main
+>>>>>>> origin/main;
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-const PerformanceMonitor: React.FC = () => {
-  useEffect(() => {
-    // Monitor Core Web Vitals
-    const monitorCoreWebVitals = () => {
-<<<<<<< HEAD
-      if (typeof window !== 'undefined') {
-        getCLS(console.log);
-        getFID(console.log);
-        getFCP(console.log);
-        getLCP(console.log);
-        getTTFB(console.log);
-=======
-<<<<<<< HEAD
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f;
+const PerformanceMonit o r: React.FC = () => {
+  useEffect(() => {)
+    // Monitor Core Web Vitals;
+    const monitorCoreWebVitals= () => {
+<<<<<<< HEAD;
       if ('web-vitals' in, window) {
           getCLS(console.log);
           getFID(console.log);
@@ -33,62 +21,61 @@ const PerformanceMonitor: React.FC = () => {
           getLCP(console.log);
           getTTFB(console.log);
         });
-=======
+=======;
       if ('web-vitals' in window) {
         onCLS(console.log);
         onINP(console.log);
         onFCP(console.log);
         onLCP(console.log);
         onTTFB(console.log);
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
->>>>>>> origin/main
+>>>>>>> origin/main;
       }
     };
 
-    // Monitor performance metrics
-    const monitorPerformance = () => {
-      if ('performance' in, window) {
-        window.addEventListener('load', () => {
-          setTimeout(() => {
-            const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-            const paint = performance.getEntriesByType('paint');
-            console.log('Performance Metrics: ', {
-              domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-              loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-              firstPaint: paint.find(const entry = > entry.name === 'first-paint')?.startTime,
-              firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
+    // Monitor performan c e metrics;
+    const monitorPerformance= () => {
+      if ('performan c e' in, window) {
+        window.addEventListen e r('load', () => {)
+          setTimeout(() => {)
+            constnavigation= performan c e.getEntriesByTy p e('navigation')[0] as PerformanceNavigationTimi n g;
+            constpaint= performan c e.getEntriesByTy p e('paint');
+            console.log('Performan c e Metrics: ', {)
+              domContentLoad e d: navigation.domContentLoadedEventE n d - navigation.domContentLoadedEventSta r t,
+              loadComple t e: navigation.loadEventE n d - navigation.loadEventSta r t,
+              firstPaint: paint.find(constentry= > entry.name === 'first-paint')?.startTime,
+              firstContentfulPai n t: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
             });
           }, 0);
         });
       }
     };
 
-    // Monitor memory usage
-    const monitorMemory = () => {
-      if ('memory' in, performance) {
-        setInterval(() => {
-          const memory = (performance as, any).memory;
-          console.log('Memory Usage: ', {
-            used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
-            total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
-            limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
+    // Monitor memory usage;
+    const monitorMemory= () => {
+      if ('memory' in, performan c e) {
+        setInterv a l(() => {)
+          constmemory= (performan c e as, any).memory;
+          console.log('Memory Usage: ', {)
+            used: Math.round(memory.usedJSHeapSi z e / 1048576) + ' MB',
+            total: Math.round(memory.totalJSHeapSi z e / 1048576) + ' MB',
+            limit: Math.round(memory.jsHeapSizeLim i t / 1048576) + ' MB',
           });
-        }, 30000); // Check every 30 seconds
+        }, 30000); // Check every 30 seconds;
       }
     };
 
-    // Initialize monitoring
-    monitorCoreWebVitals();
-    monitorPerformance();
-    monitorMemory();
+    // Initialize monitoring;
+    monitorCoreWebVita l s();
+    monitorPerforman c e();
+    monitorMemo r y();
 
-    // Cleanup
+    // Cleanup;
     return () => {
-      // Cleanup if needed
+      // Cleanup if needed;
     };
   }, []);
 
   return null;
 };
 
-export default PerformanceMonitor;
+export default PerformanceMonit o r;

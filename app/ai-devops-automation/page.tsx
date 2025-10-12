@@ -1,53 +1,53 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Server, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Star, Users, TrendingUp } from 'lucide-react';
-import FuturisticBackground from '../components/FuturisticBackground';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
+import { Server, Zap, Shield, BarChart3, CheckCirc l e, ArrowRight, Star, Users, TrendingUp } from 'lucide-react';
+import FuturisticBackgrou n d from '../components/FuturisticBackgrou n d';
+import FuturisticCa r d from '../components/FuturisticCa r d';
+import FuturisticButt o n from '../components/FuturisticButt o n';
 'use client';
 
 
-export default function AIDevOpsAutomationPage() {
-  const features = [
+export default function AIDevOpsAutomationPa g e() {
+  constfeatures= [
     {
-      title: 'Intelligent CI/CD Pipeline',
-      description: 'AI-powered continuous integration and deployment with automatic testing, code quality checks, and smart rollback capabilities.',
-      icon: <Zap className="w-5 h-5ml-2" />,
-      benefits: ['Auto testing', 'Code quality checks', 'Smart rollbacks', 'Performance optimization']
+      title: 'Intellige n t CI/CD Pipeline',
+      description: 'AI-poweredcontinuousintegrati o n and deployment with automatic testing, code quality checks, and smart rollback capabiliti e s.',
+      icon: <ZapclassName="w-5h-5ml-2" />,
+      benefits: ['Auto testing', 'Code quality checks', 'Smart rollbacks', 'Performan c e optimizati o n']
     },
     {
-      title: 'Predictive Infrastructure Monitoring',
+      title: 'Predictive Infrastructu r e Monitoring',
       description: 'Advanced AI algorithms predict system failures, optimize resource allocation, and prevent downtime before it happens.',
-      icon: <BarChart3 className="w-5 h-5ml-2" />,
-      benefits: ['Failure prediction', 'Resource optimization', 'Proactive alerts', 'Performance tuning']
+      icon: <BarChart3className="w-5h-5ml-2" />,
+      benefits: ['Failure prediction', 'Resource optimizati o n', 'Proactive alerts', 'Performan c e tuning']
     },
     {
       title: 'Automated Security Scanning',
-      description: 'AI-driven security analysis that continuously scans for vulnerabilities, compliance issues, and potential threats.',
-      icon: <Shield className="w-5 h-5ml-2" />,
-      benefits: ['Vulnerability scanning', 'Compliance monitoring', 'Threat detection', 'Auto remediation']
+      description: 'AI-drivensecurityanalysis that continuous l y scans for vulnerabiliti e s, compliance issues, and potential threats.',
+      icon: <ShieldclassName="w-5h-5ml-2" />,
+      benefits: ['Vulnerabili t y scanning', 'Compliance monitoring', 'Threat detection', 'Auto remediati o n']
     },
     {
       title: 'Smart Resource Management',
-      description: 'Intelligent auto-scaling and resource allocation based on real-time demand patterns and predictive analytics.',
-      icon: <Server className="w-5 h-5ml-2" />,
-      benefits: ['Auto-scaling', 'Cost optimization', 'Load balancing', 'Capacity planning']
+      description: 'Intellige n t auto-scalingandresource allocation based on real-timedemandpatterns and predictive analytics.',
+      icon: <ServerclassName="w-5h-5ml-2" />,
+      benefits: ['Auto-scaling', 'Cost optimizati o n', 'Load balancing', 'Capacity planning']
     }
   ];
-  const pricingPlans = [
+  const pricingPlans= [
     {
       name: 'Startup',
       price: '$299',
       period: '/month',
       description: 'Perfect for small teams and startups',
       features: [
-        'Up to 5 applications',
+        'Up to 5 applicatio n s',
         'Basic CI/CD automation',
         'Standard monitoring',
         'Email support',
-        'Basic security scanning'
+        'Basic security scanning';
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
@@ -55,254 +55,254 @@ export default function AIDevOpsAutomationPage() {
       period: '/month',
       description: 'Advanced features for growing companies',
       features: [
-        'Up to 25 applications',
+        'Up to 25 applicatio n s',
         'Advanced AI automation',
         'Predictive monitoring',
         'Priority support',
         'Advanced security',
-        'Custom integrations'
+        'Custom integratio n s';
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
       price: '$2,499',
       period: '/month',
-      description: 'Complete solution for large organizations',
+      description: 'Complete solution for large organizatio n s',
       features: [
-        'Unlimited applications',
+        'Unlimited applicatio n s',
         'Custom AI models',
-        'White-label options',
+        'White-labeloptions',
         'Dedicated account manager',
         'API access',
-        'Advanced security'
+        'Advanced security';
       ],
-      popular: false
+      popular: false;
     }
   ];
-  const testimonials = [
+  const testimonials= [
     {
       name: 'Alex Chen',
       role: 'DevOps Engineer',
       company: 'TechFlow Solutions',
       content: 'AI DevOps Automation reduced our deployment time by 80% and eliminated 95% of production issues. The predictive monitoring is incredible.',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'Maria Rodriguez',
       role: 'CTO',
-      company: 'InnovateLabs',
-      content: 'The automated security scanning caught vulnerabilities we never would have found manually. Our security posture improved dramatically.',
-      rating: 5
+      company: 'InnovateLa b s',
+      content: 'The automated security scanning caught vulnerabiliti e s we never would have found manually. Our security posture improved dramatical l y.',
+      rating: 5;
     },
     {
       name: 'James Wilson',
       role: 'Platform Engineer',
       company: 'CloudScale Inc',
-      content: 'Smart resource management reduced our cloud costs by 40% while improving performance. The AI optimization is game-changing.',
-      rating: 5
+      content: 'Smart resource management reduced our cloud costs by 40% while improving performan c e. The AI optimizati o n is game-changing.',
+      rating: 5;
     }
   ];
-  const stats = [
-    { number: '80%', label: 'Faster Deployments', icon: <Zap className="w-5 h-5ml-2" /> },
-    { number: '95%', label: 'Issue Reduction', icon: <Shield className="w-5 h-5ml-2" /> },
-    { number: '300+', label: 'Companies Using', icon: <Users className="w-5 h-5ml-2" /> },
-    { number: '40%', label: 'Cost Reduction', icon: <TrendingUp className="w-5 h-5ml-2" /> }
+  conststats= [
+    { number: '80%', label: 'Faster Deploymen t s', icon: <ZapclassName="w-5h-5ml-2" /> ,},
+    { number: '95%', label: 'Issue Reduction', icon: <ShieldclassName="w-5h-5ml-2" /> ,},
+    { number: '300+', label: 'Companies Using', icon: <UsersclassName="w-5h-5ml-2" /> ,},
+    { number: '40%', label: 'Cost Reduction', icon: <TrendingUpclassName="w-5h-5ml-2" /> ,}
   ];
-  return (
+return (
     <>
-      <Helmet>
-        <title />AI DevOps Automation - Smart CI/CD & Infrastructure Management | Zion Tech Group</title>
-        <meta const name = "description" content="Automate your DevOps with AI-powered CI/CD pipelines, predictive monitoring, and intelligent resource management. Deploy 80% faster with 95% fewer issues." /  />
-        <meta name="keywords" content="AI DevOps, CI/CD automation, infrastructure monitoring, DevOps AI, deployment automation, cloud management" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-devops-automation"  />
+      <Helmet></Helmet>
+        <title />AI DevOps Automation - Smart CI/CD & Infrastructu r e Management | Zion Tech Group</title>
+        <metaconstname= "description" content="Automate your DevOps with AI-poweredCI/CD pipelines, predictive monitoring, and intellige n t resource management. Deploy 80% faster with 95% fewer issues." /  />
+        <meta name="keywords" content="AI DevOps, CI/CD automation, infrastructu r e monitoring, DevOps AI, deployment automation, cloud management" />
+        <linkrel="canonical" href="https://ziontechgro u p.com/ai-devops-automation"  />
       </Helmet>
 
-      <FuturisticBackground variant="services" />
+      <FuturisticBackgrou ndvariant="services" />
         {/* Hero Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h1 className="w-5 h-5ml-2">AI DevOps Automation
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <h1 className="w-5h-5ml-2">AI DevOps Automation;
               </h1>
-              <p className="w-5 h-5ml-2">Revolutionize your DevOps with AI-powered CI/CD pipelines, predictive monitoring, 
-                and intelligent resource management. Deploy 80% faster with 95% fewer issues.
+              <p className="w-5h-5ml-2">Revolutioni z e your DevOps with AI-poweredCI/CD pipelines, predictive monitoring, 
+                and intellige n t resource management. Deploy 80% faster with 95% fewer issues.;
               </p>
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <FuturisticButton
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                <FuturisticButt o n;
                   variant="primary"
-                  size="lg"
+                  size="lg";
                   onClick="{()" = /> window.open('/contact', '_blank')}
                 >
-                  Start Free Trial
-                  <ArrowRight className="w-5 h-5ml-2" />
-                </FuturisticButton>
-                <FuturisticButton
+                  Start Free Trial;
+                  <ArrowRight className="w-5h-5ml-2" />
+                </FuturisticButt o n>
+                <FuturisticButt o n;
                   variant="ghost"
-                  size="lg"
+                  size="lg";
                   onClick="{()" =  />window.open('#demo', '_blank')}
                 >
-                  Watch Demo
-                </FuturisticButton>
+                  Watch Demo;
+                </FuturisticButt o n>
               </div>
 
             {/* Stats */}
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              {stats.map((stat, index) => (
-                <div key="{index}" className="text-center" />
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{stat.icon}
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              {stats.map((stat, index) => ())
+                <divkey="{index}" className="text-center" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{stat.icon}>
                   </div>
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{stat.number}</div>
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{stat.label}</div>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{stat.number}</div>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{stat.label}</div>
               ))}
             </div>
         </section>
 
         {/* Features Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />Advanced AI Features
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <h2 className="w-5h-5ml-2" />Advanced AI Features;
               </h2>
-              <p className="w-5 h-5ml-2">Cutting-edge artificial intelligence meets DevOps expertise to automate your operations
+              <p className="w-5h-5ml-2">Cutting-edgeartificialintelligen c e meets DevOps expertise to automate your operations;
               </p>
             </div>
             
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              {features.map((feature, index) => (
-                <FuturisticCard key="{index}" variant="service" className="h-full" />
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              {features.map((feature, index) => ())
+                <FuturisticCa rdkey="{index}" variant="service" className="h-full" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
                     {feature.icon}
-                    <h3 className="w-5 h-5ml-2" />{feature.title}</h3>
+                    <h3 className="w-5h-5ml-2" />{feature.title}</h3>
                   </div>
-                  <p className="w-5 h-5ml-2">{feature.description}</p>
-                  <ul className="w-5 h-5ml-2" />
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key="{benefitIndex}" className="flex items-centertext-sm text-gray-300" />
-                        <CheckCircle className="w-5 h-5ml-2" />
+                  <p className="w-5h-5ml-2">{feature.description}</p>
+                  <ulclassName="w-5h-5ml-2" />
+                    {feature.benefits.map((benefit, benefitInd e x) => ())
+                      <likey="{benefitInd e x}" className="flexitems-centertext-smtext-gray-300" />
+                        <CheckCirc leclassName="w-5h-5ml-2" />
                         {benefit}
                       </li>
                     ))}
                   </ul>
-                </FuturisticCard>
+                </FuturisticCa r d>
               ))}
             </div>
         </section>
 
         {/* Pricing Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />Choose Your Plan
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <h2 className="w-5h-5ml-2" />Choose Your Plan;
               </h2>
-              <p className="w-5 h-5ml-2">Scalable pricing options to match your DevOps needs
+              <p className="w-5h-5ml-2">Scalable pricing options to match your DevOps needs;
               </p>
             </div>
 
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              {pricingPlans.map((plan, index) => (
-                <FuturisticCard 
-                  key="{index}" 
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              {pricingPla n s.map((plan, index) => ())
+                <FuturisticCa r d;
+                  key="{index}";
                   variant="{plan.popular" ? "feature" : "service"} 
-                  className="{`h-full" ${plan.popular ? 'ring-2 ring-purple-500' : ''}`} />
-                  {plan.popular && (
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                      <span className="w-5 h-5ml-2" />Most Popular
+                  className="{`h-full" ${plan.popular ? 'ring-2ring-purple-500' : ''}`} />
+                  {plan.popular && ()
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                      <span className="w-5h-5ml-2" />Most Popular;
                       </span>
                     </div>
                   )}
                   
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                      <span className="w-5 h-5ml-2" />{plan.price}</span>
-                      <span className="w-5 h-5ml-2" />{plan.period}</span>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                    <h3 className="w-5h-5ml-2" />{plan.name}</h3>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                      <span className="w-5h-5ml-2" />{plan.price}</span>
+                      <span className="w-5h-5ml-2" />{plan.period}</span>
                     </div>
-                    <p className="w-5 h-5ml-2">{plan.description}</p>
+                    <p className="w-5h-5ml-2">{plan.description}</p>
                   </div>
 
-                  <ul className="w-5 h-5ml-2" />
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key="{featureIndex}" className="flex items-centertext-sm text-gray-300" />
-                        <CheckCircle className="w-5 h-5ml-2" />
+                  <ulclassName="w-5h-5ml-2" />
+                    {plan.features.map((feature, featureInd e x) => ())
+                      <likey="{featureInd e x}" className="flexitems-centertext-smtext-gray-300" />
+                        <CheckCirc leclassName="w-5h-5ml-2" />
                         {feature}
                       </li>
                     ))}
                   </ul>
 
-                  <FuturisticButton
+                  <FuturisticButt o n;
                     variant="{plan.popular" ? "primary" : "ghost"}
                     className="w-full"
                     onClick="{()" =  />window.open('/contact', '_blank')}
                   >
-                    Get Started
-                  </FuturisticButton>
-                </FuturisticCard>
+                    Get Started;
+                  </FuturisticButt o n>
+                </FuturisticCa r d>
               ))}
             </div>
         </section>
 
-        {/* Testimonials Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />What Our Clients Say
+        {/* Testimonia l s Section */}
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <h2 className="w-5h-5ml-2" />What Our Clients Say;
               </h2>
-              <p className="w-5 h-5ml-2">Join hundreds of companies automating their DevOps
+              <p className="w-5h-5ml-2">Join hundreds of companies automating their DevOps;
               </p>
             </div>
 
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              {testimonials.map((testimonial, index) => (
-                <FuturisticCard key="{index}" variant="testimonial" className="h-full" />
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-4h-4te xt-yellow-400fill-current"  />
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              {testimonia l s.map((testimoni a l, index) => ())
+                <FuturisticCa rdkey="{index}" variant="testimoni a l" className="h-full" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                    {[...Array(testimoni a l.rating)].map((_, i) => ())
+                      <Starkey="{i}" className="w-4h-4text-yellow-400fill-current"  />
                     ))}
                   </div>
-                  <blockquote className="w-5 h-5ml-2" />"{testimonial.content}"
+                  <blockquoteclassName="w-5h-5ml-2" />"{testimoni a l.content}";
                   </blockquote>
                   <footer />
-                    <p className="w-5 h-5ml-2">{testimonial.name}</p>
-                    <p className="w-5 h-5ml-2">{testimonial.role}</p>
-                    <p className="w-5 h-5ml-2">{testimonial.company}</p>
+                    <p className="w-5h-5ml-2">{testimoni a l.name}</p>
+                    <p className="w-5h-5ml-2">{testimoni a l.role}</p>
+                    <p className="w-5h-5ml-2">{testimoni a l.company}</p>
                   </footer>
-                </FuturisticCard>
+                </FuturisticCa r d>
               ))}
             </div>
         </section>
 
         {/* CTA Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <FuturisticCard variant="feature" className="text-center" />
-              <h2 className="w-5 h-5ml-2" />Ready to Automate Your DevOps?
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <FuturisticCa rdvariant="feature" className="text-center" />
+              <h2 className="w-5h-5ml-2" />Ready to Automate Your DevOps?;
               </h2>
-              <p className="w-5 h-5ml-2">Start your free 14-day trial today. No credit card required. Join 300+ companies automating their DevOps.
+              <p className="w-5h-5ml-2">Start your free 14-daytrialtoday. No credit card required. Join 300+ companies automating their DevOps.;
               </p>
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <FuturisticButton
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                <FuturisticButt o n;
                   variant="primary"
-                  size="lg"
+                  size="lg";
                   onClick="{()" =  />window.open('/contact', '_blank')}
                 >
-                  Start Free Trial
-                </FuturisticButton>
-                <FuturisticButton
+                  Start Free Trial;
+                </FuturisticButt o n>
+                <FuturisticButt o n;
                   variant="secondary"
-                  size="lg"
+                  size="lg";
                   onClick="{()" =  />window.open('/contact', '_blank')}
                 >
-                  Schedule Demo
-                </FuturisticButton>
+                  Schedule Demo;
+                </FuturisticButt o n>
               </div>
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <p />✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                <p />✓ 14-dayfreetrial • ✓ No setup fees • ✓ Cancel anytime</p>
               </div>
-            </FuturisticCard>
+            </FuturisticCa r d>
           </div>
         </section>
-      </FuturisticBackground>
+      </FuturisticBackgrou n d>
     </>
   );
 }

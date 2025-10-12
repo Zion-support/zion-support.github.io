@@ -1,50 +1,44 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-=======
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Wifi, ArrowRight, CheckCircle, Brain, Building, Users } from 'lucide-react'
+import { Wifi, ArrowRight, CheckCirc l e, Brain, Building, Users } from 'lucide-react'
 import Layout from '../layout'
 
-export default function FiveGSmartCitySolutions() {
-  const features = [
+export default function FiveGSmartCitySolutio n s() {
+  constfeatures= [
     {
-      icon: <Wifi className="w-6 h-6 text-cyan-400" />,
-      title: 'Ultra-Fast Connectivity',
-      description: '5G networks providing 10x faster speeds and ultra-low latency for smart city applications'
+      icon: <WificlassName="w-6h-6text-cyan-400" />,
+      title: 'Ultra-FastConnectivit y',
+      description: '5G networks providing 10x faster speeds and ultra-lowlatencyfor smart city applicatio n s';
     },
     {
-      icon: <Building className="w-6 h-6 text-purple-400" />,
-      title: 'Smart Infrastructure',
-      description: 'Intelligent traffic management, energy optimization, and environmental monitoring systems'
+      icon: <BuildingclassName="w-6h-6text-purple-400" />,
+      title: 'Smart Infrastructu r e',
+      description: 'Intellige n t traffic management, energy optimizati o n, and environment a l monitoring systems';
     },
     {
-      icon: <Brain className="w-6 h-6 text-yellow-400" />,
-      title: 'AI-Powered Analytics',
-      description: 'Machine learning algorithms analyze city data to optimize services and improve quality of life'
+      icon: <BrainclassName="w-6h-6text-yellow-400" />,
+      title: 'AI-PoweredAnalytics',
+      description: 'Machine learning algorithms analyze city data to optimize services and improve quality of life';
     },
     {
-      icon: <Users className="w-6 h-6 text-green-400" />,
+      icon: <UsersclassName="w-6h-6text-green-400" />,
       title: 'Citizen Engagement',
-      description: 'Digital platforms connecting citizens with city services and enabling participatory governance'
+      description: 'Digital platforms connecting citizens with city services and enabling participato r y governance';
     }
   ]
 
-  const smartCityModules = [
+  const smartCityModules= [
     {
-      category: 'Transportation',
-      items: ['Smart Traffic Lights', 'Autonomous Vehicle Support', 'Public Transit Optimization', 'Parking Management', 'Traffic Analytics', 'Emergency Response']
+      category: 'Transportati o n',
+      items: ['Smart Traffic Lights', 'Autonomous Vehicle Support', 'Public Transit Optimizati o n', 'Parking Management', 'Traffic Analytics', 'Emergency Response']
     },
     {
-      category: 'Energy & Environment',
+      category: 'Energy & Environme n t',
       items: ['Smart Grid Management', 'Air Quality Monitoring', 'Waste Management', 'Water Systems', 'Renewable Energy', 'Carbon Footprint Tracking']
     },
     {
       category: 'Public Safety',
-      items: ['Video Surveillance', 'Emergency Alerts', 'Crime Prevention', 'Disaster Response', 'Crowd Management', 'Health Monitoring']
+      items: ['Video Surveillan c e', 'Emergency Alerts', 'Crime Prevention', 'Disaster Response', 'Crowd Management', 'Health Monitoring']
     },
     {
       category: 'Digital Services',
@@ -52,91 +46,90 @@ export default function FiveGSmartCitySolutions() {
     }
   ]
 
-  const pricingPlans = [
+  const pricingPlans= [
     {
       name: 'Pilot Program',
       price: '$50,000',
       period: 'one-time',
       description: 'Perfect for small cities starting their smart city journey',
       features: [
-        'Basic 5G infrastructure',
+        'Basic 5G infrastructu r e',
         'Core smart modules',
         'Citizen engagement platform',
-        '6-month implementation',
-        'Training and support'
+        '6-monthimplementatio n',
+        'Training and support';
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Smart City Pro',
       price: '$250,000',
       period: 'one-time',
-      description: 'Comprehensive solution for medium-sized cities',
+      description: 'Comprehensi v e solution for medium-sizedcities',
       features: [
         'Full 5G network deployment',
         'Complete smart city suite',
         'Advanced AI analytics',
-        '12-month implementation',
+        '12-monthimplementatio n',
         'Dedicated support team',
-        'Custom integrations'
+        'Custom integratio n s';
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Mega City',
       price: 'Custom',
       period: 'pricing',
-      description: 'Enterprise solution for large metropolitan areas',
+      description: 'Enterprise solution for large metropolit a n areas',
       features: [
-        'City-wide 5G coverage',
+        'City-wide5Gcoverage',
         'Custom smart city modules',
-        'White-label platform',
-        'Multi-year implementation',
+        'White-labelplatform',
+        'Multi-yearimplementatio n',
         '24/7 support team',
-        'SLA guarantee'
+        'SLA guarantee';
       ],
-      popular: false
+      popular: false;
     }
   ]
 
-  const testimonials = [
+  const testimonials= [
     {
       name: 'Mayor Sarah Johnson',
       company: 'Tech Valley City',
-      content: '5G Smart City Solutions transformed our city. Traffic congestion reduced by 30% and citizen satisfaction increased significantly.',
-      rating: 5
+      content: '5G Smart City Solutions transform e d our city. Traffic congestion reduced by 30% and citizen satisfacti o n increased significant l y.',
+      rating: 5;
     },
     {
       name: 'David Chen',
       company: 'Metro Planning Department',
-      content: 'The AI-powered analytics help us make data-driven decisions. Our energy efficiency improved by 25% in the first year.',
-      rating: 5
+      content: 'The AI-poweredanalyticshelp us make data-drivendecisions. Our energy efficiency improved by 25% in the first year.',
+      rating: 5;
     },
     {
       name: 'Lisa Rodriguez',
-      company: 'Urban Development Corp',
-      content: 'Citizen engagement platform is incredible. Residents can now access city services 24/7 through their smartphones.',
-      rating: 5
+      company: 'Urban Developme n t Corp',
+      content: 'Citizen engagement platform is incredible. Residents can now access city services 24/7 through their smartphon e s.',
+      rating: 5;
     }
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-0a63
 
-export default function FiveGSmartCitySolutionsPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
+export default function FiveGSmartCitySolutionsPa g e() {
+return (
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+      <Helmet></Helmet>
         <title>Service - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
-      <div className="max-w-7xl mx-autopx-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4xl font-boldtext-white mb-6">5G Smart City Solutions</h1>
-        <p className="text-lgtext-gray-300mb-8">Professional 5G smart city solutions by Zion Tech Group. Transform your business with our expert solutions.</p>
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+      <div className="max-w-7xl mx-autopx-4sm:px-6lg:px-8py-16tex t-center">
+        <h1 className="text-4xl font-boldtext-whitemb-6">5G Smart City Solutions</h1>
+        <p className="text-lg text-gray-300 mb-8">Professional 5G smart city solutions by Zion Tech Group. Transform your business with our expert solutions.</p>
+        <Link;
+          to="/contact";
+          className="bg-gradient-to-rfrom-cyan-500to-purple-600text-whitepx-8py-4rounded-lgfont-semiboldhover:from-cyan-600hover:to-purple-700transition-allduration-300flexitems-centerjustify-centermx-autow-fit"
         >
-          Contact Us
-          <ArrowRight className="w-5 h-5ml-2" />
+          Contact Us;
+          <ArrowRight className="w-5h-5ml-2" />
         </Link>
       </div>
     </div>

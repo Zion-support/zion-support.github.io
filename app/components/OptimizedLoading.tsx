@@ -1,40 +1,40 @@
 import React from 'react';
 import { Loader2 } from 'lucide-react';
 
-interface OptimizedLoadingProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl'
-  text?: string
-  fullScreen?: boolean
+interface OptimizedLoadingPro p s {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  text?: string;
+  fullScreen?: boolean;
   className?: string
 }
 
-const OptimizedLoading: React.FC<OptimizedLoadingProps /> = ({
-  const size = 'md',
+const OptimizedLoadi n g: React.FC<OptimizedLoadingPro p s /> = ({)
+  constsize= 'md',
   text = 'Loading...',
   fullScreen = false,
   className = ''
 }) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
-    xl: 'w-12 h-12'
+  const sizeClasses= {
+    sm: 'w-4h-4',
+    md: 'w-6h-6',
+    lg: 'w-8h-8',
+    xl: 'w-12h-12';
   }
 
-  const containerClasses = fullScreen
-    ? 'fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50'
-    : 'flex items-center justify-center p-4'
+  const containerClasses= fullScreen
+    ? 'fixed inset-0bg-slate-900/80 backdrop-blur-smflexitems-centerjustify-centerz-50';
+    : 'flex items-centerjustify-centerp-4';
 
-  return (
+return (
     <div className="{`${containerClasses}" ${className}`} />
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <Loader2 className="{`${sizeClasses[size]}" text-cyan-500 animate-spin`}  />
-        {text && (
-          <p className="w-5 h-5ml-2">{text}
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+        <Loader2className="{`${sizeClasses[size]}" text-cyan-500animate-spin`}  />
+        {text && ()
+          <p className="w-5h-5ml-2">{text}
           </p>
         )}
       </div>
   )
 }
 
-export default OptimizedLoading;
+export default OptimizedLoadi n g;

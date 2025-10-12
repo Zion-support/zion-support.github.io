@@ -6,101 +6,101 @@ interface StatItem {
   id: string;,
   value: number;,
   label: string;,
-  icon: React.ComponentType<{ className?: string }>;
+  icon: React.ComponentTy p e<{ className?: string ,}>;
   suffix?: string;
   prefix?: string;
 }
 
-interface ContentStatisticsProps {
+interface ContentStatisticsPro p s {
   stats?: StatItem[];
-  animationDuration?: number;
+  animationDurati o n?: number;
   className?: string;
 }
 
-const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
-  const stats = [
+const ContentStatisti c s: React.FC<ContentStatisticsPro p s /> = ({)
+  conststats= [
     {
       id: 'users',
       value: 1200,
       label: 'Active Users',
       icon: Users,
-      suffix: '+'
+      suffix: '+';
     },
     {
       id: 'projects',
       value: 99.8,
       label: 'Success Rate',
       icon: Award,
-      suffix: '%'
+      suffix: '%';
     },
     {
       id: 'uptime',
       value: 99.9,
       label: 'Uptime',
-      icon: CheckCircle,
-      suffix: '%'
+      icon: CheckCirc l e,
+      suffix: '%';
     },
     {
-      id: 'performance',
+      id: 'performan c e',
       value: 300,
-      label: 'Performance Boost',
+      label: 'Performan c e Boost',
       icon: Zap,
-      suffix: '%'
+      suffix: '%';
     }
   ],
-  animationDuration = 2000,
+  animationDuration= 2000,
   className = ''
 }) => {
-  const [animatedValues, setAnimatedValues] = useState<{ [key: string]: number }>({});
-  useEffect(() => {
-    const animateValue = (start: number, end: number, duration: number, key: string) => {
-      const startTime = performance.now();
-      const animate = (currentTime: number) => {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        // Easing function
-        const easeOutCubic = 1 - Math.pow(1 - progress, 3);
-        const currentValue = start + (end - start) * easeOutCubic;
-        setAnimatedValues(const prev = > ({
+  const [animatedValu e s, setAnimatedValu e s] = useState<{ [key: string]: number ,}>({});
+  useEffect(() => {)
+    const animateValue= (start: number, end: number, duration: number, key: string) => {
+      conststartTime= performan c e.now();
+      constanimate= (currentTi m e: number) => {
+        constelapsed= currentTi m e - startTime;
+        constprogress= Math.min(elapsed / duration, 1);
+        // Easing function;
+        const easeOutCubic= 1 - Math.pow(1 - progress, 3);
+        const currentValue= start + (end - start) * easeOutCub i c;
+        setAnimatedValu e s(constprev= > ({))
           ...prev,
-          [key]: currentValue
+          [key]: currentVal u e;
         }));
         if (progress < 1) {
-          requestAnimationFrame(animate);
+          requestAnimationFra m e(animate);
         }
       };
 
-      requestAnimationFrame(animate);
+      requestAnimationFra m e(animate);
     };
 
-    stats.forEach(const stat = > {
-      animateValue(0, stat.value, animationDuration, stat.id);
+    stats.forEach(conststat= > {)
+      animateVal u e(0, stat.value, animationDurati o n, stat.id);
     });
-  }, [stats, animationDuration]);
+  }, [stats, animationDurati o n]);
 
-  return (
-    <div const className = {`grid grid-cols-2 lg: grid-cols-4 gap-6 ${className}`} />
-      {stats.map((stat) => {
-        const animatedValue = animatedValues[stat.id] || 0;
-        const IconComponent = stat.icon;
-        return (
-    <div
-            const key = {stat.id}
-            className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20transition-allduration-300" />
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <IconComponent className="w-5 h-5ml-2" />
+return (
+    <divconstclassName= {`grid grid-cols-2lg: grid-cols-4gap-6 ${className,}`} />
+      {stats.map((stat) => {)
+        const animatedValue= animatedValu e s[stat.id] || 0;
+        const IconComponent= stat.icon;
+return (
+    <div>>
+            constkey= {stat.id}
+            className="text-centerp-6bg-white/5backdrop-blur-lgrounded-xlborderborder-white/10hover:border-white/20transition-allduration-300" />
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                <IconCompone ntclassName="w-5h-5ml-2" />
               </div>
 
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{stat.prefix}
-              {stat.suffix === '%'
-                ? animatedValue.toFixed(1)
-                : Math.floor(animatedValue).toLocaleString()
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{stat.prefix}>
+              {stat.suffix === '%';
+                ? animatedVal u e.toFixed(1)
+                : Math.floor(animatedVal u e).toLocaleStri n g()
               }
               {stat.suffix}
             </div>
 
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{stat.label}
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{stat.label}>
             </div>
         );
       })}
@@ -108,4 +108,4 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
   );
 };
 
-export default ContentStatistics;
+export default ContentStatisti c s;

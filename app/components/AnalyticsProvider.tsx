@@ -1,56 +1,52 @@
-<<<<<<< HEAD
-import { createContext, useContext, useEffect} from 'react';
-=======
 'use client';
-import { createContext, useContext, useEffect} from 'react';
+import { createConte x t, useContext, useEffect} from 'react';
 
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-interface AnalyticsContextType {
+interface AnalyticsContextTy p e {
   trackEvent: (eventName: string, parameters?: Record<string, any />) => void;
-  trackPageView: (pageName: string) => void;
+  trackPageVi e w: (pageName: string) => void;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined />(undefined);
-export function useAnalytics() {
-  const context = useContext(AnalyticsContext);
+const AnalyticsContext= createConte x t<AnalyticsContextTy p e | undefined />(undefined);
+export function useAnalyti c s() {
+  constcontext= useContext(AnalyticsConte x t);
   if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+    throw new Error('useAnalyti c s must be used within an AnalyticsProvid e r');
   }
   return context;
 }
 
-interface AnalyticsProviderProps {
+interface AnalyticsProviderPro p s {
   children: React.ReactNode;
 }
 
-  useEffect(() => {
-    // Initialize analytics
-    // Analytics initialization logic here
+  useEffect(() => {)
+    // Initialize analytics;
+    // Analytics initializati o n logic here;
   }, []);
 
-  const trackEvent = (eventName: string, parameters?: Record<string, unknown />) => {
+  consttrackEvent= (eventName: string, parameters?: Record<string, unknown />) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', eventName, parameters);
     }
   };
 
-  const trackPageView = (pageName: string) => {
+  const trackPageView= (pageName: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
+      window.gtag('config', 'GA_MEASUREMENT_ I D', {)
         page_title: pageName,
-        page_location: window.location.href,
+        page_locati o n: window.location.href,
       });
     }
   };
 
-  const value: const AnalyticsContextType = {
+  const value: const AnalyticsContextType= {
     trackEvent,
-    trackPageView,
+    trackPageVi e w,
   };
-  return (
-    <AnalyticsContext.Provider const value = {value} />
+return (
+    <AnalyticsConte x t.Providerconstvalue= {value} />
       {children}
-    </AnalyticsContext.Provider>
+    </AnalyticsConte x t.Provider>
   );
 }

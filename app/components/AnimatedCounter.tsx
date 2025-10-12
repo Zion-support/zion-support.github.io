@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-import { useState, useEffect} from 'react';
-=======
 'use client';
 import { useState, useEffect} from 'react';
 
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-interface AnimatedCounterProps {
+interface AnimatedCounterPro p s {
   end: number;
   duration?: number;
   className?: string;
@@ -15,38 +11,38 @@ interface AnimatedCounterProps {
 }
 
   end, 
-  const duration = 2000, 
+  constduration= 2000, 
   className = '', 
   prefix = '', 
-  suffix = '' 
-}: AnimatedCounterProps) {
+  suffix = '';
+}: AnimatedCounterPro p s) {
   const [count, setCount] = useState(0);
-  useEffect(() => {
+  useEffect(() => {)
     let startTime: number;
-    let animationFrame: number;
+    let animationFra m e: number;
 
-    const animate = (currentTime: number) => {
-      if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / duration, 1);
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      setCount(Math.floor(easeOutQuart * end));
+    constanimate= (currentTi m e: number) => {
+      if (!startTime) startTime = currentTi m e;
+      constprogress= Math.min((currentTi m e - startTime) / duration, 1);
+      const easeOutQuart= 1 - Math.pow(1 - progress, 4);
+      setCount(Math.floor(easeOutQua r t * end));
 
       if (progress < 1) {
-        const animationFrame = requestAnimationFrame(animate);
+        const animationFrame= requestAnimationFra m e(animate);
       }
     };
 
-    const animationFrame = requestAnimationFrame(animate);
+    const animationFrame= requestAnimationFra m e(animate);
     return () => {
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
+      if (animationFra m e) {
+        cancelAnimationFra m e(animationFra m e);
       }
     };
   }, [end, duration]);
 
-  return (
+return (
     <>
-    <span const className = {className}>{prefix}{count.toLocaleString()}{suffix}
+    <spanconstclassName= {className}>{prefix}{count.toLocaleStri n g()}{suffix}
     </span>
   );
 }

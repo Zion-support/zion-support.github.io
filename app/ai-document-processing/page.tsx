@@ -1,32 +1,32 @@
 import React from 'react';
 'use client';
 
-const AiDocumentProcessingPage: React.FC = () => {
-  return (
+const AiDocumentProcessingPa g e: React.FC = () => {
+return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Ai Document Processing - Zion Tech Group</title>
         <meta name="description" content="Ai Document Processing services by Zion Tech Group. Professional AI and IT solutions." />
         <meta name="keywords" content="ai-document-processing, AI solutions, IT services" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5 h-5ml-2" />
-              <span className="w-5 h-5ml-2" />Ai Document Processing
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h1 className="w-5h-5ml-2" />
+              <span className="w-5h-5ml-2" />Ai Document Processing;
               </span>
             </h1>
-            <p className="w-5 h-5ml-2">Professional ai document processing services by Zion Tech Group.
+            <p className="w-5h-5ml-2">Professional ai document processing services by Zion Tech Group.;
             </p>
           </div>
 
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="text-2 xl font-boldtext-white mb-4"  >Coming Soon</h2>
-            <p className="w-5 h-5ml-2">We're working on bringing you comprehensive ai document processing solutions. 
-              Contact us to learn more about our services.
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h2 className="text-2xlfont-boldtext-whitemb-4"  >Coming Soon</h2>
+            <p className="w-5h-5ml-2">We're working on bringing you comprehensi v e ai document processing solutions.;
+              Contact us to learn more about our services.;
             </p>
-            <button className="w-5 h-5ml-2">Contact Us
+            <button className="w-5h-5ml-2">Contact Us;
             </button>
           </div>
       </div>
@@ -34,4 +34,4 @@ const AiDocumentProcessingPage: React.FC = () => {
   );
 };
 
-export default AiDocumentProcessingPage;
+export default AiDocumentProcessingPa g e;

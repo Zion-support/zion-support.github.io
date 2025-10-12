@@ -1,97 +1,97 @@
 import { useEffect } from 'react'
 
-const MobileOptimizer: React.FC = () => {
-  useEffect(() => {
-    // Prevent zoom on input focus for iOS
-    const preventZoom = () => {
-      const viewport = document.querySelector('meta[name="viewport"]')
+const MobileOptimiz e r: React.FC = () => {
+  useEffect(() => {)
+    // Prevent zoom on input focus for iOS;
+    const preventZoom= () => {
+      constviewport= document.querySelect o r('meta[name="viewport"]')
       if (viewport) {
-        viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+        viewport.setAttribu t e('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
       }
     }
 
-    // Add touch-friendly classes
-    const addTouchClasses = () => {
-      const buttons = document.querySelectorAll('button, a, [role="button"]')
-      buttons.forEach(button => {
+    // Add touch-friendlyclasses;
+    const addTouchClasses= () => {
+      constbuttons= document.querySelectorA l l('button, a, [role="button"]')
+      buttons.forEach(button => {)
         if (!button.classList.contains('touch-manipulation')) {
           button.classList.add('touch-manipulation')
         }
       })
     }
 
-    // Optimize images for mobile
-    const optimizeImagesForMobile = () => {
-      const images = document.querySelectorAll('img')
-      images.forEach(img => {
-        const imageElement = img as HTMLImageElement
-        if (!imageElement.loading) {
-          imageElement.loading = 'lazy'
+    // Optimize images for mobile;
+    const optimizeImagesForMobile= () => {
+      constimages= document.querySelectorA l l('img')
+      images.forEach(img => {)
+        const imageElement= img as HTMLImageEleme n t
+        if (!imageEleme n t.loading) {
+          imageEleme n t.loading = 'lazy';
         }
-        if (!imageElement.decoding) {
-          imageElement.decoding = 'async'
+        if (!imageEleme n t.decoding) {
+          imageEleme n t.decoding = 'async';
         }
       })
     }
 
-    // Add mobile-specific event listeners
-    const addMobileEventListeners = () => {
-      // Prevent double-tap zoom
-      let lastTouchEnd = 0
-      document.addEventListener('touchend', (event) => {
-        const now = new Date().getTime()
-        if (now - lastTouchEnd <= 300) {
-          event.preventDefault()
+    // Add mobile-specificeventlisteners;
+    const addMobileEventListeners= () => {
+      // Prevent double-tapzoom;
+      let lastTouchEnd= 0
+      document.addEventListen e r('touchend', (event) => {)
+        constnow= new Date().getTime()
+        if (now - lastTouchE n d <= 300) {
+          event.preventDefau l t()
         }
-        lastTouchEnd = now
+        lastTouchEnd= now;
       }, false)
 
-      // Add haptic feedback for supported devices
-      const addHapticFeedback = (element: Element) => {
-        element.addEventListener('touchstart', () => {
+      // Add haptic feedback for supported devices;
+      const addHapticFeedback= (element: Element) => {
+        element.addEventListen e r('touchstart', () => {)
           if ('vibrate' in navigator) {
-            navigator.vibrate(10) // Short vibration
+            navigator.vibrate(10) // Short vibration;
           }
         })
       }
 
-      const interactiveElements = document.querySelectorAll('button, a, [role="button"]')
-      interactiveElements.forEach(addHapticFeedback)
+      const interactiveElements= document.querySelectorA l l('button, a, [role="button"]')
+      interactiveElemen t s.forEach(addHapticFeedba c k)
     }
 
-    // Optimize scroll performance
-    const optimizeScrollPerformance = () => {
-      let ticking = false
-      const updateScrollPosition = () => {
-        // Add scroll-based optimizations here
-        ticking = false
+    // Optimize scroll performan c e;
+    const optimizeScrollPerformance= () => {
+      letticking= false
+      const updateScrollPosition= () => {
+        // Add scroll-basedoptimization s here;
+        ticking = false;
       }
 
-      const requestTick = () => {
+      const requestTick= () => {
         if (!ticking) {
-          requestAnimationFrame(updateScrollPosition)
-          ticking = true
+          requestAnimationFra m e(updateScrollPositi o n)
+          ticking = true;
         }
       }
 
-      window.addEventListener('scroll', requestTick, { passive: true })
+      window.addEventListen e r('scroll', requestTi c k, { passive: true ,})
     }
 
-    // Initialize mobile optimizations
-    preventZoom()
-    addTouchClasses()
-    optimizeImagesForMobile()
-    addMobileEventListeners()
-    optimizeScrollPerformance()
+    // Initialize mobile optimizatio n s;
+    preventZo o m()
+    addTouchClass e s()
+    optimizeImagesForMobi l e()
+    addMobileEventListene r s()
+    optimizeScrollPerforman c e()
 
-    // Cleanup
+    // Cleanup;
     return () => {
-      window.removeEventListener('touchend', () => {})
-      window.removeEventListener('scroll', () => {})
+      window.removeEventListen e r('touchend', () => {})
+      window.removeEventListen e r('scroll', () => {})
     }
   }, [])
 
-  return null
+  return null;
 }
 
-export default MobileOptimizer
+export default MobileOptimiz e r

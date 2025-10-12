@@ -1,32 +1,32 @@
 import React from 'react';
 'use client';
 
-const NetworkInfrastructurePage: React.FC = () => {
-  return (
+const NetworkInfrastructurePa g e: React.FC = () => {
+return (
     <>
-      <Helmet>
-        <title>Network Infrastructure - Zion Tech Group</title>
-        <meta name="description" content="Network Infrastructure services by Zion Tech Group. Professional AI and IT solutions." />
+      <Helmet></Helmet>
+        <title>Network Infrastructu r e - Zion Tech Group</title>
+        <meta name="description" content="Network Infrastructu r e services by Zion Tech Group. Professional AI and IT solutions." />
         <meta name="keywords" content="network-infrastructure, AI solutions, IT services" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5 h-5ml-2" />
-              <span className="w-5 h-5ml-2" />Network Infrastructure
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h1 className="w-5h-5ml-2" />
+              <span className="w-5h-5ml-2" />Network Infrastructu r e;
               </span>
             </h1>
-            <p className="w-5 h-5ml-2">Professional network infrastructure services by Zion Tech Group.
+            <p className="w-5h-5ml-2">Professional network infrastructu r e services by Zion Tech Group.;
             </p>
           </div>
 
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="text-2 xl font-boldtext-white mb-4"  >Coming Soon</h2>
-            <p className="w-5 h-5ml-2">We're working on bringing you comprehensive network infrastructure solutions. 
-              Contact us to learn more about our services.
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h2 className="text-2xlfont-boldtext-whitemb-4"  >Coming Soon</h2>
+            <p className="w-5h-5ml-2">We're working on bringing you comprehensi v e network infrastructu r e solutions.;
+              Contact us to learn more about our services.;
             </p>
-            <button className="w-5 h-5ml-2">Contact Us
+            <button className="w-5h-5ml-2">Contact Us;
             </button>
           </div>
       </div>
@@ -34,4 +34,4 @@ const NetworkInfrastructurePage: React.FC = () => {
   );
 };
 
-export default NetworkInfrastructurePage;
+export default NetworkInfrastructurePa g e;

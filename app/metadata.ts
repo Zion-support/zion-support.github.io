@@ -1,22 +1,22 @@
-// Define metadata type for compatibility
+// Define metadata type for compatibili t y;
   title: string;
   description: string;
   keywords: string[];
-  authors: Array<{ name: string }>;
+  authors: Array<{ name: string ,}>;
   creator: string;
   publisher: string;
     email: boolean;
     address: boolean;
     telephone: boolean;
   };
-  metadataBase: URL;
+  metadataBa s e: URL;
     canonical: string;
   };
     title: string;
     description: string;
     url: string;
     siteName: string;
-    images: Array
+    images: Array;
     }>;
     locale: string;
     type: string;
@@ -38,7 +38,7 @@
 }
 
   keywords: [
-    'technology consulting'
+    'technology consulting';
     images: [
 }
 ]]

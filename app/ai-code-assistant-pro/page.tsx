@@ -4,237 +4,237 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Bot} from 'lucide-react';
 
-export default function AICodeAssistantProPage() {
-  const features = [
+export default function AICodeAssistantProPa g e() {
+  constfeatures= [
     {
-      icon: <Bot className="w-5 h-5ml-2" />,
+      icon: <BotclassName="w-5h-5ml-2" />,
       title: 'AI Code Generation',
-      description: 'Generate high-quality code from natural language descriptions with 95% accuracy'
+      description: 'Generate high-qualitycodefrom natural language descriptio n s with 95% accuracy';
     },
     {
-      icon: <Code className="w-5 h-5ml-2" />,
+      icon: <CodeclassName="w-5h-5ml-2" />,
       title: 'Smart Code Completion',
-      description: 'Intelligent autocomplete that understands context and suggests optimal solutions'
+      description: 'Intellige n t autocomple t e that understan d s context and suggests optimal solutions';
     },
     {
-      icon: <Search className="w-5 h-5ml-2" />,
+      icon: <SearchclassName="w-5h-5ml-2" />,
       title: 'Code Analysis & Debugging',
-      description: 'Automatically detect bugs, security vulnerabilities, and performance issues'
+      description: 'Automatical l y detect bugs, security vulnerabiliti e s, and performan c e issues';
     },
     {
-      icon: <GitBranch className="w-5 h-5ml-2" />,
-      title: 'Version Control Integration',
-      description: 'Seamless integration with Git, GitHub, GitLab, and other version control systems'
+      icon: <GitBranchclassName="w-5h-5ml-2" />,
+      title: 'Version Control Integrati o n',
+      description: 'Seamless integrati o n with Git, GitHub, GitLab, and other version control systems';
     },
     {
-      icon: <Database className="w-5 h-5ml-2" />,
-      title: 'Multi-Language Support',
-      description: 'Support for 50+ programming languages including Python, JavaScript, Java, C++, and more'
+      icon: <DatabaseclassName="w-5h-5ml-2" />,
+      title: 'Multi-LanguageSupport',
+      description: 'Support for 50+ programmi n g languages including Python, JavaScript, Java, C++, and more';
     },
     {
-      icon: <Shield className="w-5 h-5ml-2" />,
+      icon: <ShieldclassName="w-5h-5ml-2" />,
       title: 'Security & Compliance',
-      description: 'Built-in security scanning and compliance checking for enterprise-grade code quality'
+      description: 'Built-insecurityscanning and compliance checking for enterprise-gradecodequality';
     }
   ]
 
-  const pricingPlans = [
+  const pricingPlans= [
     {
       name: 'Developer',
       price: '$29',
       period: '/month',
       description: 'Perfect for individual developers',
       features: [
-        'Up to 1,000 code generations/month',
+        'Up to 1,000 code generatio n s/month',
         'Basic AI features',
-        '5 programming languages',
+        '5 programmi n g languages',
         'Email support',
         'Basic analytics',
-        'VS Code extension'
+        'VS Code extension';
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Team',
       price: '$99',
       period: '/month',
-      description: 'Ideal for development teams',
+      description: 'Ideal for developme n t teams',
       features: [
-        'Up to 10,000 code generations/month',
+        'Up to 10,000 code generatio n s/month',
         'Advanced AI features',
-        'All programming languages',
+        'All programmi n g languages',
         'Priority support',
         'Advanced analytics',
-        'Team collaboration',
-        'Custom integrations',
-        'API access'
+        'Team collaborati o n',
+        'Custom integratio n s',
+        'API access';
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
       price: '$299',
       period: '/month',
-      description: 'For large organizations',
+      description: 'For large organizatio n s',
       features: [
-        'Unlimited code generations',
+        'Unlimited code generatio n s',
         'All AI features',
-        'Custom integrations',
+        'Custom integratio n s',
         'Dedicated support',
-        'White-label option',
+        'White-labeloption',
         'Advanced security',
         'Custom reporting',
-        'SLA guarantee'
+        'SLA guarantee';
       ],
-      popular: false
+      popular: false;
     }
   ]
 
-  const testimonials = [
+  const testimonials= [
     {
       name: 'Alex Chen',
       company: 'Senior Software Engineer',
-      content: 'Increased my coding speed by 300% and reduced bugs by 80%. The AI suggestions are incredibly accurate.',
+      content: 'Increased my coding speed by 300% and reduced bugs by 80%. The AI suggestio n s are incredibly accurate.',
       rating: 5,
-      avatar: 'AC'
+      avatar: 'AC';
     },
     {
       name: 'Sarah Johnson',
       company: 'Tech Startup CTO',
-      content: 'Our team productivity skyrocketed. The code generation quality is enterprise-grade and saves us hours daily.',
+      content: 'Our team productivi t y skyrocket e d. The code generation quality is enterprise-gradeandsaves us hours daily.',
       rating: 5,
-      avatar: 'SJ'
+      avatar: 'SJ';
     },
     {
       name: 'Michael Rodriguez',
-      company: 'Full-Stack Developer',
+      company: 'Full-StackDeveloper',
       content: 'The debugging features are game-changing. It catches issues I would have missed and suggests perfect fixes.',
       rating: 5,
-      avatar: 'MR'
+      avatar: 'MR';
     }
   ]
 
-  const benefits = [
+  constbenefits= [
     {
-      icon: <TrendingUp className="w-5 h-5ml-2" />,
-      title: '300% Faster Development',
-      description: 'AI-powered code generation accelerates development cycles'
+      icon: <TrendingUpclassName="w-5h-5ml-2" />,
+      title: '300% Faster Developme n t',
+      description: 'AI-poweredcodegeneration accelerat e s developme n t cycles';
     },
     {
-      icon: <Target className="w-5 h-5ml-2" />,
+      icon: <TargetclassName="w-5h-5ml-2" />,
       title: '80% Fewer Bugs',
-      description: 'Advanced analysis and debugging reduce code issues significantly'
+      description: 'Advanced analysis and debugging reduce code issues significant l y';
     },
     {
-      icon: <Clock className="w-5 h-5ml-2" />,
+      icon: <ClockclassName="w-5h-5ml-2" />,
       title: 'Save 20+ Hours Weekly',
-      description: 'Automated code generation and optimization eliminate repetitive tasks'
+      description: 'Automated code generation and optimizati o n eliminate repetitive tasks';
     },
     {
-      icon: <Shield className="w-5 h-5ml-2" />,
+      icon: <ShieldclassName="w-5h-5ml-2" />,
       title: 'Enterprise Security',
-      description: 'Built-in security scanning ensures code quality and compliance'
+      description: 'Built-insecurityscanning ensures code quality and compliance';
     }
   ]
 
-  const integrations = [
-    { name: 'VS Code', icon: '💻' },
-    { name: 'IntelliJ IDEA', icon: '☕' },
-    { name: 'Sublime Text', icon: '📝' },
-    { name: 'Atom', icon: '⚛️' },
-    { name: 'Vim', icon: '📄' },
-    { name: 'GitHub', icon: '🐙' },
-    { name: 'GitLab', icon: '🦊' },
-    { name: 'Bitbucket', icon: '🪣' },
-    { name: 'Docker', icon: '🐳' },
-    { name: 'Kubernetes', icon: '⚓' }
+  const integrations= [
+    { name: 'VS Code', icon: '💻' ,},
+    { name: 'IntelliJ IDEA', icon: '☕' ,},
+    { name: 'Sublime Text', icon: '📝' ,},
+    { name: 'Atom', icon: '⚛️' ,},
+    { name: 'Vim', icon: '📄' ,},
+    { name: 'GitHub', icon: '🐙' ,},
+    { name: 'GitLab', icon: '🦊' ,},
+    { name: 'Bitbucket', icon: '🪣' ,},
+    { name: 'Docker', icon: '🐳' ,},
+    { name: 'Kubernetes', icon: '⚓' ,}
   ]
 
-  const supportedLanguages = [
+  const supportedLanguages= [
     'Python', 'JavaScript', 'TypeScript', 'Java', 'C++', 'C#', 'Go', 'Rust',
     'PHP', 'Ruby', 'Swift', 'Kotlin', 'Scala', 'R', 'MATLAB', 'SQL',
-    'HTML', 'CSS', 'React', 'Vue.js', 'Angular', 'Node.js', 'Django', 'Flask'
+    'HTML', 'CSS', 'React', 'Vue.js', 'Angular', 'Node.js', 'Django', 'Flask';
   ]
 
-  return (
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
-        <title />AI Code Assistant Pro - Zion Tech Group | Intelligent Code Generation</title>
-        <meta name="description" content="Revolutionary AI-powered code assistant with intelligent generation, debugging, and analysis. Increase development speed by 300%. Starting at $29/month." />
-        <meta name="keywords" content="AI code assistant, code generation, intelligent debugging, code analysis, programming AI, development tools" />
+return (
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+      <Helmet></Helmet>
+        <title />AI Code Assistant Pro - Zion Tech Group | Intellige n t Code Generation</title>
+        <meta name="description" content="Revolutiona r y AI-poweredcodeassistant with intellige n t generation, debugging, and analysis. Increase developme n t speed by 300%. Starting at $29/month." />
+        <meta name="keywords" content="AI code assistant, code generation, intellige n t debugging, code analysis, programmi n g AI, developme n t tools" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-code-assistant-pro"  />
+        <linkrel="canonical" href="https://ziontechgro u p.com/ai-code-assistant-pro"  />
       </Helmet>
 
       {/* Hero Section */}
-      <section className="w-5 h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <Code className="w-5 h-5ml-2" />
-            <span />AI-Powered Code Generation</span>
+      <section className="w-5h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <CodeclassName="w-5h-5ml-2" />
+            <span />AI-PoweredCodeGeneration</span>
           </div>
           
-          <h1 className="w-5 h-5ml-2" />
-            AI Code Assistant
+          <h1 className="w-5h-5ml-2" />
+            AI Code Assistant;
             <br />
-            <span className="w-5 h-5ml-2" />Pro
+            <span className="w-5h-5ml-2" />Pro;
             </span>
           </h1>
           
-          <p className="w-5 h-5ml-2">Transform your development workflow with AI-powered code generation, intelligent debugging, and analysis. 
-            Increase development speed by 300% while reducing bugs by 80%.
+          <p className="w-5h-5ml-2">Transform your developme n t workflow with AI-poweredcodegeneration, intellige n t debugging, and analysis.;
+            Increase developme n t speed by 300% while reducing bugs by 80%.;
           </p>
           
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <Linkto="/contact" className="groupbg-gradient-to-rfrom-cyan-500to-purple-600text-whitepx-10py-4rounded-xlfont-semiboldhover:from-cyan-600hover:to-purple-700transition-allduration-300flexitems-centerjustify-centerspace-x-2shadow-lgshadow-cyan-500/25hover:shadow-cyan-500/40transformhover:scale-105" />
               <span />Start Free Trial</span>
-              <ArrowRight className="w-5 h-5ml-2" />
+              <ArrowRight className="w-5h-5ml-2" />
             </Link>
-            <Link to="#pricing" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+            <Linkto="#pricing" className="groupborder-2border-cyan-400text-cyan-400px-10py-4rounded-xlfont-semiboldhover:bg-cyan-400hover:text-gray-900transition-allduration-300flexitems-centerjustify-centerspace-x-2backdrop-blur-sm" />
               <span />View Pricing</span>
-              <ArrowRight className="w-5 h-5ml-2" />
+              <ArrowRight className="w-5h-5ml-2" />
             </Link>
           </div>
 
           {/* Key Stats */}
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">300%</div>
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Faster Development</div>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">80%</div>
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Fewer Bugs</div>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">50+</div>
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Languages Supported</div>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">25 K+</div>
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Active Developers</div>
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">300%</div>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">Faster Developme n t</div>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">80%</div>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">Fewer Bugs</div>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">50+</div>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">Languages Supported</div>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">25 K+</div>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">Active Developers</div>
           </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="w-5 h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />
-              Why Choose Our <span className="w-5 h-5ml-2" />AI Code Assistant?</span>
+      <section className="w-5h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h2 className="w-5h-5ml-2" />
+              Why Choose Our <span className="w-5h-5ml-2" />AI Code Assistant?</span>
             </h2>
-            <p className="w-5 h-5ml-2">Experience the future of software development with cutting-edge AI technology that works for your team.
+            <p className="w-5h-5ml-2">Experience the future of software developme n t with cutting-edgeAItechnology that works for your team.;
             </p>
           </div>
           
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            {benefits.map((benefit, index) => (
-              <div key="{index}" className="text-centergroup" />
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{benefit.icon}
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            {benefits.map((benefit, index) => ())
+              <divkey="{index}" className="text-centergroup" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{benefit.icon}>
                 </div>
-                <h3 className="w-5 h-5ml-2" />{benefit.title}
+                <h3 className="w-5h-5ml-2" />{benefit.title}
                 </h3>
-                <p className="w-5 h-5ml-2">{benefit.description}
+                <p className="w-5h-5ml-2">{benefit.description}
                 </p>
               </div>
             ))}
@@ -242,21 +242,21 @@ export default function AICodeAssistantProPage() {
       </section>
 
       {/* Supported Languages Section */}
-      <section className="w-5 h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />
-              Support for <span className="w-5 h-5ml-2" />50+ Languages</span>
+      <section className="w-5h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h2 className="w-5h-5ml-2" />
+              Support for <span className="w-5h-5ml-2" />50+ Languages</span>
             </h2>
-            <p className="w-5 h-5ml-2">From popular languages to cutting-edge frameworks, our AI understands and generates code in any language you need.
+            <p className="w-5h-5ml-2">From popular languages to cutting-edgeframeworks, our AI understan d s and generates code in any language you need.;
             </p>
           </div>
           
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            {supportedLanguages.map((language, index) => (
-              <div key="{index}" className="group text-center" />
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <span className="w-5 h-5ml-2" />{language}
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            {supportedLanguag e s.map((language, index) => ())
+              <divkey="{index}" className="grouptext-center" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                  <span className="w-5h-5ml-2" />{language}
                   </span>
                 </div>
             ))}
@@ -264,168 +264,168 @@ export default function AICodeAssistantProPage() {
       </section>
 
       {/* Features Section */}
-      <section className="w-5 h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />
-              Powerful Features for <span className="w-5 h-5ml-2" />Smart Development</span>
+      <section className="w-5h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h2 className="w-5h-5ml-2" />
+              Powerful Features for <span className="w-5h-5ml-2" />Smart Developme n t</span>
             </h2>
-            <p className="w-5 h-5ml-2">Everything you need to accelerate development with AI-powered intelligence and automation.
+            <p className="w-5h-5ml-2">Everything you need to accelerate developme n t with AI-poweredintelligenc e and automation.;
             </p>
           </div>
           
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            {features.map((feature, index) => (
-              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            {features.map((feature, index) => ())
+              <divkey="{index}" className="groupbg-white/10backdrop-blur-lgrounded-2xlp-8borderborder-white/20hover:bg-white/20transition-allduration-300hover:scale-105hover:shadow-2xlhover:shadow-cyan-500/10" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{feature.icon}>
                 </div>
-                <h3 className="w-5 h-5ml-2" />{feature.title}
+                <h3 className="w-5h-5ml-2" />{feature.title}
                 </h3>
-                <p className="w-5 h-5ml-2">{feature.description}
+                <p className="w-5h-5ml-2">{feature.description}
                 </p>
               </div>
             ))}
           </div>
       </section>
 
-      {/* Integrations Section */}
-      <section className="w-5 h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />
-              Seamless <span className="w-5 h-5ml-2" />Integrations</span>
+      {/* Integratio n s Section */}
+      <section className="w-5h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h2 className="w-5h-5ml-2" />
+              Seamless <span className="w-5h-5ml-2" />Integratio n s</span>
             </h2>
-            <p className="w-5 h-5ml-2">Works with your favorite development tools and platforms for a unified coding experience.
+            <p className="w-5h-5ml-2">Works with your favorite developme n t tools and platforms for a unified coding experience.;
             </p>
           </div>
           
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            {integrations.map((integration, index) => (
-              <div key="{index}" className="group text-center" />
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <span className="w-5 h-5ml-2" />{integration.icon}</span>
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            {integratio n s.map((integrati o n, index) => ())
+              <divkey="{index}" className="grouptext-center" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                  <span className="w-5h-5ml-2" />{integrati o n.icon}</span>
                 </div>
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{integration.name}
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{integrati o n.name}>
                 </div>
             ))}
           </div>
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20px-4relative" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />
-              Simple, Transparent <span className="w-5 h-5ml-2" />Pricing</span>
+      <sectionid="pricing" className="py-20px-4relative" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h2 className="w-5h-5ml-2" />
+              Simple, Transpare n t <span className="w-5h-5ml-2" />Pricing</span>
             </h2>
-            <p className="w-5 h-5ml-2">Choose the plan that fits your development needs. All plans include our core AI features.
+            <p className="w-5h-5ml-2">Choose the plan that fits your developme n t needs. All plans include our core AI features.;
             </p>
           </div>
           
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            {pricingPlans.map((plan, index) => (
-              <div key="{index}" className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${
-                plan.popular 
-                  ? 'border-cyan-400/50 shadow-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
-                  : 'border-white/20 hover: border-cyan-400/30'
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            {pricingPla n s.map((plan, index) => ())
+              <divkey="{index}" className="{`relative" bg-white/10 backdrop-blur-lgrounded-2xl p-8bordertransition-allduration-300hover:scale-105hover:shadow-2xl ${>
+                plan.popular;
+                  ? 'border-cyan-400/50 shadow-cyan-500/20 bg-gradient-to-brfrom-cyan-500/10 to-purple-500/10';
+                  : 'border-white/20 hover: border-cyan-400/30';
               }`} />
-                {plan.popular && (
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular
+                {plan.popular && ()
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">Most Popular>
                     </div>
                 )}
                 
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
-                  <p className="w-5 h-5ml-2">{plan.description}</p>
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <span className="w-5 h-5ml-2" />{plan.price}</span>
-                    <span className="w-5 h-5ml-2" />{plan.period}</span>
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                  <h3 className="w-5h-5ml-2" />{plan.name}</h3>
+                  <p className="w-5h-5ml-2">{plan.description}</p>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                    <span className="w-5h-5ml-2" />{plan.price}</span>
+                    <span className="w-5h-5ml-2" />{plan.period}</span>
                   </div>
                 
-                <ul className="w-5 h-5ml-2" />
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key="{featureIndex}" className="flex items-centerspace-x-3" />
-                      <CheckCircle className="w-5 h-5ml-2" />
-                      <span className="w-5 h-5ml-2" />{feature}</span>
+                <ulclassName="w-5h-5ml-2" />
+                  {plan.features.map((feature, featureInd e x) => ())
+                    <likey="{featureInd e x}" className="flexitems-centerspace-x-3" />
+                      <CheckCirc leclassName="w-5h-5ml-2" />
+                      <span className="w-5h-5ml-2" />{feature}</span>
                     </li>
                   ))}
                 </ul>
                 
-                <Link 
-                  to="/contact"
-                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
-                      : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
+                <Link;
+                  to="/contact";
+                  className="{`block" w-fulltext-centerpy-3rounded-xlfont-semiboldtransition-allduration-300 ${
+                    plan.popular;
+                      ? 'bg-gradient-to-rfrom-cyan-500to-purple-600text-whitehover:from-cyan-600hover:to-purple-700shadow-lgshadow-cyan-500/25';
+                      : 'border-2border-cyan-400text-cyan-400hover: bg-cyan-400hover:text-gray-900';
                   }`}
-                  />Get Started
+                  />Get Started;
                 </Link>
               </div>
             ))}
           </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="w-5 h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />
-              Trusted by <span className="w-5 h-5ml-2" />25,000+</span> Developers
+      {/* Testimonia l s Section */}
+      <section className="w-5h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h2 className="w-5h-5ml-2" />
+              Trusted by <span className="w-5h-5ml-2" />25,000+</span> Developers;
             </h2>
-            <p className="w-5 h-5ml-2">See what our customers are saying about their success with our AI code assistant.
+            <p className="w-5h-5ml-2">See what our customers are saying about their success with our AI code assistant.;
             </p>
           </div>
           
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            {testimonials.map((testimonial, index) => (
-              <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20transition-allduration-300" />
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            {testimonia l s.map((testimoni a l, index) => ())
+              <divkey="{index}" className="bg-white/10backdrop-blur-lgrounded-2xlp-8borderborder-white/20hover:bg-white/20transition-allduration-300" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{testimoni a l.avatar}>
                   </div>
                   <div />
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}</div>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{testimoni a l.name}</div>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{testimoni a l.company}</div>
                 </div>
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key="{i}" className="w-5 h-5te xt-yellow-400fill-current"  />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                  {[...Array(testimoni a l.rating)].map((_, i) => ())
+                    <Starkey="{i}" className="w-5h-5text-yellow-400fill-current"  />
                   ))}
                 </div>
-                <p className="w-5 h-5ml-2">"{testimonial.content}"</p>
+                <p className="w-5h-5ml-2">"{testimoni a l.content}"</p>
               </div>
             ))}
           </div>
       </section>
 
       {/* CTA Section */}
-      <section className="w-5 h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <h2 className="w-5 h-5ml-2" />
-                  Ready to Transform Your <span className="w-5 h-5ml-2" />Development Workflow?</span>
+      <section className="w-5h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                <h2 className="w-5h-5ml-2" />
+                  Ready to Transform Your <span className="w-5h-5ml-2" />Developme n t Workflow?</span>
                 </h2>
                 
-                <p className="w-5 h-5ml-2">Join thousands of developers already coding 300% faster with our AI-powered code assistant. 
-                  Start your free trial today and experience the future of software development.
+                <p className="w-5h-5ml-2">Join thousands of developers already coding 300% faster with our AI-poweredcodeassistant.;
+                  Start your free trial today and experience the future of software developme n t.;
                 </p>
                 
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                  <Linkto="/contact" className="groupbg-whitetext-cyan-600px-10py-4rounded-xlfont-boldtext-lghover:bg-gray-100transition-allduration-300flexitems-centerjustify-centerspace-x-2shadow-lghover:shadow-xltransformhover:scale-105" />
                     <span />Start Free Trial</span>
-                    <ArrowRight className="w-5 h-5ml-2" />
+                    <ArrowRight className="w-5h-5ml-2" />
                   </Link>
-                  <Link to="#pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+                  <Linkto="#pricing" className="groupborder-2border-whitetext-whitepx-10py-4rounded-xlfont-boldtext-lghover:bg-white/10transition-allduration-300flexitems-centerjustify-centerspace-x-2backdrop-blur-sm" />
                     <span />View All Plans</span>
-                    <ArrowRight className="w-5 h-5ml-2" />
+                    <ArrowRight className="w-5h-5ml-2" />
                   </Link>
                 </div>
                 
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <p />✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                  <p />✓ 14-dayfreetrial • ✓ No credit card required • ✓ Cancel anytime</p>
                 </div>
             </div>
         </div>

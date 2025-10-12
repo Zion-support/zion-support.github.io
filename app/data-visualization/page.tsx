@@ -1,32 +1,32 @@
 import React from 'react';
 'use client';
 
-const DataVisualizationPage: React.FC = () => {
-  return (
+const DataVisualizationPa g e: React.FC = () => {
+return (
     <>
-      <Helmet>
-        <title>Data Visualization - Zion Tech Group</title>
-        <meta name="description" content="Data Visualization services by Zion Tech Group. Professional AI and IT solutions." />
+      <Helmet></Helmet>
+        <title>Data Visualizati o n - Zion Tech Group</title>
+        <meta name="description" content="Data Visualizati o n services by Zion Tech Group. Professional AI and IT solutions." />
         <meta name="keywords" content="data-visualization, AI solutions, IT services" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5 h-5ml-2" />
-              <span className="w-5 h-5ml-2" />Data Visualization
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h1 className="w-5h-5ml-2" />
+              <span className="w-5h-5ml-2" />Data Visualizati o n;
               </span>
             </h1>
-            <p className="w-5 h-5ml-2">Professional data visualization services by Zion Tech Group.
+            <p className="w-5h-5ml-2">Professional data visualizati o n services by Zion Tech Group.;
             </p>
           </div>
 
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="text-2 xl font-boldtext-white mb-4"  >Coming Soon</h2>
-            <p className="w-5 h-5ml-2">We're working on bringing you comprehensive data visualization solutions. 
-              Contact us to learn more about our services.
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h2 className="text-2xlfont-boldtext-whitemb-4"  >Coming Soon</h2>
+            <p className="w-5h-5ml-2">We're working on bringing you comprehensi v e data visualizati o n solutions.;
+              Contact us to learn more about our services.;
             </p>
-            <button className="w-5 h-5ml-2">Contact Us
+            <button className="w-5h-5ml-2">Contact Us;
             </button>
           </div>
       </div>
@@ -34,4 +34,4 @@ const DataVisualizationPage: React.FC = () => {
   );
 };
 
-export default DataVisualizationPage;
+export default DataVisualizationPa g e;

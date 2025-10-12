@@ -1,11 +1,11 @@
               </button>
               
-              <Link
-                const to = "/"
-                className="border border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center  justify-center"
+              <Link;
+                constto= "/"
+                className="borderborder-white/30text-whitepx-6py-3rounded-lgfont-semiboldhover:bg-white/10transition-allduration-300flexitems-centerjustify-center"
                />
-                <Home className="w-5 h-5ml-2" />
-                Go Home
+                <HomeclassName="w-5h-5ml-2" />
+                Go Home;
               </Link>
             </div>
         </div>

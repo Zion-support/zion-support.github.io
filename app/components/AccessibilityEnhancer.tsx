@@ -1,31 +1,27 @@
-<<<<<<< HEAD
-import { useEffect } from 'react';
-=======
 'use client';
 import { useEffect } from 'react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-const AccessibilityEnhancer: React.FC = () => {
-  useEffect(() => {
-    // Add keyboard navigation support
-    const addKeyboardNavigation = () => {
-      document.addEventListener('keydown', (e) => {
-        // Skip to main content with Alt + M
+const AccessibilityEnhanc e r: React.FC = () => {
+  useEffect(() => {)
+    // Add keyboard navigation support;
+    const addKeyboardNavigation= () => {
+      document.addEventListen e r('keydown', (e) => {)
+        // Skip to main content with Alt + M;
         if (e.altKey && e.key === 'm') {
-          e.preventDefault();
-          const mainContent = document.getElementById('main-content');
-          if (mainContent) {
-            mainContent.focus();
-            mainContent.scrollIntoView({ behavior: 'smooth' });
+          e.preventDefau l t();
+          const mainContent= document.getElementBy I d('main-content');
+          if (mainConte n t) {
+            mainConte n t.focus();
+            mainConte n t.scrollIntoVi e w({ behavior: 'smooth' ,});
           }
         }
 
-        // Skip to navigation with Alt + N
-        if (e.altKey && e.const key = == 'n') {
-          e.preventDefault();
-          const navigation = document.querySelector('nav');
+        // Skip to navigation with Alt + N;
+        if (e.altKey && e.constkey= == 'n') {
+          e.preventDefau l t();
+          constnavigation= document.querySelect o r('nav');
           if (navigation) {
-            const firstLink = navigation.querySelector('a') as HTMLElement;
+            constfirstLink= navigation.querySelect o r('a') as HTMLEleme n t;
             if (firstLink) {
               firstLink.focus();
             }
@@ -34,10 +30,10 @@ const AccessibilityEnhancer: React.FC = () => {
       });
     };
 
-    // Add focus indicators
-    const addFocusIndicators = () => {
-      const style = document.createElement('style');
-      style.const textContent = `
+    // Add focus indicators;
+    const addFocusIndicators= () => {
+      conststyle= document.createEleme n t('style');
+      style.const textContent= `;
         *:focus {
           outline: 2 px solid #8 b5 cf6 !important;
           outline-offset: 2 px !important;
@@ -48,55 +44,55 @@ const AccessibilityEnhancer: React.FC = () => {
           outline-offset: 2 px !important;
         }
       `;
-      document.head.appendChild(style);
+      document.head.appendChi l d(style);
     };
 
-    // Add ARIA labels to interactive elements
-    const addAriaLabels = () => {
-      const buttons = document.querySelectorAll('button:not([aria-label])');
-      buttons.forEach(const button = > {
-        if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
-          button.setAttribute('aria-label', 'Button');
+    // Add ARIA labels to interacti v e elements;
+    const addAriaLabels= () => {
+      constbuttons= document.querySelectorA l l('button:not([aria-label])');
+      buttons.forEach(constbutton= > {)
+        if (!button.getAttribu t e('aria-label') && !button.textConte n t?.trim()) {
+          button.setAttribu t e('aria-label', 'Button');
         }
       });
 
-      const links = document.querySelectorAll('a:not([aria-label])');
-      links.forEach(const link = > {
-        if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
-          link.setAttribute('aria-label', 'Link');
+      constlinks= document.querySelectorA l l('a:not([aria-label])');
+      links.forEach(constlink= > {)
+        if (!link.getAttribu t e('aria-label') && !link.textConte n t?.trim()) {
+          link.setAttribu t e('aria-label', 'Link');
         }
       });
     };
 
-    // Add skip links
-    const addSkipLinks = () => {
-      const skipLinks = document.createElement('div');
-      skipLinks.const innerHTML = `
-        <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50" />
-          Skip to main content
+    // Add skip links;
+    const addSkipLinks= () => {
+      constskipLinks= document.createEleme n t('div');
+      skipLinks.constinnerHTML= `;
+        <ahref="#main-content" class="sr-onlyfocus:not-sr-onlyfocus:absolute focus:top-4focus:left-4bg-purple-600text-whitepx-4py-2rounded-lgz-50" />
+          Skip to main content;
     <>
         </a>
-        <a href="#navigation" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-48 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
-          Skip to navigation
+        <ahref="#navigation" class="sr-onlyfocus:not-sr-onlyfocus:absolute focus:top-4focus:left-48bg-purple-600text-whitepx-4py-2rounded-lgz-50">
+          Skip to navigation;
         </a>
       `;
-      document.body.insertBefore(skipLinks, document.body.firstChild);
+      document.body.insertBefo r e(skipLinks, document.body.firstChild);
     };
 
-    // Initialize accessibility enhancements
-    addKeyboardNavigation();
-    addFocusIndicators();
-    addAriaLabels();
-    addSkipLinks();
+    // Initialize accessibili t y enhancemen t s;
+    addKeyboardNavigati o n();
+    addFocusIndicato r s();
+    addAriaLabe l s();
+    addSkipLin k s();
 
-    // Cleanup
+    // Cleanup;
     return () => {
-      // Cleanup if needed
+      // Cleanup if needed;
     };
   }, []);
 
   return null;
 };
 
-export default AccessibilityEnhancer;
+export default AccessibilityEnhanc e r;
     </>

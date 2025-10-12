@@ -1,32 +1,32 @@
 import React from 'react';
 'use client';
 
-const CloudInfrastructurePage: React.FC = () => {
-  return (
+const CloudInfrastructurePa g e: React.FC = () => {
+return (
     <>
-      <Helmet>
-        <title>Cloud Infrastructure - Zion Tech Group</title>
-        <meta name="description" content="Cloud Infrastructure services by Zion Tech Group. Professional AI and IT solutions." />
+      <Helmet></Helmet>
+        <title>Cloud Infrastructu r e - Zion Tech Group</title>
+        <meta name="description" content="Cloud Infrastructu r e services by Zion Tech Group. Professional AI and IT solutions." />
         <meta name="keywords" content="cloud-infrastructure, AI solutions, IT services" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5 h-5ml-2" />
-              <span className="w-5 h-5ml-2" />Cloud Infrastructure
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h1 className="w-5h-5ml-2" />
+              <span className="w-5h-5ml-2" />Cloud Infrastructu r e;
               </span>
             </h1>
-            <p className="w-5 h-5ml-2">Professional cloud infrastructure services by Zion Tech Group.
+            <p className="w-5h-5ml-2">Professional cloud infrastructu r e services by Zion Tech Group.;
             </p>
           </div>
 
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="text-2 xl font-boldtext-white mb-4"  >Coming Soon</h2>
-            <p className="w-5 h-5ml-2">We're working on bringing you comprehensive cloud infrastructure solutions. 
-              Contact us to learn more about our services.
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h2 className="text-2xlfont-boldtext-whitemb-4"  >Coming Soon</h2>
+            <p className="w-5h-5ml-2">We're working on bringing you comprehensi v e cloud infrastructu r e solutions.;
+              Contact us to learn more about our services.;
             </p>
-            <button className="w-5 h-5ml-2">Contact Us
+            <button className="w-5h-5ml-2">Contact Us;
             </button>
           </div>
       </div>
@@ -34,4 +34,4 @@ const CloudInfrastructurePage: React.FC = () => {
   );
 };
 
-export default CloudInfrastructurePage;
+export default CloudInfrastructurePa g e;

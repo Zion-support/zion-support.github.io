@@ -1,32 +1,32 @@
 import React from 'react';
 'use client';
 
-const AiFinancialForecastingPage: React.FC = () => {
-  return (
+const AiFinancialForecastingPa g e: React.FC = () => {
+return (
     <>
-      <Helmet>
-        <title>Ai Financial Forecasting - Zion Tech Group</title>
-        <meta name="description" content="Ai Financial Forecasting services by Zion Tech Group. Professional AI and IT solutions." />
+      <Helmet></Helmet>
+        <title>Ai Financial Forecasti n g - Zion Tech Group</title>
+        <meta name="description" content="Ai Financial Forecasti n g services by Zion Tech Group. Professional AI and IT solutions." />
         <meta name="keywords" content="ai-financial-forecasting, AI solutions, IT services" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5 h-5ml-2" />
-              <span className="w-5 h-5ml-2" />Ai Financial Forecasting
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h1 className="w-5h-5ml-2" />
+              <span className="w-5h-5ml-2" />Ai Financial Forecasti n g;
               </span>
             </h1>
-            <p className="w-5 h-5ml-2">Professional ai financial forecasting services by Zion Tech Group.
+            <p className="w-5h-5ml-2">Professional ai financial forecasti n g services by Zion Tech Group.;
             </p>
           </div>
 
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="text-2 xl font-boldtext-white mb-4"  >Coming Soon</h2>
-            <p className="w-5 h-5ml-2">We're working on bringing you comprehensive ai financial forecasting solutions. 
-              Contact us to learn more about our services.
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h2 className="text-2xlfont-boldtext-whitemb-4"  >Coming Soon</h2>
+            <p className="w-5h-5ml-2">We're working on bringing you comprehensi v e ai financial forecasti n g solutions.;
+              Contact us to learn more about our services.;
             </p>
-            <button className="w-5 h-5ml-2">Contact Us
+            <button className="w-5h-5ml-2">Contact Us;
             </button>
           </div>
       </div>
@@ -34,4 +34,4 @@ const AiFinancialForecastingPage: React.FC = () => {
   );
 };
 
-export default AiFinancialForecastingPage;
+export default AiFinancialForecastingPa g e;

@@ -6,38 +6,38 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Layout from '../layout';
 
-export default function CybersecurityConsulting() {
-  const features = [
+export default function CybersecurityConsulti n g() {
+  constfeatures= [
     {
-      icon: <Shield className="w-5 h-5ml-2" />,
+      icon: <ShieldclassName="w-5h-5ml-2" />,
       title: 'Security Assessment',
-      description: 'Comprehensive security audits to identify vulnerabilities and assess your current security posture'
+      description: 'Comprehensi v e security audits to identify vulnerabiliti e s and assess your current security posture';
     },
     {
-      icon: <Lock className="w-5 h-5ml-2" />,
+      icon: <LockclassName="w-5h-5ml-2" />,
       title: 'Compliance Management',
-      description: 'Ensure compliance with GDPR, HIPAA, SOX, PCI-DSS, and other regulatory requirements'
+      description: 'Ensure compliance with GDPR, HIPAA, SOX, PCI-DSS, and other regulatory requiremen t s';
     },
     {
-      icon: <Eye className="w-5 h-5ml-2" />,
-      title: 'Threat Intelligence',
-      description: 'Advanced threat detection and response with 24/7 monitoring and incident management'
+      icon: <EyeclassName="w-5h-5ml-2" />,
+      title: 'Threat Intelligen c e',
+      description: 'Advanced threat detection and response with 24/7 monitoring and incident management';
     },
     {
-      icon: <Brain className="w-5 h-5ml-2" />,
+      icon: <BrainclassName="w-5h-5ml-2" />,
       title: 'Security Training',
-      description: 'Comprehensive security awareness training for your team to prevent human error attacks'
+      description: 'Comprehensi v e security awareness training for your team to prevent human error attacks';
     }
   ]
 
-  const consultingFeatures = [
+  const consultingFeatures= [
     {
       category: 'Security Assessment',
-      items: ['Vulnerability Scanning', 'Penetration Testing', 'Risk Assessment', 'Security Audits', 'Compliance Reviews', 'Gap Analysis']
+      items: ['Vulnerabili t y Scanning', 'Penetrati o n Testing', 'Risk Assessment', 'Security Audits', 'Compliance Reviews', 'Gap Analysis']
     },
     {
-      category: 'Implementation',
-      items: ['Security Architecture', 'Policy Development', 'Tool Implementation', 'Process Design', 'Training Programs', 'Change Management']
+      category: 'Implementati o n',
+      items: ['Security Architectu r e', 'Policy Developme n t', 'Tool Implementati o n', 'Process Design', 'Training Programs', 'Change Management']
     },
     {
       category: 'Monitoring & Response',
@@ -45,40 +45,40 @@ export default function CybersecurityConsulting() {
     },
     {
       category: 'Compliance',
-      items: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'PCI-DSS Compliance', 'ISO 27001', 'NIST Framework']
+      items: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'PCI-DSSCompliance', 'ISO 27001', 'NIST Framework']
     }
   ]
 
-  const pricingPlans = [
+  const pricingPlans= [
     {
       name: 'Assessment',
       price: '$2,999',
       period: '/project',
-      description: 'Comprehensive security assessment',
+      description: 'Comprehensi v e security assessment',
       features: [
         'Security audit',
-        'Vulnerability assessment',
+        'Vulnerabili t y assessment',
         'Risk analysis',
         'Compliance review',
         'Detailed report',
-        'Recommendations'
+        'Recommendatio n s';
       ],
-      popular: false
+      popular: false;
     },
     {
-      name: 'Implementation',
+      name: 'Implementati o n',
       price: '$9,999',
       period: '/project',
-      description: 'Complete security implementation',
+      description: 'Complete security implementati o n',
       features: [
         'Security assessment',
-        'Tool implementation',
-        'Policy development',
+        'Tool implementati o n',
+        'Policy developme n t',
         'Team training',
         '3 months support',
-        'Compliance guidance'
+        'Compliance guidance';
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Ongoing',
@@ -88,111 +88,111 @@ export default function CybersecurityConsulting() {
       features: [
         '24/7 monitoring',
         'Incident response',
-        'Regular assessments',
+        'Regular assessmen t s',
         'Compliance management',
         'Security updates',
-        'Dedicated support'
+        'Dedicated support';
       ],
-      popular: false
+      popular: false;
     }
   ]
 
-  const testimonials = [
+  const testimonials= [
     {
       name: 'Jennifer Lee',
       company: 'Healthcare Provider',
-      content: 'Cybersecurity Consulting helped us achieve HIPAA compliance and significantly improve our security posture.',
-      rating: 5
+      content: 'Cybersecuri t y Consulting helped us achieve HIPAA compliance and significant l y improve our security posture.',
+      rating: 5;
     },
     {
       name: 'Michael Rodriguez',
       company: 'Financial Services',
-      content: 'Their threat intelligence and incident response capabilities prevented a major security breach. Highly recommended.',
-      rating: 5
+      content: 'Their threat intelligen c e and incident response capabiliti e s prevented a major security breach. Highly recommend e d.',
+      rating: 5;
     },
     {
       name: 'Sarah Johnson',
-      company: 'E-commerce Platform',
-      content: 'The security training program transformed our team's awareness. We've seen a 90% reduction in security incidents.',
-      rating: 5
+      company: 'E-commercePlatform',
+      content: 'The security training program transform e d our team's awareness. We've seen a 90% reduction in security incidents.',
+      rating: 5;
     }
   ]
 
-  return (
-    <Layout
-      title="Cybersecurity Consulting - Expert Security Solutions | Zion Tech Group"
-      description="Protect your business with expert cybersecurity consulting. Security assessments, compliance management, threat intelligence, and 24/7 monitoring. Get your free security audit today."
-      keywords="cybersecurity consulting, security assessment, compliance management, threat intelligence, security training, penetration testing" />
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+return (
+    <Layout;
+      title="Cybersecuri t y Consulting - Expert Security Solutions | Zion Tech Group";
+      description="Protect your business with expert cybersecuri t y consulting. Security assessmen t s, compliance management, threat intelligen c e, and 24/7 monitoring. Get your free security audit today.";
+      keywords="cybersecuri t y consulting, security assessment, compliance management, threat intelligen c e, security training, penetrati o n testing" />
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
         {/* Hero Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Shield className="w-5 h-5ml-2" />
-                Expert Cybersecurity Consulting
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                <ShieldclassName="w-5h-5ml-2" />
+                Expert Cybersecuri t y Consulting;
               </div>
-              <h1 className="w-5 h-5ml-2">Cybersecurity Consulting
+              <h1 className="w-5h-5ml-2">Cybersecuri t y Consulting;
               </h1>
-              <p className="w-5 h-5ml-2">Protect your business with expert cybersecurity consulting. Security assessments, compliance management, 
-                threat intelligence, and 24/7 monitoring to keep your data secure.
+              <p className="w-5h-5ml-2">Protect your business with expert cybersecuri t y consulting. Security assessmen t s, compliance management, 
+                threat intelligen c e, and 24/7 monitoring to keep your data secure.;
               </p>
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Link
-          to="/contact"
-          className="bg-gradient-to-rfrom-red-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300 flexitems-center justify-center"
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                <Link;
+          to="/contact";
+          className="bg-gradient-to-rfrom-red-500to-purple-600text-whitepx-8py-4rounded-lgfont-semiboldhover:from-red-600hover:to-purple-700transition-allduration-300flexitems-centerjustify-center"
         >
-          Get Free Security Audit
+          Get Free Security Audit;
                   
-          <ArrowRight className="w-5 h-5ml-2" />
+          <ArrowRight className="w-5h-5ml-2" />
         </Link>
-                <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">View Case Studies
+                <Linkto="#demo" className="border-2border-whitetext-whitepx-8py-4rounded-lgfont-semiboldhover:bg-white/10transition-colors">View Case Studies;
                 </Link>
               </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />Comprehensive Security Solutions
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <h2 className="w-5h-5ml-2" />Comprehensi v e Security Solutions;
               </h2>
-              <p className="w-5 h-5ml-2">Expert cybersecurity services that protect your business from evolving threats
+              <p className="w-5h-5ml-2">Expert cybersecuri t y services that protect your business from evolving threats;
               </p>
             </div>
             
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              {features.map((feature, index) => (
-                <div key="{index}" className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-red-500/20 hover:border-red-400/40transition-allduration-300" />
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              {features.map((feature, index) => ())
+                <divkey="{index}" className="bg-gradient-to-brfrom-slate-800/50to-purple-900/30rounded-xlp-6borderborder-red-500/20hover:border-red-400/40transition-allduration-300" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
                     {feature.icon}
-                    <h3 className="w-5 h-5ml-2" />{feature.title}</h3>
+                    <h3 className="w-5h-5ml-2" />{feature.title}</h3>
                   </div>
-                  <p className="w-5 h-5ml-2">{feature.description}</p>
+                  <p className="w-5h-5ml-2">{feature.description}</p>
                 </div>
               ))}
             </div>
         </section>
 
         {/* Consulting Features */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />Complete Security Consulting
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <h2 className="w-5h-5ml-2" />Complete Security Consulting;
               </h2>
-              <p className="w-5 h-5ml-2">End-to-end cybersecurity services to protect your organization
+              <p className="w-5h-5ml-2">End-to-endcybersecurit y services to protect your organizati o n;
               </p>
             </div>
             
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              {consultingFeatures.map((feature, index) => (
-                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
-                  <h3 className="w-5 h-5ml-2" />{feature.category}</h3>
-                  <ul className="w-5 h-5ml-2" />
-                    {feature.items.map((item, itemIndex) => (
-                      <li key="{itemIndex}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-5 h-5ml-2" />
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              {consultingFeatur e s.map((feature, index) => ())
+                <divkey="{index}" className="bg-slate-800/50rounded-xlp-6borderborder-slate-700" />
+                  <h3 className="w-5h-5ml-2" />{feature.category}</h3>
+                  <ulclassName="w-5h-5ml-2" />
+                    {feature.items.map((item, itemIndex) => ())
+                      <likey="{itemIndex}" className="flexitems-centertext-gray-300" />
+                        <CheckCirc leclassName="w-5h-5ml-2" />
                         {item}
                       </li>
                     ))}
@@ -203,94 +203,94 @@ export default function CybersecurityConsulting() {
         </section>
 
         {/* Pricing Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />Flexible Consulting Packages
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <h2 className="w-5h-5ml-2" />Flexible Consulting Packages;
               </h2>
-              <p className="w-5 h-5ml-2">Choose the security consulting package that fits your needs
+              <p className="w-5h-5ml-2">Choose the security consulting package that fits your needs;
               </p>
             </div>
             
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              {pricingPlans.map((plan, index) => (
-                <div key="{index}" className="{`bg-gradient-to-br" from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
-                  plan.popular 
-                    ? 'border-red-400/40 scale-105 shadow-2 xl shadow-red-500/20' 
-                    : 'border-red-500/20 hover: border-red-400/40'
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              {pricingPla n s.map((plan, index) => ())
+                <divkey="{index}" className="{`bg-gradient-to-br" from-slate-800/50 to-purple-900/30 rounded-xlp-8border transition-allduration-300 ${>
+                  plan.popular;
+                    ? 'border-red-400/40 scale-105shadow-2xl shadow-red-500/20';
+                    : 'border-red-500/20 hover: border-red-400/40';
                 }`} />
-                  {plan.popular && (
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                      <Star className="w-5 h-5ml-2" />
-                      Most Popular
+                  {plan.popular && ()
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                      <StarclassName="w-5h-5ml-2" />
+                      Most Popular;
                     </div>
                   )}
-                  <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
-                  <p className="w-5 h-5ml-2">{plan.description}</p>
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <span className="w-5 h-5ml-2" />{plan.price}</span>
-                    <span className="w-5 h-5ml-2" />{plan.period}</span>
+                  <h3 className="w-5h-5ml-2" />{plan.name}</h3>
+                  <p className="w-5h-5ml-2">{plan.description}</p>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                    <span className="w-5h-5ml-2" />{plan.price}</span>
+                    <span className="w-5h-5ml-2" />{plan.period}</span>
                   </div>
-                  <ul className="w-5 h-5ml-2" />
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key="{featureIndex}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-5 h-5ml-2" />
+                  <ulclassName="w-5h-5ml-2" />
+                    {plan.features.map((feature, featureInd e x) => ())
+                      <likey="{featureInd e x}" className="flexitems-centertext-gray-300" />
+                        <CheckCirc leclassName="w-5h-5ml-2" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    to="/contact"
-                    className="{`w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-red-500 to-purple-600 text-white hover:from-red-600 hover:to-purple-700'
-                        : 'border-2 border-red-400 text-red-400 hover: bg-red-400/10'
+                  <Link;
+                    to="/contact";
+                    className="{`w-full" block text-centerpy-3px-6rounded-lgfont-semiboldtransition-allduration-300 ${
+                      plan.popular;
+                        ? 'bg-gradient-to-rfrom-red-500to-purple-600text-whitehover:from-red-600hover:to-purple-700';
+                        : 'border-2border-red-400text-red-400hover: bg-red-400/10';
                     }`}
-                    />Get Started
+                    />Get Started;
                   </Link>
                 </div>
               ))}
             </div>
         </section>
 
-        {/* Testimonials */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />Trusted by Industry Leaders
+        {/* Testimonia l s */}
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <h2 className="w-5h-5ml-2" />Trusted by Industry Leaders;
               </h2>
-              <p className="w-5 h-5ml-2">See how our Cybersecurity Consulting protects organizations worldwide
+              <p className="w-5h-5ml-2">See how our Cybersecuri t y Consulting protects organizatio n s worldwide;
               </p>
             </div>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              {testimonials.map((testimonial, index) => (
-                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-5 h-5te xt-yellow-400fill-current"  />
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              {testimonia l s.map((testimoni a l, index) => ())
+                <divkey="{index}" className="bg-slate-800/50rounded-xlp-6borderborder-slate-700" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                    {[...Array(testimoni a l.rating)].map((_, i) => ())
+                      <Starkey="{i}" className="w-5h-5text-yellow-400fill-current"  />
                     ))}
                   </div>
-                  <p className="w-5 h-5ml-2">"{testimonial.content}"</p>
+                  <p className="w-5h-5ml-2">"{testimoni a l.content}"</p>
                   <div />
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}</div>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{testimoni a l.name}</div>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{testimoni a l.company}</div>
                 </div>
               ))}
             </div>
         </section>
 
         {/* CTA Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />Secure Your Business Today
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <h2 className="w-5h-5ml-2" />Secure Your Business Today;
               </h2>
-              <p className="w-5 h-5ml-2">Don't wait for a security breach. Get expert cybersecurity consulting to protect your organization
+              <p className="w-5h-5ml-2">Don't wait for a security breach. Get expert cybersecuri t y consulting to protect your organizati o n;
               </p>
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Link to="/contact" className="bg-gradient-to-rfrom-red-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700transition-allduration-300">Get Your Free Security Audit
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                <Linkto="/contact" className="bg-gradient-to-rfrom-red-500to-purple-600text-whitepx-8py-4rounded-lgfont-semiboldhover:from-red-600hover:to-purple-700transition-allduration-300">Get Your Free Security Audit;
                 </Link>
-                <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More
+                <Linkto="/about" className="border-2border-whitetext-whitepx-8py-4rounded-lgfont-semiboldhover:bg-white/10transition-colors">Learn More;
                 </Link>
               </div>
           </div>

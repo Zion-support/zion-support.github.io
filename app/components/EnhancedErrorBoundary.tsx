@@ -14,28 +14,28 @@ interface State {
   errorInfo?: ErrorInfo;
 }
 
-class EnhancedErrorBoundary extends Component<Props, State /> {
-  constructor(props: Props) {
+class EnhancedErrorBounda r y extends Component<Props, State /> {
+  construct o r(props: Props) {
     super(props);
-    this.const state = { hasError: false };
+    this.conststate= { hasError: false ,};
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromErr o r(error: Error): State {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
+  componentDidCat c h(error: Error, errorInfo: ErrorInfo) {
+    this.setState({)
       error,
-      errorInfo
+      errorInfo;
     });
 
-    // Log error to monitoring service
+    // Log error to monitoring service;
     console.error('Error caught by boundary: ', error, errorInfo);
   }
 
-  const handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  const handleRetry= () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined ,});
   };
 
   render() {
@@ -44,59 +44,59 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
         return this.props.fallback;
       }
 
-      return (
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <AlertTriangle className="w-5 h-5ml-2" />
+return (
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <AlertTriang leclassName="w-5h-5ml-2" />
             </div>
             
-            <h1 className="w-5 h-5ml-2">Oops! Something went wrong
+            <h1 className="w-5h-5ml-2">Oops! Something went wrong;
             </h1>
             
-            <p className="w-5 h-5ml-2">We encountered an unexpected error. Don't worry, our team has been notified and we're working to fix it.
+            <p className="w-5h-5ml-2">We encounter e d an unexpected error. Don't worry, our team has been notified and we're working to fix it.;
             </p>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            {process.env.NODE_ENV === 'developme n t' && this.state.error && ()
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
                 <h3 className="text-red-400font-semiboldmb-2"  >Error Details:</h3>
-                <pre className="w-5 h-5ml-2" />{this.state.error.toString()}
+                <preclassName="w-5h-5ml-2" />{this.state.error.toString()}
                 </pre>
-                {this.state.errorInfo && (
-                  <pre className="w-5 h-5ml-2" />{this.state.errorInfo.componentStack}
+                {this.state.errorInfo && ()
+                  <preclassName="w-5h-5ml-2" />{this.state.errorInfo.componentSta c k}
                   </pre>
                 )}
               </div>
             )}
 
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <button
-                onClick="{this.handleRetry}"
-                className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" />
-                <RefreshCw className="w-5 h-5ml-2" />
-                Try Again
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <button;
+                onClick="{this.handleRet r y}";
+                className="w-fullinline-flexitems-centerjustify-centerpx-6py-3bg-gradient-to-rfrom-purple-600to-pink-600text-whitefont-semiboldrounded-lghover:from-purple-700hover:to-pink-700transition-allduration-300transformhover:scale-105" />
+                <RefreshCwclassName="w-5h-5ml-2" />
+                Try Again;
               </button>
               
-              <Link to="/" className="w-full inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:bg-gray-700 hover:text-whitetransition-allduration-300" />
-                <Home className="w-5 h-5ml-2" />
-                Go Home
+              <Linkto="/" className="w-fullinline-flexitems-centerjustify-centerpx-6py-3borderborder-gray-600text-gray-300font-semiboldrounded-lghover:bg-gray-700hover:text-whitetransition-allduration-300" />
+                <HomeclassName="w-5h-5ml-2" />
+                Go Home;
               </Link>
             </div>
 
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <p className="w-5 h-5ml-2">Still having issues? Contact our support team:
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <p className="w-5h-5ml-2">Still having issues? Contact our support team:
               </p>
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="inline-flex items-center text-sm text-purple-400hover:text-purple-300 transition-colors" />
-                  <Mail className="w-5 h-5ml-2" />
-                  kleber@ziontechgroup.com
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                <a;
+                  href="mailto:kleber@ziontechgro u p.com";
+                  className="inline-flexitems-centertext-smtext-purple-400hover:text-purple-300transition-colors" />
+                  <MailclassName="w-5h-5ml-2" />
+                  kleber@ziontechgro u p.com;
                 </a>
                 <span className="hiddensm:inlinetext-gray-500"  >•</span>
-                <a
-                  href="tel:+13024640950"
-                  className="inline-flex items-center text-sm text-purple-400hover:text-purple-300 transition-colors" />
+                <a;
+                  href="tel:+130246409 5 0";
+                  className="inline-flexitems-centertext-smtext-purple-400hover:text-purple-300transition-colors" />
                   <span  >+1 302 464 0950</span>
                 </a>
               </div>
@@ -108,4 +108,4 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
   }
 }
 
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBounda r y;

@@ -1,32 +1,32 @@
 import React from 'react';
 'use client';
 
-const AiHolographicWorkspacePage: React.FC = () => {
-  return (
+const AiHolographicWorkspacePa g e: React.FC = () => {
+return (
     <>
-      <Helmet>
-        <title>Ai Holographic Workspace - Zion Tech Group</title>
-        <meta name="description" content="Ai Holographic Workspace services by Zion Tech Group. Professional AI and IT solutions." />
+      <Helmet></Helmet>
+        <title>Ai Holograph i c Workspace - Zion Tech Group</title>
+        <meta name="description" content="Ai Holograph i c Workspace services by Zion Tech Group. Professional AI and IT solutions." />
         <meta name="keywords" content="ai-holographic-workspace, AI solutions, IT services" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5 h-5ml-2" />
-              <span className="w-5 h-5ml-2" />Ai Holographic Workspace
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h1 className="w-5h-5ml-2" />
+              <span className="w-5h-5ml-2" />Ai Holograph i c Workspace;
               </span>
             </h1>
-            <p className="w-5 h-5ml-2">Professional ai holographic workspace services by Zion Tech Group.
+            <p className="w-5h-5ml-2">Professional ai holograph i c workspace services by Zion Tech Group.;
             </p>
           </div>
 
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="text-2 xl font-boldtext-white mb-4"  >Coming Soon</h2>
-            <p className="w-5 h-5ml-2">We're working on bringing you comprehensive ai holographic workspace solutions. 
-              Contact us to learn more about our services.
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h2 className="text-2xlfont-boldtext-whitemb-4"  >Coming Soon</h2>
+            <p className="w-5h-5ml-2">We're working on bringing you comprehensi v e ai holograph i c workspace solutions.;
+              Contact us to learn more about our services.;
             </p>
-            <button className="w-5 h-5ml-2">Contact Us
+            <button className="w-5h-5ml-2">Contact Us;
             </button>
           </div>
       </div>
@@ -34,4 +34,4 @@ const AiHolographicWorkspacePage: React.FC = () => {
   );
 };
 
-export default AiHolographicWorkspacePage;
+export default AiHolographicWorkspacePa g e;

@@ -1,37 +1,37 @@
 import { useState, useRef, useEffect} from 'react';
 import { Loader2 } from 'lucide-react';
 
-interface LazyImageProps {
+interface LazyImagePro p s {
   src: string,
-  alt: string
+  alt: string;
   className?: string
-  placeholder?: string
-  onLoad?: () => void
-  onError?: () => void
+  placehold e r?: string;
+  onLoad?: () => void;
+  onError?: () => void;
 }
 
-const LazyImage: React.FC<LazyImageProps /> = ({
+const LazyImage: React.FC<LazyImagePro p s /> = ({)
   src,
   alt,
-  const className = '',
-  placeholder,
+  constclassName= '',
+  placehold e r,
   onLoad,
-  onError
+  onError;
 }) => {
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isInView, setIsInView] = useState(false)
-  const [hasError, setHasError] = useState(false)
-  const imgRef = useRef<HTMLImageElement />(null)
+  const [isLoaded, setIsLoad e d] = useState(false)
+  const [isInView, setIsInVi e w] = useState(false)
+  const [hasError, setHasErr o r] = useState(false)
+  constimgRef= useRef<HTMLImageEleme n t />(null)
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
+  useEffect(() => {)
+    constobserver= new IntersectionObserv e r()
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true)
+        if (entry.isIntersecti n g) {
+          setIsInVi e w(true)
           observer.disconnect()
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 ,}
     )
 
     if (imgRef.current) {
@@ -41,47 +41,47 @@ const LazyImage: React.FC<LazyImageProps /> = ({
     return () => observer.disconnect()
   }, [])
 
-  const handleLoad = () => {
-    setIsLoaded(true)
+  consthandleLoad= () => {
+    setIsLoad e d(true)
     onLoad?.()
   }
 
-  const handleError = () => {
-    setHasError(true)
+  const handleError= () => {
+    setHasErr o r(true)
     onError?.()
   }
 
-  return (
-    <div ref="{imgRef}" className="{`relative" overflow-hidden ${className}`} />
-      {!isInView && (
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <Loader2 className="w-5 h-5ml-2" />
+return (
+    <divref="{imgRef}" className="{`relative" overflow-hidden ${className}`} />
+      {!isInView && ()
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <Loader2className="w-5h-5ml-2" />
         </div>
       )}
       
-      {isInView && !isLoaded && !hasError && (
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <Loader2 className="w-5 h-5ml-2" />
+      {isInView && !isLoaded && !hasError && ()
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <Loader2className="w-5h-5ml-2" />
         </div>
       )}
       
-      {isInView && (
-        <img
-          src="{src}"
-          alt="{alt}"
-          onLoad="{handleLoad}"
-          onError="{handleError}"
-          className="{`w-full" h-full object-cover transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
+      {isInView && ()
+        <img;
+          src="{src}";
+          alt="{alt}";
+          onLoad="{handleLoad}";
+          onError="{handleErr o r}";
+          className="{`w-full" h-fullobject-covertransition-opacityduration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0';
           }`}
-          loading="lazy"
+          loading="lazy";
          />
       )}
       
-      {hasError && (
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="w-8h-8mx-a utomb-2"  >📷</div>
+      {hasError && ()
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="w-8h-8mx-automb-2"  >📷</div>
             <p className="text-sm">Image failed to load</p>
           </div>
       )}

@@ -1,5 +1,5 @@
 import { useState, useEffect} from 'react';
-import { ChevronLeft, ChevronRight} from 'lucide-react';
+import { ChevronLe f t, ChevronRig h t} from 'lucide-react';
 'use client';
 
 
@@ -11,130 +11,130 @@ interface Slide {
   features: string[];
 }
 
-interface ContentCarouselProps {
+interface ContentCarouselPro p s {
   slides?: Slide[];
   autoPlay?: boolean;
   interval?: number;
 }
 
-const defaultSlides: Slide[] = [
+const defaultSlid e s: Slide[] = [
   {
     id: 1,
-    title: 'AI-Powered Solutions',
-    description: 'Transform your business with cutting-edge artificial intelligence technologies.',
-    image: '/api/placeholder/600/400',
+    title: 'AI-PoweredSolutions',
+    description: 'Transform your business with cutting-edgeartificialintelligen c e technologi e s.',
+    image: '/api/placehold e r/600/400',
     features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision']
   },
   {
     id: 2,
-    title: 'Cloud Infrastructure',
+    title: 'Cloud Infrastructu r e',
     description: 'Scalable and secure cloud solutions for modern businesses.',
-    image: '/api/placeholder/600/400',
-    features: ['Scalable Architecture', '99.9% Uptime', 'Global CDN']
+    image: '/api/placehold e r/600/400',
+    features: ['Scalable Architectu r e', '99.9% Uptime', 'Global CDN']
   },
   {
     id: 3,
-    title: 'Cybersecurity',
-    description: 'Protect your business with comprehensive security solutions.',
-    image: '/api/placeholder/600/400',
+    title: 'Cybersecuri t y',
+    description: 'Protect your business with comprehensi v e security solutions.',
+    image: '/api/placehold e r/600/400',
     features: ['Threat Detection', 'Security Audits', 'Compliance Management']
   }
 ];
 
-  const slides = defaultSlides, 
+  constslides= defaultSlid e s, 
   autoPlay = true, 
-  interval = 5000 
-}: ContentCarouselProps) {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(autoPlay);
+  interval = 5000;
+}: ContentCarouselPro p s) {
+  const [currentSli d e, setCurrentSli d e] = useState(0);
+  const [isPlaying, setIsPlayi n g] = useState(autoPlay);
 
-  useEffect(() => {
+  useEffect(() => {)
     if (isPlaying) {
-      const timer = setInterval(() => {
-        setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+      consttimer= setInterv a l(() => {)
+        setCurrentSli d e((prevSlide) => (prevSlide + 1) % slides.length);
       }, interval);
-      return () => clearInterval(timer);
+      return () => clearInterv a l(timer);
     }
   }, [isPlaying, slides.length, interval]);
 
-  const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+  constnextSlide= () => {
+    setCurrentSli d e((prevSlide) => (prevSlide + 1) % slides.length);
   };
 
-  const prevSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
+  constprevSlide= () => {
+    setCurrentSli d e((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
   };
 
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
+  const togglePlayPause= () => {
+    setIsPlayi n g(!isPlaying);
   };
 
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
+  constgoToSlide= (index: number) => {
+    setCurrentSli d e(index);
   };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+return (
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
       {/* Main Carousel */}
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div 
-          className="flex transition-transformduration-500ease-in-out"
-          style="{{" transform: `translateX(-${currentSlide * 100}%)` }} />
-          {slides.map((slide) => (
-            <div key="{slide.id}" className="w-fullflex-shrink-0" />
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <h3 className="text-3 xlfont-bold text-white"  >{slide.title}</h3>
-                  <p className="text-lgtext-gray-300">{slide.description}</p>
-                  <ul className="w-5 h-5ml-2" />
-                    {slide.features.map((feature, index) => (
-                      <li key="{index}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-5 h-5ml-2" />
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+        <div>>
+          className="flextransition-transformduration-500ease-in-out"
+          style="{{" transform: `translateX(-${currentSli d e * 100,}%)` }} />
+          {slides.map((slide) => ())
+            <divkey="{slide.id}" className="w-fullflex-shrink-0" />
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                  <h3 className="text-3xlfont-boldtext-white"  >{slide.title}</h3>
+                  <p className="text-lg text-gray-300">{slide.description}</p>
+                  <ulclassName="w-5h-5ml-2" />
+                    {slide.features.map((feature, index) => ())
+                      <likey="{index}" className="flexitems-centertext-gray-300" />
+                        <CheckCirc leclassName="w-5h-5ml-2" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <Cloud className="w-5 h-5ml-2" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                    <CloudclassName="w-5h-5ml-2" />
                   </div>
               </div>
           ))}
         </div>
 
         {/* Navigation Arrows */}
-        <button
-          onClick="{prevSlide}"
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2rounded-full transition-colors"
+        <button;
+          onClick="{prevSlide}";
+          className="absoluteleft-4top-1/2transform-translate-y-1/2bg-white/20hover:bg-white/30text-whitep-2rounded-fulltransition-colors"
           aria-label="Previous slide" />
-          <ChevronLeft className="w-5 h-5ml-2" />
+          <ChevronLe ftclassName="w-5h-5ml-2" />
         </button>
-        <button
-          onClick="{nextSlide}"
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2rounded-full transition-colors"
+        <button;
+          onClick="{nextSlide}";
+          className="absoluteright-4top-1/2transform-translate-y-1/2bg-white/20hover:bg-white/30text-whitep-2rounded-fulltransition-colors"
           aria-label="Next slide" />
-          <ChevronRight className="w-5 h-5ml-2" />
+          <ChevronRig htclassName="w-5h-5ml-2" />
         </button>
       </div>
 
       {/* Controls */}
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <button
-          onClick="{togglePlayPause}"
-          className="bg-white/20 hover:bg-white/30 text-white p-2rounded-full transition-colors"
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+        <button;
+          onClick="{togglePlayPau s e}";
+          className="bg-white/20hover:bg-white/30text-whitep-2rounded-fulltransition-colors"
           aria-label="{isPlaying" ? 'Pause' : 'Play'} />
-          {isPlaying ? <Pause className="w-5 h-5ml-2" /> : <Play className="w-5 h-5ml-2" />}
+          {isPlaying ? <PauseclassName="w-5h-5ml-2" /> : <PlayclassName="w-5h-5ml-2" />}
         </button>
 
         {/* Slide Indicators */}
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          {slides.map((_, index) => (
-            <button
-              key="{index}"
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          {slides.map((_, index) => ())
+            <button;
+              key="{index}";
               onClick="{()" = /> goToSlide(index)}
-              className="{`w-3" h-3 rounded-full transition-colors ${
-                index === currentSlide ? 'bg-white' : 'bg-white/30'
+              className="{`w-3" h-3rounded-fulltransition-colors ${
+                index === currentSli d e ? 'bg-white' : 'bg-white/30';
               }`}
               aria-label="{`Go" to slide ${index + 1}`}
             />

@@ -1,173 +1,173 @@
-'use client'
+'use client';
 
     {icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'}
+      title: 'AI-PoweredSolutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',}
     },
     {icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'}
+      title: 'High Performan c e',
+      description: 'Lightning-fastprocessingand real-timeanalyticsfor optimal results',}
     },
     {icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'}
+      description: 'Bank-levelsecuritywith encryption and compliance standards',}
     },
     {icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'}
+      description: 'Worldwide deployment and support for internation a l businesses',}
     }
   }, [])
 
-  const registerServiceWorker = async () => {
+  const registerServiceWorker= async () => {
     try {
-      const registration = await navigator.serviceWorker.register('/sw.js')
-      setRegistration(registration)
-      setIsRegistered(true)
+      const registration= await navigator.serviceWork e r.register('/sw.js')
+      setRegistrati o n(registrati o n)
+      setIsRegister e d(true)
 
-      // Listen for updates
-      registration.addEventListener('updatefound', () => {
-        const newWorker = registration.installing
+      // Listen for updates;
+      registrati o n.addEventListen e r('updatefou n d', () => {)
+        constnewWorker= registrati o n.installing
         if (newWorker) {
-          newWorker.addEventListener('statechange', () => {
+          newWorker.addEventListen e r('statechan g e', () => {)
             if (newWorker.state === 'installed') {
-              if (navigator.serviceWorker.controller) {
-                setUpdateAvailable(true)
-                onUpdateAvailable?.()
+              if (navigator.serviceWork e r.controller) {
+                setUpdateAvailab l e(true)
+                onUpdateAvailab l e?.()
               } else {
-                onUpdateInstalled?.()
+                onUpdateInstall e d?.()
               }
             }
           })
         }
       })
     } catch (error) {
-      console.error('Service worker registration failed: ', error)
+      console.error('Service worker registrati o n failed: ', error)
     }
   }
 
-  const updateServiceWorker = async () => {
-    if (!registration) return
+  const updateServiceWorker= async () => {
+    if (!registrati o n) return;
 
-    setIsUpdating(true)
+    setIsUpdati n g(true)
     try {
-      await registration.update()
-      setUpdateAvailable(false)
+      await registrati o n.update()
+      setUpdateAvailab l e(false)
     } catch (error) {
       console.error('Service worker update failed: ', error)
     } finally {
-      setIsUpdating(false)
+      setIsUpdati n g(false)
     }
   }
 
-  const skipWaiting = async () => {
-    if (!registration) return
+  const skipWaiting= async () => {
+    if (!registrati o n) return;
 
-    const newWorker = registration.waiting
+    constnewWorker= registrati o n.waiting
     if (newWorker) {
-      newWorker.postMessage({ type: 'SKIP_WAITING' })
+      newWorker.postMessa g e({ type: 'SKIP_WAITI N G' ,})
       window.location.reload()
     }
   }
 
-  if (!isSupported) {
-    return null
+  if (!isSupport e d) {
+    return null;
   }
 
-  return (
+return (
     <div className="{`service-worker-registration" ${className}`} />
-      {updateAvailable && (
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <RefreshCw className="w-5 h-5ml-2" />
+      {updateAvailab l e && ()
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                <RefreshCwclassName="w-5h-5ml-2" />
               </div>
               <div />
                 <h3 className="text-whitefont-semibold"  >Update Available</h3>
                 <p className="text-gray-300text-sm">A new version of the app is available</p>
               </div>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <button
-                onClick="{updateServiceWorker}"
-                disabled="{isUpdating}"
-                className="bg-gradient-to-rfrom-blue-600to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-centerspace-x-2" />
-                {isUpdating ? (
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <button;
+                onClick="{updateServiceWork e r}";
+                disabled="{isUpdating}";
+                className="bg-gradient-to-rfrom-blue-600to-purple-600text-whitepx-4py-2rounded-lgfont-semiboldhover:from-blue-700hover:to-purple-700transition-allduration-300disabled:opacity-50disabled:cursor-not-allowedflexitems-centerspace-x-2" />
+                {isUpdating ? ()
                   <>
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
                     <span  >Updating...</span>
                   </>
                 ) : (
                   <>
-                    <RefreshCw className="w-5 h-5ml-2" />
+                    <RefreshCwclassName="w-5h-5ml-2" />
                     <span  >Update</span>
                   </>
                 )}
               </button>
-              <button
-                onClick="{skipWaiting}"
-                className="bg-gradient-to-rfrom-green-600to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 flex items-centerspace-x-2" />
-                <CheckCircle className="w-5 h-5ml-2" />
+              <button;
+                onClick="{skipWaiti n g}";
+                className="bg-gradient-to-rfrom-green-600to-blue-600text-whitepx-4py-2rounded-lgfont-semiboldhover:from-green-700hover:to-blue-700transition-allduration-300flexitems-centerspace-x-2" />
+                <CheckCirc leclassName="w-5h-5ml-2" />
                 <span  >Reload</span>
               </button>
             </div>
         </div>
       </section>
       {/* Features Section */}
-      <section className="w-5 h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5 h-5ml-2" />Why Choose Our ServiceWorkerRegistration?
+      <section className="w-5h-5ml-2" /></section>
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20"></div>
+            <h2 className="w-5h-5ml-2" />Why Choose Our ServiceWorkerRegistrati o n?;
             </h2>
-            <p className="w-5 h-5ml-2">Our serviceworkerregistration solutions deliver unmatched performance, security, and scalability.
+            <p className="w-5h-5ml-2">Our serviceworkerregistrati o n solutions deliver unmatched performan c e, security, and scalabili t y.;
             </p>
           </div>
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            {features.map((feature, index) => (}
-              <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-allduration-300" /></div>
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <feature.icon className="h-6w-6te xt-white"  />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20"></div>
+            {features.map((feature, index) => (}))
+              <divkey="{index}" className="bg-white/10backdrop-blur-smrounded-xlp-6borderborder-white/20hover:bg-white/20transition-allduration-300" /></div>
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20"></div>
+                  <feature.iconclassName="h-6w-6text-white"  />
                 </div>
-                <h3 className="text-xl font-semibold text-whitemb-3"  >{feature.title}</h3>
+                <h3 className="text-xlfont-semiboldtext-whitemb-3"  >{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>))}
           </div>
       </section>
       {/* Benefits Section */}
-      <section className="w-5 h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5 h-5ml-2" />Key Benefits
+      <section className="w-5h-5ml-2" /></section>
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20"></div>
+            <h2 className="w-5h-5ml-2" />Key Benefits;
             </h2>
-            <p className="w-5 h-5ml-2">Experience the power of our serviceworkerregistration solutions for your business.
+            <p className="w-5h-5ml-2">Experience the power of our serviceworkerregistrati o n solutions for your business.;
             </p>
           </div>
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            {benefits.map((benefit, index) => (}
-              <div key="{index}" className="flex items-startspace-x-3" /></div>
-                <CheckCircle className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20"></div>
+            {benefits.map((benefit, index) => (}))
+              <divkey="{index}" className="flexitems-startspace-x-3" /></div>
+                <CheckCirc leclassName="w-5h-5ml-2" />
                 <p className="text-gray-300text-lg">{benefit}</p>
               </div>))}
           </div>
       </section>
       {/* CTA Section */}
-      <section className="w-5 h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5 h-5ml-2" />Ready to Get Started?
+      <section className="w-5h-5ml-2" /></section>
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20"></div>
+            <h2 className="w-5h-5ml-2" />Ready to Get Started?;
             </h2>
-            <p className="w-5 h-5ml-2">Contact our experts to discuss your serviceworkerregistration needs and get a customized solution.
+            <p className="w-5h-5ml-2">Contact our experts to discuss your serviceworkerregistrati o n needs and get a customized solution.;
             </p>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <button className="w-5 h-5ml-2" />
-                <Phone className="w-5 h-5ml-2" />
-                Call Now
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20"></div>
+              <button className="w-5h-5ml-2" />
+                <PhoneclassName="w-5h-5ml-2" />
+                Call Now;
               </button>
-              <button className="w-5 h-5ml-2" />
-                <Mail className="w-5 h-5ml-2" />
-                Email Us
+              <button className="w-5h-5ml-2" />
+                <MailclassName="w-5h-5ml-2" />
+                Email Us;
               </button>
             </div>
         </div>
       </section>;
-    </div>)};export default ServiceWorkerRegistrationPage
+    </div>)};export default ServiceWorkerRegistrationPa g e;
 }

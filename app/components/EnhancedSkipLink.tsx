@@ -1,41 +1,41 @@
 import React from 'react';
 'use client';
 
-const EnhancedSkipLink: React.FC = () => {
-  const handleSkipToMain = () => {
-    const mainContent = document.getElementById('main-content');
-    if (mainContent) {
-      mainContent.focus();
-      mainContent.scrollIntoView({ behavior: 'smooth' });
+const EnhancedSkipLi n k: React.FC = () => {
+  const handleSkipToMain= () => {
+    const mainContent= document.getElementBy I d('main-content');
+    if (mainConte n t) {
+      mainConte n t.focus();
+      mainConte n t.scrollIntoVi e w({ behavior: 'smooth' ,});
     }
   };
 
-  const handleSkipToNavigation = () => {
-    const navigation = document.querySelector('nav');
+  const handleSkipToNavigation= () => {
+    constnavigation= document.querySelect o r('nav');
     if (navigation) {
-      const firstLink = navigation.querySelector('a');
+      constfirstLink= navigation.querySelect o r('a');
       if (firstLink) {
         firstLink.focus();
-        firstLink.scrollIntoView({ behavior: 'smooth' });
+        firstLink.scrollIntoVi e w({ behavior: 'smooth' ,});
       }
     }
   };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <button
-        onClick="{handleSkipToMain}"
+return (
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+      <button;
+        onClick="{handleSkipToMa i n}";
         className="skip-link"
-        aria-label="Skip to main content"
-        />Skip to main content
+        aria-label="Skip to main content";
+        />Skip to main content;
       </button>
-      <button
-        onClick="{handleSkipToNavigation}"
+      <button;
+        onClick="{handleSkipToNavigati o n}";
         className="skip-link"
-        aria-label="Skip to navigation"
-        />Skip to navigation
+        aria-label="Skip to navigation";
+        />Skip to navigation;
       </button>
-      <style jsx  />{`
+      <style jsx  />{`;
         .skip-links {;
           position: absolute;,
   top: -100 px;,
@@ -72,4 +72,4 @@ const EnhancedSkipLink: React.FC = () => {
   );
 };
 
-export default EnhancedSkipLink;
+export default EnhancedSkipLi n k;

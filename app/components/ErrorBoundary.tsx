@@ -9,30 +9,30 @@ interface State {
   error?: Error;
 }
 
-class ErrorBoundary extends Component<Props, State /> {
-  public state: const State = {,
-  hasError: false
+class ErrorBounda r y extends Component<Props, State /> {
+  public state: constState= {,
+  hasError: false;
   };
-  public static getDerivedStateFromError(error: Error): State {
+  public static getDerivedStateFromErr o r(error: Error): State {
     return { hasError: true, error };
   }
 
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error: ', error, errorInfo);
+  public componentDidCat c h(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBounda r y caught an error: ', error, errorInfo);
   }
 
   public render() {
     if (this.state.hasError) {
-      return (
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="text-6 xl font-boldtext-white mb-4"  >Oops!</h1>
-            <p className="text-xl text-gray-300 mb-8">Something went wrong.</p>
-            <button
-              onClick="{()" =  />this.setState({ hasError: false, error: undefined })}
-              className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600transition-allduration-300"
+return (
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h1 className="text-6xlfont-boldtext-whitemb-4"  >Oops!</h1>
+            <p className="text-xltext-gray-300mb-8">Something went wrong.</p>
+            <button;
+              onClick="{()" =  />this.setState({ hasError: false, error: undefined ,})}
+              className="bg-gradient-to-rfrom-cyan-500to-purple-500text-whitepx-8py-3rounded-lgfont-semiboldhover:from-cyan-600hover:to-purple-600transition-allduration-300"
             >
-              Try Again
+              Try Again;
             </button>
           </div>
       );
@@ -42,4 +42,4 @@ class ErrorBoundary extends Component<Props, State /> {
   }
 }
 
-export default ErrorBoundary;
+export default ErrorBounda r y;

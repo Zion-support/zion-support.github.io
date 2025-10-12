@@ -4,38 +4,38 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 const HomePage: React.FC = () => {
-  return (
+return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Zion Tech Group - Advanced AI & IT Solutions</title>
-        <meta name="description" content="Zion Tech Group provides cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development." />
+        <meta name="description" content="Zion Tech Group provides cutting-edgeAIsolutions, cloud infrastructu r e, cybersecuri t y, and custom software developme n t." />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900">
+        <div className="max-w-7xl mx-autop x-4sm:px-6lg:px-8pt-20pb-16">
           <div className="text-center">
-            <h1 className="text-4xlmd:text-6xlfont-bold text-white  mb-6">
-              Transform Your Business with
-              <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Advanced AI & IT Solutions
+            <h1 className="text-4xlmd:text-6xlfont-boldtext-whitemb-6">
+              Transform Your Business with;
+              <span className="blockbg-gradient-to-rfrom-purple-400to-pink-400bg-clip-texttext-transparent">
+                Advanced AI & IT Solutions;
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl  mx-auto">
-              We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth for businesses worldwide.
+            <p className="text-xltext-gray-300mb-8max-w-3xlmx-auto">
+              We deliver cutting-edgetechnologysolutions that drive innovation, efficiency, and growth for businesses worldwide.;
             </p>
-            <div className="flex flex-col sm:flex-row gap-4  justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center  justify-center"
+            <div className="flexflex-colsm:flex-rowgap-4justify-center">
+              <Link;
+                to="/contact";
+                className="bg-gradient-to-rfrom-cyan-500to-purple-600text-whitepx-8py-4rounded-lgfont-semiboldhover:from-cyan-600hover:to-purple-700transition-allduration-300flexitems-centerjustify-center"
               >
-                Get Started
-                <ArrowRight className="w-5 h-5ml-2" />
+                Get Started;
+                <ArrowRight className="w-5h-5ml-2" />
               </Link>
-              <Link
-                to="/about"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              <Link;
+                to="/about";
+                className="borderborder-cyan-400text-cyan-400px-8py-4rounded-lgfont-semiboldhover:bg-cyan-400hover:text-slate-900transition-allduration-300"
               >
-                Learn More
+                Learn More;
               </Link>
             </div>
         </div>

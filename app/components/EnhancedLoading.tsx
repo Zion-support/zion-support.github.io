@@ -1,50 +1,50 @@
 import React from 'react';
 
-interface LoadingProps {
-  size?: 'sm' | 'md' | 'lg'
-  text?: string
-  fullScreen?: boolean
-  color?: string
+interface LoadingPro p s {
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
+  fullScreen?: boolean;
+  color?: string;
 }
 
-const EnhancedLoading: React.FC<LoadingProps /> = ({
-  const size = 'md',
+const EnhancedLoadi n g: React.FC<LoadingPro p s /> = ({)
+  constsize= 'md',
   text = 'Loading...',
   fullScreen = false,
-  color = 'cyan'
+  color = 'cyan';
 }) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
+  const sizeClasses= {
+    sm: 'w-4h-4',
+    md: 'w-8h-8',
+    lg: 'w-12h-12';
   }
 
-  const colorClasses = {
+  const colorClasses= {
     cyan: 'border-cyan-400',
     purple: 'border-purple-400',
     pink: 'border-pink-400',
     blue: 'border-blue-400',
-    green: 'border-green-400'
+    green: 'border-green-400';
   }
 
-  const spinner = (
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <div className="{`${sizeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-spin`}  />
-      {text && (
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{text}
+  constspinner= ()
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+      <div className="{`${sizeClasses[size]}" ${colorClass e s[color as keyof typeof, colorClass e s]} border-2border-t-transparent rounded-fullanimate-spin`}  />
+      {text && ()
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{text}>
         </div>
       )}
     </div>
   )
 
   if (fullScreen) {
-    return (
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{spinner}
+return (
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{spinner}>
       </div>
     )
   }
 
-  return spinner
+  return spinner;
 }
 
-export default EnhancedLoading;
+export default EnhancedLoadi n g;

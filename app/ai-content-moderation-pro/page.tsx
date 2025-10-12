@@ -6,31 +6,31 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Layout from '../layout';
 
-export default function AIContentModerationPro() {
-  const features = [
+export default function AIContentModerationP r o() {
+  constfeatures= [
     {
-      icon: <Brain className="w-5 h-5ml-2" />,
-      title: 'AI-Powered Detection',
-      description: 'Advanced machine learning models detect harmful content with 99.7% accuracy'
+      icon: <BrainclassName="w-5h-5ml-2" />,
+      title: 'AI-PoweredDetection',
+      description: 'Advanced machine learning models detect harmful content with 99.7% accuracy';
     },
     {
-      icon: <Shield className="w-5 h-5ml-2" />,
-      title: 'Real-time Protection',
-      description: 'Instant content analysis and moderation to keep your platform safe'
+      icon: <ShieldclassName="w-5h-5ml-2" />,
+      title: 'Real-timeProtection',
+      description: 'Instant content analysis and moderation to keep your platform safe';
     },
     {
-      icon: <Eye className="w-5 h-5ml-2" />,
-      title: 'Multi-format Support',
-      description: 'Text, images, videos, and audio content moderation in one platform'
+      icon: <EyeclassName="w-5h-5ml-2" />,
+      title: 'Multi-formatSupport',
+      description: 'Text, images, videos, and audio content moderation in one platform';
     },
     {
-      icon: <Globe className="w-5 h-5ml-2" />,
+      icon: <GlobeclassName="w-5h-5ml-2" />,
       title: 'Global Compliance',
-      description: 'Meets international content standards and regulatory requirements'
+      description: 'Meets internation a l content standards and regulatory requiremen t s';
     }
   ]
 
-  const capabilities = [
+  const capabilities= [
     {
       category: 'Content Types',
       items: ['Text & Comments', 'Images & Videos', 'Audio & Voice', 'Live Streams', 'User Profiles', 'Chat Messages']
@@ -49,7 +49,7 @@ export default function AIContentModerationPro() {
     }
   ]
 
-  const pricingPlans = [
+  const pricingPlans= [
     {
       name: 'Starter',
       price: '$99',
@@ -60,9 +60,9 @@ export default function AIContentModerationPro() {
         'Basic AI moderation',
         'Text & image analysis',
         'Email support',
-        'Standard response time'
+        'Standard response time';
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
@@ -75,123 +75,123 @@ export default function AIContentModerationPro() {
         'All content types',
         'Priority support',
         'Custom rules engine',
-        'Analytics dashboard'
+        'Analytics dashboard';
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
       price: '$999',
       period: '/month',
-      description: 'For large-scale platforms',
+      description: 'For large-scaleplatforms',
       features: [
         'Unlimited content checks',
         'Custom AI training',
-        'White-label solution',
+        'White-labelsolution',
         'Dedicated support',
         'Compliance reporting',
-        'SLA guarantee'
+        'SLA guarantee';
       ],
-      popular: false
+      popular: false;
     }
   ]
 
-  const testimonials = [
+  const testimonials= [
     {
       name: 'David Kim',
       company: 'SocialFlow Platform',
-      content: 'AI Content Moderation Pro reduced our moderation workload by 85% while improving accuracy significantly.',
-      rating: 5
+      content: 'AI Content Moderation Pro reduced our moderation workload by 85% while improving accuracy significant l y.',
+      rating: 5;
     },
     {
       name: 'Lisa Martinez',
-      company: 'E-commerce Plus',
-      content: 'The real-time detection saved us from multiple PR disasters. Essential for any growing platform.',
-      rating: 5
+      company: 'E-commercePlus',
+      content: 'The real-timedetectionsaved us from multiple PR disasters. Essential for any growing platform.',
+      rating: 5;
     },
     {
       name: 'James Wilson',
       company: 'Gaming Community Hub',
-      content: 'Multi-language support is incredible. We can now moderate content in 15+ languages automatically.',
-      rating: 5
+      content: 'Multi-languagesupportis incredible. We can now moderate content in 15+ languages automatical l y.',
+      rating: 5;
     }
   ]
 
-  return (
-    <Layout
-      title="AI Content Moderation Pro - Advanced Content Safety Platform | Zion Tech Group"
-      description="Protect your platform with AI-powered content moderation. Real-time detection, multi-format support, and 99.7% accuracy. Start your free trial today."
+return (
+    <Layout;
+      title="AI Content Moderation Pro - Advanced Content Safety Platform | Zion Tech Group";
+      description="Protect your platform with AI-poweredcontentmoderation. Real-timedetection, multi-formatsupport, and 99.7% accuracy. Start your free trial today.";
       keywords="AI content moderation, content safety, platform protection, automated moderation, content filtering" />
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
         {/* Hero Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Shield className="w-5 h-5ml-2" />
-                Advanced Content Safety
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                <ShieldclassName="w-5h-5ml-2" />
+                Advanced Content Safety;
               </div>
-              <h1 className="w-5 h-5ml-2">AI Content Moderation Pro
+              <h1 className="w-5h-5ml-2">AI Content Moderation Pro;
               </h1>
-              <p className="w-5 h-5ml-2">Protect your platform with industry-leading AI content moderation. Real-time detection, 
-                multi-format support, and 99.7% accuracy to keep your community safe and compliant.
+              <p className="w-5h-5ml-2">Protect your platform with industry-leadingAIcontent moderation. Real-timedetection, 
+                multi-formatsupport, and 99.7% accuracy to keep your community safe and compliant.;
               </p>
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Link
-          to="/contact"
-          className="bg-gradient-to-rfrom-red-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300 flexitems-center justify-center"
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                <Link;
+          to="/contact";
+          className="bg-gradient-to-rfrom-red-500to-purple-600text-whitepx-8py-4rounded-lgfont-semiboldhover:from-red-600hover:to-purple-700transition-allduration-300flexitems-centerjustify-center"
         >
-          Start Free Trial
+          Start Free Trial;
                   
-          <ArrowRight className="w-5 h-5ml-2" />
+          <ArrowRight className="w-5h-5ml-2" />
         </Link>
-                <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Watch Demo
+                <Linkto="#demo" className="border-2border-whitetext-whitepx-8py-4rounded-lgfont-semiboldhover:bg-white/10transition-colors">Watch Demo;
                 </Link>
               </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />Advanced Content Safety Features
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <h2 className="w-5h-5ml-2" />Advanced Content Safety Features;
               </h2>
-              <p className="w-5 h-5ml-2">Comprehensive AI-powered protection for all your content needs
+              <p className="w-5h-5ml-2">Comprehensi v e AI-poweredprotectionfor all your content needs;
               </p>
             </div>
             
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              {features.map((feature, index) => (
-                <div key="{index}" className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-red-500/20 hover:border-red-400/40transition-allduration-300" />
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              {features.map((feature, index) => ())
+                <divkey="{index}" className="bg-gradient-to-brfrom-slate-800/50to-purple-900/30rounded-xlp-6borderborder-red-500/20hover:border-red-400/40transition-allduration-300" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
                     {feature.icon}
-                    <h3 className="w-5 h-5ml-2" />{feature.title}</h3>
+                    <h3 className="w-5h-5ml-2" />{feature.title}</h3>
                   </div>
-                  <p className="w-5 h-5ml-2">{feature.description}</p>
+                  <p className="w-5h-5ml-2">{feature.description}</p>
                 </div>
               ))}
             </div>
         </section>
 
-        {/* Capabilities Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />Comprehensive Moderation Capabilities
+        {/* Capabiliti e s Section */}
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <h2 className="w-5h-5ml-2" />Comprehensi v e Moderation Capabiliti e s;
               </h2>
-              <p className="w-5 h-5ml-2">Handle any content type, language, or platform with our advanced AI
+              <p className="w-5h-5ml-2">Handle any content type, language, or platform with our advanced AI;
               </p>
             </div>
             
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              {capabilities.map((capability, index) => (
-                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
-                  <h3 className="w-5 h-5ml-2" />{capability.category}</h3>
-                  <ul className="w-5 h-5ml-2" />
-                    {capability.items.map((item, itemIndex) => (
-                      <li key="{itemIndex}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-5 h-5ml-2" />
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              {capabiliti e s.map((capability, index) => ())
+                <divkey="{index}" className="bg-slate-800/50rounded-xlp-6borderborder-slate-700" />
+                  <h3 className="w-5h-5ml-2" />{capability.category}</h3>
+                  <ulclassName="w-5h-5ml-2" />
+                    {capability.items.map((item, itemIndex) => ())
+                      <likey="{itemIndex}" className="flexitems-centertext-gray-300" />
+                        <CheckCirc leclassName="w-5h-5ml-2" />
                         {item}
                       </li>
                     ))}
@@ -202,94 +202,94 @@ export default function AIContentModerationPro() {
         </section>
 
         {/* Pricing Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />Flexible Pricing Plans
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <h2 className="w-5h-5ml-2" />Flexible Pricing Plans;
               </h2>
-              <p className="w-5 h-5ml-2">Choose the plan that scales with your platform
+              <p className="w-5h-5ml-2">Choose the plan that scales with your platform;
               </p>
             </div>
             
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              {pricingPlans.map((plan, index) => (
-                <div key="{index}" className="{`bg-gradient-to-br" from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
-                  plan.popular 
-                    ? 'border-red-400/40 scale-105 shadow-2 xl shadow-red-500/20' 
-                    : 'border-red-500/20 hover: border-red-400/40'
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              {pricingPla n s.map((plan, index) => ())
+                <divkey="{index}" className="{`bg-gradient-to-br" from-slate-800/50 to-purple-900/30 rounded-xlp-8border transition-allduration-300 ${>
+                  plan.popular;
+                    ? 'border-red-400/40 scale-105shadow-2xl shadow-red-500/20';
+                    : 'border-red-500/20 hover: border-red-400/40';
                 }`} />
-                  {plan.popular && (
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                      <Star className="w-5 h-5ml-2" />
-                      Most Popular
+                  {plan.popular && ()
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                      <StarclassName="w-5h-5ml-2" />
+                      Most Popular;
                     </div>
                   )}
-                  <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
-                  <p className="w-5 h-5ml-2">{plan.description}</p>
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <span className="w-5 h-5ml-2" />{plan.price}</span>
-                    <span className="w-5 h-5ml-2" />{plan.period}</span>
+                  <h3 className="w-5h-5ml-2" />{plan.name}</h3>
+                  <p className="w-5h-5ml-2">{plan.description}</p>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                    <span className="w-5h-5ml-2" />{plan.price}</span>
+                    <span className="w-5h-5ml-2" />{plan.period}</span>
                   </div>
-                  <ul className="w-5 h-5ml-2" />
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key="{featureIndex}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-5 h-5ml-2" />
+                  <ulclassName="w-5h-5ml-2" />
+                    {plan.features.map((feature, featureInd e x) => ())
+                      <likey="{featureInd e x}" className="flexitems-centertext-gray-300" />
+                        <CheckCirc leclassName="w-5h-5ml-2" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    to="/contact"
-                    className="{`w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-red-500 to-purple-600 text-white hover:from-red-600 hover:to-purple-700'
-                        : 'border-2 border-red-400 text-red-400 hover: bg-red-400/10'
+                  <Link;
+                    to="/contact";
+                    className="{`w-full" block text-centerpy-3px-6rounded-lgfont-semiboldtransition-allduration-300 ${
+                      plan.popular;
+                        ? 'bg-gradient-to-rfrom-red-500to-purple-600text-whitehover:from-red-600hover:to-purple-700';
+                        : 'border-2border-red-400text-red-400hover: bg-red-400/10';
                     }`}
-                    />Get Started
+                    />Get Started;
                   </Link>
                 </div>
               ))}
             </div>
         </section>
 
-        {/* Testimonials */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />Trusted by Leading Platforms
+        {/* Testimonia l s */}
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <h2 className="w-5h-5ml-2" />Trusted by Leading Platforms;
               </h2>
-              <p className="w-5 h-5ml-2">See how our AI content moderation protects platforms worldwide
+              <p className="w-5h-5ml-2">See how our AI content moderation protects platforms worldwide;
               </p>
             </div>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              {testimonials.map((testimonial, index) => (
-                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-5 h-5te xt-yellow-400fill-current"  />
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              {testimonia l s.map((testimoni a l, index) => ())
+                <divkey="{index}" className="bg-slate-800/50rounded-xlp-6borderborder-slate-700" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                    {[...Array(testimoni a l.rating)].map((_, i) => ())
+                      <Starkey="{i}" className="w-5h-5text-yellow-400fill-current"  />
                     ))}
                   </div>
-                  <p className="w-5 h-5ml-2">"{testimonial.content}"</p>
+                  <p className="w-5h-5ml-2">"{testimoni a l.content}"</p>
                   <div />
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}</div>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{testimoni a l.name}</div>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{testimoni a l.company}</div>
                 </div>
               ))}
             </div>
         </section>
 
         {/* CTA Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />Protect Your Platform Today
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <h2 className="w-5h-5ml-2" />Protect Your Platform Today;
               </h2>
-              <p className="w-5 h-5ml-2">Join thousands of platforms using AI Content Moderation Pro to keep their communities safe
+              <p className="w-5h-5ml-2">Join thousands of platforms using AI Content Moderation Pro to keep their communiti e s safe;
               </p>
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Link to="/contact" className="bg-gradient-to-rfrom-red-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700transition-allduration-300">Start Your Free Trial
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                <Linkto="/contact" className="bg-gradient-to-rfrom-red-500to-purple-600text-whitepx-8py-4rounded-lgfont-semiboldhover:from-red-600hover:to-purple-700transition-allduration-300">Start Your Free Trial;
                 </Link>
-                <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More
+                <Linkto="/about" className="border-2border-whitetext-whitepx-8py-4rounded-lgfont-semiboldhover:bg-white/10transition-colors">Learn More;
                 </Link>
               </div>
           </div>

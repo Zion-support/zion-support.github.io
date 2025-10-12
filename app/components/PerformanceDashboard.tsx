@@ -5,114 +5,114 @@ import { HardDrive } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { HardDrive } from 'lucide-react';
 
-interface PerformanceMetrics {
+interface PerformanceMetri c s {
   lcp: number;,
   fid: number;,
   cls: number;,
   ttfb: number;,
   fcp: number;
   memory?: {
-    usedJSHeapSize: number;,
-  totalJSHeapSize: number;,
-  jsHeapSizeLimit: number;
+    usedJSHeapSi z e: number;,
+  totalJSHeapSi z e: number;,
+  jsHeapSizeLim i t: number;
   };
   connection?: {
-    effectiveType: string;,
+    effectiveTy p e: string;,
   downlink: number;,
   rtt: number;
   };
 }
 
-const PerformanceDashboard: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics />({
+const PerformanceDashboa r d: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetri c s />({)
     lcp: 0,
     fid: 0,
     cls: 0,
     ttfb: 0,
     fcp: 0,
   });
-  useEffect(() => {
-    // Only show in development or if user has enabled debug mode
-    const shouldShow = process.env.NODE_ENV === 'development' || 
-                      localStorage.getItem('debug-performance') === 'true';
+  useEffect(() => {)
+    // Only show in developme n t or if user has enabled debug mode;
+    constshouldShow= process.env.NODE_ENV === 'developme n t' || 
+                      localStora g e.getItem('debug-performance') === 'true';
     if (!shouldShow) return;
 
-    setIsVisible(true);
+    setIsVisib l e(true);
 
-    // Monitor Core Web Vitals
-    if ('PerformanceObserver' in, window) {
-      // LCP
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1] as PerformanceEntry;
-        setMetrics(const prev = > ({ ...prev, lcp: lastEntry.startTime }));
+    // Monitor Core Web Vitals;
+    if ('PerformanceObserv e r' in, window) {
+      // LCP;
+      const lcpObserver= new PerformanceObserv e r((list) => {)
+        constentries= list.getEntries();
+        constlastEntry= entries[entries.length - 1] as PerformanceEnt r y;
+        setMetrics(constprev= > ({ ...prev, lcp: lastEntry.startTime ,}));
       });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      lcpObserv e r.observe({ entryTypes: ['largest-contentful-paint'] ,});
 
-      // FID
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          setMetrics(const prev = > ({ 
+      // FID;
+      const fidObserver= new PerformanceObserv e r((list) => {)
+        constentries= list.getEntries();
+        entries.forEach((entry: any) => {)
+          setMetrics(constprev= > ({))
             ...prev, 
-            fid: entry.processingStart - entry.startTime 
+            fid: entry.processingSta r t - entry.startTime;
           }));
         });
       });
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      fidObserv e r.observe({ entryTypes: ['first-input'] ,});
 
-      // CLS
-      let const clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
+      // CLS;
+      letconstclsValue= 0;
+      const clsObserver= new PerformanceObserv e r((list) => {)
+        constentries= list.getEntries();
+        entries.forEach((entry: any) => {)
+          if (!entry.hadRecentInp u t) {
             clsValue += entry.value;
-            setMetrics(const prev = > ({ ...prev, cls: clsValue }));
+            setMetrics(constprev= > ({ ...prev, cls: clsValue ,}));
           }
         });
       });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      clsObserv e r.observe({ entryTypes: ['layout-shift'] ,});
 
-      // FCP
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          setMetrics(const prev = > ({ ...prev, fcp: entry.startTime }));
+      // FCP;
+      const fcpObserver= new PerformanceObserv e r((list) => {)
+        constentries= list.getEntries();
+        entries.forEach((entry) => {)
+          setMetrics(constprev= > ({ ...prev, fcp: entry.startTime ,}));
         });
       });
-      fcpObserver.observe({ entryTypes: ['paint'] });
+      fcpObserv e r.observe({ entryTypes: ['paint'] ,});
 
-      // TTFB
-      const navigationObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          setMetrics(const prev = > ({ 
+      // TTFB;
+      const navigationObserver= new PerformanceObserv e r((list) => {)
+        constentries= list.getEntries();
+        entries.forEach((entry: any) => {)
+          setMetrics(constprev= > ({))
             ...prev, 
-            ttfb: entry.responseStart - entry.requestStart 
+            ttfb: entry.responseSta r t - entry.requestSta r t;
           }));
         });
       });
-      navigationObserver.observe({ entryTypes: ['navigation'] });
+      navigationObserv e r.observe({ entryTypes: ['navigation'] ,});
 
-      // Memory usage
-      const updateMemory = () => {
-        if ('memory' in, performance) {
-          setMetrics(prev => ({ 
+      // Memory usage;
+      const updateMemory= () => {
+        if ('memory' in, performan c e) {
+          setMetrics(prev => ({))
             ...prev, 
-            memory: (performance as, any).memory 
+            memory: (performan c e as, any).memory;
           }));
         }
       };
-      updateMemory();
-      const memoryInterval = setInterval(updateMemory, 5000);
-      // Connection info
+      updateMemo r y();
+      const memoryInterval= setInterv a l(updateMemo r y, 5000);
+      // Connection info;
       if ('connection' in, navigator) {
-        const connection = (navigator as, any).connection;
-        setMetrics(const prev = > ({ 
+        constconnection= (navigator as, any).connection;
+        setMetrics(constprev= > ({))
           ...prev, 
           connection: {,
-  effectiveType: connection.effectiveType,
+  effectiveTy p e: connection.effectiveTy p e,
             downlink: connection.downlink,
             rtt: connection.rtt,
           }
@@ -120,104 +120,104 @@ const PerformanceDashboard: React.FC = () => {
       }
 
       return () => {
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-        fcpObserver.disconnect();
-        navigationObserver.disconnect();
-        clearInterval(memoryInterval);
+        lcpObserv e r.disconnect();
+        fidObserv e r.disconnect();
+        clsObserv e r.disconnect();
+        fcpObserv e r.disconnect();
+        navigationObserv e r.disconnect();
+        clearInterv a l(memoryInterv a l);
       };
     }
   }, []);
 
   if (!isVisible) return null;
 
-  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
+  const getScoreColor= (value: number, thresholds: { good: number; poor: number ,}) => {
     if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.poor) return 'text-yellow-400';
     return 'text-red-400';
   };
 
-  const formatBytes = (bytes: number) => {
+  const formatBytes= (bytes: number) => {
     if (bytes === 0) return '0 Bytes';
-    const k = 1024;
-    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    constk= 1024;
+    constsizes= ['Bytes', 'KB', 'MB', 'GB'];
+    consti= Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <h3 className="w-5 h-5ml-2" />
-          <Activity className="w-5 h-5ml-2" />
-          Performance
+return (
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+        <h3 className="w-5h-5ml-2" />
+          <ActivityclassName="w-5h-5ml-2" />
+          Performan c e;
         </h3>
-        <button
-          onClick="{()" =  />setIsVisible(false)}
-          className="text-gray-400hover: text-white"
+        <button;
+          onClick="{()" =  />setIsVisib l e(false)}
+          className="text-gray-400hover:text-white"
         >
-          ×
+          ×;
         </button>
       </div>
 
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
           <span />LCP:</span>
-          <span className="{getScoreColor(metrics.lcp," { good: 2500, poor: 4000 })}  />{metrics.lcp.toFixed(0)}ms
+          <span className="{getScoreColor(metrics.lcp," { good: 2500, poor: 4000 ,})}  />{metrics.lcp.toFixed(0)}ms;
           </span>
         </div>
         
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
           <span />FID:</span>
-          <span className="{getScoreColor(metrics.fid," { good: 100, poor: 300 })}  />{metrics.fid.toFixed(0)}ms
+          <span className="{getScoreColor(metrics.fid," { good: 100, poor: 300 ,})}  />{metrics.fid.toFixed(0)}ms;
           </span>
         </div>
         
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
           <span />CLS:</span>
-          <span className="{getScoreColor(metrics.cls," { good: 0.1, poor: 0.25 })}  />{metrics.cls.toFixed(3)}
+          <span className="{getScoreColor(metrics.cls," { good: 0.1, poor: 0.25 ,})}  />{metrics.cls.toFixed(3)}
           </span>
         </div>
         
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
           <span />FCP:</span>
-          <span className="{getScoreColor(metrics.fcp," { good: 1800, poor: 3000 })}  />{metrics.fcp.toFixed(0)}ms
+          <span className="{getScoreColor(metrics.fcp," { good: 1800, poor: 3000 ,})}  />{metrics.fcp.toFixed(0)}ms;
           </span>
         </div>
         
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
           <span />TTFB:</span>
-          <span className="{getScoreColor(metrics.ttfb," { good: 800, poor: 1800 })}  />{metrics.ttfb.toFixed(0)}ms
+          <span className="{getScoreColor(metrics.ttfb," { good: 800, poor: 1800 ,})}  />{metrics.ttfb.toFixed(0)}ms;
           </span>
         </div>
 
-        {metrics.memory && (
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <HardDrive className="w-5 h-5ml-2" />
-              <span className="w-5 h-5ml-2" />Memory</span>
+        {metrics.memory && ()
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <HardDriveclassName="w-5h-5ml-2" />
+              <span className="w-5h-5ml-2" />Memory</span>
             </div>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div />Used: {formatBytes(metrics.memory.usedJSHeapSize)}</div>
-              <div />Total: {formatBytes(metrics.memory.totalJSHeapSize)}</div>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <div />Used: {formatByt e s(metrics.memory.usedJSHeapSi z e),}</div>
+              <div />Total: {formatByt e s(metrics.memory.totalJSHeapSi z e),}</div>
           </div>
         )}
 
-        {metrics.connection && (
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <Wifi className="w-5 h-5ml-2" />
-              <span className="w-5 h-5ml-2" />Connection</span>
+        {metrics.connection && ()
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <WificlassName="w-5h-5ml-2" />
+              <span className="w-5h-5ml-2" />Connection</span>
             </div>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div />Type: {metrics.connection.effectiveType}</div>
-              <div />Speed: {metrics.connection.downlink}Mbps</div>
-              <div />RTT: {metrics.connection.rtt}ms</div>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <div />Type: {metrics.connection.effectiveTy p e,}</div>
+              <div />Speed: {metrics.connection.downlink,}Mbps</div>
+              <div />RTT: {metrics.connection.rtt,}ms</div>
           </div>
         )}
       </div>
   );
 };
 
-export default PerformanceDashboard;
+export default PerformanceDashboa r d;

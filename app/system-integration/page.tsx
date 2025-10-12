@@ -5,101 +5,101 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Shield, Cloud } from 'lucide-react';
 
 const Page: React.FC = () => {
-  const features = [
+  constfeatures= [
     {
-      icon: <Cloud className="w-5 h-5ml-2" />,
-      title: "Cloud Integration",
-      description: "Seamlessly integrate with all major cloud platforms and services."
+      icon: <CloudclassName="w-5h-5ml-2" />,
+      title: "Cloud Integrati o n",
+      description: "Seamlessly integrate with all major cloud platforms and services.";
     },
     {
-      icon: <Zap className="w-5 h-5ml-2" />,
-      title: "Real-time Sync",
-      description: "Keep all your systems synchronized with real-time data updates."
+      icon: <ZapclassName="w-5h-5ml-2" />,
+      title: "Real-timeSync",
+      description: "Keep all your systems synchroniz e d with real-timedataupdates.";
     },
     {
-      icon: <Shield className="w-5 h-5ml-2" />,
+      icon: <ShieldclassName="w-5h-5ml-2" />,
       title: "Secure & Reliable",
-      description: "Enterprise-grade security ensures your data is protected during integration."
+      description: "Enterprise-gradesecurityensures your data is protected during integrati o n.";
     }
   ];
 
-  return (
+return (
     <>
-      <Helmet>
-        <title />System Integration - Zion Tech Group</title>
-        <meta name="description" content="Professional system integration services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta name="keywords" content="system integration, IT services, Zion Tech Group" />
-        <meta property="og:title" content="System Integration - Zion Tech Group" />
-        <meta property="og:description" content="Professional system integration services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/system-integration" />
+      <Helmet></Helmet>
+        <title />System Integrati o n - Zion Tech Group</title>
+        <meta name="description" content="Professional system integrati o n services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <meta name="keywords" content="system integrati o n, IT services, Zion Tech Group" />
+        <metaproperty="og:title" content="System Integrati o n - Zion Tech Group" />
+        <metaproperty="og:description" content="Professional system integrati o n services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <metaproperty="og:type" content="website" />
+        <metaproperty="og:url" content="https://ziontechgro u p.com/system-integration" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
         {/* Hero Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5 h-5ml-2" />
-              <span className="w-5 h-5ml-2" />
-                System Integration
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <h1 className="w-5h-5ml-2" />
+              <span className="w-5h-5ml-2" />
+                System Integrati o n;
               </span>
             </h1>
-            <p className="w-5 h-5ml-2">Professional system integration services by Zion Tech Group. Expert solutions tailored to your business needs.
+            <p className="w-5h-5ml-2">Professional system integrati o n services by Zion Tech Group. Expert solutions tailored to your business needs.;
             </p>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup"
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <Link;
+          to="/contact";
+          className="bg-gradient-to-rfrom-cyan-500to-purple-500text-whitepx-8py-4rounded-lgfont-semiboldtext-lghover:from-cyan-600hover:to-purple-600transition-allduration-300transformhover:scale-105shadow-lghover:shadow-cyan-500/25flexitems-centerjustify-centergroup"
         >
-          Get Started
+          Get Started;
                 
-          <ArrowRight className="w-5 h-5ml-2" />
+          <ArrowRight className="w-5h-5ml-2" />
         </Link>
-              <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
-                Learn More
+              <Linkto="/contact" className="borderborder-cyan-500text-cyan-400px-8py-4rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10transition-allduration-300transformhover:scale-105" />
+                Learn More;
               </Link>
             </div>
         </section>
 
         {/* Features Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />
-                Why Choose Our System Integration Services?
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <h2 className="w-5h-5ml-2" />
+                Why Choose Our System Integrati o n Services?;
               </h2>
-              <p className="w-5 h-5ml-2">Our expert team helps you connect and optimize all your business systems
+              <p className="w-5h-5ml-2">Our expert team helps you connect and optimize all your business systems;
               </p>
             </div>
             
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center hover:border-cyan-500/50transition-allduration-300" />
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              {features.map((feature, index) => ())
+                <divkey={index} className="bg-slate-800/50backdrop-blur-smborderborder-slate-700rounded-xlp-8text-centerhover:border-cyan-500/50transition-allduration-300" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
                     {feature.icon}
                   </div>
-                  <h3 className="w-5 h-5ml-2" />{feature.title}</h3>
-                  <p className="w-5 h-5ml-2">{feature.description}</p>
+                  <h3 className="w-5h-5ml-2" />{feature.title}</h3>
+                  <p className="w-5h-5ml-2">{feature.description}</p>
                 </div>
               ))}
             </div>
         </section>
 
         {/* CTA Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />
-                Ready to Get Started?
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <h2 className="w-5h-5ml-2" />
+                Ready to Get Started?;
               </h2>
-              <p className="w-5 h-5ml-2">Contact us to learn more about our solutions and how we can help your business.
+              <p className="w-5h-5ml-2">Contact us to learn more about our solutions and how we can help your business.;
               </p>
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25" />
-                  Contact Us
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                <Linkto="/contact" className="bg-gradient-to-rfrom-cyan-500to-purple-500text-whitepx-8py-4rounded-lgfont-semiboldtext-lghover:from-cyan-600hover:to-purple-600transition-allduration-300transformhover:scale-105shadow-lghover:shadow-cyan-500/25" />
+                  Contact Us;
                 </Link>
-                <Link to="/services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
-                  View All Services
+                <Linkto="/services" className="borderborder-cyan-500text-cyan-400px-8py-4rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10transition-allduration-300transformhover:scale-105" />
+                  View All Services;
                 </Link>
               </div>
           </div>

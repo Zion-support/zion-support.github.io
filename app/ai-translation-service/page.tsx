@@ -6,34 +6,34 @@ import { Link } from 'react-router-dom';
 import { Languages, ArrowRight} from 'lucide-react';
 import Layout from '../layout';
 
-export default function AITranslationService() {
-  const features = [
+export default function AITranslationServi c e() {
+  constfeatures= [
     {
-      icon: <Brain className="w-5 h-5ml-2" />,
-      title: 'Neural Machine Translation',
-      description: 'Advanced AI models provide contextually accurate translations in 100+ languages'
+      icon: <BrainclassName="w-5h-5ml-2" />,
+      title: 'Neural Machine Translati o n',
+      description: 'Advanced AI models provide contextual l y accurate translatio n s in 100+ languages';
     },
     {
-      icon: <FileText className="w-5 h-5ml-2" />,
-      title: 'Document Translation',
-      description: 'Translate entire documents while preserving formatting, layout, and structure'
+      icon: <FileTextclassName="w-5h-5ml-2" />,
+      title: 'Document Translati o n',
+      description: 'Translate entire documents while preserving formatting, layout, and structure';
     },
     {
-      icon: <Clock className="w-5 h-5ml-2" />,
-      title: 'Real-time Translation',
-      description: 'Instant translation for live conversations, meetings, and customer support'
+      icon: <ClockclassName="w-5h-5ml-2" />,
+      title: 'Real-timeTranslatio n',
+      description: 'Instant translati o n for live conversatio n s, meetings, and customer support';
     },
     {
-      icon: <Target className="w-5 h-5ml-2" />,
-      title: 'Industry-Specific Translation',
-      description: 'Specialized translation models for legal, medical, technical, and business content'
+      icon: <TargetclassName="w-5h-5ml-2" />,
+      title: 'Industry-SpecificTranslatio n',
+      description: 'Specializ e d translati o n models for legal, medical, technical, and business content';
     }
   ]
 
-  const translationFeatures = [
+  const translationFeatures= [
     {
-      category: 'Translation Types',
-      items: ['Text Translation', 'Document Translation', 'Website Translation', 'Audio Translation', 'Video Subtitles', 'Live Translation']
+      category: 'Translati o n Types',
+      items: ['Text Translati o n', 'Document Translati o n', 'Website Translati o n', 'Audio Translati o n', 'Video Subtitles', 'Live Translati o n']
     },
     {
       category: 'Languages',
@@ -41,29 +41,29 @@ export default function AITranslationService() {
     },
     {
       category: 'Quality Assurance',
-      items: ['Human Review', 'Quality Scoring', 'Consistency Checks', 'Terminology Management', 'Style Guides', 'Proofreading']
+      items: ['Human Review', 'Quality Scoring', 'Consisten c y Checks', 'Terminolo g y Management', 'Style Guides', 'Proofreadi n g']
     },
     {
-      category: 'Integration',
-      items: ['API Access', 'CMS Integration', 'Website Widgets', 'Mobile Apps', 'Desktop Software', 'Cloud Storage']
+      category: 'Integrati o n',
+      items: ['API Access', 'CMS Integrati o n', 'Website Widgets', 'Mobile Apps', 'Desktop Software', 'Cloud Storage']
     }
   ]
 
-  const pricingPlans = [
+  const pricingPlans= [
     {
       name: 'Starter',
       price: '$29',
       period: '/month',
-      description: 'Perfect for small businesses and freelancers',
+      description: 'Perfect for small businesses and freelance r s',
       features: [
         'Up to 10,000 words/month',
         '50+ languages',
-        'Basic document translation',
+        'Basic document translati o n',
         'Email support',
         'Standard quality',
-        'API access'
+        'API access';
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
@@ -73,128 +73,128 @@ export default function AITranslationService() {
       features: [
         'Up to 100,000 words/month',
         '100+ languages',
-        'Advanced document translation',
+        'Advanced document translati o n',
         'Priority support',
         'High quality',
         'Human review',
-        'Custom terminology'
+        'Custom terminolo g y';
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
       price: '$299',
       period: '/month',
-      description: 'For large organizations',
+      description: 'For large organizatio n s',
       features: [
         'Unlimited words',
         'All languages',
-        'Custom translation models',
+        'Custom translati o n models',
         'Dedicated support',
         'Premium quality',
-        'White-label solution',
-        'SLA guarantee'
+        'White-labelsolution',
+        'SLA guarantee';
       ],
-      popular: false
+      popular: false;
     }
   ]
 
-  const testimonials = [
+  const testimonials= [
     {
       name: 'Maria Santos',
       company: 'Global Marketing Agency',
-      content: 'AI Translation Service helped us expand to 15 new markets. The quality is exceptional and cost-effective.',
-      rating: 5
+      content: 'AI Translati o n Service helped us expand to 15 new markets. The quality is exception a l and cost-effective.',
+      rating: 5;
     },
     {
       name: 'James Wilson',
-      company: 'E-learning Platform',
-      content: 'Translating our courses into 8 languages was seamless. The educational content translation is spot-on.',
-      rating: 5
+      company: 'E-learningPlatform',
+      content: 'Translati n g our courses into 8 languages was seamless. The education a l content translati o n is spot-on.',
+      rating: 5;
     },
     {
       name: 'Lisa Chen',
       company: 'Legal Firm',
-      content: 'The legal translation accuracy is impressive. Our international clients are very satisfied with the service.',
-      rating: 5
+      content: 'The legal translati o n accuracy is impressive. Our internation a l clients are very satisfied with the service.',
+      rating: 5;
     }
   ]
 
-  return (
-    <Layout
-      title="AI Translation Service - Professional Translation Solutions | Zion Tech Group"
-      description="Transform your global communication with AI-powered translation in 100+ languages. Professional quality, real-time translation, and industry-specific solutions. Start your free trial today."
-      keywords="AI translation, machine translation, document translation, multilingual content, translation API, language services" />
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+return (
+    <Layout;
+      title="AI Translati o n Service - Professional Translati o n Solutions | Zion Tech Group";
+      description="Transform your global communicati o n with AI-poweredtranslatio n in 100+ languages. Professional quality, real-timetranslatio n, and industry-specificsolutions. Start your free trial today.";
+      keywords="AI translati o n, machine translati o n, document translati o n, multilingu a l content, translati o n API, language services" />
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
         {/* Hero Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Languages className="w-5 h-5ml-2" />
-                AI-Powered Translation
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                <LanguagesclassName="w-5h-5ml-2" />
+                AI-PoweredTranslatio n;
               </div>
-              <h1 className="w-5 h-5ml-2">AI Translation Service
+              <h1 className="w-5h-5ml-2">AI Translati o n Service;
               </h1>
-              <p className="w-5 h-5ml-2">Transform your global communication with AI-powered translation in 100+ languages. 
-                Professional quality, real-time translation, and industry-specific solutions.
+              <p className="w-5h-5ml-2">Transform your global communicati o n with AI-poweredtranslatio n in 100+ languages.;
+                Professional quality, real-timetranslatio n, and industry-specificsolutions.;
               </p>
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Link
-          to="/contact"
-          className="bg-gradient-to-rfrom-amber-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-purple-700 transition-all duration-300 flexitems-center justify-center"
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                <Link;
+          to="/contact";
+          className="bg-gradient-to-rfrom-amber-500to-purple-600text-whitepx-8py-4rounded-lgfont-semiboldhover:from-amber-600hover:to-purple-700transition-allduration-300flexitems-centerjustify-center"
         >
-          Start Free Trial
+          Start Free Trial;
                   
-          <ArrowRight className="w-5 h-5ml-2" />
+          <ArrowRight className="w-5h-5ml-2" />
         </Link>
-                <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Try Demo
+                <Linkto="#demo" className="border-2border-whitetext-whitepx-8py-4rounded-lgfont-semiboldhover:bg-white/10transition-colors">Try Demo;
                 </Link>
               </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />Intelligent Translation Solutions
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <h2 className="w-5h-5ml-2" />Intellige n t Translati o n Solutions;
               </h2>
-              <p className="w-5 h-5ml-2">AI-powered features that break down language barriers and enable global communication
+              <p className="w-5h-5ml-2">AI-poweredfeaturesthat break down language barriers and enable global communicati o n;
               </p>
             </div>
             
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              {features.map((feature, index) => (
-                <div key="{index}" className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-amber-500/20 hover:border-amber-400/40transition-allduration-300" />
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              {features.map((feature, index) => ())
+                <divkey="{index}" className="bg-gradient-to-brfrom-slate-800/50to-purple-900/30rounded-xlp-6borderborder-amber-500/20hover:border-amber-400/40transition-allduration-300" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
                     {feature.icon}
-                    <h3 className="w-5 h-5ml-2" />{feature.title}</h3>
+                    <h3 className="w-5h-5ml-2" />{feature.title}</h3>
                   </div>
-                  <p className="w-5 h-5ml-2">{feature.description}</p>
+                  <p className="w-5h-5ml-2">{feature.description}</p>
                 </div>
               ))}
             </div>
         </section>
 
-        {/* Translation Features */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />Complete Translation Platform
+        {/* Translati o n Features */}
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <h2 className="w-5h-5ml-2" />Complete Translati o n Platform;
               </h2>
-              <p className="w-5 h-5ml-2">Everything you need to translate content across languages and cultures
+              <p className="w-5h-5ml-2">Everything you need to translate content across languages and cultures;
               </p>
             </div>
             
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              {translationFeatures.map((feature, index) => (
-                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
-                  <h3 className="w-5 h-5ml-2" />{feature.category}</h3>
-                  <ul className="w-5 h-5ml-2" />
-                    {feature.items.map((item, itemIndex) => (
-                      <li key="{itemIndex}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-5 h-5ml-2" />
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              {translationFeatur e s.map((feature, index) => ())
+                <divkey="{index}" className="bg-slate-800/50rounded-xlp-6borderborder-slate-700" />
+                  <h3 className="w-5h-5ml-2" />{feature.category}</h3>
+                  <ulclassName="w-5h-5ml-2" />
+                    {feature.items.map((item, itemIndex) => ())
+                      <likey="{itemIndex}" className="flexitems-centertext-gray-300" />
+                        <CheckCirc leclassName="w-5h-5ml-2" />
                         {item}
                       </li>
                     ))}
@@ -205,94 +205,94 @@ export default function AITranslationService() {
         </section>
 
         {/* Pricing Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />Flexible Pricing Plans
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <h2 className="w-5h-5ml-2" />Flexible Pricing Plans;
               </h2>
-              <p className="w-5 h-5ml-2">Choose the plan that fits your translation needs
+              <p className="w-5h-5ml-2">Choose the plan that fits your translati o n needs;
               </p>
             </div>
             
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              {pricingPlans.map((plan, index) => (
-                <div key="{index}" className="{`bg-gradient-to-br" from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
-                  plan.popular 
-                    ? 'border-amber-400/40 scale-105 shadow-2 xl shadow-amber-500/20' 
-                    : 'border-amber-500/20 hover: border-amber-400/40'
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              {pricingPla n s.map((plan, index) => ())
+                <divkey="{index}" className="{`bg-gradient-to-br" from-slate-800/50 to-purple-900/30 rounded-xlp-8border transition-allduration-300 ${>
+                  plan.popular;
+                    ? 'border-amber-400/40 scale-105shadow-2xl shadow-amber-500/20';
+                    : 'border-amber-500/20 hover: border-amber-400/40';
                 }`} />
-                  {plan.popular && (
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                      <Star className="w-5 h-5ml-2" />
-                      Most Popular
+                  {plan.popular && ()
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                      <StarclassName="w-5h-5ml-2" />
+                      Most Popular;
                     </div>
                   )}
-                  <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
-                  <p className="w-5 h-5ml-2">{plan.description}</p>
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <span className="w-5 h-5ml-2" />{plan.price}</span>
-                    <span className="w-5 h-5ml-2" />{plan.period}</span>
+                  <h3 className="w-5h-5ml-2" />{plan.name}</h3>
+                  <p className="w-5h-5ml-2">{plan.description}</p>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                    <span className="w-5h-5ml-2" />{plan.price}</span>
+                    <span className="w-5h-5ml-2" />{plan.period}</span>
                   </div>
-                  <ul className="w-5 h-5ml-2" />
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key="{featureIndex}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-5 h-5ml-2" />
+                  <ulclassName="w-5h-5ml-2" />
+                    {plan.features.map((feature, featureInd e x) => ())
+                      <likey="{featureInd e x}" className="flexitems-centertext-gray-300" />
+                        <CheckCirc leclassName="w-5h-5ml-2" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    to="/contact"
-                    className="{`w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-amber-500 to-purple-600 text-white hover:from-amber-600 hover:to-purple-700'
-                        : 'border-2 border-amber-400 text-amber-400 hover: bg-amber-400/10'
+                  <Link;
+                    to="/contact";
+                    className="{`w-full" block text-centerpy-3px-6rounded-lgfont-semiboldtransition-allduration-300 ${
+                      plan.popular;
+                        ? 'bg-gradient-to-rfrom-amber-500to-purple-600text-whitehover:from-amber-600hover:to-purple-700';
+                        : 'border-2border-amber-400text-amber-400hover: bg-amber-400/10';
                     }`}
-                    />Get Started
+                    />Get Started;
                   </Link>
                 </div>
               ))}
             </div>
         </section>
 
-        {/* Testimonials */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />Trusted by Global Businesses
+        {/* Testimonia l s */}
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <h2 className="w-5h-5ml-2" />Trusted by Global Businesses;
               </h2>
-              <p className="w-5 h-5ml-2">See how our AI Translation Service enables global communication
+              <p className="w-5h-5ml-2">See how our AI Translati o n Service enables global communicati o n;
               </p>
             </div>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              {testimonials.map((testimonial, index) => (
-                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-5 h-5te xt-yellow-400fill-current"  />
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              {testimonia l s.map((testimoni a l, index) => ())
+                <divkey="{index}" className="bg-slate-800/50rounded-xlp-6borderborder-slate-700" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                    {[...Array(testimoni a l.rating)].map((_, i) => ())
+                      <Starkey="{i}" className="w-5h-5text-yellow-400fill-current"  />
                     ))}
                   </div>
-                  <p className="w-5 h-5ml-2">"{testimonial.content}"</p>
+                  <p className="w-5h-5ml-2">"{testimoni a l.content}"</p>
                   <div />
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}</div>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{testimoni a l.name}</div>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">{testimoni a l.company}</div>
                 </div>
               ))}
             </div>
         </section>
 
         {/* CTA Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />Break Down Language Barriers Today
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+              <h2 className="w-5h-5ml-2" />Break Down Language Barriers Today;
               </h2>
-              <p className="w-5 h-5ml-2">Join thousands of businesses using AI Translation Service to reach global audiences
+              <p className="w-5h-5ml-2">Join thousands of businesses using AI Translati o n Service to reach global audiences;
               </p>
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Link to="/contact" className="bg-gradient-to-rfrom-amber-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-purple-700transition-allduration-300">Start Your Free Trial
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900pt-20">
+                <Linkto="/contact" className="bg-gradient-to-rfrom-amber-500to-purple-600text-whitepx-8py-4rounded-lgfont-semiboldhover:from-amber-600hover:to-purple-700transition-allduration-300">Start Your Free Trial;
                 </Link>
-                <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More
+                <Linkto="/about" className="border-2border-whitetext-whitepx-8py-4rounded-lgfont-semiboldhover:bg-white/10transition-colors">Learn More;
                 </Link>
               </div>
           </div>

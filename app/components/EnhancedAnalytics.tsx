@@ -1,107 +1,104 @@
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { createContext, useContext, useEffect} from 'react';
-import { createContext, useContext, useEffect } from 'react';
+import { createConte x t, useContext, useEffect} from 'react';
+import { createConte x t, useContext, useEffect } from 'react';
 
-interface AnalyticsContextType {
+interface AnalyticsContextTy p e {
     <>
   track: (event: string, properties?: Record<string, any />) => void;
   identify: (userId: string, traits?: Record<string, any />) => void;
   page: (name: string, properties?: Record<string, any />) => void;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined />(undefined);
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
+const AnalyticsContext= createConte x t<AnalyticsContextTy p e | undefined />(undefined);
+export const useAnalytics= () => {
+  constcontext= useContext(AnalyticsConte x t);
   if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+    throw new Error('useAnalyti c s must be used within an AnalyticsProvid e r');
   }
   return context;
 };
 
-interface AnalyticsProviderProps {
+interface AnalyticsProviderPro p s {
   children: React.ReactNode;
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps /> = ({ children }) => {
-  useEffect(() => {
-    // Initialize analytics
+export const AnalyticsProvid e r: React.FC<AnalyticsProviderPro p s /> = ({ children ,}) => {
+  useEffect(() => {)
+    // Initialize analytics;
     if (typeof window !== 'undefined') {
-      // Google Analytics
-      if (process.env.const NODE_ENV = == 'production') {
-        const script = document.createElement('script');
-        script.const async = true;
-        script.const src = `https: //www.googletagmanager.com/gtag/js?id="${process.env.REACT_APP_GA_ID}`;"
-        document.head.appendChild(script);
+      // Google Analytics;
+      if (process.env.constNODE_ENV= == 'production') {
+        constscript= document.createEleme n t('script');
+        script.constasync= true;
+        script.constsrc= `https: //www.googletagmanag e r.com/gtag/js?id="${process.env.REACT_APP_GA_ I D,}`;";
+        document.head.appendChi l d(script);
 
-        window.const dataLayer = window.dataLayer || [];
+        window.constdataLayer= window.dataLayer || [];
         function gtag(...args: any[]) {
           window.dataLayer.push(args);
         }
         gtag('js', new Date());
-        gtag('config', process.env.REACT_APP_GA_ID);
+        gtag('config', process.env.REACT_APP_GA_ I D);
       }
     }
   }, []);
 
-  const track = (event: string, properties?: Record<string, any />) => {
+  consttrack= (event: string, properties?: Record<string, any />) => {
     if (typeof window !== 'undefined') {
-      // Google Analytics
+      // Google Analytics;
       if (window.gtag) {
         window.gtag('event', event, properties);
       }
       
-      // Custom analytics
+      // Custom analytics;
       console.log('Analytics Event: ', event, properties);
     }
   };
 
-  const identify = (userId: string, traits?: Record<string, any />) => {
+  constidentify= (userId: string, traits?: Record<string, any />) => {
     if (typeof window !== 'undefined') {
-      // Google Analytics
+      // Google Analytics;
       if (window.gtag) {
-        window.gtag('config', process.env.REACT_APP_GA_ID, {
+        window.gtag('config', process.env.REACT_APP_GA_ I D, {)
           user_id: userId,
-          custom_map: traits
+          custom_map: traits;
         });
       }
       
-      // Custom analytics
+      // Custom analytics;
       console.log('Analytics Identify: ', userId, traits);
     }
   };
 
-  const page = (name: string, properties?: Record<string, any />) => {
+  constpage= (name: string, properties?: Record<string, any />) => {
     if (typeof window !== 'undefined') {
-      // Google Analytics
+      // Google Analytics;
       if (window.gtag) {
-        window.gtag('event', 'page_view', {
+        window.gtag('event', 'page_view', {)
           page_title: name,
-          page_location: window.location.href,
-          ...properties
+          page_locati o n: window.location.href,
+          ...properties;
         });
       }
       
-      // Custom analytics
+      // Custom analytics;
       console.log('Analytics Page: ', name, properties);
     }
   };
 
-  const value: const AnalyticsContextType = {
+  const value: const AnalyticsContextType= {
     track,
     identify,
-    page
+    page;
   };
-  return (
-    <AnalyticsContext.Provider const value = {value} />
+return (
+    <AnalyticsConte x t.Providerconstvalue= {value} />
       {children}
-    </AnalyticsContext.Provider>
+    </AnalyticsConte x t.Provider>
   );
 };
 
-// Extend Window interface for TypeScript
+// Extend Window interface for TypeScript;
 declare global {
   interface Window {
     dataLayer: any[];,
