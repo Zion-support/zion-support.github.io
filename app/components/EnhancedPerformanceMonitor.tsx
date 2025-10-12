@@ -53,6 +53,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       description: 'Monitor your application performance in real-time with detailed metrics and analytics.'
     },
     {
+<<<<<<< HEAD
       icon: <Clock className="w-8 h-8 text-green-500" />,
       title: 'Performance Tracking',
       description: 'Track load times, render performance, and user experience metrics.'
@@ -66,11 +67,23 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       icon: <Shield className="w-8 h-8 text-red-500" />,
       title: 'Error Tracking',
       description: 'Monitor and track errors to ensure application stability.'
+=======
+      icon: Zap,
+      title: 'Real-time Analytics',
+>>>>>>> cursor/website-audit-and-update-with-deployment-a178
     }
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<<<<<<< HEAD
+=======
+      <Helmet>
+        <title>Enhanced Performance Monitor | Zion Tech Group</title>
+        <meta name="keywords" content="performance monitoring, AI solutions, IT services, Zion Tech Group, system monitoring" />
+      </Helmet>
+      
+>>>>>>> cursor/website-audit-and-update-with-deployment-a178
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -98,12 +111,18 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       {/* Metrics Display */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Performance Metrics
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Real-time performance data and analytics
+=======
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+>>>>>>> cursor/website-audit-and-update-with-deployment-a178
             </p>
           </div>
           
@@ -155,8 +174,12 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
+<<<<<<< HEAD
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Key Features
+=======
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+>>>>>>> cursor/website-audit-and-update-with-deployment-a178
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive performance monitoring and optimization tools
@@ -177,6 +200,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -194,6 +218,30 @@ const EnhancedPerformanceMonitor: React.FC = () => {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
               Contact Us
             </button>
+=======
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the power of our performance monitoring solutions for your business.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-a178
           </div>
         </div>
       </section>

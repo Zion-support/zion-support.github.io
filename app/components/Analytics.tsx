@@ -30,6 +30,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking])
 
   const initializeGoogleAnalytics = () => {
+<<<<<<< HEAD
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'GA_MEASUREMENT_ID', {
         page_title: document.title,
@@ -64,6 +65,8 @@ const Analytics: React.FC<AnalyticsProps> = ({
       window.addEventListener('unhandledrejection', (event) => {
         console.error('Unhandled promise rejection:', event.reason)
         // Send error to analytics service
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-a178
       })
     }
   }
@@ -83,6 +86,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
       // Track clicks
       const trackClick = (event: Event) => {
         const target = event.target as HTMLElement
+<<<<<<< HEAD
         if (target.tagName === 'A' || target.tagName === 'BUTTON') {
           if (window.gtag) {
             window.gtag('event', 'click', {
@@ -90,10 +94,13 @@ const Analytics: React.FC<AnalyticsProps> = ({
               event_label: target.textContent || target.getAttribute('aria-label') || 'unknown'
             })
           }
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-a178
         }
       }
 
       // Track scroll depth
+<<<<<<< HEAD
       let maxScrollDepth = 0
       const trackScrollDepth = () => {
         const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
@@ -103,16 +110,26 @@ const Analytics: React.FC<AnalyticsProps> = ({
             window.gtag('event', 'scroll', {
               event_category: 'engagement',
               event_label: `${scrollDepth}%`
+=======
+      let maxScroll = 0
+      const trackScroll = () => {
+        const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
+        if (scrollPercent > maxScroll) {
+          maxScroll = scrollPercent
+>>>>>>> cursor/website-audit-and-update-with-deployment-a178
             })
           }
         }
       }
 
+<<<<<<< HEAD
       // Initialize tracking
       trackPageView()
       document.addEventListener('click', trackClick)
       window.addEventListener('scroll', trackScrollDepth)
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-a178
       // Cleanup
       return () => {
         document.removeEventListener('click', trackClick)

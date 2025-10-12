@@ -33,6 +33,7 @@ const FuturisticBackgroundPage: React.FC = () => {
     }
   ]
 
+<<<<<<< HEAD
   return (
     <React.Fragment>
       <Helmet>
@@ -51,6 +52,8 @@ const FuturisticBackgroundPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced futuristicbackground solutions powered by AI technology.
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-a178
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -61,6 +64,7 @@ const FuturisticBackgroundPage: React.FC = () => {
               </button>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
 
         {/* Features Section */}
@@ -226,6 +230,8 @@ export default function FuturisticBackground() {
 }
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-00bf
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-a178
   )
 }
 

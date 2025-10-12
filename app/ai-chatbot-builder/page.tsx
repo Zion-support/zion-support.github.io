@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { ArrowRight, MessageCircle, Users, Zap, Shield } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -92,6 +93,39 @@ export default function AIChatbotBuilderPage() {
       icon: <Globe className="w-6 h-6 text-pink-500" />,
       title: 'Omnichannel Integration',
       description: 'Deploy across websites, social media, and messaging platforms seamlessly.'
+=======
+    }
+  ]
+
+  const chatbotTypes = [
+    {
+      icon: <Users className="w-8 h-8 text-blue-500" />,
+      title: 'Customer Support Bot',
+      description: 'Handle customer inquiries, provide product information, and resolve common issues.',
+      useCases: ['FAQ automation', 'Order tracking', 'Technical support', 'Returns processing'],
+      pricing: 'Starting at $300/month'
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-green-500" />,
+      title: 'Sales Assistant Bot',
+      description: 'Qualify leads, provide product recommendations, and guide customers through the sales process.',
+      useCases: ['Lead qualification', 'Product recommendations', 'Price inquiries', 'Appointment booking'],
+      pricing: 'Starting at $500/month'
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-purple-500" />,
+      title: 'Multi-Channel Bot',
+      description: 'Deploy across multiple channels including website, social media, and messaging apps.',
+      useCases: ['Website chat', 'Facebook Messenger', 'WhatsApp Business', 'Slack integration'],
+      pricing: 'Starting at $800/month'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-500" />,
+      title: 'Enterprise Bot',
+      description: 'Advanced AI chatbot with custom training, analytics, and enterprise features.',
+      useCases: ['Custom AI training', 'Advanced analytics', 'White-label options', 'API access'],
+      pricing: 'Starting at $1,500/month'
+>>>>>>> cursor/website-audit-and-update-with-deployment-a178
     }
   ]
 
@@ -177,6 +211,7 @@ export default function AIChatbotBuilderPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <title>AI Chatbot Builder - Zion Tech Group</title>
         <meta name="description" content="Build intelligent chatbots with our AI-powered chatbot builder. Create engaging conversational experiences for your customers." />
@@ -501,10 +536,15 @@ export default function AIChatbotBuilderPage() {
                 </Link>
               </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-d9d0
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-a178
             </div>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>
   )
 }
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-a178

@@ -52,7 +52,10 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+<<<<<<< HEAD
                 EnhancedAccessibilityEnhancer
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-a178
               </span>
               <br />
               <span className="text-white">Solutions</span>
@@ -62,11 +65,14 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-a178
                 Learn More
               </button>
             </div>
@@ -87,11 +93,14 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
+<<<<<<< HEAD
               <div key={index} className="text-center">
                 <div className="bg-gradient-to-r from-purple-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-a178
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
@@ -121,6 +130,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
           <div className="bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
@@ -136,6 +146,8 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
                 Learn More
               </button>
             </div>
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-a178
       {/* Contact Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">

@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const LoadingPage: React.FC = () => {
@@ -142,6 +143,8 @@ const LoadingPage: React.FC = () => {
           </div>
         </div>
       </section>
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-a178
     </div>
   )
 }

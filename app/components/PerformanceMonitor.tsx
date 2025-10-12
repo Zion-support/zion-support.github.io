@@ -5,6 +5,7 @@ import React, { useEffect } from 'react';
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
+<<<<<<< HEAD
     if (typeof window !== 'undefined' && 'performance' in window) {
       // Monitor Largest Contentful Paint (LCP)
       const observer = new PerformanceObserver((list) => {
@@ -68,6 +69,8 @@ const PerformanceMonitor: React.FC = () => {
         clsObserver.disconnect();
       };
     }
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-a178
   }, []);
 
   return null;
