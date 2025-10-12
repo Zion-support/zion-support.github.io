@@ -102,7 +102,8 @@ export default function AISupplyChainOptimizerPage() {
 
   ];
   return (
-
+    <>
+      <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
         <title>AI Supply Chain Optimizer - Smart Logistics & Inventory Management | Zion Tech Group</title>
 

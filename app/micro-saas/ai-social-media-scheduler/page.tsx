@@ -105,7 +105,8 @@ export default function AISocialMediaSchedulerPage() {
   ]
 
   return (
-
+    <>
+      <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
         <title>AI Social Media Scheduler - Zion Tech Group | Automated Social Media Management</title>
 

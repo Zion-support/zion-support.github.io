@@ -138,7 +138,8 @@ export default function AIProjectManagerPage() {
   ]
 
   return (
-
+    <>
+      <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
         <title>AI Project Manager - Zion Tech Group | Intelligent Project Management</title>
 

@@ -134,7 +134,8 @@ export default function AIEmailMarketingAutomationPage() {
   ]
 
   return (
-
+    <>
+      <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
         <title>AI Email Marketing Automation - Zion Tech Group | Smart Email Campaigns</title>
 

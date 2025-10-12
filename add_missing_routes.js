@@ -7,7 +7,8 @@ const brokenLinks = fs.readFileSync('/workspace/broken_links.txt', 'utf8').split
 let appContent = fs.readFileSync('/workspace/App.tsx', 'utf8');
 
 // Generate import statements for all missing pages
- 
+const importStatements = brokenLinks.map(page => {
+  const componentName = page.split('-').map(word => 
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join('') + 'Page';
   return `import ${componentName} from './app/${page}/page'`;

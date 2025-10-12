@@ -110,7 +110,8 @@ export default function IoTSolutionsPage() {
   ]
 
   return (
-
+    <>
+      <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
         <title>IoT Solutions - Zion Tech Group | Smart Device Management & Analytics</title>
         {/* Open Graph Meta Tags */}

@@ -125,7 +125,8 @@ export default function AIEcommerceOptimizerPro() {
   ]
 
   return (
-    
+    <>
+      <Helmet>
         <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
 
         {/* Hero Section */}

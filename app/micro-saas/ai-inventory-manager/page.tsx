@@ -138,7 +138,8 @@ export default function AIInventoryManagerPage() {
   ]
 
   return (
-
+    <>
+      <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
         <title>AI Inventory Manager - Zion Tech Group | Smart Inventory Management</title>
 

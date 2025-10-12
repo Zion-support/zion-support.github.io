@@ -125,7 +125,8 @@ export default function AIExpenseTrackerPage() {
   ]
 
   return (
-
+    <>
+      <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
         <title>AI Expense Tracker - Zion Tech Group | Smart Financial Management</title>
 

@@ -11,37 +11,47 @@ import { Star, Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings} fr
 'use client';
 
   const features = [
+    {
+          {
       icon: Mail,
-      title: 'Smart Classification',
-      description: 'Automatically categorize and prioritize emails based on content and sender.'
+            title: 'Smart Classification',
+            description: 'Automatically categorize and prioritize emails based on content and sender.'
     },
+          {
       icon: MessageSquare,
-      title: 'Auto-Responses',
-      description: 'Generate intelligent responses using AI to handle common inquiries.'
+            title: 'Auto-Responses',
+            description: 'Generate intelligent responses using AI to handle common inquiries.'
     },
+          {
       icon: Brain,
-      title: 'Sentiment Analysis',
-      description: 'Analyze email tone and sentiment to provide better customer service.'
+            title: 'Sentiment Analysis',
+            description: 'Analyze email tone and sentiment to provide better customer service.'
     },
+          {
       icon: Settings,
-      title: 'Workflow Automation',
-      description: 'Create automated workflows to streamline your email management.'
+            title: 'Workflow Automation',
+            description: 'Create automated workflows to streamline your email management.'
+    }
   ];
   const useCases = [
-      title: 'Customer Support',
-      description: 'Automate responses to common customer inquiries and support tickets.',
+            title: 'Customer Support',
+            description: 'Automate responses to common customer inquiries and support tickets.',
+          {
       icon: Users
     },
-      title: 'Sales Follow-up',
-      description: 'Automatically follow up with leads and prospects based on their behavior.',
+            title: 'Sales Follow-up',
+            description: 'Automatically follow up with leads and prospects based on their behavior.',
+          {
       icon: BarChart3
     },
-      title: 'Email Marketing',
-      description: 'Personalize and optimize email campaigns for better engagement.',
+            title: 'Email Marketing',
+            description: 'Personalize and optimize email campaigns for better engagement.',
+          {
       icon: Zap
     },
-      title: 'Internal Communication',
-      description: 'Streamline internal email workflows and team communication.',
+            title: 'Internal Communication',
+            description: 'Streamline internal email workflows and team communication.',
+          {
       icon: Shield
   ];
   return (
@@ -93,13 +103,19 @@ import { ArrowRight } from 'lucide-react';
 
 export default function AiEmailAssistant() {
   return (
-    
+    <>
+      <Helmet>
         <title>AiEmailAssistant - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">AiEmailAssistant</h1>
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">AiEmailAssistant</h1>
             <p className="text-lg text-gray-300 mb-8">Professional aiemailassistant services coming soon.</p>
             
               Contact Us
-
+          </Link>
+        </div>
+      </div>
+    </>
   );
 
