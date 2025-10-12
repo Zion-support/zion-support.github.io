@@ -3,14 +3,9 @@ import os
 import re
 import glob
 
-def final_fix_file(file_path):
-    """Final comprehensive fix for all files"""
+def create_standard_page(file_path):
+    """Create a standard page template for broken files"""
     try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        original_content = content
-        
         # Extract page name from path
         page_name = os.path.basename(os.path.dirname(file_path))
         if page_name == 'app':
@@ -18,8 +13,8 @@ def final_fix_file(file_path):
         else:
             page_name = page_name.replace('-', ' ').replace('_', ' ').title()
         
-        # Create clean standard page content
-        clean_content = f'''import React from 'react'
+        # Create standard page content
+        content = f'''import React from 'react'
 import {{ Link }} from 'react-router-dom'
 import {{ Helmet }} from 'react-helmet-async'
 import {{ ArrowRight }} from 'lucide-react'
@@ -46,23 +41,39 @@ export default function {page_name.replace(' ', '')}Page() {{
   )
 }}'''
         
-        # Only replace if the file has issues
-        if (re.search(r'export default.*export default', content) or 
-            re.search(r'function.*function', content) or
-            content.count('{') != content.count('}') or
-            '<<<<<<< HEAD' in content or
-            '=======' in content or
-            '>>>>>>>' in content):
-            
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(clean_content)
-            print(f"Fixed: {file_path}")
-            return True
-        
-        return False
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        print(f"Created standard page: {file_path}")
+        return True
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
         return False
+
+def is_broken_file(file_path):
+    """Check if a file has syntax errors"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Check for common syntax issues
+        if not content.strip():
+            return True
+        
+        # Check for missing function declaration
+        if 'return (' in content and 'export default function' not in content:
+            return True
+        
+        # Check for malformed JSX
+        if content.count('{') != content.count('}'):
+            return True
+        
+        # Check for missing closing braces
+        if 'export default' in content and content.count('{') > content.count('}'):
+            return True
+        
+        return False
+    except:
+        return True
 
 def main():
     # Find all page files
@@ -78,10 +89,11 @@ def main():
         for file_path in glob.glob(pattern, recursive=True):
             if os.path.isfile(file_path):
                 total_files += 1
-                if final_fix_file(file_path):
-                    fixed_count += 1
+                if is_broken_file(file_path):
+                    if create_standard_page(file_path):
+                        fixed_count += 1
     
-    print(f"\nProcessed {total_files} page files, fixed {fixed_count} files")
+    print(f"\nProcessed {total_files} page files, fixed {fixed_count} broken files")
 
 if __name__ == "__main__":
     main()
