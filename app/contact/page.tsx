@@ -1,58 +1,60 @@
 import React from 'react';
-export default ContactPage;
+import { Helmet } from 'react-helmet-async';
+
 const ContactPage: React.FC = () => {
   return (
-<<<<<<< HEAD
-
-        <>
-      <title>Contact - Zion Tech Group</title>
-
-      </>
-  );
-}
-
-=======
-    <></>
-      <Helmet></Helmet>
+    <>
+      <Helmet>
         <title>Contact - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations and support." /></meta>
+        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations and support." />
       </Helmet>
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="max-w-7xlmx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xlmd:text-6xl font-bold text-white  mb-6"></h1>
-              Contact Us;
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Contact Us
             </h1>
-            <p className="text-xltext-gray-300 mb-8 max-w-3xl  mx-auto"></p>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Ready to transform your business? Get in touch with our team of experts.
             </p>
-            <div className="max-w-mdmx-auto"></div>
-              <form className="space-y-4"></form>
-                <input;
-                  type="text"
-                  placeholder="Your Name"
-                  className="w-fullpx-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
-                /></input>
-                <input;
-                  type="email"
-                  placeholder="Your Email"
-                  className="w-fullpx-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
-                /></input>
-                <textarea;
-                  placeholder="Your Message"
-                  rows={4}
-                  className="w-fullpx-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
-                /></textarea>
-                <button;
+            
+            <div className="max-w-md mx-auto">
+              <form className="space-y-4">
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    className="w-full px-4 py-3 rounded-lg bg-slate-800 text-white placeholder-gray-400 border border-slate-700 focus:border-purple-500 focus:outline-none"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    className="w-full px-4 py-3 rounded-lg bg-slate-800 text-white placeholder-gray-400 border border-slate-700 focus:border-purple-500 focus:outline-none"
+                  />
+                </div>
+                <div>
+                  <textarea
+                    placeholder="Your Message"
+                    rows={4}
+                    className="w-full px-4 py-3 rounded-lg bg-slate-800 text-white placeholder-gray-400 border border-slate-700 focus:border-purple-500 focus:outline-none"
+                  />
+                </div>
+                <button
                   type="submit"
-                  className="w-fullbg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                ></button>
-                  Send Message;
+                  className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+                >
+                  Send Message
                 </button>
               </form>
             </div>
+          </div>
         </div>
+      </div>
     </>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
+
+export default ContactPage;

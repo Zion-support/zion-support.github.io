@@ -1,4 +1,5 @@
 import React from 'react';
+
 export default function InfrastructureManagementPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -24,7 +25,6 @@ export default function InfrastructureManagementPage() {
             </Link>
           </div>
       </section>
-<<<<<<< HEAD
 
         <>
       <title>5G Data Analytics - Zion Tech Group</title>
@@ -42,16 +42,6 @@ export default function InfrastructureManagementPage() {
     
           <Link to="/contact" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700transition-allduration-300">Contact Us
       </>
-=======
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <h2 className="w-5h-5ml-2" />Coming Soon</h2>
-          <p className="w-5h-5ml-2">We're developing comprehensive infrastructure management services. Contact us to discuss your infrastructure needs.
-          </p>
-          <Link to="/contact" className="bg-gradient-to-rfrom-purple-600to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700transition-all duration-300">Contact Us;
-          </Link>
-        </div>
-      </section>
-    </div>  );
+
+  );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0

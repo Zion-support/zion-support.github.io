@@ -1,19 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Users, Zap, Shield, Brain, BarChart, MessageCircle, Target, ShoppingCart, Globe, Clock } from 'lucide-react';
 
-=======
 import React, { useState } from 'react';
 export default AiChatbotBuilderPage;
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
 const AiChatbotBuilderPage: React.FC = () => {
   const features = [
     {
@@ -58,7 +52,6 @@ const AiChatbotBuilderPage: React.FC = () => {
     {
       title: 'Customer Support',
       description: '24/7 automated customer support with instant responses and issue resolution',
-<<<<<<< HEAD
       icon: <MessageCircle className="w-6 h-6" />,
       popular: true
     },
@@ -79,22 +72,6 @@ const AiChatbotBuilderPage: React.FC = () => {
       description: 'Schedule appointments, send reminders, and manage calendar availability',
       icon: <Clock className="w-6 h-6" />,
       popular: false
-=======
-      icon: <Users className="w-6 h-6" />,
-      benefits: ['Reduce response time by 90%', 'Handle multiple queries simultaneously', 'Escalate complex issues to humans']
-    },
-    {
-      title: 'Lead Generation',
-      description: 'Qualify and nurture leads automatically with intelligent conversation flows',
-      icon: <Target className="w-6 h-6" />,
-      benefits: ['Capture leads 24/7', 'Qualify prospects automatically', 'Schedule follow-up meetings']
-    },
-    {
-      title: 'E-commerce Assistant',
-      description: 'Help customers find products, process orders, and provide shopping assistance',
-      icon: <ShoppingCart className="w-6 h-6" />,
-      benefits: ['Increase conversion rates', 'Reduce cart abandonment', 'Provide product recommendations']
->>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
     }
   ];
 
@@ -122,16 +99,9 @@ const AiChatbotBuilderPage: React.FC = () => {
         'Up to 10,000 conversations/month',
         'Advanced AI with custom training',
         'Multi-channel deployment',
-<<<<<<< HEAD
         'Priority support',
         'Advanced analytics & reporting',
         'Custom integrations'
-=======
-        'Custom integrations',
-        'Advanced analytics & reporting',
-        'Priority support',
-        'A/B testing'
->>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
       ],
       popular: true;
     },
@@ -144,15 +114,9 @@ const AiChatbotBuilderPage: React.FC = () => {
         'Unlimited conversations',
         'Custom AI model training',
         'White-label solution',
-<<<<<<< HEAD
         'Dedicated support',
         'Custom analytics dashboard',
         'API access',
-=======
-        'Dedicated account manager',
-        'Custom integrations',
-        'Advanced security features',
->>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
         'SLA guarantee'
       ],
       popular: false;
@@ -160,33 +124,19 @@ const AiChatbotBuilderPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-=======
-    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <Helmet></Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
         <title>AI Chatbot Builder - Zion Tech Group</title>
         <meta name="description" content="Build intelligent chatbots without coding. Deploy across multiple channels with advanced AI capabilities." /></meta>
         <meta name="keywords" content="AI chatbot builder, no-code chatbot, conversational AI, customer support automation" /></meta>
       </Helmet>
-<<<<<<< HEAD
 
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             AI Chatbot
             <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-=======
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Chatbot
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
->>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
               {' '}Builder
             </span>
           </h1>
@@ -195,19 +145,12 @@ const AiChatbotBuilderPage: React.FC = () => {
             and scale your customer engagement with advanced AI capabilities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-            >
+            <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
               Start Building Now
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
-              to="/demo" 
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
+            <Link to="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
               View Demo
-=======
       {/* Hero Section */}
       <section className="w-5h-5ml-2" /></section>
         <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -230,29 +173,18 @@ const AiChatbotBuilderPage: React.FC = () => {
         </Link>
             <Link to="/demo" className="borderborder-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900transition-all duration-300" /></Link>
               View Demo;
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
             </Link>
           </div>
         </div>
       </section>
       {/* Features Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Powerful Features for Every Need
-=======
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" /></h2>
-              Powerful Features for Every Need;
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
             </h2>
             <p className="text-xl text-gray-300">
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -260,28 +192,18 @@ const AiChatbotBuilderPage: React.FC = () => {
               Powerful Features for Every Need
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
->>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
               Everything you need to build, deploy, and manage intelligent chatbots that deliver exceptional user experiences.
             </p>
           </div>
-<<<<<<< HEAD
           
-<<<<<<< HEAD
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
->>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
                 <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`}>
-=======
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-400/50transition-all duration-300" /></div>
                 <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`} /></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -292,40 +214,23 @@ const AiChatbotBuilderPage: React.FC = () => {
         </div>
       </section>
       {/* Use Cases Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className="py-20 px-4 bg-black/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Perfect for Every Industry
-=======
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" /></h2>
-              Perfect for Every Business;
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
             </h2>
             <p className="text-xl text-gray-300">
               Discover how our AI chatbot builder can transform your business operations.
             </p>
           </div>
-<<<<<<< HEAD
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
               <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 ${useCase.popular ? 'ring-2 ring-cyan-400/50' : ''}`}>
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4">
-=======
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-slate-800/50backdrop-blur-sm rounded-xl p-6 border border-slate-700" /></div>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
                   {useCase.icon}
                 </div>
-<<<<<<< HEAD
                 <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
                 <p className="text-gray-300 text-sm">{useCase.description}</p>
                 {useCase.popular && (
@@ -333,65 +238,23 @@ const AiChatbotBuilderPage: React.FC = () => {
                     Popular
                   </span>
                 )}
-=======
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Perfect for Every Industry
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how our AI chatbot builder can transform your business operations across different industries.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4">
-                  {useCase.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300 mb-4">{useCase.description}</p>
-                <ul className="space-y-2">
-                  {useCase.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-=======
-                <p className="text-gray-300mb-4">{useCase.description}</p>
-                <ul className="w-5h-5ml-2" /></ul>
-                  {useCase.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-centertext-sm text-gray-400" /></li>
-                      <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
                       {benefit}
                     </li>
                   ))}
                 </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
               </div>
             ))}
           </div>
         </div>
       </section>
       {/* Pricing Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Simple, Transparent Pricing
-=======
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" /></h2>
-              Simple, Transparent Pricing;
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
             </h2>
             <p className="text-xl text-gray-300">
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -399,27 +262,16 @@ const AiChatbotBuilderPage: React.FC = () => {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
->>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
               Choose the plan that fits your business needs. No hidden fees, no surprises.
             </p>
           </div>
-<<<<<<< HEAD
           
-<<<<<<< HEAD
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 ${plan.popular ? 'ring-2 ring-cyan-400/50 scale-105' : ''}`}>
                 {plan.popular && (
                   <div className="text-center mb-4">
                     <span className="inline-block px-4 py-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm rounded-full">
-=======
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${plan.popular ? 'border-cyan-400 ring-2 ring-cyan-400/20' : 'border-white/20'} relative`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
->>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
                       Most Popular
                     </span>
                   </div>
@@ -429,7 +281,6 @@ const AiChatbotBuilderPage: React.FC = () => {
                   <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-300 ml-1">{plan.period}</span>
-=======
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
@@ -447,32 +298,23 @@ const AiChatbotBuilderPage: React.FC = () => {
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                     <span className="text-4xlfont-bold text-white">{plan.price}</span>
                     <span className="text-gray-400ml-1">{plan.period}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
                   </div>
                   <p className="text-gray-300 mt-2">{plan.description}</p>
                 </div>
-<<<<<<< HEAD
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
-<<<<<<< HEAD
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-=======
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3" />
->>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
-=======
                 <ul className="w-5h-5ml-2" /></ul>
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300" /></li>
                       <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <Link;</Link></Link>
                   to="/contact"
-<<<<<<< HEAD
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
@@ -480,14 +322,6 @@ const AiChatbotBuilderPage: React.FC = () => {
                   }`}
                 >
                   Get Started
-=======
-                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                    plan.popular;
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                      : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                  }`} /></Link>
-                  Get Started;
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
                 </Link>
               </div>
             ))}
@@ -495,22 +329,13 @@ const AiChatbotBuilderPage: React.FC = () => {
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className="py-20 px-4 bg-gradient-to-r from-cyan-500/10 to-purple-600/10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Build Your AI Chatbot?
-=======
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <h2 className="w-5h-5ml-2" /></h2>
-            Ready to Build Your First Chatbot?
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of businesses already using our AI chatbot builder to enhance customer engagement and drive growth.
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -518,27 +343,14 @@ const AiChatbotBuilderPage: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of businesses already using our platform to create intelligent, engaging chatbots.
->>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
           </p>
-<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-            >
+            <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
               Start Your Free Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
-              to="/demo" 
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
-<<<<<<< HEAD
+            <Link to="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
               Schedule Demo
-=======
-              Schedule a Demo
->>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
-=======
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <Link;</Link></Link>
           to="/contact"
@@ -549,7 +361,6 @@ const AiChatbotBuilderPage: React.FC = () => {
         </Link>
             <Link to="/demo" className="borderborder-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900transition-all duration-300" /></Link>
               Schedule Demo;
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
             </Link>
           </div>
         </div>
@@ -557,8 +368,5 @@ const AiChatbotBuilderPage: React.FC = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 
 export default AiChatbotBuilderPage;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0

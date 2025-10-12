@@ -1,16 +1,13 @@
-<<<<<<< HEAD
 import { Link } from 'react';
 import { Home, ArrowLeft} from 'lucide-react';
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
 const NotFound: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <span className="text-4xl"  >404</span>
+            <span className="text-4xl">404</span>
           </div>
         <h1 className="w-5h-5ml-2">Page Not Found;
         </h1>
