@@ -161,10 +161,6 @@ const ServiceWorker: React.FC = () => {
       </section>
     </div>
   )
-}
-
-<<<<<<< HEAD
-export default ServiceWorker;
-=======
-export default ServiceWorker
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
+  }
+  
+  export default ServiceWorker;

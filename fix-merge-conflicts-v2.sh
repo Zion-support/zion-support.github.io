@@ -1,43 +1,76 @@
+#!/bin/bash
+
+# Find all page.tsx files with merge conflicts and replace them with simple templates
+find /workspace/app -name "page.tsx" -exec grep -l "<<<<<<< HEAD" {} \; | while read file; do
+    echo "Fixing merge conflicts in: $file"
+    
+    # Extract the service name from the path
+    service_name=$(basename $(dirname $file))
+    
+    # Convert service name to PascalCase for component name
+    component_name=$(echo "$service_name" | sed 's/-\([a-z]\)/\U\1/g' | sed 's/^\([a-z]\)/\U\1/')
+    
+    # Determine service type based on path
+    if [[ $file == *"/ai-"* ]]; then
+        service_type="ai-services"
+        title="AI ${service_name//-/ }"
+        description="Advanced AI solution for ${service_name//-/ }"
+    elif [[ $file == *"/zion-"* ]]; then
+        service_type="micro-saas"
+        title="Zion ${service_name//-/ }"
+        description="Micro SAAS solution: ${service_name//-/ }"
+    elif [[ $file == *"/"* ]]; then
+        service_type="it-services"
+        title="${service_name//-/ }"
+        description="IT service for ${service_name//-/ }"
+    else
+        service_type="services"
+        title="${service_name//-/ }"
+        description="Service for ${service_name//-/ }"
+    fi
+    
+    # Create a simple service page
+    cat > "$file" << EOL
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, ArrowLeft, MessageSquare } from 'lucide-react';
+import { Brain, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const AIChatbotBuilderPage: React.FC = () => {
+const ${component_name}Page: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Chatbot Builder - Zion Tech Group</title>
-        <meta name="description" content="Build intelligent chatbots with our AI-powered chatbot builder. Create conversational AI solutions for your business." />
+        <title>${title} - Zion Tech Group</title>
+        <meta name="description" content="${description}" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
             <Link 
-              to="/ai-services"
+              to="/${service_type}"
               className="inline-flex items-center text-purple-400 hover:text-purple-300 mb-8 transition-colors duration-200"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to AI Services
+              Back to ${service_type}
             </Link>
             
             <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-8">
-              <MessageSquare className="w-10 h-10 text-white" />
+              <Brain className="w-10 h-10 text-white" />
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Chatbot Builder
+              ${title}
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-              Create intelligent, conversational AI chatbots that can understand, respond, and learn from interactions with your customers.
+              ${description}
             </p>
             
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 max-w-2xl mx-auto">
               <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
               <p className="text-gray-300 mb-6">
-                We're working hard to bring you our AI Chatbot Builder. 
-                In the meantime, please contact us for more information about our chatbot solutions.
+                We're working hard to bring you detailed information about this service. 
+                In the meantime, please contact us for more information.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
@@ -47,10 +80,10 @@ const AIChatbotBuilderPage: React.FC = () => {
                   Contact Us
                 </Link>
                 <Link 
-                  to="/ai-services"
+                  to="/${service_type}"
                   className="border border-purple-500 text-purple-300 font-semibold py-3 px-8 rounded-lg hover:bg-purple-500/20 transition-all duration-300 text-center"
                 >
-                  View All AI Services
+                  View All Services
                 </Link>
               </div>
             </div>
@@ -61,4 +94,8 @@ const AIChatbotBuilderPage: React.FC = () => {
   );
 };
 
-export default AIChatbotBuilderPage;
+export default ${component_name}Page;
+EOL
+done
+
+echo "Merge conflicts fixed!"
