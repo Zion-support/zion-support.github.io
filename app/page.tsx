@@ -2,8 +2,8 @@
 
 import React, { Suspense } from 'react';
 
-
-import { Brain, ArrowRight, MessageSquare } from 'lucide-react';
+import { Brain, ArrowRight, MessageSquare, Users, Star, Globe, TrendingUp, Shield, Zap, CheckCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import FuturisticBackground from './components/FuturisticBackground';
 import FuturisticCard from './components/FuturisticCard';
 import FuturisticButton from './components/FuturisticButton';
@@ -72,7 +72,6 @@ export default function HomePage() {
       price: 'Starting at $5,000/project'
     }
   ];
-
 
   const testimonials = [
     {

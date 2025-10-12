@@ -1,5 +1,6 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 import { ArrowRight } from 'lucide-react'
 
@@ -22,16 +23,5 @@ export default function BlogPage() {
         </Link>
       </div>
     </div>
-<<<<<<< HEAD
   )
 }
-=======
-  );
-};
-
-<<<<<<< HEAD
-export default BlogPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
-=======
-export default BlogPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-a621

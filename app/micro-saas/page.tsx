@@ -1,7 +1,6 @@
 'use client';
 import React, { useState } from 'react';
 
-
 import { Brain, Mail, ArrowRight, Database, MessageSquare, Camera, Palette, EyeOff } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';

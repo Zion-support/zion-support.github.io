@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 
 import React, { useState } from 'react';
@@ -183,12 +182,6 @@ export default function AICRMAssistantPage() {
     { number: '90%', label: 'Forecast Accuracy', icon: <Target className="w-6 h-6" /> },
     { number: '30%', label: 'Reduced Sales Cycle', icon: <Clock className="w-6 h-6" /> }
   ];
-=======
-import React from 'react'
-
-
-import { ArrowRight } from 'lucide-react'
->>>>>>> cursor/analyze-improve-and-deploy-application-b5ac
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">

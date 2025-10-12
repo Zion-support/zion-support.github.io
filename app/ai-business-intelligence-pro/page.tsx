@@ -1,6 +1,7 @@
 'use client';
 
-import React from 'react';
+import React from 'react'
+import { Helmet } from 'react-helmet-async';
 
 import { ArrowRight, Brain, Database } from 'lucide-react';
 

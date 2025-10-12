@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 
-
 import { Brain, ArrowRight, MessageSquare, Image, Code, BookOpen, PenTool } from 'lucide-react';
 
 export default function AiContentGeneratorPage() {

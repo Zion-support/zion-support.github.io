@@ -1,7 +1,6 @@
 'use client';
 import React, { useState } from 'react';
 
-
 import { Brain, MessageSquare, Mail, Camera, Palette, Mic, Database, ArrowRight, EyeOff, Database as DatabaseIcon, Code, Mail as MailIcon, Mail as MailIcon } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';

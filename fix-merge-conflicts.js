@@ -19,7 +19,7 @@ function resolveMergeConflicts(content) {
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     
-    if (line.startsWith('<<<<<<< HEAD')) {
+    if (line.startsWith('')) {
       inConflict = true;
       conflictType = 'head';
       headLines = [];
@@ -27,7 +27,7 @@ function resolveMergeConflicts(content) {
       continue;
     }
     
-    if (line.startsWith('=======')) {
+    if (line.startsWith('')) {
       conflictType = 'other';
       continue;
     }
@@ -67,7 +67,7 @@ function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     
-    if (content.includes('<<<<<<< HEAD')) {
+    if (content.includes('')) {
       console.log(`Processing merge conflicts in: ${filePath}`);
       const resolvedContent = resolveMergeConflicts(content);
       fs.writeFileSync(filePath, resolvedContent, 'utf8');

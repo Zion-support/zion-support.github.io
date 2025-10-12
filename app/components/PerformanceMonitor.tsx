@@ -1,120 +1,72 @@
-'use client';
-
-import { useEffect, useState } from 'react';
+import React, { useEffect } from 'react'
 
 interface PerformanceMetrics {
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  fcp: number | null;
-  ttfb: number | null;
+  lcp?: number
+  fid?: number
+  cls?: number
+  fcp?: number
+  ttfb?: number
 }
 
 export default function PerformanceMonitor() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    lcp: null,
-    fid: null,
-    cls: null,
-    fcp: null,
-    ttfb: null
-  });
-
   useEffect(() => {
     // Only run in production
-    if (process.env.NODE_ENV !== 'production') return;
+    if (process.env.NODE_ENV !== 'production') return
 
-    const measurePerformance = async () => {
-      try {
-        // Dynamic import to reduce bundle size
-        const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
-
-        getCLS((metric) => {
-          setMetrics(prev => ({ ...prev, cls: metric.value }));
-          // Send to analytics
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'web_vitals', {
-              metric_name: 'CLS',
-              metric_value: Math.round(metric.value * 1000) / 1000,
-              metric_delta: Math.round(metric.delta * 1000) / 1000
-            });
-          }
-        });
-
-        getFID((metric) => {
-          setMetrics(prev => ({ ...prev, fid: metric.value }));
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'web_vitals', {
-              metric_name: 'FID',
-              metric_value: Math.round(metric.value * 1000) / 1000,
-              metric_delta: Math.round(metric.delta * 1000) / 1000
-            });
-          }
-        });
-
-        getFCP((metric) => {
-          setMetrics(prev => ({ ...prev, fcp: metric.value }));
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'web_vitals', {
-              metric_name: 'FCP',
-              metric_value: Math.round(metric.value * 1000) / 1000,
-              metric_delta: Math.round(metric.delta * 1000) / 1000
-            });
-          }
-        });
-
-        getLCP((metric) => {
-          setMetrics(prev => ({ ...prev, lcp: metric.value }));
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'web_vitals', {
-              metric_name: 'LCP',
-              metric_value: Math.round(metric.value * 1000) / 1000,
-              metric_delta: Math.round(metric.delta * 1000) / 1000
-            });
-          }
-        });
-
-        getTTFB((metric) => {
-          setMetrics(prev => ({ ...prev, ttfb: metric.value }));
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'web_vitals', {
-              metric_name: 'TTFB',
-              metric_value: Math.round(metric.value * 1000) / 1000,
-              metric_delta: Math.round(metric.delta * 1000) / 1000
-            });
-          }
-        });
-      } catch (error) {
-        // Silently handle errors
-        console.warn('Performance monitoring failed:', error);
+    // Web Vitals monitoring
+    const reportWebVitals = (metric: any) => {
+      // Send to analytics service
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', metric.name, {
+          event_category: 'Web Vitals',
+          event_label: metric.id,
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          non_interaction: true,
+        })
       }
-    };
+      
+      // Log to console in development
+      console.log('Web Vital:', metric)
+    }
 
-    measurePerformance();
-  }, []);
+    // Load web-vitals library dynamically
+    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      getCLS(reportWebVitals)
+      getFID(reportWebVitals)
+      getFCP(reportWebVitals)
+      getLCP(reportWebVitals)
+      getTTFB(reportWebVitals)
+    })
 
-  // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') {
-    return null;
-  }
+    // Performance observer for additional metrics
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            const navEntry = entry as PerformanceNavigationTiming
+            console.log('Navigation timing:', {
+              domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
+              loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
+              domInteractive: navEntry.domInteractive - navEntry.navigationStart,
+            })
+          }
+        }
+      })
+      
+      observer.observe({ entryTypes: ['navigation', 'paint'] })
+    }
 
-  // Development mode - show metrics
-  return (
-    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-3 text-xs text-white z-50">
-      <div className="font-semibold mb-2 text-cyan-400">Performance Metrics</div>
-      <div className="space-y-1">
-        <div>LCP: {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'Loading...'}</div>
-        <div>FID: {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'Loading...'}</div>
-        <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'Loading...'}</div>
-        <div>FCP: {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'Loading...'}</div>
-        <div>TTFB: {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'Loading...'}</div>
-      </div>
-    </div>
-  );
-}
+    // Memory usage monitoring
+    if ('memory' in performance) {
+      const memory = (performance as any).memory
+      console.log('Memory usage:', {
+        used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
+        total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
+        limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
+      })
+    }
 
-// Extend Window interface for gtag
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-  }
+  }, [])
+
+  return null
 }

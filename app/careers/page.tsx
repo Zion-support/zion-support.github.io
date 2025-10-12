@@ -1,7 +1,7 @@
 import React from 'react'
-
-
+import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
 
 export default function CareersPage() {
   return (
@@ -22,16 +22,5 @@ export default function CareersPage() {
         </Link>
       </div>
     </div>
-<<<<<<< HEAD
   )
 }
-=======
-  );
-};
-
-<<<<<<< HEAD
-export default CareersPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
-=======
-export default CareersPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-a621
