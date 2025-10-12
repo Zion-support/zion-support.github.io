@@ -21,7 +21,7 @@ const PricingPage: React.FC = () => {
   return (
     <>
       {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
+      <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.4)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.4)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           

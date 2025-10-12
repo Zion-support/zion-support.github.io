@@ -1,10 +1,11 @@
 import React  from 'react';
 const BlogPage: React.FC = () => {
   return (
+    <>
       <Helmet>
         <title>Blog - Zion Tech Group</title>
-          <meta name="description" content="Blog services by Zion Tech Group. Professional AI and IT solutions." />
-          <meta name="keywords" content="blog, AI solutions, IT services" />
+        <meta name="description" content="Blog services by Zion Tech Group. Professional AI and IT solutions." />
+        <meta name="keywords" content="blog, AI solutions, IT services" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
